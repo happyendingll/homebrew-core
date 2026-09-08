@@ -12,12 +12,8 @@ class JsonC < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_tahoe:   "f2da9c816501d9c3c0e5f883b60b3d2758b35a3995e20d541d4b029d8b35ef13"
-    sha256 cellar: :any, arm64_sequoia: "5624048dbb067f1a6d3784081029c3d738edeefd57188ce6724bb93d01aa53aa"
-    sha256 cellar: :any, arm64_sonoma:  "ce9c5f6c7095110cd5c9336b9277e1845cc55bb0fc98c7550576587fd28abbb1"
-    sha256 cellar: :any, arm64_linux:   "64475f64c83a75a0438e4d652bd75b0e7428f2e33e33377c88f087f4c652ed90"
-    sha256 cellar: :any, x86_64_linux:  "9745b482f9c14d66b5ec02f567a61f7ef29f9060cded74e5b37e322c139580af"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "54b1ea4e838b1bc38454e736f8755ef2505463386ba4bc0ce504a16616db42ce"
   end
 
   depends_on "cmake" => :build
