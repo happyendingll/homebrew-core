@@ -20,11 +20,8 @@ class Qtgrpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "79e9cfc012bf51f951071bfba1b549e6db7fe059476ec436d54b7c4a002b3e19"
-    sha256 cellar: :any, arm64_sequoia: "9aa5494bc6651e00519b7115d87ab8a15c1a1ccd2e733079d55e26b5f8938f39"
-    sha256 cellar: :any, arm64_sonoma:  "093f2477f4bc367a71ffffbe7503252a5362df25b6396fcca9be17e0fdd7db0e"
-    sha256 cellar: :any, arm64_linux:   "93b0a82523c49d6255ae9a2f42a90bdde0ab35378e390694c73d1b4ca262fb5f"
-    sha256 cellar: :any, x86_64_linux:  "ebcf1da93822da27667f3c28fb950f7d6a33bff460271882686b022ef139bd06"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "5c4b3b21cddae900c33161a826ad2076ec7db74bd50ff42d7084398a3cd0ef2b"
   end
 
   depends_on "cmake" => [:build, :test]

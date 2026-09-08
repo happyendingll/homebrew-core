@@ -17,11 +17,8 @@ class Qtwebsockets < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "b109a87ab128dfd4b9512fcf36626f52ff4b02cc6fa3018d13a7a8aa09548718"
-    sha256 cellar: :any, arm64_sequoia: "fc840142fe3232a844b87536afc44e474db3ebdb5b665e66486c5f84dc374616"
-    sha256 cellar: :any, arm64_sonoma:  "d8d1faf11f0762053cd1b0ec265077a764928ea504392b9179d807e88b8a44b6"
-    sha256 cellar: :any, arm64_linux:   "9e1461d323f2bd9d322fd04f98af2c85cc0d9833b7cfae4d22713518d921748e"
-    sha256 cellar: :any, x86_64_linux:  "959810e91bf034f7a51b1fa43b6a7377b8cba8a1fbdd9bf8dc4f02b41dd972e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "31b2be439156586b5772a70346afdc42d2b68296b400b04484135ad3b51759f4"
   end
 
   depends_on "cmake" => [:build, :test]

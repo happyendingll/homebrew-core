@@ -7,11 +7,8 @@ class Vala < Formula
   revision 1
 
   bottle do
-    sha256 arm64_tahoe:   "7236e77a2e6bcc1b77d1cd7c8eade63f63459fee2c0429b84348eb86cd1d81b3"
-    sha256 arm64_sequoia: "ca08db6836916f2a967cfc8a289ebd93105e793385b9e0a37076e4fb770a8b85"
-    sha256 arm64_sonoma:  "b12ea61f9b9c19b0722e6309562b498d28deb797234af0280d9b3692b8aaf8a5"
-    sha256 arm64_linux:   "b911b1f58457e8fad4111c554c423beddbb86f6dde92b246dc54fd706f1e0a43"
-    sha256 x86_64_linux:  "459104ac47129f0fe09759497678a9ce7cc2e5bcb89b050e6589ea9ae4a0480d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "fa218ba6b72a5e56116b2f62e1d9100150693181bb2a4ba68d294af6de49c232"
   end
 
   depends_on "gobject-introspection" => :build

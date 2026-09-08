@@ -12,11 +12,8 @@ class Gpgmepp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "e182e7620bfe67c8ff4d39eb3061cbd7dcff08bc3ec7d51435f6575d07426897"
-    sha256 cellar: :any, arm64_sequoia: "bc1ad2a64e672863fe6501a4877e9f2f5d7cabdd4111cf4093badfa1e6928e3a"
-    sha256 cellar: :any, arm64_sonoma:  "ee685b491a5ad9bc01f2ad9922991fad349e9f9518cb6dae24bcb0fc5ce40f5d"
-    sha256 cellar: :any, arm64_linux:   "4c4ea2ca39fa1c05c89246467da34a2cf09d78f747eba8e238629f9a00987825"
-    sha256 cellar: :any, x86_64_linux:  "704771d1593f60d76a471cd903fd09b672c7c8fddad84dc8de7eed2efff0c012"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "53c17eb258073946f8203482a107a817ca8eb289c0aba4d945e004705477d6ba"
   end
 
   depends_on "cmake" => :build
