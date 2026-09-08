@@ -19,11 +19,8 @@ class Qtdeclarative < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "5bb514e40e1bf72352604ac4cfbacb532b37c0ba6ab84e405b99a385d1eb4c27"
-    sha256 cellar: :any, arm64_sequoia: "1fe4b9a56a769fafe8baa95d9ad022c68594fcc2f1026d5c7ee079c319d3c35c"
-    sha256 cellar: :any, arm64_sonoma:  "80e410e4dfa3423a1b8f4cebb191d5195738bdf79e4478f1b342d0257230f49f"
-    sha256 cellar: :any, arm64_linux:   "8dc3a256247d767407b7e9dcd187d357862e3f55d714f3413bfdf3a4b3267f4f"
-    sha256 cellar: :any, x86_64_linux:  "24690731582b68d8000f06fef3573b38e91198f42aeb00277791758bb53310fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "791b828407361c0073662da5eec11e915aa5b9d1ebffb8f14c3280c31912ba89"
   end
 
   depends_on "cmake" => :build

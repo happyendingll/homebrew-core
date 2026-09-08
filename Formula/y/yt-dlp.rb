@@ -10,12 +10,8 @@ class YtDlp < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "06605147c6afa68ab95962b35cd4405909e5e5ce33621c4b7f9fe0797a47136e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1eee0a9bb9f17280fce34a3325b7fa45fc137bdcecf92bcdcb80152deaeacd01"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b0d29c1ddc5707b45d8088d08f2c17bbf60efed23c7d5d7cb2df291539476afd"
-    sha256 cellar: :any,                 arm64_linux:   "6ffd8a116164a8bd761dba87e63cced361b212ac9ea4d080f972bfd9bb6b6438"
-    sha256 cellar: :any,                 x86_64_linux:  "aa92b9a8268633eacf6aa6bbe3034a04a6ddb1820cae90cc3723c86ff74b8bed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a50bc7dec5139ba572f8815bcd6e46fd6e80503dee85454ab031f85e0c562345"
   end
 
   head do
