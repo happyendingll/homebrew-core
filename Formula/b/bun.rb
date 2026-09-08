@@ -3,8 +3,8 @@ class Bun < Formula
   homepage "https://bun.com/"
   # Need git checkout to build. Alternatively could set GIT_SHA if we extract the commit.
   url "https://github.com/oven-sh/bun.git",
-      tag:      "bun-v1.4.0",
-      revision: "34cbb9a40b4bd1bd767d134a7065e66c2432a676"
+      tag:      "bun-v1.4.2",
+      revision: "744846f844374847c902b5e7fd59b4342a51ef99"
   license all_of: [
     "MIT",
     "LGPL-2.0-or-later", # JavaScriptCore
