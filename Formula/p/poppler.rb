@@ -13,11 +13,8 @@ class Poppler < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "282b89b8f5a4c802f178e596fc98a29171d01b34bd1198658c88a6b2deef2b9b"
-    sha256 arm64_sequoia: "ede746ab1ea5a7246e70ded986956fa75899a9f5bf3c79cee57a5feff5dba51d"
-    sha256 arm64_sonoma:  "91b63026986802149b65befdd5dffd897f46061fb8f6e38edefc0e5f1d3e0b3d"
-    sha256 arm64_linux:   "54a9ca8a90c5fdb7b16f5b9d29ac54dd9ef935c244c759c4c10b2a9ce83f38bf"
-    sha256 x86_64_linux:  "5bb6fe5b7850669aba761f36a6013ff12dd6234fe30a618ec1d4bdeec4eae1dc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "4018e285179ff49dffe624cbc33526f3333b686c2334490f0d86427f0f0cd390"
   end
 
   depends_on "cmake" => :build

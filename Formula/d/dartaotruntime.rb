@@ -12,11 +12,8 @@ class Dartaotruntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b0e21ad57e0491e917f117354c1bff8e0345c376c9a779a096dfea2971e5de08"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "42565d6f9921a9e73696604a5b647844ede0bf70ab5671a68a96a03e5edcd304"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c1178046abb5d237a996a46b9d5b6c8a8c7f664ef47c8b2a00d154743f6e5098"
-    sha256 cellar: :any,                 arm64_linux:   "ba53af411766a662ff11ac741c120244171aae0ec99d5f27af0c9093f2de33d7"
-    sha256 cellar: :any,                 x86_64_linux:  "03cf434734cae78167eb787fe4c94f8673692f998c990d17d7c41ac06c60cf5c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd63f3f237c62a0022cafaa7ac301f3277663342e6dfc7671d514cd76595b80d"
   end
 
   depends_on "ninja" => :build
