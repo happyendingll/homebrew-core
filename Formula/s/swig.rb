@@ -12,11 +12,8 @@ class Swig < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "da75d54cd9ad9ae5c7bfc712734f8a971f61735f030584f34e929462223208c3"
-    sha256 arm64_sequoia: "81ecbdfb1e57316004365b47a1c3f3cea100c3ef5f7a9ff0c218b8da73821461"
-    sha256 arm64_sonoma:  "aae4b6f5244c4c56ec3972870855203a78bf7719416365c7f487c549e066de00"
-    sha256 arm64_linux:   "29bcdf36ce033dcc962832928418a115a1ac7833252b8ae47f41875941a7e0bc"
-    sha256 x86_64_linux:  "7d404ec2a625493509c20bfa598c8a7b9bee7c90f99d884822307cae9164f53a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "2fa72de80f7067dcd0ff72fd5a3611b1b3fe68f8acb05d6601fc6a014a7e765f"
   end
 
   head do

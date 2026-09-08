@@ -13,11 +13,8 @@ class Libnice < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "e6ea7526c0b8a0b26fdcc03455328d79f7455a84a5187ae4ba4f7e689e5a7bd9"
-    sha256 cellar: :any, arm64_sequoia: "6d4020030f85a308f0597286c1393e36a0db1496e58e422bf4388905de82a811"
-    sha256 cellar: :any, arm64_sonoma:  "e9daffb2c2b76d908a3ce3c7e59192ab86d59cba9fa34a7135216cc05060fbd6"
-    sha256 cellar: :any, arm64_linux:   "7fe65c9279876a022d542a3f8f2454e9453904e226e767dcb70db7dd7a348a52"
-    sha256 cellar: :any, x86_64_linux:  "21aa22274a49bb3275c2a14e9ba63793e84263b604016b6374c3cd2ec6bd780b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "cb26becf8a87c565aa75e787b7f6646d239888043a576f5619de64bc51b2b1cd"
   end
 
   depends_on "meson" => :build
