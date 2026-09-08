@@ -14,11 +14,8 @@ class Libxml2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "5fb19b06755d9ed1aedd83ed3c3450efc6a8c248265670f00c0b7e02b8b69f64"
-    sha256 cellar: :any, arm64_sequoia: "c527df2ccbb8e3603718b7cfc318fc8907ebbc898813832ee5cdaef3c953401a"
-    sha256 cellar: :any, arm64_sonoma:  "94cee1905a126e6eccf3505e0e7cf76c6743c40d26cf237f5f7baf420125d16f"
-    sha256 cellar: :any, arm64_linux:   "71fa82e82833c9ad18e166890efd226bb52494c62bb67f69155a068783d1d870"
-    sha256 cellar: :any, x86_64_linux:  "57b219c3bbf96111a57e2afaa052757b8697f268bc61944689eb9ae35829f1d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "1e057faeea57ce4cf9ec27c0b80f44e241ca971b3c2770d91a1e0a58ddf08716"
   end
 
   head do

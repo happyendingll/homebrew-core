@@ -13,12 +13,8 @@ class Libtiff < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_tahoe:   "9a0ff1ac153879e9fb324951f33fc52c797149a6de44176e4fb80f0c8adad9a8"
-    sha256 cellar: :any, arm64_sequoia: "e971adc15ce3387a9c68a10ff1cf431755faf0e86b9d3a6daf668efc2f6f31d8"
-    sha256 cellar: :any, arm64_sonoma:  "4504c9c0fd45de525e9a532da674b703bda04d377d7471f70cf611954da1fb1d"
-    sha256 cellar: :any, arm64_linux:   "076896f22523cb34a4c1f8488bd27049d57b30f6e0232c74578df432700d61f2"
-    sha256 cellar: :any, x86_64_linux:  "565e06c1da5aca67e2993315807301afddd252372c0896b76be515895b3c053a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "59c1a9823cdf63e5acb5c81c8a069be461be8768bd5d866bd47ee15053756f53"
   end
 
   depends_on "jpeg-turbo"

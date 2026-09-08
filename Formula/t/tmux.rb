@@ -13,12 +13,8 @@ class Tmux < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_tahoe:   "9d4125a2d773a037da826d46599fa8fdde23381ca72e896af582b6a63d8f031f"
-    sha256 cellar: :any, arm64_sequoia: "b912a00996bb0421af49913cdd8019a1cb07140cb83af66f70df73c3ec58bb7f"
-    sha256 cellar: :any, arm64_sonoma:  "3ce8e889304a25593f701500e063c7e75b79bb90a1a8cedfe51052da2032cf48"
-    sha256 cellar: :any, arm64_linux:   "b25b98ebd2006119ab17f42bb9333f640f2b3362eb05bbe0096fbadd018ae55a"
-    sha256 cellar: :any, x86_64_linux:  "861cca7012fab1ccf773e254837d476cc48d519f908f460bd3d2988530c993d2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "96afbc7d3fc164cd7b65be1c19d2ee2428a3cabc435c247451d83ba372547feb"
   end
 
   head do
