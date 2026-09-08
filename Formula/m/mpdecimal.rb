@@ -12,12 +12,8 @@ class Mpdecimal < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_tahoe:   "9fa6ced040c13747f9b010f406453c14041659dfb496a791b949c163b8a413f5"
-    sha256 cellar: :any, arm64_sequoia: "9e2dc44e47e91465c3cefa8969baa6af53a1ec339eda8443b18a30786147203e"
-    sha256 cellar: :any, arm64_sonoma:  "594c572777fc4e03ca32d1d2772a4ee69791373fb1eab6b9e673564f131d13e4"
-    sha256 cellar: :any, arm64_linux:   "49590f6b1d059b895496e768d9e13004b6fad8e66f1c446dc79a41802c16e482"
-    sha256 cellar: :any, x86_64_linux:  "d92d8706831c7dfa2fdd0f1a0d8548137a7ef325ae5c5a7f98fb5090182d6974"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "4180076700bcf66d948062ebaa584e628e1a493659d710c7f72ea54301e1d4aa"
   end
 
   deny_network_access!

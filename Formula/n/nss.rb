@@ -15,11 +15,8 @@ class Nss < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "0c44c0480efbb6be252f33075c272609cdb9c4c7e7b4f1f4a16759b038c3b07b"
-    sha256 cellar: :any, arm64_sequoia: "3b2e1c490afbb0c660b993d8cb0dbc8df4413054a925831d6b034c37bc62c9f2"
-    sha256 cellar: :any, arm64_sonoma:  "8debda2455de366ed0b9074fb481c709e94c8ac2a2727f963b76f9039ca7e74f"
-    sha256 cellar: :any, arm64_linux:   "6064bda8e75cef023581eb6c65543536a2b7a6c7eaa16249894d8278b8d67a61"
-    sha256 cellar: :any, x86_64_linux:  "a64bb690a5e54dc99ab2d08b6b6430a596dd259e5829e3d59ea38c5828f75c5a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "6a773b929e12b14f5514fc9b9201acaf62fd447c2543062223e623b074e41b39"
   end
 
   depends_on "nspr"
