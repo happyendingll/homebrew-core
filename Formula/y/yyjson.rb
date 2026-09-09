@@ -8,11 +8,8 @@ class Yyjson < Formula
   head "https://github.com/ibireme/yyjson.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "653d1e1d0303e93b5471a4a7640f469653b7ca9c642e1568f44fd75bcb207845"
-    sha256 cellar: :any, arm64_sequoia: "f1b9812054f25e115b87e89f26bb43ae44c3c619278583f2e0c652bd8a2e207b"
-    sha256 cellar: :any, arm64_sonoma:  "f9b66ab2268ac524c475bf958e3241c3c56a0f7178f9e0abc9edc068dc9280f5"
-    sha256 cellar: :any, arm64_linux:   "e563523257fa61cb3d23284e60abbee5ba625e779c0943477b8fa43b023d15c7"
-    sha256 cellar: :any, x86_64_linux:  "c7281df3d474b2ec03cfeca7a7721cb14987c7f149a4b33fdd0c2a8f4d2194e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a61d0258a1867a3ada0134d8385705eb4bf724c32a45b60ff4850f9fcc2163ca"
   end
 
   depends_on "cmake" => :build
