@@ -26,8 +26,6 @@ class YtDlp < Formula
   depends_on "pycparser"
   depends_on "python@3.14"
 
-  uses_from_macos "libffi"
-
   pypi_packages package_name:     "yt-dlp[default,curl-cffi]",
                 exclude_packages: %w[certifi cffi pycparser]
 
