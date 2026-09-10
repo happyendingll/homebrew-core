@@ -1,8 +1,8 @@
 class Ipsw < Formula
   desc "Research tool for iOS & macOS devices"
   homepage "https://blacktop.github.io/ipsw"
-  url "https://github.com/blacktop/ipsw/archive/refs/tags/v3.1.713.tar.gz"
-  sha256 "79e603918a47a6ca9dbe889bab44b4c944150714af6baefa8ef3b55b872d0c03"
+  url "https://github.com/blacktop/ipsw/archive/refs/tags/v3.1.714.tar.gz"
+  sha256 "bb400c9310ea7d981eb1d9f81fba672e772a5b4ca341d622dec570b1374b5507"
   license "MIT"
   head "https://github.com/blacktop/ipsw.git", branch: "master"
 
@@ -12,11 +12,11 @@ class Ipsw < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b122b46dc023ffc1df942e764c54ab27e988d6c80b351668e13278887bd78cd6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8d25e781ca2e8f9bb1dface6b936493faef3a5bd4e14e35dc427555f9ff62f25"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9cb86ffca710c23e3a759cb0c730fac419b5161236c4a3bcc34840fafac32ada"
-    sha256 cellar: :any,                 arm64_linux:   "af6165ebcabec96cd32b320b689225429563bf29bee1662c9320068b16fbc41d"
-    sha256 cellar: :any,                 x86_64_linux:  "11d32f9214230f33482fc8345f5c6dcdcaa37510fdd817bdde1c268ff3ee86a4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "50f49d964ad24b61c23efd527dd071353ae17863bf2c9a48ffb555adeabb1867"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0c936e58ad4ddf6250dfab20a8c4dc69fd19c40f042fa5cb9f4942dc3d372ddb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "617564d0e6202629fd31412529dbe2a817ff82feb849c5ba85d55c56a25815c5"
+    sha256 cellar: :any,                 arm64_linux:   "7beb84d01b248685d1e2d05f32318e09a5083c99928b0dc1298b5c96775b2cc5"
+    sha256 cellar: :any,                 x86_64_linux:  "217a8d6e46fe33ec9b016952345f0c8810d4364b92d6e84dbd6ea3210dd6467d"
   end
 
   depends_on "go" => :build

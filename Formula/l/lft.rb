@@ -1,8 +1,8 @@
 class Lft < Formula
   desc "Layer Four Traceroute (LFT), an advanced traceroute tool"
   homepage "https://pwhois.org/lft/"
-  url "https://pwhois.org/dl/index.who?file=lft-4.0.tar.gz"
-  sha256 "b1645ade44896a69efcbd0dbd78321b5b2dce1fdb68c890d45b26d2d09262b9c"
+  url "https://pwhois.org/dl/index.who?file=lft-4.01.tar.gz"
+  sha256 "77a2923dbd10b1e3d2b55d8f3c4144795a80f73772d4f41f5e27751d1f3f0c62"
   license "VOSTROM"
 
   livecheck do
@@ -11,11 +11,11 @@ class Lft < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "10e4ccd635d0edbab05d37c04a6b0bc5ad4b87feafcbf74cd88e8f74b6aa744b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ff206b86ed2139e45231dafa0148a3e85322297696d29005a782cc578d312ea5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "53a55ae2f74dc69751a7afc2afdbe8ed239f14ded1614d2156a33d52235cf7b2"
-    sha256 cellar: :any,                 arm64_linux:   "550256874da7df1d3ee875da6e5f68c7a4dfc998de8a9b0f5405302e596d0577"
-    sha256 cellar: :any,                 x86_64_linux:  "4a3e0d886b4d417f556a6c2cae0f13d2d2d23bb962ab070a30294fd4daed8159"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b762c7dcb2b21e46e797fc10104e507d966b4622aa89f966e82ba4b6369d905c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "577eff6c7459b3237079ab50a2c3962bb20339c235f1a08bd1fca27d2b164d50"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e1ab65dae3e76d8f181da7197e121f3e8352ba7fa7729fccbb6a8a4760f1b784"
+    sha256 cellar: :any,                 arm64_linux:   "6f3b8a00a5c6f1e74dfad1fdecde55623374243c89a8848725b295daec95ff9b"
+    sha256 cellar: :any,                 x86_64_linux:  "ca27368d53945a8ae132aa3133bc4c8314c3fd7635138bf97d9b5f7c7ab50fc0"
   end
 
   uses_from_macos "libpcap"
