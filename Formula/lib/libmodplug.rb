@@ -27,13 +27,6 @@ class Libmodplug < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d166a7f4a737de154ada685c9af4f82d22238a1b6cb323ce49a4496a3e9b2911"
   end
 
-  resource "testmod" do
-    # Most favourited song on modarchive:
-    # https://modarchive.org/index.php?request=view_by_moduleid&query=60395
-    url "https://api.modarchive.org/downloads.php?moduleid=60395#2ND_PM.S3M"
-    sha256 "f80735b77123cc7e02c4dad6ce8197bfefcb8748b164a66ffecd206cc4b63d97"
-  end
-
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
     file "Patches/libtool/configure-big_sur.diff"
@@ -50,6 +43,13 @@ class Libmodplug < Formula
   end
 
   test do
+    resource "testmod" do
+      # Most favourited song on modarchive:
+      # https://modarchive.org/index.php?request=view_by_moduleid&query=212083
+      url "https://api.modarchive.org/downloads.php?moduleid=212083#2nd_pm.s3m"
+      sha256 "b869c3e70c66010eda066452791cc3f1536bd3ad0bc01b98924c79765b03ceb2"
+    end
+
     # First a basic test just that we can link on the library
     # and call an initialization method.
     (testpath/"test_null.cpp").write <<~CPP
@@ -76,7 +76,7 @@ class Libmodplug < Formula
       #include <sstream>
 
       int main() {
-        std::ifstream in("2ND_PM.S3M");
+        std::ifstream in("2nd_pm.s3m");
         std::stringstream buffer;
         buffer << in.rdbuf();
         int length = buffer.tellp();

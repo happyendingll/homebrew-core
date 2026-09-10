@@ -12,12 +12,13 @@ class LlvmAT22 < Formula
   end
 
   bottle do
-    sha256               arm64_tahoe:   "25c3eb544ec9c7d127c652f4a05dffe6820c38d00bf1493fffc0281fb450245c"
-    sha256               arm64_sequoia: "fdf8af7b6a66548f0a6a0e8c2e253198f094a8d35dfd91ed2718448b5321cc61"
-    sha256               arm64_sonoma:  "e970188c03ce29a4e8adcad5e61b5df6182939d8725c7e97d15ee37073614959"
-    sha256 cellar: :any, sonoma:        "7532f55fe6277c80b610036b41c53e547c76416e118bad15e5731b877786ba96"
-    sha256 cellar: :any, arm64_linux:   "e72b0df8106b8e65928f3b464771abe4981a4d3b05f7d2cfbc46cee471a851aa"
-    sha256 cellar: :any, x86_64_linux:  "2277ba3b8ea295ee15e50b8057ef1161c7bec8b309117c215ed8e7e8cfe823ac"
+    sha256               arm64_golden_gate: "4a5395d78f3e25d6e8dca50079aa4e88b1bf7b566d0cd9ea41febe3883f4a4f4"
+    sha256               arm64_tahoe:       "25c3eb544ec9c7d127c652f4a05dffe6820c38d00bf1493fffc0281fb450245c"
+    sha256               arm64_sequoia:     "fdf8af7b6a66548f0a6a0e8c2e253198f094a8d35dfd91ed2718448b5321cc61"
+    sha256               arm64_sonoma:      "e970188c03ce29a4e8adcad5e61b5df6182939d8725c7e97d15ee37073614959"
+    sha256 cellar: :any, sonoma:            "7532f55fe6277c80b610036b41c53e547c76416e118bad15e5731b877786ba96"
+    sha256 cellar: :any, arm64_linux:       "e72b0df8106b8e65928f3b464771abe4981a4d3b05f7d2cfbc46cee471a851aa"
+    sha256 cellar: :any, x86_64_linux:      "2277ba3b8ea295ee15e50b8057ef1161c7bec8b309117c215ed8e7e8cfe823ac"
   end
 
   keg_only :versioned_formula

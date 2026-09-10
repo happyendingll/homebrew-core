@@ -35,11 +35,7 @@ class Dlib < Formula
       -DDLIB_LINK_WITH_SQLITE3=OFF
       -DBUILD_SHARED_LIBS=ON
     ]
-
-    if Hardware::CPU.intel?
-      args << "-DUSE_SSE2_INSTRUCTIONS=ON"
-      args << "-DUSE_SSE4_INSTRUCTIONS=ON" if OS.mac? && MacOS.version.requires_sse4?
-    end
+    args << "-DUSE_SSE2_INSTRUCTIONS=ON" if Hardware::CPU.intel?
 
     system "cmake", "-S", "dlib", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"

@@ -11,6 +11,7 @@
   "coreutils",
   "cryfs",
   "cryptopp",
+  "embree",
   "fftw",
   "fio",
   "ggml",
