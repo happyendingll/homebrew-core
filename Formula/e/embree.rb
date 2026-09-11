@@ -13,11 +13,12 @@ class Embree < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_tahoe:   "599121dbb13ec24262aa0f1ee733d79f13dab88df48ab4179652ae0de7ef326e"
-    sha256 cellar: :any, arm64_sequoia: "a08f58e85ee4281a712fe8e0b553e30b2a3eb1dac6a7e70955b5daee18256f20"
-    sha256 cellar: :any, arm64_sonoma:  "68776f6b9992f0315f0bc13c2bdf5c6278b8c29c78157aa1d732fa4cee1e5184"
-    sha256 cellar: :any, arm64_linux:   "33418e0762947304108496847bd0e54fb9c7f4832e2afbf0c7563c5123d4fe2f"
-    sha256 cellar: :any, x86_64_linux:  "b2d4cb849835178c2cee7847c8115c0305be7a8ed6956ca6a56f612ce77ba231"
+    sha256 cellar: :any, arm64_golden_gate: "2d8e8c2a85a2603616b2acd3e5fbd6c662a57df9c330b5afc7ff2864193cdd3e"
+    sha256 cellar: :any, arm64_tahoe:       "599121dbb13ec24262aa0f1ee733d79f13dab88df48ab4179652ae0de7ef326e"
+    sha256 cellar: :any, arm64_sequoia:     "a08f58e85ee4281a712fe8e0b553e30b2a3eb1dac6a7e70955b5daee18256f20"
+    sha256 cellar: :any, arm64_sonoma:      "68776f6b9992f0315f0bc13c2bdf5c6278b8c29c78157aa1d732fa4cee1e5184"
+    sha256 cellar: :any, arm64_linux:       "33418e0762947304108496847bd0e54fb9c7f4832e2afbf0c7563c5123d4fe2f"
+    sha256 cellar: :any, x86_64_linux:      "b2d4cb849835178c2cee7847c8115c0305be7a8ed6956ca6a56f612ce77ba231"
   end
 
   depends_on "cmake" => :build

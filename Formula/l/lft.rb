@@ -11,21 +11,22 @@ class Lft < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b762c7dcb2b21e46e797fc10104e507d966b4622aa89f966e82ba4b6369d905c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "577eff6c7459b3237079ab50a2c3962bb20339c235f1a08bd1fca27d2b164d50"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e1ab65dae3e76d8f181da7197e121f3e8352ba7fa7729fccbb6a8a4760f1b784"
-    sha256 cellar: :any,                 arm64_linux:   "6f3b8a00a5c6f1e74dfad1fdecde55623374243c89a8848725b295daec95ff9b"
-    sha256 cellar: :any,                 x86_64_linux:  "ca27368d53945a8ae132aa3133bc4c8314c3fd7635138bf97d9b5f7c7ab50fc0"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "2c40112b2be68d4e3795726c155ce2a6472f633c63d9fc8ce1785b56577325db"
+    sha256 cellar: :any, arm64_sequoia: "7d338e52186416ed983276718c2d6ed0a27a7ca76c025f2544bafa2124e29b79"
+    sha256 cellar: :any, arm64_sonoma:  "094ad51fa666ae8fe50de127b5da956649766caeeefd782c897da756df0f614f"
+    sha256 cellar: :any, arm64_linux:   "52df348b8b0c2575f2563cb97d22e53a2596c767661afc2aaad4b83821e82f00"
+    sha256 cellar: :any, x86_64_linux:  "8779ebca5ff64b3bae3b3f4ba9a55e89906c5b73c77e73d892b1596d58ceb6af"
   end
+
+  depends_on "pkgconf" => :build
+  depends_on "c-ares"
+  depends_on "ncurses"
 
   uses_from_macos "libpcap"
 
   def install
-    args = %w[
-      --disable-async-dns
-      --disable-ncurses
-    ]
-    system "./configure", *args, *std_configure_args
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
