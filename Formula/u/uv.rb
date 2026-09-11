@@ -8,12 +8,8 @@ class Uv < Formula
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d22bb886a7c1d7778d6ce6b066cd6bb72e3c9db4f5e945d4eba65a51a894ad66"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6759c56c621f1a035a7a01bd71dfb316c9c147cf6e96aff64afaf5382c460bcd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e8aa8f69a031448e05a227fe24ca7c2a5e89342046fe12079041dbd143ddc546"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "1919592d10fc12fb466401d4a0828a3b6e65747c50e0e691dd992089d5da09d0"
-    sha256 cellar: :any,                 arm64_linux:       "a00b23636cacac2f9a440392d096efdab6ba3789fcda72e3172a508e392156e6"
-    sha256 cellar: :any,                 x86_64_linux:      "41b3b6e493abc0db2832e09dde141abed5414f2f5f7d244d6239282dff567583"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d9f8f97a9a7e4ef12c883f12bcba3fa8fbd85f3883ed3cd98036b6d0bda6bcd7"
   end
 
   depends_on "pkgconf" => :build

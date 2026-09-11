@@ -12,12 +12,8 @@ class LlvmAT22 < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256               arm64_golden_gate: "3979809f7ab4398bbb738355bd32b186911800faef497b85a1ce8ca3bd6ee1a3"
-    sha256               arm64_tahoe:       "a321c5b4ac3657f54fab8fe455146c9f15c0b4f074983c822dba955fb04e0840"
-    sha256               arm64_sequoia:     "9705fde2a45b982f91bdfe60d1023fabf12266e67d24ba7bacc963c2950174d1"
-    sha256 cellar: :any, arm64_linux:       "94785e8ca8fcf820119a423f17fed2153c49b78768f12e81062a3a3c2d47ddbf"
-    sha256 cellar: :any, x86_64_linux:      "6a24b4e413983d48cebda87e1d3e7a19287e07213d84a18825d52ab0638ab4ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "d5c9576f00064855c612b13fa743c394a3b56f25595020f90b8c790d7e6b064a"
   end
 
   keg_only :versioned_formula
