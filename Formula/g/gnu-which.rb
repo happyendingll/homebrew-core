@@ -8,12 +8,13 @@ class GnuWhich < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c60eef184cebfc5062ed02eb9e7e5ad318666427399fc1bba804831f4dac4c97"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aef34aeb6d43af64a60914a19483da99bbf430107adf5668c6e77872254fdb50"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9fc44e542bd27b51dd2ec27b208a93f29fbcf177716fee27616ed624bb0192d3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "fed8cbaaf03246121a0c7b50201693894f1bfa86aef25cfe4024ac6943462708"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "01024cb856e5918d9ace6d021848e8d512a24ed6a6ab77898b5430d81b143bbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c71ab83aed2402d38566a99d30a9421a86fb8bffac25d66f5beeac27a576c096"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d7831cea0890480d06c5a63d93bc3d867e5926a1ffc2aa718aa7f3f3c655dafa"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c60eef184cebfc5062ed02eb9e7e5ad318666427399fc1bba804831f4dac4c97"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aef34aeb6d43af64a60914a19483da99bbf430107adf5668c6e77872254fdb50"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "9fc44e542bd27b51dd2ec27b208a93f29fbcf177716fee27616ed624bb0192d3"
+    sha256 cellar: :any_skip_relocation, sonoma:            "fed8cbaaf03246121a0c7b50201693894f1bfa86aef25cfe4024ac6943462708"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "01024cb856e5918d9ace6d021848e8d512a24ed6a6ab77898b5430d81b143bbc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c71ab83aed2402d38566a99d30a9421a86fb8bffac25d66f5beeac27a576c096"
   end
 
   def install

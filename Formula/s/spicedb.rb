@@ -7,12 +7,13 @@ class Spicedb < Formula
   head "https://github.com/authzed/spicedb.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3a785a39e00e8a09cd69d697497d84b083907a3bd1192bb8868a616944c12a66"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f1d7c609a292208370cab753a4735dfc6af062c06fd1b8875e4a2fe2532b577b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "14c137be894abeb9ed94e703db7976fdc0e86ab4782e29b4f62b127314c8f4d6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8f3862ae378dd82f7aadc88cf7e3bbc44f136fc511433d8ca06c40317af2ffa3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d7fb0e97e5baec5a6688559574300f15b3090e2323a28234ae9cdfb68276577b"
-    sha256 cellar: :any,                 x86_64_linux:  "d9396e4dc0a9a20b9004645f7d0b503320502dd50ceb6dbb3d2755b3c00796b4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "df385686f1aad7ff3737306d90af0fb63c26cf063af605f250acb321bbf0085a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a785a39e00e8a09cd69d697497d84b083907a3bd1192bb8868a616944c12a66"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f1d7c609a292208370cab753a4735dfc6af062c06fd1b8875e4a2fe2532b577b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "14c137be894abeb9ed94e703db7976fdc0e86ab4782e29b4f62b127314c8f4d6"
+    sha256 cellar: :any_skip_relocation, sonoma:            "8f3862ae378dd82f7aadc88cf7e3bbc44f136fc511433d8ca06c40317af2ffa3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d7fb0e97e5baec5a6688559574300f15b3090e2323a28234ae9cdfb68276577b"
+    sha256 cellar: :any,                 x86_64_linux:      "d9396e4dc0a9a20b9004645f7d0b503320502dd50ceb6dbb3d2755b3c00796b4"
   end
 
   depends_on "go" => :build

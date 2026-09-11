@@ -12,12 +12,13 @@ class Gfold < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "db41a670045dc8a7876c729a952d1fba166f287eea7024b8719588f1da51e871"
-    sha256 cellar: :any,                 arm64_sequoia: "6ef51773366e7661f85473c36fce2dfea09653ae56caa817e0d5c83aaa25dc45"
-    sha256 cellar: :any,                 arm64_sonoma:  "4ede65914fa3dd5b43f7e247f74bcd091962e101e9f72b8d9af12b4dd13cc5d0"
-    sha256 cellar: :any,                 sonoma:        "528334f580d8869521b1b1d0ee3b8cd282c191f350596d77c49acef16a31d7f4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5907c31d6a83a8ec8f14c3aae1d282bd2bcb1d279532f7503562e9e232f90276"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0fd6dcad1f035d6dd3652a9a9ced56e2212a155a4428008e7cc09b4953fde63f"
+    sha256 cellar: :any,                 arm64_golden_gate: "86fa7007a5ca3a7577283409d7602507e1541b68f3bb43d56f70b20da5957449"
+    sha256 cellar: :any,                 arm64_tahoe:       "db41a670045dc8a7876c729a952d1fba166f287eea7024b8719588f1da51e871"
+    sha256 cellar: :any,                 arm64_sequoia:     "6ef51773366e7661f85473c36fce2dfea09653ae56caa817e0d5c83aaa25dc45"
+    sha256 cellar: :any,                 arm64_sonoma:      "4ede65914fa3dd5b43f7e247f74bcd091962e101e9f72b8d9af12b4dd13cc5d0"
+    sha256 cellar: :any,                 sonoma:            "528334f580d8869521b1b1d0ee3b8cd282c191f350596d77c49acef16a31d7f4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5907c31d6a83a8ec8f14c3aae1d282bd2bcb1d279532f7503562e9e232f90276"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0fd6dcad1f035d6dd3652a9a9ced56e2212a155a4428008e7cc09b4953fde63f"
   end
 
   depends_on "pkgconf" => :build

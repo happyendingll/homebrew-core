@@ -3,6 +3,7 @@
 First time contributing to Homebrew? Read our [Code of Conduct](https://github.com/Homebrew/.github/blob/HEAD/CODE_OF_CONDUCT.md#code-of-conduct).
 
 Ensure your commits follow the [commit style guide](https://docs.brew.sh/Formula-Cookbook#commit).
+Squash commits after updating a pull request so that each formula has one commit.
 
 ### "Artificial intelligence"/large language model (AI/LLM) usage
 
