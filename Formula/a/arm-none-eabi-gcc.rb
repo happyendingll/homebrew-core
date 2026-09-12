@@ -1,7 +1,7 @@
 class ArmNoneEabiGcc < Formula
   desc "GNU compiler collection for arm-none-eabi"
   homepage "https://gcc.gnu.org"
-  url "https://ftpmirror.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
+  url "https://ftpmirror.gnu.org/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
   sha256 "e6738e29597f733270731aa90600f37ffdc045079dfc27ec7e8192cc81085c3e"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
@@ -39,8 +39,8 @@ class ArmNoneEabiGcc < Formula
                              "--infodir=#{info}/#{target}",
                              "--disable-nls",
                              "--without-headers",
-                             "--with-as=#{Formula["arm-none-eabi-binutils"].bin}/arm-none-eabi-as",
-                             "--with-ld=#{Formula["arm-none-eabi-binutils"].bin}/arm-none-eabi-ld",
+                             "--with-as=#{formula_opt_bin("arm-none-eabi-binutils")}/arm-none-eabi-as",
+                             "--with-ld=#{formula_opt_bin("arm-none-eabi-binutils")}/arm-none-eabi-ld",
                              "--enable-languages=c,c++,objc,lto",
                              "--enable-lto",
                              "--enable-multilib",
@@ -69,6 +69,6 @@ class ArmNoneEabiGcc < Formula
     C
     system bin/"arm-none-eabi-gcc", "-c", "-o", "test-c.o", "test-c.c"
     assert_match "file format elf32-littlearm",
-                 shell_output("#{Formula["arm-none-eabi-binutils"].bin}/arm-none-eabi-objdump -a test-c.o")
+                 shell_output("#{formula_opt_bin("arm-none-eabi-binutils")}/arm-none-eabi-objdump -a test-c.o")
   end
 end

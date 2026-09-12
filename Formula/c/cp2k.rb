@@ -77,6 +77,6 @@ class Cp2k < Formula
       refute Utils.binary_linked_to_library?(lib/"libcp2k.dylib", libgomp), "Unwanted linkage to libgomp!"
     end
 
-    system Formula["open-mpi"].bin/"mpirun", bin/"cp2k.psmp", pkgshare/"tests/water.inp"
+    system formula_opt_bin("open-mpi")/"mpirun", bin/"cp2k.psmp", pkgshare/"tests/water.inp"
   end
 end

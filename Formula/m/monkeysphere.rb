@@ -53,7 +53,7 @@ class Monkeysphere < Formula
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["gnu-sed"].libexec/"gnubin"
+    ENV.prepend_path "PATH", formula_opt_libexec("gnu-sed")/"gnubin"
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
 
     resources.each do |r|

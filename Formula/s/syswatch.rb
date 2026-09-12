@@ -1,16 +1,16 @@
 class Syswatch < Formula
   desc "Cross-platform system diagnostics TUI"
   homepage "https://www.netwatchlabs.com/labs/syswatch"
-  url "https://github.com/matthart1983/syswatch/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "86b3b897573b2e7a6772f508be1ff10a2efe2fb591d666ffd5aa182ba55e64cc"
+  url "https://github.com/matthart1983/syswatch/archive/refs/tags/v0.14.1.tar.gz"
+  sha256 "c76f0f9f29044f6854edf5280533d0c560d3a52302c134dd37223e222cc86148"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8657404c6090d13d34ee7ae81dacddf0ed422b9ae80b376ead1e47083a923cc8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7bd260c2990dcf68e4bc6ca1756d9bd602def131e46aebf60e1ff3cc27de1937"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a1eebb6da0ec629df09546523b7836a8eba735811439c847e9462555c3465ff"
-    sha256 cellar: :any,                 arm64_linux:       "c53b6d042122c94be6fcadc95414d52de7cbe4e902c6d03bf2db4b0c8955098d"
-    sha256 cellar: :any,                 x86_64_linux:      "cf41c3a45eeacac57464938d5a18c7f2295506d4748b2d279491c1975ee9bf40"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9b8c5a1f185bdc4a3927401d8a3d4c88d1cbde6d7747895d9e0743de9ffd9f75"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f6e5d1394f3b06418b657b04487d6327e9a510a7b807d0b628805ad76ec69328"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7cdad0285df290844cfebf5b88edfe92e896768a590beb5dd7603c73e25b5fa9"
+    sha256 cellar: :any,                 arm64_linux:       "a2033119b94c264b659848bfcdb50321211ede0a0a541cb7dc75c72657d58502"
+    sha256 cellar: :any,                 x86_64_linux:      "641b381b742a74b124f089fc799659351b86e016511b1645c43d5450b6d176b4"
   end
 
   depends_on "rust" => :build

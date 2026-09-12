@@ -23,7 +23,7 @@ class MathComp < Formula
   depends_on "rocq-micromega-plugin"
 
   def install
-    ENV["OCAMLFIND_CONF"] = Formula["rocq-elpi"].libexec/"lib/findlib.conf"
+    ENV["OCAMLFIND_CONF"] = formula_opt_libexec("rocq-elpi")/"lib/findlib.conf"
     ENV.prepend_path "OCAMLPATH", formula_opt_lib("rocq-micromega-plugin")/"ocaml"
 
     system "make"
@@ -41,8 +41,8 @@ class MathComp < Formula
       Check test.
     ROCQ
 
-    ENV["OCAMLFIND_CONF"] = Formula["rocq-elpi"].libexec/"lib/findlib.conf"
+    ENV["OCAMLFIND_CONF"] = formula_opt_libexec("rocq-elpi")/"lib/findlib.conf"
     ENV.prepend_path "OCAMLPATH", formula_opt_lib("rocq-micromega-plugin")/"ocaml"
-    assert_match(/\Atest\s+: forall/, shell_output("#{Formula["rocq"].bin}/rocq compile testing.v"))
+    assert_match(/\Atest\s+: forall/, shell_output("#{formula_opt_bin("rocq")}/rocq compile testing.v"))
   end
 end

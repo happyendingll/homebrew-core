@@ -10,11 +10,6 @@ class Awsume < Formula
   revision 1
   head "https://github.com/trek10inc/awsume.git", branch: "master"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "912c294f4270cad32ba129a55ad7de6f297a22fcc7af22a62eddeacf4b6e2d46"
     sha256 cellar: :any,                 arm64_sequoia: "85513d3816f52eb95a95979227e54763f8f8c977c29910155f41d80169481dcc"
@@ -23,6 +18,10 @@ class Awsume < Formula
     sha256 cellar: :any_skip_relocation, arm64_linux:   "a750c88a9b764ab55a9ad12c108a422846955f417332ed9c95b4032755938a66"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "35d320dcce1421dab098f6a23f083b3d740a82d67a992db3242778fa48cccf60"
   end
+
+  # https://github.com/trek10inc/awsume/blob/master/README.md
+  deprecate! date: "2026-09-11", because: :deprecated_upstream, replacement_formula: "awscli"
+  disable! date: "2027-09-11", because: :deprecated_upstream, replacement_formula: "awscli"
 
   depends_on "libyaml"
   depends_on "python@3.14"

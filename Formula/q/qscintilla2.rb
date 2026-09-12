@@ -109,7 +109,7 @@ class Qscintilla2 < Formula
     ENV["LC_ALL"] = "en_US.UTF-8"
     ENV["QT_QPA_PLATFORM"] = "minimal" if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
-    system Formula["qtbase"].bin/"qmake"
+    system formula_opt_bin("qtbase")/"qmake"
     system "make"
     assert_equal "homebrew", shell_output("./test")
 

@@ -1,7 +1,7 @@
 class X8664ElfGcc < Formula
   desc "GNU compiler collection for x86_64-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftpmirror.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
+  url "https://ftpmirror.gnu.org/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
   sha256 "e6738e29597f733270731aa90600f37ffdc045079dfc27ec7e8192cc81085c3e"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
@@ -39,8 +39,8 @@ class X8664ElfGcc < Formula
                              "--disable-nls",
                              "--without-isl",
                              "--without-headers",
-                             "--with-as=#{Formula["x86_64-elf-binutils"].bin}/x86_64-elf-as",
-                             "--with-ld=#{Formula["x86_64-elf-binutils"].bin}/x86_64-elf-ld",
+                             "--with-as=#{formula_opt_bin("x86_64-elf-binutils")}/x86_64-elf-as",
+                             "--with-ld=#{formula_opt_bin("x86_64-elf-binutils")}/x86_64-elf-ld",
                              "--with-system-zlib",
                              "--enable-languages=c,c++"
       system "make", "all-gcc"
@@ -64,7 +64,7 @@ class X8664ElfGcc < Formula
     C
 
     system bin/"x86_64-elf-gcc", "-c", "-o", "test-c.o", "test-c.c"
-    output = shell_output("#{Formula["x86_64-elf-binutils"].bin}/x86_64-elf-objdump -a test-c.o")
+    output = shell_output("#{formula_opt_bin("x86_64-elf-binutils")}/x86_64-elf-objdump -a test-c.o")
     assert_match "file format elf64-x86-64", output
   end
 end

@@ -28,7 +28,7 @@ class CargoSweep < Formula
 
   test do
     assert_equal "cargo-sweep #{version}", shell_output("#{bin}/cargo-sweep -V").strip
-    ENV.prepend_path "PATH", Formula["rustup"].bin
+    ENV.prepend_path "PATH", formula_opt_bin("rustup")
     system "rustup", "set", "profile", "minimal"
     system "rustup", "default", "beta"
 

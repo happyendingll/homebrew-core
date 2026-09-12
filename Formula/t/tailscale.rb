@@ -22,7 +22,12 @@ class Tailscale < Formula
 
   depends_on "go" => :build
 
-  conflicts_with cask: "tailscale-app"
+  # `test do` block runs tailscaled, which attempts network connections
+  deny_network_access! [:build, :postinstall]
+
+  def fetch
+    system "go", "mod", "download"
+  end
 
   def install
     vars = Utils.safe_popen_read("./build_dist.sh", "shellvars")

@@ -2,7 +2,7 @@ class GnuWhich < Formula
   desc "GNU implementation of which utility"
   # Previous homepage is dead. Have linked to the GNU Projects page for now.
   homepage "https://savannah.gnu.org/projects/which/"
-  url "https://ftpmirror.gnu.org/gnu/which/which-2.25.tar.gz"
+  url "https://ftpmirror.gnu.org/which/which-2.25.tar.gz"
   mirror "https://ftp.gnu.org/gnu/which/which-2.25.tar.gz"
   sha256 "1cb83e4f702e60b8211ab5ec4c2afbab1b1dec80209456a7d2faf7584ed225ea"
   license "GPL-3.0-or-later"

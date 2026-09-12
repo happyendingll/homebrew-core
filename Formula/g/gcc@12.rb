@@ -1,7 +1,7 @@
 class GccAT12 < Formula
   desc "GNU compiler collection"
   homepage "https://gcc.gnu.org/"
-  url "https://ftpmirror.gnu.org/gnu/gcc/gcc-12.5.0/gcc-12.5.0.tar.xz"
+  url "https://ftpmirror.gnu.org/gcc/gcc-12.5.0/gcc-12.5.0.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gcc/gcc-12.5.0/gcc-12.5.0.tar.xz"
   sha256 "71cd373d0f04615e66c5b5b14d49c1a4c1a08efa7b30625cd240b11bab4062b3"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
@@ -57,6 +57,14 @@ class GccAT12 < Formula
       type :unofficial
     end
   end
+  # Backport the Darwin fix for C11 keywords in C++ system headers.
+  # https://github.com/iains/gcc-13-branch/commit/dea972ef87154580730f76d92e813e93b18db846
+  patch do
+    on_macos do
+      file "Patches/gcc/gcc-12.5.0-alignof.diff"
+      type :unofficial
+    end
+  end
 
   def install
     # GCC will suffer build errors if forced to use a particular linker.
@@ -98,8 +106,8 @@ class GccAT12 < Formula
 
       # Work around a bug in Xcode 15's new linker (FB13038083)
       if DevelopmentTools.clang_build_version >= 1500
-        toolchain_path = "/Library/Developer/CommandLineTools"
-        args << "--with-ld=#{toolchain_path}/usr/bin/ld-classic"
+        classic_ld = Pathname("/Library/Developer/CommandLineTools/usr/bin/ld-classic")
+        args << "--with-ld=#{classic_ld}" if classic_ld.executable?
       end
     else
       # Fix Linux error: gnu/stubs-32.h: No such file or directory.

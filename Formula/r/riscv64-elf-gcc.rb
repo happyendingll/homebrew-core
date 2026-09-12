@@ -1,7 +1,7 @@
 class Riscv64ElfGcc < Formula
   desc "GNU compiler collection for riscv64-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftpmirror.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
+  url "https://ftpmirror.gnu.org/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz"
   sha256 "e6738e29597f733270731aa90600f37ffdc045079dfc27ec7e8192cc81085c3e"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
@@ -39,8 +39,8 @@ class Riscv64ElfGcc < Formula
                              "--disable-nls",
                              "--without-isl",
                              "--without-headers",
-                             "--with-as=#{Formula["riscv64-elf-binutils"].bin}/riscv64-elf-as",
-                             "--with-ld=#{Formula["riscv64-elf-binutils"].bin}/riscv64-elf-ld",
+                             "--with-as=#{formula_opt_bin("riscv64-elf-binutils")}/riscv64-elf-as",
+                             "--with-ld=#{formula_opt_bin("riscv64-elf-binutils")}/riscv64-elf-ld",
                              "--with-system-zlib",
                              "--enable-languages=c,c++"
       system "make", "all-gcc"
@@ -64,6 +64,6 @@ class Riscv64ElfGcc < Formula
     C
     system bin/"riscv64-elf-gcc", "-c", "-o", "test-c.o", "test-c.c"
     assert_match "file format elf64-littleriscv",
-                 shell_output("#{Formula["riscv64-elf-binutils"].bin}/riscv64-elf-objdump -a test-c.o")
+                 shell_output("#{formula_opt_bin("riscv64-elf-binutils")}/riscv64-elf-objdump -a test-c.o")
   end
 end

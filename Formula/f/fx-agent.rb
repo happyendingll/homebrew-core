@@ -12,11 +12,12 @@ class FxAgent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b3429a241d73d614f975e5c7fe823f93965b4f716657083c7a9cd22c8dbe53c9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a98fd3159c53538573c694af2067b903db29c66a3f5feda74208f0f9d61607dc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "321d5296b37b6248a058e7745cfea7198aa0378f3ddadc2b79c402635c0f9e5c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "937167fb1f969c354585e623d0f0b844858e35832f44fbca99e3f12c2af3e0b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25865224bc7f14878e86f6407fc6a05ba3cfeac810a0f4aa13ecd266fa435ce9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d7972548f15a5d0b7326812eb97f7132d68fb39e06c9ca0b47a38f048be045ba"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3429a241d73d614f975e5c7fe823f93965b4f716657083c7a9cd22c8dbe53c9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a98fd3159c53538573c694af2067b903db29c66a3f5feda74208f0f9d61607dc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "321d5296b37b6248a058e7745cfea7198aa0378f3ddadc2b79c402635c0f9e5c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "937167fb1f969c354585e623d0f0b844858e35832f44fbca99e3f12c2af3e0b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "25865224bc7f14878e86f6407fc6a05ba3cfeac810a0f4aa13ecd266fa435ce9"
   end
 
   depends_on "zig" => :build

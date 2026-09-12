@@ -262,37 +262,20 @@ class Gstreamer < Formula
     #   https://github.com/orgs/Homebrew/discussions/3740
     system bin/"gst-validate-launcher", "--usage"
 
+    # The macOS command-line tools start NSApplication even for plugin inspection.
     system python3, "-c", <<~PYTHON
       import gi
       gi.require_version('Gst', '1.0')
-      from gi.repository import Gst
+      gi.require_version('GES', '1.0')
+      from gi.repository import GES, Gst
       print (Gst.Fraction(num=3, denom=5))
+      print (GES.version())
+      Gst.init(None)
+      assert Gst.Registry.get().get_plugin_list()
+      for plugin in ["libav", "dvbsuboverlay", "volume", "cairo", "dvdsub", "x264", "rtspclientsink", "rsfile"]:
+          assert Gst.Plugin.load_by_name(plugin), plugin
+      assert Gst.ElementFactory.make("hlsdemux2", None)
     PYTHON
-
-    # FIXME: The initial plugin load takes a long time without extra permissions on
-    # macOS, which frequently causes the slower Intel macOS runners to time out.
-    # Need to allow a longer timeout or see if CI terminal can be made a developer tool.
-    #
-    # Ref: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/1119
-    skip_plugins = OS.mac? && Hardware::CPU.intel? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-    ENV["GST_PLUGIN_SYSTEM_PATH"] = testpath if skip_plugins
-
-    ENV["LC_ALL"] = "C"
-    ENV["LANG"] = "C"
-    gst_inspect_output = shell_output(bin/"gst-inspect-1.0")
-    assert_match(/Total count: \d+ plugins?/, gst_inspect_output)
-    return if skip_plugins
-
-    system bin/"ges-launch-1.0", "--ges-version"
-    system bin/"gst-inspect-1.0", "libav"
-    system bin/"gst-inspect-1.0", "--plugin", "dvbsuboverlay"
-    system bin/"gst-inspect-1.0", "--plugin", "volume"
-    system bin/"gst-inspect-1.0", "--plugin", "cairo"
-    system bin/"gst-inspect-1.0", "--plugin", "dvdsub"
-    system bin/"gst-inspect-1.0", "--plugin", "x264"
-    system bin/"gst-inspect-1.0", "--plugin", "rtspclientsink"
-    system bin/"gst-inspect-1.0", "--plugin", "rsfile"
-    system bin/"gst-inspect-1.0", "hlsdemux2"
   end
 end
 

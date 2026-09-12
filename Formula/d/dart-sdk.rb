@@ -36,10 +36,18 @@ class DartSdk < Formula
     ENV["DEPOT_TOOLS_UPDATE"] = "0"
     ENV.append_path "PATH", "#{buildpath}/depot-tools"
 
-    system "gclient", "config", "--name", "sdk", "https://dart.googlesource.com/sdk.git@#{version}"
+    # Roll clang to include lld support for arm64e.x1 targets in the macOS 27 SDK (llvm/llvm-project#222721)
+    # TODO: Remove when upstream rolls clang past that commit, see https://github.com/dart-lang/sdk/issues/64264
+    system "gclient", "config", "--name", "sdk",
+           "--custom-var", 'clang_version="git_revision:07d67299a15ce03b053736e2d31a668ee0576987"',
+           "https://dart.googlesource.com/sdk.git@#{version}"
     system "gclient", "sync", "--no-history"
 
     chdir "sdk" do
+      # The newer clang flags an unused variable in binaryen, which is built with -Werror
+      inreplace "third_party/binaryen/BUILD.gn", '"-Wno-unused-private-field",',
+                                                   "\\0\n        \"-Wno-unused-variable\","
+
       arch = Hardware::CPU.arm? ? "arm64" : "x64"
       system "./tools/build.py", "--mode=release", "--arch=#{arch}", "create_sdk"
       out = OS.linux? ? "out" : "xcodebuild"

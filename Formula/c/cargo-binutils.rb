@@ -28,7 +28,7 @@ class CargoBinutils < Formula
   test do
     # Show that we can use a different toolchain than the one provided by the `rust` formula.
     # https://github.com/Homebrew/homebrew-core/pull/134074#pullrequestreview-1484979359
-    ENV.prepend_path "PATH", Formula["rustup"].bin
+    ENV.prepend_path "PATH", formula_opt_bin("rustup")
     system "rustup", "set", "profile", "minimal"
     system "rustup", "default", "beta"
     system "rustup", "component", "add", "llvm-tools-preview"

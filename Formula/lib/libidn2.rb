@@ -1,7 +1,7 @@
 class Libidn2 < Formula
   desc "International domain name library (IDNA2008, Punycode and TR46)"
   homepage "https://www.gnu.org/software/libidn/#libidn2"
-  url "https://ftpmirror.gnu.org/gnu/libidn/libidn2-2.3.8.tar.gz"
+  url "https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz"
   mirror "https://ftp.gnu.org/gnu/libidn/libidn2-2.3.8.tar.gz"
   mirror "http://ftp.gnu.org/gnu/libidn/libidn2-2.3.8.tar.gz"
   sha256 "f557911bf6171621e1f72ff35f5b1825bb35b52ed45325dcdee931e5d3c0787a"
@@ -64,7 +64,7 @@ class Libidn2 < Formula
     args << "--with-libintl-prefix=#{formula_opt_prefix("gettext")}" if OS.mac?
 
     if build.head?
-      ENV.prepend_path "PATH", Formula["coreutils"].libexec/"gnubin" if OS.mac?
+      ENV.prepend_path "PATH", formula_opt_libexec("coreutils")/"gnubin" if OS.mac?
       system "./bootstrap", "--skip-po"
     end
     system "./configure", *args, *std_configure_args

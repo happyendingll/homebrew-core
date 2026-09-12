@@ -1,7 +1,7 @@
 class Ddd < Formula
   desc "Graphical front-end for command-line debuggers"
   homepage "https://www.gnu.org/software/ddd/"
-  url "https://ftpmirror.gnu.org/gnu/ddd/ddd-3.4.1.tar.gz"
+  url "https://ftpmirror.gnu.org/ddd/ddd-3.4.1.tar.gz"
   mirror "https://ftp.gnu.org/gnu/ddd/ddd-3.4.1.tar.gz"
   sha256 "b87517a6c3f9611566347e283a2cf931fa369919b553536a2235e63402f4ee89"
   license all_of: [
@@ -54,7 +54,7 @@ class Ddd < Formula
 
   def install
     # Use GNU sed due to ./unumlaut.sed: RE error: illegal byte sequence
-    ENV.prepend_path "PATH", Formula["gnu-sed"].libexec/"gnubin" if OS.mac?
+    ENV.prepend_path "PATH", formula_opt_libexec("gnu-sed")/"gnubin" if OS.mac?
 
     # Help configure find freetype headers
     ENV.append_to_cflags "-I#{formula_opt_include("freetype")}/freetype2"

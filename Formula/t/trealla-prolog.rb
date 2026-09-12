@@ -1,17 +1,17 @@
 class TreallaProlog < Formula
   desc "Compact and efficient ISO Prolog interpreter written in plain old C"
   homepage "https://github.com/trealla-prolog/trealla-prolog"
-  url "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.9.65.tar.gz"
-  sha256 "c132e318a691ed6ec1ce37f063f63aa0291f23415946e41647c5227180f176b3"
+  url "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.9.72.tar.gz"
+  sha256 "2751974b9425ee23874ca4e7d4a66c3fef4e70ecb9260060f302004bcbb979ac"
   license "MIT"
   head "https://github.com/trealla-prolog/trealla-prolog.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "34d70fdbae9a7367f8d29ad8d1a8b42f2b14a0c0bf8a71e1e0831346fe3cc8c2"
-    sha256 arm64_tahoe:       "07c3353b2d6d02a49cf180b308786c16c0f7ea011c6d871e9316443da9440f62"
-    sha256 arm64_sequoia:     "1c93757cae897eb438633c2a6a5d369356707af38368bd4ca7333d24e66d0e1f"
-    sha256 arm64_linux:       "9ff11f99bfdf633318f7bed568f44d06738e7bd08d2b928c3d1fe3de649691d9"
-    sha256 x86_64_linux:      "f882778ff3373be2a17491c67f276311b21f8b2022d85e4d9328ab40a93fb55e"
+    sha256 arm64_golden_gate: "7051dda65a7cb8cffa0260886f4cf4cb7ea5437129d4387cc3a73cd6cf37301e"
+    sha256 arm64_tahoe:       "9ef001bf819c04836d2ac69ac01650ca0d8a8c7526f381b38c0cbc201d77629d"
+    sha256 arm64_sequoia:     "af6b17868d8e5b1c70dae6ffe90f14ddad5b6c0c9a1771296c942504ca30af49"
+    sha256 arm64_linux:       "1b6e5cee1edb680dbff28a8dc8c99b3e44828b59c9cf631e077e90f2c48c3e06"
+    sha256 x86_64_linux:      "40d309c03f4cef7f08fb11d235e5a5d5d1ac695bc12a30d3435b86790a21f984"
   end
 
   depends_on "openssl@4"

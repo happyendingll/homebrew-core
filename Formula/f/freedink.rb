@@ -1,19 +1,20 @@
 class Freedink < Formula
   desc "Portable version of the Dink Smallwood game engine"
   homepage "https://www.gnu.org/software/freedink/"
-  url "https://ftpmirror.gnu.org/gnu/freedink/freedink-109.6.tar.gz"
+  url "https://ftpmirror.gnu.org/freedink/freedink-109.6.tar.gz"
   sha256 "5e0b35ac8f46d7bb87e656efd5f9c7c2ac1a6c519a908fc5b581e52657981002"
   license "GPL-3.0-or-later"
   revision 1
 
   bottle do
     rebuild 2
-    sha256 arm64_tahoe:   "68cd1561bc7d6a477d2d3457a0c1867bf19cec00fd84c46f0fe74fd18d961cf1"
-    sha256 arm64_sequoia: "445ea09cf443c8f5b9bb1f67fc5de82f0735312169e3b009166e1d4ec0cf971b"
-    sha256 arm64_sonoma:  "ded6f2f34c6a7dd4e724b04a5fa6e315507f8154908609d81eb5d00d01f0f708"
-    sha256 sonoma:        "364f029de96f0aa207090ed4b64d8e4904138435724e4503545868b29e6cc3eb"
-    sha256 arm64_linux:   "435f2a3bc5473084034dd5052eda8f0e363674ea9bc59eae57b566274ca1f924"
-    sha256 x86_64_linux:  "1cf508674933d7217495e690ffa65a37280aab02d731b415a1613aecffaea5e6"
+    sha256 arm64_golden_gate: "df6e1ae1fd6b53bb8a09d7d1203e767c3c5ac3dbe39f1b832271178b29b796d5"
+    sha256 arm64_tahoe:       "68cd1561bc7d6a477d2d3457a0c1867bf19cec00fd84c46f0fe74fd18d961cf1"
+    sha256 arm64_sequoia:     "445ea09cf443c8f5b9bb1f67fc5de82f0735312169e3b009166e1d4ec0cf971b"
+    sha256 arm64_sonoma:      "ded6f2f34c6a7dd4e724b04a5fa6e315507f8154908609d81eb5d00d01f0f708"
+    sha256 sonoma:            "364f029de96f0aa207090ed4b64d8e4904138435724e4503545868b29e6cc3eb"
+    sha256 arm64_linux:       "435f2a3bc5473084034dd5052eda8f0e363674ea9bc59eae57b566274ca1f924"
+    sha256 x86_64_linux:      "1cf508674933d7217495e690ffa65a37280aab02d731b415a1613aecffaea5e6"
   end
 
   depends_on "glm" => :build
@@ -30,7 +31,7 @@ class Freedink < Formula
   end
 
   resource "freedink-data" do
-    url "https://ftpmirror.gnu.org/gnu/freedink/freedink-data-1.08.20190120.tar.gz"
+    url "https://ftpmirror.gnu.org/freedink/freedink-data-1.08.20190120.tar.gz"
     sha256 "715f44773b05b73a9ec9b62b0e152f3f281be1a1512fbaaa386176da94cffb9d"
 
     livecheck do

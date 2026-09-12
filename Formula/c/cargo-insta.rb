@@ -27,7 +27,7 @@ class CargoInsta < Formula
 
     # Show that we can use a different toolchain than the one provided by the `rust` formula.
     # https://github.com/Homebrew/homebrew-core/pull/134074#pullrequestreview-1484979359
-    ENV.prepend_path "PATH", Formula["rustup"].bin
+    ENV.prepend_path "PATH", formula_opt_bin("rustup")
     # Switch the default toolchain to nightly
     system "rustup", "default", "nightly"
     system "rustup", "set", "profile", "minimal"

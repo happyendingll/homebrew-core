@@ -80,6 +80,6 @@ class Qtvirtualkeyboard < Formula
 
     ENV["LC_ALL"] = "en_US.UTF-8"
     ENV["QT_QPA_PLATFORM"] = "minimal" if OS.linux?
-    system Formula["qtdeclarative"].bin/"qml", "test.qml"
+    system formula_opt_bin("qtdeclarative")/"qml", "test.qml"
   end
 end

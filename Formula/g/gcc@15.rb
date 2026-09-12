@@ -1,7 +1,7 @@
 class GccAT15 < Formula
   desc "GNU compiler collection"
   homepage "https://gcc.gnu.org/"
-  url "https://ftpmirror.gnu.org/gnu/gcc/gcc-15.3.0/gcc-15.3.0.tar.xz"
+  url "https://ftpmirror.gnu.org/gcc/gcc-15.3.0/gcc-15.3.0.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gcc/gcc-15.3.0/gcc-15.3.0.tar.xz"
   sha256 "fa59c1beef8995f27c4d71c1df227587189315d3e6faff1bb4306e61b0c530eb"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }

@@ -27,7 +27,7 @@ class WasmPack < Formula
   test do
     assert_match "wasm-pack #{version}", shell_output("#{bin}/wasm-pack --version")
 
-    ENV.prepend_path "PATH", Formula["rustup"].bin
+    ENV.prepend_path "PATH", formula_opt_bin("rustup")
     system "rustup", "set", "profile", "minimal"
     system "rustup", "default", "stable"
 

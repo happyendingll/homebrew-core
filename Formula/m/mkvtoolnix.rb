@@ -56,8 +56,6 @@ class Mkvtoolnix < Formula
     depends_on "zlib-ng-compat"
   end
 
-  conflicts_with cask: "mkvtoolnix-app"
-
   def install
     # Remove bundled libraries
     rm_r(buildpath.glob("lib/*") - buildpath.glob("lib/{avilib,librmff}*"))

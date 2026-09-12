@@ -290,8 +290,8 @@ class Csound < Formula
           }
       }
     JAVA
-    system Formula["openjdk"].bin/"javac", "-classpath", "#{libexec}/csnd6.jar", "test.java"
-    system Formula["openjdk"].bin/"java", "-classpath", "#{libexec}/csnd6.jar:.",
+    system formula_opt_bin("openjdk")/"javac", "-classpath", "#{libexec}/csnd6.jar", "test.java"
+    system formula_opt_bin("openjdk")/"java", "-classpath", "#{libexec}/csnd6.jar:.",
                                           "-Djava.library.path=#{libexec}", "test"
   end
 end
