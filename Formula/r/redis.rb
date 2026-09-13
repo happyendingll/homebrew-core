@@ -22,12 +22,8 @@ class Redis < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "b8605b39f8fc0ee614d59e2e24b3943823adb4efb9a884b5c854d30f9bae184d"
-    sha256 cellar: :any, arm64_tahoe:       "cc958259d62cfa7b13f9609eca12ec8c24f5e033e7356b5e68a9b4aaa855cc5c"
-    sha256 cellar: :any, arm64_sequoia:     "e516dbc5d61583511914c9a301b8d2ce5b2d69e069dadf1b44151a984a8b05b7"
-    sha256 cellar: :any, arm64_linux:       "dcbbabc443b0a19a31a184eee89b69b682b05ac834df0789d3c0c5e92305ba43"
-    sha256 cellar: :any, x86_64_linux:      "93dd800bc10884a868d69cfe92d988f817f83d62f16bc9388809fa3d0e793d1b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "4c38e79d2e0f8cd53074ea94cbdc648bdf4c2d4743b39b88054c6fabaa0bfc6f"
   end
 
   depends_on "autoconf" => :build

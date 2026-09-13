@@ -8,11 +8,8 @@ class Fzf < Formula
   head "https://github.com/junegunn/fzf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1094281c70e4304dd4e52bb5799dd0a15c8a229c1674ec1000de6238cc75e9fe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1094281c70e4304dd4e52bb5799dd0a15c8a229c1674ec1000de6238cc75e9fe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1094281c70e4304dd4e52bb5799dd0a15c8a229c1674ec1000de6238cc75e9fe"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7104102c94beaf32c253a7f31dbdb961fd1c773ca81c3aac8455d81b97a09ded"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "93912e54112d0acbf7790250e3cbef36a7bbe30526a45379505249d652288121"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "257c5d982f1a437a7f4a20b0827a4dc9734c8f583f8a9d8cfea10cb9a49bee88"
   end
 
   depends_on "go" => :build

@@ -15,11 +15,8 @@ class Mole < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "747bdaa331462eef34fee9ae1287ca35897f0d5607c75d0767443970cde84588"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42767ebd1781b9af3126bd6bba242ffee19e36c8b7fcc1653869f49b0ca276f1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd29730c66609303ed45cbcf3a492f6562439f3af0d68ac0235fe402725726f9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "f98a4a31efc3583a92cb3754418515c4ae12fb949340994e38aa8718ce6b987f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "5253c5e8cf3dd4dc5fdd765d0eb4f7562d1a573ba898473055607ae54c2a8235"
   end
 
   depends_on "go" => :build

@@ -14,11 +14,8 @@ class Topgrade < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a29c1ef79fd643715b348294517848a2b276264ed68d150dc4243a8e8bba10fd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5f63ca41045f89bb9e377da8788f3315765d4d8f96c97885e3e7fc4e098b87f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "299f2f0559e1a51dee7a39b39b9acb0bbf286d91b5d65ee71cd055d256610432"
-    sha256 cellar: :any,                 arm64_linux:       "6c6536b00e5f34c98fcac9904a14211d181a3afc41ec7ed85e042bc3600ced0a"
-    sha256 cellar: :any,                 x86_64_linux:      "27dafedde0135fdb169d9508e89b9207afea48ac93a4be435b7cfc6bf43f6b8e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "f2c08ed044027f3f4f0911d434071c7ac16294e5c70e6ae8baeda77f68ef52cd"
   end
 
   depends_on "rust" => :build

@@ -15,11 +15,8 @@ class OhMyPosh < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "74a42ef21fd37ab1db0d8f4d6aadb8f77b3afc5719b5c57f98eb009ee3ec29ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f1413cb26918f71282501f726749c8e34fba5131d0fbf5d7be579ea20a69f87e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6560b38be02f77b121551ce3d81f02a98139b6c3a70f56faa06eefe9f51333ed"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c64271b44e96b60b786b716b52280cf23b92f2b513ee70edb9238a17f1d48178"
-    sha256 cellar: :any,                 x86_64_linux:  "10a7b0df1986cc3fe999a0403849ce7a3ff3103f60154551d5a2010ca3da5afa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "6268868d2c75f611d68b2e78dd27acf70f4a56fba418f42087f283178ce87087"
   end
 
   depends_on "go" => :build

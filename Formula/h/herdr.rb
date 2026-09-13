@@ -12,11 +12,8 @@ class Herdr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c9c8778478c3e47edc2f944374fd444fcb736ce6f5884d89e131d74eb41242f5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ff3b064d1591a07ad16c14c76d89fd4d6f1c21735dd2363f5a26d37f5f9d052d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fda947866b0d96e8a204902338e8c6fc2c5355e7aa04d716c681d8dda7df8a70"
-    sha256 cellar: :any,                 arm64_linux:   "dc2940a96359fab617cf1c18881cd3fd8a6fd156a11f040a85ceef0fea12e0fc"
-    sha256 cellar: :any,                 x86_64_linux:  "93237c69194d2332df2ed8fd38bee203e25c56ba2d76198d192c8301b114660c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "aca8d616b57c9ae0a5ae620b99380d7483981770c74509236b21dae01b52ca4b"
   end
 
   depends_on "rust" => :build

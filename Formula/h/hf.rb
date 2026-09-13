@@ -9,11 +9,8 @@ class Hf < Formula
   head "https://github.com/huggingface/huggingface_hub.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2329013b372203a53abee7a2b586d9712d18b79637a589d691e808b66801065d"
-    sha256 cellar: :any, arm64_tahoe:       "88394715b65620ab9f76210b0f3df76d9fbd4c5cae990121158b4800ccfac800"
-    sha256 cellar: :any, arm64_sequoia:     "929830a712112ebfc92f7ad1c7b6611636d159bfcdc1588c58a91e2f27d68824"
-    sha256 cellar: :any, arm64_linux:       "9b6871bd56229155b60f722cba4b5b61d000cbc6c48cd797815b5c5b8314c08f"
-    sha256 cellar: :any, x86_64_linux:      "442d86bb44982b885323b1b67ed696d39007a7404290efa935345d00e427ec10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "17445de726dab24afa6ab88e728c2a74cae1e547f08bc0ff37481dc8d827a9af"
   end
 
   depends_on "pkgconf" => :build

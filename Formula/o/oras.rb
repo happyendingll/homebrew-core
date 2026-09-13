@@ -12,12 +12,8 @@ class Oras < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "40e443807ac98f5dd3f21b92ce0f34c001d81ff0430e3d0d32686eaad44f3b4b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1749e36c351467261a270c29a89f0e87059829f56899f0a6dcdd8a3938fb833e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1749e36c351467261a270c29a89f0e87059829f56899f0a6dcdd8a3938fb833e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "1749e36c351467261a270c29a89f0e87059829f56899f0a6dcdd8a3938fb833e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "292ce96bfa33eca540ba1ebf6297ffb180c131f0908482edf3fe45672759edea"
-    sha256 cellar: :any,                 x86_64_linux:      "ce9c2d062d70f4cd4a627fa2bc566e5c4df150298b3ac69d95fe6e3841984229"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "f4ad03fb034c1f18cb60b11a991c3c7475e789c9863d4936dfdfa4429b0ab5cf"
   end
 
   depends_on "go" => :build

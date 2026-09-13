@@ -7,12 +7,8 @@ class AwsCIo < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2ec493e1ab13a40ced07a5b7203b2a8cd2ef607547bd9a0543f7ca56a0aa18e4"
-    sha256 cellar: :any, arm64_tahoe:       "65af61010890938814768b618a543ab222ab760ad19a08e8c7e6e075d03d16dd"
-    sha256 cellar: :any, arm64_sequoia:     "85e9dc2ac23c5d280e71e3f71b7107385282f3fb2cc2206a1bb5d8e6a7e2852d"
-    sha256 cellar: :any, arm64_sonoma:      "290d7a03edbc9c44a563458520150777ceb1474514bb53f54a2f8aa560f126ac"
-    sha256 cellar: :any, arm64_linux:       "dda27f924d1af2035f485ac5324803482d396ac4de993e2b4151f45a47632aa9"
-    sha256 cellar: :any, x86_64_linux:      "4c0b9176cfa29cde228f14084758627c0c584c934ac3968313ed39416f5fb587"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "a97347aad2b4a065d47ab21f866733ea14ddccbc9161d01927685ae48d028649"
   end
 
   depends_on "cmake" => :build

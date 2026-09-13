@@ -15,12 +15,8 @@ class Nginx < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "eb6b4cb0ca2fea40f687dc9d8e45c4e698a92d4ee3338c07b4da6c091f1c4668"
-    sha256 arm64_tahoe:       "2285e889a085372c5165266cd9f364dee9219593b1903783498b763b8973f93b"
-    sha256 arm64_sequoia:     "9a7a468f0702b6e2dc423af5bc95b4b0ac6768d16e42cb9fcfba6634c48e409b"
-    sha256 arm64_sonoma:      "a41fc855d10b32a7b630e17bd408d1f62ebf1037585bbe564cfb70b6e641a283"
-    sha256 arm64_linux:       "0637837a24ae15f8bc955f592dfcf41ea22868bcdf790717003135a6e971d89d"
-    sha256 x86_64_linux:      "2dbdb48babfc0854407447bd878645694d12b2c166a12f3852904c1c05f51c75"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "622b52b0aa23ef8868899d31f2103c5622849e62aa4ff9304d586ff69b4c6480"
   end
 
   depends_on "openssl@3"

@@ -12,12 +12,8 @@ class Gtkx3 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "846fdb9b039227c2f1a69709dad0390b3fb371f0eb29b84545214b8337e50eed"
-    sha256 arm64_tahoe:       "876a6859aa6618e476e0aa530918a686aa4a802e5fef602626ccd0ee5c545ea7"
-    sha256 arm64_sequoia:     "6ee9037312d555abef508aa0dbbb1c8dd4f3e6565245266d298c4ed1a6efa67e"
-    sha256 arm64_linux:       "0a180c47d631b683c752411f0fdaebde43dc8ecf1062c35365eaed41e05ba0fd"
-    sha256 x86_64_linux:      "5396f5547b354dd8448e30603aa177e5b9424c95425673dce4098c198a52648f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "a8d434e3b9140896bc846876b431b926fff97485830dd60fd6c4915e73fd1f07"
   end
 
   depends_on "docbook" => :build

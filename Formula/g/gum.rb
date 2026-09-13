@@ -8,11 +8,8 @@ class Gum < Formula
   head "https://github.com/charmbracelet/gum.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a14d2861ff1a4e86b07abedb7e6b5715c39e64c66c9a0d392e6f0871ddfbb6cb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a14d2861ff1a4e86b07abedb7e6b5715c39e64c66c9a0d392e6f0871ddfbb6cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a14d2861ff1a4e86b07abedb7e6b5715c39e64c66c9a0d392e6f0871ddfbb6cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "57ca4d607f804b079dd431837ad85bce1110d80b9f20b6da7b1497004e100f73"
-    sha256 cellar: :any,                 x86_64_linux:      "56a727a82cfd54775cfc550634b3c6da4bf4b7001fbc038cf9b9deb5f434961c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "6d7b6223b41da63646bfbd5d2024112631025a96f0d55cde5ad40f19af5d0cce"
   end
 
   depends_on "go" => :build

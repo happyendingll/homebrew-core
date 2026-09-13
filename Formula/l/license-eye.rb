@@ -8,11 +8,8 @@ class LicenseEye < Formula
   head "https://github.com/apache/skywalking-eyes.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "859a34afb8a63a1c46aedbf8d735269f2e0b463e45d8a706c380387f2316ba07"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "859a34afb8a63a1c46aedbf8d735269f2e0b463e45d8a706c380387f2316ba07"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "859a34afb8a63a1c46aedbf8d735269f2e0b463e45d8a706c380387f2316ba07"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7aa8766beb6a6586b09f8b23eea4d55f922b0ef0420dfe86f03fe682d62795f7"
-    sha256 cellar: :any,                 x86_64_linux:  "da770b0713952cf3c2ba72d7471231568c2e04547a7e70801a80f43376682ac4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "60031ffbe392fab5632dbec7672e9e7f7051a3009444e70e2ed6bdcc79b4e15a"
   end
 
   depends_on "go" => :build

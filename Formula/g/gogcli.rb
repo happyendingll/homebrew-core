@@ -7,11 +7,8 @@ class Gogcli < Formula
   head "https://github.com/openclaw/gogcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7cf9c5003ca6831da314a341ee9ba8fbf0429a357d74ef580185be4a7eb12bc9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0e15f5cf8a3f854a2051aecec6efa668e26dd517574a2d7b72b157390879fab6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d9349190acda98e2a7a355912164b2206e91142f018dbac69bbde77baa2e1282"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fcec14cbd765af6e0a2df606f3c6edeee252832fda7091706f93425577b89cea"
-    sha256 cellar: :any,                 x86_64_linux:      "a108470ada5c7bc64efad39e5526497bc6533107273471e580458f156a7b1df1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "bce66f0c612c7c73c26c8ac576a82b49a643dcb74c515055196e6bb48c2afe55"
   end
 
   depends_on "go" => :build

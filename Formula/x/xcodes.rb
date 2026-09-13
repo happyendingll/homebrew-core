@@ -11,9 +11,8 @@ class Xcodes < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "293fc783fe123d6964c9d7bf5e06d020e04c98c3e2b8d98183a6fbc65f868527"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c372609e4c77866cb942add04f9f45d7f5cab96dc819a513ba26c9fc823aa26b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "5dd02a18c3bde83510a77ad955ec4585b8be22fa36d4d27c7d2b57bf163593e5"
   end
 
   depends_on macos: :sequoia # older SDK fail to build on non-'Sendable' type 'Logger'
