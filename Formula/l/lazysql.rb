@@ -12,11 +12,8 @@ class Lazysql < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "887ed35fb2af3135dad54106147a99f65c286312fa8f97d81f79a3da24addd53"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "887ed35fb2af3135dad54106147a99f65c286312fa8f97d81f79a3da24addd53"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "887ed35fb2af3135dad54106147a99f65c286312fa8f97d81f79a3da24addd53"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c0f58f583d8572bbc9b5ee2cd0bd67ab0cb4432a139ccc445cf69ec69b58f3d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f4a26ad3be58ad4cd98b2bd08166d1b4a8c6547f19ce0c5ed0bf3507160fcad5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "9ef158ee32ddaaea9c6201fdfce177bca4a868de6d76f94d3509f148dbb5b184"
   end
 
   depends_on "go" => :build

@@ -15,12 +15,8 @@ class Dpkg < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "efac76efc3e7ad6146e2701a419cc53db5fcffb0d8715b3e159f69e61f810af2"
-    sha256 arm64_tahoe:       "2e8f0c40856fee017101f543cb1cdeb98372375646db9b0696bab7729c3cae87"
-    sha256 arm64_sequoia:     "6fdb259935e3f5640fdb10e177d039d341bdfd7208d8488139b0d204b4107ebf"
-    sha256 arm64_sonoma:      "dc98e851918fa450cde174b588daf2f83812d584f9342d38c1def7dc1d43b28b"
-    sha256 arm64_linux:       "92bddce29c53cebe61d4279fd3b13879945ec79db656b844f96b8615a3f884d9"
-    sha256 x86_64_linux:      "8a3ff50cf54a6cfb738f78256bed0f037aa09b6fadb6091ee9fce029edd3031e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "f3da6cc4b3b7cb4b2d3cf9124398e7f56a475e2f17417bbdb898fb6ea0206fcc"
   end
 
   depends_on "pkgconf" => :build

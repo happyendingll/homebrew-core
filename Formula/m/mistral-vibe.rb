@@ -9,12 +9,8 @@ class MistralVibe < Formula
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "53b76229238b5dd7e39d6489db0a6fa4de3f075091e7761b096fdabd49059ccf"
-    sha256 cellar: :any, arm64_tahoe:       "87a4b8d0fdb04f72c89465e80ecedca4ad25e7929c511dd5ab2cdc5bdb4faff3"
-    sha256 cellar: :any, arm64_sequoia:     "e6ff8708254ff6be7a23e61d687649b9cf98fe98f4df0eabb946c844929a713b"
-    sha256 cellar: :any, arm64_sonoma:      "ebc9eb4519b6211868138639c27bc3da1ec36c53293a32d8438ea04c387bf9ac"
-    sha256 cellar: :any, arm64_linux:       "29ca3383a9ed9ff89bff70a8bcb6ed5ebe02be13122708112fab7872d3fe6c59"
-    sha256 cellar: :any, x86_64_linux:      "b87edf2b481afe6a23fc98c4c65f3341ddc9d385194499a15225bee0a634d700"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "ee9c9997acfa115fffdd178c8f439c600f3df5ed486fb603a28d1b15c9f23263"
   end
 
   depends_on "rust" => :build

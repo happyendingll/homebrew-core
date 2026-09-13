@@ -12,11 +12,8 @@ class Onnxruntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "800cb64e5bd26cb0fe2df27dd14342b4f6e033f1c20312e17c4069720c3d458d"
-    sha256 cellar: :any, arm64_tahoe:       "dcb82e256574ef422e023204ea9614c9e278073e6a1d1fca25d77822bb23e66e"
-    sha256 cellar: :any, arm64_sequoia:     "0724121a0429656f297e1b0e9b1fe599d957827dc7d22714acbaca94e33f8cb0"
-    sha256 cellar: :any, arm64_linux:       "efa4cee9bffe849bf131d8336ea855dd55ce7d30d06a4d7ebb8e4e4e10ff85bf"
-    sha256 cellar: :any, x86_64_linux:      "469261b277c54c903b657fa6735f461824b2e932db45082f64a65d8f0a182dc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "545e1087fb0af8581dac9031fe71831356892fc53dbaf2a43edafe00609a720a"
   end
 
   depends_on "boost" => :build

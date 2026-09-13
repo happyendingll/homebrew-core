@@ -7,12 +7,8 @@ class Croc < Formula
   head "https://github.com/schollz/croc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "91da297f178fd746dce5731dc03e6cd8006e9bba4430e028a6819737eee4dd9d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b871ef0aa22dad8b384332c1270cf8f8812722d49d6e5dad3293ac3b2bbbc2b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "358403b0e500576fd6dac87aff40ad8a88f17ca19d5d43f07265f35b70a34ecb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "0a64f87ee1c5e5d73c6fc9012b0f106b2e8d5b2d1e1c29a619ede8d08a6356b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3827af789c8c7692bdd3bfafc0d85a11c2f56dbe76a0c3a56af9f7bd92083322"
-    sha256 cellar: :any,                 x86_64_linux:      "8b7de69b7e87d49e6d104b9bd73aafcec9eb6c62a1b2ad11f59e091c35445cf6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "13781b64429705a63946c1b3379311d83a6207dd8fa1c1c8cb7e4463001d07e5"
   end
 
   depends_on "go" => :build

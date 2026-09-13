@@ -7,11 +7,8 @@ class Opa < Formula
   head "https://github.com/open-policy-agent/opa.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b55b3d9549ee2b96808ccda3d514f639034493015d9af2da45f3c7f1329de90a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ca3194c75bef725ff3d49e5dfc09c58ff9bb63d00e1eaf96a62531c598513bf3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5c87d497e9f924d5821909640629211bd12dbbfb4c770aa75a5c5498207ba82b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fbf3afa62105c7fa71507a699588d440ddce67d0f203d76d1a932d0e2ca1b0bb"
-    sha256 cellar: :any,                 x86_64_linux:  "5d0f778b7a36275c55c90b4a977db28db6b71499e0489bc7d4dd6aed42f5e61d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c6ed276049bdc9cf063b0425be0f5ee93d71f8106d1156d919507a490c6e707f"
   end
 
   depends_on "go" => :build

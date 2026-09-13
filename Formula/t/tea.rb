@@ -7,12 +7,8 @@ class Tea < Formula
   head "https://gitea.com/gitea/tea.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "677a799772b1a4fbf7c2c226cdd42e7c9ab836b1cdeacdc32b266c15f44b70e5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "677a799772b1a4fbf7c2c226cdd42e7c9ab836b1cdeacdc32b266c15f44b70e5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "677a799772b1a4fbf7c2c226cdd42e7c9ab836b1cdeacdc32b266c15f44b70e5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "677a799772b1a4fbf7c2c226cdd42e7c9ab836b1cdeacdc32b266c15f44b70e5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fcf3de9e67696dbcd4f9c2c4a51277e70bbc997c75d50c44faa0f507df1814fc"
-    sha256 cellar: :any,                 x86_64_linux:      "4c745d0d25e85a93f11252ec997fa4326c015813a678c4ddbb2ba81846f007d7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c0f27a3c3a9c8793b46813c254aea406f705676366e4511b1182b1db74487af7"
   end
 
   depends_on "go" => :build

@@ -7,12 +7,8 @@ class Ipatool < Formula
   head "https://github.com/majd/ipatool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "174061efc2fe51857c3e72f9feb6981d21a25260055e23a6a221f4cd37c35d78"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7ccf25212932d2ce6c25a847ba33e6affd3447251cebc4edffd6fde067ba2cd6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2031b6efdbbe183927c195b4c52b4fd26dac375634771a74918186b50611dad9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "781976115cc9e3af856bf0994bf43663667806b6390f6394429ae5f0092b25c5"
-    sha256 cellar: :any,                 arm64_linux:       "ed6dab4f402fb7b0a55d15749ea998d569157b8d9d569bdc3156f63ba425e0d5"
-    sha256 cellar: :any,                 x86_64_linux:      "c918c09600e20786ed37ea39c145da90837780ece8f848a5a31c170dc3fa6397"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b75f0dc43147e8413237ad0303e93db150832943c18b43cc2fb95334da15db3"
   end
 
   depends_on "go" => :build

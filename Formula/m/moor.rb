@@ -9,12 +9,8 @@ class Moor < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ddba716870db2e276dbdd591a12878faa0664911c1277f61dc592bc46a3e4ec5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ddba716870db2e276dbdd591a12878faa0664911c1277f61dc592bc46a3e4ec5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ddba716870db2e276dbdd591a12878faa0664911c1277f61dc592bc46a3e4ec5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "ddba716870db2e276dbdd591a12878faa0664911c1277f61dc592bc46a3e4ec5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "239a7cd4be302002ae5665e2affcd731adb41f3dd0ac15f566c774dc91570ba0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "49b7ccfae97c522fbff01039013ad2aa090bbdbcded189b66f63ea36ce153410"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "23af648db06fc4c37ad43355bdf5f10e4785b98e205464ebc5b8d5fccf672157"
   end
 
   depends_on "go" => :build

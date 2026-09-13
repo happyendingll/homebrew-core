@@ -10,12 +10,8 @@ class Repo < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bcaf963ab39402cda680c69ecdb0934c0c93a60af933adce4049ba0786f58fb1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bcaf963ab39402cda680c69ecdb0934c0c93a60af933adce4049ba0786f58fb1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bcaf963ab39402cda680c69ecdb0934c0c93a60af933adce4049ba0786f58fb1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "bcaf963ab39402cda680c69ecdb0934c0c93a60af933adce4049ba0786f58fb1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "00f3c1233eb2c3cbb86e75b0b4c08dce5b89ab03d17d45293160210d38b559a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "00f3c1233eb2c3cbb86e75b0b4c08dce5b89ab03d17d45293160210d38b559a9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "2b638e6af77c37da5e8aa2b1410b2ffcd5ec1c3a1a7e648d062d0010c1968e3f"
   end
 
   uses_from_macos "python"

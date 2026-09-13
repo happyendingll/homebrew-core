@@ -13,8 +13,8 @@ class Xz < Formula
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "1fdd8b21a8500839cdb78688605ec95cd885923fecbd87c12e89ac330cdf44b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "6b958311e9568372a79c5dafcd91e16d2deb19a079b69c6861307ac27644b534"
   end
 
   deny_network_access!

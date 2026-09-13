@@ -13,12 +13,8 @@ class Groonga < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "fbc82c5ea5d1e694bb4ac5edc7035777d22caa24d394caa0a6d2b8f871a8aab8"
-    sha256 arm64_tahoe:       "2f3a018707798707291e6c442cdda9d632d215f4e873ccbbfb54b67c23f32a6c"
-    sha256 arm64_sequoia:     "c868a43320085353e5daedd4dbab7524474b0ec8b555852bc14463df8ce7456a"
-    sha256 arm64_sonoma:      "0ccab59bdd01b386c27cde0bfd99aadbe0f93ec3b167d74a09077e28b55cbe04"
-    sha256 arm64_linux:       "92646a0ba1b3bd54e8b6c14289dfe4730e0668bfb1f576fba0e352525178a6c7"
-    sha256 x86_64_linux:      "ae2c60423b79d54ba3ca54afc35ae239fc4d6ca27fa2fb66c0f62b1aa45b7c59"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "5f18e88fabd3a451311667a7ba8e8e394f45560f61d4ff0f1e2f657f4591984c"
   end
 
   depends_on "cmake" => :build

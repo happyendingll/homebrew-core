@@ -13,13 +13,8 @@ class Wxwidgets < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "a2198377ecf2fd43016cd085d8b9b33634f46aa065a3e06d8d24ae650658dac2"
-    sha256 cellar: :any, arm64_tahoe:       "909e4774c9fef932d748395df974a1699501269e45edd0ff4a0bd35dd4ccf53c"
-    sha256 cellar: :any, arm64_sequoia:     "87adb1625022395551fe1b18c3212b781b2f3334382ff62fccbf45a73ba3f8e1"
-    sha256 cellar: :any, arm64_sonoma:      "f713a430fa37bb1297324dfad2429d25a8b2b5fdabd647fcc1b6a612c035366f"
-    sha256 cellar: :any, arm64_linux:       "00883dec5886b990d41989178a1b5416e3e0abb753766c85aafb3255106e8b24"
-    sha256 cellar: :any, x86_64_linux:      "7cf1e5058bfdd523e070a11395e79009e31684044a780cd793352195069faf1a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "94ebc2c3e6c7d250f8c59651d03c52f162c56aa270aa726bbc6c11aaf337cf4e"
   end
 
   depends_on "pkgconf" => :build

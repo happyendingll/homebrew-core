@@ -13,11 +13,8 @@ class Glslang < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dade50f46a565446c6117d85146e9009dea0189816e40538b547b0b6eb9ba983"
-    sha256 cellar: :any, arm64_tahoe:       "8e5095c5d55b0500675deefbf8589c6e56cc777ba6f66f63e24a2c09b42710ea"
-    sha256 cellar: :any, arm64_sequoia:     "e01d94f1d826e20d371db8a57de601128ebc273b6998eb87c038a3569153c78e"
-    sha256 cellar: :any, arm64_linux:       "4ebcf1ec4dccea5ba915f05a2ca05306bc0bb55b2c124af9a20fa4c72ba131cd"
-    sha256 cellar: :any, x86_64_linux:      "99ac0081b3bf04ae961638bed526d5e3e381f41084c2bbff79a1c639cd8820f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "1ae39229eba21267680f2dde1f118838830ca08386df58dbd94683e5c19791a4"
   end
 
   depends_on "cmake" => :build
