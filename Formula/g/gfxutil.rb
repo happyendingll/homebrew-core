@@ -18,14 +18,10 @@ class Gfxutil < Formula
   depends_on :macos
 
   resource "edk2" do
-    # Pulls the AUDK from acidanthera's repo. The checkout is necessary
-    # compared to pulling a tarball as GitHub's link to download a branch will
-    # always pull the latest commit, and this allows us to pin a specific
-    # commit. The revision is the current (2024-08-09T11:25:00-05:00) latest
-    # commit in the stable branch.
-    url "https://github.com/acidanthera/audk.git",
-        branch:   "audk-stable-202311",
-        revision: "cf294d66704d797e2ebb73cc7d04c5b322c543da"
+    # The revision is the current (2024-08-09T11:25:00-05:00) latest
+    # commit in the audk-stable-202311 branch.
+    url "https://github.com/acidanthera/audk/archive/cf294d66704d797e2ebb73cc7d04c5b322c543da.tar.gz"
+    sha256 "643d475eb5879428c8beb6e18092d1e4ebc609a859f8dcd34b12f43c0ceb9f4a"
   end
 
   def install

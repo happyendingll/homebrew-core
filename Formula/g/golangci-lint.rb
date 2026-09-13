@@ -14,6 +14,12 @@ class GolangciLint < Formula
 
   depends_on "go"
 
+  deny_network_access!
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     ldflags = %W[
       -X main.version=#{version}

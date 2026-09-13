@@ -14,6 +14,13 @@ class Helm < Formula
 
   depends_on "go" => :build
 
+  deny_network_access!
+
+  def fetch
+    # `make build` runs `go mod tidy`, which needs the full module graph
+    system "go", "mod", "download", "all"
+  end
+
   def install
     system "make", "build"
     bin.install "bin/helm"

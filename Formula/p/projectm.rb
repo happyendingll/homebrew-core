@@ -50,7 +50,6 @@ class Projectm < Formula
   depends_on "sdl2-compat"
 
   on_linux do
-    depends_on "xorg-server" => :test
     depends_on "mesa"
   end
 
@@ -65,48 +64,54 @@ class Projectm < Formula
 
     (testpath/"test.cpp").write <<~CPP
       #include <libprojectM/projectM.hpp>
-      #include <SDL2/SDL.h>
-      #include <stdlib.h>
       #include <stdio.h>
+      #ifdef __APPLE__
+      #include <OpenGL/OpenGL.h>
+      #else
+      #include <EGL/egl.h>
+      #include <EGL/eglext.h>
+      #endif
+
+      // an offscreen GL context needs no display, so the test works in headless CI
+      static bool createGLContext()
+      {
+      #ifdef __APPLE__
+        CGLPixelFormatAttribute attrs[] = { kCGLPFAAllowOfflineRenderers, (CGLPixelFormatAttribute)0 };
+        CGLPixelFormatObj pix;
+        GLint npix;
+        CGLContextObj ctx;
+        return CGLChoosePixelFormat(attrs, &pix, &npix) == kCGLNoError && npix > 0 &&
+               CGLCreateContext(pix, NULL, &ctx) == kCGLNoError && CGLSetCurrentContext(ctx) == kCGLNoError;
+      #else
+        PFNEGLGETPLATFORMDISPLAYEXTPROC getPlatformDisplay =
+            (PFNEGLGETPLATFORMDISPLAYEXTPROC)eglGetProcAddress("eglGetPlatformDisplayEXT");
+        EGLDisplay dpy = getPlatformDisplay(EGL_PLATFORM_SURFACELESS_MESA, EGL_DEFAULT_DISPLAY, NULL);
+        if (dpy == EGL_NO_DISPLAY || !eglInitialize(dpy, NULL, NULL) || !eglBindAPI(EGL_OPENGL_API))
+          return false;
+        EGLContext ctx = eglCreateContext(dpy, EGL_NO_CONFIG_KHR, EGL_NO_CONTEXT, NULL);
+        return ctx != EGL_NO_CONTEXT && eglMakeCurrent(dpy, EGL_NO_SURFACE, EGL_NO_SURFACE, ctx);
+      #endif
+      }
 
       int main()
       {
-        // initialize SDL video + openGL
-        if (SDL_Init(SDL_INIT_VIDEO) < 0)
+        if (!createGLContext())
         {
-          fprintf(stderr, "Video init failed: %s", SDL_GetError());
+          fprintf(stderr, "GL context init failed");
           return 1;
         }
-        atexit(SDL_Quit);
-
-        SDL_Window *win = SDL_CreateWindow("projectM Test", 0, 0, 320, 240,
-                                          SDL_WINDOW_OPENGL | SDL_WINDOW_ALLOW_HIGHDPI);
-        SDL_GLContext glCtx = SDL_GL_CreateContext(win);
 
         auto *settings = new projectM::Settings();
         auto *pm = new projectM(*settings, projectM::FLAG_DISABLE_PLAYLIST_LOAD);
+        pm->renderFrame();
 
         // if we get this far without crashing we're in good shape
         return 0;
       }
     CPP
-    flags = shell_output("pkgconf libprojectM sdl2 --cflags --libs").split
+    flags = shell_output("pkgconf libprojectM #{"egl" if OS.linux?} --cflags --libs").split
+    flags += %w[-framework OpenGL -Wno-deprecated-declarations] if OS.mac?
     system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", *flags
-    pid = nil
-    if OS.linux?
-      # SDL3 (via sdl2-compat) fails if no video driver is available and "dummy" workaround doesn't work
-      IO.pipe do |read_io, write_io|
-        pid = spawn(Formula["xorg-server"].bin/"Xvfb", "-displayfd", write_io.fileno.to_s, write_io => write_io)
-        write_io.close
-        ENV["DISPLAY"] = ":#{read_io.read.strip}"
-      end
-    end
-
     system "./test"
-  ensure
-    if pid
-      Process.kill "TERM", pid
-      Process.wait pid
-    end
   end
 end

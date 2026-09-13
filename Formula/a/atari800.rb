@@ -1,8 +1,8 @@
 class Atari800 < Formula
   desc "Atari 8-bit machine emulator"
   homepage "https://atari800.github.io/"
-  url "https://github.com/atari800/atari800/releases/download/ATARI800_7_1_2/atari800-7.1.2-src.tgz"
-  sha256 "9602badfd7c45551cb5c4cc77f862af377c43a07caaa0bfc77ac87f9179673e3"
+  url "https://github.com/atari800/atari800/releases/download/ATARI800_7_2_1/atari800-7.2.1-src.tgz"
+  sha256 "b05b7b0932a19754eef42839aa0f04aa8a5ec1e55f51054ef3f802d83c7362f7"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -14,13 +14,11 @@ class Atari800 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dcedc8d12c8bc590f4d93129aea269be753d1c50573ab8a35370cccf84bd7c6e"
-    sha256 cellar: :any, arm64_tahoe:       "ead342a44a99702268f6ac063affae6865e23dbb958c5816bbd36d74bd7a5b76"
-    sha256 cellar: :any, arm64_sequoia:     "b4b5a4e801826dd486726a8ad2475115c3ebfdda8aad73bbb04fc2dd68c92a4b"
-    sha256 cellar: :any, arm64_sonoma:      "8a729644bf33cb139b3ba9b5402e9f7501784ffc3e6b9bba9f5a2c71700b1abc"
-    sha256 cellar: :any, sonoma:            "01da96e221060afbb1f74ce602208bc83a73653f287044b3cd1674028f3b24ff"
-    sha256 cellar: :any, arm64_linux:       "3ee1fbff7fa7788a73771565abf5e56632817bf0b9be2312ecd0183b94a656f8"
-    sha256 cellar: :any, x86_64_linux:      "36fa5a1669964012f938dbad4b4e4172376b38139ea2e74d9b428042f7fa125c"
+    sha256 cellar: :any, arm64_golden_gate: "e54b7c107c468e2faaa0c81276963e11a73a0331d8c67e1111903a2abe168d19"
+    sha256 cellar: :any, arm64_tahoe:       "1a78f160dba996f258401f98d546aa6a83e00db080b263399b908ea91be2ad9c"
+    sha256 cellar: :any, arm64_sequoia:     "fbd24a748d2f1e8af3765c2dc2da68cf1e2fba087d64ee76de2a31117f760dff"
+    sha256 cellar: :any, arm64_linux:       "f5645c9c4eb7b64d1780fdfe53f8b5e95aab0d6c89eb4c377f9539e04f33211c"
+    sha256 cellar: :any, x86_64_linux:      "f1ac9b0c5df11c54667b715bcf8a084ce7a48a73a6a484c80e32cf3d7650a1e9"
   end
 
   head do

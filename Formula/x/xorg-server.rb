@@ -12,12 +12,13 @@ class XorgServer < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "277d48e1ae129f621928d182dfb59d436bee94ef8c82f8ab18740b117b599ad0"
-    sha256 arm64_sequoia: "0d8b6a8652cae487783f961c1a6d0f77f64542ca0d3a268f4f0386005ec538ff"
-    sha256 arm64_sonoma:  "7d571a9fe7dbf3520b5059f25e6ccde4ceec3da503ae1c37df27052501fb4c32"
-    sha256 sonoma:        "d00d56efb37d75edfee2a1fc44a03d297904d6eaecdfaa4c88cdd659798ffb12"
-    sha256 arm64_linux:   "49ebbe4fc3a9117f274e5c1ab0f5e1c0942ab07fa855ac5c3b7086f8865390e3"
-    sha256 x86_64_linux:  "7c4871c037d6635b9d798825c58f1745d19d3fc4e29cf1c588bd758f7375c4ef"
+    sha256 arm64_golden_gate: "a77d9ab66a5ca4abefbc59e42f4ba8b5840f30a4dffb0c1d6e8c67aca1037708"
+    sha256 arm64_tahoe:       "277d48e1ae129f621928d182dfb59d436bee94ef8c82f8ab18740b117b599ad0"
+    sha256 arm64_sequoia:     "0d8b6a8652cae487783f961c1a6d0f77f64542ca0d3a268f4f0386005ec538ff"
+    sha256 arm64_sonoma:      "7d571a9fe7dbf3520b5059f25e6ccde4ceec3da503ae1c37df27052501fb4c32"
+    sha256 sonoma:            "d00d56efb37d75edfee2a1fc44a03d297904d6eaecdfaa4c88cdd659798ffb12"
+    sha256 arm64_linux:       "49ebbe4fc3a9117f274e5c1ab0f5e1c0942ab07fa855ac5c3b7086f8865390e3"
+    sha256 x86_64_linux:      "7c4871c037d6635b9d798825c58f1745d19d3fc4e29cf1c588bd758f7375c4ef"
   end
 
   depends_on "font-util"   => :build
@@ -141,13 +142,15 @@ class XorgServer < Formula
     xcb = Formula["libxcb"]
     system ENV.cc, "./test.c", "-o", "test", "-I#{xcb.include}", "-L#{xcb.lib}", "-lxcb"
 
-    xvfb_pid = spawn bin/"Xvfb", ":1"
-    with_env(DISPLAY: ":1") do
+    display = free_port - 6000
+    xvfb_pid = spawn bin/"Xvfb", ":#{display}", "-nolisten", "unix", "-listen", "tcp"
+    with_env(DISPLAY: "127.0.0.1:#{display}") do
       sleep 10
       system "./test"
       system bin/"xvfb-run", "./test" if OS.linux?
     ensure
       Process.kill("TERM", xvfb_pid)
+      Process.wait(xvfb_pid)
     end
   end
 end

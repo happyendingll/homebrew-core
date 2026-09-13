@@ -23,6 +23,12 @@ class Asdf < Formula
 
   depends_on "go" => :build
 
+  deny_network_access!
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     # fix https://github.com/asdf-vm/asdf/issues/1992
     # relates to https://github.com/Homebrew/homebrew-core/issues/163826

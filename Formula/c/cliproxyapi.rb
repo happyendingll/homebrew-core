@@ -19,6 +19,13 @@ class Cliproxyapi < Formula
 
   depends_on "go" => :build
 
+  # `test do` block needs local sockets for the login flow
+  deny_network_access! [:build, :postinstall]
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     ldflags = %W[
       -X main.Version=#{version}

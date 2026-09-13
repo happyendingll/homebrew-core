@@ -26,10 +26,11 @@ class Bun < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "0c138912583eb9fa6ed12a1cf84e6d78ee51c65bd3291fb9a758bf220469b52d"
-    sha256 arm64_sequoia: "a547f6f128597ded6bfe3f467ce46606bae741b8b9ef32d0736650a07584cf51"
-    sha256 arm64_linux:   "d110a88f1f69a128605c07064d8c3d3484ce650f52304d18a4fa51c49a52b8dd"
-    sha256 x86_64_linux:  "823f9cfe182892e3df144e6406a6677e3c83eb299e1468ec70352b1d5f8ac97f"
+    sha256 arm64_golden_gate: "1e749a65e17ad90e1fdad40a19481915366771a53d2548a0de1802d0e7c29c16"
+    sha256 arm64_tahoe:       "0c138912583eb9fa6ed12a1cf84e6d78ee51c65bd3291fb9a758bf220469b52d"
+    sha256 arm64_sequoia:     "a547f6f128597ded6bfe3f467ce46606bae741b8b9ef32d0736650a07584cf51"
+    sha256 arm64_linux:       "d110a88f1f69a128605c07064d8c3d3484ce650f52304d18a4fa51c49a52b8dd"
+    sha256 x86_64_linux:      "823f9cfe182892e3df144e6406a6677e3c83eb299e1468ec70352b1d5f8ac97f"
   end
 
   depends_on "cmake" => :build
