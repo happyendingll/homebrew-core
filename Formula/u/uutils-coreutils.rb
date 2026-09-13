@@ -12,11 +12,8 @@ class UutilsCoreutils < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "1be42be4b24c8b26bf7fafd464671d21a14ad0a1bb452f06eb03bd1dcc94ff94"
-    sha256 cellar: :any, arm64_sequoia: "b70a34a29e55591472c59b74bb56093ba42c02504aca7488555fa2cadfa2f105"
-    sha256 cellar: :any, arm64_sonoma:  "12d799a82502002df1bf7ca9ab3e26f5a59bdf696ec024eeb1056ddce5d76380"
-    sha256 cellar: :any, arm64_linux:   "6fd365901b4b48ba97a91b3c7d19800cded910a1570b79c30445ee35a7b23675"
-    sha256 cellar: :any, x86_64_linux:  "55cb91bd524c38b57455e38c54b10b163291b59a0766f959fe6665a3dc9efa34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "c3634c127a7c1a067fc6844ddae9231c88aff506877feda1d8d94b6a654d2580"
   end
 
   depends_on "rust" => :build
