@@ -7,12 +7,8 @@ class DdnsGo < Formula
   head "https://github.com/jeessy2/ddns-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f76decf7b0199f757b948e250f42fbb38cb69f50a9dd151d3c3932353dbc31a2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f76decf7b0199f757b948e250f42fbb38cb69f50a9dd151d3c3932353dbc31a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f76decf7b0199f757b948e250f42fbb38cb69f50a9dd151d3c3932353dbc31a2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "f76decf7b0199f757b948e250f42fbb38cb69f50a9dd151d3c3932353dbc31a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f1aafdbc92d8ee5fa87bd74580c76c5f739b27a7902cf0cfa8420b7e32a7f158"
-    sha256 cellar: :any,                 x86_64_linux:      "03a695e963b63059980085d3cbef9a1d74c8a78f71cbc76d58194e73133dcbf0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "e1d5e9cdc0bf751cb3fc41cda0963c6decec67bbc3edbf9efd59374525af0db2"
   end
 
   depends_on "go" => :build

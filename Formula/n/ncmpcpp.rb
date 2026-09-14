@@ -9,12 +9,8 @@ class Ncmpcpp < Formula
   head "https://github.com/ncmpcpp/ncmpcpp.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "520feb21eca06ec08d9625f5a3599bd66bbeb79065095350bd2447c368e128ea"
-    sha256 cellar: :any, arm64_tahoe:       "cdab6288c93e2911cd53cc2a07dc7dc67427bb5f28b17e3071f521d32881ef4d"
-    sha256 cellar: :any, arm64_sequoia:     "5102d992e8855549ed40573a77910cde08e8e4893f335dfc3514d414c5c3a7e7"
-    sha256 cellar: :any, arm64_linux:       "fc778494c709bbcb075c3a87e7068f530626f5eb611037e2aa235f87d6d094c9"
-    sha256 cellar: :any, x86_64_linux:      "080126dba407b5868aa6b21c81dae21d1c1c11db138746fada2347456e745d5f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "7efa1537fdaca6efc1041a7c802df0952be81ae53598dc77ad032e5bbac7dcfe"
   end
 
   depends_on "autoconf" => :build

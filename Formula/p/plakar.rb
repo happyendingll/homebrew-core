@@ -11,11 +11,8 @@ class Plakar < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "91abbf141751dd6850324435d782250ac91c9a50fd23558e26b416441a9b416b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42e4e2449628600c0b606af72f745360f2d0b4b15dfdcd22ddb22d63d43ddb9e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a01e5bf07e039c346457c6eb0dc9ea85fbb6f1d6359bfe704af96f196da8823"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "158ad1dd0f22ef190c633fc93d326707bdda658505b2d57b31576274ae89e220"
-    sha256 cellar: :any,                 x86_64_linux:      "29b40b8d0865032f276bcf93acc1dbbba1189ae3b66368e61dfe07f6c926af6b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "05d7ea942ef27183d61bc007974d43b22f6c24a56c81706e545a1688dc6fbc09"
   end
 
   depends_on "go" => :build

@@ -20,12 +20,8 @@ class Ghostscript < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "20d8eff70c436899114af3b971cc0108a63a1c086da53e933802ddd33f6cf283"
-    sha256 arm64_tahoe:       "9fdf9326aaf65459113953809f9abbffbd48e99158ba7a3505895bd61df89e46"
-    sha256 arm64_sequoia:     "e2ef1284b4e8818c789f968ffa2193b9d4f51c0879ca1d2a93be5239efc2bc95"
-    sha256 arm64_sonoma:      "be72b022398cf813a67a667dd0b5537d78b178808002af8f653365d8594d29f1"
-    sha256 arm64_linux:       "3e85f7ce71f33514c033e2018f7414a0cec27095c6fc65de7786814e758050a4"
-    sha256 x86_64_linux:      "94327e6306a4691f6967628aaa58c160a4a78f46ae793f05316e0a7a13a49f2b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "00f5508b5b9b8cf016f1345e97edac9fe58ec18b601f4942b1c85fd2d1ba1619"
   end
 
   head do

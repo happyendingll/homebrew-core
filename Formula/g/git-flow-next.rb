@@ -7,12 +7,8 @@ class GitFlowNext < Formula
   head "https://github.com/gittower/git-flow-next.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "57fecbdf2e6e180659899da60ed55c4a44e79e6ccab58baae0c9364d95dc62e8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "57fecbdf2e6e180659899da60ed55c4a44e79e6ccab58baae0c9364d95dc62e8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "57fecbdf2e6e180659899da60ed55c4a44e79e6ccab58baae0c9364d95dc62e8"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "57fecbdf2e6e180659899da60ed55c4a44e79e6ccab58baae0c9364d95dc62e8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6b5ce631a8784e5b108b6a61ccde07883af075f7a6668c8c8c07948cfc3c1d63"
-    sha256 cellar: :any,                 x86_64_linux:      "ad4a97c0e6b6d84f3a2cca26f4bb1a4da78a9afdcc00c4e9d879c1c8b12d1f41"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "b17a60577479cfd0d57c5e0bb66f2093b7b7f2bdaa9e98b44954686f14ee8395"
   end
 
   depends_on "go" => :build

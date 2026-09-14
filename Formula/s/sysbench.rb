@@ -8,12 +8,8 @@ class Sysbench < Formula
   head "https://github.com/akopytov/sysbench.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "18b8617b1b751de9708096f2d5fc4dbffc2b17ecb19a270101156f6ab287eca2"
-    sha256 cellar: :any, arm64_tahoe:       "15552662a25c619ba6c94c583c6dde95889f0c77265657d09b4e01bb824085f9"
-    sha256 cellar: :any, arm64_sequoia:     "010ae049456b9bafd3eb3ce43553e7186e3e680616ea27ee0964cef0e4f40e2f"
-    sha256 cellar: :any, arm64_linux:       "69591d450616f00645bae4f68515312fbfbad4f36df3d534d8490fff181b0b65"
-    sha256 cellar: :any, x86_64_linux:      "e60860ff76b07b74318cf63a78064d6715cb94ea7e0b805b0401b0f8b3103d89"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "fecc4ffc897872065621262d98534f8d9507f5f0fa932e217cbc051b818ef301"
   end
 
   depends_on "autoconf" => :build

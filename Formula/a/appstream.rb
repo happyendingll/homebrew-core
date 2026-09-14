@@ -7,12 +7,8 @@ class Appstream < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "ce221f500feb9906108821e6efdbd1185ec559bdcb0de9210abe80fa1e61257f"
-    sha256 arm64_tahoe:       "e6b87c9e02342b8ccd9a395d4f445ced6111339e03a52d5a7b4d861a440b5930"
-    sha256 arm64_sequoia:     "604eafd3c96174850663c242804c118d6bc7311a2a9cef8838ceccfe8ff241a3"
-    sha256 arm64_sonoma:      "1524097ba8b03c845424486a93edb3a87572ff033ebc5f8d5b355c75a76924cc"
-    sha256 arm64_linux:       "a6995700d66b2c34cf2830b45cc0385daf371693fa77802a25b6add07eddbe7f"
-    sha256 x86_64_linux:      "9338282f7cf8aa877fe0ede9aa968cc7b295bdffb023e875e1402433dc4bdcf2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "671752519b68dd18ab2efc008fec18f12c3cdc6902e21d354a18e345f2e9dc76"
   end
 
   depends_on "docbook-xsl" => :build

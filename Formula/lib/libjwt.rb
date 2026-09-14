@@ -12,13 +12,8 @@ class Libjwt < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "f6f093d1844379197330cdd7848bd130c3f2d3d516c4849b8b2aa4503207d0ac"
-    sha256 cellar: :any, arm64_tahoe:       "cea180d3a620bee3e9d57c421d7d6b3d5323ae50a6a6ae16da8675fc22f60300"
-    sha256 cellar: :any, arm64_sequoia:     "6ff0d3d51daa751ee1ef30c19072b42cf53e281b1f1d356bc505d9b804999042"
-    sha256 cellar: :any, arm64_sonoma:      "277a593fe23a1b1450a4a5a93e9306daef9b7d99ad24b0f4f6974dbde2d20915"
-    sha256 cellar: :any, arm64_linux:       "07b4955d42e1b1fa82e7f910e2a0f08ab94b3b30581b636ae6882473710f02a5"
-    sha256 cellar: :any, x86_64_linux:      "19818bfb277320e56a4824886c08d64a5b94247cb121fec0cda2c4f97de6a06c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "caf030a78814a204f38ea57467ed4b5243b0cb7b808c4cd711eb2bc7b5484663"
   end
 
   depends_on "cmake" => :build

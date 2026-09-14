@@ -6,9 +6,8 @@ class Clippy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8cb21da3c613663b246d05c93be7b7c90dcc3edef2124dfadb236b75512f6f49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4e739d4caf1037d32eef592083ab3a85b53f48c5a9cbddba0763956e0f382c9f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b8bbe71e763e1469a72814501d569e72801d476dd27a9242f299641b402dbb9e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1c9651bddb937dfad5cbe79dd8fb5862a2a637b2bcf5bb8c8211db06117e59a"
   end
 
   depends_on "go" => :build

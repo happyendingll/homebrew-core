@@ -13,10 +13,8 @@ class RioTerminal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "674bd3aabeba9d54b2b545c516e5cba95b70508a3c5995e443abe59d633d9249"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc3e184e29e3031cf8da4713a02544c2ceab92173ac02451466e05c0029372e9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a88bc5884c178ebf46b988a538cf2ea3bfdae63a7dca6ec33adc7922e540bbc9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "bacf20df6f54d8bcedf1599cbd63fd407a5911f31627b7b2f89de2e38f898a2e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "eca3854e6f74d91317fff8927397224876f58a9b95b49120f96d6e1e752dc44e"
   end
 
   depends_on "rust" => :build

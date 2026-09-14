@@ -7,10 +7,8 @@ class Folderify < Formula
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e94c8c76a451c60a585e7d10f6fa289414a5ec6602be00ca487518c4088b0a9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d5f005c6bae4577bef91af480ebf13e9affb7d8de0729c126fb709d43a1cb906"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "550adbb3866da306194a7a90b8fdecfe612263ab4dd909e9941d1f0de2c256d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "d71a733f63067e6f6ed82264e3f115edabd91f8f4d8fd961ddfeb717abd71d07"
   end
 
   depends_on "rust" => :build

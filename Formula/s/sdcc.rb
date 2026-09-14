@@ -18,11 +18,8 @@ class Sdcc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6d47098872badfc3dc3cef80a3919b0dfdfcae1bc3836c5aa390ce86591ef501"
-    sha256 arm64_tahoe:       "12879efac9fd9db3e0ffc661cb7f474071306e0a3b3b04fd6d0454b44127897f"
-    sha256 arm64_sequoia:     "fdf93768b166020bebfab447bff7abdc86598d22ead0716c7e72e9e9e2694d34"
-    sha256 arm64_linux:       "101cc977ff15708ead6b93c085db2d1cd5437f9dc5cacdf1d047952f8c9498fd"
-    sha256 x86_64_linux:      "db5e0835f4396e95209c015955d3e9424b24512f68533dd89afe995e3df0e51e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "53042cf597b2bc9a3c961b0d7721dcd5dda625fb25a61115d234be715fb73a54"
   end
 
   depends_on "boost" => :build

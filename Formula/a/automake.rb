@@ -8,11 +8,8 @@ class Automake < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23c091faee8dac047b0670d8c10da030bf104610fc064b904407de1a1ff8f437"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "23c091faee8dac047b0670d8c10da030bf104610fc064b904407de1a1ff8f437"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "23c091faee8dac047b0670d8c10da030bf104610fc064b904407de1a1ff8f437"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a2b499128c61273de05a0d19251baca23de0c29abd15a74c8f495de2aeec3b40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a2b499128c61273de05a0d19251baca23de0c29abd15a74c8f495de2aeec3b40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "46de4002f76951774ef30a9faa663d573ed430ba1ee70b430992ca55a3b83930"
   end
 
   depends_on "autoconf"

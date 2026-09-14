@@ -9,11 +9,8 @@ class Snakemake < Formula
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cec99fa2176e722583474760405e362d0087605f6a341c6daab3d85f0dd09623"
-    sha256 cellar: :any, arm64_tahoe:       "e8eaa63f5c10f7ec8dc72dd4b993e30569a8c93fb2e8239d7475e36bb6ac79e0"
-    sha256 cellar: :any, arm64_sequoia:     "6a1fdbe67b35cf2138aabb09aa004e158433b168f5e29d511aa349885887248b"
-    sha256 cellar: :any, arm64_linux:       "c5144996dbd41217b68ede493954aed41cd70fc485d20b0c98a72238fa4710e8"
-    sha256 cellar: :any, x86_64_linux:      "c7d5786628063018617b408f6ba194027ba9d8708157ba17bf57a9dbb9ee218c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "2bdf822d2e13c276f17de143899803dc6c09e82860ddc09d1266425bda172a59"
   end
 
   depends_on "rust" => :build # for appdirs

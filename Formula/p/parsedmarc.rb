@@ -9,11 +9,8 @@ class Parsedmarc < Formula
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1c82d1ae14dd277070c0a863e5fc5bdde544edd09512f0fb80c4adffbffafaff"
-    sha256 cellar: :any, arm64_tahoe:       "f5dbdaf3cdae3445f7162d6a7c4d9e0d255c72a295b1e5a9254b801d664ee84b"
-    sha256 cellar: :any, arm64_sequoia:     "4e171947ee802aa851c8436f1526b68cace53c76e255934c413728b1b1eaa6f7"
-    sha256 cellar: :any, arm64_linux:       "ab80cf5946d7c6896551372516a90115641d39f69f4d4c74761414c7761b79ca"
-    sha256 cellar: :any, x86_64_linux:      "9454a503128113d708c1a61407411da0f64860b56f1114b4d361d5183c93d8ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "dd153c3cb5420d5bac9e93c5030624c49b49c5b13424626946bff42f87ff7380"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Libxmp < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4dcbd655092921674b98814113ce1c1b2b21c5946a9082ed54ba2decf9635e05"
-    sha256 cellar: :any, arm64_tahoe:       "7da7a7e8c2b159c2b15d4f89341f0a93b11947c1cb500e57fadb3943998865b1"
-    sha256 cellar: :any, arm64_sequoia:     "a9e25e3f437332c021c650fb5a9a8fd2e51122617cbe073d6cac9111edaca02c"
-    sha256 cellar: :any, arm64_linux:       "f057de179a9ad9866ddd25368f1faf860ea9f3520b7bd3874b7efe5249288820"
-    sha256 cellar: :any, x86_64_linux:      "803471645527a585ee35e06357e09aa8d98f86687462f3b986cebb990603e4a9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "9fdf37c97b4603d791f4e18ff4cf53d34b17b2a8c18137f88ed6590da7784d36"
   end
 
   head do
