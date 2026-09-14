@@ -8,11 +8,8 @@ class Terminator < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "411920983a7e149c030ff16a08b38a2b3ecaa6e3bddee4dc9d644da7d6322cc9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "487b99dd3b096cae9db5e29a6eaec08098031ec7187830e67aa5125fa05503f0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a2fb445a6ee48645d18691eb7665bdd864184ea617fd9a80b131767765a24918"
-    sha256 cellar: :any,                 arm64_linux:   "b48513bf076d0edb03f4555f326799fec466d57d8f718e3537d8a2fa4f705573"
-    sha256 cellar: :any,                 x86_64_linux:  "3178192dc2ac7b03c124d600fca7edc86e26519be589c3474b7932f1e3ec6235"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "236b3bdeff10494f0b35e6963833429360801a4920f8b15abad73c5f7663de51"
   end
 
   depends_on "pygobject3" => :no_linkage
