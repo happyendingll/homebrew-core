@@ -7,12 +7,8 @@ class AzureDev < Formula
   head "https://github.com/Azure/azure-dev.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1a5164224530a481caa91700eb841911a744f3bb7c3633a45805a9f909c8de7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a5164224530a481caa91700eb841911a744f3bb7c3633a45805a9f909c8de7d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1a5164224530a481caa91700eb841911a744f3bb7c3633a45805a9f909c8de7d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "1a5164224530a481caa91700eb841911a744f3bb7c3633a45805a9f909c8de7d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b37876ddcde7a65b5927a7857d477a16bee322a4b1d50580adeda3b5a63f6c1e"
-    sha256 cellar: :any,                 x86_64_linux:      "a48f5516f033caa1f27a4451399cfe944dc61355ab565a57304b60588fe4e772"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c429d12dc0ea6967fcb00ebaf768c48ca169f8de110708f9a417dc17e6b9e32a"
   end
 
   depends_on "go" => :build

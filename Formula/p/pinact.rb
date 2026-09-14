@@ -14,11 +14,8 @@ class Pinact < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e5bc3704f75de4338ac7b615649439d9efffd39b124976ff699aa4c0016ba1cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e5bc3704f75de4338ac7b615649439d9efffd39b124976ff699aa4c0016ba1cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e5bc3704f75de4338ac7b615649439d9efffd39b124976ff699aa4c0016ba1cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7bc8138de3da4e2e2f525fea3ab70862136cddce749d12782e099f6cb40c5148"
-    sha256 cellar: :any,                 x86_64_linux:      "cb54357d3a2b4f6d7b2c0adc02df5cb1297235b562d0fafb9428e17a1dcca5a8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "0c3bb4509bdc678acfcc9521421937e81777b9c04ce2f9c149955010e0da0bbc"
   end
 
   depends_on "go" => :build

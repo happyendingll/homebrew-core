@@ -7,11 +7,8 @@ class Avrdude < Formula
   head "https://github.com/avrdudes/avrdude.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "0ba01d7b32c136a2281e74ae06185066579fea5aad59903eef3def364132182b"
-    sha256 arm64_tahoe:       "f2f74daf7772910b888c482b0d3ee6f92506ed9c1518c67cc41ee2bd43ecbf35"
-    sha256 arm64_sequoia:     "b52edab65d14b4e34784484b1cf2917486acf4c6258741e72321d88c85f3640d"
-    sha256 arm64_linux:       "3a5a2c28b97bce411b218f43096cfeb46e7e7a76af9502ec2d6a883ae0bcaa7c"
-    sha256 x86_64_linux:      "13aa443020c8f4a95d45893e3eeaf32bb275bd5eada590bfd5f45c688d468e6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "845d9570e843617227ac37fc57671fcd1cad2ba27fe73fc90b1e826b74b4e919"
   end
 
   depends_on "cmake" => :build

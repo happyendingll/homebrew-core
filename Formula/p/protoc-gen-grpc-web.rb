@@ -12,12 +12,8 @@ class ProtocGenGrpcWeb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "321781d66615660d90f6d7629f432191dcd0e2045269e7191da7a2d84b1832e1"
-    sha256 cellar: :any, arm64_tahoe:       "c45eba99a26599c4047c46769e2e2077d389e7be3415a4430670d5429021c8a9"
-    sha256 cellar: :any, arm64_sequoia:     "f68bdd7172d6c06313043b28fd03dc87d7ea6b641950abff7db3fd325c628e1d"
-    sha256 cellar: :any, arm64_sonoma:      "0c77b82d2e3b4b549e29e57e188574381cf5d4a1759d0d4ad5039cfd64fcaf35"
-    sha256 cellar: :any, arm64_linux:       "1733e5737dd4c074d913e3aa5778be7f6a2c04e0880cfb4f17cfdcfb4ca46b9f"
-    sha256 cellar: :any, x86_64_linux:      "bfacf103e7d09dede55804df05f05dea6c169f7704e3d271f8644c387c69f44a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "d9cb0888fdc2eb8d012b1c03b8fe537b1d8b6aeda883c6fc96d99daab6710fe4"
   end
 
   depends_on "cmake" => :build

@@ -9,11 +9,8 @@ class Jiratui < Formula
   head "https://github.com/whyisdifficult/jiratui.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "783f313acdf8fcee6aa2370fe52cdd7a57e4d745943c8a3a827d333bd2d4966f"
-    sha256 cellar: :any, arm64_sequoia: "952504a4300bb6c5656c405efa65d4d545eec3b46411401617f02d668185d87c"
-    sha256 cellar: :any, arm64_sonoma:  "aa46972f9becabb0529706be47232a2ebe9c90034878aa4cc2912f577079575e"
-    sha256 cellar: :any, arm64_linux:   "c9f2e7a060143a5cbd63697dcb4577c206d2ce920aa776ca707b0b12ca4eb967"
-    sha256 cellar: :any, x86_64_linux:  "e213ee19ed08f355f2233f49911a81f1c173e7c3570ab4e9c5ab9374f5277e2b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "eb7c13c08bf678d7d39b05e387fde70472aee595f47d40f1280886fdf9dab2c7"
   end
 
   depends_on "rust" => :build

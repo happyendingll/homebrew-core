@@ -6,11 +6,8 @@ class Pocketbase < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "945e8b469daf9f981c4f57102c0931dd109d982748ec74761f488c048cc8b0b3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "945e8b469daf9f981c4f57102c0931dd109d982748ec74761f488c048cc8b0b3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "945e8b469daf9f981c4f57102c0931dd109d982748ec74761f488c048cc8b0b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3d0f1543bc9ec9d1cadaa746960852359a53fe899ff7ad10beebca648bf1cb86"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "58ff00226276e0f2c327c4730a8f675dbda60137bccbf799aaec63df95cf6c38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "ab0bfdfb49316eaff5b7b17ad13aecd313fcef8977dc2f4045df832070a2ae34"
   end
 
   depends_on "go" => :build

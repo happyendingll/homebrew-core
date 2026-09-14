@@ -7,12 +7,8 @@ class ParquetCli < Formula
   head "https://github.com/apache/parquet-java.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "640e1ff30cd9de6f90dfea5e500f610c179bb5534e38d8714247250172085c44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "640e1ff30cd9de6f90dfea5e500f610c179bb5534e38d8714247250172085c44"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "640e1ff30cd9de6f90dfea5e500f610c179bb5534e38d8714247250172085c44"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "640e1ff30cd9de6f90dfea5e500f610c179bb5534e38d8714247250172085c44"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fb1a7c3d2e5b1ad48fbd06c7e83554d1a9e2cc9b773c13abbbb321353ea7859a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fb1a7c3d2e5b1ad48fbd06c7e83554d1a9e2cc9b773c13abbbb321353ea7859a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "d7dd6f7e049c702035bf0b99bf032d1ddaab1d5df3de2dce39fb5615b35e4371"
   end
 
   depends_on "maven" => :build

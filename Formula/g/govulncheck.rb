@@ -9,12 +9,8 @@ class Govulncheck < Formula
   head "https://github.com/golang/vuln.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f22cf780a6d50b41748313b401fb54fb518c4c539796f4fde19261e07cd38781"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f22cf780a6d50b41748313b401fb54fb518c4c539796f4fde19261e07cd38781"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f22cf780a6d50b41748313b401fb54fb518c4c539796f4fde19261e07cd38781"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "f22cf780a6d50b41748313b401fb54fb518c4c539796f4fde19261e07cd38781"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d69a4073a1e3435a352bfb8963f7be6b0faafd180bfbead0cf61ce0b8a1b8137"
-    sha256 cellar: :any,                 x86_64_linux:      "37b5e860bbf6a38daa20a739a73c56981ed5623bdcafb3b0e7e92272f916ca8d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "4644805e9dbfd6130ca31d293b653c077cd146333972071fc3f360bc16550f8f"
   end
 
   depends_on "go" => [:build, :test]

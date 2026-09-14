@@ -6,11 +6,8 @@ class Zola < Formula
   license "EUPL-1.2"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "92e4acf1fa8fc374c2f11ab5a520109caf8c3b10ea2b77a13b4506e71001ba31"
-    sha256 cellar: :any, arm64_tahoe:       "3fa67cf51efc3cf051c748996fd0150b77236bd2894dbf23431e4da21d340667"
-    sha256 cellar: :any, arm64_sequoia:     "f47d002fe11ff674a3f2ec84c01525ee253a567acd7c2e6b6ef2749c7418f455"
-    sha256 cellar: :any, arm64_linux:       "981765219eae043318ba70cd7ec7ecbbd9ff57e648a9c29f7000218a7918d69a"
-    sha256 cellar: :any, x86_64_linux:      "2ed0144800d0c72f51a74c456d8e30e5e5fbc3a7837d932a764e466f9a3f51b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "e96f5548e887076bd676a5334d1e1c7226707a9a5e208a21a6e6d3612d4dd049"
   end
 
   depends_on "pkgconf" => :build
