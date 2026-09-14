@@ -7,8 +7,12 @@ class Sqlcipher < Formula
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "2a06ec98b12f2dac2082661a5d4004bc7267f03cc483d50d8344e5e979bf5f92"
+    sha256 cellar: :any, arm64_golden_gate: "b19c2bdf58c87701eb0322d9f302ae541a113e9dd7885ffafdb7045e393085ca"
+    sha256 cellar: :any, arm64_tahoe:       "d4578b999a41a4d00daaef8521f240952cfe138984fe60665c419fb503f60a57"
+    sha256 cellar: :any, arm64_sequoia:     "6510b5a957c96a98c6cc2be5af7a3494486218b4c5459eb6170cea594b00a88b"
+    sha256 cellar: :any, arm64_sonoma:      "56acbcd46c01d6333340ea15134c3208952a5e841b8080b81582a1dc99103b65"
+    sha256 cellar: :any, arm64_linux:       "c2d90eb34cce463f412bd52eb10a8a405ffdef54629b0012eeb7a11ca991bdba"
+    sha256 cellar: :any, x86_64_linux:      "afae4b76c9aa93b1064fce695bcfc5b1777bbeeed5a75057455d2addc688aacf"
   end
 
   depends_on "openssl@4"
@@ -75,8 +79,7 @@ class Sqlcipher < Formula
   end
 
   test do
-    path = testpath/"school.sql"
-    path.write <<~SQL
+    school = <<~SQL
       create table students (name text, age integer);
       insert into students (name, age) values ('Bob', 14);
       insert into students (name, age) values ('Sue', 12);
@@ -84,7 +87,7 @@ class Sqlcipher < Formula
       select name from students order by age asc;
     SQL
 
-    names = shell_output("#{bin}/sqlcipher < #{path}").strip.split("\n")
+    names = pipe_output(bin/"sqlcipher", school, 0).strip.split("\n")
     assert_equal %w[Sue Tim Bob], names
   end
 end

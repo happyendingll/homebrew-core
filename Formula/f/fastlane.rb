@@ -1,8 +1,8 @@
 class Fastlane < Formula
   desc "Easiest way to build and release mobile apps"
   homepage "https://fastlane.tools"
-  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.239.0.tar.gz"
-  sha256 "cc4e0ecfbc8b2e1e16885601802b8153c6c247f79f1bacf1f1ba37dd06d20681"
+  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.240.0.tar.gz"
+  sha256 "461b91f14602b640a6d0b20d98de9ffcbbf7875c6371227e67cff4ed11e3d4ab"
   license "MIT"
   head "https://github.com/fastlane/fastlane.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Fastlane < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "ad5acaa0d6c5abed022e07c8e34cfa9462a7bea8eedc5cfac4c60f671f3c068f"
+    sha256 cellar: :any, arm64_golden_gate: "ea3ea370bc1a867bacfc91c328fc80a5add76014feafbbd87d5dea0179ec9908"
+    sha256 cellar: :any, arm64_tahoe:       "e1d6868772f6a214fd6487c4e4d3ca49c6f77a7830401987006af69ef39125b3"
+    sha256 cellar: :any, arm64_sequoia:     "7c16a984734176676add3ec50d7890c0848ccb95851a87289d853266068b1a56"
+    sha256 cellar: :any, arm64_linux:       "de1540ba8fbdb690871269bd25c1a7197f7a5269e0a65a6b9055d4a43ab4aeb7"
+    sha256 cellar: :any, x86_64_linux:      "6d2872127b75a77aebff9e8fac5bee6b3ae8196058dd2cf0d89c2905477b30c9"
   end
 
   depends_on "ruby"

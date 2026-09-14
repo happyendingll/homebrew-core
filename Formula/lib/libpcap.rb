@@ -1,8 +1,8 @@
 class Libpcap < Formula
   desc "Portable library for network traffic capture"
   homepage "https://www.tcpdump.org/"
-  url "https://www.tcpdump.org/release/libpcap-1.10.7.tar.gz"
-  sha256 "0b394ac90dbc0a9838ff97468e05c9c9a3e873dec2514cd58db65d859d296e31"
+  url "https://www.tcpdump.org/release/libpcap-1.11.0.tar.gz"
+  sha256 "596389bc8560ea027dff9db8aaf6c173d992366d9aef4baf5d7c6d180b4d49ad"
   license "BSD-3-Clause"
   compatibility_version 1
   head "https://github.com/the-tcpdump-group/libpcap.git", branch: "master"
@@ -13,8 +13,11 @@ class Libpcap < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "98bfe868565f9bd60c2fdd2f4eb9cc07b5277b2eac9cf42fbf5da3096e8dc8d0"
+    sha256 cellar: :any, arm64_golden_gate: "f1f2643e54877c5ce19c7f1ceb7803c41ad707bc06a5bc9a1ca1e584722e307d"
+    sha256 cellar: :any, arm64_tahoe:       "2dda8bce797e75485e684cb14f79bef7cb6ebcb3c2227f97a027537ccca91fbc"
+    sha256 cellar: :any, arm64_sequoia:     "8c4b73f9af512cb09adcd8971d3cd584487b34adedc9cfc2e0615a2636b6efe9"
+    sha256 cellar: :any, arm64_linux:       "90ba6adb657c90c9cbca41c2bd4ed8b46ebf693408d3162c938029408df11030"
+    sha256 cellar: :any, x86_64_linux:      "884fa710f9c26a5fbd6567ae051221317da1ea1edb8cb9ab87d7da3e79acd329"
   end
 
   keg_only :provided_by_macos

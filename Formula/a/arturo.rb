@@ -7,12 +7,13 @@ class Arturo < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "ebba8e3fbb4a744beaac399da9b1ffb8307a0804d7c05b7076fb785613b5d552"
-    sha256 cellar: :any,                 arm64_sequoia: "9341ba90985816c15c47bdcac2920389879773a50ef363041dc6f4ecee689fd0"
-    sha256 cellar: :any,                 arm64_sonoma:  "17408c0bbc0e822b990ecff5b09984217bbb759533c9583fa4cbe522126a370d"
-    sha256 cellar: :any,                 sonoma:        "1d3f1fda2e54e2a47a255e4da81b268e00cb004990957cc920bc83b5fb867c7d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1d022b862b9319ffddd133b8701fbc1d57c012288d0edb3a4d5481b53a3ec4f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0ca9d6b0315a3d4cd6ad14ab1b385a0cbc42d5eaa0cce0ec69241931bd2b864"
+    sha256 cellar: :any,                 arm64_golden_gate: "fa6105e41161f410eb3b9f2be54cbb5a544193fee80bd5d8e97006e6052c36be"
+    sha256 cellar: :any,                 arm64_tahoe:       "ebba8e3fbb4a744beaac399da9b1ffb8307a0804d7c05b7076fb785613b5d552"
+    sha256 cellar: :any,                 arm64_sequoia:     "9341ba90985816c15c47bdcac2920389879773a50ef363041dc6f4ecee689fd0"
+    sha256 cellar: :any,                 arm64_sonoma:      "17408c0bbc0e822b990ecff5b09984217bbb759533c9583fa4cbe522126a370d"
+    sha256 cellar: :any,                 sonoma:            "1d3f1fda2e54e2a47a255e4da81b268e00cb004990957cc920bc83b5fb867c7d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1d022b862b9319ffddd133b8701fbc1d57c012288d0edb3a4d5481b53a3ec4f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c0ca9d6b0315a3d4cd6ad14ab1b385a0cbc42d5eaa0cce0ec69241931bd2b864"
   end
 
   depends_on "nim" => :build

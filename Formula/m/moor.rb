@@ -1,16 +1,19 @@
 class Moor < Formula
   desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moor"
-  url "https://github.com/walles/moor/archive/refs/tags/v2.19.0.tar.gz"
-  sha256 "47a5da205f0af3711a164f579dfebc7c765b54cd9360a353df477c7370b88699"
+  url "https://github.com/walles/moor/archive/refs/tags/v2.19.1.tar.gz"
+  sha256 "35e2f1bda3079b02f72d4c0b09a72f2687054d647d7502a0821b0ef8ee1ae417"
   license "BSD-2-Clause"
   head "https://github.com/walles/moor.git", branch: "master"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "23af648db06fc4c37ad43355bdf5f10e4785b98e205464ebc5b8d5fccf672157"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5302106a45c53c3e93da63ce3559f6ba4d3e6a6324c2f80a74f1a8ed2bded467"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5302106a45c53c3e93da63ce3559f6ba4d3e6a6324c2f80a74f1a8ed2bded467"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5302106a45c53c3e93da63ce3559f6ba4d3e6a6324c2f80a74f1a8ed2bded467"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4cede0c073b60fb23d173dd0e90da920aa9c39b42caabb18c1331a78c0f43445"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9a52eb679f80184e697120782a5ac066c9e6b82f5312612c56295050467dff59"
   end
 
   depends_on "go" => :build

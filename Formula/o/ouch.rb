@@ -1,8 +1,8 @@
 class Ouch < Formula
   desc "Painless compression and decompression for your terminal"
   homepage "https://github.com/ouch-org/ouch"
-  url "https://github.com/ouch-org/ouch/archive/refs/tags/0.8.2.tar.gz"
-  sha256 "803dd9d0bcdb0b4f94336bc1e9fbb5c878bf2867e03f58f266adc679c224698d"
+  url "https://github.com/ouch-org/ouch/archive/refs/tags/0.8.3.tar.gz"
+  sha256 "f695393cbbd89cf5a2095c32235e585a85432ccfb902c78d2a2e9787abbb439c"
   license "MIT"
   head "https://github.com/ouch-org/ouch.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Ouch < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "c4644ace5803818b615ba579b377aa0f3840d6dad8b119b848f4db49766e7cd8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a70f65653c18fa8468a5031b4e33d07da96db972b95fc7f811a7654dfb1ad8ec"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d348d3a35b9387a354d32ef0055cf9f0486472827d77249a78f326c3811c083e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "98d77ead4acd9daa3e8f68470d6d31d92926e0847396de926e0b7d61a98800ee"
+    sha256 cellar: :any,                 arm64_linux:       "d512ed800733b5fa9bba0ebbc4c2f9a76247242ef716899c93880d3b3ffd65ae"
+    sha256 cellar: :any,                 x86_64_linux:      "54743318b86798d93e41c0971807cb3378aa96c87bf2b897e5a418954f96c1d4"
   end
 
   depends_on "cmake" => :build
@@ -28,13 +31,6 @@ class Ouch < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
-  end
-
-  # Fix the reported version, upstream PR ref, https://github.com/ouch-org/ouch/pull/1071
-  patch do
-    url "https://github.com/ouch-org/ouch/commit/887fb81eebb816809971f7b30b8d8e5f65b03fc0.patch?full_index=1"
-    sha256 "d1036aec38d5818f811a5fca849db7ebe5226e2304fec091676399b144f7a38b"
-    type :unofficial
   end
 
   deny_network_access! :test

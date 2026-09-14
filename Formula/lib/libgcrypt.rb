@@ -12,8 +12,11 @@ class Libgcrypt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "e03f6e969135b669ffdff8ef121637d96d886aed3bc22c255e01a00cf2e29cc6"
+    sha256 cellar: :any, arm64_golden_gate: "6531ea6476a9e9c35f5c9b5420779da758edac7f486ee97a2aad8a18ee5d6fec"
+    sha256 cellar: :any, arm64_tahoe:       "18f7d112e7d1596592b3ef268bb223217cd97725659012c5c3a9041b2999f284"
+    sha256 cellar: :any, arm64_sequoia:     "c314eec8280f768dba978c7c55a569d3944505d7d709285e4721f24ae765748c"
+    sha256 cellar: :any, arm64_linux:       "969e21ed2fcdc94ddb61cb6418b3bd12b56681b8ae8e8b8c6b51ec0bd4ccb116"
+    sha256 cellar: :any, x86_64_linux:      "41109424f2982ccaccab52cad5e543d8aac6331fbb1959b2a482ceb89868ad44"
   end
 
   depends_on "libgpg-error"
