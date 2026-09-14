@@ -20,12 +20,8 @@ class Picotool < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "579fecdf1bd46738398a64f3ba25ce474c8d40cdd3fee0387377085907177235"
-    sha256 arm64_tahoe:       "7369725188e5db055acd76b7bee8cff97ab1cde39760e3f19d7c9b3122341df0"
-    sha256 arm64_sequoia:     "74d05844dc6491b153f4f05564d8f0599cfec11de293b134c34f3a3ab9a1569f"
-    sha256 arm64_sonoma:      "2e7ba3ee5af3ab9f28f7757c524a0d777661064697f3760f23c7a66a19969959"
-    sha256 arm64_linux:       "c0dc4abada1def5355cbb1d2c3d9a5e2e22871a001a1c62af7528ccfc6ccec93"
-    sha256 x86_64_linux:      "5a9c06d853733783dbb809f2efcf270a4adc69ff96a390798fa15e9f4791a36b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "7bc59a2862c073a8ff98ccd1da5a00f85936c1340b72fbfff16484f4f3a8cd37"
   end
 
   head do

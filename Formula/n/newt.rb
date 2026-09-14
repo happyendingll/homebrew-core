@@ -12,12 +12,8 @@ class Newt < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "21a582ad976c6c02afb4267f825d5ede7f89498a9389172833c926cd7bf3ba89"
-    sha256 cellar: :any, arm64_tahoe:       "b9b1d2a75d8fffb40fa00e1c48305d29c0daafeb6e5ff12bd0f9f1cac9e1eb68"
-    sha256 cellar: :any, arm64_sequoia:     "26462f57eba77601690cbdebebacd309f0732a25d3b24fac13b3b7ecfa7455be"
-    sha256 cellar: :any, arm64_linux:       "fd0757187cbe4fd237187112f1ee392d126e6c68d93da2cf1ed3d2652464ff40"
-    sha256 cellar: :any, x86_64_linux:      "caf7b666af95224258da2b092413cd77f67c5db7c3f695732c6818b5efdd3b3e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "2cd715a25be1b6d9e8a73f04cd02160792979258a33a21706e372c9db4775113"
   end
 
   depends_on "popt"

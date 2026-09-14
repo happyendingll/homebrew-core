@@ -7,12 +7,8 @@ class Checkmake < Formula
   head "https://github.com/checkmake/checkmake.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "039e9eca37bf85e2f4b86bf6297b7e28821087cc0c18730ad4638ff66402705b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e44429a9d3605e6d61d1fc886e01e6f25b2eeeb70350b6e3340214d858f6c5a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "64d7b1cdeb8abbb4d9dbe1d56490b391b9233c9f3fb12f3e3ff07523d7c29186"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6dcdc8193870c49f52b7c684ae251ccfbed991a3d0d4830b582c5e563a720007"
-    sha256 cellar: :any,                 x86_64_linux:      "cc596704a788d87ef48ac1e1303ba308c6949707644b5bd7c1f1e4e4b122a173"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "e4f938a0f50939f663c62360a9ddf4a0a568f42bb7184583a2c4b1291a227a1d"
   end
 
   depends_on "go" => :build

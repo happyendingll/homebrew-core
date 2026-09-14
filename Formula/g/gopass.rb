@@ -7,11 +7,8 @@ class Gopass < Formula
   head "https://github.com/gopasspw/gopass.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c3f41e21c59631a152247b7ea5a366d3e3f4dcf3a0c180d4606321827cd69a00"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c7ec1de3342eab9021d975374a9e479714b1d050ee654d67176082602d63dc45"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cecf2457e6e843da4f033c3a147df1bdc03a5c52a36ec9627f3809906ee3fc43"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bdf4c7030a7a7a772dacbdbbfe995beb2b69eaf31863adc411b97b773cba1251"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "484a766eeff405e914cb78ba4d8b2bd733e27e3d56c79b3592b084e4c0f449ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "e4cca2032fe5252b49b426522b18ce90ab949d092a25a9b6c910c10f651fc3aa"
   end
 
   depends_on "go" => :build

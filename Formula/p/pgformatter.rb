@@ -6,12 +6,8 @@ class Pgformatter < Formula
   license "PostgreSQL"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ba1843b9849b308a16ac7aa0b6ab7f3ffe983614ce231fd02910a420a5b861e1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba1843b9849b308a16ac7aa0b6ab7f3ffe983614ce231fd02910a420a5b861e1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba1843b9849b308a16ac7aa0b6ab7f3ffe983614ce231fd02910a420a5b861e1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "ba1843b9849b308a16ac7aa0b6ab7f3ffe983614ce231fd02910a420a5b861e1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "50dd65fd169020261191e953a65ffdf4df70565c65808b65a8ea7e78ab8d8bc0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "50dd65fd169020261191e953a65ffdf4df70565c65808b65a8ea7e78ab8d8bc0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "65343bb013f2d7a00e9dab542e082fadb1792c8d310af91f4b8abfe4799bb48f"
   end
 
   def install

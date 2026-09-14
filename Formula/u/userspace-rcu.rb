@@ -12,11 +12,8 @@ class UserspaceRcu < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "68b34be21a66be2be09b09cf39dce0f85bc05be306093f1aded8190b3bd71b94"
-    sha256 cellar: :any, arm64_tahoe:       "a112628bb9224bd25d2485aa60a61280930b5667da277078726d4fe19972e067"
-    sha256 cellar: :any, arm64_sequoia:     "dbd1786c178ec2720fdedef306099c333843cfdb6971672711e9e38650bb3dd0"
-    sha256 cellar: :any, arm64_linux:       "75add8419e6127b41c9f16a910172bd0ae3a4c39a71353204736a613ee57d9df"
-    sha256 cellar: :any, x86_64_linux:      "e6740da2ad7f0accaa6992605ed6c5db2120d4be237fe54195fd9f278ed81800"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "2693be2f9333e0de1878c7d5db16d70cd5bec2578d6085f769ff727ec204b9e0"
   end
 
   def install

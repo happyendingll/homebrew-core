@@ -13,11 +13,8 @@ class Seaweedfs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c685b89935e28ad1b094b4c5f99a6558716082cbebaeff1b77d428baca65cd82"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9a546c4e8cd3e9169155c667abc5317bfa11011bb27939b2526a7de019be6d34"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c5752797a4033e6ff7be2f8036529fd303908716f54375d03d0be4ad9106178a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ffac00e5ecb0ae84919cbd22bd336792b81eca79e9591b559f2d03f9c924dd6"
-    sha256 cellar: :any,                 x86_64_linux:  "6134db0b3d5782a039b57bc4c386662853e4b7a29f83fa85805761960b9724ad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "9c5db11abdb54ab2ec16752c69354c6264f24e89850ea1b8710c671a07076c72"
   end
 
   depends_on "go" => :build

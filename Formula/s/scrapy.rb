@@ -9,11 +9,8 @@ class Scrapy < Formula
   head "https://github.com/scrapy/scrapy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1b39a0eca418408355057619e69ec67255ada8b01ebf69a7d3b6ca90ce5b39cb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ef33ea8da0d2344bdbe66f19d78036def7662879049ca311a13233c0570f233f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4dc516620632b080b38ddafb7cf9c48f3fe802190940d3d7a3d5ea5c800b7d66"
-    sha256 cellar: :any,                 arm64_linux:       "a3dd84eff6cf61faa2a9be7f2e79f82022092ea740338ff4f78c9ce0de2cd5f5"
-    sha256 cellar: :any,                 x86_64_linux:      "53b6679b09038cfb7cdb24d30a70ab3e57deb9ed594b3c18af1c34d8ce6a0f96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "cdf159e05b0ed9028f83e89793ec76600da71406d601745eaae5291a7f50c8e9"
   end
 
   depends_on "certifi" => :no_linkage

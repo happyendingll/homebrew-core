@@ -6,12 +6,8 @@ class Biber < Formula
   license "Artistic-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "3ac812c44d3c8b0a8a1a38347b5728a329dd3fb0bd35e95447b94cecac03161c"
-    sha256 cellar: :any, arm64_tahoe:       "ff71789356a3285f6854b6cb5dd75beb85fff1997dab2282517d0701ee06b7e0"
-    sha256 cellar: :any, arm64_sequoia:     "607af65f5f2a5f697a9f2d1a92150ade4630aaf0139f7b152732d366275de8f2"
-    sha256 cellar: :any, arm64_linux:       "0468c4ebd19b8bf432b94bc104093fae6610b88b6a3740a16ef74b7fec4c84e4"
-    sha256 cellar: :any, x86_64_linux:      "c25d46fc70146117cb8bee0030103076cd34079b509f4db211f292a5750f156d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "987b1aa9230fd8abca246451a133695bdb1cf062a26e181806fb183565d52bd6"
   end
 
   depends_on "pkgconf" => :build

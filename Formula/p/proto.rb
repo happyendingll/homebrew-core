@@ -12,11 +12,8 @@ class Proto < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "145cf7bb9d4ac54b3bcf76b6718e3d98c108603f5656b54c136ac91ce98f5818"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5613335038eae9a53bfd78fcac73a6da8c9edfbd223c55529cfe639e921cffb2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3944da706256a29bc327e4557f61f20f2bf721e16db9a23a4f32ea37605ea35"
-    sha256 cellar: :any,                 arm64_linux:       "15bb392aacd57f9ebcfccf4cc1402dd05e238271c85a19b53c687b118c17a67e"
-    sha256 cellar: :any,                 x86_64_linux:      "2837e1b2a457d867fa9a69e174d90339021858d38fee7077c49dea976d76f6d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "d963bea35ca67f1f95d1559193e3b68026302223a265bf8d1ee1bd4115dd4d99"
   end
 
   depends_on "pkgconf" => :build

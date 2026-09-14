@@ -13,12 +13,8 @@ class Botan < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "22553306185fc848e81c7e88c5df5954e0dcf22e1841f089e911cfeaaaa309a7"
-    sha256 arm64_tahoe:       "172d81cf6d6958ee819bb5576f15e39a55ad4a832f653c71fa9f09ee408a2e44"
-    sha256 arm64_sequoia:     "8900beebc0493371a6fde3b7b78d4941ae839f732c0c681be02d52debdd38507"
-    sha256 arm64_linux:       "392fb0efdde799208c755a4506e4482289457531858489657cce41e32d73ed4a"
-    sha256 x86_64_linux:      "07f24225875cf8133295f25db4a514cca408aa2dbcbacf7d6e443ee487d000f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "2c4d3c6559abd9eea8e72584d54a402ffb8a116dab217f66834e293e66aff5eb"
   end
 
   depends_on "pkgconf" => :build
