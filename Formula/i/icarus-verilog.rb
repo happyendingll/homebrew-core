@@ -15,12 +15,8 @@ class IcarusVerilog < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "de6f721fcebd0ab67e29fc79de453070923656103260720973c96151de5f2d54"
-    sha256 arm64_tahoe:       "0c26b4d54f2a1264a7b9105345192f303ffaa79e7e164cf705baa3c2df275871"
-    sha256 arm64_sequoia:     "97e471a63c9695bdca2c6eee0926806c0fd145badb541b705f38431793de8b68"
-    sha256 arm64_linux:       "150345153865a080048abedf7de640c392375cb169a694a9fda7910133816e26"
-    sha256 x86_64_linux:      "d4c34b63ee3b8f2e6286fb71e4f4ba116e5d0e5142a0fdd499250a022607de3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "657194418226858d14f105edd0ebedca62955a633dca929639f31753a3ca36e8"
   end
 
   depends_on "autoconf" => :build

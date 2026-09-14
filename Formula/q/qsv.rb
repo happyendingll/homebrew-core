@@ -15,11 +15,8 @@ class Qsv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "05bcf7069f16a800989d143f8a8f3eb3ad83e5049c4599576479d4c20d827e0d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3c2a63b307f32696bdc5fb92c9d1c04d8397fcfaaee10a0d74921a6c6c16215b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8b1b0a433454d39d58bbcec8f592788068ea3411ebed4032793d584e823e6906"
-    sha256 cellar: :any,                 arm64_linux:       "ed75e50cc8c9b3adaa49275f7e9edf04c154dac72aab75c9d1dd8c5f112a28f0"
-    sha256 cellar: :any,                 x86_64_linux:      "cc8933065efdb9e63a359cc4513d564ab5db69c38b5df83363af51da981f007d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "7787d427968943f780645e802c943878b6ff3d0d1d96aa664072a4d0bf747ee9"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

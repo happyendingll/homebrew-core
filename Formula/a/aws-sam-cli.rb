@@ -9,11 +9,8 @@ class AwsSamCli < Formula
   head "https://github.com/aws/aws-sam-cli.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "958e6a76d5a1f2437a0a991b5d6704294bb0b0b42bef10ffdc0001d9ccfc9ea9"
-    sha256 cellar: :any, arm64_tahoe:       "df3e5996d0d006e9e1eb75dd472e5fabdc34eb1e77de74622be9be6fb2ad1fcd"
-    sha256 cellar: :any, arm64_sequoia:     "e5164775f2d3446250e33fc64f0d9c4e48299043f349c3ae0a89e9890a14c1dd"
-    sha256 cellar: :any, arm64_linux:       "f052e47a72b30c6c729c7aa7c2e542f53aa18952d7ebc8ad284eb4c523445cc9"
-    sha256 cellar: :any, x86_64_linux:      "04f1a9a33c94e91a8cc5e56fabe32940420b7ca9557dfe9dd79c3ec40480635c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "ccc4ff4a8ce8dfba7e6caeb193eb03f5ff2e84c442375b46330a4c164babea9c"
   end
 
   depends_on "cmake" => :build # for `awscrt`

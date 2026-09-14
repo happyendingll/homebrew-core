@@ -7,12 +7,8 @@ class Gts < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "ea98acbd02ff7364565d0b1f73375b21ecca38648ea53341945a570437e2fca6"
-    sha256 cellar: :any, arm64_tahoe:       "ce2913388e26ca0509df2504cc4db13b6855075d734f0b4757f5b592ccfa01c1"
-    sha256 cellar: :any, arm64_sequoia:     "ec1d22e070fdbc6ddddbb3689f745218f6fd8b0c4ad25706cea9abc10381f76d"
-    sha256 cellar: :any, arm64_linux:       "b943b311e50ceb20188b9e7214b374c6d1064ab9ef31e2722e71c3d675d8fa97"
-    sha256 cellar: :any, x86_64_linux:      "49f026fbc5f1a7dfb651f350fad3f3fedfd72c04f385340b9f713753131fe597"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "1ef2c260ce62bbc58a9d71385068c7950a10ccf15b14a2abfebfe80fd939cc30"
   end
 
   # We regenerate configure to avoid the `-flat_namespace` flag.

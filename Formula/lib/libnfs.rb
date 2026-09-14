@@ -7,12 +7,8 @@ class Libnfs < Formula
   compatibility_version 4
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "795251cbeab10dafae19cbd02104df2580aa30ab7ac03ca14fd2fbc6202bb0d3"
-    sha256 cellar: :any, arm64_tahoe:       "9fd081f0367a73c582d30468286129807103158d8aa4c5ba02b7e94c236c4aa4"
-    sha256 cellar: :any, arm64_sequoia:     "acc65a0b36fbbafbc99285bb30e719a9a5ebea20450cd9d1afdfd77a45e51605"
-    sha256 cellar: :any, arm64_linux:       "bb3a47b0514d8f6558ffe5eda455e573689c1db992ebe138b4095bffff5ec14e"
-    sha256 cellar: :any, x86_64_linux:      "bf4735873e9f72953d1d10a038feeabe72725a3f2cca1bca008b3360672cc619"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "aedce4da61742475336c99f2308bc6f55c2f10c1dd23c2de86e8182c2167eec3"
   end
 
   depends_on "cmake" => :build

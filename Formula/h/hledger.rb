@@ -15,11 +15,8 @@ class Hledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a531f8ac867cfcb0d6337172cab9703774508420f92790c8ef40445dfbf8b444"
-    sha256 cellar: :any, arm64_tahoe:       "bd735db8e2f23985efb55cf5431df98fa8737a5f0a08943d13d99718187e0d46"
-    sha256 cellar: :any, arm64_sequoia:     "40b0a873327d54a350e099b49df1c0550e27ed4e8c17a110e1615bdb3be3ae56"
-    sha256 cellar: :any, arm64_linux:       "f6b72822df1830dda4416c5448eb91b8919feed0b899fbe6a832608270f5f679"
-    sha256 cellar: :any, x86_64_linux:      "f43e7b90d90bb98791f5156a5cb03b2de030a365564b3008f70b86571c695bc0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "59440d46d59681d9889574d1e19b8cb25df957a54f3148e5422e5197031be658"
   end
 
   depends_on "ghc" => :build

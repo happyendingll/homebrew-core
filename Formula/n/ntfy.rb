@@ -7,11 +7,8 @@ class Ntfy < Formula
   head "https://github.com/binwiederhier/ntfy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b0bba97e142047a8416cb9f8be6dfff235776526295ee0137e3e436dfd767a0b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0bba97e142047a8416cb9f8be6dfff235776526295ee0137e3e436dfd767a0b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b0bba97e142047a8416cb9f8be6dfff235776526295ee0137e3e436dfd767a0b"
-    sha256 cellar: :any,                 arm64_linux:   "5a0e1fdd492a7485ca935bd09a78b7ef12cd8a169a739f95e12a179e6cc8d6f6"
-    sha256 cellar: :any,                 x86_64_linux:  "31c80978a13521946e92c1fe8ffb4e4a63cc1db666278f048b3f68f95dcd993b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "38fe42d5f834f780558eed2f39e6d0d78fcb58f1ca095fb8215b3a0ae4628818"
   end
 
   depends_on "go" => :build

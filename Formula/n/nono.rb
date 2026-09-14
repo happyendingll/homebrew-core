@@ -11,11 +11,8 @@ class Nono < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f6f7bb93dde31a7ad63e90e7b1567ccedbe09713bea1352f0e667fcdf7ea76f0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c319f48f9b94b4004656858fa88456b2e4020df0b1ca35433a362607c55db4ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2ea2e0d103c6bd9f9d579d2209c42238779be324438afee450405648b33b6a33"
-    sha256 cellar: :any,                 arm64_linux:       "7b85fcc00a32f1314106863087426d7f68426ac68c185e9116d4067c7ea2dd2e"
-    sha256 cellar: :any,                 x86_64_linux:      "3d192a5ed38f277bb2b17793736e0be80689964335be390064aa8621d3f02347"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "cf434c2e874220e87a9929a86ddd49afe04137b723b1609bc0d2c6feab1f60f9"
   end
 
   depends_on "pkgconf" => :build

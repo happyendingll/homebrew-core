@@ -10,11 +10,8 @@ class Awscurl < Formula
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ff785df44f42a7c8e5095a71b119da15bf7f66a69158d1521a80233d52af3fbe"
-    sha256 cellar: :any, arm64_tahoe:       "cdfe34921101ed9da0393d2a0a8913d64b717e8ea5da2c4abc6d8dcab600fef9"
-    sha256 cellar: :any, arm64_sequoia:     "4b4aeb56b2551dbb77ba764bf874f834b265ad24a7116926c3d0f77fa61d9029"
-    sha256 cellar: :any, arm64_linux:       "a5064de1d3b5f1e27ec2c70563a800f2552455920f6690dbca1487ad7058a7e6"
-    sha256 cellar: :any, x86_64_linux:      "72a8944173c23bb8cc6997a7ac97d374164f61208c1c9bed38cdbe2e67a655fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "0e841407b86d6e46a656c04b12c3c40aa3f970c64ae1daa38785a43482a28ac1"
   end
 
   depends_on "cmake" => :build # for `awscrt`

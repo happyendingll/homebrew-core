@@ -6,11 +6,8 @@ class TaLib < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "537ead5f8cd09b4cc0f3ed3a66a3736cc925e1a234064a1f563b3c5c6a0350dc"
-    sha256 cellar: :any, arm64_tahoe:       "e6de6d178938c85fdcc0f2717376cd484dc176c5f24db4c64b4260e83318c9e0"
-    sha256 cellar: :any, arm64_sequoia:     "b6f40477c526a50e488e3148bf9c1e291a2f4c38dd61722c0222c060b9ce0be3"
-    sha256 cellar: :any, arm64_linux:       "308662968647f28aae04f83313dc7dd6fadfe5dfca8051b46946c4ba9601b9a0"
-    sha256 cellar: :any, x86_64_linux:      "cabd2109c3726727400f5182715def1b8def16c351aa4429fcfc06dd965c34d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "895ef97698cda426b0bfe1b2b9e396072a0c6ff1acc8cb0fd527732b1b6b0626"
   end
 
   on_macos do

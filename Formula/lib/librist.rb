@@ -13,12 +13,8 @@ class Librist < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "c752266fb4814a60518c578a17fb741d637b3553c29880464ccae428af599181"
-    sha256 cellar: :any, arm64_tahoe:       "d53fe875d0331485ee81cf492045ba8cf5551e596299104fc428666bdd328a8d"
-    sha256 cellar: :any, arm64_sequoia:     "eb3efefc1292c5e105f3fa8e585d229a5cd9b853f97603acbbe26445faafe342"
-    sha256 cellar: :any, arm64_linux:       "301e312087c08d893a3f6fe428932d134059d10d6d1b25c9060f2f982e892bb2"
-    sha256 cellar: :any, x86_64_linux:      "0307064edb0c463e4c4fad1649dfd2de9eaf6faf1863a91fe6e45abf5e290564"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "5a9796061174407ffa53b32c68e1d751e6deb5db716e8fabde945ce3de65822d"
   end
 
   depends_on "meson" => :build

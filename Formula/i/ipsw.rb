@@ -12,11 +12,8 @@ class Ipsw < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9dfff1221cbfa4e674f2abc52c6f143fadd977aaf9e117071f715b6ca8540d0f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "00910793e4f5ab5d5d72a2a9d9b49a3b1dbadbca3ed7fd0f03925d31426ffea5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ee6594a5a4d1bac24ac1ed6a3e20057f11b10cb27f6e099ade6c0efb5d4f68e"
-    sha256 cellar: :any,                 arm64_linux:       "6eafe21290c87a2725bc5db96b60fd5d16359f524243efa90c564c3abf6d3980"
-    sha256 cellar: :any,                 x86_64_linux:      "4f9607d63f8abdb1782c2a116fed5a9a236972a7fdd204751b0411670aaf23d4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "b5b793412457fae7762360d1c4b4c87938605d3345e3e58a51f6bce30201fb50"
   end
 
   depends_on "go" => :build

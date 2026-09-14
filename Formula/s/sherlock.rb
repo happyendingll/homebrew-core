@@ -9,11 +9,8 @@ class Sherlock < Formula
   head "https://github.com/sherlock-project/sherlock.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "768ce1e3f5e1b6b6ab7ee5417a01009183f1a5af0b7008045ffb676aed33776d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e575d43b36c856830eb667f50387a5982c04bee4f712f10aec161d4dd4af8277"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f3ab78ad1a24140a5e8879c130219ae39da56e90770b747921fb1d703eb8845"
-    sha256 cellar: :any,                 arm64_linux:       "4577a220ccb61fb0f20f4fd1c03852a113a63133e9d0121c4052d0487723ca26"
-    sha256 cellar: :any,                 x86_64_linux:      "c3b38f6715a4058deac0b60013695d46ac1e37454e4dd1aefb832d3247232450"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c941d2ec005381a17af50c9ce354c2b82414f745a6289f75cccda526abe5cf26"
   end
 
   depends_on "cmake" => :build

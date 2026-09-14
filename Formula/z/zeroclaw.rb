@@ -7,12 +7,8 @@ class Zeroclaw < Formula
   head "https://github.com/zeroclaw-labs/zeroclaw.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d551d4862e6dff495155bb8bcaa24dc0542c7763b89490462f4d2ebf83c02728"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e5587cfcdc862fd75f1fe7ee02213f81cbcfa978bd8f440f53ab43dd65cd741c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e319780b2d33b5d8c444b93756b6feb1b67da8afeae2d7294f771c98ac210c71"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "1f689f9fab53f427ed2deef59051e86dddab4ae0f9e6608b73475b80ddccb5b1"
-    sha256 cellar: :any,                 arm64_linux:       "9fcfddc33c13a2d838ea0cfa473399cb65e4821634aeb39f1fbd360fd5fc2356"
-    sha256 cellar: :any,                 x86_64_linux:      "d68bdec257f48f1d513a4c26a14a36e2875fef52a7691f1bbef0e9480ba1aceb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "ca7db8649b3de9cca5966e43f6b7056d4711ec2caa1d76e33dbb3228346650fa"
   end
 
   depends_on "rust" => :build

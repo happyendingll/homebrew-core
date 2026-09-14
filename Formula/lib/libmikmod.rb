@@ -11,11 +11,8 @@ class Libmikmod < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8c6f768219823da4363752c82bcc17171eb810853c8f3e6412075516e0e5f343"
-    sha256 cellar: :any, arm64_tahoe:       "f5153327273854ae91d744b6d2f9bbeb6e176aecd3b94426c607233d13d1fd0b"
-    sha256 cellar: :any, arm64_sequoia:     "cf44cad43a8afa8fb0d0123372b31c296f995c5621e51ebfd9db524cf8201806"
-    sha256 cellar: :any, arm64_linux:       "8b499b751acae0b7b95ada2f1e0f163cb44ec1c7802a080ee1641e1622652339"
-    sha256 cellar: :any, x86_64_linux:      "4f35ddbdf67db4fcb2a146e5fea1c06d3202ced78d1f4c3bde84eaa8efcbf6ea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "2742e8d64ed6e1c4b99a52bf1b0d5970ee0c806ea1c9307e1f1f07a6cf4512a8"
   end
 
   def install

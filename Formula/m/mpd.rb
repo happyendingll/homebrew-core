@@ -8,11 +8,8 @@ class Mpd < Formula
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1a29fd0ec5a54d932269c0e9baa9a47a861c4196a405bdca446e96116cf24f00"
-    sha256 cellar: :any, arm64_tahoe:       "69944e9d6291ea7037df334e30b0619028df5240e7824ea5d60ad48cf956f2b3"
-    sha256 cellar: :any, arm64_sequoia:     "18cb7e33908777360ed0d48882130d15f79f6d83925d6b941e3ce5c7aebe11b6"
-    sha256 cellar: :any, arm64_linux:       "0b7202f206c7c2a492d7d5659801647f8a6705d7b9196e0ac03d738f90f9c927"
-    sha256 cellar: :any, x86_64_linux:      "6e7120e000646b90600654243a3b59c2ef5c7b131a6c075f11bd1df6a3ebe71b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "9e960ef7d68e91f65f24746830d037a9e019515cd407eeec1d6070f1b5a81609"
   end
 
   depends_on "meson" => :build

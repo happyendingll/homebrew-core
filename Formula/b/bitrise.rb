@@ -12,12 +12,8 @@ class Bitrise < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "618f80c5b50027eb815ca898f78c9cf64691f77ded794d614b8e0073bf729708"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "618f80c5b50027eb815ca898f78c9cf64691f77ded794d614b8e0073bf729708"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "618f80c5b50027eb815ca898f78c9cf64691f77ded794d614b8e0073bf729708"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "618f80c5b50027eb815ca898f78c9cf64691f77ded794d614b8e0073bf729708"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "728a0f8ba421fabc96f2b4eaea4b3ca1f5a2127c7f2905ffd123b387de5d818c"
-    sha256 cellar: :any,                 x86_64_linux:      "eb3c3e1c5c7571c808c3ff738046cca32b060443756154be64d86d406a8de221"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "db37b91f4a8f2ce36f6bb7135d4205d3529964f35d3b3b01e0d75c072fa6b64b"
   end
 
   depends_on "go" => [:build, :test]

@@ -7,11 +7,8 @@ class Verilator < Formula
   head "https://github.com/verilator/verilator.git", branch: "master"
 
   bottle do
-    sha256 arm64_tahoe:   "a63b3d71bbede6310fe3b5c11bc11770edbf16fb68d9d65d425928c556653e8f"
-    sha256 arm64_sequoia: "3c91aed6b03099c6fd99b58ff0cb0b65b91121dc7491146c29e67c8a24463f6e"
-    sha256 arm64_sonoma:  "7751a4969262543593b50d464206a7c73ffccdffcdc180e0c1a1a35b3c890d80"
-    sha256 arm64_linux:   "0c80a9945d24cd2637a8a9306296d00698f0e0d315b653ba73a773c1a4d24034"
-    sha256 x86_64_linux:  "7aaf304fbe83c038d8aa9656fbc870f5d7bd681d47bbb5c03910d900931fdab4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "e83600c7abedb7605f3f3f9b63179c670562e5c654c29e21b57a9cef9e3c0b9f"
   end
 
   depends_on "autoconf" => :build

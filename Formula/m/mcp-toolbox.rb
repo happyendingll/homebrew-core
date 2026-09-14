@@ -6,11 +6,8 @@ class McpToolbox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca84209f747f2148e21224210accdb089fd110c98159f3f96107e96fe839e81c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1c4287601d40b199e88acb0c146c280bb67ff0651903bbcaa75bdcfa6c24f617"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6c249e9492b55e649210c87ddc85f2a9b0ab45bcdaa182c515c6c98eeb24997e"
-    sha256 cellar: :any,                 arm64_linux:       "40eb6bfbdef42c4feb27c6562f302f89c882c0fd76e9a11ed274531af50c0e41"
-    sha256 cellar: :any,                 x86_64_linux:      "2f4397a883b9d3bd30a76d00ac3c62eef4007ebf8dd708a84c406df85c7ff22b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "8a2512792ba16418b33c7dda265390f34769da515f537795b2a6a1133eef6013"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Solidity < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "7005723a3aaaf1be56416ff2148593fd563664771118cf3d1749889d8fe34caf"
-    sha256 cellar: :any, arm64_sequoia: "47baaa05ef4f27c03d4bd8fd02ba23fca85c400d72edff36550a9d6642949e6a"
-    sha256 cellar: :any, arm64_sonoma:  "04b85ecc66f6efacab14fcfe58378b338437635f5d099b0b783c12eda6bab3e8"
-    sha256 cellar: :any, arm64_linux:   "6a079f1028886d60080d0c7bd8ac7b85493d813055db41913eb86ea35f90ddfa"
-    sha256 cellar: :any, x86_64_linux:  "d1a97bad2ecd02a881ab89f20b356509b6fa518598f269a31785e9de9552da37"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "daeaad70a0e02bf254998bc56ef2a0e321851cfd12b2eaf697f66ca998dd96c1"
   end
 
   depends_on "cmake" => :build
