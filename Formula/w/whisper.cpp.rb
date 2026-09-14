@@ -13,11 +13,8 @@ class WhisperCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "878cb8f0f608ca7a4c6bd4677d911772b09498c0f51fe50400b9e482aef046b0"
-    sha256 cellar: :any, arm64_tahoe:       "7f4638ec796dadd46cf4436afe439f1c9f8056e61f8624379a800417e905d321"
-    sha256 cellar: :any, arm64_sequoia:     "d7baf5454e1c886adc33380c1cd1bfe810477e3196a250d8096bc5d02600dfd0"
-    sha256 cellar: :any, arm64_linux:       "006fc8f2b384ff1a538ec1c9fb62a96d2d7a7c422343c62935b3cf1f805fda29"
-    sha256 cellar: :any, x86_64_linux:      "2a3304c82ab88fa6a597471b8a3dd10b06689cddcd4a58e4ed84504174118287"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "0c092ffc1782e0936484ee4cb038f2bbee23eaa131b12c41715ab11de1e2e127"
   end
 
   depends_on "cmake" => :build

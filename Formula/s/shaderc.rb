@@ -45,11 +45,8 @@ class Shaderc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "463549d39c59ba245f05379667d89e83f223f1b035226926534fc28ede01455e"
-    sha256 cellar: :any, arm64_tahoe:       "12ba0c59a98fb8f671f9473573002b2a812f26d2e60ea4f577f0c8c750c9838a"
-    sha256 cellar: :any, arm64_sequoia:     "1313ffbae9ac1559f7160cc89657ecd5fc324895ff46e15a4bd198ec3bbebec0"
-    sha256 cellar: :any, arm64_linux:       "9ffed598e151f5e279f58a041bd3cea982d2bad8d9f04a7b47abda96f2cdaa14"
-    sha256 cellar: :any, x86_64_linux:      "65e6b619e6cf08aefe36198634c19443f3abde8e1db49ab25dc937884e9f9f80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "181c0f057e01ecbe47f1018364a378a8fe0a469df80422f9a32816e0d9acaabc"
   end
 
   head do

@@ -15,11 +15,8 @@ class FfmpegFull < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "98498d5769b784377d222b14bc356d75f2453c9a12e39ed8631f45f02db7db8c"
-    sha256 arm64_sequoia: "317d40a043505506ba84b50a7cf04ddd1faf00ee42f0ffe03587a780b14edacc"
-    sha256 arm64_linux:   "8e4e4239c91f143f2782e4c322ae3f17b0d38d42a7d1acc54c75f1ddf4ceadff"
-    sha256 x86_64_linux:  "d8f4e17e6324ff387ff7bb01c5e23541d2fa6951d9d669b1b179ac422ff56260"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "59bf1a0d9499759eea6cc7b98ef2a7b40c7c0f6d49f6e9e4e89d99f2ad0e974a"
   end
 
   keg_only :versioned_formula
