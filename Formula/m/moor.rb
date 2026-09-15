@@ -6,8 +6,6 @@ class Moor < Formula
   license "BSD-2-Clause"
   head "https://github.com/walles/moor.git", branch: "master"
 
-  no_autobump! because: :bumped_by_upstream
-
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
     sha256 cellar: :any_skip_relocation, sequoia: "9f2521980c8c7cf1caa0f0162bf10484ce1aef7959329944e38107df91103d7f"

@@ -1,13 +1,16 @@
 class Officecli < Formula
   desc "Read, edit, and automate Office documents (.docx, .xlsx, .pptx)"
   homepage "https://github.com/iOfficeAI/OfficeCLI"
-  url "https://github.com/iOfficeAI/OfficeCLI/archive/refs/tags/v1.0.149.tar.gz"
-  sha256 "7a4ca4c0e91318d7782ece14e0386fee967d6a221ead9ce3fd7d7c1f99cb7b6e"
+  url "https://github.com/iOfficeAI/OfficeCLI/archive/refs/tags/v1.0.150.tar.gz"
+  sha256 "c0739e37e6104fa10e539d1f7de6262ecc54ca817938fb50e1289f1ca22b5d9e"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "e7a657f6726d5226b90f2e1e955167c59de038fb5a974bd7bf431e6fc123a7c1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "99ef64b9b3a7e3df021814e59dc87f0a403ebeb7a5b7b3785c8a980860c356f6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e02e84c8fd7ea3ea54c7d0c95b842444f31db9dfcabefbab82c0aa7f2f138074"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e465a854583e0fdf7051fc14fd0a1b51d3d5d2f1433521bf3318928a09490641"
+    sha256 cellar: :any,                 arm64_linux:       "6f2a197f835b8a36cb5adb4b3394eecbce63f150827cc3ba9ca0256ab9c1634a"
+    sha256 cellar: :any,                 x86_64_linux:      "ce16d17ec4bde2fdad36cec1b7ced9e30592738667a5de904f8545a1d755fe62"
   end
 
   depends_on "dotnet"

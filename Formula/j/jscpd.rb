@@ -1,13 +1,16 @@
 class Jscpd < Formula
   desc "Copy/paste detector for programming source code"
   homepage "https://jscpd.dev/"
-  url "https://github.com/kucherenko/jscpd/archive/refs/tags/v5.2.0.tar.gz"
-  sha256 "8a474c5fb920922e011e3facbe05be797e2c4849ba61d31a7cdef217f9b4daaf"
+  url "https://github.com/kucherenko/jscpd/archive/refs/tags/v5.2.1.tar.gz"
+  sha256 "902f07f7ebc3ff7c546b8533424a05176d29bab4539dbcc447c4815fc47c8136"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "455bb1bd193cfb84e5f24b32ca5df0e307f407bd136031b3271770e24ce38a6d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fa0266fbe61763ee27f5c3662cc9ab8b5df3b23b0d12a424975304b35fc41b0b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3efa2d9af0f640a1a3a143044bb274e3740b9dbd8156cfaaee2cfea2cced5451"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf571b464e3bf25ebb8fd7c68535068f7f6e1c5d9f7cd86997d73af7869040e0"
+    sha256 cellar: :any,                 arm64_linux:       "bc859f30aaf87994862ee247720dc77aa3dc11cf6f998164d3e8265829262e40"
+    sha256 cellar: :any,                 x86_64_linux:      "76eb7f5aa901d12d9bcf6b265714d60c3a7ff9987bfcddfcf92c06c7cedd2b63"
   end
 
   depends_on "rust" => :build

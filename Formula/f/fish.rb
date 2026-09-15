@@ -12,8 +12,6 @@ class Fish < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  pour_bottle? only_if: :default_prefix
-
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
     sha256 cellar: :any, sequoia: "bfb7094ec29692f1267f6f247fe25213ffb35e116e164904f9824366dfba90eb"

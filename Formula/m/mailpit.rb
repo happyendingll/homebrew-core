@@ -18,7 +18,7 @@ class Mailpit < Formula
   depends_on "node" => :build
 
   # `mailpit version` in the `test do` block checks GitHub for updates
-  deny_network_access! [:build, :postinstall]
+  allow_network_access! :test
 
   def fetch
     system "go", "mod", "download"

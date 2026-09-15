@@ -3,14 +3,17 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/19/51/e1060f8d6600235124a0fc399978a7c65d197214ba18194ad2630da0b577/cycode-3.23.0.tar.gz"
-  sha256 "bddae1aa52ad0b51328430a55a9f2c9a4f93a25b4edbceb02155cf40e3b9f149"
+  url "https://files.pythonhosted.org/packages/dd/d8/818095a1828476fc1eb186c9150709a426bc38fe348ec2c76c92f62d8520/cycode-3.24.0.tar.gz"
+  sha256 "c6e88fbb3ae30d3305d815df446b7ae5dc8e591e9715ddaacc90e88937e3dc87"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "da7c61e5bd4e60fa91b30f5df3a617278db70aa0abf51014dd7f54900e8b5fd4"
+    sha256 cellar: :any, arm64_golden_gate: "a3f8d0fe9d5552a892f2317f06e7975edb6211af4867dc11ab38573c1306e892"
+    sha256 cellar: :any, arm64_tahoe:       "99b735d0bbbe6b63bc7e23d39f008878befd009d168147efc6f5f385d3b08cf8"
+    sha256 cellar: :any, arm64_sequoia:     "bcb15131dfa015c055aac4a5517f9a41059eee8e09aaacff4faad6af82f4a394"
+    sha256 cellar: :any, arm64_linux:       "679ee75928003e16873450853eedeb4d39513127e3a74cb0c614719438d7ea9c"
+    sha256 cellar: :any, x86_64_linux:      "bec3ec49f258db7892c28e0852bc165c35cfacf74b38101f31f66e9af58baacc"
   end
 
   depends_on "certifi" => :no_linkage
@@ -138,8 +141,8 @@ class Cycode < Formula
   end
 
   resource "pyjwt" do
-    url "https://files.pythonhosted.org/packages/3b/81/58d0ac84e1ef3a3843791d6954d94c0b33d526c75eeb1efbce9d0a4c4077/pyjwt-2.13.0.tar.gz"
-    sha256 "41571c89ca91598c79e8ef18a2d07367d4810fbbd6f637794879baf1b7703423"
+    url "https://files.pythonhosted.org/packages/af/c3/8a3b59c25070cc61dc517fbdfa5dc0904670c96f605cc69759dc09166b99/pyjwt-2.14.0.tar.gz"
+    sha256 "77283c83fb56ecf566a886c757a714bc83668e38156de2cce8263302f42e0b86"
   end
 
   resource "python-dateutil" do
@@ -223,8 +226,8 @@ class Cycode < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/92/ff/5a28bdfd8c3ebec42564ac7d0e54ca3db65044a9314a97f9564fa7a1e926/tzdata-2026.3.tar.gz"
-    sha256 "4a1518b8993086a7982523e071643f3c0e5f213e75b21318e78bcabfff9d1415"
+    url "https://files.pythonhosted.org/packages/e4/31/3d74fa778a63b98b7374323befcc0be5ab3bd94afd4096a0124e7379152c/tzdata-2026.4.tar.gz"
+    sha256 "f1b8bd365d8d210c55353f4d7f8d6d8561c0ba50d704b700d195a9424bba0d79"
   end
 
   resource "urllib3" do
@@ -233,8 +236,8 @@ class Cycode < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/f2/0f/3f86e61397dd33bf2ccf28188c40db6a740658aeebbbf6e7dbc101a1f487/uvicorn-0.52.4.tar.gz"
-    sha256 "73acfee47a0b133c5de13d219492d62d8a31e935f4fe6e41a232451a15379f86"
+    url "https://files.pythonhosted.org/packages/5d/ad/04bbb797c84fc1f26cb171f7394716f4865ffb8d8c5e1eef42565c2dfa6b/uvicorn-0.53.0.tar.gz"
+    sha256 "a9356f0cb89b3b8621529c5d5eebd69bfe154f4c3f68b4cf2de47e45fa855c2e"
   end
 
   def install

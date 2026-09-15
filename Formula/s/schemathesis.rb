@@ -3,13 +3,16 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/1b/29/d28b545e780e7db80380006c2b806b03765362bcf7aac8c63c55e41f26e0/schemathesis-4.27.0.tar.gz"
-  sha256 "01ca14daf4dfa3a04dade2b186bb08412fb6f1cb42e84459df363d69be3a8760"
+  url "https://files.pythonhosted.org/packages/46/d0/e0ab1d87068e0fbc2d5319ae040279cdde22eee2b94dfa954280b3a6ff2e/schemathesis-4.27.1.tar.gz"
+  sha256 "f83b8b735634d4f202bd820517481f97cb3c48c350c09166b362d67934c1a52e"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "afcd46800b2b210602e551f59406203beb90505bd1a9ff362a95d2273cecc493"
+    sha256 cellar: :any, arm64_golden_gate: "e22ce2337df3f2d9e127f35945a27a3dfd32381191d2772cd7547d232304750a"
+    sha256 cellar: :any, arm64_tahoe:       "7f0c79bc666e73e9873379cc017dce8c6e28502dac89e35a33981f114b17a6f5"
+    sha256 cellar: :any, arm64_sequoia:     "c627bffa4faeefe4762a71e9349c4bc79e0be2ad1159207cab52e2c8c9ec299a"
+    sha256 cellar: :any, arm64_linux:       "9f0d828e8a1abb309aa9ca21c8b3cb213d37bdd2cd6a363804ef0984caa8732a"
+    sha256 cellar: :any, x86_64_linux:      "a94236d1a631dd99de81d63e042e08e9bd0474e2ea72ffc1845233bd4bc44a92"
   end
 
   depends_on "rust" => :build # for jsonschema-rs

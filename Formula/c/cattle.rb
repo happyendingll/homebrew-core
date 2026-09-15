@@ -75,7 +75,7 @@ class Cattle < Formula
     system ENV.cc, "common.c", "run.c", "-o", "test",
            "-I#{include}/cattle-1.0",
            "-I#{formula_opt_include("glib")}/glib-2.0",
-           "-I#{formula_opt_libe("glib")}/glib-2.0/include",
+           "-I#{formula_opt_lib("glib")}/glib-2.0/include",
            "-L#{lib}",
            "-L#{formula_opt_lib("glib")}",
            "-lcattle-1.0", "-lglib-2.0", "-lgio-2.0", "-lgobject-2.0"

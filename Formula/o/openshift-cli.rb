@@ -21,7 +21,7 @@ class OpenshiftCli < Formula
   uses_from_macos "krb5"
 
   # `test do` block connects to api.openshift.com
-  deny_network_access! [:build, :postinstall]
+  allow_network_access! :test
 
   def fetch
     system "go", "mod", "download"

@@ -22,7 +22,7 @@ class Lsix < Formula
   end
 
   test do
-    output = shell_output("#{bin}/lsix 2>&1")
+    output = shell_output("#{bin}/lsix 2>&1 < /dev/null")
     assert_match "Error: Your terminal does not report having sixel graphics support.", output
   end
 end

@@ -13,16 +13,19 @@ class Verilator < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  # macOS 27's system flex emits `yy_create_buffer(FILE *, yy_size_t)`, mismatching `src/V3PreLex.h`
+  depends_on "flex" => :build
   depends_on "help2man" => :build
 
   uses_from_macos "bison" => :build
-  uses_from_macos "flex" => :build
   uses_from_macos "perl"
   uses_from_macos "python"
 
   skip_clean "bin" # Allows perl scripts to keep their executable flag
 
   def install
+    # FIXME: Homebrew flex's `FlexLexer.h` keeps `int` signatures; skip flexfix's `size_t` rewrite for Apple's header
+    inreplace "src/flexfix", 'platform.system() == "Darwin"', "False"
     system "autoconf"
     system "./configure", "--prefix=#{prefix}"
     ENV.deparallelize if OS.mac?

@@ -1,8 +1,8 @@
 class ShairportSync < Formula
   desc "AirTunes emulator that adds multi-room capability"
   homepage "https://github.com/mikebrady/shairport-sync"
-  url "https://github.com/mikebrady/shairport-sync/archive/refs/tags/5.5.1.tar.gz"
-  sha256 "5f56571f11206cb29e1a319df10c9b1b1df21dc9e6800a3b9aa701d17aa1046f"
+  url "https://github.com/mikebrady/shairport-sync/archive/refs/tags/5.5.2.tar.gz"
+  sha256 "abcdb59674b6eedb4f3f6228f3c702e65d2cdc037231b0c48617fd90891b49e9"
   license "MIT"
   head "https://github.com/mikebrady/shairport-sync.git", branch: "master"
 
@@ -12,8 +12,11 @@ class ShairportSync < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "275e40079c9204109e2b7156e3f936f1ce3a33ed58c7295996002198c8c2cba4"
+    sha256 arm64_golden_gate: "1757c4a2e14289fc5a91ee9cab7f587db955857cf6765ea391458fd82aa4cf14"
+    sha256 arm64_tahoe:       "c0dac3881395136f1393a1a3bd8831ca9dab23aab11f894ed65a49bf40f4e1b5"
+    sha256 arm64_sequoia:     "fd1b9ed19cd116f4b1fe5d60c7b511797ebfa8935fdd6268af7c3684de2e2a84"
+    sha256 arm64_linux:       "f431591a6c3fdc775c13ca0ef7ee8917d4d24bf9c41ebd5c5cd6a5de55c8207e"
+    sha256 x86_64_linux:      "86ea8189c3cfd0507d85e68b5ca8c290ebd8b12156ac96114df0a45ed57e517c"
   end
 
   depends_on "autoconf" => :build
