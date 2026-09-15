@@ -7,12 +7,8 @@ class CfTerraforming < Formula
   head "https://github.com/cloudflare/cf-terraforming.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f56c791cb09f5b6bf4b55c6c43f9f129ae07f7d832c880b48a26808355325419"
-    sha256 cellar: :any,                 x86_64_linux:      "51537fdf729cdebc1bd121ed0484d975e1f5224f3235503786f8a8c4e975ab14"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd56fd61b9d0dc924ebea9afc2596bbc79bd929bc0db375ef228fbacc8d0cf26"
   end
 
   depends_on "go" => :build

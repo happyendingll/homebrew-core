@@ -16,11 +16,8 @@ class Libsecret < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "41f3810a797fd4fcf98d87551060a39367d9c3c74eb0496ca5bd01161bf4fe44"
-    sha256 cellar: :any, arm64_tahoe:       "96a2a8ba0615e96d9edf6f1bc076aa351e24d68c44cc3473ef72851902203489"
-    sha256 cellar: :any, arm64_sequoia:     "14b138d76afd6d6974fdd8346c0fa466b84d57a95171f44e0a6b9899cfd64718"
-    sha256 cellar: :any, arm64_linux:       "9f1c5f67559393f1a707e7cc5dd07c33f91f6186b0bf447aa3ac5e4c18bae032"
-    sha256 cellar: :any, x86_64_linux:      "c75303f08d3e9426547700ce8d49594f1955fa487786b855fa8ba9cc270fbffe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "0c940f4933c40aa7e6704b6b63e00461037bd4cc091018e40eb1c7d1c1c31d96"
   end
 
   depends_on "docbook-xsl" => :build

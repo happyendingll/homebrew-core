@@ -12,11 +12,8 @@ class Tanka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e3541d85940e17dfb89927be471974ad9aad4801eaa7c941687254b978475f4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e3541d85940e17dfb89927be471974ad9aad4801eaa7c941687254b978475f4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e3541d85940e17dfb89927be471974ad9aad4801eaa7c941687254b978475f4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a29b75a354e0778d73b96a00a0b8601aff4efe1bca49d63d0486127e70bd5a9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2efcb069cd7b8b462ae29efc1c8a31477fc27837442ab9407e803266f6f47380"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "4a46d592734cec7b1657c42d62cfc0362da2d07f8de0b3dc30add324887bb864"
   end
 
   depends_on "go" => :build

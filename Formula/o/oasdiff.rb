@@ -13,11 +13,8 @@ class Oasdiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f43198447b023cab4837f68fc997eb5797a8f01e4afcc50d3d157db56237010"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4f43198447b023cab4837f68fc997eb5797a8f01e4afcc50d3d157db56237010"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4f43198447b023cab4837f68fc997eb5797a8f01e4afcc50d3d157db56237010"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7befcffd87ca634e08d4c80c669066208b38dc452a27113c620606b687760591"
-    sha256 cellar: :any,                 x86_64_linux:      "5ae2e5ec53700396b8d1d95a5df5ec5cdba31ec01fc559513ea1ba0dbbe5191e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "47250f9ad4430664ee006f9cdc517fd47d0f63746da9dd596e26981796433f05"
   end
 
   depends_on "go" => :build

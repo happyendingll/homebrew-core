@@ -7,11 +7,8 @@ class Mihomo < Formula
   head "https://github.com/MetaCubeX/mihomo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "79e61a0fc7c405b5671061515115feb7a85b913f95e1e87487e08776e15d8327"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c80e1ca3d8ef3d31a2008dc2ca33d7a459576983e053615fa019eb2f7d689008"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "88978e01874c5b47ba8d61b56ab749d698e3ad6d0baa068da15d80440380260d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c073b56906bc188261bd824a69a76ce171f88e6dcf69af432e4b4632df6e2f74"
-    sha256 cellar: :any,                 x86_64_linux:      "ab97993a77da8b388979118e588f0921c2fcdd57becb1149fdbf6ddc796c2ed7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "363242a0f1437936a4cc0aa07071c2a24826168d14839f83f25b8590bdbb70a4"
   end
 
   depends_on "go" => :build

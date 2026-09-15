@@ -15,11 +15,8 @@ class Psqlodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e4896a138635ba0c2980ef17bf3d4e87cc202938654a1e00935473cd36e70b4a"
-    sha256 cellar: :any, arm64_tahoe:       "dd15910207f80da0e955216e0d42bef7330e261aae74333748cad61f4cf25003"
-    sha256 cellar: :any, arm64_sequoia:     "4dfe7f2f1f9af99b6763cec4aa587546f6d1ebd1aed35a9f35f5191512c783d5"
-    sha256 cellar: :any, arm64_linux:       "9a77cefdca59e44fe64c5d85a6f52ac8025ccfc815d70c6f36810cd8b20a900e"
-    sha256 cellar: :any, x86_64_linux:      "5d6796b1ab7e264558806441f2628a40fd72701264c25676cbda7d7d1fe0ffa1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "d3eed678ac5253eaf7e7c868aa3a7d78776640b608956548c7aef5f93a56dc14"
   end
 
   depends_on "autoconf" => :build

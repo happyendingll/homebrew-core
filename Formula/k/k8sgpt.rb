@@ -7,11 +7,8 @@ class K8sgpt < Formula
   head "https://github.com/k8sgpt-ai/k8sgpt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5d6619d42aa8008ad0b1ba4abbe6cb2538d984bb1447fa0231d8e5fb7bdd8008"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0e65a7a3bc35a6ff8201777045d281cd1db4ad400451a68c4a60a5830f356cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "57d8cd69be28b94f29aaced5935dccad496c747575f0980b4e540f0f2e99f556"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "38249d9f39342af258781c43ce3aa420a75950bbcd799752e89636d99f2ef219"
-    sha256 cellar: :any,                 x86_64_linux:      "e448cd21b680b3bfdf2b72a72719463639d0f388e83d2d11f16d7f3277e3207b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "8905e13ca2b581c8dc61eae11af17e659a943e153964cf4e7f14647b03dea03a"
   end
 
   depends_on "go" => :build

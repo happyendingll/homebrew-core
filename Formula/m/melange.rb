@@ -12,11 +12,8 @@ class Melange < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a70087b766580043fd7d07fa1767093d2e4e1b6bef03abd882b046f27b2dcbd3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3b2cc2a4a99d7fd905434ecf191ea1dc3453b739ba6612edd102c1876212a290"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e15405afe465170dcb01eaebe8c4f74eb1d8acd98c463ea0942027371a415b6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5866fd8ff21c66642d06d7f33b39c0eb5e7ac31b8eefbd0c24e83063c59367c9"
-    sha256 cellar: :any,                 x86_64_linux:      "94b1e583f5308c2f0fa94d0a8a83e9f3444ebce6fe376d034772dd4b23ee20d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "0a87a8c4ffb8a76cabfacd5d9896e86713c01ab4947026b41e7cc7d17ef16755"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class Cdncheck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "32a10ae8c6629ae3d27d678d9d78cca8822f78df12d4a74f78252c79576e5e07"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf51a20c2b047552c90f2bc4de6699ec5dc7713c1e1d7a4eca46f5d5147ee335"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d42f910985f6f956d1b5444fe278523b21b37ae0e349cfaa04aeaffb45caa75e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5af02e0fc875d168c006812b48ea82ff5abf2b7c7a18b990c1a362a33f231926"
-    sha256 cellar: :any,                 x86_64_linux:      "e67937b7c44192b449cf46ba482dcee98d2144b2485d09a86fdb751b9ac7a1fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "1cdb01758adc8d6d0bc317c30f8753cb9390c6f6b3f47cd9c1b5db0241e6b9fc"
   end
 
   depends_on "go" => :build

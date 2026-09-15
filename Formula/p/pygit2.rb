@@ -8,11 +8,8 @@ class Pygit2 < Formula
   head "https://github.com/libgit2/pygit2.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e2abda1fe37ef063c31a915d17cbdd21306ad1290f5ff7baa8462be740acc093"
-    sha256 cellar: :any, arm64_tahoe:       "b75937a6e4604325f7197e3a3b3fab48c2c67da3b38e6a4acd5eee4f134b0ba4"
-    sha256 cellar: :any, arm64_sequoia:     "7a2a7fa73b46aa24fe72d1182b208ffcd6755d9c8b2ac264dbb9260d0f3df472"
-    sha256 cellar: :any, arm64_linux:       "78e34cc4ada6ed12cda9fa6161f5f9cb6c4c56a4b2e60ff88807eb57afbf3af5"
-    sha256 cellar: :any, x86_64_linux:      "dedef89ae1f9d119a1d0fce35f78205ecfe4efcb3430ea4e0efcbdc66b46d831"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "2051e4f8b8af64a96ee2aaf1119fe8c180c3cd88b372249bdceb8c4b6661bf95"
   end
 
   depends_on "python@3.13" => [:build, :test]

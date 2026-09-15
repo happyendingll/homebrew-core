@@ -26,11 +26,8 @@ class Ola < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "399c1074073ae0e5899feac4e24606b8562cf31bd1d259f17a982398116c1217"
-    sha256 arm64_sequoia: "416d752ab67bf9c0a392d98ca21a39e0bd7d32f4452c5bc091c3ca09b58761c4"
-    sha256 arm64_sonoma:  "896b1db26f7652cd41408abf5f9d3b254d52fc744829dc7825f3d0a2105944ee"
-    sha256 arm64_linux:   "5a4e18359e6326fd1b6dbaf65523da165a0d06a7c776490153c43c73b4c679c5"
-    sha256 x86_64_linux:  "1a3d1798e320809dfd8d4de6aa5e9b4fe1e67f294b33886cee56478ed06daa98"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "017c010c1a59d47c4bf9445795472ab26ffe1c446d27559ae4682df69a69b26b"
   end
 
   depends_on "autoconf" => :build

@@ -6,11 +6,8 @@ class BeadsViewer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "083f89ca6f2f2f8a41f441416b22050306523f46747826450927f394a8674b85"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "083f89ca6f2f2f8a41f441416b22050306523f46747826450927f394a8674b85"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "083f89ca6f2f2f8a41f441416b22050306523f46747826450927f394a8674b85"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6b80f044df8155b9376ab69f073e4e329de771676a7f78fa56129c13d1e18f6b"
-    sha256 cellar: :any,                 x86_64_linux:      "4bd154194301e0cdebcaeca3b73f7887c8a688601e1ac9c42cbacf0340552f1c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "526beeb15255668352c95f963d252fa62865a64eed46b8a119499eae710c1cdf"
   end
 
   depends_on "go" => :build

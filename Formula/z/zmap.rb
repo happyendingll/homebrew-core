@@ -12,12 +12,8 @@ class Zmap < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "0395a8921d0d23d1022233a1cf2a8b7fbdd2d83da35611ce26c199d4fd4578dd"
-    sha256 arm64_tahoe:       "a78dfb358782c21ebc754ce63d0d54b80d274b7f73b2f5f3fe9c8fcd04972c3d"
-    sha256 arm64_sequoia:     "06ed1558ae552a5e77602d41086a4e25d3d6eaa03615a7e850db885d817f29e4"
-    sha256 arm64_linux:       "73720cfee6360c4a420f4cf12e9a8b3fee89faf598e47de1cb7a68fa548360b6"
-    sha256 x86_64_linux:      "b7a2feb5a7e0ace72f678517b0dae749f9f02fdb4b4f7ca2ecacc9f376096119"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "072b6befaebae56fa70a5c21e9603a8682fd73e25496be409c575fb6e106987b"
   end
 
   depends_on "byacc" => :build

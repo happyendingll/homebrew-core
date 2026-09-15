@@ -8,12 +8,8 @@ class Trzsz < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2650699add83bc75e4b25b7c9568b2e4736c9ef5b1d026402abfe51425a4274d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2168398fe2284eb81b524b635bde3a7e4581119f47689dc55e6db47c677fc10b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a8129bdae773b873cd3ce92c0d576acd85203b754d4a9b1da632858fe9259e3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "06c1bfe07747e515ec287c6e5adc4a4fbcf55a87044248d2eabac22a46d3c983"
-    sha256 cellar: :any,                 arm64_linux:       "31cbe696edf198541b4e938335085abc5d27d7920fd8d66fb147990d449c0e54"
-    sha256 cellar: :any,                 x86_64_linux:      "2e6aea49c7ed5198dd7c7a550f90b7ba2d1eeb460b513730853de16430d31eb5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "7c12e073acdcfefe8fe582a5c1618ff36f2bcf17cc13e10614262f19d8e3a1ea"
   end
 
   depends_on "python@3.14"

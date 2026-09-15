@@ -11,11 +11,8 @@ class Homebank < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "21c4d3808031ecb579f8160accb34090ec72200422fde880459c42ca70e9fc81"
-    sha256 arm64_tahoe:       "073aa8b75ec27f5f14e7c49320294a80254844fdb178e0cdb20b9795a258dfcd"
-    sha256 arm64_sequoia:     "3a378498d970be0493dd692784f6712e630535e2adf3bee7704603a68784c2ce"
-    sha256 arm64_linux:       "6a264cb71a143ae6bed1344a0284d24e67f2fa51bcaf86df1ccde354bff6e4f7"
-    sha256 x86_64_linux:      "9e6f57bfdece02901fdd3dcba126b3dbf56256d6c8339c7ad8c0f148a40cd09d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "7cf76ce20fbf200ce4fc207460a63f052f0baf1014bc0e0eaa97bf9567327c0b"
   end
 
   depends_on "gettext" => :build

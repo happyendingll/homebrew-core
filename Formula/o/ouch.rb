@@ -15,11 +15,8 @@ class Ouch < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a70f65653c18fa8468a5031b4e33d07da96db972b95fc7f811a7654dfb1ad8ec"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d348d3a35b9387a354d32ef0055cf9f0486472827d77249a78f326c3811c083e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "98d77ead4acd9daa3e8f68470d6d31d92926e0847396de926e0b7d61a98800ee"
-    sha256 cellar: :any,                 arm64_linux:       "d512ed800733b5fa9bba0ebbc4c2f9a76247242ef716899c93880d3b3ffd65ae"
-    sha256 cellar: :any,                 x86_64_linux:      "54743318b86798d93e41c0971807cb3378aa96c87bf2b897e5a418954f96c1d4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "da3894cfc79acdc01404b2f94de7704d15b210ec8f85ddbf8ed20754be72b8f9"
   end
 
   depends_on "cmake" => :build

@@ -6,11 +6,8 @@ class Somo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8826ef546d774f92e50abe497ebb76c2e43540523e3f01d4174fd9f6789bd353"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "146bafc46a5f5f0a5bb07d27125b058d791b704bb60a53ab124b01e820b2e84c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "68702415cd111e77cfec890ff7d5b43a9d31f8cde891780f7976337f3d574013"
-    sha256 cellar: :any,                 arm64_linux:       "dfdd0700a294c6a63d425abb579f9fb7c7d905f39276cdda938cb3bf809eac37"
-    sha256 cellar: :any,                 x86_64_linux:      "4b27bdc8f7a688a694eb3b736ac0a27da9dda1d48288ea12ee862516e72620cc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c139627fc079e123d8748a81bad0ae19f09a11c6a1123ad43bda7a2a0563765d"
   end
 
   depends_on "rust" => :build

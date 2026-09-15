@@ -12,11 +12,8 @@ class Oxlint < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d80c28fa777dc2a446fb9ef9fe57a970623d156a53751067c0e074e675e791c1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f2920a05c7c0a887de7d7b1210e4129264a76480d8aa3e930eb79acc6c870955"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2dd0124d6079d87e69cc8f1ff1b2945c5d52bf4c002889549da5ede03647f963"
-    sha256 cellar: :any,                 arm64_linux:       "e3069820d524408d992bc81cf0c07538b28ecc6a454ac16961b7f2e22aacbbf1"
-    sha256 cellar: :any,                 x86_64_linux:      "530c3ca116d2c7f0acfcf8d7f415d5d11bdeff36caf5f39fb52f4ac589a03332"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "d8b7deb85b8c2a0e060c96f7d448e4decd6de2debed4df45cf58c524f5c1f1d8"
   end
 
   depends_on "rust" => :build

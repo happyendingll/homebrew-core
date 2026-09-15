@@ -14,12 +14,8 @@ class Cdrdao < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "8447e6027230d42f921ae8ca6e40e437c5c3673af33791d49c4e531b65fd2983"
-    sha256 arm64_tahoe:       "49fec427b9b1123dd7d67e0de9bd03d1a9d9b4011c1dea772db6f75477632e0c"
-    sha256 arm64_sequoia:     "1d5c5d5ed4313f9e7b97e0e820496028685d0948c8fba20907d7a691a11f19c4"
-    sha256 arm64_linux:       "1c5d7061c79ad8085cd44edd55975446796c3fd5849ee0e622c859c9c7b6828d"
-    sha256 x86_64_linux:      "f625cd3fb76a5ce44f97e257fb0c0fe03e48ab741d43a4a816fb4b58fe7107c2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "8eeb287e975c75277be750ae7293f0b39e6c6f44b5be6a79dd232e782c874ae8"
   end
 
   depends_on "autoconf" => :build

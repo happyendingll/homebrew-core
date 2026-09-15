@@ -7,12 +7,8 @@ class Mruby < Formula
   head "https://github.com/mruby/mruby.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "94de3bc09ba9d07d0a92e20061f7bc1ea53fa96d31bfc1e4675240e3a60a8240"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2a778a666feb1f5d51fd3eb467e60a57a7fef4186493dce030dbc05116982a14"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "13f8a942e4ddc94e887fb1f5189eef6911f91367568a3a9a30052e37d57d90ff"
-    sha256 cellar: :any,                 arm64_linux:       "6adf39ec1fcbb5e86597f80c55c15f07627545c8aa3741ac055bf9889928a9a2"
-    sha256 cellar: :any,                 x86_64_linux:      "f7a8a6b51af82536ec54e8a94c115267f3522cae02005141f9936c6735ba7dda"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "58b45e07f01d485b14b30cfac71fe34036eebeca053384a1b013a024f4e0a91e"
   end
 
   depends_on "bison" => :build

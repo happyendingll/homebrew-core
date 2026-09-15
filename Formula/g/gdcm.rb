@@ -11,12 +11,8 @@ class Gdcm < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "b878c632a6c4980a1683fab2b09bf6131f2f62ece1acd80c038f6c6933540d64"
-    sha256 arm64_tahoe:       "7a099a980c5d428737f373d55f9067fe8766eaef7c9cb15f5e40dc281ff5bab8"
-    sha256 arm64_sequoia:     "b4ff57757334bf89fc0e5dd5028108ce5fbf0fdf5fa4b02272a6b313b4ffeaf9"
-    sha256 arm64_linux:       "8639611e386bf90f5ed1fd40ee019dcbcf3836cd28bc4dd05435463c248205b5"
-    sha256 x86_64_linux:      "9f81c2fbc1ba1c68aee836cea3aaf5d2925244d1d191a6972808e9ab003ae3bc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "65e32f5801e2a366e609230a100a0c907488c509403c87873fc9f651fb3dc2ab"
   end
 
   depends_on "cmake" => :build

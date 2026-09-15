@@ -9,11 +9,8 @@ class Pyinstaller < Formula
   head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7bc0ea71877c62192d5f94647e54d29274caf6b3422edb3ebf11c81605aaa3e3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "27bb588627c53277c68b9bd4d879d05cc8367ae43474e49aebe744bead663885"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d107626b61d45363aa31d3f2553a18b8e42dcdb76107e4f1a615fa5ee0217c22"
-    sha256 cellar: :any,                 arm64_linux:       "3d87a8c1a6a94c7cb14dd4c5f3d5adca68facdd91196002af672bd53dbc8523b"
-    sha256 cellar: :any,                 x86_64_linux:      "4c3c51c5ea3151120cd4d653140a7131ed43f207b9f046e9cbe4ce13f92cda62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "ec44d510d80f4bc9ae432b65d8da45434a48f014f696271769ae2295b512415d"
   end
 
   depends_on "python@3.14"

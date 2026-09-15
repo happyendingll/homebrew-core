@@ -9,12 +9,8 @@ class Pympress < Formula
   head "https://github.com/Cimbali/pympress.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "339feb3b225370afd424687da9db3203f4a305bea3cdaa0ab5ff90a7f0a84cfd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed91496f2ac340987c1084be36b180a86533c6387bfc262214144805dd625107"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "88ed25f909c6c396a882e6c040c602f93201f6679c1d34ef3a87c1ee004bdf91"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f8ba43665083628ea2b064b4faf763d1f3e3c13081077f795aa3349ce909a40b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f8ba43665083628ea2b064b4faf763d1f3e3c13081077f795aa3349ce909a40b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "e9ebe7ac500d204c4cfd5f22c4316d0cb7f0789f0851b88f1addf98848b21e3e"
   end
 
   depends_on "gobject-introspection"

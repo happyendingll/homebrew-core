@@ -12,12 +12,8 @@ class Dagger < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "50b03fa939bbd98ec8fa950b07532d1799130fc8ceaabd27ac751dcde9b24cd0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "50b03fa939bbd98ec8fa950b07532d1799130fc8ceaabd27ac751dcde9b24cd0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "50b03fa939bbd98ec8fa950b07532d1799130fc8ceaabd27ac751dcde9b24cd0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "85007c070531eb0e900bcacdfe7a0b7773edca481670c698e37538d93f5c6caf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "92a103bd5fc95981c36181e67dd3c1be500513fd9398cd784561dc815abb39a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "67ec5a1f3715b325ae96034dd4384aa2f6354f327d99e5343ba65aedd0088c4c"
   end
 
   # TODO: switch back to `go` when x/net is bumped past v0.54.0 (broken with Go 1.27)
