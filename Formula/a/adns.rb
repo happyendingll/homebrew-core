@@ -12,11 +12,8 @@ class Adns < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f37840ca2880b5bef50a47f5f4b2ac273dd37d268e88bbf5de618fd9334d803e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9f97460489cdf303f9b431a72e96666fe38f4a4d0de5370c75bb1b960fcaef5d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "77170c7a123efa6a5717a542e8b63c8d407004fbcfe212a56e58cc413691449b"
-    sha256 cellar: :any,                 arm64_linux:       "ef404a0c8f90b593f1b14d709cfeb94b3d8460443a706a7127e08b81951f924f"
-    sha256 cellar: :any,                 x86_64_linux:      "cecb74f68c64b3517b6cd183f72f8b5e7543fe52e245c9b89d3beffc9e20c01d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "1cf7679843145b4b2fa0fce9d845d64634a0a005f7cdd936d415f3de88d967f8"
   end
 
   uses_from_macos "m4" => :build

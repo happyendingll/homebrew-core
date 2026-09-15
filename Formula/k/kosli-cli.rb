@@ -12,11 +12,8 @@ class KosliCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11300023b8e529ddd55055240d0f789538856014ab9a3e2a9be7239faf080309"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "27439dc0cd3a75e6f2f558113b9395aeee971531ae42b465a89055de7ed87679"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a4519e3a524af9a3fd3b9f430b544980d47137bc7e495c7599ddd98d39339cc6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bd3307481b6268476c21b1c450a9c774b9858f7f815f78ee579f1259c42b251d"
-    sha256 cellar: :any,                 x86_64_linux:      "c25efd8a126781dcf10222a8a914f793cb74264ad0b1943f5080e4d52c2859e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "f1965c097bc0e07edda933ebdde19a835f778ec9ef930f23ce7a3d9cc9f57883"
   end
 
   depends_on "go" => :build

@@ -7,12 +7,8 @@ class ChiselTunnel < Formula
   head "https://github.com/jpillora/chisel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "75f4280c60a7ef2eabd569f47bdee2124a9054590986dc753dac118a3272ccae"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c87771870461e2fae82e20dc4a3be3d885eb0a7528bae6b5879b0d283fb4474d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c87771870461e2fae82e20dc4a3be3d885eb0a7528bae6b5879b0d283fb4474d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "c87771870461e2fae82e20dc4a3be3d885eb0a7528bae6b5879b0d283fb4474d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "767ccd52ddf31e579637b24f08ae369f9397e5e59451277d4fc4998090da53c4"
-    sha256 cellar: :any,                 x86_64_linux:      "c6f512bf8ee8d98be462dc08661a23f807a4db91ef3f1eecaa018095d73edd34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "aa93f1e323d55bd20b3d5fc71ec139a7f69d9eb7ff4b42be93b3b1f8b22c6612"
   end
 
   depends_on "go" => :build

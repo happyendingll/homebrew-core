@@ -6,11 +6,8 @@ class GnomePapers < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "5f79227a03d73e3ded412a57b451a17dd0dafbd2cee4e2cfcfd06856e932909e"
-    sha256 arm64_tahoe:       "8c417ee882f3a398b327b4f06a37bd3118427a082bb78f60f3c84782ae934f67"
-    sha256 arm64_sequoia:     "6a2c9eda37d82204744dd3ff74b28b2b8a98cdf5798164955514c9f43951d500"
-    sha256 arm64_linux:       "bcaa560f7eba27c0388a6e4f11d26d3b9afd00957143bf17656b49e03d325f41"
-    sha256 x86_64_linux:      "63205c6e810ab0bce2e116ae6ce493f4c9320b878b622447fd6fa4ee6cfc89b3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "1b98f21531c9dbd357181e5cae50c658d081bfda7a20fcb8e745855b0c110be1"
   end
 
   depends_on "blueprint-compiler" => :build

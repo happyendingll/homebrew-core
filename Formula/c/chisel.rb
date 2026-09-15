@@ -7,10 +7,8 @@ class Chisel < Formula
   head "https://github.com/facebook/chisel.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "e08544b4aeb29c969ff159278ada6409af23b3ae9539d507e2926e08cbe1cf5e"
-    sha256 cellar: :any, arm64_tahoe:       "077677ceec6cb1ffb4894e5db11e46e3668ea3ac438c63662e0de6aa5aeea590"
-    sha256 cellar: :any, arm64_sequoia:     "d4afda45323f2c83fd95744680fd3c925b3a1fa4a6dd003e70daf27610b17e1d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "88e5925dea30567c514338f25216ffff0cea37bac1c926aac64c5bd5ee7b3a32"
   end
 
   depends_on xcode: :build

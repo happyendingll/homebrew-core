@@ -15,12 +15,8 @@ class Nanopb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dfeae211d826cf17e0ca456d8cbb3fc4f918adcac2d66162a8baeb595b811b26"
-    sha256 cellar: :any, arm64_tahoe:       "545c00b1ff8f69f6104f8a3973c98fc07a3055632e7338dd2a1bc9c3cf17d2af"
-    sha256 cellar: :any, arm64_sequoia:     "c645ddff14a09b5922b976a6638317af9928504a87a8a1432d2038e11d4b590b"
-    sha256 cellar: :any, arm64_sonoma:      "13a2f8f770dfbe5e432b02851b7eba08e49b6e29f37bc8a8e311766cf51115cf"
-    sha256 cellar: :any, arm64_linux:       "c1058306daf087765fd541a3e241331962364f13becb0909807e41be46f8a0f1"
-    sha256 cellar: :any, x86_64_linux:      "42999f9161873535877861e40049b26bde44d665131a5d32311c53a67447b036"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "02b599ade069c8414715064e8e02660b2e1400f2c7ea6b31c994ec58a5bedfe3"
   end
 
   depends_on "cmake" => :build

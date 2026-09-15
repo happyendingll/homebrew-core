@@ -15,11 +15,8 @@ class RattlerBuild < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "10389d396fb75e2ee12c0b2030270d7ab87c19fcaa83127b4937efba3351d222"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d701b518bb8a972a99c90b3f0522a65f14757e61d77347332b431170e39d28dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6d52404ed119725e55bd5eac18caa7c10c3cdd5dd696ed272a0e4b358e70cc31"
-    sha256 cellar: :any,                 arm64_linux:       "72b609e6da2b83980b8fddc33de20887f960e39aea1dc375ff59ab45fb1601a2"
-    sha256 cellar: :any,                 x86_64_linux:      "a87eb7bb839f9f0ee25a29ee0619dc62f257fabfc074e5fd35b0c884ef33b4b9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "357a7f81e3ee1e022f078f56149838b708f15fbe16e7cd199c04eaadf5c1e83a"
   end
 
   depends_on "pkgconf" => :build

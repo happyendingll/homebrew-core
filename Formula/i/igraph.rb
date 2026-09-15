@@ -6,12 +6,8 @@ class Igraph < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "67bc9770a055f5c6b91b164a0649505d081fc278b697854bfd80976eb0cbc55c"
-    sha256 cellar: :any, arm64_tahoe:       "d6a735b6308ff9431cf84f33b3cbe912c364a36346886a8b6b52deecdccde40c"
-    sha256 cellar: :any, arm64_sequoia:     "5584369d3be6d0d15600268c0bdcf4faac06b156692347c0b103e97949c606b7"
-    sha256 cellar: :any, arm64_linux:       "b7631b0072b24e7ec4ebbde57336c6263e74a0b38592e16049c0e10e3b246c00"
-    sha256 cellar: :any, x86_64_linux:      "169b2bc3038142a370a2c77b280818d0bfa13363490547d4c4010d51af80625b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "2723657251af707b2b5a1d5e9e457607296fa477ae2612cf11b6ad7f258a1fc0"
   end
 
   depends_on "cmake" => :build

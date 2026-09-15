@@ -14,12 +14,8 @@ class Torrra < Formula
   no_autobump! because: "`update-python-resources` cannot determine dependencies"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "20c75cd1b7ed9984518f8015949132ee3e303af9fcbee08cfa760b5a4d42ca96"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "20c75cd1b7ed9984518f8015949132ee3e303af9fcbee08cfa760b5a4d42ca96"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20c75cd1b7ed9984518f8015949132ee3e303af9fcbee08cfa760b5a4d42ca96"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "20c75cd1b7ed9984518f8015949132ee3e303af9fcbee08cfa760b5a4d42ca96"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c9c07bcf20a00ca244ad4ffb6b5dbcdba5279aa8485e97c0218e2f1c200b0cb9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "20c75cd1b7ed9984518f8015949132ee3e303af9fcbee08cfa760b5a4d42ca96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c18a05670c29391466d6cdb010e6795ce6b5592b91941c14030a2c3112904778"
   end
 
   depends_on "certifi" => :no_linkage

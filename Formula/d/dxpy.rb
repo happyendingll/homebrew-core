@@ -9,11 +9,8 @@ class Dxpy < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "786f7c265665199cdd2e1fbaf85e9480b8891e81a2bd403e0f67375fbcaad39c"
-    sha256 cellar: :any, arm64_tahoe:       "b78bc75ddb4bee2b1df6403e9ef92e29bf9da4dfdcac6970a2407c206f12691a"
-    sha256 cellar: :any, arm64_sequoia:     "0f4e809124db5ca6f66fa988a5a37f85e6a0c0151a1c9907fcb130ba69f92d62"
-    sha256 cellar: :any, arm64_linux:       "a64c97b2863b8ec6bfbb246f078d16941977015fd93019496f7e0beed4eb7b1c"
-    sha256 cellar: :any, x86_64_linux:      "000882119bfb0ceb6c43bf1aa570dbb59eb2c12de37c7897efc044b58cf8fede"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "750603a43e73cdc7b37ce668ab501ae64df1efaa2ea49a43735ddc1343b23ea4"
   end
 
   depends_on "aws-c-auth"

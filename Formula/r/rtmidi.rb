@@ -8,12 +8,8 @@ class Rtmidi < Formula
   head "https://github.com/thestk/rtmidi.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "0312be54d2fa1f3b2276285fc2fa877913761fc2eddd4592916f91138bc30ef3"
-    sha256 cellar: :any, arm64_tahoe:       "5b514e132976094c956351e5f7c3d12a40e67b007d027cc1dae32c526e4231e8"
-    sha256 cellar: :any, arm64_sequoia:     "e575e9ccadbf67966dc23d94135d12403c70f18f0e4fdfc01f7901211663ad5b"
-    sha256 cellar: :any, arm64_linux:       "ad3c2d9efb4fb496dd38f0cf82aa9f4167fd40c1d2e1b059edf064efacc5caec"
-    sha256 cellar: :any, x86_64_linux:      "a4765854e5c0e4419ccb9c95fa8943f021a0e8a09f5cc70e5efb7600720d9207"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "d8208677cccb3b4e435b0a2547b19212d321bd1e7a615565d48f95df3b97f74e"
   end
 
   depends_on "cmake" => :build

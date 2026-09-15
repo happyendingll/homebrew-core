@@ -7,11 +7,8 @@ class Libtirpc < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5dc87a12351be4204fc6456aa5fa13a36a9881d750835547727b42e439e70b70"
-    sha256 cellar: :any, arm64_tahoe:       "b97951d0d42373be38554cede66e7a4481300117ac2e4e5fd6b2a3843c9d08cc"
-    sha256 cellar: :any, arm64_sequoia:     "42a991e6d667c2293fed5e12ccb576e1a38a92ee700052c969f815aa8c660836"
-    sha256 cellar: :any, arm64_linux:       "97a1e48cc7a4b04c0c312e43eadb1803be638d51b79aef462da14d91d6fe6306"
-    sha256 cellar: :any, x86_64_linux:      "69268084b4a21e3b5eaffe3a1a950bb11597dceec0bd3870710f3c74aaca6792"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "5923589372060b0df7aab6cba79188cf442573ef5775540a9c06b72ede50dd85"
   end
 
   depends_on "krb5"

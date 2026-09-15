@@ -11,12 +11,8 @@ class WasmBindgen < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1f8e6a0c0c7a022afd2430a2795f15bdd56590949c97af283c176f6281e00ce7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "18be261e8bbea3b5db0885a83c0d3317a3368bcb690ff8cdc1a4bb91e093b20c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b0beaad3eddc0b1e3157b348382ceca14b3db9161e4763e5eb29a0d5e9f708f6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "342b4d9650ffeb9511b0476b80c1f309eb0581855c95ee9a698a463e211c354b"
-    sha256 cellar: :any,                 arm64_linux:       "3bbc0387e954ac64dde549af7843323b462f19380cf63b01473837a87c7f1566"
-    sha256 cellar: :any,                 x86_64_linux:      "3475e4bf05681d53ae21dd479418bac7d40277b98f4b5bebcc0e508004535f8f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "c74ef814a43a7a76f6ae54011d3d4732b7e28a3e75e60c10922f62fb4569ec0a"
   end
 
   depends_on "rust" => :build

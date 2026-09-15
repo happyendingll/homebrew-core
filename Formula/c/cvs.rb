@@ -17,12 +17,8 @@ class Cvs < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "da1bbee384e68883e5534bfea38629f9f47bc312c2306b34daa62e44db98c925"
-    sha256 cellar: :any, arm64_tahoe:       "baba178520e22fa032dc3a432bb4d91aaac9051bbfc027562b7c561a695cac97"
-    sha256 cellar: :any, arm64_sequoia:     "7fe2dd380a1d94ade479bb1f6b0f4a9736bf6ff7530765be18169649e650d961"
-    sha256 cellar: :any, arm64_linux:       "b1ba2ef0cd5bad5eb18ed4cd4723594e0ba00a445f211e3ce9144f544ce7d11a"
-    sha256 cellar: :any, x86_64_linux:      "9eddf315b708d96c39b10b49a1b809d25c86d5402399226b64ef79cc7a5baa52"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "ad72e17ad5b27812ee629153ebae3c5c06f4057d72c737bb18df7de2e175d700"
   end
 
   depends_on "autoconf" => :build

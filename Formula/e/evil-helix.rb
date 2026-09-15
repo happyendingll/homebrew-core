@@ -18,12 +18,8 @@ class EvilHelix < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "fa2eb1968aeba1afd29b1ca4d2dbb2e3405e9cf4232cfb896ac8f46e8a69cb36"
-    sha256 cellar: :any, arm64_tahoe:       "6af5528b5378995f37aa0f49096968400036469e0d0b8281d891e7fb4279a058"
-    sha256 cellar: :any, arm64_sequoia:     "828a3f90d5df9d7b1c23ddff5e90332a17f6643bf41f45150e7346b75865368d"
-    sha256 cellar: :any, arm64_linux:       "91bbd88e027943f803083aa8b4b48bd05b63514344da902075e12f80f216a0ab"
-    sha256 cellar: :any, x86_64_linux:      "3b22695460477c272a7d50996cfdae9c9a580bdd57c8dd038594c97705354d94"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "e8fcbec4747256f1503ec19b231d776e1c4a0711709b0b8ad79ce1d72a8e44d3"
   end
 
   depends_on "rust" => :build
