@@ -10,12 +10,8 @@ class PetscComplex < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "16c98434aeb6c703bc64ccee8290b67638456abfcaaac7428cabb62298140aed"
-    sha256 arm64_tahoe:       "9f06d4b805ded4054e30a111223984aefbaec206b5c78d27ae0c7142561328c7"
-    sha256 arm64_sequoia:     "135626b0125b31f2b39c7c684529dff4d1f89cda4fd728e41784a01408519f6b"
-    sha256 arm64_sonoma:      "b42c430ea65ada14e5d64d837cb23ed64bc46179ab90e755cc5bf8d444c98e43"
-    sha256 arm64_linux:       "25714b37da187eed13038e051d228e666201cb2a2ac902e9554d9c660af98e8d"
-    sha256 x86_64_linux:      "d66bb400150ed33018e78b3316ef96c28879e63e5893aa08b3659f0184d78041"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "95b8f60d233c61726558c874d8e631fd30698277e90912ce171396e70dab7040"
   end
 
   depends_on "fftw"

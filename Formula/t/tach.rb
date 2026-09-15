@@ -10,12 +10,8 @@ class Tach < Formula
   head "https://github.com/tach-org/tach.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6362673796b2ea867546f01d89fbe3381a807113052ebe578760e9cd7fbc09b1"
-    sha256 cellar: :any, arm64_tahoe:       "d840c56d84b9ef5ada3637921d614c7d880831854faf3e1998e5f779eff6de37"
-    sha256 cellar: :any, arm64_sequoia:     "b23cfd2bc21dea430ea2aa888aae260983c605ccc1cef44c0326f992d2f255fd"
-    sha256 cellar: :any, arm64_sonoma:      "727f5f046051c263892e46dfedbda1aea129b0d3be8e567e15651d80d7cafdf6"
-    sha256 cellar: :any, arm64_linux:       "0a93a0d652da484185ff7d61a8e96d1f957629b245925fbb6a1cf31901444dac"
-    sha256 cellar: :any, x86_64_linux:      "18aeecfcea0f54db0957bf2f2feea6000bb72e25022c44eedd0d7473ac35aae1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "0e0b4a3cbd1bfebf9ed3351cb0f2f9e1fc51cdb93b8699a943afc7a6f773e31a"
   end
 
   depends_on "rust" => :build

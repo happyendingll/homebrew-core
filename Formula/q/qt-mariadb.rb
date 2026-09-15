@@ -12,12 +12,8 @@ class QtMariadb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3fe5f53f65d732253c035d84ed8aed92a572e2bb7cf92b946098de37ff4937f3"
-    sha256 cellar: :any, arm64_tahoe:       "152876be8131034d9a849643a403b08d10b7ee6abf87704dc5fc031104def8df"
-    sha256 cellar: :any, arm64_sequoia:     "e906145b48120344d884e24ee2571b43fc9a17b41c38ca77fa38099a1c8bed93"
-    sha256 cellar: :any, arm64_sonoma:      "896140d0b36c06fe25be208feea6905ba52254a96ff17f702507a21dab2d8a35"
-    sha256 cellar: :any, arm64_linux:       "004fbc5a9356b3e34d2cb406c138dafd4317ba981195157ca540fe49aae4aafb"
-    sha256 cellar: :any, x86_64_linux:      "a4798081bb3e4b41f66832f7c6a12b1d0471a61a7641ed5eb44e799b733c611c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "0e10efb7cfee53ba1b2391640af66bbbc6a41a26a8b793be6ecd81bbd0f257b0"
   end
 
   depends_on "cmake" => [:build, :test]

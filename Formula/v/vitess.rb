@@ -7,12 +7,8 @@ class Vitess < Formula
   head "https://github.com/vitessio/vitess.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7110a8d0188868cde972192fbfa9e430206a29a0970e359c21116a5bf5be5d99"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7110a8d0188868cde972192fbfa9e430206a29a0970e359c21116a5bf5be5d99"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7110a8d0188868cde972192fbfa9e430206a29a0970e359c21116a5bf5be5d99"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "7110a8d0188868cde972192fbfa9e430206a29a0970e359c21116a5bf5be5d99"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f71c00fda71cdeadc2f3d5c7238b06e968eb4d6ffb347a2fbef93a91a464ceb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0e62f944d347415bf24c530dc94b38ca0581d6590e7aeb5309e9f359d2933399"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "759b92494d9d9d58ee408df9ac35dabcb1cf47d20644d9c3060470a3edce1a8d"
   end
 
   depends_on "go" => :build

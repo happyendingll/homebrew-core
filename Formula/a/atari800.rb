@@ -14,11 +14,8 @@ class Atari800 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e54b7c107c468e2faaa0c81276963e11a73a0331d8c67e1111903a2abe168d19"
-    sha256 cellar: :any, arm64_tahoe:       "1a78f160dba996f258401f98d546aa6a83e00db080b263399b908ea91be2ad9c"
-    sha256 cellar: :any, arm64_sequoia:     "fbd24a748d2f1e8af3765c2dc2da68cf1e2fba087d64ee76de2a31117f760dff"
-    sha256 cellar: :any, arm64_linux:       "f5645c9c4eb7b64d1780fdfe53f8b5e95aab0d6c89eb4c377f9539e04f33211c"
-    sha256 cellar: :any, x86_64_linux:      "f1ac9b0c5df11c54667b715bcf8a084ce7a48a73a6a484c80e32cf3d7650a1e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "a39205b033985500760aa333141feb93a3175abb61e9e8f89c639c35dc0002e4"
   end
 
   head do

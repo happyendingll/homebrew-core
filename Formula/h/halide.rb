@@ -32,12 +32,8 @@ class Halide < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "1de3b79eb30e6687c17b62174ea9e17bdf0d5f7a2dcb021144cdc584f58753be"
-    sha256 cellar: :any, arm64_tahoe:       "4037cdf06844aa825899743cf9580881f6e6bf90cc45c90720577f6a520053e6"
-    sha256 cellar: :any, arm64_sequoia:     "99e3feaaaf8a7d5494771880d9fbf987c7e9f3d67c803f65eac753e0a7e86eed"
-    sha256 cellar: :any, arm64_linux:       "a13a8eb7536c3198136093eabd8791d13ae098c6d496e141ac392691b8b6ab97"
-    sha256 cellar: :any, x86_64_linux:      "ccca9e28c9adaa58a204284f0322b138e8afbf5e4cbced80f98fe319ca118cb3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "c14fe0dfdc208a52acde26d92ec5bd05eba128d632b274b3dce1804ef7d02f74"
   end
 
   depends_on "cmake" => :build

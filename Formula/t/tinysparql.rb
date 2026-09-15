@@ -15,11 +15,8 @@ class Tinysparql < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3907ab44e7d85e46f607ff2d88944fba9a2d524f698686c90e90136bc589bbcf"
-    sha256 arm64_tahoe:       "e9b596548d7a14815b29dc4dddafd38bab0bbae9f8afc98188a302014a527c5f"
-    sha256 arm64_sequoia:     "071bf8a25a8bb74a6cecc1e2a035ccf9cd4964a5b6ab4025741181cc18960570"
-    sha256 arm64_linux:       "1f5323d71d7a7e149d392295872fe3d373182d29053fc445a58dbb789f77045b"
-    sha256 x86_64_linux:      "611bad0d3e789b6873788f4bb8ebf1014b3ce1b3d9e35bc187724d1d1a15ccc7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "5c64884d8413fd9f0161531b12703f5103095947db6d0407431881c126a823e6"
   end
 
   depends_on "gettext" => :build

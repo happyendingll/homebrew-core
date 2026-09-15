@@ -12,11 +12,8 @@ class Yorkie < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6fe8ad706bd09b3bc984d6a3c870d31c2e695d954558bb2c72649c14b657580b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b352d0f91117ef77e7d9c7f85cde4aba7ed2c59014d6b2c295ccd842fc91d1e8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2920dbec50a48518f4fe11d54b3d7ee0041c4925679bba4935d0daeec3cddf95"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1903fabc35072b241826aff7bb0f2446ad1d1e30d67f231d6cdd4b02f6e82a5"
-    sha256 cellar: :any,                 x86_64_linux:      "37a00b97aa57b44229ed0b0f797bf8fafdc21997f3a58e6760003e97e1b1ff7d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "de0f1c661235f6e6d5c267ad3b018983cdc7f20c6ea59b2a2150419f95b6de0d"
   end
 
   depends_on "go" => :build

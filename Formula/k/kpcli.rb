@@ -12,11 +12,8 @@ class Kpcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e1c9015e6bae196f284393624e2cbab15f1dde99bd052f290ab30042ed7e8954"
-    sha256 cellar: :any, arm64_tahoe:       "ef1bdb8f3ce84f2ad240d1f35b01078f10335681bb997a29723cbbc62248a3f4"
-    sha256 cellar: :any, arm64_sequoia:     "d97d19bdd97f231d2fe2843fab67760583fb97a39bfc8c3d4530ace29eecaf34"
-    sha256 cellar: :any, arm64_linux:       "a0e600b5481b43071d2e156898ed6840f1776268ae63cd12f3404ca3f99025f0"
-    sha256 cellar: :any, x86_64_linux:      "85c7bfb89f3a3f9e61025cd117f6bdeefd9d952b6fa1e0316b689514e8764f08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "4bcc5b3f3bfaf979ea574a2c1f25b42ae66ce5a8bda3a2f225fe20116d3c8486"
   end
 
   depends_on "readline"
