@@ -11,11 +11,8 @@ class Znc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "4f2a826ce0ded6b6712c07f7ef00522b04e29302a6d1c49ee7ea43595b015081"
-    sha256 arm64_tahoe:       "eed95d97fde1c6da93568e57b40095651b15b0219f0664cafee92a8d3e4e8591"
-    sha256 arm64_sequoia:     "5de378841c045102c6c5762476fbf36db9954400f11d9e5127dd555c960eb738"
-    sha256 arm64_linux:       "094595c6536f2cec05f621e5ec02f5d7839caa704579811c0c22f52a3f4f5bd3"
-    sha256 x86_64_linux:      "fcad025ae02cf535706dd314def9dac8f3f21b183a685dc93b735c492cfea482"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "30d6e5f684b76034d063c91ee319c65a1ff575db5912042ffbc43235417dfc9b"
   end
 
   depends_on "cmake" => :build

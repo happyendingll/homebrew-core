@@ -18,11 +18,8 @@ class Puzzles < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9ec9b6c87bd437d2690e543e944ab71bbe2206dc48c961791705c87d9f6babaa"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ca4cfda8fb7e082bf8e2681dfff8a606ed2132b2b0b4930884448640af4a1617"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "148e77535dd7f648cba507264d14d7251df58c48e31c4b060a73e295611d8e78"
-    sha256                               arm64_linux:       "5f17ff93a09ec823d60d1283871c40e1285e8df285a530cd3cc4578469c2aab0"
-    sha256                               x86_64_linux:      "dd58099fbd370db9cab2f993fb227b65c7822a9795fccc2e18bcf0f01f836965"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "6da4d25f90af9b0403701aab50cd71f8e79d9b10b67a2861f0401e2e5c30c7c4"
   end
 
   depends_on "cmake" => :build
