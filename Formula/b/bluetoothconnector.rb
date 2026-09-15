@@ -7,10 +7,8 @@ class Bluetoothconnector < Formula
   head "https://github.com/lapfelix/BluetoothConnector.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "545a4128d0728c2a20f69c6e2863eeb8abf2c101da2e865df4e53e6ef64d9830"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e9f16794456553e1bb96608e579c0fcdb6930b793a2f6135a3113d3bf1072e3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "61cd24ebb1d29f0f3f9cfe2bb890bd29aacedb8d43a035d422566a4552670b70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "64871b447abfdf8c669734600244ed3e569a968a86e7b9c6f9fbfe37cdb1edcd"
   end
 
   depends_on :macos

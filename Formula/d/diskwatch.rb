@@ -6,11 +6,8 @@ class Diskwatch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "55bd986a6403e8159caf5097857eb1d14edcab89ce2b14920f30bcc83d28075b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "09836f566e0699cd06e08a5630990bff3ae551f1c5a892e889319926134f03f9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "85a6e3504fae4ff2ec3236e5956567190878e71c96067d1c7a7c42e2aa447d80"
-    sha256 cellar: :any,                 arm64_linux:       "7af5407574b2ceb765796b12cd805cc0277d36d5f60c0fad6be795e7fd0d1db8"
-    sha256 cellar: :any,                 x86_64_linux:      "8046070774138809fe4dba3ae2ed1f7671fa47bcc635302eccfefe7ef8a2372d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "f38b2d7c20cb44a721c850ec620481f8d0a6d0b4991b24d0cb3e9f102d39a335"
   end
 
   depends_on "rust" => :build

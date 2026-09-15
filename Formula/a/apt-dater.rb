@@ -8,11 +8,8 @@ class AptDater < Formula
   version_scheme 1
 
   bottle do
-    sha256 arm64_golden_gate: "891972799330621928a01277fcfbfb5dbbfde4b2825284f7bb4d389a1e3f3386"
-    sha256 arm64_tahoe:       "54ac1e581d1005ad7972864ffd240a906e3e4cc3fc3cb1a6167979cf86e02c9a"
-    sha256 arm64_sequoia:     "eb9414457f5422b5be9d3faa106b312c63ce4ab50214557eb51ac2778274da54"
-    sha256 arm64_linux:       "4d0be167796c7fabc5022c52d30ab755f5fe551b59a66d42fdd7c223bfc6cbe3"
-    sha256 x86_64_linux:      "4f00af46531a1318929f7a344207ce4aba4233e8d0a3b52f4c41e66d95784693"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "0d71e026d33433891270eb112432e95792ba4f1d4fbb7ca3870271ade8b20014"
   end
 
   depends_on "autoconf" => :build

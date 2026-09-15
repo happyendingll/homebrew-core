@@ -7,12 +7,8 @@ class Yajl < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "deec3842a98f0f3dddeb406eacfc8355c1822179f6a6e7af0c310ef456bdd2b0"
-    sha256 cellar: :any, arm64_tahoe:       "5d1b2c74b5de11ed9ec440b7d03090c53cafe949c59d2d5405bec9f93317cf87"
-    sha256 cellar: :any, arm64_sequoia:     "0aa351ee73c6d3c5aa03accfbe29c7b338948011bca27a16aaa0249477c83b98"
-    sha256 cellar: :any, arm64_linux:       "6cd5d794e58376d88f0e12f6b3766bd846c2756a9177fac5136546808ec26bc1"
-    sha256 cellar: :any, x86_64_linux:      "952b6eec73693e1433b9c1eff9d14645098e8c6f4f384b8bd8963bc13a116166"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "48d3840e0a634540a0f13e7d77863fe787f84cc88d290a2af3c1a639e35e7475"
   end
 
   depends_on "cmake" => :build

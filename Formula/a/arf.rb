@@ -6,11 +6,8 @@ class Arf < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f3056a787006d50a3f030e9ecdd649393c69d9d60b8328dd74a75f29ddff656"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0f20511ed1c3cfac855c0cb30a8751d3fe2357a98e2c82417e7b41a654d2e0b0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "01ff6b919243d64d473ee00c4db0a399785c7edfdc9771ab80685196389307f3"
-    sha256 cellar: :any,                 arm64_linux:       "2f174f5399ef721f298f5b1e8a71f793674e6975c4bd39171fb93544999de5aa"
-    sha256 cellar: :any,                 x86_64_linux:      "65589e48555d830088f91207b95ab6ce26ada088177a38247be432335c9e80f1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "f8f0eacb6424f7458cbd4d2af70a053b99f8e231d9435d9974e2ce311a966b2a"
   end
 
   depends_on "rust" => :build

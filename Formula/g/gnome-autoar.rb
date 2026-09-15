@@ -14,12 +14,8 @@ class GnomeAutoar < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "61d6d8f9a50af982ec4ddf0a7e3b3e26a0f44c0f96ffc471717443411eec1b23"
-    sha256 cellar: :any, arm64_tahoe:       "e55340827c5750f4a79057710c350994b6e38a7aec2968ad72f2a0881ca4d931"
-    sha256 cellar: :any, arm64_sequoia:     "8ce9e8b6a660655a3f91aad4c39be3659c583e8747ed5ab53e81d8dca0c2db86"
-    sha256 cellar: :any, arm64_sonoma:      "497c2c6f8b61c2cf4e2772661a83a14253b040c105542da2c763a4fd4be69192"
-    sha256 cellar: :any, arm64_linux:       "5056db5ff19505d9f941e8a3c491abe3dd1cdf0cb231011100c3316cbfe15a7a"
-    sha256 cellar: :any, x86_64_linux:      "4ca8ac8ac5837114ba173f19f1265e3e184c43849b45543a567e0575c28a4deb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "d9ab0f1ce2839c50a29d9ad2677a78ce2e92e2f9dbe56996686c44f61eafcfc6"
   end
 
   depends_on "meson" => :build

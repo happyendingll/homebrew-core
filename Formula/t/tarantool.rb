@@ -15,12 +15,8 @@ class Tarantool < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b468859c4ec094c0183e20e0c7e4f2bc7aa2c9625da38bfff34fe8d82953d43c"
-    sha256 cellar: :any, arm64_tahoe:       "182d0696408d991dde6018d3e1439fcebc56da6e3deb4b921c95e4f74069c7b2"
-    sha256 cellar: :any, arm64_sequoia:     "94919ba032d2193a255b688dd47a894076a44359ba1e2540b25349d219c71f82"
-    sha256 cellar: :any, arm64_sonoma:      "44866d67eb82494f3bacc0c6c5e0c3531d89eb1fcceca77b688a669de33b4c5d"
-    sha256 cellar: :any, arm64_linux:       "ac6e418b0b004cdfd65809559313e693e054c7ccf0513b50cd99695f618b6a1b"
-    sha256 cellar: :any, x86_64_linux:      "fb2aaeb01748f6ab1f0cdfd67bdd83e92a2d494044437c2cb362451c21f7bd88"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "b156aad36d0980c5141ea8df1634ef3f77420d6ddf97a2440c2475d5f3b6c02b"
   end
 
   depends_on "cmake" => :build
