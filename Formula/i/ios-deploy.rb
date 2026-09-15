@@ -7,10 +7,8 @@ class IosDeploy < Formula
   head "https://github.com/ios-control/ios-deploy.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f11fad9230cc07dbb54eff6e18ddc59d060f7183d720d0fce04827db256956a0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c134e86091b997d8edfa187eb7a85cce002930d61d07b4765be958e6f09332bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "33846928a8bb9a5f7069629efbc5c0d6fed2723f77b8531b1640f918e79c8b34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "34fbe3cde8956a608bc2e62719c7a1860e99a013fb7a5ff7df18b225632dd287"
   end
 
   depends_on xcode: :build

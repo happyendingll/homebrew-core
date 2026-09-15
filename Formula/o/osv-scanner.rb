@@ -7,11 +7,8 @@ class OsvScanner < Formula
   head "https://github.com/google/osv-scanner.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "759a306f2dbdffeb47c04e0273514119a177a6c7c2e17656d1bcb85e427aadf1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3369784d508f294a21f676c3781ff2a3f5c1995631f228b0f6d42a9d67b45dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fbe8eb58582abbee791288988ce77f7fa29ed4c07a0eb3f64cdf23f8a8142c5a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "755727d0b0c29fa50001d05fd56645928b534b4e3b735d14c847ddc3d8088c2a"
-    sha256 cellar: :any,                 x86_64_linux:      "eec7e684ca81f5c2ca009b341649f1cdff7f6d9a49ca704d97a979bae4416ad9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef635021a009a31bc8f3b830b97249305fe055cef6138b2d90ee90d59e6745c7"
   end
 
   depends_on "go" => [:build, :test]

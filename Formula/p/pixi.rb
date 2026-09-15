@@ -15,12 +15,8 @@ class Pixi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "feb79e6e4b21688214f8572492d0363ff0f60f2600acafc67c118fd484453f30"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4591af1f0ae313004e55fb089761c1b6f31bacf7857c3c1d657d68295a87872d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "890288dae4cab5495dfc01e898614864a7f14b5d30d16b2e654d4c522113b72b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "19fcead1ec9e15b3928018b785f58488729b845349a69bb825e7531297614dcf"
-    sha256 cellar: :any,                 arm64_linux:       "7fec984032c75d122607da48ed6968ed3e6951d68c60c12590014a154e8b5f6e"
-    sha256 cellar: :any,                 x86_64_linux:      "a3e2eb0a18a9bf82ec8e9a5fd2c1e3ff92a39520cc4cf1cf28e295904ce59827"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "7748c4e2a4fc380def09f45f3018d224ef63ec4f3dc1aa3aedc288d137840619"
   end
 
   depends_on "cmake" => :build

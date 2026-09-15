@@ -13,11 +13,8 @@ class Libpcap < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f1f2643e54877c5ce19c7f1ceb7803c41ad707bc06a5bc9a1ca1e584722e307d"
-    sha256 cellar: :any, arm64_tahoe:       "2dda8bce797e75485e684cb14f79bef7cb6ebcb3c2227f97a027537ccca91fbc"
-    sha256 cellar: :any, arm64_sequoia:     "8c4b73f9af512cb09adcd8971d3cd584487b34adedc9cfc2e0615a2636b6efe9"
-    sha256 cellar: :any, arm64_linux:       "90ba6adb657c90c9cbca41c2bd4ed8b46ebf693408d3162c938029408df11030"
-    sha256 cellar: :any, x86_64_linux:      "884fa710f9c26a5fbd6567ae051221317da1ea1edb8cb9ab87d7da3e79acd329"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "ba4085b15827da704a573cf0b5c4f0bf9cda8f5ec6d1b7f1995617d8f671bb2a"
   end
 
   keg_only :provided_by_macos

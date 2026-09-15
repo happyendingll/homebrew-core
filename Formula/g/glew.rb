@@ -8,12 +8,8 @@ class Glew < Formula
   head "https://github.com/nigels-com/glew.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "6fa553d6cf43a6eab23005df9e38bd5b2f6597534f1e1cc53b9ffe7a0398e9d4"
-    sha256 cellar: :any, arm64_tahoe:       "41a7f57c0f003d4ec7e042fde179cad2cadd504418db453a9738df775214a608"
-    sha256 cellar: :any, arm64_sequoia:     "db97decd397b3df69d9c00ebedf0442bb756fc0da6d10c029c51a8779deb2bb6"
-    sha256 cellar: :any, arm64_linux:       "6dc8bbe25f8e5eb5272225677c055ec3fa2ad525dbb616985c6b3471690b33bd"
-    sha256 cellar: :any, x86_64_linux:      "88b1451b62ed6c211dbebfa36d6e3f21e975f13e96c9351c83d637a462423457"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "4cd5a1b632f2b9ccd2a012ccc067aba213f9b79b3d7284880a4ecd99f779de81"
   end
 
   depends_on "cmake" => [:build, :test]

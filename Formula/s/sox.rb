@@ -7,12 +7,8 @@ class Sox < Formula
   revision 6
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "c2956a28433c90329ae94d2b2484273e252b14ed3fa4cba0e2b2742da3332cbf"
-    sha256 cellar: :any, arm64_tahoe:       "5e75dafeb3b3ee98d3fec57ddc6c7910b5c2af77de692062c90dd9e37282e592"
-    sha256 cellar: :any, arm64_sequoia:     "e7628b40fc8bef9273a2f7632cfc27ec34c8a6da03f3b59696992216d8f8e0aa"
-    sha256 cellar: :any, arm64_linux:       "57c25cb3b88b99ff56f11748d53a013e643865d4c074bd889b7abc6bd605d041"
-    sha256 cellar: :any, x86_64_linux:      "4f86b9ae7a1328854808e51516e92fa6b3d6c5a3823e8528669dfedf10882c87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "862660d66b2346e3fe4a025e3e1190dc7c6b59a614cb46d8b70dc9ae0be77929"
   end
 
   depends_on "pkgconf" => :build

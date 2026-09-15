@@ -19,11 +19,8 @@ class SuiteSparse < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "38a8db6a267ddbbc864b84144565a2a2a06513d46efa82cb8e821edd7abb50eb"
-    sha256               arm64_tahoe:       "078d7908550e08b2702ce8b0a1b7887898071da304d057838150a2ed11d1e359"
-    sha256               arm64_sequoia:     "7e6ff57565ec5aeca3ddb9710325e466165123ccfd1f6e76e60bb155bc022599"
-    sha256 cellar: :any, arm64_linux:       "0d2e28554dabd53f019e170613fcb02d8126e53e5347a29751e940d7c98727b1"
-    sha256 cellar: :any, x86_64_linux:      "a1c4ec6dfff832ac77a4753f04879eb6f8b329a7575061259303945bd02aceaa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "9767c5590dd110839c33c1579f0a5d51ae3655ba95f7a83c1beb3c5c31114805"
   end
 
   depends_on "cmake" => :build

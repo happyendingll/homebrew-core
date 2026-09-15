@@ -13,11 +13,8 @@ class Mkvtoolnix < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2c482f4b37e3685020a3a4fffd7a9fc96988e2ca191b17a8feec38e34169a8af"
-    sha256 cellar: :any, arm64_tahoe:       "42c3c56d96d203ce13747f766f64f53c8d6ede17ae41ff1a398c1288c1dd38ad"
-    sha256 cellar: :any, arm64_sequoia:     "e9b3265aaca84eb862c76a1fba130b2563d917acf720f6eb0daf5933e9680d9f"
-    sha256               arm64_linux:       "1690e3610d1dd777b77479e43f3b044b82ccbc1d4e61ae915a2eafa9affeea6a"
-    sha256               x86_64_linux:      "b3acaa1a85ba243e0c97906b3ca848db4d63d982e6b08b00d5332686cc4b92bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any, sequoia: "3eaf3221a10b46fa654aa7f98a12ad917af2e2202ee364f1531b1f56fbea8c1f"
   end
 
   head do

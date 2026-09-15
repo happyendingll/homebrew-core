@@ -13,12 +13,8 @@ class Goreleaser < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7370caba84a1da059a9af202ba09d544832d26454eb5700798635424b3b20bc1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0abfe03d9686cd6cb94fb38c030d212a012e242fbcf342187454c666e784c147"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "28a5fa890321ca8fedfc31e0998c0e1fa00a644787d48a420b8b902723a04ad3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "1087c3bf0dc9e08a0f0e9c97ed5936d2a479cbff244a640173fe1f551ff1d325"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1727f276e2ba8ce7c6e475d8c0dad0c3d0db5e2c5735f9c16f3b5f8db5c22ed7"
-    sha256 cellar: :any,                 x86_64_linux:      "7fabc937a70d3b4fc153da55f5c5eeee3cd01cafe2cf84737426c516af90feeb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "6b1f6fe9903ad94ec54bb19c21a294ba3e3e736aed29148257570340a26d167f"
   end
 
   depends_on "go" => :build

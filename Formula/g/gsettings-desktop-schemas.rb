@@ -7,11 +7,8 @@ class GsettingsDesktopSchemas < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d70b0494de9d764c4f893a22f75a736aa97b8de37b9de51da36a0789f134f1a9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d70b0494de9d764c4f893a22f75a736aa97b8de37b9de51da36a0789f134f1a9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d70b0494de9d764c4f893a22f75a736aa97b8de37b9de51da36a0789f134f1a9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "81a6ecb2ebe3b359bd024462b2d780ea5c346c9cadc10cada13f33de87fe2db3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "81a6ecb2ebe3b359bd024462b2d780ea5c346c9cadc10cada13f33de87fe2db3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b5f1b4531aaa888a79425886afba1864dbb5565e233445ec3fe9dc851fe16e3"
   end
 
   depends_on "gettext" => :build

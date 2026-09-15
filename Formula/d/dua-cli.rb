@@ -11,11 +11,8 @@ class DuaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b4cc77fc3c88c9a70f8bea913e2bc6bce1e4ffe1972f7863ce71fceae907fd17"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e976c9690db890de466b1a7aba586000728cb2c5ebe13d549a33839c60e6b60"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "098b6c0da83a7d2a845d93eacedfdbdc0197464a7d0985f0736640d691fa4b93"
-    sha256 cellar: :any,                 arm64_linux:       "9c7d90387e344c9411622f5b2d8625f2c280ab8f9c2b604a7e5c889c978911ac"
-    sha256 cellar: :any,                 x86_64_linux:      "02591d4c6e46cd502654e7c7f51afffa1c38451e75a90ebbcb865b2139d693b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "3f45b1d7de99c1481eeeb38e676ea8562b665d41364d6f0c152b773bfd9d482c"
   end
 
   depends_on "rust" => :build

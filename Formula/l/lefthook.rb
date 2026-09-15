@@ -9,11 +9,8 @@ class Lefthook < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b16123bdf9d8e9c69077b4fe3ce48a17cf030f4a91a372f51e49b69ef39fd3e5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b16123bdf9d8e9c69077b4fe3ce48a17cf030f4a91a372f51e49b69ef39fd3e5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b16123bdf9d8e9c69077b4fe3ce48a17cf030f4a91a372f51e49b69ef39fd3e5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4c5d154f085f935537a9fbd3889592bf75e9c3b00220d0a1f85ca6cdea44e1dd"
-    sha256 cellar: :any,                 x86_64_linux:      "232cf8979b7f02dbf709fa12781d9bce9fbf696fa20d1a309d7f53c2fefe2608"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 cellar: :any_skip_relocation, sequoia: "8917f4296609c556ce353e6061bc1b51b2a9b18b95f149ffe7478e131ca385c0"
   end
 
   depends_on "go" => :build

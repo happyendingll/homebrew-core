@@ -26,11 +26,8 @@ class Vim < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3fa9f661baa163b90a1bbc70ade52dc9e60a44b83d03221fafc081c286d6466f"
-    sha256 arm64_tahoe:       "f2397fbcf05c7a390b62668fcc66c4e29eb9a1c38b4382e82fa77aedaa48b295"
-    sha256 arm64_sequoia:     "d5cbc9ca32f3a37032aa5fc8c1fc19a5ba645666b355e1e3acc46bd08e97e2b4"
-    sha256 arm64_linux:       "e9f3b70469bc70ebae785aef97a3c1572b98bbfc68b12bfc6ec47b42b2b9d2c0"
-    sha256 x86_64_linux:      "6416c6f8e4f2f1c4ee6c649c5c616a370d9287eb9165a923eeb13279e4baaa3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
+    sha256 sequoia: "5b585a1c49da9102d54f5434069e73a3ed0a43ea2e73b4af97e374e4102a93b7"
   end
 
   depends_on "gettext" => :build
