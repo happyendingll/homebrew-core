@@ -25,7 +25,7 @@ class Displayplacer < Formula
   end
 
   test do
-    assert_match "Resolution:", shell_output("#{bin}/displayplacer list")
+    assert_match "Execute the command below", shell_output("#{bin}/displayplacer list")
     assert_match version.to_s, shell_output("#{bin}/displayplacer --version")
   end
 end

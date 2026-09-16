@@ -31,6 +31,10 @@ class Ccache < Formula
   depends_on "xxhash"
   depends_on "zstd"
 
+  on_macos do
+    depends_on "gcc" => :build
+  end
+
   on_linux do
     depends_on "zlib-ng-compat"
   end
@@ -49,8 +53,16 @@ class Ccache < Formula
     # (especially with IPO enabled), adds negligible time to the build process, and we don't actually test
     # this formula properly in the test block since doing so would be too complicated.
     # See https://github.com/Homebrew/homebrew-core/pull/83900#issuecomment-90624064
-    with_env(CC: DevelopmentTools.locate(DevelopmentTools.default_compiler)) do
-      system "ctest", "-j#{ENV.make_jobs}", "--test-dir", "build"
+    #
+    # FIXME: Running test with clang adds SDKSettings.json which causes test failures
+    # and also hit test.remote_helper after a brew change.
+    test_cc = if OS.mac?
+      formula_opt_bin("gcc")/"gcc"
+    else
+      DevelopmentTools.locate(DevelopmentTools.default_compiler)
+    end
+    with_env(CC: test_cc) do
+      system "ctest", "-j#{ENV.make_jobs}", "--test-dir", "build", "--rerun-failed", "--output-on-failure"
     end
 
     system "cmake", "--install", "build"
