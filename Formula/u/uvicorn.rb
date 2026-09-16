@@ -9,11 +9,8 @@ class Uvicorn < Formula
   head "https://github.com/Kludex/uvicorn.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "575557c318b5fc62358c1bfa30e5c98b994c905a2f9589339be3f78919d032ed"
-    sha256 cellar: :any, arm64_tahoe:       "5f1a9f8ff90883b595150bd038af41336321f2984a5657f27af8d1506c8408d5"
-    sha256 cellar: :any, arm64_sequoia:     "7a05c0fbc40abf18c34ab77b143d24f055ca9c4d1d86c532d64a708b0f7a87c8"
-    sha256 cellar: :any, arm64_linux:       "013072f0d2f131e6e25d299902e150fd2dc6ce2028de3cb9270ee2757633d2dc"
-    sha256 cellar: :any, x86_64_linux:      "8e007f61488b53c40ae3f0b0f69b4421c0caf59bed80056abd072727f8bf6ec3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "1505222de85aa83dda590126183e05db712787ec111afd3d85a4930867bda57b"
   end
 
   depends_on "rust" => :build

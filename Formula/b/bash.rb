@@ -95,11 +95,8 @@ class Bash < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "27fe00d21b581ba549b9312986b90d2b6e97970743a12a5f9058faf71e40a7b3"
-    sha256 arm64_tahoe:       "ac5b291d5571c2aaf30bd17e0df16f0a43723dad8aac2023b9c5904742fdd2da"
-    sha256 arm64_sequoia:     "753bdd9943047829a2f8469ed2d29fc71d0de5572df2a6d0e7b3f30be71ae937"
-    sha256 arm64_linux:       "84db1fb59b457f94e28d1c0c0f31b670c7da88b64b29ff720963ecc048ce2dcf"
-    sha256 x86_64_linux:      "37c145e5e2616798e5351173d543454a26f3cf61edd3e832c57a32d46fb996e6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "079c0b3ec4295cad1bad29a7a617a0aead58550c13da6656710812d821daf352"
   end
 
   # System ncurses lacks functionality

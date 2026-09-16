@@ -6,11 +6,8 @@ class GiteaRunner < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "437ccd550d154ca349c801d75c85dc690f45deb73b9486ff1ffba6e052eb5eb9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7a1ea9baa665107d2691cbeaadc0785432ca0daf5cc09112fcdbf1122d1fd337"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b48ea54d8f54e146beb4b66f3266375ed36d938c191609939af455775535ec75"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0c3f9bdbe53ac07ef81a790ae7e617f3e5a0d74bdbd89debc8bbddd948c54a33"
-    sha256 cellar: :any,                 x86_64_linux:      "6f4055e5204e458f39244fba3441e6d7b30823f771d8663b525b2e2c3ca4fdb0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "5b863b79ab9dae26b9776136d4767c4708cd6243ec203b968815282e21062dd1"
   end
 
   depends_on "go" => :build

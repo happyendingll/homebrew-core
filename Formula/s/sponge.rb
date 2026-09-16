@@ -11,12 +11,8 @@ class Sponge < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c43829463447d0af8bc280244cb51f3475ccbaa0aa25e6df5ac0ad84e5b1936d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2e2d3741a4785752350c23b396da6ea546edf3e878cba7d310173914c1d410b5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "96d029deedc6429cd8fc60e2ffe8ecdd62088727af8e76e557a773099a239a83"
-    sha256 cellar: :any,                 arm64_linux:       "00d4ee094988bfacda5e5f03ff4bc1caea3298785cf09f8466b65aaee6ca8a29"
-    sha256 cellar: :any,                 x86_64_linux:      "c4d294043da69edc76cc2756656376d3b42a164676ee318b3457e9f29fbdd8d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fd0bc105a50c329a515437a88f1a69beced1e236d0fd7f6a6779252390760ff6"
   end
 
   conflicts_with "moreutils", because: "both install a `sponge` executable"

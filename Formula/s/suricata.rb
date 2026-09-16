@@ -13,11 +13,8 @@ class Suricata < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "283bd9b638ec85ce190bd84768427bb8d8005f4532e42adc329231dd1b9d6f43"
-    sha256 arm64_tahoe:       "a51ed5c38f2f1c1fe5ab89cd61434c0f6328ceda7a93590d7c2e085ea7545e1d"
-    sha256 arm64_sequoia:     "d66ffa0cb29e2063db3c2d3bcb59296b8a883e773bf9f37409d9947b3434f488"
-    sha256 arm64_linux:       "67a859a358de6ff68453b5fd0d845ab9399f0e88b60d820d0f0d6420d90b9c4e"
-    sha256 x86_64_linux:      "b412552d31260f2333ad5882f99e9fcdac5ea6be54c11d2ef3b89c081e1369a2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "8e87f0d3120e2b946658e25f9beed3c344e18f3acb932a7c9b4688ef84f086aa"
   end
 
   depends_on "pkgconf" => :build

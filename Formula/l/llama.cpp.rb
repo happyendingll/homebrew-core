@@ -16,11 +16,8 @@ class LlamaCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "eb6fb1624c1d7efc90d94092d95b120fbdcff8ab3c0fe148ba6108f9c44d3a2e"
-    sha256 cellar: :any, arm64_tahoe:       "109e5646fb5b08a22695c388d548aaefef101a3cd36ce31947dd2a1c2e538af5"
-    sha256 cellar: :any, arm64_sequoia:     "d3d32d08a0b3204052a4dcec61fd3848b5b26b19fe81cf66aec13229780b17bf"
-    sha256 cellar: :any, arm64_linux:       "06f024d9384f17ba2e5c70b4c0f92cc02be8f881a0bdc18a050213ab8c1ad6c3"
-    sha256 cellar: :any, x86_64_linux:      "89f99a2d607f5dc5aec7f4283f26e8b4b0046f7b7e901caf81a5a3442ddd03b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "83f3e4d78989890c65e4ff02c5225b28bc30e71dfb27b250ba33e054321ef9e9"
   end
 
   depends_on "cmake" => [:build, :test]

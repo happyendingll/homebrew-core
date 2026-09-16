@@ -8,11 +8,8 @@ class Zookeeper < Formula
   head "https://gitbox.apache.org/repos/asf/zookeeper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fbd2050163a7a2b34a3cd0e9c786b3031827d0225bb93285c5de3c4ba104487e"
-    sha256 cellar: :any, arm64_tahoe:       "0cf4ac55a57f36c1fb6f565ef14cc9e4e5a52c20b497fd4737ea2ec9714ae983"
-    sha256 cellar: :any, arm64_sequoia:     "8156fb198b4f09fa2492eaa3d96c4eb82d355db5aee9915c654f624da508fae4"
-    sha256 cellar: :any, arm64_linux:       "5d1b304ab278b7f2402a8b44fc1c86611823e626115cd34ca71cb45658927ced"
-    sha256 cellar: :any, x86_64_linux:      "a414f7fa9d373ef44c9f3ec12a6805d4a52437039377d500c1a80f4ad9ecf27a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "112a50dd9d0b040b727cd3714b792c080136ef9e14b1e6dafa1ff981cb7f3ccc"
   end
 
   depends_on "autoconf" => :build

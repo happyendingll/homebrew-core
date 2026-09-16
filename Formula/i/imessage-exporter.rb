@@ -6,11 +6,8 @@ class ImessageExporter < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3a13633ab4c670dbfb2c6e7269fc2410fbdff5f31be637cdd5f52e6fbaaeb08d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b884f25e96bbf1670744f467cd03b3cf793c2b289969693292cf2641c0ebc287"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ebbf4b6aa8bf6862ef6d41d9a7e3db37e950f5565d3515622ad63e602eff962d"
-    sha256 cellar: :any,                 arm64_linux:       "407f84f51a844aac366ca5834d4a1323417690d7f4a92402f13dc26decbd2902"
-    sha256 cellar: :any,                 x86_64_linux:      "ea6c0a4623f60c146c9d980e66408a7599fe8c317a1c3301afe9a2f5e873844e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bb07462bf5b563acabdbbd51ecd7feb34f209ef5481515f2de0c1371e4d97b18"
   end
 
   depends_on "rust" => :build

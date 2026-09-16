@@ -12,11 +12,8 @@ class Xk6 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e0348c579a0aaba4314e5d0f77ded107cc0e2edae8d9da8ef7e221a73284a2e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8e0348c579a0aaba4314e5d0f77ded107cc0e2edae8d9da8ef7e221a73284a2e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8e0348c579a0aaba4314e5d0f77ded107cc0e2edae8d9da8ef7e221a73284a2e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "19c5f733095139651dfe9aa52c35b186bc0645ce2bf4934b5525b65e14f62467"
-    sha256 cellar: :any,                 x86_64_linux:      "a0a6d27d42ba35af066c4c38886a9449426855199703793afaa4fd57739bb803"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "52eba0b6be367dfd77325d9bb9aeb45ee88f7831686e84aacc950591389573a6"
   end
 
   depends_on "go"

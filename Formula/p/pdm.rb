@@ -9,11 +9,8 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3cea6fbeed8231559434bbc6e7efdf3ce1898980a2be1cbe34f7f3ed6b2aa26d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d150793e20c3b715fd6aa3b506693297899965a22425b51fe3d55e7190263246"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "486ce099953040558c3ae77f2f0faa17101c64be630c1e2a67136efb55e63fec"
-    sha256 cellar: :any,                 arm64_linux:       "419a286425546cdd38d4d79e0f66dce1c964b4b95bf427f9cf2d4eb7bbcb4382"
-    sha256 cellar: :any,                 x86_64_linux:      "36c1732bc3701dc98b1c64f35c11d73cf995557e493690578c7dd82011a83b48"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "6b5280bf866bce0dc4e3026f44b1b6082549f48c95ea41baed02bb7142f09676"
   end
 
   depends_on "certifi" => :no_linkage

@@ -12,11 +12,8 @@ class Temporal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a8458821c49b8c5d50a4b9f2d5d2c587ae7a1da5a5e04da59410146fc8b6311e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1b1059bdcf06a2eb6bc835d70d583b3454c80d4cbf2781ee9e3fd97a6639a4b8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2825ad96b8aead509e4b3bdd347de25ec90965f9e584581dbdd9ccb3acf87d24"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "53023811e0a158eaf7b55d4197c7c969f9a7d9920c5dc132aa86dc883779bee5"
-    sha256 cellar: :any,                 x86_64_linux:      "6a4430177c0accca5f76215f8a7377571ec9ced4193542cce13a2873f3106850"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed2959afa7b1d3525e249b9d539b988e820d1fa450288933332ac20470198614"
   end
 
   depends_on "go" => :build

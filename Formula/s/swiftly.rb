@@ -13,11 +13,8 @@ class Swiftly < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a957527a4e394efe370298ce5de008a993d3cf5add51845eb362f1f6c97caee0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ffb024d7d864930141f5ee063ef01b93296fe6706a50f6c1d9d86f96b7a61cd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c9e181f4875aecf4d98e84baeac7a8ceb04d23d172a9ea2091008c77a72f1903"
-    sha256                               arm64_linux:       "5367f110ff637f6a60a2553253d5ef7cdaf60fd14b2ae750b8712998d626642f"
-    sha256                               x86_64_linux:      "a93b0b266576df9f80861859fbdb0647f63f2ec21d31abaa202faca924fb486c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ad70d20e25de2434535acb64563de257d8c851c042f9e76616e66e95cc95554d"
   end
 
   uses_from_macos "swift" => :build, since: :sonoma # swift 5.10+

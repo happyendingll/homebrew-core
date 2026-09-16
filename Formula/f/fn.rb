@@ -7,11 +7,8 @@ class Fn < Formula
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "de4dfb3d9c3e116457c607a41e333b051d3834790f692b3ef832d2ed0b0534c0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "de4dfb3d9c3e116457c607a41e333b051d3834790f692b3ef832d2ed0b0534c0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "de4dfb3d9c3e116457c607a41e333b051d3834790f692b3ef832d2ed0b0534c0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7af687802711de7d3bf41e92b7afb886428314d5d01dd92840c705f003bc5a36"
-    sha256 cellar: :any,                 x86_64_linux:      "25df6c15ab745a246dcbd50651c3306702c6aca598bbd596cc78408b1002ab7c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0d310fedf47f0de282b622c84c7201eb002cceb3be4c54e534eb048d5958741f"
   end
 
   depends_on "go" => :build

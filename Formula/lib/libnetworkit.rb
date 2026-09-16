@@ -10,11 +10,8 @@ class Libnetworkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3fb12d60ade5660a3e813d9be1c6768dd16f5d17aff4cced23d82cc60a0671ed"
-    sha256 cellar: :any, arm64_tahoe:       "0b16dca753bec93f58f09b63ec7449c1fc361bca83f1722f6b77f1b691c9fde1"
-    sha256 cellar: :any, arm64_sequoia:     "f43a37fc50f836ba1bc754448bbdf7aa7038c2d65fc31cfb950ab3f6744a2d4a"
-    sha256 cellar: :any, arm64_linux:       "a46d3d36083b57d66cd56a24239b89aa1cda60a077ecd914533c323c214b304a"
-    sha256 cellar: :any, x86_64_linux:      "7eb623aae119b462f9ff7b12ccbfccb26c3b6772ae78971e8d22f490066fd75e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "af22a20aa1b86bc479a4f285cf1564ac91c2e5b0050d0b7450cb0aa4825216d3"
   end
 
   depends_on "cmake" => :build

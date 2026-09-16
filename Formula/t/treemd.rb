@@ -7,11 +7,8 @@ class Treemd < Formula
   head "https://github.com/epistates/treemd.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2dc5aca2bd1f3bd8dd8eb2e76dd4d2fe32345b57c2061ce7e75141452f94d7a7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "18ce4b347ebd996ccc53993500baeefbaadb4f23810720aa4cb8557833202e77"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b638337dcc82e9433db4229fd4b2d111df4207383d84c07a58118a09afa6490d"
-    sha256 cellar: :any,                 arm64_linux:       "a53f402bec05a410f6b264b9b945b8926d8cb5fc598d4808088a5de3f0421389"
-    sha256 cellar: :any,                 x86_64_linux:      "5ee2a2e6ec96709d396d009bbf2c586750b18859503aff8c3380485bb41d6760"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "82e1e8e532c9e508da8f00f6cb2587831c242f2f15dd1ad4c96a5951c71a8fc6"
   end
 
   depends_on "rust" => :build

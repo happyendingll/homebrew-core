@@ -6,11 +6,8 @@ class Diamond < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d5efd25d3804410df9caa7ba9a27a6304a77ef4815250e057441ff5cefc6721c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "297e1aea6f216440a9851101195977c1ccdd6409129ce884cbf8d7723b2418b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "89071dbaa173dcab7013f9d6f5709ee8d0b5ecce580a3ebc30f39054f55ba762"
-    sha256 cellar: :any,                 arm64_linux:       "5e509850bf50379d790416763b32c143e6e1624ec74e3be573be0eb2f1ab6678"
-    sha256 cellar: :any,                 x86_64_linux:      "347e181a3fde4fa3173c40f551986c9993d51b1f79e3df1e77cd1df9affcb0b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "467064bb18cc9f694acebd92779a10c842f9e33bbe7ae8df87ecaa81a1e259c0"
   end
 
   depends_on "cmake" => :build

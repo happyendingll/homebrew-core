@@ -11,11 +11,8 @@ class Xgboost < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8c7010d13aa0aea07d8d3bf7cc8b98578b97fb27b60b75036d23de86365d1bba"
-    sha256 cellar: :any, arm64_tahoe:       "a26aa009019faf8c69d33624635fe38898a2e96b8e92c164b7e39ed5364cb776"
-    sha256 cellar: :any, arm64_sequoia:     "2938c45519450e0e9e5c26f2c281c5f9439c6f3051e76fdb71cda5dad124c136"
-    sha256 cellar: :any, arm64_linux:       "41657b5574be4aa3e1084b39d2b0ef63823b6dd65535e9ccb36f75e49964e548"
-    sha256 cellar: :any, x86_64_linux:      "cb886e31cfc2b9f0c96ff806cf373a0063b21467c1b2e206409eb490929c7e73"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "958b8b336e67fd40a21875d32b4d2425a50175b7b1dd9841947197fde133036b"
   end
 
   depends_on "cmake" => :build

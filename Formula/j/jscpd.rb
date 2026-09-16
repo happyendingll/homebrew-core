@@ -6,11 +6,8 @@ class Jscpd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fa0266fbe61763ee27f5c3662cc9ab8b5df3b23b0d12a424975304b35fc41b0b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3efa2d9af0f640a1a3a143044bb274e3740b9dbd8156cfaaee2cfea2cced5451"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf571b464e3bf25ebb8fd7c68535068f7f6e1c5d9f7cd86997d73af7869040e0"
-    sha256 cellar: :any,                 arm64_linux:       "bc859f30aaf87994862ee247720dc77aa3dc11cf6f998164d3e8265829262e40"
-    sha256 cellar: :any,                 x86_64_linux:      "76eb7f5aa901d12d9bcf6b265714d60c3a7ff9987bfcddfcf92c06c7cedd2b63"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cb09def1d19725dcfc33f5259bc377de704ec398359af64173e12ef981747b74"
   end
 
   depends_on "rust" => :build

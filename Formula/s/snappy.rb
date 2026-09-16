@@ -8,11 +8,8 @@ class Snappy < Formula
   head "https://github.com/google/snappy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "56a72b07396e784b1baf26bd6d3e17eb4f42d6daaa547d94c2c0c7af46d3ab3c"
-    sha256 cellar: :any, arm64_tahoe:       "ed46206fcb9d94e26c725e32e2628d1b5316afd6b59bc2b5352ca05c462103da"
-    sha256 cellar: :any, arm64_sequoia:     "b494e64dbd96af17defdb6a0ebf60edd284d3df904c867c825c2d5cf9033782b"
-    sha256 cellar: :any, arm64_linux:       "7a621f5fa89c4339bee3cc592331f6d5c1adabc7ff1e7349670cc1039b3c85bb"
-    sha256 cellar: :any, x86_64_linux:      "18aec5843943b24eb10d51af1d42b6a7e32120b46a045bbf0bc5e908fbb5f837"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d4daccb38d40bd4bd8eb854f6bd13f5030ff91c04655c8af0dbbe530253c6c64"
   end
 
   depends_on "cmake" => :build

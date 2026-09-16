@@ -13,11 +13,8 @@ class Convox < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9af2d1ab0144438ce2cb5c6c2af7021a7020e3f8245f62cbe0857d44d5ce1a33"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98e2f719a1741fe96a03b806c01c5b87997a2bbb263ab69d2785e486bcad2226"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ad54c793b1f953193d6c41189537356b24325c46242235f8e348f530c7aca109"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e3acaf5f7abab1ab2ff118bb8fc32e1a6ee2c56339b16ed11757faca6f1145b6"
-    sha256 cellar: :any,                 x86_64_linux:      "a44dec68b5aae3aaad3b76e0ba2a113feab268266cc66ecb6ac2e4d060972123"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3bb1e8783a5da50160ffc0d33419ed87ef585780c13af07e9c701675dd990d87"
   end
 
   depends_on "go" => :build

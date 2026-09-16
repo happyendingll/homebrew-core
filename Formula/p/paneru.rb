@@ -7,9 +7,8 @@ class Paneru < Formula
   head "https://github.com/karinushka/paneru.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e963720c7362a1b60389666e837f5270f43d09f7a31b5b5e84c9e61e245030fc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "39d71dd823da8a782ac0f14b3b96268bae8c0835f19ba42fd14f5e4dddc0bd8a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87663c29e5eef02cfd9196dc05ef6792ac9223d0d7bd155bcd6e19abd3e885a0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e75b55a095a72b994789a4146b372d81ee8f25589dd1e9a4bfd1074b393f2740"
   end
 
   depends_on "rust" => :build

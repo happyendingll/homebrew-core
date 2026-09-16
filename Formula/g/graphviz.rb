@@ -13,11 +13,8 @@ class Graphviz < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ef2f6a5a452065bbe3f7214e9366e20f05b7cda0a1a5fe841ea323678559315f"
-    sha256 arm64_tahoe:       "f7058305ab3e33cf9e6729ba7e68f0a2fed7bc7d188391be74163c8d956c28ea"
-    sha256 arm64_sequoia:     "b21e979836c012ff0c48b671fc9dbf037e07e11f0b1e55ee6c67a256dc6ca9cc"
-    sha256 arm64_linux:       "4e0f5b6bfa78ac2c9a1ef6a0fd8e5e0d68c82a6661659d1f49e53dc6fc819f6f"
-    sha256 x86_64_linux:      "b67628bec6a481d8ead0cac5c3f5a4c840ca21e97d039b8caf4c199ed24f2c99"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "0c565accf1da8af3873d39fc4bf8476dea5141fd29b65602df7d2e62a2c33fe5"
   end
 
   head do

@@ -9,11 +9,8 @@ class Commitizen < Formula
   head "https://github.com/commitizen-tools/commitizen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c51e30df1f0b4be42f911026b92151d83f833ef165cc1236feee7d5617bf61f9"
-    sha256 cellar: :any, arm64_tahoe:       "c1ab5de875d5050b1bc45b748930bec5954fa97c542ce16ddaa57836f494981a"
-    sha256 cellar: :any, arm64_sequoia:     "727460ed8f62450835c2e9a6739af6fdafb3fced26b2c2fc9ab63f741d55a56f"
-    sha256 cellar: :any, arm64_linux:       "3feb499772e900b6084066c85ca2593eb463a8fe720b727e2e2bb762852c2250"
-    sha256 cellar: :any, x86_64_linux:      "85f161b3c833b2f2db8d3fb5074c49955e1f59c2a746452a2a31161e16f4046f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e09af71f2e7b406cd869d2addb76b4fb9188e911a308b5017d0c1c64b7f50420"
   end
 
   depends_on "maturin" => :build

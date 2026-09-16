@@ -15,11 +15,8 @@ class Kubo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9f09108941ec17295e9f8fd21e3c92aee0731c6574b3d0a2a1bbec99bced7a6a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "605f2cd4ce9f1faf43fcff8f499caec18fbb591702b22f53ce5343fb8ee0f300"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20f33a3a0693e4b54ad7b0a9f51cdbd977eb40a8547e733801bc88f04e62ecc2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a8d650d217b4226f97e1ee582be9630f37f2a7769093c8c14995dd63a5be8b44"
-    sha256 cellar: :any,                 x86_64_linux:      "b08fc046d2b512e44ae90b29768460d5ced944bee74280cd77fef8c8d4aae47c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1877800774e27a91b0c7a2460de3d4e31428e66e1c02c3a4b6171eb7271ebaaa"
   end
 
   # TODO: unpin go@1.26 when kubo supports go 1.27

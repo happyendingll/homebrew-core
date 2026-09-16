@@ -14,11 +14,8 @@ class Proj < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "448e0ca2bcb98a0b5df650a414bee47ea40b2eab716dafde9b7140bd4aedfb02"
-    sha256 arm64_tahoe:       "8a4962d2d4ca39f6556c829a94cd00e9727ea1faa64a6950817da69f75401738"
-    sha256 arm64_sequoia:     "d3a42ecb622133bc6dab5cd9955a7acad277cc232bd481850b4214dc83656891"
-    sha256 arm64_linux:       "0ec698e513dc01e29b036351cfdcaf7faf689fd495739928373325652df1bc25"
-    sha256 x86_64_linux:      "6dab4744f2f1e4eb0dab400a05cb6873c8a925426dd315473f4b94e9759847e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "32d9a4be3546705192cfee7136b809d392d7abd887cb24fd351982fd678e2563"
   end
 
   depends_on "cmake" => :build

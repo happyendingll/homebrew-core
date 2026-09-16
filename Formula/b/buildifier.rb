@@ -7,11 +7,8 @@ class Buildifier < Formula
   head "https://github.com/bazelbuild/buildtools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e4e471f61c74d0a8a61117434d5a738d82f83032f0c930da4b5d2d771db39cf1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e4e471f61c74d0a8a61117434d5a738d82f83032f0c930da4b5d2d771db39cf1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e4e471f61c74d0a8a61117434d5a738d82f83032f0c930da4b5d2d771db39cf1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6dfdcbd0a11a667b54c93554b937d6fd30dce26ff27098eff0cadfa6d18e2857"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3a1879d2fe115560db96dd40e87cf017c7cdaf5f8fa1aff35ca69019118d01df"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd925a11822d163d29b02c550b55400acd39a9820df4e3f6f7d03a3331086871"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Concord < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bbc2c15f8ec05104bd33212c2295ba6a53649f36dda77bc2303c2fa660012066"
-    sha256 cellar: :any, arm64_tahoe:       "ed16430ae985d1250a15918688af7261f1f279a77a6c2429df5bb2e1c6bb805a"
-    sha256 cellar: :any, arm64_sequoia:     "649a8225bbbddda0be59776274fee78085809a867ef0a7216ec51a6e0c9aaef5"
-    sha256 cellar: :any, arm64_linux:       "e445b9ef81af5262e076c68cd6b71fbd8798766ef68e2483f0aca657bbe38d35"
-    sha256 cellar: :any, x86_64_linux:      "fed4e9f171f1dc08e90f6a87e03c8a40d2c82daf54cb6af4a6d4c98352bf1e9e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "13b20a56947efba431edc1cbe206d7a4e117ea11a50101ece02eade8c41998fd"
   end
 
   depends_on "pkgconf" => :build

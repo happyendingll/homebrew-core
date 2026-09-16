@@ -6,12 +6,8 @@ class Libgr < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "97470c73731b8146e302578111249e07281c10b1d364c84ca25d1b22ad064f68"
-    sha256 arm64_tahoe:       "2ca280b0b4e763eb659d22585a55b903c796fe2171e8cec2b5220b1adf9c820e"
-    sha256 arm64_sequoia:     "c5b621c207017e2d3537fab8618005bc7fe9500e99defe7531310d8012479c62"
-    sha256 arm64_linux:       "33541e81f803c1c0e72a88b79d7daa74804034eb14c114457d46f89a925c3d74"
-    sha256 x86_64_linux:      "230c61d1d0950541adac591a4471867a151b1724ec12ae9f9d54e202ded03963"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "c9361d71c60c79821219c9dbd8f5ec05f8ac706b8f2bedb9f2485a8a747a1087"
   end
 
   depends_on "cmake" => :build

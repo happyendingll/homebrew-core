@@ -8,11 +8,8 @@ class Coreutils < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "4421a3a30a13aeef2871cc4ed61ce74e6c01ae63aac458f248163d6b910ff53b"
-    sha256 arm64_tahoe:       "f6fd88f7e28c355f2fbfee87f7d40b1f3d1155f61481782459910ba80426bc28"
-    sha256 arm64_sequoia:     "fa47ead734434aec427e2450ceb3297e169ee945ce66e059ee4520bd662fe449"
-    sha256 arm64_linux:       "cec5baeeb459f4e12f10aac17860adb3dbc29c93e6da6ef7252af2dbd3332bef"
-    sha256 x86_64_linux:      "fc3f61abb4fa8b16956dda47cd04854dcc38b9086a9fa9c6e9fabadd6a0461ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "9ce81fdf6ecbd53f19c83c6aaea62082d6f5ee11a44fc367dab83a8621a8045c"
   end
 
   head do

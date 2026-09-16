@@ -12,11 +12,8 @@ class Mmctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "78f4abeee0f1c31721ad5a3437ce306f9f095471f6dbd996cb56b04f5138dc48"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78f4abeee0f1c31721ad5a3437ce306f9f095471f6dbd996cb56b04f5138dc48"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78f4abeee0f1c31721ad5a3437ce306f9f095471f6dbd996cb56b04f5138dc48"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "16a6d2ed62f5ceef831eb68c7e9de3d4cc08a72d70078ac785a64f7fb867e7c2"
-    sha256 cellar: :any,                 x86_64_linux:      "252b47e316599fd977d9ee88dd811a947b821e8639432fbc2461fac2b1fd0f27"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7f9679ad1b1db6bfa3339fc5eb625a08d2e3b90c43a0f1fc6ce0bd0596f9fc77"
   end
 
   depends_on "go" => :build

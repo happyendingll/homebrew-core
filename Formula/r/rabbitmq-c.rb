@@ -7,11 +7,8 @@ class RabbitmqC < Formula
   head "https://github.com/alanxz/rabbitmq-c.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "214c926e4ae437b5ded0a99051d908ae0009017753418ffd756dc6265128af66"
-    sha256 cellar: :any, arm64_tahoe:       "a0684d61ad2c243af8069475dd16f1782917876b974703cbae9e20c1e72675bd"
-    sha256 cellar: :any, arm64_sequoia:     "67c861cb1762c7d55eb6063b03ff299159001603f41d21d5dbddb8e4be340902"
-    sha256 cellar: :any, arm64_linux:       "d7bfa7c837331e4ace2fb61a4f010da844c2919b5339ff7558757f260084d928"
-    sha256 cellar: :any, x86_64_linux:      "42e48ede827ab64800b0598e87035aa0147585f84b97db21edf065a6f24dd7cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "0c075664049484fba0212e545b702ddfacf7332d7e99005836d91c64126f4ae4"
   end
 
   depends_on "cmake" => :build

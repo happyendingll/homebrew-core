@@ -11,11 +11,8 @@ class TyposCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9aa37a6da3929cff2d4c61e778ed9a1bf1d0016fe897c52bf387a2639552eed5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c8e8196b244bfbb2ab48db84757a3e38de179a38d0bd095dea3a24a4ae49814"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe5344eeb1b3787092e874dbb98e73e4a5bb033d3e0d133f736f4e51bf637ea7"
-    sha256 cellar: :any,                 arm64_linux:       "ffedde767da4c34b432d1995a1b5d33dbf1ee266880bfb47284a4b15de7d2ab6"
-    sha256 cellar: :any,                 x86_64_linux:      "9b52cd497978f0f9bede5cf29d841ae6ca35ede1d00a28c1ffb8b545bcc77ead"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1b5ad9c8b45ebbc1b12a34d86f3d4aee5bb34fd051a9350b6235eb025af243d1"
   end
 
   depends_on "rust" => :build

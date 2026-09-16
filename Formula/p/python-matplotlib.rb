@@ -8,11 +8,8 @@ class PythonMatplotlib < Formula
   license "PSF-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "83debd71f3bd86005e87a71f90cc050afd6ea13c9c84b8a32e684ebfa598a3bd"
-    sha256 cellar: :any, arm64_tahoe:       "cb261af4bfdf8736adb53d77a7115badc37e6bdd1e52196c883d9f83de64cf8b"
-    sha256 cellar: :any, arm64_sequoia:     "277c0161f440ac2c0f6312800c30a2dac778abef10e4eea4de06597b27dff031"
-    sha256 cellar: :any, arm64_linux:       "21e087c295071d099aaed896d0a26cb80e2a400253a8d738b3c628f59f422eb6"
-    sha256 cellar: :any, x86_64_linux:      "81c0d4bd7372776834a958812de7b19899fbcc7769e9cda5950146304841a3ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "f4be2cffb141c6ae8ffe7bb067beba3f03ba6353bc3d53ca8cd299eeb727a993"
   end
 
   depends_on "cmake" => :build # for contourpy

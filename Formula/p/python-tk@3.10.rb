@@ -10,12 +10,8 @@ class PythonTkAT310 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "31c864912ccc6276b811ce314e75f6498a873325f05da80db84c80986811bfe1"
-    sha256 cellar: :any, arm64_tahoe:       "41c68aa8e1fbb5b13c9d71acca7d1ecc1b1faa337abf982523f7862852f35454"
-    sha256 cellar: :any, arm64_sequoia:     "72c0c510440474eb62ab562ec31c59c120b71767c5df969a175536c89cb778e0"
-    sha256 cellar: :any, arm64_linux:       "b3b4d9ef4b8ec5bda4c8bda9ed6a5a5409c692231607b4aa09a2fbd50bc09ffc"
-    sha256 cellar: :any, x86_64_linux:      "1338cd7f6cb4073b8b91fe56450ad5c447b7e0141d9744f1c3359fc9d7799b9f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "0af31f25fca9e0a308f5f477ca6f28d9fe0c0a735bc16e3961c67ea89316ef44"
   end
 
   keg_only :versioned_formula

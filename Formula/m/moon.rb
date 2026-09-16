@@ -12,11 +12,8 @@ class Moon < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b68aa70af4710fc5b238ae155010887f8b36a912ff3e04c2920fd35270a18202"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dafe9f35d304fdc581ad10e9e48744dc357594d245fdf8fdb5320f710169483f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a9c4f85cca16d496e3c56f35c1fabe18d3ca197ae7055ab2b3fd7cfbc06a6ff"
-    sha256 cellar: :any,                 arm64_linux:       "b32393e3d4d1c2c991ef4f13495ded0581b470fb5894e8ced23c95946719be61"
-    sha256 cellar: :any,                 x86_64_linux:      "068805cc4844af1e0d66eb035185ef011ffc2336642a4b258134dd898530eda6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "6e46d00314527ea9f37c8362be8eec01c10dd8e956f0cbfce97dc9fcc33291a7"
   end
 
   depends_on "pkgconf" => :build

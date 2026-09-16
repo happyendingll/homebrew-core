@@ -7,11 +7,8 @@ class Fastly < Formula
   head "https://github.com/fastly/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "468818fe39bb9028d98b10ed604040c8a798a6bb8f4009bf4699d08d6a1db539"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "468818fe39bb9028d98b10ed604040c8a798a6bb8f4009bf4699d08d6a1db539"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "468818fe39bb9028d98b10ed604040c8a798a6bb8f4009bf4699d08d6a1db539"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d993f9dba1c42ee555bb27aace24cb25b9977091a7b52bf84114591dea58a374"
-    sha256 cellar: :any,                 x86_64_linux:      "04bd6a610449e90b0ff298ccc721cfab792792000418daec27ee11d3d48b0099"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd56c039610823bf1592f587f032778914670d59ecd152e049646c6dbf5faad4"
   end
 
   depends_on "go" => :build
