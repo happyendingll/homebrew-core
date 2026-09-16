@@ -2,14 +2,17 @@ class Wasmer < Formula
   desc "Universal WebAssembly Runtime"
   homepage "https://wasmer.io"
   url "https://github.com/wasmerio/wasmer.git",
-    tag:      "v7.4.1",
-    revision: "df29aa22c6159a147f992375f5670edf77f8d6a0"
+    tag:      "v7.4.2",
+    revision: "7a48a071c7682a409d148cf37dc8da58322a123d"
   license "MIT"
   head "https://github.com/wasmerio/wasmer.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "6a0c3bb6f546caca52dcfaa4891e6d2b0c1dafc530d0d4993175d007e83d03b2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "158ef9e2b8dc0b94679ddd6a52df9fcc1b9d258f2d6009ffe8bbbc3774128548"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ec4161d5b249ae7491b2e5fdef8e35585bf057922c869120e03bb796871553b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a076aac0bffb5bd4899c52200569197f08ae23652d78ed8bd7550454e9b062f"
+    sha256 cellar: :any,                 arm64_linux:       "fcf318732f1312ed7e6002fff49cf34d10dccc8d8091dbef296c94042a6759e8"
+    sha256 cellar: :any,                 x86_64_linux:      "79e8270b6a8319d23d7592fcff1948284285b9410b0484e76fb8d22fc9ff709b"
   end
 
   depends_on "cmake" => :build

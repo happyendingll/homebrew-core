@@ -1,14 +1,17 @@
 class Polaris < Formula
   desc "Validation of best practices in your Kubernetes clusters"
   homepage "https://www.fairwinds.com/polaris"
-  url "https://github.com/FairwindsOps/polaris/archive/refs/tags/v10.2.3.tar.gz"
-  sha256 "7608471f6c4afae8212055e599531bf60cc08ee621605b8cdfa6876e71f8e125"
+  url "https://github.com/FairwindsOps/polaris/archive/refs/tags/v10.2.4.tar.gz"
+  sha256 "4ba36dd80a9987e4ab7f4b9b6147b29d07f1ec452734184bb0f41352d57a273b"
   license "Apache-2.0"
   head "https://github.com/FairwindsOps/polaris.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "a5716ae7e8ff090d165c74b11de99b9a85849b11495526d87d66b5b7094ff185"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "80d49f529cb1b20c0bb748846640fc1aa9700998d66b6dfa31a9f43d006a37cd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0989cf713fcff89e4e83de84d4ad970b1e2e075bacb64ab413a7a818db490ca0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f4c7acbe500d075a1a5f3507011ad01f56827b8935abbc5934ea5c7034e51c30"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "14ccc01ece3434f93058ef0109b21699d0fb7fbcbe0a8776877d13a25434550f"
+    sha256 cellar: :any,                 x86_64_linux:      "901c75101de6d365a7ebc266ad0aa9a3644a980c9316840b409ae9e217fb4f06"
   end
 
   depends_on "go" => :build

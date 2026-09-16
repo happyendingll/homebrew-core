@@ -14,6 +14,12 @@ class FreshEditor < Formula
 
   uses_from_macos "llvm" => :build # for libclang to build rquickjs-sys
 
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/fresh-editor")
   end

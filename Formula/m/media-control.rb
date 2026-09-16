@@ -23,6 +23,7 @@ class MediaControl < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/media-control version")
-    system bin/"media-control", "test"
+    # `test` needs `mediaremoted`, which the `brew test` sandbox blocks, so only check the framework loads
+    assert_equal "null", shell_output("#{bin}/media-control get").chomp
   end
 end

@@ -16,6 +16,12 @@ class Worktrunk < Formula
 
   conflicts_with "wiredtiger", because: "both install `wt` binaries"
 
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+  end
+
   def install
     ENV["VERGEN_GIT_DESCRIBE"] = "v#{version}"
 

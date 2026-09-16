@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://www.dolthub.com"
-  url "https://github.com/dolthub/dolt/archive/refs/tags/v2.3.4.tar.gz"
-  sha256 "ea5fd26263913647bff49fed44e1404df43229d90e27f3e968a8628eda408340"
+  url "https://github.com/dolthub/dolt/archive/refs/tags/v2.3.5.tar.gz"
+  sha256 "30b0d853c87a1c7c2a1959b448fd41dadc1c0f4d2c458ebd22893a5fc68bda27"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/dolthub/dolt.git", branch: "main"
@@ -13,8 +13,11 @@ class Dolt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "6e4de929d1e4afaaabaa07bba387dc516db1becf33e07f07c21e458bdd572864"
+    sha256 cellar: :any, arm64_golden_gate: "ff9c48a43c433486665fb658389121e7a552cc46a7261544317029e15234fc88"
+    sha256 cellar: :any, arm64_tahoe:       "e6843694ad4d773bcc9f1a969602c8367b7348e8523ca6bc2094c3b001e9895b"
+    sha256 cellar: :any, arm64_sequoia:     "2ba7e0f7ee7a87c3c537e7b4d2328a7db400a35a24a9535a54acb4f534f31569"
+    sha256 cellar: :any, arm64_linux:       "516c4a55ff22af9a2128855bee5d5b873349efd724b20eff333cec703f87ed32"
+    sha256 cellar: :any, x86_64_linux:      "ba81454c2ade2b5579edfba5ccfb6d2f863be96df27799c103741eb5b09f93a6"
   end
 
   depends_on "go" => :build

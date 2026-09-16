@@ -24,7 +24,9 @@ class Tgpt < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/tgpt --version")
 
-    output = shell_output("#{bin}/tgpt \"What is 1+1\"")
-    assert_match("2", output.strip)
+    # The free default providers keep changing their access rules, so query a local port with nothing listening
+    url = "http://127.0.0.1:#{free_port}/v1/chat/completions"
+    output = shell_output("#{bin}/tgpt --quiet --provider ollama --url #{url} 'What is 1+1' 2>&1", 1)
+    assert_match "connect: connection refused", output
   end
 end
