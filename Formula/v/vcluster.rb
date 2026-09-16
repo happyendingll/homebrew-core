@@ -15,11 +15,8 @@ class Vcluster < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e86b960ca14db0892da2b8161b6f22e49b9061afba7d56b823e88c054de5767e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fa86e10f9f9a843c6852af1f023eff91d8dec8a64d919d3c1204b7270bd603fc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6cc76ae2505e30baa66732ab345118f5f1c8a42aab8b68156801d84e690cb91c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f49c9efece208968d59e53cbb6093573a085c2ae4266aafa267eb7ea7bdcaa93"
-    sha256 cellar: :any,                 x86_64_linux:      "23016301b81fd8998da4d3627e8e5d068c562d8f71b5ad70e0b2ccb6d97f7f1d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c288868d5de450a77e5a819ed8c98bfdfb575427afa277ae16bfe5a9e98aea89"
   end
 
   depends_on "go" => :build

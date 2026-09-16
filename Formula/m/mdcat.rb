@@ -7,11 +7,8 @@ class Mdcat < Formula
   head "https://github.com/BIRSAx2/mdcat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e4e7949ce84a385ff81f9d2623049542a8ead5b05e82bbc60181b6c79d18d0a4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ec1de76c69e5989730fdcd8f3e794d4711ae59de4027fdb67cf1ee4b51cfd42"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "08c060f40f354d40b5d96d19fd8d4458bf8c05ba62e0d20b389ceaa001234961"
-    sha256 cellar: :any,                 arm64_linux:       "dd385e342954e6454915b49b8df778b62689460b7bfde534baecbad02a904afc"
-    sha256 cellar: :any,                 x86_64_linux:      "c92642c3909cb175e7d8de074d0a309841ccec00fcdb202b86dd6802612bb82d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "76b54f663d1192fd1488eaf2012e4f5faa66aa5125f35adbadaf00768c5b7753"
   end
 
   depends_on "asciidoctor" => :build

@@ -12,11 +12,8 @@ class Testkube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "faacb66c57d53db57dfe69d64e9008d9d363f737e8dfce69ce0e10d65f3a230a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8959fb2efb46fc913b62ee659e1857ced77346075aed7f73cfd8fc8eb624829f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "98b4ecea41ac6f575f037c238bd6ce907ea8553de60ff84edd043b2bfb8e9e8f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ec27f9173e5ff2ac0e93917ad3e75e03306607eae3ff1ff95ef2aa57e2d9f202"
-    sha256 cellar: :any,                 x86_64_linux:      "a87a15a5eb47a444cdabbefcee1b4f22d79a1c825728e9bcb94484d7f2a80f83"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ae114f19f253a9cd0d4007a77a2c991b3a0ebf477b21cb0280a9519dfb581641"
   end
 
   depends_on "go" => :build
