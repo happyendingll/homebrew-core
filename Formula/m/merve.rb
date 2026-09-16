@@ -7,11 +7,8 @@ class Merve < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "28d55ca685235ca09cafac7c50c6b00dc1b2b372a3a64121b705ae09bbf3812b"
-    sha256 cellar: :any, arm64_tahoe:       "4713f644af3e19e11aca6fdeeb641899bce180bba8b480621165aac16c2654be"
-    sha256 cellar: :any, arm64_sequoia:     "54b5a9258d8b1b15be4d1636efe4649cc3c31e9df50afb5b7469507cf6e00e1c"
-    sha256 cellar: :any, arm64_linux:       "e714a777d6c39fd86f91a53a90240ad33ebda81dfb95202e2995ac5fbfe4d15e"
-    sha256 cellar: :any, x86_64_linux:      "a21b8e9f164031cf60687eb59bf54bae65d1dba0019a2e53679449ad14f69735"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "f82e08219f89cc7751616adeeb0a94aeeae31e68e7247608e5361f6ffe405f91"
   end
 
   depends_on "cmake" => :build

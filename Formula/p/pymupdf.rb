@@ -7,11 +7,8 @@ class Pymupdf < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7191121625872a01bee8395ff74e1d283d572498bcd88859d7d33f0a296b5a1a"
-    sha256 cellar: :any, arm64_tahoe:       "d47f61dc682fdf3833f49d2e34e824cb77a3a3a113246af25fab354a979520e4"
-    sha256 cellar: :any, arm64_sequoia:     "d10f99e6b1da887cd99bbd28e965ba0ec166ff8a29eb05b5eb61796e1f752205"
-    sha256 cellar: :any, arm64_linux:       "a56e01c256dadb1e04a6f6f2e16c0c62e035cb40de375ad01d629a8492f8f36f"
-    sha256 cellar: :any, x86_64_linux:      "ce216b7561a7ba8ba7c9a01ae7301d1e2b5b2f81e5a393acaef3514492b71f82"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "bd1d0bb324c0e1c8ff1f803be7659d1c0ff3418de1ff3613e59a8fcfab164858"
   end
 
   depends_on "freetype" => :build
