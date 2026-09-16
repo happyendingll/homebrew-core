@@ -1,8 +1,8 @@
 class NatsServer < Formula
   desc "Lightweight cloud messaging system"
   homepage "https://nats.io"
-  url "https://github.com/nats-io/nats-server/archive/refs/tags/v2.14.6.tar.gz"
-  sha256 "90aec2c35eaa94105354cbcdfb6d88cea5082415dc39409efdbe320fb66328bb"
+  url "https://github.com/nats-io/nats-server/archive/refs/tags/v2.14.7.tar.gz"
+  sha256 "094114987c7f7d45347a77e1731a394d002115669b802b5475ef515d342358cc"
   license "Apache-2.0"
   head "https://github.com/nats-io/nats-server.git", branch: "main"
 
@@ -12,8 +12,11 @@ class NatsServer < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "dc8330bf71ea58402086631fe000a1237a5038e95bdf2254d3fa537b13bf5959"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e9530b237c425a761943f4ef2812b96fa72adbda67b12917becbb2a15175ed20"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e9530b237c425a761943f4ef2812b96fa72adbda67b12917becbb2a15175ed20"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e9530b237c425a761943f4ef2812b96fa72adbda67b12917becbb2a15175ed20"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7466b617dd757aa50cd5a55f0a28e49e47ca7f555129785da239e59d50f7c546"
+    sha256 cellar: :any,                 x86_64_linux:      "a31b89bddf33c2a40127760880b33b93ae0eef98af5963162bf693742f67430d"
   end
 
   depends_on "go" => :build

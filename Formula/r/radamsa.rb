@@ -39,9 +39,8 @@ class Radamsa < Formula
   end
 
   test do
-    # radamsa restores the terminal mode of stdin on exit, which stops it with SIGTTOU on the PTY used by `brew test`
-    assert_match "Radamsa is a general purpose fuzzer.", shell_output("#{bin}/radamsa --about < /dev/null")
-    assert_match "drop a byte", shell_output("#{bin}/radamsa --list < /dev/null")
-    assert_match version.to_s, shell_output("#{bin}/radamsa --version < /dev/null")
+    assert_match "Radamsa is a general purpose fuzzer.", shell_output("#{bin}/radamsa --about")
+    assert_match "drop a byte", shell_output("#{bin}/radamsa --list")
+    assert_match version.to_s, shell_output("#{bin}/radamsa --version")
   end
 end

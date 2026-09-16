@@ -4,12 +4,15 @@ class Passenger < Formula
   url "https://github.com/phusion/passenger/releases/download/release-6.2.0/passenger-6.2.0.tar.gz"
   sha256 "bd0e14538fa4a9f479a3ce60805a201bf10757d6051d23087759b1abbc811529"
   license "MIT"
-  revision 2
+  revision 3
   head "https://github.com/phusion/passenger.git", branch: "stable-6.2"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "86b5f39d7db18ca181eb8bdcb45dcb7151ddc4b5b084eaa4a2e275f0d2720e46"
+    sha256 cellar: :any, arm64_golden_gate: "4525134b680d1192e500a9353cbbe8dfdebebfb573148ce79a2d0d30bf0178ef"
+    sha256 cellar: :any, arm64_tahoe:       "c8a40c514d9bebb045f26c64ced79d54fdeb0a969e459fe897b2f78d281c797d"
+    sha256 cellar: :any, arm64_sequoia:     "06d4b9baa5bce895424ee99048379e6ac57d2023d004eed01dde6bc368981363"
+    sha256 cellar: :any, arm64_linux:       "99d469fc3465a5d9a329d2717929aaba29a021cc952528a03e213c80af1a4786"
+    sha256 cellar: :any, x86_64_linux:      "4a20b09f9a9d23571b5b09e652320f7adf5f8f330c4e07b7e9503be55c5fd71a"
   end
 
   depends_on "httpd" => :build # to build the apache2 module

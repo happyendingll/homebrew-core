@@ -3,13 +3,16 @@ class Dolphie < Formula
 
   desc "Feature-rich top tool for monitoring MySQL"
   homepage "https://github.com/charles-001/dolphie"
-  url "https://files.pythonhosted.org/packages/5c/a7/e0254efaa0b17c87cc8a90c30312327952fbfa0352126415cc61eda87a10/dolphie-6.16.0.tar.gz"
-  sha256 "90eb978e158d2e3f8119b7afdc320fddd7f204cd85822e68af59ca38d71d1f1f"
+  url "https://files.pythonhosted.org/packages/7d/1f/f23db0f516539221a02aefd50e002bd2f4fff08e4613d6b352eb8130625a/dolphie-6.17.1.tar.gz"
+  sha256 "75eca7d3928a67cabb51c50471ea6776473f2d312e526267301f6bf152bdd239"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "3fa5e58055314d92dc74434a31ad42e6856947740d8edc729474bb3083883bb4"
+    sha256 cellar: :any, arm64_golden_gate: "6b686870c37ad83d53d15ec0cf4e083924e4ad0d543adc0a8a4d9b68453911a7"
+    sha256 cellar: :any, arm64_tahoe:       "4220340c301112f1261212bdf561ab4b41b984a826adf8571f3c6b293b43cb62"
+    sha256 cellar: :any, arm64_sequoia:     "78f25681506e2d1638b07e60482472c0f9ac67f6f780f5951a7f7950724c70a2"
+    sha256 cellar: :any, arm64_linux:       "2056cf86de2944e31ec92cb3df24d34ff7d9cdb1789e90e9db65463662bfa7e9"
+    sha256 cellar: :any, x86_64_linux:      "8bc16f19551cf31698cdb37ce8c4608a9f213e215c2b1026b41242a000b9d4df"
   end
 
   depends_on "rust" => :build # for orjson

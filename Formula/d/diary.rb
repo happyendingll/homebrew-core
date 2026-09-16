@@ -1,15 +1,12 @@
 class Diary < Formula
   desc "Text-based journaling program"
   homepage "https://diary.p0c.ch"
-  url "https://code.in0rdr.ch/diary/archive/diary-v0.16.tar.gz"
-  sha256 "9140762d44251ebce08d5ae45878a30fc9c35dcdd98fe64da618cdd2062552dc"
+  # Need to use git checkout since archive url is blocked
+  url "https://git.in0rdr.ch/diary.git",
+      tag:      "v0.16",
+      revision: "e9c235ccbefdda9363c8d82f6e40c79df8e836f6"
   license "MIT"
   revision 1
-
-  livecheck do
-    url "https://code.in0rdr.ch/diary/archive/"
-    regex(/href=.*?diary[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2cf6dc0be5b3beea462918ef2b58d2c94ecec01aba46b260a85772abbef73b94"

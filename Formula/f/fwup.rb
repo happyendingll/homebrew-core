@@ -1,26 +1,21 @@
 class Fwup < Formula
   desc "Configurable embedded Linux firmware update creator and runner"
   homepage "https://github.com/fwup-home/fwup"
-  url "https://github.com/fwup-home/fwup/releases/download/v1.17.0/fwup-1.17.0.tar.gz"
-  sha256 "d2a7ee4986652650270e5c01c13f854bd17fba27b48cdfff69025be92969e01d"
+  url "https://github.com/fwup-home/fwup/releases/download/v1.17.1/fwup-1.17.1.tar.gz"
+  sha256 "7672c6568b7538ed81b8557c91bf3a198599dc9eb6f69ea4441cee8b1e87c098"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "32f058bf7612fea15acb247d91ef1ef8b40df45783460de3b60119046ca5342b"
+    sha256 cellar: :any, arm64_golden_gate: "8c2bd8bf0f168fcd3cbd4b0f7c2b589a1f6c4f83243384afe7d6c8b3f1e3b007"
+    sha256 cellar: :any, arm64_tahoe:       "da8b276e1925688560961747faf96c8fad7e00c44049a3d3c9bd2349cef511a2"
+    sha256 cellar: :any, arm64_sequoia:     "191c88ec1390c8f6a844b9568b31ca06a1d93eca1ac54daee81d424be70c6b72"
+    sha256 cellar: :any, arm64_linux:       "6c993490673261dc6f71a6c8817b763af67b264b7056fb276d9f4b3b847bf7cf"
+    sha256 cellar: :any, x86_64_linux:      "e36da541298bd05b0675eed95a0cfcae004d9e69da608c87ca945f15b219bef4"
   end
 
   depends_on "pkgconf" => :build
   depends_on "confuse"
   depends_on "libarchive"
-
-  # Avoid `CFRelease(NULL)` crash at exit when DiskArbitration is unreachable (e.g. in a sandbox)
-  patch do
-    url "https://github.com/fwup-home/fwup/commit/f07d3a65541f26eb72a8f4b7950f6d2eae47c8c4.patch?full_index=1"
-    sha256 "9ec7ca0990889dc4721477919e4783df5ab078b1ca5e54b66d902ac1ecc12e23"
-    type :unofficial
-    resolves "https://github.com/fwup-home/fwup/pull/310"
-  end
 
   def install
     system "./configure", *std_configure_args

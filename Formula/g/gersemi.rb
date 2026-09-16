@@ -3,13 +3,16 @@ class Gersemi < Formula
 
   desc "Formatter to make your CMake code the real treasure"
   homepage "https://github.com/BlankSpruce/gersemi"
-  url "https://files.pythonhosted.org/packages/ab/81/312386da943216127cfea5646a5f3e329afa27c6b777b35a41592a76f6bd/gersemi-0.29.0.tar.gz"
-  sha256 "6b6a41bea5fce42033d6330aa2a202b3564b44475050e26c03d65c44e1e3c05d"
+  url "https://files.pythonhosted.org/packages/30/dd/406b5940cc7d7ab791385fb9cac1d101f41dbdc45989d3dcb4a6972f28fb/gersemi-0.29.1.tar.gz"
+  sha256 "f40131536a42debab879448aa24c0bcac09ba792919bcaa605b11544b3b7f992"
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "80a57341192c7ea8b2eb546ea02717918554b7d52f31738e08031cb82c51ba07"
+    sha256 cellar: :any, arm64_golden_gate: "8840440958fd0fa8257318de5719f9c19c3245eb69f8260400b22b4c68563ab9"
+    sha256 cellar: :any, arm64_tahoe:       "f5e4e8becdb60f5568914e7565b4d880d85d3cebd81a91503e461c866101681d"
+    sha256 cellar: :any, arm64_sequoia:     "b98e3001797e08018609b167e7cb8dbcc80b13c24bcb45025b92cba685701d4f"
+    sha256 cellar: :any, arm64_linux:       "ca4d3ae8721a9ccf3defd8787018a506aa35d07a43bc90db4607aebfa9f1d14a"
+    sha256 cellar: :any, x86_64_linux:      "45b16f699d670e495f97fd975cb07b32854071c3ab3c3c2f026ae4182f6ebd12"
   end
 
   depends_on "rust" => :build

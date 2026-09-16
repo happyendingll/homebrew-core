@@ -2,8 +2,8 @@ class Docker < Formula
   desc "Pack, ship and run any application as a lightweight container"
   homepage "https://www.docker.com/"
   url "https://github.com/docker/cli.git",
-      tag:      "v29.8.0",
-      revision: "88096ef00576baf72a9cb45caa45c0544c40e0a7"
+      tag:      "v29.8.1",
+      revision: "4a63305d74332de5ceba7fcbccbc3cbb7412f5ba"
   license "Apache-2.0"
   head "https://github.com/docker/cli.git", branch: "master"
 
@@ -13,8 +13,11 @@ class Docker < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "4402e60b116bf7dd1e698637477302f9a2e1b18be59cd2953f10c071a4bc07e5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b763c4941323ca24dd0789958443f5a60a540f1dd2825fc5693a6142576b95e9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "40d9396a0e2a2edfea5c69137b0d5722f2049da0a218a3e1b1c94080c5f1b3f0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0c0a2c666769a8f29ebe8036f5b39d9a7868f6a76ea3cce1db1ce28bab8cd43b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "82d6667d15fabec856d87b12d4e221b171057528080752863c0656853be6bc45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "de25b96f7c6392e96f6938da24c6813beefce489b2a9bb4e78f2555ad75e4f13"
   end
 
   depends_on "go" => :build

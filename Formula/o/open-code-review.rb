@@ -1,14 +1,17 @@
 class OpenCodeReview < Formula
   desc "AI-powered code review tool with deterministic pipelines and an LLM agent"
-  homepage "https://github.com/alibaba/open-code-review"
-  url "https://github.com/alibaba/open-code-review/archive/refs/tags/v1.12.2.tar.gz"
-  sha256 "68073d308273676f49183b7c34b09cefb3588916ada028b72abe7031862e5c08"
+  homepage "https://open-codereview.ai"
+  url "https://github.com/alibaba/open-code-review/archive/refs/tags/v1.12.3.tar.gz"
+  sha256 "db9c2e290d9e56d727b6747109ff863915f7c3eb8497e12a223a67eeab1bc3ee"
   license "Apache-2.0"
   head "https://github.com/alibaba/open-code-review.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "857604b7b469556181a80d0b5b9fb62ad25ec4e9cd8dea7ee8ce1bab502dd9a4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c0b2e6478d0f1170b31523fd89ac3fcd791854ef4ee9a075ef11596715cd3b8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c0b2e6478d0f1170b31523fd89ac3fcd791854ef4ee9a075ef11596715cd3b8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c0b2e6478d0f1170b31523fd89ac3fcd791854ef4ee9a075ef11596715cd3b8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "35632b53d785b34698cae1346113af3a2cd4b1ebb1af1a73ad576f61870637ec"
+    sha256 cellar: :any,                 x86_64_linux:      "ee778f71fa33ee73b6fb52710b3a1cef580b9ab495b3333bc50ebf58dce86514"
   end
 
   depends_on "go" => :build

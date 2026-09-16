@@ -1,8 +1,8 @@
 class AwsLc < Formula
   desc "General-purpose cryptographic library"
   homepage "https://github.com/aws/aws-lc"
-  url "https://github.com/aws/aws-lc/archive/refs/tags/v5.8.0.tar.gz"
-  sha256 "04d9aa258641265099a3b1fbd37a21866e942943e16619087bf79c0b6e08f64e"
+  url "https://github.com/aws/aws-lc/archive/refs/tags/v5.9.0.tar.gz"
+  sha256 "f7b7b1a85bcc30496b98173257d69cc2990ae85d380b642ebe0b8cb251876d4f"
   license all_of: ["Apache-2.0", "ISC", "OpenSSL", "MIT", "BSD-3-Clause"]
 
   livecheck do
@@ -11,8 +11,11 @@ class AwsLc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "8231328178e9a1e546afee7c1105d320d84159327183adad0cce1f94ba1c127d"
+    sha256 cellar: :any, arm64_golden_gate: "6906182acc26988ed72273ef5c3ae79c8a5cee9e78701bf8c7e65ee2db814563"
+    sha256 cellar: :any, arm64_tahoe:       "077861768de476d617d97751686d4ffe35492b6881c7a85ae52b74399216931f"
+    sha256 cellar: :any, arm64_sequoia:     "4f4a1f9347761b23e83f0686eff9043ea5a244d490fc2991b514dc1b9ec667dc"
+    sha256 cellar: :any, arm64_linux:       "a4a7f5ae016a530f3931f9a93e8c9ac6a32ee8dbec751adb39d821b97dd391b2"
+    sha256 cellar: :any, x86_64_linux:      "8620c344ae61916e385df93c1eb8d67f45bb09d769abec56ba6fee40eaebdebb"
   end
 
   keg_only "it conflicts with OpenSSL"

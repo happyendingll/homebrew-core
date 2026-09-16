@@ -1,16 +1,16 @@
 class Neonctl < Formula
   desc "Neon CLI tool"
   homepage "https://neon.tech/docs/reference/neon-cli"
-  url "https://registry.npmjs.org/neonctl/-/neonctl-4.17.3.tgz"
-  sha256 "9582eb80d64363117c3cbc53fe33e6aa67d7a63e73be7622044b302dea693416"
+  url "https://registry.npmjs.org/neonctl/-/neonctl-4.18.0.tgz"
+  sha256 "3f9f87027d1e39c528e3a08bd78dabf83bf2296e0bb2c4f1be3bb84c3def1414"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "007307cc96b1835a9cfb4ede4cfa471b3ba94d53d2ddaf762d34e1b23cbd6130"
-    sha256 cellar: :any,                 arm64_tahoe:       "007307cc96b1835a9cfb4ede4cfa471b3ba94d53d2ddaf762d34e1b23cbd6130"
-    sha256 cellar: :any,                 arm64_sequoia:     "007307cc96b1835a9cfb4ede4cfa471b3ba94d53d2ddaf762d34e1b23cbd6130"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b76951ae728dd0ccc634144a9704332b5be54dcf02b4ec3837d6f3dde55d52b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "300b6b2b8063cf696c974650f0de37eec722c606f30436459bdda1699837ff26"
+    sha256 cellar: :any,                 arm64_golden_gate: "35f811c6f7d5736c0ba3906dabf9f4e87b078fad7f1c6447f31ab859275c1472"
+    sha256 cellar: :any,                 arm64_tahoe:       "35f811c6f7d5736c0ba3906dabf9f4e87b078fad7f1c6447f31ab859275c1472"
+    sha256 cellar: :any,                 arm64_sequoia:     "35f811c6f7d5736c0ba3906dabf9f4e87b078fad7f1c6447f31ab859275c1472"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "82df7d977b38f8ac4e84ebea1a20dcea4c786490d72952ebfe83425790944ed4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "10a7103e30a0d676a32603e6df9ada4d281193c47b4ff3eb472d012191733bb1"
   end
 
   depends_on "esbuild" # replaces the bundled copy

@@ -14,6 +14,13 @@ class Sonic < Formula
 
   uses_from_macos "llvm" => :build
 
+  # `test do` block runs a local server
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args(path: "server")
     inreplace "config.cfg", "./", var/"sonic/"
