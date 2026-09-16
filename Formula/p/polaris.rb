@@ -7,11 +7,8 @@ class Polaris < Formula
   head "https://github.com/FairwindsOps/polaris.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "80d49f529cb1b20c0bb748846640fc1aa9700998d66b6dfa31a9f43d006a37cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0989cf713fcff89e4e83de84d4ad970b1e2e075bacb64ab413a7a818db490ca0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f4c7acbe500d075a1a5f3507011ad01f56827b8935abbc5934ea5c7034e51c30"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "14ccc01ece3434f93058ef0109b21699d0fb7fbcbe0a8776877d13a25434550f"
-    sha256 cellar: :any,                 x86_64_linux:      "901c75101de6d365a7ebc266ad0aa9a3644a980c9316840b409ae9e217fb4f06"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0a3d5361e78497259984e07558bab1012dff74356e81907c376a47f8257a525c"
   end
 
   depends_on "go" => :build

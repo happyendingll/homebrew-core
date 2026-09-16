@@ -8,11 +8,8 @@ class Dolphie < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ce6049022a6b704bf6c1be8e7b8a5eb9d7cd6353a1c495aca9bb7371aaba25a4"
-    sha256 cellar: :any, arm64_tahoe:       "8521348a490afc2d538c06664fb79c35fad6eaf2f1636ab539ac6286cef84786"
-    sha256 cellar: :any, arm64_sequoia:     "d62f5d48748f144afe5e8865f69d0ba26237d73c470e9781acd1575e59bc3430"
-    sha256 cellar: :any, arm64_linux:       "4e3b661fa47db25b7ed754082c0fa12fcad95741d9518ebab03897300033b956"
-    sha256 cellar: :any, x86_64_linux:      "c2ee3cc7b948a537d826938d8b18f10e78efe48fdd86bf4618a235f522febc71"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "0758ccdffd013e7cb2e550551e46abb2be26da7bf0a79190f29df0b205a1cd23"
   end
 
   depends_on "rust" => :build # for orjson
