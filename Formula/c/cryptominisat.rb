@@ -14,11 +14,8 @@ class Cryptominisat < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d1fa3a2099c5177b22be17aa1238b5a641f5d9163627aee1ff912c3edf09d63c"
-    sha256 cellar: :any, arm64_tahoe:       "1e09ba0cc5fcb044421ec175381dc1b566edd22222a9569c97cb901639ff368e"
-    sha256 cellar: :any, arm64_sequoia:     "2187367adc01c4c6bc31ecc4fc6075faf08e4b4cba8c489c2c92a3fa822f0688"
-    sha256 cellar: :any, arm64_linux:       "436bd9726c057908f76ed4e060775f7009fb88395fe487bfc2a7b32ec1e94398"
-    sha256 cellar: :any, x86_64_linux:      "19cbdf088a5733af2642c77c38bb9613974d1aa9d06c8c5801d94817184bac71"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "299cfc3aa236cff192cdf1a169b499d420f796009b2241d5198ce6e712b9325e"
   end
 
   depends_on "cmake" => :build

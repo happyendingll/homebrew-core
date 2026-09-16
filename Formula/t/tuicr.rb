@@ -7,11 +7,8 @@ class Tuicr < Formula
   head "https://github.com/agavra/tuicr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1471b39dae122d26ef8730b891c86caafc32f071de096b92f3576765d0cc655f"
-    sha256 cellar: :any, arm64_tahoe:       "657f205dc54bb4e449dc2594e05a6c4fdc7a358874b9f989576c055cd024347a"
-    sha256 cellar: :any, arm64_sequoia:     "03995df77438441d630bf7b478b185d84fd032442309a491255bd780906848a2"
-    sha256 cellar: :any, arm64_linux:       "1611c619c9c56f65b96825d0f31bb6eb1874126f96a99f5efb2f481a9318e46b"
-    sha256 cellar: :any, x86_64_linux:      "f0327af0f6a6aca6c83272276fe985285e917d4da48777b642fc0a8e7485a578"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8ca28884f5ffd220a9c0c041c15e383e9868f3e874bf0ec9e82484fa2082721e"
   end
 
   depends_on "pkgconf" => :build

@@ -11,11 +11,8 @@ class Goaccess < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "28598cdadafc44cc2bf2aa8657faecc7feeb1d761090d2e0c5477ad673b4db13"
-    sha256 arm64_tahoe:       "e718f0d4c244e03e9fe8598864e27aa04b12a34b3dd316de308dab48d4700b2d"
-    sha256 arm64_sequoia:     "b8e456822cbc356e0d5cedc96a437947dc1efb83ac3c8a5e7b91f87697c3fcc2"
-    sha256 arm64_linux:       "b6f1e983bcb2a5504ac9dd4f701d872e3096cfe561a54fea598e91aa81afadc3"
-    sha256 x86_64_linux:      "7dce0adedf72e4ad07bc8817dbfe97661ab7ed983631011c5108eef11e8ea309"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "ae57bfaa6a29a20069a14f5a819f2e1c93d2076a9eedec23bc2720b25c477eba"
   end
 
   head do

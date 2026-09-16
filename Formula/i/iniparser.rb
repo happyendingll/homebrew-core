@@ -7,11 +7,8 @@ class Iniparser < Formula
   head "https://gitlab.com/iniparser/iniparser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "50db3f59d1200080fec2fdd366fe942ce9bc43fee12327925786ff5102f996bd"
-    sha256 cellar: :any, arm64_tahoe:       "f6ca33ba6ede9f764aa7e9b5ea8c84de8b92112aed61d8051e5c8a282833623e"
-    sha256 cellar: :any, arm64_sequoia:     "8ac82a569780c1fdc7adb374f5568807bfedbc9905a8cf1b9634e952824b2e26"
-    sha256 cellar: :any, arm64_linux:       "09d200784f38acab6d6dd7c6f3bbb11e9b1d32ebafb5c5550b0fe4ccb6f182df"
-    sha256 cellar: :any, x86_64_linux:      "35c3e075be57d654d1a8ab8fa786a0887f413428466e5189a668ff7c7c60f6c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "542c28b54067f0956803b0719c904e382a68d8c1fcaf8dc7c577dfd1d4c6242b"
   end
 
   depends_on "cmake" => :build

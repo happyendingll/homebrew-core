@@ -14,11 +14,8 @@ class Hk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d3244a977a945f19e9e4d5ee4da4412916953ef87706c6a94ebd8ba834a2077"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d9650d50013ab535299cae46719f99e87e92f0961716682dac9a2e35b0419ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8dd4b1490bbb72b81037bda09496eb4c43dc1f1601f9f2d638ad3bdcb46906c"
-    sha256 cellar: :any,                 arm64_linux:       "80d8fc715ddd26bf2e7e66b7cd029dc244c982fee11b888fb2c29db3ba691036"
-    sha256 cellar: :any,                 x86_64_linux:      "c9446102bdb9fffdd0a8c42f10937bf733e6f07130f6629b89053a2799aedc84"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c9ac04094640ed24b1063b4b7dce59936ed09e15990677115fd1164c1ff31e45"
   end
 
   depends_on "pkl" => :build

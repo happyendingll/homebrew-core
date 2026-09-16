@@ -11,11 +11,8 @@ class MupdfTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "96e80f7f958c595c3b1bd23d677b053ee81e6eaa701b5ed985c9538ab76f8c28"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "822f4ec6bb198c4acce21cac9a6c37e1443e22b6b2962f9a97170dbc4ca974a1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b26433f13aee5f60d8e7d784d6d9d8caa5ca2158864e9841ef9f2549b3ec6f69"
-    sha256 cellar: :any,                 arm64_linux:       "570c2b3917d2f2f88ebe512cf3017d68f5dc98fd214966938031b95676e25aa3"
-    sha256 cellar: :any,                 x86_64_linux:      "1ef200db6c705d3995823d0b0203bdf4b968f22a9fdf79eea076eb708dc9aeb4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ab5818fc78505da38228530f8ff96fc5d1f98b46d90bef5018c3243b4e4580b5"
   end
 
   conflicts_with "mupdf", because: "mupdf and mupdf-tools install the same binaries"

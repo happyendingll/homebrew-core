@@ -17,11 +17,8 @@ class Mariadb < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ef86a6319358e96f8af8497ae9d0f6291428bddb86b49c93ec420147916d0b15"
-    sha256 arm64_tahoe:       "556d42f31838456944ed3e9e8454d097d81b0d76b2bb36ae1b51c7b158e57fe2"
-    sha256 arm64_sequoia:     "062bb10d938df508b3352f68eba77e6c231a60ed6b5870a59b438a742cef35bb"
-    sha256 arm64_linux:       "ca968b41901717611980d289e7b2eabfb5b5bd79cf7730dd375f6b5f6d9c6adf"
-    sha256 x86_64_linux:      "bb470957887f7a68845b4bd46b08447856125038158553ac0d15ee386d36b9e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "6dc6d9a7ac24995bcf086b685c459f70edbe295b8d92c19ef9942ee8acfc0c14"
   end
 
   depends_on "bison" => :build

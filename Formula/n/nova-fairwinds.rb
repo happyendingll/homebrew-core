@@ -7,11 +7,8 @@ class NovaFairwinds < Formula
   head "https://github.com/FairwindsOps/nova.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9f0e05c0c4741c48caf34c1163d7512f3c7d5445570f152c14e789968621e5e3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9f0e05c0c4741c48caf34c1163d7512f3c7d5445570f152c14e789968621e5e3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9f0e05c0c4741c48caf34c1163d7512f3c7d5445570f152c14e789968621e5e3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "738f366cec2c7292edcee3aa63a6aaae1b2be95c8666d64caa9730610f8f6a3d"
-    sha256 cellar: :any,                 x86_64_linux:      "2f3d8cd918faeff663029eb681ec6a65a9f197f88aca9250b37beec2f5fb5b26"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8399a293ed6c78f4b243c82c64f00b7ef96c31bae3bbd8432b74938136932818"
   end
 
   depends_on "go" => :build

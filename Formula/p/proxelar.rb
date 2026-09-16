@@ -6,11 +6,8 @@ class Proxelar < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "26ae8dfdc568dd2fbeb66f5871c32f3880cf6675ffb5f46c286274443744c6d0"
-    sha256 cellar: :any, arm64_tahoe:       "b9e44ffd525468cdf5a55260e2f6694e3d10f683d2540a93eddd11a04a0a328e"
-    sha256 cellar: :any, arm64_sequoia:     "d0ba2143e6cbe0ccde7734bd8f87abfbfcfa46947d6e3280db20ad25e5819bc0"
-    sha256 cellar: :any, arm64_linux:       "8c81b9aa5b50b280d02c57f682aea4213cda3472d2871d07b6f09a16a94f7517"
-    sha256 cellar: :any, x86_64_linux:      "1a82147b17db142994249dd5a21aeb40259c87319ac349ca3fe9e1d30f5eef88"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "98477c07f73c2f6b6083668c363c92d60a3478dc9788c78cbb700d17e01867f9"
   end
 
   depends_on "cmake" => :build

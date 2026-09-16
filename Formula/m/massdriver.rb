@@ -15,11 +15,8 @@ class Massdriver < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "36b312a93d8805c49bf684257e374a0c382953840021e73029c136615658aaa7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "36b312a93d8805c49bf684257e374a0c382953840021e73029c136615658aaa7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "36b312a93d8805c49bf684257e374a0c382953840021e73029c136615658aaa7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a762206a536c568fa46e384bd2a5b6be558cba57dd4abafe72d70ebd7357660e"
-    sha256 cellar: :any,                 x86_64_linux:      "6f0b0bf0e152b4b135c60b11f72742c730ab0b34c8260d01f6dbeb19ba007810"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "873877c727685d3714991295f0ee9adf7aa38e608198477fe754d8dc34004eb3"
   end
 
   depends_on "go" => :build

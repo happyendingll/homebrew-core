@@ -7,11 +7,8 @@ class Hysteria < Formula
   head "https://github.com/apernet/hysteria.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3df51fb1f5276dbef654025626eed12f29e34c4608e7a6fdc796c44b9bd62a7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3df51fb1f5276dbef654025626eed12f29e34c4608e7a6fdc796c44b9bd62a7d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3df51fb1f5276dbef654025626eed12f29e34c4608e7a6fdc796c44b9bd62a7d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "721c39b87e7e808330f177a977b1bf9c287a7a68029aaa13b8c82952a5e8380f"
-    sha256 cellar: :any,                 x86_64_linux:      "b2e266343327ada3022251b9dfc82b058d3e284c1394c7598b6ee704eecefcbd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dc7895d809e371031dc7b144450557f4076a90d5e3dd8051d5fe38792889a1b5"
   end
 
   depends_on "go" => :build

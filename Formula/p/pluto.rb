@@ -7,11 +7,8 @@ class Pluto < Formula
   head "https://github.com/FairwindsOps/pluto.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c6d30eafd716dde680907f953ce1e86b8ec1f1f6b944012bc1d5805a3f38c3b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c6d30eafd716dde680907f953ce1e86b8ec1f1f6b944012bc1d5805a3f38c3b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c6d30eafd716dde680907f953ce1e86b8ec1f1f6b944012bc1d5805a3f38c3b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "27e61627d5989205e4b4ba706bc636150afb4f3fc9dab3e5f228db212a2aa051"
-    sha256 cellar: :any,                 x86_64_linux:      "1b319b618401dad199bcf9cf9b750bfca1a8537c7b9bcf0e58d662398e5baa46"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bfcfcc1188342805dcc094634cf7561c9ac37cc5aa62d3c9f00c328dcf0696f4"
   end
 
   depends_on "go" => :build

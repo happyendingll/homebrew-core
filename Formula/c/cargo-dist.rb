@@ -7,11 +7,8 @@ class CargoDist < Formula
   head "https://github.com/axodotdev/cargo-dist.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "561e149ec75c641d0fa5d08752f51080344c2d6bde23af692bc7c62a3b59e821"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "999afe2b3f61b3cd7b4bf999f714ada1f96a3fabfb628b55862c55d887d1d859"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "064d1241abcb43af413bfb4495a8147b35411ee3924d6e6dea20582dc3fd8c0e"
-    sha256 cellar: :any,                 arm64_linux:       "f272bf14182768ada993cfddf8797b84b885251056a6190f769ecd55550bf3a3"
-    sha256 cellar: :any,                 x86_64_linux:      "225c70fec9c10c68379fdb4a8aeac2c659d1ee4259935eae720659236399a631"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fa5486fdf6dfee8d303f61ff345ca10aee09eb620566c370ef754ff72329020e"
   end
 
   depends_on "rust" => :build

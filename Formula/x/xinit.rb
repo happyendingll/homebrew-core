@@ -6,12 +6,8 @@ class Xinit < Formula
   license all_of: ["MIT", "APSL-2.0"]
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "0c877dd24259cd1bf5a2955f66ff37e4dc28d7dcca5e0867a4a08984af7f5fd1"
-    sha256 arm64_tahoe:       "f053c34789bb75669b4afd247a5d9e735c2439a4337ce08a6901d20d99439ba7"
-    sha256 arm64_sequoia:     "679e5e4c52c1a10ad16584abaece9f95e0f39acf14692c5492b6ffe3408be5fb"
-    sha256 arm64_linux:       "8de17a1a3379f940d85c9247f9974be42c9c0f248269e99ecff73c941d96db50"
-    sha256 x86_64_linux:      "3df897ded59636d39b6713af4d3e7fc55f4769eb48a87d87a47df818e9c1bce4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7dba98832a2c72f6bbaf6932ca44cca27c87b83f3b229fda436b9f6a456a3ef4"
   end
 
   depends_on "pkgconf" => :build

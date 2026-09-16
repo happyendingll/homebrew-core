@@ -11,11 +11,8 @@ class Wabt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8d9d4301d6367d0885568925ed4bde689f7388ef5039be5cd8fff6b9f88befea"
-    sha256 cellar: :any, arm64_tahoe:       "f633e46e0c43fd94d24cfd1c377ffde30bb6960dde7da0f7d0f94c1a4b8be04e"
-    sha256 cellar: :any, arm64_sequoia:     "6c753b42e46037fde432e38d610e0f182db239fe8eeaccffd1ce7bedec18c34c"
-    sha256 cellar: :any, arm64_linux:       "e734461106d03b4ffc228dd1c99dba2cad92029d11e95ac2b9bb510bb95cb169"
-    sha256 cellar: :any, x86_64_linux:      "87f9681fce361b612caa9dee882136d59ec16a145c11836d2b3e7708a251baab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "41310cbaf31d94f7e3032649b9fe9c68034d601a71edede18ada0b0fe7b1d400"
   end
 
   depends_on "cmake" => :build

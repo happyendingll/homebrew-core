@@ -8,11 +8,8 @@ class Beads < Formula
   head "https://github.com/gastownhall/beads.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f056254428086b36ae36c17c7676006ac4a14e9dcc3171e3de607cb8579d71bd"
-    sha256 cellar: :any, arm64_tahoe:       "ef3f72dde113b8a3a3447f4f495b52a18765438ae871745dadd305112ab44c23"
-    sha256 cellar: :any, arm64_sequoia:     "d5cc986f8306f6ed944ae4f304d2530dfe4063f85ecfb4047dad430adf431c06"
-    sha256 cellar: :any, arm64_linux:       "318cc0db07f17fbbc7f83af443415bc5d25e69121b011c9cb46c427be6e646cc"
-    sha256 cellar: :any, x86_64_linux:      "01a7344c33d0837cdf8a5b652690020d51b8211f36a2edf253df86b78b7e9a3e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4f24d9baf0cf8b80f843d139b30fe42636103d1aeac3601050b7b58afb0a0312"
   end
 
   depends_on "go" => :build

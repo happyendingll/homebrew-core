@@ -12,11 +12,8 @@ class Ioctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "64976c941ec4d9324f7d4f29eb5647d13ada52062f129b052382cbf8d57bca0e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d997b5a2247227022af1864278bff298458c234fbfe26b41520e8c219e6a32ff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "378b89935f512f800fa179fe34f80dd4d752736b44598743ab3ba6a5f85bca01"
-    sha256 cellar: :any,                 arm64_linux:       "d1690afb597c53331ce2a6d5874eec17c6397d800f30c1ff6a111315b606b9c3"
-    sha256 cellar: :any,                 x86_64_linux:      "091b7ef211465033babb625bf6dd3846fcb05677e85582285f07d2bee8d2fbc4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9f0e629469908325209effcce1f73ffdd9d936392d3fc1b79e92939fef3217a0"
   end
 
   depends_on "go" => :build

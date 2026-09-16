@@ -6,12 +6,8 @@ class Xrdb < Formula
   license all_of: ["MIT-open-group", "HPND-DEC"]
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "de514ce3ca23012eda0c38f03e40c5865bb8ee8a9299b449a3162c61356fcd55"
-    sha256 cellar: :any, arm64_tahoe:       "7ddd048d9e571628fea436be64442dae27dbcc875a8d2025299e2881645436c6"
-    sha256 cellar: :any, arm64_sequoia:     "4bcb60c61e5d6ba2158bcad4ea980f315a9b2f59ced380856ca9fa6b90bc593a"
-    sha256 cellar: :any, arm64_linux:       "8d018863fc1c74a0cad12d182e3b610887bbe2ec2ebe8407845c60151095c8f7"
-    sha256 cellar: :any, x86_64_linux:      "9ba83e56d97189302216b1aee508bfcde96f50c3738ad2069e9c1c8a04201fd5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a4fcabcdf0e07b97d91b0d6362b5cd5d6f65851082a716e20c517dddf8580a9c"
   end
 
   depends_on "pkgconf" => :build

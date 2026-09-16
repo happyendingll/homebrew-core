@@ -21,11 +21,8 @@ class Macpine < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5723aec635018a78557ce1b3377e72c5f71ec1b3573b04c8062d90f91378808b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5723aec635018a78557ce1b3377e72c5f71ec1b3573b04c8062d90f91378808b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5723aec635018a78557ce1b3377e72c5f71ec1b3573b04c8062d90f91378808b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4de2a02b104ed8d3134936574134b6d06646f3fe3090adcdf4c3c8ad654b74ba"
-    sha256 cellar: :any,                 x86_64_linux:      "f70eefb6ca07247f54ee8c4c2bd7f69b50dd0667c2dbe4958fd508e4cf416b58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4f6dc9f44d113e087d75e64f090c3e1e2b9a91d65d9714b1666439bb4f4f898"
   end
 
   depends_on "go" => :build

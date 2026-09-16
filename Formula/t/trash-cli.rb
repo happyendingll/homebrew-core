@@ -9,11 +9,8 @@ class TrashCli < Formula
   head "https://github.com/andreafrancia/trash-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09318b59716e168dcd6f0b6f4ff6fe54c84f535e5abef40df93fb7a3e472fda0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04b8c55a25837c64348072cb3ce5acb1da34f757c16b3a918544e49401392e8d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4e95d7d7ad03ab0076797af0652366b3995459fb4af9705d67a58354bf6b6a39"
-    sha256 cellar: :any,                 arm64_linux:       "27df1b49fa8a2f7d21da52fbc7a1c61edbf7aa0416c141243af42acaea7e7ec5"
-    sha256 cellar: :any,                 x86_64_linux:      "2d57ef4af3c555ee6d60b0916140075e8b3814fc40b55a75197be6f9d35e518f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "527dbb4a7088d4cf94d1249ce348c4811032745745f6926ae15d0ad11837a5cb"
   end
 
   keg_only :shadowed_by_macos

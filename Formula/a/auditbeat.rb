@@ -8,11 +8,8 @@ class Auditbeat < Formula
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "009704b343c1190e55e7714d6f2c8b133e38c90569cd1b273a8304d291c054d6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8bc5deed8404926e27f955c8b57409d7b04b4edf73496eca569c9f94141728f5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dc3219fde73e058c4a2e24404784a23aac65fb316d525075b3759b316b4333cd"
-    sha256 cellar: :any,                 arm64_linux:       "4069f5647d83b84452866fabbb889f8187578b5355da2c57d2ede308dd721bb5"
-    sha256 cellar: :any,                 x86_64_linux:      "2f29f86628fb64dd4e07987d49423f1b3c1c1d52ffbfcfdefda11c15fbfe00ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ae8b2f91b5d4f3c87b5f822eafa96cdbabbd9120eefdf01811f542226c537e9c"
   end
 
   depends_on "go" => :build

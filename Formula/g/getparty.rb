@@ -7,12 +7,8 @@ class Getparty < Formula
   head "https://github.com/vbauerster/getparty.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "89510ba5ddec576961648efee8418c9ff2a2fcbfd240c2d147f192c34229f9f4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d1720ea607d150686a6f3e20993f280d8c5bc61db7ea0817cfb6223c58ad4e2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6d1720ea607d150686a6f3e20993f280d8c5bc61db7ea0817cfb6223c58ad4e2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "6d1720ea607d150686a6f3e20993f280d8c5bc61db7ea0817cfb6223c58ad4e2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6c8a6c5334ed84a351db3672dc5e6198f5c905596257879cd8c702d69bd74f99"
-    sha256 cellar: :any,                 x86_64_linux:      "770ca9fb8583f05acd5d478aae96d400e01402b5762b7839008f5607e6fd85dc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fc5c17843f6b8c11072edce7e83e22e5ae4df59a08d4cc6ee91258da90fa318c"
   end
 
   depends_on "go" => :build

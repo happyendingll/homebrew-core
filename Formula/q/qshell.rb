@@ -7,11 +7,8 @@ class Qshell < Formula
   head "https://github.com/qiniu/qshell.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a2ddbf4449594fe38678ac4f64441585eae016cffd9c0f312ec738cc2b7e15d1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2ddbf4449594fe38678ac4f64441585eae016cffd9c0f312ec738cc2b7e15d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a2ddbf4449594fe38678ac4f64441585eae016cffd9c0f312ec738cc2b7e15d1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a703e7acad931ad5ee26cd96d97626c4b96bcd11986e74cc16516fe8d9ee37aa"
-    sha256 cellar: :any,                 x86_64_linux:      "5f179170061cdffa35bf76a38e4a6ccb91a0979ed18698f91cab1c39741a08b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "deee4aef6384a0d16f36e1225742b9aa9d6bee1af8e4889189d8020b713d20a5"
   end
 
   depends_on "go" => :build

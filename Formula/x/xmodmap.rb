@@ -6,12 +6,8 @@ class Xmodmap < Formula
   license "MIT-open-group"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "bee38f85e975f72f62bc3e4045bddfd96ad344519354ad0bc43694c6801a057a"
-    sha256 cellar: :any, arm64_tahoe:       "68bb9f8b47204fe1f7e13491cd67366a224ffb333f5025d6340ad87cc49b16f2"
-    sha256 cellar: :any, arm64_sequoia:     "b2ab244fd297cb7ee7d5f41e95daf61c5b2414a662ab84d79e4898576a91dee5"
-    sha256 cellar: :any, arm64_linux:       "a36c6e0a7f622360d09c7f722c7b97c428580c98995f2238eff97c12e0030e49"
-    sha256 cellar: :any, x86_64_linux:      "80c44d49552a07d7453d6ba393777109047bce5b20c58e24ab97a644e586d1d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b2fe3a83caa2d3ae4d1d5394a90acb018c896a97d84a823e3bbd7563490e9d21"
   end
 
   depends_on "pkgconf" => :build

@@ -13,11 +13,8 @@ class OpenshiftCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "51960dc358c2e69c0fd14d6a0b7c02247eee038509bb60ef05b23d75812219e5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a06f8562fe840ab63e561bc86dbbcce58f32fb9ea3f38788a96921a0a0afe03b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5ccdcf496237808fb73519f52c42fe3159f80c72f798099e8d0d136290ea6e8c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ccf6fb2cea10d4176ceef778cfd12515681ce73981d58f490d45827465237d83"
-    sha256 cellar: :any,                 x86_64_linux:      "fff53d442d644024b037a75ee38e9b974fd3da1d2ba04de46d9cae412d0b6b8d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "eb25ea3f6ab7a7fb66f823bac7da233350e66132ea1fd0c4840795841cb8fa4f"
   end
 
   depends_on "go" => :build

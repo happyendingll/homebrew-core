@@ -12,11 +12,8 @@ class Jaguar < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "beafc9def8c6e8196fc4782e42cb9187c64f6464a17552696efcc9328a5a4397"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "beafc9def8c6e8196fc4782e42cb9187c64f6464a17552696efcc9328a5a4397"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "beafc9def8c6e8196fc4782e42cb9187c64f6464a17552696efcc9328a5a4397"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6fdff8db3a7b7f9f40f9548eba09661882de70f35275f3317854282f5dc3f0d8"
-    sha256 cellar: :any,                 x86_64_linux:      "bfd08eb67fa8d99cf969f780647cf997aaf5451a0cbe3bdfbaccde4a8e2624cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f9b244e21a8abeabf38e173e264679543bdfe02171d1fd557c9e0218bfa3aec4"
   end
 
   depends_on "go" => :build
