@@ -45,6 +45,9 @@ class GtkGnutella < Formula
     # Work-around for build issue with Xcode 15.3: https://sourceforge.net/p/gtk-gnutella/bugs/583/
     ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
 
+    # FIXME: Xcode 27's clang lists `SDKSettings.json` first, so `dep.o:` and `dep.h` end up on different `-M` lines
+    inreplace "Configure", '$contains "dep$_o:.*dep\.h" dep.out', '$contains "dep\.h" dep.out'
+
     ENV.deparallelize
 
     system "./build.sh", "--prefix=#{prefix}", "--disable-nls"

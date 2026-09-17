@@ -15,6 +15,8 @@ class Dos2unix < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "cacff5bf59082fcbf528f5d4031d9cba6aea6bd342fd5a335ee4c861269ab928"
   end
 
+  deny_network_access!
+
   def install
     args = %W[
       prefix=#{prefix}

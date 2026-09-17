@@ -40,10 +40,22 @@ class FseventsTools < Formula
   end
 
   test do
-    fork do
-      sleep 2
-      touch "testfile"
+    require "pty"
+
+    # FSEvents delivers no events in the `brew test` sandbox, so only check that the watch starts.
+    # A PTY keeps the output line buffered until `notifywait` is stopped.
+    output = ""
+    PTY.spawn(bin/"notifywait", "testfile") do |r, _w, pid|
+      r.each_line do |line|
+        output += line
+        break if line.start_with?("Watching")
+      end
+    rescue Errno::EIO
+      # Raised when `notifywait` exits and the PTY closes
+    ensure
+      Process.kill("TERM", pid)
+      Process.wait(pid)
     end
-    assert_match "notifying", shell_output("#{bin}/notifywait testfile")
+    assert_match "Watching #{testpath.realpath}/testfile", output
   end
 end
