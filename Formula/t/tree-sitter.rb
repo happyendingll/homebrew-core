@@ -17,6 +17,8 @@ class TreeSitter < Formula
     sha256 cellar: :any, sequoia: "0b6b9ae6d31cff9230b361031b29aa22bcb22c9a4e0e63ada74b9f1dfdfb4da4"
   end
 
+  deny_network_access!
+
   def install
     system "make", "install", "AMALGAMATED=1", "PREFIX=#{prefix}"
   end

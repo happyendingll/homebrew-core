@@ -45,16 +45,23 @@ class Terminator < Formula
   end
 
   test do
-    pid = Process.spawn bin/"terminator", "-d", [:out, :err] => "#{testpath}/output"
-    sleep 30
-    Process.kill "TERM", pid
-    output = if OS.mac?
-      "Window::create_layout: Making a child of type: Terminal"
-    else
-      "You need to run terminator in an X environment. Make sure $DISPLAY is properly set"
+    (testpath/"version_check.py").write <<~PYTHON
+      from terminatorlib.version import APP_VERSION
+      print(APP_VERSION)
+    PYTHON
+    assert_match version.to_s, shell_output("#{libexec}/bin/python version_check.py")
+    terminator = bin/"terminator"
+    assert_path_exists terminator
+    return if OS.mac? # terminator within macOS sandbox crashes without any output
+
+    pid = Process.spawn terminator, "-d", [:out, :err] => "#{testpath}/output"
+    begin
+      sleep 10
+    ensure
+      Process.kill "TERM", pid
+      Process.wait pid
     end
-    assert_match output, File.read("#{testpath}/output")
-  ensure
-    Process.kill "KILL", pid
+    output = "You need to run terminator in an X environment. Make sure $DISPLAY is properly set"
+    assert_match output, (testpath/"output").read
   end
 end

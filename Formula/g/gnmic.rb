@@ -1,14 +1,17 @@
 class Gnmic < Formula
   desc "GNMI CLI client and collector"
   homepage "https://gnmic.openconfig.net"
-  url "https://github.com/openconfig/gnmic/archive/refs/tags/v0.48.0.tar.gz"
-  sha256 "444aad2dd219a39c0dba35f8537572b1c5fdc5e847f25ba00d2f0379293a3921"
+  url "https://github.com/openconfig/gnmic/archive/refs/tags/v0.49.0.tar.gz"
+  sha256 "59c238fb3c5e8b7280e6d743cf2f569fdf0abe2f2b8fe147871ceaf22f59a0ba"
   license "Apache-2.0"
   head "https://github.com/openconfig/gnmic.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "217a8bf36798a49d80af299d3eb7fa509b74f0e2dc1590ace34326a91d59131e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "001b4767bc321b433c508b6dd29b8bbcefbc13d01501bf6123b347a5e9960ef2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "93c2fb4e7aa51e2547db4f89b7954f74dcb9f948a0126ddc5d5ebb8ce9a5cca5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d7ee01e78cbce6ca9b510e33c944cb42f563553a34b4b39b66cec9671eec3ea5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "80f60cb2c1ad0649b9b222a7407bced83399d3c4e5b8d373ca75e5a23a9434ba"
+    sha256 cellar: :any,                 x86_64_linux:      "9555f73a3b3d767dfc03f425d7e726b01bf6b4a755008341a013c017fa4daae0"
   end
 
   depends_on "go" => :build

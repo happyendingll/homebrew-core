@@ -1,15 +1,18 @@
 class Trufflehog < Formula
   desc "Find and verify credentials"
   homepage "https://trufflesecurity.com/"
-  url "https://github.com/trufflesecurity/trufflehog/archive/refs/tags/v3.97.4.tar.gz"
-  sha256 "b1346ded49f6283005284c56b98b5c3603c0f5077c0d4fcd083beda9dfba3268"
+  url "https://github.com/trufflesecurity/trufflehog/archive/refs/tags/v3.97.5.tar.gz"
+  sha256 "5c4fce6fe81bcd7f175852af433ad5146d2f21ce8b2ae268c85be0166b69192a"
   # upstream license ask, https://github.com/trufflesecurity/trufflehog/issues/1446
   license "AGPL-3.0-only"
   head "https://github.com/trufflesecurity/trufflehog.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "33f62e2cc880c81d78f371b6c696b9ccad54ab3b8f3d44da2a832a33a0a7ba2e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1226ab964b5c6ed9bd676825aa3955fad6875bff7a164a1ff3754971bbcb07e7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4dff40ad829afcd9963540745aff3bc77ebf4cae862a10e1f244999a0c2cb53c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9c16a075cbffb10c1d643f652f32ca4678aadad825543bd24bd01eb9217cb202"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0a5ad8a93941b9bef3a29d7d2ddb18de372525d4172af49211db9bb6be86c09f"
+    sha256 cellar: :any,                 x86_64_linux:      "efbb68dcfa6920ee201a212e9532d2e93a4be4c0aac238adca6ec7bca8267470"
   end
 
   depends_on "go" => :build

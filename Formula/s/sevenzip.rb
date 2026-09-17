@@ -14,6 +14,8 @@ class Sevenzip < Formula
     sha256 cellar: :any, sequoia: "f6d54b78fdd93f3e04f03ac766d3cb45ef5f8737325317cce12f7d406f59b05f"
   end
 
+  deny_network_access!
+
   def install
     mac_suffix = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch
     mk_suffix, directory = if OS.mac?
