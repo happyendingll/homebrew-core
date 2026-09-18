@@ -24,11 +24,8 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "348097ee8a0dac2b8bd05ab5b504956fba72c470f63c0c9d47b242f3b148ee72"
-    sha256 arm64_tahoe:       "a844a02d02920664696f70557f4b25219fdcd61803acc87821c56927a2e7d41b"
-    sha256 arm64_sequoia:     "a9a970b52daa86073f791a57bfe0ac35ddf9c009234e524fa2cd791067713e1a"
-    sha256 arm64_linux:       "fcacab5b5a16acabfb7e7f88e47792339659d649c35dbac5ed442fe962168730"
-    sha256 x86_64_linux:      "869a6670604a2d0629c36f9505d6df66e2eaa2225646c216ab7b6f6129d97d8a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "04f13437e8a3531720f1acf1d61952c93314db032c87606bb34c99da69bcf66e"
   end
 
   depends_on "bindgen" => :build
