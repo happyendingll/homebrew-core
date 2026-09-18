@@ -1,17 +1,17 @@
 class Bashka < Formula
   desc "Static verification of installation bash scripts"
   homepage "https://github.com/dmtrKovalenko/bashka"
-  url "https://github.com/dmtrKovalenko/bashka/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "97758cacce997405acae16fe00b571d54dab1a7fabad2cc3795711be604e236d"
+  url "https://github.com/dmtrKovalenko/bashka/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "d25f80f00132287cd2c32d880848fffa14c648c838f3bd5bbd4b47e06f471200"
   license "MIT"
   head "https://github.com/dmtrKovalenko/bashka.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6b56298df8adf1fc49041bd2982d0be9a186f24d140b280e9fc742e5e4047b6c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec6b6d651a58590ffb9c080b4ba8e39f6ad8bd1a8fda30a79bdec6e1aea175f2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c9e1ee83b3831412eed550d0ab32887339ba7d4fbb03a9a3683900b30f13f565"
-    sha256 cellar: :any,                 arm64_linux:       "68f1ea3f722f77b9e358e70ccee3c86b5ce369e31b35aafef463befb79fce83d"
-    sha256 cellar: :any,                 x86_64_linux:      "eaf47ee901934a4398b882577d752f2a06f5e8260bf490132ae703d4bd33ae79"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48be3cabd5244838d0883f2b2001e8b9b9561225682da1d8fa11967a34d90565"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b2f746906f443831d167d208fdb8ea1b72c6a3404a3707d90f3f7b7c2cef8789"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "879d12f1d666102fa653d467f2253f57ea6c7ffd63a8d3f60e78ee7b72668a2f"
+    sha256 cellar: :any,                 arm64_linux:       "2d79cd28ccb42ef0f805652c0cc5c642ec1a6875762ef745b2259369541e0a7b"
+    sha256 cellar: :any,                 x86_64_linux:      "cf26f4ff4b1603a8407e1c011c619f3c751e3e9a0859c8874c04fed9c096d96c"
   end
 
   depends_on "rust" => :build

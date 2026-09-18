@@ -4,14 +4,18 @@ class LibheifPlugins < Formula
   url "https://github.com/strukturag/libheif/releases/download/v1.23.4/libheif-1.23.4.tar.gz"
   sha256 "d0c02b4b0e978f34a1974b6f3eea7975a537bf7a9195ffeea38e7242ff316fdd"
   license "LGPL-3.0-or-later"
+  revision 1
 
   livecheck do
     formula "libheif"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "378b931430c857f676964e898f2459471947c918517fd79bc375c8b9e66a09e9"
+    sha256 cellar: :any, arm64_golden_gate: "a05aa884b046f6278e433af7678f96344ebf324e81b62990b8920335890273d0"
+    sha256 cellar: :any, arm64_tahoe:       "16ee18bd87eda5ae2c28f630f3c4d686a4e4a0567d31a49dfa0d3070fc47aa07"
+    sha256 cellar: :any, arm64_sequoia:     "829034cf089c09b83f7f6ecc86c3593bbc38716dfa7e737a80f0c829cd1624aa"
+    sha256 cellar: :any, arm64_linux:       "c626b9846fb9b4d30089dc2bd04f1591657589c0dcca2d4bb6aa8f3948ae4fb9"
+    sha256 cellar: :any, x86_64_linux:      "dccaa999d883bc0b9bcb39866c6ffbd3bf344531c746b269cb009911460f045d"
   end
 
   depends_on "cmake" => :build

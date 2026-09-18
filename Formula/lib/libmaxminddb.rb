@@ -1,14 +1,17 @@
 class Libmaxminddb < Formula
   desc "C library for the MaxMind DB file format"
   homepage "https://maxmind.github.io/libmaxminddb/"
-  url "https://github.com/maxmind/libmaxminddb/releases/download/1.14.0/libmaxminddb-1.14.0.tar.gz"
-  sha256 "65ff92382c71ef6634b8c13e278651a2efa68f1de28ef3c31fc32369fa0bb3e3"
+  url "https://github.com/maxmind/libmaxminddb/releases/download/1.14.1/libmaxminddb-1.14.1.tar.gz"
+  sha256 "ca5c87d41339f8bc4daabb53e8a9356b3c995f2d2419b85d7bff823b2ecc252d"
   license "Apache-2.0"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "5dc983fc743c0a3ad91106d05af85d8b38a614310176f6d3a2fa5b1fa843dc0c"
+    sha256 cellar: :any, arm64_golden_gate: "2f0ae54b073b78c2dc1d526bfbb4882bac43fc9bdde1992aa81bb9a1c7aa7c47"
+    sha256 cellar: :any, arm64_tahoe:       "29fad65e40df8a8665da3b5cd76f1488aec0161ac0da386bd66e01930aa246a1"
+    sha256 cellar: :any, arm64_sequoia:     "a39f2ebe92607371937c715c6a22e1fec6895fb5e5f48682a33ea24be67abb67"
+    sha256 cellar: :any, arm64_linux:       "c2ba2e69b493b3bb0bee3c337eacc662c5b199588ecaad8acb28a7865d2d3c79"
+    sha256 cellar: :any, x86_64_linux:      "572434444abf40217879536e0bafe66b112e261fe09d3d0bf7cd545f45778f72"
   end
 
   head do

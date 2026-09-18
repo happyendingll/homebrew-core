@@ -1,8 +1,8 @@
 class RioTerminal < Formula
   desc "Hardware-accelerated GPU terminal emulator powered by WebGPU"
   homepage "https://rioterm.com/"
-  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.5.27.tar.gz"
-  sha256 "860cb019a4f6a87bffb786ac2408f51f7c7f09551be234355fb3fd4feeac5331"
+  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.5.28.tar.gz"
+  sha256 "80ddf991cef26b8f49a80b911d35c7361879f4e072479410d29f1b67dd965213"
   license "MIT"
   head "https://github.com/raphamorim/rio.git", branch: "main"
 
@@ -13,8 +13,9 @@ class RioTerminal < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "eca3854e6f74d91317fff8927397224876f58a9b95b49120f96d6e1e752dc44e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0793b7a438b242d0d3e1d6ba125b487a91e8ce0ea9d358ca495797b93dc7d78c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dec962e11139f8e0a308406aef911713bd4f4f3045886c667eba86da3de627cf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b1b2d6c86028bec14bec6f8a778e8c066de4a030655e7f7a4063eca19b7a6c5"
   end
 
   depends_on "rust" => :build
