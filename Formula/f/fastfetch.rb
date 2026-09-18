@@ -53,6 +53,8 @@ class Fastfetch < Formula
     cause "Requires C23 auto type inference"
   end
 
+  deny_network_access!
+
   def install
     args = %W[
       -DCMAKE_INSTALL_SYSCONFDIR=#{etc}

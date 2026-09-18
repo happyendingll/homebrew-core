@@ -6,6 +6,11 @@ class WhodbCli < Formula
   license "Apache-2.0"
   head "https://github.com/clidey/whodb.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "20230b0e256d4b29f7416444b887b7b0318fe3fda3e9d23d4d67b68eb7efa386"

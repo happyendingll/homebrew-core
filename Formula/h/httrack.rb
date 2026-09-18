@@ -1,13 +1,16 @@
 class Httrack < Formula
   desc "Website copier/offline browser"
   homepage "https://www.httrack.com/"
-  url "https://github.com/xroche/httrack/releases/download/3.50.2/httrack-3.50.2.tar.gz"
-  sha256 "bde231415a42adf793e5272ce436a5c22377dab94b0b2e395e3cee7c298343f0"
+  url "https://github.com/xroche/httrack/releases/download/3.50.3/httrack-3.50.3.tar.gz"
+  sha256 "644d4ec0e48ad596dacd7f8017b68d8a3f1dfc140284b412b53086e7d1664e9d"
   license "GPL-3.0-or-later" => { with: "openvpn-openssl-exception" }
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "d18fc724abfec5b26a4d238f3c8ff98a5b81a0f81f7d9711f17e67f88ee122ba"
+    sha256 arm64_golden_gate: "b14d8455418faf47d4c8c4f4217ad7b002b7804b51c2d99d55d37c9d4100ba96"
+    sha256 arm64_tahoe:       "302aa1b3560fb56d0368eb914d0fa2d6231708b1652f3e7e14bbe5f20fb15546"
+    sha256 arm64_sequoia:     "d98d00b8b3f8839baccd40676cec5e111d294e1543227ec9c092d37dcee48f10"
+    sha256 arm64_linux:       "a41379e18cd93e710480f7e07236005c1636589941096702ef70c19c03a7b661"
+    sha256 x86_64_linux:      "655375c9be45be507a38d9029c74a71b69b67b90d196e45410cb0a43643bdd21"
   end
 
   depends_on "openssl@4"
@@ -15,6 +18,8 @@ class Httrack < Formula
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  allow_network_access! :test
 
   def install
     ENV.deparallelize

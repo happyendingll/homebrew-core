@@ -19,11 +19,11 @@ class Coreutils < Formula
     depends_on "automake" => :build
     depends_on "bison" => :build
     depends_on "gettext" => :build
-    depends_on "texinfo" => :build
     depends_on "wget" => :build
     depends_on "xz" => :build
   end
 
+  depends_on "texinfo" => :build
   depends_on "gmp"
   uses_from_macos "gperf" => :build
 
@@ -43,6 +43,17 @@ class Coreutils < Formula
   # https://github.com/Homebrew/homebrew-core/pull/36494
   def breaks_macos_users
     %w[dir dircolors vdir]
+  end
+
+  # GNU coreutils-9.12 added quoting to 'env' and 'printenv'. This has caused
+  # some unforeseen issues in some invocations. Use a patch from upstream which
+  # only quotes when standard output is not a terminal. See the following
+  # mailing list discussion:
+  # https://lists.gnu.org/archive/html/coreutils/2026-09/msg00061.html
+  patch do
+    url "https://github.com/coreutils/coreutils/commit/782a1e5bc2090212273bb731dceee2cc2a071e54.patch?full_index=1"
+    sha256 "d93cf338341d9418522a637e3c99c4211a25a967d0cffd2f036fd18871f15e35"
+    type :backport
   end
 
   deny_network_access!

@@ -26,10 +26,11 @@ class Mas < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "294b2bb9fa19e6b395129d792fc5880b326906268d4ad023259e9aa9dee85a93"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8e1586d7240b2e3bfada5528fc18da035adbafdda2a55d4b69a00a272eedf88c"
-    sha256 cellar: :any,                 arm64_sonoma:  "3a7a9c6e7042ac3db18357200989a9ee89f730b067593445ec4d556e425a3eca"
-    sha256 cellar: :any,                 sonoma:        "53be6dd8eb7dcb6f930653f901c48ceea0602aa4584681faf92ffa35679bd1db"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "641455eac9e2dfeaa0cff4238d4d644f6c2b91d25492e95c1ebc4461967eab97"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "294b2bb9fa19e6b395129d792fc5880b326906268d4ad023259e9aa9dee85a93"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8e1586d7240b2e3bfada5528fc18da035adbafdda2a55d4b69a00a272eedf88c"
+    sha256 cellar: :any,                 arm64_sonoma:      "3a7a9c6e7042ac3db18357200989a9ee89f730b067593445ec4d556e425a3eca"
+    sha256 cellar: :any,                 sonoma:            "53be6dd8eb7dcb6f930653f901c48ceea0602aa4584681faf92ffa35679bd1db"
   end
 
   depends_on :macos

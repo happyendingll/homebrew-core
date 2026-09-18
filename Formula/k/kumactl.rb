@@ -1,8 +1,8 @@
 class Kumactl < Formula
   desc "Kuma control plane command-line utility"
   homepage "https://kuma.io/"
-  url "https://github.com/kumahq/kuma/archive/refs/tags/v2.14.4.tar.gz"
-  sha256 "a7669804aa41eebb1f23e9c1d25f740b758ac1b1aafc1fc2e08b6a6a47e208b2"
+  url "https://github.com/kumahq/kuma/archive/refs/tags/v2.14.5.tar.gz"
+  sha256 "56cdecc20c8c95b53c37656c2bd19dbd807f98fb995360ee271b0bdecd8f2aef"
   license "Apache-2.0"
   head "https://github.com/kumahq/kuma.git", branch: "master"
 
@@ -12,11 +12,20 @@ class Kumactl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "fe5019b22dea0a3a44bb7f8f692c9d172c3b2603b895c183d13e603ac900d119"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "94df930427857df2e9af883ad8601c8121d055926b44224b8c5b84f665f2d683"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47672a3a38e789b76d59d5a852940b52ca9d8987615e3a98c34deb60929cc68a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82d5f3438bf255c12d2bd26962d22348465993ebd32077355a80c88654b9379e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "688bdda9672f96d2ace62ac4e85175de1cf8162e9fb0283d7479d82565915fd8"
+    sha256 cellar: :any,                 x86_64_linux:      "5b907d1909f66ebccb05cb90328c043ba57e9ff8441e3a93fbc7a45568cf975e"
   end
 
   depends_on "go" => :build
+
+  deny_network_access!
+
+  def fetch
+    system "go", "mod", "download"
+  end
 
   def install
     ldflags = %W[
