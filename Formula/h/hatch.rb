@@ -8,11 +8,8 @@ class Hatch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "39832f1e61e0327b005825e51990eac1f890f39d04c4726bc22696f2dc2998e3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "39832f1e61e0327b005825e51990eac1f890f39d04c4726bc22696f2dc2998e3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39832f1e61e0327b005825e51990eac1f890f39d04c4726bc22696f2dc2998e3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c76b7c7b1461f141706475cf5096671d5c76012ef55e2b3fb4f1ead12f0960bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c76b7c7b1461f141706475cf5096671d5c76012ef55e2b3fb4f1ead12f0960bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "0fd466ef806fdad06a2e3716ab5ec767e1b978f4ae6d50d202979a7effd1533b"
   end
 
   depends_on "certifi" => :no_linkage
