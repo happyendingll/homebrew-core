@@ -3,14 +3,17 @@ class Datasette < Formula
 
   desc "Open source multi-tool for exploring and publishing data"
   homepage "https://docs.datasette.io/en/stable/"
-  url "https://files.pythonhosted.org/packages/08/31/128dd63469844ee00fba7097ed778696460bb48db8943a8749f4be73258c/datasette-0.65.4.tar.gz"
-  sha256 "6b08f8aeb8f307262372b1cbb6e8e50cc350273f250af64393156b10c5bc0528"
+  url "https://files.pythonhosted.org/packages/98/4a/75224122c9cc725b6dcc9466fff8a720c99a2d7b67ce866a82c52a5f2141/datasette-0.65.5.tar.gz"
+  sha256 "8d16ab1bf9a2753089cd3cb079045885d440f11267973e89e08e7fecf555264a"
   license "Apache-2.0"
   head "https://github.com/simonw/datasette.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "131d60e99eae1902b0be50d7e8a0d41102cdbde2fca1a83a8b1bd4feff5e39b8"
+    sha256 cellar: :any, arm64_golden_gate: "68f2c0c1cfe3b4a1fc002c5195560da1798949aa199cfcb01a4b1b320c09bb93"
+    sha256 cellar: :any, arm64_tahoe:       "213d8cb6ceac9101985be5d9400413ae5a6fc70e8a674d991174596c77234f6a"
+    sha256 cellar: :any, arm64_sequoia:     "64051dc567ba7ea77913df29be416a744f137fcd675e02be2bc4eec000d92b76"
+    sha256 cellar: :any, arm64_linux:       "a4c1f8d0b8a970395864aedb1cd945b307041a0d712bece935d3cffdc3c1718a"
+    sha256 cellar: :any, x86_64_linux:      "27c2729b44ac421858b3be802e8982839c97444212a0574236f117621850a49b"
   end
 
   depends_on "certifi" => :no_linkage
@@ -110,8 +113,8 @@ class Datasette < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/53/18/f3bb8ef0d3b930692343da8aa4d3cbcd6749477c053959395ac81965a6e9/platformdirs-4.11.8.tar.gz"
-    sha256 "f23abafea7dd4276d1f29104b83598d7dcc567cafd07c9c951e66665645437fc"
+    url "https://files.pythonhosted.org/packages/58/b9/8adc4e1b422b27fd88540ec7bf1f406f77ef393ec070e26fc430e914cde8/platformdirs-4.11.9.tar.gz"
+    sha256 "e2c66a8d384596cd98e3c4aea2d761df7bac95d9d8a2cc3946daa8cdafdaebc1"
   end
 
   resource "pluggy" do
@@ -140,8 +143,8 @@ class Datasette < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/f2/0f/3f86e61397dd33bf2ccf28188c40db6a740658aeebbbf6e7dbc101a1f487/uvicorn-0.52.4.tar.gz"
-    sha256 "73acfee47a0b133c5de13d219492d62d8a31e935f4fe6e41a232451a15379f86"
+    url "https://files.pythonhosted.org/packages/5d/ad/04bbb797c84fc1f26cb171f7394716f4865ffb8d8c5e1eef42565c2dfa6b/uvicorn-0.53.0.tar.gz"
+    sha256 "a9356f0cb89b3b8621529c5d5eebd69bfe154f4c3f68b4cf2de47e45fa855c2e"
   end
 
   def install

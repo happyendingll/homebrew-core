@@ -23,6 +23,7 @@ class Sdcc < Formula
   end
 
   depends_on "boost" => :build
+  depends_on "binutils" => :test # to check for conflicts
   depends_on "gputils"
   depends_on "readline"
 
@@ -42,11 +43,19 @@ class Sdcc < Formula
   end
 
   def install
-    system "./configure", "--disable-non-free", "--without-ccache", *std_configure_args
+    args = %w[
+      --disable-install-libbfd
+      --disable-nls
+      --disable-non-free
+      --without-ccache
+    ]
+    system "./configure", *args, *std_configure_args
     system "make", "install"
     elisp.install bin.glob("*.el")
     # FIXME: sdbinutils prefixes every tool except the demangler, which clashes with `binutils`
     mv bin/"c++filt", bin/"sdc++filt"
+    # Remove info files that are part of binutils
+    rm_r(info)
   end
 
   test do

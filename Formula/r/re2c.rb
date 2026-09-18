@@ -12,6 +12,8 @@ class Re2c < Formula
 
   uses_from_macos "python" => :build
 
+  deny_network_access!
+
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"

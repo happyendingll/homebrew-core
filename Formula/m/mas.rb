@@ -1,11 +1,24 @@
 class Mas < Formula
   desc "Mac App Store command-line interface"
   homepage "https://github.com/mas-cli/mas"
-  url "https://github.com/mas-cli/mas.git",
-      tag:      "v7.0.0",
-      revision: "7c70ffdfd9f71a654300a78b3b627782e6abe1b4"
   license "MIT"
   head "https://github.com/mas-cli/mas.git", branch: "main"
+
+  stable do
+    url "https://github.com/mas-cli/mas.git",
+        tag:      "v7.0.0",
+        revision: "7c70ffdfd9f71a654300a78b3b627782e6abe1b4"
+
+    # Backport to fix build with Swift 6.4
+    on_tahoe :or_newer do
+      patch do
+        url "https://github.com/mas-cli/mas/commit/21a7eff7905fbc2daf79150287a6eb17496d1667.patch?full_index=1"
+        sha256 "e5b02ff06093c0f9f8a2c1eaea91aa5834ec7bc95ced6ab50f2e2b2e6306d319"
+        type :backport
+      end
+      patch :DATA # https://github.com/mas-cli/mas/commit/377a1e7147b29885b5370fe03f370421dff2ad2e
+    end
+  end
 
   livecheck do
     url :stable
@@ -44,3 +57,22 @@ class Mas < Formula
     assert_includes shell_output("#{bin}/mas info 497799835"), "Xcode"
   end
 end
+
+__END__
+diff --git a/Sources/mas/Utilities/Output/Printer.swift b/Sources/mas/Utilities/Output/Printer.swift
+index bf35ec1c3239da502ffc12bb9c48b368af2b88df..412cd17d28d72ead8de3c3d979ca1a53454e2758 100644
+--- a/Sources/mas/Utilities/Output/Printer.swift
++++ b/Sources/mas/Utilities/Output/Printer.swift
+@@ -116,10 +116,10 @@ struct Printer {
+ 	}
+ 
+ 	private func print(_ items: [String], separator: String, terminator: String, to fileHandle: FileHandle) {
+-		unsafe items.joined(separator: separator)
++		try? unsafe items.joined(separator: separator)
+ 			.appending(terminator)
+ 			.utf8
+-			.withContiguousStorageIfAvailable { try? unsafe fileHandle.write(contentsOf: unsafe $0) }
++			.withContiguousStorageIfAvailable(fileHandle.write(contentsOf:))
+ 	}
+ 
+ 	private func print(
