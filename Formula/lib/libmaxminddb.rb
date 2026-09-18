@@ -7,11 +7,8 @@ class Libmaxminddb < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2f0ae54b073b78c2dc1d526bfbb4882bac43fc9bdde1992aa81bb9a1c7aa7c47"
-    sha256 cellar: :any, arm64_tahoe:       "29fad65e40df8a8665da3b5cd76f1488aec0161ac0da386bd66e01930aa246a1"
-    sha256 cellar: :any, arm64_sequoia:     "a39f2ebe92607371937c715c6a22e1fec6895fb5e5f48682a33ea24be67abb67"
-    sha256 cellar: :any, arm64_linux:       "c2ba2e69b493b3bb0bee3c337eacc662c5b199588ecaad8acb28a7865d2d3c79"
-    sha256 cellar: :any, x86_64_linux:      "572434444abf40217879536e0bafe66b112e261fe09d3d0bf7cd545f45778f72"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "83aaeb49ff90c8ad95722880eed6fbfe2684188ad1ac15c0b9c2801ea8ad9727"
   end
 
   head do

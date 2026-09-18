@@ -8,11 +8,8 @@ class Ocrmypdf < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b346f5e02faff0e08b77de78c4796b490919ce5a3d1cf82399ad96c98bca44fd"
-    sha256 cellar: :any, arm64_tahoe:       "064085f3ad6a80e9ff2c4193fe8b7c8d51bc8da23729834b80ed3612515d334f"
-    sha256 cellar: :any, arm64_sequoia:     "38cdb109911e52c5e7206dae205df0305ea838d9188573e2e7e668c6e8da634c"
-    sha256 cellar: :any, arm64_linux:       "baab52bfdefafc6e5a4b51fa46bff46ea2b2c0c9c965f60ef579ae55dfed9e7e"
-    sha256 cellar: :any, x86_64_linux:      "c71b2f074aadf6c19e5694a7c93e2b3e267dd1264b036c0dad991f034535e247"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "80b8b6a51ca6a6ad177478d381449cf9f22d06034c6d3b62fa8a21128ae1af12"
   end
 
   depends_on "cmake" => :build # for pikepdf

@@ -7,11 +7,8 @@ class HopenpgpTools < Formula
   head "https://salsa.debian.org/clint/hOpenPGP.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "88af34d23f12407d4050b75911202f163c2bda890debc5cfb49d9f4c4afed193"
-    sha256 cellar: :any, arm64_tahoe:       "3a04de95fa979ddc649c72157c1daf3c712ab500abe5debee327b45f9db341fc"
-    sha256 cellar: :any, arm64_sequoia:     "fb1738953f24e4e0dc5d1f828d9809f772c67bfcc38a60b69bb8ef5dd684df07"
-    sha256 cellar: :any, arm64_linux:       "d4bf2061527821620b758bfe49eff4bc31668ed286edab1356b587c10dcd2688"
-    sha256 cellar: :any, x86_64_linux:      "5608d4ef911977b4e0ee0399e37b25e5c8c9124934915bf47588f6efd83f386e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "ffc2ad13cc9b3d11fc715523ff245d8aeff628c8561f80e56ef51d7c9235d5d7"
   end
 
   depends_on "cabal-install" => :build

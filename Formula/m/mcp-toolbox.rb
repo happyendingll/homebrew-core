@@ -6,11 +6,8 @@ class McpToolbox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ced40cebe0d7f7dff6b73f22622d726287bf2f35a029f78c868ac7f4cf55c27e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a075e2de1007d6e528c629ad842821049644227da2ff828436cd256ddf67e5c1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "635f4a4a667bc50e286d3c883e8e17e25419463f6bc7160a28ddc5c8e9393cde"
-    sha256 cellar: :any,                 arm64_linux:       "99e819787f9673422f121df3ad7bacb489da71f285cf17fa8a887dcf40686bcb"
-    sha256 cellar: :any,                 x86_64_linux:      "2536a9376f53b8d1af9763a05cc938c5afffe9e66fbbfc97aae3ba3a6b990dd3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "34cf4ab4e30f69c975240ad1786af09b9bc107b2bc77011cd9c7f413be0883a4"
   end
 
   depends_on "go" => :build
