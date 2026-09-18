@@ -14,11 +14,8 @@ class SwiftFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "19ad90f368d9a5627a0f45d0858c78bf13f782752a9a36bc7a355cfd9dc19430"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cb8ba1f28d1c9b1b7d490cd45eb21561a896b923493bc192983de9d206272577"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a4890bc578594b94782ec0e434097a467a1a8e94271b504e0430326a6db55fb2"
-    sha256 cellar: :any,                 arm64_linux:       "c36e52a9319d336be41f946bd5098580e8f76422e16293544d82ef3a942c8f0e"
-    sha256 cellar: :any,                 x86_64_linux:      "90c1263e0a1f4cd7ec4242cb7c1d79433badb7f03c01bf2b0dfcb592d0986801"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c386fe03c009c911fa230e5f49fdfbdc2841501ef0b7c8179ac3b219a6944c23"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work

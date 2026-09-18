@@ -9,12 +9,8 @@ class LuaLanguageServer < Formula
   head "https://github.com/LuaLS/lua-language-server.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a7b8dea25ad1d0749997294eeb31d98da5e85043d64fe9fa6381e55c145f6b68"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d856c8709d98e4af1da64c12abf7575f02e336134838e91d6dbcfad730a9e8fe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b7fbab20c3e23c0c3857caedf5e3031a12efde0043f076dde2fc9f0465403586"
-    sha256 cellar: :any,                 arm64_linux:       "c012324731c6b93866e16a64de709934b1dd77d56260704f20d511e4e1fe3eba"
-    sha256 cellar: :any,                 x86_64_linux:      "16384ed7c7ecb71912b70f8b8dfbeb49547b81117be0eaa39d768e3ee462768d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "6619c9397bcc27ebd1f4675840862a95c61ea0f3a512160ef3617dbb6f074552"
   end
 
   depends_on "ninja" => :build

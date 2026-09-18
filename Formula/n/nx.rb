@@ -7,11 +7,8 @@ class Nx < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "4acdadaa3fd1eaf9a3114dec39cf5ccf46670584ed70608f7e872c5b55f726a8"
-    sha256 cellar: :any,                 arm64_tahoe:       "4acdadaa3fd1eaf9a3114dec39cf5ccf46670584ed70608f7e872c5b55f726a8"
-    sha256 cellar: :any,                 arm64_sequoia:     "4acdadaa3fd1eaf9a3114dec39cf5ccf46670584ed70608f7e872c5b55f726a8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fefeff6f9f5c15b8c2b36c0f4eea6a3fbaba9f0a707c224f2fd36ef9e3fb23d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0dcc03262fa46dd356e04954e6e57e060258b9b5d3b755e5d0a2b8687a3176e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "886f1ab217503fbb0aab92a25d1d6cd6bbdc9e3ae4932bfedcd6ca13e89ad389"
   end
 
   depends_on "node"

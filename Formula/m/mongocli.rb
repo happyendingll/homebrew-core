@@ -12,11 +12,8 @@ class Mongocli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1b2b7e1e422e0aa9cd2c23c354e46ad7a28048bc03b0daeb549a967fd7ab084c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b16b26ee90526e19625813739c3895004666ca80026a7d011336851ea7777104"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "71973858864a6fd36075881f81fc3ebf572471b9d2ed42d1e3586c70febc736a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b5b7d331153ecbc3e5327817c9737850ffb17efae5f1223639c2a177db898fb0"
-    sha256 cellar: :any,                 x86_64_linux:      "81f3365084cab0cfe7d235daa2f776c023d21d4c40f720cefa0b7e9a39a1eb84"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1ddde063f33bc0837e3c60eeedd2c0b745990230d1de0d8466c95ba81f888385"
   end
 
   depends_on "go" => :build

@@ -16,11 +16,8 @@ class Unbound < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a1f2f2cc1c73c790c73d01672b38db709bc284f632b43c9dc9675ba370fc78ec"
-    sha256 arm64_tahoe:       "7fb46e16f257df7082f48484f368f69f4c6bbc8f49966afe10f1a3de9619f61c"
-    sha256 arm64_sequoia:     "2ec2046518d7df0ca1e641865797f1c095994df8b8996bfcac71cd44aea52c47"
-    sha256 arm64_linux:       "a94584990e9e79d1403945f7f2f9df851f11d824d52af98e13f81402c6b6e109"
-    sha256 x86_64_linux:      "071515a3b4b4d3cc72906ad32a5765ad9408d29e733123e6656f168b4852c035"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "7c21cf2474e1a2044a8c3b7e4a6cd86122de4af90bafc2c107be8e7628088cbe"
   end
 
   depends_on "libevent"

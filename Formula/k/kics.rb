@@ -12,11 +12,8 @@ class Kics < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f0efb8715db85fc1e0080d8629eca1205be8402c1d8f9a78617ec1c7e45f08e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bfc6ab278b38aa2b09ed4b17834cc7b623e44409a474efe59f9b29a1d10592e7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "36d69892b1eea2e02f0d6114c95ea62dce81b5f77c8f2b37d7af8fa2836ff0b7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b56ebf35ca15a80e41ec1295d6b04f48e15952781de6a8fe94d79d35b9d5f554"
-    sha256 cellar: :any,                 x86_64_linux:      "54a40dda251f86fe884ed44cc082fb190d4661b046a0d8df9f9cdba4a141043b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b77f306a87731eae211ada3b47a4e5d5c2ea50ebbfa5fbd68414781cdca9daba"
   end
 
   depends_on "go" => :build

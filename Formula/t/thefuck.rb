@@ -9,12 +9,8 @@ class Thefuck < Formula
   head "https://github.com/nvbn/thefuck.git", branch: "master"
 
   bottle do
-    rebuild 7
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "087a105ef29b07b4e1470d7c412a79f7be311ca6692dba22835e8b2a28ea7397"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b70c9d501ee13654b398e6b1eb386ac26a3513b2352023782f7bad98cc6e83fd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "06e2af0755eb040bb98ada50165aee62704808689d97bda10f088c1959e47c92"
-    sha256 cellar: :any,                 arm64_linux:       "02df15efac00a2d46cebcfe45b622ed181c9b7f81f2ba01de704083b5c20bd44"
-    sha256 cellar: :any,                 x86_64_linux:      "1618e26eb097230c0ca1f8fc8003fc16dd1b4bbafc6ded0484466e9e357054ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2bf3a7e99cc7d8252ebf2c550b953a6fe235dcb24253e2caaef1c6cb53d98845"
   end
 
   depends_on "python@3.14"

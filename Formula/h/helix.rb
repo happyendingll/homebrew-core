@@ -7,12 +7,8 @@ class Helix < Formula
   head "https://github.com/helix-editor/helix.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "4e68c5975370f7be5918cd8c160798b3e1b4085aea62403181924e8685256b6c"
-    sha256 cellar: :any, arm64_tahoe:       "0a55fa8eec03e38aaadfb2df8cf3f09d1bf9a1078c12ba7bbfded3b1253c7dbc"
-    sha256 cellar: :any, arm64_sequoia:     "590d036799387c9ca8dbda933a8c0fbb2361a98932973d862f3e08960e1a6556"
-    sha256 cellar: :any, arm64_linux:       "f61f3b4d8f06fe37b72bd67a51cb4383b64644eeb1e617f717af7e69d4b66245"
-    sha256 cellar: :any, x86_64_linux:      "acb6fd5cc7046ec666d02d28aa4aede836f539c759af26f8103b500a077e49f7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "f26a2d2c291639ae51ad9e6fd4874493684e7f25766beee04df93aa517dbaa42"
   end
 
   depends_on "rust" => :build

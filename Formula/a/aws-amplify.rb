@@ -6,12 +6,8 @@ class AwsAmplify < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "bc5bcecf4c47bcbe4a7cf2745a39c79c2c260aea2943688bf11f7fe2c2cee864"
-    sha256 cellar: :any, arm64_tahoe:       "bc5bcecf4c47bcbe4a7cf2745a39c79c2c260aea2943688bf11f7fe2c2cee864"
-    sha256 cellar: :any, arm64_sequoia:     "bc5bcecf4c47bcbe4a7cf2745a39c79c2c260aea2943688bf11f7fe2c2cee864"
-    sha256 cellar: :any, arm64_linux:       "aada36c4fe0c42400e0b888b6c6a3c39b42877156320afed4a4c7499bc7c253e"
-    sha256 cellar: :any, x86_64_linux:      "0d6bfcd36d2e6f0407530539fc76e127e223ffe9481a2cc88ee95613f69c5cab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "42906b4c43c8805f167551e15fe1d03c7fd34e80a1b67138303274bcc53a9130"
   end
 
   depends_on "node"

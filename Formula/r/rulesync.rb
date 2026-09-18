@@ -6,11 +6,8 @@ class Rulesync < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "861d5d658b18c9b65edd1c618193360295aac6e6fe40e7bc7c1df8379b75323f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "861d5d658b18c9b65edd1c618193360295aac6e6fe40e7bc7c1df8379b75323f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "861d5d658b18c9b65edd1c618193360295aac6e6fe40e7bc7c1df8379b75323f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "12470f5031afccc8fb2e39ef09335195be54c4758d48890a00ee9e906afc1373"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "12470f5031afccc8fb2e39ef09335195be54c4758d48890a00ee9e906afc1373"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f3b7b0c6d39c4091895c01ccd9c424162b8eb92ed819f80d677329759aa29e72"
   end
 
   depends_on "node"

@@ -16,11 +16,8 @@ class Spidermonkey < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2e527d8e30e2a731fedfa5bf0111809aa04ff3371e90d80a42c99797b2fa8149"
-    sha256 cellar: :any, arm64_tahoe:       "c29e4e6ab3285d0b8e02f1fce499efd3aa72e172d7be8b15ae42c76745ce8338"
-    sha256 cellar: :any, arm64_sequoia:     "3118624a62adbb386d6da6f87cfdc1af2fefd9e83f5e2d40aeb111f395f4a414"
-    sha256               arm64_linux:       "64f5402fafdd1ec5494ca1e3aae39ceeac155fc94f280d2a99d67309aa15b16d"
-    sha256               x86_64_linux:      "9c878749e1c25f798f0c0009935575d25d03b62382ca3b7800bf07076e6536a8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7effd432288695cff0bc96fff7540ed17dd02e664bcf12a240b878b33ac45d38"
   end
 
   depends_on "cbindgen" => :build

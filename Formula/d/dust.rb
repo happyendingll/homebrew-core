@@ -12,11 +12,8 @@ class Dust < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a4629a8f9efe50acde6bb93815f41285c530edfe26d98f4083d3b058c3fc71da"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1012137818b9c1d28d30e28bdce6f82ff34090328890adca39b927fe7ba850b7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "52dc5e4b48d504edb90048fbccb961054e96c06388c4b676f88b667ee34545fb"
-    sha256 cellar: :any,                 arm64_linux:       "12dfd66b128bed2bf7756944a011e8b30b0abfe59eed1b4970c5fa9613d7f938"
-    sha256 cellar: :any,                 x86_64_linux:      "5886d5c418efd219cf5bd77bda3c167c452261ba612bc91da9c13aa13c6ddc3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f00ab38c40db1d9022ce79db4a0424883645fad93f1a5ac25071d251d2d20dfc"
   end
 
   depends_on "rust" => :build

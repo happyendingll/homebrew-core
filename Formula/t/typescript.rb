@@ -13,11 +13,8 @@ class Typescript < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "470f605fe17553307fd39545f9966ad8be2a8e34f5f05b0e0262bb9e5a159713"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "470f605fe17553307fd39545f9966ad8be2a8e34f5f05b0e0262bb9e5a159713"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "470f605fe17553307fd39545f9966ad8be2a8e34f5f05b0e0262bb9e5a159713"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8f7a78a6bad897ac04acb2cf520f5743b8c501dae50898a9075f256844238ad7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8b46d60170f22d1a52b565f01509f594f450cd71b94342250e9f930e96fa8da6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fbd8cdcb0f0694ac2154b47f3c34b9505dd7779b6408a688e4e9dc814fa3e902"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Localai < Formula
   head "https://github.com/mudler/LocalAI.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a66480f5d6c99368475b8f8548241e3dd72f6d9b2343b82cc7d43840c853fa69"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8287cb98a9851c99019f23d1d43bb5af1a729f33ea7150d77ddcd69f5df86a4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3de808e51e42bff2931561497df2aebcf8a642334145fb8900ecdd234c3bd50f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b2d375bc4e6bbbea8a9edc48571bc4860c0bd6f29b7bc6d07b1d8013e826ff75"
-    sha256 cellar: :any,                 x86_64_linux:      "9faf005dba21df04a5b6e3a396084624fce4465a4311c45c939dc557e3c4ffd1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed7138944ff8b156b19bbb6780218c417762f346f8aa00c1145d4c36119ab0a3"
   end
 
   depends_on "go" => :build

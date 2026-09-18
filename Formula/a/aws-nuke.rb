@@ -7,11 +7,8 @@ class AwsNuke < Formula
   head "https://github.com/ekristen/aws-nuke.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3179dd56ec752173af2e8d13c291582275d470271320f3c76cf7cb3d5dece735"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3179dd56ec752173af2e8d13c291582275d470271320f3c76cf7cb3d5dece735"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3179dd56ec752173af2e8d13c291582275d470271320f3c76cf7cb3d5dece735"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1d704d9fbfb6339abcd55cfbb0436870d43a0b3486110898c01b7520580c0e2c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4316b42169e4e523d5b39c6c694d85d8fdaa7fb08a89160c3bb615d3b75a6484"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a747d95ec2d045d89d01cefccf85d63d575a9531db19658c7f9d634e01d53083"
   end
 
   depends_on "go" => :build

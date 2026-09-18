@@ -15,11 +15,8 @@ class OpenMpi < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "dfff4ff05401c1ffea4f9b7484499e949ed0e75f1dca4b57b593d08bc281a1c6"
-    sha256 arm64_tahoe:       "d095a9ea0c14990e346727304518721a182e3303ec04d8f1768a0cc5f418748e"
-    sha256 arm64_sequoia:     "4553b1769afb3afbb1d42f7cc14f2953e3ad965549d42ca52667c6be4cc74259"
-    sha256 arm64_linux:       "717133b8d1cd6c857c244525473177f3785b33e059e66aa383d07b0278346a04"
-    sha256 x86_64_linux:      "f343a7d4e6acaa8e21b827d8ed4af0b22e927732e7cf7657821ee75548dfad11"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "3f8bd1c2b87a86f201bd401568d3fd941d393b8567bb6f48344fee7f4c911cb9"
   end
 
   head do

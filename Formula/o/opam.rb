@@ -22,11 +22,8 @@ class Opam < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "64e008ed35732d9de31138cdba6b55284f7be49083c0fb9b2f6ee73e99beef46"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dc0991b97991af5b4fed0a7b921331cdf29bc67d99faf103c052148f5194a7f9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "28fa94a50c705cc3ca101c4d73e52204ff81759360adb65b8b5af70e0d44c028"
-    sha256 cellar: :any,                 arm64_linux:       "704129aab3e2831fb97806bfb2868d522b01b5120288006cc7933be85cf7231d"
-    sha256 cellar: :any,                 x86_64_linux:      "f2d238664b9ab4989aa1160783a12322d64f184e55380765c4a343cb9e600974"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "779b7e20b7c1e2116847e984710e47851f7b884e9dc7fc3a19b2b478c451ca6b"
   end
 
   depends_on "ocaml" => [:build, :test]

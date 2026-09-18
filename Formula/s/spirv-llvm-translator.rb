@@ -7,12 +7,8 @@ class SpirvLlvmTranslator < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "62b81746af2c3e2bb32c72106af08ee8b0c9651285496ffbbd79ff9b4da9d792"
-    sha256 cellar: :any, arm64_tahoe:       "bee3764d7f2b6fd3d88140809238dcf1a16f847c3e36308d8d0d3c4f9fffa2a7"
-    sha256 cellar: :any, arm64_sequoia:     "7b77d68313b19de5f2d7eadaa7b94597dde5b9302436b8e422f8e80efc99be7b"
-    sha256 cellar: :any, arm64_sonoma:      "e70ff3c3d6b0d102ac5102189d955bf57bc30c31277d8f179fbd2b20f9b71448"
-    sha256 cellar: :any, arm64_linux:       "650afd4748908eca7fe58b201ba12798789f3d1ba0ac2ce30a791770b72a387b"
-    sha256 cellar: :any, x86_64_linux:      "c01df8e2ce807bf1e8ab122161999550dcb5f3da90c4ace9beb23de3ecf5a8eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "245ae67c10ee795459d41f6db99997b8167da9cead4daab608be79bdd3ec63ea"
   end
 
   depends_on "cmake" => :build

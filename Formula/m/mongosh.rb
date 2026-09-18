@@ -7,11 +7,8 @@ class Mongosh < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e673266b83ffd9769f62126d782982e4015daef1e8d51972ab57f6d7bbc9520"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1e673266b83ffd9769f62126d782982e4015daef1e8d51972ab57f6d7bbc9520"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1e673266b83ffd9769f62126d782982e4015daef1e8d51972ab57f6d7bbc9520"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f6c915eead76d12cfcc8a734a5c67145286768e8e37f6033061d0f3c7d9f5e0d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f6c915eead76d12cfcc8a734a5c67145286768e8e37f6033061d0f3c7d9f5e0d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d3e2044dc9ef3b4c9efb2c61b3eda14c16fcc76139fce797c9eba2885349f485"
   end
 
   depends_on "node"

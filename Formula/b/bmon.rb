@@ -7,11 +7,8 @@ class Bmon < Formula
   head "https://github.com/tgraf/bmon.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a684507da86e052a46b11a4c7815415f754608abb5395cc467f31c8bca2bd24d"
-    sha256 cellar: :any, arm64_tahoe:       "1cf3adad3a4bdbc8b071e51ef8efd5dde4a6ef48058bc3025ad601839f4977bc"
-    sha256 cellar: :any, arm64_sequoia:     "c5859ba57d8671ed23d9e371a0de6c33898b8c4c617f54825700cae8042c7da5"
-    sha256 cellar: :any, arm64_linux:       "e0b494ae4fe8cd5b72eedc13ec08066a5e9258683a41f504c92d919e96aeb377"
-    sha256 cellar: :any, x86_64_linux:      "2baa9b8b5c26ac014eb6e5473bd1dd4d7eebcf29faf5a2f4c6130d13cdccaca4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "688a301806e0043ffe7ff8cba526213e232675adcf818791df77e6c8903ca317"
   end
 
   depends_on "autoconf" => :build

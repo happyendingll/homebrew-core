@@ -7,11 +7,8 @@ class Sslscan < Formula
   head "https://github.com/rbsec/sslscan.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b27802f53be5a3c30f4fdc5fd9a6f8c3855ecc40db3bdc2040b7be04fc896dbd"
-    sha256 cellar: :any, arm64_tahoe:       "f294f2eac70d48a2bcc734d1bfddecf480e16a7be63dbd697c369bc682db51da"
-    sha256 cellar: :any, arm64_sequoia:     "07565b20f02f9bf4ad0456d1b545d0613c522baf2d8b0d7d5f632216badb2ffa"
-    sha256 cellar: :any, arm64_linux:       "7708758f152c9d20a4d637f1f292677024add1f64e25f9f909e9b4e10e249cf1"
-    sha256 cellar: :any, x86_64_linux:      "d43bfdf4fdb8dfe72c475005a9486709d41a3bd031944e86bc57798c25c0b6a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b7d0d530ef08c75e46120547fc57c075a20cdbb4ed3c8e7b04556fdc9f3b8215"
   end
 
   depends_on "openssl@3"

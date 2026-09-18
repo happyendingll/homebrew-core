@@ -7,11 +7,8 @@ class AtSpi2Core < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "080256d6e4a921c8e022fada73b1fb9c26a3ac3249cbf51c2c76a1001d90461f"
-    sha256 arm64_tahoe:       "8e907458f839fc17a31161fc166aff56ab9f7ac1fffb40bba5bfd28b8af4ada9"
-    sha256 arm64_sequoia:     "9d1c368333367703a58b00fa390bdfc7a98623a11a9f862e062e152e3c7a0e04"
-    sha256 arm64_linux:       "add1e178850d104d090b6573378bc716d7c3b5b3d2fb1467bfaf73bc1997213b"
-    sha256 x86_64_linux:      "8c5b945dac16f6f7ecacce4ef2a891ccfbc8ed5a40c9e429cc9c369e79de9187"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "1191e75138b6f82abc21017580c196be6caeb03fc3ea60f62a6956ef508488a8"
   end
 
   depends_on "gettext" => :build

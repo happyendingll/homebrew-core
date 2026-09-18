@@ -6,12 +6,8 @@ class PiCodingAgent < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "dc4bc3c921b3ba4f7fb3942966c3a08fb4c26a0e436811664533b0836a1d9966"
-    sha256 cellar: :any,                 arm64_tahoe:       "32c6d3f03776b845255950fa82aef81aa0dc7984587277461434b43cebaa81f3"
-    sha256 cellar: :any,                 arm64_sequoia:     "9e3b3e33dc7dac78522d7aa56017e50481e3f1b95ed2261bb116cdee78e534d6"
-    sha256 cellar: :any,                 arm64_sonoma:      "82ebeb1a1d3fd649dda55196b248cd2146bc46169ba6073df43c7d338874ff28"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e90d956046cbb48c971d664268fc315dde2f0ce81269f3478e8840dfa755c2c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b83e435b41ce18498eec0ba2e494013d47e731bb260c8e63bf317526ebad80d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4355671a4243fdd4393ae4ffa98d1a6ac7967fdabe983d5995e879b84849c49e"
   end
 
   depends_on "node"

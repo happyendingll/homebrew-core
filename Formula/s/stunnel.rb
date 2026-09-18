@@ -11,11 +11,8 @@ class Stunnel < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "14e399909d79196097c6e93f263f9dc55c0eccbebccb2bf0f3dd46ea22205c3d"
-    sha256 cellar: :any, arm64_tahoe:       "821e5a4d1461524ee6e472a12460e621c0379bbdec553fb74d208e6169602508"
-    sha256 cellar: :any, arm64_sequoia:     "8eacf36bbaeb1ed8b010b0a87163bf50d5b50a99f79d4e030ef7cd14de6ca911"
-    sha256 cellar: :any, arm64_linux:       "88cf920aa5417768663f7097f65d55f0575c89124de8cbec253f1ebfb082e0d6"
-    sha256 cellar: :any, x86_64_linux:      "b853a3eca4ee7fd41a1ca65b9fd45cde6285fd49d12b3dd0f3ac3d33b3cd523d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "2a417e4601a73e707f9d79df2d3f90af07cf86f26cf52d5005355f2f3c2319a6"
   end
 
   depends_on "openssl@3"

@@ -6,11 +6,8 @@ class ClaudeCodeRouter < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "679068419a44d4621d4a6b3538bdb9a4725635ad02d356072c1bf070711c2e9f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c0e7272fd0f6dd983bfa7206bb234b0ef6c6a52e5b6bbba61fcb5eb58c369cc7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aac2b599ec7acdb4e41134d240b6d67f18bbed16a3418674fcd26e982a8c1f43"
-    sha256 cellar: :any,                 arm64_linux:       "066e3b59fd0f4b0762b50d1e7d8feab01754d17679678146a20689e657d2e04b"
-    sha256 cellar: :any,                 x86_64_linux:      "60743f741ffda09220af853380341d8c08bd514b02e5d83e447a414be8c25d02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a62c4fe25360eb18cc1db22b85884cd75a47d7bbd966d0ecc157c32700f1a0f3"
   end
 
   depends_on "node"

@@ -6,12 +6,8 @@ class ContentfulCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0c12814cde157ca9fbd1ad353831fc877b8e8b1fba2344092d9a94d65287db52"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9afc61be18c076f7a77ec92e126cd73b2096af8866ee3ce246cfd933e1c1540d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9afc61be18c076f7a77ec92e126cd73b2096af8866ee3ce246cfd933e1c1540d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "9afc61be18c076f7a77ec92e126cd73b2096af8866ee3ce246cfd933e1c1540d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9afc61be18c076f7a77ec92e126cd73b2096af8866ee3ce246cfd933e1c1540d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7ad82352ed7c3b5871ae04dd85c740befb26941ab016acaba1e1370eee3014cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "515ef87e3e4f5443faffe8f71f4ec4c6b3fe13d7ad0dd81142f68409e5a569a2"
   end
 
   depends_on "node"

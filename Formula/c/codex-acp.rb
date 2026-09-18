@@ -7,11 +7,8 @@ class CodexAcp < Formula
   head "https://github.com/agentclientprotocol/codex-acp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6746d5c4d8bf34cfa61064bcf02153d996f994c997c87385f139035c513a7340"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6746d5c4d8bf34cfa61064bcf02153d996f994c997c87385f139035c513a7340"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6746d5c4d8bf34cfa61064bcf02153d996f994c997c87385f139035c513a7340"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e8976395f52fb479b618ba9960b6c40240f680a08badd1100579649a28fac012"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "84249e4bc1003f665f8a2452ac38a0ba4eeb59d8b04dd6c105a84f2733dd4e23"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "788599d8b7ebe95d39bc89d4574904341e932f88d443f9ce11cb9935a331310b"
   end
 
   depends_on "node"

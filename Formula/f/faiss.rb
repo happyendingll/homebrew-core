@@ -11,11 +11,8 @@ class Faiss < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9df7e50e22a08e9b020b4d025b15505127fb828ff5b931381419dfe7bd7381cc"
-    sha256 cellar: :any, arm64_tahoe:       "bd8a4ea7137baba4514d422a84093235006faae8738868743bb5a2024ff23078"
-    sha256 cellar: :any, arm64_sequoia:     "6cdc984648e15ffb9dd628414530bb8839fc88d65b6b01fb4bf4d04cd17094d3"
-    sha256 cellar: :any, arm64_linux:       "0a2086210cf972d88f9b77f68d44fb6c5d042ba09becdc3f530d17b6af1eee31"
-    sha256 cellar: :any, x86_64_linux:      "3fd3a9166d24ec7860d6434899bd58d513a303d30102f3fd92665ca5fa6877d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8b95dc7d8851548313cdb8e69b1bfe7105c7e12a3b87283778c862db7da118f5"
   end
 
   depends_on "cmake" => :build

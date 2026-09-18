@@ -16,11 +16,8 @@ class Glibmm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7ba4aedc30afd3dfd37ac7d3955e2c9ef8eacf4f006806349c309e604a2f15a0"
-    sha256 cellar: :any, arm64_tahoe:       "51649501dc86d69f57c88a5fceb479d0f007dd2e17d740cc714a82f111903ae2"
-    sha256 cellar: :any, arm64_sequoia:     "ed5d4e505aa436dde063d19fa2950fd7b796312472f94b4a70e70ae8e701cb15"
-    sha256 cellar: :any, arm64_linux:       "b8920ae679ca4d8650770ed434ad78cb7f0125f501f97eb07dc49e98d650d7a6"
-    sha256 cellar: :any, x86_64_linux:      "071c26d691365ae87ed42f7a151742a8dac576e798927ba8a8659ea1060c2a5c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "38c1091cd921f971ba34c55a6b8f2d5fb475717c8f0c24274d22473923cea014"
   end
 
   depends_on "meson" => :build

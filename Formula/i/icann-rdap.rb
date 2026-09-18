@@ -6,11 +6,8 @@ class IcannRdap < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d89ef2c5581b9f2e5f9da95a428590d7cb4e93aa97b5261393cc903ce029af1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3f1d1814176217bac06e3d8989238de805e3f7c92a758b4df2505a1265ced0d5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0ae6480eeb3f0f2e9ec3f0d0896691d738e7d32eb725d66747d26ee630d45d5d"
-    sha256 cellar: :any,                 arm64_linux:       "bdb7a6219cdcd52bac441c7f7afab63e3a0a2806b798410f3884f0fc51bb3526"
-    sha256 cellar: :any,                 x86_64_linux:      "353048a48579151d1649fb9d05a6481804f4dee5873020a52c281f067c3dec62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "eb63870e16b554679820e3647dfb1382e1f6c7ec8ce03ffaf101ab19436cb7c6"
   end
 
   depends_on "pkgconf" => :build

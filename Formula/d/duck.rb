@@ -15,11 +15,8 @@ class Duck < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d1b4fa4464ab9db587b0b9b6da38012af08d61963fe21d4143a9b137f82bb987"
-    sha256 cellar: :any, arm64_tahoe:       "b7febceeea6a50e7976c10fed24eb8f8231ec871b0a0306e20f377ae09e1659a"
-    sha256 cellar: :any, arm64_sequoia:     "c4598837c09438d328ca8a3cb4a79db36e3d2ac29bcae607b0145e39fe4132a1"
-    sha256 cellar: :any, arm64_linux:       "66c1b771f99c36eefb9852f0d2f7a8ee9fc1f38f707a599b0db2d6d02ffb3571"
-    sha256 cellar: :any, x86_64_linux:      "4381fe1fcf8a18605401ac1c6a15336fc59e982363fb30b41bb6237392bbc3c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b790623c04871abe4fb8fe218bf52a9ccac2d7ac08e908cf68ebe8ea114a8d85"
   end
 
   depends_on "ant" => :build

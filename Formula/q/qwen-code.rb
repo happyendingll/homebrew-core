@@ -6,11 +6,8 @@ class QwenCode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1697f03796861c845f63f981cce7552114ddd608bde840bfac287ea97405d50c"
-    sha256 cellar: :any, arm64_tahoe:       "1697f03796861c845f63f981cce7552114ddd608bde840bfac287ea97405d50c"
-    sha256 cellar: :any, arm64_sequoia:     "1697f03796861c845f63f981cce7552114ddd608bde840bfac287ea97405d50c"
-    sha256 cellar: :any, arm64_linux:       "e9b1246c4374bc2093926e49fd5be40aef08010ee0a1e5d8a4690b3dd92edb2c"
-    sha256 cellar: :any, x86_64_linux:      "788cfd35b919ad2775487ac652d1a475e738e690087a0ec8d518be39194a4a16"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "010546723ee31cd51d0a170dc2ad8b4b3df9ddcfa7480490694771f27ead5b68"
   end
 
   depends_on "node"

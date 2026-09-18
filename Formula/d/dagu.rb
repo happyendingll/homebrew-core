@@ -7,11 +7,8 @@ class Dagu < Formula
   head "https://github.com/dagucloud/dagu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5f9b8efd973cb3491dd23603341ffcbc26e6114e4ad79985514213219d38eeb6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b792c3a49059b50031f9835eb7856f3e0a2d642ce6a4e3477512e0d503d5959b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3c86c4c9a4e9c8e70d58f8c72d1f288a9e0b70686c6c894bec878bd43b069bd7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "adf9c04ec9f4838c4a46b8975bf14ae40bab3c4844e64965306d467655adc9ff"
-    sha256 cellar: :any,                 x86_64_linux:      "acefadeb1711d54beb74cdda239c0580d1fb4e08e6d4d66ddfd69750a6c95031"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3e201e48c1281cd05ae826c93354867737ab973daf70167a497e87e304a1c312"
   end
 
   depends_on "go" => :build

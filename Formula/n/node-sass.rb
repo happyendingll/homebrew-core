@@ -6,11 +6,8 @@ class NodeSass < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "192a34cad562f4d774e4b2806b7ca2f89376dee4fd7cd03903cc6f00ae036108"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "192a34cad562f4d774e4b2806b7ca2f89376dee4fd7cd03903cc6f00ae036108"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "192a34cad562f4d774e4b2806b7ca2f89376dee4fd7cd03903cc6f00ae036108"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "06eff50cfebe5b528698735aedcf83188059e825e22db7be875b15dc87c1cd6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "859060e829be4986aa8ffb783e914a84d09d302b060db24654f58f8a09d375da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "917923fd49ffe9e36fa5c45c8bd7647bb29afd03cdf9272e87ba1ae71e1c3c75"
   end
 
   depends_on "node"

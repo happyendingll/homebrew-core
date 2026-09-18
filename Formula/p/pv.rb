@@ -11,11 +11,8 @@ class Pv < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "4474aa564a01214715138402980661cf1f4503e2ee21b71640b4adc10e0ead04"
-    sha256 arm64_tahoe:       "cd91923ccdde058fb984dc9a25c12cf903ded4da91ac8b33e21c659ffb18c076"
-    sha256 arm64_sequoia:     "b9c9b8620083d6686cd48ae66c9db086c6919b8c1946d7cc9fffb20af880530b"
-    sha256 arm64_linux:       "31f26810cc198c0c96791eb6e9f0a517dd6ec094ac401bd08463739f4a94507b"
-    sha256 x86_64_linux:      "20fb9b8f6b82b6f954345ad449fc182b8deb0be548c27e1984f4d30250317b05"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "2df7a9194cb1daaa15d4fb9d916df878f1651a069222c47d05d2a6b6abb5e28a"
   end
 
   uses_from_macos "ncurses"

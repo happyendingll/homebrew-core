@@ -6,11 +6,8 @@ class McpInspector < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "3f63fd6d130c3c7533f90f698cd501ed31eba0ef78bc96958ae098fdb9811505"
-    sha256 cellar: :any,                 arm64_tahoe:       "756c9adaba3a805064e45854b5ff0662245488936e8a993b798d926252ca0aa8"
-    sha256 cellar: :any,                 arm64_sequoia:     "36abbebf0301fbc615a32b5c9d931d091544d5b4d7edef1b97d1dfad6d765119"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a7182675106d63a2efd72236040347109851ed20b0452518113928389b13a480"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f98096821ac0ed057f54df0a0d2c24119f490a9a0794b2e09e9c9b06a15f67ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b1bddc0e30d9ed2af4f50913cb914bc181dc71a5390b3071394022e95fd6000a"
   end
 
   depends_on "node"

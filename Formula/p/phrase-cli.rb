@@ -13,11 +13,8 @@ class PhraseCli < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "396d718350f77dca9c79cf3081e1d42c7db646cc114a455bee290a89bb358064"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "396d718350f77dca9c79cf3081e1d42c7db646cc114a455bee290a89bb358064"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "396d718350f77dca9c79cf3081e1d42c7db646cc114a455bee290a89bb358064"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "94e52125d93fea5fae890dce6f1615dc622210da02c105e20a0a01589af5476f"
-    sha256 cellar: :any,                 x86_64_linux:      "7a472176fe0fa4788bf2de22774387b8d1ea97887e3d88ba29471bd0760c3aa3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ff86f0db97796b4a9a3317a7a14ef9d5df8f4488a4d6ec4e1cd918b25ae82bf7"
   end
 
   depends_on "go" => :build
