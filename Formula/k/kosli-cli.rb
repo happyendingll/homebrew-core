@@ -12,11 +12,8 @@ class KosliCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "83a703ab359b80748604cd5a6c8357e40df0136aa096b04d1d3cb318085dfe24"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8741ccff2b7ac3bee89b8de0f9d6a9efb503ebed8fef79fb4868a41dc9a2489"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6985d7440f7a50a18bf1a9e1939e4d43858e372572cca57e287aec0ea5f6851d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "adfecd0cc9ef0db26390cdda25044020b3c5cc7f666fd3cf898982767f3ec420"
-    sha256 cellar: :any,                 x86_64_linux:      "7ae348977b6982c4d0822472acc2508bbd45e17a320fa647c35bab8ec16c6a82"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "95bf11ca2e525fdd1d4e653e81a5ec93618a91bff00a1d61235b9a20de940fb6"
   end
 
   depends_on "go" => :build

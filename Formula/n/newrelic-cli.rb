@@ -12,11 +12,8 @@ class NewrelicCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f580a72d0c8c2c9d17b6c3d167e8e0736415266ac2f5281ece0b36ad17438e4c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a1b162a5c4ad182d3b7620df8b7adf1a14610346d5f538c2a1047f813171b5a7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "85b56892b31766995a3422c2f12c3b7c8af0dcb9cfa48787ad04438fcca72cc1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0a18a197067b1ae99a492115afe1aac43662034ba4a3465bb38ae132d15a0a18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "199f6b2d25b54ffc8a624edd0bda5cc71a0b8e33bc4b98576fbc625bdb301f1d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "b0f0f9e7665b248bbc9dd3569bb9ec4664e739f4072d502f8cb2f7366ad46cb9"
   end
 
   depends_on "go" => :build

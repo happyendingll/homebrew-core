@@ -12,11 +12,8 @@ class Esphome < Formula
   no_autobump! because: "macOS resources cannot be updated on linux CI"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "265aea2f4ae22dd211f81ebf91bffac27590a8edaa22fea595f9225a26fb734d"
-    sha256 cellar: :any, arm64_tahoe:       "77c39a4157876cae9611c893e8cbae6bf12b601a580d0cb4f69ef13d6ca6e6dd"
-    sha256 cellar: :any, arm64_sequoia:     "98a40f677e6bf80ef7027034d8534d4fa2ab157fe5ad413605a735981b9ef9a7"
-    sha256 cellar: :any, arm64_linux:       "1a23156ee0e3ffc0edd722f9c44da700421e4e13b732266a25c7c04eff9a7c90"
-    sha256 cellar: :any, x86_64_linux:      "87f914580e134f0781a015bf95c64b18a393a121cee8a9b92fa83fb697ce7a87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "38b952568cf85c9ddf6d5518bf1703f7173b9573cdc5922aeb5613bfb812e74e"
   end
 
   depends_on "rust" => :build

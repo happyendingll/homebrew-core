@@ -12,11 +12,8 @@ class Flix < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7dfaa890e81219f6bdc2101a6293a6e2921b5216197ccf0085a3830005c5b63c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c76f15dc2c8579912c5145c1e58f82f56e01d91f9df297ec455eb5b2b1256b23"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "40d5bb8742ca5afbcf38289d8d8a317e80ee10fa33191e2c71d21ce076b95e05"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ceae6e7dba94f4b233bc1addcad4d60b217d1cf98a77f99c76062430ad12ed79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e51d6f1923c4515cef82c35fe84d7eba32901016278c294f789f8a9c73f5ad83"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "9a01e169b76304129473a0f3323b420510df92276d9d7b269af0b8765a091aaa"
   end
 
   depends_on "mill" => :build

@@ -6,11 +6,8 @@ class Officecli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "30c32092d9ead85814fae998924d58cadef45a3d27986cd4e4982c95107f6538"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37b650e6941f9da0ddff1f0fcf52a58c6f5fddb1e4e4b96fd6c6d469ecc161b5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1569a0f60591564c9dda9e9b4a5548bb5bf52c32c01c587c6266c01d145bd998"
-    sha256 cellar: :any,                 arm64_linux:       "9fcce5a394e12eff970eb5850d857b943f99318d59558921ce257ebc667a5200"
-    sha256 cellar: :any,                 x86_64_linux:      "cd7f82e1346fcdcb807379c88d7d0b05a56bdbfd3a4e16184391cf592f018131"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "7ef61189fdd3df41f453f4973afba8352c99c4be40189e36ec91c4bcc9ff492f"
   end
 
   depends_on "dotnet"

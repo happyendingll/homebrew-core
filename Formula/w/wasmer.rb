@@ -8,11 +8,8 @@ class Wasmer < Formula
   head "https://github.com/wasmerio/wasmer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "158ef9e2b8dc0b94679ddd6a52df9fcc1b9d258f2d6009ffe8bbbc3774128548"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ec4161d5b249ae7491b2e5fdef8e35585bf057922c869120e03bb796871553b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a076aac0bffb5bd4899c52200569197f08ae23652d78ed8bd7550454e9b062f"
-    sha256 cellar: :any,                 arm64_linux:       "fcf318732f1312ed7e6002fff49cf34d10dccc8d8091dbef296c94042a6759e8"
-    sha256 cellar: :any,                 x86_64_linux:      "79e8270b6a8319d23d7592fcff1948284285b9410b0484e76fb8d22fc9ff709b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "444d04feface03172019bf1b5ad590924796091403c94f321efafa56aa19fc95"
   end
 
   depends_on "cmake" => :build

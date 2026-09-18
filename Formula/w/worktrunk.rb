@@ -7,11 +7,8 @@ class Worktrunk < Formula
   head "https://github.com/max-sixty/worktrunk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dd95c30746d531952864f13054e301f530e2bda378de0a6518e2b573424c99ce"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b1259d19b2b7093d65df2fc49f68b31e86471ccd7f0e44d6665586d78867d2af"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d891bc3fc32e1dca2cc373d31f28ef5fa61190254d5fcaffd2d9726bed45ded5"
-    sha256 cellar: :any,                 arm64_linux:       "1a8a63ebb9bdc2b40a79e9a5c302e1d72f93c7e3a752d07ded956c55c573c839"
-    sha256 cellar: :any,                 x86_64_linux:      "9f37be8b01406986d73eed172eae311083fcddab02aa2979360364805743575d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "c00590caf5d2e3c22cf52a598f96efeee7598f37f00a1e42ae772ce530bc8a52"
   end
 
   depends_on "rust" => :build

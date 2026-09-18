@@ -12,11 +12,8 @@ class GithubMcpServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e0cac811ce080a911769d09440ca60435e817c6fee4ea9269ee0dc3f9e1f4b33"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0cac811ce080a911769d09440ca60435e817c6fee4ea9269ee0dc3f9e1f4b33"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0cac811ce080a911769d09440ca60435e817c6fee4ea9269ee0dc3f9e1f4b33"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "383b63e6e9455e480e81461aba47fd37a2eb473c95f1513475c0c4c1063dfe86"
-    sha256 cellar: :any,                 x86_64_linux:      "6daf30ad4ccba21acc5649212125175bdbd8349a49982a81a951d31245b4edd1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "795ac61c3e5dca38474ac2fd2f8715e9af042a7290187accba23237281ebf2de"
   end
 
   depends_on "go" => :build

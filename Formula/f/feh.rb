@@ -11,11 +11,8 @@ class Feh < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "360d1466646f27866e144c886dca69a4a568d1b75e1cbf05c672329ae91e1c91"
-    sha256 arm64_tahoe:       "46ef1f9f762e8bd2ba0077408ba00e5e952eaebb72167940e830501931e3a66d"
-    sha256 arm64_sequoia:     "913591bd7662f4d6097be1fb66255af9f912bd79a0c9e5fa1cb4be2a9494f3b3"
-    sha256 arm64_linux:       "8181d653eba7264cdaa72786f735fac24aa30e3d841a3326debcdc9770f37d6a"
-    sha256 x86_64_linux:      "d45fb5284f44125499f4a0dd2aa2184c7bdf28b3b91564c17d8bacf878fa603a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "124c39191edc364c5731a9dbbd4811f3f7168597d8bd006233b6bebb8900e631"
   end
 
   depends_on "imlib2"
