@@ -9,11 +9,8 @@ class Bazarr < Formula
   head "https://github.com/morpheus65535/bazarr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d7c5510ee4c525a5eede50a73f40cda4533fc5fe3770a0d0e27dc4e0ad03b273"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "96ec6cfa375ced33d5af6f2c37ce1bcbb188d4a66fff6669abdfdaf8011ed462"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e34ab26bddc90ddbfb35e91d57069a8dc8d61f119ce2a68d94ce9f244fb46f61"
-    sha256 cellar: :any,                 arm64_linux:       "9e5e69854d1e4d7e0bce7f0cd7ba7f4abaebca5fb4dea423bb5480419e60d578"
-    sha256 cellar: :any,                 x86_64_linux:      "c873fd54810e7031c7b3e00f9a338bdc7a33c62f30675b1e8597adb0ceceef63"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef3a811686b9efc92a34cf7e8a15fac8e811805ac4fdb6839dcdd93b5e6b8441"
   end
 
   depends_on "node" => :build

@@ -6,11 +6,8 @@ class Varlock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b3661ba3407a6867bb8a064e372887a35309e724b53b15cb04f54f12b8b88f04"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3661ba3407a6867bb8a064e372887a35309e724b53b15cb04f54f12b8b88f04"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b3661ba3407a6867bb8a064e372887a35309e724b53b15cb04f54f12b8b88f04"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "86b010a74d31e435e2d1a71163a9e962e459af6d8f3042d0b2c37fafe3fc16f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3f64e08183a513d22d0e77b53cbed0493310b236b09a8fc9868d206caebe540e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "68dd38a92e23060e52d4fb77db0cafd100febcf62a7d57b64fa7b7532c541b5a"
   end
 
   depends_on "node"

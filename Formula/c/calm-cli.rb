@@ -6,11 +6,8 @@ class CalmCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b3195b877fb03b6fc6096fa351aed00708e7b460d3bb6f0a244aee8c85963959"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3195b877fb03b6fc6096fa351aed00708e7b460d3bb6f0a244aee8c85963959"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b3195b877fb03b6fc6096fa351aed00708e7b460d3bb6f0a244aee8c85963959"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3facfbcd43b37e8718b5a6c85d58a9d4ea90944e193e362a2483d12cfecd9633"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "894e6e374ec6709ac0d5102dc444afba42fb15fe76f913d84f8b681d374e1cd4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3991872a94d602b3719e2639d4520ac5a2ffa9601df50d49fd0eb7bba6cbabb3"
   end
 
   depends_on "node"

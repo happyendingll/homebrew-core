@@ -6,11 +6,8 @@ class Nessie < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2185548bf84dbdeaa02b519798f131f52c9d84ffe9279ddb722f7a1da3a03bb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "377a66896703e9cf0c0439deeeca86bc9d0282ddd581839f789ff3c75e474b07"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3892a89adc1cd5ec01b3fb741b24034bd91127fbde33842664ce4ac1ee580f5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "77a50617679d50543662f3d791df9bb4be181748ed1602fc9bdae7e64e624a2a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d39181ebef1513904d9c53e6492abe376fc3f8c55a3e50184bf0a523bfd891de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "004834d11fa7e0198041e6e9efe8e4cc6c82acc0c6a2e06474baf7e469f96227"
   end
 
   depends_on "gradle" => :build

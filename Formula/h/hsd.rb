@@ -11,12 +11,8 @@ class Hsd < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "8a85892f70479ce2220e75b73555fefc130511d48c76eda38777697538314953"
-    sha256 cellar: :any, arm64_tahoe:       "36611c3df02c5cdc5ca4e1d0a5ccff743dbb13bae2ef19a4c26047344b3b0436"
-    sha256 cellar: :any, arm64_sequoia:     "6d90276a5d657b913adce32aa66275711de9e470110a786e073d011f82ddd588"
-    sha256 cellar: :any, arm64_linux:       "ceccc5cbaf898894a713b9b8bea6ebf2a2fc435aa9b272d8efb478d4f74d1d04"
-    sha256 cellar: :any, x86_64_linux:      "5f7128b4e22bf488817ca133b88e27db73dd9b027bb2a71c65892724bc2d5be1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "ef0c0eb748d238e5db08d2acc804f304e5d5cd710021f809b74fde525725f7d9"
   end
 
   depends_on "node"

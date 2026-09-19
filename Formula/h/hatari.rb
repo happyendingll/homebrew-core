@@ -10,12 +10,8 @@ class Hatari < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "8b15bbe1d2952a755d91c6041b914bdcd81dc884084b867890adbc8091101c48"
-    sha256 cellar: :any, arm64_tahoe:       "fa9f0afbe42a4c1f9f2cdf6f75cca0aa9b574780ed5e2f3ef4a6ae4c646d9a33"
-    sha256 cellar: :any, arm64_sequoia:     "d2ae1893a8569d6f16a465eb1e9d5785c39f9192a83abcd0d367e5bc13dcd726"
-    sha256 cellar: :any, arm64_linux:       "02f7b9bf697d9b09c1097565393b12c0ae527a885dc54ae1410fb4d5ca61a77a"
-    sha256 cellar: :any, x86_64_linux:      "2d440e9158df9418c060a1907b8bc759957c54c9fcb4f1c87086d15d90ec09ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "5d89260e087bf1ccef94ed51a9d9fcd3bbb18c527adfd3106f6a1b1eb55a62a3"
   end
 
   head do

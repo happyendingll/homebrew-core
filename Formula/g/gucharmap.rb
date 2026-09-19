@@ -6,11 +6,8 @@ class Gucharmap < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "59469221d9d575259b06736923fc90275ab1df0d0ebc8b5a7d087e5d9109da90"
-    sha256 arm64_tahoe:       "768f8db2281a78643978397ac90f65cba1f869e4d13a9f709726c62f53e1efcf"
-    sha256 arm64_sequoia:     "39a493527ba3b0d6ce466726c6444da0dd9e95a82cfc6f710f04200c41d7b236"
-    sha256 arm64_linux:       "5456e835e81ea04bbd349364773cb904b2cd9a036e04f14592d4eef7b4d8ce92"
-    sha256 x86_64_linux:      "f2b8b202b1174996afd75cd28e8ed0cae0e3b22fa3321f807d8c6b115aa5ce28"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "92e37889a04b157aaac2b90e132bb558b2e84cfcf66b297de7dfa37813b285e6"
   end
 
   depends_on "desktop-file-utils" => :build

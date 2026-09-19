@@ -14,11 +14,8 @@ class Koka < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "eb1e4b165a587a815b45f8127b6b8c25142dcfd94adce794d6fd5dcd81b7d877"
-    sha256 arm64_tahoe:       "6ac7623df6083e39385639ee53511a4bc3c946110e527f4b863bf8dcaeb1161a"
-    sha256 arm64_sequoia:     "b3127a13564e8669f177aaa012b3619c983c6a08ba1671f67d1f163e1ffd0c78"
-    sha256 arm64_linux:       "fbaae82d33b0cf0f7dcc3744c96ab85f9501a4ac3315798d39deec6b77258234"
-    sha256 x86_64_linux:      "68d8f40230ed594f2fa530eab0a4e860e9eec302fd1b8bdfcb2a67c6b21bbbf8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "213e7c766c29b934129c9df997e7b7edecfdf34c22d6e05b1e42456677844cb9"
   end
 
   depends_on "cabal-install" => :build

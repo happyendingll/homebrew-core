@@ -7,11 +7,8 @@ class Httm < Formula
   head "https://github.com/kimono-koans/httm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "937e9536209a61f1bc629ab7ca6a4d10ae4e1b3c39154f8014b7536970aab060"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06a9a1e96371482a45cf87044cebc8ca7df154362673525db291f44dc515d957"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2f72e1d233cefe264f1a4f9618792dba605955e80ca7e0bf31077387b5a42eaf"
-    sha256 cellar: :any,                 arm64_linux:       "8c8093a9c667079555b12ef32d26dfd2bf4036874e8f96e8320d81dd7e75d420"
-    sha256 cellar: :any,                 x86_64_linux:      "bde98379a2230dca7f38433924b97ae71789bbe806feb1506d2acd9dd023e14d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a9e1c10c79879e79120dd2e5009a81b3769d6013d13926d41cde0df83c79239c"
   end
 
   depends_on "rust" => :build

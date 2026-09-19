@@ -7,11 +7,8 @@ class Talm < Formula
   head "https://github.com/cozystack/talm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d2e7a55cb595407a36e7ee7f4074d04330ea9419fc896e9fc414163893982290"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "456c207efcd939dc0b0b71b09c8fabae189daf2ebffd0286578d6d87555904c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eb2847785b339d32db17c16c935ea2d15d9274dac8e699094079ffe1a3eeac5e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4aa570dec00c83ecccb275355869f15b150386a8c3be5e7c27cd51830ff2877c"
-    sha256 cellar: :any,                 x86_64_linux:      "27e291b5e74809cacca5224c3d436c9987d14edbeb3aae2269ab2d2adc3bdaea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "644d1ed1137fdd820d2b0428c68bea1b0a879b037dbcb31ebc993c0d61c89f98"
   end
 
   depends_on "go" => :build

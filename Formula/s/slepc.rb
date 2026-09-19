@@ -11,11 +11,8 @@ class Slepc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "05eb379a03cd629d37ed1d07912079ae5c3df3df5d08bc27c72ac6325fe3a9a5"
-    sha256 arm64_tahoe:       "f1bc932b06d91298af4822bb9c8961e1d8d5d27027ab6ec6db70ef928fe17f67"
-    sha256 arm64_sequoia:     "062600909239156ffe850f080d9764683684c8dfa81138a45b96bf86d9f1fe6b"
-    sha256 arm64_linux:       "8b9bf10c8fb0bb3eba74341f5445cc69bd7bad42623dbb3d6f9638613fe4055a"
-    sha256 x86_64_linux:      "4f0dd76f8066ca261c2bbbdbe390ec3ee03d3a3a8bb44d99856bac2fdd409715"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "36c7a30fd253c3a5be2559d295fd2d0835433da42091df49888ad6c98d6211a2"
   end
 
   depends_on "open-mpi"

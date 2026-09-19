@@ -13,12 +13,8 @@ class Kapacitor < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1f1a32167d73ea8962a7da2f05e8215742fd70f3b022df475755c3bba4e84114"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fa5787af03c87a93b12513d307ed38efa320b31f75e894e6da8d3a13b388f99b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eb65e4f7cbdc07bbd6a9716fc0a917a5cc9e860274acf79c5c354a2fb22ed166"
-    sha256 cellar: :any,                 arm64_linux:       "d3f93b7570977c0aea6a26bbd3365f811c1bcd985cca2dc53efd961110d604df"
-    sha256 cellar: :any,                 x86_64_linux:      "6bd4f4d917ec6d108ff379eef10009d77b9d6b4430fc8d65d37e63a7c5baa18e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "66fa5fea9a55c51612c7309c248a8243e025bce1e43e2e8501826018856b5a76"
   end
 
   depends_on "go" => :build

@@ -6,10 +6,8 @@ class FxUpscale < Formula
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4311a88b2ecde390d839f18846834af3355730a9eddb69becfeedb2ca4bc31a8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "716acd22ebfeb3e4fc274d5a6e7a8a46f33b08f1c44a52c1dd6aea8f2e8790a8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7e70bc33a0cd634e64e7d4cbffb3776d3240a6bd43b892c2c2ea128bd673e94d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "915c54fd5c3260a3b7f213b54de693275572e1589bea652e4032e771ccc872d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e505e79d908e944173ad5f61f2249445d123b285c5a400175fd5c1c97890eef4"
   end
 
   depends_on macos: :ventura

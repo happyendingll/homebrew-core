@@ -6,11 +6,8 @@ class Nco < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6b69ff21ec0920494ad538809bcfa4a550e8d9ed87a5fbad1781898696f4ce9d"
-    sha256 cellar: :any, arm64_tahoe:       "691c37e8d1159b11da8ad0dad9773bcf0e6bc5ff196a5dbc253810a7dc31aa67"
-    sha256 cellar: :any, arm64_sequoia:     "97438892cc561ed6b78032d2de7cda7c4a4a622b5662b2491fd7d81ab4180dcf"
-    sha256 cellar: :any, arm64_linux:       "b4efcb45db398f3cdcf8dbbbcfde1cba6a7c81adef7bc56c3535650a6be9bda9"
-    sha256 cellar: :any, x86_64_linux:      "9cee5b1acd581f80a47c5560c239275a465b74707c74c449ad302d58256134b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e5721b37b9720f1b17286591ec62732b06afcb2429e2b39884c024bd50dac935"
   end
 
   head do

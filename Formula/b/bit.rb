@@ -8,12 +8,8 @@ class Bit < Formula
   head "https://github.com/teambit/bit.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "05ca9828a0854f2524ed1e74551c7a767d4be7ce742c5d6b4a208c2879bfe2b9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "05ca9828a0854f2524ed1e74551c7a767d4be7ce742c5d6b4a208c2879bfe2b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "05ca9828a0854f2524ed1e74551c7a767d4be7ce742c5d6b4a208c2879bfe2b9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1cc4d6b68d102e7b498e32b58c13c7ade59c081f9df581304c3cfb4b88e96e59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3d483b7235678b0143df74d0819f144eb673e4a1cc2dd66edaf1632c68cc4b57"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f0c5c79cbf6a4dc9da4fce71442c05749eb3e39553cec3866b332f67b63ad427"
   end
 
   depends_on "node"

@@ -11,12 +11,8 @@ class BazelAT8 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c3ea5706d55f5603fb33ed78a8710d9b09197cff2fd10fb535ca1df3b44b09fe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "126644ea64dd3a8408bc465df2e699f7b440dda31886290669f27e03172390b7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "818adf6c106cd0fddb3f50e80f3f8c9eb28c80f0f6825f980670ce0c6531def5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a2968e2f6d4a8bcb7a0674316635f6ac518908ce1c667761c7cd2fe0fdc9f13d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f9c79b77078ecaee02388883820309d7a9a13216b54b9fcafae91c428a19ee7f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "5b052af1672fd4368fe64d554971b62bdc09b88e131e40c967eb003ae1e3d0b6"
   end
 
   keg_only :versioned_formula

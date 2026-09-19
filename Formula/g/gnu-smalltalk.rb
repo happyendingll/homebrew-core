@@ -18,12 +18,8 @@ class GnuSmalltalk < Formula
   end
 
   bottle do
-    rebuild 4
-    sha256 arm64_golden_gate: "946911395ee208cc47695bd6451fe03afcd4619657b15ee3154f4c72fe55fc35"
-    sha256 arm64_tahoe:       "1935af530752ba55c1e8bf8f78fb342ef198ef1b5341c1513b7455965a471f1b"
-    sha256 arm64_sequoia:     "06e05353ca26a07e110fcebac0fb9276ce3ba2a5db94460e427b4faa4bbdff24"
-    sha256 arm64_linux:       "63970f55e4a310e87ef69229c1697d9d86e36eef66ee206de490ab36e436e648"
-    sha256 x86_64_linux:      "b368bc7382d041b256856c7cdb6335f640f20931c925386cf672563e308cdb6b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "334c35d0294ce8132c3f5b49acb10ad51e85eb6db925abfb0d0ac2f495875b0f"
   end
 
   head do

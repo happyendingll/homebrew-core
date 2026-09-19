@@ -6,11 +6,8 @@ class Sanity < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a36deecd4cb6023d6d8a49cb75650c03edca7a17f630577dcff38cfed45abc81"
-    sha256 cellar: :any, arm64_tahoe:       "a36deecd4cb6023d6d8a49cb75650c03edca7a17f630577dcff38cfed45abc81"
-    sha256 cellar: :any, arm64_sequoia:     "a36deecd4cb6023d6d8a49cb75650c03edca7a17f630577dcff38cfed45abc81"
-    sha256 cellar: :any, arm64_linux:       "14820996bd81c8e3d7857aa6c64de38923af562292c350a8c49068a1e8d3a205"
-    sha256 cellar: :any, x86_64_linux:      "d12f675e26ec165b0defd8c103df9944d6117608cf31d9440d58ffb788e9f9d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4368d1084c8a2454cb86d35abbc3523efba292f6457f99059147e61959620a17"
   end
 
   depends_on "node"

@@ -6,12 +6,8 @@ class LeappCli < Formula
   license "MPL-2.0"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ecc6de45eedbb13cdfd6657b15eeeb24ef368d4424c70ee3537d659cdc401c61"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc1e7ec357d22e8c68abcb8f5b2621df647bd6a08e1c4bbc5a728ffee04c0c3b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "94ed65f571e7a93cafbdfd13e3c48a5d2f8124775e4362267391f181099d66f9"
-    sha256 cellar: :any,                 arm64_linux:       "a199c8d0df81843247b1bf519763fdde8c7d061465ba43492ee7271ef75b960d"
-    sha256 cellar: :any,                 x86_64_linux:      "70795892174769c47f4fcf3bb8a44682054f626800df115138492b7c51d12f02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7f26fae512534cbccca6cda6fdd7c387016c0ef1acfa4a82dc5924bfdbdafcce"
   end
 
   depends_on "pkgconf" => :build

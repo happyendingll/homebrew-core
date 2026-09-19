@@ -8,10 +8,8 @@ class Gfxutil < Formula
   head "https://github.com/acidanthera/gfxutil.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bc3d312f7b33ba6e153ebfc22111d8f5e8037a80ff0d78613debf8a46fe10335"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8ee145a2ebb496024e4028f02130c629f532c35f630090b9f4d94dbd3f2fa1ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4e8ea9ec58fff7c3186cad6cc50f50a8af31be3d5f9694191fb9e92671ba6d3b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1b474c319e4dbacc7912ea7351aeb05cae012d573b4a075aa23c215c016691d3"
   end
 
   depends_on xcode: :build

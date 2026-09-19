@@ -9,11 +9,8 @@ class AdrViewer < Formula
   revision 7
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "15258fc5d1ca3f2218fd2cf890743e2d141a0b730da94ab7d0f5fd2aa972611a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "03e40a5c62d38116a9643488b29ec7e70bb1f075d258b601ee6de23bbdf57023"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7123a0a9225d152b5c518595cbd35bb67f7702bd84de0e5a27fe16fd8c4bbfaf"
-    sha256 cellar: :any,                 arm64_linux:       "5987be469ef36b191db448a035971f6fa8d9445d7cc8c904eacf02629fa61d68"
-    sha256 cellar: :any,                 x86_64_linux:      "8123ee292ab1b562fe76965fe14b1bae581ccdd355aedb01d28375d1c806f37f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4caa8b960cd3d5d6e9ee8ab1c8ae39da0b5fa700c997c63b9bc503281244c40"
   end
 
   depends_on "python@3.14"

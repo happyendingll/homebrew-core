@@ -11,11 +11,8 @@ class Pnetcdf < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0b71509e01f93cc7e846ebfbd5141c75bbf673c77155026cc79c27771ffa2482"
-    sha256 arm64_tahoe:       "521e5af7ae603eed617aa27e55fab4459944cf0d81393537759295c1e959e487"
-    sha256 arm64_sequoia:     "26c745ad7dec7dcda1ee1b5ade59a545bed659d2a0e30b8df27ac7f18c104b87"
-    sha256 arm64_linux:       "4845d6748856a9f7b8fae2eba47ad5bc7b1bbd4441d1ee164ef0d7586ca7b9d6"
-    sha256 x86_64_linux:      "a19b3da41ab1828ed5751fe1ea82b966d4c4b1b7913ba28a2c8f40360375b2b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "740e013fb9549d19562fe63d84274d02198a64abe2b3669268de3521d74a04cc"
   end
 
   depends_on "gcc"

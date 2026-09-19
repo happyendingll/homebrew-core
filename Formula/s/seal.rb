@@ -6,11 +6,8 @@ class Seal < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "851e669eb9202efc8aece886fda2a7e1804bb82631817823664995af08f0853e"
-    sha256 cellar: :any, arm64_tahoe:       "c525aa8f6d53a5d2b85815e6e8ce6d7c00e1f814f49f4eca0aed1aea526e833d"
-    sha256 cellar: :any, arm64_sequoia:     "03699d9c9e1223b3e56c3c785ddb24661bc52bbcdf5b9d2367886bab1450bc0a"
-    sha256 cellar: :any, arm64_linux:       "621fbe2a04c3b4199314c6bbd4ae28ee3cedb68e5303f1f98aeb9707136419ed"
-    sha256 cellar: :any, x86_64_linux:      "c687af894a00b991289fed3e8b1bd1c71d4d5a4ac71af755c86825b0ae35432c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "716b3918a7115865fb96c39065f28e485ad23c5bb87578e0a456834d3c780d71"
   end
 
   depends_on "cmake" => [:build, :test]

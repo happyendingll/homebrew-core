@@ -7,11 +7,8 @@ class Wgcf < Formula
   head "https://github.com/ViRb3/wgcf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d0e2d555e79664fac01a85744fe85d8883f0b5c0902058b893300105c6237f75"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d0e2d555e79664fac01a85744fe85d8883f0b5c0902058b893300105c6237f75"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0e2d555e79664fac01a85744fe85d8883f0b5c0902058b893300105c6237f75"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0920d67e80fd996ea86c9d0eb483bc722afa0bdd7bfb3a84f9456a12c6c6b4b6"
-    sha256 cellar: :any,                 x86_64_linux:      "de34cc84f8978219d35a383f1732a2905e8410548db10f52102e8778d05d0f93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e9fd843741e442b9d0f2eba186007b9b5da21a1d60641c2d24eb0ade0144aec1"
   end
 
   depends_on "go" => :build

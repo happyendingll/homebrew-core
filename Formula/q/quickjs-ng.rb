@@ -7,11 +7,8 @@ class QuickjsNg < Formula
   head "https://github.com/quickjs-ng/quickjs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d16d3608d538b1b61f2fbc062a117d88dfb1f2857b99b43867bfd064d57ddebc"
-    sha256 cellar: :any, arm64_tahoe:       "87f8466998b94688d6991b40c1682f9dc44d1c83ea8d6fecee2e15eb00288983"
-    sha256 cellar: :any, arm64_sequoia:     "3b7ee057b20abf6a32ce66387946cb95037446c820032e9d9e2b7088f28e87a8"
-    sha256 cellar: :any, arm64_linux:       "ad399022c60c13a8b1bea2c72ef6dcacf6de9c46ce0b0d420fdabc621e39cf84"
-    sha256 cellar: :any, x86_64_linux:      "a8882caaf9b102caeccfa98a4cdbcb549ffad6fc41cefdf1fc6a247f26cb424d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e6801483007c0b84007fb609872fc69ac6a6e114173ac5a260dfd20ed5b25f7b"
   end
 
   depends_on "cmake" => :build

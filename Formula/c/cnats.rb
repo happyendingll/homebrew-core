@@ -6,11 +6,8 @@ class Cnats < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c0b48c772a713bf986e7c0ed1b8c4d95dcb5c775034d37537026812d6dff0d34"
-    sha256 cellar: :any, arm64_tahoe:       "b12e05c399c776e78a6b088aad44019cf55eee0c27f250c96bfb34e5eaa681b7"
-    sha256 cellar: :any, arm64_sequoia:     "453efb871697b97b47c507332fd4f187d94af33ac88e9269af5729ba5b29818d"
-    sha256 cellar: :any, arm64_linux:       "7b35686110c20daf884ae3a3f73892f03f0df14fbf757c6971c0c3d0ac7d31bc"
-    sha256 cellar: :any, x86_64_linux:      "66e637912b64ecbc22701a8e8d12765bb43beef917623579f4c7e9bf394f6839"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a9da58373db0d12380ec49aa913e83af8f1307c191e483bd06a0e2334e4cb21b"
   end
 
   depends_on "cmake" => :build

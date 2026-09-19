@@ -6,12 +6,8 @@ class Flyline < Formula
   license any_of: ["GPL-3.0-only", "MIT"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0105da97bf3a4d777ab9068195ef9e83ed5877f4281da8bc0511eda03e960670"
-    sha256 cellar: :any, arm64_tahoe:       "a4cbb3e7da4f542ead5e3d59cee81b9688bb1155ca59497027c456a31208bbff"
-    sha256 cellar: :any, arm64_sequoia:     "4c3e5bd746f6a9b2ae1528f03653637615c5b0c3aeb67ea748bc79f582b03827"
-    sha256 cellar: :any, arm64_sonoma:      "5f4e819931f41e8b7375f83c1b7ec0f67d5cfab4cea3c84ab3469481f50c5317"
-    sha256 cellar: :any, arm64_linux:       "6961edc2e30d740913af11c388c5f60a3166d6f6bab6b00d1f73fa821961faaf"
-    sha256 cellar: :any, x86_64_linux:      "d9e9f3be418c845fb3153c790920ee34dcc5cdcc4b4818d21ddcb7e7046a2c6f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "290bebc22e8124e1538c40730c36dda16ca7173ab3b249cbec4e846449b8b9af"
   end
 
   depends_on "rust" => :build

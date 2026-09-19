@@ -7,12 +7,8 @@ class SqlLanguageServer < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "90f006d732780a385cdebbdf4c195f5e66a35f43c976552a95ee8a5f155ccbbf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "90f006d732780a385cdebbdf4c195f5e66a35f43c976552a95ee8a5f155ccbbf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "90f006d732780a385cdebbdf4c195f5e66a35f43c976552a95ee8a5f155ccbbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c99d2ded8d6c79b2e93fd2ea3d65ce7d2a61d8c248f70dc86db6dfe5f2692193"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c99d2ded8d6c79b2e93fd2ea3d65ce7d2a61d8c248f70dc86db6dfe5f2692193"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "df73b9de0171c8a63d4db19eb555f3e95c133528615569b7756f56be11b6acbf"
   end
 
   depends_on "node"

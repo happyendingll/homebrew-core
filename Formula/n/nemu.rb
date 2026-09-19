@@ -6,12 +6,8 @@ class Nemu < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "ada86ab170e4c827e2c841ec4c96f3ec2274c7ee4288cb1a21913eabb02ea174"
-    sha256 arm64_tahoe:       "22d05d93d1deb46f0103f7cdb6ac44697bb3e5494b2cb41cd37f675d860453d2"
-    sha256 arm64_sequoia:     "fa5178f8c869ce40993be28a1410ea7b7bb77c16cd2b6bc9abb4592bf1964c11"
-    sha256 arm64_linux:       "265283a0c431a5ffd015104a6b0936d65bdb86b1669f88c8ddbb837609d07750"
-    sha256 x86_64_linux:      "cc70ecef5271f8e8aca65da93e205e44a46ac692394110f1c81b08802f2a1931"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "e474bf4e20189c5d4530abde4228aaa80424d0e1515de7c4c89db39a4e1c0917"
   end
 
   depends_on "cmake" => :build

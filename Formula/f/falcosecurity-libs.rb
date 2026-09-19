@@ -15,11 +15,8 @@ class FalcosecurityLibs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "922d408a33447e4c3a6b51a6cd59969e1ae2e5779975685239269ff541399484"
-    sha256 cellar: :any, arm64_tahoe:       "5d2d5c7501403438edec87aec5c30f5fd1de64cf0be7b52f6f2572f7d88ec651"
-    sha256 cellar: :any, arm64_sequoia:     "31f3f8d42d7f4297cf0a2eec9545d94875d58a695ddd2a7bde50ac1ad180a1b8"
-    sha256 cellar: :any, arm64_linux:       "5aa9f8aefce14c14c367bf704eb8e5151dfe33adc01f143cb4b3b30fcafd87a7"
-    sha256 cellar: :any, x86_64_linux:      "42a48f95ca822d8711c2fa126c17fad5c4a3b47e29310a9fad1b5ae8b78dc092"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d8b41d5b23d610f8c01dd3e9b732c4273817b15932a47f004943fe62121eb2ca"
   end
 
   depends_on "cmake" => :build

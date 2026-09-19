@@ -14,11 +14,8 @@ class Clifm < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e1cbc3fe6bbeb42e4be4bed591ea19947e17180fd1b9339b54b22d5fca2f6243"
-    sha256 arm64_tahoe:       "f0ad9c9ebb953ad5cf1e1cc4bbd2541dc40f190cc26307d27ad210a049eb8f22"
-    sha256 arm64_sequoia:     "a1102226d22fd8768f6e5fdffb32b83c249d45cd6bbb7356f7c5235e57bf3193"
-    sha256 arm64_linux:       "070825355117bcaa233e007b490e45f43bf9ec2f74715f7b2a7cb8a6bddbb1b1"
-    sha256 x86_64_linux:      "464438b7230264085f495d22fdff402e5ec19fd5e8725901dfd786177cfc2a18"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "950ea4d676be0ed93645494f2ae29b971ed7e1fa7d1b6877d696b6ff7704ecb4"
   end
 
   depends_on "cmake" => :build

@@ -6,12 +6,8 @@ class AskCli < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ab899bbb64905b1630d5542bc9e8dbf7d1c8fbb9191b2982c22aae447520327c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ab899bbb64905b1630d5542bc9e8dbf7d1c8fbb9191b2982c22aae447520327c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ab899bbb64905b1630d5542bc9e8dbf7d1c8fbb9191b2982c22aae447520327c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "276f13320ff6fa486d1ae63083e75c5e92ef62113ef8bb7421e7984d8a4b3239"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "276f13320ff6fa486d1ae63083e75c5e92ef62113ef8bb7421e7984d8a4b3239"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fbd9a39320014bcce65c042846dd0d428c96f34d351ce6b6c76646c2602cbe23"
   end
 
   depends_on "node"

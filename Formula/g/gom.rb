@@ -13,12 +13,8 @@ class Gom < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "ecb897fa8aaac867d2e94bde956f9ecaf66dd82a235e90bfc8df4cbc4b311193"
-    sha256 cellar: :any, arm64_tahoe:       "b1a06c108f5d6825a633479cbfafaeb84b782489daf60a6e82e255a1b8870672"
-    sha256 cellar: :any, arm64_sequoia:     "5545021b60c1d4c427fa27a311d7b4800eed86b3c328534cd7ef7c6f354ea83b"
-    sha256 cellar: :any, arm64_linux:       "ec9e7993c9b8320781af9435430cce0ed594dd55d23e7e5ed5f90532f86011ba"
-    sha256 cellar: :any, x86_64_linux:      "3d6903358a8e8471eb52e99c18f20ea4c2a2792e449270e0769450970c6e7274"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "5f2f6dcc7055f77d9cf88906fb2f244f447b00bfcb70a28198c154c0a322c072"
   end
 
   depends_on "gdk-pixbuf" => :build # https://gitlab.gnome.org/GNOME/gom/-/issues/18

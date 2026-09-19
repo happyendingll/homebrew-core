@@ -9,11 +9,8 @@ class CyclonedxPython < Formula
   head "https://github.com/CycloneDX/cyclonedx-python.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9ce13dab13d4ff306d4828c6ff2e390a490fdf7d49e16cd3d56a5a82019b0a5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6efdeec97400aba6f37352d53ee2bc961b899f3488415ed4e31b26181f686f59"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0e6a282ed9c9323713b0fcb7b04f022b0fbc730731f3232ae73bb019b6dea36b"
-    sha256 cellar: :any,                 arm64_linux:       "54b20b3cf7d59e0179f8177e4912a2a8d155870931dab4024a0eb912e5e9a228"
-    sha256 cellar: :any,                 x86_64_linux:      "b929f6ac923bdc3d520f3788a8b8d548e32aaba4ee657739e6fd60283ad6bbbe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "50e9d5e282da42534f8dc3df719012beddbae7f7af499ef27af8f9213a419050"
   end
 
   depends_on "python@3.14"

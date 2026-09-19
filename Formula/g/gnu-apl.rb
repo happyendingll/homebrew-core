@@ -25,10 +25,8 @@ class GnuApl < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "415920b4c553171c5a0eceb1953989049b462e4134daf8e04cb7209fa267e8c7"
-    sha256 arm64_sequoia: "066f0d40a60f92a1d7f4b0fd5aa8d18012c976ec7cedef011f2979ff7cea2176"
-    sha256 arm64_linux:   "5dc6f9e6a8c99d7df7fd81f25083490892b7e6355521a2687d2a8492b75c9b23"
-    sha256 x86_64_linux:  "a5550e649fd32123c5f133bf0b4b28ff3ba2a94102625a96d5621a48a35c6cc7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a0b66814487187afdfaa2aa349cb7ffa4d68f019f9ab205fc3e58881f4224005"
   end
 
   head do
