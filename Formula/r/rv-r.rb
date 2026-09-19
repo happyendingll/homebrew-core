@@ -18,6 +18,12 @@ class RvR < Formula
 
   conflicts_with "rv", because: "both install `rv` binary"
 
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args(features: "cli")
   end

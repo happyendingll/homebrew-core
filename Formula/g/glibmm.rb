@@ -6,13 +6,12 @@ class Glibmm < Formula
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
-  # See `glib` livecheck
+  # This regex is intended to avoid the `Gnome` strategy's version filtering
+  # logic while maintaining the "even-numbered minor is stable" behavior, as
+  # minor versions >= 90 are still stable in this case.
   livecheck do
     url :stable
-    regex(/glibmm-(\d+(?:\.\d+)*)\.t/i)
-    strategy :gnome do |page, regex|
-      page.scan(regex).select { |match| Version.new(match.first).minor.to_i.even? }.flatten
-    end
+    regex(/glibmm[._-]v?(\d+\.\d*[02468](?:\.\d+)*)\.t/i)
   end
 
   bottle do

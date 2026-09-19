@@ -6,8 +6,11 @@ class Ccusage < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "9b6ea4185e8ac3223c8f0950b1f28dc8718a2c8727ae5370a1daca54128f9f3b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d85125f99e1fcded832b25507ecde4c9f91def8c73a9f2ad72b1e6a9e6161280"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "557b98b6bdb2d49dc683b5d3644bde57f3c59216cb6321a05522b025b9d97e9a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4dc971d28fa21d5e7af44952556bf0c184b1550acfca3191e570a1791dbb5159"
+    sha256 cellar: :any,                 arm64_linux:       "d35c414649920e9779b4fb30eb87e05ed87a8d611dcddfefb2d81a881c66e21c"
+    sha256 cellar: :any,                 x86_64_linux:      "1e698f3864277cb152344dce7d668c11f9d13aa231fe115bbb2bca2456413921"
   end
 
   depends_on "rust" => :build

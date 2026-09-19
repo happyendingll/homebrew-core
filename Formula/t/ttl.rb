@@ -16,6 +16,7 @@ class Ttl < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+    generate_completions_from_executable(bin/"ttl", "--completions", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do

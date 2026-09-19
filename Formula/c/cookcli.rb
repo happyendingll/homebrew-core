@@ -1,22 +1,31 @@
 class Cookcli < Formula
   desc "CLI-tool for cooking recipes formated using Cooklang"
   homepage "https://cooklang.org"
-  url "https://github.com/cooklang/cookcli/archive/refs/tags/v0.35.0.tar.gz"
-  sha256 "413aaea997cdc6afe5ff122d5673733aea2ff6314173342235b4e7120ea1c276"
+  url "https://github.com/cooklang/cookcli/archive/refs/tags/v0.36.0.tar.gz"
+  sha256 "868ea0e05be14bce98e4cc89028e3a5d8a3fc6b2131b10376103db8a46b644c6"
   license "MIT"
   head "https://github.com/cooklang/cookcli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "384c358d1d2c118903f9864df2d10cb1a120dd32a9123cd3f5447034337e2399"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a4a5120ce441297f2bf0dfd45553f43437b1130aded552d659a8890dfa7691e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "458efaaf7c89989189b3fe05ac2f9c73b045fd4dc4bb686050e680cc93f9041f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2d9e31f0f7932b1455ec3f1cef8bbffc96ddb292aa87176d11b2958c5c34cc3c"
+    sha256 cellar: :any,                 arm64_linux:       "5accf14a2848e5bee29c2d6925659f5646bbbd6122ab954e2afdf2f8f3cc9ff6"
+    sha256 cellar: :any,                 x86_64_linux:      "d9dfdea5cb6ac996f27af217cd323621b4a827374d7601379d71f08b9347a279"
   end
 
   depends_on "node" => :build
   depends_on "rust" => :build
 
-  def install
-    # Install npm dependencies and build assets
+  deny_network_access!
+
+  def fetch
     system "npm", "install", *std_npm_args(prefix: false)
+    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+  end
+
+  def install
+    # Build assets
     system "npm", "run", "build-css"
     system "npm", "run", "build-js"
 
@@ -45,8 +54,7 @@ class Cookcli < Formula
 
       ## Steps
 
-      1. Crack the eggs into a blender, then add the plain flour, milk and sea salt,
-      and blitz until smooth.
+      1. Crack the eggs into a blender, then add the plain flour, milk and sea salt, and blitz until smooth.
     MARKDOWN
     assert_match (testpath/"expected.md").read,
       shell_output("#{bin}/cook recipe read --format markdown pancakes.cook")
