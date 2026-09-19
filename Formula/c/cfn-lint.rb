@@ -8,11 +8,8 @@ class CfnLint < Formula
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ed7f281dc210766b89790c3e83b267f266cfafa6d75b81ba1305d3eae9b9990d"
-    sha256 cellar: :any, arm64_tahoe:       "16d3b12c6ffd3cb27710adfaf280ae7e381b83e5d7b29ec2453c0ef5638c8f0d"
-    sha256 cellar: :any, arm64_sequoia:     "c97dc7af10dd92bc34c26673a49f178701c0b5cf3f00e3c9239e4f4d72f76453"
-    sha256 cellar: :any, arm64_linux:       "d88c2d47d84598c348112948dfe1e942e3fe0ee5f1ff5d9c51f69abde0b21eda"
-    sha256 cellar: :any, x86_64_linux:      "b1407bd9ecabfb150705ed3328e7adbf268a84bd70ed2d2c88a98f9fc301f5d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "fa1911aee968311b66b8d349539aa4036bf241fce75e9183e08e3198201172ce"
   end
 
   depends_on "libyaml"

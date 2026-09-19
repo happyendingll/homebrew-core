@@ -7,11 +7,8 @@ class CargoGenerate < Formula
   head "https://github.com/cargo-generate/cargo-generate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a59646b1430768b26e15559c4af6b4dbffd13fd671cb760dbc67801b9b34774d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "086df390b02c840d1dccbb8c51dfe65f48f0965021e6294500e2140ae6398bec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6651701a20cb037bc0db288371fbad115f37f6d9d5832fe75fba779a54551ccc"
-    sha256 cellar: :any,                 arm64_linux:       "64b9ebcf373d66035d014a3d6108a70fcfab17573eeabbc8430d3c5dda8235f4"
-    sha256 cellar: :any,                 x86_64_linux:      "b1b934f16e6137cd047c7cc5e92c4cbd783c2b0b5f1eea6f0d4adcb7fb1d8841"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2b66a81bc9ee0417c4bb1754c81f5753bbef28c7b566f2c475642c53922a3af5"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Zuban < Formula
   head "https://github.com/zubanls/zuban.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "44f56bd96874e552a8901e65c7aa6e393abbb7c0c07a91dd2e01405db26bb39a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bedded60441bcd5c80d7a6f8569a1815921edf25ac19bc8be00a66d0f4962b61"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "76def94832f0ca408ebcfe7d48b156342557bac5d119222c3c61b28344498e0f"
-    sha256 cellar: :any,                 arm64_linux:       "c0eab74c1361f4fa021100605ea625e6466c264e2ca1869ffad47af4edfefcb1"
-    sha256 cellar: :any,                 x86_64_linux:      "e75b29203145732eaa07a5bf90c574b1d4199662a328b6f5138240d95251dfb2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "c75e4b988da7d52f9573664989c9458f675362d2c4ed97a0e71f3aab7643bd34"
   end
 
   depends_on "rust" => :build

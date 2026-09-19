@@ -9,11 +9,8 @@ class Azqr < Formula
   head "https://github.com/Azure/azqr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d42ca303ec70706aa6f62099a22979261b7d3b2c37997b8d68a2a13df515a6d7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d42ca303ec70706aa6f62099a22979261b7d3b2c37997b8d68a2a13df515a6d7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d42ca303ec70706aa6f62099a22979261b7d3b2c37997b8d68a2a13df515a6d7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "83c0ae2c293df13d75d6dd6c09043436977d3ce1ee278dbd34b4f30ffbce6aa3"
-    sha256 cellar: :any,                 x86_64_linux:      "6d32e29eed828580472273d1276fd3f141f017c1dbd3471a2a1378d61554ad9a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "be2d02921c506463a094345cc223b429c6c011db0734a99e8c69810bac57fad8"
   end
 
   depends_on "go" => :build

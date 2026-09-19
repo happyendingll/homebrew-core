@@ -7,11 +7,8 @@ class Ty < Formula
   head "https://github.com/astral-sh/ty.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "091b904ab53457c6275e41b72a8bb45e963cc4568940d0c7aead4f12c2fa9ebb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0852f0af878c7dcbc0df0a7a88c8b67c9ec3654e5ae7eae612b508f3d5d05892"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db9be1151fa2acd7d6c8a7ed0caf0b8fa3b9e24b031c4302d10747b24fe6ef8b"
-    sha256 cellar: :any,                 arm64_linux:       "2f8a867fd06cab726f326ca593bb0802d94340af096e32ec36180ebfc7400fd9"
-    sha256 cellar: :any,                 x86_64_linux:      "73fa8fec665df6d765bc3ca836b7898e4066a9f1e78ed1ef6bdccc5aeb1b965b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "83b3a5ed09b5c389c6251545c088bae83768cc1f8b379e0a872a950d272224ba"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class GitCliff < Formula
   license all_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "69fe771ba746247b913c4ed681cfe1ccba1f5025ddbf22b49832436c0c48f7a3"
-    sha256 cellar: :any, arm64_tahoe:       "87cb3ecf594fcb3d633860459dae6d4ab4951d1cdd2bd2978fdb58099f9022a5"
-    sha256 cellar: :any, arm64_sequoia:     "f02241c6a9253453eaf643ce75f4af6b53f6f3fd7b3483a3643a5520108396d0"
-    sha256 cellar: :any, arm64_linux:       "6baddeabcdac191f5f9f01e8f6c0330ad120be102dff6652ce76b5777af11338"
-    sha256 cellar: :any, x86_64_linux:      "4e9cf54718d4d615e0ad2c4a47a2066aa5b8ed338a72518811279cf9f9a841bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "5a48d781906b998036ed22ef6382cb0e6a0981823c41d8ca74e40d8a47edfad1"
   end
 
   depends_on "pkgconf" => :build

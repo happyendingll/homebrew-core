@@ -12,11 +12,8 @@ class UutilsCoreutils < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6dd3ee75ae24d92be1afaee6243d360e72f3d5282e35816cab707e0edeed825"
-    sha256 cellar: :any, arm64_tahoe:       "1d05013da1b606a9e411c5527f7145480a217cc6662e0d81f866d116b4e8aa3b"
-    sha256 cellar: :any, arm64_sequoia:     "351f88ec6c0251f40877e4a274e5f9643d6b922d6ad372adafc00fd03f99b621"
-    sha256 cellar: :any, arm64_linux:       "87a61889e18c16cacc15858cf7df59e299e77c324e0768d4ec2272f1b7e9fba1"
-    sha256 cellar: :any, x86_64_linux:      "38950d1ada2c3ace4236f32830bc65797a95d2eec8f544b50893ce5e0c32e13b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "00850c3522188a8b36f95298c90ec3c9b9665cadbe64c81d4900158475197587"
   end
 
   depends_on "rust" => :build

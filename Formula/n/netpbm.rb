@@ -19,11 +19,8 @@ class Netpbm < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "2fd7307fa5a703a288971d7b38efb217c912b5da90daea0b114d2e555d2e554e"
-    sha256 arm64_tahoe:       "acb9284d843ccbe3667b976bbba3cbe5a295dcc281853cbcd91962abb42452d9"
-    sha256 arm64_sequoia:     "292e1635e563dfe22f4103d5f5313f4ea912f0cfd8b5814a70a64f8f99acc1e6"
-    sha256 arm64_linux:       "bf8ee82e9d646f6a75b0e369b9e1a002cb74134a48ec3b4cefc4c10a2c57679b"
-    sha256 x86_64_linux:      "d234463812ea8bfe30df940ee2732a622366ac4ade33216865b3edd86aad123d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "ef30b75c394c0339a6ac62fcba9ac748f3d69d9fdf028bf7b643f9f8947328d7"
   end
 
   depends_on "pkgconf" => :build

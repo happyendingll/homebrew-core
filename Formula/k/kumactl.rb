@@ -12,11 +12,8 @@ class Kumactl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "94df930427857df2e9af883ad8601c8121d055926b44224b8c5b84f665f2d683"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47672a3a38e789b76d59d5a852940b52ca9d8987615e3a98c34deb60929cc68a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82d5f3438bf255c12d2bd26962d22348465993ebd32077355a80c88654b9379e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "688bdda9672f96d2ace62ac4e85175de1cf8162e9fb0283d7479d82565915fd8"
-    sha256 cellar: :any,                 x86_64_linux:      "5b907d1909f66ebccb05cb90328c043ba57e9ff8441e3a93fbc7a45568cf975e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "cede7ddfc8dcb649bb5f2fb95ca24e84916bcac0d1315c2a1949b31ac52bdb7c"
   end
 
   depends_on "go" => :build
