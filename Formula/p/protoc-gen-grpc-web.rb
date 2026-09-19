@@ -12,11 +12,8 @@ class ProtocGenGrpcWeb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7b480d8c9ac120c8d3ab6dcf16f710e81fa4b115315d4f62a23bc83a450d7134"
-    sha256 cellar: :any, arm64_tahoe:       "c5a5f47de93304b3ff6bc9e2984050d9b77b8dd3b57a95e37829d5ea1f755087"
-    sha256 cellar: :any, arm64_sequoia:     "7634c36aeb6a590b8a15bbd7d470db5536371f2b08e3822588ea17d228ca080a"
-    sha256 cellar: :any, arm64_linux:       "d9f05205809785a209a69a1b26cac5c5ea4ab20f833655dd227b6ec24a9f91b7"
-    sha256 cellar: :any, x86_64_linux:      "f9461b2657bf5e50f18c49ec50ef91a6b32a3a291645fb42e73a73cfbabf8c77"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "456cf6c9379077176f48e4fdc077e56922be26e66f82a16f81633f4a56c31bbb"
   end
 
   depends_on "cmake" => :build

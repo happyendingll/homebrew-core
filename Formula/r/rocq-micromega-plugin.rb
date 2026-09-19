@@ -12,11 +12,8 @@ class RocqMicromegaPlugin < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d6ada3d5c0ca2dd30bfb3d3bd4e170e1421309b902eeaed96cf6962375b22bfb"
-    sha256 cellar: :any, arm64_tahoe:       "e3b7e603ec115bdb0fc407fb742b0e3bd865e2a7a3f15ad9cae5d19092e5c615"
-    sha256 cellar: :any, arm64_sequoia:     "1a67d62f01d5a865bd879f9683fc33674b58fe0c846204b68db99faea7360e89"
-    sha256 cellar: :any, arm64_linux:       "cc49aa8e5ab6f3f8a72761cbfa43cf78067b536e15f7766698c0feeede2d748c"
-    sha256 cellar: :any, x86_64_linux:      "8bba083d3e93bbc504d526208477edac76a0dc9dd7799157412e3b927093fc2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a74757490b38480bea7c4f3466d6f0cb83c76e49184b37d01bebce4b129a5a2e"
   end
 
   depends_on "dune" => :build
