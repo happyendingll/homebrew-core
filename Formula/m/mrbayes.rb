@@ -12,11 +12,8 @@ class Mrbayes < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2198adef427b45f96b95d14dcba9b9e30e857f643212e96c4c3435ee9e48d774"
-    sha256 cellar: :any, arm64_tahoe:       "c9871b950fc0607aaf979461cf5d067c01f670f8ebac0ceaa9ee2be6d5c2faf4"
-    sha256 cellar: :any, arm64_sequoia:     "85913540941f7795ca1dffb21cda7a1b13f4966bbe45efff26283a412fe2e363"
-    sha256 cellar: :any, arm64_linux:       "fa29744a5aa6b88758e48035f6f5e02507ef0161d623b72f7f415921c2dff1c8"
-    sha256 cellar: :any, x86_64_linux:      "1d68660d7a570f0f14d90c5dd10cc198e6e086f7742680adceecedfa9bd5869e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "72cdecb0a0e7bfd1fda042a9da265edd0b248cd7d655980d6aca15cbcd00b4af"
   end
 
   depends_on "pkgconf" => :build
