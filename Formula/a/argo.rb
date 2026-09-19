@@ -8,11 +8,8 @@ class Argo < Formula
   head "https://github.com/argoproj/argo-workflows.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "05e601b8cd3b57a43b68a0a1b45a794c99924c58cf2569be3641d43527dc7ffb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc04688f5895b1aad0cf12dfa9ec9426bbc9f7f70606661032bf6668eaa70e07"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0c5aa527c6db73e0cb948a509195f864ceb7fbf38ba1ab3405b2f1d5608bf1e5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "63f0e4f565c1e8f33e441262695424112efbfaf8693b356aa942196f6575ed39"
-    sha256 cellar: :any,                 x86_64_linux:      "c267ceb262abc613aea5b41930b47b068481989a4e86ed30257549de13d59549"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "708e843763d719c2db69661c4f7e6dd197d7fa005ddb125221210054135913b4"
   end
 
   depends_on "go" => :build
