@@ -11,11 +11,8 @@ class Soplex < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c2ae4c15de4db6494a960143f7c16bf8f9a3f297dfff54b21a620f54a0bfa799"
-    sha256 cellar: :any, arm64_tahoe:       "eac15c7cba992d07b176eaf59f148fe574cc41b9a65dfe26c515146588bd3ff5"
-    sha256 cellar: :any, arm64_sequoia:     "58bd2205aa57bb30bebc87bfa158895c4babfb015813cdda9227c5a50b3fb646"
-    sha256 cellar: :any, arm64_linux:       "af25fc2c56ba32006dded4a0f56a5762675a274bde8de7dfc2349d32301064cf"
-    sha256 cellar: :any, x86_64_linux:      "ab09bb5a1b033da0b6c9d430f3d90b902108585d6a3d51723a81a90fb9067d0f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "16396c37a8dc8d20ef5475a4b4054c03dc5a27ebdc90e3e4f85a07a9f52f18e6"
   end
 
   depends_on "cmake" => :build

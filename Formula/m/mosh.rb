@@ -7,11 +7,8 @@ class Mosh < Formula
   revision 43
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "acbfb8dfc2449b4ef45e487d2f9c7823da349d754f7b51a7d5c2c9d4670157d8"
-    sha256 cellar: :any, arm64_tahoe:       "430fb1dbac65092068c1eda359bfd2cf7c06c7e8ce7801966f1d5bb3c93af418"
-    sha256 cellar: :any, arm64_sequoia:     "40fdf3049243bdcbc809eb1727021f9523059697d58c86f52fbaf8844c52b4ef"
-    sha256 cellar: :any, arm64_linux:       "3cf695e51c1044c6ddea63a714abce095aed950e1235cba025dfea4c61957d01"
-    sha256 cellar: :any, x86_64_linux:      "64033d1609d622d682e423424a686031a4c34578a088c41ba585d5b897cc8b37"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "fd9c3987e1bf12687a4b4147e813132d05a66cbbadb30ab4c0d37c4c9ff47db3"
   end
 
   head do

@@ -12,11 +12,8 @@ class Scip < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "71394d6ace28a14dc76b6b43dbe9a1f11ab83ca7b7f6e063475d60b13aa40c3a"
-    sha256 cellar: :any, arm64_tahoe:       "2a856e103a7f6e88d048316e016c5e95247a2815f2b678f1bba73c556e3818d5"
-    sha256 cellar: :any, arm64_sequoia:     "bfe7455c138840fab4c81089d7b6b2424e8330b1f2fa61eaea2f1212017897f2"
-    sha256 cellar: :any, arm64_linux:       "c5fccc3a85ba12c92ced74ff4bb212556fe6c50be3aae9efabee6517c7ed894e"
-    sha256 cellar: :any, x86_64_linux:      "ae5473952780d42b25b3cf9aa70a4647f009a9ad74736d786d97d6935703d26b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "ff41b3995c191f1b5af32b3bf35d5c935c62c0c35eeeb00b8f68d40b3d730f78"
   end
 
   depends_on "cmake" => :build

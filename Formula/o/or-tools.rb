@@ -13,11 +13,8 @@ class OrTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "954c1a6c041480f18a6c2bc48f6a397eeda263860d9f83cc5c475b5d1a11675e"
-    sha256 cellar: :any, arm64_tahoe:       "64dfe69bfd2a0e6eb1613aea7b662b650bb5be5b184166e18506fa4f6a8a3a79"
-    sha256 cellar: :any, arm64_sequoia:     "fcf443659b0fb8f952587fc16eb36d9f1799a16db39572ebb7710cf0aab7fd24"
-    sha256               arm64_linux:       "225ef78281ec665813905864b88737c172d99aadeaeac8f5a7850e1662ae45dc"
-    sha256               x86_64_linux:      "9011b061985ca4090a1366f7110ab6679cd6c77e22e2fdc15e07c26c6e83c5f0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "b031bbb0d225bc41d23f5394c841392546ac167b1202f4a668d5bdb57eb73e95"
   end
 
   depends_on "cmake" => [:build, :test]

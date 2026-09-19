@@ -11,11 +11,8 @@ class Pachi < Formula
   head "https://github.com/pasky/pachi.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "4687f6d2edc32b869f2ba241ba20d432b3a53e3862f8850ea47959dd72f6e4cb"
-    sha256 arm64_tahoe:       "3a8e2d2a3d9d6321c122671b5f379b49a34f458557e23536d68ee735162b376f"
-    sha256 arm64_sequoia:     "933f9e9186fa5bea05faad8bcc54b02ced0085739e0690b4b4e42b07f666b753"
-    sha256 arm64_linux:       "4713f964d611b39a36dcf3844a794292de966982ff45478f608c6f6608d33d02"
-    sha256 x86_64_linux:      "13a75be0c7981baeb9678e3aa318b299c40d09db4f56566e8010e1f5ef834099"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "6f27ff8b2e1d9d77b1711dbf9a7b90ce20b3bc9dcdcdef3c45552ea91fac3ec0"
   end
 
   depends_on "cmake" => :build

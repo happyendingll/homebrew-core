@@ -7,11 +7,8 @@ class Et < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "55753551805383574a06066cacd01561db9b36b019609d17f358a711fbb77f80"
-    sha256 cellar: :any, arm64_tahoe:       "c36f4f97bad05ae5b06e00df0c07d32f10433a2352be2cac22e84f67dde8c308"
-    sha256 cellar: :any, arm64_sequoia:     "b8785322616535eabdccc3038d5c006be5c784f3807e58165a9de432e318e9b2"
-    sha256 cellar: :any, arm64_linux:       "b32def35feac04513a783aa4abdd8fe146b353b6c3c8444e0670bcb7b8c426bc"
-    sha256 cellar: :any, x86_64_linux:      "916a6272b0331d52ce6815de82fd1cf88ef98d99c896b7b7a6a188f8967a1cc8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "ae72c2c75c960c2c03eeb9c267feaae8181fe4cbe612a2be8f89bfe9be556959"
   end
 
   depends_on "cmake" => :build
