@@ -17,11 +17,8 @@ class Oxen < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b5b93604cf6e33c262e62a89aa6488c8e71a807ec1ec3eebc62dbc724ab21e39"
-    sha256 cellar: :any, arm64_tahoe:       "2311a1bc580adf1997e879b7f9767f5c77a17b114eb3323d888e4baf565a02b8"
-    sha256 cellar: :any, arm64_sequoia:     "b31cfaa0056dfe140d18e40621d818745c43a92e0b28cb0cec41795589af55f9"
-    sha256 cellar: :any, arm64_linux:       "a7ce01e7a0f7c68b49c19fe6c3eb89f1ebb0f332270b701c8f0217d825bec215"
-    sha256 cellar: :any, x86_64_linux:      "a8a15a2363436377fad385f8b78c3effe321776e6df0ef2dce26f75815dec396"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "c2a935a15affc8a60a88e6440db4eee715528faf9b0859f77ccb6bc0cae3af13"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

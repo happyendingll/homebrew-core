@@ -14,11 +14,8 @@ class Xxhash < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8fadb24f4ee2177c8763b1d454dda05c26787af9aeacef31d79f622d6c283471"
-    sha256 cellar: :any, arm64_tahoe:       "4378420ce577ea0fbffbac3c97f9bbf8d862ff85bc2aecd81b2d87aeec82e51e"
-    sha256 cellar: :any, arm64_sequoia:     "11fa633824f0462f584909a90b3231d4bd18c6735addfd154ffff06b0c0f039c"
-    sha256 cellar: :any, arm64_linux:       "5129b758780c883c989048cc8fb2b52859ab00c9f020fd766b535efc56dbcb7a"
-    sha256 cellar: :any, x86_64_linux:      "64866e1f4d8bf1c49e7883592290d186d47b2d3b3ce434ffc73364f534275ae6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "b7e422b8ae270b8cbf5c19dbdcd2f39d902e859117b3896f71d38d0888b18b10"
   end
 
   depends_on "cmake" => [:build, :test]

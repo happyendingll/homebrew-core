@@ -14,11 +14,8 @@ class RocqElpi < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "42c494010c5595abaea6ba3994fcd5eed2911710adb01743104098c3135c3775"
-    sha256 arm64_tahoe:       "a1cfa32c3238a2204461606ba25dcb57099e8771f6c12f743f56b05d0d692940"
-    sha256 arm64_sequoia:     "88d009ed3d3086b1af7b4c654a211a68436459e85aed46d34160ef5c05d2d55e"
-    sha256 arm64_linux:       "0de5c98a1eda517d3a4cddf30010542b74f8383ae4cfdcab79f5ec66b14c69da"
-    sha256 x86_64_linux:      "099ce036f40dfaa46c65adddb09801c0c9aff39ec3d9ba024e3375bba5a068ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "4b80081fc63cd121728662d9dc397ff209ba32181b84e8bbf25a146d56f274e1"
   end
 
   depends_on "dune" => :build

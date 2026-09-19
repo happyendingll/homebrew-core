@@ -7,11 +7,8 @@ class OcamlZarith < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d6f17210cfd7e55ea7b586b16e62bf7e95cb37cc2deb8210e92da20318142ab1"
-    sha256 cellar: :any, arm64_tahoe:       "e78850010ac01002146fc3027fb407cec34ea975e9ad33ba269a33ec6948f479"
-    sha256 cellar: :any, arm64_sequoia:     "e601fe3a657d9ca87e2f3c0749444352ee0854c60df4257f4e524f4da1a51411"
-    sha256 cellar: :any, arm64_linux:       "7acf38bc8394ff77c6e865c0c4a4bc01e3ca57473f6bc07860a2910f525595e4"
-    sha256 cellar: :any, x86_64_linux:      "0bee0df8f82b281850059def01b744d68759ea29e0b879cce7ca1aa421e0896a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "904490345d71ac8ff7fe8fe55119ffb3cbc0226a44aa862ef97c19625cd723ad"
   end
 
   depends_on "ocaml-findlib" => :build

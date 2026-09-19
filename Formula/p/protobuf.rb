@@ -12,11 +12,8 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "35068a9351547528d7ce95e8d4c510e32650813ce585f0441070d1bc54de60c5"
-    sha256 cellar: :any, arm64_tahoe:       "573d5907842eba3930afbac15f7fbab91df421acc610d9c79278062c1c70c33c"
-    sha256 cellar: :any, arm64_sequoia:     "153d9b9b322fc8c54fe66dbaf2c8fe382294ee6a8fba35fd4c090dd61de3d77a"
-    sha256               arm64_linux:       "ea1f621076b35e1caea7dc4c0eb9a70141148018fffa9e10b00ccf530e3b6fb2"
-    sha256               x86_64_linux:      "88021d182eaa0c7a6fd41df1772748b22835f985aa34a9c5c308f5ac09e9ac27"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "23c1b997672d8c907b7493086a0a785b885dcaf68851cd6d2a1e96d9f116314a"
   end
 
   depends_on "cmake" => :build

@@ -15,11 +15,8 @@ class Wstunnel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "acfa530cd8adae1d50819b39c24a80ca41b66fb213c795df341df1e97df533da"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f45b2937165027102d6509ff86373fedbcb476610268834392bf7b132f3f2c6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "84fd27ac88fefca678fcf6a26df7e975e408045314c917ae5fb98a6f2c3a01b0"
-    sha256 cellar: :any,                 arm64_linux:       "3c59cf0302127f0c2888a69c6de5528998765878d67a2946512c92e7cb48f20e"
-    sha256 cellar: :any,                 x86_64_linux:      "e2994034518a75e0442cec91462084919d74df59f29572f677ae16bcf858c1c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "15a8d30561c354becac31e9341c2809fa13e81fb327c8ced074a8bff2de8fb58"
   end
 
   depends_on "rust" => :build

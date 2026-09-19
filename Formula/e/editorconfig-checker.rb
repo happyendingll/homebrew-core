@@ -12,11 +12,8 @@ class EditorconfigChecker < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "096881de3cd292015d02a4d671ec045e51ac1c2247c71e7c4ef758e9cfbe4d73"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "096881de3cd292015d02a4d671ec045e51ac1c2247c71e7c4ef758e9cfbe4d73"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "096881de3cd292015d02a4d671ec045e51ac1c2247c71e7c4ef758e9cfbe4d73"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4bc2fd4433323399b07107ab722d507a0c8d939599db5f149fb3097ae2182693"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "89d03d96a4481b358d9c72ba7b764ccbb5f5ac650cd589b7d1802834dd0c47a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d6bca66d37ac6e9f74054d3a12814396a63bbad811fcd58ad08cbf1cecc404e8"
   end
 
   depends_on "go" => :build

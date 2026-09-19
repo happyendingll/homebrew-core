@@ -6,11 +6,8 @@ class TodoistCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "a5d5dee0227c50118d761057cf225c341120e31de02da86c2b09c6dba449f8c2"
-    sha256 cellar: :any,                 arm64_tahoe:       "bd3c79fb7b6686e8315785fd67eb97658535ff9ce7fb27010dd9aa8965e356dd"
-    sha256 cellar: :any,                 arm64_sequoia:     "b453572317155ca671f1f21418702de22414d3687b7d5932e9be76970b904436"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "05e759a47b723a68ed30cc75a7618e67c6695042553e4e7d880991d8866d18d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4b852d76dc0581b7faac534bf1c540a6275be16da92e649b28c40648b4e68546"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "57d226b2be4da4035651a76b803d21886cebf2801eda47c520bc67bf16f91760"
   end
 
   depends_on "rust" => :build

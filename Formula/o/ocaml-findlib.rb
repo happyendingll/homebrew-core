@@ -12,11 +12,8 @@ class OcamlFindlib < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "48c376115d91af8e22c6f29cdb8d65b461ab5598b2ad0170692ad2984c117fa5"
-    sha256 arm64_tahoe:       "8970bc6f56d6bbf45bc039ea34059d57ff34941ad755ab3b928b43a6414ed3a3"
-    sha256 arm64_sequoia:     "c6f0ca3673fd3b5f2f577c3f4f9c6c735326a72c0e4c768a2e2dd7e0dd77cb57"
-    sha256 arm64_linux:       "8a373191f68d6b013698ccc1e59632743189b6689f4009b2f606d4e59187ee26"
-    sha256 x86_64_linux:      "b832f69955d82f69f6b6bfcc4c04cef749fb2028544f4383d678691c00ecc821"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "e75d769f04f9aa9e6f909c01de32e76a5533a75031325a3eb12a679e2a93e923"
   end
 
   depends_on "ocaml"

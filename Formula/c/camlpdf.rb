@@ -7,11 +7,8 @@ class Camlpdf < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8622f4faf3a68302b19a14c6956c853f5b28d4bd6adbcd2e115c3fe7f41d48f7"
-    sha256 cellar: :any, arm64_tahoe:       "d230195e3669115b5c9f13685055d91d349e1f585de5920877314ed75ac82a62"
-    sha256 cellar: :any, arm64_sequoia:     "2d4802aa515ad59381258620151faef8ccb4273b8a60036eb25f62d82ffe9896"
-    sha256 cellar: :any, arm64_linux:       "601c933dc03bc2a863f4a2c4eb39ee5de5232c73218389300c179101b5df6dcc"
-    sha256 cellar: :any, x86_64_linux:      "62a0307c0039cec147c066be4a3da3e2712b23e7e972731537571a461565541c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "5fdfbb6a96f51064e79d6fd6a7cd672cdb5e15f8c1de136a189b280fcb816178"
   end
 
   depends_on "ocaml-findlib" => :build
