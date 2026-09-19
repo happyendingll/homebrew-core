@@ -1,13 +1,12 @@
 class FfmpegFull < Formula
   desc "Play, record, convert, and stream many audio and video codecs"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-9.0.1.tar.xz"
-  sha256 "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635"
+  url "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz"
+  sha256 "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   # Passing `--enable-version3` changes the license to GPL v3+.
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   livecheck do
@@ -15,8 +14,11 @@ class FfmpegFull < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "59bf1a0d9499759eea6cc7b98ef2a7b40c7c0f6d49f6e9e4e89d99f2ad0e974a"
+    sha256 arm64_golden_gate: "dab1657cbd4c14f7ada5838728f93ac02d45e24e8206cdafd38e55c105085ab3"
+    sha256 arm64_tahoe:       "b32725987244bf52f2da5f5b3104d62f25207b2806d74b06eafd507f6a1f395b"
+    sha256 arm64_sequoia:     "ef9633f1fee8a0039c6b8ac241f6303c2d4768892f2e84a4934564e91e9fff90"
+    sha256 arm64_linux:       "a863fe87f61c6021a0da9d9a6846073caa253c7462818034f9aadb55cc232cbf"
+    sha256 x86_64_linux:      "a64f8dee7f60d0f57c0b0d85e51c970c8c6ac38fb7f686d40246117dea3e40a4"
   end
 
   keg_only :versioned_formula

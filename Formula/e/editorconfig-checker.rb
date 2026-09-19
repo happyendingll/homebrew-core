@@ -1,8 +1,8 @@
 class EditorconfigChecker < Formula
   desc "Tool to verify that your files are in harmony with your .editorconfig"
   homepage "https://editorconfig-checker.github.io/"
-  url "https://github.com/editorconfig-checker/editorconfig-checker/archive/refs/tags/v4.0.1.tar.gz"
-  sha256 "9a53621851423ea758647521be5f2bbc45c97dfca2197e7dfd3a814196a0b783"
+  url "https://github.com/editorconfig-checker/editorconfig-checker/archive/refs/tags/v4.0.2.tar.gz"
+  sha256 "0b84c5090d3f48db1bdfab454b7cde79adb26015d1a2731bba59bc1a636276bb"
   license "MIT"
   head "https://github.com/editorconfig-checker/editorconfig-checker.git", branch: "main"
 
@@ -12,8 +12,11 @@ class EditorconfigChecker < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "a9271c9de42c7eb0ead5fe51f98d29c5f83f47cae3a96948d7f6a3946151d33f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "096881de3cd292015d02a4d671ec045e51ac1c2247c71e7c4ef758e9cfbe4d73"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "096881de3cd292015d02a4d671ec045e51ac1c2247c71e7c4ef758e9cfbe4d73"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "096881de3cd292015d02a4d671ec045e51ac1c2247c71e7c4ef758e9cfbe4d73"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4bc2fd4433323399b07107ab722d507a0c8d939599db5f149fb3097ae2182693"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "89d03d96a4481b358d9c72ba7b764ccbb5f5ac650cd589b7d1802834dd0c47a1"
   end
 
   depends_on "go" => :build

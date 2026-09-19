@@ -1,13 +1,16 @@
 class Vercel < Formula
   desc "Command-line interface for Vercel"
   homepage "https://vercel.com/home"
-  url "https://registry.npmjs.org/vercel/-/vercel-59.23.0.tgz"
-  sha256 "5f238f21c6e810be867fdb1e4a74f40dc36059d0f777bcbd1e6857e0e5174caa"
+  url "https://registry.npmjs.org/vercel/-/vercel-59.23.1.tgz"
+  sha256 "2e764877a5587816c633f18caf8f7402b8f5d26a9cede28aa79c70e05b270e15"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "3d130cd8465aeed7c3d39435fcc69a6a8afa912d57dc5ff6bd3d56ca63076073"
+    sha256 cellar: :any,                 arm64_golden_gate: "b992139e435502ec2d96fc3584a6e6309ed01df92b2cc670cb7177918b5c83cb"
+    sha256 cellar: :any,                 arm64_tahoe:       "b992139e435502ec2d96fc3584a6e6309ed01df92b2cc670cb7177918b5c83cb"
+    sha256 cellar: :any,                 arm64_sequoia:     "b992139e435502ec2d96fc3584a6e6309ed01df92b2cc670cb7177918b5c83cb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7516bfa3bb763870d2702d9d7f3d0e67e7a954a4fe61865062479f13e63f593b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ed428c1b34a3ce7b324421ef8c57f299070986fa250b86bc18f62c586a81fd80"
   end
 
   depends_on "node"

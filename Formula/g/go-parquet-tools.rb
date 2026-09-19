@@ -1,14 +1,17 @@
 class GoParquetTools < Formula
   desc "Utility to deal with Parquet data"
   homepage "https://github.com/hangxie/parquet-tools"
-  url "https://github.com/hangxie/parquet-tools/archive/refs/tags/v1.55.1.tar.gz"
-  sha256 "53d36e0a1b8624ed962769541a795ebced98a77358274ae6cca07ffdad0466af"
+  url "https://github.com/hangxie/parquet-tools/archive/refs/tags/v1.55.2.tar.gz"
+  sha256 "a0e6acbfab09d1923be34403b2c48f43dfa4f56b2c5237a8c877a4e28479bfa4"
   license "BSD-3-Clause"
   head "https://github.com/hangxie/parquet-tools.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "234819e3be5e14ae0370538ebef4653e3cf92101f495ac0bef07ae823942a49c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "56162d03e64e914a3d378d000a0f4ce1c4506e657c7fc40822f4fdb78de8516e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "56162d03e64e914a3d378d000a0f4ce1c4506e657c7fc40822f4fdb78de8516e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "56162d03e64e914a3d378d000a0f4ce1c4506e657c7fc40822f4fdb78de8516e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d84b46398e1865e2fd3ac483ec0a64d116fbd9f87ccf139ba04fa7d3ba6a12fd"
+    sha256 cellar: :any,                 x86_64_linux:      "ee108ae725794f59fe747be75d96d8c9856d21bfbd44b103508afa0935e692c7"
   end
 
   depends_on "go" => :build

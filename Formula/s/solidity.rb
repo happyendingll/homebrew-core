@@ -24,8 +24,19 @@ class Solidity < Formula
 
   conflicts_with "solc-select", because: "both install `solc` binaries"
 
+  # Fix build with libc++ 22 (Xcode 27), which rejects the `std::less<YulArity>` specialization
+  patch do
+    url "https://github.com/argotorg/solidity/commit/7543cf45326f58d2597c9464d3d525822b6e28c7.patch?full_index=1"
+    sha256 "d8bb9605e0b472eff8ba98e52d48d913d842d93e29b2348af9979c52901dbc4f"
+    type :unofficial
+    resolves "https://github.com/argotorg/solidity/pull/17027"
+  end
+
   def install
     rm_r("deps")
+
+    # Avoid using an older deployment target than our bottle
+    inreplace "CMakeLists.txt", "set(CMAKE_OSX_DEPLOYMENT_TARGET ", "# \\0"
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DBoost_USE_STATIC_LIBS=OFF",

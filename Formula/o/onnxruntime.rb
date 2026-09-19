@@ -4,6 +4,7 @@ class Onnxruntime < Formula
   url "https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.30.0.tar.gz"
   sha256 "f6681ecbddf53898adf0cc9e8e9e84657485b84d2eca3c8aa353de6d7dd417ef"
   license "MIT"
+  revision 1
   compatibility_version 9
 
   livecheck do
@@ -12,8 +13,11 @@ class Onnxruntime < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "cfe66fbb74128971f204291877126474fce9a6566e770ec9a82a403324ed91dd"
+    sha256 cellar: :any, arm64_golden_gate: "6a4c4cd6a597708260e5d5ae8c803c51f38b35823f1f14f2e5de1f42f2106d90"
+    sha256 cellar: :any, arm64_tahoe:       "cf0f6e381b96d4c9b43e570719c1b17a1de8ddd9103c9fecde039ded9a998403"
+    sha256 cellar: :any, arm64_sequoia:     "5fef971df76a944014ec5f8e847e67935b586b1ba77c75759bf8588fe8b15113"
+    sha256 cellar: :any, arm64_linux:       "386b79bfa33b449cbba5eb2ab267855761c83afea5f4e966468dacc3159b4094"
+    sha256 cellar: :any, x86_64_linux:      "858e34ec135406c1b75aae36cdc3a32e97cba58a8de77ad438333c4d0765262b"
   end
 
   depends_on "boost" => :build

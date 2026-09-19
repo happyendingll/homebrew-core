@@ -4,7 +4,7 @@ class HierarchyBuilder < Formula
   url "https://github.com/math-comp/hierarchy-builder/releases/download/v1.10.3/hierarchy-builder-1.10.3.tar.gz"
   sha256 "577597528f25d217baee91040cc5d7e5f621be7e7a629cccf295e337f73a6d45"
   license "MIT"
-  revision 3
+  revision 5
   compatibility_version 1
 
   livecheck do
@@ -13,8 +13,11 @@ class HierarchyBuilder < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "651b739db9bd9704aa0ed45273e6d496a1d82869ed78a9e0aea11511592502e1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "58c173707e6b1bbfa2aaa6c108c2af1283dd80a449e223fe678d56c2ef881461"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "632e9a56b6bf5c7dcdc6c09a07ed34c6d7e893e14bfcd4070d1867341541fad8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cd71aaac4d4ee8af41b6fe1f9c00430115b85dd8ccc192fc7cbf3f8bcbf81421"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a66de4596367767841714bf9016ed2457c924e6da36d956826760537dc69c5f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4e97eecf404a301c89a35d662c6f4825129e1eb9394b58533aa0a5d38d68fddf"
   end
 
   depends_on "rocq"

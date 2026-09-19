@@ -4,11 +4,15 @@ class ProtocGenJs < Formula
   url "https://github.com/protocolbuffers/protobuf-javascript/archive/refs/tags/v4.0.3.tar.gz"
   sha256 "43ea40481e7b5efdeccf4a0926226b0bd4f61386cdb819a55ce55f5828e32025"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/protocolbuffers/protobuf-javascript.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "097538721d9255f5bca2af54342a369777c0769158a7e8880ac2ad9471e78200"
+    sha256 cellar: :any, arm64_golden_gate: "d29eb46440e0f82228cfda805b96aaf6c68b3909609208c68551b37dd113c350"
+    sha256 cellar: :any, arm64_tahoe:       "3aaabe229adba9040578852d0a37bbf74a2176d4cb85df8bdd3b827c45217587"
+    sha256 cellar: :any, arm64_sequoia:     "07524eb5725a28a9c2df8e6b3a967173398c18b401e938da0c354bfefba2d9a2"
+    sha256 cellar: :any, arm64_linux:       "ba9a465cf03eecff43df1c3b802fd54a904ac33c57bdf7e0aa984c95e883d65c"
+    sha256 cellar: :any, x86_64_linux:      "1439bc9d371cf256b74b99b4ce7801a033d7d6878e43746b8754e0c168dfd151"
   end
 
   depends_on "pkgconf" => :build

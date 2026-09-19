@@ -9,7 +9,7 @@ class Katago < Formula
     "MIT",
     "CC0-1.0", # g170 resources
   ]
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -17,8 +17,11 @@ class Katago < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "a4400edba7d8d0994a883d99bd736244bd30a1867e40c0495964ad9821c064d8"
+    sha256 cellar: :any, arm64_golden_gate: "d89cdb99b223b3d4cf26c5984fecacf0142a5cbe20fb62b8dfe16f298584df0d"
+    sha256 cellar: :any, arm64_tahoe:       "72e07d097c976c0d57802a81c6dfda3e3ec6d885397d77666b355da5db6ea2eb"
+    sha256 cellar: :any, arm64_sequoia:     "7ff0aef28c12264c64b8d03f2b0168a7e92a7b5c9e6bd5ee1cc5ea2a54cd865a"
+    sha256 cellar: :any, arm64_linux:       "93e915993f95246bb7284bc2854d2dd27ab6cb8dcd7169bd56100543ab3710c0"
+    sha256 cellar: :any, x86_64_linux:      "e5f740c4830b24298c5b310a87c4536527c0b2239fe131e14b5896ab0e5dbc4e"
   end
 
   depends_on "cmake" => :build

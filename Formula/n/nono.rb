@@ -22,6 +22,12 @@ class Nono < Formula
     depends_on "dbus"
   end
 
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/nono-cli")
     generate_completions_from_executable(bin/"nono", "completion", "--silent")
