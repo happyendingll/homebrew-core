@@ -13,11 +13,8 @@ class CloudflareQuiche < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "60c0c2dcdb910c4f26bafb26b56113e41a55c11eac12fa4196abd290be250054"
-    sha256 cellar: :any, arm64_tahoe:       "7f3ae246b4f1d3a135499e9a7053ab64d3718cc7f7f404e573bd27a251d61e53"
-    sha256 cellar: :any, arm64_sequoia:     "385d710feeb1bf15264312fa5d1d9af4088c3e960ea4c438427fa5a1228efbec"
-    sha256 cellar: :any, arm64_linux:       "d0a4a12227bd3fd6c855ca1ed9a58a77108fb2159ac3ae4ae06f3bc9f2fc2fe5"
-    sha256 cellar: :any, x86_64_linux:      "1299e7e4a919f9c9335dbf849d76d3874de9270c17d151bab5160ecf23cdab75"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "dd4c61a3d224d30f02435920083a7e27039aa8df088b7327313c6f3b1b0dde0d"
   end
 
   depends_on "cmake" => :build

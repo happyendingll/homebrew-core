@@ -12,11 +12,8 @@ class Openjdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "db2b560ca59a2b2b8bf7e1bc900a80479d74c6c855dec497c9df2eeb5282790a"
-    sha256 cellar: :any, arm64_tahoe:       "060b8fe0ebe12e885dccb992c063973018262defb1d3483939d5941fa5d00c9f"
-    sha256 cellar: :any, arm64_sequoia:     "934cf2a836e98792d3a4c8f3a2cea90788b4cbc01958aa85c16cdd3609d34738"
-    sha256               arm64_linux:       "cc7ba53035abcfaa0d525df2a334398713753520f91fd159c5c7c095db2f654c"
-    sha256               x86_64_linux:      "71bcc4e1bec60bef2b495a95676c41002536aec8490a344fa074c5685ed2d4c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "06128feb33ca8d1d44a3f85eb2c03b5fa19a6a3eab11d64d9afaf3b23f5b9823"
   end
 
   keg_only :shadowed_by_macos

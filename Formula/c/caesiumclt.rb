@@ -6,11 +6,8 @@ class Caesiumclt < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bbbbca303b22e31fcae389175956254df7de406501a049d2cac32f6d8ba7a3e0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c81c69ecc28f62ada9b8f796d68834be3c6f55b6aa0267384e3851ccb984de2d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3cb517afb1b0438e38bbd0cc417cdd3f1b75fac6211e98b809cb11f040e9a08c"
-    sha256 cellar: :any,                 arm64_linux:       "a5d1ec3ca2808c608a3b6e4f7c2a8aac9b859d274a35bc17cc917b1ca26d67e7"
-    sha256 cellar: :any,                 x86_64_linux:      "d76dd7f083ab897f20b31d7072fdead75f572ed2169b758366eb99317a47760a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef6a1eceff89c2ad917dcd24e632caa8fbfeb2b6839bee294268a636370dad99"
   end
 
   depends_on "rust" => :build

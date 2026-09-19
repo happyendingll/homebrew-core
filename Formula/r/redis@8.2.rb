@@ -17,11 +17,8 @@ class RedisAT82 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f0d2d0117ea962dcf3180812aa1fd7430581c7867a45a6d3fd43852112bbd6e1"
-    sha256 cellar: :any, arm64_tahoe:       "e4ef7119c6e0061ba27aaa7772c03b060932a921fc9e51acce15042da5bfb645"
-    sha256 cellar: :any, arm64_sequoia:     "8d2d297a4a056aefca23a8fd1571f902892bf9006e31f83aed8a8a159401779e"
-    sha256 cellar: :any, arm64_linux:       "b427dfb3c088e39b466f3f9f840d84a8272df1502b6c2952782d0f27b78884c3"
-    sha256 cellar: :any, x86_64_linux:      "4294c200d3a6ce459b0cf58258671b5532854e14e5db31f5f893f0c2294e908a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7fe9487df48d6f225f238334ee0ce7f93bcd4ecb4323fec215aba8469d674dc1"
   end
 
   keg_only :versioned_formula

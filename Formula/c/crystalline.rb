@@ -6,11 +6,8 @@ class Crystalline < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "9dbee58249b91669e31b946cbbbdb5047a749e110c39506f381e1c265d4accef"
-    sha256 arm64_tahoe:       "53ee7da763c8fc480e2808debfbd0cd0606b8ec2c024a493bd816c6fdf49223e"
-    sha256 arm64_sequoia:     "a9bf68068f4926e1440f634f3c9b3363d30d13deb052b652656781947e52c404"
-    sha256 arm64_linux:       "6dec77b52072ddfbdcb23f290ad40b53aecf159cde525ce4dff7668382c4fea5"
-    sha256 x86_64_linux:      "9857bd43467e458008b04b7ae5701475b280d23fef6dc34412784db199fe8cb1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "e7acc8b3ee2299eed651e01dd0ae0ba0c6531b53197f76639a22df5ae8d3510e"
   end
 
   depends_on "bdw-gc"

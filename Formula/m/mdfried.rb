@@ -12,11 +12,8 @@ class Mdfried < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7e56b5ab30776c4a7d8a2781a4021b35f8c52f063bb48a4b6bb034dafab57731"
-    sha256 cellar: :any, arm64_tahoe:       "8200f4462d736797dd8b7c6bff2aaf8c84e35f6fe4077d996d183d1ccd103c4a"
-    sha256 cellar: :any, arm64_sequoia:     "0647a10c1b056efbd57ca9e0a35375224ce85e71231be509c90ece227cdf9ff0"
-    sha256 cellar: :any, arm64_linux:       "b8ecc6a2d156844ebf351d5f7ee673b05ab81b926545c5110ac033f7d08c0cc6"
-    sha256 cellar: :any, x86_64_linux:      "c159158f8b6583e2cb249bf3d38bdfe7e7f80b4c35ff4ef150afc4c37b0e04c0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "fa4b46a16c899430c109da5494628351bd820d7e0011665b14983536169cf5c9"
   end
 
   depends_on "pkgconf" => :build

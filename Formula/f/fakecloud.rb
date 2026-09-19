@@ -7,11 +7,8 @@ class Fakecloud < Formula
   head "https://github.com/faiscadev/fakecloud.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f1ac58695cea9d8ff6884fc225539ed373859a3f08645396d56ec16f30bd5df"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c74ada655a29315c22da66d676850f2435dc68c322a6430847dce9e2291557de"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e059712d075c8a0c1ef5ac01f2b2437c939812777a9f6ab7a8890e1e84c70014"
-    sha256 cellar: :any,                 arm64_linux:       "f2350e89dee58bb4dacf7109d34dda059311f287c676cc4e7efb98f1fe205e88"
-    sha256 cellar: :any,                 x86_64_linux:      "d65b86a70aad3b85a5367d34a4d4c8ddd31c5be71db642e279306bb0e7e8674c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2f56edce71d4629e716d1ffba91c5d9c7b1a006eaadd74d1f318840e52e6bf21"
   end
 
   depends_on "pkgconf" => :build

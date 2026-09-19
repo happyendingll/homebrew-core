@@ -7,11 +7,8 @@ class DashMpdCli < Formula
   head "https://github.com/emarsden/dash-mpd-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eb8437f41e7303b52475188d6111523fcd07b5128fd0713bf892dafc58b319a9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f97be0533323e9116a537e2ea2ce8c100c01c4a272558b8de6918e5bfbdfa8be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "af026f7b7140f04d80acedd2cb8d22482f8f404c8990564a3deea8e901e49a86"
-    sha256 cellar: :any,                 arm64_linux:       "21e3988e870a2eef884658569139416993fc5b09ac39bfc4ec1b489ad7d2d54d"
-    sha256 cellar: :any,                 x86_64_linux:      "d186e07b0ccc145ccf38d0f3cf706a9e71124372351b23b56e3660ae7595f4fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2ad989c72835c78a98aac0850fd9c088ed1c2efac7385e2921a943788ae5482b"
   end
 
   depends_on "protobuf" => :build

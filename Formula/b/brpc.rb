@@ -8,11 +8,8 @@ class Brpc < Formula
   head "https://github.com/apache/brpc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "77694d763026c749135a4de419339f74865d650b2779bd6f2ed075168bdef019"
-    sha256 cellar: :any, arm64_tahoe:       "4b59d4a2a2279200a3a7da8ee9300f74a2615395f732d71a3be12bbafddac54c"
-    sha256 cellar: :any, arm64_sequoia:     "23599a752ad8739bc8ccaf49ff48ecf52a0d48afa28d40ecb229c6d1152e3ede"
-    sha256               arm64_linux:       "55d2c6a14cc35f3af3ddf48abd1f52724648a6f3d2f9fc50b5cae8ff318d0744"
-    sha256               x86_64_linux:      "cf1c223e38b15948c30b874e17fb148c2134c7d97aa2333100c0b97b93204d7e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e44a7054f47eb87c32b5f04cbc3491dbe4ec694e682da50c16a51ef03300c237"
   end
 
   depends_on "cmake" => :build

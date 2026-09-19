@@ -12,12 +12,8 @@ class Libclc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f34be9ae8fc5f50383834ba18334baf7d9249208e2e0326509b3421da1604c9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9b7f7dbc7f8277430626bfadd3a8de0fc8696702f1072988bc20687848c44ecd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "afdda900c48f3e9893a3293683be8f461a7c1a49f9c14fe14b48963e348a3164"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "55b5343848a365defcd52e7967e0849707be4d79a87859a174c39664719550b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "aa8e36615fd41e17459b17f690a445baee4133e3743922bb80dc8d9da14dd945"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "63e2fb4a19219a6e9b8b491427763a8e80289a3c314c3fa8696deb669738e905"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "807876121c080ecd644abb9ba1015c9b4b7a351f3afae45b51dce904bfe941cc"
   end
 
   depends_on "cmake" => :build

@@ -10,11 +10,8 @@ class Aqtinstall < Formula
   head "https://github.com/miurahr/aqtinstall.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "08c7b8e1e921c6b075faf23b293e6ed147050aaba07ce29063f51990a9b43aaf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "090f3bc9c91ed193da10c56e18398ededa8b3d1041bac3f95e4a8d32c36ecc36"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "efc2cbecfce86b53eda668de743f574f23e7905a166f53158b428fba0f0ee3b3"
-    sha256 cellar: :any,                 arm64_linux:       "84f33803769046cd58d2438e392fe72129cc01f4a8135aa0a2ea9c374c883ce1"
-    sha256 cellar: :any,                 x86_64_linux:      "9ba2556561238ee2196ea4d020ee14210a2f5b401643986e9f9633ec53547c80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8f2fa29dade383a463ee14b12ccfe72a89afb30155b83158342cfddecc63fb2d"
   end
 
   depends_on "certifi" => :no_linkage

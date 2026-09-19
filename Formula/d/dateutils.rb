@@ -6,11 +6,8 @@ class Dateutils < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_golden_gate: "86ba6fdf734dc5c4bffcd2c9abd30ce42119423316e913d53673c0f2af269bff"
-    sha256 arm64_tahoe:       "5611c984dbc411ba0c4fc552851d3477c04840025efd12d0a2b7b1b6606fe874"
-    sha256 arm64_sequoia:     "4bcbff992bf54d1acffbc1b53f297eb969095f3e6ef8862a24b0a8521745b969"
-    sha256 arm64_linux:       "15a72b3473ac7875ee8eb35a7a245b8b683620203388eb8c99c130d6e52f4681"
-    sha256 x86_64_linux:      "17027d41652de2e5fb5a5dd08092095dd8335195ac662b65afd9267b7d58349a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a831ddbbf177623cc7b14c1d5a9d0f8df807eef8a25c46e0188e311c01081d43"
   end
 
   head do

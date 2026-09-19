@@ -9,11 +9,8 @@ class Enex2notion < Formula
   revision 24
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef5901769421695143c54323d10960f0e9c16e21d1bf46aa62a2b76c0831f73f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b80ecbc3b66bb3075d71a2b78ea25671abf76f6c664d7ccc8bdf88e77cb50869"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9a60a03fe2fd331d75849ada8ed1385d51827f896bcde0dabc6d37b49b15e38"
-    sha256 cellar: :any,                 arm64_linux:       "013587a68cf4b4c53c6548e548ad150afdce10878dbecc22dd8209161d3c1387"
-    sha256 cellar: :any,                 x86_64_linux:      "bc64b669242c09e3298d775d9be97392cd0767e46daab775dd18f5104ae78b10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d124d22df3caaab217393349ee4a673f10eb03f3bce5de0e116b0511525a2884"
   end
 
   depends_on "certifi" => :no_linkage

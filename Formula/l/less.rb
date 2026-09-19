@@ -12,11 +12,8 @@ class Less < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "4424cbf3a1ce87d36b39ab1918bb5d871289f1e6e33a012bd9483f16fb4b82a2"
-    sha256 arm64_tahoe:       "4a25aee751a4c5a12886744cbaedd6d60ab039989f764f2e74591567097ebd55"
-    sha256 arm64_sequoia:     "1059c6f2cab177f99362517f59e249bd9fa33e8c417056c5acde2804f4861870"
-    sha256 arm64_linux:       "c2c82e6f10e8ece95d96a020bfdcb08d87775a1db4ea487a8b57a73867f700ad"
-    sha256 x86_64_linux:      "bbc93622a13a6aeae4640938a4fab6f5298d255c1f352b433ff288db2bb68cc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "3f3ebcb963cee139e7f3b509dd301d3e323633bdab2d2d0a7e10aacda9665a67"
   end
 
   head do

@@ -6,11 +6,8 @@ class Pangomm < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4ed7a8fd20c2c4b23080fc8881e107499f3a51e3347c854a77ef3051a090e6e7"
-    sha256 cellar: :any, arm64_tahoe:       "af63e35822fdec3f914dba2af313c621d34b0c2d123714c2a5408aed2caa571e"
-    sha256 cellar: :any, arm64_sequoia:     "1ee24cf248414829a0bd416ca6774bd230f92c214470a36f061eb2bd707a06cf"
-    sha256 cellar: :any, arm64_linux:       "f9da19ee46804e872edd1066cab040e1f85b42e0d9ae62a9c0ae39887bd57f34"
-    sha256 cellar: :any, x86_64_linux:      "e15b8ad21c1571af43370a0243481d9dd73b0b8fab14b9d5b822441b39a885d1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "9fe29abdd0212593c5b49ff9c5b0e32d0651604f2610bdf3cadb72681663b02d"
   end
 
   depends_on "meson" => :build

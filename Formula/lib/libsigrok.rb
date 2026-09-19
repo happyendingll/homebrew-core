@@ -48,12 +48,8 @@ class Libsigrok < Formula
   end
 
   bottle do
-    rebuild 5
-    sha256               arm64_golden_gate: "083bc299566beece6d7f582e9a091593e598bc6dfa542247019c31c570b299e4"
-    sha256               arm64_tahoe:       "28671d372513343cd4820779e13eb1bdf10a7ba1ce51be6f032664577c165039"
-    sha256               arm64_sequoia:     "452a314ee92dd001c8eeb742e731dfe343b925dd2d4bc33f71b38730838afc9a"
-    sha256               arm64_linux:       "8bb458272a5be45e1c1f5ce0cafc710e8f2af686cdd2bcd31a32fc990c1803c0"
-    sha256 cellar: :any, x86_64_linux:      "96bd5bd71fbd75c9a6a6058ff88dff3297a447fe3b4f234a0c96a77360055320"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "6b71ab1ac077d24e361078acf069ce6252df3c133e0b43322b2fe2ee6c937421"
   end
 
   head do

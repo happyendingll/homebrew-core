@@ -10,11 +10,8 @@ class Cloudsplaining < Formula
   head "https://github.com/salesforce/cloudsplaining.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "093eaf299cc8593de4210d2aaf80a9b25bb23fed57f44ecdd4b54463c372f268"
-    sha256 cellar: :any, arm64_tahoe:       "5b354c402a9910ee91822730dcd2653ce85d9e7ada9e21005d3e3219b5d574b8"
-    sha256 cellar: :any, arm64_sequoia:     "2f6c6fcc434fe5904cfe25347bbee6ae4d63cdd4acd222bce68e2179e4c067da"
-    sha256 cellar: :any, arm64_linux:       "06944e23ca224bc8b97809a93b7e2e47638ad536ce39bdddd35095a00f91ff61"
-    sha256 cellar: :any, x86_64_linux:      "51a47670df27454168d9bc1027c18c4d34d2ef493917eae04c27ac9ee83e6108"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "677d22e6628659be399d1d7be37e576ee7b066d9e9d90d7876cb02f86c2b0d85"
   end
 
   depends_on "rust" => :build # for orjson
