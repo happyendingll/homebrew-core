@@ -7,11 +7,8 @@ class Cek < Formula
   head "https://github.com/bschaatsbergen/cek.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ec560a594f53c1039bb8718a61e3ad197d381053ddff378156e10f073cc687a2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec560a594f53c1039bb8718a61e3ad197d381053ddff378156e10f073cc687a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ec560a594f53c1039bb8718a61e3ad197d381053ddff378156e10f073cc687a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "348d0f4fce928c9fd1ec0d109fce2ccec191b979125097e679b3a0cd47790da4"
-    sha256 cellar: :any,                 x86_64_linux:      "6823661b656fb14477b8f26b10ff69c9d6e6d2675b600df1d3106dc2e339c91c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "abe24ebefc7dae947840635b474c4b8fcefb35694f9103f92d2fb5bbe912b8a5"
   end
 
   depends_on "go" => :build

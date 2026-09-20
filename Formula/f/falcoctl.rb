@@ -7,11 +7,8 @@ class Falcoctl < Formula
   head "https://github.com/falcosecurity/falcoctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "12f12bf7f8d762be10cd901a89f56abad7e6ff1e660e2e16faea814e2d15ed56"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5a871b93c661294256750f84811e8cdb6b892514ffeb048d4a5a843887fdaef"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4155396efebc714e73e314e11b5e47d2ccf983bba1bfebd0d68845cd0e77cae3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "16a482c1d2f4a10778c7fd7dfc21299e58d4cc90f4a290ec861a0b5211b32825"
-    sha256 cellar: :any,                 x86_64_linux:      "60ed8e1240a2d4fc21ad09dc6dbdc3a92f01cd5a62ecc85d87ac889d3bc17cc3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2cd7e5bd833ebd8dcef902a04f2d3565c11728aaafaac0b12e13d0f320f1e7fe"
   end
 
   depends_on "go" => :build

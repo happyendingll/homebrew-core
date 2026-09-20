@@ -12,11 +12,8 @@ class Libuninameslist < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "be30cf7255db988eb9d9de6f5cc6bea2f05b8cbd7e7d2a0212c3011da6c34da9"
-    sha256 cellar: :any, arm64_tahoe:       "6ed38b913c30d8c8c10ddad1cb1cb40fb6148fb58a9f80b81df348166fc9beaf"
-    sha256 cellar: :any, arm64_sequoia:     "0d934878052ae876f93d80748f0fdad7c0680227da6b0d85e697923cf98b6fcb"
-    sha256 cellar: :any, arm64_linux:       "94c9829f9578e8069835a368504dd1e28d9230e8a39ce79d5861656958c31d0b"
-    sha256 cellar: :any, x86_64_linux:      "05f11945ac79c613b461a3c7c8042dd57b259169335d78dfe74c3302268d0fcf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "0cbd20e402ede0c442b856ba917cc52afd56d0d9e12587f07ada5cebbe37fd7b"
   end
 
   head do

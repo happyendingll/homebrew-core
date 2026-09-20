@@ -15,11 +15,8 @@ class Logtalk < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e90229713060045c5c902b09bad9c4ad0e97afe279f6548ae2167ca14673049"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9f781729c034f5a8111d9a0749cf978ec6532a38f9d2adc60efd50192684197e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "06c9cc894ff10b8b67c074f2e0115f96f678d807452f222294fb3c2cfc61efbc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "15c683cf73004349e07196b2e87b27ec39d02d203ef53d046dcf3b60da0711c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "549a7c3564e98e0e9dabd1136975742d931a79fa18a943ad06b2d7234e4e5deb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "68359b56582212058c227aabe367ba55916489f5cde24fa8cb9b4473df197484"
   end
 
   depends_on "gnu-prolog"

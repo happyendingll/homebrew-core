@@ -7,12 +7,8 @@ class Scilla < Formula
   head "https://github.com/edoardottt/scilla.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b143f09dc5934d6b3cada68a00d3c74c1698bafb1d0d8656c0968c81bec95cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0b143f09dc5934d6b3cada68a00d3c74c1698bafb1d0d8656c0968c81bec95cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0b143f09dc5934d6b3cada68a00d3c74c1698bafb1d0d8656c0968c81bec95cc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "0b143f09dc5934d6b3cada68a00d3c74c1698bafb1d0d8656c0968c81bec95cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1ec399d2a8a7b3dac091eaf0b296de3f8d295a4743da1773e8d2bb9b750159a9"
-    sha256 cellar: :any,                 x86_64_linux:      "5f6669a27970bf70cb89a4f937a9b08ea5878ee4d8883d65e905425c5c5d2245"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c27a8412260ea50e14b508d881fc994b173bfe53e12d3bb58a286835717b145b"
   end
 
   depends_on "go" => :build

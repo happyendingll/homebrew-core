@@ -30,11 +30,8 @@ class Exim < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "93457cc469268b4a60a73d01f590e67d1ea8c98b3ccf4ab8fe0dd3b8a84325c7"
-    sha256 arm64_tahoe:       "ad3d7dc027f383803ae7d186169511ade5626e9ab90b2d344d306500be74cde7"
-    sha256 arm64_sequoia:     "9d3e150fb0edb711f78c118b9da90de3dcc604f23d3938fe5cf20e82ea922629"
-    sha256 arm64_linux:       "db3d6f92c3d7656047fd777c10c724003b7bdfe6984e3e56401bab46817ce9fe"
-    sha256 x86_64_linux:      "fd671028d9126a09d7b16309162146caf35e455af5f867cdff4e1121e4ee4406"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "857a3d45feca4bd6dde738a15d7be5fac8f65ef87417c9cf0606f5eff28df13e"
   end
 
   depends_on "openssl@3"

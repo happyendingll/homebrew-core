@@ -7,11 +7,8 @@ class Goresym < Formula
   head "https://github.com/mandiant/GoReSym.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "82d113e4c6cc88af46c2922fa18667fe6e5c2c0472b9e237afb32a92be48dc67"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "82d113e4c6cc88af46c2922fa18667fe6e5c2c0472b9e237afb32a92be48dc67"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82d113e4c6cc88af46c2922fa18667fe6e5c2c0472b9e237afb32a92be48dc67"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7aa54468605b100f364aaadd6e6ff66b704f4895fb95a2ac8b737bd6cccc674e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e207f00b56e1857d48d80ae680db6d6b2b1958fc10749de1b61bbc589d008155"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "25e51103e1574af2f57fc982843eb441e351bb7bcf730dcdcb632b95bb99bed2"
   end
 
   # TODO: unpin go@1.26 when goresym supports go 1.27

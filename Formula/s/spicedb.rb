@@ -7,11 +7,8 @@ class Spicedb < Formula
   head "https://github.com/authzed/spicedb.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5b2b2ce622949aad3e3dc24af075eef0725fc2e15975c23c1cfa63ee4ab82ac3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d1e2c3a2e99cda8524603ae8761877478281118284ab00d6d62f5783840fcee9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9af145f8b6e067b47a3b75855c37ebd06bfba0d4233d874cb3ef5b448c2842a0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "71af2b6210b73393eb1fb8e0c73324f99c880cc7139fb59deffd613a00702a9e"
-    sha256 cellar: :any,                 x86_64_linux:      "313b6b70fd0eedc59fd530d0fc4b7742a356f5d58992c4107a7fe92da109f43f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3861d6f289b090462b215a06c12ce6e175c29e25d9b32651b3e28dbbd93ef294"
   end
 
   depends_on "go" => :build

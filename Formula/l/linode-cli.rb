@@ -10,11 +10,8 @@ class LinodeCli < Formula
   head "https://github.com/linode/linode-cli.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0259a6120e03c3387ee278eb8a4b87dcb00ce964ec6fad4e273e32a69fc3f68c"
-    sha256 cellar: :any, arm64_tahoe:       "776a4ed8a80b65698d97b355d44fb0119b021c305f16494ec39c40d4ec4577d5"
-    sha256 cellar: :any, arm64_sequoia:     "b48255542c38e9d2ab2ad85023e995e57290e5e904bf680c27dc99ac14768097"
-    sha256 cellar: :any, arm64_linux:       "39add5143ed9a26054c3d341fa6880a71772f9e3b5e2cde217c2f497dfd0bd62"
-    sha256 cellar: :any, x86_64_linux:      "a0efa9d6ee3daee03dd72128608d1789ed0715406188449847645aada02201d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8233f980671630c04f0650f16999f7298c9dc1740dcd0d9e4c0d9316642e7b04"
   end
 
   depends_on "certifi" => :no_linkage

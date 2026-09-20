@@ -7,11 +7,8 @@ class VowpalWabbit < Formula
   head "https://github.com/VowpalWabbit/vowpal_wabbit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "79430b5bd35a3bd69ab48ff6bdc7e04cdeccb033b9697f6bb03c2b6f5eb434fa"
-    sha256 cellar: :any, arm64_tahoe:       "836b986b8af1d809d903bc8b219b7cb19cbc1f354947e68de3aa6e88e4a73cf4"
-    sha256 cellar: :any, arm64_sequoia:     "7225082be50e681f209d176022b9ce62cf4678cdc9a6a5dbfa82844c0e691dd3"
-    sha256 cellar: :any, arm64_linux:       "6f195050106d86ee24c736a3441a9150110d6cef80886e946dbd11bc34d1e393"
-    sha256 cellar: :any, x86_64_linux:      "1b9754af65f84983338dcec4e09826d1f4bc9787212a1f98a46f1b0af7745d6b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d0551d1094d4138e44a49479d8f44d2da47c5e375ffe864dfec41defaa6c0886"
   end
 
   depends_on "boost" => :build

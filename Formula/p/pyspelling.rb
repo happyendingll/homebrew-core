@@ -9,11 +9,8 @@ class Pyspelling < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a174a1d067b3b4eea7ceeb70836c230ba9146a85d0675062b1a4a864acf13696"
-    sha256 cellar: :any, arm64_tahoe:       "53ef517e0c3a54ce3b3e0f74f9b81838f6fec74aac2d84fce7054b71ed9d4211"
-    sha256 cellar: :any, arm64_sequoia:     "ddfa190d29c754cbe0eae7a38152585a82c180269fb7e97f5b6463fb22ab8d05"
-    sha256 cellar: :any, arm64_linux:       "20e14770e3c8f61e9e1751386af491590e166a55dd2089e7f984e6a727307aa4"
-    sha256 cellar: :any, x86_64_linux:      "b1b09834642fca3b35dca5789a48a20cb7a6435b6d55704888e9902fa85e1e79"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8ddd3412508313f5fc70065801a0398b4676de9353f4d8df6a110e8dc00d800b"
   end
 
   depends_on "aspell" => :test

@@ -7,12 +7,8 @@ class Nfdump < Formula
   head "https://github.com/phaag/nfdump.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "e503d3f84145d4f523be259654eb0aebc9259a36c9c7880d743dc2f987d2e38f"
-    sha256 cellar: :any, arm64_tahoe:       "8af6ec9421617e7dfb41fd2a8dcddc9221221896cd96b4bd09a2ba6e06efb2a4"
-    sha256 cellar: :any, arm64_sequoia:     "d929d7c54ab4f3f60b5959e3ffd9fb45675ede6741ec323f36126889d6ac8df5"
-    sha256 cellar: :any, arm64_linux:       "79b9079e2ee58183189bb647f56d5195e475b8123a631c72f84c1317b5470f32"
-    sha256 cellar: :any, x86_64_linux:      "76f14a3855d1205cc9be006866a7ed53d4dcb9b7313a9e3f724e83bee408ab14"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "00cb5f23be26c2437308e5dbdebb68c2600844b389423c795ec3e969945bdcc2"
   end
 
   depends_on "autoconf" => :build

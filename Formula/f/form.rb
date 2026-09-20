@@ -11,11 +11,8 @@ class Form < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "91a588458025f662e3d469bcdeb1ca00af618bec583793225cf930cf031990c9"
-    sha256 cellar: :any, arm64_tahoe:       "1c2d7cfa2efa9ac28d44008f71d4986657a005111bc9d7e133d7bda36e4e5f6b"
-    sha256 cellar: :any, arm64_sequoia:     "243cd6d28cff1929fd5dcef809dbdf352422bd9cd89ec54a4a7430ac01f9af70"
-    sha256 cellar: :any, arm64_linux:       "34a6d153868d8187ce3600a15bbb3ffc7cbf9e73496d177ffb347f3d225c8fa3"
-    sha256 cellar: :any, x86_64_linux:      "d7f56f73162c63f91e725f35d11d69c0910edce32c9b99af2cfc310159c3a276"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "956d67942a481948271c4b8ee318a48a588e164f7bdd2a40961c073c654fa851"
   end
 
   depends_on "flint"

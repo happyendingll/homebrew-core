@@ -12,11 +12,8 @@ class Libfabric < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "00e9ef43819e45fc51eb7aa874c34a4f19b9e2a258c3d8efb5321e6e18c90ec5"
-    sha256 cellar: :any, arm64_tahoe:       "0726305d521d5c6a0eb585bdba78e7812178725f71ebfd8400780f4f08127d98"
-    sha256 cellar: :any, arm64_sequoia:     "911320e794efd1ba2bc0fef756838f32fe1311bdc36e783699966aad93fd52c5"
-    sha256 cellar: :any, arm64_linux:       "248babb342dff1d36c5f59622c082d9285e77fc35cad484dc8f22a3c67c3ecb0"
-    sha256 cellar: :any, x86_64_linux:      "7bf38ed2e48785e7b09e5389cf51a19acf4a368db3bf3b8bfe4cb3a1722041fb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "fc4589f5a1aa714d1c6fa5b1ac75809b6820ee9df00dd7a6303aec2738f71fd9"
   end
 
   depends_on "autoconf" => :build

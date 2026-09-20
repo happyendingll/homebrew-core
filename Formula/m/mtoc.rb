@@ -6,10 +6,8 @@ class Mtoc < Formula
   license "APSL-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ee3b0b982580acbaa738c5a7e7a08647ce601a0a8a97f9f0604de30c7ec5ec60"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "adb45ecff560e344b072468cdd5779e48da051825c5e432f158ca7b3f3078766"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "62f924f7b8d67d754ff4927d64d6729e5a23f02cf5dc97a65ccf2cb057a2342f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "80a547bf67eaefe439721ce26c603e9b4c68727c49d64cb10310c451c6963c45"
   end
 
   depends_on "llvm" => :build

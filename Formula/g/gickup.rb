@@ -7,11 +7,8 @@ class Gickup < Formula
   head "https://github.com/cooperspencer/gickup.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26533b07a5f0731f1a9542fc9ea6489862702fb78d494c57d79718f215075f5f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a26b5ebbc8e5fd22d8df790621d088e441459e97bf4a0c2559e9fad4369158f2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d4f225e258233adcd7ad10a9a1d3843a5e4aa1d7770303e2e43aef2cc345669b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b69368a81a54a72a51d999220e5270d529f7b7d2b2932c67956aef23cac2948"
-    sha256 cellar: :any,                 x86_64_linux:      "23eec013ca1b789639483466ba17217a2912ce776ef8a024d50f651a9c974b01"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fcbccac856b798494e89389969be84b6784742d55b1bb6b641e0d70bd3a83eca"
   end
 
   depends_on "go" => :build

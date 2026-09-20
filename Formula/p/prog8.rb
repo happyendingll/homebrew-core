@@ -11,11 +11,8 @@ class Prog8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "67c81defcc225fff63ab88641a6954a05b37feefd01a6bcb9122c891b99c398f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4d21faa9712c45c2b8d5abc6691ef4c09f3d6ce9126feeb34338c6a80b5a3f3a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f99189dd1148dec129ba7ce0d82682d1086788e2404d56cc8ba21cbab281eeba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b163dc73aa9959549159681f0d6585bf48e5fcf8a3c1d87e3d1b925c85e02e37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c8fde557cd2452a11eee3733b238edefd75fefc9c6e0c540a5be46038cd780dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "71554b7143ce61a33100eac7c9a13a13993c2b4e6b489ae58bf40c3a2aa20c52"
   end
 
   depends_on "gradle" => :build

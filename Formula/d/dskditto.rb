@@ -6,11 +6,8 @@ class Dskditto < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e9c483de09e5f0896dbdca6df1a9ca32f2d47e2b89aaed1247733216a3cec523"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ca4a2304114d2f4332d329adab2ec5fec8f9f0ab9b191b01cd4d52a784b932b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a16e68e55ffca5b18232cc30709c44f4d3ca2f4f5142e9b0c5c4ca835a8c4e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "af033c1d6ad53bb4e469746c09e1d7820453f920149eccd7281be8ddf6e92661"
-    sha256 cellar: :any,                 x86_64_linux:      "7c7f22d12b8fb9e04ca86a2cd9294cb331d94d722f1fb362379674d1a831891d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1fa1cf9b49d5c04f3de1ce131349401a6ab832198057b5cf286b793c43e5285e"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class CamlpStreams < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "66cf6c6e906ebb2eeec62c375bfcf5ebfa3d5cc0625290818c89f1cbba13f7ce"
-    sha256 cellar: :any, arm64_tahoe:       "4b27a1600ecf72abd834014cc1a0468123a43deb552b11be0f2b82590dee0ada"
-    sha256 cellar: :any, arm64_sequoia:     "73488f091ea0410e729fac0a9f4ec29ca3cfd6ecd9044b3b4425e1ac6be77cbe"
-    sha256 cellar: :any, arm64_linux:       "ff202f7479a469d8d010c053420e5391b67742e760e4f721b76fdff7109dc919"
-    sha256 cellar: :any, x86_64_linux:      "50f38409c827ecd178f56c167e2e64bc9d4cdf87effd918202301a2f54a4412b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "3206db6595a1f9a450da49841ba483a7daa355e4ec40ea8809322ef2668e3016"
   end
 
   depends_on "dune" => :build

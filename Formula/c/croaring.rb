@@ -7,11 +7,8 @@ class Croaring < Formula
   head "https://github.com/RoaringBitmap/CRoaring.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dfcae21fcee5830e02b00125c277ea605f31eed1b65b817b0d4ded6d13ac574b"
-    sha256 cellar: :any, arm64_tahoe:       "bcb1cc116aa3c4c33dc0e1a0f7c0704d04df5a0b27746959302ccb134d255427"
-    sha256 cellar: :any, arm64_sequoia:     "66057511474f02e72f08e9d2eb391c98b1808264bbcd7a742d6b710463c8e8fa"
-    sha256 cellar: :any, arm64_linux:       "87a5b87431c75e69e8b7431fa8f1e3b17530bb06b882373be7dc4a569e865926"
-    sha256 cellar: :any, x86_64_linux:      "5987526d4d9d71c0b7607f65a44ad91e2cc6cf23af3e604bfb0ddd580103c40f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "77f6e21bb32f17dde4a262614d450c720cb00bded0d3de6ad84d1f32bf7c8fa8"
   end
 
   depends_on "cmake" => :build

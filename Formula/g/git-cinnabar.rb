@@ -7,12 +7,8 @@ class GitCinnabar < Formula
   head "https://github.com/glandium/git-cinnabar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "231d77635690a2da599202a1a6b14631919423adfec5f047b8ffedf8dd3f063c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ebb3d2ad35aa9568d16389b36efdb688105e5b1bc5c5070b8de0d3ef67b7a50b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db5c9a7a4baef75c24d8592d0a052923a9d801be68a87cb71b98fa64c8ec7ba4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "b9e72e57888da6c388728f3b65f6b2b34ba99c9578fdc9a68118b317dac3b3e5"
-    sha256 cellar: :any,                 arm64_linux:       "0392caacbcb5da3296da21bf92941f5ca3d8c48092dfe124d71db1adc488a52c"
-    sha256 cellar: :any,                 x86_64_linux:      "ba11bac0d78cfe8e36e7c641856085889d05b15dfc3b2ec5993271b2527d14ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "12653b4b1412117a8bd0237d41d726b372db1bc3b5a10096ab4d89e7a0a5bb9a"
   end
 
   depends_on "rust" => :build

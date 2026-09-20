@@ -12,12 +12,8 @@ class ArxLibertatis < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "e9e3ba7512696c5734388ec8401086029cff865f417e251b89f3ac63f73b02c1"
-    sha256 arm64_tahoe:       "75fff5f90379f2579818f529144c817b0a07de9f4e3937fc4046287271042b14"
-    sha256 arm64_sequoia:     "0b1d9d0b4667e89fbefa27c6028933704c1b1c1d16cc806310b0ddfb6d508a0a"
-    sha256 arm64_linux:       "6e499f620fbe0a637308dbd24489a16ee74ccb30173807deec8c1d8cfaecfdaa"
-    sha256 x86_64_linux:      "635e03240035ca0966038f70efeee5aeeb0549db9db04cf656c8e3d7613447b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "c564b15287f899b63ecb1a08685deb63049deb07ffde8300227a1a91bb8495da"
   end
 
   head do

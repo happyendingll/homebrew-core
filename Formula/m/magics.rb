@@ -11,12 +11,8 @@ class Magics < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "ab5ef87626865bb0a5fafaf059f679f592fe99903168234f027bed02f882f51d"
-    sha256 arm64_tahoe:       "9bff7bb5e7f9044d264a741b35a68fb1603952d16fbe8dd261806b791de224f1"
-    sha256 arm64_sequoia:     "6756f4ade57c494461f56f3f57c670fb62d051e657178efe68af6f8e83cf0fde"
-    sha256 arm64_linux:       "e8e83e91d1add49811f85d9c4a56741b0e57a418196446a95a1f0f26922f36b9"
-    sha256 x86_64_linux:      "1db8be1f9ec3bf6a13048856c12f8bf6c4950537f391e4f6506dae9ddfd08b2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "eb675a1c1cfbb395c99a47f508ce03f1543695df246ba8d25fb06e67931f927c"
   end
 
   depends_on "cmake" => :build

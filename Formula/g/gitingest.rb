@@ -9,11 +9,8 @@ class Gitingest < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "92162e9ec3dadd4b61339b07c70c3d38b9dcd42a69ff132009a55f4e73f63ffa"
-    sha256 cellar: :any, arm64_tahoe:       "68e970a83d016b09ed9733f4d52f1520ce8a8a5fc9fdfab4c6ea7c878af589f4"
-    sha256 cellar: :any, arm64_sequoia:     "a3d99c796a0389ce5505f72cf49bdaa7c0f1cd9fda199ba19a16ed49c081e3d7"
-    sha256 cellar: :any, arm64_linux:       "f867ab7198c0acda8d2667a3589ba7c652d97280b9630ae80df6c9861ae5b95c"
-    sha256 cellar: :any, x86_64_linux:      "93d1b6622ce5ede2bdcd7bb6c92dea853480c5addfe49a1ef2082f6dbb21f2da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c6d1ee4712814b2b53edd0998852bb65691d1e49e7373e201d46625a057204b1"
   end
 
   depends_on "rust" => :build # for tiktoken

@@ -9,11 +9,8 @@ class LanggraphCli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1caef4944b4232c8eefc02b1956ecbdb5b66a37ab2f1d9815cce940ef1ac3d9f"
-    sha256 cellar: :any, arm64_tahoe:       "26a1e96968c7150302190b8d2887136191c373145eecb2dda7e76c04cad285b9"
-    sha256 cellar: :any, arm64_sequoia:     "e5541bf07d30e2b49591cab164545fc2d5ffddee8b6f31e1f394bea587d8e246"
-    sha256 cellar: :any, arm64_linux:       "928b25e9a3fab27d4689d1a64c68e1d32242798dd177d55dba7348fe635293e2"
-    sha256 cellar: :any, x86_64_linux:      "2037bcbe2940315d98d93d2e59e198be32330d1638d472046e855437a216bef0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7a2c6598569f27c9414abba3bd6554c50aa80296ea1440d7bdc0518aa4f4b6a8"
   end
 
   depends_on "rust" => :build # for orjson

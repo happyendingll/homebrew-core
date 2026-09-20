@@ -7,11 +7,8 @@ class ZlibRs < Formula
   head "https://github.com/trifectatechfoundation/zlib-rs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b55812598da1212a923cbc3f2ae0a21aa7a476e6a8b77b46c3051b363da16994"
-    sha256 cellar: :any, arm64_tahoe:       "6f1b7590384f19467c52fa2871f7e9d418dea1f7d8cd42fb9f278c5c7ee91090"
-    sha256 cellar: :any, arm64_sequoia:     "49b35291e790790cad24aae2251aad9f3553d362b3d3a4905fc7468c2d390a61"
-    sha256 cellar: :any, arm64_linux:       "e4dd90a177b01e7ada61cb59ac46da99b56320e7b0f6b12d3241216646efafda"
-    sha256 cellar: :any, x86_64_linux:      "db4ecf8e5d245e697e8d4d552eb3b889fa4ffd8493d5cb75f4e4785a087cdfee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a37dd68c6561f144d22e3ce2c97c9aac8cc46a5b486e20c1012b864646cf7525"
   end
 
   depends_on "cargo-c" => :build

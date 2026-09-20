@@ -20,11 +20,8 @@ class Gcr < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "affdc242b6126b78c1b93d6107a4c2db71cc56c752ebf1fec8e9ab1a15d92aca"
-    sha256 arm64_tahoe:       "711044b2de080a0874953f5b56d4cdac52023f5950dc6a517b79a524bb57876a"
-    sha256 arm64_sequoia:     "8534179cbe65fb82115c099bc9ecd9a28ca4b476c17e0bb8cf94fc2d2bd84542"
-    sha256 arm64_linux:       "3677e3c9220ba82c8532d0a57a147c46cd42ca1f21d264f7ed232f34d5755b11"
-    sha256 x86_64_linux:      "fd12034c41ee44e76d4aab103313e63ba87f7d4e2cbfa538924df3728cd591c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "ae0a9263524133b49f532b9ba0a5aaf0e54bab25fe8191dceca5807ea7ff0b55"
   end
 
   depends_on "gettext" => :build

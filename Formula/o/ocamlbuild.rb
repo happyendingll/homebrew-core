@@ -13,11 +13,8 @@ class Ocamlbuild < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "00c40f3ff05ff224beddef09dd5bfe2052b8473cdad244f3af894250992acdcf"
-    sha256 arm64_tahoe:       "8b8baa86b4c4fd8d800937c3f82566a65dcaca3c2c03c382f9c74e089c7704d4"
-    sha256 arm64_sequoia:     "b61d6af332d1e8d087cae5eed2b5d5fbe8c41dd0a18f99a4fd22f1376fa70623"
-    sha256 arm64_linux:       "36c2e39997ef8991ab31691ac6007840628b587422c7792bcd71b5f53230d3d5"
-    sha256 x86_64_linux:      "109e4856e2c458d99166e0462dd7e8456d46cc554759d08405da38b1f75a17ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "6524e51c0c8cd66915a3df55275dab90f74b2d93b87463b30a71f4980fc145b2"
   end
 
   depends_on "ocaml"

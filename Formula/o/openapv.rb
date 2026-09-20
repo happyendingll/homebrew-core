@@ -11,11 +11,8 @@ class Openapv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f99f6ff9c9c2b5847fdc00f62bb469ba6222e02f69900ef07decd14b20ba0bc4"
-    sha256 cellar: :any, arm64_tahoe:       "d69ef2c9c4bc0550c7dc429237548d4cea60ac59df962fa0391cbdafde4401f9"
-    sha256 cellar: :any, arm64_sequoia:     "4a75eaa35fcb10d6e64304bf026c2992137a82405b23eb0fa9036fd23497eb0d"
-    sha256 cellar: :any, arm64_linux:       "2e01f0e76f081c97f787611b012bce9a41b4a4ae6a94d12c0f52b6786fbb4520"
-    sha256 cellar: :any, x86_64_linux:      "a353e9980ac4c9a3ec006ac3fa73e17627d51bbde120fc36d3a3a82a31278615"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "59776d6433fadf137f5f2bbeae1e92557f6b836cf502473f4867c33da91458bb"
   end
 
   depends_on "cmake" => :build

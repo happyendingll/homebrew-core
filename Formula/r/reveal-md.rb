@@ -6,12 +6,8 @@ class RevealMd < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "9894ad668b98aac5215a89bdd31e39be7d73962f1d8101690c6022154e9c6f1a"
-    sha256 cellar: :any, arm64_tahoe:       "9894ad668b98aac5215a89bdd31e39be7d73962f1d8101690c6022154e9c6f1a"
-    sha256 cellar: :any, arm64_sequoia:     "9894ad668b98aac5215a89bdd31e39be7d73962f1d8101690c6022154e9c6f1a"
-    sha256 cellar: :any, arm64_linux:       "dbde45bb72ba1e3d9fb548473ff026e1d4379abac971885236b1c365252c499c"
-    sha256 cellar: :any, x86_64_linux:      "45100cb1686b30fdddbfc5cc0b516346dcf8c6170eac86edfbbcb52cbad2da4d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "483802cbd061c6378e24912bceee37f2b5392383b5f70be0108415d44c4b8533"
   end
 
   depends_on "node"

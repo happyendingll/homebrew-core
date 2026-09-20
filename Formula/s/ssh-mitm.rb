@@ -9,11 +9,8 @@ class SshMitm < Formula
   head "https://github.com/ssh-mitm/ssh-mitm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "68f6c630c48797551421e068d0bcc679ba607fcea7b705bca226b2401269e2dc"
-    sha256 cellar: :any, arm64_tahoe:       "679e4382398d2881f3f59805bac91aa79a1cb4377a28a48a5b608f37ffe31762"
-    sha256 cellar: :any, arm64_sequoia:     "4c8ece7267231fea45d51494e9605492fd078c309fa7eb20b53d03b75091c878"
-    sha256 cellar: :any, arm64_linux:       "d4c2f62fa710163ffcdc44e6b47b9b8ed183693cb997901d039fb19abd925dc5"
-    sha256 cellar: :any, x86_64_linux:      "55750b59b69b43c6fa1f8f8d550c78b98be18cffca6a12688893ae0ce186b2db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "cfd16601f087a8a0a26ac64e744c68c63bc887f99552a17f7b80b79812a0b329"
   end
 
   # `pkgconf` and `rust` are for bcrypt

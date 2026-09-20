@@ -9,11 +9,8 @@ class Maigret < Formula
   head "https://github.com/soxoj/maigret.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2e2e503dc3fd12972bace678fa20a269193317314dd9e71aa58609f93b4e240"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0d7d67a9e024647fc9e18ab1ae52145f68cb4b9dba1cffcd2f1f78776c18961"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91c29adc84d14562b1ff5bdf61d897ae81870195f0ffd44e8358cfc31247f415"
-    sha256 cellar: :any,                 arm64_linux:       "de1315740879474e3c47822f4ee6e6b93b6c99404ca0de29753bbabd3168c6e3"
-    sha256 cellar: :any,                 x86_64_linux:      "372df20008e814575f2709bffb9c6f1f85515d8116534d1e53fc6ea4fd97cc40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "111a214df0c98e8fbbde01ec956fc2ebbb12d4087da26f125d48d4bbc4ecfc66"
   end
 
   depends_on "cmake" => :build # for pycares

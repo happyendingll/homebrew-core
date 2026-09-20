@@ -11,6 +11,11 @@ class PortableLibyaml < PortableFormula
     formula "libyaml"
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1dff12077e80adfa33beacdc24cc10be9ad2e9eaf23d32d6141f29c7a8981557"
+  end
+
   def install
     system "./configure", *portable_configure_args,
                           "--disable-dependency-tracking",

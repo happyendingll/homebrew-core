@@ -7,11 +7,8 @@ class Firefoxpwa < Formula
   head "https://github.com/filips123/PWAsForFirefox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "72a0165deca44bf50c454787841bdfd01171050341ee4b82af6fec5d75312ef5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e645c0267ba766f9a85957f0fb88dd54afd82a541085ec07b39597ccda6ef7d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3dab5090fd3dbd4316c08093603de710f5587964966462fe10b0e732b58a1e77"
-    sha256 cellar: :any,                 arm64_linux:       "cc97b4212415c9a625ed4c1f30c9bacebc13ce177b4fa236e0159f2aefde0789"
-    sha256 cellar: :any,                 x86_64_linux:      "fa2925a674fd6782f6396c344e12ab886c695ec3bdd62611d2dfe14ffd22170e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "228636e094d78a81378e0b017099073074828bc3a260ed8d512c19902d38047a"
   end
 
   depends_on "pkgconf" => :build

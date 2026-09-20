@@ -6,11 +6,8 @@ class Breseq < Formula
   license all_of: ["GPL-2.0-or-later", "MIT", "BSD-3-Clause"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c462c15ee597fc4e12dc374c635bb7795e0e043d63051b8bc2f93678e6cb39da"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "846c5cd36fb225f17a4f2cf2ce0e1d2036d59750fc9bb32dac6924c96a31a70d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fd605a578b171d8b5e11cee880724ce766782cdb97b30e9ab7fa9124925f4fee"
-    sha256 cellar: :any,                 arm64_linux:       "701f023b6d791bf5169a00a6193965ea1b4045927181ccf912975e48504340ff"
-    sha256 cellar: :any,                 x86_64_linux:      "eee49502a6c17d26edf2ed5e8226b9df3530deb8414293c369f537acda142945"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "eac46ec7ef3675f137708d2d127ab1c964a897c2551e2acd2d21ff8ca7c04841"
   end
 
   head do

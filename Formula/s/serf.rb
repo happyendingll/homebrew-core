@@ -7,11 +7,8 @@ class Serf < Formula
   head "https://github.com/hashicorp/serf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cde5efa135b027ccc05a06d2530f37bf40fb6ccddb83999057d8f91fd1af8c23"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cde5efa135b027ccc05a06d2530f37bf40fb6ccddb83999057d8f91fd1af8c23"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cde5efa135b027ccc05a06d2530f37bf40fb6ccddb83999057d8f91fd1af8c23"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "56957740c2ee1379419824632086979e5ac768d44dcf2ca45e1327a8346c10dc"
-    sha256 cellar: :any,                 x86_64_linux:      "c6051672372425d9d971f60b5025d568456cd8fb0aa8854c0ba513f0ed04291d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "eb000cea1db0e7b8421a01e4d0992b5a7c38a7ddebe46acb95798eaf99580964"
   end
 
   depends_on "go" => :build

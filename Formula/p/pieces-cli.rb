@@ -10,11 +10,8 @@ class PiecesCli < Formula
   head "https://github.com/pieces-app/cli-agent.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "765f6e1cfe418be2b5e121d4ed197ba70966cb0c9dd221ad071b3f7534d2ecd9"
-    sha256 cellar: :any, arm64_tahoe:       "de42f1eb91eb5893750311c8bb9e5ee3d84b0f35c5e4c1bf752d6f83479cbb33"
-    sha256 cellar: :any, arm64_sequoia:     "3589db3cf0cfbfe8b98c8fb5c8b6da5eec443f1827009519eef8f6784239220b"
-    sha256 cellar: :any, arm64_linux:       "b8457bb42ca24ea714376bbc60f4cd9cab3cae8d5877fb5066a70f331dd06c7a"
-    sha256 cellar: :any, x86_64_linux:      "cafefca2de176f34a18c24da69617b011d700d28adf934920c3a6153801a8d66"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "493e1e03d7b195cf512683409b496a99032665090e2f4a73c028eba213d57f23"
   end
 
   depends_on "certifi" => :no_linkage

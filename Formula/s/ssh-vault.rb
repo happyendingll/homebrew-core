@@ -9,11 +9,8 @@ class SshVault < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a6ca5bf377dc9094a81eca5c3d8427ab20fbaa0f373925e9ca9462d87015c06"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "824492df6458e67e91922788fd0cb24fe01a5eccb339e863f312883d3ac58540"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5ec7ade81352de731fe686d89b96d0215d122b966c3912b86fdd702bc9a123ba"
-    sha256 cellar: :any,                 arm64_linux:       "ef5645ce6e6ead95c907f7cdd321bd29118dd7593f7723b3f116a6d2859f0084"
-    sha256 cellar: :any,                 x86_64_linux:      "b24513b3d76ce4d77e17f9401589dd9d0bd7f464a314f93ae1f03d59d6e25e20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2feb10eadd7e9f001ce3d8fb8a3c2c745610b77f09ebb797ff041568b26f1d22"
   end
 
   depends_on "rust" => :build

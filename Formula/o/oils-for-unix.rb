@@ -11,11 +11,8 @@ class OilsForUnix < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9cbfb2000539d72a7f67e6baf5bb3850b501d1b9610c8627b08bffa18c9e84b6"
-    sha256 cellar: :any, arm64_tahoe:       "c796e59f2e1a32dc30250d5af154aaf496c1978b9bdabecd3100b5be274ae546"
-    sha256 cellar: :any, arm64_sequoia:     "e5fe474aaf7c63d3956c977a388bf6e3b358a077595a4a7a74f826279c1f193b"
-    sha256 cellar: :any, arm64_linux:       "1aae8a6e3a3b95e6f3a5c3a6961f117f2b821f7fa53517a40bcab75bcdb83712"
-    sha256 cellar: :any, x86_64_linux:      "cd7765d340396d4786c84166038eeb6d6b3a217eee2710615cbfca2c47001593"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e59f7ef884b3fa208190d4e29e906b1fdebf2935d981ba3a7ded17586ce4a872"
   end
 
   depends_on "readline"

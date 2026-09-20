@@ -9,11 +9,8 @@ class Johnnydep < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bd06c692e3446939a37dff8ef6435894617798fd5d9e7c2cdb303a5091141c59"
-    sha256 cellar: :any, arm64_tahoe:       "57d07a082d4cdce674f21518a7a01d7b0c14f1ad40252a062667599320d73e73"
-    sha256 cellar: :any, arm64_sequoia:     "20515ceccdd2de9ed5dc68cd9bf88a6bdfa444eb55030e2ee90ec3bc39cc5cb8"
-    sha256 cellar: :any, arm64_linux:       "98a0f9f38ffe440b3998728eacf3104bbbc9e0ef4fb5ac5cd0164e4356831552"
-    sha256 cellar: :any, x86_64_linux:      "dafb0b33e7186e6c5134e2850e0607621b88a24402485bf89ea5775be5c8dda4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "2fd489a38b49a95c01845dc151b7a72216bbed0e9234216df180bc0c5aa1ed00"
   end
 
   depends_on "certifi" => :no_linkage

@@ -11,11 +11,8 @@ class Sftpgo < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a3a00bf433093cb5faa7057aafba86a792c6537b30657acdae05a2e5fbaf79f6"
-    sha256 arm64_tahoe:       "aab385c3774b92982d03b410320214dad0a8a1702b985bdb0aad9c611b083352"
-    sha256 arm64_sequoia:     "37dfa01a4bc2c0a398fb1dabd860169b270a606e811789efc9c14a33d9a7e6c1"
-    sha256 arm64_linux:       "6822969bb3d07c9fdb89b6f7325c9979548d9cc5f058055cd9c3066fe159cbee"
-    sha256 x86_64_linux:      "40f89cce30713c6eda608457fcbe1a59ff0c078ddc406b027c684ef24345aeb2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "73d695eb876385e7e1cc81deabc95c26e6e342266b366be593dc4b3c06f90bc0"
   end
 
   depends_on "go" => :build

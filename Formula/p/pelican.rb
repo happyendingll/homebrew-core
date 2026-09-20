@@ -9,11 +9,8 @@ class Pelican < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1e2ca8a073f5874a010bd2da0b0e387c930aec192886c8d6beb47365107f41c4"
-    sha256 cellar: :any, arm64_tahoe:       "fbc9af939d03e778a437a70f00d61f377d20037b8abcb6ff6b760c47bc052709"
-    sha256 cellar: :any, arm64_sequoia:     "52e5fc285c1db3a054b49116a6229173da5b24277c7fdbfc2845ef143145a4df"
-    sha256 cellar: :any, arm64_linux:       "d968303228488e84dd0061e2f9264955d769a1ee3e706fa4177f49cb7fcb6582"
-    sha256 cellar: :any, x86_64_linux:      "2498e4c3d3ac131a525c4895a7573875c28fb1e1c548aff1c2ea55f8abdf8cc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4f3307c41c3ca3d9747140d02cfacf6efe50131ab03e55b9b4eac20220ac3a3f"
   end
 
   depends_on "rust" => :build # for `watchfiles`

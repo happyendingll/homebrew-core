@@ -9,11 +9,8 @@ class Posting < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fa9af3dcb23df39c26da36965cd87f2caf7d57913e1cbf776b63a86e8dbf013b"
-    sha256 cellar: :any, arm64_tahoe:       "686d7360cbc2913111836804a6f4ccfe9695722c2afc7fab034f86aa44501f70"
-    sha256 cellar: :any, arm64_sequoia:     "da6d4b520f10d464897ec7bbfbd6c36b9cdaa29f22624d18b0aee20c99332f57"
-    sha256 cellar: :any, arm64_linux:       "a68415e9992e9c609cd61f8b6dc39f93f89529263d43a9342c75429518993634"
-    sha256 cellar: :any, x86_64_linux:      "11a0d21065e8a353627c4be3a23171081ac2ea32c6e1330387a41919846432d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8c256eb7b295a4b4aff5e2d5de65675f797fd155a3b8e15bddd70a65dff0f4c6"
   end
 
   depends_on "cmake" => :build
