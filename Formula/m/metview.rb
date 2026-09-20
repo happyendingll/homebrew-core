@@ -11,12 +11,8 @@ class Metview < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "5a1d1e76099dbf127a5b12d140c67177c89badf19738f851329a68e2fc907057"
-    sha256 cellar: :any, arm64_tahoe:       "bd863ad07297b790be7f2926d5c0ece1ac0e6ac539a917df45bd2598a0505529"
-    sha256 cellar: :any, arm64_sequoia:     "3faa35a75423cf43a8792429f3c37d6ad586573ad6993dd480e143eff9946874"
-    sha256 cellar: :any, arm64_linux:       "4ca04059eda9ac1ba987a1735b48bbe4aacd240c5be43fb00d6bcbeb473513e7"
-    sha256 cellar: :any, x86_64_linux:      "61d3356ddca4c0457bdac6122ee00357340c0adf7fe3bef276de6e92238caa34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c31068972e82431b6298750849fb791e80f352986eacc03a6b2d65e5ea216300"
   end
 
   depends_on "cmake" => :build

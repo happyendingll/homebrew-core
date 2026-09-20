@@ -7,11 +7,8 @@ class Menhir < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "87d1a6f7fa151ddf1de28d9995e37e16e2dc524e9535596d183142414076a7b5"
-    sha256 cellar: :any, arm64_tahoe:       "43af046448515ba9704d2d1aaa83c11c5ca6fb6e0837c336533ca84f75717dd7"
-    sha256 cellar: :any, arm64_sequoia:     "e92475c1bc5431eb558e055bcc2ed6b849aa8dc0b4c195f2311da317c7ebce8f"
-    sha256 cellar: :any, arm64_linux:       "a8da683ffae4530db882842956e605b8766c84ac5d5ec65a6915395d63081c57"
-    sha256 cellar: :any, x86_64_linux:      "817623b4c127287e8c5e2206c0d8cf127ebd3e9736b3d65fe9a01d61bc19d815"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "37b00377486b95231fadb93b531652aec17a09c62238766b1f0b0b109661edaa"
   end
 
   depends_on "dune" => :build

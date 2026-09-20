@@ -15,11 +15,8 @@ class Ledit < Formula
   end
 
   bottle do
-    sha256                               arm64_golden_gate: "09936a19fd839c942fc87d955b692aecfe37e5ff56b4050b6571feca111d609d"
-    sha256                               arm64_tahoe:       "5436407da729171a830263530217b8bfd7997c38bd7e8a6d42e8120cf54296d4"
-    sha256                               arm64_sequoia:     "f7676f12ed17e6ecbdd5f134d28027b86ce9fd50e17faa1280ba6b5f4d5c6ab6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ce83484af144e1162b1f91c81432466fdebc27b5a5788fd798dfa1e0a0f1cf39"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ce83484af144e1162b1f91c81432466fdebc27b5a5788fd798dfa1e0a0f1cf39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d45ca50be9d4479aebcaa71d48b697f7279a57e9cc4e7fb50b31ff8533dc03c1"
   end
 
   depends_on "ocaml-findlib" => :build
