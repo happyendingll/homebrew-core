@@ -7,11 +7,8 @@ class Garble < Formula
   head "https://github.com/burrowers/garble.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cc64811a6f633848f1d6e06f95f1ee47821d23251ee913d1635a3da8a36f9ec9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc64811a6f633848f1d6e06f95f1ee47821d23251ee913d1635a3da8a36f9ec9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc64811a6f633848f1d6e06f95f1ee47821d23251ee913d1635a3da8a36f9ec9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "56ad8af355db29da561a4063723961e31444c0415bed8ad10c8056e091d37f8e"
-    sha256 cellar: :any,                 x86_64_linux:      "4647c4cc9342d87053932f601959eafc3e4a6e49d67cb4e970328c9d65ce2c40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2db7c4645385db2909ddf4dccb1dfc536e3aec4d79f9418d582c5a591ac2d939"
   end
 
   depends_on "go" => [:build, :test]

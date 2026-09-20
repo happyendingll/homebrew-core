@@ -7,11 +7,8 @@ class Tailcat < Formula
   head "https://github.com/tailscale/tailcat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6b9a79a9c847a94c7ac4544ef8b975db39fcc5db94dc9285b9a15ae24e52e6d4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cfd5f77dfda9a3fc6e66ec60a0d408527281d61f47cf06680fea0c28ffe5f212"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ad12dbe1687b64f6eb990a71dc111f6d33c0aebff1e342a8ae6c209412f6769"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "313ccd5f792b7ee23fc88d352fd09fb801bac0bed8b6dc03d4b1735fca83031b"
-    sha256 cellar: :any,                 x86_64_linux:      "3d20bb3caa436e21d7f13eab763919b36b948917e411af52342b8cbcbedbb19a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "b71406891bcacba21d4d4bf7d8deda0594b5d4e653b40c0ddccbc1ea25fc600a"
   end
 
   depends_on "go" => :build

@@ -9,11 +9,8 @@ class LinodeCli < Formula
   head "https://github.com/linode/linode-cli.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bfd9b9f886c95eacd74fc0dd994b8d622d6e2db0f720b0c3c503510245a37e50"
-    sha256 cellar: :any, arm64_tahoe:       "7f8fc05fe0c09af5ffce882902525aed10b4298ff08a948c858289b4d28e7a26"
-    sha256 cellar: :any, arm64_sequoia:     "2e58334699977c44c7d537d0ec0e07db69fdb38424f484bdc2b0dfc0c7d2a4a7"
-    sha256 cellar: :any, arm64_linux:       "2320e1e090ff5513374f6e5f34e5c0b62267510d10bc8817fb0d36cee83a1de2"
-    sha256 cellar: :any, x86_64_linux:      "5cdee23c74bbe9ffa0248faa5a9bfd36977879e8a31676e5aa613def6327d3c0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "001768197e2155f18784566e92136ad1461c464b6aaaad961ed3e7f1f2438326"
   end
 
   depends_on "certifi" => :no_linkage

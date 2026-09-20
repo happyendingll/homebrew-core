@@ -6,11 +6,8 @@ class Iamb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ad26af7c6e67b37a716a7debaae52cef5fd094b53a2d09b13ca300adc1a0696"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ae8082145233f38782b8fd8de0c2b5739f3155231ec1f48147b5b47437b3d22b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fcd60dbdbbaf979557c9d0ea75618dbc374794c17bd9774a800b07a04eb87994"
-    sha256 cellar: :any,                 arm64_linux:       "e96726a55d3bd5609a43395877ef2b0484ed88f64ecf763a25ecf7482dfba5ee"
-    sha256 cellar: :any,                 x86_64_linux:      "9a2a639f5c13dc8347d4417999c413f01b0d891ac4555818f851849e9b639d90"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a644abfe8ea76bb71a8bb556af62ea733d85afd9c960d9f0efa6a2da6ca7e21c"
   end
 
   depends_on "pkgconf" => :build

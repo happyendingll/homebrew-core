@@ -7,11 +7,8 @@ class MinioWarp < Formula
   head "https://github.com/minio/warp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e309a30a86d40b1e79aa07a9d15224772a688c4c3ee9d210f7552efb7211c68"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "22c517bd8e66fde990c6fee120bb09225aa82277298a833a8659be21ba1dff46"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07b66f60e1f5f4118410010a5b41a6691821e72830b64f2d6718193bc2aa9e98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a6902a23b164b4779a298d48143fd6ef2b55a2668bca9ba5fcfc33fe6d3f8b41"
-    sha256 cellar: :any,                 x86_64_linux:      "1e91c9f4cb1783521ea05fea41638985ed51951650607794e3fdab4f6fff7ba6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "3f8ee8d11e8795844ff7725ea6d974d6315b1d2c08bcb56ba3b87c2128e9920f"
   end
 
   depends_on "go" => :build

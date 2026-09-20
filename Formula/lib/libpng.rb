@@ -12,12 +12,8 @@ class Libpng < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "02e4e023512c6bf086f139717bcb90fb53ece5fbab3ab4354b0d5fed25afa5db"
-    sha256 cellar: :any, arm64_tahoe:       "afb3b4e1b5035a602d60668b8a16369704dfa32aca18330f4e0faaec54b3134f"
-    sha256 cellar: :any, arm64_sequoia:     "bc998bd8497a87e10e613348858c295a38f29f12914408ccbec81f0d0c2e77c8"
-    sha256 cellar: :any, arm64_linux:       "36876a725450f53a659f499b1bae414674d451ee558c59b14a76a459dd1b31d5"
-    sha256 cellar: :any, x86_64_linux:      "fef7fad4ecddc7ba44bd310ef6fbdbacbadeb99027577e3df1f05bd330554eac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a6af06c61f8385b8e4cc0e685dc3a4ab7bd964e28493a94a2d0833a3e7566a2c"
   end
 
   head do

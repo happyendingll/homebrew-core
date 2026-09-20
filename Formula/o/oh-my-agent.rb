@@ -6,11 +6,8 @@ class OhMyAgent < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b184b4fe9acd208eefa4cd1df19d44d9478fa539041d52027f72974561541e95"
-    sha256 cellar: :any, arm64_tahoe:       "6e794faf27596ba636ba933211609d0093405ea44a1bcd71174afed47bfac36f"
-    sha256 cellar: :any, arm64_sequoia:     "3004523da34b22203f26814ac89fedb0b626be66b77aefb7971ebbda3ee7031a"
-    sha256 cellar: :any, arm64_linux:       "084f5328516bf238fa5797d7035325b97f66b0c46bd1c9e89527468b0b958217"
-    sha256 cellar: :any, x86_64_linux:      "22f0264c2cfdf69bbcd2790b0db2f54bee80cccaa64bef46b763923e925cd651"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "46bd9d6b59839d83d96dc1ccad96cf9419db542172497b5f97416fd720d136bb"
   end
 
   depends_on "node"

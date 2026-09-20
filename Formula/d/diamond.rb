@@ -6,11 +6,8 @@ class Diamond < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "104b2f784f12dfd7cf0c700c11db3eb925426d2956c1b35a584fce76aad7b975"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97f7e38b892486ad2e6add06b96d79626bdac717894bd6e4c71bd41a1a43d768"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2907038e5334790aa10c0e327a2ecea0298a8087b8998cabee70c05350e960e1"
-    sha256 cellar: :any,                 arm64_linux:       "b04502c713f0ba7bb37a22ee1d4a9c0264ab043f44d256b026a81a927aaf5fea"
-    sha256 cellar: :any,                 x86_64_linux:      "83bb4c0e18fcd6abbc17f674caa3f3e831a76d6d39ddba4e1a07fc7bf8af9fd5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "147cc49c9813c0dc5bf326c48308d7435c582241e7ad06d2076f1337278659c1"
   end
 
   depends_on "cmake" => :build

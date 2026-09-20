@@ -8,11 +8,8 @@ class WakatimeCli < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf35095368275affdb47b1288d4c341d59f401032f1ca1f54d3bbffa0fa3788c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf35095368275affdb47b1288d4c341d59f401032f1ca1f54d3bbffa0fa3788c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf35095368275affdb47b1288d4c341d59f401032f1ca1f54d3bbffa0fa3788c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dfe70ed4dd179dbb6976bc221b8f39670ff5085ac1873dd868aed6883b9e113b"
-    sha256 cellar: :any,                 x86_64_linux:      "6b7db788038b15145253267e687eecd9db760da1c4ec6db14569b9e5916de61e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d5aaa5a8133854eb4fbb857bc4ffff57a2327d28abee1914f9e82e12d9283b7a"
   end
 
   depends_on "go" => :build
