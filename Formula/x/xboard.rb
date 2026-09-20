@@ -20,12 +20,8 @@ class Xboard < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "74171650ea32aaa60891345f4d72f953901bfa37df649b6c229b78ea4865107c"
-    sha256 arm64_tahoe:       "53d55768d79426bf00e69bf7db2a9a05a53c7f9b0b8dd7545f988e50e79f990a"
-    sha256 arm64_sequoia:     "d667ffcdbf166279d7cfdad4d6f21f53a8e44639d5bb211e70199f005681027a"
-    sha256 arm64_linux:       "c0d6a2a152c01dd748ebc1a88404ba01f97e0ededd8a9a7f6c4669c65b34031f"
-    sha256 x86_64_linux:      "814476c1bfed7cc7ca7302269e5828e5addf1d6a6ded74b181f2ff2fcaae5529"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "48078b7451a2b04c61cd45cc33f15a70ba4a438258584b1e7acf3ee05c8a4215"
   end
 
   head do

@@ -6,11 +6,8 @@ class Nuspell < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3a71166483fe0953861e5fb2f7653e718df4c2690f4fbfa8c22f8cf08e761394"
-    sha256 cellar: :any, arm64_tahoe:       "8624a623a51789c2db48b03905cf2b9504c75d618afc0a6d757b4135c191eb75"
-    sha256 cellar: :any, arm64_sequoia:     "13f8909f12513600e258f93151ba2db4457c00f1e4be1107313f4d272501c0f1"
-    sha256 cellar: :any, arm64_linux:       "dc4dc178ccdf90df09b929fabbfd11f4483083203f885ee36c528675ba49147e"
-    sha256 cellar: :any, x86_64_linux:      "10fae610b93df585dac48c1f73586995a48ab06774e1a834288200f15405ead9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "99915ebc67b3d507c1c5ff23dd8ebc4689df115f02cd5e3219cb4f21a7845627"
   end
 
   depends_on "cmake" => :build

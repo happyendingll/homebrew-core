@@ -7,11 +7,8 @@ class Mcpsnoop < Formula
   head "https://github.com/kerlenton/mcpsnoop.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "abdca28be4831f5fa602efcb1797992aa0676e697750386ae1d6d6d877a29ef5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "abdca28be4831f5fa602efcb1797992aa0676e697750386ae1d6d6d877a29ef5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "abdca28be4831f5fa602efcb1797992aa0676e697750386ae1d6d6d877a29ef5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d13540a5d74d7a67cc56c4187faa14a8db29ea92bb388c6a897cf6f1c72b4b4"
-    sha256 cellar: :any,                 x86_64_linux:      "a297d5eab9cc99ffbcf0758fb97ff4a867e8cce586e86bd7f3fdb3a6c761d2db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e09b0365472d1eb56afa512df9c67b102b4d6d7243b42a113b3f35cbd5b55b56"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Nvc < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "36c32376fd5bdcd0563424acc5f7e3873eba40d23b2041d14cb3b01a100ed1c8"
-    sha256 arm64_tahoe:       "1cdfbf6234b0ca5d376fd447a89a97624d696b2d23a7ca5e79b238ba4e886e0c"
-    sha256 arm64_sequoia:     "45e00d44410af7c5a52fe64bcd84bf841b0480955c88723a690aac01a5a4d33e"
-    sha256 arm64_linux:       "dffe8d466142f69111710c74d6b82728062dac477b89b922c88b633f7abceafc"
-    sha256 x86_64_linux:      "19c681428d3229afc4edc87a73769added6e6cb1e71a3e111529090ccd56a274"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "1d685b8c35b623960dd2cc7c1919b3aaba12e63ad92e33508c8a72b8c2cf36bc"
   end
 
   head do

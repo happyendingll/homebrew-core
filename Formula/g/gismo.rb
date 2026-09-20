@@ -15,11 +15,8 @@ class Gismo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2b8e5b1042e508704bfc9c14528698c0dbfa0b2f922560b6c7064433da80ca12"
-    sha256 cellar: :any, arm64_tahoe:       "e85fcd9adc1d0191fa065ee1c0fbb8e9d3d933e63650115bd652df46ddee97a6"
-    sha256 cellar: :any, arm64_sequoia:     "7a5f1e092c3a19a90b5ed994d47eb5ff4f7e71f17b9e6cd97c9b6decf7c7b9e0"
-    sha256 cellar: :any, arm64_linux:       "4664ad91ae588e7d450737e00f338912e96094ac98727206f5076561aa102f58"
-    sha256 cellar: :any, x86_64_linux:      "d269c6874b8652e1326cb82f0f69fbf6475da24055cbc2f9d14489fb3b5bc298"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d94d04fa5b1235864662342a9041031740ea7bd7a5a9322bfa556bcf89da1a87"
   end
 
   depends_on "cmake" => :build

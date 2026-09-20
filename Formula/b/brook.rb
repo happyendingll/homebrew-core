@@ -7,11 +7,8 @@ class Brook < Formula
   head "https://github.com/txthinking/brook.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a6c88e6f0715a4ce9eaa99e903a4798af55677be3e20b98817661ef7691d6c1d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a6c88e6f0715a4ce9eaa99e903a4798af55677be3e20b98817661ef7691d6c1d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a6c88e6f0715a4ce9eaa99e903a4798af55677be3e20b98817661ef7691d6c1d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "362fe24d762548d06ac4e448965040f431ab60802cc8561e0b8d5ab8bc30e201"
-    sha256 cellar: :any,                 x86_64_linux:      "6299bd5ea11349e0cf0f09dc979a529ce1b1baf193c191714a1d4a7a83f2ac34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f964adb1519b0207ddedbcf47e65155b59588bb60c9b9d0ac12f52ed339f1781"
   end
 
   depends_on "go" => :build

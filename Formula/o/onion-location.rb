@@ -10,11 +10,8 @@ class OnionLocation < Formula
   head "https://codeberg.org/Freso/python-onion-location.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "27b359002760d6322f77fccd7c32f039c9d9822f6928adca147b82cf6e52770a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5c3d17ff4adff3514deebfda09e318c0f1d9bcd50f4f4a42d338ba09ec37d25c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba660e20158b73946ff53e0e9e7ff5b0c3dd4c48f4658019b2a2d96764013152"
-    sha256 cellar: :any,                 arm64_linux:       "4e96073c8a317259b2441421e889e6c474ffc5096e266ba656e844303ead4c0e"
-    sha256 cellar: :any,                 x86_64_linux:      "15385fee61b7493a11ed7ef940eff88e0e60d205a9655eb6cff6a4f8207baaca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0ec9d74e833f2edb90ad9b85111ae098069357d99052b4f833e87ef7b4297376"
   end
 
   depends_on "python@3.14"

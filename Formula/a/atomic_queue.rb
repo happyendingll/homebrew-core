@@ -6,11 +6,8 @@ class AtomicQueue < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7f0efd983f44e6bde5d7aa18466b0883b764edfe8e5b764493152be3f806d1ac"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7f0efd983f44e6bde5d7aa18466b0883b764edfe8e5b764493152be3f806d1ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7f0efd983f44e6bde5d7aa18466b0883b764edfe8e5b764493152be3f806d1ac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ebf77bfb6c05e1f69cbd142920e8a491831f2044ad0728554ba3382b64179825"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ebf77bfb6c05e1f69cbd142920e8a491831f2044ad0728554ba3382b64179825"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2e677fcb8005291766f2359863d64e21916f9cc7dfc775584ab015fa1ee50673"
   end
 
   depends_on "meson" => :build

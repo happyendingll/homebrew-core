@@ -7,12 +7,8 @@ class CrystalIcr < Formula
   revision 3
 
   bottle do
-    rebuild 3
-    sha256 arm64_golden_gate: "16494c7f2dc00b76f48cfe4eecedf6654b105125cc15aa79ae74215958bf2d5b"
-    sha256 arm64_tahoe:       "f2dcd176ebd262e64584de8180f9c58f3f2e9442014645582ce9bea729eff649"
-    sha256 arm64_sequoia:     "b1b54bf47bdd2cff1696b3a96b48ba922df129e3d2541a11107a1fd040ca4536"
-    sha256 arm64_linux:       "e83bfa5cd9f2669132caa35ce32f4b2da3dc31ffb04f480e66f816ae0295c1af"
-    sha256 x86_64_linux:      "5ab53d6f72128b8c9cfb0e85e7e0859e0f4e1b16c9cd06d2ddf246ffe0088288"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "6c8aba98e1748801d01623536791d7e0ca854bd170f6069a8fdcf531089cc1ff"
   end
 
   depends_on "bdw-gc"

@@ -6,12 +6,8 @@ class Lief < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "0eaa9b6a3944aeefdf7526e7d61628b7f6088df3b14cdc1673ad662d2849ce8e"
-    sha256 cellar: :any, arm64_tahoe:       "d040da382b3b781b0ee299f2f2d1af7fe0b0b66a4a9bb325482d01d39b62a348"
-    sha256 cellar: :any, arm64_sequoia:     "33bd4f306ee19669671244135261875dbcbf49d1602c438c923ffb2e5195ab02"
-    sha256 cellar: :any, arm64_linux:       "484370a5c63852bfc2c0dd156ddb896dc1f59a1f129edf5ce51fc28ce1e7c069"
-    sha256 cellar: :any, x86_64_linux:      "8a3775863038faa6e105edcf4f5a597842eeaf9813815e6441a53b38edb9a42d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b4b7e64d7dffeef7d45cbabd2cc6e3ef4c674682f17c84cd53f60b24842e8099"
   end
 
   depends_on "cmake" => :build

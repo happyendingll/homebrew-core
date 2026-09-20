@@ -7,11 +7,8 @@ class Flatcc < Formula
   head "https://github.com/dvidelabs/flatcc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b390488a0565e30084d6d5e1e69e975de78ee116e1ccb4eea8a7478865c3af09"
-    sha256 cellar: :any, arm64_tahoe:       "a66439c7140f8c2b781fd4bdcb1b00987b56b851c012f04779da95372aad8483"
-    sha256 cellar: :any, arm64_sequoia:     "9fb98c5faffdde130da5702211e6f6db22e8a68259875acedde5ac573c0c0e8e"
-    sha256 cellar: :any, arm64_linux:       "64a9b89080a483267b415722dd07ecc104a5e98550f02cd2a0e7957bfdfef717"
-    sha256 cellar: :any, x86_64_linux:      "3e06eef49163cc53d7d069671cece04dcca4a4b214a5110b421153e472f2ac3a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8fa55ca38cecfe3b10052692cc3ce825a56050f8bfbea2a4685126b2ff7021b7"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class Gfold < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "72fb93ab699ddb00c33ac819e0e36e382fafd0889994732aaf27f11d98a18ccc"
-    sha256 cellar: :any, arm64_tahoe:       "0362e3af27dd1b571e1b14d12941fb320ccebad49f8dc97f1ef43c8267e21476"
-    sha256 cellar: :any, arm64_sequoia:     "75f8f681479f82cdd5456e704049a12cff6757d13e01113b9a3586729685644c"
-    sha256 cellar: :any, arm64_linux:       "d39aa66963eefff24fb652de6baaf8c1e0753ca4523c3aaed972beb901d88e77"
-    sha256 cellar: :any, x86_64_linux:      "99bbea5976d834dbad56ffc5aa7ca56381b3048da5887d8d95251107aa24c91b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7991b214d0413d4c9ac206446513f673abd93ee74e3291c170eb2d464c08dfb4"
   end
 
   depends_on "pkgconf" => :build

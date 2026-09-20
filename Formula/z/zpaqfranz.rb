@@ -14,11 +14,8 @@ class Zpaqfranz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09c4e3d404939260a164626ef249f950e86ef6cacf02868217ba2790b62de320"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8c68d796783a8c4d8a1445fc76317e2a60353b15da1d32aed4c3a327c1ad64ae"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bac4072c0d60264035ef1d31f4cf6bbc591efe388809372146dda6a6133e0433"
-    sha256 cellar: :any,                 arm64_linux:       "04da5ffa363d3084020c19644128d254ba9da9ee72166a95d735f3864bccdef2"
-    sha256 cellar: :any,                 x86_64_linux:      "7378b8ca9dd7482cd6f3608531c034ec157d210b7be5aedc951587132a3bf473"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1af4ca67efc7257fa0e7ffebfd2f9428068545f53b99ff73fc6d8f99c1d725ec"
   end
 
   deny_network_access!

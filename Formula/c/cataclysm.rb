@@ -13,11 +13,8 @@ class Cataclysm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dd539e50c159a9cd005ef1115144ea25edf90163852d6e7efeecb29b0209a929"
-    sha256 cellar: :any, arm64_tahoe:       "4f2b5416cfd128d4b52f2d4143fc7fd4428653f8286cf6f7c3d8b53b763e83fb"
-    sha256 cellar: :any, arm64_sequoia:     "b2a9a536de070af17504483b6fcb6279f9810fdb0de9806a8d3287c4c07606bb"
-    sha256 cellar: :any, arm64_linux:       "9dcfa203fa51d1461dedc072944eecea3400679ae47f5f69df9f8d32e648ec48"
-    sha256 cellar: :any, x86_64_linux:      "2819f3dac67b7c5dcf314f0f3349bc2c1a058fd745a0a53690a2a9cb17d3f916"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "09e00130f52b5f9f794b4492e4f620ebe20873c83e7841ef4631f610c2b61ffa"
   end
 
   head do

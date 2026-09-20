@@ -6,11 +6,8 @@ class Fcp < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "726a6e02c898303b23176423dea7a525bd4146fefdf544ed7f8f4e3a4ed1e133"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9cd7cac8e1836e0bcd97890b29c61a6c4121a8e1ae29f653a535da53996319e2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b2256850c5d557b19ea7e27b0cb1fb62b1b011eb2e3605eae0b61f68bb835380"
-    sha256 cellar: :any,                 arm64_linux:       "b5329a998ce87196e31d753a92c9df02e2f838c717a205a77c5fca449b41325b"
-    sha256 cellar: :any,                 x86_64_linux:      "8f769ddab1abbc3a21c4d2cb11ee200b0d9fc4468464ca23f1b7b2bb848cac4b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "52c5fb5e531bfb2b6843fc7aa2f5404071522dadf65c66c9f77b21c8ad3ebe40"
   end
 
   depends_on "rust" => :build

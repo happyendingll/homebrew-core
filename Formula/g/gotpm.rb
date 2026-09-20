@@ -7,11 +7,8 @@ class Gotpm < Formula
   head "https://github.com/google/go-tpm-tools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "97f8b68f7de57c20e8ac42e0ae350ad06e03d444497f880f76bf4404af930f60"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97f8b68f7de57c20e8ac42e0ae350ad06e03d444497f880f76bf4404af930f60"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "97f8b68f7de57c20e8ac42e0ae350ad06e03d444497f880f76bf4404af930f60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9fb5f602191fa2385adf452f73f36de75309cf0618a92dcaa391dbf07c9f5de1"
-    sha256 cellar: :any,                 x86_64_linux:      "03394a2fc51cb2ebf830aee949a01be63c641b025318aebef8f92cd4b34f76b9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "843508fd639ba3d8320c8c3ad7e4037d6a13f7459ab82f68f71eec80989d9afb"
   end
 
   depends_on "go" => :build

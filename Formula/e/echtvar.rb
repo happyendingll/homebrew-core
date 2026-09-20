@@ -6,12 +6,8 @@ class Echtvar < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "b99733c8387d80230aa973fbc0db97f885d7a792aad7b6699855fdb94846effc"
-    sha256 cellar: :any, arm64_tahoe:       "cccb0f49754be42e90f922933a99419073082567bf5526ebb80b131e3846a12f"
-    sha256 cellar: :any, arm64_sequoia:     "38e002a6813dcdaf69846500bd6bfe924565d9ea8c96eb5c7a2d16453bcd4e29"
-    sha256 cellar: :any, arm64_linux:       "bd21001a526b2ddded21f1e35baf7ad15f7df90a2f4898e314fd5f2a6883b0ed"
-    sha256 cellar: :any, x86_64_linux:      "1c29e8ec6a808d0251e1318d1fbd3cb3f7ca23c59b1101faf7c0c7b8c3057ef0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a0d6b76f63bba221e1d5e9a8984aa879e28d64b9c24fedea953115971cc53add"
   end
 
   depends_on "cmake" => :build

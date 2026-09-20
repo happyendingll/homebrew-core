@@ -9,11 +9,8 @@ class Borgmatic < Formula
   head "https://projects.torsion.org/borgmatic-collective/borgmatic.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d973a0db4fc5da8f7ce140b2f2107d8659eff2b977024f0aaea4e12cf57ae98"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f613936e27ad1d98dc6e4d8e863244d0ef18000f04d6f4d0c3c1544e07b49664"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "000a76f68804378eb7843a0f6439d7ebc341a4f5faffc555cd972ce0322169ec"
-    sha256 cellar: :any,                 arm64_linux:       "7802bd48f724bdd21e3dd2d99dd53a93ee395b63c46117c559b08afd386503ca"
-    sha256 cellar: :any,                 x86_64_linux:      "bcb408bc104e3bb9807ed15e97d244001804aef8fb4f2f40ea7ecadfe5ee04ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "5469acc6a2a06009ba128eb88092d8bbd3714da841e65874e3a9a08e59f589a0"
   end
 
   depends_on "certifi" => :no_linkage

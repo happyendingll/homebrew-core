@@ -6,11 +6,8 @@ class Miasma < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "769b2759cc1fa53a8b910eceb0f65f105d04a9a618e6dc1cc63d750e8d9b0f79"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b5dd9d32cd45cb1d5eda730c7a21927f006af72852cc164023a9e08d3befeaf6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c00dbefa1f3247f678d4ed0141c9e63373579c696b75908e23d97f73d1fc64ee"
-    sha256 cellar: :any,                 arm64_linux:       "9adc1d4e3b73748169cae9c409c1630e3b8eda4ca60cee2adaff4c0761781ba1"
-    sha256 cellar: :any,                 x86_64_linux:      "fde99c3c6f2894bfb8b61c5e0f058ea7b916fa88a42543aea9a21495c43e11e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "845cb41423a562f4dc43c62d5887e10d034eeaf3e5785abaeeec13aacd7fc804"
   end
 
   depends_on "rust" => :build

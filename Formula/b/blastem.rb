@@ -20,11 +20,8 @@ class Blastem < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1d3be837a182c9c3794f99f8d05a56d9b664dff177a46012b43ae59210f3abac"
-    sha256 cellar: :any, arm64_tahoe:       "3ada7ac311478d5f37fbccd77cd14c9c9eda18276e700b81592f81e09f43a72b"
-    sha256 cellar: :any, arm64_sequoia:     "7fa084989f2845f425d2a29ae96ffb2e583a2b4bf7f971826af914312eeff0d8"
-    sha256 cellar: :any, arm64_linux:       "501d1b152dee4f26e7bd3a7139dcbc553a1ea5af6bddde4562340351dd014597"
-    sha256 cellar: :any, x86_64_linux:      "cbbb133a9566d6c825815d1cd85ae45c33b8bb16121ab303d72553536f2293a8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "bac1669ab104ee1afeac4c06ec1d70c9cc3acc7b55ed897d95e7981a7a10ff20"
   end
 
   depends_on "imagemagick" => :build

@@ -7,11 +7,8 @@ class Parqeye < Formula
   head "https://github.com/kaushiksrini/parqeye.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "16c83459fd4b340717e1bb37fd61a112932dee6fa12036446e4f11a0bafa6bae"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c039bbf9f1e135278183c63a5e6e986af2ac374e422da55db395018803cfecd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2050ec690944a6603f878d44f4204d8e07c1f5c2308fdf2d58b4a5383982f509"
-    sha256 cellar: :any,                 arm64_linux:       "6c7a480adf7b6e5e47cfd8d0a84f52bb95823c04de0c990dbc501ff0f5d1fb5a"
-    sha256 cellar: :any,                 x86_64_linux:      "c81845adaf21855a76eda8e140a528922dc5e7f14754722d0b6d8a3f763b10e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "80a57e5cbba76d8a138eebf175139c999b8496845ea4225769595c6acb5304b6"
   end
 
   depends_on "rust" => :build

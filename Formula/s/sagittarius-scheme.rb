@@ -11,12 +11,8 @@ class SagittariusScheme < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "7baeaf662a002b37223853b74db5e93d1f94b8e7ceffdc00008e796d7f198ee4"
-    sha256 cellar: :any, arm64_tahoe:       "272d5089d181b13dbf4aeffe4ad3560ecf96cc7184df76c451109d5f393d8676"
-    sha256 cellar: :any, arm64_sequoia:     "412ebad082c2d968dade069d7a40f8048ca397d04373a9a24b3e20b237a1439b"
-    sha256 cellar: :any, arm64_linux:       "3bada512c4187f602c78b79f971c6dc16e5f807bf6cb7562d27a6ce34c16bbe1"
-    sha256 cellar: :any, x86_64_linux:      "a9eec431f1fae56d9c9900fbcf5abef96f044960449b4353b047f2332b36829d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "f93b428b9b93bd7fb1e27c5c21aae65171b49fa2ddc67a18c991e4e2495e03b0"
   end
 
   depends_on "cmake" => :build

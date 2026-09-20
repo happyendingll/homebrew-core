@@ -12,11 +12,8 @@ class Counterfeiter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f96208e0fc51d178a34499e38f4a3f41dbf8e26f236ae496ba8a109d51810d37"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f96208e0fc51d178a34499e38f4a3f41dbf8e26f236ae496ba8a109d51810d37"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f96208e0fc51d178a34499e38f4a3f41dbf8e26f236ae496ba8a109d51810d37"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fadf155a3404f000af9bc966389269abee4cca16da4665bf0a728b40f8831cad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "183e9ede3abbef545a20c31b7ceb54f19eca66af833186b87e859c4b41bdd43a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b09e9d5eb4d93d92c2e2e94fd06328dd859f4f56dc1b076d8395c9a3c37d0e8"
   end
 
   depends_on "go"

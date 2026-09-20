@@ -11,11 +11,8 @@ class Dynamips < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cc06802900d1ad0a059249764ca05d5031e76379007d64b5a62cd30bf1a927ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "162d5d7fd38e318d1298a6a5f19bd246aeef23c9107a8b6211a45285a8481c8c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0c8519babac9fbc49fc9b55242c1943c89adc2d380b32dd46f655292f132b50e"
-    sha256 cellar: :any,                 arm64_linux:       "9133fad684a0052da2b89a87c12ac0148cd16d8c7a8a505c01bdbddaf3e9f832"
-    sha256 cellar: :any,                 x86_64_linux:      "2ac58a80ac5965ab0cc7b89beac0ab825c7453994428147a65c4a5f2dd0859c0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "00d9be9def72cbc36da491d8ac46bf7a96d9030b90fbca90aa44653ad0b48301"
   end
 
   depends_on "cmake" => :build

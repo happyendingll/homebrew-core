@@ -7,11 +7,8 @@ class Goawk < Formula
   head "https://github.com/benhoyt/goawk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "86a2e75f2d3d6d6ee48156bba246b0c8a46dbee8f3e7ed74ad017cebe5f1f7b2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "86a2e75f2d3d6d6ee48156bba246b0c8a46dbee8f3e7ed74ad017cebe5f1f7b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "86a2e75f2d3d6d6ee48156bba246b0c8a46dbee8f3e7ed74ad017cebe5f1f7b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b21ebfd50d30fea14fa1babfefbdb99b7283d8cc7726b8b879ee710b185de85d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "48365a54a43506defa109cc1cf5fef6866eb4eecff99ae84eded4afcd7b164ca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "19550222e3a12fac8e7e6ecc02031d97c371fce5b5b65d9827e1a5b5724ed76a"
   end
 
   depends_on "go" => :build

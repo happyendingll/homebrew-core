@@ -7,12 +7,8 @@ class Lunarr < Formula
   head "https://github.com/lunarr-app/lunarr-go.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "53317b1d617acca892fb46a24adfa8ce85960f1fd66a85395c38195bcdfe7ca8"
-    sha256 cellar: :any, arm64_tahoe:       "3e4b112b6a344d508977a70b97541181128bd49f06ba45ca4a4e12a741721da4"
-    sha256 cellar: :any, arm64_sequoia:     "1b094b8872d1e1ffe33a83725e6f00a765c18790a9e65a932da32fa39ee20b8a"
-    sha256 cellar: :any, arm64_linux:       "598a67ea9d4c4d237a8719306b2a30dd3dfcbb185b09c5afd9803c02109b58f9"
-    sha256 cellar: :any, x86_64_linux:      "e30fcc34d3135f53a47b9e5db359f218753b1e383343c6093cc4072d5064408f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c24ce77f88205d62e68fe3b3e369c50ddf761cc6af2319425012ceb88f64eebb"
   end
 
   depends_on "ffmpeg"

@@ -8,11 +8,8 @@ class Picoruby < Formula
   head "https://github.com/picoruby/picoruby.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e7a1c312226e6c04c9f1e99df13eb08cfe7b69f31d3962a309f7e34a51f5e62e"
-    sha256 cellar: :any, arm64_tahoe:       "24b5a0a92db1046a3b0525b91238648fb90c0f3ddeac45f1507a1fa148a0658a"
-    sha256 cellar: :any, arm64_sequoia:     "0748b083bb0b0c212c3e18e1032e7b4e5b84adf4fd937b1b5fefc56492de7dfa"
-    sha256 cellar: :any, arm64_linux:       "9cb24583c4974f5d350c726b226529716a94dd73296e4a007056e80580cfe09e"
-    sha256 cellar: :any, x86_64_linux:      "7fc52af3158b3fca76ed93328722b55690a687dfdd65b498e44b756c7d567768"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d879aa9857db43da100f3e9f919c4767d678f9999900b40f000ae744ba267a95"
   end
 
   depends_on "ruby" => :build # for numbered block parameter `_1'

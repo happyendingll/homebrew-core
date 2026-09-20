@@ -11,11 +11,8 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "99f26005e70c6e13a002cdd7f3f01631ba648b2203568899bd720a759b2ccd1a"
-    sha256 arm64_tahoe:       "dfb3d1935dd2197b2bb2ef630c91c989fcee45fd625e93363ea3de0d79432ff8"
-    sha256 arm64_sequoia:     "301f8e1fada41eba38dc88504ac602f5f95fe2d1c99f30f629be136baf12d463"
-    sha256 arm64_linux:       "db162748b883eda3d59c56fe647db3bf12ceb410949f1fdf5d3c56b71d6056f9"
-    sha256 x86_64_linux:      "fb6b6a2aefd86a36d6402a452f2652f36afc7413f5b50ae6cd8f82cc4bd48176"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "ebaaec524eb58e5e25e385e7b2fa9f2cb206f224031ae5560ef739abbcbdf7c5"
   end
 
   depends_on "pkgconf" => :build

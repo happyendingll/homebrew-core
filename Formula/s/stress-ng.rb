@@ -11,11 +11,8 @@ class StressNg < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ced5cd151919780b08fc206650f23dc01fb5cf1ad06f7d37e904b52f7f63ee20"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "89e5522a96b8ac5e7a6c2dfdf47d776dfe422d6afe74b9fb47c6c47b386d1771"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c0f6252ad12b0d9239f9598350fab913dc85416ca92f3b90ee31f0ab01b630c7"
-    sha256 cellar: :any,                 arm64_linux:       "924f9ff216b76ba6d4d4322a08324ce6de50a9efab1395c763c399a75338699f"
-    sha256 cellar: :any,                 x86_64_linux:      "51a1e51d71cc6c9f49c8fac0719e7405e5263c6954492b8f2029d3528eab0133"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4a2db17cacb48f37bdcb07e6b688525d716d855202732d1abcee960121a7a67a"
   end
 
   uses_from_macos "libxcrypt"

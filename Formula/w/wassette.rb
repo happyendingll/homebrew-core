@@ -12,11 +12,8 @@ class Wassette < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23c36fafdd59ef7816dec82df30f800120af35904d4b8d284c731180065987ee"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7f9e9095445555f612a10d213c04647370aaed2873f4e29f8bcfc1843802e8f7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7da421696a75e178ca17737d93454c0bbd6d35435d7c7915c377aedd050781bf"
-    sha256 cellar: :any,                 arm64_linux:       "48edd88d6ac2f9b716636038eb7e6e926b73c1cb0812fc11cf4c98b975fce9c0"
-    sha256 cellar: :any,                 x86_64_linux:      "46d176d31bbfe369816eb2d598002205af629028ed57104accda3006e1172ff8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "33c02214c552b82671e8ee3ab0e464cf8c0bafddc68c3eeeeb6b13d17b6cd96d"
   end
 
   depends_on "pkgconf" => :build

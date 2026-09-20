@@ -23,12 +23,8 @@ class Clisp < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "3d72c06219102d616fe394651760e449ea6d03341c1e936721d0a746e48175c2"
-    sha256 cellar: :any, arm64_tahoe:       "3af53aa873a0ed7d2e43fac7c09fd80c127e2069d69a814422362dc2e66fc264"
-    sha256 cellar: :any, arm64_sequoia:     "6333c511593cd930393b6b446ec2e60ab6a5acb75ebad2f6a383b0b8f6b6be1a"
-    sha256               arm64_linux:       "5814eb822b3860e8e627393f15784d47fd2ee41ffdd6d87c74455275cd8c504c"
-    sha256               x86_64_linux:      "7360777f3cbc613fd1d35b0947cafda3f0e1b9fd2fccab604207b53447ab91a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "58ce318f937498ce3d6462ab8f5b42b785290767400f619055c9d0a93dbc435e"
   end
 
   depends_on "libffcall"

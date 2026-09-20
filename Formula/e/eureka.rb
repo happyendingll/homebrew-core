@@ -7,13 +7,8 @@ class Eureka < Formula
   head "https://github.com/simeg/eureka.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "fcca826a0c490097e7e3243bb2568e8d9c9609221086a8bcc29d908af53aed4c"
-    sha256 cellar: :any, arm64_tahoe:       "95e8d555017dd25c4ac2b99589e1b476a2c7fdd9e8a6a345795a007e7fb23ae3"
-    sha256 cellar: :any, arm64_sequoia:     "58a6ab0a632ebc3ab366b1d5f25919a3b56cca97a8b656156ed0e24891013f14"
-    sha256 cellar: :any, arm64_sonoma:      "fb79daf2022ba0b83542df3c81bb4b410ec09b795e706e5349668c0a1b0e2fb0"
-    sha256 cellar: :any, arm64_linux:       "f44d91be16ef8cbe07929da00ce956fe3d54ab59c0adee70c43c3fc245581e9d"
-    sha256 cellar: :any, x86_64_linux:      "c57fe75ad2bfacb2f72567ac2e41d680b7190caaeaf937fcb23a67497ee486ca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "54cddf8ca2141554dba219dc7037e1e29b06763b3341691817b5ed915479ebc2"
   end
 
   depends_on "pkgconf" => :build

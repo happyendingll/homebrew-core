@@ -7,11 +7,8 @@ class K0sctl < Formula
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b8614ce05c9ccddaac127ad2715a6caf20d5794707a3df155dfb0451fbd6ba5e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8614ce05c9ccddaac127ad2715a6caf20d5794707a3df155dfb0451fbd6ba5e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b8614ce05c9ccddaac127ad2715a6caf20d5794707a3df155dfb0451fbd6ba5e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d3d8cdb5c44fd065a251bfbbc7028d7d50f3c38cf88ffbc76a1f6f491fb1908"
-    sha256 cellar: :any,                 x86_64_linux:      "35922373692c858a7079bae8059d373e0d8de2455b71771105efdd902cbab674"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "76c021dd19d002391799e4b8c2535910d9eb48757278149def1dc7a73ab0030c"
   end
 
   depends_on "go" => :build

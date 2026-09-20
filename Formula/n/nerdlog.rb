@@ -7,11 +7,8 @@ class Nerdlog < Formula
   head "https://github.com/dimonomid/nerdlog.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "81ed87fba9226d415496bfe59b2150417eff0f6a67146eef47391210a61e010c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec818d81463d5099aa08285273d7e988f306b9b3e29f58c67416368ce7c7986e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6043912c1b993c4b4cc44341e1c80f1288714c46b8d9df97abe491fad663be2e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "91cabafef3277d057ae8d4aec4aee5d3cb3c0cfffbeec30a9a7d52362faf1f1a"
-    sha256 cellar: :any,                 x86_64_linux:      "5737f5c9e88ff61065067a921224c582e7a34ded52886b5cbc6a6d49c100ff29"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0d9182939b204d90619a23dea82c6bf530e63e3a223adc8d6b9fed2a9421f709"
   end
 
   depends_on "go" => :build
