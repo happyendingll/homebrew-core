@@ -13,6 +13,12 @@ class Tmuxai < Formula
   depends_on "go" => :build
   depends_on "tmux"
 
+  deny_network_access!
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     ldflags = "-X github.com/alvinunreal/tmuxai/internal.Version=v#{version}"
 

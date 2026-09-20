@@ -1,8 +1,8 @@
 class Bmake < Formula
   desc "Portable version of NetBSD make(1)"
   homepage "https://www.crufty.net/help/sjg/bmake.html"
-  url "https://www.crufty.net/ftp/pub/sjg/bmake-20260824.tar.gz"
-  sha256 "76c6253a592dd55741be0b14805b9f7e0eb8442004146a978f24b20f37d2cb72"
+  url "https://www.crufty.net/ftp/pub/sjg/bmake-20260912.tar.gz"
+  sha256 "b6bd32964cbe451be2838822c9d200b7c7e76a2a5947c03feb71dc6bd72988bd"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Bmake < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "a9bbaecfefb14df75386d92b0b5a42d470b256ede08d0edcdb4e17b65e8272a6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "47a0576cf8407e0ddf40c9f4b2451390098d5b1c95fc6c7530990d487b5382cc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "93f2a6f6db6d6fa92fa29472294bcf2d8bb358eae85bce25a3c7d80fc3c14956"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aeb5e436cc198a498e1f90442eefa854ac2c46db20fced7bb0e1c9198b2f838d"
+    sha256                               arm64_linux:       "0ff638f07d03a31fe4ad471a955407c33cc4de360d9693e089208d7afd780a71"
+    sha256                               x86_64_linux:      "091dbce9cdb453409cb546dd26ef91771e4b68dea28e5fed5246904b31be3d09"
   end
 
   uses_from_macos "bc-gh" => :build

@@ -2,14 +2,17 @@ class WakatimeCli < Formula
   desc "Command-line interface to the WakaTime api"
   homepage "https://wakatime.com/"
   url "https://github.com/wakatime/wakatime-cli.git",
-      tag:      "v2.26.2",
-      revision: "184cfb91d54153c3a4a57ed0703d340a0159cd18"
+      tag:      "v2.26.4",
+      revision: "03c6c40c8f11d8d0057bf258bf573a05c1bab5f6"
   license "BSD-3-Clause"
   version_scheme 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "a905946e65840932c4a71192fb46f4613ed1e9095e364d18784c9ac5aaa8cc93"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf35095368275affdb47b1288d4c341d59f401032f1ca1f54d3bbffa0fa3788c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf35095368275affdb47b1288d4c341d59f401032f1ca1f54d3bbffa0fa3788c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf35095368275affdb47b1288d4c341d59f401032f1ca1f54d3bbffa0fa3788c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dfe70ed4dd179dbb6976bc221b8f39670ff5085ac1873dd868aed6883b9e113b"
+    sha256 cellar: :any,                 x86_64_linux:      "6b7db788038b15145253267e687eecd9db760da1c4ec6db14569b9e5916de61e"
   end
 
   depends_on "go" => :build

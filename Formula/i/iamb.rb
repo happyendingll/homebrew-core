@@ -1,13 +1,16 @@
 class Iamb < Formula
   desc "Matrix client for Vim addicts"
   homepage "https://iamb.chat"
-  url "https://github.com/ulyssa/iamb/archive/refs/tags/v0.0.11.tar.gz"
-  sha256 "a5cf4f248e0893b5657c5ad1234207c09968018c5462d4063c096f0db459dd7c"
+  url "https://github.com/ulyssa/iamb/archive/refs/tags/v0.0.12.tar.gz"
+  sha256 "54e3e87eece1aff22e9d6bd6798492a1d23ea5e831e9d0889b51272c7d4f6cdb"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "005edda6164cb067a8848c81b098d3e2c537e4478489072899c2d09c7cda907a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ad26af7c6e67b37a716a7debaae52cef5fd094b53a2d09b13ca300adc1a0696"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ae8082145233f38782b8fd8de0c2b5739f3155231ec1f48147b5b47437b3d22b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fcd60dbdbbaf979557c9d0ea75618dbc374794c17bd9774a800b07a04eb87994"
+    sha256 cellar: :any,                 arm64_linux:       "e96726a55d3bd5609a43395877ef2b0484ed88f64ecf763a25ecf7482dfba5ee"
+    sha256 cellar: :any,                 x86_64_linux:      "9a2a639f5c13dc8347d4417999c413f01b0d891ac4555818f851849e9b639d90"
   end
 
   depends_on "pkgconf" => :build
@@ -17,14 +20,6 @@ class Iamb < Formula
 
   on_linux do
     depends_on "openssl@3"
-  end
-
-  # Rust 1.94+ overflows the default recursion limit on matrix-sdk futures
-  patch do
-    url "https://github.com/ulyssa/iamb/commit/d69bc64cb9f6ddd150d5a6f1e08119f4cc74740e.patch?full_index=1"
-    sha256 "c7f804a296abe18828d26884098a6755bd633705f4703648b0154bca74c29f4a"
-    type :backport
-    resolves "https://github.com/ulyssa/iamb/pull/599"
   end
 
   def install

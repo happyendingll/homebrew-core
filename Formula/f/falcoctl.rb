@@ -13,6 +13,12 @@ class Falcoctl < Formula
 
   depends_on "go" => :build
 
+  deny_network_access!
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     pkg = "github.com/falcosecurity/falcoctl/cmd/version"
     ldflags = %W[

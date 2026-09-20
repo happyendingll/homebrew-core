@@ -1,13 +1,16 @@
 class Diamond < Formula
   desc "Accelerated BLAST compatible local sequence aligner"
   homepage "https://github.com/bbuchfink/diamond"
-  url "https://github.com/bbuchfink/diamond/archive/refs/tags/v2.2.7.tar.gz"
-  sha256 "e950fde217b4047e6a631e20b9c2bed602ee3dae435714cc00e6771876754422"
+  url "https://github.com/bbuchfink/diamond/archive/refs/tags/v2.2.8.tar.gz"
+  sha256 "a9cc37bd955fa7ed25447278a0b4f97e7036a9abd64f60e6565a56c28219c54c"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "467064bb18cc9f694acebd92779a10c842f9e33bbe7ae8df87ecaa81a1e259c0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "104b2f784f12dfd7cf0c700c11db3eb925426d2956c1b35a584fce76aad7b975"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97f7e38b892486ad2e6add06b96d79626bdac717894bd6e4c71bd41a1a43d768"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2907038e5334790aa10c0e327a2ecea0298a8087b8998cabee70c05350e960e1"
+    sha256 cellar: :any,                 arm64_linux:       "b04502c713f0ba7bb37a22ee1d4a9c0264ab043f44d256b026a81a927aaf5fea"
+    sha256 cellar: :any,                 x86_64_linux:      "83bb4c0e18fcd6abbc17f674caa3f3e831a76d6d39ddba4e1a07fc7bf8af9fd5"
   end
 
   depends_on "cmake" => :build

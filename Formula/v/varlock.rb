@@ -1,13 +1,16 @@
 class Varlock < Formula
   desc "Add declarative schema to .env files using @env-spec decorator comments"
   homepage "https://varlock.dev"
-  url "https://registry.npmjs.org/varlock/-/varlock-1.19.0.tgz"
-  sha256 "10cf9e4bd6b837798bd70f50e10fa3719a5acfe62d7f0af13c421ddeafaa2c5f"
+  url "https://registry.npmjs.org/varlock/-/varlock-1.20.0.tgz"
+  sha256 "69060cd72113f4c0e3b5c1333b47ca6655476b4bd77285a5a57e404a3b9ec053"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "68dd38a92e23060e52d4fb77db0cafd100febcf62a7d57b64fa7b7532c541b5a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3505fff113fb12cfd74971a32af36f3267e629192b4ed47aa8ba7caff67a8fe9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3505fff113fb12cfd74971a32af36f3267e629192b4ed47aa8ba7caff67a8fe9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3505fff113fb12cfd74971a32af36f3267e629192b4ed47aa8ba7caff67a8fe9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "98542dcaf4d67124c2ebcff56940034190341d790d8cf191dbda00f56036d827"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2e5aa86c25b4da7932bf15c76b4425042fe013fd7d3465c4fd71d6d3809de9fa"
   end
 
   depends_on "node"

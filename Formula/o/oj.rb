@@ -13,6 +13,8 @@ class Oj < Formula
 
   depends_on "go" => :build
 
+  deny_network_access!
+
   def install
     system "go", "build", *std_go_args(ldflags: "-X main.version=v#{version}"), "./cmd/oj"
   end

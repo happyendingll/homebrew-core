@@ -3,15 +3,17 @@ class LinodeCli < Formula
 
   desc "CLI for the Linode API"
   homepage "https://github.com/linode/linode-cli"
-  url "https://files.pythonhosted.org/packages/f4/53/a924ab651cffe044575bfd114a9c39f58b27974356ffcf2e52c2d54bfd98/linode_cli-5.68.0.tar.gz"
-  sha256 "c3af1dc617f8bc164baa9e98020e979b20c5ee6b6d35414276f3c2681d983507"
+  url "https://files.pythonhosted.org/packages/50/0b/e7d29399cade814e1df366ae7d38e22e3ef2a2b9fe3fe4b9093504ac3e99/linode_cli-5.69.0.tar.gz"
+  sha256 "d08dbf8014fca1327537d3272f690bbf8f1f9f5d511ffd1ef812ba1f756cbaf9"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/linode/linode-cli.git", branch: "dev"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "8233f980671630c04f0650f16999f7298c9dc1740dcd0d9e4c0d9316642e7b04"
+    sha256 cellar: :any, arm64_golden_gate: "bfd9b9f886c95eacd74fc0dd994b8d622d6e2db0f720b0c3c503510245a37e50"
+    sha256 cellar: :any, arm64_tahoe:       "7f8fc05fe0c09af5ffce882902525aed10b4298ff08a948c858289b4d28e7a26"
+    sha256 cellar: :any, arm64_sequoia:     "2e58334699977c44c7d537d0ec0e07db69fdb38424f484bdc2b0dfc0c7d2a4a7"
+    sha256 cellar: :any, arm64_linux:       "2320e1e090ff5513374f6e5f34e5c0b62267510d10bc8817fb0d36cee83a1de2"
+    sha256 cellar: :any, x86_64_linux:      "5cdee23c74bbe9ffa0248faa5a9bfd36977879e8a31676e5aa613def6327d3c0"
   end
 
   depends_on "certifi" => :no_linkage
