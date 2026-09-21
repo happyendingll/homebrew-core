@@ -45,6 +45,8 @@ class Gnupg < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
     libusb = Formula["libusb"]
     ENV.append "CPPFLAGS", "-I#{libusb.opt_include}/libusb-#{libusb.version.major_minor}"

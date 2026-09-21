@@ -18,6 +18,13 @@ class CargoNextest < Formula
   depends_on "rust" => :build
   depends_on "rustup" => :test
 
+  # Test downloads a beta Rust toolchain via rustup
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
+
   def install
     features = "default-no-update"
     system "cargo", "install", "--no-default-features", *std_cargo_args(path: "cargo-nextest", features:)

@@ -3,8 +3,8 @@ class Circleci < Formula
   homepage "https://cli.circleci.com"
   # Updates should be pushed no more frequently than once per week.
   url "https://github.com/CircleCI-Public/circleci-cli.git",
-      tag:      "v1.0.50757",
-      revision: "cacfc122bd46b6fce8ef4fcfcd8f0ac0c9a5a77c"
+      tag:      "v1.0.50849",
+      revision: "42fd89089e30bead5172424752238006cf764dd8"
   license "MIT"
   head "https://github.com/CircleCI-Public/circleci-cli.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Circleci < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "3379dd13e82dd50f97e621e78cf1974f77a7573231f1fc8389081ad8d866e03d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b01801a8450a0c1411ec7ccf9414d1cbb35303818c1fa5980035485531e99e8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e6903278ad145b900785b3b5e33c9f9ede7f841b402224ba2d7ea33effcf1d5b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd6acca7c38147e9289ddc45014e48dae6239dc5cf524332252ea7a3cacb1aab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "83736d4bdcfa53da077adb8830f248f2c674bdf00b2a766a92441fc407d3568c"
+    sha256 cellar: :any,                 x86_64_linux:      "bd1773fac5605db1a5914e42dd4d41d01e2bf851021bc51f5045985f73b18fb7"
   end
 
   depends_on "go" => :build

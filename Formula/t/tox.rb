@@ -3,12 +3,12 @@ class Tox < Formula
 
   desc "Generic Python virtualenv management and test command-line tool"
   homepage "https://tox.wiki/en/latest/"
-  url "https://files.pythonhosted.org/packages/5d/85/f29e61f6938c7ae39054e15694bbd7ffe7a52cbdf1b82b8ee8b6dfb7cf6d/tox-4.62.0.tar.gz"
-  sha256 "4095724c046c32c52e24066f2e55006f3ac4480e733d144e03d81f2f3ece040f"
+  url "https://files.pythonhosted.org/packages/35/93/ce52def83be73dcb86c0c5985f40808917f09828c1616d4018206c3dbba3/tox-4.63.0.tar.gz"
+  sha256 "fb7105ef125b371e31797cfa615e5a160de3d8ef29b86dca7fcbd9048da3a9d8"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "fc612e41c998f746cc8e5c470239b2f815110736527cc37c8ee52b354e537bef"
+    sha256 cellar: :any_skip_relocation, all: "dba3fdb99b3f48ef213f69a6ee7ced797a301aa67b4116284e10163e60f72015"
   end
 
   depends_on "python@3.14"
@@ -64,8 +64,8 @@ class Tox < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/cb/8f/d4da8965384182e79d005cf165097c194e15df7b9f13c2dc09d7fa3d4b97/virtualenv-21.7.15.tar.gz"
-    sha256 "072c16d3d1d796cb6a851145d2eae314f8434bd625a55f18b8b72b29890cc366"
+    url "https://files.pythonhosted.org/packages/af/76/6067b553c6cfda44ed049ef821bdeda1b40b4597c934663ecd6cdfcdfc16/virtualenv-21.8.1.tar.gz"
+    sha256 "529a4c883b4efa067b98cfb61b64cdc0e453d01800ef5b5a29d0a9c514499a4f"
   end
 
   def install

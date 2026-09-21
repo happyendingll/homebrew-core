@@ -3,14 +3,17 @@ class Azqr < Formula
   homepage "https://azure.github.io/azqr/"
   # pull from git tag to get submodules
   url "https://github.com/Azure/azqr.git",
-      tag:      "v.4.1.2",
-      revision: "e85b9f9d9ca60e5c8b3085c2c6077a785be1a0a3"
+      tag:      "v.4.1.3",
+      revision: "234620309dd5b91797a80084af251e037bf3a3aa"
   license "MIT"
   head "https://github.com/Azure/azqr.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "be2d02921c506463a094345cc223b429c6c011db0734a99e8c69810bac57fad8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aec5128f760b9b94945a8f3304e637ef50cf59fcd9bb9bd832017d82ce6cf109"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "aec5128f760b9b94945a8f3304e637ef50cf59fcd9bb9bd832017d82ce6cf109"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aec5128f760b9b94945a8f3304e637ef50cf59fcd9bb9bd832017d82ce6cf109"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "79863734bf264f3aec236cef373bb4cdee6655c50fa16f71807d259276766f03"
+    sha256 cellar: :any,                 x86_64_linux:      "00891636ee2739ee95270d0ebbaf87a851a6c3b43e58fde1c48d915b6d7d62db"
   end
 
   depends_on "go" => :build

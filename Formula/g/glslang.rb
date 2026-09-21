@@ -23,6 +23,8 @@ class Glslang < Formula
 
   uses_from_macos "python" => :build
 
+  deny_network_access!
+
   def install
     args = %W[
       -DBUILD_EXTERNAL=OFF

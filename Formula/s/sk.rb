@@ -1,8 +1,8 @@
 class Sk < Formula
   desc "Fuzzy Finder in rust!"
   homepage "https://github.com/skim-rs/skim"
-  url "https://github.com/skim-rs/skim/archive/refs/tags/v5.7.0.tar.gz"
-  sha256 "3a239d8ee284206e5a3891b2fd4e9dfe9150d120a63912b4b764bec2e6ef3966"
+  url "https://github.com/skim-rs/skim/archive/refs/tags/v5.7.1.tar.gz"
+  sha256 "dca8c3e56066415b8ba629726de02cbc132a24d7af9ada46d2baecc75e0270a8"
   license "MIT"
   head "https://github.com/skim-rs/skim.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Sk < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "56d54d29e92131131b2e467d83f177a47dd036f6bc6ca8aa9d54383ffa0f8765"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e1c4634256bebe012338367bd2e73b78e2a141b5bb4e4896a86f1727877abf35"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5d148fdba20f0d69c87ecac9f53f1e0619ab9a31692792d00ec177e86c2696a0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aa6981a795d679fb0116c07908ad1458ef15096163643e201bb1db0d69112d46"
+    sha256 cellar: :any,                 arm64_linux:       "a09b2ef43a954bfab562b18dd3ac24a8533fe69470d66554d60b83c4aa171b6b"
+    sha256 cellar: :any,                 x86_64_linux:      "54d040add2fc87259af99acb3cb5bd396b6e0ea10afd1db1325921e376a7b13e"
   end
 
   depends_on "rust" => :build
@@ -21,7 +24,7 @@ class Sk < Formula
   deny_network_access!
 
   def fetch
-    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

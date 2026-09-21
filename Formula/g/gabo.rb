@@ -1,14 +1,17 @@
 class Gabo < Formula
   desc "Generates GitHub Actions boilerplate"
   homepage "https://ashishb.net/tech/common-pitfalls-of-github-actions/"
-  url "https://github.com/ashishb/gabo/archive/refs/tags/v1.20.0.tar.gz"
-  sha256 "ba19f20fbc4e1bce153949cab06f9d0fd2a371ff6c11eea24e989634f72c53a9"
+  url "https://github.com/ashishb/gabo/archive/refs/tags/v1.21.0.tar.gz"
+  sha256 "674029ba6af49294147d7f5b3757d4e3eb0c5e0e23e44883410f7b233d678679"
   license "Apache-2.0"
   head "https://github.com/ashishb/gabo.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "248d289e1a7f835a3611b7b71c25aeea9efeae6885ca34b37c5e07500a015359"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "911a07960c165a97b649cf9f1e5af32903d69975a0ffc7ee50555e2aaf09fbef"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "911a07960c165a97b649cf9f1e5af32903d69975a0ffc7ee50555e2aaf09fbef"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "911a07960c165a97b649cf9f1e5af32903d69975a0ffc7ee50555e2aaf09fbef"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "83a74c9369920a9f039ca9ace4582e4ac37c65c833bda61b795be6d6be9d5662"
+    sha256 cellar: :any,                 x86_64_linux:      "1400d3b192b2399d84f9b0547aacf3380dc60ac54842bf437da9bf96328e695b"
   end
 
   depends_on "go" => :build

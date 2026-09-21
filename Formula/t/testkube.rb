@@ -1,8 +1,8 @@
 class Testkube < Formula
   desc "Kubernetes-native framework for test definition and execution"
   homepage "https://testkube.io"
-  url "https://github.com/kubeshop/testkube/archive/refs/tags/2.13.2.tar.gz"
-  sha256 "8b0989e1a52494438cd7b3571f3d1beb9b27529229c6ebf72ea099ca8c6d5865"
+  url "https://github.com/kubeshop/testkube/archive/refs/tags/2.13.3.tar.gz"
+  sha256 "45987289672012bb00170d5db9f46facb952f8e2501f14126c3672d1748cff0e"
   license "MIT"
   head "https://github.com/kubeshop/testkube.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Testkube < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "ae114f19f253a9cd0d4007a77a2c991b3a0ebf477b21cb0280a9519dfb581641"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c5912f05bc0975dec1e9c4f4e6cec27b7e3282f62ddd52c02194527c4445c37"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f6c9ce71b65c9d5678b7241123b6b0ad175353d99f218d93485d90b33e463967"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0f46067e1947714cb33a9fe838741e151ea311703a74ec32620299f5773c691"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0901052c7ae1a0d5bf1d42c47b1ce926090364586cf873079708737fc2c4a057"
+    sha256 cellar: :any,                 x86_64_linux:      "01466cae3ff384d3d405503f510017feae935015ac40b4b677d7a29cafe90527"
   end
 
   depends_on "go" => :build

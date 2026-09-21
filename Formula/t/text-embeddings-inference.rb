@@ -17,7 +17,7 @@ class TextEmbeddingsInference < Formula
   allow_network_access! :test
 
   def fetch
-    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

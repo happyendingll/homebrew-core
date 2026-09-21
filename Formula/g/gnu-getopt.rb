@@ -1,8 +1,8 @@
 class GnuGetopt < Formula
   desc "Command-line option parsing utility"
   homepage "https://github.com/util-linux/util-linux"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.3.tar.gz"
-  sha256 "2f4c3484f67c79688a50974b9e0ae52d089fe07a63d2dbb59b20e50ed26fe89f"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.4.tar.gz"
+  sha256 "af3241e7776964dcb6bb9a811ca7b0d93000b563e2ae2a8df8f80a7cd6e04d56"
   license "GPL-2.0-or-later"
   compatibility_version 1
 
@@ -39,8 +39,11 @@ class GnuGetopt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "02dac77e98b2eea084291441310183e658356aaf26178dcd569561f4d1487110"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0614621d302ea14221955fc85e81812c876ae5439a049ea9815d697b6ba93b2d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "442922ec7b2f94f0b0f9e5036f7e17627973f3904116f78b78dffd663ab35c83"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a11448e84e277c582599f0b5edc94e1e4961c6c7fc958eb3074ab5c7b4834168"
+    sha256 cellar: :any,                 arm64_linux:       "b3ba5a2df1092d95a48ef3dc5efc2ef68da529b905d969d4e120da3bab20dca8"
+    sha256 cellar: :any,                 x86_64_linux:      "38b1e756f71a8b80f6e6f3c077407830982b88096c2d0347461ede3c25b26f21"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BSD getopt"

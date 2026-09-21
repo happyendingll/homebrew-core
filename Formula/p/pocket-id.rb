@@ -1,14 +1,17 @@
 class PocketId < Formula
   desc "Open-source identity provider for secure user authentication"
   homepage "https://pocket-id.org"
-  url "https://github.com/pocket-id/pocket-id/archive/refs/tags/v2.15.0.tar.gz"
-  sha256 "c8296ea0b760dbf058d42cdc12eeb402a058be9d77b7b64f09d987c635fbc3c7"
+  url "https://github.com/pocket-id/pocket-id/archive/refs/tags/v2.16.0.tar.gz"
+  sha256 "d0631899a9e04dc0165ea3fd97492e9a09784134b70e38c3960dda282126245d"
   license "BSD-2-Clause"
   head "https://github.com/pocket-id/pocket-id.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "019a63fda568c7fdf5ce28c9a04c4bff1ac7b1381633d4f463d9171c0f5cd9eb"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fd7b40b69386f15d85141162f81dab473066f85f0081d7bdf98ee8be5f32c5a8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d073f48f67268f078e04f0aaf140048e28b9b5b812ffad35ef67a1d805f96000"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4b7a77e39c489817f553e04edb0828b82e9d30c7bff945ffb03cb87ab5654171"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d5960ebe48cb4980bc32c84fe2c251b126bf6d0ed8c030ee79f6cf328ebf1531"
+    sha256 cellar: :any,                 x86_64_linux:      "f2aa4083b9c910e97570df8658d331ed5066ce5b90db768ad2a0f7046fb57af7"
   end
 
   depends_on "go" => :build

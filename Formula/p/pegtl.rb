@@ -11,6 +11,8 @@ class Pegtl < Formula
 
   depends_on "cmake" => :build
 
+  deny_network_access!
+
   def install
     args = %w[
       -DPEGTL_BUILD_TESTS=OFF

@@ -28,6 +28,8 @@ class Yajl < Formula
           "patches/non-gcc-visibility-check.patch"
   end
 
+  deny_network_access!
+
   def install
     ENV.deparallelize
 

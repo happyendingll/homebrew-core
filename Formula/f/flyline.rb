@@ -1,13 +1,16 @@
 class Flyline < Formula
   desc "Supercharged Bash plugin replacement for readline"
   homepage "https://github.com/HalFrgrd/flyline"
-  url "https://github.com/HalFrgrd/flyline/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "9cd8bf72365cf88a76a46ac7f3fc90c6377ec5667ae9434b442fb7b300ab2e5e"
+  url "https://github.com/HalFrgrd/flyline/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "7d0af846bbfaa48f4ebe3c78f24135f3a6298990cd98903c39601be89e510b71"
   license any_of: ["GPL-3.0-only", "MIT"]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "290bebc22e8124e1538c40730c36dda16ca7173ab3b249cbec4e846449b8b9af"
+    sha256 cellar: :any, arm64_golden_gate: "92a3756f03f9fcd9d41aab5f16ad91945443f362395c9a2b2fc726a1fcc80fc8"
+    sha256 cellar: :any, arm64_tahoe:       "75de40255ac59ed6a4649f140dcff614236be4cb94514661f24998343495eb4f"
+    sha256 cellar: :any, arm64_sequoia:     "c5d1e2fc2bd8022e4c1bb6d849081487ed5c6dc1061bba5a40a6fdf6b8b2ee8d"
+    sha256 cellar: :any, arm64_linux:       "8b54037d9f84e4d34a7662f9f4bc393de213acb1352805108e3eb4f32279d0ef"
+    sha256 cellar: :any, x86_64_linux:      "869128ed7daf1c671c93952a0bf7a6d8cbec66a472eadec1ed46b89e7624bb6a"
   end
 
   depends_on "rust" => :build

@@ -25,7 +25,7 @@ class Httrack < Formula
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make", "install"
     # Gnome integration is inert on macOS, but Linux desktops use it
-    rm_r(Dir["#{share}/{applications,pixmaps}"]) if OS.mac?
+    rm_r(Dir["#{share}/{applications,pixmaps,icons,metainfo}"]) if OS.mac?
   end
 
   test do

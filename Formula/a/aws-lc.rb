@@ -22,6 +22,8 @@ class AwsLc < Formula
 
   uses_from_macos "perl"
 
+  deny_network_access!
+
   def install
     args = %W[
       -DBUILD_SHARED_LIBS=ON

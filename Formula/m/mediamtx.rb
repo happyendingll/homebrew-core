@@ -3,14 +3,17 @@ class Mediamtx < Formula
   homepage "https://mediamtx.org"
   # need to use the tag to generate the version info
   url "https://github.com/bluenviron/mediamtx.git",
-      tag:      "v1.21.0",
-      revision: "2c6727904fbf233615de74a6c54a9b94dbf6025d"
+      tag:      "v1.21.1",
+      revision: "048255986f7e04b859b4c4efe651448ec785ecd4"
   license "MIT"
   head "https://github.com/bluenviron/mediamtx.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "fedec9272dd41c00201a1b2cc34e59c1fa917a5030520a5eb75b4554d6d53196"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c89fb7628d491ff584592b4b1d75cd97e1c30528e274f36345c9733467ce95c7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c89fb7628d491ff584592b4b1d75cd97e1c30528e274f36345c9733467ce95c7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c89fb7628d491ff584592b4b1d75cd97e1c30528e274f36345c9733467ce95c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8d4988829b900791c807466f27f43c9b562119dfc5307a6ce098f7c9898c87f5"
+    sha256 cellar: :any,                 x86_64_linux:      "4748ad53a07a698717f2a5025c3287232132f8171ad7386ac2a40de2133fc444"
   end
 
   depends_on "go" => :build

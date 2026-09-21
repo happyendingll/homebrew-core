@@ -72,6 +72,9 @@ class Openjdk < Formula
     end
   end
 
+  # uses local ports during build process
+  allow_network_access! :build
+
   def install
     boot_jdk = buildpath/"boot-jdk"
     resource("boot-jdk").stage boot_jdk

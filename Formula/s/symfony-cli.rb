@@ -13,6 +13,12 @@ class SymfonyCli < Formula
   depends_on "go" => :build
   depends_on "composer" => :test
 
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     ldflags = %W[
       -X main.version=#{version}

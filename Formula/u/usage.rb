@@ -1,15 +1,18 @@
 class Usage < Formula
   desc "Tool for working with usage-spec CLIs"
   homepage "https://usage.jdx.dev/"
-  url "https://github.com/jdx/usage/archive/refs/tags/v6.10.0.tar.gz"
-  sha256 "8c357ab9b67b7e0ca57d1744c784e33770480f5c0336e0462d1281a7b71c3067"
+  url "https://github.com/jdx/usage/archive/refs/tags/v6.11.0.tar.gz"
+  sha256 "44ca23fcd407d9d871c00a3151034a4250981c2b31996f9a901130b674aa6e99"
   license "MIT"
   compatibility_version 1
   head "https://github.com/jdx/usage.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "b3c783f90a549804a9100cbdce64ccaf1ab8336e379ff8e6b4020378eaeb2306"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1b9deeffe550f0ccdfbf240b4bbd0409a052f5c9a3f2453939d0c8d472c3c8aa"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6f53fba56ed7edd80c65bf576681fa1692016971fc4b4fd7baa987c815ee89f7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b5c07acd2a38ad1bf2aeba3ed530dc7ab6c17ba7300f4c12f78861707f7ca868"
+    sha256 cellar: :any,                 arm64_linux:       "da818053868f60064ea6a0ac96e996f7fa27f8a33714a032aea6f1ec82602912"
+    sha256 cellar: :any,                 x86_64_linux:      "d05f9b9bbad25e062fb4d4f90b2333409c1b8e63cef306f3c7e0533c6e997bc0"
   end
 
   depends_on "rust" => :build
@@ -17,7 +20,7 @@ class Usage < Formula
   deny_network_access!
 
   def fetch
-    system "cargo", "fetch", "--locked", "--target", "host-tuple"
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

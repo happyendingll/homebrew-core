@@ -19,8 +19,7 @@ class Kubo < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "1877800774e27a91b0c7a2460de3d4e31428e66e1c02c3a4b6171eb7271ebaaa"
   end
 
-  # TODO: unpin go@1.26 when kubo supports go 1.27
-  depends_on "go@1.26" => :build
+  depends_on "go" => :build
 
   deny_network_access!
 
