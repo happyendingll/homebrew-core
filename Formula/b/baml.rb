@@ -12,11 +12,8 @@ class Baml < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5b387ac7625ae860bf341d12f9fa8274f99176e1a20c2c7fc7cdf64be52ff5b5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d8fb3f5ce5ba8be92bc28b2b806f873dfeca6ee8d195fad51be95a1908bc53ea"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "320529c58771dc173ea287e28eb05d11b011d8a33e4ccc18a90e98620d7e1a6c"
-    sha256 cellar: :any,                 arm64_linux:       "47a0108fcd3e2085e068defc44f878ba06e5f9a1a73e20bf4f2f87773773e1a3"
-    sha256 cellar: :any,                 x86_64_linux:      "aea15b4fabbb38e22aa1fecc6f02cec4d9bfb318b17435772163b41a8ab174ca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "66601f5fa5123d7c1e2ca30753b25d8051a2d3ccd849c6f26914883f474c3e60"
   end
 
   depends_on "cmake" => :build

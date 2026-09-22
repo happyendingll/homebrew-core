@@ -11,11 +11,8 @@ class Pypy311 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "33ecf9f323e61e0aca48cb4a94086d8cfdc1962f3fe79d7a94a84dec5b454515"
-    sha256 cellar: :any, arm64_tahoe:       "1217e4b388ee551b54d7ec0d55956ee32854f644fa2178688819b045f4552f42"
-    sha256 cellar: :any, arm64_sequoia:     "8829be3527ab3164867cdfbc2c3073ac02b7e812949f5d2d4ba598185c091cca"
-    sha256 cellar: :any, arm64_linux:       "d3adf4b494989c208afad97b769953ba3986f9aef7b1f4bedf5cc30c390a100d"
-    sha256 cellar: :any, x86_64_linux:      "0e428811901ffa3a04394c7cf2c8c19231ae12d1cb588ce1480431a12fe837b9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c845c480f93c9f6f8cd2e15332bd1ff5d75e58dcbc015794b47c651c9e27b3eb"
   end
 
   depends_on "pkgconf" => :build

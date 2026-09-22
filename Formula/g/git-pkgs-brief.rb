@@ -7,12 +7,8 @@ class GitPkgsBrief < Formula
   head "https://github.com/git-pkgs/brief.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "240f01ced079efdf7707f3cf1c322ac78c1de095889ae802ed058f029c3a991c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "240f01ced079efdf7707f3cf1c322ac78c1de095889ae802ed058f029c3a991c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "240f01ced079efdf7707f3cf1c322ac78c1de095889ae802ed058f029c3a991c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "240f01ced079efdf7707f3cf1c322ac78c1de095889ae802ed058f029c3a991c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d9be209f730f2085288e29b713c698dd8e3698504ed227b459c7f709f0ed8f85"
-    sha256 cellar: :any,                 x86_64_linux:      "a76c8e005cc7fdbaa99dcb21d9704f81e7370e12728154dd269e3368f02c38df"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "20cb12b8fef39a93fc30c14bb267eb195e8065813ab592dcb9f8bc3d70380a85"
   end
 
   depends_on "go" => :build

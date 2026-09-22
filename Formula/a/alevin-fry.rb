@@ -6,11 +6,8 @@ class AlevinFry < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e9a36b05d95406546dff2f4e3cc3502e01c4f28ac42205ca15c0699a151ab3a5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "34d63792fa533fc61d84d262a7510e56366af8e384488bcc0313914494959166"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6a5798f5800a54be0ad3e0dd939660d2e2197a0731f5a9f4a1cd1d682c71d85b"
-    sha256 cellar: :any,                 arm64_linux:       "c4622736ad83a3a79442ef566c3f5c79c4a0d6b1d11cf3801750d431934d7adf"
-    sha256 cellar: :any,                 x86_64_linux:      "a7a21d1d36459da062b8f0e7a18be2f0433b1d5dd4eda11cadf00d1da98990dc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9cb8c843dc4ca8eced0ce3d6db38bdaaa35067d1251d37fea6f616ef9a0c16ca"
   end
 
   depends_on "cmake" => :build

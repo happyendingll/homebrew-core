@@ -7,11 +7,8 @@ class Nats < Formula
   head "https://github.com/nats-io/natscli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "814deaeedd530ae32ef35d96fca56202640d75ead4a24ecec07687b9bfc55884"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "165673e92ba48954f7d1b3e3c4ca47f53beb9e3f640553ce07640f67a3161df0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0a3936a8133f4753b8cf5341464784c13b7f3db08ed09ef6eb68ed5ffb7a27e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2c67f22255a269f86a81c69715a091866195a9465cd3cd878b3d35a87676e578"
-    sha256 cellar: :any,                 x86_64_linux:      "d93bc98bc76cf8d88383117433fa28524bb509aae1a65ec4377faa208a6a3d94"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "82ff0803dce75dcf8d7d128642b0272f855fc0140846a62c7368e1e571c188c2"
   end
 
   depends_on "go" => :build

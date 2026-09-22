@@ -13,11 +13,8 @@ class Lowdown < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "38a9c03bfb5c39b6d63be0274944d3b5e160a6be420940b3824f5aeea47be83d"
-    sha256 cellar: :any, arm64_tahoe:       "1db06afacaaec6d74c6eab22e02640d6baf377ce2174aa58cd24dbe2610b0c73"
-    sha256 cellar: :any, arm64_sequoia:     "5e8ba6edc11595adff2d93a89c7faeee42403b24a6d8659d5d3a29eba9e70260"
-    sha256 cellar: :any, arm64_linux:       "f218d5b57a9de3ed769afcdd8cead044567f94c8a9eefafd2349a0aa2b10bbfd"
-    sha256 cellar: :any, x86_64_linux:      "bdd9ee43b62835566b8f141d3937924c63b0c1ef565a60c749b35c9fc13551b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "81699423f1e6da452487999b248150c164998e1f6813f867c85288fa404281b0"
   end
 
   depends_on "bmake" => :build

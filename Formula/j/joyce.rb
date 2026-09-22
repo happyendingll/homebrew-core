@@ -14,12 +14,8 @@ class Joyce < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "d19ab6f1ea382072a8b00a2aeff4c25f8b8b2a3150c4af3a6c2f41ff66a90150"
-    sha256 arm64_tahoe:       "e2158169899c44fdff0bf9b3211bb33383817412c2ede428db4606f04650b0eb"
-    sha256 arm64_sequoia:     "dc481968eb3c1cffab85fd94f15c01dac8172ca23b99812088fd9d8626b6d9e7"
-    sha256 arm64_linux:       "020de32fa5e61a0dbf45d07ee93894ac37e657586b57aaa21e53b3bb0dbb7efd"
-    sha256 x86_64_linux:      "2a18b56e9f7a2663c9f6f4dcfccdec42d3d89c303a7aaaf52d696cbe9d9c2a70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "b2b7453d2dc9d567403973fe2fac00a443477cc5c3724329a3a85c39f064bc77"
   end
 
   depends_on "libdsk"

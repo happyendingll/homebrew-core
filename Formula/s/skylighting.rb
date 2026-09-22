@@ -6,11 +6,8 @@ class Skylighting < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a37b774907c122728226b0b35e3d762dc7353b6935bdc3b960e112d28ebcffe6"
-    sha256 cellar: :any, arm64_tahoe:       "4c3fa2611a6f4069f850943622ce507aa06598b79492f8e8276c0386d836d9e6"
-    sha256 cellar: :any, arm64_sequoia:     "e6fd10b2a8c031cbd3d2fa40f0e6baf99eeb677c280ba956d6d615a8f3c57773"
-    sha256 cellar: :any, arm64_linux:       "074da3fb40d1647c0504b50dead72fba5735f8732fca3b5231e423b66f069b89"
-    sha256 cellar: :any, x86_64_linux:      "bd01fc200102922d4923cbc5f249ad86497cc98aeb1adc37d9e66679ece8aa10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e524205ec44a2f462e579318230d6e2a291c6e9efe5e881755e1df11c1b88d24"
   end
 
   depends_on "cabal-install" => :build

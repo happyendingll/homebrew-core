@@ -10,12 +10,8 @@ class Swiftlint < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e986deaff3ecaa4dd5c1f169a0900131dd5ff56c5ec4cbf96b73b1033196e593"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d50373afecfb6ad0dbb527de4bd678d38cf9f9a42c248e85b7235055a8db68a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a08a9e47fe0ccaf6c4eacec3961a6897393d9431dfd0fcb52767994f2ea197c4"
-    sha256 cellar: :any,                 arm64_linux:       "309cb49b4012b0dcbf56b74305734209706122e074e2fb93e8e7a62e86c19c1d"
-    sha256 cellar: :any,                 x86_64_linux:      "e79601d7a4c1483ed94d820ca94f8f39609728d7826f29d2aad51b9861549ab3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a3c868a53a8e9d7de8c933aa520c067dc10445e1ad108441752ec2295fc6b32f"
   end
 
   depends_on xcode: "8.0"

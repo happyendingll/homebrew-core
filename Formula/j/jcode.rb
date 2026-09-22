@@ -11,11 +11,8 @@ class Jcode < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "80f0f6232bb34719f5a70834452c48aa72861e5038e06f731ab0e70eefec19c4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4e82e5ca781617354d65201cca1750ba0e091c21ce93ecff0d9dc181c600bba8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26e25747871a8d291529b7a64cf664cb69a9b0f251938e6a0de630a4d6866f9a"
-    sha256 cellar: :any,                 arm64_linux:       "d03c344a6f4aed5e04712f0212ff0459600125a1ee11dc52603bb5faad7cbc0f"
-    sha256 cellar: :any,                 x86_64_linux:      "4a8cd0588ad5fcf740f3fafc6b8ccb51e04111e291d8880a89501eb6ed33e771"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "69ba01cc56deeb55a812d8101a4029a5d276b6cda97a6f779912fadf7ccc7e49"
   end
 
   depends_on "cmake" => :build

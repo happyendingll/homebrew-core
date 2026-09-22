@@ -7,11 +7,8 @@ class CargoShowAsm < Formula
   head "https://github.com/pacak/cargo-show-asm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "62d1339293830e40826742aa961f25da51316690f4f393b147c4dd0ebc01e289"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "876d25d0ee6e786ba1b34016d2c465a7ac2352cc15ff0e613199294280088429"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3bcfe7354fa1b4c6baef9970b3b9651940d6d8a33bb8994808d01275722910a8"
-    sha256 cellar: :any,                 arm64_linux:       "c6efeee2dc0cb788f03d5cbc64cc5ada4d524d6416f34fff9a2fba0c687ec9e9"
-    sha256 cellar: :any,                 x86_64_linux:      "30e2169a7e25ebc19cb128fb6bd074f2b8a739bf51f2ab19a6b227e3caf2ce91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d6160b42448d06ef428e865c0ee33c0d43872d7d91026cd100343691d166545a"
   end
 
   depends_on "rust" => :build

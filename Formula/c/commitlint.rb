@@ -6,11 +6,8 @@ class Commitlint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "957e4a1664832b28a41e3c0fbc387a54f3b3b059ecb3e10e5cda57a5212f711e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "957e4a1664832b28a41e3c0fbc387a54f3b3b059ecb3e10e5cda57a5212f711e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "957e4a1664832b28a41e3c0fbc387a54f3b3b059ecb3e10e5cda57a5212f711e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "087bb8d14d9854e5b5aecee52ac99457058a66477833e64a6061f5a8c6602e6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a1a9f3f6e6de6df570fa0501765d066433be7906743ca997509c01493fcce00b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7644d6fd7e933b1f57146f445b51d49b56595bade8791740fe07b858f92f9151"
   end
 
   depends_on "node"

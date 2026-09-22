@@ -11,11 +11,8 @@ class Nub < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aae399245585bfef99e2b9641dfc5f07b2aec9f45b45c1e6396d2cadf755db24"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2bf49bd851c2b9a8478d3ff4592339e491e3ab7f666ebd9a6cbae70f348f53f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82d73ad35e07b76405fcb98ef38554763bb5816fb504e781c513166b9ed8b66b"
-    sha256 cellar: :any,                 arm64_linux:       "641ae302d3fa7a8bae1d74f2952a70dfc5236c57c18086d2f00af97014b28662"
-    sha256 cellar: :any,                 x86_64_linux:      "c0b6dae44ee68004d0fc4df38ca44086415d28f29da9391c61f6715998630a98"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3b227103583f271825c4557d0ab5130bdeed147c7c29b97f0c0f5d49e2c4cf31"
   end
 
   depends_on "cmake" => :build

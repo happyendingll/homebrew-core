@@ -6,11 +6,8 @@ class ReFlex < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b163ee9f78f692e44781b5ead29f9eb747b26ed542499912023dcaa1ad0d626e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41f6d9d75da03ebb96c6b39798b48defa6d4bead4c2c689b31b458885de18fbb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0bff40548ff20fa453b51266e3bd65f5106b1e4a7d4da25db6369fd228528d3d"
-    sha256 cellar: :any,                 arm64_linux:       "2cac03a849a81d83f4a71c1ef6ff7f0b37cb0c84bc7504e32d8bb31e92218cfa"
-    sha256 cellar: :any,                 x86_64_linux:      "e7fd535431674ec30c6a7fd59cfae094c4eec3d3009fb435a4ac3dffe001bd70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "5245cf6053c6f4d64a4360b89bf35c56df3ccb97c561501c2c1ebe90791cbe88"
   end
 
   depends_on "pcre2"

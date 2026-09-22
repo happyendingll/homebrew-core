@@ -11,12 +11,8 @@ class Tgui < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "dc21459f599692bc5af688bff211f25c18b2643375cba0fb19ee6dfe45ff3cfd"
-    sha256 cellar: :any, arm64_tahoe:       "5baf47c3dae461e0cb08d37d049c432deabc74480efd9b59d79ca2726f3e573a"
-    sha256 cellar: :any, arm64_sequoia:     "e306726a4cb13fad0b3e1c57bf7d26bd8b67e02e4dc0907616e2e39d80954ed2"
-    sha256 cellar: :any, arm64_linux:       "5df2dee299a11cdb0b3bac9efe114da27b68b7a5fd59b5b368486da8ce01560e"
-    sha256 cellar: :any, x86_64_linux:      "e8c59dd195dc02a9f3ba1c45f425155120101b97115cbd1dfdbbd44fd9f457fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "9a064c753787c3af08cfcc821c4485176412cb2d16b9926e3a6f001517ed71d9"
   end
 
   depends_on "cmake" => :build

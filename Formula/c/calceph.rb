@@ -11,11 +11,8 @@ class Calceph < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "82950772ec0dc121bac775e5430730da451dfa429b14e36cdc85ecf273d18b27"
-    sha256 cellar: :any, arm64_tahoe:       "5f9ee625bfc6da755cc6747e51b330dfae42478d1f580e3ed05871df08fdfb77"
-    sha256 cellar: :any, arm64_sequoia:     "f575faca305766338278980c758e8bbdfd660a90dcaef6f51af5d8a644ebca6a"
-    sha256 cellar: :any, arm64_linux:       "331fba5627f656977c3f17525f395a03bb9e6334f287bd3e8a986280855f0b22"
-    sha256 cellar: :any, x86_64_linux:      "2906c6e83b3630c189d1caa84c4e8f5f237c483b1e7c6bf7726d9e12b3da22bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "6a82ba275a947514f7c5dc42657313fbdec960ce7e31c90ea2085bcfdd5d063e"
   end
 
   depends_on "cmake" => :build

@@ -7,11 +7,8 @@ class Rsync < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b9bf0049adf7c331cffcde8da12b499bbdc107ab097a328ba4b9a2a00358e235"
-    sha256 cellar: :any, arm64_tahoe:       "c13909ed22964467473786560c89a4e58a68f9bff46c8976db3785a083f539f7"
-    sha256 cellar: :any, arm64_sequoia:     "f4da2206419d4f03f6a966b35bf21283b3f975c1b7cbb69ef5926070264c5695"
-    sha256 cellar: :any, arm64_linux:       "ad05b5d79762136ad7aeb2753d37ee6c1f865a476ecef973a0f0a686717f9e38"
-    sha256 cellar: :any, x86_64_linux:      "67fc87a9f59d57b2df5ce78a36afc3a1ad2d5a8aaa9f0698e0e6b68b1dcf32e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "dc150fe580d7b733d0aa32fe5769719a6aba2168e0e69f2d467b2ad987f68ea9"
   end
 
   depends_on "libidn2"

@@ -10,11 +10,8 @@ class MetaPackageManager < Formula
   head "https://github.com/kdeldycke/meta-package-manager.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d4677225f4ccb89fbdb7a38644447be80a494f8f5a72abadf4abc5b73524d4d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d4677225f4ccb89fbdb7a38644447be80a494f8f5a72abadf4abc5b73524d4d0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d4677225f4ccb89fbdb7a38644447be80a494f8f5a72abadf4abc5b73524d4d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cf95cd6709766da7be01d20dc32490194302bebd0f73d5e07cd3db939ff2b222"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a663fd3b5d487cba8cc80b939d5c04b20982fcc1396745643f56d000fbc73bb1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fd5e6c8f364b0dbcb9cd1bd67157cb3d068df06f2c128196ff7bc8a408afba6c"
   end
 
   depends_on "rust" => :build

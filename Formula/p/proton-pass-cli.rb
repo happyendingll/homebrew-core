@@ -6,11 +6,8 @@ class ProtonPassCli < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "343a4cea568e82a10e22b462134cfb184f71c6319feec987d7a07923942ed0ab"
-    sha256 cellar: :any, arm64_tahoe:       "44c0f5f198a8bfd8b1e68b7eb296c05ec65a6f9ee494a375835159e1f330964b"
-    sha256 cellar: :any, arm64_sequoia:     "f7c157827848038884d79a65ee2a96537e686cd6f19422cafda39b6b156fd4df"
-    sha256 cellar: :any, arm64_linux:       "e77c1bec79002eac58e5fd229f7e676328ad9d32055afc745c3bcf6076874b0c"
-    sha256 cellar: :any, x86_64_linux:      "5aea350b9079b3a0c5410c82f8930bf870b66a467f489b7797f9497620355e28"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "6908b362cb270ecfa7ccd3f2d222959f55a40e008edda06013b874a468d43d3a"
   end
 
   depends_on "pkgconf" => :build

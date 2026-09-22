@@ -7,11 +7,8 @@ class PfetchRs < Formula
   head "https://github.com/Gobidev/pfetch-rs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "34621ac07a02ce1cbd76bd1ff05ef65a8bc9c16540c7387d543b99082cb0331a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ddf452e9e892adffa62d138f3b7b43f6ea678a2598701e5c30d568a8d10cc82e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c183ea8fd78ad9ac96741f71eeff4bfd56df97e940d5d3131e61edad38dfcc29"
-    sha256 cellar: :any,                 arm64_linux:       "c7ebd68eac76239455561dba7d1155f2326d83566b1958727298698fbb070d25"
-    sha256 cellar: :any,                 x86_64_linux:      "ef6aa6a9230d3bc3368505c9edcf1f270bf35e29b93fb7a56d1903d6c0f4a774"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3f78152d8c06c57db739f6c66a1b35919cda5ec808ca5f7f51b9cdad0ad374ef"
   end
 
   depends_on "rust" => :build

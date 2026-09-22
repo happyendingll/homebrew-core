@@ -6,11 +6,8 @@ class Obscura < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f7755c52b382d974705946a037900d19ac9b9d2fb7f97c1e2ae09334820b3a57"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "58b5c6879785d8105318d7b45453b3fe8ebe479282e77d41a669aea077b133e3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1828b0c3a42d92cd2a00416c4403315a0d760675a9a76adca0d0a1c8c4ba768e"
-    sha256 cellar: :any,                 arm64_linux:       "7ed51d5d77cdfac047abe2b3bc075c15d4593a461c33befc85774daf261fd066"
-    sha256 cellar: :any,                 x86_64_linux:      "bf455bb95c5837a0c5b9e09a627825a60b274d79f111188925e44f429aa37d6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3b503e43d894133bd1cbd2e79ddb667b49f7d60878c944714007ca5f415e7025"
   end
 
   depends_on "rust" => :build

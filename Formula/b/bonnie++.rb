@@ -11,12 +11,8 @@ class Bonniexx < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "84fd1e486465aeb00c1a1f8c3820b336cfafef7867d4bccbdcc873d9ae596ec2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "08e292d8b9ed4e96aa54ebc50f0fa67e43b2fc99ce817b8ba515861dbe7f8668"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0ceed0542a0147c3b8a902aedd2c8bf87377a88f50ea65ba5da4c9e8faf85ee4"
-    sha256 cellar: :any,                 arm64_linux:       "1ec4e0f867669e824aee81620de70aff90f4d59620b602cd8de354bcc6cd1db1"
-    sha256 cellar: :any,                 x86_64_linux:      "ed2ec705d02407601e3709ded19555954d2cb1d0966efdc7260e4d14165e9fee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "655253cf10e36a8fb90e4db3b95cc80b5c455f6f866e40fac0619c25ce91ccaa"
   end
 
   # Remove the #ifdef _LARGEFILE64_SOURCE macros which not only prohibits the

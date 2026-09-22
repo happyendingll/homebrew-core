@@ -7,11 +7,8 @@ class Gzip < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a4fc6cf11086f1848bd0bc4d9797cafbaa79cf2ab4098bde4aa034837af517d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2b422221e96dd43b7c7778439f6437073ab1181a6a48796d3b17e1c5ce4cc8e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91a7889ad537212365620a25f0596c9b4928ad517e7c37d1282deb32a63c0977"
-    sha256 cellar: :any,                 arm64_linux:       "859bc0e90ca8df3432d76dc17db91fb2ff824a46711ba5a9f96b9c940c16a36e"
-    sha256 cellar: :any,                 x86_64_linux:      "c67934ce7882e720c8deb757203f528e9546c0f90451ae35b93a1e0bf7f8a8eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b553f807cd1a2c3e4ea8f3e5ba378efcf2859dd4130dbb9ce7906201e1751ed8"
   end
 
   # Fix compile error on aarch64 Linux

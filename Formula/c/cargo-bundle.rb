@@ -7,11 +7,8 @@ class CargoBundle < Formula
   head "https://github.com/burtonageo/cargo-bundle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "68e6280a21a26a14b22854e9e834c816b4a34dc7a807d16a97d5bd2a6cf6846c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b05cdc6709f0c2053045307bbce55d39dede8baf6efac3ade7b544f300b2f8ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f23c367224830401e4d76f29a02b3e7181d519adb6b5f714121892a90c9fc863"
-    sha256 cellar: :any,                 arm64_linux:       "4572932552f2452f4a99175f0600dd1bb3d629ba4c011c85e855757972470cb8"
-    sha256 cellar: :any,                 x86_64_linux:      "156e26bb8580554514e0648a507e3db97746815fddc430ea54ade390d9879244"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ca55e0a29d596c9f7d99468ce97c3330089e2f1b6e54da45c2024cf368daaa1c"
   end
 
   depends_on "pkgconf" => :build

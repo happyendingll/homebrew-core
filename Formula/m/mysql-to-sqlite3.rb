@@ -9,11 +9,8 @@ class MysqlToSqlite3 < Formula
   head "https://github.com/techouse/mysql-to-sqlite3.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c7d6d440524c684c5578d174181ff3cb70fd93ac94fcc8809d5fd1722df320d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7eab98d6ff584142d452febc9e9617ec3f00030e4244003c14fae365c45555c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ce7c37e26ff4c431958187ac7b402af2f5f82915d1bf4d1321beca70bda36ecc"
-    sha256 cellar: :any,                 arm64_linux:       "0f6a60b110f5239d45b1419cf8521cf02425ae2771a67e21d61882020cf8eef0"
-    sha256 cellar: :any,                 x86_64_linux:      "4a2c4bd072395bced5542f748d468a853c22bb2f37a4866466308f377644be65"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a11bac64932bdba80236c85a354243385e19d030a56ab980b61329b52b59bb39"
   end
 
   depends_on "python@3.14"

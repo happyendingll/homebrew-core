@@ -7,12 +7,8 @@ class Ifopt < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d1c4327865bfad7e97da5fb1e19d05719ae0f468d0a931c747c70621af9d4e34"
-    sha256 cellar: :any, arm64_tahoe:       "26fd541ebedd2695690d60bb297ab1c042ce0e1063c877fd046b09d0ee3d97ff"
-    sha256 cellar: :any, arm64_sequoia:     "00681c3ecbdff9f3374a16527fb0d8f21138eb565f6985495ae57c0aaa6e8685"
-    sha256 cellar: :any, arm64_linux:       "2eb31a088cebf2c9374e579d92fe3f5537c24d389378d4cad64c6aa57596359c"
-    sha256 cellar: :any, x86_64_linux:      "066286ce5ecae8791cacab5376aaeac4308014fd8780b6b6500a1134c1789d2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "cb17dca285219498c5437153a6b85ad2d0131e3e84f2b3b6e3b32c6f23365a6b"
   end
 
   depends_on "cmake" => :build

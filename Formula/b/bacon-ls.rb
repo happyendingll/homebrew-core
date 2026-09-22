@@ -7,11 +7,8 @@ class BaconLs < Formula
   head "https://github.com/crisidev/bacon-ls.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "214426c64353514d4b8bbbfb5c2188e86654040dc4942eee69178de6aabbe3b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a67135f9134a9f78d39fc8af1111e5c57581e9e9f71be6a5a7c1c9a6d7af3c01"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cd7b4a52c2d878c76f1f8d6cb3008a5396ce8ec68524cb490e385a770c946b98"
-    sha256 cellar: :any,                 arm64_linux:       "1efa5d707bc349c81fd9928e731afc02441b0c659d0eda06dd602686ac7b403c"
-    sha256 cellar: :any,                 x86_64_linux:      "9767b471b4a8d1ead9255e5d65c4b2aab67a9f335a19fb80553fd330a730010d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "33ca339eb4cfd22c9961ba2bc638b24ad4c2adc85b12361d0a386ef480abb3cb"
   end
 
   depends_on "rust" => :build

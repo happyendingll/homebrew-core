@@ -7,11 +7,8 @@ class Jump < Formula
   head "https://github.com/gsamokovarov/jump.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d7a865810c0b3e76b0eb06147455604e031b827a1d10d7abf2711150a6e29c2d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d7a865810c0b3e76b0eb06147455604e031b827a1d10d7abf2711150a6e29c2d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d7a865810c0b3e76b0eb06147455604e031b827a1d10d7abf2711150a6e29c2d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f6e93b19a4501cded7674a6c592b789a2e4381ed45e9256359ac1a14d762a98b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6a893287a10358e6f9e49ce4b488104c784f699976e2761181ac788492a3c056"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ee89d9fea7046cfb90185b3291e64055037e91add76f8a05b5d73a1d910461c3"
   end
 
   depends_on "go" => :build

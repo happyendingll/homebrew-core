@@ -7,11 +7,8 @@ class Libgsf < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "4f3da8ed2c2f63f2dc52da430261a2a17a2bf23cea79aa92789ef53e0f0277d9"
-    sha256 arm64_tahoe:       "f3acb1ba06832683f4b464abcbacd6474eeab445b9a31eb8ec46183103c9d6b6"
-    sha256 arm64_sequoia:     "d25ad9dfb121fde82634a30c19dfde2c03e479dd26c2a12fbde8a5e3575a93f6"
-    sha256 arm64_linux:       "09d7b66a05a8a9b9d35590cbebfbf30648c221609c86fd73c6e3e52edc51052e"
-    sha256 x86_64_linux:      "bbfef7f8bec27fb05aff5d02e03836f8d09742dfff36d4d9aea0d05d1118c9cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "d56dc704c551503cdf3998f37811c64f3159ee3c93eb7b8b7af802223a64cdbb"
   end
 
   head do

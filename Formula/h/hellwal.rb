@@ -6,11 +6,8 @@ class Hellwal < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c878b9620f231a54aebc76e61fd70d8e86f56d52adb9624c5698d4ce5cdd6c44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf4242ff50905d089417461d5d5736fd017b089ea457dbe8b71804216b0c993b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5490782b0e56972fe9b0aeb3e0d2d182a644012f93ee777a99f151335752ab4c"
-    sha256 cellar: :any,                 arm64_linux:       "b124d10fb5b5bd860b33fb44bd44ee9495f59acf48e20797ede02c642a965db9"
-    sha256 cellar: :any,                 x86_64_linux:      "432792a355394a09a0f26bf0a2f1d07bb9e306bf587aaa8ca0a8bb6c37856942"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "19395ae45b6b84e7bdcccb554b2d76abc7c9b5826632759258b8760445514426"
   end
 
   def install

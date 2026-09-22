@@ -11,11 +11,8 @@ class Velero < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6723008fa7d48f18b1a8d04aab298942edefc17cf6900e409135cc27e4b373f4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b245156c7afdb09d785cf4673ef0323fe3fc94ac88b6bfd115dbec68761cddba"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f6af2dd027165e248bef43106302931051c5a22ba1aea748ef6980812ef5edd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6e4999d44509cc41bdcf77426d6aaf9e5c5b95dd420f34584edc1a06913faed3"
-    sha256 cellar: :any,                 x86_64_linux:      "0ee161de05cd618956d496a0b1fc1b5101d730cae7d48a4621e79e125095fc3a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9c4815d82da7d73fd56aee8add1ce1b4245629bc2f7008f1ad9823aeb31fa183"
   end
 
   depends_on "go" => :build

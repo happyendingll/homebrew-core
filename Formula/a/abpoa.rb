@@ -12,12 +12,8 @@ class Abpoa < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7754fce45bd7a37b567741016605492e9b3e94db53955011a308cbab011bc22c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fd232c10a127d10f27d2f7e427bc35bfd8c2fdad4e5f817848538f7e4d8c1207"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "acd3292b288e7154e4db5a9c8fb02011f0b946b60424277a806f5ee2de66e8d6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "43416190587993099b4dba1c40ebbd3aeaada41e5c9bfa9eed184aa3d28a45ce"
-    sha256 cellar: :any,                 arm64_linux:       "02d4af5c4469c0c392c37f6fafd14fb3b8f1862517b0bd0b5ade4484598e5c3a"
-    sha256 cellar: :any,                 x86_64_linux:      "d2adc2fbf775e089aa49c78776516a8df09eac24ed849b7a5b68f8049747d07a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1e6b142211f94c2c9cfeefde27eb04df4aab8f336a2f081e1ef1fab8a55c431b"
   end
 
   on_linux do

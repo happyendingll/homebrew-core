@@ -7,12 +7,8 @@ class SpeedtestGo < Formula
   head "https://github.com/showwin/speedtest-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c30480c4f4f69864564dd7b1ffed55c8f95fc8db6c14b4dca9d8ac0866d1486"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c460180f156e1e70209edc76a39348297fc69452767167a8d39623305ece5703"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c460180f156e1e70209edc76a39348297fc69452767167a8d39623305ece5703"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "c460180f156e1e70209edc76a39348297fc69452767167a8d39623305ece5703"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c44d2c556d2ee1e5a06a852b315d70505f48367d659f35bc3959036e61ea1b05"
-    sha256 cellar: :any,                 x86_64_linux:      "c791f67a07932b13b1f974248fd2136cb0ecde7258bca39eb7efa346f25dbf28"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9eec5927ddedbc400c2169478b947c332a608143cb90e6e9b824310e72141446"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Netcode < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6e01068c5cd40225d9550012afd02753347befa0be1621538b9f047d3288b082"
-    sha256 cellar: :any, arm64_tahoe:       "90c7a90dfe4163d0f157ad840e6130ebf8bf2f461724ca4fa69ae46afdedbbc9"
-    sha256 cellar: :any, arm64_sequoia:     "bc06d84ad658409a81e3266d46ac699e97bfb066de77c299530c47a476428966"
-    sha256 cellar: :any, arm64_linux:       "33716f51b8b4be6fce3555d705b113cf575a2705bbdefda5ebf7a8dd65da94fd"
-    sha256 cellar: :any, x86_64_linux:      "6ab54f635c99f63cf06ff4e05862b5a8325a6e1d903cf3dbe5fc587035a39180"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "dbeccb0b8f6dccf6a171834a3990c003595bb456860ba450e24ae61b6c5771a0"
   end
 
   depends_on "cmake" => :build

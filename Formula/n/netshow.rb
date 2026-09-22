@@ -9,11 +9,8 @@ class Netshow < Formula
   head "https://github.com/taylorwilsdon/netshow.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fa0e5a5368cefe90e16c40d4ea3f3d7d3e27675b49743fed5523b8ff2018f9b5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f263f859f94b773b607fcce2835e91a41010a7e08b30e331bf38a9b7b2642183"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b40453e1b9694f045b8bdaceba70ac7cb4a7d993a10e2dffe0212d973c6a32b"
-    sha256 cellar: :any,                 arm64_linux:       "294a8b3bdb565bc09f92f16d61b2a2f82d4644b59f7ac2643cc1b12f1883d1e3"
-    sha256 cellar: :any,                 x86_64_linux:      "dea578f1d76356612454476ebff2a7e3f1fe5ed4067fe2e3f15efabac2005a0f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bac6d39cb7380c11220b5a66e2c1c3e2a5cece451e79a65f344a25ec7df0ea37"
   end
 
   depends_on "python@3.14"
