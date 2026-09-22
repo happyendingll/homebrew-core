@@ -2,14 +2,17 @@ class Ghr < Formula
   desc "Upload multiple artifacts to GitHub Release in parallel"
   # homepage bug report, https://github.com/tcnksm/ghr/issues/168
   homepage "https://github.com/tcnksm/ghr"
-  url "https://github.com/tcnksm/ghr/archive/refs/tags/v0.18.4.tar.gz"
-  sha256 "d95ef0cb78ec9f137c40cadaf2e8ba8858fb495399122abd44ff0b9a82ffd48f"
+  url "https://github.com/tcnksm/ghr/archive/refs/tags/v0.18.5.tar.gz"
+  sha256 "b176fb747a3316999883cdbbc3f48a7512ef4b31b622ca378b64f015dc95a439"
   license "MIT"
   head "https://github.com/tcnksm/ghr.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "b9fe20626d12d8f0bd0c590e250b36699b21e82c607c10639918e3df7875d3e7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b8957473cc4ea3216491e79993300d010894f70d88d10cdff50a4a13500718a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2b8957473cc4ea3216491e79993300d010894f70d88d10cdff50a4a13500718a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2b8957473cc4ea3216491e79993300d010894f70d88d10cdff50a4a13500718a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "22dd5bab0cbd02b7017703eadeff166b61d4d7c681f70816c81216b96115a8c3"
+    sha256 cellar: :any,                 x86_64_linux:      "c97884cc0519bc001a679508f1edd89f6261b13dd192a9c37e7fde9e84f5480e"
   end
 
   depends_on "go" => :build

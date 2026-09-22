@@ -1,8 +1,8 @@
 class Lazysql < Formula
   desc "Cross-platform TUI database management tool"
   homepage "https://github.com/jorgerojas26/lazysql"
-  url "https://github.com/jorgerojas26/lazysql/archive/refs/tags/v0.5.7.tar.gz"
-  sha256 "90d6943d0208964aa6143da9d0768fa0dfc2bfd7a4ca2302ba7b36ec92808334"
+  url "https://github.com/jorgerojas26/lazysql/archive/refs/tags/v0.5.9.tar.gz"
+  sha256 "f7d6bd4dfc9f7b72d2fbae076dc8d8c05773a970978a4e9ac3458dfb393c3f33"
   license "MIT"
   head "https://github.com/jorgerojas26/lazysql.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Lazysql < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "f9add2767b70bc41a3640a62b1e5a59c3440d87cac2e1a10233ace624fa74c05"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5da0fc1695e78c0390d639add0f7c794efaa8468467c65efb15110cfc950c14f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5da0fc1695e78c0390d639add0f7c794efaa8468467c65efb15110cfc950c14f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5da0fc1695e78c0390d639add0f7c794efaa8468467c65efb15110cfc950c14f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c6ff988088984c5f2732eaea47b717df438959aac3b219fa67ef8ab46cc34e1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f47900b38e8cb9cee6e308b4256b1f7d0b3dc506a78b44fb286cc1c40b190103"
   end
 
   depends_on "go" => :build

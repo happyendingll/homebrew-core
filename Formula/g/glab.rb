@@ -2,16 +2,19 @@ class Glab < Formula
   desc "Open-source GitLab command-line tool"
   homepage "https://gitlab.com/gitlab-org/cli"
   url "https://gitlab.com/gitlab-org/cli.git",
-    tag:      "v1.118.0",
-    revision: "570955d4252f860d6b0cbf3fd2ec44f86a7e6957"
+    tag:      "v1.119.0",
+    revision: "f5016eda261bb7142627d05d1d85a20d6dd56ddc"
   license "MIT"
   head "https://gitlab.com/gitlab-org/cli.git", branch: "main"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d92a45ea99d39a6a1f54ed87fa8d8c715b591960f7e3c91192de56cd619baaa2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bd57e1655fa8c4e10f32bbce90772ea301ad860191658777b6064cc52a2628c3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bd57e1655fa8c4e10f32bbce90772ea301ad860191658777b6064cc52a2628c3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd57e1655fa8c4e10f32bbce90772ea301ad860191658777b6064cc52a2628c3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1e10bd827c7cd6859f60946651ea3e2a5d0049b132ce0c6d202a4720c6ee1816"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "dc05cf8f096b83b0d31f2872b8bd25bbb104ebacc6375d792085c36135a63cd0"
   end
 
   depends_on "go" => :build

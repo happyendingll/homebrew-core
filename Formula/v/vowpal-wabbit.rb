@@ -26,6 +26,8 @@ class VowpalWabbit < Formula
     depends_on "sse2neon" => :build
   end
 
+  deny_network_access!
+
   def install
     args = %w[
       -DRAPIDJSON_SYS_DEP=ON

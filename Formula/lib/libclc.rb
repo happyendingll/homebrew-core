@@ -1,8 +1,8 @@
 class Libclc < Formula
   desc "Implementation of the library requirements of the OpenCL C programming language"
   homepage "https://libclc.llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.1/llvm-project-23.1.1.src.tar.xz"
-  sha256 "ebe9be46fe8756d58c5b198ffad0fa2a766257add81a4dc52179bfacc7888ee6"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.2/llvm-project-23.1.2.src.tar.xz"
+  sha256 "c98bbef08a2b4c2613cd50e9aa9ae7b69b1fe6c16b2c40373bc0ab6116fdf78a"
   license "Apache-2.0" => { with: "LLVM-exception" }
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Libclc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "807876121c080ecd644abb9ba1015c9b4b7a351f3afae45b51dce904bfe941cc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e53b3c7a34ee6b8137ce09ec70dcd3f83933c5b0f8f4c25a98e580e1e32c59c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e53b3c7a34ee6b8137ce09ec70dcd3f83933c5b0f8f4c25a98e580e1e32c59c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3eda4992160ce90a93cd314a8e4f34eadfef5777637699decc84acb14882ad3a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0e57776d153453e753a3b16c63a962e5b94540f6a9a3d981c0f81508b481c94e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "aab4482f91bff89dc065ca970d32f7f4265a85ea8615d9a9057b340ce5dca5c7"
   end
 
   depends_on "cmake" => :build

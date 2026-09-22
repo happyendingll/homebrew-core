@@ -1,7 +1,7 @@
 class OpenshiftCli < Formula
   desc "OpenShift command-line interface tools"
   homepage "https://www.openshift.com/"
-  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.22.13/openshift-client-src.tar.gz"
+  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.22.14/openshift-client-src.tar.gz"
   # This project employs synchronized versioning so the sha256 may not change on version bumps
   sha256 "ab39e814949280981afd2f9fb643b4f7b5feb26fbfe2d6060c158658a8888cb0"
   license "Apache-2.0"
@@ -13,8 +13,11 @@ class OpenshiftCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "eb25ea3f6ab7a7fb66f823bac7da233350e66132ea1fd0c4840795841cb8fa4f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ed45b5b1ef29c786d9eb3854ce512c80d67b6d6b8560a3cf1a466a20c465e41a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e946391a0a8fb6772394233ea24876171d2b6e8c0a002d11d7a601ee86742608"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a80d13ea909ea7b4a30c8754e5628d536eac8e7da9fafad05b2afb08c00998ef"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5904e0a0fbde78c928d2bd4b90dc26a7049ba19299c1fcc6044252d4a82a53c0"
+    sha256 cellar: :any,                 x86_64_linux:      "989ae88e1075cfee9211c7358bd2e7061aab6276437c12c6decde36dc8e27728"
   end
 
   depends_on "go" => :build

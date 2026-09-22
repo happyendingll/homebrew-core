@@ -1,14 +1,17 @@
 class Gosu < Formula
   desc "Pragmatic language for the JVM"
   homepage "https://gosu-lang.github.io/"
-  url "https://github.com/gosu-lang/gosu-lang/archive/refs/tags/v1.18.11.tar.gz"
-  sha256 "fa2562023ecbe83a95befeb7465c61c5f7e8fadb5c4e420194ef6a8c01906593"
+  url "https://github.com/gosu-lang/gosu-lang/archive/refs/tags/v1.18.12.tar.gz"
+  sha256 "22bc5e2d5a7e9dd25c9028764b4cbf5d9febcb7f85a7f192bc97c7999cf1003c"
   license "Apache-2.0"
   head "https://github.com/gosu-lang/gosu-lang.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "5b9671a01e64b528c4392ad6ad9ab4edb342aff582e4dffd766d5b7e9d121b83"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f730b48d03e2cb2ac424e31a5d993559530149e27dc4c2674e66dfd1d6da08b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e1c4ed8513fcfafb5384af1f385fe0eab64eec824ed64854ebcbc4036940da48"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bacce4086024750af0755a018cf2ad2284b4a3492d70f81d8a7d82e6f62473c2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e5842f95cdad8e92e2190ab41fdff004e3cbf4093d3439e32c535f63ae76851e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "709e73a1317b6b2cf21ab69a0437635f86201b686b45141133380e82879f40ad"
   end
 
   depends_on "maven" => :build

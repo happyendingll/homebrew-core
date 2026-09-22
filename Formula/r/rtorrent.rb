@@ -1,13 +1,16 @@
 class Rtorrent < Formula
   desc "Ncurses BitTorrent client based on libtorrent-rakshasa"
   homepage "https://github.com/rakshasa/rtorrent"
-  url "https://github.com/rakshasa/rtorrent/releases/download/v0.16.23/rtorrent-0.16.23.tar.gz"
-  sha256 "be8679cdc14be9bfe7044e09d50c822a85805ca79554436464822cd34a11798a"
+  url "https://github.com/rakshasa/rtorrent/releases/download/v0.16.24/rtorrent-0.16.24.tar.gz"
+  sha256 "269d82054bdf3862194722c5e27bddc12abb51d45045bf6df1bd7ee3a2837bab"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "05bce5b96499b24d1186b68da35e2a1bde5a4e52f0dee08888cbef87ecab2450"
+    sha256 cellar: :any, arm64_golden_gate: "38849fae26896b102fa16c0b5f6c809da328003b10f7fbaa7b285010a223b874"
+    sha256 cellar: :any, arm64_tahoe:       "3927e8f1ebf98e49f1f4dcb97b7b6dbbed78480c450230aa0e737479a0db274d"
+    sha256 cellar: :any, arm64_sequoia:     "53e4868d951a043fe669b170fbf5dbbbdad6b8162c552ecaeeb9609eed5fc8b6"
+    sha256 cellar: :any, arm64_linux:       "9a436e19383b34c97dd93c16db8db70532d745f3f8fa38c21889783737873e89"
+    sha256 cellar: :any, x86_64_linux:      "3c8d2dd239df9e43af98e833f653df50d14c7e81f45d6ee96e76d65318d8c2d8"
   end
 
   depends_on "autoconf" => :build

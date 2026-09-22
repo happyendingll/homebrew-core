@@ -1,8 +1,8 @@
 class Depot < Formula
   desc "Build your Docker images in the cloud"
   homepage "https://depot.dev/"
-  url "https://github.com/depot/cli/archive/refs/tags/v2.102.9.tar.gz"
-  sha256 "3cbcfff5bd880b2e00461915c5e4d54efed9799b40f8e89bbfe20fb16230d380"
+  url "https://github.com/depot/cli/archive/refs/tags/v2.102.11.tar.gz"
+  sha256 "4d906c15a7cb7c92c54dd64eed73687587fb47d18346402d60c51a6e75c33149"
   license "MIT"
   head "https://github.com/depot/cli.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Depot < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "a364b9b6d3da1ee0ac141abad6e2653c551402dedbcaac9a6000b29aa858a6e3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "01d32e675fb426ef54ec4cb4a55f38c1f5fcfc6f61339271cd4c6ae140928551"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "01d32e675fb426ef54ec4cb4a55f38c1f5fcfc6f61339271cd4c6ae140928551"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "01d32e675fb426ef54ec4cb4a55f38c1f5fcfc6f61339271cd4c6ae140928551"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "99f060a51650d46c6544035ea13fc9137cf125eb86f82e4663b9f435944f9e8c"
+    sha256 cellar: :any,                 x86_64_linux:      "4234c74a3ef10d85ff6ce7a53252f63ef92978f0e83e73594d15785886cab8e9"
   end
 
   depends_on "go" => :build

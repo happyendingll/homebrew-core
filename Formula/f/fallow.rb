@@ -1,14 +1,17 @@
 class Fallow < Formula
   desc "Codebase intelligence for TypeScript and JavaScript"
   homepage "https://docs.fallow.tools"
-  url "https://github.com/fallow-rs/fallow/archive/refs/tags/v3.27.0.tar.gz"
-  sha256 "c9cfd746e7b27882a0b3a4aecd24052c900f589393e54cbfef9e2eaa32e77b41"
+  url "https://github.com/fallow-rs/fallow/archive/refs/tags/v3.28.0.tar.gz"
+  sha256 "b18f53d05b3b2035afed7f4eabe35cb4eced3fd01b4297504745447f380c9e40"
   license "MIT"
   head "https://github.com/fallow-rs/fallow.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "cc0e1caf3f9adca9fd432023686bd7ec4c6f968f410f4f15c48118132ba224bb"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c946430302dc5bf66303f9653d8660d611805a8e9483640bdd9f3eaa9b35fbf0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2ac28a18def712ba7a4d9f15e5e7f0d9835a65fa4bc6337a7c11a99a32ceaf08"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "411f5e7b375c5fb7670a532f76c6de1c9476e52e2b165a43a660ac099adc0e53"
+    sha256 cellar: :any,                 arm64_linux:       "ec097efb903ee0b1a658094daaed13a3ea4a31c819f9d0a9929893985502ca92"
+    sha256 cellar: :any,                 x86_64_linux:      "f0f74c630a53aa98454caf1cc033431d42ab4488543235986223ad2cc6ec6515"
   end
 
   depends_on "rust" => :build

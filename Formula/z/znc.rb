@@ -29,6 +29,8 @@ class Znc < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
     rm_r(["third_party/cctz", "third_party/googletest"])
 

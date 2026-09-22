@@ -1,8 +1,8 @@
 class Varnish < Formula
   desc "High-performance HTTP accelerator"
   homepage "https://www.varnish-cache.org/"
-  url "https://github.com/varnish/varnish/releases/download/varnish-9.0.4/varnish-9.0.4.tar.gz"
-  sha256 "766e91abf4d9ca7f00a88e105bc61109f1145983c09116db4228c9067fa2adc3"
+  url "https://github.com/varnish/varnish/releases/download/varnish-9.1.0/varnish-9.1.0.tar.gz"
+  sha256 "fe615fa024c801d12928e7eea0e822ba93ab625a585841143c36ae02d5bcc37a"
   license "BSD-2-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Varnish < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "3e8df03f80fc9649ca039a3878db9fea515528d40460b64f844b4eac3cf66bf9"
+    sha256 arm64_golden_gate: "e18f372af78c521f950d5285634518af0bebb6f73892efc812f5d380034edcf8"
+    sha256 arm64_tahoe:       "1acc0316fd557891df55e490bd420fb8fc86427805a79454b1c81ba24a2b3dcb"
+    sha256 arm64_sequoia:     "adc8484475ac3b533c688fc7b5ad556f09959e30eda675905b95d5e324aa2b50"
+    sha256 arm64_linux:       "bfb1cf19db896f3bf0aad26ffbf897c833452385816a57c69ab0976e13278d7e"
+    sha256 x86_64_linux:      "e9d6853821625c8394fd0b8dc23e899b893d166396bdeeda650b85835aa06737"
   end
 
   depends_on "docutils" => :build
@@ -87,6 +90,7 @@ class Varnish < Formula
       testpath/"m00027.vtc",
       testpath/"m00048.vtc",
       testpath/"m00049.vtc",
+      testpath/"m00050.vtc",
       testpath/"m00054.vtc",
       testpath/"m00053.vtc",
       testpath/"m00051.vtc",

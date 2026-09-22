@@ -1,14 +1,17 @@
 class AwsCS3 < Formula
   desc "C99 library implementation for communicating with the S3 service"
   homepage "https://github.com/awslabs/aws-c-s3"
-  url "https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.1.2.tar.gz"
-  sha256 "e41697f5c12c8123786caae05491b27cd5a43888a8237f6aa64761d3fe84fd16"
+  url "https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "840810fa0b09b96ef35db9608bdbe572c9451526782e057c2c2e0b0a97d4db9e"
   license "Apache-2.0"
   compatibility_version 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "5b30ef083ec8a2c5d19db16b77cf909647cb9331417b9f628936344d3866c173"
+    sha256 cellar: :any, arm64_golden_gate: "0141373a713a8db787971b067ae6fa0ab0532441b9732725d4f13a51567d2224"
+    sha256 cellar: :any, arm64_tahoe:       "4fd95ee4cd2c3afa11e1f9574a0e6bd0975d8598a4975878d8307818b8a93244"
+    sha256 cellar: :any, arm64_sequoia:     "df84a94d70d04accebd8efc2dcdce800d80128bcad082f60ff07ad7eeaa6266c"
+    sha256 cellar: :any, arm64_linux:       "624e8a7eb92c11023e26a200ecc7f93e4e3e2a14ed64cbb2a566f7211162135a"
+    sha256 cellar: :any, x86_64_linux:      "15da54fef5c1e9eafbcd0b6e7860a8fa0d9f83420eae50c8a5f3d4206d91bfd0"
   end
 
   depends_on "cmake" => :build
@@ -18,6 +21,8 @@ class AwsCS3 < Formula
   depends_on "aws-c-http"
   depends_on "aws-c-io"
   depends_on "aws-checksums"
+
+  deny_network_access!
 
   def install
     args = ["-DBUILD_SHARED_LIBS=ON"]
