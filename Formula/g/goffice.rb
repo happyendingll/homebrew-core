@@ -6,11 +6,8 @@ class Goffice < Formula
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256 arm64_golden_gate: "2e4c85c395fc38bc6b0f159b4a0a3660957aa9112148b8f9e59d2a85c8f33531"
-    sha256 arm64_tahoe:       "ef735f1e58f015529fa308870f9c882a2b0bfdcbfa83867672a7407ee414a4c4"
-    sha256 arm64_sequoia:     "d107599cfa733f29c98e60daac6e810223a5e38174f95517da6e6caadab476b3"
-    sha256 arm64_linux:       "0d6a83cf84818a7b386f6385b713a9c58daf0fe7144a46d405b7eabc7f9b6c36"
-    sha256 x86_64_linux:      "207f1dc802b02ff9e93046fbf8dfeccdc2d9bdf195b89c957be1e3463fb709fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "4eb7c76ec9e82a0393fa98bdc6d3d7bd4d6c69f5a983001ee013a4df3fa647e0"
   end
 
   head do

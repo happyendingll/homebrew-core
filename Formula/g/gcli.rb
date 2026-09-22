@@ -8,11 +8,8 @@ class Gcli < Formula
   head "https://github.com/herrhotzenplotz/gcli.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f9586c60e4106a7ce24130470d27ea5c42919c15e84c393faa37de33239138e8"
-    sha256 cellar: :any, arm64_tahoe:       "36ade248eb726336162db2dc1e7ae6d7c0449a2634db0f1905dece713990046c"
-    sha256 cellar: :any, arm64_sequoia:     "3c025a47ba65cdad547f36b278ea1e843f277172ae5c73c5b3d0dbfc7f302a9d"
-    sha256 cellar: :any, arm64_linux:       "dca2d6aba7965011a7797a46b5c0b1d3d02bfdf02a80478387286a2a00e7cc27"
-    sha256 cellar: :any, x86_64_linux:      "6419fda9ac61bac95264a7de8bca890df3a7ad0f7f018786926fadde030ae60c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4d753fa1ee07e60152e49441c7bc72418031302a47b25111dfe40c77592ec850"
   end
 
   depends_on "pkgconf" => :build

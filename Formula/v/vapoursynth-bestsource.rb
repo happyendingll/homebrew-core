@@ -12,11 +12,8 @@ class VapoursynthBestsource < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "111c5162447ef0a4d4813bf1def84bdb4edbe58a640630f48e9c2b1be4cc4ecb"
-    sha256 cellar: :any, arm64_tahoe:       "eec2ec30f58df856f53a3355f6c490d09a50e59e913a987c2b0e38159149a0ab"
-    sha256 cellar: :any, arm64_sequoia:     "918a419a28cba355c47f2ca805f037d229afb55537776afc9ea61277260236e1"
-    sha256 cellar: :any, arm64_linux:       "d34f0c0d6e37bbb72b54244ab567fe2e119026b5b313ec88083b7057e030dd41"
-    sha256 cellar: :any, x86_64_linux:      "413baca85ceb01bcd0b5aba2fdaec9e61e17c14993b9ac03a8875d7ffa426796"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "11800396ea6697f2b44ea76390c87a0e682aae3dca761564b0860a4c9548d606"
   end
 
   depends_on "avisynthplus" => :build

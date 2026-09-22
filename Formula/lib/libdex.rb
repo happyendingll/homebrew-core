@@ -15,11 +15,8 @@ class Libdex < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6d403716b8ff08c22e9d74d1e99258ce473f212f26d34d2ca75732e5682a0659"
-    sha256 cellar: :any, arm64_tahoe:       "7dd82413f48fe4c16e7d254d00910ef2c83cb712694c06242645f46494f8b286"
-    sha256 cellar: :any, arm64_sequoia:     "95db5c7aff4f53550fe217d7bc07cc3a44cce1eb2af010223cf76fd9c65b79a7"
-    sha256 cellar: :any, arm64_linux:       "ad86635a8d864f19314b3a51058e95dc49fd0e5b9b3bc7feee3ee25758d50a70"
-    sha256 cellar: :any, x86_64_linux:      "dd3ca608b122329b64aa406a33d14cd52009764472f0bf787f51f84fd13160ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "df8287edd92ab64b7b9eb1b5443070b7aeed4003e54d325ae72ce059224c8c98"
   end
 
   depends_on "gobject-introspection" => :build

@@ -7,12 +7,8 @@ class Stanc3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dfe53612ffae4cf72094cd4265d3e2492a03f6bb34b0d0a1486d06eb8569ff5b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0c7b77a3cb300ca440fe6282f8e403fd79c04f243c5199f8888926e137626a51"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "08bfe3a11b10e0c6dcb3a72037a4a510c176eb0d2b315a8d6aa362070bc1267d"
-    sha256                               arm64_linux:       "b600d142ba784335f89a054dbeba5822babf856d94f1c5acf994a613e9e2ca14"
-    sha256                               x86_64_linux:      "2d5d18812a525f078226bdfbf2b003bb99e831f34da8428f09f16c1c3dc886c4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7bd29d98cbb39bd5fb53e6e7d0a757f8d84d5c93cc0f4bc64cf4e6bed9b29362"
   end
 
   depends_on "ocaml" => :build
