@@ -7,11 +7,8 @@ class RustAnalyzer < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d3b1928bfe4c74dd16eb01226e4919e3381a3c17cdb77c229b90cc2c321d9f0f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cff3225230ae45dc80f153f1a03bdaa3fb47fac95af3ce75217a42eb7f56bf95"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "51bbdec58fe05584c856d3466beeaa6ae24b386ec5056ea169a4e6e9a6117e7e"
-    sha256 cellar: :any,                 arm64_linux:       "ae1ad8330e802b748368aaa9d240b81d1df72005b1d66bbe75ca31fdcdfb8d6c"
-    sha256 cellar: :any,                 x86_64_linux:      "1c284897806c042d6be70352e3f2cbb36ed5fe806190a2af5fe42c52c33eff74"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "697eadb4631a1afeb5c9b012dcf0dba2a402393a5e2b0f7bd5071c0edc8c58cc"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Vals < Formula
   head "https://github.com/helmfile/vals.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a48f8b46a3c2c255554648f3a852f7c8380f526a692be611b517e21e32fe2ad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c1362efc15afa45e52f534c38a2a1acb3a59f7ceda58ff68188fdd0fee614b05"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe31c5b03bd0992bcda52247333c0b32672dd1667235b5669ba361bc947bf101"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0de7a338b83f4e845c806d7f1e0b369d078738dc6fbffc93eb7f6cd218dfc941"
-    sha256 cellar: :any,                 x86_64_linux:      "8023daf79304fdcb236ec5a169e09a1599b49e0ce6833edc7d66ff17e054dd79"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "5751f3c3c02fc0058f01cf4895f3fc67e513f77c8d94486f0a05710262810464"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Upterm < Formula
   head "https://github.com/owenthereal/upterm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fce51782ef503fe555fa9d816c3642abb0debf02d620abaf45679861eb8a199d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5b0ef9acda0bf6b9b945896b52b05cb8c6d47455acc1b0bccec4471b92d70a08"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4591670ed1a883e4af616aa96fc026aeeb34173967c9dec9b684fea64a52af7b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ca86f3cf72fcc7028220aba3a2b34f0ac3d5ca54c96a314d76fdbe74d77005ba"
-    sha256 cellar: :any,                 x86_64_linux:      "ade8ea2613e58a6573e8bb571411f0c3a8bb01e4b83d082fff13fcc06be10b59"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a5563f3d9e946747e7b11ab74d89c2a2ebef491dd3aca5cab993950d5026f3ed"
   end
 
   depends_on "go" => :build

@@ -9,12 +9,8 @@ class Libunistring < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "57307eb89a02e09aa4de70e09391994dfc9520d9f101ec7e64f9af21dcea2420"
-    sha256 cellar: :any, arm64_tahoe:       "14a72bd0aa3f1b2b3a7360be24380171d140b2fc5abbde0144807d3847b6728c"
-    sha256 cellar: :any, arm64_sequoia:     "513bf2378982459bf3daf286cec9d50d3f491686f8caa8749604de3be4e6db77"
-    sha256 cellar: :any, arm64_linux:       "27ac70a1873a544d1602e2c23a60feab68707d8a5403fb686567ce94ef08e2cd"
-    sha256 cellar: :any, x86_64_linux:      "a1153bcda606e120f9bf8e7e274d102e9f87a517c88fc8324c488ffdf1cfce71"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "7ffc80feb6e1b01164a958d84e73e78e1bede9c1deb243fc2aef8ee5bf236f9b"
   end
 
   deny_network_access!

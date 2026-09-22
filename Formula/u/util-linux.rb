@@ -25,11 +25,8 @@ class UtilLinux < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "fbc4e7669248f29d3ec91b3724b4a1fc0383c624d4f6e09ae643703e879f8e0a"
-    sha256 arm64_tahoe:       "aba531ed615bc666cee842fbda966f2aa513e9801c73974f758e4a1b15aea602"
-    sha256 arm64_sequoia:     "46746bd46db509001b062ffe3d13b3428e7bf274884afbadd25e44bb400b4025"
-    sha256 arm64_linux:       "98d4c3f1afb746272ba0b5b134c5717df6e1796b50103f9072abe34083a7d43d"
-    sha256 x86_64_linux:      "a2f2f02b1a397f4bbda2832fc1403c55daff00e3c52c6a8c970d0c98fff95139"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "b4878904c063b2bee8301c3ae611632b0b2454ebe9688709f1900d4e04411061"
   end
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"

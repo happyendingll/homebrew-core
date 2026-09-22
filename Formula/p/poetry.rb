@@ -9,11 +9,8 @@ class Poetry < Formula
   head "https://github.com/python-poetry/poetry.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3113af7554fa9ff1184ad83f82fa51bc9c99d25836bbb98f57dcbb1b92c05a04"
-    sha256 cellar: :any, arm64_tahoe:       "1a5877d1c842be460e34c090298a3e5b3d3644b09b194b72acafc9d15263ca66"
-    sha256 cellar: :any, arm64_sequoia:     "6c1e18982f053c2957f665a56536777834a5a2efbd95063f4c14bf55401095ac"
-    sha256 cellar: :any, arm64_linux:       "93a7fb1a279181e76fe45b75095b931c295f2c27585cdb06329f904fd244329e"
-    sha256 cellar: :any, x86_64_linux:      "1f8a9eba9b0a5ab11acccca3f5c84b5c6998eb2c04d8084445fd1bd44ddaa80e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "34656f1800e038732973fb359e4ca50f8d930d817cdc603127f38ef001bb5c88"
   end
 
   depends_on "cmake" => :build # for rapidfuzz

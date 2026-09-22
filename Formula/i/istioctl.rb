@@ -12,11 +12,8 @@ class Istioctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a4987c5eb865b685fa559656a514cc36011a2485ca6871f02c6b5234f50f170"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a98c38e6aa91d587711f501f633928e35e1727a0ba2f033a8396cba48580a670"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bb88680e0635f39b5562eefe4fedbc93824b2ec40a70f5cbf60122577d479518"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "50cc94b16c7a56c831cc71b691ceee706ca4ba28efabc0a0ef0036509d087a03"
-    sha256 cellar: :any,                 x86_64_linux:      "aef9db819e0ad81ef0a053070504ae391be38232c7c074fc6d5a0915b2aabb50"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "457ecef98ceda569a5fe23bfa42804d1f4cbba6873c5cd08d6c48f30fcc3baff"
   end
 
   depends_on "go" => :build

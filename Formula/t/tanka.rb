@@ -12,11 +12,8 @@ class Tanka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "97ad0faf6c7d1cec51b5afe84b468bb661c39783f90870bf465988a96d2ccb74"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97ad0faf6c7d1cec51b5afe84b468bb661c39783f90870bf465988a96d2ccb74"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "97ad0faf6c7d1cec51b5afe84b468bb661c39783f90870bf465988a96d2ccb74"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0d6bebf1bd034371976456cbe4f8e4bb3dbca4371f7703f11f2c5ae6b4790378"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2679625e4f32a3e1324f89b4f9243541bc1f91972809e39538309e854c287b56"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "909be5deab94486a20d7c172464990d05771d354d900d8e2090feb76340f70b7"
   end
 
   depends_on "go" => :build

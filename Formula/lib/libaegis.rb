@@ -6,11 +6,8 @@ class Libaegis < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1cfb0cf66a1203aa98797b47e1039a99eea8748c3b889971af06764654442a20"
-    sha256 cellar: :any, arm64_tahoe:       "6cffa2d6c217571eda0d872c3b4fb9c6aafaed35b71b343c22f66d536fe91d01"
-    sha256 cellar: :any, arm64_sequoia:     "7af51a873d026baf98201eca6a08d9b3d4560011559f403007b24e2410ef1c44"
-    sha256 cellar: :any, arm64_linux:       "ff61724183e2ea37e6701b56654022038705f61fe8f0c02abcf6bb3cbfb2b2c5"
-    sha256 cellar: :any, x86_64_linux:      "127ced10a47aaf2a1ef14067a96584812b54afa82a47b1dfbff23d41b6ed2c2e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a507aecd4e31cd61a3d524837d292a3049edc25309a42b4281e308a90694cec2"
   end
 
   depends_on "cmake" => :build

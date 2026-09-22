@@ -8,11 +8,8 @@ class Specify < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "53fb48aaa6781a902a40a082d64e61e862788d2d5b49d54f149532086661cd46"
-    sha256 cellar: :any, arm64_tahoe:       "d61a129680c61dd9845bf116fd2be73aeea339f45f18a7fa9d91f7bb44978221"
-    sha256 cellar: :any, arm64_sequoia:     "8fb1148415101c6cd32ac728c5a84b817d2ba4adf7f4271897ec8319a5cdef90"
-    sha256 cellar: :any, arm64_linux:       "101f0b45a8c59c27380e1441f42d89e8f4b6cac6cf76bfbd9c14aea943bc3593"
-    sha256 cellar: :any, x86_64_linux:      "883c20d79649d6643fcc031eb2d005df28c4bbd3ba520e1e69abff38808d4fc0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "b6ae2657c0d5a67e374617ce629bd035ea51ad002251314ac598d3522dea134d"
   end
 
   depends_on "certifi" => :no_linkage

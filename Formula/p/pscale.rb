@@ -7,11 +7,8 @@ class Pscale < Formula
   head "https://github.com/planetscale/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "15a076e643d013e18ce6054fd139bc8bcb6b832148a69c5239833c8e6598ad7f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a4882d755b484e6c172a09e3ba5e6a0727d89befa42e3b5d4a33a5df8e6df062"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9190fa1e13ade4b5dd51f7abb0697d26033efe1f2b4341e4a11e8c6aa4ae6623"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d9ebb1aeaca61ce32ec687ab8903cf13b1365c552329f5123a65821aa1b47b74"
-    sha256 cellar: :any,                 x86_64_linux:      "a8ce272cf78d1ac75457a452997e118d446fd70a97b3f3b472ba13986a7c1ae1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2090353c94ecd892befe856e0fed195a9339b2ca8e7ccad88b5d4b475d0e76f0"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class Llgo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ee6bd570bff321dc8aa0b38deb66eee67a30df17ed42da60a6a7261bbf5379a4"
-    sha256 cellar: :any, arm64_tahoe:       "fbeef5372c8b6731f8d46544ce18d7c32c742c4c152e6b79087017b31c359b33"
-    sha256 cellar: :any, arm64_sequoia:     "e0e4ca2ba35cc16fabf7466ca4d7ee80e797f96b8dd82cececab673583283fc1"
-    sha256               arm64_linux:       "c3c65736a38e953cbbd52052c1bb437fcda39e100176791efd46b600a203adad"
-    sha256               x86_64_linux:      "9cd548129b85d6dcd083dec580f7c4149e22f1fd30dbd2f723cfd22aa7faada6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "48fe39f072fe44ce3d16a1b24e3e9bb22fd36f26f1b3061fed3532b11cb9ccc3"
   end
 
   depends_on "bdw-gc" => :no_linkage

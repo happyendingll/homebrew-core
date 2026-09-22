@@ -6,11 +6,8 @@ class Flyline < Formula
   license any_of: ["GPL-3.0-only", "MIT"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "92a3756f03f9fcd9d41aab5f16ad91945443f362395c9a2b2fc726a1fcc80fc8"
-    sha256 cellar: :any, arm64_tahoe:       "75de40255ac59ed6a4649f140dcff614236be4cb94514661f24998343495eb4f"
-    sha256 cellar: :any, arm64_sequoia:     "c5d1e2fc2bd8022e4c1bb6d849081487ed5c6dc1061bba5a40a6fdf6b8b2ee8d"
-    sha256 cellar: :any, arm64_linux:       "8b54037d9f84e4d34a7662f9f4bc393de213acb1352805108e3eb4f32279d0ef"
-    sha256 cellar: :any, x86_64_linux:      "869128ed7daf1c671c93952a0bf7a6d8cbec66a472eadec1ed46b89e7624bb6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "abd1e7b31678f6fd0354ffdb262f0f6f73a435ca2b8e0b80f827db0303f20796"
   end
 
   depends_on "rust" => :build
