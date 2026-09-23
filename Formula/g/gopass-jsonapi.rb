@@ -7,11 +7,8 @@ class GopassJsonapi < Formula
   head "https://github.com/gopasspw/gopass-jsonapi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "38d166ab9e6865363ebd2027c12d3665d9ad87df2509fb7e10a7763d73cb4526"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eee17fe1410861ea49e29cf62ca6ae75197dcebb95ee475732cf21238cbe15d7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ffec0e354293aca84ea898cdfacfd882c33059cd8887c89735ec6299da9213e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "de745a0eae2f3fa2137d28ddc07a071f6bea513feb9d4e8a771680fd7dcd8103"
-    sha256 cellar: :any,                 x86_64_linux:      "29c3feb200e5ba74ba2841ff516d572bf4303f292f108ec9a1b8f96d02ab8f7a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "200e0c685da73671e7e04995742956e7cd859c4c743234b13477f5554f4355ae"
   end
 
   depends_on "go" => :build
