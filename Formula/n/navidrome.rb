@@ -7,11 +7,8 @@ class Navidrome < Formula
   head "https://github.com/navidrome/navidrome.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f4e2c3aed555fdda4e21de4903f371ca640873f445636f9d2f5f680ba0bd31b5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a3cfe0b044c25a0bf1b990b7effeebf3263fa9fae8a687f1802ad57bf161e13f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "85e1efdda9210186e0307f261f0c2a62fd2bd8d4be1655cbcde65da317688954"
-    sha256 cellar: :any,                 arm64_linux:       "236728253b0bc9a1e7cef8f39c6c88882ea2942e46f07497ac84fbf04e0a08f6"
-    sha256 cellar: :any,                 x86_64_linux:      "c30199eb0ea9163585fd98624d26b360729084923387a9be1c85b4849fae9491"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "1bc7adf20e932a6b451fabad2aaef9ca64fe0749a750d9489750b3b7f8e4b9ef"
   end
 
   depends_on "go" => :build

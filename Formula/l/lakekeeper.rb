@@ -7,11 +7,8 @@ class Lakekeeper < Formula
   head "https://github.com/lakekeeper/lakekeeper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "54af00f59ed7648052778d02e09bcecce6b30567d8ca15b36d4d1925979c7d45"
-    sha256 cellar: :any, arm64_tahoe:       "51ebc1f9ddd346e1d41727591188b40bcfc72128355a9e0caf59289caf592e84"
-    sha256 cellar: :any, arm64_sequoia:     "0b0b3237ae1e8e6ef24f43653061651cff540e62504df0402e7d42c0726c02ec"
-    sha256 cellar: :any, arm64_linux:       "c1a59d18c2e26bfb7bc07730acfda04ce486a05603d4d3bf7fce57dfe246257e"
-    sha256 cellar: :any, x86_64_linux:      "bd3b9160020133a4d76dd857f68681a82d2ac633f805820c38d84e249e283a20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "9c3e56d4dea4d3daf1b59810d76b667c8e7b97004143610fd318b6b2f9d84f24"
   end
 
   depends_on "cmake" => :build

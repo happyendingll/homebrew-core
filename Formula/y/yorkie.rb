@@ -12,11 +12,8 @@ class Yorkie < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "40c2f63fb0c3cd84ff83b1a4deb0b65d08721e7022dd8508321b363f58784af9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95b099d82980d7960ac5977ba66960709386e5acfdb9ce3857ba7adfd66d2c67"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "88220ffbe7727ba376f849a71e39d6dd078b14849884dd7018fe4fbfe46aaf9e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1e4403e2ae2fabaf2ba715a302fc7059a2cb17b8313f2e0087b55f8c34e17bcc"
-    sha256 cellar: :any,                 x86_64_linux:      "ffed8bb0e961b6aabe6a5b3e94f81e0b29a442e836cbb00386d6e6bd92a08c8e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "6bb3698a50914ad883c4931152e444753cf21d5abb4a4a43bc4e70a41f5cd8f3"
   end
 
   depends_on "go" => :build

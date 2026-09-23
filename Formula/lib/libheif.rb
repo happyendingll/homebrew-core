@@ -7,11 +7,8 @@ class Libheif < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cf8ea3d502cb0a08e24a00a9c0334a3f53d2a158d07267cc925f1fa6f24f34b6"
-    sha256 cellar: :any, arm64_tahoe:       "4944f53fcf6e0fa4b0e5d5b53dd8eda5fcd0bd9aff42afd001795d601b04fde7"
-    sha256 cellar: :any, arm64_sequoia:     "63e961af49f4771ab5fc26253b97dbe5f9c6d5d578eb426c61e514d18a56a8a8"
-    sha256 cellar: :any, arm64_linux:       "abac0483660fe7bf25062207bf0d45a2b5289d29b2c7aa66ec3bba7706b5a3cc"
-    sha256 cellar: :any, x86_64_linux:      "4bfeff1ebb3fd6112ee116475413fe29b59008e6ee7c6d85d3e3018e38fbf130"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "33b67699a86d77b33c1f14bb0c2b20bf5c9e7dd0fbcb50be9aeea1880a66fc85"
   end
 
   depends_on "cmake" => :build

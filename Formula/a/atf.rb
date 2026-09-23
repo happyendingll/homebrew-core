@@ -12,11 +12,8 @@ class Atf < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "d32c7b5fcf43bafd203f330128dc651ed926a13244746459a3a313e9a2127add"
-    sha256 arm64_tahoe:       "9f55f3f81952f127c042c88562d74acaeeec96a2d6a696bf6c708f838ffd8e19"
-    sha256 arm64_sequoia:     "aafaa35983b9a5de8703c4a84dd1443f1909ae8fdc1875637977a35d982e5b87"
-    sha256 arm64_linux:       "5acf9b4ba36a227f8894be8e15615786ac4b938a616dffb217141ea0ce9bda4e"
-    sha256 x86_64_linux:      "5e7ce4d277858da5ac1a3732a42995531fb2e95561ba1831daf9dd906c1cdcc2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "f6672641ad96688da2355a7dd6824518589bfaf18e6c1000f2580d07fe6ed211"
   end
 
   depends_on "autoconf" => :build

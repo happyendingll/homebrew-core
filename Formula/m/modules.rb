@@ -11,11 +11,8 @@ class Modules < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f576e16b0001fe35da4b63000582a18a0120c91b7154d01397e58354aae40fc2"
-    sha256 cellar: :any, arm64_tahoe:       "15d5c0388d4f43239ef034f5547902395b514c304e1fbd8fcc257287f66bd212"
-    sha256 cellar: :any, arm64_sequoia:     "0aa6131d168592dfac4877a4ded5a1183692f5cad9f3adce13083c6ba99189e7"
-    sha256 cellar: :any, arm64_linux:       "53393cbf8232d697094bc67c0c053356deead6a1aefcb80753b2cb4e217a808c"
-    sha256 cellar: :any, x86_64_linux:      "a9d2cfc5e7a5f40f336328d268b5fdcfd388d76eb7b882086df87549e8e4bd30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "bb46705adb0fdea2eedac39a61de5c7a3fd2ba57277a9433b3fa7d9bb0caa0e8"
   end
 
   depends_on "tcl-tk"

@@ -8,11 +8,8 @@ class Dcd < Formula
   head "https://github.com/dlang-community/dcd.git", branch: "master"
 
   bottle do
-    sha256               arm64_golden_gate: "c4c91f43d9f6eb322155777b0a6f12ead207a4f557e668d32edd034ca710b494"
-    sha256               arm64_tahoe:       "f5786b92c21a959f0ed743470e305d576ab850cdcdaa32c965fe754fdad8c5e6"
-    sha256               arm64_sequoia:     "189d61bc888b3b46aa3e46cbe200303c5bcc28c940e87cfa124988381761d846"
-    sha256 cellar: :any, arm64_linux:       "f2bdc99f4671cd10cbf54bf909dbd0782676cd1758dc57c5457cc3eff0932e02"
-    sha256 cellar: :any, x86_64_linux:      "0b19ede8ffae996b7727dd29925fbe57c5223c2e7446224653604181578514ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "cb71ae4c8aaa385c780ce60739de10903cfb173f3efa50072e76232bb6a6b99b"
   end
 
   depends_on "ldc" => :build

@@ -7,11 +7,8 @@ class Superseedr < Formula
   head "https://github.com/Jagalite/superseedr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "119d41bf48e675718af7128fa491d0164c620bec4c125e1eb4a0c692b3f0cd67"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "431a872758d3e41fb4e0fddf93ce168413c5daf9e9bcdffaaea7c3894c54130d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d7e04178806a883150f93c8bee52fafbaf1f1be3a5a5791119fac22ca970d7f"
-    sha256 cellar: :any,                 arm64_linux:       "0963b90c6d85df5eeb17cafe2e73680de1acca47f8bd2e2bfc6f2c80cb316f08"
-    sha256 cellar: :any,                 x86_64_linux:      "957846f77265d812d21a576932208188240d5dc9ce6d5964106fe46ced4dcfed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "4028c5ab20168ac96af954a8f892be8b04795f0d65306b68ae12f5cb5fad7853"
   end
 
   depends_on "pkgconf" => :build

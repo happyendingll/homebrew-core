@@ -6,11 +6,8 @@ class QwenCode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b63dbdff57c2b482f912654708742f343033f56e82c0c5a19ae80267624401ac"
-    sha256 cellar: :any, arm64_tahoe:       "b63dbdff57c2b482f912654708742f343033f56e82c0c5a19ae80267624401ac"
-    sha256 cellar: :any, arm64_sequoia:     "b63dbdff57c2b482f912654708742f343033f56e82c0c5a19ae80267624401ac"
-    sha256 cellar: :any, arm64_linux:       "6e7437d66c33aa004083c47ef97463d0ecc7594d4f390ef5a81d64e6bbfd812c"
-    sha256 cellar: :any, x86_64_linux:      "31a151b85510b09a5dfa23c910b48f95d7cdbabe2a97976f71a25fbb1be21ebe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "f29493613d9e6f810a388d2474b7bb90fa85d5cd204a11662b5c40c38114f42b"
   end
 
   depends_on "node"

@@ -7,11 +7,8 @@ class Gcx < Formula
   head "https://github.com/grafana/gcx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2a2da896a87c2ff6db722e83755f0cbdf9adebf872ce7371baa3db9439b6aa0d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "81d63247a17245ca042f70aaa3fc2219de3279516748dc47adfa8567d601d6bc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d53fc0863abb29863b7eb3fc3ba1b486b58027cf9d81505204b51ece0730f6b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "635f0c65fb3bc8901b8340e27bd75a4d5aff6152daaab89338c50537c75d7df3"
-    sha256 cellar: :any,                 x86_64_linux:      "d247ac718fd3037710d6d9b808707fe1f9687fda090945bbad48f768a5fcb97f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "aa8e00f6b01ee5cab905ec6e1cbe2f04a17468543ad204173947b2796c95c2a3"
   end
 
   depends_on "go" => :build

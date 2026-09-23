@@ -6,11 +6,8 @@ class Concord < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "563d2ef3633d35de9f3f74bbfd964785cbf9b9a586802d5d1ad74bc1c117d8c1"
-    sha256 cellar: :any, arm64_tahoe:       "a084fa44fb3793ed1b3cd611c2ff85637a3ba588d0d0a66a0200fa785d38d926"
-    sha256 cellar: :any, arm64_sequoia:     "cedaea65c6306117cb0735d0692fef2797432513385ca54cc98a687532ab15c8"
-    sha256 cellar: :any, arm64_linux:       "a0cedbf4c658af8d639d9d5b16a9a90570034409435e79e8d1751a6e88f08046"
-    sha256 cellar: :any, x86_64_linux:      "3f15a5fa6a2219af8caf36cdf321efcabf1749194bcd41e254093cde7c6c2a1b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "cadec593a6f7295c4bc6c376d4d0632874cd140e340b7eac96aa3407cd83b0da"
   end
 
   depends_on "pkgconf" => :build

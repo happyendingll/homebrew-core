@@ -12,11 +12,8 @@ class Stackql < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eadb28640460991e197a8c08f3e78e18bc901b15ac3b17cd05fd293dfa329d94"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eadb28640460991e197a8c08f3e78e18bc901b15ac3b17cd05fd293dfa329d94"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eadb28640460991e197a8c08f3e78e18bc901b15ac3b17cd05fd293dfa329d94"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "47adafbf2cb4b8738307d255a22be0eb26466e3d97dbabd9d54fcc1738f536fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f3b60be856539def0ac0607d35256eef87daa868b47f5bc83050f0d188d90bef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "80e9ab77bee2d0c98d888c750859e8b84cbbe3399bd21558eb88a12966a3d3d2"
   end
 
   depends_on "go" => :build

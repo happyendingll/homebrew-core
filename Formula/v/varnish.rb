@@ -11,11 +11,8 @@ class Varnish < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e18f372af78c521f950d5285634518af0bebb6f73892efc812f5d380034edcf8"
-    sha256 arm64_tahoe:       "1acc0316fd557891df55e490bd420fb8fc86427805a79454b1c81ba24a2b3dcb"
-    sha256 arm64_sequoia:     "adc8484475ac3b533c688fc7b5ad556f09959e30eda675905b95d5e324aa2b50"
-    sha256 arm64_linux:       "bfb1cf19db896f3bf0aad26ffbf897c833452385816a57c69ab0976e13278d7e"
-    sha256 x86_64_linux:      "e9d6853821625c8394fd0b8dc23e899b893d166396bdeeda650b85835aa06737"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "5becf189cb6609ed23642b961546e83cc353509295ee3cbc88b01997db284ec7"
   end
 
   depends_on "docutils" => :build

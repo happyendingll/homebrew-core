@@ -12,11 +12,8 @@ class Cairo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1dab52f452b0eb0a90432a5f1022529abaab3aaa83b36b9e0edde404ee168f0e"
-    sha256 cellar: :any, arm64_tahoe:       "e067e63e664c7d95bdff0a08a293b4a0182a26f38b750f5f7958012e00823416"
-    sha256 cellar: :any, arm64_sequoia:     "2eb1ea8f47088a4bddf68c052eef3ef5e52a5bc1369118d432db6bea2e363853"
-    sha256 cellar: :any, arm64_linux:       "7608281ea691a911abee820f95200dfcbdfc5396511f842fb05196521e025cd5"
-    sha256 cellar: :any, x86_64_linux:      "5fd48263c0683b91d89c475f500db3bcd00178490005646cb6b09d57d7b30c91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "0f9e66fbc8c87a05ee57b8ff60337f638d4cf65ce9c1750daf5c3516988e309a"
   end
 
   depends_on "meson" => :build

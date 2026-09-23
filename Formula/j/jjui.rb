@@ -6,11 +6,8 @@ class Jjui < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "92bd3a2cd098340a96984cd19ae07240ddef220f1ff51623d429f690b636a933"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "92bd3a2cd098340a96984cd19ae07240ddef220f1ff51623d429f690b636a933"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "92bd3a2cd098340a96984cd19ae07240ddef220f1ff51623d429f690b636a933"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1745ed631397edec19bb0cd77b054dab8aab244f1df028e16155c0b0aa9826f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e3fe2f4462644fa7bbf7e7610a6b2bd5cd3f4bbd4c8f7d5cf52f4dda65d7aaf4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "4908f1f0281e10656d0ea2ab1c85efe13388bb0ddab63a0405e0a0cd924aed6a"
   end
 
   depends_on "go" => :build
