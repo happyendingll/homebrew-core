@@ -11,11 +11,8 @@ class Ghidra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "70f281725bc5340068fa6f39526d17cd7249cf990e950c00458ba53ff0a9020d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2a6222389d18d32d48e55079407c1d877d90f86d692911b0399a6ff5e440a9a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fdaf330d5d9e3a2ad7c58c4cf69c6a145ec8a964c119617d6476f911434d6ca2"
-    sha256 cellar: :any,                 arm64_linux:       "b8cca5890f3486247bcf94b329ed2558cf5277ced3de9055cbd59a9e27611321"
-    sha256 cellar: :any,                 x86_64_linux:      "1808ba1b278316e6458c0cf8312dc421897f057cbbaf47c7ca3755360a3df121"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0e918c16a8b10eab4795a01418ceb38c84aeeadbcef34dd33c60fafcf5777707"
   end
 
   depends_on "gradle" => :build

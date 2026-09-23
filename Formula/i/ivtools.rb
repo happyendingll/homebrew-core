@@ -12,12 +12,8 @@ class Ivtools < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "a69e428b1dbc6ba6dc7b1ba6b17f7a00c9a7666b09bf39f8afbae5861ca245c5"
-    sha256 arm64_tahoe:       "67f1a46aca2f25c032fcffedb05c2cf2e28cb0603ec00858bfb722b5f538b6cb"
-    sha256 arm64_sequoia:     "ac9a42927da7997644f40b872db459791f355dce97ce0a8ecba7c7616e0544fb"
-    sha256 arm64_linux:       "92c32cef62a1a4df074ee5609da4a5dbec3ec44de778e0cd207dc2b556e44062"
-    sha256 x86_64_linux:      "c35982cd34127344bdfa4c0f11d5e8aed2f64f2b9f8593b4827a7e9dddc99d84"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a3b39e8d3f4600ffe80ab7a0993f73f946d60e11e5166731a6bef88781d9197c"
   end
 
   depends_on "ace"

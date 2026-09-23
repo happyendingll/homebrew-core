@@ -6,11 +6,8 @@ class LibxmpLite < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4065b670e30b968e6c74f55ec40c53840a1faa5ff08757c3882e6ae63be3a2ce"
-    sha256 cellar: :any, arm64_tahoe:       "7eadd2ffcc5e9134db68b10c1fddaa303a57d093df93eea6c687c5985a38389d"
-    sha256 cellar: :any, arm64_sequoia:     "2c77acf76acd29dc96d15b5aef46ec1280684b7cc2029b58e8717fed046846ce"
-    sha256 cellar: :any, arm64_linux:       "6f17f36ff7f65aacc723623d33abf1740823315838531dc81964a2a0401d2faa"
-    sha256 cellar: :any, x86_64_linux:      "bda8a5d95767c7e4397ca6e69469adde1da64b2f7a0b9e3d00ea5eb0ef4ecf9d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c13d1116ca753cd59cd0d3657b506c54764a4025ec8f84fa3af7b4a2a9099ee3"
   end
 
   def install

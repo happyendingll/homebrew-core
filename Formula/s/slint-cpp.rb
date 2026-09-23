@@ -7,11 +7,8 @@ class SlintCpp < Formula
   head "https://github.com/slint-ui/slint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "702dc9502a4dc60b9366d898ce844ea826db8e8ce14c1dd9a8a453b60a237cc2"
-    sha256 cellar: :any, arm64_tahoe:       "a735e6d22a5b5ff4c8114cdd987ffb5af217fed357acd576dfce90a4a1d74ec7"
-    sha256 cellar: :any, arm64_sequoia:     "146a8e4f8508781704cb8b4ccc5df1a8e33a5e02f9181cafd3b427d473ef1ae0"
-    sha256 cellar: :any, arm64_linux:       "41fea2d425282f3076c0d20497eb2e3e83c57cc4e6b97f5584b5be788fac4891"
-    sha256 cellar: :any, x86_64_linux:      "d8220a47b994d55247a5786bb47dd3cfc04751d1151704bcae69b00779b96338"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "4900a7e54ffd64ce43883eae8a0705a680ebcc7a1c980cb6762e01086e4ffaa8"
   end
 
   depends_on "cmake" => :build

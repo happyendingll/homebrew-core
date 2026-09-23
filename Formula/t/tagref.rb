@@ -6,11 +6,8 @@ class Tagref < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "28c05dd13d6b9b7904b410fcc83c7f7c144b2e0fd9b872ebf6d98b661e394fc5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6f7c935aa0d4d42e47fd935cd98083d1937a66d0e5c33a5683d2ef40e6cdcc53"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3aad5edd2d0b625552ea9c5d7fbedc995bbd40243095d1435b4a8d27777460fb"
-    sha256 cellar: :any,                 arm64_linux:       "617cc3b000daaeba096ef02da2ea3b6f183880fd634daba4bab9897a97f8be76"
-    sha256 cellar: :any,                 x86_64_linux:      "2d9f0edebf2b55aaa44e90927ecc94ec45b07298d2964a5c7d1171aa01dec2ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a4039198d202b690bb6347d8fb084eb06bd2649d0a7d476c8d750884a129b145"
   end
 
   depends_on "rust" => :build

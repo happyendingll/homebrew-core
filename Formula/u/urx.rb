@@ -6,11 +6,8 @@ class Urx < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b7926fa5f1e35a4ce2cebc4f524094c0330fb219cc34603988bad470d1d9fe41"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f82e46383b5606735a9967c4cff334a1a1c39322c4720ac05d41cae483c7d0b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fdf94721cf7a4b18c9df53faf8ccc96e6dfa0e046289b06555280cb761176173"
-    sha256 cellar: :any,                 arm64_linux:       "442d16eec1c295dc6f126ac2307b487b4d4363f2f97ce0445b0aec566ee5956a"
-    sha256 cellar: :any,                 x86_64_linux:      "d36ed6bba8077396faeaa99011b7a0814f68b619483a150abaffb8e09753df51"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3877cdcf94a126e77b972034fc25549e199bad1be19a9cd2d0d92f55e3c6f8ce"
   end
 
   depends_on "pkgconf" => :build

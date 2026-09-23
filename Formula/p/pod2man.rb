@@ -11,12 +11,8 @@ class Pod2man < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3d208af3aedeb2139a4f1580f4115266e27849058c5aff53be2af97a98a8863c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3d208af3aedeb2139a4f1580f4115266e27849058c5aff53be2af97a98a8863c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3d208af3aedeb2139a4f1580f4115266e27849058c5aff53be2af97a98a8863c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "3d208af3aedeb2139a4f1580f4115266e27849058c5aff53be2af97a98a8863c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "10f3eae739afacfc36189ddf27a9c44b68f7debffe082588169796060cc762c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6e10d72fb170c0c3863547e2d62c549b48a5cc4fedafb5ff97a2fac7b246f923"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9637676b93b9a2d7131398df1fefd861ed83f6d7275899bc1b7130f4861a2210"
   end
 
   keg_only "it conflicts with the pod2man that ships with Perl"

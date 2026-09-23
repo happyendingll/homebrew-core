@@ -7,11 +7,8 @@ class Octl < Formula
   head "https://github.com/outscale/octl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "74d4288f966610a658dcf40cd33fc1bcb9019436a3879cd96952b9a1bfdf0cb8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f2d04f1bffa92ff7c26aa42f9a0341b8a1c26a3532d9d174277665431a8b3304"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc74ecef4c2a27d19217311af1a9cd294784dee1f1ddea63ecd951d71107ef59"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c19c3cee7a1e6b86f39572ee6ea1e3f872bec85500d58bd61c3bfc8352f13162"
-    sha256 cellar: :any,                 x86_64_linux:      "b376a4b17f9795067f2d7910c9a5331e0219482a51296f27d5990b7f9a36b9e8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1f30cbccd8912eeda8f89f304426e9f64803c3e5d9d675ca8e3ce5d66df7f00b"
   end
 
   depends_on "go" => :build

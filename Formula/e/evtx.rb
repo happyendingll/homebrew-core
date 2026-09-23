@@ -7,11 +7,8 @@ class Evtx < Formula
   head "https://github.com/omerbenamram/evtx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "49593a1a22b89efad98c424ad44a8c17b650a01d4b584b943d4c73cdde055da0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b4e6817c3dbb88f03847bee9df24f9182fe2e793084a4a41ab3fdf6a8ae0840f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dc63117c2e41a2cb115cff516b322bd3b20827b8ffd268aa28bc408d091ca5e8"
-    sha256 cellar: :any,                 arm64_linux:       "4c0850e5b28fc6257716c2b6fc5c1e66c48ab6168c789c626af5e5bd72542a25"
-    sha256 cellar: :any,                 x86_64_linux:      "451fa936f0be8a0b6d5c1cf215de5c190206b5b8a057df47d867d9e468d27527"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "eb84710723072308ea1177093375ee376a4a79041bfd3a5a80a9d8c79d0d03c1"
   end
 
   depends_on "rust" => :build

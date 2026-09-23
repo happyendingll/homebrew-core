@@ -8,11 +8,8 @@ class Iblinter < Formula
   head "https://github.com/IBDecodable/IBLinter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e66ec7fdee3ae5b454e67336ba833cfcafe29417fc976c6a7a09fe4874a6893"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "edfa9a0703e03c81df343d462d2c33c87742c1d38047a7bbe26366a78d21c394"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b88dff6dcb1898da9fc0f4270d88a60cbc1fcb6e639ceb8d94c7bfb9e228008f"
-    sha256                               arm64_linux:       "895973d1b3ddb94bb99ec7fae5321bde3a12512d6ad1f6b1f69b4c1f3ee26302"
-    sha256                               x86_64_linux:      "682df528a5c33efbf78869d3d51e60f98417bba4fe759767ec75c32603cac632"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0fc8911a173f30af8c8f9fc0cd1afc49d9956d0c25c0e518ad8c3afe8d468e7a"
   end
 
   uses_from_macos "swift"

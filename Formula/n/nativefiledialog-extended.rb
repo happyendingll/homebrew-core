@@ -6,11 +6,8 @@ class NativefiledialogExtended < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "482ed246590013b5718983202acd16cc9894e3c53ce89649bb12bbb802e01642"
-    sha256 cellar: :any, arm64_tahoe:       "bad96e7ef75a6fe5a4e87b8d249bbf08e263c429e12af85f015d19ea196d3c35"
-    sha256 cellar: :any, arm64_sequoia:     "0c186de91e0d1dc30015f61e24f980bf1dbb2b27e92feff01d1f3866551fc8d7"
-    sha256 cellar: :any, arm64_linux:       "f37df06a7df46f4038379fa40db27e3bae879df197857ce50a8d12a4902643a2"
-    sha256 cellar: :any, x86_64_linux:      "3acaf44171f45b086223cc2cf6c3e203a11133ded73ba10b54dd69be3938621c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "64824d17a4f3f8466245c7b49e6226b9aa3e50b1a884508bfff2a486d3a26009"
   end
 
   depends_on "cmake" => :build

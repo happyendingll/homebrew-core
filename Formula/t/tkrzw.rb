@@ -11,11 +11,8 @@ class Tkrzw < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "b5fd8f8ff3959243226ee5d12be2b6f3b535e3e66856d9873d5e8628fcd59337"
-    sha256 arm64_tahoe:       "4db2a070e0ca33c21217ffb4cce28b1f5b71f3e2849ff83ab0b5cf4a01d1252a"
-    sha256 arm64_sequoia:     "a6611d96c46410a3dde875ad04e6d701c900536ace362b03fd01f7e79877089b"
-    sha256 arm64_linux:       "b34f8d0eb4c8a2f0b4c2c9414156950e4167e229abee378d6a5c05919b66d9b3"
-    sha256 x86_64_linux:      "fab697d85f404064bfd922066084bb78357f93a0574c73413c239944aae82565"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "cc7faa8756c646161bb8c6a76df0c4634c18a19100303ee19652c6e48f6a4ee7"
   end
 
   depends_on "lz4"

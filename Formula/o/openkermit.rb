@@ -11,11 +11,8 @@ class Openkermit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "637d52a0da7a88b2b81f521b4a472cb290ccedeb1b54fc9876e0633996b942cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1434a15ffca3a0e0aa14e9e44b2e15345e721b3e5ca3517df4c6af1782ebb7b0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5c8edd03bbd81f1790157bff4fa5b19fd7ff3e8a5ac95ca079d16f05adb4bb78"
-    sha256 cellar: :any,                 arm64_linux:       "ce7aa235cf09529d121a08772f4ee52b1a1fa57ddac0e9f050624c269194ac63"
-    sha256 cellar: :any,                 x86_64_linux:      "72e416a4962262a7192ef31d59a7f383e642796e5a89584a9c64c190f7de8c67"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "62348b08e50ae55022dc159e5e4577954a9524dd64c93e1f6dfce3df07363be0"
   end
 
   uses_from_macos "libxcrypt"

@@ -6,12 +6,8 @@ class SignalwireClientC < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "1cd355ddde0c2bd04c7eee3d89eb8d7e02a37463810733ddb7b9866b8059d00a"
-    sha256 cellar: :any, arm64_tahoe:       "348229694a18316b1d9ddbe739b3352eb412f39f348d434bb9fcd0af732abac2"
-    sha256 cellar: :any, arm64_sequoia:     "f24eb3f4de098559a6c178bf20a7ff78be0a3efbe0e717907b6dd3976d3eebba"
-    sha256 cellar: :any, arm64_linux:       "c28d772e0ee183cfa9b3ae4d3392152fc16858864b40939c605d1d527144b48c"
-    sha256 cellar: :any, x86_64_linux:      "d5155d2c4d6ac3d6295284084bed1a684f039157154e7bf8527636b4051e1037"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "086af7f80a89109c27062eb71449ebc02b91ef45b12c3306565814949808a816"
   end
 
   depends_on "cmake" => :build

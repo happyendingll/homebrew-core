@@ -11,11 +11,8 @@ class Jruby < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2113c169f2a582e0739e24fb32f1cb994126acc3448629c9e0588ac21c3466b7"
-    sha256 cellar: :any, arm64_tahoe:       "5b8718a4aebd1d02cedf56895179d332d433f9ea3a4d6b569a23fb6977760970"
-    sha256 cellar: :any, arm64_sequoia:     "c1a2e39b560c883da5860faeb1e8ab90d4fee02dce35ae09505452b62db9994b"
-    sha256 cellar: :any, arm64_linux:       "cca1d8c191bb61822493ef39fdb8e66116226e8b99f15b74dfcba09fedb5f8a5"
-    sha256 cellar: :any, x86_64_linux:      "e118ac94a66cd8d0d3e824fdba3ef4d151868107024c145904e8df698d5d6254"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d41289750fb0f040075ff72401e4c27cb0e0d4f1c788b8e840d4f780d998e05f"
   end
 
   depends_on "ant" => :build # for jffi

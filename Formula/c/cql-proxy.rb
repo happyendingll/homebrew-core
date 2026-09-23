@@ -7,12 +7,8 @@ class CqlProxy < Formula
   head "https://github.com/datastax/cql-proxy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "50eb31072ba68acb4dc85fab963bf941b3c7358f800ba6c64e56b2f270c9c898"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "50eb31072ba68acb4dc85fab963bf941b3c7358f800ba6c64e56b2f270c9c898"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "50eb31072ba68acb4dc85fab963bf941b3c7358f800ba6c64e56b2f270c9c898"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "50eb31072ba68acb4dc85fab963bf941b3c7358f800ba6c64e56b2f270c9c898"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5b333e252968e5388e7c7e3e40d60c9dbd19a6b4f5f3727a0c009d6bb00adc9e"
-    sha256 cellar: :any,                 x86_64_linux:      "e5565236a72be7f9b41861b6887ea01ca9ac94627c43bcd2965fbea95a389211"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "10ffdba760b414781f5fd7b3ed6b4c4619dadafbb8a789e0756521abb7f6b76f"
   end
 
   depends_on "go" => :build

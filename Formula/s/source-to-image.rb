@@ -8,11 +8,8 @@ class SourceToImage < Formula
   head "https://github.com/openshift/source-to-image.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7efd521c16af4025e1ec8d1429ab09daff18e4513a1e2f83b77f874364830581"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8c06e0f36e185aaaa07d0b4bdedbf52f09f291564da99049d8d739814ec7bcbc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e814e974a12fac44340415b99c12008244fca6cb062e30af392b3f8c1aade3d4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5ce26921c24ee2641eb56aa887ee3c9268eb9999c8337f08858c569037fa620f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a0fe773a735548322880dc3eb73b81a9a28f4213f9adda2a1117d283a51f64e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "16e106c29d5cb674e5e9c170ffe3b02ef563b2b66526aaa575fd1b9c143d184f"
   end
 
   depends_on "go" => :build

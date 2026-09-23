@@ -7,11 +7,8 @@ class OpenTyrian < Formula
   head "https://github.com/opentyrian/opentyrian.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "50321ad12a5de87cdf59e63584c9e3bdbc46242f60349b26fa21115293c27ae6"
-    sha256 arm64_tahoe:       "a367545bba9fcd03b3894a1768523704e3728903ab1e2ae5a26820c5f307e5dd"
-    sha256 arm64_sequoia:     "049fab6183403a11363acdbd0096b8209446dabb641a1c01433564a98313f959"
-    sha256 arm64_linux:       "89b9144e673d26cd2a309ffca6781402367abfd0479c436c3281a94ceb7c66b7"
-    sha256 x86_64_linux:      "c5f46eac379e10dc84aae4be8b47d158a955b1ebb9c0fbe1506da54f1b01eccf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "7f01a9b29a5ad1cf5ad6f2f1f52ae1cf1d4cd6e8480cf815ceb0e0ff15bc388f"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Tgrep < Formula
   head "https://github.com/microsoft/tgrep.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ea7421590f2f0321d2bb4c774cec503ac9f4c546e12073f25fce1dc9dcfe606d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d6ad7841fb7256431e409d0af31a01a6beef623ce2c1b717caee1b97ca71d14"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d47079204e9b67808c22506c887f3dfcfec6d009d6c7e487ca4b14900fc5ae09"
-    sha256 cellar: :any,                 arm64_linux:       "ed2d159da59b2769c3d90c87a37f60b7df495d031fbcfe2dc3c0c69d78146014"
-    sha256 cellar: :any,                 x86_64_linux:      "25491669de336b9abb6522966afd842b02acc7025c72832ea4d9dc17466b2418"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f69e1ddfd2bd41b412071aa2e36788438963378596fd3e6c84a2bc3cc2ca6607"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class Sqlitecpp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1456f9074e75199a86acfecb33829bd9d0ce27e006c3143f640ed58b3682c47b"
-    sha256 cellar: :any, arm64_tahoe:       "38cdcc64ecff9acf74a9c205e3babd92d527f2f2bb81deab76eaf4d64ec271cd"
-    sha256 cellar: :any, arm64_sequoia:     "c87126aa77e2c061907d3ad90b051af334eebfcc943ac121477b83f7dc66ba42"
-    sha256 cellar: :any, arm64_linux:       "9806af528517e5a606cd1e1e5952d117cec16eb414cce0380062a053bb051e56"
-    sha256 cellar: :any, x86_64_linux:      "275ba91fb7ba4908b4ef74b2aff627cda180ae5267380c2f617b047085eaf49b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "f4e930dcd186b9b328d795c4fcf0eea61fab65b4df241be5c6810eb366acdefd"
   end
 
   depends_on "cmake" => :build

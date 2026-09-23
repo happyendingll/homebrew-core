@@ -11,11 +11,8 @@ class Packetq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ae61213865e69472a189ed5e0f745e61ea88117a57438927bafa05f10adf4b36"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "07058bd8ef754f321a06312d752c0700918df1ef93c3a8bfd7333de5d74440f7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ec0ab5d6534cda819fadd75cfb0d146ca330858fce4b16f36b5b819e44c8623a"
-    sha256 cellar: :any,                 arm64_linux:       "fec19271ac1d3939a1f307a8fc615804d417d764bc682fabee8e2d7e253fd101"
-    sha256 cellar: :any,                 x86_64_linux:      "6c61f563c1972dadd5ea06d75434c43d9d892f37a35d9fd80b4d59ce7c8c5ea3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4e1a1f3676d04b1b7580bcc4a96d431324aa277b3770c07cae12354a4cdc0aa3"
   end
 
   on_linux do

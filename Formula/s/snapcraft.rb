@@ -16,11 +16,8 @@ class Snapcraft < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "153b1d3f59bf1f6fbecab801fc56b7f5df3bec9c48574949d628844ec102ff6d"
-    sha256 cellar: :any, arm64_tahoe:       "ea8f114d9dca904507d15d43f0a43f7a8e55a1af1473bc443f4d1c44a984d110"
-    sha256 cellar: :any, arm64_sequoia:     "483a7bd91b805110926af52815714346e65360fda428f7f7ab2b6baec79ab744"
-    sha256 cellar: :any, arm64_linux:       "7a96a2fe113a2752897dad21df7a28df0d91a98e72faaf6b2f8b292ebd3f4741"
-    sha256 cellar: :any, x86_64_linux:      "f662231d8f14627169f0aab8c582ab17184b95915b7c415253723724797b75c3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "27c7dcad137e87d8261a429e547d139a969dbf596112b5f29e27d14b48c2cccf"
   end
 
   depends_on "certifi" => :no_linkage

@@ -7,12 +7,8 @@ class LinkGrammar < Formula
   head "https://github.com/opencog/link-grammar.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "ccf8cad221341e3a5b430063b7f9458245584419a96873e4ba7fc3a952cd98e7"
-    sha256 arm64_tahoe:       "d33b0976e53138135d4f4630436298779f502f7aefc069bbc53259436ccd6626"
-    sha256 arm64_sequoia:     "03f694cdcdc9d2e6ce3265e8d08e61a59333be3c915b002f193b22ae9f3da479"
-    sha256 arm64_linux:       "f0d1ccffa7ff47795bcb97fba75d17757f1935621a28672a0efd126ddc478ebd"
-    sha256 x86_64_linux:      "9af0e02f2077e830d742f0028c5d30702188c943e931a021b0dd5f0f8a7a2146"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "eb9d0bd046cfd54ed644d2df20a0cbf7dc53e883c19bd7c633a705875f454a24"
   end
 
   depends_on "ant" => :build

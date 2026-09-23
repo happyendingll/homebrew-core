@@ -11,12 +11,8 @@ class Cln < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "eecbd9b437a3d34fd0a2b247fd7a3370109b5a764f9bf3fdaa99ad40b1fbcc7f"
-    sha256 cellar: :any, arm64_tahoe:       "82df63ebc446543a6c05219ad65d2de6e9e7d90a9717022d13b9e6858b9acf29"
-    sha256 cellar: :any, arm64_sequoia:     "3bb3c98eb2263f2eb1ad30f5dc8059b4b668951f6412dd2c3d4ae66ad4c2fb62"
-    sha256 cellar: :any, arm64_linux:       "c78c81ce4a3ce4249fd7ba0835a982e863a1e5d2c77f5601602fa66c361f8440"
-    sha256 cellar: :any, x86_64_linux:      "0db1112f7433248b6edeebe7055512bac1e2e4977aafb9dc70e7570fe4190e46"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "cbe231dd0550e1f912be0533fb94deeef426899d5975986a96fb83b0e6a0be25"
   end
 
   head do

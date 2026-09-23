@@ -13,12 +13,8 @@ class OpenalSoft < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f732c34f549bc105ac74a2c57eea035e8d8a4588956dabdde97c3a8993f0b6f0"
-    sha256 cellar: :any, arm64_tahoe:       "a6ec50b9050cf2aebd3403dae993d37499a56f5b3aa7e034088970f4864e6117"
-    sha256 cellar: :any, arm64_sequoia:     "1648060f2a8454167d03de328d509551a3629f5c0f240d18d1715baf4695428a"
-    sha256 cellar: :any, arm64_linux:       "bb5ad337d620639f44896633d3996647462522845d36d412268c6c2c1a247413"
-    sha256 cellar: :any, x86_64_linux:      "bef54577209c931c5ba7293035d84cdfc24e676adf7e41f3393bcf846eff199e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "6871f253e9f0db6196661f18cdefb4f58a6a6371a412e3b515b87838d5b223a3"
   end
 
   keg_only :shadowed_by_macos, "macOS provides OpenAL.framework"

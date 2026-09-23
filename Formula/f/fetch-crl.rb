@@ -11,12 +11,8 @@ class FetchCrl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8dd6f07a8c4f8a431947dc62fb4227d2533b8b8109e5846a40ff0921cd7ab279"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8dd6f07a8c4f8a431947dc62fb4227d2533b8b8109e5846a40ff0921cd7ab279"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8dd6f07a8c4f8a431947dc62fb4227d2533b8b8109e5846a40ff0921cd7ab279"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "8dd6f07a8c4f8a431947dc62fb4227d2533b8b8109e5846a40ff0921cd7ab279"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b1e966c1cc59d653cc3873e176c93e166d6c1024b039975617bf67b5f23452ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fe090b6633c495b997db7697b0576524d9b283b2d036dc62cb4ff494afd20dd5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a9abccc3201924269f968fa8e2fedc4f66a8cb134a33ce1802da243284ed79f7"
   end
 
   uses_from_macos "perl"

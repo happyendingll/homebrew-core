@@ -11,11 +11,8 @@ class TektoncdCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "195ac14574137eeda9a836845bcb843cb92649249b574bd98e2e2bd686360e64"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3bf579cec871e27ffd81cece6ae2ff177c1b8ecac6a0a5fe8a7a17c6cdaa50b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ec46e096c89f372a47b1f7e0feceb07dd4d2ac72a169e0857be25a62ea773d20"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1aa1234e86f5bde2e9b8c24a26e6108eadcc2437e50111b40be25a2134c6f69c"
-    sha256 cellar: :any,                 x86_64_linux:      "10502913769d6cb3bb737909e583f854d12d96b788e1b954b838ee9bc82565cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a2a64cd25ee490c9ea4dde45a1eaea5febb12ee9b463f02b9baba2fa624a76a0"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Xaric < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "564cf4cde94b7e34c6d8a966efdcd34df89b9bd0687a64a88b63459f0744c183"
-    sha256 arm64_tahoe:       "e581c7b2ec029eda76b688009874961b5b81e854355f8fb30c4617dc1e1160c4"
-    sha256 arm64_sequoia:     "65349a2ed4d52d08f3aca03ac6c5b186c3bc86a78b79f894202a986b7ee1c7ae"
-    sha256 arm64_linux:       "b0159c15b6a20389c511fe65ee6e9e3e45e2adb6214a18da8d6ffdb2d35a7097"
-    sha256 x86_64_linux:      "03f1958f1f49aac09e320b0c8e022681039d25a3538ccbffc2a88d6e3256a29a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "b08a47649f6ed04cf9d6fcfc5a010acee3287403ad3b8cf53f2dbd9e37865031"
   end
 
   depends_on "openssl@4"

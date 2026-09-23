@@ -6,11 +6,8 @@ class Octomap < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ebe6fd230093c36f670de6dde66f7f135a064f4953892a0cfe655e2280455c91"
-    sha256 cellar: :any, arm64_tahoe:       "341f9ad94e1234a57a01680062414ca5f729a3c3f497e2b1cec9f1a07566b1b4"
-    sha256 cellar: :any, arm64_sequoia:     "ee0e6c608e4dbfa6f0fa0388bbe0710cf602121d25d877c1ed86043752a901a1"
-    sha256 cellar: :any, arm64_linux:       "2faca0e4b7d529f5a098e081b167f994f58601dc759d40e61f416168ebf0c5ff"
-    sha256 cellar: :any, x86_64_linux:      "61d4e164f82d93c8c7fb050ccdfddcc965ce7bd1346687e6b73fa52efa512972"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "18aafb2be997edae22a3c6db762625c58c6f269d6615c2e1a76b2dc7425f235b"
   end
 
   depends_on "cmake" => :build

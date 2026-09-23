@@ -7,11 +7,8 @@ class Shpool < Formula
   head "https://github.com/shell-pool/shpool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f3a671e684c5198597f86833f97cc14c80fa056767d00a2b3e4443d5cbb0da6e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "892ed6628c22b557505449832a972ca3c0a3bae5284ef8ce1ad6ee07615b296a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20fc8958227d0ce772fe6ac80d3389885c9b321eb13c7c9702824c238039fac7"
-    sha256 cellar: :any,                 arm64_linux:       "cb9099cd963d583bac24fa9d8712b5e4cddc5d20e2cfac0f7ed3119fa5334bd4"
-    sha256 cellar: :any,                 x86_64_linux:      "b00ca33126df664ebe740d7e09a8ebc9c414be8d57ded886aab5810d1c91ee83"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "11878e126513a65a150747b67f80db22b934206ed0f50711ea4f44045ed0ce4b"
   end
 
   depends_on "rust" => :build

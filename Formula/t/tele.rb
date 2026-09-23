@@ -6,11 +6,8 @@ class Tele < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3b87d6ee2d15b8f7673258ea17523f22ba9e9c75e76cb4c08d17df0d47994975"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6c90769aa794f57ab3d84788dff5e1e5c337b073c75af532f771a6e8922f1f2c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7fdfad5eab1256c1a63c523411f80e2564890239f078449edc8ef7b513f5e111"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "40ffdbfa4b551dc35b2623132bf28eafd656ce9e1782b1bb2e0417106d92e6ca"
-    sha256 cellar: :any,                 x86_64_linux:      "11d573d9125e65d45f8bcb2c0bb9fe3a3f948e97dea38515ba61635f72c89ce3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "109b9554bd8076f5ea6686604f25c14f0972d772ea6d08c41639cafbd4ba5591"
   end
 
   depends_on "go" => :build

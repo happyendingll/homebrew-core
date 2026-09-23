@@ -7,11 +7,8 @@ class Msgvault < Formula
   head "https://github.com/kenn-io/msgvault.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8f2d180d5161b2f8c871d72bcebd87965bd70e799132129311c914dac94ff668"
-    sha256 cellar: :any, arm64_tahoe:       "032aa4d4f32fe4a8548aef7ab09dc089802bf87e371f4310bdde14d672e2d4a3"
-    sha256 cellar: :any, arm64_sequoia:     "25f00522530e99780f807638e370a675af9c252c3746b85888431b306b57546e"
-    sha256 cellar: :any, arm64_linux:       "a2fe7d5ae2bdbb9d206b30fd737b499fd245fd7c5d76cf855fe8afb8ff13791e"
-    sha256 cellar: :any, x86_64_linux:      "6690c98beea046db57f6de7b86910844514853cceb9588b44f13bd604496bb63"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d4d3a571fa676c4b292387f7ad001827067115d64a37f33f8b9820698905a71f"
   end
 
   depends_on "go" => :build

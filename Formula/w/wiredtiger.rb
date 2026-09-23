@@ -11,12 +11,8 @@ class Wiredtiger < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "5e151cc2c0ceca8de05d5f4f7f1bf98d5cabf917db585fea82d76fde3cb9dfe1"
-    sha256 cellar: :any, arm64_tahoe:       "7702bdf65943a7b8034ec68f5b7d6b5931b924d19af568e296fc19d4f1ac7871"
-    sha256 cellar: :any, arm64_sequoia:     "2af1845b1c55625951c23e50faa7b403f2331cb25a0fee4a15aaf21be6104301"
-    sha256 cellar: :any, arm64_linux:       "6ff57955e5789fba8c9dbb84e96204360c27a7455b2c97303ab74f4557cb6f52"
-    sha256 cellar: :any, x86_64_linux:      "3b7328a417a34d0730f0e5ffa4eebb0f4c78d839661ef3e11042048319bc93b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "9715597462bf2518805dd05ad51ba3a396f5f59b77787aa24c44dba9049218e6"
   end
 
   depends_on "cmake" => :build

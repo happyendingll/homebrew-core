@@ -8,11 +8,8 @@ class Solod < Formula
   head "https://github.com/solod-dev/solod.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "52e0ce878d48b04c96385c2fc407ddd90589861dddb427b742e2096fef94bd62"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "52e0ce878d48b04c96385c2fc407ddd90589861dddb427b742e2096fef94bd62"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "52e0ce878d48b04c96385c2fc407ddd90589861dddb427b742e2096fef94bd62"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d920c0c42343a4e7d30e7c05e58b26055e7e544717c38df5f1dbc65b29049edf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f23aa087960d006d27ac03224d95af7efab59966228707a32a8fb551e8e6c0d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d7eafd3c72d417fe46592be2bdfab3f26ff87957e5d066fa4462102b7bf8a04b"
   end
 
   depends_on "go" => [:build, :test]

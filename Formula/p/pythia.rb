@@ -17,11 +17,8 @@ class Pythia < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "e4445e451928da92135dbbb8800d527a58bd53bc3be424c765112022a9bf0423"
-    sha256 arm64_tahoe:       "e5160ba954d21bc69f470619a00ec7c0a77ad6126f97a2af5d0bc428939d1d74"
-    sha256 arm64_sequoia:     "85871e9517a839d3a516fdb7377766f6ea7e04c8dfe63c15bb3a900526c2ffa7"
-    sha256 arm64_linux:       "d4753068ceeb3e21384c19ff6476bccecd6fbabf71781f49a71dde1a7b7567e0"
-    sha256 x86_64_linux:      "4d91d0cc9709076766e193f8fe5e6fbdca1005f46fe9a2427ae38154cd6fe6c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "804a2ae6e8d554be5ac62f78839f07423d1df3a421ea5602a67678cd1f61c34f"
   end
 
   uses_from_macos "rsync" => :build

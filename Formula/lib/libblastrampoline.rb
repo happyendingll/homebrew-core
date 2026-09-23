@@ -10,11 +10,8 @@ class Libblastrampoline < Formula
   ]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "59cbab5b3da6915ee96a4679b2c967609d042509774b610b4aca260460e6dc43"
-    sha256 cellar: :any, arm64_tahoe:       "be4220763373b3e66590e14be7b5481e997bbe8bd54156571210e4f9636126cc"
-    sha256 cellar: :any, arm64_sequoia:     "d402d97b4d342aa444e39bed5e19193659d3120779e6209f3be42294c75c108a"
-    sha256 cellar: :any, arm64_linux:       "52a0072fd9d4b6b84248585dae972baab7dbaddcd39b3b727394a8d05702db14"
-    sha256 cellar: :any, x86_64_linux:      "bd488926e5bf9867a561ca837d22e2373fd106bf049c6dddffc1803828166157"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8a70ecd5e96e8478a61c85160b5481c69b51394418366c6ef9d8f20dfcc87aa3"
   end
 
   depends_on "openblas64" => :test

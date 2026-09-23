@@ -14,11 +14,8 @@ class FfmpegAT8 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e0bb3491dcbe64a7af3d8f88b65ec57a00ea5bcb9bdeda98b807e0de9239d8e6"
-    sha256 arm64_tahoe:       "b0e96b24ffbbe3f48755094714607adb93b3697b32cbf3932f1b17f95fea59b1"
-    sha256 arm64_sequoia:     "55bbc2119ef63841c81c4ea2e7bfc25fd4f9679e9b825b0ae0901316a1efb67f"
-    sha256 arm64_linux:       "2c9d38b4b17e41bbf1ba8cf08162d64a37f52fb8d49c20c36bbd83de806fdefb"
-    sha256 x86_64_linux:      "a160ad1931056eecb37dc44d3c4d4f41ea7d8478db07dced385e21c788c1b647"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "2e6dad77fc89c198d8712a1bab95c58dedce83a2ac0b689851e0ba84dae66758"
   end
 
   keg_only :versioned_formula

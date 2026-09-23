@@ -6,11 +6,8 @@ class Libxo < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 arm64_golden_gate: "993d69ecea33c90ce8ca56bbc59e0dcaa7c5621dc9e7303da30a6cd5bf264803"
-    sha256 arm64_tahoe:       "3c5fdbc2f23f278007e9e68f41750c77c4ed86875768c1e563103fe2d1471568"
-    sha256 arm64_sequoia:     "78ef1247dfcdaade32b8c7eef1fc9275da1a332b1cd6f38d3850c4632a8c3607"
-    sha256 arm64_linux:       "e1b98119fbe8ae0b60e9825d7c760156bb6728330a14c1de8a6fc76da11fecc9"
-    sha256 x86_64_linux:      "4b509b71b671a369211275a8b3fc3e69c872460c772eb487cd5ccd7a7db98d24"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "7a508b13b26461e30378619ecc736399c991fcba1a190af880b05344ee2a15a5"
   end
 
   depends_on "byacc" => :build # the XPath parser needs byacc, not bison

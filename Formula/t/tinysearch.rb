@@ -7,11 +7,8 @@ class Tinysearch < Formula
   head "https://github.com/tinysearch/tinysearch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c0f503356f2e04eb0253f8a69d7eea188b143fcd5bfd29c0fa8edff03e693349"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dd1bcba140be308db4bcbc7b0209b7a67aaf7beb00061e1f18e2dfaea6117e0f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a29b95208d6fbcab54ebe8bca57e339909c57843e62797d3aa69aed42e169c52"
-    sha256 cellar: :any,                 arm64_linux:       "3359c0a410ba09bad4ced8e48d24532b21c5f10687f597b81e92ccf89377427c"
-    sha256 cellar: :any,                 x86_64_linux:      "6a6f6a34a19d3f81dcac917639cb7416b68861d70eb4a378964d862357f8cc2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e4d6fe46fd4ec234559834fd1b8b64506c78dbd968a856321ffc070e43319cda"
   end
 
   depends_on "rust" => :build

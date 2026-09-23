@@ -7,11 +7,8 @@ class Flvmeta < Formula
   head "https://github.com/noirotm/flvmeta.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "374d955e41e703f408694ffff8a78caac0fb890223e6a153189316d44717c01f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "934ca1abe6fdd3758a2d1254dd3ed9214ccc1c441431a7d8c9c8843beaf8dbfa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d2b5b90d3a95e7b2039d7aa430cf4d3c336e29ac77bf15bb70c1d2508eb1575"
-    sha256 cellar: :any,                 arm64_linux:       "ebc838e6883dda21bbb4daec46d7f6f80d88aecbdfb30917e5c03d4e5b90a389"
-    sha256 cellar: :any,                 x86_64_linux:      "5277dd8efa915221e9630aaa057b834f3222aceed3630019ab6dc90afa8383a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1a926b8e17bdd1644b9e8ab7e4803f6163fb255f36e19bfd87939544413469b"
   end
 
   depends_on "cmake" => :build

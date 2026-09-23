@@ -11,11 +11,8 @@ class Libfreehand < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a123c892432f9612a58cc7fb78182ce76f9cce010cbf767db0bfd82d05eba685"
-    sha256 cellar: :any, arm64_tahoe:       "04e2f344a5b0a5c219055eb85bf8226699d818b47830b854e7cd0100ab21bd49"
-    sha256 cellar: :any, arm64_sequoia:     "ee4e45db0dbda886e39c8edf5159b308777aafcb0f36162ba52c488e1a7c5eed"
-    sha256 cellar: :any, arm64_linux:       "51a443af0b072364daa917f3d42235b25da4e5e15c4550765aa7116851c94547"
-    sha256 cellar: :any, x86_64_linux:      "f30972de842b030b45f78a1421fffa25d101e9957163a3c709e7897dd1de22c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "3c64b110c0b3761b4e3c5387169df34086828f0027a9bce07ff7d4e427af0be3"
   end
 
   depends_on "boost" => :build

@@ -7,11 +7,8 @@ class Godns < Formula
   head "https://github.com/TimothyYe/godns.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "30bf8eb176e6aa51eb572d82e42d1aada52a732d6c3f2541b1b12ba0e8046c2e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "30bf8eb176e6aa51eb572d82e42d1aada52a732d6c3f2541b1b12ba0e8046c2e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "30bf8eb176e6aa51eb572d82e42d1aada52a732d6c3f2541b1b12ba0e8046c2e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "09fc4d9d3d9e5bb43ba6d964e62f5a2175c58615d19c3ca2eaff6f36ae5caf4f"
-    sha256 cellar: :any,                 x86_64_linux:      "aa37e23b60f069c3896b02a52f2c65fd57b22a4d52d75e0c9c6a3e5c6a5cfb4d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "85bd3a3a963613ccc9bb879d91d2094a816ea496e90a2e5a52ba80a1182b3b90"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Inshellisense < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d1585e5f227d1cf95c81b37329a7f36b7167dd056bfa455c3d034f88c6499f88"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d1585e5f227d1cf95c81b37329a7f36b7167dd056bfa455c3d034f88c6499f88"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1585e5f227d1cf95c81b37329a7f36b7167dd056bfa455c3d034f88c6499f88"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1b13788021aa1ce15389fdf8fa81348041059eff0ac3fee7f5e4debfd5d4fea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fd80c8ced83382e565265d99f655e7f1ceff58851fbe2cd48d2f72c19802e197"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e7715518e62e48e1f1096381e91995ea920ddda0007c93a804441a9d920bc721"
   end
 
   depends_on "node"

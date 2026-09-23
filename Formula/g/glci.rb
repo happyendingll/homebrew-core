@@ -7,11 +7,8 @@ class Glci < Formula
   head "https://gitlab.com/gitlab-org/ci-cd/runner-tools/glci.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0e8824267bff105657afbac27476dc28be5bd718263a5a79f14002402967a0b2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0e8824267bff105657afbac27476dc28be5bd718263a5a79f14002402967a0b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0e8824267bff105657afbac27476dc28be5bd718263a5a79f14002402967a0b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fe8a8bf2f414e0e820a4c05f9aabdc886df3f54ef3882b7d3ad98fbbf51d1e0d"
-    sha256 cellar: :any,                 x86_64_linux:      "63d60e7b49598b48d2ddc4856e345b2045257aac041c5b57682bb66cc292ccf2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bebdd80dcd0cf1c2cd2c9039dd3fb3568305bc63eee99ae4db88911e766652eb"
   end
 
   depends_on "go" => :build

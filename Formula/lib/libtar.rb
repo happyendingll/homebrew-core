@@ -7,12 +7,8 @@ class Libtar < Formula
   license "NCSA"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any, arm64_golden_gate: "0bee5a7daf113533848ee50ebd90c8c966850ae12540f09f7b441b6a8d1fd9ab"
-    sha256 cellar: :any, arm64_tahoe:       "1ee318fdf6d06e8d670cedcd4e9d5a8df008104c3fdc2aaace8caa3ec04ea0f8"
-    sha256 cellar: :any, arm64_sequoia:     "48ccf141f62ae2175f39795d088a23af7d984d5fa226c5ff0accd8fe051a9136"
-    sha256 cellar: :any, arm64_linux:       "d800d4b33d612c482798f24145fc941409e8c86878f0a1cb71346fb42c430cd5"
-    sha256 cellar: :any, x86_64_linux:      "8fc74cf7b1dd61a1e8ea1b18e090e678ddef84672dce29ee39295d1fc536e60d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c82ef3118baea8194136898ce6bbc51b60dc264913c458f2576556f925883ab7"
   end
 
   depends_on "autoconf" => :build

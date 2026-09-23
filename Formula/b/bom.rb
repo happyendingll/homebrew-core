@@ -7,11 +7,8 @@ class Bom < Formula
   head "https://github.com/kubernetes-sigs/bom.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f26a57dc100765ebbd5d294cde8730bc73162bf2113f41f621213c8869a84f98"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f26a57dc100765ebbd5d294cde8730bc73162bf2113f41f621213c8869a84f98"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f26a57dc100765ebbd5d294cde8730bc73162bf2113f41f621213c8869a84f98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d6730ac5a8abf3be3c6dfe1998a2c115450fea6a018cbb28408fd8695fa8b080"
-    sha256 cellar: :any,                 x86_64_linux:      "97c9870589efa245856d94242d5fbf4c97fc21e90811bb5b199c19c8c9f0d1d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc903ff13a763ae5f8de401298a04ec569e99031a3ad924c65ab5312956c401b"
   end
 
   depends_on "go" => :build
