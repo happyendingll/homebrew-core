@@ -7,11 +7,8 @@ class Kew < Formula
   head "https://github.com/ravachol/kew.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "63244c68bfcf3c8d63bebdef35d2e841e0b96a065a8fd2adea783c281f4f6491"
-    sha256 arm64_tahoe:       "4c5d91eddf8519f868c4f6c3b17044d40935489fd7e6f0fc62e47d24f01f26d1"
-    sha256 arm64_sequoia:     "68a7bba92de71f1117c4d00c0669a64245982cbb4c6bcea461208c2de0524f77"
-    sha256 arm64_linux:       "1f9efc0976b163454e03ac2eb87ca230404cff77246ffb05c21d5247ebe2f140"
-    sha256 x86_64_linux:      "246db87beba715af96d889b049102c42b07be63d260e6c408b4e3a165640a7e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "a1cc0393e22cf33e8c13bd236c391bd0cfa79597199b52ad0883e16673bc49b3"
   end
 
   depends_on "pkgconf" => :build
