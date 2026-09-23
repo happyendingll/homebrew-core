@@ -22,6 +22,8 @@ class Libcoap < Formula
   depends_on "pkgconf" => :build
   depends_on "openssl@3"
 
+  allow_network_access! :test
+
   def install
     system "./autogen.sh"
     system "./configure", "--disable-manpages", "--disable-doxygen", *std_configure_args

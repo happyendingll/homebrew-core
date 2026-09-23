@@ -1,14 +1,17 @@
 class Leetgo < Formula
   desc "CLI tool for LeetCode"
   homepage "https://github.com/j178/leetgo"
-  url "https://github.com/j178/leetgo/archive/refs/tags/v1.4.19.tar.gz"
-  sha256 "39537b3d2e221c5cec3826c845711903223fb878e93f81a1b452d814c806c819"
+  url "https://github.com/j178/leetgo/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "74811881a19f44a351030b7b84044bef25ebfb115153cab17495d8a211acfa44"
   license "MIT"
   head "https://github.com/j178/leetgo.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "ff2512df56b5cda43b814363e2c69b6dc03c22018a8c7c5291d9397760489724"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "02f4605e8ce1532641c01abc47a8543638d71e49126f549809a203d8fcb3cb2b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0b8bc42243d251ff124ea60181dd241d2371cbc56603834d56f7da3c18b6d43"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2f952678ad402b5740620a93cba0d2e2c6045a77eb941c4eaee690ce91a061b2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4fe9c6d165c455957b6dbc3356fadd562dd303662c58ac363ba2d70998bcdf74"
+    sha256 cellar: :any,                 x86_64_linux:      "52eace4eed93344bf7676c6169004adc349b7ed5861a1613559043cace9af783"
   end
 
   depends_on "go" => :build

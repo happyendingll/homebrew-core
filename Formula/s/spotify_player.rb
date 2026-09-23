@@ -17,14 +17,18 @@ class SpotifyPlayer < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "dbus"
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
-  deny_network_access! :test
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
     features = ["image", "notify"]
     system "cargo", "install", *std_cargo_args(path: "spotify_player", features:)

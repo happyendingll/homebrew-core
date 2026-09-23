@@ -23,6 +23,8 @@ class Eccodes < Formula
   depends_on "netcdf"
   depends_on "openjpeg"
 
+  deny_network_access!
+
   def install
     args = %w[
       -DENABLE_NETCDF=ON

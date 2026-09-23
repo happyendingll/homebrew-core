@@ -45,6 +45,8 @@ class Swtpm < Formula
     resolves "https://github.com/stefanberger/swtpm/pull/1094"
   end
 
+  allow_network_access! :test
+
   def install
     system "./autogen.sh", "--disable-tests", "--with-openssl", *std_configure_args
     system "make"

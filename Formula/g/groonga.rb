@@ -1,8 +1,8 @@
 class Groonga < Formula
   desc "Fulltext search engine and column store"
   homepage "https://groonga.org/"
-  url "https://github.com/groonga/groonga/releases/download/v16.1.0/groonga-16.1.0.tar.gz"
-  sha256 "e10370308607bc7b499f0ab880c4f97dd2ad89f85edcf1d2b534e301ae3fb7b3"
+  url "https://github.com/groonga/groonga/releases/download/v16.1.1/groonga-16.1.1.tar.gz"
+  sha256 "f78bb9acbc5a5b4c6e79dd96fbec50d98bd807ff9ba95dc931f0f8df30e1cc8f"
   license "LGPL-2.1-or-later"
   compatibility_version 1
   head "https://github.com/groonga/groonga.git", branch: "main"
@@ -13,8 +13,11 @@ class Groonga < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "6e9fb5669c5868a5c491f1733f85f7260a89d30d649a992ed56572f43c9b3b3b"
+    sha256 arm64_golden_gate: "4f4892b070a29510bf4032a4ab6f32cc9af540fb4bd23bd528a041716c559470"
+    sha256 arm64_tahoe:       "798e3392a89ca7a319b69cbdd1b2a592df3a9ee2da52493b8758accfbc36a88f"
+    sha256 arm64_sequoia:     "0a0f0b347b796810c60491811785c94b28c19eb420f3704cbfd3f37c4c36ab1e"
+    sha256 arm64_linux:       "6257285a646038c4126d38f188b4178fba03d88a0fb812df33a7f3647a039658"
+    sha256 x86_64_linux:      "9f38305d0593c819fd33778ceea661fd2646d9272da00dd85e9f73968de2d77f"
   end
 
   depends_on "cmake" => :build

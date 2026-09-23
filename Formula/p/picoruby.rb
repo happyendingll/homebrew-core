@@ -13,7 +13,9 @@ class Picoruby < Formula
   end
 
   depends_on "ruby" => :build # for numbered block parameter `_1'
-  depends_on "openssl@3"
+  depends_on "openssl@4"
+
+  deny_network_access!
 
   def install
     ENV["MRUBY_CONFIG"] = buildpath/"build_config/default.rb"

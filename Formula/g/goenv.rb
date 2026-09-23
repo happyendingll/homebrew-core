@@ -1,8 +1,8 @@
 class Goenv < Formula
   desc "Go version management"
   homepage "https://github.com/go-nv/goenv"
-  url "https://github.com/go-nv/goenv/archive/refs/tags/3.2.0.tar.gz"
-  sha256 "329c9430bba95df90d360e9588d2ad4258d9918b62bba72480113cbae5875fee"
+  url "https://github.com/go-nv/goenv/archive/refs/tags/3.2.1.tar.gz"
+  sha256 "29030c8362c6f07ada11244f4e0926a170aa9631a33c4d08f534ddd4f72ca58f"
   license "MIT"
   version_scheme 1
   # TODO: Uncomment when default branch is changed from 'master' to 'main'
@@ -14,8 +14,11 @@ class Goenv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "19a6b97bba9e23b356004fbd667de7fbce838eb82b5c5f7bfb5f14541d8e6428"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1f4802bfb68a686daabd327a17df9c35e37db15d4aaaee5b977066664e3b7614"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1f4802bfb68a686daabd327a17df9c35e37db15d4aaaee5b977066664e3b7614"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f4802bfb68a686daabd327a17df9c35e37db15d4aaaee5b977066664e3b7614"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "65899c1d056dd9e3a228d3a97774f6f559f48ee118157a642dbf12cf967879df"
+    sha256 cellar: :any,                 x86_64_linux:      "da9bf96a272b9de816806300f8050f9ef2bda832e170161fab366f3b2288c733"
   end
 
   depends_on "go" => :build

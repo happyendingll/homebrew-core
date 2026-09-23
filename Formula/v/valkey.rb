@@ -17,9 +17,11 @@ class Valkey < Formula
     sha256 cellar: :any, sequoia: "fdec010216cdb68dd0ac73e6ecd4010f95dad2af4d32160f79cfc43f0f4c0179"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   conflicts_with "redis", because: "both install `redis-*` binaries"
+
+  deny_network_access!
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes"

@@ -1,14 +1,17 @@
 class Mq < Formula
   desc "Jq-like command-line tool for markdown processing"
   homepage "https://mqlang.org/"
-  url "https://github.com/harehare/mq/archive/refs/tags/v0.8.5.tar.gz"
-  sha256 "02e83968f7c63e0b9ae1e225dfeef43bf57bdb3932bd3286467827cebfd679ce"
+  url "https://github.com/harehare/mq/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "434a79cab530bab19cfbd27bf348fe81ba7bd84fd06188ea8d466710b207edd1"
   license "MIT"
   head "https://github.com/harehare/mq.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "856709c7078b487e741ce600651bddde92491cf9aab48eae51cdfec0121ac247"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b179e0cdcfee7bfb63bbfd5796168206be4ad9723a28758eacee8eb8cdd4ebc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37d21b64637fd89f55938b701e9ddac459728705f08b7d423fa6890c3df50c6c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d70b7e12243cdad5da7b6b6a395263e0cdea29aa9c9fd9f952cedc0b87c14cd8"
+    sha256 cellar: :any,                 arm64_linux:       "a293f6aab494e5f802004c411541487078f5519701ffd1142db3b08b79984934"
+    sha256 cellar: :any,                 x86_64_linux:      "c8d566ce843d3c393a9e270cd640ead26fd9de61e23bca04b2e8836662a43d7b"
   end
 
   depends_on "rust" => :build

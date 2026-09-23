@@ -7,21 +7,28 @@ class SnxRs < Formula
   head "https://github.com/ancwrd1/snx-rs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6268f1ec7d15679dc4dedd062ade82f8e68102db5a97b9e1f15ba5f76622ccaa"
-    sha256 cellar: :any, arm64_tahoe:       "6d68341b0bfb4d44ebc6283b825b50e3243822b080cff9b988d105c12343875f"
-    sha256 cellar: :any, arm64_sequoia:     "bdf7c074131d55baf56619c17bd0767a805d46f4a1eae5bb18e9f73242eb680e"
-    sha256 cellar: :any, arm64_linux:       "5725f1938f3f1b915295a380dd52791b4ad04c1703c7a17c508dff2eea56376f"
-    sha256 cellar: :any, x86_64_linux:      "833d547a746d6284901c492fed16e8be7afe6883fd1ef3712ec1b830f545aa8d"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "0ae59abcdb05ee6ef712993a7c745ba132ab4917a0adf873b7bfbcd42fcc2c0d"
+    sha256 cellar: :any, arm64_tahoe:       "8d01bd86296f3c0f0b7b45b3f95220c2fc2b02c4c71ec4cb822fd29d68d3570d"
+    sha256 cellar: :any, arm64_sequoia:     "66645880a63adf2a2bb67b4ad3a3ee1ed42fdfa2c1dc32269d2886109c977784"
+    sha256 cellar: :any, arm64_linux:       "8f8650465b81191252065fe7aa3c6c0cd07598aa88aa495656c44fb309f66e43"
+    sha256 cellar: :any, x86_64_linux:      "f86fb9a9221fc109fb2b638c61a09a10143191585a1a6f2e472f92fc995b1bf0"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "sqlite"
 
   on_linux do
     depends_on "fontconfig"
+  end
+
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

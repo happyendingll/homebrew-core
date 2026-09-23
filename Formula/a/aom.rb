@@ -2,14 +2,17 @@ class Aom < Formula
   desc "Codec library for encoding and decoding AV1 video streams"
   homepage "https://aomedia.googlesource.com/aom"
   url "https://aomedia.googlesource.com/aom.git",
-      tag:      "v3.15.0",
-      revision: "de4c1d1edc49723a78954d30a83690aa1937422f"
+      tag:      "v3.15.1",
+      revision: "44d0a57786f432d933ff64b653347c66f4d0fa1d"
   license "BSD-2-Clause"
   head "https://aomedia.googlesource.com/aom.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "94fc9708f79797e7aa401eebc1b1ecb81792e75d45ffc016c5f6b6a43d39b784"
+    sha256 cellar: :any, arm64_golden_gate: "1b8cc8b3704e99e634b6bb3baff07ec508cd7a055fbf51cb4a951d8fb4b2065f"
+    sha256 cellar: :any, arm64_tahoe:       "f78fc63421cf6d79eae934ffb0c0b8e671285cee6e4213c4fd08e5ff84b3d393"
+    sha256 cellar: :any, arm64_sequoia:     "356ad2843b8ab1c11cc83043256cbcfeb659eb031215ecd116dfcbe2ea3f1d11"
+    sha256 cellar: :any, arm64_linux:       "e6b3ee10a86d33cae4d6658a7cbfe3b164fedafe4cf279f80c14f84113cda99a"
+    sha256 cellar: :any, x86_64_linux:      "ed7e7a71a73934b4d5e599fa0f7e61517c8ef6bae02626f438ca2f90fb389370"
   end
 
   depends_on "cmake" => :build
@@ -19,6 +22,8 @@ class Aom < Formula
   on_intel do
     depends_on "nasm" => :build
   end
+
+  allow_network_access! :test
 
   def install
     ENV.runtime_cpu_detection

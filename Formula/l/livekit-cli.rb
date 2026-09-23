@@ -1,8 +1,8 @@
 class LivekitCli < Formula
   desc "Command-line interface to LiveKit"
   homepage "https://livekit.io"
-  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.18.7.tar.gz"
-  sha256 "ed0d2168bf4784f3b5b987d7499128f7de95c276d7aa4514aa8a872b820d6e99"
+  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.18.8.tar.gz"
+  sha256 "db9aa392805ffbdd0ae9372edf1a94b0f17bbaa9646bf2f58d24a914e0d5b737"
   license "Apache-2.0"
   head "https://github.com/livekit/livekit-cli.git", branch: "main"
 
@@ -12,8 +12,11 @@ class LivekitCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "e79d95d19e4e22569f89ff10a7433618f13ae58211362e4714d78de0a0203e3e"
+    sha256 cellar: :any, arm64_golden_gate: "14fdf8d5fdb7415348f4f42a252dd2771f5f82a9b3a60ce482d06447d416d08f"
+    sha256 cellar: :any, arm64_tahoe:       "0bda274df85e177fccd2dc8e5768cb66d55d684c514ccc6640cfbdfd17f0393d"
+    sha256 cellar: :any, arm64_sequoia:     "9de5d483a190e3efc9b7ef9a97f33b7807a959c44de61200d37329e3519f2561"
+    sha256 cellar: :any, arm64_linux:       "07b50d42e35bf2ca103361cc7d7d1c2a385cb6724f47e56512436c61583f8545"
+    sha256 cellar: :any, x86_64_linux:      "107139323a316eedb3eda5f586fd1cc990681c9b8af876fe8983d0e90a783e34"
   end
 
   depends_on "go" => :build

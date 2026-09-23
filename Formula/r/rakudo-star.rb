@@ -19,7 +19,7 @@ class RakudoStar < Formula
   depends_on "sqlite" => [:build, :test]
   depends_on "libtommath"
   depends_on "mimalloc"
-  depends_on "openssl@3" => :no_linkage # for OpenSSL module, loaded by path
+  depends_on "openssl@4" => :no_linkage # for OpenSSL module, loaded by path
   depends_on "readline" => :no_linkage # for Readline module, loaded by path
   depends_on "zstd"
 
@@ -76,7 +76,7 @@ class RakudoStar < Formula
     ENV["DBIISH_SQLITE_LIB"] = formula_opt_lib("sqlite")/shared_library("libsqlite3")
 
     # openssl module's brew --prefix openssl probe fails so set value here
-    ENV["OPENSSL_PREFIX"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_PREFIX"] = formula_opt_prefix("openssl@4")
 
     rm buildpath.glob("src/rakudo-star-modules/**/*.o")
     # Skip module tests probe for optional DB/client libraries and rely on the test block instead

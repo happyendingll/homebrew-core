@@ -1,8 +1,8 @@
 class Asdf < Formula
   desc "Extendable version manager with support for Ruby, Node.js, Erlang & more"
   homepage "https://asdf-vm.com/"
-  url "https://github.com/asdf-vm/asdf/archive/refs/tags/v0.20.1.tar.gz"
-  sha256 "070281c31d7576b5089a39374bc5674649b439adae5ddaeb69c697a756a28a4f"
+  url "https://github.com/asdf-vm/asdf/archive/refs/tags/v0.20.2.tar.gz"
+  sha256 "29f5b702f532f345270e2f7bb8b01ea07dbc6892e34ec8c97a180002794684e3"
   license "MIT"
   head "https://github.com/asdf-vm/asdf.git", branch: "master"
 
@@ -12,11 +12,11 @@ class Asdf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c9de3f0417bea2e23f31aebeb02ac15aee25acce9f75b5c575cfb0c16d1b920"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1c9de3f0417bea2e23f31aebeb02ac15aee25acce9f75b5c575cfb0c16d1b920"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1c9de3f0417bea2e23f31aebeb02ac15aee25acce9f75b5c575cfb0c16d1b920"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "752821bbd8e7c78b577cddf0a0bdc39147cb450ce8df7056290235425d80e259"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "bafbfb021fe3fed1e7f26eb7c1f370fc09a280f556ecbe2072164494d8118418"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11395793631019858ca30d90a18dc1a91d2d73312d01365488d03f8c3a641fbd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "11395793631019858ca30d90a18dc1a91d2d73312d01365488d03f8c3a641fbd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "11395793631019858ca30d90a18dc1a91d2d73312d01365488d03f8c3a641fbd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "eb4859574064a3e8ba599b447ee8d96853b02c62f4692ffbf1a7398f6db5642d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "73c846eac2f880bd73f8675780a30ffd43ef151febc5a50333a3cd66760bfd9f"
   end
 
   depends_on "go" => :build

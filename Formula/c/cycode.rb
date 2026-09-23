@@ -3,14 +3,17 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/dd/d8/818095a1828476fc1eb186c9150709a426bc38fe348ec2c76c92f62d8520/cycode-3.24.0.tar.gz"
-  sha256 "c6e88fbb3ae30d3305d815df446b7ae5dc8e591e9715ddaacc90e88937e3dc87"
+  url "https://files.pythonhosted.org/packages/1d/6f/2b1af599122b84b9357960d5d6221c07e3d1a8a48ccb42bc3967fb701c62/cycode-3.24.1.tar.gz"
+  sha256 "1a4555233d23da4b37210a02973a16daa46eed7cf90f20ba2752beb5275f4ea7"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "b293a89eea729b7eb9d26f4f3400a6d8a232a3c314871d2e1465639a815de2ad"
+    sha256 cellar: :any, arm64_golden_gate: "6757880ade89bbf93aa83d4bbb6c995ee3b21cb3ee263b761b016f6ae32fb72f"
+    sha256 cellar: :any, arm64_tahoe:       "dd5ecd2fc106415e51d331f3ee58d16c061c8ba4dd456ed1e2b9fe9d79e778d4"
+    sha256 cellar: :any, arm64_sequoia:     "5a981e265cede2b7c966dcd8b8e64fe24d2db2ae9e8290f034472e6b00befdab"
+    sha256 cellar: :any, arm64_linux:       "45bf37f7ac18a195c1da29b6e5816f265ad6b406c126e579f1207c1a706186b9"
+    sha256 cellar: :any, x86_64_linux:      "21da3cdf285f2ad6f674e373bdd8479fbdb9e2480919888487145cfba36d9272"
   end
 
   depends_on "certifi" => :no_linkage
@@ -83,8 +86,8 @@ class Cycode < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/5f/f7/abb373e5757eaec4b922b92f97ec8d6d7e057cf06778247604fbc4e7c3f3/idna-3.19.tar.gz"
-    sha256 "5e0811a4383b21dc5838069f801c4fb62113b7447663d2530d2bd6e77b49bf15"
+    url "https://files.pythonhosted.org/packages/f5/08/8eea9d4b8302028f3abb2c0813953f7aec26d33b7a8960ed760e65ff29fa/idna-3.20.tar.gz"
+    sha256 "a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44"
   end
 
   resource "jsonschema" do
@@ -228,8 +231,8 @@ class Cycode < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
-    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
+    url "https://files.pythonhosted.org/packages/e3/05/b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e/urllib3-2.8.0.tar.gz"
+    sha256 "63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63"
   end
 
   resource "uvicorn" do

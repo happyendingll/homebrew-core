@@ -1,14 +1,17 @@
 class GopassJsonapi < Formula
   desc "Gopass Browser Bindings"
   homepage "https://github.com/gopasspw/gopass-jsonapi"
-  url "https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.17.2.tar.gz"
-  sha256 "b1369a2bad432386455d7aa3002f93910f9e275fc3c33e3f37f5731aa918f07a"
+  url "https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.17.3.tar.gz"
+  sha256 "4b2c0fc019b2667af845202059103f70d684d924a5dc0590469f825ca7d251d3"
   license "MIT"
   head "https://github.com/gopasspw/gopass-jsonapi.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "2db356ec1e34ca453d7e5b0f4ab4cc30e84a1952f8c515a6d5a7480a769020f1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "38d166ab9e6865363ebd2027c12d3665d9ad87df2509fb7e10a7763d73cb4526"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eee17fe1410861ea49e29cf62ca6ae75197dcebb95ee475732cf21238cbe15d7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ffec0e354293aca84ea898cdfacfd882c33059cd8887c89735ec6299da9213e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "de745a0eae2f3fa2137d28ddc07a071f6bea513feb9d4e8a771680fd7dcd8103"
+    sha256 cellar: :any,                 x86_64_linux:      "29c3feb200e5ba74ba2841ff516d572bf4303f292f108ec9a1b8f96d02ab8f7a"
   end
 
   depends_on "go" => :build
