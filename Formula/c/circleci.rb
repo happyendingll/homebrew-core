@@ -14,11 +14,8 @@ class Circleci < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "30512336b00a797eb0870b8ff91b7150ee21b3bf699c9a294a5845de60855e7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bc538cacd67ce1aa04b93b5156c151bb7d6ae33cc0b4c954b103ad7bb9e555ec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2e4bc966050cbea7fdcac1e313607b828f0fb767c474230b26620fecb2edced2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "142d547f57d158f0de5aaff68dd29ac3ea52cc4bc78345724e00fe5cfda78190"
-    sha256 cellar: :any,                 x86_64_linux:      "aac78edd64ddce69fb1e5e31451928775d4f8abbad334a1bd32584277ab37c80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "8d5927625a1a56ab520adbb51bb4c7bd544061014a98a56220cefe713db747b7"
   end
 
   depends_on "go" => :build

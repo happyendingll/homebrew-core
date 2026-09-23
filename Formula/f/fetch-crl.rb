@@ -11,11 +11,8 @@ class FetchCrl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2385527f2d6cb73580e951ac76bcdfa89cfe526695db164b39304e1b58a97146"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2385527f2d6cb73580e951ac76bcdfa89cfe526695db164b39304e1b58a97146"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2385527f2d6cb73580e951ac76bcdfa89cfe526695db164b39304e1b58a97146"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1b211afaed479ca3f780bb8409c684f4364b56155a8bac56abf3ba3d9052499e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9752e315cb9d6eaec70792ea3363c219fb548ac324aaea849b05e211e5c98779"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "44706be96bf275bb238c88cf96b329256dd9faade3ba6dfa49438949ad01f667"
   end
 
   uses_from_macos "perl"

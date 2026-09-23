@@ -7,11 +7,8 @@ class VowpalWabbit < Formula
   head "https://github.com/VowpalWabbit/vowpal_wabbit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "518ad61e830cc03c6b9884d42e39295ba8ba1ff7165724e39e4f551914b1eac8"
-    sha256 cellar: :any, arm64_tahoe:       "9abd9252af109c46cfed5e64a04318ff0d86457bbda25e4684afd8979679b40a"
-    sha256 cellar: :any, arm64_sequoia:     "29c9ee41960d006b12a2f09311d84a5eba1583c0d1f13f021365a70cb4426680"
-    sha256 cellar: :any, arm64_linux:       "63737a9b81a7d58f981422e4ae926a67ebdff683dc580c2523a57ce1a7acc82e"
-    sha256 cellar: :any, x86_64_linux:      "601e9009c0ef43cdd669a8756e1749a4a1ed2bae9832a6f7816e187c7b5b38da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a05acdd71d0375a05b2b8a311e1c65f254aaaf443fdba86cbea1e77b61d29caf"
   end
 
   depends_on "boost" => :build

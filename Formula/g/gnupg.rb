@@ -18,11 +18,8 @@ class Gnupg < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6c1d6a8fec9e054a01dfb57856160a37898dd68405c0ae1b4b713cde423d7679"
-    sha256 arm64_tahoe:       "641983de8774502eef7572de8c3cfc7dd8300b3829e6847b7c358ca23faf6334"
-    sha256 arm64_sequoia:     "c6a15fa0be01a9acd2d3a9df7aa3e555678fabcdd05a21530c92766d4ca5de29"
-    sha256 arm64_linux:       "9ba01e836fe6c6512cbf298b2c625ebd4d3d8be777b8829adc652de5202a0d0e"
-    sha256 x86_64_linux:      "51c561be0e77f45960591590f65fdf1b7d9396e73a97e7529193bcee5a0dd2f5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "dc7e1ae29bd7fd255ea65018d7bb7c8a9319b4680c3d7ebafed97f5d8c85a5f5"
   end
 
   depends_on "pkgconf" => :build

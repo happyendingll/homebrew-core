@@ -8,11 +8,8 @@ class Ggml < Formula
   head "https://github.com/ggml-org/ggml.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "961397982c2e2388aa61e23175f2fe0fa7df2d8f16b298b4df043813964ef710"
-    sha256 arm64_tahoe:       "5eefe5cbbb72ec0dbd9c132dfb95dba81e79eb7e54c51ebd83eb2d9c2f366400"
-    sha256 arm64_sequoia:     "815041bd71f41942a14dcb05a027876cca7eecb670789a63ce1dc884eb1e3632"
-    sha256 arm64_linux:       "e9fd004cbcaab2f227d49e9f72021f1f594dbee28eefdd270c66ef2fe243466c"
-    sha256 x86_64_linux:      "5c8721014b2cf0c1a4d6ab07d4a0e8ae1125b7736c264adb21a46599fe6138fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "46477480dee1772eea72e7e22dd4dbb211a91d5be6906f9c65ab7aa71971682f"
   end
 
   depends_on "cmake" => [:build, :test]

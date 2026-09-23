@@ -7,11 +7,8 @@ class Mq < Formula
   head "https://github.com/harehare/mq.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b179e0cdcfee7bfb63bbfd5796168206be4ad9723a28758eacee8eb8cdd4ebc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37d21b64637fd89f55938b701e9ddac459728705f08b7d423fa6890c3df50c6c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d70b7e12243cdad5da7b6b6a395263e0cdea29aa9c9fd9f952cedc0b87c14cd8"
-    sha256 cellar: :any,                 arm64_linux:       "a293f6aab494e5f802004c411541487078f5519701ffd1142db3b08b79984934"
-    sha256 cellar: :any,                 x86_64_linux:      "c8d566ce843d3c393a9e270cd640ead26fd9de61e23bca04b2e8836662a43d7b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "fa136f37f91d6c3345e59e6b0ff79553c698498465b561489615fb80283eb9ec"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Secretspec < Formula
   head "https://github.com/cachix/secretspec.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "74464fccedc39c8271bba5749e7ac4838443d3e5f1a4ca672cd4ed8ed2345c40"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9c3693eaf007f265b6e67159d929ec40e4228ba8b619ab34eef8c1b8935d3174"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "be30c166bf8bac1a554a0af6645e7828d06c2416eca6f33781b4cc5b7482834c"
-    sha256 cellar: :any,                 arm64_linux:       "a582273a96a0fb7213533e6a1da36314e6e1c0b714b813bfa12d645d1c2bd278"
-    sha256 cellar: :any,                 x86_64_linux:      "d0b6a81384e1a00c68d337c3f6cb7da8be1e5dbec562b470949f8b78c4bdf92e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "6a0b411436953fe894ed3c41bac19f5a6e17f682fc2cc14976b572d159e43cce"
   end
 
   depends_on "pkgconf" => :build

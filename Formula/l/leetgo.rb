@@ -7,11 +7,8 @@ class Leetgo < Formula
   head "https://github.com/j178/leetgo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "02f4605e8ce1532641c01abc47a8543638d71e49126f549809a203d8fcb3cb2b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0b8bc42243d251ff124ea60181dd241d2371cbc56603834d56f7da3c18b6d43"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2f952678ad402b5740620a93cba0d2e2c6045a77eb941c4eaee690ce91a061b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4fe9c6d165c455957b6dbc3356fadd562dd303662c58ac363ba2d70998bcdf74"
-    sha256 cellar: :any,                 x86_64_linux:      "52eace4eed93344bf7676c6169004adc349b7ed5861a1613559043cace9af783"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "12d61e11fdf0ff35ab7e0eb47c956434b7c9698097f9e2aec517133e128298b6"
   end
 
   depends_on "go" => :build

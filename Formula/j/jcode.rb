@@ -11,11 +11,8 @@ class Jcode < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f581c5a1691d1a8c4d156a4ed915b42a52523486043867e69648dd72488c8d34"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff0fe3b9c3d36ed45070c292c1b449f0f299ce8b8ae350ea422316d89b6a22d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d44e611bbf057fa5921182515c6228c687f5d934c5de66bda5acd7ade8fad23a"
-    sha256 cellar: :any,                 arm64_linux:       "e234f8a75da512865a4c4a2eeb02ca65cfd71f3c1eedffeb2c1789b373daa408"
-    sha256 cellar: :any,                 x86_64_linux:      "8cae620a8b6fbcbe066590372b8f2318583b3da71fcf738a846391516ca43f7e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "996d48b5f9570c4b2c38f9eb0da9c878d5480f9424eb4a808e3dbae770173cc1"
   end
 
   depends_on "cmake" => :build

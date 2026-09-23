@@ -12,11 +12,8 @@ class CodeCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d6dd69feeafc6f0897a63f1b0d97a3d868ebede2572a78a6c8a10522b43dce5f"
-    sha256 cellar: :any, arm64_tahoe:       "58750d85054fb84e4fb6557b828ca4afd4e912b05c3c9307c3f134448cb2fbcc"
-    sha256 cellar: :any, arm64_sequoia:     "5a4634178ba5be08dff6baa001de150794cfb64196f096067656c2ac5232a884"
-    sha256 cellar: :any, arm64_linux:       "ac61a3c28741bc9e42ecb2f9106a03fe6615ffc8d81f7e7d473cc136bb706647"
-    sha256 cellar: :any, x86_64_linux:      "20594212824442c1737e4c1ce066c021904edca42f7258f1e378fcc9aa12a76c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "dbd07f5512de4e250b8683dfe4d37372e4c55d03c90f5251400b6cc76c4b69f6"
   end
 
   depends_on "pkgconf" => :build

@@ -11,11 +11,8 @@ class AwsLc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9981b5b620cc64ace30724ddd053a39369b4735e66afcce767e86995aabd457a"
-    sha256 cellar: :any, arm64_tahoe:       "63e58169e5352d447f145e34fde660f5fd0b408ad8f14fcdad9e3b513b1824e1"
-    sha256 cellar: :any, arm64_sequoia:     "a80c6239e4873ecc74e2b30062f07017f21d02f79cf5cb1f1c8107edbcdda815"
-    sha256 cellar: :any, arm64_linux:       "517c83848d97fee0bc0574985688396d7be570bcec68c4519955e44a6dc065db"
-    sha256 cellar: :any, x86_64_linux:      "7614897981128e1e3f4b2d248bb5f9d3df0dbd2988ecd549477a43cee90b4599"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "8a34bccc6a1e5332cc805d9cad1f6b0aff88958d44a1e8052ec5eb18e473eb3f"
   end
 
   keg_only "it conflicts with OpenSSL"

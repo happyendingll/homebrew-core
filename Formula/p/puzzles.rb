@@ -18,11 +18,8 @@ class Puzzles < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d2dde5e14b56e30fe518228a95d073c69103d83966e9bda0a136bd6b627ccd5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0f37b6594a62e3229ed97777a339ab9c76dc388c1b2564274545fca7bd669689"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "45b6378ea2b57396d2585ed89fc028dc07a08eed9b752022e7b32b106ad7e888"
-    sha256                               arm64_linux:       "6b537ec6936749be286578a522797822c71a9ee4aa6081c7f60603a65ac98ebc"
-    sha256                               x86_64_linux:      "6c87fd9ee8319d796dead44d88c6647394bb1cf493cf9979839294db3d14c94d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "6eacf1a604fcadd83709f1292a44d5544af8a0a4245cc98de333ded855860f79"
   end
 
   depends_on "cmake" => :build

@@ -7,11 +7,8 @@ class Tgpt < Formula
   head "https://github.com/aandrew-me/tgpt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "383bac02aa1aede466a0997d6ef177073f160ba64960417ded57faa615f7a16b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "af971b2e5da6618aa868b24108bf3457ac784ac3c46c16b7ca90b392042306e9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "68497b8bdde49d3c0cd5ab5775089e374061ff44c2d3a139935bb83fb9502638"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5684674186ebc2c4e6052e79f107dc53a20e8223b4cb991f055e326e04da9a26"
-    sha256 cellar: :any,                 x86_64_linux:      "522a0cc36ac589a3d0e022f3c05131e68f444ee88c295c15fa6b3e6e89971c16"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "dbab4c21630b3432eabc19158ac3170a317ef3ad8e65e0346527e32dfb16815e"
   end
 
   depends_on "go" => :build
