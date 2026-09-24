@@ -6,11 +6,8 @@ class SentryNative < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bf8b4e526d94c9e919faf89c5930b173b7c1bab6ebbc16ac1c5a1f968bec6911"
-    sha256 cellar: :any, arm64_tahoe:       "da953a71816e8f956017a783464af848ed69c3177b0c0a14f882a39122525a0b"
-    sha256 cellar: :any, arm64_sequoia:     "4a25dda820bb1306193253242500f0674718294da2322c441a565272fd3af6a9"
-    sha256 cellar: :any, arm64_linux:       "3586ca7f2652b3f3372d442d693eff7454f29d006f36401070cfe5ef0b3021b3"
-    sha256 cellar: :any, x86_64_linux:      "5cc2888f072e6b1309c6929865a7a19115f0f412b7f7c7611abf42c3a9e2a3ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "4a17ddb0bc5bb6068191d9e5fb67447f50149aae7f93fa0db4544c9efbb4b5fb"
   end
 
   depends_on "cmake" => :build

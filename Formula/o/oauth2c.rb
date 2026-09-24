@@ -7,11 +7,8 @@ class Oauth2c < Formula
   head "https://github.com/SecureAuthCorp/oauth2c.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d75d44a4993f6232df595f26415b5391523d2bf5f81c0f8ec355a8ec731b0be2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d75d44a4993f6232df595f26415b5391523d2bf5f81c0f8ec355a8ec731b0be2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d75d44a4993f6232df595f26415b5391523d2bf5f81c0f8ec355a8ec731b0be2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9c99ff220b799c8fe151c963564b8a657f1d5081d52c2a6e9ca0380e13784999"
-    sha256 cellar: :any,                 x86_64_linux:      "490575b781e17bb1df816f758a177f6d2f9cccf7019524b2dadd0c1e9910f181"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a0061ac01277f1efd87592a1c8566bc8541f6907e3efc6029e1c7a37c2eb134b"
   end
 
   depends_on "go" => :build

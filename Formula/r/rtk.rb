@@ -7,11 +7,8 @@ class Rtk < Formula
   head "https://github.com/rtk-ai/rtk.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e154a3606414c96095b045c66c5f6520aff5d21fe18508ca8b084e9a1e4712e4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0c15483b4e1fdaa8f880c4ab283d9f46f930e123550a6f328dc552f852b101c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82377d183757b8fd39200eea6f09504b49a1e6e43dd2ed797677a0c0b811289a"
-    sha256 cellar: :any,                 arm64_linux:       "5ba60f025b654c8ed3e696d6be3288a8517787088757b811b639299fe8506998"
-    sha256 cellar: :any,                 x86_64_linux:      "d45bf5e56a294aff09a8828abe94a01bab80d79158544ec77c3a2125d37963ca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "c622cbbbde5f16d376570b9b9df6af1be1e273263a707d60766ddf3ae672128c"
   end
 
   depends_on "rust" => :build

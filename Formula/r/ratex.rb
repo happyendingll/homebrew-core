@@ -7,11 +7,8 @@ class Ratex < Formula
   head "https://github.com/leoliu0/ratex.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "93cfb646f709ccf95b9665e3f2343d4c1936b61a05c48a61cb6f2bc21b838c5c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6fa22588fc1316b50e6a062f4a4d097c87760234713b71dcfa47f7355332498b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "edcfb6fd67241eb211a1a3f2dc6d697dbb3bd85dccbeba75eeda4bf2909b8284"
-    sha256 cellar: :any,                 arm64_linux:       "df23caa0e0c37a757adfeb5033ba9b7af5cec6720bc00e42a683f785ba2e6516"
-    sha256 cellar: :any,                 x86_64_linux:      "2ec1c3d8818a25bc20ab3a963ccf5316bd0eae0328f2e16d35d39007cb8a32b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "f64e8d05700fd7711deb990b19b8f4c64a02ad752f18e673e4076f402cf66d6f"
   end
 
   depends_on "rust" => :build

@@ -11,11 +11,8 @@ class Fio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4b7197238360929e9f2b3ba6d2fb8e359061dc07dd23a055405440ae9991fe91"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b1f4fa60ee65027f3689aa11fe168bde90ffc169c20a92625a18ca6454474b4b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7f18f3fa32b5893cc37db51000a8c52ca2b01fadea876a3de006c50307e89a77"
-    sha256 cellar: :any,                 arm64_linux:       "38c2bf604b600681233a88c987ed04480bd86ebe85ec3e202ed7d40d4565f3ab"
-    sha256 cellar: :any,                 x86_64_linux:      "0a1b798a44a7027561385f294a36a2710ad163d378ea4caa89442a9978e38e3a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "dde20e0b54030caa722c8513d9df934ec2818bc226b8fcd8a53f22f6457c546e"
   end
 
   on_linux do

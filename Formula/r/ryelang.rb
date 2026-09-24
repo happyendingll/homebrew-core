@@ -12,11 +12,8 @@ class Ryelang < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "77875fe811f2073d16d8fa66f1b7e0cf9309d4af991ef014b8e3d652815c9df4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b5ed24703de91af4f23172ba9a3ac4287c86c2178dc9d4003599bddb07543cbf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b2eff5422665dbec5bdfd7ff88c8b0b20041a836ab3af8ad4bd04c17654138d2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c0dad043d60221677bda341dcb3ecd3eccf057125f09dd559dd18fa6a0789e49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "40e16a5b31e1cb27e58119bcd0d40897ece51016dfac5f162a35e14e083be7e6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "fd8c76ae9710431e4ba85ffefe4110d0c70f8b66c0d5677c5c2a66319e6ec5cf"
   end
 
   depends_on "go" => :build

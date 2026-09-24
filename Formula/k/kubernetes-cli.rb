@@ -13,11 +13,8 @@ class KubernetesCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5631eb9a9fbf75037add6275f9a9acf58acbf963fa2b45725dc59f8cd9932546"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "64f0c5b577f582095f4263847a6fd9bc10c7ecf1768e039777a1428b2e13fc40"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1c09f67bcd5823ef6320bd4af45ff1d325b0f75f4cd15970c7a2db8dcf96fc7e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8ce82f771ec0203f9559d068fe5e2f3dac66ae0e68b862e080442e3bb56adee1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f71f9ac3329741d2e228a4b7d19f35caad1fedfc1a47b28e32c41194c7ec2868"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "20fa5d1f51e6295dc0d9584eabefe6995045b2d3f18fc5096aae695282ed68cf"
   end
 
   depends_on "go" => :build

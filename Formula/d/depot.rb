@@ -14,11 +14,8 @@ class Depot < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2ad6abc6ea19a626fb9d8f20386c7c41f247f8fdbc16ea4cba75fab9d4ccab5d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2ad6abc6ea19a626fb9d8f20386c7c41f247f8fdbc16ea4cba75fab9d4ccab5d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2ad6abc6ea19a626fb9d8f20386c7c41f247f8fdbc16ea4cba75fab9d4ccab5d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2bc65d6e2ae6d6922294a921193f3f9b2befafa14b459a50831be4628e7f4d31"
-    sha256 cellar: :any,                 x86_64_linux:      "4353f5992b5d529c2f6f70d4f4adac80199188b0fae10d7b455f0650af751743"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "790d98051d69b259f62d261939102137bb6e347b9614dd3abd5dc8dd38de0d17"
   end
 
   depends_on "go" => :build

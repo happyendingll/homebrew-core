@@ -18,11 +18,8 @@ class Mq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "42eb0dc131cbbf28c8197d0d7e045591a1df623ba3cd1c7ffa539ac0808db5c6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "294a53c289bf98b90a429036a36c5279123fd48b9c5ea8ca5594f038103c32f3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a35aac7636330b5fcd0d78507fe2c36f0314a4df89c37da1de62e976c7e1419"
-    sha256 cellar: :any,                 arm64_linux:       "367f6a60a0a32536899a1699a4c64b7e5fc96c0ae1c8c2376c34b991c02f5472"
-    sha256 cellar: :any,                 x86_64_linux:      "04df09960786ce1a58797d9a780362f244a5d6c1964ebf7d61aaadd01ccbbc67"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "30e6c2bb8d8d146c4d2658e5515028164a16831882e4805b9e6a34bafea7209b"
   end
 
   depends_on "rust" => :build

@@ -8,11 +8,8 @@ class Gum < Formula
   head "https://github.com/charmbracelet/gum.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9909c2899539ee2e31e3ba5e5b672e27613b2ed6a3728cf0a317cc8063278aef"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9909c2899539ee2e31e3ba5e5b672e27613b2ed6a3728cf0a317cc8063278aef"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9909c2899539ee2e31e3ba5e5b672e27613b2ed6a3728cf0a317cc8063278aef"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "014dd90a816a7ca29194e1b4287c3029c1abe04a975126dfc9f04a81de242c6f"
-    sha256 cellar: :any,                 x86_64_linux:      "2470131a951e140ddc0d511171473d395f52c9057eeea6617b0ee18e346572fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "b3309d4a0d17b6b9a88e9c09264a4a52447f9d3f576a96f641fd1a0ac79294c9"
   end
 
   depends_on "go" => :build

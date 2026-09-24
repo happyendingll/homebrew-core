@@ -7,11 +7,8 @@ class Vhs < Formula
   head "https://github.com/charmbracelet/vhs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "95ae3e96bc433efaf012880b89edb1e511719bbd497adea94280c0c7587fad1e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95ae3e96bc433efaf012880b89edb1e511719bbd497adea94280c0c7587fad1e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "95ae3e96bc433efaf012880b89edb1e511719bbd497adea94280c0c7587fad1e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b9319ad58ab9aadf0ac70f0411ce054059411408faca66a9b8b04c6f113c2024"
-    sha256 cellar: :any,                 x86_64_linux:      "c3af24c6574021d6e94b29d434045f6ac24789b11b6788e956968fd0746c5719"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "987b296574d8cdba289cb57a19e7309380f02216de5310daa32df4f11cb63752"
   end
 
   depends_on "go" => :build
