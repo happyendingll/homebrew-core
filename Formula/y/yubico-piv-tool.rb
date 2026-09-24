@@ -11,12 +11,8 @@ class YubicoPivTool < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "e1483709af170adefa9460acf1b5df1588a58c200a78a1107c244de609326c2d"
-    sha256 cellar: :any, arm64_tahoe:       "5276dc02eb4082e94f23377ce12607dcb3da58cfddeb39781eda5355a5b7e773"
-    sha256 cellar: :any, arm64_sequoia:     "100e3a16c8c0029a0c896f1b0cc60725e2ddae683f1633c7a976ed7f594f3aa6"
-    sha256 cellar: :any, arm64_linux:       "de22960e155a0d9fe5b64feeef907aef7b5296aaf80fcf88b5af15331777a5e3"
-    sha256 cellar: :any, x86_64_linux:      "83d18863b29d2c476ab51746a5187be48e1860ecbde157dfaf7aec6bfd8a0656"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "3f28b3a911db48fddba3fc4416715532c4e796a990d2c13845658e2b38f364e7"
   end
 
   depends_on "check" => :build

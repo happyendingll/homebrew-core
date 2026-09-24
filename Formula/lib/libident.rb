@@ -11,12 +11,8 @@ class Libident < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "6b861ec0af132f3c2d86d08ddae33e192040da20d28a518f5158d4742705bdd3"
-    sha256 cellar: :any, arm64_tahoe:       "5bf318f1e22090881f6f7ee6f7d27bea66e0738da64488e8a2c23b358b00fe05"
-    sha256 cellar: :any, arm64_sequoia:     "ebf7a988b65d7a6c90e56d121775a417a245e07d7332a6425725044b87182994"
-    sha256 cellar: :any, arm64_linux:       "7b8b5f724c158bb5c33c807ae42da3f5c23175492a8eb76d4ba2fca2d2a588c6"
-    sha256 cellar: :any, x86_64_linux:      "99c32352a9e686bb57eec6f756c68cce76e4fa727a67309dc3c64b4d70cd1642"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "1522c884d83d6769c9b260bcd587861339d7b9ce084239241c8d3b96291e24b1"
   end
 
   depends_on "autoconf" => :build

@@ -11,6 +11,11 @@ class PortableLibffi < PortableFormula
     formula "libffi"
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "237993a44642cc801aba5a6c04de8f26298609ff293d5c06a39692c108d08ba3"
+  end
+
   def install
     system "./configure", *portable_configure_args,
                           *std_configure_args,

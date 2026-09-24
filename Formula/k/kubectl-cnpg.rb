@@ -8,11 +8,8 @@ class KubectlCnpg < Formula
   head "https://github.com/cloudnative-pg/cloudnative-pg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7e5eca805b095ddaf8f3514bb208d42a0d3a39f3fbb65e051b7d276c0448c4d9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f414e333fd0bd1c6c89d02dcdd6e7a67613b773d3517bb18dec38f5a2e0501d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "24d6554b125b03e8b792d5fea6224c11e5b390ed62a566f327e20ee60e5a9b20"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2a542c9fbefc1c15566f31fe8dbb5947410927dc94e1fd704bb24cf8ed76fed2"
-    sha256 cellar: :any,                 x86_64_linux:      "f57c6a3b61299a15791316cffa19465958b3b0bbea802ae95dfb2215affc3195"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3096893d9707339ebd4c3be81172bc5dd55a13c13361dd663e38b8819589d612"
   end
 
   depends_on "go" => :build

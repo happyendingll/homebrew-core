@@ -13,12 +13,8 @@ class Socat < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "8216d9bb5ee04d0c8c8099711a81846dbd5b90e8b012ba9be3205a5e4cd3be6d"
-    sha256 cellar: :any, arm64_tahoe:       "f59f7e2df3f1428f970cd4d7c260f316ff1378895319a6de915836d27eaf7ead"
-    sha256 cellar: :any, arm64_sequoia:     "31d9e7870de62e53e7735298a2f1757581053ddc78fddab97eec0a53097b999e"
-    sha256 cellar: :any, arm64_linux:       "fdb97fc1cb97cb27468ef27e9174aaa9a773200944917d1e73639256194014ba"
-    sha256 cellar: :any, x86_64_linux:      "f65c3124803b8f92bc474a82009327ed5420794cc82d0bccce827d065f94b909"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "5d92eeee78ba631a2b6958c8e78d2c455f83caba90d35d44d4abf5bc44228c4e"
   end
 
   depends_on "openssl@4"

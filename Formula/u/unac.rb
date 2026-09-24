@@ -11,12 +11,8 @@ class Unac < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "3d813ab578128d39b99540ccc152aa832af4db05a2c3dddf7c6a99c0f4dd64f4"
-    sha256 cellar: :any, arm64_tahoe:       "119c6d2e4b2ef998eaeb2968afe277c1ad01249667338109e2052712170a559f"
-    sha256 cellar: :any, arm64_sequoia:     "4690b5b24adbf855a28c21ce20dbf4fcb9b5aef86eee030c997f8c4e0dd29202"
-    sha256 cellar: :any, arm64_linux:       "23474813dbd1ad4b1b4239831cc67e77cd9e3ec6608b61f3f7cf6849e713df66"
-    sha256 cellar: :any, x86_64_linux:      "529f92fa0e71615ea2e6ed3eafffc60720b14f6ee0df2c12b5d5476effb6cc79"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "3123739b2d420e763958a2258ef0c03c0453279563f95895390215156be9803a"
   end
 
   depends_on "autoconf" => :build

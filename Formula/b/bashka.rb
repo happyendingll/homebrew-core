@@ -7,11 +7,8 @@ class Bashka < Formula
   head "https://github.com/dmtrKovalenko/bashka.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dd278f5a8eb1e7130b5296c3fb67ec79231a876f17195bd47cb4c11b0c339968"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9ae0f89a513551c081718890aa4bd82699e2a5b7c4241dbafd1f9babb570a392"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8ab403401a80ed23e813aa5b063a545cf1e95f299499dd915e6503161b6c349a"
-    sha256 cellar: :any,                 arm64_linux:       "9490f634f6a728485c2adfe1cde97bfbe2a3c9e03de00b5d6654565d68a4ff94"
-    sha256 cellar: :any,                 x86_64_linux:      "a867c556c9619dd9a22d37aa39c6f902acc6bfd8d711159b99889f01ef6a127b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "364b4a965549f31058f504ad738432fb84f9af97825efb1103bef747378d47d5"
   end
 
   depends_on "rust" => :build

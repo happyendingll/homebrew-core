@@ -11,6 +11,11 @@ class PortableLibxcrypt < PortableFormula
     formula "libxcrypt"
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9e65f412d3f83d123309e4dea686615302d07f726dff3cebbd916e5975b63a37"
+  end
+
   def install
     system "./configure", *portable_configure_args,
                           *std_configure_args,

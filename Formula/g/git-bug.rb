@@ -7,11 +7,8 @@ class GitBug < Formula
   head "https://github.com/git-bug/git-bug.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ee3013a6d25e298a74f0246b2d1d4e256f263a2565a85a4bf9754299968b151b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ecf692341b6d5713dfdc9ecaff6422cd5fa08e7b7181eeebcdbb2eabd95ec4bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c045a269cf20a3b60422fc670770703e6f30583116ef68ae19dd5b7791587234"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6efca2224e87ef7df8b0a323e47f8f8f51704e21866679b8149dce44b141a675"
-    sha256 cellar: :any,                 x86_64_linux:      "21a974cab95bbd8de8a742aa952a570a2930313f58013637b81268e0df1a4b57"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fb3cee39c01a4acfe010118300827c51eb6c0fec28afb9218be9e56fcc493389"
   end
 
   depends_on "go" => :build

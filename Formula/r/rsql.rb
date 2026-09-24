@@ -7,12 +7,8 @@ class Rsql < Formula
   head "https://github.com/theseus-rs/rsql.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cec566f2650f943db78c7baff4df43c60ed5e0c5a6ee859c1df659a958693916"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3c81a0a62ddcb71c9365b17d3954cc004cc394105f5e333edf31722af819fa6b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0e68209a6d3fa6fd007243054a6274f21e9bc285b453675dc19582f5bc5aa32d"
-    sha256 cellar: :any,                 arm64_linux:       "8abc40bf045b6da42d8f082ad6e5aa18e367dc23986b58c0da6302b104608c3f"
-    sha256 cellar: :any,                 x86_64_linux:      "6f5a7463e4872626cbab42ef99e0eb9ffc47f7839ac5088ba5480c1e80745d92"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b8ae654118d6363560c6534724d5d0a9775c7082308caa0f07d7225112a23bfc"
   end
 
   depends_on "pkgconf" => :build

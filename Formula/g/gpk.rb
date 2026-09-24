@@ -7,11 +7,8 @@ class Gpk < Formula
   head "https://github.com/neur0map/glazepkg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b4578d42d4012d021fd5c0457ce05fb351c6c8610b993f6f8d784974b81e504f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b4578d42d4012d021fd5c0457ce05fb351c6c8610b993f6f8d784974b81e504f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b4578d42d4012d021fd5c0457ce05fb351c6c8610b993f6f8d784974b81e504f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "05e849b49a51962e1cacec3ccd56a4355b821c91ccafbaba25ff2b584f0d7deb"
-    sha256 cellar: :any,                 x86_64_linux:      "0d6868c5713fb22c4725a32d962c08d09724a2bdacebdefd553e26ab120a25d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f16f3aaab1a59ede26b25e6e2050bc12a70631ef4f7057bd6c3bdc551ba25786"
   end
 
   depends_on "go" => :build

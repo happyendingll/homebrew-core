@@ -7,12 +7,8 @@ class SequoiaSqv < Formula
   head "https://gitlab.com/sequoia-pgp/sequoia-sqv.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "4901e4a68f1a3041e3289605044783cf056958c4d0ec735f94dd62afb73b99e1"
-    sha256 cellar: :any, arm64_tahoe:       "a0be56817a575d08053d42ff37df1662a28cf3e92317b84b8fe85b7d8da9b370"
-    sha256 cellar: :any, arm64_sequoia:     "77974f2e835e41c29c22fde6cef4f64fe9a4440c96a474ee90b39bfab2a865ca"
-    sha256 cellar: :any, arm64_linux:       "26da1c192176be3d758175dfffc8031a954f3ae43e6641403594cd2c0e516700"
-    sha256 cellar: :any, x86_64_linux:      "cb2267d295815a6f88b3c6641ef20c5d09c7f334e4037541784cdf967a190469"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "67ee0be5a20610029cc529ee828010493604facca6a7a64ab662fd5149a90621"
   end
 
   depends_on "pkgconf" => :build

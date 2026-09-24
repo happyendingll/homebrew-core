@@ -6,10 +6,8 @@ class Nef < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "767306a07631b9377bc9456ce65bd20b0901684982f5a9bba2f7a5f8915ff1f7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c58d00692ad2f49ab2550935f72c807ebbd8f1229bc065638cb49b70a1293ce1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21b1b3a4ecb000a4e2e9fbba2cc7ab2f108d8a5e8c70ad7122e27dc8f4dd2dd3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c7520bd05790edf56d1f058a33e26ddb44fb39ea0464a1a14e86ef44be9eb1bb"
   end
 
   depends_on :macos

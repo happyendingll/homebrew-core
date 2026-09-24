@@ -12,11 +12,8 @@ class Wimlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "08e15f04cd58bedfc69eb9f87fd528c77fd32799f7084e6cd78cdda06c888bd5"
-    sha256 cellar: :any, arm64_tahoe:       "d77899c4baeac118aecdeea00047733d1420f8a1b86d509a5bb8cd6591f041ce"
-    sha256 cellar: :any, arm64_sequoia:     "627b03499f9e0b076c16e25ec65c181ccfbf66aec7c8d065499c87c1e44dfd20"
-    sha256 cellar: :any, arm64_linux:       "5a4289fd843c22c9d926f3059fc05f80fc008564a88eed4078f555cae01b7f8e"
-    sha256 cellar: :any, x86_64_linux:      "ed9f4b418cd2e06796c2b24ba228c0900d38477da52baa44ef69865fc1b8e2c5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "afbf1c211bacbaef7910a128737ae06f27abfd7779d0d0c8b2746bafb846f1b9"
   end
 
   depends_on "pkgconf" => :build

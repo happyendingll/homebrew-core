@@ -7,11 +7,8 @@ class Fastplong < Formula
   head "https://github.com/OpenGene/fastplong.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b19af367fd97514e55d41079b2abc53eed849ebb2b2e1e0022b082966250e5d6"
-    sha256 cellar: :any, arm64_tahoe:       "9902ccee778382b88435ff5c3bc3c75d35af206f233c6e5a1bd0c5704a037628"
-    sha256 cellar: :any, arm64_sequoia:     "f49674cd5ab99ba7c3a1b1a795176e5c7220e7a8f8d85e3a36e3f98616e91e6a"
-    sha256 cellar: :any, arm64_linux:       "5105f4015bbcf3505ab6ddf477dd541f407a59d5e617e9f815f15536114a0c0e"
-    sha256 cellar: :any, x86_64_linux:      "67b9bdc45234dfd2f6f771db730ddb3c93f3c60a43312b8c91c43385c4b6b4a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c86bb877636c1b5ab91807c6a94d69e42611eff0b63c5e046a7df5689d7b2f3b"
   end
 
   depends_on "highway"

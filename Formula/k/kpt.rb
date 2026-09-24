@@ -12,11 +12,8 @@ class Kpt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c547a2ef4a3562dce2490eebfa439b3069d084f82b96878fc2ee8f185fd29782"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e8f91bacc9cacc9916badc9b09c6be6c3a98e7dbf674e774363b9be58fdeba3c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "72cbeae31800fb7c6a954941ecc682595d7c4fca54cb9792a068135fe7cd3f46"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "365d7a725336405307be09e161bb8f7632e3e416d38215d84ba9b7cd219160a3"
-    sha256 cellar: :any,                 x86_64_linux:      "f482d3f746b0eba552df1c80006b0faf5fa55f5b8e68217a6a38d438ab800481"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "30d606b9369ded37bd2e37d3e6db888b756d9da2cf784676c0a8868683eeabce"
   end
 
   depends_on "go" => :build

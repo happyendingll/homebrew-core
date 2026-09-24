@@ -6,11 +6,8 @@ class PayloadDumperGo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0fec05bd01f42f1eea69c5a7a7dcf26c29bfa48eb3d7583ddd61f4b2df8a9609"
-    sha256 cellar: :any, arm64_tahoe:       "a7ac9a4f7d075a9b5f30199c213524c3a9fa7c9731f1b4de61fa105781161916"
-    sha256 cellar: :any, arm64_sequoia:     "807b512a330347c3edfc92ad305106f0698a011aedcdf7332998e6c31dd14f14"
-    sha256 cellar: :any, arm64_linux:       "2fb22a52d86e908876570e4ae71379f8add08dfa9ebaa59cc778ba801d4b39e2"
-    sha256 cellar: :any, x86_64_linux:      "59257b1d11a9096ad059fa0b234f549625f75531a4704f4c7c653d6ba7cc46e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "6d86a247e2da8a7561b8d6f3fbec1b8bddf83578adc52d4a1ead315fd3b44f12"
   end
 
   depends_on "go" => :build

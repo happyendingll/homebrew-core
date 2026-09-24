@@ -6,11 +6,8 @@ class YuqueDl < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "96e29145a0521f0594fcc1948631d198e63e8aa2b1e1e5f735c9718f17ae9f44"
-    sha256 cellar: :any,                 arm64_tahoe:       "96e29145a0521f0594fcc1948631d198e63e8aa2b1e1e5f735c9718f17ae9f44"
-    sha256 cellar: :any,                 arm64_sequoia:     "96e29145a0521f0594fcc1948631d198e63e8aa2b1e1e5f735c9718f17ae9f44"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c80524f77a4485e6097918eb7f572851ac7e592d70d6716a22ad1e9de6995c6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "091534affc8299859977ebff362fc82874809db3f59d181d43484e5e47facd4e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b47b2fb5fc365367454ef86f95c55eb2948452c0afd920122fe9a7939c116415"
   end
 
   depends_on "node"

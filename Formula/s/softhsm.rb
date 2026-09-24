@@ -22,12 +22,8 @@ class Softhsm < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "b9879d4e2e1afab76e20aad0009042903d3064ca7883ec16fd0d420c2176e326"
-    sha256 arm64_tahoe:       "40d5a8ce7b320bb727da8ee48588382e910ba4592c76d55ca2ce99183ce37d64"
-    sha256 arm64_sequoia:     "e9bd882bc09343a718f4a4447d4cf724388a9bf4f6e381761325bb4cd492fdc9"
-    sha256 arm64_linux:       "7c9801b3af5f45956c9a5acf881c1892285ac334337fa08b8a3b8e9d9173a4c6"
-    sha256 x86_64_linux:      "348a91ac03ccb1c57779cad1d145ced926b1dd472c2a5e83ba8c429624ec4743"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "73052034b21cbee455af8ce302524a29c0a3876d9fb08322864089ac0c7ac32c"
   end
 
   depends_on "autoconf" => :build

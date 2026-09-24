@@ -8,11 +8,8 @@ class AnsibleCreator < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d4933c2f33a837b83e2579e53fd01db4a60b752b4b46a9d6c54089dfe26cdd9e"
-    sha256 cellar: :any, arm64_tahoe:       "b7df404feaf71519ecfd71337d66ca308083a53a2626ea7f71b797598362906e"
-    sha256 cellar: :any, arm64_sequoia:     "6e396391a3e5ff60b02b4c1ce58f2686b93cd00418e4040a8720d08a5997ce74"
-    sha256 cellar: :any, arm64_linux:       "3043c1662926dd48f2eb2ab20f6cc652fce972c006d95f764f3bf687201dbdb9"
-    sha256 cellar: :any, x86_64_linux:      "cabc0d85a51bf77226ccf22d6da35999aa630c01d4a50c834f8fdac277daba27"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c23b84191e28fe0988e82275eb1f6a0c0117867a6a94965a404b814ef95c1ff4"
   end
 
   depends_on "libyaml"

@@ -11,11 +11,8 @@ class RubyAT34 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "8cea19f6b222e3221960641b8037fc78de60498cbe6da10ea3f46dcee9a9b7bc"
-    sha256 arm64_tahoe:       "986fe68bf256aef0090be6e5b27c70f5d892b6c88014b47533a6023e07f5995e"
-    sha256 arm64_sequoia:     "c4b8a94c65a52324f8f3097edaabc671b965eed836f09c05a2e23348feda1c04"
-    sha256 arm64_linux:       "125178461b61a7770156efe33d0795b1bf5e22c6d1a9bde47a200bf082108193"
-    sha256 x86_64_linux:      "7749d4d23a8d4988cf082aa101d836d860747ad6bf93b31a48c6797a2a4db1ea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a0214ca87599e756514b5f46cf43725d1447eb80befc8586ee269041e3c7eab8"
   end
 
   keg_only :versioned_formula

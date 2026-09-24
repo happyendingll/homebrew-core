@@ -12,11 +12,8 @@ class Ethereum < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "53c6b84ae67d4016e825311faec1aad55fc8f49882ad9e6fc5ca42aaec29416d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a1272a1403773cfcfe01ac109531dac268c4fe7c74ce12fea8761d65fe8ffd6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "074e5f0071d6ebceb2b54bd9aeeaacf436daef0f749ea701012cee6ea02c5079"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "031587f595a246a871c6886f99e4f390b7211214a2b8e30df8fb1c060eafa36f"
-    sha256 cellar: :any,                 x86_64_linux:      "a57e5f5df64f37d2e3e5bd97915c85f8ca15101c477bcfa938b6ee0f64383ed1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "04ffab3cd0ecf40c0801dfec1c6f6cdba2b8331a67fffa8d4cccc4b6c6ae1d52"
   end
 
   depends_on "go" => :build

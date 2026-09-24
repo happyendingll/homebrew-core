@@ -7,11 +7,8 @@ class CargoMutants < Formula
   head "https://github.com/sourcefrog/cargo-mutants.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "127c2957c81fbaf8e54d4cd5ce8ae8438d76939e929e0258e2c32526ef9c4f12"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "82dd60237c62d705eb5b3ece26d1df32384db2388724d9ca901f5736dff406bc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ab41e4212d8574327a5e869cfed4c57adb297a99e137896865dddb6ddda77201"
-    sha256 cellar: :any,                 arm64_linux:       "68446138ea752a5729095db3c7c7c79821b721f371d7ec4132c89169469bfd7c"
-    sha256 cellar: :any,                 x86_64_linux:      "fe47586f2a7b3deeab19226275dbffe7d52f74236c7f4e5bb8e54330d0e089da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9009776767b25f39a0b0b4818ca8b1ac8b2b733798ea2362aa8add01ffcf9a2b"
   end
 
   depends_on "rust" => :build

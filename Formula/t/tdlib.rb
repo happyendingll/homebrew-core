@@ -7,12 +7,8 @@ class Tdlib < Formula
   head "https://github.com/tdlib/td.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any, arm64_golden_gate: "822250da1da3a72dc4182d90565382875560d1b2d5d5bdc32d9a25960bf3d75f"
-    sha256 cellar: :any, arm64_tahoe:       "2e08058c919f73a66663bd6b09489d99b484094d00b71852cb0236abf6d34ae3"
-    sha256 cellar: :any, arm64_sequoia:     "6c0cf344b1c403250842e3f2d19abcbf2ce58efe21a3e2b034cc48e38d0627ea"
-    sha256 cellar: :any, arm64_linux:       "d9e86f8a0592457c064b7f590b3d95bef3824731a9b4f0a28580071265394a43"
-    sha256 cellar: :any, x86_64_linux:      "1c6f55c2a65966ee3490f244aa7ed3bf4ddf3794ae787253415905e8a52f294f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c12f0ae810a7c9d8a065b9ea7a92de234541a13985669bba22a5e0d9ecd98444"
   end
 
   depends_on "cmake" => :build

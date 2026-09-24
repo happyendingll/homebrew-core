@@ -12,6 +12,11 @@ class PortableZlib < PortableFormula
     formula "zlib"
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "47fb4f6cb98942a10131655e9c901558c96fb37e46dd3d0faea485f018f2de38"
+  end
+
   # https://zlib.net/zlib_how.html
   resource "test_artifact" do
     url "https://raw.githubusercontent.com/madler/zlib/refs/tags/v1.3.2/examples/zpipe.c"

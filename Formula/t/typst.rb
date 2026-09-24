@@ -13,12 +13,8 @@ class Typst < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "534233338dee13f1b93c2e1c08d1e0c6c5fe201f793ba640d938d58666388808"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37bfa441d1641d246e8663d742f940811688b7cd56b50b29a6177928ed949beb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "baa3a28555bff94f9f6f6154b8ef34458733daec86f22ffb1fd9af01fe9956b8"
-    sha256 cellar: :any,                 arm64_linux:       "8e9ac4d200c27bf7d5f96213ddbc0e6ab95710740c598341049df5705d072adb"
-    sha256 cellar: :any,                 x86_64_linux:      "ec392c6b39754c10c733dd48a51c67e2eb58a8dac3e66bc3c5d8e033e288e6e8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a2f7877d103ccc2d2c6a54529197cd799962de7ea5eaff4d118f35cb29c9db5f"
   end
 
   depends_on "pkgconf" => :build

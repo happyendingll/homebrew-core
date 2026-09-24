@@ -8,11 +8,8 @@ class Diffoscope < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4db89aa9a96e233274ce8d35caa4dbda0b558e2d834d450e7c690388e6a5120f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4db89aa9a96e233274ce8d35caa4dbda0b558e2d834d450e7c690388e6a5120f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4db89aa9a96e233274ce8d35caa4dbda0b558e2d834d450e7c690388e6a5120f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dfad5909980f049a6b6c0271b05ee5979e3ea910aeab2ecc66e3752d26cf56a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "dfad5909980f049a6b6c0271b05ee5979e3ea910aeab2ecc66e3752d26cf56a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c555550308f4d69bec945ed16c21263cac08dcddca88be179bf23af1bff367c5"
   end
 
   depends_on "libarchive"

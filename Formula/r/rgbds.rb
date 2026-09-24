@@ -12,11 +12,8 @@ class Rgbds < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a16a3ea9decfdc52a4ca1d90dfb14b311ca61170c3c7af40f9d6d7581b804d70"
-    sha256 cellar: :any, arm64_tahoe:       "8f0dcf9b69f106ad28c2b0b6e8fb047754923d23e54adf5a183dcd9ff739a674"
-    sha256 cellar: :any, arm64_sequoia:     "61c018e5c904c7541904849bd315eb9c69a7efbcb1a9bdaeee868858a4a6e258"
-    sha256 cellar: :any, arm64_linux:       "f4ca356a08d43636716cd63e545af105097c1445f617c6f53045a5ec0ff0d8e7"
-    sha256 cellar: :any, x86_64_linux:      "d94507151784598b70aa56ba406b9c49d41195e77585190c5ccbb9d145906e2c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "efd3c6d0357bfc30aad151c788e88c54eb99b71c68e396a0ff284b4b36fd7db3"
   end
 
   depends_on "bison" => :build

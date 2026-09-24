@@ -23,12 +23,8 @@ class Pjproject < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "0569bd6c0aec33fea3a8f97f7e57e2536041ce987c0a44d6263d4ac91c4eddea"
-    sha256 cellar: :any, arm64_tahoe:       "2d834c5d4559992257c1bff7ee49665c5cb97ec1ed2882f70740e0821863698d"
-    sha256 cellar: :any, arm64_sequoia:     "64e9ca3a5a794470f0396fcbe5d7222e1801870e42d378d28d33329c03c56d74"
-    sha256 cellar: :any, arm64_linux:       "78625608c7dc0e5f407f829e281ce25b9dd7b32cf71d363814552d007d0df235"
-    sha256 cellar: :any, x86_64_linux:      "7d2c1b161eec50c23a1c1538a38c5e00c2b0362c3b524720fbce5fec98476070"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "805db5da216fdd8d7ae7258292b49cf9bd95c0738a57efaeb4a8baa4b272e16c"
   end
 
   depends_on "openssl@4"

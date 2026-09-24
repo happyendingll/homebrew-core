@@ -12,11 +12,8 @@ class Cog < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "60b73981b5f72ed59bb30989ecdbbf7ad0378544c95e08cefa149f7a82bfc0ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1fc476195f334b0255baaaa16b369e667a6873ae283eaf6a526018fa65e24537"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9dfd5783868cda86f351390c9096bc2a9acf55765f7894740fc288a31b156c94"
-    sha256 cellar: :any,                 arm64_linux:       "607c2421c1f09ad6f7c21ca649ef5a28a9ef49ebc3e7642cba3b0ced87812aa7"
-    sha256 cellar: :any,                 x86_64_linux:      "dbb62518f5fb7e18e89ef8127fb2bd859d1b63c5526ca72213d06baa2e95e7f3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8162c8a72ce88d228bec90a8db2df26b602577ae9bc21523d0b8c39e7f6b199b"
   end
 
   depends_on "go" => :build

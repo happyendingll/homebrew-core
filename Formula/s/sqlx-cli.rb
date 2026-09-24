@@ -6,12 +6,8 @@ class SqlxCli < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "17f96346339df8309f2f8d5020a878c3a794da751dc2a040fa71de00f8970e25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1345cd07b26c471448eeaa7845fbe87ec84f94c24441e38179482dd6e554bfb8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf39cd229538f7cf6c608a9d22d0a7cde3e8edef84eb1e12478151d8e1dac9d4"
-    sha256 cellar: :any,                 arm64_linux:       "ffd6a2e3df2697ab46d243288e9fd1a536a5936b0b0f46a3f721de38816f2b8b"
-    sha256 cellar: :any,                 x86_64_linux:      "1961041ef533e6f542d3b94951820947defe630ec25f8a33a67eac1f32eb61dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7eec21e9fd10bd1ce532ae51986d90c6e4f8b9a6ed8bb315bbf2740f814daeff"
   end
 
   depends_on "pkgconf" => :build

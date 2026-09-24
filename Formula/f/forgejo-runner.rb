@@ -13,11 +13,8 @@ class ForgejoRunner < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c8b9bd534ab0b380cd5e34186088964740b63ef9a7d2c450a42eedfe20a54d9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1c8b9bd534ab0b380cd5e34186088964740b63ef9a7d2c450a42eedfe20a54d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1c8b9bd534ab0b380cd5e34186088964740b63ef9a7d2c450a42eedfe20a54d9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2992055ca9c45ffb38dc027b258e3fb401dd77d31d0da72d09d4db6c966e4a08"
-    sha256 cellar: :any,                 x86_64_linux:      "2b980c34f907a83cec7609c412c182c731718dfc66554b2f448a33ba49a60f6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "61e97d30f31adb1720f6ffa1cd5411152f4290a16c86ca3cff614317f9ea9351"
   end
 
   depends_on "go" => :build

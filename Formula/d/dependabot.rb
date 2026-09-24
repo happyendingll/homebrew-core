@@ -7,11 +7,8 @@ class Dependabot < Formula
   head "https://github.com/dependabot/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "407a95a694885b532c311e20808901426d0b92aa4d436dc16625c7ed5db69535"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "407a95a694885b532c311e20808901426d0b92aa4d436dc16625c7ed5db69535"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "407a95a694885b532c311e20808901426d0b92aa4d436dc16625c7ed5db69535"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fd05854392ab12ca4487f7c51ee6b1be6805056669b71b4771ac46b0f8ed83a3"
-    sha256 cellar: :any,                 x86_64_linux:      "06dbc3ca9045d5951a1a235c8c872b45ddbcf141d8e7d81e6228c3206a48c455"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2f31ceffbb5f0ef4bac397820fa8fb29b02168771d518843a9676d6ad59b546b"
   end
 
   depends_on "go" => :build

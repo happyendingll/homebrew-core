@@ -11,12 +11,8 @@ class X3270 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "ea3453124778264fd8410b6a3be158e557daadab66c4197680851fc893623780"
-    sha256 arm64_tahoe:       "449e02fc6cddf44e3790bc046985804b71c3fadb2e4fe0f7afa142eee75b8a1d"
-    sha256 arm64_sequoia:     "e6d75144a80b4730a875a0960609af6961426646f92e21f8278eabf1252014bb"
-    sha256 arm64_linux:       "26e35b6219fb72f3eed9c1c8444a3b84eab7fb2816dbf4f545671ffbf40cbc65"
-    sha256 x86_64_linux:      "c6a8b41cba0c85ae6b5df9430d8515eb9f374e11b93d2a0e3f9519eaa0e0e141"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "589450ab783bce07ee04af2fdc10d90d9a4fdd38d2ca5ee7ed6560f06a7482ce"
   end
 
   depends_on "openssl@4"

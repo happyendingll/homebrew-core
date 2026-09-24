@@ -7,12 +7,8 @@ class Pixiewps < Formula
   head "https://github.com/wiire-a/pixiewps.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "6c8934528d0b0209a5b87a20aecdaa878e84c7334cf708741a6a428022a404e2"
-    sha256 cellar: :any, arm64_tahoe:       "c627bbe17e0e1c9bb1adf3b08d0d60515c16498c3cec960e3b6a3779f8adff58"
-    sha256 cellar: :any, arm64_sequoia:     "088c2611b7bbd032ba14130863220fc271a5c7af9e665488b02d40d18e21a2e2"
-    sha256 cellar: :any, arm64_linux:       "47d6608519f969e4d886b7a33040e7b627210e309f2a8666f1149aca433729c7"
-    sha256 cellar: :any, x86_64_linux:      "184d2a1709ed2e52ada20d98584b8c13af0d8e9e9b4e591c9410287fc94702bc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7724f78b72b90af0a5bed83badd3f4288d2c785c003c74bfc43dbf2a27a82b21"
   end
 
   depends_on "openssl@4"

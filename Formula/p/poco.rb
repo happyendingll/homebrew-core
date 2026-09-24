@@ -14,11 +14,8 @@ class Poco < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4dcfd8016a852af701b225ec12fe5f09058a35a42894c632f1706629eeb7e98a"
-    sha256 cellar: :any, arm64_tahoe:       "44108fc84fd41996338bb43baa0e9a43cc7b6ec37d17fbffcd74bffd45889019"
-    sha256 cellar: :any, arm64_sequoia:     "f2291b64afb1a2552622b7ce340588b71e9d90994c38a8e091f78f0dc0848e91"
-    sha256 cellar: :any, arm64_linux:       "840a622f6fe19e963dd2a670833e70af7ea7ffa6e0f7db2edc48d4c685ab4528"
-    sha256 cellar: :any, x86_64_linux:      "56a0a56930acc6efe217ce37584bde71979c29c240d10ae263cd96ba4c6f28a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "188137534cd829659dd6530dee3e8694f5e75e0f6892f02c080d297c136e7c27"
   end
 
   depends_on "cmake" => :build

@@ -13,12 +13,8 @@ class Jupp < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "a657f7b97ce2a81ca28fa85e4d66f779b9d5c36eeef6a7f21916cadc1ca2fd12"
-    sha256 arm64_tahoe:       "9ce260439f94128f52d4dbe25f3e996487635255d9ce292bed9f51b4eefebb06"
-    sha256 arm64_sequoia:     "4e6f9df5e42351cb3f393b9d33b52a65a7c2eac52ef34cfc95a90e2e03acdc98"
-    sha256 arm64_linux:       "8e1c949763b9ed44586ab9ceba53dc5fc85a8bc48d591fe26e64f073478c0680"
-    sha256 x86_64_linux:      "7360bc99630b6f39cf3d3f11ce570df13786326720aaea1cb0f3709388cfb1c4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "33e0c2167e3f4a0ffb8de1eea4be793c0cb973e429d31caa3c5f889ce4085745"
   end
 
   depends_on "autoconf" => :build

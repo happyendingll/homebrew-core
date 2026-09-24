@@ -7,11 +7,8 @@ class Libmxml < Formula
   head "https://github.com/michaelrsweet/mxml.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b26c5e30103ccf3cde2318342f04005b32746c3172ed11b05dbd0ffcb1138335"
-    sha256 cellar: :any, arm64_tahoe:       "f1a73853f88ad5939b1ee35b19ab0a99a86bb2510d8b2e1be51444c2d0dbd309"
-    sha256 cellar: :any, arm64_sequoia:     "72c5171a3de34db7a162fb5aa0b44c5db9fafa744b967fe77e1b4d706ce48414"
-    sha256 cellar: :any, arm64_linux:       "b6c398dbcd40129bfe717049bc804081286bc0ef2ce8d0984dd61cf9673caab8"
-    sha256 cellar: :any, x86_64_linux:      "f47fc4593704d533469508e90eed317cd2e4fe36b231093e0a95e8cbcfa44dd8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "0c3004b62441d3509e459c143fbb60408af14c5d72ea04d42b599a859e5bb16f"
   end
 
   depends_on "pkgconf" => :test

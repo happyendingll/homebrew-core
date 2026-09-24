@@ -11,11 +11,8 @@ class Pgbouncer < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "32e98d8a2e2b279c09cf25634901bf3fed2cd1dd5ab6ed2dbd1b89aabfbdf6a4"
-    sha256 cellar: :any, arm64_tahoe:       "6e246b133ceca897407df93be55de6b722f27b6a748543a1b878f76c3b7c0a46"
-    sha256 cellar: :any, arm64_sequoia:     "a6b0aa57499c8c6e9126112c0825e44ba61418d44e0d9d44118f81718a9eae15"
-    sha256 cellar: :any, arm64_linux:       "7dc4555712ce383a6a197648e765604efbbe7de0c65e2d00c0f8d42c201f23fc"
-    sha256 cellar: :any, x86_64_linux:      "5fa16c1cbd2d23b28f30bdc2d27cc49f3376cbe76d839600afe096e3ac82fdcd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "48311d8ebd4f2c1b90f76279039e464301fa6299d67bd0f60ec41e5262732ed4"
   end
 
   head do
