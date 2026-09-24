@@ -12,12 +12,8 @@ class Pay < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2dab35085c0ad240ae876d79aba82f80139319435952dce0624ab85109f9742a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2447da39467a8c41f16f3b8729308a47b58cee21d873395461690c358e3bfe4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf33683e10b2a2feeeed5ac807c93355591889b84219025e2c868ab0db0327cd"
-    sha256 cellar: :any,                 arm64_linux:       "447df5d3affbd8ef850ea4c8f52dece3bcc908c1eedd7279dcd20e84aa83f29f"
-    sha256 cellar: :any,                 x86_64_linux:      "2ef750a400ba5d0e7ded0f202649be6892ecc81f1a5c5efa7d12c81730701bd9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c7399584b11e223629d8c8bc2ef053f6906017cb8d48885d565ef53b4f0fbb42"
   end
 
   depends_on "cmake" => :build

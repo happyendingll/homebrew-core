@@ -15,12 +15,8 @@ class Snort < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "dafe7c135cd7c22279f55dbb65e7271f23d58abb57482418790d9b2c9bb11bf0"
-    sha256 cellar: :any, arm64_tahoe:       "7c7c722c4743d25cff27ccbea3a61b8a3ace36d0e75a95f3c64248ad33095c1a"
-    sha256 cellar: :any, arm64_sequoia:     "1337f6bc8f092a84d5655a8bd93aaa8dbcbb3f2d0667c9d093fe600e1a77b7a6"
-    sha256 cellar: :any, arm64_linux:       "59f654ffd81a9cda1d350aa318e80ae4836038f0a6c9b0ec6169983696879140"
-    sha256 cellar: :any, x86_64_linux:      "93bdc4b78bf8709e3877f32d4d6250af5a435f883ed5fe6403b945e32d2b3b42"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "fcf863a1ce54ae9dc5d5a04c791b4809ed92fb1aec800d7af92dc992b7294141"
   end
 
   depends_on "cmake" => :build
