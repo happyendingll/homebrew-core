@@ -15,7 +15,7 @@ class Haproxy < Formula
     sha256 cellar: :any, sequoia: "b46da0e9c44b275a04ad01a6b8aa74386e228fc62a10f110e7336acc621973d8"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   uses_from_macos "libxcrypt"
@@ -23,6 +23,8 @@ class Haproxy < Formula
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  deny_network_access!
 
   def install
     args = %w[

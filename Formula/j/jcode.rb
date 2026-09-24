@@ -20,13 +20,13 @@ class Jcode < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   deny_network_access! :build
 
   def fetch
-    system "cargo", "fetch", "--locked"
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

@@ -1,14 +1,17 @@
 class Oauth2c < Formula
   desc "User-friendly CLI for OAuth2"
   homepage "https://github.com/SecureAuthCorp/oauth2c"
-  url "https://github.com/SecureAuthCorp/oauth2c/archive/refs/tags/v1.21.0.tar.gz"
-  sha256 "f03ec7b08fa9612f8196d236658f6aaa3245ddd1cab6aa94a086fe5d938a0bfc"
+  url "https://github.com/SecureAuthCorp/oauth2c/archive/refs/tags/v1.21.1.tar.gz"
+  sha256 "8f033f91e14bddc3ff3ae2c7cdf804f4e794d94dfa0e9ef4751d9b9d9cd212c4"
   license "Apache-2.0"
   head "https://github.com/SecureAuthCorp/oauth2c.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "398d47880790b213bb5d0a8823e44fd5f72eba4475697b5be82437b53cfe4074"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d75d44a4993f6232df595f26415b5391523d2bf5f81c0f8ec355a8ec731b0be2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d75d44a4993f6232df595f26415b5391523d2bf5f81c0f8ec355a8ec731b0be2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d75d44a4993f6232df595f26415b5391523d2bf5f81c0f8ec355a8ec731b0be2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9c99ff220b799c8fe151c963564b8a657f1d5081d52c2a6e9ca0380e13784999"
+    sha256 cellar: :any,                 x86_64_linux:      "490575b781e17bb1df816f758a177f6d2f9cccf7019524b2dadd0c1e9910f181"
   end
 
   depends_on "go" => :build

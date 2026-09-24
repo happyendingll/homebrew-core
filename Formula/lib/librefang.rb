@@ -7,19 +7,26 @@ class Librefang < Formula
   head "https://github.com/librefang/librefang.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2a33883fa1f47eadc8319508114e607cabcaff3cc66fea981b7579eec9d24a15"
-    sha256 cellar: :any, arm64_tahoe:       "eb97fcb6e58421eb783513f5ae0e6d91be38da51865330f7996767de1bbb2940"
-    sha256 cellar: :any, arm64_sequoia:     "bcb37174cf8a0310412ef7a0c5817db3574ac6c9336be53d059183698a9005ea"
-    sha256 cellar: :any, arm64_linux:       "d06251baca4a474b2c58dc6e574454894e824054e60c551c97fcfc679459fef2"
-    sha256 cellar: :any, x86_64_linux:      "d5aa7ee21b8e78b8056372c8c7d41683e13fa02553fa277d1d2541278eb801f3"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "53b2028f50eaa0e01c56499d7eea420feddd1d41e864acb8fec0ebd24c9d1847"
+    sha256 cellar: :any, arm64_tahoe:       "86d706e7ce8834d5193b502d84d2559200e0759547b13fd466ce4d835ecb0897"
+    sha256 cellar: :any, arm64_sequoia:     "f9f93221388e935911c4458a8336fe6c764133122845c46339c519e1080256ce"
+    sha256 cellar: :any, arm64_linux:       "7e6def2219402dbed158f85601191db1f106f03d7704f775bca884608dcb75af"
+    sha256 cellar: :any, x86_64_linux:      "fce7bdf6a4e0c08900dc853ee3d755f81c2c81894ba8561001213ba62c40cfe6"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "dbus"
+  end
+
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

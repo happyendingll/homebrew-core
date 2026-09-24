@@ -24,20 +24,16 @@ class Libp11 < Formula
 
   depends_on "pkgconf" => :build
   depends_on "libtool"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
+
+  deny_network_access!
 
   def install
-    openssl = deps.find { |d| d.name.match?(/^openssl/) }
-                  .to_formula
-    enginesdir = Utils.safe_popen_read("pkgconf", "--variable=enginesdir", "libcrypto").chomp
-    enginesdir.sub!(openssl.prefix.realpath, prefix)
-
-    modulesdir = Utils.safe_popen_read("pkgconf", "--variable=modulesdir", "libcrypto").chomp
-    modulesdir.sub!(openssl.prefix.realpath, prefix)
+    pkgconf_options = ["--define-variable=prefix=#{prefix}", "--variable=modulesdir"]
+    modulesdir = Utils.safe_popen_read("pkgconf", *pkgconf_options, "libcrypto").chomp
 
     system "./bootstrap" if build.head?
     system "./configure", "--disable-silent-rules",
-                          "--with-enginesdir=#{enginesdir}",
                           "--with-modulesdir=#{modulesdir}",
                           *std_configure_args
     system "make", "install"
@@ -45,8 +41,9 @@ class Libp11 < Formula
   end
 
   test do
-    system ENV.cc, pkgshare/"auth.c", "-I#{formula_opt_include("openssl@3")}",
-                   "-L#{lib}", "-L#{formula_opt_lib("openssl@3")}",
+    openssl = "openssl@4"
+    system ENV.cc, pkgshare/"auth.c", "-I#{formula_opt_include(openssl)}",
+                   "-L#{lib}", "-L#{formula_opt_lib(openssl)}",
                    "-lp11", "-lcrypto", "-o", "test"
   end
 end

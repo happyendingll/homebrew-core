@@ -1,8 +1,8 @@
 class Simdutf < Formula
   desc "Unicode conversion routines, fast"
   homepage "https://simdutf.github.io/simdutf/"
-  url "https://github.com/simdutf/simdutf/archive/refs/tags/v9.2.0.tar.gz"
-  sha256 "b4b4f397065bb8f2ba2386feb40e58e27654c71c6f7521d9cbd32a16142bd040"
+  url "https://github.com/simdutf/simdutf/archive/refs/tags/v9.2.1.tar.gz"
+  sha256 "582f9d0dcf578f6d4766fa29ea12a7f2f02bd3c6ad9e0cf35a8e0ec8478eba4b"
   license any_of: ["Apache-2.0", "MIT"]
   compatibility_version 5
   head "https://github.com/simdutf/simdutf.git", branch: "master"
@@ -13,8 +13,11 @@ class Simdutf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "6ec4e7dfdf4adf835b2b55da8d376606539cad475ea9fe083f71d0014286ffe6"
+    sha256 cellar: :any, arm64_golden_gate: "e5c1ae108e4d53384b38ad0a865bb58140b7c2c8e8528e9d8a7bd7810c03d83f"
+    sha256 cellar: :any, arm64_tahoe:       "c0992a6098ad9b85df9db148ef58ecd82d712adabbb39016fe6b8a7c9bc1459f"
+    sha256 cellar: :any, arm64_sequoia:     "47c8bfe62737cdda001f35e79375248269eacb81b259977aa9c75eaae0be623b"
+    sha256 cellar: :any, arm64_linux:       "ac704b64b9877e89baa13c19c9b1c4997a68ea5b6f3abe1392ee63baed7fa564"
+    sha256 cellar: :any, x86_64_linux:      "4dada8ea727a9f78c007cdcea0b29d33c4f2639804f9dc611f6271d70a0e9346"
   end
 
   depends_on "aklomp-base64" => :build

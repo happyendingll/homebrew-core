@@ -19,7 +19,7 @@ class Nginx < Formula
     sha256 sequoia: "52eabc1a1633089ed4c2f6241c76e578eba442da31f9d802eb289abb0c8ed473"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   uses_from_macos "xz" => :build
@@ -46,8 +46,8 @@ class Nginx < Formula
       s.gsub! "    #}\n\n}", "    #}\n    include servers/*;\n}"
     end
 
-    cc_opt = "-I#{formula_opt_include("pcre2")} -I#{formula_opt_include("openssl@3")}"
-    ld_opt = "-L#{formula_opt_lib("pcre2")} -L#{formula_opt_lib("openssl@3")}"
+    cc_opt = "-I#{formula_opt_include("pcre2")} -I#{formula_opt_include("openssl@4")}"
+    ld_opt = "-L#{formula_opt_lib("pcre2")} -L#{formula_opt_lib("openssl@4")}"
 
     args = %W[
       --prefix=#{prefix}

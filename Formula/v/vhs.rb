@@ -1,14 +1,17 @@
 class Vhs < Formula
   desc "Your CLI home video recorder"
   homepage "https://github.com/charmbracelet/vhs"
-  url "https://github.com/charmbracelet/vhs/archive/refs/tags/v0.12.0.tar.gz"
-  sha256 "2e4a3b940f66ffbe1f66ded3b6253c9f3185a69567596e80d08c50cee77eaedf"
+  url "https://github.com/charmbracelet/vhs/archive/refs/tags/v0.12.1.tar.gz"
+  sha256 "ba9fbcb40133d1734c580ccb6b0fcae9673bf51d227f00877ac581c56ad15b77"
   license "MIT"
   head "https://github.com/charmbracelet/vhs.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "9010a7c88720d8a0798366e768e4e5be6cfa71d385f4239a7c05e7d1ce16c907"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "95ae3e96bc433efaf012880b89edb1e511719bbd497adea94280c0c7587fad1e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95ae3e96bc433efaf012880b89edb1e511719bbd497adea94280c0c7587fad1e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "95ae3e96bc433efaf012880b89edb1e511719bbd497adea94280c0c7587fad1e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b9319ad58ab9aadf0ac70f0411ce054059411408faca66a9b8b04c6f113c2024"
+    sha256 cellar: :any,                 x86_64_linux:      "c3af24c6574021d6e94b29d434045f6ac24789b11b6788e956968fd0746c5719"
   end
 
   depends_on "go" => :build

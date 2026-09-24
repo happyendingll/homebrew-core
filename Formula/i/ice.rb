@@ -26,13 +26,17 @@ class Ice < Formula
   uses_from_macos "libxcrypt"
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
+
+  allow_network_access! :test
 
   def install
     if DevelopmentTools.clang_build_version < 1700
       inreplace "config/Make.rules.Darwin", "-Wl,-max_default_common_align,0x4000", ""
     end
+    # Work around some const correctness when using OpenSSL 4
+    ENV.append_to_cflags "-fpermissive" if OS.linux?
 
     args = [
       "prefix=#{prefix}",
@@ -81,8 +85,8 @@ class Ice < Formula
     CPP
 
     system bin/"slice2cpp", "Hello.ice"
-    system ENV.cxx, "-std=c++20", "-c", "-I#{include}", "Hello.cpp"
-    system ENV.cxx, "-std=c++20", "-c", "-I#{include}", "Test.cpp"
+    system ENV.cxx, "-std=c++20", "-c", "-I#{include}", "-I#{formula_opt_include("openssl@4")}", "Hello.cpp"
+    system ENV.cxx, "-std=c++20", "-c", "-I#{include}", "-I#{formula_opt_include("openssl@4")}", "Test.cpp"
     system ENV.cxx, "-L#{lib}", "-o", "test", "Test.o", "Hello.o", "-lIce", "-lpthread"
     system "./test"
   end

@@ -1,8 +1,8 @@
 class RancherCli < Formula
   desc "Unified tool to manage your Rancher server"
   homepage "https://github.com/rancher/cli"
-  url "https://github.com/rancher/cli/archive/refs/tags/v2.15.1.tar.gz"
-  sha256 "99a9a459c2e366944d0fbc238b63077582b807b1cc5cb568653dacf13236b934"
+  url "https://github.com/rancher/cli/archive/refs/tags/v2.15.2.tar.gz"
+  sha256 "77ed5b7cc5ba86962c241ec6e96efc48871c115ee04ec180e43f3b8a44c59973"
   license "Apache-2.0"
   head "https://github.com/rancher/cli.git", branch: "main"
 
@@ -15,8 +15,11 @@ class RancherCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "756603e9a872e6b87db2f58c22e88e7ef5e6be8620fdae387e227c9dea00c902"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b29df7e04bf46316454d218d9ece889c36b09733b4dc2bc37c1e290c9554f0e8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "138c7f24cc72b22ce61c56eb4ce9fa045470901fa69b6201af3d008100d94a44"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e174cd4ca9c501fe76536b8ede6961a0d806beb96d0f9b3ed6901eca6e3e7c4f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f100d552c276679fa1da2122d2b4acc7e190e8ca798a5dd271ead646ac1c715d"
+    sha256 cellar: :any,                 x86_64_linux:      "fad776487e4d435a3ecd5d5a97bf3a5e7680188ce5c9e77ba3d78a0d420c2eca"
   end
 
   depends_on "go" => :build

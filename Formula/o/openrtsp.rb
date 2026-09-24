@@ -18,7 +18,9 @@ class Openrtsp < Formula
     sha256 cellar: :any, sequoia: "0f99a401360e85685a2be626ff30e377c1ed7a1330a339c3aab590aa4deeea35"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
+
+  deny_network_access!
 
   def install
     # "test" was added to std::atomic_flag in C++20
@@ -27,8 +29,8 @@ class Openrtsp < Formula
 
     # Avoid linkage to system OpenSSL
     libs = [
-      formula_opt_lib("openssl@3")/shared_library("libcrypto"),
-      formula_opt_lib("openssl@3")/shared_library("libssl"),
+      formula_opt_lib("openssl@4")/shared_library("libcrypto"),
+      formula_opt_lib("openssl@4")/shared_library("libssl"),
     ]
 
     os_flag = OS.mac? ? "macosx-bigsur" : "linux"

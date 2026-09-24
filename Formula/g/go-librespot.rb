@@ -1,14 +1,17 @@
 class GoLibrespot < Formula
   desc "Spotify client"
   homepage "https://github.com/devgianlu/go-librespot"
-  url "https://github.com/devgianlu/go-librespot/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "0d60022635f9658a454e4917e47c5bdf1689a6be6fd87ad067fde67233f8bfe4"
+  url "https://github.com/devgianlu/go-librespot/archive/refs/tags/v0.10.1.tar.gz"
+  sha256 "35fa02b98cb863712af04c8c22f995f470bf23002525fa54fe6f4937decce5d7"
   license "GPL-3.0-only"
   head "https://github.com/devgianlu/go-librespot.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "e9bced45125a55eab6b9e187e0c325dd0f00427a3e67f184be576690d7a92e79"
+    sha256 cellar: :any, arm64_golden_gate: "5cb5a2afbc9d8bee8faee98fc1c51c00bc5352dd1111c9ac8c845dcb690693aa"
+    sha256 cellar: :any, arm64_tahoe:       "abc789a4debccc384fb5f99a42955342aded849e28ac4b84d19f2c6192423d0e"
+    sha256 cellar: :any, arm64_sequoia:     "7f7b3529716c8e0e7025d5bfa84f11e904ced10f92da5a59e5ba31d930af99fd"
+    sha256 cellar: :any, arm64_linux:       "c736d890e339aea34ca0bbb2281cfa8e274ea4c0bc8ca4faa715e64723676cdd"
+    sha256 cellar: :any, x86_64_linux:      "705e371c170d4ed2acf7b01c49e4552a70a7087a32f3f8b4fe7e377094366faf"
   end
 
   depends_on "go" => :build

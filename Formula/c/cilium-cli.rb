@@ -1,8 +1,8 @@
 class CiliumCli < Formula
   desc "CLI to install, manage & troubleshoot Kubernetes clusters running Cilium"
   homepage "https://cilium.io"
-  url "https://github.com/cilium/cilium-cli/archive/refs/tags/v0.20.0.tar.gz"
-  sha256 "afdc484e06858349b69c3deac2f25326fee06cada31749195b22461b85d35c7e"
+  url "https://github.com/cilium/cilium-cli/archive/refs/tags/v0.20.1.tar.gz"
+  sha256 "3c9c6a261baa52ee3365c41e6501eef956d046133360685ab2b5fc00bad7b683"
   license "Apache-2.0"
   head "https://github.com/cilium/cilium-cli.git", branch: "main"
 
@@ -15,8 +15,11 @@ class CiliumCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "294e3b1185dc8c148d256c846ed7a7ff23b95bde0b4668c61ac3e3f95466cf68"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "88d87b3d14834c7e0158103b09d32e0ebfb56e2a998d659beaab1ca346e7eada"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60349dbb2732308c6db983d991832069525a24e0f2ff7d95d1b3ffd4a13297d9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "108c6a68604384d11e0928c4bf4bbc1af1d14d5f4e7655b9e823f43e86384ae7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "064b1624502b19264562fa08f6ac54d4e002fbb7ce3a5704b63574261108f660"
+    sha256 cellar: :any,                 x86_64_linux:      "301b52c9d558c52e6a7fbf1b2e8d36cec4ea1bf7f138d875e4234332bac938e4"
   end
 
   depends_on "go" => :build
