@@ -12,12 +12,8 @@ class Ngircd < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "2dad8f0e52214c496bbce97abd6cd1b7b64232b35089ff3278dd1b575ce4e732"
-    sha256 arm64_tahoe:       "87bc6a006ee2a63d03860f388378b53405cd2bddcfaa702e960f7d7af502eb1e"
-    sha256 arm64_sequoia:     "e8f213f92636952b0a7616a3022c32ec026af92c16c210b85b4131f5b722e158"
-    sha256 arm64_linux:       "e5b1f3ac2780bfd8c7a553cd92c79c5abe730e01577a50c97fdc3c3230d143cc"
-    sha256 x86_64_linux:      "d33cbb6f13b29f35c32fc26b9dafbfa9cc35b45d9c1f18c59e6f2f3c606a1365"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "e65c27bc33b0d0982694d4eb45bee8c9ed0dc164a6234787931f82683e7e5210"
   end
 
   depends_on "libident"

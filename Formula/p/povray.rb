@@ -31,11 +31,8 @@ class Povray < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "4c13b09ae94c57eea35c4701e14cfa20a13b32ef7166bf6802baeca3488ef3d7"
-    sha256 arm64_tahoe:       "102f3c00d65ef6e00504bf3908a5e3b97b27115d81603604cca63cacffd5c378"
-    sha256 arm64_sequoia:     "09518f6266b1e616c411f4bdee1955a5b9847a09a51ae11f8d0f41a1222030ff"
-    sha256 arm64_linux:       "94529c9518243bdf75b7e05ec67c69f0c0ddf4a0379b3b3d1a53ff8954514156"
-    sha256 x86_64_linux:      "211aac4d0069aa8e509a4cb8908dd07cf6b33a284369aba6d017c47f25561ea8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "047719853a0401b4a0f73d0fd1f50ee6d576bb27302d52cc1faf0b2916a21ae5"
   end
 
   head do

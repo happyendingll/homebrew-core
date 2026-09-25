@@ -6,12 +6,8 @@ class Jimtcl < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "7c2cd2211b5be4e1ffd311699cdf205f156395a77a9471ce21e8c708b4594c44"
-    sha256 arm64_tahoe:       "6b3b9d1158ff0ac9bcbaa038cfbcb524105e9bd54167bba6bfc61cc9f45fc38d"
-    sha256 arm64_sequoia:     "710f84b7e976b2b6651ba7e02ca96121580bdc42335bbeea985388f66432743a"
-    sha256 arm64_linux:       "ba4dd4cf5da248cd9ed1b1a11f930315367a631ef74234bc95796713fccc8895"
-    sha256 x86_64_linux:      "745dce246a206776f5ef8947e22809732e60036c30a6b689e4f47bf0ffae9684"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a80196991c495b6a52980f16cd4965a5f1f0fb20a3b726f470f2289ba3492516"
   end
 
   depends_on "pkgconf" => :build

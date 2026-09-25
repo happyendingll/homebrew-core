@@ -7,12 +7,8 @@ class Oha < Formula
   head "https://github.com/hatoo/oha.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8315770d6eceb8b72eacf6e9886351146f60dcf22aedbaffd1cd07c0cb01e645"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "597f6b2ab99b4f3babc59012162b446ee2359874774e8829749af4151e4af230"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8259062a1f7c81bc75596a758d19d23de81090fe2f2cce87311dd7aba0158167"
-    sha256 cellar: :any,                 arm64_linux:       "c89b24dcbe00a46df02cea31b6dd885d9bc5b9eca825681052652e88df263665"
-    sha256 cellar: :any,                 x86_64_linux:      "4de4913aabb8a9a54e7867c22ecbde08ffe92e6a921fd0ee5bb1f0cf413f610c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "54b5e075a2517917e378e4f1bf96760f5b272955aaeb468232b8c941cd6cb12f"
   end
 
   depends_on "cmake" => :build # for aws-lc-sys

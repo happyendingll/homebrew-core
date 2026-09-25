@@ -6,11 +6,8 @@ class Rpl < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ed0e5aa3201678b41e1bb3b1df21af6c1f455f7e0f0f568fa99434b9d278a486"
-    sha256 cellar: :any, arm64_tahoe:       "5f7ad6e07f85b121c668ca396528095e7c7863598c9023f20dda1ca3810374b1"
-    sha256 cellar: :any, arm64_sequoia:     "d9e58f3b1811c814774aa5d9a74a7a25fdeb9529bf83efaf934b9b156e1d49df"
-    sha256 cellar: :any, arm64_linux:       "0f0bad3a569ee5c8b98c0c00224ae2d922a02871486c27937bb9b3ec6eb4686f"
-    sha256 cellar: :any, x86_64_linux:      "f5ca2ae431d0ea21c46e5faa91bcf49dcf649f8dbfa97a0b05194591ebc4c716"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a97540be29c817db0db45c62fed0f1ff1983dec9c82ed887f615a09811b7ed90"
   end
 
   depends_on "help2man" => :build

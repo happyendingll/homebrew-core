@@ -11,12 +11,8 @@ class Liboqs < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "49219c29dabe554d5a94683c09188a52f0a809875bdd88e70342abbc10690d7f"
-    sha256 cellar: :any, arm64_tahoe:       "d1bafc1d1aa7d09b2b4c5efb2d4713327fc3100cfd9bf149851ac7d3fe567546"
-    sha256 cellar: :any, arm64_sequoia:     "eabb4df936ed371458d18485e9b59bcd315ad59e06d38b90a0a859e522cb9491"
-    sha256 cellar: :any, arm64_linux:       "6e381ca66850b6eec6638f7f9c2b55ed3786b00a8164eecc3940e01ca1ec5dfa"
-    sha256 cellar: :any, x86_64_linux:      "85a55828104442d9fb8f162d3d94f2e1e04e7c723b640abcd2d18f58a3bb68ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "b71c83c4a735a15670d0f6e67a5944b3d7046f8209d85543432380b99b5d5b89"
   end
 
   depends_on "cmake" => :build

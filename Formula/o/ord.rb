@@ -7,12 +7,8 @@ class Ord < Formula
   head "https://github.com/ordinals/ord.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e131d41ee5c39e38b38ddb3e47e41e18c4d4331b00c95131d3ec124fec26116e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06ef5bbb1a9e32de8ea9a69df1181c5f42de45a615b25aa0f91b2d26b171a77b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "802e7b37429b98baf8327fb748f418c907af3b3f02ff64260ec52f14a0c89a5c"
-    sha256 cellar: :any,                 arm64_linux:       "d9e6014f270bbf31307dc31f641ddbf180ee0aecea805a33b434b6f4f5830421"
-    sha256 cellar: :any,                 x86_64_linux:      "5b748409062f1dd8e70f70d252fc3ed14e1ce4799d69284aeeb9f3d4e44bf091"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "876172d8d33927c201deac89d16bc4d257d91d1cabc596216ea8077145ad75b8"
   end
 
   depends_on "pkgconf" => :build

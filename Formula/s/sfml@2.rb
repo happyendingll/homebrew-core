@@ -7,11 +7,8 @@ class SfmlAT2 < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "56dc46402b2a136a2f61f7c417996add5805f05294914a38cc36ccf9685e7a2d"
-    sha256 cellar: :any, arm64_tahoe:       "ce4ae98701f057009e94b093b2b5cf4c3958397d59daf0624a8b1b29fedb20bd"
-    sha256 cellar: :any, arm64_sequoia:     "9c63b784731a08cc47a12980b7f4214e3f60f0ff4d979e04e6941b97cfe70e5d"
-    sha256 cellar: :any, arm64_linux:       "a8b7547e627c71683677ab9d7b33bf6139b1d45fe2a36df0030798b47b0e82c3"
-    sha256 cellar: :any, x86_64_linux:      "18d53d74a00320c8982b4dae5d95e4412b9e236540af1c727bbd9dfc71663614"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "9fb446c63b12a765107bd703791d492b752d235831f6b94f4a0c789a5b0aaa0c"
   end
 
   keg_only :versioned_formula

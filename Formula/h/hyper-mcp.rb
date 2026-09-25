@@ -12,12 +12,8 @@ class HyperMcp < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09b7ad4ff52e8e7f54e81c467976c2d926db93ea5f37fb77551a6e10f2322114"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ab6b007bdb1b691d9edf3312cb828b2325014583ecb1560a374bf6f5ebfd43a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "980278ec3c0f8be2510d30449a1998e68585291416ec0c763454751ccf350ff4"
-    sha256 cellar: :any,                 arm64_linux:       "955da75a07472ad82dccf4892e33766bc038531b227656f6c9f6097a320a34ae"
-    sha256 cellar: :any,                 x86_64_linux:      "4bf54ad5f40180f7ff9d3ceb3793d7f80b015b5b66840e608e6b9d292e1e785b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0240382ce78b069350e74f244c0ef7d99963dea651e230f08ce7b44748dff47e"
   end
 
   depends_on "rust" => :build

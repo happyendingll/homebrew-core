@@ -11,11 +11,8 @@ class Wget2 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "14a0909904fba9bed173f92386d697b3003bdeab444c99061466421c762d26aa"
-    sha256 arm64_tahoe:       "acc0faa3223d9a63bacdacf90a53d13dd78210dd7bf9def25848512f119e22ac"
-    sha256 arm64_sequoia:     "687e2efd6d0e1fe9b304ddcf61c679c51c57d142f03afb248f016a69c4626822"
-    sha256 arm64_linux:       "06edc949274df47d8a66cd176c1a1200ee2471088035ed80957ebfab509700cd"
-    sha256 x86_64_linux:      "0cd41a7cd8f612689d11ca23e21e3feb9554ba86e2b9b4a216d44ebc1904744c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a079d10c7f81599a2ba9509f7c0023603d5d714b219b9ea0d40c9e8cdf317448"
   end
 
   depends_on "autoconf" => :build

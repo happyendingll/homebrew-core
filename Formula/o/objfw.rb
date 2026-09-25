@@ -12,12 +12,8 @@ class Objfw < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "582e436d5ca560d556602a93cdf250a14aeff4b367c2619c4dee381ee2d6bbbb"
-    sha256 arm64_tahoe:       "10b176023682f5111607d0e3c9f7bb0fbf6d7b662835ba0747abd53e4c1afda0"
-    sha256 arm64_sequoia:     "06bed702a19c019baead09d2b29b9a7049d00cb6907239c3f2ba3d158b1d63b2"
-    sha256 arm64_linux:       "73803cebaac8ffee2c5d65206dba8a1cae5c450f62e48dcf73ab2d240c787ba7"
-    sha256 x86_64_linux:      "52d1fd8eace8f3ea3b0654ad97084ab04e3774885160509a92718ded789752fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "ba5e849bcef3eadf0c68472a2ada388f6e4782436f9334dc991dd9becad52cb0"
   end
 
   depends_on "autoconf" => :build

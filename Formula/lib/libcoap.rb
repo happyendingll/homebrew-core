@@ -7,12 +7,8 @@ class Libcoap < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "148d4541164a5107839ff43cd9f237d4fd7027452312e5be39f75d83ff72b8e5"
-    sha256 cellar: :any, arm64_tahoe:       "217cd4af1702fdf3e004afc72bd303800c82420002a9c257e32e5a43af33cc0b"
-    sha256 cellar: :any, arm64_sequoia:     "0faff1587a9d48cf0d6864c859acd24f7bd2b070957ed5122c7fd248a5adedba"
-    sha256 cellar: :any, arm64_linux:       "8e532ce37b03f0c8c4b04e46434d1d541202971f29ba12371ae9b72e12371d9f"
-    sha256 cellar: :any, x86_64_linux:      "fd2820c7f5e8ab17f7f22631c1c7a947f5d7f616bf8b6f39bc8218a804e665cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "9784faa5ea31d7b6df0c0311962b6689756222f4913cf2a4680ab881ae6e132c"
   end
 
   depends_on "autoconf" => :build

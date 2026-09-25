@@ -8,11 +8,8 @@ class Ctl < Formula
   head "https://github.com/aces-aswf/CTL.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "400c29e424a05b0898c56e6455d67b71cdbc53c969354f980018fc1e95cb9c0f"
-    sha256 cellar: :any, arm64_tahoe:       "3035799ef4261b9bb5ea6aa0d849eac318792c4e07cda89d260b97e0e75219da"
-    sha256 cellar: :any, arm64_sequoia:     "51a985402e336b1a42885d2b9a1f0b9439e13be1868d3136472e79e7e1b45d8c"
-    sha256 cellar: :any, arm64_linux:       "18d9a39c698a67b53092e9d65bb8ac1ec1c9956bff29c583e2d2f1f94063eca4"
-    sha256 cellar: :any, x86_64_linux:      "47325aad92767d26fc02154cb3815616a0474e6408db1d0ddf86a798b550a064"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "6fd76504f0d5779b8ee9b1a76784e81fde94e792f0efd6fabf928370abb4b7f1"
   end
 
   depends_on "cmake" => :build

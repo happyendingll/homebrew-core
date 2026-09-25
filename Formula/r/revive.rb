@@ -8,11 +8,8 @@ class Revive < Formula
   head "https://github.com/mgechev/revive.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f927b18c520d3247e16842bba365f7ecdb271d7cfffc69bcf7d63a0e01f31f9f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f927b18c520d3247e16842bba365f7ecdb271d7cfffc69bcf7d63a0e01f31f9f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f927b18c520d3247e16842bba365f7ecdb271d7cfffc69bcf7d63a0e01f31f9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "67c2dd209795d6bf0242379a8795c8707f032da1c16cb3c62569f3670f8d1aec"
-    sha256 cellar: :any,                 x86_64_linux:      "693e4c263e408c73ff800d48c8c2db7e3dc7c1ecf07a3d29341ef314c4b6a691"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "96a457c2d1353d8dc3d1bdd6215fffc169bd4d755ac28020da339a6d592576eb"
   end
 
   depends_on "go" => [:build, :test]

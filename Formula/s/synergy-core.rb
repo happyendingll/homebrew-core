@@ -17,11 +17,8 @@ class SynergyCore < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4cda7e29e117c1f87d5f4356c494d4290ac908f4b69c0469c7b8042a6f3e6af7"
-    sha256 cellar: :any, arm64_tahoe:       "00b43438d4da5f6711074f3c3a769b1ccd44c8f07375319b71033d810d3e39c2"
-    sha256 cellar: :any, arm64_sequoia:     "19dfde03d384f3d8ac947d97e03b5806a5cd2d5345f09e8ee19ba33995bed270"
-    sha256 cellar: :any, arm64_linux:       "bc6243721e490e0f8eddd7d51f2a4f1422d8089e49f3a24fcb299ef403cc4033"
-    sha256 cellar: :any, x86_64_linux:      "c5f0d6c144e21f1e70f265ac98984dd2fd4e8a5f060958541ff18dc39eb52340"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "ddd76765c1a6705f1d248a64fa0acfbdc6d68343e9d7c33a18686e10b70cbcda"
   end
 
   depends_on "cmake" => :build

@@ -12,12 +12,8 @@ class Libexosip < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "2d36e210652e3d69b74813ca3df06b03b4cd4a31734fd1026e066d9bba213ea4"
-    sha256 cellar: :any, arm64_tahoe:       "fd656403b8e8d5437cb745a7bdd4361a91e7d2189f047feb8fc666e2986ea6d8"
-    sha256 cellar: :any, arm64_sequoia:     "5ef1ade494065b22d7fad22c10f08cba832b76773fca7de7bae22661f13af8df"
-    sha256 cellar: :any, arm64_linux:       "652d6f38ba6fb236578ddc94d3d8188d682a791b1a5c89719f72140b80d5c830"
-    sha256 cellar: :any, x86_64_linux:      "045476fc48b507eaa2ac61574dd617897df6a8682057b82ceaabd1b65cf20457"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "13f13d76b0935c1488f06d13a99c28e4ca1e5ef4f46e8328463213503013dbba"
   end
 
   depends_on "pkgconf" => :build

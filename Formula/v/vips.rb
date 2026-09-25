@@ -13,11 +13,8 @@ class Vips < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9146bcb8fa3f333bcb7c38af211baaf16592aad875bb9c05a0144043a511c8e7"
-    sha256 arm64_tahoe:       "dd4c297a4db73e20f1ce6046d30ccf1352d3838f4777fae0d8730166c7ca695d"
-    sha256 arm64_sequoia:     "c062239b24054ab69ddb9e5bc6f1b44d8dfaa3aa1e01522c30eb620e6a6b4132"
-    sha256 arm64_linux:       "c32da60f53714085172ee38424a7384a979018cd0f5d4085e447089c511787ae"
-    sha256 x86_64_linux:      "97cd01cd90af25a51e088af924e08475449d2f88e359cbf67b7ef0112c1fcf0b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "47ffaeb0bcc49c8880c28ed06bf82f4e12378ed19349edf644d5c948ce7102ff"
   end
 
   depends_on "gettext" => :build

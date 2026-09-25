@@ -7,11 +7,8 @@ class Seqkit < Formula
   head "https://github.com/shenwei356/seqkit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "761d0952bff55f68df26a8137bf23e713d55a6068c7d3c241a5cf618b445dd0b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "761d0952bff55f68df26a8137bf23e713d55a6068c7d3c241a5cf618b445dd0b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "761d0952bff55f68df26a8137bf23e713d55a6068c7d3c241a5cf618b445dd0b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cc07ee5d9c53a1ae5ec93ced9d47e32f02321261a01e5b0fa82230e7687af32e"
-    sha256 cellar: :any,                 x86_64_linux:      "db1685f908a4639df6da238e9b5718ad408291e1d3c3469e5e0ce285bacef63a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4827b87e1b50635dfc9af59a15cbb86f2eb59098b05f75f35b96ecf759f9b24a"
   end
 
   depends_on "go" => :build

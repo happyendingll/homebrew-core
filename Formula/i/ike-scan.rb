@@ -18,12 +18,8 @@ class IkeScan < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "5fdc157bfdc1bb0e6ff949842c754b8c975f2a2f83313b76ecc98b2e22a982a7"
-    sha256 arm64_tahoe:       "8a05a1989d1d1b4f2ffb610f2a823b9fc43cc8101d1e9fff8c600d757a503e0b"
-    sha256 arm64_sequoia:     "296923a6d7acc5878774485c04096e8bb6052cbcb26de0580d3fc9132ec89b07"
-    sha256 arm64_linux:       "b044d5bb035382f8634d053bc864b1bc2190821fbac409fcfe83e2123d08a6fb"
-    sha256 x86_64_linux:      "d51df1bc00e8729ffddef17c664efe73500ac72a0c40be3da26366ac2296dc0a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "d8ab5a50a53371af39b1c5153625666459209fba80e98c3769ecc359f45031ef"
   end
 
   depends_on "autoconf" => :build

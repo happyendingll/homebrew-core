@@ -14,12 +14,8 @@ class Imapsync < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2d7904f9995562b3e56cd8b1c3d9a5586733e3aa94c44784aeb5280f54e82c8e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cbb9402caf8fb24a642200a66b067dfffdb9b18209aad065b194b4f73c9f3f07"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4cdf34a0097eea1cd4a269abed053d4bd4aacff886554ad1fb46dab2a03ae809"
-    sha256 cellar: :any,                 arm64_linux:       "9f1662da0730c3c11d2ccd973786d5400b9dc44822018155f0a1c620468a5652"
-    sha256 cellar: :any,                 x86_64_linux:      "866853667c281b401b0a684cef5c206cac3327ae5b65420375b131c24c34abf0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c90cb15a871e35d8aea8b1e706c393fe1c6af0af265da1f186f59c11a9cf82dc"
   end
 
   depends_on "pod2man" => :build

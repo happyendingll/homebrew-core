@@ -7,11 +7,8 @@ class Sipp < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7b7c8f2c83843426ae8a0ee55bf001e267b07b159b241619bfae550f75cb74ff"
-    sha256 cellar: :any, arm64_tahoe:       "d86175424861489a045269e986f88646395cd3e48b8a3a2beb578026a5c66734"
-    sha256 cellar: :any, arm64_sequoia:     "75d5968b8e0954c9c09f8c81f419a491cc04df6f01fd2adf447f214c66ec8d8e"
-    sha256 cellar: :any, arm64_linux:       "8dbca031af559688827135846853c5d8849fa2bf7afb326f0dc50a0a096ba547"
-    sha256 cellar: :any, x86_64_linux:      "997b814f1b05538c8bfb9ab978fe8610feff992fc03a7891b2f932de9bedb38b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "164596112bfa5a596417b500730556c864638482ca2c7fe5c0f1f3d6434ce08a"
   end
 
   depends_on "cmake" => :build

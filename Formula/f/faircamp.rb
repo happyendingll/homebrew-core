@@ -6,11 +6,8 @@ class Faircamp < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f3a66809f93f7232649e0caf47922e1c4e24a9bb09c4050dfffd23af2e118311"
-    sha256 cellar: :any, arm64_tahoe:       "77a3cc18312fc73bc09dae647a64737d47e96c2cf823850518bcf4e155bb3bd2"
-    sha256 cellar: :any, arm64_sequoia:     "bebc6da51576dab1064495824092e0a441f50fe11f129e1e4b19e8617016e43c"
-    sha256 cellar: :any, arm64_linux:       "21b4e5de09f0e1aecb44b1bd811fccc168b9f04fafcc3b2ec30d9ad17423cdd7"
-    sha256 cellar: :any, x86_64_linux:      "f6b47b080ae68b73fbbf1206ddd1aa2817609087f05d0974fbc1d214d4a16356"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "78af423ea1694207820d06ecba89485b7e27f69547373b0319ccc2dfebb5eeab"
   end
 
   depends_on "pkgconf" => :build

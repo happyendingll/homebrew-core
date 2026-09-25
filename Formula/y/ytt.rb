@@ -7,11 +7,8 @@ class Ytt < Formula
   head "https://github.com/carvel-dev/ytt.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9bb45b110a236a979bd0b8abb60f86fd47eb4cf3c7d3b7d3f38c8f4c67304a4d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9bb45b110a236a979bd0b8abb60f86fd47eb4cf3c7d3b7d3f38c8f4c67304a4d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9bb45b110a236a979bd0b8abb60f86fd47eb4cf3c7d3b7d3f38c8f4c67304a4d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b4b6dac2bf5d452a14d00235627e46e927a6718126874b5f62a0d040cf585b7b"
-    sha256 cellar: :any,                 x86_64_linux:      "b75985b270a7cdf962f46ba59a7f2e3047bfec8505ae5f4c92da3d1776b4f6e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8806061ed0fa191861235f6e6dd8964a65a6c3314e34fe251fb23522287a33bf"
   end
 
   depends_on "go" => :build

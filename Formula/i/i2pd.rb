@@ -7,12 +7,8 @@ class I2pd < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f9b045848be1b25adaf05a91d5b92e4f98231a784563824c6396cec496eb61d9"
-    sha256 cellar: :any, arm64_tahoe:       "eba1e18fb8fcc359e488ad38534ac074354329ea20f6254ddb20efb974846fb6"
-    sha256 cellar: :any, arm64_sequoia:     "d8e2f6a38996467a0cae0c3bd5439747359fb630724b66b74b6872668b3af783"
-    sha256 cellar: :any, arm64_linux:       "3372018cc4fdc11805b2ec6a2835b10930c3e792854ecb1dc261b1b6a6c54872"
-    sha256 cellar: :any, x86_64_linux:      "ff2e8d6b2368f1613f0f913f5b37d6f8c9d5092f1318fd91b5f8e9765aff790f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "1352b46c2c84e541e84aae21363926f3ac2ac698c8d1346a630dad312c09623b"
   end
 
   depends_on "boost"

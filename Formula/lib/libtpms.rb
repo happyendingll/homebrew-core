@@ -7,11 +7,8 @@ class Libtpms < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8335ea28c832407e001886232c1fdd6e45da78a314a6dc812efc96da4504946f"
-    sha256 cellar: :any, arm64_tahoe:       "8407b49b8507d71716c2d7c63624448922c5b30284924811e815233318e6eb1c"
-    sha256 cellar: :any, arm64_sequoia:     "d3fc62db2d34cd269b402be7e1a4f2a9742b638be26ea4f3b1a640813271e10a"
-    sha256 cellar: :any, arm64_linux:       "a772f0538372e126fe0bbe248975a1a1d0fb52c90e8eb1a8424eb82c3af7da3b"
-    sha256 cellar: :any, x86_64_linux:      "8db8a3c599ca72a621c67ca109d2e39a1ca8db238cd9ed9e78f6f77bdbbefd2c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "90b624a591a07e2d609134b4566a525cc75ca495c46c9c7ed328e0dce8b100d4"
   end
 
   depends_on "autoconf" => :build

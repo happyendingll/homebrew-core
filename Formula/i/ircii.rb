@@ -18,12 +18,8 @@ class Ircii < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "13ebbf524835d17fc45426d8c938c6b53ddb2ee80da87a693962183190ed9204"
-    sha256 arm64_tahoe:       "8a11c2fa353238c8bc04bb2272e3c3379f7a375b506c3a1a6d25debf57a0e684"
-    sha256 arm64_sequoia:     "2f4008ee66119222dc6146102e7fda300ca30a2c1e241f9b4297def808e9fd06"
-    sha256 arm64_linux:       "5fca12b00e20b231928fffa60c3ee84024e6a3d4aa5d210c032c6ed42ea5af1e"
-    sha256 x86_64_linux:      "ef01fd427bbfc49593060935645b9ce17a1c8a23c90694ddf734d3de0efab623"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "57fa935f14f7afade08c7f79449d77aa8fc08e62b1818b39bab8548c25c6dc98"
   end
 
   depends_on "openssl@4"

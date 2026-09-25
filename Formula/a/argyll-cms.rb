@@ -11,12 +11,8 @@ class ArgyllCms < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "585de1b56d00de6d7ab345d8d590cd415d70e3c5f5a847ab37196f074b1b5c22"
-    sha256 cellar: :any, arm64_tahoe:       "3f2bd767813d16e34fcb2eef9c377a21788cb67a0bd293f505cbfbb7b6be01c1"
-    sha256 cellar: :any, arm64_sequoia:     "85b0ae0e0e6d6591900bf6085241b854b4d8c55d28685cc4be783d42c413633b"
-    sha256               arm64_linux:       "c00d9e488f123acea9ac11e5bcdf23d21833a9432d829e25e389087837cacba8"
-    sha256               x86_64_linux:      "5c6c560545149c627bb8b069668ed4769ea81c2dc1d309c5046b32dd50112842"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "49f77207960a44ac727c04d54d0cd155ec929c59f5115172976d75418f9c4830"
   end
 
   depends_on "jpeg-turbo"

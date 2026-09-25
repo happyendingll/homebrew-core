@@ -29,12 +29,8 @@ class Ncrack < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "65094a52b2c9793ea270cef78fb031aa8791512ba07081f6622b42fa2a2f7bb2"
-    sha256 arm64_tahoe:       "85017d5ac2d1fd2dc639b61f71c86369b39bb32bde557388bd664cbb54db0161"
-    sha256 arm64_sequoia:     "0861dda9a4b22f65928d52d2ef0f3b5c62d3581915cd01047bebde9fa8be4066"
-    sha256 arm64_linux:       "b710bf67ad6f53f0eef7ecf99d084cb0522570f27365fe44b2400a5a3bb7397c"
-    sha256 x86_64_linux:      "d53db34925dae25f4faefe250f69afda50f22815bce28df5ef5782605078e0f0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "3978dec0d0f3ed8cd9a39011b260c99e546b252fb9f713904f28ffc365bf304d"
   end
 
   depends_on "openssl@4"

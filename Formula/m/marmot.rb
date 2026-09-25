@@ -12,11 +12,8 @@ class Marmot < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e1e42809feedc9d79dc06afb023c63629659000b27952d335bfba4c0e9326e9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1e1e42809feedc9d79dc06afb023c63629659000b27952d335bfba4c0e9326e9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1e1e42809feedc9d79dc06afb023c63629659000b27952d335bfba4c0e9326e9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7edcf40d158cefb28c6a207e1fd3b3c5134eae1a4a57c376bcde799ab855c24f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "339532ba15a4ed1b53f69328b122d513c6f4c93266aaa0e8e1369eb2907336e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "395deb2593343acc5e6f4355a154361564fcd0731bc0920504aaa21c1f2846d5"
   end
 
   depends_on "go" => :build

@@ -12,12 +12,8 @@ class Nikto < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c35f535d8885c015724569ceb2757ecb3b175f2d53f65e38aac053c73984c5b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c35f535d8885c015724569ceb2757ecb3b175f2d53f65e38aac053c73984c5b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c35f535d8885c015724569ceb2757ecb3b175f2d53f65e38aac053c73984c5b"
-    sha256 cellar: :any,                 arm64_linux:       "9c1746d64ddadf53574d7822e4cddb553cffa71b8ff5989c36dfa1ee8af14a2a"
-    sha256 cellar: :any,                 x86_64_linux:      "aa2f53f705ee66143958a1ae0d3aab24ff94b6734966975d2833797fe1c4dc28"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b21a3007dd46499aec1cb7fa875ef7fd81b34ddebbb33fa205dfccea7bc2c74f"
   end
 
   uses_from_macos "perl"

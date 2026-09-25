@@ -12,11 +12,8 @@ class Chafa < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "03f87f827bbd5ee2bcf7dad29443629fbd98bdd2d8b5d6434c597ccac08514aa"
-    sha256 cellar: :any, arm64_tahoe:       "993191e48f92a6583f02438b5aa34315f927700a333e1c92be3e70d947c76e62"
-    sha256 cellar: :any, arm64_sequoia:     "0e1847feab9deb2ffb78703d877d9602d8b8f2745c9061e354d5a92e8d476412"
-    sha256 cellar: :any, arm64_linux:       "4e3d9342907b11258c07465bbf91e57e098628a300bf62149fd005ea865908eb"
-    sha256 cellar: :any, x86_64_linux:      "4a6278c0108bb2df7d65f5d2afed3e8d943043da1aae7950cac098dd484409aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8890f87af37c4e3592c0a2b2439507d6d6f9456bd2c0703c97109703f5ef0ea2"
   end
 
   head do

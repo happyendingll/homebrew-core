@@ -7,11 +7,8 @@ class SpiffeHelper < Formula
   head "https://github.com/spiffe/spiffe-helper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "29ec768ad9f6ea8cda6c031ed59a9f50d7732759068e3e06dca1b4520535e428"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29ec768ad9f6ea8cda6c031ed59a9f50d7732759068e3e06dca1b4520535e428"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "29ec768ad9f6ea8cda6c031ed59a9f50d7732759068e3e06dca1b4520535e428"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2286b5e6badbe348f2b6e9264cfb30d12301c9bbe83c372259f070022cc06194"
-    sha256 cellar: :any,                 x86_64_linux:      "9e74a289fe8179c655b2fa30b16722b62aae983a4e544fd432c74912214a2f6f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a971413493dd7826ce3606d0e1432a9f7f88001f311e48e0ff92a5f715bf737e"
   end
 
   depends_on "go" => :build

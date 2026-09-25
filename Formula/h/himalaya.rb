@@ -6,12 +6,8 @@ class Himalaya < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7018f91ada286aa08e60c22b8184276ed076126734849a370b059302c40d1b94"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8046ca334ded160ac6ac7f9bf8656e25cc29589bc1b9b72f1ff34ae0fa79076f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf8045981d83b1e88532999614ac14a4fc5b77bb107de01d509dca32409095ee"
-    sha256 cellar: :any,                 arm64_linux:       "c69ce7b5eba1afc71ff18e4b8157c187e1b8bfc2d1baaac2fa73882b4983e6c0"
-    sha256 cellar: :any,                 x86_64_linux:      "87a8a1ba54db0772156360d3d9a6ca97683678e768257198b2c9eea33e813f6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9766230d4205328f06ba0584a19df966c8e35013d56430ef6d5a965cf33b0c85"
   end
 
   depends_on "pkgconf" => :build

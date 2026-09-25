@@ -18,12 +18,8 @@ class IntelliShell < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "a0d12a69cadc997ff2d3a6c417fa66c97c1d2615e1d80ca5429beb4f430ac1d9"
-    sha256 cellar: :any, arm64_tahoe:       "32f4d229b561c0321224292a23691076f23bd48243df5d3a68eff3bc54ffbc44"
-    sha256 cellar: :any, arm64_sequoia:     "8edb24e4ecb07d4ff91b69b78f256bd432828ade902b0ad47586a5b942a8184b"
-    sha256 cellar: :any, arm64_linux:       "64ba901c2ef059180565b2d4af71c5cf2b069ad588206524c430e989e2b8fbfa"
-    sha256 cellar: :any, x86_64_linux:      "5b45e326d19e6ea9255d90bd886796c4c940ad9e716875f2daa9242716701d62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "401d2c4503be7499b075351be81a6ef273aa87656197f71027021751245ef516"
   end
 
   depends_on "pkgconf" => :build

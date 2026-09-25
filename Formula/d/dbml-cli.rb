@@ -6,11 +6,8 @@ class DbmlCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "6cb813737114e956d985491653281c0141492f33c6cf62d4fceffc52a32e1dac"
-    sha256 cellar: :any,                 arm64_tahoe:       "6cb813737114e956d985491653281c0141492f33c6cf62d4fceffc52a32e1dac"
-    sha256 cellar: :any,                 arm64_sequoia:     "6cb813737114e956d985491653281c0141492f33c6cf62d4fceffc52a32e1dac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "abc759b84c2ccffdb9c86a040ee1e966795ee6fc3d732be9d740eb92acde3238"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7180a75ed0afa818fae7fe401aa216700c7be53d306937829c1cd0b1986880ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "d6782c7ca899119f9bbc387049d111fda565f2d56971dc8b0aba7f10dd3b36d4"
   end
 
   depends_on "node"

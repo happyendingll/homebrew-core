@@ -6,12 +6,8 @@ class Lftp < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "f953d155eba4323d2b51143403e282f99a09441c83bf6d65e829fddbf7105793"
-    sha256 arm64_tahoe:       "b0e8fcf3cda8e78a46c407fd402e46eff31059387471799b747523ebcbdd5ecf"
-    sha256 arm64_sequoia:     "ccbcd928c1f4ce526e2452d6c347d63a24b45015018756e1de5d4559fdf7a66c"
-    sha256 arm64_linux:       "59792faee593d079b0771f0af58f15856a288a44884041f548c6cc101a749203"
-    sha256 x86_64_linux:      "b9a2a281115d97c6cb81d8bcd9348059dc09becb0d7ee2cf69b8456f8e2391d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "fa1ca8871c639d1158fb107877d4776ce66c92650286569a2eded9718e07fd57"
   end
 
   depends_on "libidn2"
