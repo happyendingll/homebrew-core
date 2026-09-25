@@ -14,11 +14,8 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8264fc175137cbe682c3a6acde42d13fa7583954b4d2a6b7c8fcb15423e052a0"
-    sha256 cellar: :any, arm64_tahoe:       "142f0d78648cfa23157fdc8e39ef162eb7ecc3c7c16b41057fa28e73db960a24"
-    sha256 cellar: :any, arm64_sequoia:     "fcff8f6b22921f60e6bf87dcc586d6ca597e66852369df3b35fd164ad883bec9"
-    sha256 cellar: :any, arm64_linux:       "a28d0b950d1b84b4bef891df77ea66cb91c5ae7c208c09707686bafa3ecaa595"
-    sha256 cellar: :any, x86_64_linux:      "647cc7d5fccf5f6d1c78e8cf5a702623981521eaebe65d767abc47fdd9fb079d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a44d8500fbb2a739d307bd21105133f4eaf564bb9c251e272a9cf6992a4ef7a1"
   end
 
   depends_on "cmake" => :build

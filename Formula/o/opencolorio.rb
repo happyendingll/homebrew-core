@@ -8,11 +8,8 @@ class Opencolorio < Formula
   head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "47e5a000a0dee9e5c18548c9b15297647b3077c5af3b8815fffd847e0d897a76"
-    sha256 cellar: :any, arm64_tahoe:       "2519a0398a5815e8159a67f15fa5c4efb378712cfcedb2b15e4e1882563bccc8"
-    sha256 cellar: :any, arm64_sequoia:     "cf7448c782008716e5892d907a7080dac09ee3510ee2a9f5b232a18350eed318"
-    sha256 cellar: :any, arm64_linux:       "32882dc5a7d237d3d87132e7bc50f9bc73eb728d6f1e187b8089d797f2899e06"
-    sha256 cellar: :any, x86_64_linux:      "2acc6be54d12aaf29ecb47bbc0de030ea97771c56131c8e32dd99b0807561dd6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "dc67eb60b1af30067204e676fa9f43184b05c69537c20ee6a3185e261fa464d3"
   end
 
   depends_on "cmake" => :build

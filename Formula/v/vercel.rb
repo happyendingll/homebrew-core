@@ -6,11 +6,8 @@ class Vercel < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "9f606734dca7bf731f73be6c2f9d7c1e2853527a3b42044e12eb296ecd1c35c4"
-    sha256 cellar: :any,                 arm64_tahoe:       "9f606734dca7bf731f73be6c2f9d7c1e2853527a3b42044e12eb296ecd1c35c4"
-    sha256 cellar: :any,                 arm64_sequoia:     "9f606734dca7bf731f73be6c2f9d7c1e2853527a3b42044e12eb296ecd1c35c4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "aac2100c68de781bc17bd8ad0ff5964603c94f0b549c7e2b6437c3088961b611"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c1d3b39d617506a066b30e6382f6ce2bf724ef8f793e957d08dab387674abf02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "2d7530a05a0935020ffe1e605e381ba7dd527c280a727c34d300decb1d031672"
   end
 
   depends_on "node"

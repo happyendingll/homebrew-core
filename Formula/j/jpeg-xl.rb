@@ -13,11 +13,8 @@ class JpegXl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f5613d8fd10ef72372c1fe2b14ccb51fa332f4119f916deabb9fa07b8a1f3f3a"
-    sha256 cellar: :any, arm64_tahoe:       "1da12f614c4db97c3afa09d7dec5b9e719dca06bb1a3f545358ff38ce6dbb33b"
-    sha256 cellar: :any, arm64_sequoia:     "3c193d49dacde5e78331ff37462b5ef7f09d44279801ad2df911a7a5d618c109"
-    sha256 cellar: :any, arm64_linux:       "164c7ce15a5764ec30fc41ccb62229e9f88896e5c05f0391a67a225e8fc1a92a"
-    sha256 cellar: :any, x86_64_linux:      "10819cf13cf5b5fcc5c8170c5c857fd6903dfcc02f328899c76f69ddd4ee8fbe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "0c5ab54ce432b67ce356a887da6c5a4616727031b7f6118b26892e5161cabbeb"
   end
 
   depends_on "asciidoc" => :build

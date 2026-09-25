@@ -6,11 +6,8 @@ class NodeSass < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f761fb53692018b015ba3d5ff9d881e7e148bee2dacb5564330d4c057b171113"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f761fb53692018b015ba3d5ff9d881e7e148bee2dacb5564330d4c057b171113"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f761fb53692018b015ba3d5ff9d881e7e148bee2dacb5564330d4c057b171113"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e8feb20952bc807e0fdf27175cdad8e43d334d2b290afe0aec471ccda09adf65"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "04218e4700e5a4a0fea9ab717919d8dc72c815b9efb49d015ef6564066373dad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "81c2524f2a35eac6ea7ae5e5f67dc6806366dece1efa1ec3ae84b323051a8b5c"
   end
 
   depends_on "node"
