@@ -24,7 +24,13 @@ class DezoomifyRs < Formula
   depends_on "imagemagick" => :test
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

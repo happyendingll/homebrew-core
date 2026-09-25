@@ -1,13 +1,16 @@
 class Rbspy < Formula
   desc "Sampling profiler for Ruby"
   homepage "https://rbspy.github.io/"
-  url "https://github.com/rbspy/rbspy/archive/refs/tags/v0.52.1.tar.gz"
-  sha256 "e5bd0126e6585d57fcb8deee7db3b04ffbdfad36074eb1b799b48791f6219449"
+  url "https://github.com/rbspy/rbspy/archive/refs/tags/v0.53.0.tar.gz"
+  sha256 "2357adc3dcbe3a6eb2e0d8929fce8260f27f7840f02fbbaa6cd2db68d96c98dc"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "11cb786ce35497afb38080123e9fdd222c116856a4e23e929e7ac0c22b34d323"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dd1f73c2acb95cf048b5892675382b68a0f2610909d6d97893eff6792e9c6d6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "499b4ba9097e7208a9fdffd90267a62f7e7cd71b492bfdf831722330eafa0537"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "177ed70a33b8677e2561808ff12edf12fe3b370e6abbe70ff9786ab72c085c54"
+    sha256 cellar: :any,                 arm64_linux:       "dacce7689a8ac3eee105567e112454b35084862a7e90cb22487f5b6e31c032a4"
+    sha256 cellar: :any,                 x86_64_linux:      "4f05eea60d4ac090372c1610dc67a930719ac38779a05aad48e3aff51633a81e"
   end
 
   depends_on "rust" => :build

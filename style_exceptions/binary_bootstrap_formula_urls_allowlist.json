@@ -13,6 +13,7 @@
   "ghc@9.8",
   "go",
   "ldc",
+  "mlkit",
   "mlton",
   "openjdk",
   "openjdk@11",

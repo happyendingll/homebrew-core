@@ -4,12 +4,15 @@ class Gowall < Formula
   url "https://github.com/Achno/gowall/archive/refs/tags/v0.2.4.tar.gz"
   sha256 "df19d8a7f4d138cfa233415ad71250c788aa1a3d310b4b19ca952fb0750c0c36"
   license "MIT"
-  revision 5
+  revision 6
   head "https://github.com/Achno/gowall.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "ea4853e82f2d2a6555f714fca1c514937bdf9d17fd549e752c0de0c7f8bb0c80"
+    sha256 cellar: :any, arm64_golden_gate: "a5c8e66f67252660ef74a433f206de8797f71aec2f346ba9023457519b2e7084"
+    sha256 cellar: :any, arm64_tahoe:       "8a548f86e38c74d3c33f94c0312199e844dcf2b503e3bdda28d44cec2bd686df"
+    sha256 cellar: :any, arm64_sequoia:     "0762980e468345798966d0d9be7de36f34cab70b8fa73b8d74f6c4eb8cc035a2"
+    sha256 cellar: :any, arm64_linux:       "14fb09905e1a2835b98b7ca8ffcf3f4211700e45bf9823802e4147eae4fd93e5"
+    sha256 cellar: :any, x86_64_linux:      "d29ed09867b45e24877a43fbd5b3f25d9f27d381d6590cf99b0fef6dea1151d5"
   end
 
   depends_on "go" => :build

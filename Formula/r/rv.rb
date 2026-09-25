@@ -1,8 +1,8 @@
 class Rv < Formula
   desc "Ruby version manager"
   homepage "https://github.com/spinel-coop/rv"
-  url "https://github.com/spinel-coop/rv/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "c7d6c173ea022b9eec1eca727859e33a9c8fd68a5aac147ebf5e351df7f0d9e1"
+  url "https://github.com/spinel-coop/rv/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "a88bf0edc2ddb14c90e59a845fc8c9b3b26af236764fdfbef368bb0b33a395ea"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/spinel-coop/rv.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Rv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "aa260d78dd941bb2fd73559c94cbccf01d09b4ccd4773ba7c3da578253fc132b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "73246abb08121f85ab205ec46f2f834fae552aacc55b327c274491c7e101f343"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bab99d390f461f06c01534f6304e8d01bf4f5b125df3a77380a94f3df7b29594"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eb556da911b788f595e646435285df25f5c58a18c7e3713159ccd106c4a581e6"
+    sha256 cellar: :any,                 arm64_linux:       "f014372e63b43c5c78bc6b737b403b67fd6ac6edd1f3659fe46b337e09879f5b"
+    sha256 cellar: :any,                 x86_64_linux:      "706d566c8bb71311d85635f2ce2084d1514d3ddc4589c5bf5ba52e390a981393"
   end
 
   depends_on "rust" => :build

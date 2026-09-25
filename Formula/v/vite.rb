@@ -1,13 +1,16 @@
 class Vite < Formula
   desc "Next generation frontend tooling. It's fast!"
   homepage "https://vitejs.dev/"
-  url "https://registry.npmjs.org/vite/-/vite-8.3.0.tgz"
-  sha256 "8341c0e40cf1700c68998ce5e7b1c715b9f89d700abf6c41f5d8af067a270a72"
+  url "https://registry.npmjs.org/vite/-/vite-8.3.1.tgz"
+  sha256 "d1e2250c6eb956e84df6b5d4f8127d420efa9142f393652c77a06906e79d69c3"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "799567d666e45b0beed96042e7fade6557bb2694883b5a6faf86211d9737ee49"
+    sha256 cellar: :any,                 arm64_golden_gate: "a1c5829a6bcc334a548270e3b734eeccb7b29d7260339dfa6010893545e46e58"
+    sha256 cellar: :any,                 arm64_tahoe:       "a1c5829a6bcc334a548270e3b734eeccb7b29d7260339dfa6010893545e46e58"
+    sha256 cellar: :any,                 arm64_sequoia:     "a1c5829a6bcc334a548270e3b734eeccb7b29d7260339dfa6010893545e46e58"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bae9e73a267ceac26a91ff708a641455ce5551c4c295c9fa01a23c5f7e88ec5a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0bb9faeafe02cf260d99ae0e433f170dfbfb7ee86437fddd5680fb0c4d8670df"
   end
 
   depends_on "node"

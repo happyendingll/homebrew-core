@@ -3,14 +3,17 @@ class Virtualenv < Formula
 
   desc "Tool for creating isolated virtual python environments"
   homepage "https://virtualenv.pypa.io/"
-  url "https://files.pythonhosted.org/packages/8d/f0/58b5e510c05ef177afa8c5679516a46bf7b3cf131aadae3bbd1605f19035/virtualenv-21.11.0.tar.gz"
-  sha256 "fa83254de82b83565013b2f111519cf056124dd068bdbb8c5e49c6b72c061f0f"
+  url "https://files.pythonhosted.org/packages/81/a3/4d9dede34649537601a64700558e350f43dd552a12db166e0ff1bc81087d/virtualenv-21.12.0.tar.gz"
+  sha256 "bc5923d9f3e25f4114d6335e99c265978386d3ce8a6a0ec061b18d9b1635b016"
   license "MIT"
   head "https://github.com/pypa/virtualenv.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "b9544ae70fdf1dcf1b1a84916037c0090e06901c82939e2414dae2a8d77b5992"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bc593dbc3ac060d1fdb32bc6d8423927d97fa5081fe53b02e5477bd7cb6fa6f8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bc593dbc3ac060d1fdb32bc6d8423927d97fa5081fe53b02e5477bd7cb6fa6f8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bc593dbc3ac060d1fdb32bc6d8423927d97fa5081fe53b02e5477bd7cb6fa6f8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3eac878d2862d1ccb1d931bd083ab791d5ebc7c79c08c35fbb31706170d8811e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3eac878d2862d1ccb1d931bd083ab791d5ebc7c79c08c35fbb31706170d8811e"
   end
 
   depends_on "python@3.14"
@@ -21,8 +24,8 @@ class Virtualenv < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/6f/38/88cd6eda96c40594a1e3da7d8b40f04bc40ace5a6aef9ac5cb407540f173/filelock-4.0.1.tar.gz"
-    sha256 "fdefc3f3e87716d855ae2b732c1cfd521dd99799ef2b4d00e8c0d4dcdc7cc94b"
+    url "https://files.pythonhosted.org/packages/4f/b8/9ba8f569df649beb7058db5eb392a5f779bdbc3b82cf3942f0be439fb99e/filelock-4.0.3.tar.gz"
+    sha256 "87296d60478e14204fd9406e79831400fef76693bae2895deec236c98e87a8aa"
   end
 
   resource "platformdirs" do

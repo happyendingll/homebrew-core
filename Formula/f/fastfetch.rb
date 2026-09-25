@@ -1,8 +1,8 @@
 class Fastfetch < Formula
   desc "Like neofetch, but much faster because written mostly in C"
   homepage "https://github.com/fastfetch-cli/fastfetch"
-  url "https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.68.1.tar.gz"
-  sha256 "c268cfcd230cc7ed5447fb34ed21bf4977315c7104356a39388b6ba784ad11b0"
+  url "https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.69.0.tar.gz"
+  sha256 "d0e42faf307e39e7b531d632745a56e4eb558a6545f557280099c622562355ee"
   license "MIT"
   head "https://github.com/fastfetch-cli/fastfetch.git", branch: "dev"
 
@@ -12,8 +12,11 @@ class Fastfetch < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "a46da2156a21c48f75d6b10cd6c1637326d8129ae9ef79eba00ca324c082d4ff"
+    sha256 arm64_golden_gate: "f04813a4392632b5196d7b0ebd35f887555c2c0fad13b085744867da4bc2931c"
+    sha256 arm64_tahoe:       "932f519f9eae54ef60d47881e4d528b9381117299eee04d93e3bb4bf3541c3c3"
+    sha256 arm64_sequoia:     "4a741bfaa50f253c1589ae9cedea662132fd4096c590630cf8c9f68db5843e0e"
+    sha256 arm64_linux:       "21e7ff92f7b70a493c2c60c37569ec9c8bc5758e73b4c4ac744a66cb450e0b08"
+    sha256 x86_64_linux:      "549311d6caabdaaf665783ab257e67afb8c3fa826956236e12313993412ccbd5"
   end
 
   depends_on "chafa" => :build

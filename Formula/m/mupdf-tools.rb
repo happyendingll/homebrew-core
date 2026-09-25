@@ -1,8 +1,8 @@
 class MupdfTools < Formula
   desc "Lightweight PDF and XPS viewer"
   homepage "https://mupdf.com/"
-  url "https://mupdf.com/downloads/archive/mupdf-1.28.4-source.tar.gz"
-  sha256 "2d97e043a616f96b148657c9c3d81ad71c4bd2052c59a2a3315ad842599340f9"
+  url "https://mupdf.com/downloads/archive/mupdf-1.28.5-source.tar.gz"
+  sha256 "98a5c10cda20c3992cdf76ff6b2a1149c32bd79cc796d3f703230b1185b7e934"
   license "AGPL-3.0-or-later"
   head "git://git.ghostscript.com/mupdf.git", branch: "master"
 
@@ -11,11 +11,16 @@ class MupdfTools < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "ab5818fc78505da38228530f8ff96fc5d1f98b46d90bef5018c3243b4e4580b5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9d12d4b8ea057012c4a8319df2db6f0076cbf19042cc4ac9de43079f2a1e70b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f28237538ff6a8c4fab9d3e3f3fd302aa25b8629ecd1f0d327c35df82191c829"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7d36f91531459dfc0eb02220cccad03ca6346c58bbd6e46f7d66a45160df0137"
+    sha256 cellar: :any,                 arm64_linux:       "b1fe65f2e5655519ec247038f68c534979940cf08964cb73d7086a544d147862"
+    sha256 cellar: :any,                 x86_64_linux:      "5e670af508174bdfc21850abed734390f0e4afb2ddae1c8d554299b8d13454ae"
   end
 
   conflicts_with "mupdf", because: "mupdf and mupdf-tools install the same binaries"
+
+  deny_network_access!
 
   def install
     system "make", "install",

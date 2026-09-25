@@ -1,8 +1,8 @@
 class DatadogStaticAnalyzer < Formula
   desc "Static analysis tool for code quality and security"
   homepage "https://docs.datadoghq.com/security/code_security/static_analysis/"
-  url "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.9.7.tar.gz"
-  sha256 "39224c6cb9deaf19446cec8c373979ade1efd02d94002af2cd4906b232e7f9e9"
+  url "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.9.8.tar.gz"
+  sha256 "793164c5defd1eeefd2907e60dec00dbe0d8c05f45915af546a0b012ca693b0e"
   license "Apache-2.0"
   head "https://github.com/DataDog/datadog-static-analyzer.git", branch: "main"
 
@@ -12,8 +12,11 @@ class DatadogStaticAnalyzer < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "0c4c7cabb776a998455deba37fa7cb9ea05f072e66e6619d4173a98ea20f92e4"
+    sha256 cellar: :any, arm64_golden_gate: "76226da7760e7e9da83059d26b85c0706521c429451457b4de7d76bf84a746d8"
+    sha256 cellar: :any, arm64_tahoe:       "a2a76ed543656d5ddc35c97f1a6935ab0ee69e7e51c4e2b9b85228ff5b12726c"
+    sha256 cellar: :any, arm64_sequoia:     "544480b8f02eab8ad462189d009f29972e7354db1e6bbeb58a06dacf9a1534c9"
+    sha256 cellar: :any, arm64_linux:       "072858df9a4aff50558e432cdb90832546ee8dd932bf4047beb4cb8a843c0456"
+    sha256 cellar: :any, x86_64_linux:      "b34fa98012321840c8423faf9beba91154ab0ae9c94004e8c391333709402f48"
   end
 
   depends_on "pkgconf" => :build

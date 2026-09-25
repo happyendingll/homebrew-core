@@ -16,7 +16,7 @@ class Firefoxpwa < Formula
 
   on_linux do
     depends_on "bzip2" # not used on macOS
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   def install

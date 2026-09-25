@@ -3,15 +3,18 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.37.1.tar.gz"
-  sha256 "0d21e108c5bb502ec9572f512ddd865396fd1cb039ca515abba8c9d4a8573550"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.37.3.tar.gz"
+  sha256 "91dd50eb35375412c636ef72949c9ac8bbafe7cc402f53e9b782516de311dfa2"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "366726ca8541476643be443299163f33383f77a1bb562c763f6df496f68a162a"
+    sha256 cellar: :any, arm64_golden_gate: "7910ce276287475cf266de83c0145feabfd5af4317b5d99c39a3459ec926ff19"
+    sha256 cellar: :any, arm64_tahoe:       "91b9bd0d4252863ba12fdea3a6055369dc2d48651a1f434d0b94a84cbd051640"
+    sha256 cellar: :any, arm64_sequoia:     "f65d18aaf463ba12858ade27bb94aa27906f299653ae97694faf4db479cae1e9"
+    sha256 cellar: :any, arm64_linux:       "76198dcf86437a319c85c62fa2efe638578917852219d830148f18b8379ea3e5"
+    sha256 cellar: :any, x86_64_linux:      "e312e894d225fd8f0cc5f6e3cab0ff40baebf5f8527159b8af67cba90db4c23f"
   end
 
   depends_on "aws-c-auth"
@@ -30,8 +33,8 @@ class Awscli < Formula
   pypi_packages extra_packages: "flit-core"
 
   resource "awscrt" do
-    url "https://files.pythonhosted.org/packages/bb/02/2a724318c05aa0e6e74e2537e3a841097ad2aeb737bdc27c6a74ce72358f/awscrt-0.36.4.tar.gz"
-    sha256 "5b6a53f10e8dd060e7c0c91d063831137239c234877a6d1f03b277dfbac0c507"
+    url "https://files.pythonhosted.org/packages/93/bc/9a88ccd0f764a61fbc0f40b600d099110e3b16cf68fc92a401c3c953cfb3/awscrt-0.37.0.tar.gz"
+    sha256 "9e2ddadc609084b5f60affb8b87e77304fed64e271e2b2b7558186cf65d81e5a"
   end
 
   resource "colorama" do

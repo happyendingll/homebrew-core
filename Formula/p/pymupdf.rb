@@ -4,11 +4,14 @@ class Pymupdf < Formula
   url "https://files.pythonhosted.org/packages/a3/fb/b6761fa2d5266f2cdb24c3b91f4023070ab7848381417678e7a289a1d52a/pymupdf-1.28.2.tar.gz"
   sha256 "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
   license "AGPL-3.0-only"
-  revision 2
+  revision 3
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "bd1d0bb324c0e1c8ff1f803be7659d1c0ff3418de1ff3613e59a8fcfab164858"
+    sha256 cellar: :any, arm64_golden_gate: "83bfd165b2f2e9708b1135703330240bd9a8bbb027faf1fbca600e05233fc8db"
+    sha256 cellar: :any, arm64_tahoe:       "bad08478b9bf35e17fc994a3f253edee30d1980ed6e954c5f773357e478fa272"
+    sha256 cellar: :any, arm64_sequoia:     "b1d86451c7504f359d5839d6d9e7f90894a40921a7aae7422c077fc8f493e82b"
+    sha256 cellar: :any, arm64_linux:       "d7a44734c709b2254945b2770d858bd97785ef71433a1542ec6e34b94f753fa3"
+    sha256 cellar: :any, x86_64_linux:      "0e702a786dc6271b4276710841083c8cf69cee48890c7dfc218a6a28a37bbeb3"
   end
 
   depends_on "freetype" => :build

@@ -22,12 +22,13 @@ class Fetchmail < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
+
+  deny_network_access!
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--with-ssl=#{formula_opt_prefix("openssl@3")}"
+    system "./configure", "--with-ssl=#{formula_opt_prefix("openssl@4")}",
+                          *std_configure_args
     system "make", "install"
   end
 

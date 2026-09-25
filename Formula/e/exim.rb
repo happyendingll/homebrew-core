@@ -34,7 +34,7 @@ class Exim < Formula
     sha256 sequoia: "857a3d45feca4bd6dde738a15d7be5fac8f65ef87417c9cf0606f5eff28df13e"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   uses_from_macos "libxcrypt"

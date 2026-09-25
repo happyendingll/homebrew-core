@@ -1,22 +1,33 @@
 class Autobrr < Formula
   desc "Modern, easy to use download automation for torrents and usenet"
   homepage "https://autobrr.com/"
-  url "https://github.com/autobrr/autobrr/archive/refs/tags/v1.86.0.tar.gz"
-  sha256 "97fda65127c6d0754b6dd990df40ba0cc4a2a0064a6c460f59e5a9f83f72293c"
+  url "https://github.com/autobrr/autobrr/archive/refs/tags/v1.87.0.tar.gz"
+  sha256 "473ffb90c42b44081e3c063e31086f6f17b498cea2199a789c39fc295a594be3"
   license "GPL-2.0-or-later"
   head "https://github.com/autobrr/autobrr.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "dc1acc5885080b2de035ef4e4eb9f1ee2c974c4a7a72465ba3ff5ccb588d1f3d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2f5df0e668e7d3678408be2d668bbcdb096a4c2c9c36d219cb64e82f9e012ae1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "99839211e6f2b8ac65a6b30258360646e331c0e80ac0feb1813cb8a87b5fd581"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "689cab201a2d659990a8242ce58ec1b678134a5c8de67f0c9e82caede45a83d6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6fe807e309b5fa3a30bf19202e497602754503513182fb763b5ac0d595b55f0e"
+    sha256 cellar: :any,                 x86_64_linux:      "869ad2e30318e74a81f3cfacf4514ecfb4875171b4b3bae29a1b65c7a7abfebb"
   end
 
   depends_on "go" => :build
   depends_on "node" => :build
   depends_on "pnpm" => :build
 
+  allow_network_access! :test
+
+  def fetch
+    system "pnpm", "with", "current", "--dir", "web", "fetch"
+    system "go", "mod", "download"
+  end
+
   def install
-    system "pnpm", "with", "current", "--dir", "web", "install"
+    system "pnpm", "--offline", "with", "current", "--dir", "web", "install", "--frozen-lockfile"
     system "pnpm", "with", "current", "--dir", "web", "run", "build"
 
     system "go", "build", *std_go_args(output: bin/"autobrr", ldflags: :goreleaser), "./cmd/autobrr"

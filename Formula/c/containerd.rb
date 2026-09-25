@@ -1,13 +1,16 @@
 class Containerd < Formula
   desc "Open and reliable container runtime"
   homepage "https://containerd.io"
-  url "https://github.com/containerd/containerd/archive/refs/tags/v2.4.0.tar.gz"
-  sha256 "01b8974eac869ee146b510af13b56653e4c3da16aa71342dd3ba244c1ac01ab0"
+  url "https://github.com/containerd/containerd/archive/refs/tags/v2.4.1.tar.gz"
+  sha256 "c213c8222ec2b51f88eb541cd75e5905b35ae7d0b82d6d812f0b8121d11131a6"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "f3b50646f9481018ac462b0e6f24c627922b1dce16bcefd70c1c9beb6dd8474b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "55ca39aae736fd6b33de4a6db606ee46ef106d7fef27fc7ac8897c6e0212c41f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8aa759fa39ed25938df9d693a8f59468c617cfa5412b31174e237cf36b054712"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "80689caf28f38fe8eed14b97d7dab1b7f8e9f2cdeeeb7e381f4a6950c9ec4e32"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bd57730329fda483eda8eb3927b2d5d12ada22ee2d2344beb13486b20483d3df"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "da1fd1121e6814bbeb70926e6f89e74a96358a65117ca11bc918262c0f976764"
   end
 
   depends_on "go" => :build
