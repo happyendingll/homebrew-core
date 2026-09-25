@@ -6,11 +6,8 @@ class IcpCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2f1cf2897c761e6b7ceb23f701e989a12a383f3f428aa6f345ba7b61b463616c"
-    sha256 cellar: :any, arm64_tahoe:       "9c5301855f0e6d57726b9c84642290c1d849c10af0d5e7041c64744ed8091339"
-    sha256 cellar: :any, arm64_sequoia:     "ebe097dbc3ee5cc82d987738103fbfaaf2ae3c78324daa1e14f0b5c599db4666"
-    sha256 cellar: :any, arm64_linux:       "15564ce13051d357f33eb434b48093c00b4d2fc0f21e748d7bca1fa8a0e4c6b4"
-    sha256 cellar: :any, x86_64_linux:      "ff8c8460f898f79ba35687969a1e3d5abc21817998629b09899ed2b4063f8f07"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a1090117f4857f13706dd0431d36aa0593ed94ad1878b03ce4f8e102f8bdd12d"
   end
 
   depends_on "lld" => :build # for `wasm-ld`

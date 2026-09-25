@@ -12,11 +12,8 @@ class Rv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "73246abb08121f85ab205ec46f2f834fae552aacc55b327c274491c7e101f343"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bab99d390f461f06c01534f6304e8d01bf4f5b125df3a77380a94f3df7b29594"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eb556da911b788f595e646435285df25f5c58a18c7e3713159ccd106c4a581e6"
-    sha256 cellar: :any,                 arm64_linux:       "f014372e63b43c5c78bc6b737b403b67fd6ac6edd1f3659fe46b337e09879f5b"
-    sha256 cellar: :any,                 x86_64_linux:      "706d566c8bb71311d85635f2ce2084d1514d3ddc4589c5bf5ba52e390a981393"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "60ec302400f0e7c33f1ed635519640d1326da0d634d9e83f57ed3dc0050bb04b"
   end
 
   depends_on "rust" => :build

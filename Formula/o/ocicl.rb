@@ -6,11 +6,8 @@ class Ocicl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0e0bd87f6bd933300491d35341325bcf42fb7a6be1bb7ddfb4d6ae6172c03983"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a95ba0da65b62503b7cbe7233eabe97f0c2ecd5a47041e350e7b7e66fccb685a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "33ba76f170d3498e57f8f8d9f96d68c0a040ad768c1b94b7e3d39cd9bf372be4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0fa246cddb41fd2c1b210c51a6d6855e535b672eb7afbf68cabd5a289029c8ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0f71115e66e9acd80860f84bb1230d9816c094d5bf9c781de6e4ed55e0957b6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "ddd005721831f1e33c9a1630bcb5124af1c9d254049c7e2c485a13f0c3a92fe9"
   end
 
   depends_on "sbcl"

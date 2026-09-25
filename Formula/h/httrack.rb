@@ -6,11 +6,8 @@ class Httrack < Formula
   license "GPL-3.0-or-later" => { with: "openvpn-openssl-exception" }
 
   bottle do
-    sha256 arm64_golden_gate: "7943d29fcd139131b21a4da5795b68c5775f55edc8c954558439ee4e5c8bfe18"
-    sha256 arm64_tahoe:       "6862f0e76d3f6623ae5e7a05043049827679182f9e7e2a124c83ce00c9a5a9a2"
-    sha256 arm64_sequoia:     "8d7c64e2d322d6450e7af5f41494b20a3925716d758a05f9720c7b1d0778d29e"
-    sha256 arm64_linux:       "edfaab883d82cbb05d84db4978cf8c936b507b6e433c61a4172b37abfa9cb6c7"
-    sha256 x86_64_linux:      "fee7cbf0232f465fc6eaa3aafb22e075c013e576f7d6709c0c1372b918274609"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "450362c49d28a79def4976220225cb81d99a64a8ad1d6e84afc601341e6a1ff5"
   end
 
   depends_on "openssl@4"

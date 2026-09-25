@@ -6,11 +6,8 @@ class Lfk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "380fe07f686d0c9bdeb1ded8ee1f7422932b542246815c96b3781c6ce9a41094"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed68a96f780342ce81da4e3c463cffabc843c0d59b9796d5bdecd794b7674bf2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "68ba3ce9ddc0922762e22c7b8a31a08a5a705a13644505256a891f4c7640d375"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "352e2cec4ff0ac4f5a31e3eee75367b725bb57aaee047198b582a65b676b04de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "48497c7f56dbb9ad7b5cc874bdb105b40bd3e6270ba6426e66b13fadb232571e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2df8f84bb2c4725f010422c88f25286d7ea86bc692b826b38de64662db82483d"
   end
 
   depends_on "go" => :build

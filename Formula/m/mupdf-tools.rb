@@ -11,11 +11,8 @@ class MupdfTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9d12d4b8ea057012c4a8319df2db6f0076cbf19042cc4ac9de43079f2a1e70b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f28237538ff6a8c4fab9d3e3f3fd302aa25b8629ecd1f0d327c35df82191c829"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7d36f91531459dfc0eb02220cccad03ca6346c58bbd6e46f7d66a45160df0137"
-    sha256 cellar: :any,                 arm64_linux:       "b1fe65f2e5655519ec247038f68c534979940cf08964cb73d7086a544d147862"
-    sha256 cellar: :any,                 x86_64_linux:      "5e670af508174bdfc21850abed734390f0e4afb2ddae1c8d554299b8d13454ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "5de44188d7515b2b4188c2ed43d6ac6598d8181cde90e343e5046555934f2767"
   end
 
   conflicts_with "mupdf", because: "mupdf and mupdf-tools install the same binaries"

@@ -7,11 +7,8 @@ class Benthos < Formula
   head "https://github.com/redpanda-data/benthos.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b868e363d2c04b0944ef68fdfb076309e5f109a928e42b600db4fabb9de10182"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b868e363d2c04b0944ef68fdfb076309e5f109a928e42b600db4fabb9de10182"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b868e363d2c04b0944ef68fdfb076309e5f109a928e42b600db4fabb9de10182"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "539ec43c9dd3e80a746ecb03955dab1379426abe11003dad1365f637c7c1bba7"
-    sha256 cellar: :any,                 x86_64_linux:      "2f0647fb4654b6323ad69ef7adafe337824b79b54d6e720c9959e07d4b17c7e3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "9934f30904fcf706b1091fd01daf536da4ab53efbff6591d5896dd73ba995fd8"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Rbspy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dd1f73c2acb95cf048b5892675382b68a0f2610909d6d97893eff6792e9c6d6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "499b4ba9097e7208a9fdffd90267a62f7e7cd71b492bfdf831722330eafa0537"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "177ed70a33b8677e2561808ff12edf12fe3b370e6abbe70ff9786ab72c085c54"
-    sha256 cellar: :any,                 arm64_linux:       "dacce7689a8ac3eee105567e112454b35084862a7e90cb22487f5b6e31c032a4"
-    sha256 cellar: :any,                 x86_64_linux:      "4f05eea60d4ac090372c1610dc67a930719ac38779a05aad48e3aff51633a81e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d8297e9185a4780029228423659e0c9e36baa5ad692f7ef827ab791e8d7d13c5"
   end
 
   depends_on "rust" => :build

@@ -11,11 +11,8 @@ class Ngt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "45abfad53e2ca0728309c68a69567eb65fe32d9abeb9a7191d9f9ee16ea0c546"
-    sha256 cellar: :any, arm64_tahoe:       "fd19c1447fd6e4b48ebee8a52c6ad308b534eb8f9f1ac645891b5145e3debe13"
-    sha256 cellar: :any, arm64_sequoia:     "e3acfb1afaf5baf2b40d61280af51e3e98d6055c90d80ab9831c68fe99a7fee5"
-    sha256 cellar: :any, arm64_linux:       "c381798aa62796327645e3e98b2974c1ffe2e14f3e3c331e41beeaec9bf0545f"
-    sha256 cellar: :any, x86_64_linux:      "d12e28e8419b363ffa5a3aff2fdf16b8eb5a477f2b20e99f102d52013e4e0485"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "f5e56db0241267c081ed020b17538876c10fa047a6c03384664fefe0f2a6bba0"
   end
 
   depends_on "cmake" => :build

@@ -9,11 +9,8 @@ class Hf < Formula
   head "https://github.com/huggingface/huggingface_hub.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a6fe6f0d66be402845f493b3c3821c78cf7f4d7d32e5b1f428178a8128f03f52"
-    sha256 cellar: :any, arm64_tahoe:       "a9e5d82bf01c7dbf83e40a6f73834942c098b0c01f1617af2465f961dcca0ace"
-    sha256 cellar: :any, arm64_sequoia:     "9c94fb38fe918f46c52140cd8f5a145641ea2af81f24212f20751b9f6d5746ec"
-    sha256 cellar: :any, arm64_linux:       "551ac0045d1a7ef80751c2513e83b9bf6077c916e19e4203706a0e04941a45d2"
-    sha256 cellar: :any, x86_64_linux:      "f51224c63cbd7973d3e5914dc2f9a4ac9bf8a033ed631bee35a46432e264190e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "cda56523ed674076909435231e59923c2ed85eefe52c45d59bfd71cc32463791"
   end
 
   depends_on "pkgconf" => :build

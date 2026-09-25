@@ -7,11 +7,8 @@ class Ruff < Formula
   head "https://github.com/astral-sh/ruff.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "075822552b9a9117154334536ed36591ca1b9bba8922f2da50a0b2cfaf33b992"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "64ef88de56f357dbad5b7f2a8ab81349d239eb40dddf9b075422aef346e2f640"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b6448ad986d6e13f2f2c0bd1f4ac59017d5c797afe5f63df8bc5035858482be4"
-    sha256 cellar: :any,                 arm64_linux:       "995d3ca7767081627c7465c8b0d6bf51b632923949f7fd779da54bb98cf19683"
-    sha256 cellar: :any,                 x86_64_linux:      "9e6274b8e3a2139c4d797f3b11c7d826085e6290cc242258579652f6bd41f04a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "ccb27be499d836a4f282f6325b2feaed765bf07f7e2bc11f5842732d164f6c1c"
   end
 
   depends_on "rust" => :build

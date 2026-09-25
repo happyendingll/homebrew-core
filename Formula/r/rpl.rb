@@ -6,11 +6,8 @@ class Rpl < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "698786e815561b07c7cb3f2af12b7fd255fdc78f4ed7860b7e52b8b8e8d02b44"
-    sha256 cellar: :any, arm64_tahoe:       "78f96d5d14af1194b4bfdc24d06d03698a8c94952d0c5bd2900d3522fc9d80a2"
-    sha256 cellar: :any, arm64_sequoia:     "6ac0ebd923df28be08cbd2278b91979f8118c01ab8b0d34446cdd8cdab6092b6"
-    sha256 cellar: :any, arm64_linux:       "69cb6b065c427702e5a329a494ad74c1fe21fb0e535d93256b33afe46268ec3e"
-    sha256 cellar: :any, x86_64_linux:      "34282ca2c648a99bd56fd8af6d94f00dbf21534ad9e9cbbcaf33ed4990dc686b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "64425e453526fd0e6a850cd5c38432ecbba3357c6fcab48d76164b950d1201ab"
   end
 
   depends_on "help2man" => :build

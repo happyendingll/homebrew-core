@@ -13,11 +13,8 @@ class Mupdf < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d1af23a73cc60d53b8fd3e90dedf65d379be82725bd6bb42c73b26e0f90ac46b"
-    sha256 cellar: :any, arm64_tahoe:       "e3ff8e74e06a0c56f542084140d4a680c2aebda946a1e7fd4817ff4d2a4b056b"
-    sha256 cellar: :any, arm64_sequoia:     "9ec3ae87bee36f2e75f5323dd5cb3812879a1894658525821a3c4bc2ca889b66"
-    sha256 cellar: :any, arm64_linux:       "16106bfbc84ac3a5247d01fb6f926da1f7c09ce82dfd558e3872dcfe72c29bca"
-    sha256 cellar: :any, x86_64_linux:      "45cc2ed173c4746dad183b8ed64b30d5dea3d124b8bf36a6ef4ddf906b3c2871"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "7a159ae4541599d2f54b75f150794bab759fc38f0ed5aa180e1150b5cc88f198"
   end
 
   depends_on "llvm@21" => :build
