@@ -51,6 +51,8 @@ class Mariadb < Formula
 
   conflicts_with "mysql", "percona-server", because: "mariadb, mysql, and percona install the same binaries"
 
+  allow_network_access! :test
+
   def install
     ENV.runtime_cpu_detection
 

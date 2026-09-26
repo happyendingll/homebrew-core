@@ -1,14 +1,17 @@
 class Dbxcli < Formula
   desc "Command-line tool for Dropbox users and team admins"
   homepage "https://github.com/dropbox/dbxcli"
-  url "https://github.com/dropbox/dbxcli/archive/refs/tags/v3.7.3.tar.gz"
-  sha256 "7e8c6817d9b72e0b691a875ea09fdfa04c3243c9ab910a27de15bb3db28499ca"
+  url "https://github.com/dropbox/dbxcli/archive/refs/tags/v3.7.4.tar.gz"
+  sha256 "e28d45962d1a95b934235280743eeba37b942ba75a250d083517ead8fa012f8b"
   license "Apache-2.0"
   head "https://github.com/dropbox/dbxcli.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "f253e537fd68941f92e08d33ccb6f3c272b317f2f1459eec1a06e861a371b05d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3395966895e25f8051fa3db5ba40a5d3fa36884c348d3d60cdf73a047f19aa10"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3395966895e25f8051fa3db5ba40a5d3fa36884c348d3d60cdf73a047f19aa10"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3395966895e25f8051fa3db5ba40a5d3fa36884c348d3d60cdf73a047f19aa10"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ece0f3d4f3a10edb54cb431ea8c59710706511b7087bcdcc82b680ef9fc8abc0"
+    sha256 cellar: :any,                 x86_64_linux:      "5b0aac11956a9dd84c10a2e1bc9b66b12618f2f1234cda1d279de1081c54d21b"
   end
 
   depends_on "go" => :build

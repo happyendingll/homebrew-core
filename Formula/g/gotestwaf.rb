@@ -1,14 +1,17 @@
 class Gotestwaf < Formula
   desc "Tool for API and OWASP attack simulation"
   homepage "https://lab.wallarm.com/test-your-waf-before-hackers/"
-  url "https://github.com/wallarm/gotestwaf/archive/refs/tags/v0.5.9.tar.gz"
-  sha256 "95a504b2e456f102a9973a973c8a831ff5e6d6be735ac0b8442a77f0a4f6a4d7"
+  url "https://github.com/wallarm/gotestwaf/archive/refs/tags/v0.5.10.tar.gz"
+  sha256 "1e16260572ba1932014683b934d2f18df6c06aec960756d51eaedfe7e025a8c1"
   license "MIT"
   head "https://github.com/wallarm/gotestwaf.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "1711c5454202cb60ee327dd80efcda0708cdae0bbee153ca5f2301efb8d5116e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e74cba58101dd2e91fec5aed201dae3b60c8c12df81e9436206fb9ef03a1b72f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e74cba58101dd2e91fec5aed201dae3b60c8c12df81e9436206fb9ef03a1b72f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e74cba58101dd2e91fec5aed201dae3b60c8c12df81e9436206fb9ef03a1b72f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "737e104725e902e5f7af41580c7f279033d14b301ce291cfa9cc8fca1b9510e4"
+    sha256 cellar: :any,                 x86_64_linux:      "56ffc30b55f5005eefbcd3aab1a743fc638f042ee27c03f7ddc78f627ed7cc5f"
   end
 
   depends_on "go" => :build

@@ -1,13 +1,16 @@
 class MermaidCli < Formula
   desc "CLI for Mermaid library"
   homepage "https://github.com/mermaid-js/mermaid-cli"
-  url "https://registry.npmjs.org/@mermaid-js/mermaid-cli/-/mermaid-cli-11.17.0.tgz"
-  sha256 "23f2c2722262d98347cf979da6d88bc8693eef2cd8798a38ac393a7f006938a0"
+  url "https://registry.npmjs.org/@mermaid-js/mermaid-cli/-/mermaid-cli-12.0.0.tgz"
+  sha256 "b5b43bc60c2e6bc87f7d12ab3e6e78883c799213ea5b015363fecdd5e6363c84"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "0f5410c3ab6ab7023f7eeb35a792905b681abc34bf1714fe6925ff8f46d51ef3"
+    sha256 cellar: :any,                 arm64_golden_gate: "db05323cf6a5485488e6f9f1efd153a7f191a625fae3e7afca744db36fff9371"
+    sha256 cellar: :any,                 arm64_tahoe:       "db05323cf6a5485488e6f9f1efd153a7f191a625fae3e7afca744db36fff9371"
+    sha256 cellar: :any,                 arm64_sequoia:     "db05323cf6a5485488e6f9f1efd153a7f191a625fae3e7afca744db36fff9371"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "417e2f41f528b3af2831669949bd1777ee4dee3f7fd9f598afbeb1e6b3d6c7b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1c56ffe763302fb7f3c76785750fed99e1bf9c80c7aeb750deac0f913840997a"
   end
 
   depends_on "node"

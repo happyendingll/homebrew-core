@@ -1,8 +1,8 @@
 class CargoBinstall < Formula
   desc "Binary installation for rust projects"
   homepage "https://github.com/cargo-bins/cargo-binstall"
-  url "https://github.com/cargo-bins/cargo-binstall/archive/refs/tags/v1.23.0.tar.gz"
-  sha256 "e86f3c97853d21ac62b053b177f7920de3a3967f81042b441961087c98938fb3"
+  url "https://github.com/cargo-bins/cargo-binstall/archive/refs/tags/v1.24.0.tar.gz"
+  sha256 "e31dc589483bc72d53437d382dc6e3e54d7c89666ce4d998ac3f8e1f11e999c6"
   license "GPL-3.0-only"
   head "https://github.com/cargo-bins/cargo-binstall.git", branch: "main"
 
@@ -15,8 +15,11 @@ class CargoBinstall < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "1fbc79eb35439a07adcd2125eae256ee6a34f8c1b86090bc3679a8fc2444d862"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3450766521e5b64c15c809b8bc85fc6d95d006de4dd965cd195ed0092e8d5965"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a20b9ab1a5495e57b68926b24836e67704f6d97cd3e9107259b104006841b55"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "00a327dcba781b26f7f6630174ef45e4a42c3254fa59a391386d6a618c5f60e5"
+    sha256 cellar: :any,                 arm64_linux:       "bd5c662cfddf4fee231a329d3ccd290ea8163559b332c09e8526efe73e8ff307"
+    sha256 cellar: :any,                 x86_64_linux:      "67f92f8731b3d572e18e5efa7c2d5a6dae5ddf5473771aa886c51edd2768f4a8"
   end
 
   depends_on "rust" => :build

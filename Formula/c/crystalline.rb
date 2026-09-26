@@ -4,17 +4,21 @@ class Crystalline < Formula
   url "https://github.com/elbywan/crystalline/archive/refs/tags/v0.20.0.tar.gz"
   sha256 "8693e91c0f2afa9afa66885aa2bbdc971e539ff95e3d89b2f5d499d07acad02d"
   license "MIT"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "e7acc8b3ee2299eed651e01dd0ae0ba0c6531b53197f76639a22df5ae8d3510e"
+    sha256 arm64_golden_gate: "6ab9d531bcf06d3e4047657f7381b44981b5c0490888eac83700457438b40057"
+    sha256 arm64_tahoe:       "fcadc0e91448d09a06ad11ae9d47a183e31f2672d91b2a084e9022929b0f19c6"
+    sha256 arm64_sequoia:     "afd54b02d3320d7d80d912c9f3f76493f1c596af5c93791272f9e547fa211b6b"
+    sha256 arm64_linux:       "d7b8de1e6ebe6026c1cfc165c64c03e11a342d510ef66457e3fc81f13dc22aad"
+    sha256 x86_64_linux:      "c85501ee8bf9782375ddc4047bd27dd1d5ddab0a3d02ae86ce57aa4d43acc2aa"
   end
 
   depends_on "bdw-gc"
   depends_on "crystal"
   depends_on "libevent"
   depends_on "libyaml"
-  depends_on "llvm@22"
+  depends_on "llvm"
   depends_on "pcre2"
 
   deny_network_access!

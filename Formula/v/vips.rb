@@ -1,10 +1,9 @@
 class Vips < Formula
   desc "Image processing library"
   homepage "https://github.com/libvips/libvips"
-  url "https://github.com/libvips/libvips/releases/download/v8.18.6/vips-8.18.6.tar.xz"
-  sha256 "3c41e1d5458081bfa4a5bc54e116c46259c75c6760a18027764555632b9dda3e"
+  url "https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz"
+  sha256 "5baaead3b0bb20ffdb9e9ff09aa9fda08620923df77b63b436654cb5e0b3bf94"
   license "LGPL-2.1-or-later"
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -13,8 +12,11 @@ class Vips < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "47ffaeb0bcc49c8880c28ed06bf82f4e12378ed19349edf644d5c948ce7102ff"
+    sha256 arm64_golden_gate: "ab386f4ee8b02d3f9b9767c4a36fc6f10d6ab81e56bdef18f1b7998741f9a28c"
+    sha256 arm64_tahoe:       "2a83e649492e3e2e62c2ffb7892ee67ffe9c718cdcdc29ab3c8c9530a2f86e22"
+    sha256 arm64_sequoia:     "6800c28d51d72c319121016b7642d1dc4777653d213c0219737b2b64c4cbaddc"
+    sha256 arm64_linux:       "d63ad41955e7b00deffc554b469c729fdd29220feb04364dd7b046556ad5cdec"
+    sha256 x86_64_linux:      "812e68221a99429e501bfba6c770ab6a00f909b5d64e36ce36e6c096fe21fa27"
   end
 
   depends_on "gettext" => :build

@@ -3,17 +3,17 @@ class PocketTts < Formula
 
   desc "Text-to-speech application designed to run efficiently on CPUs"
   homepage "https://github.com/kyutai-labs/pocket-tts"
-  url "https://files.pythonhosted.org/packages/eb/49/ff1b716c147e8ef765ea2791734a15050596a3b4110c6a226228a40899bb/pocket_tts-3.2.0.tar.gz"
-  sha256 "94b4be4cebb78e41632ab04ac33f0d89bb16dc66ba3aba10fcd3ac80ab73bb19"
+  url "https://files.pythonhosted.org/packages/56/e4/08262e47704291a99c211515b17e754d4891a899323a8171e220f468e45b/pocket_tts-3.3.0.tar.gz"
+  sha256 "997b3dd39d43c0555cdd9b8efd72ac926dbfcd250fb5f3575aa29c33db5b6621"
   license "MIT"
   head "https://github.com/kyutai-labs/pocket-tts.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a320acfaec8f08e85d00cf359ef3094b9a7ca74dca5f784682617d6701417ec4"
-    sha256 cellar: :any, arm64_tahoe:       "8f1460f0951ce13f230b5d9078b576c7d29061923ec1e72e9de0617fe7dfb9a7"
-    sha256 cellar: :any, arm64_sequoia:     "8b44770cbe924c93f27253acb2e2c01feb3d983dad1076e955c3b7dbb71a10d5"
-    sha256 cellar: :any, arm64_linux:       "5e73ac62c0b2f2685509fb39e2e73daa0fd87b237e72c72fefb408d4ee214bd2"
-    sha256 cellar: :any, x86_64_linux:      "36dafc03ceb927fa73428a09a58bd0815049d843a0da52f91967e38cfd3020c7"
+    sha256 cellar: :any, arm64_golden_gate: "4f2580fa3c141acbf4a2d6179794f3f228654e672ed1c9c185dfa45ebbbb9dac"
+    sha256 cellar: :any, arm64_tahoe:       "5c29cbb62a5c0d93ed87ef77ff9f0791fab7bf80976063ef88b4f1f07d1e8d85"
+    sha256 cellar: :any, arm64_sequoia:     "8ed0dfa02db56d118f5f170b3af446859f53f2b3a3e76cbc1188ecbcdb1bd3f9"
+    sha256 cellar: :any, arm64_linux:       "38bf483a2b45445083e470de826fb9d6b214f32bc3dcfa0982762b413e4e3251"
+    sha256 cellar: :any, x86_64_linux:      "ddacfe76ce10a4c7667c1b6c0b87a51de5414372979b677992648e68c9d3901f"
   end
 
   depends_on "cmake" => :build
@@ -83,8 +83,8 @@ class PocketTts < Formula
   end
 
   resource "huggingface-hub" do
-    url "https://files.pythonhosted.org/packages/fe/0f/e83fdd856da8fca26bf78d71709ebd120432a0ce535e72b9597cab1eb5bf/huggingface_hub-1.32.0.tar.gz"
-    sha256 "ed70a45498abe86039df7c2f4e5f7575de524be908d3840e8f828d5525eafd6a"
+    url "https://files.pythonhosted.org/packages/25/2a/484d112c0d8fc5f665d7b65137ac9cdb2953c982391598c3597968a12ee7/huggingface_hub-1.33.0.tar.gz"
+    sha256 "367be21a201db9523eddf8aeac7048f2602c1b308691c97640d5e72ed188007e"
   end
 
   resource "idna" do

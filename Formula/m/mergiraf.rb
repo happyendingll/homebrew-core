@@ -1,14 +1,17 @@
 class Mergiraf < Formula
   desc "Syntax-aware git merge driver"
   homepage "https://mergiraf.org"
-  url "https://codeberg.org/mergiraf/mergiraf/archive/v0.19.1.tar.gz"
-  sha256 "36ccbbd80a3f79bdb23e9e087c9109aeaaed9cc80d85a7722c8db0c0295d107f"
+  url "https://codeberg.org/mergiraf/mergiraf/archive/v0.20.0.tar.gz"
+  sha256 "85a1dc9e60e8ebc22ffe161cc08cb998f18f5e27b7e23319f35328a69a95fd10"
   license "GPL-3.0-only"
   head "https://codeberg.org/mergiraf/mergiraf.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "ce98284ea1bfd17133c305b23e0da6cb7a730839ec24bff4505919a7a9dfe2cc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6cfa5f2da73d1de20a2e5ac468087be030deef6a0bceab0fe8851d5adce0d57b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f0e38cdc14a1c56d2f6f66f04f9d7441a9d7fa27fbfbbd3388710734c10ecdde"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6efc7bf4a38b82faf5b9cfc9d18a9bd6a648bd7e808e4267d2bdcf23ba686b2e"
+    sha256 cellar: :any,                 arm64_linux:       "c34d8d842b6f4d8d1f99b3281a0b563994cd807cf146e69bd32c247071faaac0"
+    sha256 cellar: :any,                 x86_64_linux:      "11105ab497a9b70e746240ac7ebaae55e75fabb91e16f7a84dbde841a0d49858"
   end
 
   depends_on "rust" => :build
