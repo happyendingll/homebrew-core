@@ -7,12 +7,8 @@ class Codesnap < Formula
   head "https://github.com/codesnap-rs/codesnap.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "06c1dafd27965b4e274ccfc36b2ee23d5f049be1a6ec6cb8cb4b4175db36a8d1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "888e72eb89988d3f9db4467512eeb82762d33b41d9127a20de5a7e3111765a37"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6620e43422a8bf5ef8679b765d25546375c433298799e0a878ec97a62f181590"
-    sha256 cellar: :any,                 arm64_linux:       "6dcf6708d06fe819fe8def2cdf44cc5cfdf109bd6eb44359512387fa5685dd93"
-    sha256 cellar: :any,                 x86_64_linux:      "f36bd8236c35f11f305596e300cbbf2012bb23c4c7c9d9443917f241319f70a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1afbcc449eee799aa97b05523d469bcb6a30443dbf173cd54cbafe8f85254ee"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Pgpdump < Formula
   head "https://github.com/kazu-yamamoto/pgpdump.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "461263e1f721e46bb5673ead579b1fabb6c5e9c462a3003f4e14ee879e10fa52"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8fc69f799ea95e3e89ccb78bc8661153a67343db86b19d92d822e6428b71e7d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bc5590a7b082b8c32cd7fb39b62906eb31d08b742b8e4faa095a75b2c81d46f8"
-    sha256 cellar: :any,                 arm64_linux:       "0a0d71dde70381e31b523b558e00d30aa46f2da428fd6bb87db1cd1059073d31"
-    sha256 cellar: :any,                 x86_64_linux:      "186cbee04dff0d6c779c20c0e4d5bdc76f486149124aaa02a0adbc5f45bcd4ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ec70d4e074598a029b1c205096c349c50b7485e9dd6c220b4b1260f457db3d9e"
   end
 
   depends_on "autoconf" => :build

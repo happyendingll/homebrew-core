@@ -12,11 +12,8 @@ class Kraken2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f793cc408b58377d67833e9f4be578789c88f5321170be15d8bf8f634f29b08c"
-    sha256 cellar: :any, arm64_tahoe:       "3542091efa6df3d627715383e03fdaf22cf90df3d5a93870f063912594f97607"
-    sha256 cellar: :any, arm64_sequoia:     "7b14ae891e96cb97259e95f52c58c995080dab92625f3dff2f678baba54ac032"
-    sha256 cellar: :any, arm64_linux:       "87a099d3ffd1fd44f5089ca623e8a48f153d6ce3e64b41866dc10c8931037378"
-    sha256 cellar: :any, x86_64_linux:      "21c9d0ebac4986805f699510187acd40f415d9ff504808fdc3b097361fde9878"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "dee66928fff2ad06f3482294bf083d9c017a4ed9f27345a6e71ad0eb5fb51f2a"
   end
 
   depends_on "gperftools"

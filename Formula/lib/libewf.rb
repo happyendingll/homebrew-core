@@ -14,11 +14,8 @@ class Libewf < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1ec9dbeadfcff305be1c18d9e5b0899eafe4ad7433fc9739d901773b2804aa35"
-    sha256 cellar: :any, arm64_tahoe:       "8792a4b916c961bd9b3e7de6faf86f3a10736e280a9c24f22ef5278c9046c7ad"
-    sha256 cellar: :any, arm64_sequoia:     "f3d83ba7fbcf13ea2c9791cc4292a952950a97e3d03704d9a80817618b1ce33e"
-    sha256 cellar: :any, arm64_linux:       "28bd71b9e943961157da7409353c1a6bcd95c851e65952a399405e756162bd4a"
-    sha256 cellar: :any, x86_64_linux:      "20d57304f8cd5355fb4761a3d74d0577fbfcc50acdb867627c8f2155477b1676"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "85ea83abd21070e59e8c03cc4d9c3e037db10d5273e3199f8b6b085e790938c7"
   end
 
   head do

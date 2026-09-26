@@ -12,11 +12,8 @@ class GrafanaAlloy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b0dcb368bbccf99872d3e7b5cfc449e568545011ff68017d83a3af6c01afdfd2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "52b53598c5ed7039caae587fffe44af6767eb7452956939c72e3a0eb660d82ee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "38e2eefb2b95a9de21d00baded8af6a4643ae4de8d88ae0fe0358af122347c1d"
-    sha256 cellar: :any,                 arm64_linux:       "13a19408af6dae8fd7b0f851994ba49eff3835a58cd0153f1feae0d333f300b6"
-    sha256 cellar: :any,                 x86_64_linux:      "374fc753a177b370744f6b77b0b41bb2c736103db0c7cd6d0cefa95c370ceb46"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "68e21a7a77589c321900fd56eb707a51b4dadc679916b22f443b34eb185bfb83"
   end
 
   depends_on "go" => :build

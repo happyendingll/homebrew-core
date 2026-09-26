@@ -7,12 +7,8 @@ class Fq < Formula
   head "https://github.com/circonus-labs/fq.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "0ee4f40eee6d68ea8e39759b2bdb59036eb03863b435c0ca11d21243e2b3a26c"
-    sha256 arm64_tahoe:       "af9f15d2ab89561c12e797f7e709e1b26e47cce0759823f5c6d0478a003b6198"
-    sha256 arm64_sequoia:     "9bb54081fd33ccff3f7cbef0361a7cd1744ba09cbb67f41e779a1dda1b4cd251"
-    sha256 arm64_linux:       "0d08e1ca55ac0b75b522c204cb0aca4bd0044e1f287088858bb84a6cfe9d04a9"
-    sha256 x86_64_linux:      "2c21025a440f8167559fb2daf944f4fbc138b23a472aa0b4f792bc69e0bff46b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a1bd99150326dea59beefdf7e0a1f6046c48b6aa649413a8d2a8157ef78fcf6f"
   end
 
   depends_on "concurrencykit"

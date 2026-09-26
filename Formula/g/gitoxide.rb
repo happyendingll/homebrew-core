@@ -12,11 +12,8 @@ class Gitoxide < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07445f87b0b27c0cdf6ca6ccaba0a98b1f66942782845d9b3d8956f6475bdb24"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "23538548bcf9652c060424160372c8343e340b0c81d5bba31a00c64c458afd02"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2c11a783389afc387834700b01a8e81dbc5bff722b06330012fb1620a3768927"
-    sha256 cellar: :any,                 arm64_linux:       "2ef6adf077ecf7cd4b0f64ec86c74d19b7082486e826c632037f1d9bd7d8a9ef"
-    sha256 cellar: :any,                 x86_64_linux:      "8d4a365121c0724324e182abbf219b04e0c7de7ac0dae0720394831bd622b2b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e5efd9bb92d14b7e5a05cf2715421d94883e7a2e5cb3e67ae1d03ff52e70260b"
   end
 
   depends_on "pkgconf" => :build

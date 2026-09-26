@@ -11,12 +11,8 @@ class GambitScheme < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "71b7111dd6f7b3c1bd0e711493cfc468dd6ba15ae5236811c9642496960ca53a"
-    sha256 arm64_tahoe:       "18972a99033b1bd893b769bd0e6a29267a1e7e8069494512a007a6d25b32c7f6"
-    sha256 arm64_sequoia:     "5d4867bde22dc23c0821177f759f25f8db1c1e3e6b75c24253c5f7239e89e146"
-    sha256 arm64_linux:       "eefa71bc2bac0b446c63b84d897ed9a9b478ceeef763502039780aa339a181c1"
-    sha256 x86_64_linux:      "fe6904a521d67c22c221a32c9acf79c1353143a84a55a79a32cccf64bc166886"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "159945817be0987ad66d02a39e3630c87ba48060dc5de6af60ffd72c01631653"
   end
 
   depends_on "openssl@4"

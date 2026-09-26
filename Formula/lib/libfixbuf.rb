@@ -13,12 +13,8 @@ class Libfixbuf < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "06a5af7406b391531dbba99e4b0459c9b6577108f4d0eed1a8f2af8e344af234"
-    sha256 cellar: :any, arm64_tahoe:       "882ab760594b41aa9201adb97609adadbc5687b18e99e1c515aa6ec3d14ee224"
-    sha256 cellar: :any, arm64_sequoia:     "55fd6d658098efbc3bedd78c1d308e08a25217ce572bfdb3ea35a74b08ffad42"
-    sha256 cellar: :any, arm64_linux:       "e0922aac6dddc9a1e5b9bfe77e05c151dc785de184a439d171e15c6e4e0c5ad5"
-    sha256 cellar: :any, x86_64_linux:      "5faf63faafa693d0e2f5f0b447033b0aa08241539bd245f39f4e69b0047fc3d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "728cfde15f2b07da963d17de8d34a000ea42a70971b437e58b13b44cc7ab2d34"
   end
 
   depends_on "pkgconf" => [:build, :test]

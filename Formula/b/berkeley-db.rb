@@ -16,11 +16,8 @@ class BerkeleyDb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9a6b14a95512978cc752fe673e49ad604422350f72beb47c7f9f1676b8277164"
-    sha256 cellar: :any, arm64_tahoe:       "d94e51bc4878ddf195920e8a64c9f1ec2f513671c64c2862937ae034d5e3708f"
-    sha256 cellar: :any, arm64_sequoia:     "56f53021c4758ce4b4860aa1b6567f2128c5badabb6ebd8c3fd87d093e24c05a"
-    sha256 cellar: :any, arm64_linux:       "aae5235e0a9113eb9f9193e98823f90cc07ddc74061c819a778c999ed6515945"
-    sha256 cellar: :any, x86_64_linux:      "c94fb50d96ac4591613e5432955dadb3cf352a4f2412ccf7758df1776505b674"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "dea1bea935ca2825d8ebabf2e3140379b536bf4f8e97d74e190d563c513c0117"
   end
 
   keg_only :provided_by_macos

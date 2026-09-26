@@ -6,12 +6,8 @@ class Instead < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "1c1e5a933c65864ba48dcead307d97932572d6371bce746d265993eef0d0cf85"
-    sha256 arm64_tahoe:       "9c66bd5025cd98a1d6728895d208cd9f0fe36a4f5a3ac60f76a9a04a125aeb6c"
-    sha256 arm64_sequoia:     "92ce8a6ec45d5ac109f985d8bafb0bd9c6c08563f68e6295013a640bfe1af00b"
-    sha256 arm64_linux:       "22d5f39dd5833ac098f6a9048cc0029deab9dd15ad0f05386d10be9ef0d87933"
-    sha256 x86_64_linux:      "ffd96d25da618026346183328a2b165143ac9a11a482e329080036444d640b3f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "5090973977620aaa7115ba9161fa7abea9badbe49f9a9417997a6d03e12b7311"
   end
 
   depends_on "cmake" => :build

@@ -7,12 +7,8 @@ class Flawz < Formula
   head "https://github.com/orhun/flawz.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7701200ca9a319e1630bdd0ae229fdf4cfe2ec8c0f630e29cfb997f22b0a651c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a5391e6b06f900858eae6f6b6b56daf0d488c6c839adb184164b777be4d6502e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5bb8302663275870e215fca1308fe23cf7caa0d6eefa1e21073f3bf3d43fd503"
-    sha256 cellar: :any,                 arm64_linux:       "ec4de4d6a20c29e7ad4b9ee64208293b195cd91831cd88e22e071ea7bdeac971"
-    sha256 cellar: :any,                 x86_64_linux:      "3b9066f11b2a40a1cf9e3c90e734cd5403da68e085afb096c5a7b1f6a5c3a44b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f7be5c74ebb5a7624dcda9e23e5d39f28702c8a6ea1424a810efcfdcbeca775a"
   end
 
   depends_on "pkgconf" => :build

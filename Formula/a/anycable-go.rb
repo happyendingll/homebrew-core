@@ -12,11 +12,8 @@ class AnycableGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "342fb1dbba39be816992caa3d429a1f434854baed5642c137a94eb544abe7435"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "342fb1dbba39be816992caa3d429a1f434854baed5642c137a94eb544abe7435"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "342fb1dbba39be816992caa3d429a1f434854baed5642c137a94eb544abe7435"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7ba2a3e68dd7a83e66e8358e645f608e29fdbdf3e7d85391ab9039a2de411581"
-    sha256 cellar: :any,                 x86_64_linux:      "c389371d9ce151bc8c744ad4f8a06d72d79f30885761d806bf1c90402e748604"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8c6211755f4a1d4c80ef37aba2b5a574fc090df031b8982c3ce451062d91463c"
   end
 
   depends_on "go" => :build

@@ -7,12 +7,8 @@ class Bulletty < Formula
   head "https://github.com/CrociDB/bulletty.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "343c40afa97cf836303f63c6961e5ca930b84d1960f59ce61c16bf1c2f646e12"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0489b8d9ec6050527d11bd57996dee30fbff8973c4e2553c8c91fb3e5b979187"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a270ac782a1b7517824fc0775f3da86cceedc7c3d17aa5ce047ab2a0308ea5f1"
-    sha256 cellar: :any,                 arm64_linux:       "be398e9954d14e8cc4abb8d032db94736f19c419b800e632bb76939f3a787bc5"
-    sha256 cellar: :any,                 x86_64_linux:      "457d123f39b4ac2c89a230a073e0dc2afd9581a5d6e086b8afe0ab9a668e77cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e1faf3193ef491ba3132ace5124ed636c1718ca6a56f453a36e51e5b8706fe63"
   end
 
   depends_on "pkgconf" => :build

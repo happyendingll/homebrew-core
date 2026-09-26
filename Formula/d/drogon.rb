@@ -9,12 +9,8 @@ class Drogon < Formula
   head "https://github.com/drogonframework/drogon.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d0e62373deac65d1fb493b679c8bcd8df49fc2525cd0bbb46f2469323e7b9edf"
-    sha256 cellar: :any, arm64_tahoe:       "18dca8c71ad37b5bbb770932d6caaf0fb548ba7f139a6539b6966027ef111a03"
-    sha256 cellar: :any, arm64_sequoia:     "6814df6a07b39480cb2813ef644eb323d6082ecee79619825183d6d792bec4a3"
-    sha256 cellar: :any, arm64_linux:       "09023fabf142669b866365a24071e244380fa43a7144490a2d5d455c984f676e"
-    sha256 cellar: :any, x86_64_linux:      "fae8c1fdfe1d13392e692a87f7c024b13337ef047c4d7b46872e951c77eb7e22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c13ec4f8c10a4bfd6e954ed7073bd21d287b4a87921c5753af62026735a3aa10"
   end
 
   depends_on "cmake" => [:build, :test]

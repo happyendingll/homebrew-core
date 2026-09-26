@@ -15,11 +15,8 @@ class Feluda < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b822d0b5dd4903d301bf4eb0ea6bd10e0920d0bdfbe9011372b007404dd4ed75"
-    sha256 cellar: :any, arm64_tahoe:       "bd29cbb04b417ae0cd4b4819867e09ead478363ecf44d69c8b185d1cc41a55e7"
-    sha256 cellar: :any, arm64_sequoia:     "bfc75246c9b5503b06628d7adfe8e9602a3aeca0559519c359840ea03d1abbc2"
-    sha256 cellar: :any, arm64_linux:       "2b5d291a421bc04114aac3b6aa84a273f793762c3e20875ceda9a058925fcfa8"
-    sha256 cellar: :any, x86_64_linux:      "516caafa476dcd77ed450b3f2ea0e190fdbd496d96a5631e988038f954a24b7e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "861e650716bfa7a0395e4cece0a857fb2f78a25eb7162c63cf7e4b045faf324b"
   end
 
   depends_on "pkgconf" => :build

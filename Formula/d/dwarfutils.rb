@@ -13,11 +13,8 @@ class Dwarfutils < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ae1e174d0c3e6b044ab2dad4fe7bb89585d6f725dd641c7d82bff80e20018d6f"
-    sha256 arm64_tahoe:       "e8615a85ebe4b24f3a14dc93c8d8b7b52520d812f05466e186c9cb4d4db7b8a6"
-    sha256 arm64_sequoia:     "a91d9cadb172a23300b9e1fb1db1eec35fc3886991f6f1dda0ac8812cfcc5f38"
-    sha256 arm64_linux:       "fed704faa7887461be1f593a77efb23422543187f8d1c799088293d3db7d01fb"
-    sha256 x86_64_linux:      "b22dc3476addbfc3d5dfbd7d8002de65d4cd9e525b6a26a2bab1c2c9839dacc1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "e74a53a0902dc6ae4cc6d32f5696d4a4a622abc73e34011e678a7eb9d9d0f5fa"
   end
 
   head do

@@ -12,10 +12,8 @@ class Chapel < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 arm64_tahoe:   "d7b046ade6eccd937cd27b027903a7c6dc6672eef1084a1e8853f9f5a1d0930d"
-    sha256 arm64_sequoia: "cbda1a20fdb07979e06487d65e851bf822ea15e190666652f7c274ff8e62a6d7"
-    sha256 arm64_linux:   "9d2c2a892bc19c7699f83e2cdf3b22ea8ad816e4e6e022d9dc5386c1f251bfd4"
-    sha256 x86_64_linux:  "81d4850d992f5845dba3d777518551392c57c2a67c438fda0337f7434208ab04"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "5c5694bfc323f9463b2e94efc9bc96d55aa33d33ad5665b40e939eb072436386"
   end
 
   depends_on "cmake"

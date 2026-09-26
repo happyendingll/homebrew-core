@@ -12,12 +12,8 @@ class Dwarfs < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f39262b31c6a921306a10596365cc41e2edd18fcdf49cbab767cad9787896544"
-    sha256 cellar: :any, arm64_tahoe:       "24f271f3a1129694d38e26d040e4455d3545295a0e4d4a24f2d4702ccfc9dbf9"
-    sha256 cellar: :any, arm64_sequoia:     "87084711b64e35e44867ad4645335d7df806804879620ebc96636a562000d145"
-    sha256 cellar: :any, arm64_linux:       "c511fd605d13564d4dab6e70c4dfbed89c6308c35d67a170fba371636908dd23"
-    sha256 cellar: :any, x86_64_linux:      "e88811e21d3195c707c33b5a275285b66a0581f74afe8c0f57681ebaf633c51a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8919af8dd3cd26d5916c4d2278b25d291a737d967c7013cc610ef4f4795c5194"
   end
 
   depends_on "cmake" => :build

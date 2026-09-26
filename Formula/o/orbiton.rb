@@ -12,11 +12,8 @@ class Orbiton < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26b6184c603745eaaeb85bb7f5dae9ee1784950d6673661e30c08c73eb3ed0e0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26b6184c603745eaaeb85bb7f5dae9ee1784950d6673661e30c08c73eb3ed0e0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26b6184c603745eaaeb85bb7f5dae9ee1784950d6673661e30c08c73eb3ed0e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d0d57bb2e2bd3acf4fafeece04fa610e581901182b36c91a7f7573762dcd54f2"
-    sha256 cellar: :any,                 x86_64_linux:      "ac09571ed46ca3bf594d3f856b101ee7fbf9decca5b740b4452076e3d263e841"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1fe48ca8af4a47799957f88b31cc0b28628e3d6e286044cd0da673356af602a1"
   end
 
   depends_on "go" => :build

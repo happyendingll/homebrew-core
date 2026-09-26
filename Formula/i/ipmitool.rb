@@ -13,12 +13,8 @@ class Ipmitool < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "b7cb2691bf1d9efd8e53c2e5ec84a162f5c775cb8e4f27600d93b49f7cecdcf4"
-    sha256 arm64_tahoe:       "fac2be6b6864c8ba04561644fa6c71fadd657c26725aab90ab009afcaf6ae437"
-    sha256 arm64_sequoia:     "ace2463c31aa8323d12f23808698220aaf1a119fb599bc7996d757f3670bea5e"
-    sha256 arm64_linux:       "9d8f46de91af22a4e3f4249d440cf15f3163148c94db6fa4de3fa64d42d22d2b"
-    sha256 x86_64_linux:      "7ba2fa2ab338c124d5aab91f6aa0339c71fb774143fb2ec4eaa64f87dd581eb9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "4a7cfee85a685a70fa76d8564cefe8653e6e6fa87d48c925b546ad59720fcf24"
   end
 
   depends_on "autoconf" => :build

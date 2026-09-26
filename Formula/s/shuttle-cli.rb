@@ -7,11 +7,8 @@ class ShuttleCli < Formula
   head "https://github.com/lunarway/shuttle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aefec12638d4390492d12eca20ed2a7c414176d493f2fe9ab51f530dd0619854"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "aefec12638d4390492d12eca20ed2a7c414176d493f2fe9ab51f530dd0619854"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aefec12638d4390492d12eca20ed2a7c414176d493f2fe9ab51f530dd0619854"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5e8c5bcaddb5bdbebb85518aa3746cb916c473c48beabec58b683168d9580d5f"
-    sha256 cellar: :any,                 x86_64_linux:      "ce45f1a3ea7684bff6e8096717437959b4db0d6fc89eb821ef3a329099efa4a0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d059bb67152dba19a49cec686c83d502bf15994b6a8f065d8fdcc65d2086270d"
   end
 
   depends_on "go" => :build

@@ -9,11 +9,8 @@ class Vunnel < Formula
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8baa905783c22e7f374632f79c93884f904bd63c54b05b47ad180dea42e174fd"
-    sha256 cellar: :any, arm64_tahoe:       "385f1d574c6134a6fbdaa23db29d15aadd2f828c8bdd4a8b9c17336545d5ac2b"
-    sha256 cellar: :any, arm64_sequoia:     "2a51a95af1b5d3abe3f5d7596b81fd118acb837a39a495736fa136ed0412a7cb"
-    sha256 cellar: :any, arm64_linux:       "b20fa3a4ca0634a924cf1bc56015d4d50ec27ecfbd3d16ecd3acf0c924fccbe3"
-    sha256 cellar: :any, x86_64_linux:      "fcdd0a966a053ca9681bef78b053ae1b7f221c239ea0390d3760527e18250f44"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e1d64e48cf708a4aa64628b826a996bbda121020391818060e6e253e8f3d759c"
   end
 
   depends_on "rust" => :build

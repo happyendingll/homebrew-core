@@ -12,12 +12,8 @@ class Irssi < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "8abd032e0f87f1a0a6ada2bc59ff4c5ecf8741e30ec5e60810f4f05f3659abf0"
-    sha256 arm64_tahoe:       "63a9bacb5877588da97645351c1b2db8709421a909787e11da2663b34331f5c3"
-    sha256 arm64_sequoia:     "dd157a807bfb407c75deac84ecccb71acb21afe9d82b458d5d5749d76df25ca4"
-    sha256 arm64_linux:       "6207bbec2b3944dca829886bec462824f0192f89b9d61bdfd2afb69e70ee279d"
-    sha256 x86_64_linux:      "11aec7b48552d3ce880b87262551b9eefe1251e7850124b66bc2f996d7aa05f1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "316af1a09778701f05eda33ece7d2c386522b05e9579ea1f7599a9e578923141"
   end
 
   depends_on "meson" => :build

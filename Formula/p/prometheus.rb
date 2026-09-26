@@ -14,11 +14,8 @@ class Prometheus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "28086726d128ad0b3d52482100b7a23c28e7c350203bd6c05509bb84ef13293d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bb64ae1b4a5e90da2d243d578259ddb8e68706f957abb15982bab7b261571171"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "261b129f76cba193a585d9d67e7f4aae20a56a44fd62d54f3f485b9f3e7b7baa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0fab160304f69b07add0e434b8d1d552151c3c97d7696b25af1915913197d67b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "37203530939eef519518dc8b3dfb0456d6fa0703ba705b759569a6b8be6f98b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "443a9c7a4611d821893ef1e459740151cdcffb8b92ef7f776b12b279969b31a6"
   end
 
   depends_on "gnu-tar" => :build

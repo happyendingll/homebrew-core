@@ -23,12 +23,8 @@ class CassandraCppDriver < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "ee344876ddd0520a78ef1ed0a19df5985dc55f05e241d0c46ad5a11f023c558b"
-    sha256 cellar: :any, arm64_tahoe:       "aed7c57c257aefb388dec385c067714c9a7a25ba6b3a447ba302bf9897e8e88d"
-    sha256 cellar: :any, arm64_sequoia:     "71cca948b550d6adf308cc90e7e47b0c204d5d3b1b582a030f367a10bf249835"
-    sha256 cellar: :any, arm64_linux:       "9dfef249c57a2e01bd1d646ffad6efad3bf8e0f15fee463eaf8d7e494fb4340d"
-    sha256 cellar: :any, x86_64_linux:      "9a50199d1ddbf8d60fe7ea0140267d1f20df7b118a2af326453ecea2f4a62e97"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c22dc81810b94e63753da9a49ef3c4e2e6c0dad03b5d456e9a698fc58054b3ee"
   end
 
   depends_on "cmake" => :build

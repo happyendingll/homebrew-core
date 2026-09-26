@@ -8,12 +8,8 @@ class Cppcms < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "d84ae7fbc5f5842ac9c3f059ad7f472b093e4bd064ead67613400b13c8256ac5"
-    sha256 cellar: :any, arm64_tahoe:       "3e60d5df68d9b71a758c4d36e9eda5bd2c0e7e44336d19d676ad52b323b8f635"
-    sha256 cellar: :any, arm64_sequoia:     "5124b51085eb6a99626cacc8beb377bd0d485b26dc17be5dfb9051581f9fd563"
-    sha256 cellar: :any, arm64_linux:       "501e09db10d85110fd3b26e9af45cbf972957027a09b52dcde6101a1721baebd"
-    sha256 cellar: :any, x86_64_linux:      "3c2715739b78e7d6b2e9a1cf3281e8fc28bcd75bff5065aba20ae2c6c0c0d24e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7527a99f8bdaaa3b8710a57a80306ac8e8063bc20b9b3c70f7bbdbd68d3b84ce"
   end
 
   depends_on "cmake" => :build

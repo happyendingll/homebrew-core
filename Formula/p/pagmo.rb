@@ -6,11 +6,8 @@ class Pagmo < Formula
   license any_of: ["LGPL-3.0-or-later", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "09411ccb768026f9cde2978003397d0ab70917d0b56111a37390584045b3d359"
-    sha256 cellar: :any, arm64_tahoe:       "f5785dbbc6f6b93ee9cc435f8b7f737866e49da979aa332c15773b457180474b"
-    sha256 cellar: :any, arm64_sequoia:     "ff4fe138739435578d77b6c1624fcb93e775977c82505d18741eac6ce98bbad0"
-    sha256 cellar: :any, arm64_linux:       "6595489ac203b33e97d12632e9189aae09d791d6942508f236f7d6495e92bfd5"
-    sha256 cellar: :any, x86_64_linux:      "13e7b286b3646603147045aad598c73cdaaec5d67ff9875f7c7780bc4a010abd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c12db5ac66f289de43a1207380335fc8972e539d658e5b373652cec31beffd5a"
   end
 
   depends_on "cmake" => :build

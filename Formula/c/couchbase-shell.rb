@@ -7,12 +7,8 @@ class CouchbaseShell < Formula
   head "https://github.com/couchbaselabs/couchbase-shell.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6003dce9b939cde8c9778009829df39a949035f47a66b20a97fc9f7cfb6e72eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98e6283e63181fdeece944e10ff47c19923eb5c91f186ab97846075d35cce1c5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f9bfa398ad3a06d30940ea66ff2f51df6dd9753701f4413ae3e7cc43e653e33e"
-    sha256 cellar: :any,                 arm64_linux:       "5347ef5a4b23c96e2f952cad5af996daba5ce6166692a62736b4624ad508c866"
-    sha256 cellar: :any,                 x86_64_linux:      "8ae2cf35ca70a8e3ff53f889586d3418e689b6dab7db3a80581f873818ed6865"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "edb5d9245b226d911e64748b48c6303f965a3e4fbf2fcdebb9fe98b060d60af2"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Gotestwaf < Formula
   head "https://github.com/wallarm/gotestwaf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ad7ca198bd6a8b0e0c149759ac419ad8282a2907086917ddbd37b4feac4958c4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ad7ca198bd6a8b0e0c149759ac419ad8282a2907086917ddbd37b4feac4958c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ad7ca198bd6a8b0e0c149759ac419ad8282a2907086917ddbd37b4feac4958c4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f837730e55f29d9d6b95b138954cb19efb0c612278f1790156c1dd8c30d72a41"
-    sha256 cellar: :any,                 x86_64_linux:      "6ed7c8383ad20f88b78a29118c8bd13289daf1932f6e25a5e1a83e4a421059b6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1711c5454202cb60ee327dd80efcda0708cdae0bbee153ca5f2301efb8d5116e"
   end
 
   depends_on "go" => :build
