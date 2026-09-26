@@ -9,11 +9,8 @@ class Uvicorn < Formula
   head "https://github.com/Kludex/uvicorn.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "18f5c54b3db0e37e6232e689eb2c6c41d28ba62b0423f3cf1d12984bd0e2c553"
-    sha256 cellar: :any, arm64_tahoe:       "d1821baf86612900513329415615ae47dcc9df098930f9f95c7db5202b0a35d2"
-    sha256 cellar: :any, arm64_sequoia:     "d71e0461cc9abf7c8b15d19b4fac129a742716759a804d33e226c90fc0647ddd"
-    sha256 cellar: :any, arm64_linux:       "2892ff997ffc9df3c67f568245956bb20d2861b87353b3dc80622fd448aadea0"
-    sha256 cellar: :any, x86_64_linux:      "f3cc76dd0bb5cd57b36764f4b72e6cf4248a4b3d1535c649459221442d4f5b65"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "1ea7f36a6998ed381d97185971d65dec038ccc701702654f9de16098f61a0987"
   end
 
   depends_on "rust" => :build

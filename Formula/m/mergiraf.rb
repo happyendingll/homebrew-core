@@ -7,11 +7,8 @@ class Mergiraf < Formula
   head "https://codeberg.org/mergiraf/mergiraf.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6cfa5f2da73d1de20a2e5ac468087be030deef6a0bceab0fe8851d5adce0d57b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f0e38cdc14a1c56d2f6f66f04f9d7441a9d7fa27fbfbbd3388710734c10ecdde"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6efc7bf4a38b82faf5b9cfc9d18a9bd6a648bd7e808e4267d2bdcf23ba686b2e"
-    sha256 cellar: :any,                 arm64_linux:       "c34d8d842b6f4d8d1f99b3281a0b563994cd807cf146e69bd32c247071faaac0"
-    sha256 cellar: :any,                 x86_64_linux:      "11105ab497a9b70e746240ac7ebaae55e75fabb91e16f7a84dbde841a0d49858"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "01f83fbaa02fa256a8fa494353552ed65d4e58e0125f76d4d22c5d1662202524"
   end
 
   depends_on "rust" => :build

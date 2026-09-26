@@ -9,11 +9,8 @@ class Bazarr < Formula
   head "https://github.com/morpheus65535/bazarr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0c73590e516700a7df2315970b883c84609c06d1f9f7bcda5e603cc927a1e164"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "45133d41ec3666290c28f4b5a5be3af04687449669710f2305a4a077554f8c01"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b156e919db0efd65d93ec27bae6b458c60bd1211d941bee1f00717cdd16f99fa"
-    sha256 cellar: :any,                 arm64_linux:       "eb0e2de8680a11f8c6c1f4b624302c6d6b9b956ae45d5b3b982597b9d703322f"
-    sha256 cellar: :any,                 x86_64_linux:      "a715e89ef129a4459547b8ff791a784697037299b03510603d477c43e3953dbb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "1853c52143d6ec0fa5ccca179b7a037fc316d8bf1367e67430a6248e2a33a83d"
   end
 
   depends_on "node" => :build

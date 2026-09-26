@@ -13,11 +13,8 @@ class Flarectl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "634d8db04e95446faa40475897c2cf60e8684ee6908f18faf7fc4494d118aa2a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "634d8db04e95446faa40475897c2cf60e8684ee6908f18faf7fc4494d118aa2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "634d8db04e95446faa40475897c2cf60e8684ee6908f18faf7fc4494d118aa2a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b536762049b9ec69827a388aced7ff2492cb581af7f334ef754fd76a1f9bfe65"
-    sha256 cellar: :any,                 x86_64_linux:      "1622b344a715b8cb3fbcc90077b65799b8355149e7e277d91312961ab4aa702b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "0cf5e8e04a36b628a92ba270b7d437aa12fec6b0c6fa5d6c09d7264689e30ecf"
   end
 
   depends_on "go" => :build

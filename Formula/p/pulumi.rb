@@ -10,11 +10,8 @@ class Pulumi < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8afc275d99a43fa4f1e8f61aff25b3bad26ab3fef22e40306f599766962f322d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "66716b8d5af3eb64a5178850793368e362bf696ac5d4d897038208b1440b8539"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "039a466e298a997c2f6776aa189320ca47cb81165ab805f5972d3740fb5a40f4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a56a2478e2eb0cb23c07357312a6c45f196fbb4ece61fb5ad41d6985dc182048"
-    sha256 cellar: :any,                 x86_64_linux:      "5aae22eb813ecd3a61a8585adc67ccecaeab665515ebaeade5956f53ff1c1199"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "e84d29abb3b23ee44b0fd8ae0cd899499628a0c6d062a0ab788e83afc744fb30"
   end
 
   depends_on "go" => :build

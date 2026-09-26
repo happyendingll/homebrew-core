@@ -7,11 +7,8 @@ class Crystalline < Formula
   revision 1
 
   bottle do
-    sha256 arm64_golden_gate: "6ab9d531bcf06d3e4047657f7381b44981b5c0490888eac83700457438b40057"
-    sha256 arm64_tahoe:       "fcadc0e91448d09a06ad11ae9d47a183e31f2672d91b2a084e9022929b0f19c6"
-    sha256 arm64_sequoia:     "afd54b02d3320d7d80d912c9f3f76493f1c596af5c93791272f9e547fa211b6b"
-    sha256 arm64_linux:       "d7b8de1e6ebe6026c1cfc165c64c03e11a342d510ef66457e3fc81f13dc22aad"
-    sha256 x86_64_linux:      "c85501ee8bf9782375ddc4047bd27dd1d5ddab0a3d02ae86ce57aa4d43acc2aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "c2064d76b96d0b4faca8a70ee8b3e8692dc787718c40e7a9d9308f5bb6567939"
   end
 
   depends_on "bdw-gc"

@@ -6,11 +6,8 @@ class Treehouse < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b84a3107590652ed54809e8c2badc7feb8f5cbc1dccb252caa18fe2531c9efd4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "625557fde2223697846ddec4cf75715e5a4b5669ea1160ab734e1637c080aeff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "186d18e37df85bcf35a192dba37ea8c1faba32ea200d6bba14a0046d5dc9f62d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "22c6fc553c77a9b72c9704b69f9a6d4356e73d533faba9586812acdbc9dd3428"
-    sha256 cellar: :any,                 x86_64_linux:      "dc96822cb82b98232eaaf99fdfb45cfbc5655b9a10420aa90c1ba066dfe6555c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "dce68b6135ca692ee76170b57fa326e5f145d0b403f03040b7dd9130f8bb3fb6"
   end
 
   depends_on "go" => :build

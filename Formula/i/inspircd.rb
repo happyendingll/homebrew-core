@@ -11,11 +11,8 @@ class Inspircd < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "571a5b84e86976e9a0ab09b5efd3f32435526a44e1a2c20995cda7c311c32392"
-    sha256 arm64_tahoe:       "ba6c86f25072d65436df028966ea2bfa8910f691f76a2efb6d546e9dab822ff5"
-    sha256 arm64_sequoia:     "a28301bff1f58ae22e48c0d2d8ca2c0853a17a157acbb7bb24abf34a8c4dd5c2"
-    sha256 arm64_linux:       "44eaf2f3ef4dfe300248ca50c8fa23c99ec9809137cc55863fb738ca49d3815a"
-    sha256 x86_64_linux:      "e1c9ec5a111bd35a4ef01f9b40b7ed66af370127d62ab59dfcea9b371ffff118"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "cd416543681fafde5924d27435ad49fdd20e4c729c51d3a5c5d32550ab7dac36"
   end
 
   depends_on "pkgconf" => :build
