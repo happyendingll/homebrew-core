@@ -15,11 +15,8 @@ class Libuv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2fea505cd00bcf4b00c6f39a8a70a7b669b57db9c7ced4195c59221f4647c9b6"
-    sha256 cellar: :any, arm64_tahoe:       "76e5d3743160ff4da9a91f35f1e10614ffef9c4aeafb8f44e8e7b07a9bfa32fe"
-    sha256 cellar: :any, arm64_sequoia:     "fd36aed546040f791778940d56586bbbeaa2f8ed804f1a957b4baf83657d5b1f"
-    sha256 cellar: :any, arm64_linux:       "d0980c41c5fd765f0e2936fccc4ab0e29c147ca464601fca52d2a75621817235"
-    sha256 cellar: :any, x86_64_linux:      "5697a3e2ebf129603045c088824fb7fcf5e99fcf139eeed6239bc50375ad4cae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "2378d10bb8de9b4b5c842db3903822a5854ae0b0d5d01e5731defdddec18154b"
   end
 
   depends_on "cmake" => :build

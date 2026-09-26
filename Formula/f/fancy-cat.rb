@@ -7,11 +7,8 @@ class FancyCat < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "db1147d423bb1b25373b7383f3a0007ceabdf4044206389c2e7c149a5217bf0b"
-    sha256 cellar: :any, arm64_tahoe:       "a93cd39a812cd2e8dd892180bdd2df1f083816915ff615e156c98ef906595bc3"
-    sha256 cellar: :any, arm64_sequoia:     "2ef3f352a364ea0a6af9b0466273af4da46db98564aaa45d35a803102c951628"
-    sha256 cellar: :any, arm64_linux:       "45ada280706bf87c395786561f3a977d174d015fd028688940f9d9598d302d47"
-    sha256 cellar: :any, x86_64_linux:      "6718f46f7a70b7046da627c6a7bc126c6d2da601be76e8fdb4747cf238c29e93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "b2e2d2f2bf7f2c8328008a432ba88f3262bd926a9a52c2c9d32153ece5b6426a"
   end
 
   depends_on "zig@0.15" => :build

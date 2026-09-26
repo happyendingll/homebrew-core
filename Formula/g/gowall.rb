@@ -8,11 +8,8 @@ class Gowall < Formula
   head "https://github.com/Achno/gowall.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a5c8e66f67252660ef74a433f206de8797f71aec2f346ba9023457519b2e7084"
-    sha256 cellar: :any, arm64_tahoe:       "8a548f86e38c74d3c33f94c0312199e844dcf2b503e3bdda28d44cec2bd686df"
-    sha256 cellar: :any, arm64_sequoia:     "0762980e468345798966d0d9be7de36f34cab70b8fa73b8d74f6c4eb8cc035a2"
-    sha256 cellar: :any, arm64_linux:       "14fb09905e1a2835b98b7ca8ffcf3f4211700e45bf9823802e4147eae4fd93e5"
-    sha256 cellar: :any, x86_64_linux:      "d29ed09867b45e24877a43fbd5b3f25d9f27d381d6590cf99b0fef6dea1151d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "680ac66952b078a6a508bd45079b3fb559577c3d4657ae245a1ae5b9a869672b"
   end
 
   depends_on "go" => :build
