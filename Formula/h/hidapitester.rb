@@ -7,11 +7,8 @@ class Hidapitester < Formula
   head "https://github.com/todbot/hidapitester.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "92b3acd725d9737c5bf926b6ca3b404821fb0774cbe27db5e64d980a83d64891"
-    sha256 cellar: :any, arm64_tahoe:       "7558d2ab90eb61bb206deeb1f189c5c3eef85531024bffc7ae4f229180766902"
-    sha256 cellar: :any, arm64_sequoia:     "c9daf7ce18a77f84d6cc5bf55744293ff22522b80caf775d7e9f61fc72341a31"
-    sha256 cellar: :any, arm64_linux:       "1b8b5905ca1ce23c6049e7dc8cb4d45ba4e98e35a9669d93289dcfdaa2f11613"
-    sha256 cellar: :any, x86_64_linux:      "bc4cb553e4c60641b5c63fbf23234321fdcee63e1303e9df605b5ed706f66bb6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e5aa2929aca9d5ce349afb9725414f5216addba836acdcb9b4e50bd71a7b8c88"
   end
 
   depends_on "cmake" => :build

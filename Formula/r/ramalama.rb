@@ -8,11 +8,8 @@ class Ramalama < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "941f6c7c4eafcae55b6936414b114b55cd5cf01d5d23e54060ab493f098f7a56"
-    sha256 cellar: :any, arm64_tahoe:       "eb33ebd589e91493b58dcbde23f8537b8cf34160b9bcd9e2372613fa96ca1521"
-    sha256 cellar: :any, arm64_sequoia:     "528d9922af7d277043276bdd1bf8c4fe0107b7f97ba75aace01829ecdc641fe0"
-    sha256 cellar: :any, arm64_linux:       "336e92f0acfd8c3d72c4ff71b342c708cf4e8bcf1c0d991cf2eb3351d506bdee"
-    sha256 cellar: :any, x86_64_linux:      "cb7e35e968db1fba34e5fc914a93b21288c706ebfc13f8ff8e2b1fa41d1af605"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "15cae35dbec874b4602da3c091a5fedcef895abedb8f43846dc51b5d84125684"
   end
 
   depends_on "libyaml"

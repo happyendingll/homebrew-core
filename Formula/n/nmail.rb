@@ -7,11 +7,8 @@ class Nmail < Formula
   head "https://github.com/d99kris/nmail.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1f0472adc9c25a53e40d071ee93295adf21701290a8f7ae1d742a13bcb01d544"
-    sha256 cellar: :any, arm64_tahoe:       "c1d29d5ba630473e179744cd7fded0264a2a54e3ab3222f10be470cecefc5ebd"
-    sha256 cellar: :any, arm64_sequoia:     "67035bba568b6bcf6ceb140f537582b1b794f2775d1f15a67622709468b787dd"
-    sha256 cellar: :any, arm64_linux:       "77bd992de07b6d154337ee7338e75b95566666af141a6034ecf7ddd149c47ede"
-    sha256 cellar: :any, x86_64_linux:      "9e53a62dff2e1f017609ec14b4a295b13d53557f5a6cb934a7e9496141842ec2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "76541ca14ba759af8fda7b8c90d62c5c04677c66d47b06044282950d1acd3435"
   end
 
   depends_on "cmake" => :build

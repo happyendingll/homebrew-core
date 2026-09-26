@@ -7,11 +7,8 @@ class Bacon < Formula
   head "https://github.com/Canop/bacon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca223043e4a28db5fa369a5ffc8c14368112f49e0940c242f3880eb6d2a67a54"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b27d3533ce8c8ac7abc1737c3d2d7f8fbe1be1515e952b32c5b42ac247d9bae6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9084b6e9ad5c57572f84e0175f2f20e3ba1ebb14660bc89884478a844b7a4959"
-    sha256 cellar: :any,                 arm64_linux:       "b397d1c665129398b4742a7a8ac6167bb7315ee5bc12b72a94db0b0b83a67b1a"
-    sha256 cellar: :any,                 x86_64_linux:      "70153aee87958cd6b3b49c161c78fe1c6c179729b5d07cec6ebd9de9c14211e0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "57ba3fa9be1168393158bc723f78158732c6db4d6df8a929cb6334b4980ee860"
   end
 
   depends_on "pkgconf" => :build

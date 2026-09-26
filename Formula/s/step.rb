@@ -6,11 +6,8 @@ class Step < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a4d097e34ef3ec9bbac57af27566a201890679ac154c56555d7af217586bed4a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0ca195ed5744fb6faa55922309bb903beb84e72b4d244e580f5236042828b0e0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ed351d8139def7b42040b036068c48e6ced501ef714add5b46b238be882b190"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6148025e544caf2f24b4109ee620adc470503d3077f151648c4d389e2bfe10d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "69e67fd2d7de6c770711690685f46bd51c0d4fe41020a20f7ded624a15af0ba6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c6e2d2c26bacccd1ad8775da7cf7e71cb36443a34ad80c8121b68a666e368d3e"
   end
 
   depends_on "go" => :build

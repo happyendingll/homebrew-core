@@ -6,12 +6,8 @@ class Nanoarrow < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "a9cf515ce719208286d7711e11310d2e17e494b53e903637e32d213c9ff59d4d"
-    sha256 cellar: :any, arm64_tahoe:       "05e38f5f26b17f039c6b44dbda1f9808ed840b2e79e8f4eae668ad4c57852bf2"
-    sha256 cellar: :any, arm64_sequoia:     "2dbc5294a93664ec30176212ce50918e856ffb76e4ba8de888ad21eec297ff08"
-    sha256 cellar: :any, arm64_linux:       "f70a15dd725d21f7b631d0599539c9f7061ef452ef67c370c28961068268d7de"
-    sha256 cellar: :any, x86_64_linux:      "29f62d89306b9b292d0b2fcb8f0caf3b738e2c569188b4238caefbfe24f1bff5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "fce310bca6d90c48d7a19372ccfd96a00d0a86fc1d2467de0f3dd534aea3a04c"
   end
 
   depends_on "cmake" => :build

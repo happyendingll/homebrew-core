@@ -12,11 +12,8 @@ class Onednn < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "34024aadc337e79548b10884cfbbcc99248e94821d2745c4a071746b08a93e2a"
-    sha256 cellar: :any, arm64_tahoe:       "acdb08500e963e5c0c6f0835fd0c574c9a2f1fad3d5ce1599c7f86c9f267cbdf"
-    sha256 cellar: :any, arm64_sequoia:     "57fa9e420c886935dcdd173506a1deb587d91a9b728ce14b748769dbb150d37a"
-    sha256 cellar: :any, arm64_linux:       "7c5625b14f01d9baef34fa18de8093c2759d5502e7630406b46c7b31d5b8751a"
-    sha256 cellar: :any, x86_64_linux:      "336b984e17809cc5ac90665d1406859ee1f38c05f4c7c9468380a88ee51d994e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "8c44c76261ed6cdc8af223ca41338711a86f154191057705197896d834a9ae6c"
   end
 
   depends_on "cmake" => :build

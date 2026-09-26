@@ -7,11 +7,8 @@ class Carapace < Formula
   head "https://github.com/carapace-sh/carapace-bin.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4a3ffbd3e21125b777ee8e0839bccabb2fce6cab8f22be15de20606a29819aa4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a3ffbd3e21125b777ee8e0839bccabb2fce6cab8f22be15de20606a29819aa4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a3ffbd3e21125b777ee8e0839bccabb2fce6cab8f22be15de20606a29819aa4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b96fd6e5b85bad3511b5536c6d47337c9eb14ba3f71c902820525e2249eb733f"
-    sha256 cellar: :any,                 x86_64_linux:      "ff706e616e05b66ad26ac1b92865faec8c7b3529bdcb05daa24927b1c046f23f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f953adb18f6465f949e3ae6bee49a7512c224af68885d875ac50f5bab2b652f8"
   end
 
   depends_on "go" => :build

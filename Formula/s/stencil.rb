@@ -7,11 +7,8 @@ class Stencil < Formula
   head "https://git.rgst.io/rgst-io/stencil.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d0680e93b782708e6a2bc758075fcd5eb455e355153b97c1510aeb339060af36"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1aeed447ae38105ffe9713aba75c4bb27af7b6809cf3384afd472374862f3822"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5616c8062c45cec5f0fb1097de3f49f7bc61a7ce6edd1e6543a54100ae478966"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5e3ef803e5148106b07296878b1d709b42465e22d4c094029f283e539ea2493e"
-    sha256 cellar: :any,                 x86_64_linux:      "0624a63a97fa69fcb251d5f2270c9d7c66b1b8ceb73c365bea5545dc23c5968c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "48f3ee7efb2a8f6be1ce589766ce77588ed780be4e24599e8bc27d5437f3bc12"
   end
 
   depends_on "go" => :build
