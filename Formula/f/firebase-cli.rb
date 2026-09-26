@@ -6,11 +6,8 @@ class FirebaseCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "268decb6c06da28e2fa4088c0e8a82077ac60cd52cb73198a8a2689263efa4db"
-    sha256 cellar: :any, arm64_tahoe:       "268decb6c06da28e2fa4088c0e8a82077ac60cd52cb73198a8a2689263efa4db"
-    sha256 cellar: :any, arm64_sequoia:     "268decb6c06da28e2fa4088c0e8a82077ac60cd52cb73198a8a2689263efa4db"
-    sha256 cellar: :any, arm64_linux:       "75899f91355224ee83df571479d659b21d7e123fac97883c2e948f05031b3e68"
-    sha256 cellar: :any, x86_64_linux:      "d7ae0cbebaa1b20d645d7f59f0b45ecd1640e535db0bd69c0b16582e01b85484"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "9ce8fd766c43e0b9ced32383945f2614f74205ce76ef3329bb8abf652e4e4512"
   end
 
   depends_on "node"
