@@ -7,11 +7,8 @@ class DejaVu < Formula
   head "https://github.com/vshulcz/deja-vu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a3ea425d5f7495d177b92b85838dbb0836cba90ee758cbe4ddc5c138ff502c2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8a3ea425d5f7495d177b92b85838dbb0836cba90ee758cbe4ddc5c138ff502c2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8a3ea425d5f7495d177b92b85838dbb0836cba90ee758cbe4ddc5c138ff502c2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dafbaf53d3e900e3de8f4d53f8c98dd101a92e67bccf7b8ef81a61afdcce42cf"
-    sha256 cellar: :any,                 x86_64_linux:      "e7056f7ac1876fe4143a32a557ac9326f51fc6add01d69fe3f0e58f8ccbe4048"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "94e026e1ffe1cd6648846edc326ee20fd08e77c3c1b5805578bc9cb0e8bb504a"
   end
 
   depends_on "go" => :build

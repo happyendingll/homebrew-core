@@ -7,11 +7,8 @@ class Neocmakelsp < Formula
   head "https://github.com/neocmakelsp/neocmakelsp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0a030af044639a351fd66a5dfb35b405e73358088af562bed8480340412fce2c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "196eed60fbcad6386687f98811b2cce61f28f6e4269471e46b4298e9c05f7df6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6dafc9bede5c5cb4c3975065ef162c8d7d195564384b405922c712bab67ed2d3"
-    sha256 cellar: :any,                 arm64_linux:       "3e70e1502cf5a355e5a06a6a1760f26ba872e2a2e82c9493cc103ce3ceabe797"
-    sha256 cellar: :any,                 x86_64_linux:      "d4c1d472e7ed6e0e36c8e5184560bfb5ed4bfe4447fd73a59f0672f3242646b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "82777fd863557228fcc8b58558280c299bd80affa7dc2afd618965b2bd62841c"
   end
 
   depends_on "rust" => :build

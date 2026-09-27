@@ -13,11 +13,8 @@ class Cliproxyapi < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "63f6739f848e21a469ecbe6f91b8fe722573078fc3e8e8bbfc2a8ded699735a6"
-    sha256 arm64_tahoe:       "d2a9d5f7aacc7097e2733f7089cdfd79b427ea9ec307b72914ee66938638fd25"
-    sha256 arm64_sequoia:     "356045155ef27e270bf6ebd09ee7b5fd2539ac864d9fdbb7fc4bf0979f992d43"
-    sha256 arm64_linux:       "6d722a7730eb36ff2878600f4b4d7356bc8ffd6c3ae95b478676e29a6188ff5f"
-    sha256 x86_64_linux:      "e60001f6367772e396a251c1a853005b61c8cd8380e07bba677f6fe31cc83de1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "d191760ebf9e66502ab644fca0223dd8f7e898667492d4ad1daabfbc4ea3a8fb"
   end
 
   depends_on "go" => :build

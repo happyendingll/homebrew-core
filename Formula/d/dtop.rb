@@ -7,11 +7,8 @@ class Dtop < Formula
   head "https://github.com/amir20/dtop.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "28218eba18a2964cf49567fb49d22127d8dc9420368472d9a5e039fa6ca0dc36"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "aaf05c58bf41edcc787bd6ac54d234ad9e6c9f062dae4fcb344963f8f4300c7d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "75d177106840aef89c47f4ca90c2c9cd09d9396503d59a6124086da31b5c684f"
-    sha256 cellar: :any,                 arm64_linux:       "13751bceb4f1bf9b9c84acc738fa79d146c6e95d9af270fcb605bbde9591f111"
-    sha256 cellar: :any,                 x86_64_linux:      "5adaea50066f19dbf4745f34266693e5b7e0b851e75b1f9fada28aa70566dd3e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "18435841cae50e8c3a528e7432f8271d1ffeaadaa53d65493d180689e276dbbd"
   end
 
   depends_on "rust" => :build

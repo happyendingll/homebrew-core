@@ -6,11 +6,8 @@ class Arf < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bda878cc35314a34eeb35a59f5468ae56286de231f1d81844439ab39896e80e1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "640b6e962968a179b4f6a06bff264b5421cf6f7a8dcc3349aa403ccd1be07b0c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1ace8e45f816b56052c71868aa4fffb1df8ea2192c51ce4337ead6024e30d5b6"
-    sha256 cellar: :any,                 arm64_linux:       "c95e647f636fa91840999157dc63e2164e5ac7975632a73d354afec972f5e104"
-    sha256 cellar: :any,                 x86_64_linux:      "02924acbdfaf187ab2b144e9dd8bc94c702e23101838b5a3cee3f6c637c5977c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a335e1d554a4fbe93f89fe063ea2a65050e7733f42e517ef1b376a25af036822"
   end
 
   depends_on "rust" => :build

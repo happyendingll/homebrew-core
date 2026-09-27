@@ -7,11 +7,8 @@ class Qpdf < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "56e1db3fa21e577791180e1545bbcc5496bf13b3a3cc091a38f32fd5f14406c5"
-    sha256 cellar: :any, arm64_tahoe:       "0e28e074080e9421ef3864938178110b648ad30597b290851abb005435704c9a"
-    sha256 cellar: :any, arm64_sequoia:     "c53c9acf66108e0e2f91af257e4bf95a63b3bbf2ef457cbafde7ba26678e6770"
-    sha256 cellar: :any, arm64_linux:       "13a73184b81c17b76fbdf514367fcfbe91b17943c84ef10de8e8d37222ff7524"
-    sha256 cellar: :any, x86_64_linux:      "afefd57ebfb2ab05b5177d4aaba28c36fd6795e4919996a233e67f3fe5c461a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "e377fc47850ecac5687d844d1374e099e81e73cda967ede72be8b2e7de4daf0e"
   end
 
   depends_on "cmake" => :build

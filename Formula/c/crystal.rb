@@ -29,11 +29,8 @@ class Crystal < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "59ce85b849ea2e9efedfaa8e7990a441f656bf52e45616deadb59a7a0d7e5a73"
-    sha256 cellar: :any, arm64_tahoe:       "3efe943a1e958b1cb86360bdff2a025ad9854bbaed992a8d690a142465fdd25d"
-    sha256 cellar: :any, arm64_sequoia:     "30b8d9e04b84760db7e3f14713a573f69c3e404e0d9b867865d0e69ab17afb58"
-    sha256 cellar: :any, arm64_linux:       "fa0a7594dff38917696ed25433139da9ab95fd16613a38383561b9dee238f61d"
-    sha256 cellar: :any, x86_64_linux:      "b43270c362edf209e1ea6a41e8646031dbe8daf78af8c28ec10cbecc38d8184e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "1081ffbc1ec1e33d447244a4f7a63dbf11b87fd1fe1801ad55ff0eb7dfa3e917"
   end
 
   head do
