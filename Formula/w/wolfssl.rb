@@ -17,11 +17,8 @@ class Wolfssl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b20e22f4a91be3dc7adc6c4184c849f362e6df84168b1aa199938f78fe1d460b"
-    sha256 cellar: :any, arm64_tahoe:       "2d20992bcf519985e1fc216362f4312deacc7248f72207afa7b18bd20a95c8cf"
-    sha256 cellar: :any, arm64_sequoia:     "bb1007a3549020c942f1205abec2b8d22dc10519c56e939841cd2e5290acc8ef"
-    sha256 cellar: :any, arm64_linux:       "6bafae64a9a2606037b56a086df814ed4d78ce0236c81ffe2b4500f951cf8bc6"
-    sha256 cellar: :any, x86_64_linux:      "0cfd5b000ec77c9b22edaccbe54e665a3eec50857ebcae2cbd3142a24f3069ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "47e5ee394a737da92413d299d7c2e57d99fed5eb093c20e0e9d818e4c125ab36"
   end
 
   depends_on "autoconf" => :build

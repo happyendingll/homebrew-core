@@ -6,11 +6,8 @@ class Readsb < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "509b085f8e4839f39af3039a48d88ddbafdf4648821df185d0e6e4c408b86627"
-    sha256 cellar: :any, arm64_tahoe:       "1cbf3acc06c66361c00683953f76c80d5a21d4e0c5b380ee4691d654bc3ae338"
-    sha256 cellar: :any, arm64_sequoia:     "3225c7b9576425ba17bc730e7f34e5fae53fc8ac70f83895836661a7bc526cef"
-    sha256 cellar: :any, arm64_linux:       "b40669bcc9bc07bfc1e9abf57d479f4cfe964bf251bdf23e8668d9c3987bbe74"
-    sha256 cellar: :any, x86_64_linux:      "1101ed7be4594d2e9f5b4feac56be04370afe2a86e235727842c20489728b1ee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "bbc010204801b5af9f4c45f213cd5be4924a0f1fa8d44ff545af752299fd71a1"
   end
 
   depends_on "pkgconf" => :build

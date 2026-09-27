@@ -14,11 +14,8 @@ class DbusGlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dac4154763b11e67006b2dd05d63c360c43197193a1c7dacdfefd8aa785804a4"
-    sha256 cellar: :any, arm64_tahoe:       "035a6a708cbd2b19bec2ed2f0cfac7562302719a36c5201de4e806b30791a8e8"
-    sha256 cellar: :any, arm64_sequoia:     "7f8b41675880cd476ded5af2f3b4f28906762b0a682905b14b9936b21a489fdd"
-    sha256 cellar: :any, arm64_linux:       "6e917b08d6bff3dcd873dd86b2ae686c0b04ced3d2d42271db062c7a57f7f05c"
-    sha256 cellar: :any, x86_64_linux:      "2bb4b5dc4ccb63554db4443b11376b02aa644a15664ee98b60ca2d6a1eb5b0b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "f09b92ac924741cbac9b1ce4979aef555ec2e5c49681d717f542983c131bbcc9"
   end
 
   depends_on "pkgconf" => :build

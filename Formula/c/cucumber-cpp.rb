@@ -7,11 +7,8 @@ class CucumberCpp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "87fbd1fde771e87cc1cf6912f0ce365b2b543255c6bc75da2f1c2fadcb11a7b6"
-    sha256 cellar: :any, arm64_tahoe:       "9378982184549953aca702549098a4ae2d5a222d04f1b1a66127e2debfecd685"
-    sha256 cellar: :any, arm64_sequoia:     "9faf7c36dd7918e0eea7b3f7e6bbd1945906930d87e0bb65b345b5a8c0519520"
-    sha256 cellar: :any, arm64_linux:       "8414c70a32e4aa9a84cae73dac6bc80a24f3bde1187e2c278ba3acfc2a03651c"
-    sha256 cellar: :any, x86_64_linux:      "4f2f59e8cfae15023fde76bd1582e7888687a08f8af4cb10a6f55124c7699689"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "3766f83d08a802eaa3f073d714efba1d26142518aa36d71a0a93dab9b07f3e5e"
   end
 
   depends_on "cmake" => :build

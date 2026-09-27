@@ -9,11 +9,8 @@ class Glances < Formula
   head "https://github.com/nicolargo/glances.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c916030471c5885738e6254307c926477d7123e07a7029eb5c37f29f0fbd4401"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9eace15610b86cdc18233c07a88c8317cb6dd9336cc1ba1e4c4b0c82ff9ac799"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "780a6c95b8098774d20a3aee225e93e6fd0f34572de66ec8d96a803ebd7a8358"
-    sha256 cellar: :any,                 arm64_linux:       "847ee364643a3de15713f66d6967a5bdcd2875ffa7e32f9e1f814807bae2fb9d"
-    sha256 cellar: :any,                 x86_64_linux:      "a624e4e0755f1d6ede63bd9c749a001812a76eeba1b5d70c9cd2454ae41c8857"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "abf10d979e2e88e66f1e83ab0fa3963c3de99823818e068a50e5739d0230b472"
   end
 
   depends_on "rust" => :build # for annotated-docs

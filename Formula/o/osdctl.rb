@@ -12,11 +12,8 @@ class Osdctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "35186d0629e364464e399c98eca2f850fa4a74f5582857032b7654b04bcdff2a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "35186d0629e364464e399c98eca2f850fa4a74f5582857032b7654b04bcdff2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "35186d0629e364464e399c98eca2f850fa4a74f5582857032b7654b04bcdff2a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2984c5e341acad716455cbcbdc308e8228e400de09e566a51af492c2e842006c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4d08676cc4091147189762132b012dd121a99e90cb7dc7340cae6f21c7951ce0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b5d7d63aaa70961e5abada02c56190e7bf4fce62afc51a66cb1ed903bd92ab44"
   end
 
   # Can be undeprecated on new release or if upstream responds:

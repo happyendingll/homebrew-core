@@ -6,11 +6,8 @@ class LiquidDsp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "08f26b099934aba3db8a1a0c7b312f1fbc05a3790e7469d1e1433edcf972196c"
-    sha256 cellar: :any, arm64_tahoe:       "3edba8c938fce60d57b7cfef877a5cf2e82c5c547b4e748b9731c8048e6b9492"
-    sha256 cellar: :any, arm64_sequoia:     "1625b8ac210ee3edb1bf5763baf33ac8706c43eead41be7e3f3d27ab1a0d71b0"
-    sha256 cellar: :any, arm64_linux:       "270dc966585dccfe228ee8d83e542eb5973f1a0f2880f12268b614e21eef3ae7"
-    sha256 cellar: :any, x86_64_linux:      "a2fa13745f522f7060306acd7aaac916e2220b53c29c290481b4b761cad67f56"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "989be41fad2ab4a2bbdcfbb92d4ca01a9a09c172020412163442b0f8c2321f66"
   end
 
   depends_on "autoconf" => :build

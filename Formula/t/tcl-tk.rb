@@ -14,11 +14,8 @@ class TclTk < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f4a3960886ab0e7031677bbe03605a1b724cfeec03522cd32fae086d9a926cbb"
-    sha256 arm64_tahoe:       "b4148308c75628f087db66c5ebac34f872f32723f76355a4bf64d255151284bc"
-    sha256 arm64_sequoia:     "0350f2d19a0705678bd4c38dfaadbca58fa9f4789ac381e522270fae7a10a5f7"
-    sha256 arm64_linux:       "a55da02a8c387fd4996612de6a49533c82ff27560ba9fcdcf86bc29158f98735"
-    sha256 x86_64_linux:      "996ee7af1459ac5daf0c9725a1e36940d80ad2d8a0973cc5080e55cc3928068f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "1fd256e1858ee5bc1edcd3d62f1643717b51f555d443ad77f888165bda82e390"
   end
 
   depends_on "libtommath"

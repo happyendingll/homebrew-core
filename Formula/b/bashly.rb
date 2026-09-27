@@ -6,11 +6,8 @@ class Bashly < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "05e59758ed36f5e127e1d43ff80d417f16ff9db6543a8e6912f95e8919b4cc24"
-    sha256 cellar: :any, arm64_tahoe:       "5a474247920f82e0ad014cd4658bebdf6b0d10da3efe3c64428d6a0f9d01adb1"
-    sha256 cellar: :any, arm64_sequoia:     "137c334c11161df0ea0298628fe29868aca7fb284b038d92821972cf8f5bb460"
-    sha256 cellar: :any, arm64_linux:       "3ac4978372cee2d7803f383840117e24f087c1aa113770553fe5724c5c6873ad"
-    sha256 cellar: :any, x86_64_linux:      "1f4438ca4f6a917fa116c937b2894a5dc95f9729a5075a7cd08830c6649736cc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "133a4186ebbc1de35df2dee338665cc4983100568782f5cb87fe01fa6e148ce5"
   end
 
   depends_on "ruby"

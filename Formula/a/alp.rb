@@ -7,11 +7,8 @@ class Alp < Formula
   head "https://github.com/tkuchiki/alp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dd2399b07dc202117fbe7e93a5a6ca80a8527c6d3b75807539e67c6cd225e7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5dd2399b07dc202117fbe7e93a5a6ca80a8527c6d3b75807539e67c6cd225e7d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5dd2399b07dc202117fbe7e93a5a6ca80a8527c6d3b75807539e67c6cd225e7d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2f7fc9892141caea3d9612bfbff6542a1cf368ffe63c7506247e41b9a295f0b7"
-    sha256 cellar: :any,                 x86_64_linux:      "40fe8cd31f8b8c4a493325769a1518f814b6e4653fcc9bc1badc1fb43b1bd943"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef611b0f388af44906dd7949cbfd8edbcce548f2103bd4dfb80bb70797dc1c37"
   end
 
   depends_on "go" => :build

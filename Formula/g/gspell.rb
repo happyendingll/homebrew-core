@@ -7,11 +7,8 @@ class Gspell < Formula
   compatibility_version 1
 
   bottle do
-    sha256               arm64_golden_gate: "c8a3319bbf2bce3f9c0f4c0a2a911a956774e272fca80436c271943171fa77e9"
-    sha256               arm64_tahoe:       "d1d3de757b5073ad648fa1caea8176c23f170f63cc61b4eba1687df695b9c6eb"
-    sha256               arm64_sequoia:     "c6036e4f8920b32e95c8b543e9e9c4d856cb53788646a43ad2727e4661953dc5"
-    sha256 cellar: :any, arm64_linux:       "f4899d992bdc1eb53eaac7b51fd4ff903b1d82449d34d5c6d631f7e0516de771"
-    sha256 cellar: :any, x86_64_linux:      "5c99330509611d825f2e1e6c3a2c7b92dde1711668aa11ad3427d2b02b57522d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "236fd9b61094e6c36796015b5305003ecf50fba6e197200fcb6a0991778aed4f"
   end
 
   depends_on "gobject-introspection" => :build

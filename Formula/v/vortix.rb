@@ -7,11 +7,8 @@ class Vortix < Formula
   head "https://github.com/Harry-kp/vortix.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5956a47f3219515b63884b15d9df7055215b67df8f8593a90165d01e8a5a8280"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2c2bdbf422bb540569a3dee6584375a22e9e4324c4fd8a80c30fea2baa46f889"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f4fe8e2b9605abb110cb4c8503744c02e7f90541cbd39e236870858ff7dcab10"
-    sha256 cellar: :any,                 arm64_linux:       "170151d05899ebbeec21ec3eb7618839da604c6ab89e8f48adca84f8334b27ef"
-    sha256 cellar: :any,                 x86_64_linux:      "78f83bb37c551a286b1803b3a8b562616f6f65bdbcbba66cfd26d26e53ad162c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8cba43034d9161f8a7df0cc7a8c7104c5345ee10b7950449f8614eb822b33e77"
   end
 
   depends_on "rust" => :build

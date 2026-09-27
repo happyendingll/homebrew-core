@@ -6,11 +6,8 @@ class Pgbackrest < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7d311219289993ac8ea9743aa0150acddc3c8f73b61d6074c4a0ebe7f2c55ec3"
-    sha256 cellar: :any, arm64_tahoe:       "cc97f013b76516d4e7f9af80fa5f88601e0176bfee1d1acabc7807aa842fabe5"
-    sha256 cellar: :any, arm64_sequoia:     "fa6371227704f3903d8cf874d461d36acfec0ec41f6c9e30cd98648321de45ec"
-    sha256 cellar: :any, arm64_linux:       "57c174eae8e358c247b6a3ae4f2713729cfa1781ae71670ff8bbce991b7545ee"
-    sha256 cellar: :any, x86_64_linux:      "192f7c176521061fbd04700a9c2cd87d13b5f72e41d85e9223a06a10d3bda760"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "1229214f8c82ac14db5e2f4d8c3a95956547785970724fe36a9d9b4ccbd816e2"
   end
 
   depends_on "cmake" => :build

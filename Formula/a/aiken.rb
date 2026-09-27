@@ -7,11 +7,8 @@ class Aiken < Formula
   head "https://github.com/aiken-lang/aiken.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "88e769286eeb71f3346f50144b443bcc776e594e3dd52ebd0f0f08186f3f3a7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cbc54fab505addc057725bd0d8a9c22a70a1abd3b8a8ab1d90d13c4fc3369ca4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "923e0452295efde67f4e9da44f915dee9c276a7d2735427f76cbd4642b8196ea"
-    sha256 cellar: :any,                 arm64_linux:       "b74df01b8dca091b975db4e6c4b5e2050db76efbc07814316a4a6dea98646ebb"
-    sha256 cellar: :any,                 x86_64_linux:      "9a360a0c0a6fa3c6e7be5fafb6ca1874586f2cdff0523ae4b90fb615969de3ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e02f07c0a626e86f6b2b159b2a70893f506f5bccc066413e16b980986042c12b"
   end
 
   depends_on "pkgconf" => :build

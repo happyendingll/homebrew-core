@@ -8,11 +8,8 @@ class Trino < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21f595da51f8f78b4677f2e7a6d0603d301fb33bbf723ca95ea8f3d38c623b82"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21f595da51f8f78b4677f2e7a6d0603d301fb33bbf723ca95ea8f3d38c623b82"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21f595da51f8f78b4677f2e7a6d0603d301fb33bbf723ca95ea8f3d38c623b82"
-    sha256 cellar: :any,                 arm64_linux:       "a052212f4102b9aef761b6cefc429224fa6ce318458e329839ab2de828f54019"
-    sha256 cellar: :any,                 x86_64_linux:      "dfc19202770e99b7af5a2d334b1b5210e8b1e00f4274ee7fb5bfbd4b60f7d4e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e167cebecbdcba3a1e4f3dc68adb432569d384b1726ffd0f958c9adfac478606"
   end
 
   depends_on "go" => :build
