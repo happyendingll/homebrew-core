@@ -8,11 +8,8 @@ class Wolfmqtt < Formula
   head "https://github.com/wolfSSL/wolfMQTT.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ebc3c1b5b18b34218838255f3602649f45e8b33633ced2b31a302ee782be4188"
-    sha256 cellar: :any, arm64_tahoe:       "d49f4693e1aecbcfe0543d9a95560a3d135456b564d1a6064dd5ee38127dae9b"
-    sha256 cellar: :any, arm64_sequoia:     "ccfd7d918e37ade189bb82818c0b673c5bcb3a276dc255886d9396cdfcf542ef"
-    sha256 cellar: :any, arm64_linux:       "8530cf463c9106e14cc6b072be9cfc77c8138fe13273ef2e91a0f6c11848947c"
-    sha256 cellar: :any, x86_64_linux:      "acff17fb6292633caafcb05dea63bbc2bc02ee2209302ecc7d8e5543ff77b883"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "106b6502bd79f07bfa1132caebe3946836fed149d9d9b2f43d58570d5f840cd0"
   end
 
   depends_on "autoconf" => :build

@@ -24,11 +24,8 @@ class Bsc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0d8fd080c2542f5cb3024ae93843f7dae35ff3d02305c81782b21abfad22a0df"
-    sha256 cellar: :any, arm64_tahoe:       "6818e9977beaec7bd9f0f027dde1faf1a93ce43d942858bb76fe85baeee24ae5"
-    sha256 cellar: :any, arm64_sequoia:     "d641b4c1179b71a628b2e30f6080a8deffb31d3fd600417f7f6801d58d6b4bef"
-    sha256 cellar: :any, arm64_linux:       "40199a9fff3800260fbec86b0ef1e27c463f5ce95957d30d936c61df8fe6b97b"
-    sha256 cellar: :any, x86_64_linux:      "3207c503c9fe8e16b85592749476d3eeeb1145714400acf66d4a4fc3c8142eae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "15ddf48490a9c1a4abb8b3dec2672b55414d3f82b388d91f13b5289571607850"
   end
 
   depends_on "autoconf" => :build
