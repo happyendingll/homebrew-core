@@ -1,14 +1,17 @@
 class Scrutineer < Formula
   desc "Security through scrutiny"
   homepage "https://github.com/alpha-omega-security/scrutineer"
-  url "https://github.com/alpha-omega-security/scrutineer/archive/refs/tags/v2026.09.12.1.tar.gz"
-  sha256 "801a9c5bf649fde2e8ef8ebeedb1acfbecfb8637842dd99222cf8fe48ab04820"
+  url "https://github.com/alpha-omega-security/scrutineer/archive/refs/tags/v2026.09.26.1.tar.gz"
+  sha256 "62227311efe1f547831ee31b597bfd0b469832382a93fad72d779c46d5e8b499"
   license "MIT"
   head "https://github.com/alpha-omega-security/scrutineer.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "1e89c980979ecbdfd28414699c2a0103198c235d8f78f2f1424424ca14469f93"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5c9790b8e0e1205c3d423371fc5c3d7782106c0fbea3646113bab65808f69021"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5c9790b8e0e1205c3d423371fc5c3d7782106c0fbea3646113bab65808f69021"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5c9790b8e0e1205c3d423371fc5c3d7782106c0fbea3646113bab65808f69021"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "28bb14dda9b4ec44cf9b9785aadc9b55d291889afe3c5538d9f7f4fe47608eba"
+    sha256 cellar: :any,                 x86_64_linux:      "633917d3916b8540dee090451301566203bd5dbc110c70cd44b566e49ff2f9b2"
   end
 
   depends_on "go" => :build

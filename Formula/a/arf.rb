@@ -1,13 +1,16 @@
 class Arf < Formula
   desc "Modern R console with syntax highlighting and fuzzy search"
   homepage "https://github.com/eitsupi/arf"
-  url "https://github.com/eitsupi/arf/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "34647ecda535521c18dd26dc2b609c390b02876f47e76d661750bb44ca9fc602"
+  url "https://github.com/eitsupi/arf/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "3d72268d7390b5838a3cdf270bdda742f63269b592d292c1d6f814a3cb555d67"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "f8f0eacb6424f7458cbd4d2af70a053b99f8e231d9435d9974e2ce311a966b2a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bda878cc35314a34eeb35a59f5468ae56286de231f1d81844439ab39896e80e1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "640b6e962968a179b4f6a06bff264b5421cf6f7a8dcc3349aa403ccd1be07b0c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1ace8e45f816b56052c71868aa4fffb1df8ea2192c51ce4337ead6024e30d5b6"
+    sha256 cellar: :any,                 arm64_linux:       "c95e647f636fa91840999157dc63e2164e5ac7975632a73d354afec972f5e104"
+    sha256 cellar: :any,                 x86_64_linux:      "02924acbdfaf187ab2b144e9dd8bc94c702e23101838b5a3cee3f6c637c5977c"
   end
 
   depends_on "rust" => :build

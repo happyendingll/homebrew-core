@@ -15,7 +15,7 @@ class Lavinmq < Formula
   depends_on "help2man" => :build
   depends_on "bdw-gc"
   depends_on "lz4"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   on_macos do

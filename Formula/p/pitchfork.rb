@@ -1,14 +1,17 @@
 class Pitchfork < Formula
   desc "CLI for managing daemons with a focus on developer experience"
   homepage "https://pitchfork.jdx.dev"
-  url "https://github.com/jdx/pitchfork/archive/refs/tags/v2.27.0.tar.gz"
-  sha256 "b2e41ca58f46aef9e79e476063efccde6b59fe08113dde6990f7a696e9f0526c"
+  url "https://github.com/jdx/pitchfork/archive/refs/tags/v2.28.0.tar.gz"
+  sha256 "c3351486ed6cf1be3acd8dc787c95693ab6da3f8414b275e26af404ff7e1aa0b"
   license "MIT"
   head "https://github.com/jdx/pitchfork.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "3f0f6977d4f1927e2323e1063b5661dd59f02450d0f8513a7a61d7caa2314697"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0c3fc45710ba07f896d8d59ce93c0b3d01e6f789c46479a5ef833548a124033a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "de273dd25492d007b9dac0fdca6331d714e4f558afa0200184c1f21064d8a46f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "da456d3ecee23aeb993b5830163290a6fc5cdcbe8965819884cf78554538c6fd"
+    sha256 cellar: :any,                 arm64_linux:       "1dfd8f06272a427c1cbda300825d02457018cf6628247dd11193d1988cb32278"
+    sha256 cellar: :any,                 x86_64_linux:      "517bca18ad8f1f1998b96a916b89e3e1cfe967dd1f317d0827fd3cf49abb4e66"
   end
 
   depends_on "node" => :build

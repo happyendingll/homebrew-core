@@ -13,7 +13,6 @@ class Crystalline < Formula
 
   depends_on "bdw-gc"
   depends_on "crystal"
-  depends_on "libevent"
   depends_on "libyaml"
   depends_on "llvm"
   depends_on "pcre2"

@@ -1,8 +1,8 @@
 class Weaviate < Formula
   desc "Open-source vector database that stores both objects and vectors"
   homepage "https://weaviate.io/developers/weaviate/"
-  url "https://github.com/weaviate/weaviate/archive/refs/tags/v1.39.6.tar.gz"
-  sha256 "4010c911a22bf9ac07bbaa689ff0e5be648a12192e293702df4ebbb393956af8"
+  url "https://github.com/weaviate/weaviate/archive/refs/tags/v1.39.7.tar.gz"
+  sha256 "301734f751cbc85664fd9500a24804916d2b7b46d40f1b9d20f8f953ea94abc9"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Weaviate < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "e66cb3a4943c20d9785b39056f8e7eabfdb767f84513c821869946752b48825b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7aa1b7f0505ea6b55cb144db255f5b04f85f9a7a162598ecc385e15509380ca4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7aa1b7f0505ea6b55cb144db255f5b04f85f9a7a162598ecc385e15509380ca4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7aa1b7f0505ea6b55cb144db255f5b04f85f9a7a162598ecc385e15509380ca4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b7f0a64489d642855afac8ad51595342e573e4c61aaec4dfaae21e4514959b3c"
+    sha256 cellar: :any,                 x86_64_linux:      "a6dd529a55ae65f437d83affb23d23e3a38c42beda077bfd159599d60a22bf3f"
   end
 
   depends_on "go" => :build

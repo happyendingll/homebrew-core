@@ -1,14 +1,17 @@
 class VowpalWabbit < Formula
   desc "Online learning algorithm"
   homepage "https://vowpalwabbit.org"
-  url "https://github.com/VowpalWabbit/vowpal_wabbit/archive/refs/tags/9.11.6.tar.gz"
-  sha256 "dc55e96ee95af7eb35a4dd87c56130ebad0d9735d42bf51911bb5598cb256e02"
+  url "https://github.com/VowpalWabbit/vowpal_wabbit/archive/refs/tags/9.11.7.tar.gz"
+  sha256 "828c94afc960dee230110b08c6b37eb17ab117dad9214b57ab7c10330f064670"
   license "BSD-3-Clause"
   head "https://github.com/VowpalWabbit/vowpal_wabbit.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "a05acdd71d0375a05b2b8a311e1c65f254aaaf443fdba86cbea1e77b61d29caf"
+    sha256 cellar: :any, arm64_golden_gate: "53b761bd56fda6dc07449b54a328b0e49e6a3880a8ef12f6f789032b0552734f"
+    sha256 cellar: :any, arm64_tahoe:       "1a9977edb72a5c76c6f5d47803300cdb6d80e422205e1c463544516819e51d98"
+    sha256 cellar: :any, arm64_sequoia:     "352fcf35ad9d7e02399150d478d30ef1173ed49a6d092de7350cd43ca5b7d0c6"
+    sha256 cellar: :any, arm64_linux:       "b9dd1060988c3b7f2689c0b908e4c370af4d1d45876b0d2053f94e1dcde63391"
+    sha256 cellar: :any, x86_64_linux:      "b49fb30853db17a423cfb1bcf27fd16a773ece1ac9f608d1b33e9640292c0ffd"
   end
 
   depends_on "boost" => :build

@@ -4,18 +4,20 @@ class CrystalIcr < Formula
   url "https://github.com/crystal-community/icr/archive/refs/tags/v0.9.0.tar.gz"
   sha256 "2530293e94b60d69919a79b49e83270f1462058499ad37a762233df8d6e5992c"
   license "MIT"
-  revision 3
+  revision 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "6c8aba98e1748801d01623536791d7e0ca854bd170f6069a8fdcf531089cc1ff"
+    sha256 arm64_golden_gate: "c21cafe1f6624e3f664638d863f7f4b4ec2f34bf25bd16362f0dcf116f3e47b3"
+    sha256 arm64_tahoe:       "0eeb299f632e4352bc1de10ab2f57eadd1fa6cfecc457aee62308bac6aac52c2"
+    sha256 arm64_sequoia:     "05b06f5e34378d1371b8679250de08974be0bf4c90040c127a602b79719e18c7"
+    sha256 arm64_linux:       "cf3adb692ca9244a7ea72337c0af1044c55fea5a462a4d3fb7b5365dde76aaef"
+    sha256 x86_64_linux:      "2801f28b1a6d6886ce3ce140914c3da162908c9c04175952c076f8f9435daccf"
   end
 
   depends_on "bdw-gc"
   depends_on "crystal"
-  depends_on "libevent"
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
   depends_on "readline"
 

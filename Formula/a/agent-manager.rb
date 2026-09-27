@@ -1,14 +1,17 @@
 class AgentManager < Formula
   desc "Terminal UI to manage AI coding-agent tmux sessions"
   homepage "https://github.com/YoanWai/agent-manager"
-  url "https://github.com/YoanWai/agent-manager/archive/refs/tags/v0.38.0.tar.gz"
-  sha256 "55b74bfac8507542ed7c6d9d79ee1ca52bb3f7e9eec8ba40cf0cb332e532fb64"
+  url "https://github.com/YoanWai/agent-manager/archive/refs/tags/v0.39.0.tar.gz"
+  sha256 "9589e5c867a2c0d78515778f28ffb0432362093fbc618ce6d701fa5f403735eb"
   license "Apache-2.0"
   head "https://github.com/YoanWai/agent-manager.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "79c6e934402c11dd130a059a8a421ed4f3611e1d02d770128f04988b8ea849c0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11ebb43b4ed698044eebc9d291155e4cbde2e0332b0809b472ca381fd8274a8d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5171229c0bcd704dcf70ee404ee9fda036bf4c456751f62d72fb562114828db5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "30edd223559e1af71457a121d4031babb3714711bdbd8128cdb15166a189dd73"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "06adab31d3dfd35cff6daebbb15ded2069f1fbc1581ecfa3e087dedcb66a07ae"
+    sha256 cellar: :any,                 x86_64_linux:      "2d06d22f99506c2cb30aa6ad562fb9ee59f667e7855b927496bad829c9361e24"
   end
 
   depends_on "go" => :build

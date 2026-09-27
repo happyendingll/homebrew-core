@@ -2,6 +2,7 @@ class Crystal < Formula
   desc "Fast and statically typed, compiled language with Ruby-like syntax"
   homepage "https://crystal-lang.org/"
   license "Apache-2.0"
+  revision 1
   compatibility_version 2
 
   stable do
@@ -28,8 +29,11 @@ class Crystal < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "b5bd8fc7b00c7477185e97ee904ccc38a3936fbc28b67b2616c66c3b0438e8b1"
+    sha256 cellar: :any, arm64_golden_gate: "59ce85b849ea2e9efedfaa8e7990a441f656bf52e45616deadb59a7a0d7e5a73"
+    sha256 cellar: :any, arm64_tahoe:       "3efe943a1e958b1cb86360bdff2a025ad9854bbaed992a8d690a142465fdd25d"
+    sha256 cellar: :any, arm64_sequoia:     "30b8d9e04b84760db7e3f14713a573f69c3e404e0d9b867865d0e69ab17afb58"
+    sha256 cellar: :any, arm64_linux:       "fa0a7594dff38917696ed25433139da9ab95fd16613a38383561b9dee238f61d"
+    sha256 cellar: :any, x86_64_linux:      "b43270c362edf209e1ea6a41e8646031dbe8daf78af8c28ec10cbecc38d8184e"
   end
 
   head do
@@ -45,7 +49,7 @@ class Crystal < Formula
   depends_on "gmp" => :no_linkage # std uses it but it's not linked
   depends_on "libyaml"
   depends_on "llvm"
-  depends_on "openssl@3" # std uses it but it's not linked
+  depends_on "openssl@4" # std uses it but it's not linked
   depends_on "pcre2"
   depends_on "pkgconf" # @[Link] will use pkg-config if available
 
