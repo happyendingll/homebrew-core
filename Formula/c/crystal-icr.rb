@@ -7,11 +7,8 @@ class CrystalIcr < Formula
   revision 4
 
   bottle do
-    sha256 arm64_golden_gate: "c21cafe1f6624e3f664638d863f7f4b4ec2f34bf25bd16362f0dcf116f3e47b3"
-    sha256 arm64_tahoe:       "0eeb299f632e4352bc1de10ab2f57eadd1fa6cfecc457aee62308bac6aac52c2"
-    sha256 arm64_sequoia:     "05b06f5e34378d1371b8679250de08974be0bf4c90040c127a602b79719e18c7"
-    sha256 arm64_linux:       "cf3adb692ca9244a7ea72337c0af1044c55fea5a462a4d3fb7b5365dde76aaef"
-    sha256 x86_64_linux:      "2801f28b1a6d6886ce3ce140914c3da162908c9c04175952c076f8f9435daccf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "0e9ee4f4d9f98499397afc124adb3550ed82d914d4b809ff80e252576e09f1e7"
   end
 
   depends_on "bdw-gc"
