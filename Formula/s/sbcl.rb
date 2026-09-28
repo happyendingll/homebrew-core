@@ -12,11 +12,8 @@ class Sbcl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "62c404a86f264d56bd106ea5b81c9cedf86c28ad6f1b201f211217b511511136"
-    sha256 cellar: :any, arm64_tahoe:       "bf1fbd12c145773884bd4eb4e106529c6ff70bd9f06b4fde64d845f732a750f3"
-    sha256 cellar: :any, arm64_sequoia:     "f5ea0e39f978a60a22bf2583927e150164c7ac3142f906198fe03407280ecd87"
-    sha256 cellar: :any, arm64_linux:       "3410c8fd521d0d7c6506a07a3de080958af04720e0acdf0fdbb6ed7273384d64"
-    sha256 cellar: :any, x86_64_linux:      "890a44c77132873f2bbde23854100f08e7c38dde89b4347eb70c93c4f7621f4d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a4f7d5135b664383aeed0473622ab4d940943e8a1bcaf2dd37dbad6fa67f535f"
   end
 
   depends_on "ecl" => :build

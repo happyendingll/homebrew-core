@@ -11,11 +11,8 @@ class Velero < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e079634c642b84b138f12954ee98455f98551fe773eaf4c5cb2fa072c13c3b43"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2577a977fdb4fffb584f04ede49f160df6cd27d8ee0d238d0aaf6f6d9f0aaa74"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bbc1678b55230911c0b45f041c13e13f8c8e86b82932a25811ed48fd6484b2fc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "eac4545e845af20ab8cb525a64a4ab8cd6355ec7d03e2005776513c127dfd76c"
-    sha256 cellar: :any,                 x86_64_linux:      "06082880d77e8342cc65c24aefa05a28afbfc9ce78dc4b44427ad57af62f5251"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "6ba9f7fe9789a946f4bae3b11d76d82c9a756adb49db09ff11eb18ea6ba62945"
   end
 
   depends_on "go" => :build

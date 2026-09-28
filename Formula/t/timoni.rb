@@ -7,11 +7,8 @@ class Timoni < Formula
   head "https://github.com/stefanprodan/timoni.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a8ed922642fd1e88d679502982f6215dca5d8cc98cea5c270e678b6948eb4d97"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0671a8038a2411d708c73a07def0ce9eaa79a1391c4fcf044407db986b80a5bc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c0caab4443d26896d8427602112ecbd79b6c11332b4bc5dad028c61cbc76ab32"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "eecf0267aaae646e2c745d055034f0276ca18ecb3824f58832e602494d522aea"
-    sha256 cellar: :any,                 x86_64_linux:      "675c2d44c1ea5ebc0064ed22a2a5793128aeae079e87f5ce5e09ae65f1cbaae3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "00fd936e4d0ec69da0a5fa2c4f2525f451a21ccac70b1f7c38f4624152ef7112"
   end
 
   depends_on "go" => :build

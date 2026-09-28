@@ -7,11 +7,8 @@ class Mkbrr < Formula
   head "https://github.com/autobrr/mkbrr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b79ed3431926305f8012e248e9137c082ff718e0669cd8d1886decfa92aed5a3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b79ed3431926305f8012e248e9137c082ff718e0669cd8d1886decfa92aed5a3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b79ed3431926305f8012e248e9137c082ff718e0669cd8d1886decfa92aed5a3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "806e890eb625e378d4614da9f67fdc1d431c95cee49e0c9898a65038234860a2"
-    sha256 cellar: :any,                 x86_64_linux:      "8c415e6499befd7b3be962fd94e498b4e0879fa997bc69af709df3a2016c2226"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d1acbf7aa61112431e5de172f7a5f8129b48a1ae68dc275d83858c60d3650014"
   end
 
   depends_on "go" => :build

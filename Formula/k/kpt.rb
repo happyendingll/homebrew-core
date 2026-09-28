@@ -25,11 +25,8 @@ class Kpt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "90bcbf92440da5a3d99e8c28dec9c9e3f83df9cbceac0ae0c358a92164e5c149"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eb3dbb9b3bc622e40e9af0a82f42abb0486266833de06e815ea278227fb78340"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0cc8fa6ae26d697e411850b4b7a04ab3e4997b1dbf2e34eeb5dbf77e20b013e7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d62c308af8ad0bb9693ff55c2e1b812c36d85093bf53091dad5d4888f9e603d6"
-    sha256 cellar: :any,                 x86_64_linux:      "08a91b7aa2370f88346f4cf5126b605ae744fceb6d88719992b553a53562e99b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc101a0864f95eccc356f3526d620d6b646e61b393d8cdb2f86aba0e4949ce48"
   end
 
   depends_on "go" => :build

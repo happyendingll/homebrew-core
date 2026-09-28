@@ -11,11 +11,8 @@ class Scw < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43d0524453c62696b37c1e7c0825d54b93597e6d74f928170c8d52827ee1e76d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4b4c9fcad3d61669d183ca0d28feb98bfc634dff9bcd6dd7ee98d264a57df91f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b4d1a475a6e70796d631eafc75b66f65684e19776dd8491f167463d4cdcc68b7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ae193a613d84b391bb212cb5ac669edc7da2ece2e8d54f7e311666baef607fb1"
-    sha256 cellar: :any,                 x86_64_linux:      "a143b8ae0b316f07d83eb911d76a838b308ea544052cad3f9adde11a1225413e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "4e7424f433ea1b89acdb683b37dcf511604e2e929fe35018afaa13fc39454648"
   end
 
   depends_on "go" => :build
