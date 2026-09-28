@@ -11,12 +11,8 @@ class Aider < Formula
   head "https://github.com/Aider-AI/aider.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "e284718dced73d2319aecb53260bc218eb349d264db2acc159f3cb89f8ac2374"
-    sha256 cellar: :any, arm64_tahoe:       "6fd6864b922fddaae2904a5e1813f4db9bdb51bce7fd5727807bf602c6a15546"
-    sha256 cellar: :any, arm64_sequoia:     "6676e8cd88b1c1256d341dec6ad86e40961ad4b311b53bbf6860ee0b291e39a8"
-    sha256 cellar: :any, arm64_linux:       "eae4b1cecf77e5a3a9527678574ebace58eb91c3a00c667ffa0dd2feaf788220"
-    sha256 cellar: :any, x86_64_linux:      "c726f6bfe60983c376e23269bc726edd6253869ff9411aa962b7d047c27dde5d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "ac58a05d2e9dfd2a6c86fcc2df6009f0b03c7d8fc1f9794f6857e2c274befada"
   end
 
   depends_on "ninja" => :build
