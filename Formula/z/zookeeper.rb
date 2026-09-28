@@ -20,7 +20,9 @@ class Zookeeper < Formula
   depends_on "pkgconf" => :build
 
   depends_on "openjdk"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
+
+  deny_network_access!
 
   def default_zk_env
     <<~ZSH
@@ -28,8 +30,12 @@ class Zookeeper < Formula
     ZSH
   end
 
+  def fetch
+    system "mvn", "dependency:go-offline", "-Pfull-build"
+  end
+
   def install
-    system "mvn", "install", "-Pfull-build", "-DskipTests"
+    system "mvn", "install", "-Pfull-build", "-DskipTests", "-Dc-client-openssl=#{formula_opt_prefix("openssl@4")}"
 
     system "tar", "-xf", "zookeeper-assembly/target/apache-zookeeper-#{version}-bin.tar.gz"
     binpfx = "apache-zookeeper-#{version}-bin"
@@ -44,7 +50,7 @@ class Zookeeper < Formula
     (var/"log/zookeeper").mkpath
     (var/"run/zookeeper/data").mkpath
 
-    Pathname.glob("#{libexec}/bin/*.sh") do |path|
+    libexec.glob("bin/*.sh") do |path|
       next if path == libexec/"bin/zkEnv.sh"
 
       script_name = path.basename

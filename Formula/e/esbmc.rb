@@ -4,6 +4,7 @@ class Esbmc < Formula
   url "https://github.com/esbmc/esbmc/archive/refs/tags/v8.5.tar.gz"
   sha256 "61a240ca75cccbd037292d4921b7da01bf12fef0ae760401d3284a3a8a17cff3"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/esbmc/esbmc.git", branch: "master"
 
   livecheck do
@@ -12,8 +13,11 @@ class Esbmc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "937d6f824d7e401492931857f7732853f824f6fa32301ce45e01923335907463"
+    sha256 cellar: :any, arm64_golden_gate: "cc4658e2195afa4892652ad92c6c70702a9e3563630033ddaa664eac50bcf075"
+    sha256 cellar: :any, arm64_tahoe:       "1d121b5c9fba0ae1b962f953164e8c20374edbe23c347fb0ef5a35f2a4efff26"
+    sha256 cellar: :any, arm64_sequoia:     "23e3afae2f854a918b8233784d37c3a2399a322664e1b4ffdc2b020bf8c3c89c"
+    sha256 cellar: :any, arm64_linux:       "972df7395ba95c7455e0ac720fe5442005fd5a1633771ebc851614263f020230"
+    sha256 cellar: :any, x86_64_linux:      "2ccae6e02b5219045ca0874b5d0b826a36b23bdd3b478fb2aac836e01616491c"
   end
 
   depends_on "bison" => :build # macOS ships 2.3; esbmc requires >= 2.6.1
@@ -55,6 +59,7 @@ class Esbmc < Formula
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+    bin.env_script_all_files libexec/"bin", PATH: "#{formula_opt_libexec("python@3.14")}/bin:$PATH"
   end
 
   test do

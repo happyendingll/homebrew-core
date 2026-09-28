@@ -5,11 +5,14 @@ class Libpulsar < Formula
   mirror "https://archive.apache.org/dist/pulsar/pulsar-client-cpp-4.2.0/apache-pulsar-client-cpp-4.2.0.tar.gz"
   sha256 "cc48a168dc44dc2f89122edd692c2919736c794564c8a71c6a7acff86ca2d315"
   license "Apache-2.0"
-  revision 4
+  revision 5
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "753cfb9ab2cdd642ce6c09636eed4cd520187c6d5ff0fcf3a2547d58cb2eb027"
+    sha256 cellar: :any, arm64_golden_gate: "3095da9d53780d1d6ff1f06a44392de7df62880a6a3055d0bbdef29df8e6639e"
+    sha256 cellar: :any, arm64_tahoe:       "de5d8dcba12c3e670cf8bb07c1afb282028163e0b399b6ea57979bd2d868cf2b"
+    sha256 cellar: :any, arm64_sequoia:     "fb601ee13874282d298ab703fdccc171bac29f04c271b8653d21d833b02329d5"
+    sha256 cellar: :any, arm64_linux:       "a6e3283fc5230ea5b767d6dc69c774607adbee5e750bb91d94c27a5556131f07"
+    sha256 cellar: :any, x86_64_linux:      "4e871be02f880d49220d62dc62de9e5b4c4dbf20669419ebb2d9c08fc4c71b20"
   end
 
   depends_on "boost" => :build

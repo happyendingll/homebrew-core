@@ -4,10 +4,14 @@ class Ocicl < Formula
   url "https://github.com/ocicl/ocicl/archive/refs/tags/v2.20.0.tar.gz"
   sha256 "c93441daeb9772922af5f7b394d60bbe44c67ea061511648943db07d33b5abb0"
   license "MIT"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "ddd005721831f1e33c9a1630bcb5124af1c9d254049c7e2c485a13f0c3a92fe9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "acf9195fe118e0d9651349031e5004d6b0e0c3641e5d978efaa6ea3728782c4c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3ff7d1814cfe7166c574c91bf343147954c950d4de16499cb4c91c8a806a077"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "13e3662b5566a1167c54149ccd9a7ca7eb8c0f1b7efc74c1d07bd159f521887c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7e3b267282e9cc5a442a0ebabb7c707c96d017ac9988f2835663370f215d5414"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b6bb1e48276d3a7fe7ed76ad6f6095af363021e038042487c0e6b55cfe68d3ea"
   end
 
   depends_on "sbcl"

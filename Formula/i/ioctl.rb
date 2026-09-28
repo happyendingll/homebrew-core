@@ -1,8 +1,8 @@
 class Ioctl < Formula
   desc "Command-line interface for interacting with the IoTeX blockchain"
   homepage "https://docs.iotex.io/"
-  url "https://github.com/iotexproject/iotex-core/archive/refs/tags/v2.4.5.tar.gz"
-  sha256 "60cd30a0c3180f3d5d6afc2d0895f980176ec6f135acd27b5bbc8f414a6e42b4"
+  url "https://github.com/iotexproject/iotex-core/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "6da30b5319c303e87ea14dd7804a78ccc44f099b3607375eeb71afe9ca38a96a"
   license "Apache-2.0"
   head "https://github.com/iotexproject/iotex-core.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Ioctl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "9f0e629469908325209effcce1f73ffdd9d936392d3fc1b79e92939fef3217a0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "312ad7b47bc980a90d127529a1e8b515c66e5e1723820fc31b01f0ff59a8fbaf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e263479512b263fe1b5ff536599aa32b3aa41d232f8a2b887de2f588adc7cfe2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e8ca25c0bcb26297c95b2ffd2ac5be1a677fdf34b15412d22d5765acd4c9d922"
+    sha256 cellar: :any,                 arm64_linux:       "ca2a05f410a749c099598e4d30e122dae23f51132dc71c3107e6a5c068bcacef"
+    sha256 cellar: :any,                 x86_64_linux:      "ab73db3567fb3616ce2e2f15b2fc5229de8f789f690ecb23f1d41c04d0f436f6"
   end
 
   depends_on "go" => :build

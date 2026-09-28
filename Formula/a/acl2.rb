@@ -4,7 +4,7 @@ class Acl2 < Formula
   url "https://github.com/acl2/acl2/archive/refs/tags/8.7.tar.gz"
   sha256 "d6013c22e190cbd702870d296b5370a068c14625bf7f9d305d2d87292b594d52"
   license "BSD-3-Clause"
-  revision 6
+  revision 7
 
   livecheck do
     url :stable
@@ -12,8 +12,10 @@ class Acl2 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "e4fb1256d4545b5c0e7175ad97cc6a9595dda48e25dcbcbb72990bc6ce9f1168"
+    sha256 arm64_golden_gate: "2ba916bb66b371f5fbb7c11a6db21c79a3a558e5689e0bfe23159be2772ffd27"
+    sha256 arm64_tahoe:       "d673802a2215f160048d525a20744af1ee9b9633bc270d61b809052966e2fa7c"
+    sha256 arm64_sequoia:     "2f898283caefe3eaab6eed40e7a31c5f04b2e0b656a9f42a216e4365ab1b402e"
+    sha256 x86_64_linux:      "b8d56408c90a0836123e4f2000ec36de5d6f55713a7296ac0e8fa21b3a031477"
   end
 
   depends_on "sbcl"

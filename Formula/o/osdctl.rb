@@ -6,20 +6,10 @@ class Osdctl < Formula
   license "Apache-2.0"
   head "https://github.com/openshift/osdctl.git", branch: "master"
 
-  # TODO: remove if undeprecated
-  livecheck do
-    url :stable
-  end
-
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
     sha256 cellar: :any_skip_relocation, sequoia: "b5d7d63aaa70961e5abada02c56190e7bf4fce62afc51a66cb1ed903bd92ab44"
   end
-
-  # Can be undeprecated on new release or if upstream responds:
-  # https://github.com/openshift/osdctl/issues/963
-  deprecate! date: "2026-09-18", because: :checksum_mismatch
-  disable! date: "2027-09-18", because: :checksum_mismatch
 
   depends_on "go" => :build
 

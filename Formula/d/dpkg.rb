@@ -19,9 +19,9 @@ class Dpkg < Formula
     sha256 sequoia: "4ecaef8443623ef22cf78922f9c520a4a4c375c642b2bd77d66f201ed73bb65f"
   end
 
+  depends_on "gettext" => :build
   depends_on "pkgconf" => :build
   depends_on "po4a" => :build
-  depends_on "gettext"
   depends_on "gnu-tar"
   depends_on "gpatch"
   depends_on "libmd" # for md5.h
@@ -29,6 +29,10 @@ class Dpkg < Formula
   depends_on "xz" # For LZMA
 
   uses_from_macos "bzip2"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   on_linux do
     keg_only "it conflicts with system dpkg"

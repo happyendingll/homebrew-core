@@ -1,8 +1,8 @@
 class SynergyCore < Formula
   desc "Synergy, the keyboard and mouse sharing tool"
   homepage "https://symless.com/synergy"
-  url "https://github.com/symless/synergy/archive/refs/tags/v1.21.3.tar.gz"
-  sha256 "363b20ce6e80c737f692e09a07d1325db8cf9361a7918184ed5d0ef49818c7b0"
+  url "https://github.com/symless/synergy/archive/refs/tags/v1.21.4.tar.gz"
+  sha256 "369d789ae5616e6e43b5eeb6feac644ab7d3384c138748a13ed9f7e1df7361a6"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
   head "https://github.com/symless/synergy.git", branch: "master"
 
@@ -17,8 +17,11 @@ class SynergyCore < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "ddd76765c1a6705f1d248a64fa0acfbdc6d68343e9d7c33a18686e10b70cbcda"
+    sha256 cellar: :any, arm64_golden_gate: "206543de543008dd31c3725f746a02a397b998154d153506a68f3046daff288c"
+    sha256 cellar: :any, arm64_tahoe:       "8aad19e0da49e4d7283d9443629a4a30d179955409268fcbe5b373238d53960d"
+    sha256 cellar: :any, arm64_sequoia:     "8a6d7afafb04f52e7992711d1ee7e8d060f2a3b940163e827f2ec87978dff417"
+    sha256 cellar: :any, arm64_linux:       "5f78a812090c0a41721a8bb32b644b6ea85f3df71beb6dfe44daf63e180fc81a"
+    sha256 cellar: :any, x86_64_linux:      "82438dcfe467ce26a5c17dcdbe3de64e7cab24780fd847c539c27b8d18598b32"
   end
 
   depends_on "cmake" => :build

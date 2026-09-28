@@ -1,8 +1,8 @@
 class Scw < Formula
   desc "Command-line Interface for Scaleway"
   homepage "https://www.scaleway.com/en/cli/"
-  url "https://github.com/scaleway/scaleway-cli/archive/refs/tags/v2.62.0.tar.gz"
-  sha256 "055c5c99ac022fdb1d7c235928bd9a331ec04926ba00241b93cbb4c9ff8a5583"
+  url "https://github.com/scaleway/scaleway-cli/archive/refs/tags/v2.63.0.tar.gz"
+  sha256 "9b3ed64890943fb2f5ec0750807abcea45cd439b9ff56582ff6c71a20584b794"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Scw < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "a620c67071a35d12b11d993c24ec898caa2ed1c970090ee6da8ee2b11ef7b0b8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43d0524453c62696b37c1e7c0825d54b93597e6d74f928170c8d52827ee1e76d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4b4c9fcad3d61669d183ca0d28feb98bfc634dff9bcd6dd7ee98d264a57df91f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b4d1a475a6e70796d631eafc75b66f65684e19776dd8491f167463d4cdcc68b7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ae193a613d84b391bb212cb5ac669edc7da2ece2e8d54f7e311666baef607fb1"
+    sha256 cellar: :any,                 x86_64_linux:      "a143b8ae0b316f07d83eb911d76a838b308ea544052cad3f9adde11a1225413e"
   end
 
   depends_on "go" => :build

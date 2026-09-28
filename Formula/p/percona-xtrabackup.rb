@@ -4,6 +4,7 @@ class PerconaXtrabackup < Formula
   url "https://downloads.percona.com/downloads/Percona-XtraBackup-8.4/Percona-XtraBackup-8.4.0-7/source/tarball/percona-xtrabackup-8.4.0-7.tar.gz"
   sha256 "177ee52757d6e702b082b033e4562d680ed8f6dfa24d8cdad13005e48db65e18"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url "https://www.percona.com/wp-admin/admin-ajax.php", post_form: {
@@ -21,8 +22,11 @@ class PerconaXtrabackup < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "5cad40ef4dcdce30535ab2f7648bb221290a4fcdeb001cac35e50635e2d905c4"
+    sha256 arm64_golden_gate: "20db74bbcec43435d8a284453ef84654704af61c13a1863342d8d272f9f59464"
+    sha256 arm64_tahoe:       "ba8ea2d8d5dfc1d9e8a16910ccff12a87f136effb52eebfc92b7780ff1c1539d"
+    sha256 arm64_sequoia:     "c6ec78d3b1abf912e96dcd68ee46c53c0acdd3a0607b0e754704a8e1a6a62c5c"
+    sha256 arm64_linux:       "ff6e83da34eacb373e4243f143ad6dd8e2caae081fe633be05f0417d26922c40"
+    sha256 x86_64_linux:      "3fcb15831b8d0ccbcd19d1c54da98a18f757d6192d69a7c4d9645722b1066b7e"
   end
 
   depends_on "bison" => :build # needs bison >= 3.0.4

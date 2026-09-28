@@ -4,7 +4,7 @@ class Maxima < Formula
   url "https://downloads.sourceforge.net/project/maxima/Maxima-source/5.50.0-source/maxima-5.50.0.tar.gz"
   sha256 "0bc4b5e11fe153ef20b24a3a816b668ece5378cc738fa24ca426b62fd6d8fc37"
   license "GPL-2.0-only"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -12,8 +12,11 @@ class Maxima < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "7ae962a17c099b3653c1cbad8a34a00d4d59250b5b728c6296ea73b6c5107a70"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "579a3993261da5d3d3ec137cffef18a41fd5d0ddeab3284673bc3f43aee11970"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "33e3ccdfc1dc37def1ed866c576195691287176bb017acc818d4a929890b0e2a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f02c8c360061c0f413ecb2926771647761e68e68c4b3c583fda27d12cc1095d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "de4465b3b19e27a5539560dc31f87b38ca40c845ed022ee9fac6d8a484dd85cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5e4565de592c01cc6346b47be9942d5d3c2c14fe4086ea02b89345b7a592d873"
   end
 
   depends_on "gawk" => :build

@@ -5,11 +5,15 @@ class Brpc < Formula
   mirror "https://archive.apache.org/dist/brpc/1.18.0/apache-brpc-1.18.0-src.tar.gz"
   sha256 "26497bb50a8e06c8ffe24f37325431b1ca72fffd447de6fa3eb0002db79c978a"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/apache/brpc.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "e44a7054f47eb87c32b5f04cbc3491dbe4ec694e682da50c16a51ef03300c237"
+    sha256 cellar: :any, arm64_golden_gate: "14e01d4c0ab4b50101c53c031512df3c8f458cf497989fee5c4116713efb6a13"
+    sha256 cellar: :any, arm64_tahoe:       "af88555283ea2923e8b6684aa6e3d5af60a88c93c519b52be52cb92cb74261a0"
+    sha256 cellar: :any, arm64_sequoia:     "c2fc469d5109dde976a07bc0f592ce139f02bc0c60b3f9d3debea981030d527b"
+    sha256               arm64_linux:       "2d8cb979fabaecc931bcb896df0f9f636d6ca3b33b0e22ff9e0db9e537cc31a9"
+    sha256               x86_64_linux:      "a91f75668092df73efb9f2c34c0c76986457623232ff084e2d9f85ae4183b662"
   end
 
   depends_on "cmake" => :build

@@ -25,6 +25,19 @@ class SwiProlog < Formula
         type :backport
       end
     end
+
+    # Backports to support OpenSSL 4
+    patch do
+      url "https://src.fedoraproject.org/rpms/pl/raw/7ce89990c46ecd45cf6fc9a5106d9aad9325df00/f/swipl-10.0.2-openssl4.patch"
+      sha256 "fbed115159222ecb936f56354f3c40bfa092dd135ab5a482ee0a9f2e6d27939a"
+      type :backport # https://github.com/SWI-Prolog/packages-ssl/commit/24cff8cff7f8c32633fb883d99f3d8b8cc3c5bec
+    end
+    patch do
+      url "https://github.com/SWI-Prolog/packages-ssl/commit/7673a282d2868d69172ecfbcc0824eb6b47d373a.patch?full_index=1"
+      sha256 "17b18f612872a876e163d1cfb5600d41d870dd0c8244ea2cd7a03c24cc44f530"
+      directory "packages/ssl"
+      type :backport
+    end
   end
 
   livecheck do
@@ -43,7 +56,7 @@ class SwiProlog < Formula
   depends_on "gmp"
   depends_on "libarchive"
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
   depends_on "unixodbc"
 

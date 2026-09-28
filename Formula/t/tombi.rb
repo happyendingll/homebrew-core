@@ -1,8 +1,8 @@
 class Tombi < Formula
   desc "TOML formatter, linter and language server"
   homepage "https://github.com/tombi-toml/tombi"
-  url "https://github.com/tombi-toml/tombi/archive/refs/tags/v1.5.6.tar.gz"
-  sha256 "d38ef65a4150609714292ef31633ddc2ba666f7c6d528710cbb1e6d0df844f1f"
+  url "https://github.com/tombi-toml/tombi/archive/refs/tags/v1.5.8.tar.gz"
+  sha256 "0f6f2475a4db8837efca92ba65f18a2d8416b4ed5aeb8a1ef5f006e19326e888"
   license "MIT"
   head "https://github.com/tombi-toml/tombi.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Tombi < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "0d2a197b9de674fd9482bef6173a50c89069a0de30c34d9cfd90da428e299c72"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e7a8810733972099446f4b91a59faf915904d20687a34b6c66b0b8d66157e2e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2f474c27ba9f75f0fe1718b24cdb5d1c4c2f214b757bda7e7115e226e50fe78b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e924280fe36dd0f76da325ed114cd3e0fcc7e087c59282c90ee2c7b8ee2e002d"
+    sha256 cellar: :any,                 arm64_linux:       "cc3b91f12f4d1b097e9246d0f64ea6f9e64bfdecc25e1a53517ecec2b453cf91"
+    sha256 cellar: :any,                 x86_64_linux:      "2a616b568307ba175b08cee8021b3576b1f965ec1984688babd6f61e5993532a"
   end
 
   depends_on "rust" => :build

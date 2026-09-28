@@ -1,10 +1,10 @@
 class Sbcl < Formula
   desc "Steel Bank Common Lisp system"
   homepage "https://www.sbcl.org/"
-  url "https://downloads.sourceforge.net/project/sbcl/sbcl/2.6.8/sbcl-2.6.8-source.tar.bz2"
-  sha256 "ad5126dfdfba5db27ee77bcc25893020fe522d0b7653d45b4c4795ade3ddc23d"
+  url "https://downloads.sourceforge.net/project/sbcl/sbcl/2.6.9/sbcl-2.6.9-source.tar.bz2"
+  sha256 "c6fd1d735570eb4ff34caf9609988ca77ed0bd12b55d09a4fed075be890da513"
   license all_of: [:public_domain, "MIT", "Xerox", "BSD-3-Clause"]
-  compatibility_version 7
+  compatibility_version 8
   head "https://git.code.sf.net/p/sbcl/sbcl.git", branch: "master"
 
   livecheck do
@@ -12,8 +12,11 @@ class Sbcl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "c47c24d97b23c20ab1a3f1ec5e7ed73877850e832c356c6110fb3b80b804b64c"
+    sha256 cellar: :any, arm64_golden_gate: "62c404a86f264d56bd106ea5b81c9cedf86c28ad6f1b201f211217b511511136"
+    sha256 cellar: :any, arm64_tahoe:       "bf1fbd12c145773884bd4eb4e106529c6ff70bd9f06b4fde64d845f732a750f3"
+    sha256 cellar: :any, arm64_sequoia:     "f5ea0e39f978a60a22bf2583927e150164c7ac3142f906198fe03407280ecd87"
+    sha256 cellar: :any, arm64_linux:       "3410c8fd521d0d7c6506a07a3de080958af04720e0acdf0fdbb6ed7273384d64"
+    sha256 cellar: :any, x86_64_linux:      "890a44c77132873f2bbde23854100f08e7c38dde89b4347eb70c93c4f7621f4d"
   end
 
   depends_on "ecl" => :build

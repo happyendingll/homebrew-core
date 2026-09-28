@@ -1,8 +1,8 @@
 class Petsc < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (real)"
   homepage "https://petsc.org/"
-  url "https://web.cels.anl.gov/projects/petsc/download/release-snapshots/petsc-3.25.5.tar.gz"
-  sha256 "6d61c472db39006d261542d1a42f1fa6c52d6e89f9e77041386189aa8c24b490"
+  url "https://web.cels.anl.gov/projects/petsc/download/release-snapshots/petsc-3.25.6.tar.gz"
+  sha256 "00ac91c7ae96eae6a39d7380c7e869c1c7ddbc0c64a23a0b5fd3442227c7cdb9"
   license "BSD-2-Clause"
   compatibility_version 2
 
@@ -12,8 +12,11 @@ class Petsc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "cf6f19bb35f129bb9ba0badca26b783b16e28687da1a1f61f2a4b9094bcfd64f"
+    sha256 arm64_golden_gate: "6021ae3895aeca572a8bee99b952894ed94b11d6e19ab4cf7ae0117e5534828c"
+    sha256 arm64_tahoe:       "e77185e38482951edfd6d7a09b1c6975e026da8992371423119691ea4f0afc45"
+    sha256 arm64_sequoia:     "95acaa7632163c36ff772725bfd2101396de04908a4b612792d09ac6934e5b0c"
+    sha256 arm64_linux:       "4e945c507ed1f71b46aba8c01997d34ab064dbd74c31b5763228b77af603d9f2"
+    sha256 x86_64_linux:      "40344e2dcb898aa1e17834be0309349a6bd33ed096829b0451d299642da77498"
   end
 
   depends_on "fftw"
