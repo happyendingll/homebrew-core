@@ -14,11 +14,8 @@ class GhcAT912 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e2c23f3f66da5105a223973127cccbc7c390026dd82f8a312aaad25916b3a48b"
-    sha256 cellar: :any, arm64_tahoe:       "b77c10e1ebf331a8a90c022f1eb3578c18c9f841fc736e47f50ca51f98da51b9"
-    sha256 cellar: :any, arm64_sequoia:     "1611dc3f9cfb311161482efad812660eda84fd14cf0c30e482c02c28730a0fe9"
-    sha256               arm64_linux:       "8629b6af9428b10fa30d79c772b4c8170e5f02c83448b8704d1b6ca8a199186c"
-    sha256               x86_64_linux:      "99e0f11fa78962b4003b2d55ce52fe5c54c15e102e4c811f78d15c0994e7f978"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "8a28797ff1791ebc8016baa4a8b3df0a504ca154f054d69fa8345037b326b6e8"
   end
 
   keg_only :versioned_formula

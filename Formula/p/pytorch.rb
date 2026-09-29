@@ -15,11 +15,8 @@ class Pytorch < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7cb3a591da1fb739ce75e7033145451f780ea6934c5e9790192efe77733726b8"
-    sha256 cellar: :any, arm64_tahoe:       "2ea0f6a893b54dae2a2a66cbef03d21bd4345ac8be48b0b7c928c43b532e3c67"
-    sha256 cellar: :any, arm64_sequoia:     "391586e4030d14495f7231d764cc2b0f20497d4524e3bd4fc81cde39ad59764e"
-    sha256 cellar: :any, arm64_linux:       "08f20de24d8c2bfb20a59efdb12cd05f3dfc6387d117de531e73ce6fdb2cb8bd"
-    sha256 cellar: :any, x86_64_linux:      "db667d2c30ca3206692841a8da3331383516d1dedca1e610c885bf897e24e3de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "1a184fa37387cb33792ba593b2739609ad8fa2599949148d83c4eb3e344de00c"
   end
 
   depends_on "cmake" => :build

@@ -7,11 +7,8 @@ class Librefang < Formula
   head "https://github.com/librefang/librefang.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "af1b5530b60f22288731f12dd62fc9fef29517450b02886e28ecde303dc0eb12"
-    sha256 cellar: :any, arm64_tahoe:       "3c9a732e2dd6a30f3fc0dac5c94c2662355c577bfac5e25c92eee2acd4fb8a0e"
-    sha256 cellar: :any, arm64_sequoia:     "8ba47166ba76449da3567b0504e67791e10227b3445b9fbdb6c2d861cb4e1e9c"
-    sha256 cellar: :any, arm64_linux:       "e67ee26352cf99e359cec7c411f5003ed0bc638e1d488d385061719e35c8d34f"
-    sha256 cellar: :any, x86_64_linux:      "d3cdfe37535cf2123ed823bc16dc3dfb2ee619d67d92b0a077a60c7b2f05d8f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "7bb1b3d80448af31b17ad3a2785f14f626a1551e19ad223f180f01c74e9b0e1b"
   end
 
   depends_on "pkgconf" => :build

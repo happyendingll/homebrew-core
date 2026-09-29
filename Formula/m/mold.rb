@@ -15,11 +15,8 @@ class Mold < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6390617a0c79613f91c5735bc135ec0b04d5e0c2f120252b2390dbf1d101e054"
-    sha256 cellar: :any, arm64_tahoe:       "f8783cd443e4c1e4a8386fbb76350f2da37faa6c35ff82452afc625c6b04bd7e"
-    sha256 cellar: :any, arm64_sequoia:     "93ecc52ad053adcd04a72ce700063929fdb3333a9a910b0302631d200c443a67"
-    sha256 cellar: :any, arm64_linux:       "4a38f8aae2d02d9df37301e35e094df54119dbd8a906c9424a1717f5fc7026af"
-    sha256 cellar: :any, x86_64_linux:      "1a9ba98129bb0220979933261e8da4d477746091756e6cea5ee809b6a3ec523d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "32dd998ec4b67dc9532bd5ca1588c967fb7424efcd43c67e6ddd1223cc0a57cf"
   end
 
   depends_on "cmake" => :build
