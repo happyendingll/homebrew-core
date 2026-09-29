@@ -1,8 +1,8 @@
 class Ladybug < Formula
   desc "Embedded graph database built for query speed and scalability"
   homepage "https://ladybugdb.com/"
-  url "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.20.4.tar.gz"
-  sha256 "4c85fa10f60668df3128fa85812a811f72d78fffbc967622986f57dcc7812e62"
+  url "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.21.0.tar.gz"
+  sha256 "b367872a9d423b6f4e26b073dce7ba60dacedfba16e876d32d608b5f4977ef63"
   license "MIT"
 
   # There can be a notable gap between when a version is tagged and a
@@ -14,8 +14,11 @@ class Ladybug < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "dbb9e329a5d1f38585aba02f61079c47681d0d6483774d325dba77e9dda48224"
+    sha256 cellar: :any, arm64_golden_gate: "889f4fd8adeabe08baa8ae2cf57eb6211fd6e59e8e6524b8cfc49a8514525d5c"
+    sha256 cellar: :any, arm64_tahoe:       "bbe62a037403115f4eca91c06ba17628b0378b56a06c3b926af3a553387685ce"
+    sha256 cellar: :any, arm64_sequoia:     "e42bf817f74eab555bb3062c6603d67b2b0f056131fdee6a9ecc5ffcab283bef"
+    sha256 cellar: :any, arm64_linux:       "66a0a956a94291780e8f354183ccefa8d04b888dec59e9316d45b16a0aa016aa"
+    sha256 cellar: :any, x86_64_linux:      "00d46c85f1ac932559e73f4655ce89bb061d035062d896bda7f8a82c93e17855"
   end
 
   depends_on "cmake" => :build

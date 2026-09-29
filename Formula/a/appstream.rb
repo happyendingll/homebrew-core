@@ -1,14 +1,17 @@
 class Appstream < Formula
   desc "Tools and libraries to work with AppStream metadata"
   homepage "https://www.freedesktop.org/wiki/Distributions/AppStream/"
-  url "https://github.com/ximion/appstream/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "02f723cb1afa372d434896e138503163a44ad49e4a813d0d30713fc38ccb8d0c"
+  url "https://github.com/ximion/appstream/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "2bc53d1d63ae28e7409a15747d4ae23a557409249461aab87a7947640402d1bd"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "671752519b68dd18ab2efc008fec18f12c3cdc6902e21d354a18e345f2e9dc76"
+    sha256 arm64_golden_gate: "028c33c665784ecb33ba94cd3d26b7a6dc5d8232187eb0f7ef0a2e87ce2ed4d9"
+    sha256 arm64_tahoe:       "fc76c57667654ed35f8e08500e616dd654ca6470db6be645a8ca9bf3f3606f60"
+    sha256 arm64_sequoia:     "f398ec4bff0fd00b087268d640ffc70d79c6afa5ea37bc3c93e0d5cd94816ac1"
+    sha256 arm64_linux:       "f80a70f1f7ad5a038b762b144501c197085bc8835409378243a5204159669807"
+    sha256 x86_64_linux:      "c0b849bd36a717f3ff96e551f43e02bafa7b505e06c7b5b27c87ee309d6b8c15"
   end
 
   depends_on "docbook-xsl" => :build
@@ -42,8 +45,6 @@ class Appstream < Formula
 
   def install
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
-
-    inreplace "meson.build", "/usr/include", prefix.to_s
 
     args = %w[
       -Dstemming=false

@@ -1,26 +1,25 @@
 class Mlc < Formula
   desc "Check for broken links in markup files"
   homepage "https://github.com/becheran/mlc"
-  url "https://github.com/becheran/mlc/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "635c05b2dacc3769089f3a8854bebac2b06605280648d07d0136996b1d1de596"
+  url "https://github.com/becheran/mlc/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "6584889f81406f905d38bf624815861948abe62a13259a7a6805a00109f89648"
   license "MIT"
   head "https://github.com/becheran/mlc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1dffe5231ef4c1547d17a75feeb7b152d88f5fd9c9734221b74dda6a4ae52286"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "53f3cbfaf325342b02159254ef76d9662dd1e43ca0306c077d48383e426bbd49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2bcbbb02edc73eb77b65b210492ee793565303c99f3705a2df88e5b48585289e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "35d38d67b828a4acebdc9cedc31425c865bf87d314aa7c03a1a7182d27cd8652"
-    sha256 cellar: :any_skip_relocation, sonoma:            "735ecd15c43aaef25d4bbf33937057d868011c586652e4525b5ec2d2425fe277"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ec8e9ee4cb303a6f3bb5cd58000e817f6147e40b892920b0e326e2cf11e2f5ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "28cd68a8dc923a784360d646cf81244900f0ec03bfd4885063fe395765cc3620"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5b8bc74070f12f643d8dd7d94909b431dd5d6ff4f7002b59841a2d54f7cf6ba1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ee8c1d98726c59dfd60eb0d6df4eaae8fa087c97d67a3554fa111d8077920e59"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6708c54bf42a1f1e9cd02b5ce69b467e2e748a5b180839c492c2a0e185f296ae"
+    sha256 cellar: :any,                 arm64_linux:       "51d010447eb946c2649e8c9afb635449b949d3dff4d7826b845208373a91e376"
+    sha256 cellar: :any,                 x86_64_linux:      "e993a1d09f938bf712f33d0dde8cc277fd95b73c87dea16ab1572395cfdd3003"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   def install
@@ -28,7 +27,7 @@ class Mlc < Formula
     # incorrect or outdated linker (e.g. x86_64-apple-darwin14-clang)
     ENV.append_to_rustflags "-C linker=#{ENV.cc}"
 
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
     system "cargo", "install", *std_cargo_args
   end

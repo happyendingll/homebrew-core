@@ -3,13 +3,16 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.github.com/spec-kit/"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v1.0.12.tar.gz"
-  sha256 "210844d1d10c1dc0bedd280e585e3f16eee3f7674bd9c118f65b8b63b210dfe6"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v1.0.13.tar.gz"
+  sha256 "acbbf92c47902faf42fa5ef4405158316248a387d3ae122b26a47977e2254c35"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "c1dcc3a151016a79ff5b95e0562b84f102a33316486b8088e0fa959910d364b7"
+    sha256 cellar: :any, arm64_golden_gate: "8961213ae2795cf7158ae7e0155cbd8d41f455008e6bb8cb5ebc698d038e0214"
+    sha256 cellar: :any, arm64_tahoe:       "64044ed37092c80f886307c0475927d5f0005f6d908ffab28d2b45103b6ee5de"
+    sha256 cellar: :any, arm64_sequoia:     "1bb66349f9302395d266fa2590040b7f75e25effdc24c9cb709ec197546bac63"
+    sha256 cellar: :any, arm64_linux:       "c762c090c674dd5fdd021485fb83e682477b8ca2d9f7efec0c61bcc4268ebc81"
+    sha256 cellar: :any, x86_64_linux:      "bfef6337012763af4dd5a208a8c368342820447c8f93b14c766fc0a8a3cb8e0b"
   end
 
   depends_on "certifi" => :no_linkage
@@ -51,11 +54,6 @@ class Specify < Formula
   resource "pathspec" do
     url "https://files.pythonhosted.org/packages/5a/82/42f767fc1c1143d6fd36efb827202a2d997a375e160a71eb2888a925aac1/pathspec-1.1.1.tar.gz"
     sha256 "17db5ecd524104a120e173814c90367a96a98d07c45b2e10c2f3919fff91bf5a"
-  end
-
-  resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/f8/13/f870dd0b42690138e4e37a76b5138e5690ed4365a77071bb092d59037da0/platformdirs-4.11.11.tar.gz"
-    sha256 "b0befe8a90759e4a9a8b9820d434ae226a6549063210b596da0038a7a05aede4"
   end
 
   resource "pygments" do

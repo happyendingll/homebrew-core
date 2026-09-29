@@ -17,7 +17,7 @@ class Luvit < Formula
   depends_on "libuv"
   depends_on "luajit"
   # TODO: depends_on "luv"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   conflicts_with "lit", because: "both install `lit` binaries"
@@ -57,6 +57,20 @@ class Luvit < Formula
         get_lit_page[:content][/LUVI_VERSION:-v?(\d+(?:\.\d+)+)/i, 1]
       end
     end
+
+    # Backport changes for newer lua-openssl
+    patch do
+      url "https://github.com/luvit/luvi/commit/1ca5bab12976821f7f8283982a18f4fc2076ab75.patch?full_index=1"
+      sha256 "8474fbb57bb7a60c48e3f6cffdda837b95ebda0b06e3982306247d0b1cb817a2"
+      type :backport
+    end
+  end
+
+  # Needed for OpenSSL 4 support. Remove when the `luvi`
+  # resource has a new enough version as a submodule.
+  resource "lua-openssl" do
+    url "https://github.com/zhaozg/lua-openssl/releases/download/0.11.1-1/openssl-0.11.1-1.tar.gz"
+    sha256 "b49a010d254a44669d4bb84292a5211d805fdd57e312ee78f799c261525abcaf"
   end
 
   def install
@@ -64,6 +78,9 @@ class Luvit < Formula
     luajit = Formula["luajit"]
 
     resource("luvi").stage do
+      rm_r "deps/lua-openssl"
+      resource("lua-openssl").stage("deps/lua-openssl")
+
       # Build the bundled `luv` as `luvi` is not compatible with newer version.
       # We cannot use `-DWithSharedLibluv=OFF` as it will bundle `luajit` too.
       # TODO: Restore brew `luv` once support is available

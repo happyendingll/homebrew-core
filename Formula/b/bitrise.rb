@@ -1,8 +1,8 @@
 class Bitrise < Formula
   desc "Command-line automation tool"
   homepage "https://github.com/bitrise-io/bitrise"
-  url "https://github.com/bitrise-io/bitrise/archive/refs/tags/v3.0.0.tar.gz"
-  sha256 "16d9183e0c65e626eac52f5960ae18130cb3d5de068800dd79e553b5808219c9"
+  url "https://github.com/bitrise-io/bitrise/archive/refs/tags/v3.1.0.tar.gz"
+  sha256 "1706f3d54b5e963c11a75108adee6e077041e02d8503b3c2ffab06e5267ca1c6"
   license "MIT"
   head "https://github.com/bitrise-io/bitrise.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Bitrise < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "89ca337cd84ed936c3d54e01aca8105d65212eecc25e38e95c3ab9b9557c5996"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d957e2059647bcbd6251d73a80ab765ccc4c90ed64d1eaed8ea6e35bdf3a750b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d957e2059647bcbd6251d73a80ab765ccc4c90ed64d1eaed8ea6e35bdf3a750b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d957e2059647bcbd6251d73a80ab765ccc4c90ed64d1eaed8ea6e35bdf3a750b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2a12e9df879e207ab6b211154fb87280ead8c51a01a5ba1f1ce03f1785abf747"
+    sha256 cellar: :any,                 x86_64_linux:      "e6f87a3177d59fe33ee9191da9dc57cb68057faa08d72468b00d64ffb2f8fc6a"
   end
 
   depends_on "go" => [:build, :test]

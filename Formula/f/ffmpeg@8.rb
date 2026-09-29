@@ -31,7 +31,7 @@ class FfmpegAT8 < Formula
   depends_on "lame"
   depends_on "libvmaf" # dependent: ab-av1
   depends_on "libvpx"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "opus"
   depends_on "sdl2-compat"
   depends_on "svt-av1"

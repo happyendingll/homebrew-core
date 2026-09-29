@@ -2,14 +2,17 @@ class Picoruby < Formula
   desc "Smallest Ruby implementation for microcontrollers"
   homepage "https://picoruby.org"
   url "https://github.com/picoruby/picoruby.git",
-      tag:      "4.0.4",
-      revision: "c4e8c3f8926b28faf297d982075721e64078dca0"
+      tag:      "4.0.5",
+      revision: "604666ec366bd9c597756e3d671bfa4c378f165d"
   license "MIT"
   head "https://github.com/picoruby/picoruby.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "d879aa9857db43da100f3e9f919c4767d678f9999900b40f000ae744ba267a95"
+    sha256 cellar: :any, arm64_golden_gate: "d9e6b1683906d6780b22fc60329b3a7506134624d9a3006a507b51d4cc1f7baa"
+    sha256 cellar: :any, arm64_tahoe:       "6927124044346dd746515773ff8487cff8b8c4752b9ebaebd713163f74867377"
+    sha256 cellar: :any, arm64_sequoia:     "7192567af2a309905edbeac4324758a235a91f212880aa164540e79187c020fe"
+    sha256 cellar: :any, arm64_linux:       "832cd04b8e20e0317796605ddac31d7a3ec04d8dd9a22b008d06dfbb40979e34"
+    sha256 cellar: :any, x86_64_linux:      "028242ac84c0436b41e8b18539482180196e2db476edd60303d354d9349c98da"
   end
 
   depends_on "ruby" => :build # for numbered block parameter `_1'

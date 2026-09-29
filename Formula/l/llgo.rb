@@ -21,7 +21,7 @@ class Llgo < Formula
   depends_on "libuv" => :no_linkage
   depends_on "lld@22"
   depends_on "llvm@22"
-  depends_on "openssl@3"
+  depends_on "openssl@4" => :no_linkage # runtime/internal/clite/openssl/openssl.go
   depends_on "pkgconf"
 
   uses_from_macos "libffi"

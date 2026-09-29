@@ -1,15 +1,18 @@
 class Usage < Formula
   desc "Tool for working with usage-spec CLIs"
   homepage "https://usage.jdx.dev/"
-  url "https://github.com/jdx/usage/archive/refs/tags/v6.11.1.tar.gz"
-  sha256 "bd5d88d0733e117b3ea64c1e919d652a9608015f973386bd4d48de7cab46620e"
+  url "https://github.com/jdx/usage/archive/refs/tags/v6.12.0.tar.gz"
+  sha256 "7ff9edb65341a36866389fecba7a83852aeed97ca1e98e232c6aaa3b7375db45"
   license "MIT"
   compatibility_version 1
   head "https://github.com/jdx/usage.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "261e5b86788f52ec2d09858ac82f96f0e5d49ebde0d1d64d193749edd4dc78ff"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "801278ecb9e56e5e700348cab1698871cad7eb7f801a343867cec3c7950aa253"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fafaaf1b5fda7543a45781ef9c206589268efb73a8e3a4d6070c63afdc19f9d1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d68143e13449c7b5bf8e2fae9dfe2442acb7aafc9b6fa0aa5a6f380f5a3a1768"
+    sha256 cellar: :any,                 arm64_linux:       "773893711abe24f9a3127a968b3fbf0da3f2bbfb4a3d6762a50df9c7d2b38f38"
+    sha256 cellar: :any,                 x86_64_linux:      "bec55081a950b4af07d04467267946a36d6a5825258632578e79d1f89d39e0e7"
   end
 
   depends_on "rust" => :build

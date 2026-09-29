@@ -24,6 +24,10 @@ class LeafMarkdownViewer < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    bash_completion.install "completions/leaf.bash" => "leaf"
+    fish_completion.install "completions/leaf.fish"
+    zsh_completion.install "completions/leaf.zsh" => "_leaf"
   end
 
   test do
