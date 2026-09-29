@@ -9,11 +9,8 @@ class Trafficserver < Formula
   head "https://github.com/apache/trafficserver.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "25dc171995cf3f45663d95c1953575322ef2267059f50e70dd1a5ee0771d7217"
-    sha256 arm64_tahoe:       "695ab27752e888384b39aba46f8e240306c673b645cbda0310ca900c65b3f6cd"
-    sha256 arm64_sequoia:     "fdc674281e20e886b735130ec9f77ec4ef1e71c2a07734d488304d38dad243d0"
-    sha256 arm64_linux:       "0e136daa8aeb1d44194875dfae62bf16de73403a24b47792d0e1ea16c117706c"
-    sha256 x86_64_linux:      "fdd1a3704ed6e98176eee285f43a772685faabac9657f7fe43021a0dd19db5b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "7aeb5b3d5d3cc9280960c6d17648a09b200745c9f05acea229499e0cbccc2351"
   end
 
   depends_on "cmake" => :build
