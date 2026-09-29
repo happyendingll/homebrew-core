@@ -7,11 +7,8 @@ class Splitrail < Formula
   head "https://github.com/Piebald-AI/splitrail.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a237cb31a59604ce41ed6452179e603a467cbc3f828e8af8313beab6371113b1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ee9553827d3baacfef36edfa2810ad2a4991eb7f6e2a8e29587c8ed96a9cfbed"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a38075cd0547c4f37db7765db7d269e654a44cb67729cf82408da0e971817ebd"
-    sha256 cellar: :any,                 arm64_linux:       "4936ba48b7fe2707437bccb0bb57d8f63eee050d1e29e801abde262aaad27620"
-    sha256 cellar: :any,                 x86_64_linux:      "55286c319c39393ea2866a71a7d5e821143677ca836cab4a2ef9340545eaedd4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "c757f880c1cf535fd78e4a03c851ff976aaa28755f8adfa117df001100e63ad5"
   end
 
   depends_on "rust" => :build

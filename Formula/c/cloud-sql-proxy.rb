@@ -7,11 +7,8 @@ class CloudSqlProxy < Formula
   head "https://github.com/GoogleCloudPlatform/cloud-sql-proxy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c6c78c84dcf0a48a373aa645f2b998a81713951c6ea88906e1f8c4248d408ed"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "63b5d95de7ed829c4226681747728c4584f86572bc9fb581946f285de714e9dd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21a4f45b76b78e7296f450078febeddad3c48d9c374611abb2936193c220280d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3f11fa4e0887e723faa2fde01c92138874cac057fb5525ec749b33ada56bd886"
-    sha256 cellar: :any,                 x86_64_linux:      "601aa7a05a37b1589e21a25a90fd700892ab454e60ce21a20036a61547888af3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "09f82c3b58a9587b9d8c7d224cccf56cc20836f2a83ef46abc8b68617b38a0f0"
   end
 
   depends_on "go" => :build

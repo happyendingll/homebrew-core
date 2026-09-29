@@ -7,11 +7,8 @@ class Xcsift < Formula
   head "https://github.com/ldomaradzki/xcsift.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a7386c9fd69cf74b730faa05308f11bc0b46afe226c369864c01655f7c534b36"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0c3379c58df3d7c776af2a37b7a7ae487f513f445644a129348dea469e55d4f2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "67afda547dbc030e488ae188d7159a8ecdab4ea4dcf59c7678adcba5e197afd6"
-    sha256 cellar: :any,                 arm64_linux:       "0314d464b9f291e78bd9ca37404c192a3c946eff0b1777100c25d6d2271a2912"
-    sha256 cellar: :any,                 x86_64_linux:      "fc4bed8b9ad6ee23631f59bda0a6a9f79bec9e8d31da69aa424065fe087a0914"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2f392c85240bf7c5e58921fecdfe0b6e8a4a687528df3df47c84493bf0954647"
   end
 
   uses_from_macos "swift" => :build, since: :sonoma

@@ -12,11 +12,8 @@ class Ivtools < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "c0fb5cf339425f2c81f96b03e40aca7142546147f6db26341de06dd7fbf4fc62"
-    sha256 arm64_tahoe:       "0ba68cb5a4d04966ae25bd30ada3ff3cddb192e9f3927792f41a528f96bcaa80"
-    sha256 arm64_sequoia:     "750fb2fc78a73d9fbe7282ab27f514e142d77655dda84d2949bec51fb1838bd3"
-    sha256 arm64_linux:       "bfd8ab978398f976d130f3b484337b98d09b856e47b27c31df9b6c3f91b7075e"
-    sha256 x86_64_linux:      "ebd182c4f41f0712a0b6cf5cfa4970e088c32ecad89166b9a3e93dfc3eda9411"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "03137a775527c4048d9d3278672e2a878e68aa1ccf87dd0caaf14d6dc543efe4"
   end
 
   depends_on "ace"

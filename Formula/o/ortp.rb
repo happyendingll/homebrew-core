@@ -7,11 +7,8 @@ class Ortp < Formula
   head "https://gitlab.linphone.org/BC/public/linphone-sdk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5b1f3a023bf6769606555b9f97c76e878e2c2a383b62fdd8be4909dd115786bb"
-    sha256 cellar: :any, arm64_tahoe:       "148a711be04c2538001c6e41e42c83f0e193ab06b78d00f4552ee6ba4e7983f9"
-    sha256 cellar: :any, arm64_sequoia:     "de66f7a6c2587fb68e6ebcb2db84a8907e6322213668a405ddf2f1b4273530b0"
-    sha256 cellar: :any, arm64_linux:       "5c41b684038e3016eda2d7cad130dd7eb334ab8486fe87c637a0034d7fb3060b"
-    sha256 cellar: :any, x86_64_linux:      "91d4716776740f71c426b0d268953d513a751331bc2ae594d25cb6040a9fb69a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "5a61632a802e578a98efe61d63f13e6f5e1ca7de098903ff4b626a3634857e3f"
   end
 
   depends_on "cmake" => :build

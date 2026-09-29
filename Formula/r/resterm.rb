@@ -7,11 +7,8 @@ class Resterm < Formula
   head "https://github.com/unkn0wn-root/resterm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0a50e74bc97df931c9c2ee8162456d4c7e93b98707d697c107312b57c5b82661"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0a50e74bc97df931c9c2ee8162456d4c7e93b98707d697c107312b57c5b82661"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a50e74bc97df931c9c2ee8162456d4c7e93b98707d697c107312b57c5b82661"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "128e5dabe2bf0bffdc3f7a10cf7f691d12fa703f097851015a1a6e9f83714ed8"
-    sha256 cellar: :any,                 x86_64_linux:      "e86df9b5250381bbb6c021224a92025dc3a492597cc7e9652370dd7500efa55d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d0f0b820459f933196f4456f977fe48340205560d5241ede4c8dbef0b415bcb4"
   end
 
   depends_on "go" => :build

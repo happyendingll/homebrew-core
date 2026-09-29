@@ -12,11 +12,8 @@ class Bitrise < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d957e2059647bcbd6251d73a80ab765ccc4c90ed64d1eaed8ea6e35bdf3a750b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d957e2059647bcbd6251d73a80ab765ccc4c90ed64d1eaed8ea6e35bdf3a750b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d957e2059647bcbd6251d73a80ab765ccc4c90ed64d1eaed8ea6e35bdf3a750b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2a12e9df879e207ab6b211154fb87280ead8c51a01a5ba1f1ce03f1785abf747"
-    sha256 cellar: :any,                 x86_64_linux:      "e6f87a3177d59fe33ee9191da9dc57cb68057faa08d72468b00d64ffb2f8fc6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a0d0cb9558f7f0b79165fc6d22d7f44d1ee4735ee39df41ac009f9507022d557"
   end
 
   depends_on "go" => [:build, :test]

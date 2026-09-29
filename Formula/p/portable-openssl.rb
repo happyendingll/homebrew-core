@@ -24,6 +24,11 @@ class PortableOpenssl < PortableFormula
     end
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "96e16c83d44e99b659f00048329335fe7c0407fd73080503429172c807362add"
+  end
+
   resource "cacert" do
     # https://curl.se/docs/caextract.html
     url "https://curl.se/ca/cacert-2026-09-25.pem"

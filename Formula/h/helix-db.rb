@@ -6,11 +6,8 @@ class HelixDb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_golden_gate: "b2b66449696a999bb342e1319cd93c1b61ac1e4e03a9b74c9581818df41fb621"
-    sha256 arm64_tahoe:       "cf6f635d709600e2301cff2c43ed95f6e5d9eb4f2875431e21596b96a5be46a9"
-    sha256 arm64_sequoia:     "ce5fa54f17363e9c95e84714f3dfa1e0ba4d948f8c73313dcf5f45502bad1d3c"
-    sha256 arm64_linux:       "d9460fa7ecafa2b678e970d84b2f0baa02ef368b9f3b7894fe9ffe9adc127c8d"
-    sha256 x86_64_linux:      "52894b2520ad30ceb3d4b701640316bc84ab9f640c2d18dc47ea8df61b7420b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "0a4fdcb60c85d97d741da28b06421a9c495111ee93d1c9e09e803453d0a405b0"
   end
 
   depends_on "rust"

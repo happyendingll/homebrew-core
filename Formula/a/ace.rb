@@ -15,11 +15,8 @@ class Ace < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "285859dbe41ddeef30775f0439be848fa4e2d48679656be0251552bf7de44b08"
-    sha256 cellar: :any, arm64_tahoe:       "2d77ce8098c09ad168bf5448ee8640200e0313bb3603fbf047fb37403b82f820"
-    sha256 cellar: :any, arm64_sequoia:     "5aa502f337d40bcbea1a0b9a47bddf659c35a28caf1f328512d13a323ff5292c"
-    sha256 cellar: :any, arm64_linux:       "fad05cfb26e5345a9a3a7a85934bc2844dbe6d51a171f1f22fea38998fdd853b"
-    sha256 cellar: :any, x86_64_linux:      "58d04e9b8c3407be1950519ec717442a73dcc4699a59488315c3444f86f76caa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "fde9bda20d89fe8a3d6a438c43830686dce11880b07a8034ac28895e6dd40c80"
   end
 
   deny_network_access!

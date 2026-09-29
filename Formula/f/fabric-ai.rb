@@ -7,11 +7,8 @@ class FabricAi < Formula
   head "https://github.com/danielmiessler/fabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e809c03afef8b9d4e21672aab94e2ffc93751eb7f946d852e0c2fc05ac27961"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8e809c03afef8b9d4e21672aab94e2ffc93751eb7f946d852e0c2fc05ac27961"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8e809c03afef8b9d4e21672aab94e2ffc93751eb7f946d852e0c2fc05ac27961"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c8f7387467169e85930cd5817f638545022821829bc264156d1638a40cd1af92"
-    sha256 cellar: :any,                 x86_64_linux:      "42a9fabd763ebf33379771e77f627a2d92fab2c2acbb5b8b2aee674e1bbaf919"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "152aa45facf6e4c48309b78a48413a1187a807aea62c42ad6c03abca0aa8055a"
   end
 
   depends_on "go" => :build

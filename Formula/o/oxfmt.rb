@@ -6,11 +6,8 @@ class Oxfmt < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "ba07560a7d35900db673cbd84066fe596cb82fc0d0e16f244d77db9ed03dcd84"
-    sha256 cellar: :any,                 arm64_tahoe:       "ba07560a7d35900db673cbd84066fe596cb82fc0d0e16f244d77db9ed03dcd84"
-    sha256 cellar: :any,                 arm64_sequoia:     "ba07560a7d35900db673cbd84066fe596cb82fc0d0e16f244d77db9ed03dcd84"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "228929194ef890f7b351def791de2dc495cc223189c43980214de0cbbaf227a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e624bb7140a48ea4ee6e568596461e07564647f3af0104fbbe077bd9f6571447"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "f6852248196ffb7356b5976a15c5e8cdd522014f84f62ac0296b04088d7fb011"
   end
 
   depends_on "node"

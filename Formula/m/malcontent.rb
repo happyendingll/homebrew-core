@@ -7,11 +7,8 @@ class Malcontent < Formula
   head "https://github.com/chainguard-dev/malcontent.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4e250707c9aee72c1dc550dc95e132e05a52633992f24dc0f33cd67723061a88"
-    sha256 cellar: :any, arm64_tahoe:       "f3fc1d2a559c67c2e024c2b2916168b445e1f982f612f8afa37ebdd4f7bf91a0"
-    sha256 cellar: :any, arm64_sequoia:     "0a40350c84468b8164576dbdde98d79f821b1076e7ce1882090f137eb059918a"
-    sha256 cellar: :any, arm64_linux:       "beae4b2fc76c555d81086b2159f022b085a08379eff8d1d9acbe81c338f85519"
-    sha256 cellar: :any, x86_64_linux:      "3e037617936b97a47ded9e14fb405bf6612e7e8066ad6b1ebb55b57150c62896"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "98497b5db9ff28f89a852cb553772401d1974545929509231aed3b236d03aa83"
   end
 
   depends_on "go" => :build

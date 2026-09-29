@@ -7,11 +7,8 @@ class Skillshare < Formula
   head "https://github.com/runkids/skillshare.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "99a8e7a8aa8292ff2beb9b21f5b06b59b81cc89484226a4c497b86449ab66afa"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "99a8e7a8aa8292ff2beb9b21f5b06b59b81cc89484226a4c497b86449ab66afa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "99a8e7a8aa8292ff2beb9b21f5b06b59b81cc89484226a4c497b86449ab66afa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "08ff95ef1fc50943b480b59854688b0bf15236fb81b4840a16e0d4f99e34f5c2"
-    sha256 cellar: :any,                 x86_64_linux:      "05c00988e3cf7cc510a6ebdbf9dad3bd1c97fb84abe9c69a0e332fe75b89c28c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "ea9f0bdc6f6b17433ca141a9a694996a88c30dac10aa383154d64a3b5b649660"
   end
 
   depends_on "go" => :build

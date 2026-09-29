@@ -8,11 +8,8 @@ class Usage < Formula
   head "https://github.com/jdx/usage.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "801278ecb9e56e5e700348cab1698871cad7eb7f801a343867cec3c7950aa253"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fafaaf1b5fda7543a45781ef9c206589268efb73a8e3a4d6070c63afdc19f9d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d68143e13449c7b5bf8e2fae9dfe2442acb7aafc9b6fa0aa5a6f380f5a3a1768"
-    sha256 cellar: :any,                 arm64_linux:       "773893711abe24f9a3127a968b3fbf0da3f2bbfb4a3d6762a50df9c7d2b38f38"
-    sha256 cellar: :any,                 x86_64_linux:      "bec55081a950b4af07d04467267946a36d6a5825258632578e79d1f89d39e0e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "5ece38749b16a9dbf57e09f808c6b04d24a7884bd66e4528f6be2b09e0df7103"
   end
 
   depends_on "rust" => :build

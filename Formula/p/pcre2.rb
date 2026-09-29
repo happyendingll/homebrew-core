@@ -12,11 +12,8 @@ class Pcre2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5cac44323243138490ca74a2499fd347fa836df6b5fffa789944be12110e91ff"
-    sha256 cellar: :any, arm64_tahoe:       "475d36ffae1f472554eac1fd96ca3ead3840c3d8fd2d34b257d2d7c4c1e5a17f"
-    sha256 cellar: :any, arm64_sequoia:     "0ec47d18c50f5770db2b3f07b5b85644284cc6ee8e07e23b11d2727e95932b77"
-    sha256 cellar: :any, arm64_linux:       "5bab1f9eb587d9f538e0a18589768c71b741dcebd9fd3863d7b5dd35f10ccd1a"
-    sha256 cellar: :any, x86_64_linux:      "372ff34217dfe1185894c7ee06dc5c865eea331192c13ed5e62df0babe1b0520"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "a15c4625444924cb9c0c52dc427dfc576a8433855527a2fb1a6be2bff6751567"
   end
 
   head do
