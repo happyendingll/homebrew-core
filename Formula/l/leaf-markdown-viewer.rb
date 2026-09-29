@@ -7,11 +7,8 @@ class LeafMarkdownViewer < Formula
   head "https://github.com/RivoLink/leaf.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8512a79fd0a25ddca6a1642ef79e33533d583dc94d63fd3fc16aa0545dc1773a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2af2dab6645750c50a8add7a5edca4e25e9227aba95198b9e5a1ab193c5927ed"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b8fb1c5127ed51d8811d709701d5c6ccc6627bfde82c263b30c72397c1f10a92"
-    sha256 cellar: :any,                 arm64_linux:       "f1f7a096f0ab9bdf2c863a0d3e1d5658a8a60dc9362de12597e753de3fe2448f"
-    sha256 cellar: :any,                 x86_64_linux:      "a53642db1706da677aeaad0670103fd389625e68e11d1c136d98385112d944c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d89f83f07b23f132fe5bf9d1b9ecd8117b68a90a406020dc92f5e0d2bc9db8d6"
   end
 
   depends_on "rust" => :build

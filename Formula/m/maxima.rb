@@ -12,11 +12,8 @@ class Maxima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "579a3993261da5d3d3ec137cffef18a41fd5d0ddeab3284673bc3f43aee11970"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "33e3ccdfc1dc37def1ed866c576195691287176bb017acc818d4a929890b0e2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f02c8c360061c0f413ecb2926771647761e68e68c4b3c583fda27d12cc1095d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "de4465b3b19e27a5539560dc31f87b38ca40c845ed022ee9fac6d8a484dd85cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5e4565de592c01cc6346b47be9942d5d3c2c14fe4086ea02b89345b7a592d873"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "0dd8b988c369cfee0826bbf29a19a69944b8997c3339509c90a87aa98f15b832"
   end
 
   depends_on "gawk" => :build

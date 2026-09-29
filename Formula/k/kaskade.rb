@@ -9,11 +9,8 @@ class Kaskade < Formula
   head "https://github.com/sauljabin/kaskade.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9ffdafd394a9833fa90b1fdd4bab818c7c9cb43f7dbfd59f27c982313e913d5b"
-    sha256 cellar: :any, arm64_tahoe:       "928511682e8ab98e2aac64473ba698723d49b0840382c244814c92f506ac47a0"
-    sha256 cellar: :any, arm64_sequoia:     "afd071eb61091708245f8c58f719e555192a13c88ad90000d762969819f33111"
-    sha256               arm64_linux:       "ad729e4bd5e52d63bc626e392cb3b5cdda0367b55a53d03d5a2aa5b097f49467"
-    sha256               x86_64_linux:      "a2a620eafdd0f1f0a1e3f62dfa2bd0121f684aa6d07949287a6561727afb39a9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "2ddcb9e12b69125430b567f9a662e507aa1450d5409a78e194ba4031a40506ba"
   end
 
   depends_on "certifi" => :no_linkage

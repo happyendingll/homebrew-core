@@ -17,11 +17,8 @@ class Emscripten < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f68279d6c259c6c496172fde2f7affbc3b66505e6d822705361a9e62af49357d"
-    sha256 cellar: :any, arm64_tahoe:       "3e219c0a25ce2305b5baa06a5373eeecb2ca7602a050c061768f342fd8c46d72"
-    sha256 cellar: :any, arm64_sequoia:     "4646681e6c70bffe65fec06e05a7206da378264406aec57b3e6e2db5793f080f"
-    sha256 cellar: :any, arm64_linux:       "2f769c50f0a57d54de945a250c2b27fee2fb8f588dc1320dd602eb475195e031"
-    sha256 cellar: :any, x86_64_linux:      "94b97fba7ef43ae8c976b2bb08f5f724affcdb7101d2b1f4a218908b8ece9599"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "e3130160036c39aa4c583a878bd661e9b1aa809aa0799f9f8925aaa115575691"
   end
 
   depends_on "cmake" => :build

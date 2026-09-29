@@ -8,11 +8,8 @@ class Apprise < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "db134f7d48049430754f101aee96b00abcddd45c193862751ddb6aa0571681e4"
-    sha256 cellar: :any, arm64_tahoe:       "4bffcb86267552680a4d8242f7025c43008edc032f840ae484737ecfb60c7d07"
-    sha256 cellar: :any, arm64_sequoia:     "6b500bbe45ecac33a48cabc9286daa6d96b6835dd9886ab68754c83d4de3bd1e"
-    sha256 cellar: :any, arm64_linux:       "dd293dd72dae648aaa058e28f4a2d1ac57cf62a3ef259248b849249bb84bcc63"
-    sha256 cellar: :any, x86_64_linux:      "9d6eee6c804093aec78085f7e34cfd3a4a71ee1067b9fad4bed13fbcc628b76e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "1e9347ef5c8d7c6aa9acee4382504b41dff48beb8654e5831e2db77802006c93"
   end
 
   depends_on "certifi"

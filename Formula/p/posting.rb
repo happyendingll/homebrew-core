@@ -8,11 +8,8 @@ class Posting < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d0dec045c241e06560dcc87cc42bbba20ece600cd52c717096a9fd7b1a1cf9d8"
-    sha256 cellar: :any, arm64_tahoe:       "8a8ec191612cecff744e9891d1e9ae8a69673922b9fca276768c2f51cebbd715"
-    sha256 cellar: :any, arm64_sequoia:     "db0bcb7d028548c2bf68b0bfc23c1b9853aa1cb0038f0e914173fa2e8a58d194"
-    sha256 cellar: :any, arm64_linux:       "ff1819039bcca83eaaf215d43118b2963dd51024b3c3317ad0cd5c2e7d39089f"
-    sha256 cellar: :any, x86_64_linux:      "2e9a9f1a807e1a110debb43c9508542ef9bda15217d931db266eb6b06efffe96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "b6df14968f865ef5eb4ef6c7044339703645ade11e9daf674f7ab39ce33eea93"
   end
 
   depends_on "cmake" => :build

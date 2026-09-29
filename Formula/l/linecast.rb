@@ -8,11 +8,8 @@ class Linecast < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b577d2ca93e274b6716d6495e96f9924e98060a0c8bd5b8b84c0a3e96fd06bcb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b577d2ca93e274b6716d6495e96f9924e98060a0c8bd5b8b84c0a3e96fd06bcb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b577d2ca93e274b6716d6495e96f9924e98060a0c8bd5b8b84c0a3e96fd06bcb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7f9866e73c5cc1aa94376300991946c816456dbad76b8266a2e36fd58f16b5a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b577d2ca93e274b6716d6495e96f9924e98060a0c8bd5b8b84c0a3e96fd06bcb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "9c14a0ba584d47b05f073d00a8e6eed5ecb89c41f7298e54b191e104832b968e"
   end
 
   depends_on "python@3.14"

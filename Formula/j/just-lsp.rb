@@ -7,11 +7,8 @@ class JustLsp < Formula
   head "https://github.com/terror/just-lsp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dbe678a6210968cc45a2292cc06e462f832f2bf2fef830a66b73092a58caa7a1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bab48c09602d45caec62a2d07c110d897f91b53cba098962a38c789249c06b84"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8b61f0fa618f8f11e42aa05df8dfe72d58eb1a08ddd268d6a7f23e4c6c361d5e"
-    sha256 cellar: :any,                 arm64_linux:       "dd94fdad8168d7dd09dbee5468d2e72fd026ae93d38b6359158b0d97531502a2"
-    sha256 cellar: :any,                 x86_64_linux:      "5c2c92919ffe3fb76589fbb369c4ac04e9aca9aa78e228eb70faa9e815bd7472"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2dc06dd7afe1ec054646bcd69e0f749bc11f8d08c8ca4ca8eb229d63317e4698"
   end
 
   depends_on "rust" => :build

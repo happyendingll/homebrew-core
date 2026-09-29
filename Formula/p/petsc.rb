@@ -12,11 +12,8 @@ class Petsc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6021ae3895aeca572a8bee99b952894ed94b11d6e19ab4cf7ae0117e5534828c"
-    sha256 arm64_tahoe:       "e77185e38482951edfd6d7a09b1c6975e026da8992371423119691ea4f0afc45"
-    sha256 arm64_sequoia:     "95acaa7632163c36ff772725bfd2101396de04908a4b612792d09ac6934e5b0c"
-    sha256 arm64_linux:       "4e945c507ed1f71b46aba8c01997d34ab064dbd74c31b5763228b77af603d9f2"
-    sha256 x86_64_linux:      "40344e2dcb898aa1e17834be0309349a6bd33ed096829b0451d299642da77498"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "33332c45cbec3c4e16fe709ecaebd64340d1426cdab75f48ac43a25cc977d528"
   end
 
   depends_on "fftw"

@@ -8,11 +8,8 @@ class Teku < Formula
   head "https://github.com/ConsenSys/teku.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ecd0a797de23094a9e3c83682f3b10aa2dac10612b84f124ace287399b23b9f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7ecd0a797de23094a9e3c83682f3b10aa2dac10612b84f124ace287399b23b9f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7ecd0a797de23094a9e3c83682f3b10aa2dac10612b84f124ace287399b23b9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4bbaff2e396d60a04e2cfef3c24cbc97494a6b090bf469e0f397ce91f7b3f345"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4bbaff2e396d60a04e2cfef3c24cbc97494a6b090bf469e0f397ce91f7b3f345"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "cdbab638337fdaa05f53681b9f0323cd70dc930ab8d44b61d1208a1fd0fd03c9"
   end
 
   depends_on "gradle" => :build
