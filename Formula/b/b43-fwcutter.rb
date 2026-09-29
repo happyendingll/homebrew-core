@@ -11,11 +11,8 @@ class B43Fwcutter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d3b3d9900452b2cb1f69d78cc5aee52e6d7a670846bd304f75b746c7f8fd42c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "57b8e25d937753bafc32ac5d300ea0fdac6352bcb4216eb12e56ea651f603e66"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "736cdf5c49916cf6889ca822ad79807073a7468d804e1e68f9a33aba018cf83b"
-    sha256 cellar: :any,                 arm64_linux:       "8766b8be4ecaf144ddb009d11664236a185347b8d013748f190b77ac623c0b0f"
-    sha256 cellar: :any,                 x86_64_linux:      "1a9d39f6f14afa678fc07affb74210ee13e65ce628a2430cf616c88716d32944"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "025a79b6d58f01a1a4f539e50f7ba3096084e0720e346061433b0235b40f89f5"
   end
 
   def install

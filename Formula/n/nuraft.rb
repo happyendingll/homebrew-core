@@ -7,11 +7,8 @@ class Nuraft < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "517e0a885621767c861246519db093fe346ab22726f7ea48401944b11c040890"
-    sha256 cellar: :any, arm64_tahoe:       "3fe144bec835ae99558360ce66dba39bf6d3c4ca19e38c66a579e14927e11418"
-    sha256 cellar: :any, arm64_sequoia:     "31b701afa908f0ab05f611ce43f4fc12dd462ad5284ca17a00a70c4e0c11b76c"
-    sha256 cellar: :any, arm64_linux:       "21045bf1bb5ccfab056b036173702c56190f4113ba09a0f84b84012a1c64aa27"
-    sha256 cellar: :any, x86_64_linux:      "cb7bb5d88c1a3bbba642b274b827b8b966dd5184e05321fc6d68e12d27c0780c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "800daf3ec2847fe8b0e17ac2f7fd92a6341985f34428f7c3801c4c97e2968a51"
   end
 
   depends_on "cmake" => :build

@@ -14,11 +14,8 @@ class Libwebsockets < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0743d8cd08cd9d81c95fa1392cf9b7de6c5c52d652cbf00d1df004751ae9a183"
-    sha256 arm64_tahoe:       "97370dc398d491a188f2f303ec1aab1bd2576f981e2ca6cc42e95374667e6330"
-    sha256 arm64_sequoia:     "910fc3061663c7e2c8dc33af9d99e9df76dca95f0bba5a368306f955c94d6b92"
-    sha256 arm64_linux:       "80c2075b90f66410f0247671b58ec18ae95e33450780b5aa15966a84e49109cb"
-    sha256 x86_64_linux:      "84b53118fc440aeb02f47aa8dbc5bd9a08112ce6e00a6a75a324c12c3257f7e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "eadfbf2893c0e0456a82a2620f15e227893215d3fa71a1c87cc60fd0c96698dc"
   end
 
   depends_on "cmake" => :build

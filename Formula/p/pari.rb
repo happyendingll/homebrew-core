@@ -12,11 +12,8 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0a49c819b6b84db0e85efc42adcae727b33f69b89bcbf30daa02964cc61c1a6a"
-    sha256 arm64_tahoe:       "95d6c9c4f0cb47a1f2fbf4e912fbc933ede9d1db7b8b5ceca17960c34dc56b25"
-    sha256 arm64_sequoia:     "27c908dd5522bfce2da8ef7d5a3c1d3171681c1096194a03b0ab70363fbb2392"
-    sha256 arm64_linux:       "cb2468e532d3ddfb2f306621e25482ede877acd3e8a47805c068ad84e1b59999"
-    sha256 x86_64_linux:      "20247275ac1f5537edc70f20613137906ef2d5a2b5e27eedf8c2b41057e14275"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a660c5a28e95cee5c44664c9a03098ba0ed47e35a92ac3cfaa862209eb337d64"
   end
 
   depends_on "gmp"

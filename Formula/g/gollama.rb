@@ -7,11 +7,8 @@ class Gollama < Formula
   head "https://github.com/sammcj/gollama.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f27b92e79e8369ed3abf439ac8378ad540a662e923ce1a8510d1877dbcc3dcff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "79c0f3fb3852165db50d806831c26d8037aaac4bac93afef93886aac0e57803d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dff018dc8a4fe2ac3539e8b6166bf7655274834ff47dbf7c8ae3572a1bf485e8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "59893a878809e9a1265722d9a15301ab1ff6bfceaecc452bf922ca8fd4a7a3a0"
-    sha256 cellar: :any,                 x86_64_linux:      "edaa137de88f7c606be15cdb1925961ebb243334cbde1b74290b03025fcacb39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "053f69fd723843f58dee7426982df7d8ccbb718ff0b63b41a7f3a1e10e0566a6"
   end
 
   depends_on "go" => :build

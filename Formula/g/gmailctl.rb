@@ -7,11 +7,8 @@ class Gmailctl < Formula
   head "https://github.com/mbrt/gmailctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4a5e37e6b02533386d57c745c9332b4cdd37a2e3b9da3958fde6079ac50f6be1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a5e37e6b02533386d57c745c9332b4cdd37a2e3b9da3958fde6079ac50f6be1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a5e37e6b02533386d57c745c9332b4cdd37a2e3b9da3958fde6079ac50f6be1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f10de85da1a397fca0758d1e7f98b0f03461bd13083fa07999100d789a1f3468"
-    sha256 cellar: :any,                 x86_64_linux:      "d09620ad1ca56409f7e520c43280907692ae8f9b4cbe0f5d134197ce3812e61b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2af12172e78175718bc0dec87091b089e861dc84f362e2ad39fc7cf9ecd7ac0e"
   end
 
   depends_on "go" => :build

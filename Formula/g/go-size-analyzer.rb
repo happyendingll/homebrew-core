@@ -12,11 +12,8 @@ class GoSizeAnalyzer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e44b5546bd3055db4282cf6a2a0affdb4e763a9278e4ff34147a65068056f5e8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "795c5eb237076023836f0a856c5c5d98800c231881a2302f81a428281563c405"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c424b76b93a8ce423aab4c105d20a34930502f0f230b840c17b196bd4d27ccf2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "08f614c695e4a1af0fe97665eada89ff4c9c642851d2cbfdc329abd83d748b0c"
-    sha256 cellar: :any,                 x86_64_linux:      "5b31cad705c0ac3be57fc6609423f5726de915f81a7af3b29e76b3a0f48a3d4e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "6810b39209cfb45d276aca1b047009c06e79c80e417707ef8d211d73657fb90f"
   end
 
   depends_on "go" => [:build, :test]

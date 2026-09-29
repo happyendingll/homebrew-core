@@ -6,11 +6,8 @@ class Primesieve < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5e0073096319b9fb4a8754e000c4d04c4539ec857601fe1442fea4a10801e9ea"
-    sha256 cellar: :any, arm64_tahoe:       "ccaa74654491bce29f25e245ce362d5a3b310847542269f60733a9e510edf092"
-    sha256 cellar: :any, arm64_sequoia:     "c795a6ee982185ed9fb0bdf2a93c70dae0529fb3174fbd9dfa9ccfac07dbb653"
-    sha256 cellar: :any, arm64_linux:       "56dda390e93be389d7c13daac6afea28f1445d6bac774be8f17d923ca895abbc"
-    sha256 cellar: :any, x86_64_linux:      "91814951c855ec14c9fd7371054803ea99c8dfd0bc37826592589233ac98c2da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "da762f11949d562b4aca79e39827646a3307b47ce1ee34402610fea602fb440e"
   end
 
   depends_on "cmake" => :build

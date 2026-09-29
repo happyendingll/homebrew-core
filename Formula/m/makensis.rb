@@ -6,11 +6,8 @@ class Makensis < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fb902fdc6f21f2d0dee4f78d6a1350263901624217ed2ae591b94d107e665a38"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e7c507dc02c50a630db44948fc68ff4dea7c2bae64592d96d134952c2624ddc1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "02605964f5fb05003331867c10cf89dbfa0bf4eeeca7ee397787a4d8084837ac"
-    sha256 cellar: :any,                 arm64_linux:       "4b830b3abe54cacaa0f575d8f15d92d59316629252105f30abf59f5f38e2ded8"
-    sha256 cellar: :any,                 x86_64_linux:      "ffa86d93e3affc4cb033d75d66c7cc4369664850928ccf518c665e6669a0ad6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b3426a6e01258c183df71b39a41dc39e393fc3d7060bdc2c4f4a7c92794b998c"
   end
 
   depends_on "mingw-w64" => :build

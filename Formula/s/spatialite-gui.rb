@@ -12,12 +12,8 @@ class SpatialiteGui < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "fd3bd2f0d2c11810655371e72b8930edb4aa788a789e29282ea7cc9c94bf10d4"
-    sha256 cellar: :any, arm64_tahoe:       "bd19251db318c8c1bd7b20c31a533101c6590ade1264ffe213dc11e243decd46"
-    sha256 cellar: :any, arm64_sequoia:     "115d4f6e56f1ffc00967fb8536c42b5e1b0c578e719a5b53ed020dad0bcadefc"
-    sha256 cellar: :any, arm64_linux:       "9ae847c480f6aadd42bfb988903323475e7c44ca4f9b22958651b5c816f5555e"
-    sha256 cellar: :any, x86_64_linux:      "3ad274b1b83512372e326d105d2d9ac72b517a96aac551310ab1da519649ee9c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c1fa3a66c4161c51ff2fafd1dd47c733639f2c429c8289b393d74a49c51734ce"
   end
 
   depends_on "pkgconf" => :build

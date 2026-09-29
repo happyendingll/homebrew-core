@@ -12,11 +12,8 @@ class Mpich < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7fa7d793d7ef08522a15208bac4a4b8ef9d2d716dcb602cb1f91c3f6cb7f86e2"
-    sha256 cellar: :any, arm64_tahoe:       "8d59adbbb2547d363b71121c4eb7e7fd52ada889332dd1fcd7e1251f1d688710"
-    sha256 cellar: :any, arm64_sequoia:     "932cc239fdbbd5b75f644c5f1271a7d24e6f331f6648fae54ba0180e9ecfd479"
-    sha256 cellar: :any, arm64_linux:       "1d9b96a6fc6ba36227116cee5017ae2faf5e60b763b14926e170c3315f5950fd"
-    sha256 cellar: :any, x86_64_linux:      "6cb3a31b31f2614fad70ff761a048404c71ae10123d84d98516cd38d4b6d07ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "31828d5790faa0927dae2dff1580b1b11aa5f400dfc2dae8b9be76cdc1b6d6dd"
   end
 
   head do

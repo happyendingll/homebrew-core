@@ -15,12 +15,8 @@ class Tectonic < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "cd5a512ed939507f6792f2e762a0135e47bcef6b92a972bc1d10222376f8d511"
-    sha256 cellar: :any, arm64_tahoe:       "c29a2920a91b0a4db3f3d70026d45ff62e9328dc003df2399bddf2f3beadfdfc"
-    sha256 cellar: :any, arm64_sequoia:     "37afa7011a76f2f2a44701c439f08593dba885a6d77c613ca1d8d1e0e4e13aa2"
-    sha256 cellar: :any, arm64_linux:       "43f2d25a37bfff6e5911ff2c543b9943e7915d207c695d59f3eb40d8df7b7451"
-    sha256 cellar: :any, x86_64_linux:      "17173ccaee1130ee6c92151bbddca0417e79e0e8d326f871cb76885f919ac805"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "362cf5110e4d05e352dbf6cddd0684b4b8f178da8df17ccc38df695876204581"
   end
 
   depends_on "pkgconf" => :build
