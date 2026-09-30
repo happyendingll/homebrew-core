@@ -11,11 +11,8 @@ class GitSvn < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2873553993805a93f82518d11632eef95992d885b93408da33303d653795bea7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2873553993805a93f82518d11632eef95992d885b93408da33303d653795bea7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2873553993805a93f82518d11632eef95992d885b93408da33303d653795bea7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "78f68cd6e751aefed14c28b7d9f1db1394504f781e0c0a7b5ea814de6f06087a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "797172f1ce13af4e6fd58ee932203267da022992ae710f1c48a516d9569fbae4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "266501f719d8c1daa5fbc8a7b8cc87e83dd4a35847c5957651935b9f9e37fa4b"
   end
 
   depends_on "git"

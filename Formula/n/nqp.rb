@@ -11,11 +11,8 @@ class Nqp < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a1f0d6e34e555af2649823cdc21c9ec470c66ddac4eb205dc3c6c0d5fee03ba1"
-    sha256 arm64_tahoe:       "2039b4d3e9f7a30b7dfb3e89a96eabe1c8a857c8c2e93c7951046d5dfc4f90f8"
-    sha256 arm64_sequoia:     "7dc37875613e8bc3c0f844a1a3987f6bf4986969ddd1d9055e695b67c38ba041"
-    sha256 arm64_linux:       "205fb033e0886a79067980caee64508a49b120907a047150daa19fa2bd27c57d"
-    sha256 x86_64_linux:      "21aa9898d5cbed8c2b23fc8e52f3227b0b881eabcd40611465d0fdb8641e94c4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "e5f8c512f943989ce04e70f2754c474de49ce70a575bfcd880a2a42db6abfc98"
   end
 
   depends_on "moarvm"
