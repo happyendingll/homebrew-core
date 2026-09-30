@@ -1,12 +1,11 @@
 class OpensslAT3 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl-library.org"
-  url "https://github.com/openssl/openssl/releases/download/openssl-3.6.4/openssl-3.6.4.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/openssl-3.6.4.tar.gz"
-  mirror "http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.6.4.orig.tar.gz"
-  sha256 "9bffaa1ad1e07b354c21bd3324ec02fa15579f45a7d0494b3e74bc449b7333ef"
+  url "https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/openssl-3.6.5.tar.gz"
+  mirror "http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.6.5.orig.tar.gz"
+  sha256 "a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98"
   license "Apache-2.0"
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -15,8 +14,11 @@ class OpensslAT3 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "d63b0bbe503c00db050f52f5f2172deba5e0233a30cbd0059622bf53ce9be9c3"
+    sha256 arm64_golden_gate: "fd8ea89de8c9d5390eb17041609842f61986b43932fabdcba9b43bacddc63c84"
+    sha256 arm64_tahoe:       "a1ef3283ad41feaedac5d41dafc4c2a71db6492c3a45a4d1755cfb19d02afc7b"
+    sha256 arm64_sequoia:     "0994a8029175af4578c3b93b3020e58dffa638ca21dc22d862c6bc02fea7e73b"
+    sha256 arm64_linux:       "5074ccc96209b4a63a1aed9eaa226b0c2976dfaa62f4b0c04eb3344c7ea8d005"
+    sha256 x86_64_linux:      "d1059270d1dfaae5e945745c7d5930c76a178b270a964ff450c16a2f2cda5ad2"
   end
 
   keg_only :versioned_formula

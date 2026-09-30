@@ -16,6 +16,9 @@ class Pypy < Formula
     sha256 cellar: :any, sequoia: "80312071549083b99f9c113ad60c0d55a06eb483aae2fcd1d7c30dc9884a5270"
   end
 
+  deprecate! date: "2026-09-29", because: "is Python 2 and needs vulnerable versions of pip and setuptools"
+  disable! date: "2027-03-29", because: "is Python 2 and needs vulnerable versions of pip and setuptools"
+
   depends_on "pkgconf" => :build
   depends_on "gdbm"
   depends_on "openssl@3"

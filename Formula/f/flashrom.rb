@@ -23,7 +23,7 @@ class Flashrom < Formula
   depends_on "libftdi"
   depends_on "libjaylink"
   depends_on "libusb"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   resource "DirectHW" do
     url "https://github.com/PureDarwin/DirectHW/archive/refs/tags/DirectHW-1.tar.gz"
@@ -31,6 +31,7 @@ class Flashrom < Formula
   end
 
   def install
+    ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("openssl@4")/"pkgconfig"
     ENV["CONFIG_RAYER_SPI"] = "no"
     ENV["CONFIG_ENABLE_LIBPCI_PROGRAMMERS"] = "no"
 

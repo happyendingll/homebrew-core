@@ -15,8 +15,15 @@ class Dagu < Formula
   depends_on "node" => :build
   depends_on "pnpm" => :build
 
+  allow_network_access! :test
+
+  def fetch
+    system "pnpm", "with", "current", "--dir", "ui", "fetch", "--ignore-scripts"
+    system "go", "mod", "download"
+  end
+
   def install
-    system "pnpm", "with", "current", "--dir", "ui", "install", "--frozen-lockfile", "--ignore-scripts"
+    system "pnpm", "--offline", "with", "current", "--dir", "ui", "install", "--frozen-lockfile", "--ignore-scripts"
     system "pnpm", "with", "current", "--dir", "ui", "run", "build"
     (buildpath/"internal/service/frontend/assets").install (buildpath/"ui/dist").children
 

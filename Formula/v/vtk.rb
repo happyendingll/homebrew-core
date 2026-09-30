@@ -13,8 +13,11 @@ class Vtk < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "9a27dd1677b6152fe99e115f8e5cccd2f00b5bccdc93c0d6bad1d36efe8a44ed"
+    sha256 cellar: :any, arm64_golden_gate: "ec90108f09c274ee0c4d757f355cd9403eaca034482050170c74ca1f40ad7437"
+    sha256 cellar: :any, arm64_tahoe:       "f864a5d7679adedc617c61d60db26af3ed1fd74d93c049d4d285580f51d8fe48"
+    sha256 cellar: :any, arm64_sequoia:     "f6cd1d7814f06095c8475d1232c211c9cde6d274eb2019645928856cb74295d1"
+    sha256 cellar: :any, arm64_linux:       "d40b1365da98ea631f5945cd4495bf28d0955987ef81226d6570f45534ae5e1f"
+    sha256 cellar: :any, x86_64_linux:      "2d22dd5483250e666419544422b3c31ef60391303cc2db0097b5f78a1ffa7e98"
   end
 
   depends_on "cmake" => [:build, :test]

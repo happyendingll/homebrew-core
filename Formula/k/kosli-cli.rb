@@ -1,8 +1,8 @@
 class KosliCli < Formula
   desc "CLI for managing Kosli"
   homepage "https://docs.kosli.com"
-  url "https://github.com/kosli-dev/cli/archive/refs/tags/v2.44.0.tar.gz"
-  sha256 "088a017daea833f2dc540485a985177459f0b8f33d3b7c7cd8b295503a30593c"
+  url "https://github.com/kosli-dev/cli/archive/refs/tags/v2.45.0.tar.gz"
+  sha256 "687e66349a174c7714e89784341c1b20b3df2554f7799bc2a604e0f7daff5a6c"
   license "MIT"
   head "https://github.com/kosli-dev/cli.git", branch: "main"
 
@@ -12,8 +12,11 @@ class KosliCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "ceeaac2ed30db01e7d791740db3553e584d477fed781a2eb3ff1652df9a14fcc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b0e67d53b9603b8b06fb407eb20eff7410f84bbf6947d510ae1370091de67b40"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5571e01ae3e8aa35ba756a9dd86780734f732f56489179041b69e6c0d11a55e3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4168ca3fb811ec56c9065551626251aa616428936f8be2e8e7521733fd0ce9e2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c52213344ba447344d8b3797bc69a98e1272844310d83fa27e098ff626d83f0e"
+    sha256 cellar: :any,                 x86_64_linux:      "471c7c35c26b66f94b401016e648e94320640ba97b4ff41b94849f8d107703f1"
   end
 
   depends_on "go" => :build

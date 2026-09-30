@@ -6,10 +6,14 @@ class Apprise < Formula
   url "https://files.pythonhosted.org/packages/38/b0/2f2e9b6d9e52f7530b47ba7a9259ebf2378e3953f445222f54412fb27a68/apprise-2.0.0.tar.gz"
   sha256 "aeb321737f951860d7cb0a9574159090cbdbcb0f1ba01c6b49c69018380adf8d"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "1e9347ef5c8d7c6aa9acee4382504b41dff48beb8654e5831e2db77802006c93"
+    sha256 cellar: :any, arm64_golden_gate: "695ea94e78599fbf72e5bc5d3ed8a82ebba42be026b399c59fbcc8e27731d669"
+    sha256 cellar: :any, arm64_tahoe:       "bfb2f4a6ab1f7c5c72e74313d5ddb5a4a4db8e521f603a99d8498549896d2993"
+    sha256 cellar: :any, arm64_sequoia:     "981c51f0c19538155cf6705fffa18f5cb38d0eb27179c301331a39a85e80fb59"
+    sha256 cellar: :any, arm64_linux:       "2072d241f851457fb8d168e5380ebb8894c437936eda2ef2a580bd0c5cf1c459"
+    sha256 cellar: :any, x86_64_linux:      "136ebe7d7018aec671401f2597bb321c4c2b4bf3be41384f64c60004fcd62269"
   end
 
   depends_on "certifi"
@@ -39,8 +43,8 @@ class Apprise < Formula
   end
 
   resource "oauthlib" do
-    url "https://files.pythonhosted.org/packages/0b/5f/19930f824ffeb0ad4372da4812c50edbd1434f678c90c2733e1188edfc63/oauthlib-3.3.1.tar.gz"
-    sha256 "0f0f8aa759826a193cf66c12ea1af1637f87b9b4622d46e866952bb022e538c9"
+    url "https://files.pythonhosted.org/packages/7a/d8/a1bcc8ba112a627f8ffbdc212a78ce18d3ac07e91a5ca65d27918eee25a1/oauthlib-4.0.0.tar.gz"
+    sha256 "efb274799819440f95b4ab3b818869f1ce9ae26c5beacba0201d1a1b76b54f86"
   end
 
   resource "pyyaml" do

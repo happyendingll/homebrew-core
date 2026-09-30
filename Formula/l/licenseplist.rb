@@ -1,13 +1,14 @@
 class Licenseplist < Formula
   desc "License list generator of all your dependencies for iOS applications"
   homepage "https://www.slideshare.net/mono0926/licenseplist-a-license-list-generator-of-all-your-dependencies-for-ios-applications"
-  url "https://github.com/mono0926/LicensePlist/archive/refs/tags/3.28.2.tar.gz"
-  sha256 "f687b45015a4bbc679b83ee43bfc129c0ecfc4aa6f179b091d5d9fa34dd7ec82"
+  url "https://github.com/mono0926/LicensePlist/archive/refs/tags/3.28.3.tar.gz"
+  sha256 "f5e1482fae8207fec4f11e8b665c0b12f6a8f4e46188c9f1e45af6611a99f360"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "0d36ecf8875016039faca7fccc7f4f80926802fe369cdbae54e163034765f5d5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "352f7dfb1298a9e044fecd09d28207e47e3d83baea07701c46db530912a26197"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "73585c84fdc083e751d9bec8a72992b591a814fd34cb075dbe88f0656f30fdec"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6113e8950f5b958465c945859fd52467b8d82d63e2d4735886dfcee05746ef3a"
   end
 
   depends_on :macos

@@ -4,5 +4,6 @@
   "hive",
   "opencoarrays",
   "pake",
+  "rpki-client",
   "tsung"
 ]

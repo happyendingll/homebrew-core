@@ -1,14 +1,17 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages"
   homepage "https://samizdat.dev"
-  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.20.3.tar.gz"
-  sha256 "046efc5a94135a16d661541cc8650fe173fd63a15b03a6f2c83ec29f0b9e4f9e"
+  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.20.4.tar.gz"
+  sha256 "d7f97042a5348cc21a21ca689ea61fb6ac008f4dcab21fd4bbcfef03c0ad2ff1"
   license "Apache-2.0"
   head "https://github.com/kovetskiy/mark.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "2533ad8329d04480079755e802641c5cf1031b56ad830fbaa3de949d2271fab4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eacdfcc4c04b596901c72f7b5d4b240f82e2525435130b596a9c0c8dd0a0772c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eacdfcc4c04b596901c72f7b5d4b240f82e2525435130b596a9c0c8dd0a0772c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eacdfcc4c04b596901c72f7b5d4b240f82e2525435130b596a9c0c8dd0a0772c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5b3310688a120a0693dd1d0b01ab3150692a571177e48821f89da9350326993a"
+    sha256 cellar: :any,                 x86_64_linux:      "cbe3636201f24ca4376358de3612e3a5a28f11830b581855cb12831152f4ca89"
   end
 
   depends_on "go" => :build

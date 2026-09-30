@@ -1,14 +1,17 @@
 class Giza < Formula
   desc "Scientific plotting library for C/Fortran built on cairo"
   homepage "https://danieljprice.github.io/giza/"
-  url "https://github.com/danieljprice/giza/releases/download/v2.0.0/giza-v2.0.0.tar.gz"
-  sha256 "7cbdacc68ca2fc7f62f220ad6c12f8617d352bd27e06a752fb6c743c12fc0e1a"
+  url "https://github.com/danieljprice/giza/releases/download/v2.0.1/giza-v2.0.1.tar.gz"
+  sha256 "a62b0fc68712ed12ede18a7adec0d49a7784f266a11d71cb16ad4890c396986f"
   license "LGPL-3.0-only"
   head "https://github.com/danieljprice/giza.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "e9765b359cadf8b20d10ac2eb258cbb0303b797ab2136aebe84e85db438d02db"
+    sha256 cellar: :any, arm64_golden_gate: "1f024641fa55f442d729039c358746915d5290dd27fe08003d20a25211b0dcc3"
+    sha256 cellar: :any, arm64_tahoe:       "2ee493cd34cf0f7ff385d38362296793492aba1cded0ecefa4297842ffa4f416"
+    sha256 cellar: :any, arm64_sequoia:     "551814298e540c253a8f488d56041a3707a1f5445335c0d81f8e6c7a4ad75a14"
+    sha256 cellar: :any, arm64_linux:       "cbe657eab8d0c8f4dd71096b756d3d4204aeab48da3627d18284e07832273771"
+    sha256 cellar: :any, x86_64_linux:      "df9b0e6a26071797eb3fd562fe7a343af553532597622d40066cbc01e0245b1b"
   end
 
   depends_on "pkgconf" => :build

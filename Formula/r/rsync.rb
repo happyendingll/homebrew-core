@@ -13,7 +13,7 @@ class Rsync < Formula
 
   depends_on "libidn2"
   depends_on "lz4"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "popt"
   depends_on "xxhash"
   depends_on "zstd"

@@ -1,13 +1,16 @@
 class BeadsViewer < Formula
   desc "Terminal-based UI for the Beads issue tracker"
   homepage "https://github.com/Dicklesworthstone/beads_viewer"
-  url "https://github.com/Dicklesworthstone/beads_viewer/archive/refs/tags/v0.25.0.tar.gz"
-  sha256 "0967ce29a23a0b949862578a3a706ee4a0065f0988e0bc02f08e6e4de1500b85"
+  url "https://github.com/Dicklesworthstone/beads_viewer/archive/refs/tags/v0.25.1.tar.gz"
+  sha256 "ab22edf73e57f9b53a271f75753e6b6f2d081a80ba8318eaaa388a3ca1969679"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "526beeb15255668352c95f963d252fa62865a64eed46b8a119499eae710c1cdf"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "47bb1561ebcf3f2e087b4ba7b82a4d8849c76ffcc95c279d11fbd537796e2cf9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47bb1561ebcf3f2e087b4ba7b82a4d8849c76ffcc95c279d11fbd537796e2cf9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "47bb1561ebcf3f2e087b4ba7b82a4d8849c76ffcc95c279d11fbd537796e2cf9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dbc289f3e5a3dd0ecc1dbd6b563c31fb19a2caeed5d79fb6e11a9d6b7d72f605"
+    sha256 cellar: :any,                 x86_64_linux:      "6e45ec3a8112b2aa21f8efbd8c6a8e53430a6804fd189cb1c18a39729b2b823e"
   end
 
   depends_on "go" => :build

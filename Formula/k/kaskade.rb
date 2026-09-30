@@ -3,14 +3,17 @@ class Kaskade < Formula
 
   desc "TUI for Kafka"
   homepage "https://github.com/sauljabin/kaskade"
-  url "https://files.pythonhosted.org/packages/f1/ed/0509ae0633a44853313926c7c9f7a5cc4986d3d6356289831648847df9c8/kaskade-5.0.2.tar.gz"
-  sha256 "516e39fcc84dd850b3031527846577731a7fe0d3599eea4df9962a46ef0d2e80"
+  url "https://files.pythonhosted.org/packages/3f/b7/0b3951bd91f014601090b0866859e4b848a596ad23d43e5aff1c73fdf51c/kaskade-5.1.0.tar.gz"
+  sha256 "cff8cef193aa2a1bc9ee9422a4d7c82adaa63a1496e39fae0e3ee7dcd4f7aa04"
   license "MIT"
   head "https://github.com/sauljabin/kaskade.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "2ddcb9e12b69125430b567f9a662e507aa1450d5409a78e194ba4031a40506ba"
+    sha256 cellar: :any, arm64_golden_gate: "171352b96f9e47dca855d761cfa42c7d34f2971d4aced9ce886e671326b3f850"
+    sha256 cellar: :any, arm64_tahoe:       "23005d43c7f78717a920e948742f4ba2fbe08573d5d14e230cee09618b589f96"
+    sha256 cellar: :any, arm64_sequoia:     "60bf98521592c1a2a32bd3592650a2f905373e32351bef0dfee67a2bfc3becba"
+    sha256               arm64_linux:       "a021b3003a5269854117ab20b35070cb1d3f639fcd3c5efa375596ed0d1eea9a"
+    sha256               x86_64_linux:      "7628619164507d6b8a311397a7bee88875a0c0e0b979c79de078960a585bb67f"
   end
 
   depends_on "certifi" => :no_linkage
@@ -165,8 +168,8 @@ class Kaskade < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/23/4d/e78afe1b449720c481884ca0a2f960f85f9ffdaa34b2d127b5427422c564/platformdirs-4.12.0.tar.gz"
-    sha256 "095be5c143382b1bee917c4f3e9987a0d8d6a582261f1d061ad0c403b7695b5b"
+    url "https://files.pythonhosted.org/packages/c3/8a/84ef03c1c83eacd7cc4540b05428a93b5cd4e42f62fb0b98ac2cb6ed3a6d/platformdirs-4.12.1.tar.gz"
+    sha256 "38da801a4af303033cbffccb39030db22bf0473e6414309b02acebeee7ca8bf1"
   end
 
   resource "protobuf" do

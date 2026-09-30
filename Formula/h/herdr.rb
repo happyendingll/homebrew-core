@@ -1,8 +1,8 @@
 class Herdr < Formula
   desc "Agent multiplexer that lives in your terminal"
   homepage "https://herdr.dev"
-  url "https://github.com/herdrdev/herdr/archive/refs/tags/v0.9.2.tar.gz"
-  sha256 "ff1a8ded511d29f84c3cc97816b4ea3510f10953166a185e669e9e7339100a8d"
+  url "https://github.com/herdrdev/herdr/archive/refs/tags/v0.9.3.tar.gz"
+  sha256 "e48f6706440c92362773663131ef5b524c62549523e50a03f2b55d315edca100"
   license "Apache-2.0"
   head "https://github.com/herdrdev/herdr.git", branch: "master"
 
@@ -12,12 +12,24 @@ class Herdr < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "3b2eff6a4816a75fa8ee534d99659077542f7bf08907b10da7899a5ff1410d6a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "60bb9a282c9350f100aa66d40f416b1b07892670e3a91489c039d093be6953b7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ca0dfafae3aa89abf46bbbd26726ad4813deb4f784f82fef851b75b2330ebc22"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d381e8af36dc499593101d33b80098dd7316ba9f167b1535e4eeb76b2ac2e58a"
+    sha256 cellar: :any,                 arm64_linux:       "6b9e828aa918f11d6c5c27dc7237fb0a6c4a3766edcd76e0725f273fca2d3861"
+    sha256 cellar: :any,                 x86_64_linux:      "e3fd0aa811dc08c55f19d26dc71feb90b2897ae3998aad895ad90ab397f7cd02"
   end
 
   depends_on "rust" => :build
   depends_on "zig" => :build
+
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+    cd "vendor/libghostty-vt" do
+      system "zig", "build", "--fetch=all"
+    end
+  end
 
   def install
     system "cargo", "install", *std_cargo_args

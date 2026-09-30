@@ -14,15 +14,12 @@ class Brpc < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkgconf" => :test
   depends_on "abseil"
   depends_on "gflags"
   depends_on "leveldb"
   depends_on "openssl@3"
-  depends_on "protobuf@33"
-
-  on_linux do
-    depends_on "pkgconf" => :test
-  end
+  depends_on "protobuf"
 
   allow_network_access! :test
 
@@ -70,7 +67,7 @@ class Brpc < Formula
       }
     CPP
 
-    protobuf = Formula["protobuf@33"]
+    protobuf = Formula["protobuf"]
     flags = %W[
       -I#{include}
       -I#{protobuf.opt_include}
@@ -81,7 +78,7 @@ class Brpc < Formula
     ]
     # Work around for undefined reference to symbol
     # '_ZN4absl12lts_2024072212log_internal21CheckOpMessageBuilder7ForVar2Ev'
-    flags += shell_output("pkgconf --libs absl_log_internal_check_op").chomp.split if OS.linux?
+    flags += shell_output("pkgconf --libs absl_log_internal_check_op").chomp.split
 
     system ENV.cxx, "-std=gnu++17", "test.cpp", "-o", "test", *flags
     assert_equal "200", shell_output("./test")
