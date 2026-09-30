@@ -9,11 +9,8 @@ class Lefthook < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f40b8c1b0708a28f6c13918d50bd76219802ad93c5b8de1e0f209580967ca093"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f40b8c1b0708a28f6c13918d50bd76219802ad93c5b8de1e0f209580967ca093"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f40b8c1b0708a28f6c13918d50bd76219802ad93c5b8de1e0f209580967ca093"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3720c7fe7f98f435afff67cea7bbf3927a3bdd59ee235c5d3dbc578ce02aeb3c"
-    sha256 cellar: :any,                 x86_64_linux:      "22a9702a61309a47f92881c38d8022867969fc0ca00bdb5dee1de5f8be67c76a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "86141f901342b436b9515b7b9dba05e4042453c62b79fda077ed6afadc6f9eb6"
   end
 
   depends_on "go" => :build

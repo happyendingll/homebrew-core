@@ -14,11 +14,8 @@ class OpensslAT3 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "fd8ea89de8c9d5390eb17041609842f61986b43932fabdcba9b43bacddc63c84"
-    sha256 arm64_tahoe:       "a1ef3283ad41feaedac5d41dafc4c2a71db6492c3a45a4d1755cfb19d02afc7b"
-    sha256 arm64_sequoia:     "0994a8029175af4578c3b93b3020e58dffa638ca21dc22d862c6bc02fea7e73b"
-    sha256 arm64_linux:       "5074ccc96209b4a63a1aed9eaa226b0c2976dfaa62f4b0c04eb3344c7ea8d005"
-    sha256 x86_64_linux:      "d1059270d1dfaae5e945745c7d5930c76a178b270a964ff450c16a2f2cda5ad2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "9ed9599d2df434ad6706bb4065ab5cf758030b4d9b461ae96f9677fa7a500a0f"
   end
 
   keg_only :versioned_formula

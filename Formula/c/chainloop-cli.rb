@@ -12,11 +12,8 @@ class ChainloopCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "443c76671575939a90961ce9258be05a7f7d53a0f00b9dcf39e16130c7e50e04"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "443c76671575939a90961ce9258be05a7f7d53a0f00b9dcf39e16130c7e50e04"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "443c76671575939a90961ce9258be05a7f7d53a0f00b9dcf39e16130c7e50e04"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7096f6a45f95d0e3d7d7b20f16d802f4cff1eabd0b74f6944d80a6b47b63e997"
-    sha256 cellar: :any,                 x86_64_linux:      "53fec6f51223cde42a1026d0c7c0abd21da309c82bb33873ef8c15d73f52169e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "ea784127828f2f6b00e550e3dfc3819b07be503d38827a0fa2adae5abe16adce"
   end
 
   depends_on "go" => :build

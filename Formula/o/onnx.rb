@@ -7,11 +7,8 @@ class Onnx < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e49c7e550e13766b71c6c1871145d02dd811072bd6479cb215de3f7cbf1ec6c0"
-    sha256 cellar: :any, arm64_tahoe:       "9f025e004999c4b778833b12a9aec17dcfa9f44342d38299201f3a246c7eebac"
-    sha256 cellar: :any, arm64_sequoia:     "372e29e26007da321f6c7dbbc100245680057edb73fb992a6a13ab9d7b5bb0d6"
-    sha256 cellar: :any, arm64_linux:       "e1d1edc149d8bf7ffb95b56adfa5ddf0bb813cd6ca96c6798d37fd731eb2292b"
-    sha256 cellar: :any, x86_64_linux:      "62c515f5f2e210d582d31c3b50ff5669e4ffe456e4e8e52d5f451d596aa52bb5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "7931a0fa711cc38fcafb5475511ca53be3f871dd516238779886ee4ae2b29e17"
   end
 
   depends_on "cmake" => [:build, :test]

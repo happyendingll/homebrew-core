@@ -7,11 +7,8 @@ class Tinyice < Formula
   head "https://github.com/DatanoiseTV/tinyice.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b48120b24084c5680beb6571316492ae353998a2348ef3384f5460874acb9b00"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b48120b24084c5680beb6571316492ae353998a2348ef3384f5460874acb9b00"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b48120b24084c5680beb6571316492ae353998a2348ef3384f5460874acb9b00"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2799f5b693a7c134bed5059a5538a38a8e782a7aec3638c34271a10f3d6af207"
-    sha256 cellar: :any,                 x86_64_linux:      "29b481f0401a7eeba9e2286e354577e363118f5aa1f00d5cbcc9af190be12069"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "f0a6d8ca7367322a35120fd3d36e9b04d787cfb381b4c43a8bb9b9c487f44744"
   end
 
   depends_on "go" => :build

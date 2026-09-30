@@ -12,11 +12,8 @@ class Calc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0edf5361bf3a7a3e59c5cf28cb131be9d56404567909df0ac5d8ba6f1a30db74"
-    sha256 arm64_tahoe:       "2b97b124467e1165ac167933d6c4c8da8ba8bb41affba09d02ecd7cbabe0030a"
-    sha256 arm64_sequoia:     "3dc9dfbf237fd68855b2f611bf671054fbdd38fb78b9d357ecc5792c4d0f8ee8"
-    sha256 arm64_linux:       "045ffa26795a0462d71f3538e3caa7285f4709b2f69bd75a189c3aa04141697d"
-    sha256 x86_64_linux:      "7f75a8453e4f35233aefc1d1541a584fe8baa5741229c9eff9bc860176bbc623"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "9c0662f0ac3b478393f7e17547cf3fbb534405bd5503a8c3dca468c786ebf8fb"
   end
 
   depends_on "readline"

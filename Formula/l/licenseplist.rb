@@ -6,9 +6,8 @@ class Licenseplist < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "352f7dfb1298a9e044fecd09d28207e47e3d83baea07701c46db530912a26197"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "73585c84fdc083e751d9bec8a72992b591a814fd34cb075dbe88f0656f30fdec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6113e8950f5b958465c945859fd52467b8d82d63e2d4735886dfcee05746ef3a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "b03c589c2c928c3066ed177badddefb3b5bbbb630368b5169982672544430fb5"
   end
 
   depends_on :macos
