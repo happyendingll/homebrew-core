@@ -13,12 +13,8 @@ class JohnJumbo < Formula
   end
 
   bottle do
-    rebuild 4
-    sha256 arm64_golden_gate: "52199f22fdef94eb0444037d86a80d20f060090a733cbc76c1553ffa56d219b0"
-    sha256 arm64_tahoe:       "eb036c2f183b0b8577a2f6708cd79b87e300e11013eba20aba0d33ba9bc73627"
-    sha256 arm64_sequoia:     "55a298783b6e1f11f54434c01e5d3c588444b54eb5a360035330cf162d176aa7"
-    sha256 arm64_linux:       "5e574793724a9959e8981265d4ebdc69612983f92f8dfe5d3a16784f68ba1198"
-    sha256 x86_64_linux:      "e9b0393ffd09a818421a1bdeb275a1162bacc6cf2320a5a5bf301d2acb2cfa98"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "21a3f745a702663534a94fd6c521b7762dea938f57f2414f69975c31ee4ab407"
   end
 
   depends_on "pkgconf" => :build

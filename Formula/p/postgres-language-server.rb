@@ -7,11 +7,8 @@ class PostgresLanguageServer < Formula
   head "https://github.com/supabase-community/postgres-language-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "61756b4c8e2b532c3369d9c7d96fea96488d76b826ab8c1bd80936d1691c0639"
-    sha256 cellar: :any, arm64_tahoe:       "581f3220b9e1b5c6fc007e23a235bf08f4218cd397843239acd92abba1cff18c"
-    sha256 cellar: :any, arm64_sequoia:     "f7d031c1cd4ccc9b628b9010d472660de4282381da879134c12fe61586796548"
-    sha256 cellar: :any, arm64_linux:       "b9a5ababc4c10ee4e10ca5764f1859eb03d6eb29130069f2db36e9f1f8e8b5a7"
-    sha256 cellar: :any, x86_64_linux:      "15fc08b9f104718d452920c7dc06833af3d9133379afb097c3f2d21cb59db324"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a9a36ae8f2a9437ff2d4e86cddfb588e74e337cd67bbf6df2e24e46a10c848b4"
   end
 
   depends_on "llvm" => :build

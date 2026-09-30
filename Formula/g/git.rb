@@ -19,11 +19,8 @@ class Git < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "32638a7c7c26f1d3d595a7543247baa234abbb819f8887aac5c2b858da91d0a9"
-    sha256 arm64_tahoe:       "1b5d5749c5092daaa6c88b2e0430f095aac55a5c723117da7758910e506a8982"
-    sha256 arm64_sequoia:     "db3fbed936fd0a1dbdc265e1be33bfe6584a98d692aab9c21c10f1890fd3b78b"
-    sha256 arm64_linux:       "d013c21067ac3f044cb1e1c1bdbb5529a2dab364081600424f333f964e1ca755"
-    sha256 x86_64_linux:      "79987fa0d484cc5aabb909cb2bffc83e2aedacfdf4cc98aff8db4803819daeef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a60fd5a12906c452978d72233286bcaf3f4408e9db21bc9fa12a301dbba3153c"
   end
 
   depends_on "gettext" => :build

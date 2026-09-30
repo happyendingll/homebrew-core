@@ -12,11 +12,8 @@ class Greenmask < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e40e9f9bf45072ff5deecf5fe01bc9705bf88dda3f7c9502badf9ba5c2e911f8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e40e9f9bf45072ff5deecf5fe01bc9705bf88dda3f7c9502badf9ba5c2e911f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e40e9f9bf45072ff5deecf5fe01bc9705bf88dda3f7c9502badf9ba5c2e911f8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ac1d0e1cfcfab030ed2de4950bc7d7547e5066ce3610ef746260b5466699b127"
-    sha256 cellar: :any,                 x86_64_linux:      "3d0785c79b701a8a01e32e2bacc853a64b5d45886bf052aabfcb679f1867c84a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "64563a77cba1fe4a1164168dd419e470aa5311954f409aef2c70491533ec0351"
   end
 
   depends_on "go" => :build

@@ -18,11 +18,8 @@ class SpirvCross < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a62dcfc77bfc53b7c3801a3360591ce39cca2f8f417fe4a5f60f6bca698a455e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fbe28d5e8ec2373465870ee42a0c3ee145390748559a0542ddda8e6dd15d0555"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3bd332f91d03227a11522d36e33c58736ddae7fff83db42d838ad3181a447eda"
-    sha256 cellar: :any,                 arm64_linux:       "33a355d78320baf50422bea5c516713bfc882c3180ae929d276fafcbde0e02e2"
-    sha256 cellar: :any,                 x86_64_linux:      "f54eca64170f7c3e79511286405e6ba26b8d4ff23d496c5472773ee8cd74bb5d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "71491f1a0bf47e28cdd3ca5bd1863233858370b1cccc5f2c977d93b0d3fc4506"
   end
 
   depends_on "cmake" => :build

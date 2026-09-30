@@ -12,11 +12,8 @@ class DsdaDoom < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1909626892e6ab14e77b687230dd7c12f549bd358cb1774844789c9ac7685aee"
-    sha256 arm64_tahoe:       "269e1324c134dd2fb95f569b328ebac04316875c73117bce8f9a0d9a7dbb7986"
-    sha256 arm64_sequoia:     "941909d953d7a72d680423beed8c85122323cd2683c0a5ae84baa668d08b34e3"
-    sha256 arm64_linux:       "25995d48a3a0b2e10ba617089f7fe74e327a66a050055081a36c7fc2ba4e5966"
-    sha256 x86_64_linux:      "0d9f0d37aab6b30102d9e7205f593b5274e15d41f4ecbed0f5b0f07649bfd865"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "455ce71d2b9f0e83da2bc81000add3d99400cd236a61396d3a9061c499692050"
   end
 
   depends_on "cmake" => :build

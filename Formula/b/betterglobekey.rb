@@ -7,9 +7,8 @@ class Betterglobekey < Formula
   head "https://github.com/Serpentiel/betterglobekey.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b6c566abf974b1c6f564ae952dd9ae9b45174d30bf1e89ebc97dc93e5cd28808"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26e3de053cd6a5c54c58b602ffa2323a4ab2bf843d3a07cd734248afb3df6e54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e416110884136741cc139232a6cdd431edd1184e4e16e21d7b3f708b570236ca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd11bc8a43717cf89181f2aa06b7f09ffc89fd7bf69bef9f89cf723ddcd08a96"
   end
 
   depends_on "go" => :build

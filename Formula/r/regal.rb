@@ -12,11 +12,8 @@ class Regal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8b62c1d88ad24042ef9c287778efc2a06c11408913e61c060ffc05ead5da6731"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8b62c1d88ad24042ef9c287778efc2a06c11408913e61c060ffc05ead5da6731"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8b62c1d88ad24042ef9c287778efc2a06c11408913e61c060ffc05ead5da6731"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2a36d61453505489408de35a841f03fe6f4511ad6705e35e1518636cb78d97b3"
-    sha256 cellar: :any,                 x86_64_linux:      "7ca0a7c15df35c114483a97a55aa65c451661a6575e6897a82e1e468e8f6e413"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8d66e4055839bc4fc4c71421b5dc583bb031ef96717f95893d2f678cfef9b7a2"
   end
 
   depends_on "go" => :build

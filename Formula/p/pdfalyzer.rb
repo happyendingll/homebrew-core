@@ -10,12 +10,8 @@ class Pdfalyzer < Formula
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "1eab5bf3e528016a8466b886eac1f14aae9f6fa7d9232d8ce6724e6305780f4e"
-    sha256 cellar: :any, arm64_tahoe:       "c669fef059da5e192a88d9306423424c9d6803257be5929e26efe7fb2efebe8c"
-    sha256 cellar: :any, arm64_sequoia:     "24c97c9c468d228b47468c6746703e05707d939b24c8aeb0292ff283f2eaf43b"
-    sha256 cellar: :any, arm64_linux:       "2b7240d07aa58ceb139e7e2179600c3ba08f4792f4bb02f8754292b09c131f57"
-    sha256 cellar: :any, x86_64_linux:      "5fcf1323b4439cce5af256fc9840bf5a076e7e941bc06ed1527b44ecacb22226"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "fb5b2ed2598ab54b7c661ed182441cd01c7be7f1e02b773bc2d1e0d17806bf00"
   end
 
   depends_on "pillow"

@@ -12,11 +12,8 @@ class Calc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "d7a23a3bc9e0b0286950470cf3b5ed539b631c540374c6b188b3cddefaea12ac"
-    sha256 arm64_tahoe:       "fb2eca8cdbca62794a1e77361bc6136a29e1e745e5c0ed872ef29ae2bb5bbd9b"
-    sha256 arm64_sequoia:     "fe30fd58df941161e5b0f7fa61e2f862ad55f03a8950214c6e9e6d4323a1d9c4"
-    sha256 arm64_linux:       "cfa39d480d7a44637ff3abe8b880c973c265aa8ca6fe9b048036c564205a991d"
-    sha256 x86_64_linux:      "f75079b41f548b2938109716a575b385018d9bf78870a3c7d1f961641764b214"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "a5ffe46d03575a7d3bb34f82e821734494debafb194170530211f9bb9b379848"
   end
 
   depends_on "readline"

@@ -12,11 +12,8 @@ class Ov < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f0948571ca33114301de28bd0603d09a35544b594b97cb497366a642fb9af209"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3be862544a9f634bdd3e90abd3772887ed1a7bdd96c7043e1058cb56822c1491"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e851911df688f51760308e6c4e97b9696d1c5b8549c807f4fceba3df92188b38"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "09845ff14a34a3c0334359d8aabbe3401a42f5461690037672a00b0d567df8f3"
-    sha256 cellar: :any,                 x86_64_linux:      "ceaeab943d1040bd609a2c485e6f11bca23adde0c4f1d285a8e597654b87ea66"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dbc9e5ef3231e0a8377c64d289f5eba4e7c09c89a7c42572446e4aba2ddc6c89"
   end
 
   depends_on "go" => :build

@@ -6,12 +6,8 @@ class Nghttp2 < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "c8b46996ac9b4d5fa0e86655acf94cb0412cc91278fa5917cdc0c0be08e19086"
-    sha256 cellar: :any, arm64_tahoe:       "01da61bc5fd988294932c5fcf0843eb9902b781c73fc25acd040036f6203e85e"
-    sha256 cellar: :any, arm64_sequoia:     "aedd74fa570f6e47c0e49e8fb716450cf275513c16787465708336bd1b188674"
-    sha256 cellar: :any, arm64_linux:       "32eebdeb3dd6e2ac3e2a0d0835a56b12d6d245441551289786c6ac4eb30bce22"
-    sha256 cellar: :any, x86_64_linux:      "e3e8dd26e3af50e6af756a0d794a7b094110e910816f4948c6d1d8685e6e7f92"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "72f247d531082b714e74e1bce563703d808d3706684ea34b796196f61b1c093d"
   end
 
   head do

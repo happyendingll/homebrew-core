@@ -11,11 +11,8 @@ class Whosthere < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "36275c0ef5c5591103b816b7113993651e8f131db4206437a9ed090927a75abc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "36275c0ef5c5591103b816b7113993651e8f131db4206437a9ed090927a75abc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "36275c0ef5c5591103b816b7113993651e8f131db4206437a9ed090927a75abc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cef4ed6489e9aaa4b52d8437e38bad33c500e4139ba01ba030eefaa50d748215"
-    sha256 cellar: :any,                 x86_64_linux:      "777712d5c49f0dbf6f4c93cca4b250533ef215a8e776418c21de7f7493f4ed20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d2e730a66a233383a794936f4460b029ba66abdc12d902610713e001062a5eea"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Pdfcpu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f74c5d3e359e85027830123e20e9ae1b0342df37c9a1b9634d6e176e5d7a142e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f74c5d3e359e85027830123e20e9ae1b0342df37c9a1b9634d6e176e5d7a142e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f74c5d3e359e85027830123e20e9ae1b0342df37c9a1b9634d6e176e5d7a142e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b0b4273b318316ad9ed8aed771e555348ea79c0583435ef8a59fdd0540cc0bfa"
-    sha256 cellar: :any,                 x86_64_linux:      "9217a6dfdb77b2210bf19be9a17b11f1cc0283c53dbf4e8ab2e814b54e56228c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "662fffc9be0986bdc4ad1c991024819132ef5b2aad697495d133d330e1145f55"
   end
 
   depends_on "go" => :build

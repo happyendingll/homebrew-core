@@ -11,11 +11,8 @@ class Byobu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e4b89c3400932c3936e5b03ac1ce2d5ae2587d9532b14d2bfbbcf14a708b50a7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e4b89c3400932c3936e5b03ac1ce2d5ae2587d9532b14d2bfbbcf14a708b50a7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e4b89c3400932c3936e5b03ac1ce2d5ae2587d9532b14d2bfbbcf14a708b50a7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8388a7612cd754dee31cfb8e579b5a0c5c11ccaecf948f3cff20da33affe1db5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8388a7612cd754dee31cfb8e579b5a0c5c11ccaecf948f3cff20da33affe1db5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d558bbc29699f508a099f8fc22364c5bc85b4ce56d2ef46d1bcfc28fd5b8e03a"
   end
 
   depends_on "autoconf" => :build

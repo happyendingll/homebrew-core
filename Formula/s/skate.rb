@@ -7,11 +7,8 @@ class Skate < Formula
   head "https://github.com/charmbracelet/skate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a9da5852f0acb70341c6833a32617133465b34318ea58484fdb4687118c4aa27"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a9da5852f0acb70341c6833a32617133465b34318ea58484fdb4687118c4aa27"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a9da5852f0acb70341c6833a32617133465b34318ea58484fdb4687118c4aa27"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c10586eb4bffafffee9f8a87fb1ca4a84961a5559abbf373c87951c886310eaf"
-    sha256 cellar: :any,                 x86_64_linux:      "3a8f0ec7e337f5017a084021999b851a5703cf92ceeec886c8c183f65008141c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e4f2c4e134aabcfe27b49cc5990ec8007ac2f8eba757a75709552ece3c2204ee"
   end
 
   depends_on "go" => :build

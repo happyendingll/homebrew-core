@@ -7,11 +7,8 @@ class Mprocs < Formula
   head "https://github.com/pvolok/dekit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "302d29cb65557f004944b837b0f2b8a6cc3c693ee5ecb0a69f8b42d79ec32388"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "36e5c20a22418b6447c453231f609c4dd4606c8556a828c03816c4a9fbb14589"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d5851fbac70ff544d68a19680e5cf39260cb1993c2c328582c7a8e9c4d8e3e91"
-    sha256 cellar: :any,                 arm64_linux:       "1120730bd84a80d2d8ed1a6292e14f357fff6993ee60240d3c0402c36e03768f"
-    sha256 cellar: :any,                 x86_64_linux:      "8da2a4bbb75beb329e214e2cc1af3f6f3bff175028756e8663259b361d2f176a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bfd903eb6e0e342f056adaca445664a31fdbb605a8a177cb5379310d4838cc81"
   end
 
   depends_on "rust" => :build

@@ -7,12 +7,8 @@ class Mfterm < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "e0f593b5e2b34ba00dd11867d7492b51988e9831a58232bf62dec2bbef789a13"
-    sha256 cellar: :any, arm64_tahoe:       "60aeea82c7d8adad403b01a6ac6360429e5761b88d6d8f5c8f613c7da808d656"
-    sha256 cellar: :any, arm64_sequoia:     "518dfba132ced0ec7b8f2fed7c11b9bbaec98fa31bac1a95814d369ab4344655"
-    sha256 cellar: :any, arm64_linux:       "d8ce19d5e8970f9169534e685f93fd44c2b0f786952851fea09a456a7ff06318"
-    sha256 cellar: :any, x86_64_linux:      "c7e2d26924345300a3dc724214e1be9b0b34bf520bb0bb934959836549149b63"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "1f478269a78c683bbd6fa5881df558e4d0bf4f7e1e7efc2a707698f86cfe263a"
   end
 
   head do

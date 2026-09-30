@@ -22,12 +22,8 @@ class Dcmtk < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "35122328b6f7635683bd93f87ec7588d058ba42155170b16ad5a46c1c368ca1d"
-    sha256 arm64_tahoe:       "7b3b6af3c6ce50267c149f7c763ffcc4c9050e12ff4ba79bf8389fa82fc8b958"
-    sha256 arm64_sequoia:     "d7a411774bc4619350b37f93ede1fbfd8fa822c373fbb5549227d32c49aec96f"
-    sha256 arm64_linux:       "701aa3552e3d32f67e26cd36c6bd3a77e9aba7a62104768677ca35e6c860eaf1"
-    sha256 x86_64_linux:      "6ae579320a406131f5603c9860d6340ce5275940dc6a737d22e92585c4f8dcde"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "2812c2a1cda7412f79ea22f70b7cec4596d41ffd3ee6d3fbec726646c807ba59"
   end
 
   depends_on "cmake" => :build

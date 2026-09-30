@@ -31,12 +31,8 @@ class Retdec < Formula
   end
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any, arm64_golden_gate: "17c5462b65773fc080af01f01e90fc4dd3267390ef12e579ec9bde1991d45409"
-    sha256 cellar: :any, arm64_tahoe:       "cd4ac1ca4d48b061f06ef61111e4c95b80a913ec46cebc648f605f586f8d6946"
-    sha256 cellar: :any, arm64_sequoia:     "60b35fe2f60234a92b7091220503bbb91e660a8a3e9ef9cc290ee8247348ac84"
-    sha256 cellar: :any, arm64_linux:       "bbd5f16f1edeb18880cad175fbcaf728401adec9e4e0515d3f8759b333e05b77"
-    sha256 cellar: :any, x86_64_linux:      "48986bb64e250106c9327faa4d7a028daf542bc51b6ab53273b1c761896cc06d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "7fa30c46a7938a61c717ce7ad77a76f20078a23a47018d0f635a6bc2277c12d2"
   end
 
   depends_on "autoconf" => :build
