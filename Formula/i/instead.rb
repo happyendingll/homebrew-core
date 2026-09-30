@@ -6,11 +6,8 @@ class Instead < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "86219e7e5aca92b1a1d4b8f639d1946232d2221e527b749f49ba407e533d2452"
-    sha256 arm64_tahoe:       "7d0732d392fc927db7d778ea935d92d2e0c12de4286b8b3bf44f5a93d12a5a7e"
-    sha256 arm64_sequoia:     "cb326b3adb5f8d7f31bc7e7a4cde8924a47cdd0c7e3c7f65420ca73fa2eaca57"
-    sha256 arm64_linux:       "8612458c7ecc9521efeaca057ea01660529bcfe107e9757a957fb05024a282e2"
-    sha256 x86_64_linux:      "899c00dc314cc1d7aa40732c86d50f6e1e1c338fdb901db9ff9b9ed18c388f45"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "dd13869dba2c021dbec8cf05e9b89844ed2bfca437bf9cf55593ee28a07e38ef"
   end
 
   depends_on "cmake" => :build

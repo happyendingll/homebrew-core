@@ -7,11 +7,8 @@ class Appstream < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "028c33c665784ecb33ba94cd3d26b7a6dc5d8232187eb0f7ef0a2e87ce2ed4d9"
-    sha256 arm64_tahoe:       "fc76c57667654ed35f8e08500e616dd654ca6470db6be645a8ca9bf3f3606f60"
-    sha256 arm64_sequoia:     "f398ec4bff0fd00b087268d640ffc70d79c6afa5ea37bc3c93e0d5cd94816ac1"
-    sha256 arm64_linux:       "f80a70f1f7ad5a038b762b144501c197085bc8835409378243a5204159669807"
-    sha256 x86_64_linux:      "c0b849bd36a717f3ff96e551f43e02bafa7b505e06c7b5b27c87ee309d6b8c15"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "5c4c7c4ee52e5d593cb8a46aa34037810436505daa2785599c487fd541b72d6e"
   end
 
   depends_on "docbook-xsl" => :build
