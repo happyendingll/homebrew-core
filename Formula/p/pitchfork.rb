@@ -7,11 +7,8 @@ class Pitchfork < Formula
   head "https://github.com/jdx/pitchfork.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "33acb67da4095417e3e4772f279722ed5e8193c048903b916bec5426ee58fc7f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d4e3fc81807770594a5ebc0585397bba75eb38273534669c7c6bd965ded2ab74"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87b8a96e14e61f617b9b5312310ebb1ad23823868d40f7fe295ac28dd06d9122"
-    sha256 cellar: :any,                 arm64_linux:       "eba40af4304ae8703ed2f10f171f409fe62d0841133840518b03a7f1176971fd"
-    sha256 cellar: :any,                 x86_64_linux:      "4c7a4079bdff474c8eccfa7a1a221349413dfb84b3cf02e4083d705500a42b8a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a64a235f1e8597714a0bc2f0004d4e137ad41919abd77c9b3ffb7c2ab1700eb0"
   end
 
   depends_on "node" => :build
