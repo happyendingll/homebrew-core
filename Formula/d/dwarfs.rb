@@ -1,8 +1,8 @@
 class Dwarfs < Formula
   desc "Fast high compression read-only file system for Linux, Windows, and macOS"
   homepage "https://github.com/mhx/dwarfs"
-  url "https://github.com/mhx/dwarfs/releases/download/v0.15.7/dwarfs-0.15.7.tar.xz"
-  sha256 "363c7fdbf7bad490a6b8d63186da8643c1aeb17ca54cce1193d7b0ebc57bc6bd"
+  url "https://github.com/mhx/dwarfs/releases/download/v0.15.8/dwarfs-0.15.8.tar.xz"
+  sha256 "a2382a2d06f4539b1c53b8b4f800776945e2f13f71c0a3226d3bab3e1b25fe04"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -12,8 +12,11 @@ class Dwarfs < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "8919af8dd3cd26d5916c4d2278b25d291a737d967c7013cc610ef4f4795c5194"
+    sha256 cellar: :any, arm64_golden_gate: "0600ba659ff86c1d73c81252f9e43fe056e9642d3badafc93e2437239f498874"
+    sha256 cellar: :any, arm64_tahoe:       "d42e25fab481f4c26e3b3ac82db770935971a3c399402c7de8fb62e3b2768917"
+    sha256 cellar: :any, arm64_sequoia:     "348939f1ad0f5b57cbbe3301a25153344893d620a3a106baefd2df7c6be28266"
+    sha256 cellar: :any, arm64_linux:       "1b31ab9ff68ead5ec381a6e4c639c29f04222622951f6f26212fe8bc31019190"
+    sha256 cellar: :any, x86_64_linux:      "22c1eb5340a72af0321e346ea63fae266cca2bf3b82f596e35d98d712f4350fc"
   end
 
   depends_on "cmake" => :build

@@ -2,8 +2,8 @@ class Libmsquic < Formula
   desc "Cross-platform, C implementation of the IETF QUIC protocol"
   homepage "https://github.com/microsoft/msquic"
   url "https://github.com/microsoft/msquic.git",
-      tag:      "v2.6.1",
-      revision: "a01333cf7c2659cce0ff03ef3f21e1ff15bb5b83"
+      tag:      "v2.6.2",
+      revision: "819ab74f851ee168504cbc392ec32e7bed1d82e9"
   license "MIT"
 
   livecheck do
@@ -12,8 +12,11 @@ class Libmsquic < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "63e560e637640f40024fbc7b3a27f0ab1caa50d21743987fa1cf7f9094b4a68a"
+    sha256 cellar: :any, arm64_golden_gate: "1e76486cb83c4f14cfba35d3b63f82e46a21387145092b88a29a186e9ce22733"
+    sha256 cellar: :any, arm64_tahoe:       "d9b361c3709c4bac0a01623c35b62e45d1c4ceefa2a16a65af084f95e4131b7f"
+    sha256 cellar: :any, arm64_sequoia:     "c7d7fbdaec216ced0ed5b9b7b58d3d6b251e96dc4d666409e3fb211cf8c3bf55"
+    sha256 cellar: :any, arm64_linux:       "0e2b620b95427a1bb33082dbbdac1908a56261b28bce0625f255c6838b8a4c05"
+    sha256 cellar: :any, x86_64_linux:      "e56358a568a866926c75f12bb9e63a354733e3ed90ea797301f57e958424ea5e"
   end
 
   depends_on "cmake" => :build

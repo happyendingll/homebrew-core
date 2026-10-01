@@ -1,15 +1,18 @@
 class Opencolorio < Formula
   desc "Color management solution geared towards motion picture production"
   homepage "https://opencolorio.org/"
-  url "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.5.2.tar.gz"
-  sha256 "722601e01b78b7a12da4829cb450674935f404b0e508f3f20046fa77570e3272"
+  url "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.6.0.tar.gz"
+  sha256 "784ac37bde5b9c6e5dc15f23d1235bd1452d376cdc03627d6d6dd310f375a735"
   license "BSD-3-Clause"
-  revision 1
+  compatibility_version 1
   head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "dc67eb60b1af30067204e676fa9f43184b05c69537c20ee6a3185e261fa464d3"
+    sha256 cellar: :any, arm64_golden_gate: "0a764ad21304d7562723eb1938fe33246a4405b21064c021e09dac8ea18f3ad2"
+    sha256 cellar: :any, arm64_tahoe:       "467cd0b91a9b07cb25a54592b65f7f5e2ffa71a4ea74bc4db553771aa2544323"
+    sha256 cellar: :any, arm64_sequoia:     "2770dbb2a624170a938ffffe158f3e9828ed79dfd90d3fbb7ab9dc98539f7f73"
+    sha256 cellar: :any, arm64_linux:       "24f3f1ef831c8d4fd9201b1c62f1de3e0c96b0d36eabbee523ede0aea5bc4efb"
+    sha256 cellar: :any, x86_64_linux:      "7f7733a1913f6e80a28164ac1400f7251d7cb3da31c59ae14d10f85ce325b4cd"
   end
 
   depends_on "cmake" => :build

@@ -3,14 +3,17 @@ class Conan < Formula
 
   desc "Distributed, open source, package manager for C/C++"
   homepage "https://conan.io"
-  url "https://files.pythonhosted.org/packages/39/aa/f21a687ac0fdd8261ba4ea727dabbe5e58f178278e17786e86c4793b7e70/conan-2.32.0.tar.gz"
-  sha256 "59a033862bc46f99c4e4fd72c2741f44b8742377864ba33b28a698cd7361471e"
+  url "https://files.pythonhosted.org/packages/9f/7c/f7cb78bc0a292bb041b8b1e44130afcf8ae798913722a189ecf29783c271/conan-2.33.0.tar.gz"
+  sha256 "2e0f890b736d42049f40ef5b96225bac5866cd71a504ca3eca620b25d8333a72"
   license "MIT"
   head "https://github.com/conan-io/conan.git", branch: "develop2"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "ac9dc6dc53be4d69e11e699bd2665e853712d523ef23515d70e06ef23fa39213"
+    sha256 cellar: :any, arm64_golden_gate: "09aa61ac3f1ab848754392aa3947a50fe362a531fad58d22de34e0bb1d669c58"
+    sha256 cellar: :any, arm64_tahoe:       "5a5ccf3c316c16f8e69a172d2b165901f0e70580a63a1dfbf789c5ec6c9a323b"
+    sha256 cellar: :any, arm64_sequoia:     "9174e7614912cf3c3321bd485d68b7dd23a12c0d73720f0b269699b3e9fbec96"
+    sha256 cellar: :any, arm64_linux:       "65833dbaf8da82f9b2f9f81ca66684e25c29698f756eb78f5e61f3be5da220aa"
+    sha256 cellar: :any, x86_64_linux:      "9f392590f8fac53fa0c3c5132c749a00e4f761f2e22860a9ab21ab6f168b0253"
   end
 
   depends_on "pkgconf" => :build
@@ -43,8 +46,8 @@ class Conan < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/5f/f7/abb373e5757eaec4b922b92f97ec8d6d7e057cf06778247604fbc4e7c3f3/idna-3.19.tar.gz"
-    sha256 "5e0811a4383b21dc5838069f801c4fb62113b7447663d2530d2bd6e77b49bf15"
+    url "https://files.pythonhosted.org/packages/f5/08/8eea9d4b8302028f3abb2c0813953f7aec26d33b7a8960ed760e65ff29fa/idna-3.20.tar.gz"
+    sha256 "a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44"
   end
 
   resource "jinja2" do
@@ -82,9 +85,14 @@ class Conan < Formula
     sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
   end
 
+  resource "truststore" do
+    url "https://files.pythonhosted.org/packages/53/a3/1585216310e344e8102c22482f6060c7a6ea0322b63e026372e6dcefcfd6/truststore-0.10.4.tar.gz"
+    sha256 "9d91bd436463ad5e4ee4aba766628dd6cd7010cf3e2461756b3303710eebc301"
+  end
+
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
-    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
+    url "https://files.pythonhosted.org/packages/e3/05/b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e/urllib3-2.8.0.tar.gz"
+    sha256 "63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63"
   end
 
   def install

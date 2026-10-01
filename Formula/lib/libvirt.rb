@@ -1,8 +1,8 @@
 class Libvirt < Formula
   desc "C virtualization API"
   homepage "https://libvirt.org/"
-  url "https://download.libvirt.org/libvirt-12.7.0.tar.xz"
-  sha256 "7ec1a04e7e4f4069353d4daac117bbe869287f5b202695de61fe1b079efb6cb6"
+  url "https://download.libvirt.org/libvirt-12.8.0.tar.xz"
+  sha256 "0cd46a8f3a2b9b63c35c6e6f42a6c2989183ef3b3d1499ee92b4876db35e6fe9"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
   compatibility_version 1
   head "https://gitlab.com/libvirt/libvirt.git", branch: "master"
@@ -13,8 +13,11 @@ class Libvirt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "29f5fbea90f462c4efef9a138d0c448b6823a94bceae1fa95907bc55d93a923f"
+    sha256 arm64_golden_gate: "75f4021b44fb26514976e85aa234887c2877e1b0497ef7f5ee02fb3f3180477c"
+    sha256 arm64_tahoe:       "79776b6f37dd8de8929b68a882df71452999aadc5870a82016e5354749f1e8cb"
+    sha256 arm64_sequoia:     "4a002a0e0c5d9f2679f36e554965198a06cc7ceb8a968871944be8fd2a640d4c"
+    sha256 arm64_linux:       "9603503f3308796b28aeb975e3d3634e6cbe791a8fe557d6715f831cf0839790"
+    sha256 x86_64_linux:      "b1eeb1215148471f4b0da33f6c9f73b8dafe0c6ae853f45af1eb7a6bb4a159d1"
   end
 
   depends_on "docutils" => :build

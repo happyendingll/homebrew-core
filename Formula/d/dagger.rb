@@ -1,8 +1,8 @@
 class Dagger < Formula
   desc "Portable devkit for CI/CD pipelines"
   homepage "https://dagger.io"
-  url "https://github.com/dagger/dagger/archive/refs/tags/v0.21.9.tar.gz"
-  sha256 "652fffab225340df36ea4f65eded61628a9cf5f1dd2ac2f667aadaa5d84eb430"
+  url "https://github.com/dagger/dagger/archive/refs/tags/v0.21.10.tar.gz"
+  sha256 "4177831173a91b8269ca3269d53767fb0b4217d181cdb293612a14ce2f948da0"
   license "Apache-2.0"
   head "https://github.com/dagger/dagger.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Dagger < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "67ec5a1f3715b325ae96034dd4384aa2f6354f327d99e5343ba65aedd0088c4c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b1e595e724012d82d73fe3e8f9d86eec7240d16ae7c9f198440dfb7e985c663c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b1e595e724012d82d73fe3e8f9d86eec7240d16ae7c9f198440dfb7e985c663c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1e595e724012d82d73fe3e8f9d86eec7240d16ae7c9f198440dfb7e985c663c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0fa7333d189b23c7ee792fd7ce711c2dd314c046f0c0e4e1868ac914fd83c797"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5daa72b75084541db92ee7904a8dc8db141a6bd2e3d2e4a55803c2633a38ca19"
   end
 
   # TODO: switch back to `go` when x/net is bumped past v0.54.0 (broken with Go 1.27)

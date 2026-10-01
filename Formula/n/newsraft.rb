@@ -1,14 +1,16 @@
 class Newsraft < Formula
   desc "Terminal feed reader"
   homepage "https://codeberg.org/newsraft/newsraft"
-  url "https://codeberg.org/newsraft/newsraft/archive/newsraft-0.37.tar.gz"
-  sha256 "725fdbf4c14d87eb7e926aebd9b116f540dca812bea02e73078070156d986ad4"
+  url "https://codeberg.org/newsraft/newsraft/archive/newsraft-0.38.tar.gz"
+  sha256 "60da202448e104687c429a6d7b227ec7d038f7b906001dda594c78847efcc378"
   license "ISC"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "7ac40bde0ad3e657c1b5d774527999d7fca2218c75f67b930e401dff73fd2bfd"
+    sha256 cellar: :any, arm64_golden_gate: "771e56d73f43ab07b8fcb90cfa36eb1653711085b0e68ef45dd316dbf72da1b5"
+    sha256 cellar: :any, arm64_tahoe:       "447bd4cd76b0489da0f0f59e82b56b8edaac09bbf4ca9a833296ef78da8b734f"
+    sha256 cellar: :any, arm64_sequoia:     "e458f48acd960f29a3c215fe11a685519f4de5b0cd12f19c6c4cd50c3358a355"
+    sha256 cellar: :any, arm64_linux:       "26c054c51276d9634a304bfc0d22f21f3192f9c647d6e5ccf6d2fc28ec36ad30"
+    sha256 cellar: :any, x86_64_linux:      "5352ed608aaac177ef060b26b45ab06bca89a3eda3a7395c7de357bd7550a06d"
   end
 
   depends_on "scdoc" => :build

@@ -22,14 +22,21 @@ class GoSizeAnalyzer < Formula
 
   conflicts_with "gwenhywfar", because: "both install `gsa` binaries"
 
-  def install
+  deny_network_access!
+
+  def fetch
     # Prevent pnpm from downloading another copy due to `packageManager` feature
     odie "Switch to `pnpm with current`!" if deps.map(&:name).exclude?("pnpm@10")
     (buildpath/"ui/pnpm-workspace.yaml").write <<~YAML
       managePackageManagerVersions: false
     YAML
 
-    system "pnpm", "--dir", "ui", "install", "--frozen-lockfile"
+    system "pnpm", "--dir", "ui", "fetch"
+    system "go", "mod", "download"
+  end
+
+  def install
+    system "pnpm", "--offline", "--dir", "ui", "install", "--frozen-lockfile"
     system "pnpm", "--dir", "ui", "build:ui"
 
     mv "ui/dist/webui/index.html", "internal/webui/index.html"

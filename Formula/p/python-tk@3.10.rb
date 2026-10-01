@@ -1,8 +1,8 @@
 class PythonTkAT310 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.10.21/Python-3.10.21.tgz"
-  sha256 "f276987f06270ae6c1fb4da620bd105edf78c31368c2f7e85e6c1d51c560b04b"
+  url "https://www.python.org/ftp/python/3.10.22/Python-3.10.22.tgz"
+  sha256 "9448b34d16f8e3db0964ac3ed9fb283197747543c2c021f283ffd2c8b7287357"
   license "Python-2.0"
 
   livecheck do
@@ -10,8 +10,11 @@ class PythonTkAT310 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "0af31f25fca9e0a308f5f477ca6f28d9fe0c0a735bc16e3961c67ea89316ef44"
+    sha256 cellar: :any, arm64_golden_gate: "601d74823b6a4f89de6e47a05163444b612d491ebe40504386cad247ab60ddac"
+    sha256 cellar: :any, arm64_tahoe:       "3c47717207f20bde1abf286ad572feeebc0c845a5e45e597c246c1acd4060939"
+    sha256 cellar: :any, arm64_sequoia:     "124743bbd73ff795ed4be5bbd0f189ae832df49d3a51fca4185c03b0ad4eb163"
+    sha256 cellar: :any, arm64_linux:       "04cce512105a2c1e9b55989100cd56216f7f8143a14896087d2ce0363a67930d"
+    sha256 cellar: :any, x86_64_linux:      "02350ecc532c8df68740b5cdd07cda75ea04d49ea13136110a855b56c0ac3d91"
   end
 
   keg_only :versioned_formula

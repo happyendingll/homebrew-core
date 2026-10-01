@@ -1,8 +1,8 @@
 class Nono < Formula
   desc "Capability-based sandbox shell for AI agents with OS-enforced isolation"
   homepage "https://nono.sh"
-  url "https://github.com/nolabs-ai/nono/archive/refs/tags/v0.78.0.tar.gz"
-  sha256 "dd7f50c088cefb4e5f005d80b1666bccfe3f8ce81a2ae8e825a1b3ba98736b06"
+  url "https://github.com/nolabs-ai/nono/archive/refs/tags/v0.79.0.tar.gz"
+  sha256 "8aaf669401a0d0084d2e6da79468efe067cbd220d3831b42d46085a312df50aa"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Nono < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "f665d5ef234080c01ecf44ca00caa4a02949a3997d375e1628f7688d78a93f2c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "13adb3656763f84d27d2e20abeb5b41dcc76d6a5cccdaee12a5a4a1343713368"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b2b536a26147176de108277d2dadbab2bcae81698d31287680d244c645511720"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "525d7a8351d5fbb630aa65c470d16ede9a5a356b17762bbf4475ddfe2aa1b017"
+    sha256 cellar: :any,                 arm64_linux:       "83ded978c41d3425812788e05349563a42ca7c1e146d6ab4959c9b366832f556"
+    sha256 cellar: :any,                 x86_64_linux:      "7c0c790ad27e84930aecdc57e469179c0202bb708a2a233163d09ce43fed56b5"
   end
 
   depends_on "pkgconf" => :build

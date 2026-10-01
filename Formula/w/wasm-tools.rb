@@ -1,8 +1,8 @@
 class WasmTools < Formula
   desc "Low level tooling for WebAssembly in Rust"
   homepage "https://github.com/bytecodealliance/wasm-tools"
-  url "https://github.com/bytecodealliance/wasm-tools/archive/refs/tags/v1.259.0.tar.gz"
-  sha256 "c3ee7f0757d1220bd4b46260c4fad4549ceea211f91d706649c1ba24ca7fdc17"
+  url "https://github.com/bytecodealliance/wasm-tools/archive/refs/tags/v1.260.0.tar.gz"
+  sha256 "a0fea568085f3f33f1f8064fe28d34f27fd12d8a083427fb6a3fb5f445af2770"
   license any_of: [
     { "Apache-2.0" => { with: "LLVM-exception" } },
     "Apache-2.0",
@@ -16,8 +16,11 @@ class WasmTools < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "96497c16fe0a234d1f8d9e8a4c6819cba3c2f9f11bb0eec2b7075d5a56715b71"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1394e9db173c4ba5dada0c62717c46a888c5ec90a344ae9aa31fc5002196564e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "07d76b7c414703970a98a1068cb6f589de17d2753ae24e1234b253f558937a1b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5bd99aed9717b52d098df09d54df81061cd05b658272ecec19508d257f6607e3"
+    sha256 cellar: :any,                 arm64_linux:       "9034d9d693f56048300e62ecc96a92280a8f448ffc862709ec7ed4e9c124fa41"
+    sha256 cellar: :any,                 x86_64_linux:      "1caba430c7104ab482ef706f4a9fb38d530d15df4da640c3821f92f33572a872"
   end
 
   depends_on "rust" => :build

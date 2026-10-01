@@ -1,8 +1,8 @@
 class Grafana < Formula
   desc "Gorgeous metric visualizations and dashboards for timeseries databases"
   homepage "https://grafana.com"
-  url "https://github.com/grafana/grafana/archive/refs/tags/v13.2.2.tar.gz"
-  sha256 "eb5c8001e18b3e587bdda93c2fff925301d46c61ba1688c97585ccbda3848e03"
+  url "https://github.com/grafana/grafana/archive/refs/tags/v13.2.3.tar.gz"
+  sha256 "8e31ab62f206cc2d4964373bf0c3502793210aba50a11cc3ff2f0db790cedab0"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/grafana.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Grafana < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "261ca09a653dcf40756a91f11e5790c48136633fd2e6005cc7d5be85d4507863"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "71edbf45630014d69e6b6682d5cf00674460bb8ecea4cb0edc3227a37303afe9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cba1519060b3ab6c63106e31641d7034fff9f092b12d641c3169116bbf5059e5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc0ef2c6e3d567f6a68b9725ff6f382e240fc3d206053e36ce26681ede84cf32"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e645e79551e64ec149f0f00c0957ea29efbe9f833e8d1d56534db26ea5a594c2"
+    sha256 cellar: :any,                 x86_64_linux:      "a90d5148f8aee3822ae8fc9996693c37c16941188923df334faa8f0c27271ebb"
   end
 
   depends_on "go" => :build

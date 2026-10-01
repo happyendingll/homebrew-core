@@ -21,6 +21,7 @@ class KubectlRadar < Formula
   def install
     system "make", "build", "-j1", "VERSION=#{version}"
     bin.install "radar" => "kubectl-radar"
+    bin.install_symlink "kubectl-radar" => "radar"
   end
 
   test do

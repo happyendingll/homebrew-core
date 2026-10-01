@@ -1,14 +1,17 @@
 class DockerBuildx < Formula
   desc "Docker CLI plugin for extended build capabilities with BuildKit"
   homepage "https://docs.docker.com/buildx/working-with-buildx/"
-  url "https://github.com/docker/buildx/archive/refs/tags/v0.37.1.tar.gz"
-  sha256 "c8eb34392910bf18a858d4099e841deec2f7ea433bb3ed230082f55b69f19118"
+  url "https://github.com/docker/buildx/archive/refs/tags/v0.37.2.tar.gz"
+  sha256 "6b4cdf64fd6b919b65be75fdfcfb6a42c9738730ee18453e26641132ecc177b4"
   license "Apache-2.0"
   head "https://github.com/docker/buildx.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "d17d49145d0fab5566647a401b4903d83f3bd0ea7920bb3a97f9063a88834dfe"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f38ac10413ccc680326bd1f123ee9ea47ccf08ba76f16bdf5ebac6bafdbc61f3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f38ac10413ccc680326bd1f123ee9ea47ccf08ba76f16bdf5ebac6bafdbc61f3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f38ac10413ccc680326bd1f123ee9ea47ccf08ba76f16bdf5ebac6bafdbc61f3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f17d0ec9720eb2bb931cc03604c05f5cf9f76a1e33bdbe91570bf545b83c6600"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9f09ec9d631fe7bec32c862b7a28643594efa39e4d3ed00690c7d1bb4ef0f5fa"
   end
 
   depends_on "go" => :build

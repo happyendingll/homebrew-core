@@ -1,13 +1,16 @@
 class Faircamp < Formula
   desc "Static site generator for audio producers"
   homepage "https://codeberg.org/simonrepp/faircamp"
-  url "https://codeberg.org/simonrepp/faircamp/archive/2.0.0.tar.gz"
-  sha256 "b0601a411fe041baae4da86bab4242fc964df6229ff2335955f1d5df46f2deff"
+  url "https://codeberg.org/simonrepp/faircamp/archive/2.0.1.tar.gz"
+  sha256 "c3518bb1a54609475ba7452f2e4b0fe82199818700083a0cd69d8997f59a4585"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "78af423ea1694207820d06ecba89485b7e27f69547373b0319ccc2dfebb5eeab"
+    sha256 cellar: :any, arm64_golden_gate: "16892d7219ae5f72d9a2f32aa957fdb041c507d4649e0726861e344b229cddf2"
+    sha256 cellar: :any, arm64_tahoe:       "49796ca668155037379281121360d4f651d00ec7b1b33f3d0c07ce5f119d796c"
+    sha256 cellar: :any, arm64_sequoia:     "09da44239757e2d198a941cf217bc4acebca8d61ddc18ceb3a138d7557fd4d1c"
+    sha256 cellar: :any, arm64_linux:       "af6a518df42a8002848759851fd6bcd759645bf51f62b617734204b75d87263b"
+    sha256 cellar: :any, x86_64_linux:      "8773bc2008a0e65fb224749dfa61d2bf731b9d1a4c126abf56c91588fca2f171"
   end
 
   depends_on "pkgconf" => :build

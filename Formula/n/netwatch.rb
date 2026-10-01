@@ -1,13 +1,16 @@
 class Netwatch < Formula
   desc "Cross-platform realtime network diagnostics TUI"
   homepage "https://www.netwatchlabs.com/labs/netwatch"
-  url "https://github.com/matthart1983/netwatch/archive/refs/tags/v0.33.0.tar.gz"
-  sha256 "e67ba46ba7bebc4914c34a4f5a1a22f3d3e57bd6bdb07ec035667cd1751e968a"
+  url "https://github.com/matthart1983/netwatch/archive/refs/tags/v0.34.0.tar.gz"
+  sha256 "9f1504998c9ac6951a9e75a7f7265c90d15fe033aca00952ac67b17873e893a3"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "2bf3479eea96c9433c5e4d9c031142da506c290648bc16f5f5c77b07416edb5b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "81a87f65d224aaae4d0b001006edf39e644317febf49a702646b1cf237d90039"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "adac9a18398836b483575f88af81fb77f7f3ecc54a2355579b2272ce798cdcb9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "435b639213711ddba1e43fcc55712339a257eb8a641ab8a8327e708e37bb0b60"
+    sha256 cellar: :any,                 arm64_linux:       "488cadbc410e24d3e6d36593c17d8c6af44752be00bbae82f16bec7a1f63dc92"
+    sha256 cellar: :any,                 x86_64_linux:      "598b1af33864484649b0efa4cccb773a01a9a44dbcced15a1b91ddf4baf20177"
   end
 
   depends_on "rust" => :build
@@ -37,7 +40,7 @@ class Netwatch < Formula
       Process.kill("TERM", wait_thr.pid)
     end
 
-    screenlog = (testpath/"screenlog.ansi").read
+    screenlog = (testpath/"screenlog.ansi").binread
     assert_match "topology", screenlog
     # match text in help dialog
     assert_match "DASHBOARD", screenlog

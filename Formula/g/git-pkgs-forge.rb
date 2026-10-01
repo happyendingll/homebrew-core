@@ -1,14 +1,17 @@
 class GitPkgsForge < Formula
   desc "Go library and CLI for working with git forges"
   homepage "https://github.com/git-pkgs/forge"
-  url "https://github.com/git-pkgs/forge/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "fb221afbe54cbd8dcfbe5a476df0b6aa93bea83e23455ac8eaca3b7b0eedd33c"
+  url "https://github.com/git-pkgs/forge/archive/refs/tags/v0.10.1.tar.gz"
+  sha256 "4e6674f10c84da580776d3b3c4eb6fcd46ef76828b43a2caa602f2cdcf483047"
   license "MIT"
   head "https://github.com/git-pkgs/forge.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "163f9361eff5d370e29fac6e267c9ef8f06ae64465a1cedf546c8445b2272269"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d96f910f964e5500a31ea6951ee2891605159dc6c0b434af83c8658f8d34d7cd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d96f910f964e5500a31ea6951ee2891605159dc6c0b434af83c8658f8d34d7cd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d96f910f964e5500a31ea6951ee2891605159dc6c0b434af83c8658f8d34d7cd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e5ef82351a06e58f354b14cb62a305735c4617af23a6ac7d0979c61956400d51"
+    sha256 cellar: :any,                 x86_64_linux:      "c6e22c760966bd9d694078e46d7990a6161c787f300fff15beb1f125c87aa4e2"
   end
 
   depends_on "go" => :build

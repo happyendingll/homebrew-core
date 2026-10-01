@@ -2,7 +2,7 @@ class Gstreamer < Formula
   desc "Development framework for multimedia applications"
   homepage "https://gstreamer.freedesktop.org/"
   license all_of: ["LGPL-2.0-or-later", "LGPL-2.1-or-later", "MIT"]
-  revision 1
+  revision 2
   compatibility_version 1
 
   stable do
@@ -26,8 +26,11 @@ class Gstreamer < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "225e0e28f7c15604c8dd04ec343a740708138b3541cbbbc7b45ea7dc5f5596c6"
+    sha256 arm64_golden_gate: "a6e736b6e1ab7a9da87b7c6c8d104becc1cf56fa878433a6e148dbb2c260d8ef"
+    sha256 arm64_tahoe:       "480a5e8b7a30a7a57420881328207a101d09d19e77442c10f2ed9643e7f4343c"
+    sha256 arm64_sequoia:     "a344ccc47d1fd774cd19e60e22c5a2e751d723062932bc94bb3e23b4cd5fb1fc"
+    sha256 arm64_linux:       "23606233a4228f0a09022d38a55343d755c4b5cddeccca6fcc658511883a62c2"
+    sha256 x86_64_linux:      "a563843df0b9a549128a700553e64736bf3c9b919b392b78c416943755acf7de"
   end
 
   head do
@@ -150,6 +153,14 @@ class Gstreamer < Formula
   patch do
     url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/commit/49b4b4129e3b488f246493d3a57dc70652ec9dcf.diff"
     sha256 "25ef9fc417878e0aac46ffb0f16c5a5d1a44341cd3364c97111980fb5bfd64b8"
+    type :unofficial
+    resolves "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/12148"
+  end
+
+  # Support faac 2.2 `faac_params_init` signature
+  patch do
+    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/commit/2890668a8e8aec2f41f36a62036e4e7daf93f976.diff"
+    sha256 "b39d939f1b614dfcb9bfd89e259779196ba64f9d0277588c42be4d16b84486f8"
     type :unofficial
     resolves "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/12148"
   end

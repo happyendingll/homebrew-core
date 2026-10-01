@@ -1,13 +1,16 @@
 class AiCli < Formula
   desc "Generate images, video, audio, and text from the terminal"
   homepage "https://ai-cli.dev"
-  url "https://registry.npmjs.org/ai-cli/-/ai-cli-0.5.2.tgz"
-  sha256 "e80c872b32b92b8be2f811a139c13de147773aa21e6fb8235f6f19afd016154a"
+  url "https://registry.npmjs.org/ai-cli/-/ai-cli-0.6.0.tgz"
+  sha256 "591833d9e8fb354af2c26706126be6e7d7cbb6c88d98be669a1c923d7ecb8d98"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "9d7fe4908aa6cb576a049e3510d3d3980a4e28d079b7b9a9bf1a8841f6bdf0f4"
+    sha256 cellar: :any, arm64_golden_gate: "6aa6324a88bbf83e065fcf315768d68172721bdbbf1cc20bcdaa9963db910838"
+    sha256 cellar: :any, arm64_tahoe:       "6aa6324a88bbf83e065fcf315768d68172721bdbbf1cc20bcdaa9963db910838"
+    sha256 cellar: :any, arm64_sequoia:     "6aa6324a88bbf83e065fcf315768d68172721bdbbf1cc20bcdaa9963db910838"
+    sha256 cellar: :any, arm64_linux:       "77ff15b815d67ef460600bbbecf76b29a8884006074bd845c930505dc32247e2"
+    sha256 cellar: :any, x86_64_linux:      "10dd798e78d2772127738db4e7477d63eb13eb12cba9e3d4a3186a30c2a26c9e"
   end
 
   depends_on "node"

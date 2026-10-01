@@ -1,14 +1,17 @@
 class DartSdk < Formula
   desc "Dart Language SDK, including the VM, dart2js, core libraries, and more"
   homepage "https://dart.dev"
-  url "https://github.com/dart-lang/sdk/archive/refs/tags/3.13.4.tar.gz"
-  sha256 "8a6040a7998e157e4ff6ec29141a78478aac000b372a2b065a9c53ba40cf8fa9"
+  url "https://github.com/dart-lang/sdk/archive/refs/tags/3.13.5.tar.gz"
+  sha256 "2da077bf89f3a14ae5a741728549371d87013265df49b8cace6475bd9ffc59e3"
   license "BSD-3-Clause"
   compatibility_version 3
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "9f2a971459eb4b036f3deaba7fb0f2e7d9982e7db43984bebd262f78b797660f"
+    sha256 cellar: :any, arm64_golden_gate: "ba2fe7dee081e6782d25e7b93c9b8856c03dadc6f199ae7cabc14a7889b3deee"
+    sha256 cellar: :any, arm64_tahoe:       "ec74532ed9ee0061a7fdcf2b731f207bc9e095756a4d04ca921d1d52e0f40614"
+    sha256 cellar: :any, arm64_sequoia:     "12bb228c9b6a2e7ddc89b2d4ae2102a425c2fad1930f44e38efcc3cdb43e360c"
+    sha256 cellar: :any, arm64_linux:       "197fd010e58013ef62c8545f92d2e6dadab0792a298f23c71a8aac624f81f2df"
+    sha256 cellar: :any, x86_64_linux:      "e32c710a32e233ce15ca8b144c28e68bf8032887cac7e81d59af30abeb40be85"
   end
 
   depends_on "ninja" => :build
@@ -21,8 +24,8 @@ class DartSdk < Formula
   # always pull the latest commit from https://chromium.googlesource.com/chromium/tools/depot_tools.git/+/refs/heads/main
   resource "depot-tools" do
     url "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
-        revision: "46afe8bfbb57583700c01d1584e7a49638d586ed"
-    version "46afe8bfbb57583700c01d1584e7a49638d586ed"
+        revision: "b2042c50e4d8a0ecc69ebc60983024a5b477c4ca"
+    version "b2042c50e4d8a0ecc69ebc60983024a5b477c4ca"
 
     livecheck do
       url "https://chromium.googlesource.com/chromium/tools/depot_tools.git/+/refs/heads/main?format=JSON"
