@@ -10,11 +10,8 @@ class Charmcraft < Formula
   head "https://github.com/canonical/charmcraft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "707ae660e50c5d9cb2395eabe1ee13069845569d4f9d901ca358a82c88e84769"
-    sha256 cellar: :any, arm64_tahoe:       "ea47fe0760bc7a153df952b10273b0159856f9521ebc35a74556577ede3c04d2"
-    sha256 cellar: :any, arm64_sequoia:     "2827e5fb6224115c6621ac6925fd68315cf379cd05bf38c4f8bdbe58eea61b86"
-    sha256 cellar: :any, arm64_linux:       "97daf690d31a505c109e21f6e97be009f2fc7fae811247d1faa7ee0d317e8dee"
-    sha256 cellar: :any, x86_64_linux:      "f3d96e5c08e833c67b34b7264a1ffdb143770ee1febeebe459935a9d12b149f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "d75d2f24357843d57bcca4159074f52e11a1a9a9d9aa7f70222592a28b055b3b"
   end
 
   depends_on "certifi" => :no_linkage

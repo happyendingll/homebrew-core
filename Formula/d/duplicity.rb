@@ -11,11 +11,8 @@ class Duplicity < Formula
   no_autobump! because: "`update-python-resources` cannot determine dependencies"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "af5f3b36b5b987a293b0a5e3d7d4d74b0f7a3967613c3e0a0e567c04adc2a9be"
-    sha256 cellar: :any, arm64_tahoe:       "2d71e862cd3b315e141e3a500e794aa23230ced7ac903e4fbca31026ca097950"
-    sha256 cellar: :any, arm64_sequoia:     "daaf7391a61652ec1a8b478ced7bc0979cdfe9e6e3370f99feb8a1ec9d307997"
-    sha256 cellar: :any, arm64_linux:       "4edd14f083146a16f5006d5ae992ca240a0214ca11a84de8d2d06d90d4e6f6b5"
-    sha256 cellar: :any, x86_64_linux:      "e66763910636c5270d03171e62fe60b4ec0b798eb78fabf0bcfd9e40f376eadf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "aa74a2a52e5b4424bbf5448296e731c94bcab53cc0075cde02fcdcc7b33a006f"
   end
 
   # `pkgconf` and `rust` are for bcrypt

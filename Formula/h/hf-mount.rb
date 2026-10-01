@@ -7,11 +7,8 @@ class HfMount < Formula
   head "https://github.com/huggingface/hf-mount.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07e6e8869d5c4597df0a35c0f89e629b295757ca4f067a0f79e9f5e877dd8335"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d22eca68a2716f874d6eab431b1631f67a64dbeaf68ce628f2758bd044e76c17"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cb7065b940e8e9ffac5543880ee9e558fc87412b533cc3d2a746cd5b2822e1ce"
-    sha256 cellar: :any,                 arm64_linux:       "68689cc6276481cdbf002b766fe7a62580b552abc59168ed4641b3cd1b056ccb"
-    sha256 cellar: :any,                 x86_64_linux:      "b9f1b0eeca617a70e2603e27fca854377fff99c7cf4c52a36f5f9aaf626ea209"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "e7622a269498ce17ae1d60e451e3b943fe5a3c5628395791c7581800a7bd74a8"
   end
 
   depends_on "pkgconf" => :build

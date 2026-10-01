@@ -8,11 +8,8 @@ class Zrok < Formula
   head "https://github.com/openziti/zrok.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "86b9f0214939b0d26c2c9701d19efcbd452bbe56fbc28cbe4473e5ce73bebfaa"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f3110f8393b8d3a68f6d4b9c942699d446c50f4ac76b12dfe903df54b03c7e0c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cd2b32c48c45557980eff5a20cffea508f1f66160fe727ffa501696751357532"
-    sha256 cellar: :any,                 arm64_linux:       "e1d79cf91344bfc9496188df497ef93f1aef2a5bf649604f759f2df2e8fa53c2"
-    sha256 cellar: :any,                 x86_64_linux:      "4aba7edbf72d040a2ff1f349ef370db8aa47e765f03e7504fc06bb457a730cad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "8ae576eb409a11e9b543953e7bf1994bc05ce0c34840c9a13203bba72be4eefe"
   end
 
   depends_on "go" => :build
