@@ -14,11 +14,8 @@ class Ladybug < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ecdd0ada9c667fd7aafba22dd8d4523db92b8c3b33cd64f7f1648fcce8a45759"
-    sha256 cellar: :any, arm64_tahoe:       "a0d6296aa2380f665be9617748f0e338ff123961159aebeb059443636ef67cb1"
-    sha256 cellar: :any, arm64_sequoia:     "91c05ad69d4f3dc6de36a131472c484ff90115ca89ebd619862f356af399ed64"
-    sha256 cellar: :any, arm64_linux:       "4a397459fc001c44bb66b51ac04edfce9a69cc5d7625ffbd4cb45b20e3f49104"
-    sha256 cellar: :any, x86_64_linux:      "069a1cd8d439ac7a64b7eeccbf0e03c3b518a48667ed41ae05d522f1874cb64a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "3e6faa005627444e69d740326b74432aadf7d588eba638efcde4559ae1f33201"
   end
 
   depends_on "cmake" => :build

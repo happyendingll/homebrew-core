@@ -9,11 +9,8 @@ class TrashCli < Formula
   head "https://github.com/andreafrancia/trash-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a5eeae8398c0040d806067e2204ecb7e26530c456668879d25cd7368f8f6939"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "20a5e685184748a046bf4e03689ca83a2dd31feaedbf6f5c6aa71e7f89bd5ebb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a2b5d3c85c4f52775c4e8390158329f00529ccd1737bade3cf19d3ce1cd3e4da"
-    sha256 cellar: :any,                 arm64_linux:       "c64f6f17bd30ece7bb3bf7c7f13cc1ff068a0aef992963307a09319d10fbd5be"
-    sha256 cellar: :any,                 x86_64_linux:      "fb164eca5af4de10d5a3860a108ae92cd3c8aace8922d2c77d968979be9b2471"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "76322ade602b6c8f6b197012beacfbbbdf1b3f8fe4db28270b60576421f4b864"
   end
 
   keg_only :shadowed_by_macos

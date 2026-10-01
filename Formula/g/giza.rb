@@ -7,11 +7,8 @@ class Giza < Formula
   head "https://github.com/danieljprice/giza.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1f024641fa55f442d729039c358746915d5290dd27fe08003d20a25211b0dcc3"
-    sha256 cellar: :any, arm64_tahoe:       "2ee493cd34cf0f7ff385d38362296793492aba1cded0ecefa4297842ffa4f416"
-    sha256 cellar: :any, arm64_sequoia:     "551814298e540c253a8f488d56041a3707a1f5445335c0d81f8e6c7a4ad75a14"
-    sha256 cellar: :any, arm64_linux:       "cbe657eab8d0c8f4dd71096b756d3d4204aeab48da3627d18284e07832273771"
-    sha256 cellar: :any, x86_64_linux:      "df9b0e6a26071797eb3fd562fe7a343af553532597622d40066cbc01e0245b1b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "cbffc242014b4f3c452733ad49c616547969aa9de9fb3285ca21c47f3b70fb81"
   end
 
   depends_on "pkgconf" => :build

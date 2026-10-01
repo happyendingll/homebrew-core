@@ -7,11 +7,8 @@ class Libgsf < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "9436bac8cb0841a8e346ae6bab292acf14cc0e133b424a6e7f0169c800c207cd"
-    sha256 arm64_tahoe:       "4144eab57f7da47f0c5a9d1d455d27e11159e58b677f893ca0b623e1f7bd72ce"
-    sha256 arm64_sequoia:     "6e152a26ea8bc565998431ce25754b70674b8583506ed3d8d2eee936cb28a43c"
-    sha256 arm64_linux:       "3b8b3dd591f3978224e5f66dda92757d8827f907bbdedbda20eae8ec957089ed"
-    sha256 x86_64_linux:      "b56a8d49f812ae6968b28627e2ef6d80384778a473ab28c7ddf77f88cb96b5ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "2a89791a8102351daa425044b3e5548831f76b8f6d4babf05fe52c36c18f4522"
   end
 
   head do

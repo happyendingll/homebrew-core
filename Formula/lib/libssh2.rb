@@ -15,11 +15,8 @@ class Libssh2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "24bf37928fe5cced4a228526f01bb279204a067c6570415c04adc517edd5b58a"
-    sha256 cellar: :any, arm64_tahoe:       "916856f463c8b6f29d5a36c5b6f0ab6f62f5c4c3098dcd0b111028fb311a69c7"
-    sha256 cellar: :any, arm64_sequoia:     "481010a7c43b80c86129e5bb2892864d4a50b165338fbe5eb8918f1bb926b483"
-    sha256 cellar: :any, arm64_linux:       "9b31f6b60a7b76944d670018185c81aab767f533b2d385e6aae8779510da7c86"
-    sha256 cellar: :any, x86_64_linux:      "d7547bd8b67ed4bdcf5fb97cf501b309a51ec47a616d051a9799a50db556f836"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "fec5363922ccb2870606a532958f37cd4d477dba3077cbfbd4528cfbaa577f2c"
   end
 
   head do

@@ -9,11 +9,8 @@ class Apprise < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "695ea94e78599fbf72e5bc5d3ed8a82ebba42be026b399c59fbcc8e27731d669"
-    sha256 cellar: :any, arm64_tahoe:       "bfb2f4a6ab1f7c5c72e74313d5ddb5a4a4db8e521f603a99d8498549896d2993"
-    sha256 cellar: :any, arm64_sequoia:     "981c51f0c19538155cf6705fffa18f5cb38d0eb27179c301331a39a85e80fb59"
-    sha256 cellar: :any, arm64_linux:       "2072d241f851457fb8d168e5380ebb8894c437936eda2ef2a580bd0c5cf1c459"
-    sha256 cellar: :any, x86_64_linux:      "136ebe7d7018aec671401f2597bb321c4c2b4bf3be41384f64c60004fcd62269"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "7635a41b0bb2d99dde15fddad45ccc97dc2deffa76ec67b1cff35a69d4469543"
   end
 
   depends_on "certifi"
