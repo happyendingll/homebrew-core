@@ -6,11 +6,8 @@ class Gtranslator < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "a6d399223174174830bfdaca7969447dd822866305bf17fb84172aac2473da18"
-    sha256 arm64_tahoe:       "a31efb66e77100c660097fdc464a80b0d2a0290cd66ccfab0ae57595ad874556"
-    sha256 arm64_sequoia:     "0b835e5c0d0860ac633eccc8701a8e60bf2b5a2b0dbbf4e4c0aae5e7226758cc"
-    sha256 arm64_linux:       "9076c79c59afa58c4974b1b15c92f01dc3a9faf0a7fd44060dccf893b539b2f1"
-    sha256 x86_64_linux:      "6e8efdf23856e98e2eb0bc2c502086aa218544ec70142a16c4e88c080b2020bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "7c0abc7566238043c23e70a2400fbf84a974e2b67f74620d480cd69223f3610d"
   end
 
   depends_on "desktop-file-utils" => :build # for update-desktop-database
