@@ -19,12 +19,8 @@ class Opencascade < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "27c6bd32062cc3864edbe11c6daff505c866673baf4c9706502176abbf9df806"
-    sha256 cellar: :any, arm64_tahoe:       "bf744d8d3520150f03bfc1bbc578d22413a703985586eae9450c532db90c40d2"
-    sha256 cellar: :any, arm64_sequoia:     "ed5dfaeff1c71a1d3df421d862307593d88253f05fe725ea8f6118a007a5bb64"
-    sha256 cellar: :any, arm64_linux:       "62df045c76709134c9eedc5dee5c146c488fe26f4b955bdc1ef9d4339637f8f4"
-    sha256 cellar: :any, x86_64_linux:      "53014119157546ae92e3de650d1045d2dc1989482e70403ec8caf5caf1bb91b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "a587b263187666fe1fb39338cfbdb2cb9c4bba78c2eddc44342da33c2f04c202"
   end
 
   depends_on "cmake" => [:build, :test]

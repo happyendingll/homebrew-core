@@ -6,11 +6,8 @@ class Sextractor < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "adc8b556f0810147755dd603f1ba7cf8b408f47341e040085f380e5414adb516"
-    sha256 arm64_tahoe:       "a4115da37455083592b0e177730dc18a318f01414048f4236a41f700357fccc8"
-    sha256 arm64_sequoia:     "0569170fda55206ac2196500f6935a6a5a5104f7c36d5214699af3e7da278bb4"
-    sha256 arm64_linux:       "9a17279567d154d5f537d9f11cd799f52be4d4a7a0ab68401aa743468a8d271b"
-    sha256 x86_64_linux:      "07c5be9f8e0acb8444bb4e471583c1903d4b670f04e58f59a8f9136d1791d6f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "e63f15e1fe8a88a51e25034d08c3bf684d5ae6cc9f33c0ee87e57af48cfd6dec"
   end
 
   depends_on "autoconf" => :build

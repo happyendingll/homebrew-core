@@ -8,11 +8,8 @@ class Xrootd < Formula
   head "https://github.com/xrootd/xrootd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "86a0f1c88ec855c5601774ba59d91ace6dd6f96dcf56268f08ea94f5298bce6a"
-    sha256 cellar: :any, arm64_tahoe:       "b4dec50e24ef38e40678c106bfcad52456c2589773ff2d1df9d018464d359d6a"
-    sha256 cellar: :any, arm64_sequoia:     "b8b2bd32aa8f943e43ae5bab748da1341ccf2702725b9d6ad853a58578124a28"
-    sha256 cellar: :any, arm64_linux:       "cc3b7729138f624db935251cea78019b7c0424713df40f06da62f3e8f3e4677e"
-    sha256 cellar: :any, x86_64_linux:      "b8649937fed1d1c40130180c1e2776b539b0d917829eb747d3f036ac9d15749b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "0aa6ffbd4c854e98236a5e3dc73f70fdaae7f5fea9a8b866b54bb91cf33c0c72"
   end
 
   depends_on "cmake" => :build

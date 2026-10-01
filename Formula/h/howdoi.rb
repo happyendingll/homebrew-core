@@ -9,11 +9,8 @@ class Howdoi < Formula
   revision 23
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5f8d38aa1c9540316a25052f1211eee7cd7c8cb0b321c7b5f6233d60ff55559a"
-    sha256 cellar: :any, arm64_tahoe:       "1c4610b32ed0d2f7f327b6388642f1996e7f7723b1abea666664c53ecac68c17"
-    sha256 cellar: :any, arm64_sequoia:     "f06ec8d490311bb30bd2febfa5313a1b41c3c59924e07814137f74ccf5e88e39"
-    sha256 cellar: :any, arm64_linux:       "182af6388c8e69c9f9c2d9823e09ba3ecbf345ad2c2686f03c3e3c0864fd8029"
-    sha256 cellar: :any, x86_64_linux:      "7884c61a9106175e946207c8e05fd741764290409574e5964bc6c12d2ae729d6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "ce0352d27248fed7e8fc49aeaccd42f15a6320e730d43750be4478ba9ffce22f"
   end
 
   depends_on "certifi" => :no_linkage

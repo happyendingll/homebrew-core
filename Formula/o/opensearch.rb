@@ -7,11 +7,8 @@ class Opensearch < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66dc8dfda2d0fc66a9f19a2e60c419a22d3043bc6ad54fdc8654596c86b47320"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "897b3141d42c73adccbadbd3e0670e6369402a8ef913aeeec2ed42ccb7f6aa71"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9a3300301e2e0fdac45e27c0ab9de794f560b19b18e775e8867bc62e2099175"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "891b637b6e1ba69e5ee2f03949c85af0ac4cfd8865cb7f0d1a4fbce422da628d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5c63435d50fd0325f5bf3f819b0fe7ac08926f516fc4f5ad990750e41ae3cdab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "64083b2124cad2beb00fc4a10377c1ed0b527e1fcf47783f43f118b88d4ca8f1"
   end
 
   # TODO: Use the vendored Gradle wrapper until its minor version matches Homebrew's `gradle`.

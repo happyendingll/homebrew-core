@@ -8,11 +8,8 @@ class Vte3 < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "3fb3f2bbd358b1d13d51b9cfe871e8ea38cccd653f71e361e5a97031c69a9f0c"
-    sha256 arm64_tahoe:       "241e237a5581ee7eb50c89bb2e4b468aac08da44a86ad8794053a364d86a2edf"
-    sha256 arm64_sequoia:     "bcadba3af859a4c594340310d87c62163b22fbde0c04284dbb390eb52721099d"
-    sha256 arm64_linux:       "15bc58135d7b13a570275bc58982135353af9c465f276682e56c131a6a051111"
-    sha256 x86_64_linux:      "2af1a4100d19a4560d1950133898c3d708b2214d250582fbf55af07b10a81e18"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "24a0420ffd195f5b217d2ad117d015de6256e0ce6c0c13dd0c95f338ea35da59"
   end
 
   depends_on "fast_float" => :build

@@ -10,11 +10,8 @@ class GimmeAwsCreds < Formula
   head "https://github.com/Nike-Inc/gimme-aws-creds.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e55dba8409e9a7177a1856bbce02b2077c67698da8309e23ac0a1aeed5299124"
-    sha256 cellar: :any, arm64_tahoe:       "dedbeaefddbc446cf5080f7e26dabf871270fc8603e87e0057c63bf999c06281"
-    sha256 cellar: :any, arm64_sequoia:     "dbda053234ecb5f5c898e792a0b8cce31026a9672b19694d8972159e6eef27e2"
-    sha256 cellar: :any, arm64_linux:       "db68f6f11cffd6b2e5de34e89e853f1b3231bdea0af97549bcdc11d58737c79b"
-    sha256 cellar: :any, x86_64_linux:      "7c45557dd7eabaddc3219e801d66b4572668078a6ee9527464be2f2ac172dd95"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "eac9871037dfa945cdb346b0859a83c19ca15e0c7bbdef4c8528b96f190fe8e3"
   end
 
   depends_on "certifi"

@@ -9,11 +9,8 @@ class Twarc < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "32bf63aca6c8652d829e19488f6aa51bdfe08ae55219f0f665152aca1fd0bda5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7507f3efb1b6add925500d88b58c4eac26fe508343e399c08f74db4495944945"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a57b7232dd918b991618dedbecdab09286bf8e93c6fdd51db209d907fee0256"
-    sha256 cellar: :any,                 arm64_linux:       "916a420c3a9deb6f0ff31bc65e284071311fb5dea87291a6cb3e233684db0c07"
-    sha256 cellar: :any,                 x86_64_linux:      "ed8be7fd77f80a882b34a16c1a9459c9005dbe701745a96629b41d7c1557422f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2a0f1c004f9c9588df916fc77eb4fc89ce36a31d734bb4704b0334159e854ba9"
   end
 
   depends_on "cmake" => :build

@@ -16,11 +16,8 @@ class Libadwaita < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "abc50622e19f686ab417acf15c4cf3c43f0f0737cd82c0a9e26459ef3c388599"
-    sha256 arm64_tahoe:       "1deeee6e4691fa17639ec9c5e7931a69136d6e413f2b0bfada7427b4adce40ae"
-    sha256 arm64_sequoia:     "a62f507386c532e378cb4a7d8e64762e91a0e7e32561f87396a2129fa34960ee"
-    sha256 arm64_linux:       "c08461957bf7607bcd29782cd174401c88e8824df1e3bcc812fbe7fdfc484e00"
-    sha256 x86_64_linux:      "130d29e68eb1669f3c468dcfe6ad6b2772a1a3ab9071cea203f3cb7ef2ab555b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "76f5dccaa82f5e98b8f76591915bbac5873625524bf9f42b537781127b9497d1"
   end
 
   depends_on "dart-sass" => :build

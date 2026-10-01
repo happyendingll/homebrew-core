@@ -8,12 +8,8 @@ class GetIplayer < Formula
   head "https://github.com/get-iplayer/get_iplayer.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "56f686c6e52b8e48ca01545296e6308c492e7d899082f647f77c16416aa8c0ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "56f686c6e52b8e48ca01545296e6308c492e7d899082f647f77c16416aa8c0ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "56f686c6e52b8e48ca01545296e6308c492e7d899082f647f77c16416aa8c0ca"
-    sha256 cellar: :any,                 arm64_linux:       "d7493c2df7449da4887a576784169191d8d0403388d2efc5a3c8da811ae8975d"
-    sha256 cellar: :any,                 x86_64_linux:      "9980f9bbf3ed55b8ff899f94bb6241e17f23b227c3177b5dd96b4971fef91b6b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1c16c30d3f7c195403ea38e711ab297aadf64f44eb53df5adf503f8e7ad050b2"
   end
 
   depends_on "atomicparsley"

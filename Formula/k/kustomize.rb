@@ -12,11 +12,8 @@ class Kustomize < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "79ef5fd65d967d1ae54c8bd1892c961db7a33687fb1391b5563b43ba197f892c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "997387aa599105c5138f49b34098ac45295991beefadd92aae9e2adc522e4b73"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "05306d545d40743da0ef7cd63e672045f5a58f5028230e938df0a0377f5a03ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c40cfb3d515ba315f860291fe2f04db182cca444684c6f65a764c47c3464f127"
-    sha256 cellar: :any,                 x86_64_linux:      "313151fce577d48cc310e845be7a56bed9001b8c5aa98490ea06cb0bcd14119c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c988cdd1f8d502b72b6dc5e5e67d54c0ccaba2b8792a6025536c388df7ffa25e"
   end
 
   depends_on "go" => :build

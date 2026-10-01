@@ -8,11 +8,8 @@ class Ghq < Formula
   head "https://github.com/x-motemen/ghq.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "38acaeebea85bb56897074df03ad9b74a0d7d66d4433025c02aa74f97d06f4f1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2915db5c740619a910fb7020d457d7160d5d1fcd940df4f47fa8da59209241bb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "619299634c00101298367b1ba91b78a121f88f7e038d4e154ab7acd0652315b6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d9fc113b038a82a329fe6c38c465117f86c3593159cc046f3647a185636f9dae"
-    sha256 cellar: :any,                 x86_64_linux:      "4c787e32e7dc46320bb7ea3102b4e7d522fc09e7693f59a67d98025ff98300b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b88f51bc84884abad920627e2b8a61c68fbab4b77806abc83e3ce012046f99a3"
   end
 
   depends_on "go" => :build

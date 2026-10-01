@@ -12,11 +12,8 @@ class Gtksourceview5 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2931e55af2dbf475c3aa25d01e0868d10cb37be886a8ea6dfba91613237fe959"
-    sha256 arm64_tahoe:       "4cc2c1c2f338e83b99fe83ceffa2dee6a9632a3912536b640b954b6718212b08"
-    sha256 arm64_sequoia:     "c52f0d6c7ba5bc3f367c77cab1d08f4d416ea4c1a5fd239e929ff8659d666a14"
-    sha256 arm64_linux:       "f8c7ab656dfefc30f831735456cf6294ce14db002461422a558a8e1a22702d4d"
-    sha256 x86_64_linux:      "8f95f0e981a2d2defd89e3043f83294697f8ad872a5ea2fa1a410d59892689f8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "ec3356f86a6f4f9b1b4f0a680982899c648ced8a985806bccf9f247cc6b4d123"
   end
 
   depends_on "gobject-introspection" => :build

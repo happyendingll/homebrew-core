@@ -9,11 +9,8 @@ class EvernoteBackup < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09c9218f500ca73da1c0e9e400ee73fe454f2d3d92b13a9281e5c723f8804a11"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "931d55e6f32aada6c3281911c42b8c951e3ac3a2b65838cc4d479f22aca21b7b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d935d7bb8d81ebcc057c72dcfffe482b4e4474ec6096421f0f499ac5d43e7cc"
-    sha256 cellar: :any,                 arm64_linux:       "0d77f91d885ec13795dc2236df902f0a43e07d21d04f413d799175273078250b"
-    sha256 cellar: :any,                 x86_64_linux:      "7aa7c54f71e39462e52bb6e1faa9ce2ba8a172a2f055aec93ae5966fe4df6433"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "732da6713a8f00d85c76e0585c1c2fc6f74a2bad429a9e5ece4e4ee438305327"
   end
 
   depends_on "rust" => :build

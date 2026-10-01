@@ -12,11 +12,8 @@ class Libmd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "366d28c7ac75b795b94100726d9a38e66c97b669f5609ace8c251f842b69efe7"
-    sha256 cellar: :any, arm64_tahoe:       "444402c6c05d552f31d5cd6acd6ea5654daa79b7d40d32d13aceeeb27e104713"
-    sha256 cellar: :any, arm64_sequoia:     "2e70abfbbe3959958db7befb2c8b218781214290717ec10d97dea6c3e82021cb"
-    sha256 cellar: :any, arm64_linux:       "64e7579f92d26396662dc6f7724c4d5837656ea7997a2c48e9d83ecdcb95f458"
-    sha256 cellar: :any, x86_64_linux:      "934faaf308977199217ed9d52185bea45a7426ab03b68f4f369d1c1583e59bdb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "ba831a1212e849a471791812676bfaa1636ee7a5793c7098ce2960812bc95e36"
   end
 
   head do

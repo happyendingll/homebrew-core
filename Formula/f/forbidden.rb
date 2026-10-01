@@ -10,11 +10,8 @@ class Forbidden < Formula
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2a7c909987bd2a4f0bd8434b15a5f9bb45d1806b411f1788025e2f743a31d07e"
-    sha256 cellar: :any, arm64_tahoe:       "db9449dace9afc4c19593e1f897e0ef551b8ffef29f11087d43c8133916e881a"
-    sha256 cellar: :any, arm64_sequoia:     "f0cf0dda284c275cb0d6c5351a0c464d090011bd70ac1fea00a8624bfb748c60"
-    sha256 cellar: :any, arm64_linux:       "68628116b5acde48ec9f09a26c87aff87d3e9327b8d78e99b0abaf0164e73cda"
-    sha256 cellar: :any, x86_64_linux:      "abecba717fbda4053b52de85588eb1b4b7057110509fe805b0d8fc9fa1f5d169"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "1174cde740dfea7042299de607fb5b827c5c0e1c3e2162d13d499cd2ed67a954"
   end
 
   depends_on "certifi" => :no_linkage

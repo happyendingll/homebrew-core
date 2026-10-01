@@ -11,11 +11,8 @@ class Gravitino < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "99b10dc44d27ead919f150edc4f52ccb3cec1178dae11ca304a4f13f9c666a3a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "260ee6421d3606256a110a9b99ad1a362a58bdfc60680da6e721ea77d7141da6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1a76015c8a30240478cc6164bae73c595a371614ea4379beaf1bae886943408"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f578548ff65f5be79e684d3a6e253d0a8b97c4200085660cff0fa8c968e631a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0976b1cd1ae095dffc1fe12e66764554bed144efc3591f7d5b75e11819911a13"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "95492fe70ba410cd41321761818bbfb327fd01c1beda5866e98c165d733023d7"
   end
 
   depends_on "gradle@8" => :build # Gradle 9 issue ref: https://github.com/apache/gravitino/issues/8571

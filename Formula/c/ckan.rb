@@ -11,12 +11,8 @@ class Ckan < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d58c9014f39a3e847cc0feea02a216b13c9aa5ef77036686f80d131ec2389f4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dffad48ff1aaadcb51aa576f692df0b79476e6a914b7eec5234afceb2614198a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "49a0e9dfbc380cafacd0fd2b5bf714f4f4dd94f93a7f4800e376913525018a9e"
-    sha256 cellar: :any,                 arm64_linux:       "ec6e13e5494f3fc369897206f024ebe87575c4797b285a6189d138bf0feec742"
-    sha256 cellar: :any,                 x86_64_linux:      "f997195e4880fb61ce3f592c41ec09f83e417381ebc0e2d0a0e967b065c81904"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "08b4c647819b151cabf4b875311f384f8294eaddf3d3915711f989ca0795c455"
   end
 
   depends_on "dotnet"

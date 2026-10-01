@@ -15,11 +15,8 @@ class Spoofdpi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e9cd37389ddb94e60a2bd137172d5c80f67c4a697ebbc9a1513ceee87933ed25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98eb2188407207de6ab2ec5f95a78ac873a68f464978c78c7354add8ca3771e9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "62279c302bf970193c0246a39e51c54d9b2439d64290ac3e65bbde8323749099"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "111bb383243e3820f0119a82b93e27a82a4b984cc1dde48fc6a11e977961360a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "858cd0ffabd3bd7c335a16cd245bad85fed38e91dd7abc369e21416346fd00bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d0c36316a9abc238a1e197c85e12214c18e3b7bad53eddedccf06ab7be4c6b98"
   end
 
   depends_on "go" => :build

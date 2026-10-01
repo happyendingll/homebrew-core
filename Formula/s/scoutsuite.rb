@@ -10,11 +10,8 @@ class Scoutsuite < Formula
   head "https://github.com/nccgroup/ScoutSuite.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6c537b4a3a5106e4b56549cc50d37e786327805854c6791e82be5df72cdc69d8"
-    sha256 cellar: :any, arm64_tahoe:       "32323d8c77d08d5221a1aa5994229a0142116f0949bfad8fe74b9c6b430e57be"
-    sha256 cellar: :any, arm64_sequoia:     "f271b2be0c3a79eeaab7cb53cce045a5b6f7d9ff5f4ff9ff959f5c20128d85b2"
-    sha256 cellar: :any, arm64_linux:       "5535b2910b1f199e6b81c556a309f86f1fa9a2922bed5c43fe84cda027b36efd"
-    sha256 cellar: :any, x86_64_linux:      "054288aac97d09b9f09e50a86ac7353ffd652ef5b8d7cd5de2cb1d776971395c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "35be863a14275cf4cd31ea7203f337c1617c9f63865beb63460e37184321347a"
   end
 
   depends_on "certifi" => :no_linkage

@@ -11,11 +11,8 @@ class Fracturedjson < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e8adda3b3832506cc4ded6d7b28edad8fc15ab7709a9e503bcd735451bf81ab5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f3f8570519d75f23aa9c577b20f6f56bac177781fff191bab9484b6850f3c5f3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d43a181c4c59244a196430507ab6b573ce64c98f9b83d4d569a9c70a5eb06e50"
-    sha256 cellar: :any,                 arm64_linux:       "6de70475655e71fe8b9f3aa0f976c504e7fc76a0dac6bd8959f1c3e6bd7fb609"
-    sha256 cellar: :any,                 x86_64_linux:      "d798f9509531b3f2dd32a4eb9a5ec6c7d09c28c30f64d0657bc8f647951071d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "94653dda58a7cd9f25d50491200b9e358695d7d01774f6d9a0ce8ebabb2e0fda"
   end
 
   depends_on "dotnet" => :build

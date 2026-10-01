@@ -9,11 +9,8 @@ class Badkeys < Formula
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "92e9142d2b508eef73361de8901a9913f548a126aaebfdb8eb802fe33f46303b"
-    sha256 cellar: :any, arm64_tahoe:       "20b8dc3d5d1c404c79b4eadf8eaa8497e1f0d400611f3aecf4f04c8862f7ba74"
-    sha256 cellar: :any, arm64_sequoia:     "0b193beb57b95d7588416dd4af56e7f2d9b3cb832c749a9b0057637459c858f2"
-    sha256 cellar: :any, arm64_linux:       "83f26506993091d39c8a053275aedc125bcb45a18ccf8bc0323bd2d3d062e826"
-    sha256 cellar: :any, x86_64_linux:      "71d53b19cf02b2e20f7fe9521bd72adb1a19ec7a486238e14fca83ac126ef744"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "6fb6d3667325dcb3854e9fe08568f69f368f0d0a7956ae211694959c7d1ef520"
   end
 
   depends_on "cryptography" => :no_linkage

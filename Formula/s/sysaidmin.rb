@@ -9,11 +9,8 @@ class Sysaidmin < Formula
   revision 20
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bf9f45a52f168d9495459500d380862fe740d3cceea222f866a4a132d2f04bd7"
-    sha256 cellar: :any, arm64_tahoe:       "b8145bfa95de7ef97be2479d5174eab030791abdccf09a293d1a9433c99e2691"
-    sha256 cellar: :any, arm64_sequoia:     "eedcc57adb327d1210124c2bf0aba85e42747f91c53788c132e152eef9c3c927"
-    sha256 cellar: :any, arm64_linux:       "8aa6d32270e120e83a1c1e819ae8028abde579cf5af3922210174e1e02493d50"
-    sha256 cellar: :any, x86_64_linux:      "f021f9bdef10daefac5c4ef9293de6fcd3510fdabcc8970fa3cc1411a9c5f72d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "175c4c7fdfba9264902192c536a2c4357caa5f34e7c7ceae627340cea6a09142"
   end
 
   depends_on "rust" => :build # for jiter

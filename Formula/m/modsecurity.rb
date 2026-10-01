@@ -6,11 +6,8 @@ class Modsecurity < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "69455a24d9a40cd015552a36f685d73db4042af46b3dd88dcc97f203556fd1cd"
-    sha256 cellar: :any, arm64_tahoe:       "8794c92d822c313a32a8dbc3c98f12e12059e18665422530360827ca4c5f253e"
-    sha256 cellar: :any, arm64_sequoia:     "ce76ad59f0b43361b075163bc96f29c43fb2ac3b31a38aa4fc52022dfe6c5e1b"
-    sha256 cellar: :any, arm64_linux:       "781a0525ebad7674ad0b47b5663f7611876f69a3ce26586444b8cd335096273a"
-    sha256 cellar: :any, x86_64_linux:      "5f9294bde5c2fa6d90dc3aefdce89f0bb00e0ec4f637ae520472d312d610deea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "bdbdcff18dc28274d5adbe1a6c54abb104344aff611243b3ce70e45a4c9e8701"
   end
 
   depends_on "autoconf" => :build

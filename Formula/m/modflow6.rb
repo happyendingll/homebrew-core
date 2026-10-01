@@ -7,11 +7,8 @@ class Modflow6 < Formula
   head "https://github.com/MODFLOW-ORG/modflow6.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ac891bef98937e8a2542a9793e20a6e3bdc1d9e9145fa804fef50cd21d4485f3"
-    sha256 cellar: :any, arm64_tahoe:       "128a08d785a3bae0398a4473773cb3776c877c14a330e673752646e6aa6c2fa3"
-    sha256 cellar: :any, arm64_sequoia:     "fee54d749c2c38f235939481c6388f68529d7ed8c4ab72e2573f54f35b013c2f"
-    sha256 cellar: :any, arm64_linux:       "92674173e5aa71b6222ac2ecead01bc3648989d090a2a8b8756d843dff152ba0"
-    sha256 cellar: :any, x86_64_linux:      "b2b2951e634bd5ac4d2b1d107bd0458bdccf014846a08e8e66ae2ae29cf960c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "e0ec7189c913d5cc2ab2f3ed97dec210ca50c4675b82c29889e4448878d1f69b"
   end
 
   depends_on "meson" => :build

@@ -6,11 +6,8 @@ class Gnumeric < Formula
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256               arm64_golden_gate: "fa1cddbde5d32c56f9b5b40dfe610a5e6bb43aebba8b493823a2295a7d2a4983"
-    sha256               arm64_tahoe:       "d52dd5b83933ebf27018a2dbf28ef48692b1df0be7bb5f091725a64da534191b"
-    sha256               arm64_sequoia:     "2541e9e5802d4c9fbef1435cc100807773798b281a5d6c1a9fba688a90554bbe"
-    sha256               arm64_linux:       "acd2be380d54b5a0a9b5be434daa1a9c58c24c275e2cafa228777a542a5b9160"
-    sha256 cellar: :any, x86_64_linux:      "cd89ec8174d66d7eeaa79a9d3c4b693b12f571ada27f831d314ec42881678395"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "8a989e89e0b00eea33494bdf9bd032c77e97023b353903ced42a12db4a93423c"
   end
 
   depends_on "gettext" => :build

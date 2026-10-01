@@ -13,11 +13,8 @@ class Certgraph < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c15573064d15a0d1608b1ee9bd7766c28acc7852a62f5c9575202fce1d6ed0f7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c15573064d15a0d1608b1ee9bd7766c28acc7852a62f5c9575202fce1d6ed0f7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c15573064d15a0d1608b1ee9bd7766c28acc7852a62f5c9575202fce1d6ed0f7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "54c3056d1ac9ef5d7abb9fb01e8fba94e15c7a7b254ec30aa1aee13c3c5825a7"
-    sha256 cellar: :any,                 x86_64_linux:      "bd653f949c009c588a2401c639621b6ffafeac03297daeb5c06e243262044d88"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0b6d3a0912ca9b6e1d83b62f46fab80404cc044e4b9df50cc1a61e849c3997dc"
   end
 
   depends_on "go" => :build

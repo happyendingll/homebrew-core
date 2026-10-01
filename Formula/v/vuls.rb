@@ -12,11 +12,8 @@ class Vuls < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ccb5e486ccd93c5fc8e34a1e686be63f16a5cc5f2a6d54aa0a7279d59448106"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ccb5e486ccd93c5fc8e34a1e686be63f16a5cc5f2a6d54aa0a7279d59448106"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ccb5e486ccd93c5fc8e34a1e686be63f16a5cc5f2a6d54aa0a7279d59448106"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b08825409c3331c4faa677d8f40c0ec04eef92f9b8241e6eb7340759fbdc0ea5"
-    sha256 cellar: :any,                 x86_64_linux:      "549ddf900e99934b7ae33510bb9a9502100420c4c93c1e34cb4dad1fc3bf6bad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "75eec16f97d478af9aa18bb3004e80e4961ba5ac5a5714905d9c2ed1756e9d42"
   end
 
   # TODO: unpin go@1.26 when vuls (and trivy) support go 1.27

@@ -9,11 +9,8 @@ class McpGoogleSheets < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d5f51ec0e08e878ff4ac39db6cd9e3dbeca0a8fb7d847b0bc43bf4edb7b27b6a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7086c6ea254d96e529f7a14a9a7a889631a882ee2329d3f885b3df031b476de0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5760d4c73b429cb303f277566c77b37192593815e4a1eb34c9e6fd03a34635bb"
-    sha256 cellar: :any,                 arm64_linux:       "f07d3e777eababa0b1dd534f931417c331cc3b8c2d40fca3a1258f23f9b011de"
-    sha256 cellar: :any,                 x86_64_linux:      "bf6554c4552b00f8b7463975da934982e19f4fe4d6f83edad35640072545ac93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "94c9062d29df29df38c2ceeb53eb629c527a87b3543fb88f0d5adbd4d49b4dc2"
   end
 
   depends_on "certifi" => :no_linkage

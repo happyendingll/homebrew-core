@@ -11,11 +11,8 @@ class Iperf3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6f9b73d21926fdbb1e05ec0acc99bbcf14c4daf17646b517fe3ceb55b1782ed3"
-    sha256 cellar: :any, arm64_tahoe:       "0406c80fc7addf00ff01fccf8e80c90ec224fb59950cfc0545a28b0a871bd897"
-    sha256 cellar: :any, arm64_sequoia:     "4e9af1cced938a2b1b368ce3ac5fa6a69cf693926d638f93976e07d0f1618107"
-    sha256 cellar: :any, arm64_linux:       "6674f6a76dee7d39e08b7ffe4f9af8caa7bd6fd8fe698b1d134546475169db5d"
-    sha256 cellar: :any, x86_64_linux:      "e41796ff65e2813c6cf421fdc2915cb52dd93ec8869011d42e1fd885ff911858"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "868e213842c9469541c944b6363ba47db22cf32dbfd8e7752719d0732aabdcf6"
   end
 
   head do

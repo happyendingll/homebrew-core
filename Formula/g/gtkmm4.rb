@@ -11,11 +11,8 @@ class Gtkmm4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "842cd6a2ab287b029f18c493d663c909f0db8c6c77c58575cc2f9919d5321f36"
-    sha256 cellar: :any, arm64_tahoe:       "25d09172c0222520d662c50f9ef212084b5aad4a9ddf6a96cc8f45527552e179"
-    sha256 cellar: :any, arm64_sequoia:     "8f11a6f9b562287f1190bdf5698c4e0545f1cc020f8c92364e3a86bd2f421c38"
-    sha256 cellar: :any, arm64_linux:       "a4c9e45c8e91c1f9394abaafa23f90a9d76cb6f1006b38e0e3e80c469e34ee18"
-    sha256 cellar: :any, x86_64_linux:      "5621947bac3a749a61832a72fca3b1a244d542b345f0b69d87acf765adc38c67"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any, sequoia: "c91050726c2a0b3b44a7b7b6e787dfc58d11984adb43d189d6e4255275c6b5be"
   end
 
   head do

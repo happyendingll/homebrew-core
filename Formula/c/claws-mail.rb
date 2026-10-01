@@ -12,12 +12,8 @@ class ClawsMail < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "d9db5bd0175507711b16baace6f219a88d1f763673f245a53f889afe18e9055f"
-    sha256 arm64_tahoe:       "2b44bc7b150fb7a1300c1b349215b3ebf27cef545eab1ebf39293cec0111899a"
-    sha256 arm64_sequoia:     "95a87435b43c6b8620f5d6c4af4a882d765c1f4248338f2be61d589866eee6af"
-    sha256 arm64_linux:       "0df7c59a820265bdbc44cc4c560894374a22647360c6945766b9aa8177f562cf"
-    sha256 x86_64_linux:      "184237a3cc59c2084d4148ae844cbfb6dbe0ca986252700988773b8e4076a60c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 sequoia: "cfcda8cce690ee048f5f03b74f25ba082488504dd69989efec73b2ed1b8c09db"
   end
 
   depends_on "pkgconf" => :build

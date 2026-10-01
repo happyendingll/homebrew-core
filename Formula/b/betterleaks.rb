@@ -7,11 +7,8 @@ class Betterleaks < Formula
   head "https://github.com/betterleaks/betterleaks.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fb03dba8d08785b64704076585c0eed7756e173dcd85a0e844292817d908bdd5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fb03dba8d08785b64704076585c0eed7756e173dcd85a0e844292817d908bdd5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fb03dba8d08785b64704076585c0eed7756e173dcd85a0e844292817d908bdd5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "83f7406a02fb62c625fd66d459de6cb3e1de3d583b5112f64573d5085969c272"
-    sha256 cellar: :any,                 x86_64_linux:      "18e50926602c8e7ad5cdcebef124de4bad1f300a1ff92c6f1fac7c2cd0f6b9da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "720f4073cc82da72abe749e445bca4f974d88f3d910c2481b0a933f100682507"
   end
 
   depends_on "go" => :build
