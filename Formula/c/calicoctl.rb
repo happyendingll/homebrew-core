@@ -2,8 +2,8 @@ class Calicoctl < Formula
   desc "Calico CLI tool"
   homepage "https://www.tigera.io/project-calico/"
   url "https://github.com/projectcalico/calico.git",
-      tag:      "v3.32.2",
-      revision: "db255c554b929afd73552fd3ac81d691107a1607"
+      tag:      "v3.33.0",
+      revision: "fbaa371111636a37ecc82625fce8453064a7fff2"
   license "Apache-2.0"
   head "https://github.com/projectcalico/calico.git", branch: "master"
 
@@ -14,8 +14,11 @@ class Calicoctl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "68930da79b787b56d771efdf8c1369648fb0babb55ef9b5c29af9da61d575e6f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "285ab6442b7a97a5961d8e37198a80ff482316f6067f75e0e100b669592bca47"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "01dd66361727494f7874595262756bc00cb30b3007082828c28ebf929a86d37d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "491dd29d477b7b61a6944978fff8697b2063314f2d4248ebf59eeae504654dd0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f45deb3bd9bce015403f653be40299f7c99e447a28b793ea9cf282abf0107721"
+    sha256 cellar: :any,                 x86_64_linux:      "6ff21bcb3b90782f925423d7136543e40ae7da19191285c412b901f5c5c34630"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,6 @@ class PythonAT310 < Formula
   license "Python-2.0"
   compatibility_version 1
 
-  livecheck do
-    url "https://www.python.org/downloads/source/"
-    regex(%r{href=.*?/Python[._-]v?(3\.10(?:\.\d+)*)\.t}i)
-  end
-
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
     sha256 sequoia: "b733ac41f4be01fdba3782b5edc1f7f60711d6323190882565acb08e881f7ddd"
@@ -20,9 +15,9 @@ class PythonAT310 < Formula
   # build packages later. Xcode-only systems need different flags.
   pour_bottle? only_if: :clt_installed
 
-  # https://devguide.python.org/versions/#versions
-  deprecate! date: "2026-10-15", because: :deprecated_upstream
-  disable! date: "2027-10-15", because: :deprecated_upstream
+  # https://devguide.python.org/versions/#unsupported-versions
+  deprecate! date: "2026-10-01", because: :deprecated_upstream
+  disable! date: "2027-10-01", because: :deprecated_upstream
 
   depends_on "pkgconf" => :build
   depends_on "gdbm"

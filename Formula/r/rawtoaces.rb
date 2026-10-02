@@ -4,6 +4,7 @@ class Rawtoaces < Formula
   url "https://github.com/AcademySoftwareFoundation/rawtoaces/archive/refs/tags/v2.2.2.tar.gz"
   sha256 "1687f12ce34c3d01d5e3d293dacf14df3d815d51d4595c12321d0262a5adc792"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -11,8 +12,11 @@ class Rawtoaces < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "2713857eabedc976795d7fd12699976dae243dfc415fde744f9278498004f3b4"
+    sha256 arm64_golden_gate: "f94c9904d3951ffd910e73561d46b6c81eb6c754a23e0192e087823256968776"
+    sha256 arm64_tahoe:       "6ed26bc049d6662d7083a4e1f59dfbb953632236fc89848040494255c6d701df"
+    sha256 arm64_sequoia:     "74e264e24f5340dad451f650ec8f1059adbf92dfd823380d19376dbf7cba835b"
+    sha256 arm64_linux:       "990a035d46e3c75f39241f3c337881bdf503b667bbe579f146ae8226f2f2a96d"
+    sha256 x86_64_linux:      "9ece41125ec6387d28e93650200c6a0cd29595b6542b5910cda50b9874e22255"
   end
 
   depends_on "cmake" => :build

@@ -3,14 +3,17 @@ class Virtualenv < Formula
 
   desc "Tool for creating isolated virtual python environments"
   homepage "https://virtualenv.pypa.io/"
-  url "https://files.pythonhosted.org/packages/50/67/b5d37693e5e666b68100db8fe34f00db28279330db55f739a3c799ff2449/virtualenv-21.14.1.tar.gz"
-  sha256 "719b189804e66678017d9f63bbfc590c44f6b96ab4829513806394f9b375929c"
+  url "https://files.pythonhosted.org/packages/67/57/630a01cf5ab58f33b9c7dc8a7f13464cb5740b5227f8a08cab9d798bd532/virtualenv-21.14.2.tar.gz"
+  sha256 "571930928b11e43db690073ad8228162eca8a3f8fd3a87acdeae07df7dd57068"
   license "MIT"
   head "https://github.com/pypa/virtualenv.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "04d29b94f33bad831ab6a07b39cfe7eb438fcea0c54c4baaac1463fd6f202198"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5fa0e21333f3cce4a7ade78b5802f986458de02ba6afe64017366440af161c69"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5fa0e21333f3cce4a7ade78b5802f986458de02ba6afe64017366440af161c69"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5fa0e21333f3cce4a7ade78b5802f986458de02ba6afe64017366440af161c69"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4d0a5edc0c9629697b652713f72c7ec3fcc6f3105e3808b13df3ef9ae1b39b4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4d0a5edc0c9629697b652713f72c7ec3fcc6f3105e3808b13df3ef9ae1b39b4a"
   end
 
   depends_on "python@3.14"
@@ -21,8 +24,8 @@ class Virtualenv < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/35/f5/14097cca69f53794270d8c7970b48321636302affe3154c7e0ba114eeff9/filelock-4.0.7.tar.gz"
-    sha256 "da5915714a70b55d167fdc7e251ad91302b0a36816fb574dfafae8f4f2c9bb21"
+    url "https://files.pythonhosted.org/packages/cc/19/d4f21fc4b7ad098dd3c774ccb2a2929178b15d6e1a3ba7d0929817c0b30c/filelock-4.0.8.tar.gz"
+    sha256 "733d9b6b153fc63672f86104324186818b6bbe9dd7db84e9bb9887b6a04a2775"
   end
 
   resource "packaging" do

@@ -41,13 +41,22 @@ class Openlist < Formula
     end
   end
 
+  allow_network_access! :test
+
+  def fetch
+    resource("frontend").stage do
+      system "pnpm", "with", "current", "fetch"
+    end
+    system "go", "mod", "download"
+  end
+
   def install
     resource("i18n").stage buildpath/"i18n"
 
     resource("frontend").stage do
       cp_r Dir[buildpath/"i18n/*"], Pathname.pwd/"src/lang"
 
-      system "pnpm", "with", "current", "install"
+      system "pnpm", "--offline", "with", "current", "install"
       system "pnpm", "with", "current", "build"
       cp_r Pathname.pwd/"dist", buildpath/"public"
     end

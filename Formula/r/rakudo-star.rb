@@ -1,8 +1,8 @@
 class RakudoStar < Formula
   desc "Rakudo compiler and commonly used packages"
   homepage "https://rakudo.org/"
-  url "https://github.com/rakudo/star/releases/download/2026.08/rakudo-star-2026.08.tar.gz"
-  sha256 "a7b6fcfc7b6b7b6bc8bc5d347650736c01ff99de71c06157fc7440677b7a6ab3"
+  url "https://github.com/rakudo/star/releases/download/2026.09/rakudo-star-2026.09.tar.gz"
+  sha256 "feee33e1d9e58ac76d09c3d2fb6790b9881be821924783a62af6c92899fe6365"
   license "Artistic-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class RakudoStar < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "489ee17422efb602ba31dbb579fafd4a53b1c19b944ea22cdeffd8a085215c19"
+    sha256 arm64_golden_gate: "1e18d1792745513941e5178ae75a04eae3c83d782131863d0eb8b9e3b83c1dbd"
+    sha256 arm64_tahoe:       "df932a3efa1b50a999eabd8fb07809520263cb28a901070d4af4547ec141d87a"
+    sha256 arm64_sequoia:     "97d25d455842c353f12a2e59533cb4e25cdb0a499f4165cca80e918c7c3fcae6"
+    sha256 arm64_linux:       "88f38c510462f2c971bf685792be5aa0c9c7bf7313ea2d4958db09524e5558ee"
+    sha256 x86_64_linux:      "b662ab53c8d15b9bea1180d19d8544d4adc46f89d26a21c4a559314584d01c07"
   end
 
   depends_on "pkgconf" => :build
@@ -81,6 +84,11 @@ class RakudoStar < Formula
     rm buildpath.glob("src/rakudo-star-modules/**/*.o")
     # Skip module tests probe for optional DB/client libraries and rely on the test block instead
     system "bin/rstar", "install", "-T", "-p", prefix.to_s
+
+    # TODO: Remove once upstream stops caching build-only environment paths.
+    # https://github.com/rakudo/star/issues/230
+    # The generated module cache embeds the build environment, including Homebrew shims.
+    rm_r share/"perl6/site/precomp"
 
     #  Installed scripts are now in share/perl/{site|vendor}/bin, so we need to symlink it too.
     bin.install_symlink (share/"perl6/vendor/bin").children.select(&:executable?)

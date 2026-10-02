@@ -15,6 +15,7 @@ class PythonFreethreading < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "ca-certificates" => :no_linkage
   depends_on "mpdecimal"
   depends_on "openssl@3"
   depends_on "sqlite"
@@ -75,18 +76,12 @@ class PythonFreethreading < Formula
     end
   end
 
-  def site_packages_cellar
-    lib_cellar/"site-packages"
-  end
+  def site_packages_cellar = lib_cellar/"site-packages"
 
   # The HOMEBREW_PREFIX location of site-packages.
-  def site_packages
-    HOMEBREW_PREFIX/"lib/python#{version.major_minor}t/site-packages"
-  end
+  def site_packages = HOMEBREW_PREFIX/"lib/python#{version.major_minor}t/site-packages"
 
-  def python3
-    bin/"python#{version.major_minor}t"
-  end
+  def python3 = bin/"python#{version.major_minor}t"
 
   deny_network_access!
 
@@ -288,6 +283,11 @@ class PythonFreethreading < Formula
            bundled/"pip-#{resource("pip").version}-py3-none-any.whl",
            libexec/"wheel-#{resource("wheel").version}-py3-none-any.whl"
 
+    # Use brewed ca-certificates PEM file instead of the bundled copy
+    certifi = root_site_packages/"pip/_vendor/certifi"
+    rm certifi/"cacert.pem"
+    certifi.install_symlink Formula["ca-certificates"].pkgetc/"cert.pem" => "cacert.pem"
+
     # pip install with --target flag will just place the bin folder into the
     # target, so move its contents into the appropriate location
     mv (root_site_packages/"bin").children, bin
@@ -408,7 +408,7 @@ class PythonFreethreading < Formula
       Python has been installed as
         #{HOMEBREW_PREFIX}/bin/#{python3.basename}
 
-      See: https://docs.brew.sh/Homebrew-and-Python
+      See: https://docs.brew.sh/Language-Runtimes-and-Packages#python
     EOS
   end
 

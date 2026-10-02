@@ -21,6 +21,7 @@ class PythonAT314 < Formula
   disable! date: "2031-11-01", because: :deprecated_upstream
 
   depends_on "pkgconf" => :build
+  depends_on "ca-certificates" => :no_linkage
   depends_on "mpdecimal"
   depends_on "openssl@3"
   depends_on "sqlite"
@@ -321,6 +322,11 @@ class PythonAT314 < Formula
            "--target=#{root_site_packages}",
            bundled/"pip-#{resource("pip").version}-py3-none-any.whl",
            libexec/"wheel-#{resource("wheel").version}-py3-none-any.whl"
+
+    # Use brewed ca-certificates PEM file instead of the bundled copy
+    certifi = root_site_packages/"pip/_vendor/certifi"
+    rm certifi/"cacert.pem"
+    certifi.install_symlink Formula["ca-certificates"].pkgetc/"cert.pem" => "cacert.pem"
 
     # pip install with --target flag will just place the bin folder into the
     # target, so move its contents into the appropriate location

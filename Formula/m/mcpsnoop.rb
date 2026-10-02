@@ -1,14 +1,17 @@
 class Mcpsnoop < Formula
   desc "Transparent proxy and TUI for debugging MCP traffic"
   homepage "https://github.com/kerlenton/mcpsnoop"
-  url "https://github.com/kerlenton/mcpsnoop/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "8f30e4bee02d7656d423d86da272af7907185729ce070de3ad40bcbd006229d7"
+  url "https://github.com/kerlenton/mcpsnoop/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "a23ce56f8895a485cb056ea7d1e697be0ef9d1ef224db1d2789f0e9d5de8ff32"
   license "MIT"
   head "https://github.com/kerlenton/mcpsnoop.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "e09b0365472d1eb56afa512df9c67b102b4d6d7243b42a113b3f35cbd5b55b56"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0c0f4586459c7320029f3e7811533cac7810a5261f5d30cb9a78e18e1a36b74c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0c0f4586459c7320029f3e7811533cac7810a5261f5d30cb9a78e18e1a36b74c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0c0f4586459c7320029f3e7811533cac7810a5261f5d30cb9a78e18e1a36b74c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "353cf3e2e1ace43c29af3852dcde8664745f1370a2479cfebea891377650ef38"
+    sha256 cellar: :any,                 x86_64_linux:      "86aa95881a8e73366250286ef1d9d985f7a5bdf1059e0ec9f32f186bc3d9b9ed"
   end
 
   depends_on "go" => :build

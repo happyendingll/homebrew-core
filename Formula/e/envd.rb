@@ -1,14 +1,17 @@
 class Envd < Formula
   desc "Reproducible development environment for AI/ML"
   homepage "https://envd.tensorchord.ai"
-  url "https://github.com/tensorchord/envd/archive/refs/tags/v1.3.5.tar.gz"
-  sha256 "a356b852f6a3c808666cd9e1afcebcc183c59f1b9f755291005cead411dc53d1"
+  url "https://github.com/tensorchord/envd/archive/refs/tags/v1.3.6.tar.gz"
+  sha256 "795776d46263d2a21312cd3b4eabc6d3cc19560f82b02aee1dd066045eb7b5d2"
   license "Apache-2.0"
   head "https://github.com/tensorchord/envd.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "77f54ff226525959426e229030b2003a6afcb40e40389a65fc983c3de0eda279"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "475246091bd23ee4fefdb4623e2924d432cc105cae293694261b127c68a028ad"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9207f00ac858dc1b32189a9431d92b9332e6519b947b28e4e156cea3ecb96784"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f252d5241288c65059ba83f144f11ed3c0bdb1b1a5e7c67d87d9336246330f98"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b7dad3fdfa2bbab49a49f4d8365baa1aaa7e1791b451a7a0a0f5feb169b45c43"
+    sha256 cellar: :any,                 x86_64_linux:      "4d4395bd94b500b1da06056a2824c2887931147be360f30daa8429ade6efc519"
   end
 
   depends_on "go" => :build

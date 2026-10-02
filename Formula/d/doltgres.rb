@@ -1,8 +1,8 @@
 class Doltgres < Formula
   desc "Dolt for Postgres"
   homepage "https://github.com/dolthub/doltgresql"
-  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v1.3.3.tar.gz"
-  sha256 "85490227eff5f17afc740f99ac21cb1a9181085d43fb2744692a60409c2a2eca"
+  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "8340d0ba1a193e8355d1b0c515c183927539766ccdf8a31b5d37e83ebd27e844"
   license "Apache-2.0"
   head "https://github.com/dolthub/doltgresql.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Doltgres < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "94d7b5470c2d688d578d0c14abec411692f843915281320a449672f8e44cf8d7"
+    sha256 cellar: :any, arm64_golden_gate: "3c1b9f34fbe0ed9e2f11ef8ad79f1c15275b75d1ca2eae57aa430523dea9ef78"
+    sha256 cellar: :any, arm64_tahoe:       "82d5d92acc97ac83eac45098baee4adcbe611d43507e60ff699ae7b694286f2d"
+    sha256 cellar: :any, arm64_sequoia:     "1dce30cf58b0321dd17b57d2b410a3a2ed2e57cfe56738e589fde962bca4178f"
+    sha256 cellar: :any, arm64_linux:       "25e8821d397ace8496c5e9bc3becd87cfb9fbb5a0a313e90e9ca544c04b3d01b"
+    sha256 cellar: :any, x86_64_linux:      "ac4ad6696dc971b45e48dc3f3e2588ace0df46db4754c766c9a6e27f79542986"
   end
 
   depends_on "go" => :build

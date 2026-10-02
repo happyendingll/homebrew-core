@@ -1,14 +1,17 @@
 class GitPkgs < Formula
   desc "Track package dependencies across git history"
   homepage "https://git-pkgs.dev"
-  url "https://github.com/git-pkgs/git-pkgs/archive/refs/tags/v0.20.0.tar.gz"
-  sha256 "edfce5a67b1995df3fd53b765cc93bdac10622a61935d6158533cec314ce7d9a"
+  url "https://github.com/git-pkgs/git-pkgs/archive/refs/tags/v0.21.0.tar.gz"
+  sha256 "d48505757969fb808e21de80f3dc8d8247e3cfd3f8f89c30bf43fe7a91d5f598"
   license "MIT"
   head "https://github.com/git-pkgs/git-pkgs.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "3339ff978ea09f5a6f84da74371194336d87175aa2966c7a1df50e6ca2bf39a8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cdec30b4b912564c350378fbad6f3515fd3bb5997804bb9ceca6371694ede7ca"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cdec30b4b912564c350378fbad6f3515fd3bb5997804bb9ceca6371694ede7ca"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cdec30b4b912564c350378fbad6f3515fd3bb5997804bb9ceca6371694ede7ca"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f505d357c0525f7d2631122a57dfff6e3574fa3b412db8871bd29c4109fe2958"
+    sha256 cellar: :any,                 x86_64_linux:      "a16c67cfb0c138287164a716f84c8e839be06423af74e9eeff18f39dc7599420"
   end
 
   depends_on "go" => :build

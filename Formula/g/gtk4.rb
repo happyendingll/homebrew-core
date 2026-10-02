@@ -1,8 +1,8 @@
 class Gtk4 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "https://gtk.org/"
-  url "https://download.gnome.org/sources/gtk/4.24/gtk-4.24.0.tar.xz"
-  sha256 "28ba4ac1c04f86eac09b79a163cb163a4c2b54442d9f7eccc04679062a581044"
+  url "https://download.gnome.org/sources/gtk/4.24/gtk-4.24.1.tar.xz"
+  sha256 "e98abe720e16129c8c0f50761dee0a2e9ae2478055e31018f6cf977fcf6513e9"
   license "LGPL-2.1-or-later"
   compatibility_version 1
   head "https://gitlab.gnome.org/GNOME/gtk.git", branch: "main"
@@ -13,8 +13,11 @@ class Gtk4 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "a77db29a6ff9e741c444ff161cc10d1b9df38d93b89e68f0e1f3ccf111f38703"
+    sha256 arm64_golden_gate: "70c0736217175c13b2b2464a71dab2012716d9526c3f0a11a4eab1c858441e73"
+    sha256 arm64_tahoe:       "654059a8dcf646b074ff00b890993e0913e9deee1214d08a2e9a9e89fcff72a7"
+    sha256 arm64_sequoia:     "644d3add67ca5e1a68e7687cb71df2ba8350825995dff14f127b0eee8fc6faa9"
+    sha256 arm64_linux:       "8513d82ad933e8c2901532bdc52949b72af1eb97bf95ef765d48d1c77e367c32"
+    sha256 x86_64_linux:      "f80fbff0896944faf08ec14d757fc5692bfb8861e720d713e2e0d7b585a548f0"
   end
 
   depends_on "dart-sass" => :build

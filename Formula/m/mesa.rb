@@ -3,8 +3,8 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://archive.mesa3d.org/mesa-26.2.3.tar.xz"
-  sha256 "1628058a8d2c0615975de5a15ab7bbb9638c50000b5bed9456ff423ea034a81f"
+  url "https://archive.mesa3d.org/mesa-26.2.4.tar.xz"
+  sha256 "bce5f7fbebb934373b86c999a064d52fb5065878dc57f287f95346648ec832e9"
   license all_of: [
     "MIT",
     "Apache-2.0", # include/{EGL,GLES*,vk_video,vulkan}, src/egl/generate/egl.xml, src/mapi/glapi/registry/gl.xml
@@ -24,8 +24,11 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "04f13437e8a3531720f1acf1d61952c93314db032c87606bb34c99da69bcf66e"
+    sha256 arm64_golden_gate: "a0b56573cf9b7662010f20160b880c6037175c37ac16e9b351d5108e1385eb7f"
+    sha256 arm64_tahoe:       "c59ffcf11d785d47cf25a14727fe96aa1781085953a4f96fd20b1992e74be433"
+    sha256 arm64_sequoia:     "4aa88fda165257c6e98efa8ed5d88e0e2eb15015c73edafee6f0b034403b65d1"
+    sha256 arm64_linux:       "4878343b91730d9c76aab1af0120e975b852f0fcb0268f1ab06931c72e574162"
+    sha256 x86_64_linux:      "6c0a5f7ce5e206f74cd9299f69f329202ce3d32b48a3f791d1a2475dfa871980"
   end
 
   depends_on "bindgen" => :build
@@ -88,8 +91,8 @@ class Mesa < Formula
                 extra_packages: %w[mako packaging ply pyyaml]
 
   resource "mako" do
-    url "https://files.pythonhosted.org/packages/2a/12/b5fa2353e2754cd67fb9f83793fa48ff42c213a5da7e719869d2301f6ab8/mako-1.4.1.tar.gz"
-    sha256 "d7904710b662996425a21627710c4777c45053146942cf8a7aebf757c92b8c27"
+    url "https://files.pythonhosted.org/packages/5a/09/e07c4b5579a79f4b16f8d4f29f6c54514ac787c4ad506b8c4f28a0e6b0bf/mako-1.4.3.tar.gz"
+    sha256 "cd6537fe88d5fec315c55c2f8529bc4ce7a9a352ad7db3eeaa6a66e2dd4ec37a"
   end
 
   resource "markupsafe" do

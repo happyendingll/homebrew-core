@@ -49,11 +49,13 @@ class Nub < Formula
 
     system "cargo", "install", *std_cargo_args(path: "crates/nub-cli", features: ["embed-runtime"])
     bin.install_symlink bin/"nub" => "nubx"
+    bin.install_symlink bin/"nub" => "nubr"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/nub --version")
     assert_match "Usage: nub nubx", shell_output("#{bin}/nubx --help")
+    assert_equal version.to_s, shell_output("#{bin}/nubr --version").strip
 
     (testpath/"package.json").write <<~JSON
       {

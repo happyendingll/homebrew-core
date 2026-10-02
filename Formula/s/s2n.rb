@@ -1,8 +1,8 @@
 class S2n < Formula
   desc "Implementation of the TLS/SSL protocols"
   homepage "https://aws.github.io/s2n-tls/usage-guide/"
-  url "https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.10.tar.gz"
-  sha256 "daf1cef574cdce15fe8be5d2b5632e90bd902ab6bdfc72687c7f574a28df437e"
+  url "https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.11.tar.gz"
+  sha256 "c3894e86bc09c1923f9ed42edc310d8dd1ca4d0461f037acc56762a274ebe2b1"
   license "Apache-2.0"
   head "https://github.com/aws/s2n-tls.git", branch: "main"
 
@@ -12,8 +12,11 @@ class S2n < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "dff98f8b447db52355517b3eb534335026f70fcc502dc555f3d94946c334c334"
+    sha256 cellar: :any, arm64_golden_gate: "4be31dff7517cf9f9cf8d388afd3ef6e14faf1a746ae6434f4119dd97e9b2049"
+    sha256 cellar: :any, arm64_tahoe:       "a2d84c3cb89a0d510083acc14b9ce4e9a74e7f71c9fec74560ef9fb2c5ebd0b6"
+    sha256 cellar: :any, arm64_sequoia:     "d9d9422a4d722c76eacd3420a1ab7dfb278f02c23e6bcb2439dbc8c8d3bd4b03"
+    sha256 cellar: :any, arm64_linux:       "647d3bb3b4f3ac059ce1e79038662641770c8f6e770d3102fcf74b8ef51546ba"
+    sha256 cellar: :any, x86_64_linux:      "3f75e54da5c8d670d3ea49600cab96e41bb60572c66c81ad20d30315f467cbc3"
   end
 
   depends_on "cmake" => :build

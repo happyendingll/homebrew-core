@@ -16,9 +16,18 @@ class Pitchfork < Formula
   depends_on "rust" => :build
   depends_on "usage"
 
+  allow_network_access! :test
+
+  def fetch
+    cd "ui" do
+      system "pnpm", "fetch"
+    end
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
+
   def install
     cd "ui" do
-      system "pnpm", "install", "--frozen-lockfile"
+      system "pnpm", "--offline", "install", "--frozen-lockfile"
       system "pnpm", "build"
     end
 
