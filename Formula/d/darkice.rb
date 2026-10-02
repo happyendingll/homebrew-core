@@ -12,11 +12,8 @@ class Darkice < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "744a5e14a51612494cf8e3d12309793158b230554e63c7d2ac96363232fb7acc"
-    sha256 cellar: :any, arm64_tahoe:       "7faeeeafe0d8fe698edc5d398ec2352a91724df5bc46f8d1161d918202ed4ef9"
-    sha256 cellar: :any, arm64_sequoia:     "e85c04e13db9d2f29031a5f1113cd39f0ba94bbb9ec9a42d74be052ed590b0bb"
-    sha256 cellar: :any, arm64_linux:       "ea51ebe3e6c6a2e17eb028a5c24346e37525f3d04c048b0d40e403064671becd"
-    sha256 cellar: :any, x86_64_linux:      "0c6ace886ee388b3b94dc0d56ddf7681c1562d305f4c17a7af7c8d0ac0b77519"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "2b462b17c2cd8da5033c98453d372f8981808a48872621b3ed44b9062fcbfd98"
   end
 
   depends_on "autoconf" => :build

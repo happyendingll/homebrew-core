@@ -9,11 +9,8 @@ class Sourcekitten < Formula
   head "https://github.com/jpsim/SourceKitten.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e15a7f54eb6a633cd4cf34ba15a2bfcf7e91bda5147b76ec473b04b24bc1284"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "034e8d5f425af20fab1f554f1e1501bbee64538ea0bcbc8d2304ff4b408a4f87"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d693907284b8d624882b9c18f6e743560b325b1d4b3d4e6dc809a04d234d5062"
-    sha256                               arm64_linux:       "dd176b113764b7672a3db4fa1180ae6ddff4a3dd85d9c71fcbbc312c1f3edaeb"
-    sha256                               x86_64_linux:      "080a088f3ae793a818323c7cb254f5cc2135fc778880404431f5ede438f20406"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "ac81f5d43545b9e33c023fd19a70441bf4ab461781439cec6280e8630e1b4b92"
   end
 
   uses_from_macos "swift"

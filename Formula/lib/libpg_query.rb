@@ -7,11 +7,8 @@ class LibpgQuery < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6f0b6079051efd7269309edf8ce2e78753114d910e9d32ea30fab1bb7a44e8ac"
-    sha256 cellar: :any, arm64_tahoe:       "b2f8e2ad27549f4fb8c4bcbdc4fe2da63a30277b42b5fb0dc774b6e55cc3986c"
-    sha256 cellar: :any, arm64_sequoia:     "a4d6331474f417f6044e55a0c391761ad621f7f2d81ae876b225175af5ca94ec"
-    sha256 cellar: :any, arm64_linux:       "b4ac51d9a9448eb56be75bb15403b60569f6f268d7a8baf1107577ab06a120c7"
-    sha256 cellar: :any, x86_64_linux:      "9f8b94d7361d655d9154e36a47ff3f6957494e8ae4cb674b62110fd5d6cd0853"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "fe03161138d80fe650b717ab368309ff2c12146faf972a38e8bea5dbafa38b70"
   end
 
   def install

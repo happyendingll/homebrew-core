@@ -6,11 +6,8 @@ class CppPeglib < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b71c5b1574d0f7ad4c3eb98b59bca48c3448bb9c914234437845149e26dd7de5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "024237bd1c74c968aa8209c306e7b53a2e3f068a86a3437162881f2e9a8c76a9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7276cb4b09aa1dc2f52afeef5dfa1fabaa880f567b9b8da1d3031f1281ed0171"
-    sha256 cellar: :any,                 arm64_linux:       "808ae35bc7537176865590c92261d371b5940408344368b0c26bac99cb5c1942"
-    sha256 cellar: :any,                 x86_64_linux:      "421933bb57f968795567bd2d1e6a55f84e36324f1d71086435f995fba958b82a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "d938647eeac9c8444f8b02e9bd24173cb14cb41bf4ab575f6ee5a125cb11b648"
   end
 
   depends_on "cmake" => :build

@@ -9,11 +9,8 @@ class Conan < Formula
   head "https://github.com/conan-io/conan.git", branch: "develop2"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "09aa61ac3f1ab848754392aa3947a50fe362a531fad58d22de34e0bb1d669c58"
-    sha256 cellar: :any, arm64_tahoe:       "5a5ccf3c316c16f8e69a172d2b165901f0e70580a63a1dfbf789c5ec6c9a323b"
-    sha256 cellar: :any, arm64_sequoia:     "9174e7614912cf3c3321bd485d68b7dd23a12c0d73720f0b269699b3e9fbec96"
-    sha256 cellar: :any, arm64_linux:       "65833dbaf8da82f9b2f9f81ca66684e25c29698f756eb78f5e61f3be5da220aa"
-    sha256 cellar: :any, x86_64_linux:      "9f392590f8fac53fa0c3c5132c749a00e4f761f2e22860a9ab21ab6f168b0253"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "1ec096713e63dcab384b4bfa44ff6c0dbaaeb62764371e6e8f1e485e544af9dd"
   end
 
   depends_on "pkgconf" => :build

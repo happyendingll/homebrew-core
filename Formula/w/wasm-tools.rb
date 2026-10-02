@@ -16,11 +16,8 @@ class WasmTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1394e9db173c4ba5dada0c62717c46a888c5ec90a344ae9aa31fc5002196564e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "07d76b7c414703970a98a1068cb6f589de17d2753ae24e1234b253f558937a1b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5bd99aed9717b52d098df09d54df81061cd05b658272ecec19508d257f6607e3"
-    sha256 cellar: :any,                 arm64_linux:       "9034d9d693f56048300e62ecc96a92280a8f448ffc862709ec7ed4e9c124fa41"
-    sha256 cellar: :any,                 x86_64_linux:      "1caba430c7104ab482ef706f4a9fb38d530d15df4da640c3821f92f33572a872"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "5fb75909db9f4556243c2b50d1a82b4121670abaf1f0665c127e59a04a0db648"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class CloudflareWrangler < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fd8b6f33aa5c0dc62b51a0726ed0febc5c6bd7710ed5da2aeaa53e23d16a028a"
-    sha256 cellar: :any, arm64_tahoe:       "fd8b6f33aa5c0dc62b51a0726ed0febc5c6bd7710ed5da2aeaa53e23d16a028a"
-    sha256 cellar: :any, arm64_sequoia:     "fd8b6f33aa5c0dc62b51a0726ed0febc5c6bd7710ed5da2aeaa53e23d16a028a"
-    sha256 cellar: :any, arm64_linux:       "69202e649efaee42c29431d49d933698f1a3222198cee5be1b715ec27fddef18"
-    sha256 cellar: :any, x86_64_linux:      "afb980c135a7556bf10275b987a27d9c1d378aa05044709302b3cde68d66d971"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "bd649c3ce3d34d59ba62ae2c5bf18d095d9dbb5269277488019426a4bb220e5f"
   end
 
   depends_on "node"

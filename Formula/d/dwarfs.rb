@@ -12,11 +12,8 @@ class Dwarfs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0600ba659ff86c1d73c81252f9e43fe056e9642d3badafc93e2437239f498874"
-    sha256 cellar: :any, arm64_tahoe:       "d42e25fab481f4c26e3b3ac82db770935971a3c399402c7de8fb62e3b2768917"
-    sha256 cellar: :any, arm64_sequoia:     "348939f1ad0f5b57cbbe3301a25153344893d620a3a106baefd2df7c6be28266"
-    sha256 cellar: :any, arm64_linux:       "1b31ab9ff68ead5ec381a6e4c639c29f04222622951f6f26212fe8bc31019190"
-    sha256 cellar: :any, x86_64_linux:      "22c1eb5340a72af0321e346ea63fae266cca2bf3b82f596e35d98d712f4350fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "385278697c98ad212c9f41c80b6c573cc47733e0ce8d63fc3d65ded1896e5c1a"
   end
 
   depends_on "cmake" => :build

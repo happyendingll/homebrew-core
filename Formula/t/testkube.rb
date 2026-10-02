@@ -12,11 +12,8 @@ class Testkube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6d0412e05adba81d38561e4b31b37a6466fb2e1a9906a40d917ffe8c8b26ad86"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a61117cdaaa8019233e669c2a4f20d819b23e6c678823e0c8e08355cb31add12"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7209e919b65e0aa9840714bb719de59280f6534d104bc20290320e562f3bdfba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7741287326186e43337464b6f1b2ffdd12b132c129daf6ea272b34e97b15053d"
-    sha256 cellar: :any,                 x86_64_linux:      "8f29a247aa12f5c620874dbbc8fb38e5e2482aa53622652188650feb73c2134e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "69683ef74e0c3c70573360ec869f5b844ace4d03146fd0dc07c96e669f5289f6"
   end
 
   depends_on "go" => :build

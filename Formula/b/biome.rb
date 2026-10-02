@@ -12,11 +12,8 @@ class Biome < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d4a114410bae6d9da2d891ccd414ab5076eb0ca3aaa767b2f45c19a8a2fd0d8a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8aa06c191178247e15f9a2f821fa95c002bff7dbb1d4967d17a2a549dfcabadc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c80fa1ec83e73bcdd25e78cdc0eb1a8e1acc031b2ed746fc63226fecdc0f325c"
-    sha256 cellar: :any,                 arm64_linux:       "dae57de0ce7f06cf6e10b1d3e6c19ca85e17d5e125c4d889264bc7b7d1a51a6e"
-    sha256 cellar: :any,                 x86_64_linux:      "cb0fbbdaf36e32dcb43f3bba52549be23a9d38987233c65f3074a850444d75c4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "2409f2e2e2f36d1383e53a30ff3d5f6c43c96ff3f6f103d70abb726b4ab98902"
   end
 
   depends_on "rust" => :build

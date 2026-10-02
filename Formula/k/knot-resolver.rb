@@ -14,11 +14,8 @@ class KnotResolver < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a28e66bbc3a3e942b35ac054a34cbbd9ea2e4251bfbaa8ba9f1feb6bbe03e568"
-    sha256 arm64_tahoe:       "055f733d384542dd77e1a4cb865802d1a1d47c4c0b64f4574c5e4fe3749e1930"
-    sha256 arm64_sequoia:     "e6baf025909d7d9e626bba5e29a1bf31abe812c42bdadc33be14666e00c2f2c2"
-    sha256 arm64_linux:       "9f21dbf3abd8fd1e0bd8820ee59b8731f7e50b712551994be45e306ac18ad139"
-    sha256 x86_64_linux:      "ef7316ba3b81a58ef2fe9cf78ce27e5348adbff730d2b928798bd953dcad103f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "476c59a9cb841189e735fe1a5e41d0d5971f705ecaee9c4def201e252ffd3ebe"
   end
 
   depends_on "meson" => :build

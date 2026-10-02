@@ -6,11 +6,8 @@ class Fluxcd < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7a3e44b6e62ccef07d5a4a591eb4d02615c38389220e2fab07a64c89ecab964e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9984a689ae76f67966ba85f5942bd6316f8337747dc2b90cf88d86479a29658f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "42ce1cc25e7e480ca8063a9951a46b28501a5e9831dba06a8a1e0b867c7b588d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "60a4b332935cb38857ad20d822f3071577fddf631bedf21ddf0b4a53f207a5ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "526456bf418f28ea2c0e9bb80bda4abfe1f5858a09ea40af2a6f305c7d918768"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "7c542babd374def66dec2cc381d9732f260f27a61d503792dd1391a2a2a64c6e"
   end
 
   depends_on "go" => :build

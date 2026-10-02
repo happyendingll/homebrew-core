@@ -9,11 +9,8 @@ class Dolphie < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0eacfd49bdc5936974af12045e93e45f678b92d91242434b43d0ee2ec2f9b5ba"
-    sha256 cellar: :any, arm64_tahoe:       "7738a74a092d49b009f8c2ac610ec2d0c79ae26b8f68152cbe5961c2a1ad0e6f"
-    sha256 cellar: :any, arm64_sequoia:     "e85cf14d288deacbcf7caa21476d193aac95cbcd41bf0f511b7dc99df7cc00e3"
-    sha256 cellar: :any, arm64_linux:       "2f77a964be5b9f771304f2bca8bf79506b6576373b702e03b3759e6060e1b65c"
-    sha256 cellar: :any, x86_64_linux:      "388b89aa09464677787f24a94bb9fadd5397f0377d64dfb8a7dd30439fe2daa5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "5f3a68b453ddec4e05e97da94660355f3ddffba40370e0ad2e0bb0372854635c"
   end
 
   depends_on "rust" => :build # for orjson

@@ -7,11 +7,8 @@ class Faudio < Formula
   head "https://github.com/FNA-XNA/FAudio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f08effd033d40866f3df01e75538cca22c1d57d94c57a31e72a30eac61e728fd"
-    sha256 cellar: :any, arm64_tahoe:       "de9d2872d272adfdf3e14777c66286025c2038ea3b401b4a153907110b36d4ed"
-    sha256 cellar: :any, arm64_sequoia:     "d33b06b63c55a4e3f1c56e26f78d9ebd50edbe74e5926c7b83fc19f906c8a4b2"
-    sha256 cellar: :any, arm64_linux:       "1b2757c5864799bda70dc24fb58f6a94a66c93acc6473f65abf29b2ea9bbd077"
-    sha256 cellar: :any, x86_64_linux:      "116c011ebf1558e32791aabaeeb43e118acc16cbb8e600abeaddd273df939fdb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "7d97cbef53ca4d2a75f39350e4f52ebcdc335e85ff0a04cf0738e809472e6c3c"
   end
 
   depends_on "cmake" => :build

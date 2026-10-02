@@ -10,11 +10,8 @@ class Dotdrop < Formula
   head "https://github.com/deadc0de6/dotdrop.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "34fd269c1331a1fd306d2ae958223a5ccf0fd04ac01abda922377190c5fa9058"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4cf0c2df0bea01e44a0390b6f43d8f5f5a418ddba510b2cc94e35f51a2698da0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f7eeb0d05d35b1f34a4312418a12397a9e3b6cba179382fa9d6d8ed744e6f32"
-    sha256 cellar: :any,                 arm64_linux:       "3a3a393d8a42cb406cd7dc2e2cdafba604afaaad283423a535d010ce20ea5495"
-    sha256 cellar: :any,                 x86_64_linux:      "473979b0f5a22238ea886a8433d8d525c4c166bc27fbea3442ba9d61265f2f95"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "82400e845f15113c02ae2b461e9b402e283ff3cb66b77d537f83fd3ebc69acc5"
   end
 
   depends_on "certifi" => :no_linkage
