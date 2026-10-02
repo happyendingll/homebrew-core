@@ -7,11 +7,8 @@ class GitPkgs < Formula
   head "https://github.com/git-pkgs/git-pkgs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cdec30b4b912564c350378fbad6f3515fd3bb5997804bb9ceca6371694ede7ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cdec30b4b912564c350378fbad6f3515fd3bb5997804bb9ceca6371694ede7ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cdec30b4b912564c350378fbad6f3515fd3bb5997804bb9ceca6371694ede7ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f505d357c0525f7d2631122a57dfff6e3574fa3b412db8871bd29c4109fe2958"
-    sha256 cellar: :any,                 x86_64_linux:      "a16c67cfb0c138287164a716f84c8e839be06423af74e9eeff18f39dc7599420"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "5acd6b4c653f8c312f92bec82889884ba2a5d7e39197eb2c10686968fcf2e406"
   end
 
   depends_on "go" => :build

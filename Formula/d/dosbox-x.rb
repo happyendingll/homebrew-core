@@ -19,11 +19,8 @@ class DosboxX < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "828ac729952d469ff3b14ceb62f6796a787a12f05d566ce7f236cfa674dc5b7e"
-    sha256 arm64_tahoe:       "277c70e19dee2ea0603bb504331b35b46bf6d7027ec8a5d2f88fa06b6d12753a"
-    sha256 arm64_sequoia:     "1a17b3e7dd0b7147b3c889e24a23ea03809d6e250cec08b424aacb2e408b5e50"
-    sha256 arm64_linux:       "9debfd55ad10217e1348c312517442c63fe8db42e39e3cb54774da3d21382b4c"
-    sha256 x86_64_linux:      "4d6e824cb4bf26af9891b2424cc157ab45dcc582d4d440b6e87703d13a48b826"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "537c73e0eb31a42197fdf98692c4af1bdd815d554f1edc375c14975573d32752"
   end
 
   depends_on "autoconf" => :build

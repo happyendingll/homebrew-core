@@ -6,11 +6,8 @@ class NativefiledialogExtended < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d368ee5c6aee72210d1852bf1eb11104ef0d90d769a04a1870ad08fd95a97c17"
-    sha256 cellar: :any, arm64_tahoe:       "a9edd26f4d75837a4f6131d0c939f053807c85889ba11f03b996b968c2f7b5bc"
-    sha256 cellar: :any, arm64_sequoia:     "20da32af5dccba65607c4843b948b3229fcfdd1b780ca78b7480fb848c321ea2"
-    sha256 cellar: :any, arm64_linux:       "579a141cd500780b4458c3f83433f9f6197755a59f4d061e12aa6f2addc39439"
-    sha256 cellar: :any, x86_64_linux:      "90957ce82bb45b2ff30b190423c2d41772f8e5df789fa8391186421cf5b1cca5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "4c5bd7a92b88489f739f65088f0f276d5d9eeecb0e5f1bed34d8ff376458ee81"
   end
 
   depends_on "cmake" => :build

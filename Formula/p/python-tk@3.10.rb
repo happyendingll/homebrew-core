@@ -6,11 +6,8 @@ class PythonTkAT310 < Formula
   license "Python-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "601d74823b6a4f89de6e47a05163444b612d491ebe40504386cad247ab60ddac"
-    sha256 cellar: :any, arm64_tahoe:       "3c47717207f20bde1abf286ad572feeebc0c845a5e45e597c246c1acd4060939"
-    sha256 cellar: :any, arm64_sequoia:     "124743bbd73ff795ed4be5bbd0f189ae832df49d3a51fca4185c03b0ad4eb163"
-    sha256 cellar: :any, arm64_linux:       "04cce512105a2c1e9b55989100cd56216f7f8143a14896087d2ce0363a67930d"
-    sha256 cellar: :any, x86_64_linux:      "02350ecc532c8df68740b5cdd07cda75ea04d49ea13136110a855b56c0ac3d91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "93d17430fe08d978888cefe7ffa9e8ef1ed1f43f30c975bc7f11a7c1834bc74b"
   end
 
   keg_only :versioned_formula

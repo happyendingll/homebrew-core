@@ -6,11 +6,8 @@ class StripeMock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9d5107d95f8c6e8b03e76439940646e8a55637b952a409811ccb81551c085cd2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9d5107d95f8c6e8b03e76439940646e8a55637b952a409811ccb81551c085cd2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d5107d95f8c6e8b03e76439940646e8a55637b952a409811ccb81551c085cd2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5b046274af31c50276abc908af5a652cf7d25ca955ae41ec54e7f244ca7e845b"
-    sha256 cellar: :any,                 x86_64_linux:      "01a82583ecda34523e3e78df5cdaf3b436d2452baec15fc4e9ff883a62d71b74"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "fb4ef0d68d2ed54d5f5558b03931c29b718a6ad20c72a523c8037eb54ba1bc02"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Doctl < Formula
   head "https://github.com/digitalocean/doctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5f1c83e9e4f7dc5252af5b8db57fef4f8463b6a7440e05eda6ba91fc7a79df77"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5f1c83e9e4f7dc5252af5b8db57fef4f8463b6a7440e05eda6ba91fc7a79df77"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f1c83e9e4f7dc5252af5b8db57fef4f8463b6a7440e05eda6ba91fc7a79df77"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "36f3063fe282470ff564c7b0f20d8ef1a8748f96125a9ae3ca4d854250cae868"
-    sha256 cellar: :any,                 x86_64_linux:      "2523c3b952bc2744f63c50ca5b5ecfc6126d2581c834bfb4fece075a3aca84ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "588710e785803e35b68e7429c1abbb1c5fd88851d386807f8306b26426bc39e0"
   end
 
   depends_on "go" => :build

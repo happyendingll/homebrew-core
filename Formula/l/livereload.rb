@@ -9,11 +9,8 @@ class Livereload < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "77dc6ee3ada2a0b47448a9af44669413f58e8525071532ac6f99f2e49822911e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "15aeb1318a37dab72f3aac01d20db588a8eb31ff819c54e6d1dddb3c85d1d89e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1367d1f126fa4bd4bfd435f360e0239578b9a7e71f044979c5b265272da802ae"
-    sha256 cellar: :any,                 arm64_linux:       "13e2f4ca25f0bc4f3a2040170be4b877593ef579c4494e20563d549839103cd4"
-    sha256 cellar: :any,                 x86_64_linux:      "01625e5f67bda053d0c9dd062465f1bd58241df1f028e9ab46c7d0222b3a8ee7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "3c3a991a7c537e80dd02b4997c503e66f88968b4441caf3f1e7ccc95c7a369b8"
   end
 
   depends_on "python@3.14"

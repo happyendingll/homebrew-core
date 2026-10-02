@@ -12,11 +12,8 @@ class Hookdeck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1096e5a95429d857e245c1d30ee4fe1a85bc75bb6db31aec20b0068860e053d8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1096e5a95429d857e245c1d30ee4fe1a85bc75bb6db31aec20b0068860e053d8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1096e5a95429d857e245c1d30ee4fe1a85bc75bb6db31aec20b0068860e053d8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bc96825c4922c11cb154513e165c447f8219f1bdd51ec4eccdd98319a6d25485"
-    sha256 cellar: :any,                 x86_64_linux:      "bea04e366fae593310784900b9a89a60281efdc0717133eaa018287d0cf3d020"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "353fc9c14cf360371541848db832067595a3300127a337b98cc9a41de1efb5df"
   end
 
   depends_on "go" => :build

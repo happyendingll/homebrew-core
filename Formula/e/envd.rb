@@ -7,11 +7,8 @@ class Envd < Formula
   head "https://github.com/tensorchord/envd.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "475246091bd23ee4fefdb4623e2924d432cc105cae293694261b127c68a028ad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9207f00ac858dc1b32189a9431d92b9332e6519b947b28e4e156cea3ecb96784"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f252d5241288c65059ba83f144f11ed3c0bdb1b1a5e7c67d87d9336246330f98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b7dad3fdfa2bbab49a49f4d8365baa1aaa7e1791b451a7a0a0f5feb169b45c43"
-    sha256 cellar: :any,                 x86_64_linux:      "4d4395bd94b500b1da06056a2824c2887931147be360f30daa8429ade6efc519"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "86de2cccc18b59e698a3424326a9e057724ebcf12d2aa36b73431bb21b690980"
   end
 
   depends_on "go" => :build

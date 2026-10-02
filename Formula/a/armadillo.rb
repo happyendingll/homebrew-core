@@ -11,11 +11,8 @@ class Armadillo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "821e030c3900578e37f0b84cc70cb1717b77acf4d0cefbbfb6d9feac263b5b07"
-    sha256 cellar: :any, arm64_tahoe:       "6934af8b581da7a29d15acb654b2c35747bd59de11b30ead2b9164f87b216de6"
-    sha256 cellar: :any, arm64_sequoia:     "bf1270b5d374c3621bdf416459080c10a0d5b388e8c1bf707f190ed12c02436b"
-    sha256 cellar: :any, arm64_linux:       "f39aceba7334f02fff73b7fcf5fb850638d30534d5ecea9f2c3110927ea25db6"
-    sha256 cellar: :any, x86_64_linux:      "78cd5c616611820bffaa52766180e78e664e886d611553b1829a08305b25dce5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "b102f54efb20dbba2d4f1c44b873434b51803ae6f839799b15067bf8b771379d"
   end
 
   depends_on "cmake" => :build

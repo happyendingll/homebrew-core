@@ -84,11 +84,8 @@ class Rust < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7525422d522cb4fafca1441ab42ace810b590edc540f93ad14a81bdee157de99"
-    sha256 cellar: :any, arm64_tahoe:       "9fd7f9b81fa70767432e1cd6cab9b945ab7a4297529b5e3f95fc2663e512b2f5"
-    sha256 cellar: :any, arm64_sequoia:     "ab2aad7448f020d2ceb660ef75ba79d06761f91d8afc29071b8e9a1bf99af8ca"
-    sha256 cellar: :any, arm64_linux:       "7587563b8bd5a17d0846cba46d41ccac9d45cdbf6554eeaf95f8504db79b4e36"
-    sha256 cellar: :any, x86_64_linux:      "06952c11381a7519c1e10b9b455942f0965c0f44dd6246cd4e4e29b3b85dee42"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "e201c7ee7f2f2ae55da4056eac0e065ddb86d6a7001c39aa619f503c008d8b0c"
   end
 
   depends_on "libgit2"
