@@ -11,11 +11,8 @@ class Slepc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "4a0c1b72bc29bc5a7f6212b45827bfcb919d84d99d83fe993f7864e082534827"
-    sha256 arm64_tahoe:       "da6676e7738de42ab9e8882e9ac1c1bb7d528155e626c9a6b27206e784c22a43"
-    sha256 arm64_sequoia:     "83fe0503c1e1a300327dd32326ad37a188e865f97b69660b31e4f07558295aa6"
-    sha256 arm64_linux:       "7298d7127faff7145cce2f5809cfd348eae0ba40a07e5f905b6a24a58a0a0e2b"
-    sha256 x86_64_linux:      "d166222a0e79679142093e1dc5dc443d9b8f1fbbacaf067ba51142801a73ce05"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "fd8a44275cfec9fc9e7ae4f9d0d43b80b1b377459aaf5d672f743a6c36b14f14"
   end
 
   depends_on "open-mpi"

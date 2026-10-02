@@ -8,11 +8,8 @@ class Harfbuzz < Formula
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6a67cdd698200c70cd22db386c45a8138cfcdbe99bd088bb8cf91876e9f3ef1"
-    sha256 cellar: :any, arm64_tahoe:       "1acf1656c7db85043eaf262a2d53eff2b395b5890b508e01fef31c344423b899"
-    sha256 cellar: :any, arm64_sequoia:     "e29c6dc0a0344cb8e788b6af2be27f5c68b9f2e5a4ef93d09e8091c6b91a588b"
-    sha256 cellar: :any, arm64_linux:       "7452bc88e355fd6403c753aa16dfba7d8661f23c02cbccc04241d902f9765dc4"
-    sha256 cellar: :any, x86_64_linux:      "858dc77726b5fa2b2d2487d7068e4b9130fd164c807e8cb5a926a7371d285b96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "d9e4534ebd1f7611a095b67bd19c273a8f6058ac210bb9fd8dcdc68fe8fe16c4"
   end
 
   depends_on "gobject-introspection" => :build

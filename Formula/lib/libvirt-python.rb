@@ -11,11 +11,8 @@ class LibvirtPython < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8988645a7a8cdefe56ce0744418b8e04b88b0dc1384349bce0787d706f1da416"
-    sha256 cellar: :any, arm64_tahoe:       "ed46998070065fa67f6517c64633a22fbbd4eb09605f06673284114395322cbe"
-    sha256 cellar: :any, arm64_sequoia:     "504614c98a38e53e0daf76e5aa524ad2618ec92ba29586ff46dafd6e87973674"
-    sha256 cellar: :any, arm64_linux:       "878ef24a24c2fe50284b95d1a8d137605ca71485281967f97c5892de1d4bf1f1"
-    sha256 cellar: :any, x86_64_linux:      "2384e4acb38fe6bdc4c3fcb7c3ec0bedf51ba1b8ac9be1bc27e05ad88f411bb9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "521a2abdbfd23508ed7704802bfa0f5bcc6e8d0a790d65659c1a744eb05acd52"
   end
 
   depends_on "pkgconf" => :build
