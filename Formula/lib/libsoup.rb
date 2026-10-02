@@ -7,11 +7,8 @@ class Libsoup < Formula
   compatibility_version 1
 
   bottle do
-    sha256               arm64_golden_gate: "a1fbb62038cdd7bc55ce07ae592eeb0df01520e37a211c95aeb0fd5d82c98415"
-    sha256               arm64_tahoe:       "3d0e6032d46f74fa113ff206c1d5c54540e8cc18c39c825c4545e2955a75db0c"
-    sha256               arm64_sequoia:     "a8f0e6cbcbedc43bcecc98815f2abcc764bd4d7f33f9c574c4dbfe882c079160"
-    sha256 cellar: :any, arm64_linux:       "815c66094a8ab73fb8ba1a60c9ea1a192c027a480d4889d7410ae1a90e8599a8"
-    sha256 cellar: :any, x86_64_linux:      "657404066287b2d6dc7dc6ed0ecd56f7d1e82a6ad7a16fcfe3cfcac7f3d5b508"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "9a46d88b5d6ba623df56008664138e6fffe6a85b3c12d80e761a437e1a6921b2"
   end
 
   depends_on "gobject-introspection" => :build

@@ -6,11 +6,8 @@ class Faad2 < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "15d889dc25b77a061642b62d94aafae9989197babc254580666e400ce25fb485"
-    sha256 cellar: :any, arm64_tahoe:       "a1c6012d8a4d604d30f684d72ccf39c5c0aab2c724a4868f2cc143f52fed0dfc"
-    sha256 cellar: :any, arm64_sequoia:     "b9875c841217859d9c92d675b4cf719d53145cbafee9bac95273713822f55281"
-    sha256 cellar: :any, arm64_linux:       "ddf1e8094dd399ed3bd3e5c779005185b9d02fd43a27f574f156f60d8d243d69"
-    sha256 cellar: :any, x86_64_linux:      "74bee1119ba9061e934ac3b2d3963993658f6ea775676545ca0997022ed7ee24"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "e5d88145413b4412fa346c689abeb74465456147e280d26a268b13c19003a475"
   end
 
   depends_on "cmake" => :build

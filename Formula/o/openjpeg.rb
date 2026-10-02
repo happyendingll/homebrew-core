@@ -28,11 +28,8 @@ class Openjpeg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "031d1267409505d3e26249e279633b21a55799c99ad7ce6cb0a8ede0fd8779fb"
-    sha256 cellar: :any, arm64_tahoe:       "175f4e65750a8bc968e01b36259e7adb979dc32dbc22c0f4c980bb56e7b494b8"
-    sha256 cellar: :any, arm64_sequoia:     "5f2c17c1be495ddc03d00c721b7144f63e9f5098cbee3147cb67610f3875a516"
-    sha256 cellar: :any, arm64_linux:       "2ae24800fc442770c7db79ed9c62119f7a5dce67fc77f31511527544f56322be"
-    sha256 cellar: :any, x86_64_linux:      "d76448f4df7eee17f227054562bc5df6d89342388ac6e496572fd7d901a4ad10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "fc6e42120d0414df060edbad3deae1aaff0860d0795db211dd4eb9fdc72afac4"
   end
 
   depends_on "cmake" => :build
