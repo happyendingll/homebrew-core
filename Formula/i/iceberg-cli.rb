@@ -6,11 +6,8 @@ class IcebergCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2b38eb44e2c67ac5052a75ab9558b170fe5f751ccea9bc1ee64b1283e91c423"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f2b38eb44e2c67ac5052a75ab9558b170fe5f751ccea9bc1ee64b1283e91c423"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f2b38eb44e2c67ac5052a75ab9558b170fe5f751ccea9bc1ee64b1283e91c423"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "17b536fbdce49bffd7e5c5b2d46ad529f7938f896acd1a790f70b94c6a586730"
-    sha256 cellar: :any,                 x86_64_linux:      "62bc87b45b98b11f6efaee5f4b278eb3e290fb348997383c2d5540faf8b544a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2031227dd25ffad04e579d9372fad9f550419c83ef666aadd8ac24f0e676a943"
   end
 
   depends_on "go" => :build

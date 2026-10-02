@@ -8,11 +8,8 @@ class Trivy < Formula
   head "https://github.com/aquasecurity/trivy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4fe3192f521a72e0100943ffcde6d4eb3e2d2e2ff02b4bf4038726de90c57909"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d7f287ed34d2bd244e27d03fb56f28107d9dfe873e757761dd356281a5ec0ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "00587c5652a9c9ad7667a4b70af180cadaef5a05f40b0fea94b51c97a9cda21e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7bfa5bf2cad495975da23f7ed4df0520fb6149779765b595b36832897ff8dc0e"
-    sha256 cellar: :any,                 x86_64_linux:      "308cc089fc0abef3b37c9db36cb5e531ebdcdd967eb5cb7c97c655df055a1c39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "27f6ff02a2d134eb30085e3e75f5a1bdf3ce51202f4f719e9c3aeacf5c68a603"
   end
 
   depends_on "go" => :build

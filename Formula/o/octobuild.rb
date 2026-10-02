@@ -7,11 +7,8 @@ class Octobuild < Formula
   head "https://github.com/octobuild/octobuild.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "795fa73f3a6b09f2d31291259713b08c65a1fb344946a9ebe08fe8adc6692b7f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "774070041d50dfd51c7187e8af49ac255094d0bc5f8a429390e634e7276ca54a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bcead0bf62c999991c870bf8c0f4b5fdf8dc1125c4eef7723c47344a4bd37a65"
-    sha256 cellar: :any,                 arm64_linux:       "3f689aa09c5d00a20255c293eae7504ae204dcd3be27941096962244e66c3dc4"
-    sha256 cellar: :any,                 x86_64_linux:      "df99225d6e9d5ce8bf1eb23cf05c7f673ec59c0f91e66d934c01661983705fdc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "90edd35c7aee13f2b211c42ae7f6201c79b912e712a76af522e8d8b1e7a3ab8f"
   end
 
   depends_on "pkgconf" => :build

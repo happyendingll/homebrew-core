@@ -10,11 +10,8 @@ class CloudflareCli4 < Formula
   head "https://github.com/cloudflare/python-cloudflare-cli4.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "055c87d689abdffe2fe59999765763f0265b2177a855224fde5c2b2a25bbcd9c"
-    sha256 cellar: :any, arm64_tahoe:       "82614235fd42f76a35553fa49f3e5660332329b1e7f85df64a11bd6f4f8147ab"
-    sha256 cellar: :any, arm64_sequoia:     "a16f42c802e1475d068198233b4d9e9fdca5e8787c749072bb5ca3670da6cbef"
-    sha256 cellar: :any, arm64_linux:       "5cdd15691d88b7f0006935837822db2fff7a4dec9d7e72ea0a04bdd04e770bf2"
-    sha256 cellar: :any, x86_64_linux:      "9f5cde1dcf7888ca3b23b22bac305ac6ab0933290fdf3adbb19714bd414d9ea9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3bc3be200b13101b23bad9ba58fa4c3ab8ef92ab4d88dd1173b777b2f6961908"
   end
 
   depends_on "certifi" => :no_linkage

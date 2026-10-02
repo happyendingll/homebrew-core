@@ -9,11 +9,8 @@ class Codelimit < Formula
   revision 10
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9b1d9fd19f657600bbfecec2d8524c5dd0c2cffb70c73f455782d85bf7c93a2c"
-    sha256 cellar: :any, arm64_tahoe:       "be7444fee1c0ed3b98078f837b36ea2c99371026b17205ef909040750e3b1775"
-    sha256 cellar: :any, arm64_sequoia:     "1dbb03cb8b65b5c73ea975004ff99baf5c41211ab3d615142b40f786d249db14"
-    sha256 cellar: :any, arm64_linux:       "77c1453b65c2b4ea5cc31906be6132db58a8efac9c6ff5fd9937ac08fb327d89"
-    sha256 cellar: :any, x86_64_linux:      "7a945e467135b956a56c801ff0b6ccb015f9cc67e73c81b2fa930f9d42b3bb01"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5b2717c1e789748dda58ad8cff6398f559c5f0d81619b21b555768344f5d4195"
   end
 
   depends_on "certifi" => :no_linkage

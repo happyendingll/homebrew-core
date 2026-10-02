@@ -7,11 +7,8 @@ class Deja < Formula
   head "https://github.com/Giammarco-Ferranti/deja.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1dea6ae6c577b0cb9967bfbfa134c923f6d169579b797c8bb0f01c2010606b80"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5b74e26cdf7af28d48241a01b10ec17a5f615e67f117f0b5f8c71c679c3f3bb5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d87800503cd360d967c9cfdaa5eccd8609380c1047e5b00c4ccf09e43a7bf573"
-    sha256 cellar: :any,                 arm64_linux:       "5c2f5b645dc17b75f815768195ec1dfb3460cac18fb4ac1cecba2a44cfd9c75b"
-    sha256 cellar: :any,                 x86_64_linux:      "311915b4c74f3f4f61c6fd233c25359a6f3af6a67b6b19755f97ff12857f9690"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e8e3d631ba157aa2fc1bfea6f7fecd95fb4b9f18eb9e007dd7ef072343d3b279"
   end
 
   depends_on "go" => :build

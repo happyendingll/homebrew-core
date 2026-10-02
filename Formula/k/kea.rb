@@ -14,11 +14,8 @@ class Kea < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "be5dc2ab36b9d8ca6c63f6c9a6b5ad5db89c20afe8362639037dd19f53a3d2c3"
-    sha256 arm64_tahoe:       "c280bb0c0e457809def0fa213da09a7b66c26c71999af180cecd4016959e50a6"
-    sha256 arm64_sequoia:     "09165f679b1b8953d170fd380d13f01aa9639222d6c5922d848baa961e2576ce"
-    sha256 arm64_linux:       "480b658ab8687d4ee1db93ceb9b91321de9b7b8f415835c11c8640e34269cb3b"
-    sha256 x86_64_linux:      "2689b6ef31a99a7ff28f2665f905cac253593c079cb6816b2b49b601588d1d17"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "e14510117d263cf9187cbbd96f45866787cc7546a1238de727cb3ec1b2b2ee17"
   end
 
   depends_on "bison" => :build

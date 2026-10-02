@@ -13,11 +13,8 @@ class Clusterawsadm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "12bb246ee0d1290bb2d60d929bd191121bc592d569c6205a2796503e6a34cc7f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2d99be941e33c25667d2dd5dfa6325fe6cac950179246c0aa0662689e48779e9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4826f2cd057fded5fd59e4e5e0fc8d47dc380bdd6095342a5a03cb421ee26210"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "87f85aefb2ed42e4e5fc87a7df938752577224b297ea6b3f0209b5bd3c6e3f52"
-    sha256 cellar: :any,                 x86_64_linux:      "7bb7f78eeef7b9948d7ae70fe9757821c84657a22bd79ca5a2f868ab9749c6ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "26caaf6e5f9f2ac599cc73fda17267a45f72f8148252fb4cbc6034506518e020"
   end
 
   depends_on "go" => :build

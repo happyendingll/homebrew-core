@@ -9,11 +9,8 @@ class Certsync < Formula
   revision 12
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c94387188b42b58d6e499e6de7d5ccfeb16dc79ecdcd357a526990557599bd82"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "03e864be6f2478154a57739fed729e72596a291bb6f8adc3f213b1e34a3d641b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2015cdca53cf7a131d60279e9796abf6e5e7bddce86ba41dd5a429f23f95a927"
-    sha256 cellar: :any,                 arm64_linux:       "21bdd94ef58176b2a8162eda1f995be4f26f6a286069bd4583108a48b394c732"
-    sha256 cellar: :any,                 x86_64_linux:      "1c8e8bd6aa9c9a4d5cfabe3718105c65b20768d80427398ceced8e4ba4c720bc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4e91c57c991077895c5f4b20c8c3348ffacd133605ca0bc79d2beb74b0b812e6"
   end
 
   depends_on "certifi" => :no_linkage

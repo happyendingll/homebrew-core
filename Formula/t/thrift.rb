@@ -8,11 +8,8 @@ class Thrift < Formula
   compatibility_version 4
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0d285f9dacce1246fa9faaa0c049144c5d0d31e5b80817bae14fa2d676fd4ea3"
-    sha256 cellar: :any, arm64_tahoe:       "e25867b29dcbee74e54fb5c705bbcad6899b0f8f1dcde539acdd2e60f4891a74"
-    sha256 cellar: :any, arm64_sequoia:     "9604c7ca5fb75e3feadcfc7082138a0ffcefefeaa86acd10504cfed594a99fc5"
-    sha256 cellar: :any, arm64_linux:       "f283682e5cae69164465f3ecc6d99413cf7eede15bfaefc5866c7a22f870334c"
-    sha256 cellar: :any, x86_64_linux:      "d9b178eb3bca5dc3a50b48a44836ea9517fa14fbe893cf2de348d83b3f3f3297"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f952bcf81de2d1713fe9a1436609997c18c6b9976d56cb3f9a9ae59ece4df681"
   end
 
   head do

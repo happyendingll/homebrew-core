@@ -7,11 +7,8 @@ class Gomi < Formula
   head "https://github.com/babarot/gomi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e3ab1122bae1b2fcd40acc84c3f92c20890f15bff539b685eb1e5a2c8b32d942"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e3ab1122bae1b2fcd40acc84c3f92c20890f15bff539b685eb1e5a2c8b32d942"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3ab1122bae1b2fcd40acc84c3f92c20890f15bff539b685eb1e5a2c8b32d942"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ace8e933ceaca6ce51487e4685850f5e03925fdeef160bf77ce7e364d531be72"
-    sha256 cellar: :any,                 x86_64_linux:      "df191b6ce7174bf5958c33794342bdf03c73f8a3f36034e210364168b79344fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7ba369e81fbcd7e1b20e4b91cfd1825834454d2f36a26a279a4f284c6c104168"
   end
 
   depends_on "go" => :build

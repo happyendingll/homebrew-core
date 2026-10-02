@@ -6,11 +6,8 @@ class Libre < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3bc1fe6c9130fe3c83d0b058bd583cb6fa991d4d9c96ead0c4d7d14a9abaedc6"
-    sha256 cellar: :any, arm64_tahoe:       "ed767b60fbdd48af90f0d207045f3e8a61adbef247a8a122f8ded85acb92fab9"
-    sha256 cellar: :any, arm64_sequoia:     "0d8642f74e32aa81cb7d0790efc1d6eef82522e23cebe3dc1425730d80c7dda8"
-    sha256 cellar: :any, arm64_linux:       "8e633dd6d9be87bdd21014858c964c2fed42bfacbb6136e0e46e29ad545dad3f"
-    sha256 cellar: :any, x86_64_linux:      "7db66bb147cee5bfa5a3abe999ba3908a15649945d4e662d25d80fd99cf361d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "da29f4af519a840fc90341e6cf10797617c78b0f25d1ba1a8f3aacda932aed87"
   end
 
   depends_on "cmake" => :build

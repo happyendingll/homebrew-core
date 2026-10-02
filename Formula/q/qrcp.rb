@@ -11,11 +11,8 @@ class Qrcp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4c0030d2091a35b171841b25fa852571ede6f65b301602af5ef387ece2026083"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4c0030d2091a35b171841b25fa852571ede6f65b301602af5ef387ece2026083"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4c0030d2091a35b171841b25fa852571ede6f65b301602af5ef387ece2026083"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f3b8e031e4980377a1a55f881184dbe18dffeccb0f8bcc450fdadb1ae7bbc13e"
-    sha256 cellar: :any,                 x86_64_linux:      "3727188f3322ee679221137f83b63657f6b278538d2642809006a032a91b9507"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f49f99397a87c8e6fa65867a6688ad7eed5ce2eca3724b4dae0b6dc0ef171bde"
   end
 
   depends_on "go" => :build

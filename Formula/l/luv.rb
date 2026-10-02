@@ -8,11 +8,8 @@ class Luv < Formula
   head "https://github.com/luvit/luv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "096b0bbf0266140e535f699c2ee381a0136ecdd2a81e5000de41c9c0f7800673"
-    sha256 cellar: :any, arm64_tahoe:       "7db8ef065a98ddd04c6cb278341272c334d1e0f4b2995fd6aac3785623ac68b7"
-    sha256 cellar: :any, arm64_sequoia:     "a02d7d48c9b7296b4400f076acfd5221aa7cbb4a3cce1e97fc6db717bfbec835"
-    sha256 cellar: :any, arm64_linux:       "25fa572d4abea7342d734784ae12f3929613028e9364aede242a2dde38083e1c"
-    sha256 cellar: :any, x86_64_linux:      "2273b3e364326468f16e90e6c06c7da8baa8a6953062f52a0e8993e0e7697910"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "0339e927f2cd2c0b2a489a5f9711207e2b1d80487365080d6440e0b1ab8a05dd"
   end
 
   depends_on "cmake" => :build

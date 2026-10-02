@@ -9,11 +9,8 @@ class B4 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "31e1a232a5672f7f573a516bcb9c74baa43367efb4d586b1e69adc932c2aba34"
-    sha256 cellar: :any, arm64_tahoe:       "f74774dfc0c528b8a559ec703f7cf89a71168c5f238eb0e2bce41295729fbb7f"
-    sha256 cellar: :any, arm64_sequoia:     "840b3ccb68665a70c381081895987d202ca18827801a5e2fe179ad24d987d860"
-    sha256 cellar: :any, arm64_linux:       "6713cf213dc4637524dfcfa94304d0daa939e3f87d290d1834dd5f25b65d6486"
-    sha256 cellar: :any, x86_64_linux:      "c9bd87d79e40b4ec54d96434c3d49ab5cf7159655ef82435c7b46b9abc13d7be"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "49261833d82cc85c0f8f8708be1fb69be8f24b73a03e2b7d88e8f83eb819a338"
   end
 
   depends_on "certifi" => :no_linkage

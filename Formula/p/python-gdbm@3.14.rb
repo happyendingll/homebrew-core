@@ -10,11 +10,8 @@ class PythonGdbmAT314 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "108c0058564dd2432ee85c277f10cf6d8635dde9b94fd3d8f0ac917a78542d65"
-    sha256 cellar: :any, arm64_tahoe:       "c9233dd722709e16326fb29e926ca3c13b533f0f61e7e58aad5cea8f0fcc89bf"
-    sha256 cellar: :any, arm64_sequoia:     "8e961bec4fd3eaf62f4de4ab316c839e264b318c03a62ffd1045c9824f65baab"
-    sha256               arm64_linux:       "fcce69dd045d4c54f6dab9d879a27a9ea20c491f0fd1a5115ec41a95ef286d17"
-    sha256               x86_64_linux:      "00f0973ec8ecb25bebcf99da6da69200ab12cea77b56caa8bb7225a7bed7a0da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5f6fe5812a1eb6dcf0945676b54459a3cb67e04cf30487bcf929f3f0bbcbc45c"
   end
 
   # https://devguide.python.org/versions/#versions

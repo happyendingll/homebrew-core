@@ -8,11 +8,8 @@ class Httpd < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "6a0c5eec30f59c94ffc697ac3c2f667772d8175ff994e5abebed31b79e19508e"
-    sha256 arm64_tahoe:       "fbaad1f54bc8cfbc9e62ef2731a46e005c0dea7f9d3a7b5377711c6b39a760d8"
-    sha256 arm64_sequoia:     "9993ab0c6f9a3a1754dd5cd427d8417effe0abd5afd5211772a387d9f288322a"
-    sha256 arm64_linux:       "81f042b55f5abed917e3a4d245ece9c667f9b94dee0ecc3adff2dd53f1b5003c"
-    sha256 x86_64_linux:      "e72c8163194eeb7e403eebe1d6aec2c9292547e0aa03f79351f65c4509c6ec64"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "0d2cbcf7f01239d179aad14304081ed03b91a33bd4fcd7f4fcdfcd6cf3a12202"
   end
 
   depends_on "apr"

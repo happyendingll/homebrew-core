@@ -10,11 +10,8 @@ class Breezy < Formula
   head "https://github.com/breezy-team/breezy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8b3305e9eb22eb40221ea150740cfb798f169dc6c435526de9b8b5af6a81136e"
-    sha256 cellar: :any, arm64_tahoe:       "5dc0ba980d5fb51cdfccb47837a1591a063f71d3cab7a4a12f5774e56844b779"
-    sha256 cellar: :any, arm64_sequoia:     "ec8a3b6364c914faad26dcd81d93306fd5d49d1d67d28219791af0f82b8ab3b3"
-    sha256 cellar: :any, arm64_linux:       "78d80be34dda0097657efd41cd54345b966b985c1465f9c3ef58ff60e18644bc"
-    sha256 cellar: :any, x86_64_linux:      "d8dc45733c2bb97922c96e70403559421f9dc65d0f036deb88413e7232509798"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2b16b189679059d85dd51b4c4371568fc9a298940ec0832f23aad58394c08c15"
   end
 
   depends_on "gettext" => :build

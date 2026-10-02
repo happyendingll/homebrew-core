@@ -9,11 +9,8 @@ class Bagels < Formula
   revision 15
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c00cf0f68e8b9c067893d733d3566c6d84b60bdac49fd22e54c8b40772375cdb"
-    sha256 cellar: :any, arm64_tahoe:       "127ad073d28c63963b5782b12d35ac6b3446d425a7283571ce878ea2e5d99705"
-    sha256 cellar: :any, arm64_sequoia:     "fc86ade629afcd87b528dee1cd692ebee9c0735dcca5f05293306f58bdaddaf4"
-    sha256 cellar: :any, arm64_linux:       "81a45ad615ab0de2e97f51cc046b92d77265b13689971536180fa732f68e0911"
-    sha256 cellar: :any, x86_64_linux:      "61ebfa0573434f54d04a2b7ec2776d62b00a0094440cc8c9f707b6c5f9792845"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6a10b5ff3ac325baf95de43c5c5f125fad6653e0e647024b5855539a50e540d7"
   end
 
   depends_on "rust" => :build

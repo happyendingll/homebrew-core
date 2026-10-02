@@ -6,11 +6,8 @@ class Krane < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "31df7f443f3c01ffbdebedc34b969285852a04f74bddd165a951dc0625ee5a45"
-    sha256 cellar: :any, arm64_tahoe:       "7fff026d82c3c1ad0e1e100ea2932b3f4dd3d40e6d3568a663da7ee92db168db"
-    sha256 cellar: :any, arm64_sequoia:     "e3a9158fd797a5314a600199928d4918cc37812a6d3f3c5c1b5084eeb2bcc313"
-    sha256 cellar: :any, arm64_linux:       "75b6651a579b662155b70497f3123dfe912fcd754d8a51ee4d6cc26077a1d74f"
-    sha256 cellar: :any, x86_64_linux:      "e3a14b671f12f9d95db087db90dacc89587799fcf8b7ac2807c469e38b2b21ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "fa320c314b39f45b41d4b7cf34c6a4090e635222062ae97e78b578f9ed7bac88"
   end
 
   depends_on "kubernetes-cli"

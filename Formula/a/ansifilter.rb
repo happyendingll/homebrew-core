@@ -11,11 +11,8 @@ class Ansifilter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ce2d3b8f8b9daf5eb918fc434b3b463f535e831baa3019a29bcc29342e979de6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ead30ff7bba9161b224ae343fe5ff3580c0d0e23e8ea700a99ff11e8fd8569"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "464237c8e8b65a55a9d0230659d8f3f6fedb67fec2803ba3b5b3802f6e8e91d1"
-    sha256 cellar: :any,                 arm64_linux:       "ee7a9eb4a413f662525810d547f672a6f57702bf58dfde372ec2193f60b8979b"
-    sha256 cellar: :any,                 x86_64_linux:      "cf3d002314bd6fa6f9ca475909141cfcc3b2bbbbf5b6b6055525a7879e0e4a50"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e75df363d9d25adfdaf11db12e015de9ced6ef31934106677b0cb18e2eac3793"
   end
 
   def install

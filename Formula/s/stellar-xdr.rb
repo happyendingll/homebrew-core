@@ -7,11 +7,8 @@ class StellarXdr < Formula
   head "https://github.com/stellar/rs-stellar-xdr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6b4928eb43c7c0c42fe95eacb83a28564d964b4966b51bf71c98d93cb9fa4539"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "290f0245109e45c46c480b0e2e4f4e848d4aa28a5320ec32b05b40e38f1a5232"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "38a267112368edebc99bca85a97fcb9d98e7f9db8becabb1abe8b638510ec348"
-    sha256 cellar: :any,                 arm64_linux:       "305cea2e349936dff07f59eaa5b97c0edff9613e80d6555cf5e290196d960832"
-    sha256 cellar: :any,                 x86_64_linux:      "a21898a612d01248fb88a24a4f83c329561397eb65247b514d1e7ee73731289c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "62eb1e86248c515e14db80c7a4e9b83983535d589537b16b11170e0735220158"
   end
 
   depends_on "rust" => :build

@@ -9,11 +9,8 @@ class Airshare < Formula
   revision 26
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eaf2c602d03c65ed46366da9e5ddcb2e60822f97bf8909064b2d95db9a40d1cb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6a28c6fc3c48fb7e1154c21772f269fa085c66865d584d335fdf75cd531dcc88"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac238e7e7feafbe16630f259e90cea25ea63f9a0b633678972321552ea260bf7"
-    sha256 cellar: :any,                 arm64_linux:       "831549489b178494d664e47837f2d49698014446069eeb7e70c252cba3dbe30c"
-    sha256 cellar: :any,                 x86_64_linux:      "d9d9d2a9f42d2808536af72213102b9d86e7c1e3665ac16ef457c0a30cd39d22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "29b286dcdb395c77df3c2ff5158f2134123291729ebe1525389819b97c86d82a"
   end
 
   depends_on "certifi" => :no_linkage

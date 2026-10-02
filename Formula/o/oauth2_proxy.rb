@@ -7,11 +7,8 @@ class Oauth2Proxy < Formula
   head "https://github.com/oauth2-proxy/oauth2-proxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "15ce14d5e75a072f73315d89fba36361c4e786907e73c9de81030473bc424401"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "76d6c2819ebce530cb5a698e5e36412c15e421f72ef5ce68e97352c2dda96d16"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "86983352e8a449291a694c502bb30c532914c1169acd37af8134704b23507717"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "16462094aa070b585b4c6603a1628b8e3a5e59f6b2d5368b054cb5e5014db39d"
-    sha256 cellar: :any,                 x86_64_linux:      "173429be3e5962b95e0dfbf86671bbfaac580df84a7e41c858b66d97b74105a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0321bf02c873bf8ab09084d73ca454f877c4bf0a740d8660d1e2f6ffb7c0f0ff"
   end
 
   depends_on "go" => :build

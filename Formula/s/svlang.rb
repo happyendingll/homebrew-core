@@ -7,11 +7,8 @@ class Svlang < Formula
   head "https://github.com/MikePopoloski/slang.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "332e75aa965dfd3c10aefd9623b25983faba4f9d07dcc3b294ac8e3f92d9d81e"
-    sha256 cellar: :any, arm64_tahoe:       "cd2120ec05548a5642a7cb7972b89181b37a48a6f8ece48405f34e693a3aa63c"
-    sha256 cellar: :any, arm64_sequoia:     "fccb04c7241e24312619b985b322a710c08881d9a3663fa4428ce1ccb4d06b16"
-    sha256 cellar: :any, arm64_linux:       "3e274000c539616552fca6a6d5230b832e89d76a1049fff792450fe206e02b0c"
-    sha256 cellar: :any, x86_64_linux:      "ee0e1b158befdb1d10169935b75887839756814f4f9cc0edf28b0dcb6b02c713"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f9ec97e477cf0c8f08baef0949bda58a4e0cc6a127855c5180f3763732662cfd"
   end
 
   depends_on "cmake" => :build

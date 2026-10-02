@@ -8,11 +8,8 @@ class Pylint < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8364112b4c9f950fe3defa9e6fdf4a543d7edce837ce62c748b8a6d3f6b800e8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8364112b4c9f950fe3defa9e6fdf4a543d7edce837ce62c748b8a6d3f6b800e8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8364112b4c9f950fe3defa9e6fdf4a543d7edce837ce62c748b8a6d3f6b800e8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "78bc7055589d7552c18222aea12b201341b196af9b22f1b1f4a93bcf5b0db67f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "78bc7055589d7552c18222aea12b201341b196af9b22f1b1f4a93bcf5b0db67f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "65c68db5cf38d974ce919c4d4e48c15560c0ef7f971277e6d4248665a0b389b3"
   end
 
   depends_on "rust" => :build # for `isort`

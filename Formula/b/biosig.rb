@@ -11,11 +11,8 @@ class Biosig < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "53189b21bb5d69e6228230ceeaffc2e6c7e3b156f93c9f739dd118e9a83c40f2"
-    sha256 cellar: :any, arm64_tahoe:       "9d69a2ebb60dc759566e07cd24b70e739692aa1251b70a365abd2de64b7a9494"
-    sha256 cellar: :any, arm64_sequoia:     "39802973d3b25a519cbb9e1d13497312f7ceb4ffe9b0707f8d878f8c5c299c6c"
-    sha256 cellar: :any, arm64_linux:       "85394d04e21fd4be94ca6aad6beada910adacee45a1c159b048a6a0b13931b16"
-    sha256 cellar: :any, x86_64_linux:      "277bd005562cdad3d2dba34bba0e9ee1564df6290b43a6257936d010a0abe5cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "313ef1b658fbea629ad3201a036f180b46bcc0e75d0589339b1236eb9a6df84a"
   end
 
   depends_on "gawk" => :build

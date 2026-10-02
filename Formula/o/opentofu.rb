@@ -7,11 +7,8 @@ class Opentofu < Formula
   head "https://github.com/opentofu/opentofu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e21bb4a4937783afa2a9b2c85583f0d80f0e98b3e49393cc2127f78c99c9f78f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "566406b46c4db9995246b4a9930e7b1ac34e46a4ae20919b296b5020d653d19d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ab8d2317e661672692489d4d708cfebeb52a5031de3b82a434b6402399d3872"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5df70d936c051d32c5ab6f19976f112ed937a0326d12cb88468ccb7c5bfffdec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6de1bdcd602fe5b9b37f5c3486e1d76e528f4950d94cd29df4a6f8afb2695a81"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "09386ef79a591ca7b9e58b8d2cc9d56632a886ff378e79c6b8a1ab7710de9320"
   end
 
   depends_on "go" => :build

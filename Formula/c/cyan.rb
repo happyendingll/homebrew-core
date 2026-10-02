@@ -10,11 +10,8 @@ class Cyan < Formula
   head "https://github.com/asdfzxcvbn/pyzule-rw.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "207ab362ff1d7cdc407a325362dd38ca9d9ff1162ca47d5df73f41e5c5191577"
-    sha256 cellar: :any, arm64_tahoe:       "e329832402b95e031ccf71cf7158cf747f90701ec36ded36a24fcec6f30e3fd7"
-    sha256 cellar: :any, arm64_sequoia:     "9f42456f4e01b317bde3261ec215cc826d472f92f02714d35ab605b516b4d47e"
-    sha256 cellar: :any, arm64_linux:       "729374ebe9c37e811bbed2e1887930dcf20528933fbcf9e2e9b086e13fb2c79d"
-    sha256 cellar: :any, x86_64_linux:      "e869bc11fbd097a0653e597f1aee40d728582193555876355bb1dcf8dfdbb352"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5f51d17e66dc248a913e79cb1400982c5bf2a072d915074ab9a60fbf848171b8"
   end
 
   depends_on "cmake" => :build # for lief

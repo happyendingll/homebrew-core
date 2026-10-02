@@ -10,11 +10,8 @@ class CryticCompile < Formula
   head "https://github.com/crytic/crytic-compile.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9fded727d106f47a06410dd3eb5f49f236ddaa19d3cebc71b6a2fcbcf9bb3262"
-    sha256 cellar: :any, arm64_tahoe:       "476d3ca6dea32e86a63eb62a9658da4ffa74367882abea15012bdf72fdb9ae9b"
-    sha256 cellar: :any, arm64_sequoia:     "900b632d6f71a5b9ea075e636873976ee4c22debce245567b97d7a64af2e1485"
-    sha256 cellar: :any, arm64_linux:       "cb4c6f7a1a77040ff09bfb8e048770f13e269092e3709e8b3569b161d95b8a82"
-    sha256 cellar: :any, x86_64_linux:      "9238a4eabb7a759e96afd8d9251bbac83b36ee519db54861a17e2f65d3c03477"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a172bfa4692c5451a7021502ec2aed301fcd2da3609eb607204000a89fa372c0"
   end
 
   depends_on "rust" => :build # for `cbor2`

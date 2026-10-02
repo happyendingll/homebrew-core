@@ -14,11 +14,8 @@ class DamaskGrid < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2bebd819d0e4ed7378188eb1bea38ed6cdf96a590327337c8dd9ab4b539691dd"
-    sha256 cellar: :any, arm64_tahoe:       "211b023d8f4f2ebf88af33d59166658ba83caa3e6808cfaf0fefd8e213406e2e"
-    sha256 cellar: :any, arm64_sequoia:     "76ce727955d3aa8b3bdac63c831b7a0a44b4d12ad32d7c47110feaddfb7f9952"
-    sha256 cellar: :any, arm64_linux:       "1206f80692e5df5d5c2e1f1f62b48482c117f2da118cc3bec98a414002ed6e13"
-    sha256 cellar: :any, x86_64_linux:      "3eada3183508be0dcd031c2a93a98e6d8409e0c2473be34a922fb2682f7cf790"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d3dd085055abe85e975f7db521f1a65bec1be2e141a89c54cf8ec49f5b480926"
   end
 
   depends_on "cmake" => :build

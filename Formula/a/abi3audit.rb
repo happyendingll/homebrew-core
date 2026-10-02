@@ -9,11 +9,8 @@ class Abi3audit < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "658e5cb570e0e9ee40f17e3b0918f03a2e6ede8dd2a234ed69db247fcc1571cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "658e5cb570e0e9ee40f17e3b0918f03a2e6ede8dd2a234ed69db247fcc1571cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "658e5cb570e0e9ee40f17e3b0918f03a2e6ede8dd2a234ed69db247fcc1571cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b38e8ea36cfa10c462073593e1e0cf50bc3e76e74495872f704d688a52a34620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b38e8ea36cfa10c462073593e1e0cf50bc3e76e74495872f704d688a52a34620"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c458ffe2229e56dfe89ada6e085ce277efa08aeffe2eca08b81eed3968a687ff"
   end
 
   depends_on "cmake" => :build

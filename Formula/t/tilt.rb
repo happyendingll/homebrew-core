@@ -10,11 +10,8 @@ class Tilt < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "54725585f4e061375642ecc26943d8a08ab45b401201e1e584bf963530e44162"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06430c323b1c2ce3b9c0402433e9295375c50053669048bc2a5d16f17176c7d6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5caf559f31e6cdb259713dfdbabadc7b8f3508b9d86e6d677ec843c38815c7ff"
-    sha256 cellar: :any,                 arm64_linux:       "466e7ad219da312e8018fc6f2c9cf72f72419d3b996e1643da8aae94ca72301d"
-    sha256 cellar: :any,                 x86_64_linux:      "528adb23b4e06ca455403b4161b925ddf03d051738c50c6dd101f016b8b3aadc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2e7938286aa6f3aa615fca23f44df3b9c3cfbc87978eefdd606647ddaed1ad34"
   end
 
   depends_on "corepack" => :build # for newer yarn

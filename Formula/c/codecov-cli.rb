@@ -9,11 +9,8 @@ class CodecovCli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "76aad766dfdf79f1469dcae736650a0a838de51428307f335b9cb2375316682a"
-    sha256 cellar: :any, arm64_tahoe:       "cdbb33add5097a4ddd28bb30cb1ca79ceb02fd4afbe4467511a070fc23db2e61"
-    sha256 cellar: :any, arm64_sequoia:     "0d0acb270d5c4d88fec0a95db6fc6eb7030d351314af12f5033de8d3c3a44411"
-    sha256 cellar: :any, arm64_linux:       "8e42212c45cd1a969afbfb26d82f0fbd3d8cff2fa1023a04bb91cf31185562cf"
-    sha256 cellar: :any, x86_64_linux:      "9a8bedcd7b7fff9ac669099bfea1d2ae89aa368fd31672f71a1d7716087eb62c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "4c5197dd01f8c177f469cd241ea636aae8f91f908cc9103916863aa79f941154"
   end
 
   depends_on "rust" => :build

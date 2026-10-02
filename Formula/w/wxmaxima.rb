@@ -12,11 +12,8 @@ class Wxmaxima < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "144fbce2cb1c4f04d02f60f8072979fbae04290b9d037842148704875e8fb4b5"
-    sha256 arm64_tahoe:       "457e0ffec9a3945c2857372e74b75c2d3527ee5e8eb1c2f43bce887a5bf5e04b"
-    sha256 arm64_sequoia:     "da8bad7c735c34f596cadbc14a821d098cfbfae374caaf27959d12d56829b4b5"
-    sha256 arm64_linux:       "eb45684688106368ed25a50a7b48ec1dab03c391d5ef4eebeedffd37915f4bbc"
-    sha256 x86_64_linux:      "6285b53f643d7a6069b4d9db491d62245e51b2d0f549db408e44f8cc910ec642"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "9de938cdf8a6902b6736d69ac7ba12eeaad8a8069a8b81cc5d0863b6b25e69e6"
   end
 
   depends_on "cmake" => :build

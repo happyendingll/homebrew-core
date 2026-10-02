@@ -10,11 +10,8 @@ class Bpython < Formula
   head "https://github.com/bpython/bpython.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "19bd96e49e7897106e6526dc08349b4272fd4e6fcaec1132b3fa16d497243575"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ffee203f7adc8cd835f24e6754e9520915eb641e483459bd17d7dbdc9e52dd51"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c330ef9fc981ac7e4b1d2848cea31453a8f6143a36bbacb2eb8e2b0a2341444c"
-    sha256 cellar: :any,                 arm64_linux:       "02ad3f8e65d2c9036c29cad817e17aa8f8a069874f44e183cd41c213af9a3e6d"
-    sha256 cellar: :any,                 x86_64_linux:      "a1e1052b435ef63f9d4214e4d4b208738a84a92074273ab24e9d26447b873269"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "31cb14c082a298c8f2e66d7e91ee7ab0213b7b3620235eee306a2f20951093d6"
   end
 
   depends_on "certifi" => :no_linkage

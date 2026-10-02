@@ -9,11 +9,8 @@ class AwsElasticbeanstalk < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3a9abbcb4f2d3db3508ad57638e33c9b7a13e3a4f7d5e625883efa6491935ebd"
-    sha256 cellar: :any, arm64_tahoe:       "0b6507e21bb2965e9e257acb1da4cb02c2729e25a415210edeb9b857ed70c67e"
-    sha256 cellar: :any, arm64_sequoia:     "6279eb67dfebabfc394de57c4d83a47227055bd4eb1d626130ae9330f8343b20"
-    sha256 cellar: :any, arm64_linux:       "ce55aacacb580f6b84daac1512f4a6a4634f4fdaefaa8ff3204be809234500a1"
-    sha256 cellar: :any, x86_64_linux:      "b2360a39a24adbecb6efadba13f7adb32848c512d7100b42704ba2c42af2ef88"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "657b0a447cfe30a723b8d16548c2fb343f15e34d583e98fbbe58459e988e272c"
   end
 
   # `pkgconf` and `rust` are for bcrypt

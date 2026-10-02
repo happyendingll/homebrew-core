@@ -11,11 +11,8 @@ class Patchelf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bd8031ce10d3b4494815b89f92d84f35cafe06629010d60407025fbb126f4267"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ca983b871e31aa5ad8e5310f8436c9eea5044dce44cd6a9f2692dfcc8439bccf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "173b1c00c78d2626621a598ee0d79094dbee6e67c4b8636afef77098f4d13f2a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b902a6c4df239292e0bd32f17927f8500b25e4dbfd300ccbfb3a9da8efb91aff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a42d6647f56285333fa8b209faf526eb85e409b3a818f5a99cf036e3367e3ab1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f6733ea47d3d15b35e13d829442b75e3c1269a1560e9b10f9c800aac9fc9150a"
   end
 
   head do

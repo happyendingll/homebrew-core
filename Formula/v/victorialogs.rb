@@ -14,11 +14,8 @@ class Victorialogs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "339511a643934a76cb133e5c9937958a72b9922516049f8245a65056c0b76bfb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8a36589597de593a53b4bb03d6a86a47fd9e8093cb44b75f8298fa2e63255a5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2491aeb40c2519d52dc93ccc86abb5c83ff8528876dc137bf5064e6b8cf79b5b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "97bb5598d20d17abedd7214d6b7552e4cb039d66a2938349c318aeac2b9525fd"
-    sha256 cellar: :any,                 x86_64_linux:      "b8edf0fb07ad9f68ccd15af24f95f791e4efd5a4aa5df8e75faec4b10e4ef27a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f76efee5832bed8b47c3038356d6ef45d33b30fa49f69dab4f73aae712e30069"
   end
 
   depends_on "go" => :build

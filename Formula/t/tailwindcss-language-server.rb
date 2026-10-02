@@ -13,12 +13,8 @@ class TailwindcssLanguageServer < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "018efd02aae8afaf25d5df49966ed0b14ee4f2fcf4b84d81368db6e0893a0f91"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "018efd02aae8afaf25d5df49966ed0b14ee4f2fcf4b84d81368db6e0893a0f91"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "018efd02aae8afaf25d5df49966ed0b14ee4f2fcf4b84d81368db6e0893a0f91"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "07a90272e63298815aa148574352b6222d99b1725ba1fcdbb1149e69a5681f24"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "07a90272e63298815aa148574352b6222d99b1725ba1fcdbb1149e69a5681f24"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fa4db336b3f45b0c56b3de2553111cd084ac8e02e4cab78054e3c85997d607ed"
   end
 
   depends_on "pnpm" => :build

@@ -9,11 +9,8 @@ class Aerleon < Formula
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0d2037308d4419c13f94bdb460d4bceb1d69a4a872b3ed336da9b869a2e8c6ea"
-    sha256 cellar: :any, arm64_tahoe:       "c753b5558528d1f6bec7745ff4c17ba00fd3c2daff2352d5878794a8c4781d0a"
-    sha256 cellar: :any, arm64_sequoia:     "bf4451aa94e73ce9905c694a24260fdad4bd83881d8f0b0a433d6452d19cb11d"
-    sha256 cellar: :any, arm64_linux:       "1d20d796f99c93e4c0b6afc4b3c7948429e9420374ed76a1aa9cb61c90f04890"
-    sha256 cellar: :any, x86_64_linux:      "837b102617a35fcebbc7707c76c133181ea496b5ee95076934f283b0f9a16b3e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "1b737c369553f5e9bb15030a90a47fe1e9a0fab11e435c787d69735b5bb17568"
   end
 
   depends_on "libyaml"

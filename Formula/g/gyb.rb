@@ -19,11 +19,8 @@ class Gyb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7801eeac2da84e3f4b69355e8094b70c2b2ef70178be45f16adfc3d18cdc8211"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc1fd1f3d8b5d48b11324d20b0f56ee1dc15797fd4c36c4f739ee1aa4b0fb720"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e9b2204cedb243bb218a9206f75dc7c883cba65f9cab45e03d71c123d90995a1"
-    sha256 cellar: :any,                 arm64_linux:       "b0922b58473d435ecafea073ddf7a0ff0235bdab0d2411ec647a9934ba7bcee2"
-    sha256 cellar: :any,                 x86_64_linux:      "6540d17464ed85222fee04442fb34c7fba091f1942675147f4956ccd0b5aac2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "210cef0a9db7eec7cf5d7507beb30988c077d89c2ccc1548c571a251bf5883fc"
   end
 
   depends_on "certifi" => :no_linkage

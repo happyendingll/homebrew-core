@@ -6,11 +6,8 @@ class Air < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "54799f29180cb8af194390ad8c54d5a8f0d81c1e8fecc7003e0f9764267874bb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a388de51b3c0ad79f3aa118791cc2fb06707cfa60387748e0ea26401dc28ff3e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d5884da832cbc185e7fb510e69fd343c61638944e6fc1c7ce43277db84b991a2"
-    sha256 cellar: :any,                 arm64_linux:       "fd02d5b43f6e16c3e71ce4a769c8fee38db4ca1b5df15c39904441d54bf84830"
-    sha256 cellar: :any,                 x86_64_linux:      "2cfd97d1cb68eb888d6f04c8aa171eb46352b7da7be3315e83dc26f7c8ebc34c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d837be68455598724fa3a956d6ad79ea380997b9155e5478245e8e2c3b742c40"
   end
 
   depends_on "rust" => :build

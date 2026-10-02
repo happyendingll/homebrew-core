@@ -9,11 +9,8 @@ class Dnstwist < Formula
   revision 13
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c1fe82f6bb5f8cee4e1275ea986c115c3c05a8b174389af533a0a22e99df0eb0"
-    sha256 cellar: :any, arm64_tahoe:       "b03e1005b92b816898639c7b66535e1d3ecb243fe5494cebb88a137579a97f75"
-    sha256 cellar: :any, arm64_sequoia:     "245bb75abaaf058e1309e492e246777d1c1b5642363d348673e4f9ad4d5ec87f"
-    sha256 cellar: :any, arm64_linux:       "0239518ba5a6e1bbef10941b871767eff6f4e0ba80f970eb479d9c48be92d8e9"
-    sha256 cellar: :any, x86_64_linux:      "b851f95b80f70b557bb87cb8816af3d11ca0ba6d8a77c7e50c5a5a43ee0444f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ad9c5ea8e0aaeb5d0aa3f6728b66cf72e8a2cc632b8f2a440b837d167e153579"
   end
 
   depends_on "rust" => :build # for geoip2, uv-backend
