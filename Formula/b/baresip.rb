@@ -6,11 +6,8 @@ class Baresip < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_golden_gate: "4069579dd1642f67fc0488b2f83f5dd97e3adc8ccdaf83d8bbdbb2bd191eafb6"
-    sha256 arm64_tahoe:       "63bba8620c3f888a896a6c6eb8ef21dd508f8b8298fd2e0eae832d10d8671079"
-    sha256 arm64_sequoia:     "17a733bd0b4a1a83a86e36d3a3656df21558f2b51f40155e77067388ea772bdc"
-    sha256 arm64_linux:       "7174109c0930bc6eb5c6da64d4bd3db2c90cf61d194d8d94cb4f5f1b3e016717"
-    sha256 x86_64_linux:      "ce455dc9a3038c34dbd129c249c63f8f875bdc63059c3d69b6cac9d51160e5f0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "2e72acbba9d288b37d20bb6bb315f1eb5f8b8d5e160f2bab6433280459c45998"
   end
 
   depends_on "cmake" => :build

@@ -9,11 +9,8 @@ class CharmTools < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "47c85e9649fdf49f090c6fff8828ed2ba3db1f9ccb8c4d98afaee030bbcfee20"
-    sha256 cellar: :any, arm64_tahoe:       "8c916dd97397aec1792774006d2088147fd4e2401b2cc2bb1ed3317a25a85d79"
-    sha256 cellar: :any, arm64_sequoia:     "e6fe42ca4a792c1dbec6ac1069a32fe9d4cd76bb552e92af017f10597d54f29c"
-    sha256 cellar: :any, arm64_linux:       "5259839cbcddca1ca5f3ce480014b61a34ffb3126946039b935787591beeb90f"
-    sha256 cellar: :any, x86_64_linux:      "59391a2b843c37b1542583677a94aef7b64c3ae55b19497ff748de9bbca3b153"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3570d4b15f172743018c457790e4987554d809694f6baf06bec04bcb3d9fb4da"
   end
 
   depends_on "certifi"
