@@ -11,11 +11,8 @@ class Gromacs < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "5affba3979351ffa97c3ddf146a80674cf4291cefbf66937ab5d4fca9e8ec352"
-    sha256               arm64_tahoe:       "dcec9b86ecc7c34bdc5692506283e9edfc6517611e2e1b3dcad8c70cb30e8fdb"
-    sha256               arm64_sequoia:     "d836f7818ebbb58f8ac48c8f37087a7a60bf8a7e620ff9eb9d7b59015bea8fb5"
-    sha256               arm64_linux:       "cfda23ff93f5a6bd6238e4cee31dae4c236f85e965911dac94bfd9b9d3cbe635"
-    sha256 cellar: :any, x86_64_linux:      "8709ec05de0f35d03dda35872516eb0db384abc024d514223514b5beefbd02fb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "5569ae5ab102b138189ebfff2ce2e8dcd848aed2e5eb27a26273c4e581656bef"
   end
 
   depends_on "cmake" => :build

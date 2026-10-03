@@ -7,11 +7,8 @@ class Autocycler < Formula
   head "https://github.com/rrwick/Autocycler.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f64acab88516e134c934f69a438a77545d4c67e097fa4bdd306a608e1d401a21"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0748c366e780d31d525d222433384c027c41e09cdf384ea986959c0287c8122e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "158a9115d7fc2d00a81bd908219d6a7945ab285fd31332e25d9b1cbee69bdf83"
-    sha256 cellar: :any,                 arm64_linux:       "c5e52202ede956138b5881b329f42927e051def595f658d6a3b13fe75171e4d2"
-    sha256 cellar: :any,                 x86_64_linux:      "3ce380cce8038843a3f26e1946dc29fec0a71bbb3bfa81505c1beb887b15a168"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "539a439e259f91048d8abc6f22c3974798a706395a47543afea71601cf6d6222"
   end
 
   depends_on "rust" => :build

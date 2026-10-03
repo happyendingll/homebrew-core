@@ -6,11 +6,8 @@ class Ncspot < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8048054bacc353778d1ddfb3c7f5b3210af57bea57438571daa63fc4a2ef351c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5abdfb5d713fcc981beccf9dec792d63fc3484bf7a297b679327b2732d08b7ee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ca49267c6c936720184f9031de484bfd95b9073f9ff14fa95a7b65101a91ee60"
-    sha256 cellar: :any,                 arm64_linux:       "2814ad1f81765af7f93be9c2311ee66c04a99466c01f2fbc6ebfed7d76708436"
-    sha256 cellar: :any,                 x86_64_linux:      "67b103b675a783083c805166639657bf39c173f6d0bf5c79778f1be671b2ee9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "84146b20ce1a820dd01fe228c92f0afbef97df57db68026c30688f3b9b3eeea7"
   end
 
   depends_on "pkgconf" => :build

@@ -6,11 +6,8 @@ class Topiary < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "20ad8cd8c160af31d9bc68511cacf4987d942cfebc36aa16e5e7d9aba13bbe03"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "13ed87a3bb1782a6bf2d88efcc3a7f033dd4cb544a43798338fd64894d998b03"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "92956d7622b98e73ce45f8a2beaddf7c13c0b68d63746849adc5977b2b434fc0"
-    sha256 cellar: :any,                 arm64_linux:       "995f80b0e710d71d454de9685a2543c33b8c67fc6d463dabc23bd1f69b4ff00e"
-    sha256 cellar: :any,                 x86_64_linux:      "53152a488d481095a1beb53738a2e0e36cef0c16c4e67d5776dbc589f9892168"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0fe46dde8b9b9378cccedd72b33f97ca1083da33db30d75394d45c7d63bcff28"
   end
 
   depends_on "rust" => :build

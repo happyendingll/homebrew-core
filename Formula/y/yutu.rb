@@ -12,11 +12,8 @@ class Yutu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "78d61be41f5335b50a823a049d2347ab9bee7b2247eb08c39b168e20188da1ce"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78d61be41f5335b50a823a049d2347ab9bee7b2247eb08c39b168e20188da1ce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78d61be41f5335b50a823a049d2347ab9bee7b2247eb08c39b168e20188da1ce"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cf58cc05c88a05f96febfed3f9c9b7b3b986812ba05ef7eefb3bf9d907bdf1ff"
-    sha256 cellar: :any,                 x86_64_linux:      "49c018715fe87054bb7fc2426e5bb643df0430bda53164cd8a90a8154e93de20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5fa37f027e8fc545791a3eeec9d023fe87ad3e6645fccdff64eb6881e538dca6"
   end
 
   depends_on "go" => :build

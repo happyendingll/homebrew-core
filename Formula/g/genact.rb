@@ -6,11 +6,8 @@ class Genact < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f07ad6bc63cdd75cb4d147c543203ccc213a0014267933ee39ba822b78b0868"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a60e80dcf99c77d411494da33296dc83366d5eb26b8b65f39dcc0d5393c961e6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "75e17e2fff597f44f11b22f0abd4522b85c6c54b24facec8d5349655a602bf8f"
-    sha256 cellar: :any,                 arm64_linux:       "45307fbaf1396ad104679ed6c9fa95de7267f2acbd7d2055a0718e81272decbb"
-    sha256 cellar: :any,                 x86_64_linux:      "5e24b161bf245cd2a2d06f02adb3a77eb2a83d15e2dbcd52b7769360ba5ac943"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d11d0b2b5fd7800493b2082b69b894bf6acf226bc2c1acf4153262429799b151"
   end
 
   depends_on "rust" => :build

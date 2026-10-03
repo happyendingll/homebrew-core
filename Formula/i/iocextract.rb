@@ -10,11 +10,8 @@ class Iocextract < Formula
   head "https://github.com/InQuest/iocextract.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5fdc997a091da245bbad28a3e2b1b5d6a11d14723fa071c85c7ea1e5ce7799ae"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "63be74669cb11cc3ea988cbda51c6534cc284acfd3fdc4b9c9dd7c2966458027"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a94fea9aab55b766b3d281c3a73e22dd99a1492ff8dd33005e448709f997510"
-    sha256 cellar: :any,                 arm64_linux:       "967082f5ef3ff79cfc75323d354d19edb721ce43957e3a113ad91356742dd0b6"
-    sha256 cellar: :any,                 x86_64_linux:      "151f513972fd9023c1bd0c5cd08db6b1d659ee8da5507b477aeca03dc8f03e89"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "61446209c44bb7eb58e8da9f0fe904a185fd43d569188d917f46833c26e5dc4f"
   end
 
   depends_on "certifi" => :no_linkage

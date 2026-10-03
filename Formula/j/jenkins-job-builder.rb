@@ -9,11 +9,8 @@ class JenkinsJobBuilder < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8d1e1612a0ce854a348e7325f1fb8714a0022711912753030eab66294bd48edc"
-    sha256 cellar: :any, arm64_tahoe:       "c0f76316551a1b31fb87da10671698220834504b17fdc8eb36bd742053fa098c"
-    sha256 cellar: :any, arm64_sequoia:     "133d475ce675e7f900a50bb0018f1df064dedea558772437e6da64d5f18cf3b9"
-    sha256 cellar: :any, arm64_linux:       "29b0e37db5eefa2c81e9b6b29aae281a728c06d972f530cda82093f88fc4dd3d"
-    sha256 cellar: :any, x86_64_linux:      "39f17d23e8fe51df397bb06d30c5d3b85ef76d05b799db234833a37f24d8f280"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9d2910dbc2337d79db01cb9ff10a7baf13c192fe6d76cd01f387303e9159b842"
   end
 
   depends_on "certifi"

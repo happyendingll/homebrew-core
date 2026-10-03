@@ -11,12 +11,8 @@ class Asuka < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aec6df40ed09e3ffa39407f67e6b5ff4370dfeb8e3a16cca8a0504e097d631ea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "32ee0da95789720132c1d861f2d3123ad212788d9146555e435a96527bf7bd3b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe4fca3a8b96744b6b0304c3cf5cdbaf22a0ed7ec822d6e783b670a4c1869ac5"
-    sha256 cellar: :any,                 arm64_linux:       "83fd646a9af29c9d6e407133fa9613c9288980199b9e0992381107d8bd49db37"
-    sha256 cellar: :any,                 x86_64_linux:      "789d5787d195d510189eb4a4c4ba5a473a1b5e563942ed5effc8e03fb1c62937"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "501ba0b71b2d4049a4d41042b470bf1d85596a86b55f1500a34d4ef21e68e663"
   end
 
   depends_on "pkgconf" => :build

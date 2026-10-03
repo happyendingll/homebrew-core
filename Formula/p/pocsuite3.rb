@@ -10,11 +10,8 @@ class Pocsuite3 < Formula
   head "https://github.com/knownsec/pocsuite3.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0523658f0aeade95703ef1450b2a696e665e1138c57c02f130365445c99c0fba"
-    sha256 cellar: :any, arm64_tahoe:       "296fb897bf0caedace2a7301df56b41e98903463e412d4d4e0a823ad67902dd8"
-    sha256 cellar: :any, arm64_sequoia:     "99d458550a571b3dbe155b2deec43a739c987b0f718f2095674d9fe50da5bae1"
-    sha256 cellar: :any, arm64_linux:       "a08d7367fce647740e1e2c3629f98cec47d4b9ce68ae2aaf7b548a4baee1d542"
-    sha256 cellar: :any, x86_64_linux:      "72dd462940e20efc4f0b250125fd36d45a3456a42d28b646527ce6c431c8ec53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6d6af0542833f867a5d1e51624a79ff8d29f325b139e88a14c76c340917ed55d"
   end
 
   depends_on "pkgconf" => :build

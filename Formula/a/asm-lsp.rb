@@ -7,12 +7,8 @@ class AsmLsp < Formula
   head "https://github.com/bergercookie/asm-lsp.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "841ae55df666f63a6f4ce786a3b71662fbf8b210106660e3c45168bca170ccbe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "722840f4af9b43c029e2ab914dd73f67f886f00391aa6eacb67f1df04f601b32"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f63aa59b47fd257e14d99b8f3fc12d0d91a81fe46a43e3ee234720d961d3830d"
-    sha256 cellar: :any,                 arm64_linux:       "b2b03ad5c7245ecbd0ee4091decc8ef08f0c39c51f1108c8c44f54599caccaea"
-    sha256 cellar: :any,                 x86_64_linux:      "8cb43f74b4528cb5b8c320754cb9099be7e1762c1a324406ac84e387ef6de444"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6ccb3e75b0cb78baa6a79f93523b4c620ae4854894b62fb07c54a954a142f1e1"
   end
 
   depends_on "pkgconf" => :build

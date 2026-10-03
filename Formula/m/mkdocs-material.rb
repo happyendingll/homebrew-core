@@ -9,11 +9,8 @@ class MkdocsMaterial < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "420767f633ca16dfe055e6919e149352679284986f7b55b6da598251c1c61e5b"
-    sha256 cellar: :any, arm64_tahoe:       "7375327bc7f494d3173335ca1e6920283c47e1f84aa99778f802adb705185da7"
-    sha256 cellar: :any, arm64_sequoia:     "7f49f32b1ce0f4f377c0ebad0eab3642c834f1e255420680ebbe48d40fd3adb6"
-    sha256 cellar: :any, arm64_linux:       "77ca28ea35575a10cb1e0b39644bd072da22cb59deb473fb8290918a1d85bea5"
-    sha256 cellar: :any, x86_64_linux:      "3427aa63299ee8cf224ebe55339887ec5918ae387cda45a115108acba221fde3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "62f68c956760bf78ac1c0212d97b7a1aa6fd9f3efc9ca9482784b38c35c5bc57"
   end
 
   depends_on "certifi" => :no_linkage

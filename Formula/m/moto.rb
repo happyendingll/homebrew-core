@@ -9,11 +9,8 @@ class Moto < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "80d3029c8ddf2ea196d46f7dd315c6720b21ff4a596fed1f64cfb43b8b24eb92"
-    sha256 cellar: :any, arm64_tahoe:       "9ab9df7c4d47c14075cb37c636c2f738ab45b25afd4e34b483793fa2c77efcb1"
-    sha256 cellar: :any, arm64_sequoia:     "d487d97a8aaaf970d0cff3f164a8d522348ff2b5401cc9c30756f53485d49888"
-    sha256 cellar: :any, arm64_linux:       "8fbe12c2b07b492bedbf78755dbbd37e151c5552ec3f24bebf829cb963412c9a"
-    sha256 cellar: :any, x86_64_linux:      "877b8c12b2e754729b779ffe928ccb6555ce75a399cce638e1ddb832c07276d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5a9af5150671ba0b77384f9ad0d9172b18b78d144b820e391954aa0d5c7cd73f"
   end
 
   depends_on "rust" => :build

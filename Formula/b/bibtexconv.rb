@@ -7,11 +7,8 @@ class Bibtexconv < Formula
   head "https://github.com/dreibh/bibtexconv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8c8838a0208d2ca94232f6a6b2ba99217740eb07752544f52d371965ef48dcff"
-    sha256 cellar: :any, arm64_tahoe:       "a6b8fdb3a90cbb0c468ed72192e3d89fced096c6003aff96f2330b70443799f2"
-    sha256 cellar: :any, arm64_sequoia:     "1433fb90267faee183558beda96870d8bde3396f58c5f519db24b574927ac8e2"
-    sha256 cellar: :any, arm64_linux:       "987891180329ce3a37e9b8db235da409ff98a98179b596e3863d933b0be85459"
-    sha256 cellar: :any, x86_64_linux:      "0508a7d1f72447f3124f766a058342de41210328a3bd68d99996ad14bad5a4c7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "19165b2b00b393da93193d8440ec0c8f1542ef0d5331bf6048b29fc4c887bc1f"
   end
 
   depends_on "bison" => :build

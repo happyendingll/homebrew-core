@@ -12,11 +12,8 @@ class Apkeep < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "301d1aebc359ffb42f003690fe42eb7e93406c8a0d922df177bee496da40d4ef"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4567991fb169f4cb484aa8fa1dcea36532113517c272ad325c8692b4a2c348f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6f0c9690ab19d1e2704227fcb502fad07d04bfde5ae3e8a79022418320882286"
-    sha256 cellar: :any,                 arm64_linux:       "37938e8da3d68a42277fc77f07251570a9121a87dd998b6f897c3107de425445"
-    sha256 cellar: :any,                 x86_64_linux:      "a83b06e6c76217d2fb782910123235986a3cf89f5fe625f659f99b41b9f36a55"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "04602a073421d85335dbe06e59a6121c948d47f21f82acacfd8f9cfe10cd528c"
   end
 
   depends_on "pkgconf" => :build

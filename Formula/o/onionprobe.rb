@@ -10,11 +10,8 @@ class Onionprobe < Formula
   head "https://gitlab.torproject.org/tpo/onion-services/onionprobe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d13f71b1b6c1adf8476f32e6458bbad927f5edbb4b35a6ce722829741c5e25ac"
-    sha256 cellar: :any, arm64_tahoe:       "8d022f23593f09bac7e28f65addf9814881379f1846b390df73d55099ac8ecd7"
-    sha256 cellar: :any, arm64_sequoia:     "557a07273160caa90e01841011f12f6311d0b38aaf43656b28412667461c1b9e"
-    sha256 cellar: :any, arm64_linux:       "5a158b75a0c8f6a7a6ca1ec2214e5439cf7999dd62ec0d6fcea3c9ae807fc73a"
-    sha256 cellar: :any, x86_64_linux:      "638165cf24ca84720f4ef65d91d4d98c41c4671a97ee2003013c61dc5b38801c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3b78357310e8015517f2276181556e4edefdfba3b5ddaec2b50942e9d414d9f3"
   end
 
   depends_on "certifi" => :no_linkage

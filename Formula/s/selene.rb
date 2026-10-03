@@ -7,11 +7,8 @@ class Selene < Formula
   head "https://github.com/Kampfkarren/selene.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "92ba4aa49b97955e87d0b1da3e2c344bfbf25212e33154c5e1b95977cda4f56b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4422e5f144497e79230ad7eb438278caf9b34851c44dbdca7ad601f0b4e5e226"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "658ee21747f33a782fe47d6be6a00d8858ce1481fea0074e3249a33732d16191"
-    sha256 cellar: :any,                 arm64_linux:       "bdc685472eb4f1a4f16a5d77ec3879de4fb371f0ecfdda6a98c33788e9f2c82b"
-    sha256 cellar: :any,                 x86_64_linux:      "38cd2f9fa32f638319d37b742d441666996d3b3579920221f522115b2ead658e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "15a67ae19b0b4a4ff57e2580a94438b9a4ff0a743e116d9a70a26217e99bee09"
   end
 
   depends_on "rust" => :build

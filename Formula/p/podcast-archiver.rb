@@ -9,11 +9,8 @@ class PodcastArchiver < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "30a790e0b8b6b34d29669d44b2939a613a77195afb068c2e65cbc11c499e3ed3"
-    sha256 cellar: :any, arm64_tahoe:       "39a815e76cb029e6093da51ce14a372a0cada0d339756be4b0a19f5119a68107"
-    sha256 cellar: :any, arm64_sequoia:     "fbd174c26aa913f8127d03c07b480a98f04b2ae983c9756a898b3c64718b06a6"
-    sha256 cellar: :any, arm64_linux:       "52abf26b97e240161669aa88272229c661038c71b99ccffaf388da5eef47b3e5"
-    sha256 cellar: :any, x86_64_linux:      "4f7a1211c2de3206f75399c5631f87e3180edb4104be96e0043d1c176517578e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c5c51283370e08d060004cdea595c64a674f850259d4f78ab84278fb47d6db94"
   end
 
   depends_on "certifi" => :no_linkage

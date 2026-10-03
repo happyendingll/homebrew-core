@@ -10,11 +10,8 @@ class Parliament < Formula
   head "https://github.com/duo-labs/parliament.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f4d966374db9c1111ef25434a0e215cba274343ac6fe34f63934a0be8f84d951"
-    sha256 cellar: :any, arm64_tahoe:       "d0295fae2d2398f2102292b480553a5196ef11e7f8ee3b662b186208c3fd719d"
-    sha256 cellar: :any, arm64_sequoia:     "9fbbfca6f3168ff23e757c5fee77c079e8b450dc71b07f0211312ac05f99ab20"
-    sha256 cellar: :any, arm64_linux:       "01ec1557ca0970c44d916955326d55d1c9bb06ca6b1a2d059b5cf783b2ae8534"
-    sha256 cellar: :any, x86_64_linux:      "c1af5015acea01a4061cc5042df3f1e8cf6b581da1e61cfa27e29f0397b32d9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "7565c5564a6cd0b28f4f6ca58b9dd89efda97489c34e83f57e3628680983df2b"
   end
 
   depends_on "libyaml"

@@ -9,11 +9,8 @@ class Mapproxy < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "308545bf63b46e5e0be2b609a575d013744c567e39f496f8f0f42f13f1d71258"
-    sha256 cellar: :any, arm64_tahoe:       "e8de1bc56679f2f04c49087db3ab21599babdc8b1a333f529fb4683c5a05d786"
-    sha256 cellar: :any, arm64_sequoia:     "95eeb05b79389516ac6e61c8030cfb94eef58431fe958af3e4373a936046b429"
-    sha256 cellar: :any, arm64_linux:       "9197b0eb45ee15953901346c773563b93b58421af6395923cc2591057f62ea04"
-    sha256 cellar: :any, x86_64_linux:      "c029dd5ebb77537b8e11d7ff28b7da089942f73503f2a3c17e250063a841b6dc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8ecac2a06f0ba98af8d1cda02de9805fd78800d248b7f91f1a12ea07e51a273b"
   end
 
   depends_on "pkgconf" => :build

@@ -10,11 +10,8 @@ class OpenaiWhisper < Formula
   head "https://github.com/openai/whisper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aba46921e803daaa6aa0e86cd6c200a43196f41a3fa3316b36c00ff32c922041"
-    sha256 cellar: :any, arm64_tahoe:       "8318c85c10b489a7371899607e7cc1f530f63d352744592bbd00cf914d1a87f5"
-    sha256 cellar: :any, arm64_sequoia:     "99df5bbb86f3bc7ee713997d2046a1b7165015f5c21d27713b3f1d639125fb28"
-    sha256 cellar: :any, arm64_linux:       "c11f7fcbabdc2b9ac6ab8363e3aa5b5f8534e46e06281cce02407df33ca4f8a5"
-    sha256 cellar: :any, x86_64_linux:      "43ffdf57cfe685df91da51d9c765aafb6effefdcd4a37ff7d2b90a2a878f4176"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e954bd25714f05d1cd6f3ce391cd26d3b0dbed82220ac6a74233e7ec2139b5d5"
   end
 
   depends_on "cmake" => :build

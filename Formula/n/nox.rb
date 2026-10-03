@@ -9,11 +9,8 @@ class Nox < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f0947fa33fac238bb3b8842451485a0c91fc04e618d2173ff6a68c345bd4d0aa"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f0947fa33fac238bb3b8842451485a0c91fc04e618d2173ff6a68c345bd4d0aa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f0947fa33fac238bb3b8842451485a0c91fc04e618d2173ff6a68c345bd4d0aa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a655d8cf99f75c29b53163137680bb13d8e7a366855270fada7c2b826a536b7c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a655d8cf99f75c29b53163137680bb13d8e7a366855270fada7c2b826a536b7c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0a4a7a6a3c735528e26e8fd9af1fc83ce40c5ebf0db50fb8755ed2b0831d567b"
   end
 
   depends_on "certifi" => :no_linkage

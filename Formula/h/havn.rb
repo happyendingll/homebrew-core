@@ -6,11 +6,8 @@ class Havn < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b635e3319e966a8c6beb65313ab1246871ac6e88da33679e61a90cc97231a596"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "aa4b542a823aeb5a162447dc435099ee2b22a8ae0e81863ab546d5d50ee0b0c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3b98ab02fc66e741cf2cba35b66767ab1cf4e6bae1ec23efca311f2975e4207"
-    sha256 cellar: :any,                 arm64_linux:       "594a9ca2f45cb19830f78b8861b44c967c54df0553db380740c5f67a8fd427f6"
-    sha256 cellar: :any,                 x86_64_linux:      "c297c5b0c814349d80856a68c93fb09e212a16db41fd5c50b69a9c7b6d2ed3e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ee378c2ad58d08b021390558f2fe0e1e5b85cd8ea023d46ebb70c844ed7d5604"
   end
 
   depends_on "rust" => :build

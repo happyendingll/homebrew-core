@@ -9,11 +9,8 @@ class Nvchecker < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "08a320596dc44ce969e6c9ea34e904a8bf88a594b4e0c41ca32349c706dbc87d"
-    sha256 cellar: :any, arm64_tahoe:       "24ab9beb7be8f98c6f6912b5483c2fc381384af1ce4bd233b8d2a0d498b1f512"
-    sha256 cellar: :any, arm64_sequoia:     "f4cfc04e9102fef78dcf5c04dd7e3e3c5d10c69f3ae9634afdf94dc26a579cd0"
-    sha256 cellar: :any, arm64_linux:       "9a57bc9833daf20043502e51142925691a2c7874830782210e31a4ac4f5bcdb7"
-    sha256 cellar: :any, x86_64_linux:      "f5f622a43f9a9125e324bc99fb8197f1cb0e77e835472a65d536fdbe8b8426d1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3a1a04caefe22e848dd2047722d85367ee516df61af8990060d9abf2dc8bdcdc"
   end
 
   depends_on "curl"

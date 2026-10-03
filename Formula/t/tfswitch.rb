@@ -12,11 +12,8 @@ class Tfswitch < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "06217960f63d5f3288ddad26fa7953f942ee693c3d8889a2547e1f8e67a7d30f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06217960f63d5f3288ddad26fa7953f942ee693c3d8889a2547e1f8e67a7d30f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "06217960f63d5f3288ddad26fa7953f942ee693c3d8889a2547e1f8e67a7d30f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8518581935fc8ba45c4a6fd15bc6ab86ccb81ba83d6557e54b47d0293f609798"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c60c8a1f653d3a397836fc6e4720011245d929d5974d6bd8cf706277ca9d8b20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "81fdb839325c2a563a81ebf03b1156ccf2e4fdd7862c66a9f10a25a3d36992b1"
   end
 
   depends_on "go" => :build

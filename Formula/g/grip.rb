@@ -9,11 +9,8 @@ class Grip < Formula
   revision 22
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9813bb434a834bba1a20b0a7e32f12a0edddc8a7bcd496da07f5f12d24c88e5d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7bfeb48c0a059f124188e8223341057c4d90ea470b84010e4fc31cf91380d46d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "523b02502c1fc3ed1eeac3b53da4055ff6517e1a320926078b3bf7d9276c1be1"
-    sha256 cellar: :any,                 arm64_linux:       "d9291412ef1cfaf2417f92670e33b0372fbecd5905bbf226cfa6302612edf048"
-    sha256 cellar: :any,                 x86_64_linux:      "fb596e64d1ba9065dfcb21042bebbafe9c72042ee8acc52ab6351b2ed3359d7f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2cf83f1a138b09923ee384a9ba3bfc352aa034be1f8d07f636cd3e2f650f96f1"
   end
 
   depends_on "certifi"

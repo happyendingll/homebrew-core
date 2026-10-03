@@ -7,11 +7,8 @@ class Subnetcalc < Formula
   head "https://github.com/dreibh/subnetcalc.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "cb4e5d074bdfd8a90aa6cc195e0a8778c419db7be28609279366eb3335eeca69"
-    sha256 arm64_tahoe:       "feed7f26d42db7eae0e740328cb32650ac97e3e9336224d8b6329459edaac4a2"
-    sha256 arm64_sequoia:     "9b95e93d27e44ef1aeadc8d165c4fcc1364f41c0609c294685802bf695ba017a"
-    sha256 arm64_linux:       "b6911cd49a1f38afc24172517ad3fff5d266f79e78ee9793b488180794288d33"
-    sha256 x86_64_linux:      "4814e0cc693f259f3b850f76e21ecf0d35354605110e38da87b3b31288970d56"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "c8fc29dfde3ceeec6a120221dcc22cc94c08dcd20575889b886649c4876ff15b"
   end
 
   depends_on "cmake" => :build

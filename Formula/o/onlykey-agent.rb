@@ -9,11 +9,8 @@ class OnlykeyAgent < Formula
   revision 14
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a1b886550a24306f1d1fe450ee5069775d3526741d3ef186431a9004b4748035"
-    sha256 cellar: :any, arm64_tahoe:       "879c1e02e76e03b09992c116333c3a0d78327452a81fbca457a8ca7ead570f6d"
-    sha256 cellar: :any, arm64_sequoia:     "0fe608c74232ad3ff9825259d5d0e1834bc2bc355183c8b31926355feff835a2"
-    sha256 cellar: :any, arm64_linux:       "7029a97774965472011d9f6602aa8c8038cd54c39feb568d8c4e9e6c2e276dc9"
-    sha256 cellar: :any, x86_64_linux:      "21c749cc83fd779a44741723e1163a40eb72ca25883dc1a3fe63474026b66467"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a3935b7ce359911df621937825607f390d68b867a9259ddc97bdb42cc1712216"
   end
 
   depends_on "pkgconf" => :build

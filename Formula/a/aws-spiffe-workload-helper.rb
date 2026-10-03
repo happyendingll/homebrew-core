@@ -7,11 +7,8 @@ class AwsSpiffeWorkloadHelper < Formula
   head "https://github.com/spiffe/aws-spiffe-workload-helper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b19ea518bc0130349fb38eab5ececc8a6c3db7bbc708dcdc755e8d92c7881596"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b19ea518bc0130349fb38eab5ececc8a6c3db7bbc708dcdc755e8d92c7881596"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b19ea518bc0130349fb38eab5ececc8a6c3db7bbc708dcdc755e8d92c7881596"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "70c82193ba68c5d82f1104849fba935facc4e15b1c251f83aaf29d1c8d2067a4"
-    sha256 cellar: :any,                 x86_64_linux:      "b85539082c2a3120c82124e60990f6ebbba37d280ba778faefef842391565c56"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4ab1924a6a471b8811d5faea7d51c39baadb50241b90ddc86d0d9f0d9ddf19a"
   end
 
   depends_on "go" => :build

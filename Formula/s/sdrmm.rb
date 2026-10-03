@@ -6,11 +6,8 @@ class Sdrmm < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4684666432e67f182d87686867f6cecee25373053ec359519754eda7c733aacf"
-    sha256 cellar: :any, arm64_tahoe:       "7e68e32b9387188042b06f79c0a4375d33324eec857cd5c031a7117ebe9e5cbb"
-    sha256 cellar: :any, arm64_sequoia:     "76f38b844912130bb00864fe752cc9afc1b3be6d058d0b1c40e6283b1cebdf96"
-    sha256 cellar: :any, arm64_linux:       "db03cef44eea2b35aed5f1d843f8d070541ecb11a36d0eb2a9a928a9cffc4c26"
-    sha256 cellar: :any, x86_64_linux:      "a99341c5e97dfb03e6424f8ee29fc24232c659211dfceafa95105b2d899e062c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "302204b89b668c08c0ef380b177d782e1b35d1bf1681d4b57f91b83d7cfc56cc"
   end
 
   depends_on "cmake" => :build

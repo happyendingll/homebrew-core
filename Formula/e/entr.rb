@@ -12,11 +12,8 @@ class Entr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2684ccbd205b2b06eb1aa1174eab33c6db1a25e56fca6ab50cd4700dfebc28bb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "44320e4d824dc977fadfc1c871bfd1a604e6a48f073be0c1263add9c8a499607"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8af3d28815a4024e15fd973d1558e59b7264dd0ed79775d4b43382f9b48701b7"
-    sha256 cellar: :any,                 arm64_linux:       "78ae395c02f3e5f8451d1ae35bedcd03b6a077896c78f76b206903d053442d56"
-    sha256 cellar: :any,                 x86_64_linux:      "28eaca5c84b0952841d9615f9464ddfea9e6aef0da23477641f78dee9563da4e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1f1cb76c10e5045f483cf32811cb5edf448cfa988856db6d156fb18e8b0b3c1e"
   end
 
   deny_network_access!

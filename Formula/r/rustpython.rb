@@ -12,11 +12,8 @@ class Rustpython < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "027b8d2ac35fc6044ce6a29208a751c28d4886f7f3ba8b1688175b27caaa246d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1c023db1f504419fcf1b784d729f8d223fcd4a3aaf569d563b10d5712887cd6a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "efc8dd046f37dbef10db87660808e3893792292e04d4f95088f65b53aa10aef8"
-    sha256 cellar: :any,                 arm64_linux:       "41643e1fddef82f23163068ebe0b5d1adea0161be04838266bc053d90c5b0689"
-    sha256 cellar: :any,                 x86_64_linux:      "dbd53494f3e85d61dfd47b0ef14e6ec31858d8ce1e2025a57d36917fe58e6109"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc83b573741e6da519ccca84efe21517eac23417e842e7d05becb87492da70fe"
   end
 
   depends_on "rust" => :build

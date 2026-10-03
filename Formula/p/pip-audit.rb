@@ -10,11 +10,8 @@ class PipAudit < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0aaaff5c31e8206c6f673562eaae8af27511e195ab7535659bec9cd2fe94fd69"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3becf4de2b9eba77593e903ea6454ba3e2df7c5d2130c8e17a0b599f61a772a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9b2d90a102fb3cc73a3cc0ad6cbd325395d446578b41ae0d1e13163a7c23446f"
-    sha256 cellar: :any,                 arm64_linux:       "b037aa7836ed952a4792c28a319554504ebca46078a191c52c933ac6e28a445c"
-    sha256 cellar: :any,                 x86_64_linux:      "e9a7d0ce84e6413ca9d4450459f0577095af9092707e490c3464137661d250d1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "58401c6172fca18cfd1858ac70e700baf5c3a1ae9a011ccf1b36a7db4288cb0d"
   end
 
   depends_on "rust" => :build

@@ -10,11 +10,8 @@ class PassImport < Formula
   head "https://github.com/roddhjav/pass-import.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9352578c3ec8e4842f74b2e173a672256af6f857cc8f942fd1c96baa9b803a20"
-    sha256 cellar: :any, arm64_tahoe:       "e3c24def82f506cec459785af307f21b1ff3a503f46021141bc54fee09a31134"
-    sha256 cellar: :any, arm64_sequoia:     "2f6dce619c0d41de03be1e640465a86e0db7abca2a26a135ad2fe8cb0c51763c"
-    sha256 cellar: :any, arm64_linux:       "4cec55b6eca0328ab5e858e862388167f889d7812aaff5405c998180b2a2d334"
-    sha256 cellar: :any, x86_64_linux:      "bad0a181ea8bbb72ae1b228b4d3fa1dbd1a3d368d53b49442b01dce9ffb1c588"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "db0f291ee9613a2a6d64f3260e60b7d3e4f795c6a7d21710ecc0945c757f5959"
   end
 
   depends_on "certifi"

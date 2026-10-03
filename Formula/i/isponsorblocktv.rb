@@ -9,11 +9,8 @@ class Isponsorblocktv < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d430baac080e0d05a8731b18e3ce29902a224f7fe0d1b9fad9913fd7b7a9a002"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dfd17cf35f6af60931394a25978282f06c0432449c002423a0192c15076c6945"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a52d3a57dd6dca7266cf4e6b77fcf72279abfe01a7d11c9d4f26178f37fcdf77"
-    sha256 cellar: :any,                 arm64_linux:       "cf370ef7460cca8cd34ed528a3d35fe7f74c6c2736b88ff7595da0124277ccf7"
-    sha256 cellar: :any,                 x86_64_linux:      "06d45febde4fb5dcf254e5bcf4fc6ed1ad5830c6a926a6cbb8203b5dc7b00dd3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4acb84d3f59e23c2845e9a6fdd5d81d4c35cdcdca6046b519360d00ee45217a6"
   end
 
   depends_on "certifi"

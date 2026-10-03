@@ -10,11 +10,8 @@ class HomeassistantCli < Formula
   head "https://github.com/home-assistant-ecosystem/home-assistant-cli.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a4f44d97c0269ce0ac91da88fc0adbbb21666e1a5ea1e139ab070315f0c2cda7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b83b626d85ef45cafb4ba3958f7bbd8fc48c0f637aad8ffdca9b9365789ece7f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "090a38c674bf3e129b0e62b4739072110e7334cd3dc18eb1a03e8480be566133"
-    sha256 cellar: :any,                 arm64_linux:       "7261390e34b5fd1cd7f0e04e626a40b5abfec1c0ac613c12f8ec6a202cbc43a0"
-    sha256 cellar: :any,                 x86_64_linux:      "a2f24bfa5a126cbb497e83efc856db1efcf278054307c5436c47a93ba041a400"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e532075588ae11c80cc2e7a2ee3608ca7a2cad4430ed6783dd3e8fc008ac6a96"
   end
 
   depends_on "certifi" => :no_linkage

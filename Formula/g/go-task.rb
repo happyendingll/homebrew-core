@@ -7,11 +7,8 @@ class GoTask < Formula
   head "https://github.com/go-task/task.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1bd590c63c6dfa71ecbed3e2ea2b56ce10585caafe5e64c701b47bd545af8425"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1bd590c63c6dfa71ecbed3e2ea2b56ce10585caafe5e64c701b47bd545af8425"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1bd590c63c6dfa71ecbed3e2ea2b56ce10585caafe5e64c701b47bd545af8425"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "acfd05df69c800900801274cf19dd94ab61fc72e53e9bb22bde4e7bed294b070"
-    sha256 cellar: :any,                 x86_64_linux:      "0fcf16162746728079ad400786ba0a98dd1f44864947f6c59c0af0b4b5476d38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "26af34823c86108687fb3eb715260e33f59f152f9448940a2a9202b0d2dc0b86"
   end
 
   depends_on "go" => :build

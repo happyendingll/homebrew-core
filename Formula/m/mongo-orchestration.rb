@@ -10,11 +10,8 @@ class MongoOrchestration < Formula
   head "https://github.com/mongodb-labs/mongo-orchestration.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d7df1c44377977d741acad2ccd12c01fe49400ece6d36ce0091a8191d3fd78a0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "626367ed910b291e69fb160cd8a1f5a1e5211edeeeda9f5ffd01a005eb412b98"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "96de464286b9b3b418e060bcd9094b0135ccd2b34b06fbf2468c3a38c60bbeae"
-    sha256 cellar: :any,                 arm64_linux:       "9ef25c6ffba7f9e72f7fb43d02657cd04bf305fbd68e95ea6ac5c61da587e184"
-    sha256 cellar: :any,                 x86_64_linux:      "b0caf75946a7792342184a885c9f731cc0fac6b032e3c64a1c86869d5f8614b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "476a926617cc581fde037d605543880e9fd8a419e290622b643d7e570a8f7621"
   end
 
   depends_on "certifi" => :no_linkage

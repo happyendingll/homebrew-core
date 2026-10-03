@@ -12,11 +12,8 @@ class AzureStorageCommonCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b00c8981cc471073c6ac58d8d317a8b5481fe912c2b1e0c0fbcf9fbe286a0a83"
-    sha256 cellar: :any, arm64_tahoe:       "85b6b625b71b845bb2c68e92eb2ad06687e66ca3082ae49f1440b68fe4fc1fe3"
-    sha256 cellar: :any, arm64_sequoia:     "5dd98d8e82ae42a430e98878c051c47a73aebf7fa1b3c3e341e7b672748cb19b"
-    sha256 cellar: :any, arm64_linux:       "8f9deafa3bf1f37aa9f499a936dc9deda66c94ef2e7d1066282d83935ebd268c"
-    sha256 cellar: :any, x86_64_linux:      "dff335fbf74d89c4921b389dcf7603a2b6109225e6b517aaf8d16a6e7d01a8ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "dda6d3f6133c8afcf15dd1e3bcc71e9f999cb354289004ded1cfb4d2e7606331"
   end
 
   depends_on "cmake" => :build
