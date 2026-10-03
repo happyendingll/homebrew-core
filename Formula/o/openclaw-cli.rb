@@ -1,16 +1,23 @@
 class OpenclawCli < Formula
   desc "Your own personal AI assistant"
   homepage "https://openclaw.ai/"
-  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.9.6.tgz"
-  sha256 "1a7355691bc0e605222ba818f1f72c1787253c78dfeb0df6be2086ec73b71e63"
+  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.9.7.tgz"
+  sha256 "1b4746d9dfe1768e73da849e824172140f1a71b6edde3f7625f70477a73f83f7"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "1a05bd6b553c1b4555de3e922f137e85a788d78efc2392a234d7826ac62c2f6f"
+    sha256               arm64_golden_gate: "ebdb181823e2bf164600ddab2a7ec68289d7167d782897c03c863771c84c1705"
+    sha256               arm64_tahoe:       "ebdb181823e2bf164600ddab2a7ec68289d7167d782897c03c863771c84c1705"
+    sha256               arm64_sequoia:     "ebdb181823e2bf164600ddab2a7ec68289d7167d782897c03c863771c84c1705"
+    sha256 cellar: :any, arm64_linux:       "fb245ee9edac6a522e0ceb8be5cb2dd9220a7893568148ac1d224f3e9ba13d5c"
+    sha256 cellar: :any, x86_64_linux:      "d6666be0432522f17e57f8fdbadd35dcb641c7a77710c111aba47a25c93d8bee"
   end
 
   depends_on "node"
+
+  on_linux do
+    depends_on "libxcb"
+  end
 
   def install
     system "npm", "install", *std_npm_args
@@ -48,6 +55,9 @@ class OpenclawCli < Formula
       basename = dir.basename.to_s
       rm_r(dir) if basename != "#{os}-#{arch}"
     end
+
+    # Rebuild the X11 clipboard helper against our `libxcb`
+    system "bash", node_modules/"@earendil-works/pi-tui/native/linux/build.sh" if OS.linux?
 
     # koffi binaries moved to `@koromix/koffi-*`, which also ships a musl build
     node_modules.glob("@koromix/koffi-*/*").each do |dir|

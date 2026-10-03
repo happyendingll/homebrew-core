@@ -23,5 +23,6 @@
   "openjdk@8",
   "pypy",
   "pypy3.11",
+  "pypy3.12",
   "rust"
 ]

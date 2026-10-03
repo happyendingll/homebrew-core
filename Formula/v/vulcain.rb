@@ -1,14 +1,17 @@
 class Vulcain < Formula
   desc "Fast and idiomatic client-driven REST APIs"
   homepage "https://vulcain.rocks/"
-  url "https://github.com/dunglas/vulcain/archive/refs/tags/v1.4.4.tar.gz"
-  sha256 "af022f399651aef02704a84a617586ebc67c7df987fecd521c2b0ec6401d30ba"
+  url "https://github.com/dunglas/vulcain/archive/refs/tags/v1.4.5.tar.gz"
+  sha256 "e16b0e691cb348d1622dc1dfdc12134a09d1c1d74559d220b9a5de55057983fc"
   license "AGPL-3.0-only"
   head "https://github.com/dunglas/vulcain.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "591cdc7a7f8a3fec3edf91c5126fe817fde2e5ec232782b50e78009634fd00c9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4da72bea38381670016d909b73f456958bd866d63b3faf61fdbe7c69bd9b8cef"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42357e323eb416eba8992d1c3a7b7f5cb63f66cf5e609c6a1b54db94fc13d07e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2581c5b6a8355054edc3ace06c0c3940ed383ce23e98a91f1b2c45e975ca430a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b3192b285bacca9f127643acbc34540c7d35393e46871cba2556d9488f2f94c0"
+    sha256 cellar: :any,                 x86_64_linux:      "85607cfa42d6a60cef566dbf0ae7a0c765146955b96f456eb18b924281a2267c"
   end
 
   depends_on "go" => :build

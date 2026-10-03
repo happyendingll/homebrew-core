@@ -1,10 +1,9 @@
 class Zig < Formula
   desc "Programming language designed for robustness, optimality, and clarity"
   homepage "https://ziglang.org/"
-  url "https://ziglang.org/download/0.16.0/zig-0.16.0.tar.xz"
-  sha256 "43186959edc87d5c7a1be7b7d2a25efffd22ce5807c7af99067f86f99641bfdf"
+  url "https://ziglang.org/download/0.17.0/zig-0.17.0.tar.xz"
+  sha256 "b6c7f1728f043700d6529bac980800792f824256a9d2f1839b3d62beed0b8abd"
   license "MIT"
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -13,13 +12,16 @@ class Zig < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "2ba0019a37b574b330b792dd709ecc3a506a0e9d37ff46ed91239dca7f534508"
+    sha256 cellar: :any, arm64_golden_gate: "85eec248d94adbd3108aba05bde198fa993c618e7a60937a23b1482e44db1cf8"
+    sha256 cellar: :any, arm64_tahoe:       "d00f287f5366ec5e2ca231528024e008aa788b82b0422159566f4a5c7350688c"
+    sha256 cellar: :any, arm64_sequoia:     "f874a532c80d8ff6cd09e1a16054010174f616d45270342a7a3e3aad6919b583"
+    sha256 cellar: :any, arm64_linux:       "3ae196d35cc9598d605e3d7b56488a90422ce967d0ae810c73e4807b0ad41074"
+    sha256 cellar: :any, x86_64_linux:      "cad0b7425cda1a6a0803d97542e04f508f3eeace63345c4c378df325faeb889a"
   end
 
   depends_on "cmake" => :build
-  depends_on "lld@21"
-  depends_on "llvm@21"
+  depends_on "lld@22"
+  depends_on "llvm@22"
 
   # NOTE: `z3` should be macOS-only dependency whenever we need to re-add
   on_macos do
@@ -30,13 +32,6 @@ class Zig < Formula
 
   # https://github.com/Homebrew/homebrew-core/issues/209483
   skip_clean "lib/zig/libc/darwin/libSystem.tbd"
-
-  # Backport fix for zig to fetch zip files to cache
-  patch do
-    url "https://codeberg.org/ziglang/zig/commit/cfde9303ff75322525746aa325026f0e12fb402c.diff"
-    sha256 "9e9aa27db65d5b66eb82df7eae13baff57656de2088c0ee15eccbda404e690fa"
-    type :backport
-  end
 
   # Force Zig to use the system libc++ on Darwin. Without this, the vendored
   # libc++ gives `zig` a private std::error_code category that disagrees with

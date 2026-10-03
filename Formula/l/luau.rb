@@ -1,8 +1,8 @@
 class Luau < Formula
   desc "Fast, safe, gradually typed embeddable scripting language derived from Lua"
   homepage "https://luau.org"
-  url "https://github.com/luau-lang/luau/archive/refs/tags/0.740.tar.gz"
-  sha256 "419f96e4ecf5a0dd415a2625ea7ea9dc8a407e86d64b25e00936302b25a7afbd"
+  url "https://github.com/luau-lang/luau/archive/refs/tags/0.741.tar.gz"
+  sha256 "deee653d0f5971b809ef67f50dbe8109ad369d7575e344cfe2013774fed2f4c6"
   license "MIT"
   version_scheme 1
   head "https://github.com/luau-lang/luau.git", branch: "master"
@@ -13,8 +13,11 @@ class Luau < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "e9db453cec292cc41bca9f5b741ecef82a072287f707949468d64ae96b0c01c4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c9d15090b2166c2bfa16c8ce1ffedfeea2fdc12b6d43668ef2827d05431ea6ed"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c134a2cf2e20a094ffee5f71ac239da6670489ac84a73d04eb4d2c48fdc48b2c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0add7b875e575ae122d6712cb3a12060a8afff9cd5b2324a36b7a7e5805f97fd"
+    sha256 cellar: :any,                 arm64_linux:       "51781383c21303ce8ce1f3cad2daa98e53ed14ef07bb3cf5d2877a021c7da31c"
+    sha256 cellar: :any,                 x86_64_linux:      "d9a2057f09bf2dc57c04965822421db53a95ef6544d1f273204c1638fa0cf453"
   end
 
   depends_on "cmake" => :build

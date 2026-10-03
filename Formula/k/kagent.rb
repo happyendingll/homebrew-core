@@ -1,18 +1,27 @@
 class Kagent < Formula
   desc "Kubernetes native framework for building AI agents"
   homepage "https://kagent.dev"
-  url "https://github.com/kagent-dev/kagent/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "452f6c79a5edf1f310bd80b5f8b893c9a4111cd3ba61e45b2c7feda9daf4695c"
+  url "https://github.com/kagent-dev/kagent/archive/refs/tags/v0.10.3.tar.gz"
+  sha256 "258cd2ffd24221a6c00dab916d07639f164b96400ccbdfb6db2257ea1e655e5f"
   license "Apache-2.0"
   head "https://github.com/kagent-dev/kagent.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "5bc85e987ae54a6e7c54009dec574f1051dfa2563a931348d11b706d54b7620d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5112611154bfc5d5093654d960a3374480f9c930e93999f7ebea907c50090d6c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c60352ef17483c353919a68a2f8c82d8e7243ab26ef118864fb415facaa9e159"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "54c4f11c4fa38d2a002f76b6e997f277f0b20a4a0c1df731e8774aa603612221"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f7f22dad978cc7d34c1edce808059626f9800bb9aa225c860d57c4ab3c0630a2"
+    sha256 cellar: :any,                 x86_64_linux:      "392cc4d7235de357fb374315cc18392ddfdd46a858a5a629f09185282cc81078"
   end
 
   depends_on "go" => :build
   depends_on "kubernetes-cli" => :test
+
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download", "-C", "go"
+  end
 
   def install
     cd "go" do

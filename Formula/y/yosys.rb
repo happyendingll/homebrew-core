@@ -4,11 +4,15 @@ class Yosys < Formula
   url "https://github.com/YosysHQ/yosys/releases/download/v0.69/yosys.tar.gz"
   sha256 "6dad6412cae417f5a53e2c943c2aee160162cfc1bdd31669230da1b7e3522571"
   license "ISC"
+  revision 1
   head "https://github.com/YosysHQ/yosys.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "88e8e2bd3dd409e2fd694076830fa00c3b5ee619ad045d0d96a051fd1938ff87"
+    sha256 cellar: :any, arm64_golden_gate: "721d4ca90b7a6e54444b0e966f0d8e2946c824521065d97c46badd02864857ae"
+    sha256 cellar: :any, arm64_tahoe:       "80d534c82b29426761d7308665713423f278c65442c0d826f13936c6b94ab885"
+    sha256 cellar: :any, arm64_sequoia:     "ebcf5c499ce0451b78916cecc0f7770c43078da2b51bbac793e0cbf47cb2eeca"
+    sha256 cellar: :any, arm64_linux:       "912f49b90da114f147df3d71e318269f8224dfb3d46126af9bdbe04cc209e861"
+    sha256 cellar: :any, x86_64_linux:      "af0c3a822e3fafca65fe16ccba425bfb813a458be15c11ac46211132b4792175"
   end
 
   depends_on "bison" => :build

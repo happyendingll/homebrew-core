@@ -2,6 +2,7 @@ class Bsc < Formula
   desc "Bluespec Compiler (BSC)"
   homepage "https://github.com/B-Lang-org/bsc"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/B-Lang-org/bsc.git", branch: "main"
 
   stable do
@@ -24,8 +25,11 @@ class Bsc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "15ddf48490a9c1a4abb8b3dec2672b55414d3f82b388d91f13b5289571607850"
+    sha256 cellar: :any, arm64_golden_gate: "323b3ea0ac72592a6c37f079d8ea0435c7c01a3077df20b2e92c41ef3e424205"
+    sha256 cellar: :any, arm64_tahoe:       "b049841441cbce5e98752172f20f402eab30a1f5eba5f0f0492d8c7e13499492"
+    sha256 cellar: :any, arm64_sequoia:     "7a1f6e535570500088d040698d2ed54ee6e37bf8cb56734a6d791cd07cef6c9b"
+    sha256 cellar: :any, arm64_linux:       "c2a8d89692430dd6653c285220305d7bd43070bf793c19e94742806335984fba"
+    sha256 cellar: :any, x86_64_linux:      "2728a37a36ec9642142af0522082ea9dccbb3f210f7948301ca33071aaa610fd"
   end
 
   depends_on "autoconf" => :build
@@ -44,6 +48,8 @@ class Bsc < Formula
 
   conflicts_with "libbsc", because: "both install `bsc` binaries"
 
+  # TODO: Remove the Tcl 9.1 workaround once upstream supports it.
+  # https://github.com/B-Lang-org/bsc/issues/1130
   # Workaround to use brew `tcl-tk` until upstream adds support
   # https://github.com/B-Lang-org/bsc/issues/504#issuecomment-1286287406
   patch :DATA
@@ -164,3 +170,18 @@ __END__
  	echo -ltcl${TCL_SUFFIX}
  	exit 0
      fi
+--- a/platform.mk
++++ b/platform.mk
+@@ -77,10 +77,10 @@
+ ifeq ($(TCL_VERSION),8.6)
+ TCL_DEFS=
+ else
+-ifeq ($(TCL_VERSION),9.0)
++ifneq ($(filter 9.0 9.1,$(TCL_VERSION)),)
+ TCL_DEFS=TCL9
+ else
+-$(error Unsupported Tcl version: $(TCL_VERSION)
++$(error Unsupported Tcl version: $(TCL_VERSION))
+ endif
+ endif
+ endif

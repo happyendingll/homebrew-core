@@ -15,7 +15,7 @@ class Neovim < Formula
 
     # TODO: Consider shipping these as separate formulae instead. See discussion at
     #       https://github.com/orgs/Homebrew/discussions/3611
-    # NOTE: The `install` method assumes that the parser name follows the final `-`.
+    # NOTE: The `fetch` method assumes that the parser name follows the final `-`.
     #       Please name the resources accordingly.
     resource "tree-sitter-c" do
       url "https://github.com/tree-sitter/tree-sitter-c/archive/refs/tags/v0.24.1.tar.gz"
@@ -104,56 +104,27 @@ class Neovim < Formula
 
   deny_network_access!
 
-  def resource_source_directory(root, resource_name) = root/"deps-build/build/src"/resource_name
-
-  def resource_build_directory(root, resource_name) = root/"deps-build/build"/resource_name
-
-  def define_resources
-    cmake_deps = (buildpath/"cmake.deps/deps.txt").read.lines
-    cmake_deps.each do |line|
-      next unless line.match?(/TREESITTER_[^_]+_URL/)
-
-      parser, parser_url = line.split
-      parser_name = parser.delete_suffix("_URL")
-      parser_sha256 = cmake_deps.find { |l| l.include?("#{parser_name}_SHA256") }.split.last
-      parser_name = parser_name.downcase.tr("_", "-")
-
-      resource parser_name do
-        url parser_url
-        sha256 parser_sha256
-      end
-    end
-  end
-
   def fetch
-    define_resources if build.head?
-
     resources.each do |r|
-      source_directory = resource_source_directory(buildpath, r.name)
-
-      parser_name = r.name.split("-").last
-      cmakelists = case parser_name
-      when "markdown" then "MarkdownParserCMakeLists.txt"
-      else "TreesitterParserCMakeLists.txt"
-      end
-
-      r.stage(source_directory)
-      cp buildpath/"cmake.deps/cmake"/cmakelists, source_directory/"CMakeLists.txt"
+      r.stage(buildpath/"deps-build/build/src/treesitter_#{r.name.split("-").last}")
     end
+
+    (buildpath/"fetch-parsers.cmake").write <<~CMAKE
+      set_property(DIRECTORY PROPERTY EP_STEP_TARGETS download)
+      cmake_language(DEFER CALL get_property targets DIRECTORY PROPERTY BUILDSYSTEM_TARGETS)
+      cmake_language(DEFER CALL list FILTER targets INCLUDE REGEX "-download$")
+      cmake_language(DEFER CALL add_custom_target download DEPENDS ${targets})
+    CMAKE
+    system "cmake", "-S", "cmake.deps", "-B", "deps-build",
+                    "-DUSE_BUNDLED=OFF", "-DUSE_BUNDLED_TS_PARSERS=ON", "-DCMAKE_TLS_VERIFY=ON",
+                    "-DUSE_EXISTING_SRC_DIR=#{build.stable? ? "ON" : "OFF"}",
+                    "-DCMAKE_PROJECT_INCLUDE=#{buildpath}/fetch-parsers.cmake", *std_cmake_args
+    system "cmake", "--build", "deps-build", "--target", "download"
   end
 
   def install
-    define_resources if build.head?
-
-    resources.each do |r|
-      source_directory = resource_source_directory(buildpath, r.name)
-      build_directory = resource_build_directory(buildpath, r.name)
-      parser_name = r.name.split("-").last
-
-      system "cmake", "-S", source_directory, "-B", build_directory, "-DPARSERLANG=#{parser_name}", *std_cmake_args
-      system "cmake", "--build", build_directory
-      system "cmake", "--install", build_directory
-    end
+    system "cmake", "--build", "deps-build"
+    (lib/"nvim/parser").install (buildpath/"deps-build/usr/lib/nvim/parser").children
 
     # Point system locations inside `HOMEBREW_PREFIX`.
     inreplace "src/nvim/os/stdpaths.c" do |s|
@@ -167,12 +138,11 @@ class Neovim < Formula
     # Replace `-dirty` suffix in `--version` output with `-Homebrew`.
     inreplace "cmake/GenerateVersion.cmake", "--dirty", "--dirty=-Homebrew"
 
-    args = [
-      "-DLUV_LIBRARY=#{formula_opt_lib("luv")/shared_library("libluv")}",
-      "-DLIBUV_LIBRARY=#{formula_opt_lib("libuv")/shared_library("libuv")}",
-      "-DLPEG_LIBRARY=#{formula_opt_lib("lpeg")/shared_library("liblpeg")}",
-    ]
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DLUV_LIBRARY=#{formula_opt_lib("luv")/shared_library("libluv")}",
+                    "-DLIBUV_LIBRARY=#{formula_opt_lib("libuv")/shared_library("libuv")}",
+                    "-DLPEG_LIBRARY=#{formula_opt_lib("lpeg")/shared_library("liblpeg")}",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

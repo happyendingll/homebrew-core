@@ -16,7 +16,7 @@ class FxAgent < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "a1fea19013717d83d66373adcd7307dd4dcadb65d6485a723c0dd9dc9cfc8142"
   end
 
-  depends_on "zig" => :build
+  depends_on "zig@0.16" => :build
 
   conflicts_with "fx", because: "both install an `fx` binary"
 

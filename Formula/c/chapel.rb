@@ -24,9 +24,13 @@ class Chapel < Formula
   depends_on "pkgconf"
   depends_on "python@3.14"
 
-  on_macos do
-    # FIXME: chpl hits an internal error when building mason on macOS 27
-    depends_on maximum_macos: [:tahoe, :build]
+  # Fix bug with newer libc++, full fix will be available in 2.11
+  patch do
+    on_tahoe :or_newer do
+      file "Patches/chapel/remove_custom_stdless.diff"
+      type :backport
+      resolves "https://github.com/chapel-lang/chapel/issues/29458"
+    end
   end
 
   def llvm

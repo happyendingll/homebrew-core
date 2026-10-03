@@ -4,6 +4,7 @@ class Pypy311 < Formula
   url "https://downloads.python.org/pypy/pypy3.11-v8.0.0-src.tar.gz"
   sha256 "829cef413d84383563488f0234b3cc537a8034e43fda13e0530500dad2d5dc3b"
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://downloads.python.org/pypy/"
@@ -11,9 +12,16 @@ class Pypy311 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "c845c480f93c9f6f8cd2e15332bd1ff5d75e58dcbc015794b47c651c9e27b3eb"
+    sha256 cellar: :any, arm64_golden_gate: "6dabe6b50efdf80320a33f97a4666f4a0778b4c164c055b61eb04bf5d66e2dbe"
+    sha256 cellar: :any, arm64_tahoe:       "271d94d5d3a95c9eaaaa255563249a5d6dfdd4cb286b1fd695594bbf68c59a57"
+    sha256 cellar: :any, arm64_sequoia:     "8600fd0e9f848d03269a4082d074cb548281c7d8b7cca7f67132ab4f9e627646"
+    sha256 cellar: :any, arm64_linux:       "63be98ba15e693b553d32d3119bc039059b8b5d6e28d337d262aa7366a5a1222"
+    sha256 cellar: :any, x86_64_linux:      "52793346dc2739b8a0b1090c53edbd53ff42b659506d91d757b0aa8497501cf5"
   end
+
+  # https://github.com/pypy/pypy/blob/main/pypy/doc/release-v8.0.1.rst
+  deprecate! date: "2026-10-02", because: "is planned for EOL in next release (8.0.1) and uses EOL Tcl/Tk 8.6"
+  disable! date: "2027-10-02", because: :unmaintained
 
   depends_on "pkgconf" => :build
   depends_on "gdbm"
@@ -31,7 +39,6 @@ class Pypy311 < Formula
     depends_on "zlib-ng-compat"
   end
 
-  link_overwrite "bin/pip_pypy3", "bin/pypy3", "lib/libpypy3-c.dylib", "lib/libpypy3-c.so"
   link_overwrite "lib/pypy3.11/site-packages/pip*", "lib/pypy3.11/site-packages/setuptools*"
 
   pypi_packages package_name:   "",

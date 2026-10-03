@@ -17,9 +17,12 @@ class Zigmod < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "78e822702f710d5a71b0cda496713a4f6179007811e891b784ec7fdb269eecb6"
   end
 
+  depends_on "zig@0.16" => :build
   depends_on "zig"
 
   def install
+    ENV.prepend_path "PATH", formula_opt_bin("zig@0.16")
+
     args = %W[
       -Dtag=#{version}
       -Dstrip=true

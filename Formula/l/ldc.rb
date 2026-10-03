@@ -58,6 +58,7 @@ class Ldc < Formula
       -DD_COMPILER=#{buildpath}/ldc-bootstrap/bin/ldmd2
       -DINCLUDE_INSTALL_DIR=#{include}/dlang/ldc
       -DLLVM_ROOT_DIR=#{llvm.opt_prefix}
+      -DCOMPILER_RT_BASE_DIR=#{llvm.opt_lib}/clang
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

@@ -16,7 +16,7 @@ class Minizign < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "a2f745cbd517ad2ce762fe8474ec3246b4ea1f67c5914d0f93dd4b6d4d0d8e02"
   end
 
-  depends_on "zig" => :build
+  depends_on "zig@0.16" => :build
 
   deny_network_access!
 

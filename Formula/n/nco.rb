@@ -1,13 +1,16 @@
 class Nco < Formula
   desc "Command-line operators for netCDF and HDF files"
   homepage "https://nco.sourceforge.net/"
-  url "https://github.com/nco/nco/archive/refs/tags/5.4.0.tar.gz"
-  sha256 "c6e03cacbde7eae908eabfe65b2c1edc7b1754e07597b8f7fe2fc894f21b2dca"
+  url "https://github.com/nco/nco/archive/refs/tags/5.4.1.tar.gz"
+  sha256 "1908416c4c8c8754f48b797d1030ac847e07d7e49a6d5bf455bdee7808409aad"
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "e5721b37b9720f1b17286591ec62732b06afcb2429e2b39884c024bd50dac935"
+    sha256 cellar: :any, arm64_golden_gate: "4cb9f469e182752e4f525a07c164c17070aeb318c814716a23c4c6787537b287"
+    sha256 cellar: :any, arm64_tahoe:       "e365175190faa9782633a2d607942a904fcbd07900b8081811a10c25dd2df1b1"
+    sha256 cellar: :any, arm64_sequoia:     "b95b9cd4b71e3995499911b56af40583e53fac14e154c2cf8f34e754267c4fe2"
+    sha256 cellar: :any, arm64_linux:       "e1bda50f0603c187a53df7451506746dd090b220ba6702bbe8f64545531d01d6"
+    sha256 cellar: :any, x86_64_linux:      "560afd5aa719f7996724043a0747f6a749db2bf378839064fbde0eaefec9d58d"
   end
 
   head do

@@ -2,9 +2,10 @@ class Ollama < Formula
   desc "Create, run, and share large language models (LLMs)"
   homepage "https://ollama.com/"
   url "https://github.com/ollama/ollama.git",
-      tag:      "v0.35.0",
-      revision: "cc4069396f3ad2c370c53eed2e4a42ac13adab84"
+      tag:      "v0.35.1",
+      revision: "b0c1ca4f7549d7acdfa52a7dcffc934bc63a43ce"
   license "MIT"
+  revision 1
   head "https://github.com/ollama/ollama.git", branch: "main"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
@@ -16,11 +17,11 @@ class Ollama < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d03b542441288b689433990bb254341cc48a28034964f8026d9355169833f10f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f26b579d77a6e5e72e43442c89e14f4dea28a67669e9d3272db295d4bd9bd44d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "62f1146acf3348d54cafbe4142399c3f76d66d00bc35731b9ef5cfeccdb37a53"
-    sha256 cellar: :any,                 arm64_linux:       "158315caf195bf68f7c51da745f6ad5000b48f2d50d19b1472e0a82ecbb625d7"
-    sha256 cellar: :any,                 x86_64_linux:      "2b6be7466e2cbef4edcbb8e4a6f1e4aa7ffee38a4f0f5af3ed893d8979f4a087"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dce9182bb7a472e0ef69b93d9d6b6c2ede372b9526c4f5bc1fadeed45e99b86"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "55b277688f55facaa45e5831de1982faf4c39a55fb4743586add21c3d8912331"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0eb232a4c437d9f6a36064fd622e912022e50a5ee6276a1327d995d7b41f54b"
+    sha256 cellar: :any,                 arm64_linux:       "02316ef8d5a5c9972662bd19bede5b35fda31d020f62c07563dd828fed4d9ded"
+    sha256 cellar: :any,                 x86_64_linux:      "cd9801c89d6d0d59d0f8e35b9be383caa10ed080d7d6c9e8a41bed1c6c26b535"
   end
 
   depends_on "ccache" => :build
@@ -31,13 +32,11 @@ class Ollama < Formula
     on_arm do
       depends_on "mlx-c" => :no_linkage
 
-      # Build with the mlx-c bindings for tagged MLX 0.32.1. Upstream targets a later MLX commit:
+      # Build with the mlx-c 0.7.0 bindings for tagged MLX 0.32.3. Upstream targets a later MLX commit:
       # https://github.com/ollama/ollama/commit/0bb09259203ff8f6d361faae1d40c4f83d2a99f7
-      # `mlx_cumsum_axis` only exists after mlx-c commit for MLX 0.32.2:
-      # https://github.com/ml-explore/mlx-c/commit/d4afaec5cc5c9ffbe58f37fdc038b2faaedc6e70
-      # `mlx_gather_qmm` has no `global_scale` in MLX 0.32.1, so always use the wrapper fallback:
+      # `mlx_gather_qmm` has no `global_scale` in mlx-c 0.7.0, so always use the wrapper fallback:
       # https://github.com/ollama/ollama/blob/v0.34.1/mlx/compat/0001-mlx-c-qmm-global-scale.patch
-      # `mlx_fast_gated_delta_update` needs MLX newer than 0.32.1, so always use Ollama's own kernel:
+      # `mlx_fast_gated_delta_update` is not in mlx-c 0.7.0, so always use Ollama's own kernel:
       # https://github.com/ollama/ollama/blob/v0.34.4/mlx/compat/mlx-c/0002-fast-gated-delta-update.patch
       patch :DATA
     end
@@ -46,8 +45,8 @@ class Ollama < Formula
   # Pinned dependency required by llama-server
   resource "llama.cpp" do
     url "https://github.com/ggml-org/llama.cpp.git",
-        tag:      "b11081",
-        revision: "161755f29e415e2c33efe906e91843c068efd664"
+        tag:      "b11232",
+        revision: "6f767fe960c3b97cf37fac4626c86400561ca1e4"
 
     livecheck do
       url "https://raw.githubusercontent.com/ollama/ollama/refs/tags/v#{LATEST_VERSION}/LLAMA_CPP_VERSION"
@@ -205,15 +204,6 @@ __END__
 diff --git a/mlx/fast.go b/mlx/fast.go
 --- a/mlx/fast.go
 +++ b/mlx/fast.go
-@@ -21,7 +21,7 @@
- 	}
- 
- 	out := New("FAST_SDPA")
--	mlxCheck(C.mlx_fast_scaled_dot_product_attention(&out.ctx, q.ctx, k.ctx, v.ctx, C.float(scale), cMode, maskCtx, sinks.ctx, C.bool(false), DefaultStream().ctx))
-+	mlxCheck(C.mlx_fast_scaled_dot_product_attention(&out.ctx, q.ctx, k.ctx, v.ctx, C.float(scale), cMode, maskCtx, sinks.ctx, DefaultStream().ctx))
- 	return out
- }
- 
 @@ -30,38 +30,6 @@
  	Bias   *Array `weight:"bias"`
  }
@@ -253,18 +243,6 @@ diff --git a/mlx/fast.go b/mlx/fast.go
  func (r *LayerNorm) Forward(x *Array, eps float32) *Array {
  	out := New("FAST_LAYERNORM")
  	mlxCheck(C.mlx_fast_layer_norm(&out.ctx, x.ctx, r.Weight.ctx, r.Bias.ctx, C.float(eps), DefaultStream().ctx))
-diff --git a/mlx/ops.go b/mlx/ops.go
---- a/mlx/ops.go
-+++ b/mlx/ops.go
-@@ -103,7 +103,6 @@
- 
- func (t *Array) Cumsum(axis int, reverse, inclusive bool) *Array {
- 	out := New("CUMSUM")
--	optDtype := C.mlx_optional_dtype{has_value: false}
--	mlxCheck(C.mlx_cumsum_axis(&out.ctx, t.ctx, C.int(axis), C.bool(reverse), C.bool(inclusive), optDtype, DefaultStream().ctx))
-+	mlxCheck(C.mlx_cumsum(&out.ctx, t.ctx, C.int(axis), C.bool(reverse), C.bool(inclusive), DefaultStream().ctx))
- 	return out
- }
 diff --git a/mlx/ops_extra.go b/mlx/ops_extra.go
 --- a/mlx/ops_extra.go
 +++ b/mlx/ops_extra.go

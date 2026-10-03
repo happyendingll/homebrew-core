@@ -14,15 +14,30 @@ class Aoe < Formula
   depends_on "node" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
-  depends_on "tmux"
+  depends_on "libgit2"
+  depends_on "tmux" => :no_linkage
+
+  uses_from_macos "sqlite"
 
   on_linux do
-    depends_on "zlib-ng-compat"
+    depends_on "aws-lc" # cannot use on macOS due to openssl symbol conflict
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+    cd "web" do
+      system "npm", "ci", *std_npm_args(prefix: false)
+    end
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(features: "serve")
+    ENV["AWS_LC_SYS_USE_SYSTEM"] = "1" if OS.linux?
+    ENV["LIBGIT2_NO_VENDOR"] = "1"
+    ENV["LIBSQLITE3_SYS_USE_PKG_CONFIG"] = "1"
+
+    system "cargo", "install", *std_cargo_args(features: "web")
     generate_completions_from_executable(bin/"aoe", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 

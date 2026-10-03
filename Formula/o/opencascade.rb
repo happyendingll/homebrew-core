@@ -4,6 +4,7 @@ class Opencascade < Formula
   url "https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_9_3.tar.gz"
   sha256 "5ecf094ec6b12d5413dfb851d8c3590c354058aee556e32e408bdfbf8c357d57"
   license "LGPL-2.1-only"
+  revision 1
 
   # The first-party download page (https://dev.opencascade.org/release)
   # references version 7.5.0 and hasn't been updated for later maintenance
@@ -19,8 +20,11 @@ class Opencascade < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "a587b263187666fe1fb39338cfbdb2cb9c4bba78c2eddc44342da33c2f04c202"
+    sha256 cellar: :any, arm64_golden_gate: "f3e8a4afb66a07801bd3977a165e9b897d4c49d3b65e41b556167ad1ff0b7cae"
+    sha256 cellar: :any, arm64_tahoe:       "cbbb914aee6197f6ce60cf75b26e8b558be68699265c79cfe7e51e9713a10ea8"
+    sha256 cellar: :any, arm64_sequoia:     "b62765e91c1b704cbee71297fc1901beb9db38d6a08d720735b490c10684b957"
+    sha256 cellar: :any, arm64_linux:       "567e8bba26485d08562963d9c9870ccaeb691e1acbefb07ee2606ff88040ace2"
+    sha256 cellar: :any, x86_64_linux:      "7118d9aee4489f4076b44ec19afa439de79466d5e4e96793467ed3bfb2b52e1d"
   end
 
   depends_on "cmake" => [:build, :test]

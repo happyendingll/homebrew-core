@@ -4,11 +4,15 @@ class Weechat < Formula
   url "https://weechat.org/files/src/weechat-4.10.1.tar.xz"
   sha256 "b8744c6f5dc5543062791f563e0516dbc96a36161e1a03c468b3b7dcc8be5aff"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/weechat/weechat.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "f27af78d18f392ed91c19e66e47d4337aee4fa90853a326e64a7b1d544e82a6b"
+    sha256 arm64_golden_gate: "44c8714f960cd7bb425902245289e1a238c720dc697e662fc0af1a2273a8cf6e"
+    sha256 arm64_tahoe:       "8f1cbbeaac2ec0684a9d2ce2e4b2d1454f34b752cb6e5e09642017b8626062af"
+    sha256 arm64_sequoia:     "eb8d4dc8954a31d90bda1a405603f3ace79f7d63553774739c7a7822fad29baa"
+    sha256 arm64_linux:       "22d323c3ebdac40110cea3e4854d45362f97079e19cbf1520d38fd6a0e52e3b1"
+    sha256 x86_64_linux:      "2f4fa98892f228860de30bcaefa6acd11af7694194f82dc892e5de28601e7802"
   end
 
   depends_on "asciidoctor" => :build

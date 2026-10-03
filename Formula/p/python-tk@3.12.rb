@@ -4,14 +4,18 @@ class PythonTkAT312 < Formula
   url "https://www.python.org/ftp/python/3.12.15/Python-3.12.15.tgz"
   sha256 "de1a241a519e0a3374fea98988d0b52c886743f9d953f23be8269cc7b59c5fab"
   license "Python-2.0"
+  revision 1
 
   livecheck do
     formula "python@3.12"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "00d4d80aff25e36a1bf9a5a71bddb9182b2fded0326fee66d806e7499a8e90f2"
+    sha256 cellar: :any, arm64_golden_gate: "11a2f7014c66f526ff2a833d1ff6c7d2613124c6e959667565d96eebd9f36337"
+    sha256 cellar: :any, arm64_tahoe:       "79133faeacc4020f790d7406c8e50971dea539dbc48bc8956b81008855442298"
+    sha256 cellar: :any, arm64_sequoia:     "64ea6fca3df3d746331b25c8a90846fee2686bf3b3b664dcfe616445f2101b75"
+    sha256               arm64_linux:       "c1a61b104f39aa419c744df739802f9227975a856d133e8b9e338b9a81f83397"
+    sha256               x86_64_linux:      "306fe1c08dd69676463196b9e209ce6925a6f2bdcb67eb7d6140b366d7db0899"
   end
 
   # https://devguide.python.org/versions/#versions

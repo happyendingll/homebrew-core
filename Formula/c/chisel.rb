@@ -14,8 +14,6 @@ class Chisel < Formula
   depends_on xcode: :build
   depends_on :macos
 
-  conflicts_with "chisel-tunnel", because: "both install `chisel` binaries"
-
   def install
     libexec.install Dir["*.py", "commands"]
 

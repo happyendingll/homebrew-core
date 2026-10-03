@@ -1,13 +1,16 @@
 class Lfk < Formula
   desc "Terminal user interface for navigating and managing Kubernetes clusters"
   homepage "https://github.com/janosmiko/lfk"
-  url "https://github.com/janosmiko/lfk/archive/refs/tags/v0.19.1.tar.gz"
-  sha256 "e34a04fdc226feb4ea0ecc95a394fdf2540d22ba1fa83d29f518c677aab03b0c"
+  url "https://github.com/janosmiko/lfk/archive/refs/tags/v0.19.2.tar.gz"
+  sha256 "a129b6b7b81382a6983e1cc05e704925cbe8bc763bffa014dc61022ac38a65ea"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "2df8f84bb2c4725f010422c88f25286d7ea86bc692b826b38de64662db82483d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2d6737723c076ffeb2f58099423743e50a33a4a498394b96c3bd95d314c2aeb9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3d098f24feff7715b63e19ce768ce53dc0cb88586717f86a4ef422c3d100e3f7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "173c1b3ca5f34678310f5aa0f07c4877aafa79e4bb897c8b80bff7e72524009c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3262b55b43867e9efb81f689bbf082dc627f3eaf9c95583b11464553fdd7a225"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c5ecf16c1b30dbec98c1e462ff784e5b255870d1ddadcc7376aa6995859cfd0a"
   end
 
   depends_on "go" => :build

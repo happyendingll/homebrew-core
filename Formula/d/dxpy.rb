@@ -6,11 +6,14 @@ class Dxpy < Formula
   url "https://files.pythonhosted.org/packages/98/98/7f8504aa4b04172fb73e8226696349111a92221db85016e6baf4e258f319/dxpy-0.415.0.tar.gz"
   sha256 "62ca97b746e673da5428f0ab1cb2517aaed324173c340b1a2039dbdf5e3befd2"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "b6afbac1fe7cad17dce8dab68332e851a04e18503fb51fa252ce75912d6b7a4c"
+    sha256 cellar: :any, arm64_golden_gate: "dd3726243c003bc852cd177b1f5e53fa9d0ed0428fdc1a895edd4233fc248270"
+    sha256 cellar: :any, arm64_tahoe:       "724d0668f77fe3c293022efe93bd9e3c92421bb60aac731eb532afcb1a66a057"
+    sha256 cellar: :any, arm64_sequoia:     "651e0a183ed38d0bffedea4cee5d3621912e7bebd8809bb406b1a2f1ca47e493"
+    sha256 cellar: :any, arm64_linux:       "73ddae2a08abe7790df51e58159aefaafc18fd7b0f19e0c81861e6c7568478e3"
+    sha256 cellar: :any, x86_64_linux:      "adcd08694f1b1b2e3fb27e9e7a0db6dcf5f0b87721e9f7adc3f613e2192433e1"
   end
 
   depends_on "aws-c-auth"

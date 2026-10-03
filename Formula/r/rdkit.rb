@@ -2,8 +2,8 @@ class Rdkit < Formula
   desc "Open-source chemoinformatics library"
   homepage "https://rdkit.org/"
   # NOTE: Make sure to update RPATHs if any "@rpath-referenced libraries" show up in `brew linkage`
-  url "https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_03_6.tar.gz"
-  sha256 "d4d20b3b140237084694518aab34fdba6929d44bd7f720bce69329516abef663"
+  url "https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_09_1.tar.gz"
+  sha256 "86711e340759a3a0678a2e62f54f26f7ff564c3a02de0460f60b1ce89ac1bfe9"
   license "BSD-3-Clause"
   head "https://github.com/rdkit/rdkit.git", branch: "master"
 
@@ -16,8 +16,11 @@ class Rdkit < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "cd18a661f08c93e36c5d2ebb694ec75549918cf5cb2d484d9626385f9a8be051"
+    sha256 cellar: :any, arm64_golden_gate: "a061790105db0118a998193489ce6d834ec4eb7ad5d0cf0b559d6f82ba4b276a"
+    sha256 cellar: :any, arm64_tahoe:       "abdba9b65abfe462ed1aa4cb2e5401d7742e9245d32d88dda53467fd546f2d49"
+    sha256 cellar: :any, arm64_sequoia:     "3523a26e6e8aac1ddd1eddc760a2dda87318b9622c3c7e33fe3c72e141957e1f"
+    sha256 cellar: :any, arm64_linux:       "68ca0c1506133ea4a30bb726f6b551a70bc2cabe7626c4b21cd57b88e7400109"
+    sha256 cellar: :any, x86_64_linux:      "c223fe99c7bc62a27ed9bd766a0a082f1db2e881ffa4426ac9ae124ad4f41bf5"
   end
 
   depends_on "catch2" => :build

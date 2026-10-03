@@ -2,8 +2,8 @@ class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
   url "https://github.com/influxdata/influxdb.git",
-      tag:      "v3.11.5",
-      revision: "f083f73c92eaa87186d39c81bbd8afc3a3fd8d94"
+      tag:      "v3.12.0",
+      revision: "3ba97c65f1ee4e1f127a8266517d4d2083b7ea39"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/influxdata/influxdb.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Influxdb < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "578bbf155f9fb4e9b98f806c68a19fdf0099778868ef9f7ddf20e9eb40689f92"
+    sha256 cellar: :any, arm64_golden_gate: "2e082e82371c5912696947fc17bfea2833b2ebed9a4b6c160c24f86bd4534148"
+    sha256 cellar: :any, arm64_tahoe:       "d541ecb38d7ce7b2b09f425d81449147e09a0ed064b6173bb1128a479746f454"
+    sha256 cellar: :any, arm64_sequoia:     "b5986abca6dfe93c19ae6373e537dd49ad5aebe0db8877988e86a26527677d48"
+    sha256 cellar: :any, arm64_linux:       "2418ec169b10867d8a51d9fc7f43ae346dd9493fd720ed9d766714917896f1b5"
+    sha256 cellar: :any, x86_64_linux:      "e13c678707bb8964c33dc335197f327edf0eb600f2c9840c25bcfd2244271a2e"
   end
 
   depends_on "pkgconf" => :build
