@@ -8,11 +8,8 @@ class Libirecovery < Formula
   head "https://github.com/libimobiledevice/libirecovery.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a431276c56c97f47113f2d7cfdae91dd54cb9f55be9a7b38b23c2c2457fa9cd4"
-    sha256 cellar: :any, arm64_tahoe:       "c1f363151a9d348e0a64e4700aced724a23592d19697b0d04c946c4c5684720d"
-    sha256 cellar: :any, arm64_sequoia:     "7f29e556e43714b684ff38a39f17252a7b6045eeeb8bb2f519c3223ec4605601"
-    sha256 cellar: :any, arm64_linux:       "4b66e902d9548f4eda08653150c02b3f61bdc54df604d9534fed5bd36dbcc49c"
-    sha256 cellar: :any, x86_64_linux:      "4cf7d2482b31099c176efdc905144a371df121d0db6db8eee1737642fb6ce76a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f20de1a13f2767074bc445e69a7bf489ba3e143b8dc4d221e8e83d1b58ab534c"
   end
 
   depends_on "autoconf" => :build
