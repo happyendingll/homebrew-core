@@ -9,11 +9,8 @@ class Ldid < Formula
   head "git://git.saurik.com/ldid.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7c8799de0bd1159299e337f15d28dc7e53b6e3d1bc2c6b4525b2acc31a250ee1"
-    sha256 cellar: :any, arm64_tahoe:       "b1deffb6e575a4996e31cef6cbc56aa009f5eea67b73b437f6aea597198866a6"
-    sha256 cellar: :any, arm64_sequoia:     "bafb40af217fc882cb89890b1c8ec8943d006369ad8736d5d2e6533c209b282b"
-    sha256 cellar: :any, arm64_linux:       "28926ee4770d925d7d7d5712774169b5116b034ce42f2f81c3fff5005ef8d0dc"
-    sha256 cellar: :any, x86_64_linux:      "dc1105c33e228c1afeecffc04094ad9fb24f092bfa8f6a774277930c6878340e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6745c948aa89650963ea2b0a5ab5b5124fe481c069f33582b2a7d3fe49c78fda"
   end
 
   depends_on "libplist"

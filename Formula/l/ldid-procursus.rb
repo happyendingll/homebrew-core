@@ -27,11 +27,8 @@ class LdidProcursus < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0d063d417d94fa8797075e64c3c6853a92d1fb8df8c5e24c0699f316a17cd226"
-    sha256 cellar: :any, arm64_tahoe:       "4e9b85fb979ebcb8ce7ec1f3eb9b400fe18af1ac2a6c6b431c45220525f303a4"
-    sha256 cellar: :any, arm64_sequoia:     "34e43d0860debc89391f98072cceb4fc4f9298df5ef7bfa3194bbbc396c8b495"
-    sha256 cellar: :any, arm64_linux:       "a80396a5853c3f0759e5c0709d10c497db1c46e743699911ed430e3f0bb7f674"
-    sha256 cellar: :any, x86_64_linux:      "2cea3d649ee7339ff74f837432902606e3d17df7a4bcef12252ca97277b1b359"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2e5f204ada61b09e852dfd3be311b890f860455340cb6a7c43a71b4f7e9b7100"
   end
 
   depends_on "pkgconf" => :build
