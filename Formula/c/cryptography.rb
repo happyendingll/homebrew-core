@@ -8,11 +8,8 @@ class Cryptography < Formula
   head "https://github.com/pyca/cryptography.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7b08c43ef8082788d616c510fe6d963310f0f7321b5454eaccde8a48db206688"
-    sha256 cellar: :any, arm64_tahoe:       "f540b7d77d605b76c480649e9e89ae0670b1fc9f40c17adccf758faab4dec26f"
-    sha256 cellar: :any, arm64_sequoia:     "63d1ec730ac0d0b9fdaf6f07f09054687449f481f823600f76a891aaec7799b7"
-    sha256 cellar: :any, arm64_linux:       "b1094eeca891130ebb6109964115c97d59d78cd913c620b5275a07c20cf1dcd9"
-    sha256 cellar: :any, x86_64_linux:      "a036915f635d12321a894e0d8ef314e25cc920b293171d73c610d5291a4218f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "9cef29c9fd53a5db2092b55893aa58a1f4f8fcf3ce1d2d1e110a914519ff2b8a"
   end
 
   depends_on "maturin" => :build

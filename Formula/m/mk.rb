@@ -10,11 +10,8 @@ class Mk < Formula
   head "https://github.com/pycontribs/mk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "07dbae2a90fb295c472609905216f75775534567d83fcc89b8c8cb677b9bdb5a"
-    sha256 cellar: :any, arm64_tahoe:       "51e1b2814a6d8f5563cf4a7ae7831b50d600061240d537e17e6028aa470d440d"
-    sha256 cellar: :any, arm64_sequoia:     "7bb06e2ebbbac8fbd680bbacc290992cd04d8c8308d6d446e0e274a12345de80"
-    sha256 cellar: :any, arm64_linux:       "2971e734da1f09f17904ae2e8e2bd5e7d83c1b7f403c88bdd132eb2b5c62c883"
-    sha256 cellar: :any, x86_64_linux:      "f94110bb45214e1f4e18f7e2af13f604edadd1f2d4fe9b8324529790db10afc4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "89e585923b8eabdce048b506e668ef404ccab05094551f0f586293f779562490"
   end
 
   depends_on "rust" => :build

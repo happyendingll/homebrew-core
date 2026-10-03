@@ -12,11 +12,8 @@ class Watchexec < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f7ee9810f1f675c2bfb1597ab2ccdc957e4fb6318f9b5b265835acfd866f40c0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1b9848f82871ac21f9e10599f2da1323faa2f19c1c8c50b5621ab939dd0f3d72"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eb9f9371f513ecb2cdc50964cc95b3720b16ad52be778b924e7870022bcbe1e2"
-    sha256 cellar: :any,                 arm64_linux:       "119b2daf3bb309d4c9c29d8ac7ebd672862b3096968d7af1cf54dae0a23686c1"
-    sha256 cellar: :any,                 x86_64_linux:      "e57aa37524e9139aecaa15422809c3ffca72ed8aee7dd7a126bb47e4257ec1b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "cbc0585ae84ea0e9c8b1ac33fafdfa2809ecbe882a035121460012badded911e"
   end
 
   depends_on "rust" => :build

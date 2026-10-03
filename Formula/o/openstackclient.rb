@@ -9,11 +9,8 @@ class Openstackclient < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2771d58b96009bf6396e47e27cc9a341e0291a807fbe2d67258f79d7b490600a"
-    sha256 cellar: :any, arm64_tahoe:       "158663f06dce4fd398b27c375f41d914f08bccd0846f5ae260e73da063b677c4"
-    sha256 cellar: :any, arm64_sequoia:     "e51439adae91dd5c3f6d1b5c3bbff9b4092730f3e04ba7204e99bae8a9e554f8"
-    sha256 cellar: :any, arm64_linux:       "8381aea081e3ff656c1faae2921be7c52508d19492dd84696254f6ecf35a0a11"
-    sha256 cellar: :any, x86_64_linux:      "4ca49ad5f2a62a8afc37720b37141b20bbbad6f6229708600e4977823532737e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "3440dedba796e68573ebd56393402128979b81324d1be3e5c5a77773ecdc4923"
   end
 
   depends_on "certifi" => :no_linkage

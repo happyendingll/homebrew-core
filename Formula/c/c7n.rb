@@ -13,11 +13,8 @@ class C7n < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1c271d34cdb113d16eb27b0fb08e58108f22f6cc37733f1fe18a615c38deb81f"
-    sha256 cellar: :any, arm64_tahoe:       "74e3821b9e8b5ba59dc23860afca7fc338602423297f1c36747e85dc93096946"
-    sha256 cellar: :any, arm64_sequoia:     "c63a6259d39f8c5ebe85ee20b80c8e8c97e20b5dad7561ab2be76dec6913d5b3"
-    sha256 cellar: :any, arm64_linux:       "5d6efa40757d91041d922a701ef87125ff2e0086fdc28f758ce7b19871528264"
-    sha256 cellar: :any, x86_64_linux:      "020bf5ea0e155ec594cdb30ece35ec26c75629838dd56639c84cf065ed66e089"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "2a7eb26095007d0f6a767b129dd56d9bb9de19ef3a3e034047778c1deafccd3c"
   end
 
   depends_on "cryptography" => :no_linkage

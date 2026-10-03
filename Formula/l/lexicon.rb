@@ -10,11 +10,8 @@ class Lexicon < Formula
   head "https://github.com/dns-lexicon/dns-lexicon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e9c860aa764c81336f18c70e6ecce09e5cfc0a4bb75f1ced983bd1325f810201"
-    sha256 cellar: :any, arm64_tahoe:       "d55f8d5756660d6c18167c6da9185f4d4e9eb22ce35b7f67c4e8f7d843254735"
-    sha256 cellar: :any, arm64_sequoia:     "9c969cb041c88d913c45e7f4554f5c90b2fe9d44d5b7b3505479ddcf58f2ff72"
-    sha256 cellar: :any, arm64_linux:       "507a1b2ca8b5c0ad904e2a8c8cd001bf35a85dbde903ed216b72120fe69e106f"
-    sha256 cellar: :any, x86_64_linux:      "ddd3063327bb8004771e076cfbc078707bd1550c2ed2bd758fc64711968f30fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "f5e188acbe1c23532738cce757e54a71e3b54800a08a4741d72e597ea4e5c3b7"
   end
 
   depends_on "certifi" => :no_linkage

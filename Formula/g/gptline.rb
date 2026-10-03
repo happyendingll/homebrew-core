@@ -10,11 +10,8 @@ class Gptline < Formula
   head "https://github.com/gnachman/gptline.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e7d7ce99bccf63cec4a15c92315622cf884d28e50a1c6b78b124675bafcb2584"
-    sha256 cellar: :any, arm64_tahoe:       "85b66c997ce807d43f979cdc83c37a5695cc8ee01efb207ba20fcd1f93bb6a57"
-    sha256 cellar: :any, arm64_sequoia:     "bce2ac8164cb7503a816f7d1dc23ebb77f896bd234a7c7054e4a548d06ba7d34"
-    sha256 cellar: :any, arm64_linux:       "d3d7f2bf488441e838bd3f06b6fabb895cad3964300e5792164ab629813b7861"
-    sha256 cellar: :any, x86_64_linux:      "589eab39cc89331cc74aa7d8df72bb08e0642cd804f6063eac8cee3e22c97c38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "6ea6598f679e5e9dfab1202c5d1b6caf69b963aec37408cb738e3a4e72a6c6be"
   end
 
   depends_on "pkgconf" => :build

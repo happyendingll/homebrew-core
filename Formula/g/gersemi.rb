@@ -8,11 +8,8 @@ class Gersemi < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "64fe8b22b13468205e40e720e1f224a2657da604ef6d0609e5a29d31c3c07787"
-    sha256 cellar: :any, arm64_tahoe:       "ed99cdb7443d123c9f6cf50296a206768a0b04a1ef404ddddaf52c29edd86ecb"
-    sha256 cellar: :any, arm64_sequoia:     "4aeea171054d6ef8f5d5e27ce8cb9f5302d4fa1f3e54d502c6bddb283114c4a1"
-    sha256 cellar: :any, arm64_linux:       "8344877d5ea28103c865848fdb3218dacea504fce59718fef250e002efa50a82"
-    sha256 cellar: :any, x86_64_linux:      "19f69b9b77d70a950400d4f9f9e5c1c0adc58d83878ac4d1c01ac82adec61636"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "392e75b66265d36422f3cc1d2cfd9fe63ba0a35c10daafa32d82858a1f2bd39e"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class Mago < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "de11421c17f7c2f20f756e817ad6f590f79cde9be588adda099088c3cb8707b9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c01e2a5c29f106fec007ab60ff354f4d01e2c0c59ca45e85bae6fe83da1d18e7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0b2433f513f9c4ca936850d248ba73f378187676dbf3134dfca8b2719193d611"
-    sha256 cellar: :any,                 arm64_linux:       "08a8a574eaa2437f9818a2c25db3142e1a9fb6633d855246e7be95a35dfbe2e2"
-    sha256 cellar: :any,                 x86_64_linux:      "612ced37c1a1a5bfca5ec6b01a9a2963fd5ed2066b31c60087bcf1d5a92b47d2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "a709db607e56981825b1fdb8abf098bb9b265ffcd2f9b96136449591b03d6ce6"
   end
 
   depends_on "pkgconf" => :build

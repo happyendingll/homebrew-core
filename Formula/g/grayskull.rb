@@ -10,11 +10,8 @@ class Grayskull < Formula
   head "https://github.com/conda/grayskull.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "93e1512c2d8e67fe3bf28c07b16ae76e50c82408c7d2219e3e82265b03e0a964"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6991337b6edcba36a88773d6f4a79622c11785c65911e89630328e62513199a1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "708ebe4d79c386ce9f5164446e1484605d181cc1bd4cb2ad3bbf2aa47d1455c4"
-    sha256 cellar: :any,                 arm64_linux:       "b009db1c93a92e8499640ef143b2e16b22ca2df6f33439e1952d77f5d46fe7fb"
-    sha256 cellar: :any,                 x86_64_linux:      "f8303f8ca6eb3308c25401abd6a3197f08b927e4bc77421c7de7bf38d7c1ea85"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "203486f0de44adc7ca4136e92144deb7af86d9c7c0c6a05e50a6c13dc51814de"
   end
 
   depends_on "cmake" => :build

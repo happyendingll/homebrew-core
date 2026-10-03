@@ -12,11 +12,8 @@ class Rawtoaces < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f94c9904d3951ffd910e73561d46b6c81eb6c754a23e0192e087823256968776"
-    sha256 arm64_tahoe:       "6ed26bc049d6662d7083a4e1f59dfbb953632236fc89848040494255c6d701df"
-    sha256 arm64_sequoia:     "74e264e24f5340dad451f650ec8f1059adbf92dfd823380d19376dbf7cba835b"
-    sha256 arm64_linux:       "990a035d46e3c75f39241f3c337881bdf503b667bbe579f146ae8226f2f2a96d"
-    sha256 x86_64_linux:      "9ece41125ec6387d28e93650200c6a0cd29595b6542b5910cda50b9874e22255"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 sequoia: "e60613cd133325a33642353d233c00032b4b91526a6a13cd021af18f0bfc1a5f"
   end
 
   depends_on "cmake" => :build

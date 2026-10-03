@@ -6,11 +6,8 @@ class AngularCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "7c1b47fcc22cd0b9e2d95ce04c0eea30cdf25519fb0d5cf90da6e4c2ca607d38"
-    sha256 cellar: :any,                 arm64_tahoe:       "d98313e3eac6bf11d5c63d1a301db89c4960ab7c54409121c1293523e01aa59a"
-    sha256 cellar: :any,                 arm64_sequoia:     "c704a7c62695e1623468f6d4aa9db094a150c6e85eb9c38b17aab8a9db997729"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f22360c7596c1e119af2286187386453dca9ea38ed04c58e90841c4a6ff9f263"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "62993cc6a7ae58d6995df8dce31eb0d9b8688dac903efcd4dbdf63aeeef90009"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any, sequoia: "828d88011ffd2c2fc53cf094279d815276f858c6de56aa26a81020528bf883eb"
   end
 
   depends_on "node"

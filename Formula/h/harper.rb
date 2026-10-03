@@ -12,11 +12,8 @@ class Harper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a4c21653f90ee370a6a05f6637e2e871fb8d077a12bed28f167af250aaaa9acb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5efd5a9d872e185ee2cc64e67cf4f9ff3350934d8567825714eb597e8a139cdc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f806152d02f97df83a915e571b38b8f86f0f5146efe44501671abe52d4c52007"
-    sha256 cellar: :any,                 arm64_linux:       "44cdbe3979fa4f54c8190c0668906488a6ce83b1939e353f8591e299b7552afe"
-    sha256 cellar: :any,                 x86_64_linux:      "3ba24bd3b5adddc2818326c38b149e1e0221659a321be3ed991899c1e7eb6c36"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "404af2da98f476dc919528f765080f62ba92d0f8bdda1977b61c5ffc4e63024a"
   end
 
   depends_on "rust" => :build
