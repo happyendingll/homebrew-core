@@ -9,11 +9,8 @@ class Libimobiledevice < Formula
   head "https://github.com/libimobiledevice/libimobiledevice.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a03c9a613bd9b5e84ab9259eeeecd8b62f147441d467b75beb7e19bb7f3ea887"
-    sha256 cellar: :any, arm64_tahoe:       "ac7bc52f4a95b6bd20cc15232d21b3ed7c0a5c40c89156895de10ce1a301d59c"
-    sha256 cellar: :any, arm64_sequoia:     "d1a3daa1a9ad566a86f553d4d3c677f9870c7f4e489155b581d6e6bc96d14cf4"
-    sha256 cellar: :any, arm64_linux:       "a7e06622c240701fc5723138da9c6cec6d2fa16dc3a3085deb835fca7b7b63be"
-    sha256 cellar: :any, x86_64_linux:      "75cd18a11ff1b43ef5eb2309b2da670914dc58b8e9e27e52856262f5859ed1a2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ee8d4c7da37df0fe61f30ef804f83b772eb02f83bededaf18a95eab50f73bc39"
   end
 
   depends_on "autoconf" => :build
