@@ -10,11 +10,8 @@ class RustWasm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9158e6d281852de9231725820be10a74b82bc2870407fa25de07d1e30204532b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9158e6d281852de9231725820be10a74b82bc2870407fa25de07d1e30204532b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9158e6d281852de9231725820be10a74b82bc2870407fa25de07d1e30204532b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "49d3387d90b4504d811020b10d7b1daad5f2254db3cdf1f3e66b21cac180636e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "374f6b9ed6cfb99330f7238f5d7211729eaff7f27efb37796d70eeed3e3a36b3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
+    sha256 cellar: :any_skip_relocation, sequoia: "4016b0ebec4770fc39839179a575f384167356ba3cb26141a2c7860136d74a5d"
   end
 
   depends_on "wasmtime" => :test
