@@ -10,11 +10,8 @@ class Pwntools < Formula
   head "https://github.com/Gallopsled/pwntools.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "73474416cf9948bc82eb45ed0980ea559adc0570648292a232ab5cdd013e9729"
-    sha256 cellar: :any, arm64_tahoe:       "6e9c4da2f0930d9a10a9a3cdda42a82918168dd6175853bb93dd51c9fb2411e2"
-    sha256 cellar: :any, arm64_sequoia:     "bf882caec8eeb9fd0cc0ceffc8468f63d756c1846fae1698f16efae3790f58c8"
-    sha256 cellar: :any, arm64_linux:       "6cd07c22e8bab294b72f4ec861171c798cf6c2c2061768bca649e5b9c9d67efd"
-    sha256 cellar: :any, x86_64_linux:      "fa185de22eed690d6f0222b0bab7d10fab78d098e8fbaf1ed632ada9463ce2cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "afd9b3b4030fa8703690450d8c4bc013d02ad1c4d847eee3f8208eb7c8682a83"
   end
 
   # `pkgconf` and `rust` are for bcrypt

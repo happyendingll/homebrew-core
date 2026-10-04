@@ -9,11 +9,8 @@ class Pytr < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5c83681f7914e5ac5e7ef4c811d4b4c364666d0d037fefedcf98d1e3ddacb208"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5067f5c1250347069b26b2931c269124b7e475eabd94f57e7776cf35b903a7c8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "72c34cbe97c7ce39f50b230fe7f981b9b56a6275f68d82f7eb356e49736561f9"
-    sha256 cellar: :any,                 arm64_linux:       "7f9017019a02b97ca996174fb4d86ae202ec7b29a9edbd79e71cdec9483408b1"
-    sha256 cellar: :any,                 x86_64_linux:      "a11402cc7efe2b8811b18f1daa85c241f5038a5af3295a42c6ee33ced2d77c35"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9750bda2666b30a974bd0868e31bc415a6fd8ce17df376e468e25ebbc8c777a0"
   end
 
   depends_on "certifi" => :no_linkage

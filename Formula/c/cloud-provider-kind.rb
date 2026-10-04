@@ -7,11 +7,8 @@ class CloudProviderKind < Formula
   head "https://github.com/kubernetes-sigs/cloud-provider-kind.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c497e9ef00709e97cb72209c64cd596219077b8db62984f9cbefe544a390fe5d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9363d9263416f89282ebea7e0600f029bf6edb850a6306bb9d407b05b6ac53ce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "36767915314faf5005d7474fff9598c17145243986d4c50c283bcf5d0806baa9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6bc741bd0a815a92b900d9b8001ad01420c3923d9c7352602ef013fa7d397c2c"
-    sha256 cellar: :any,                 x86_64_linux:      "ad4e54319fab6acd45262717b14ce1b931ab14fe609c7a70b992cb21ca0b79e6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "be3b89ddf323827e50d983505034d9b7e2fbfdb0910e258488eb14a2db2f9ef9"
   end
 
   depends_on "go" => :build

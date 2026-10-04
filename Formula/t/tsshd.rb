@@ -6,11 +6,8 @@ class Tsshd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07588d25973700906e01641c9937f8d64cee275dfba9c24cbe4a410808125c0a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "07588d25973700906e01641c9937f8d64cee275dfba9c24cbe4a410808125c0a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07588d25973700906e01641c9937f8d64cee275dfba9c24cbe4a410808125c0a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "267e7d703d641b39bf7c39696de06eca84a7ea3aa0bdb0c5263f7af87035fe97"
-    sha256 cellar: :any,                 x86_64_linux:      "bfa9fce01c8c4140205da76bf82d7436198bcbbed55d0e92a4f0ba7cd03bb2d2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "297bd14188bec464890987de8a21cc1b6aaadeab215046c110f192ebce7b67f4"
   end
 
   depends_on "go" => :build

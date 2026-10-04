@@ -7,11 +7,8 @@ class Gensio < Formula
   revision 1
 
   bottle do
-    sha256 arm64_golden_gate: "8c2ba861113f75f7b2ffa0d9dca95c069e94ba5b68dcc1f196a49544813cb57a"
-    sha256 arm64_tahoe:       "ccd0bbeb4530bfd31ae10d83a82b7e8830bceb92669f2b5157bb0c937709bfa6"
-    sha256 arm64_sequoia:     "1d851c3835480381a9309d0dc01202707c0db65e6053435504597316e7552b1a"
-    sha256 arm64_linux:       "16893875cf024bc3d09404553189c95cce4a2a86558859c11bdce3ec00ee40a3"
-    sha256 x86_64_linux:      "0bdcd8c010da9475fca47a651ee98bd8ace93ca1e1b8c31982dacfd180d575c7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "441974373f4d9ebcfdd8aa6f1ded178d30d09b901465badfadc188f01a4951c0"
   end
 
   depends_on "go" => :build

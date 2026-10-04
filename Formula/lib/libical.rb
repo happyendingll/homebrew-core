@@ -12,11 +12,8 @@ class Libical < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "43407333cb5755e06332bb6802e6bf6d596db041665137cf091dd945decb8c56"
-    sha256 cellar: :any, arm64_tahoe:       "6e2dc1199f3e3f78e93bb8173f6f55db09b3ae38dabc6c50bf3ccd66261252fb"
-    sha256 cellar: :any, arm64_sequoia:     "288b7c51c2daa1768e7996fc82bf83b5cc5e6fe1f2a27c08619ede4b774d09a2"
-    sha256 cellar: :any, arm64_linux:       "83959a77cc5a9dd361af6195f0e56f6f272736bc071ea782ffb8f9811c119091"
-    sha256 cellar: :any, x86_64_linux:      "aa6ad757af943637db8ab69d61032b284a77f0f390def5abeb6e559279f3563b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "843c84477bed3acb74f26710424b8e249fcb0885c91953c878937fadb1951da9"
   end
 
   depends_on "cmake" => :build

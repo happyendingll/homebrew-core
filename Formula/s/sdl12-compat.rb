@@ -13,11 +13,8 @@ class Sdl12Compat < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "183ea3dc6721c9dae9d361bd72b94e9730ec5e9f531140bb0313a8aa5711fc4f"
-    sha256 cellar: :any, arm64_tahoe:       "2f89409c4fea3a58ff48c41e09251f233f75663c889d6b118ae3a55b864dd36e"
-    sha256 cellar: :any, arm64_sequoia:     "fc3cbc762465580e1e5e06dfbe735b12b7dd4616c14770851ada7efa995f8f62"
-    sha256 cellar: :any, arm64_linux:       "8a304ebaaf778c8839b646b43861efa5a6ec59288f1327bc302192dbc38ceb82"
-    sha256 cellar: :any, x86_64_linux:      "3350cb380469914492095fc3bb27ef519a160e8f679ab92289b072119679cdc4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "27d14b248c3ab0538a293eca678250e9ef77509f079472d2acfeeff91ccefe48"
   end
 
   depends_on "cmake" => :build

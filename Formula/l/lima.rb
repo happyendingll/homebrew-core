@@ -8,11 +8,8 @@ class Lima < Formula
   head "https://github.com/lima-vm/lima.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "45b60082bc96dca12d076e75b9b0651edc3df86861de855d724ffa47fd2173ea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eb28334f31cc05f6a1d1fdaa282e97d3fa9908cf97d2efa3c95b08e28ad177b5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "47a100808049a4d9903d94f69c00ae74e4548fa3c3073a8aa70b847891de735b"
-    sha256 cellar: :any,                 arm64_linux:       "3f0df0d72c8b68993d47fa406ca8d3197ae56f166837c5543479459fa504638e"
-    sha256 cellar: :any,                 x86_64_linux:      "cdff168d449ec581ae16f966d7eaac07a945ef8c58434f8531a5aa54d15f0f30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7d774e17a6802adba21568debfd193cc5cf56dedf84e8aef24e46d47c656a92d"
   end
 
   depends_on "go" => :build

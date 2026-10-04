@@ -7,11 +7,8 @@ class Pvetui < Formula
   head "https://github.com/devnullvoid/pvetui.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "44bba77b81dc0fdb466327c754e90e5d369367608282911cfb10b5e1eb0c28fc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "44bba77b81dc0fdb466327c754e90e5d369367608282911cfb10b5e1eb0c28fc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "44bba77b81dc0fdb466327c754e90e5d369367608282911cfb10b5e1eb0c28fc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4485f2e101a3139a5a617c9abab8a3867f0ad68a4b3aa81a40653816ac668027"
-    sha256 cellar: :any,                 x86_64_linux:      "dd2621848e4f682ef73b726942f2a97a5bf1a686435583f98de7f05c0b3874fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "656c055cf8cdadbc1f830742de438284d222de9f0270da659d18ea1c930035a1"
   end
 
   depends_on "go" => :build

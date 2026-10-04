@@ -14,12 +14,8 @@ class Perl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "112e18c3c12684a683ed68a2899f5891ca292c629dacd5aac44d4741120b477d"
-    sha256 arm64_tahoe:       "3933a5884ef2db18d9fc0681c5aa977877249f088781fc55a69f075bb9bf8715"
-    sha256 arm64_sequoia:     "1d63c5b5b743b9d30ea425ecd9d6bf6adabcff7848c33136f404cf602ccc7662"
-    sha256 arm64_linux:       "6de7e6ae13d1f1e02b9f2497cc747d96c2e30ca3797042bae01633e97031298e"
-    sha256 x86_64_linux:      "30389a67e4de441632b29645353b8ed1b3e774310abc910e5f1a6e04a9384eca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "76ec28aafab43db505c18ade4d12ad4338d86d445ad51632974ca3ce76f15131"
   end
 
   depends_on "gdbm"

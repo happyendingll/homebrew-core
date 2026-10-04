@@ -6,11 +6,8 @@ class Morphe < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c393a3cccedabb46431104fa135753831822801f617c3b5af295d1089eb82c45"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c393a3cccedabb46431104fa135753831822801f617c3b5af295d1089eb82c45"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c393a3cccedabb46431104fa135753831822801f617c3b5af295d1089eb82c45"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0c4a16e8a1daadff9d2708c01d72630d097565bf033dad96406dbc57994d35fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0c4a16e8a1daadff9d2708c01d72630d097565bf033dad96406dbc57994d35fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b6147fbd203ef290fc50d827333ffaf6385052cbed5689fd11881af5ead69f08"
   end
 
   depends_on "gradle" => :build

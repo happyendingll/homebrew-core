@@ -11,11 +11,8 @@ class ApachePolaris < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1f791831e7282a9b53f78a3e590deae0d2e03af1dda645e7c7b537ccd2f9a476"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "efa5308e053328888f518435737cc476b6af384f814307a4f2c7d17f247d5d51"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3cb1d9c2ef4b5849ec6f67a5000eb1de27015825433b24ec4341fc77d573e9bb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "21255ccd106d2f9c5fd64e085696261267edd4d9986e6f9a27ac01ff4dedf312"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7d31554514b827f1948e4c28799fe9300ac94af02a490498808673ff03cf3945"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d1808ccfb70b46f38cf4908f8407ef2cbda66f8dbf8e88c6c7c01da73813a859"
   end
 
   depends_on "gradle" => :build

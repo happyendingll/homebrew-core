@@ -7,11 +7,8 @@ class Protolint < Formula
   head "https://github.com/yoheimuta/protolint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "50c67b56b137888adabb258b436b96edc4aedce2a7184fb4da4a3bd152f4b560"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "50c67b56b137888adabb258b436b96edc4aedce2a7184fb4da4a3bd152f4b560"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "50c67b56b137888adabb258b436b96edc4aedce2a7184fb4da4a3bd152f4b560"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "00082246c3369183f579e89f4fa92bed037df29f17d3c8f0cc56a68d698e7a3b"
-    sha256 cellar: :any,                 x86_64_linux:      "a1d61eb911accd7cbce6f1087ca35102ff4572ddaf79c7652aa2f3ec61866196"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "33d0d136212b9b26c255a813cfc2b915954d27375bceb5ab0783525debe51766"
   end
 
   depends_on "go" => :build

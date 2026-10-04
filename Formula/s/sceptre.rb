@@ -9,11 +9,8 @@ class Sceptre < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0e6fef7e020f5661b9077338e75ca04428dcbb2de4d1a05be1d79afdd1d33bb4"
-    sha256 cellar: :any, arm64_tahoe:       "83893f1106459fe6e4298ea769a736ea351bb6acf7e5daf8bcdc7c6a526a6ba8"
-    sha256 cellar: :any, arm64_sequoia:     "a86b648ff5415cdba464b31b8ba6bfb5f7b8eac1d01b6fd5a6b3d4500d3a7892"
-    sha256 cellar: :any, arm64_linux:       "b794cf223e2d6833a302089df21b2874bb33ed46bb1f40e7be2e430a9bd9d8b8"
-    sha256 cellar: :any, x86_64_linux:      "4458090a4248b43d78b4dad4b0c52d2cff4f0c992667c82496223f5ab5621056"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "288086f82345e592bbfdfa4097a1c7ce337e973b3d1f415fd9d660b38e8fa98a"
   end
 
   depends_on "certifi" => :no_linkage

@@ -9,11 +9,8 @@ class Mypy < Formula
   head "https://github.com/python/mypy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "65544c7d9ef599a72fabca7da974590fbfd13d1c3d24194f34b12df7f4e74a30"
-    sha256 cellar: :any, arm64_tahoe:       "b7f92e2798909ebd94dc1c53d75bcde86f03e8b8a62defe8b343018a02b93436"
-    sha256 cellar: :any, arm64_sequoia:     "4d0bc334e1867b1d8564833ce941dce3e0dc90d18f4ef86f3e47ae564f2fd003"
-    sha256 cellar: :any, arm64_linux:       "6e8f192b44183afa5e8237f0d31dbefffc6d6f363cbe34f340ff3b5121559e17"
-    sha256 cellar: :any, x86_64_linux:      "ada250b7e7169a71c2b0c55b3acee288257f0bf7656edfdafd95472126da2e58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "780183b5727247e67a632db638728e3922cae342210cab752b2c88e5e57ab2a8"
   end
 
   depends_on "rust" => :build # `ast-serialize`

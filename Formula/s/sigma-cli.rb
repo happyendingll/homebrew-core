@@ -10,11 +10,8 @@ class SigmaCli < Formula
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bb5a1c4268488991b4a0a07a2d71e52b01f6f508b0638db67695eae1fe529347"
-    sha256 cellar: :any, arm64_tahoe:       "3f718873e97ab93eb8f6fbd4f87feea191a128430282fbd621518bf5d65ce8a2"
-    sha256 cellar: :any, arm64_sequoia:     "a4674e4c6deb422d2bc2963377c975f7378319c783cd8b364bcda4e614cf9bee"
-    sha256 cellar: :any, arm64_linux:       "26b0cd77c7f7cfb55d8d8d100e86e67303f9b4141545ab7efd9c26bdec9edfbd"
-    sha256 cellar: :any, x86_64_linux:      "40da62ff691169ff3a1af719325a1f7c601a92da80d551e2ceda57a83e0c0318"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5bdaa344fb51be73cbaa0f12c30e1e0d46ab6e535cd8fecbf31e977988a33086"
   end
 
   depends_on "certifi" => :no_linkage

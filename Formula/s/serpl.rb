@@ -6,11 +6,8 @@ class Serpl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fcfe3ff9a9648ecd7884941d81a5a63b9c7c5cc0915668b55c6ce6d91f12a5a7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "58db4d5dcd16fa53100756e9ae3c0a9c18c7adf5e704aaa85656493994c13ec5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a42a6119314001710f0670dc44291ae769d9df206e14c7db38734db230f8d890"
-    sha256 cellar: :any,                 arm64_linux:       "d27264ceea3f23b4a70cd29b5fea29c596d15c6637ced6356326509ff35366a9"
-    sha256 cellar: :any,                 x86_64_linux:      "3d44d3a19fab2207055c15603816f02afcc9339a43a871364a5a08df6ae7aec6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "cb58070783d79d4df8c5451783e1b5a899bde1dfbdff6bcd504fe28dcec85722"
   end
 
   depends_on "rust" => :build

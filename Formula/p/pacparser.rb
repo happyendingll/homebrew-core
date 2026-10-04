@@ -7,11 +7,8 @@ class Pacparser < Formula
   head "https://github.com/manugarg/pacparser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c491f0c7f0e5b5607896a5f02f2d9dbc9825f35fb5e3ab1fa36f64a411e114fe"
-    sha256 cellar: :any, arm64_tahoe:       "97ca39dfebaaac2123e123bdf13af7fe8ab971677111770e37d47ddc1a906616"
-    sha256 cellar: :any, arm64_sequoia:     "9ca156a8cef5fe716557a4225c5b07149117eb4eef064f6f7e217e82579dfa6a"
-    sha256 cellar: :any, arm64_linux:       "759a76c7ed11c06909e04ca86e4e52ec2d2dfa3f8512a517295694cc6681499a"
-    sha256 cellar: :any, x86_64_linux:      "9432a415c9b5af38b59d81ce72fcc3dd0f4c1dbd2a54557ad178074a3583f700"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f9c3ddcbd181618429546cb96dd5cd55bd2c1151b1fad588471e6d0c82fbafd6"
   end
 
   def install

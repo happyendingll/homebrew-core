@@ -7,11 +7,8 @@ class Vcfexpress < Formula
   head "https://github.com/brentp/vcfexpress.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "75432627cbb9d543e3c848abc92a1d40f70006cde998b4b174fa9a94ecaf789b"
-    sha256 cellar: :any, arm64_tahoe:       "6b65c491b553924d74a27e75da784a7b07727e62dfb5dae317775111daded837"
-    sha256 cellar: :any, arm64_sequoia:     "0f4758a5a7c398eaf4243ba120eb87c61c21d8ae6ebc2db2156149f502f6c215"
-    sha256 cellar: :any, arm64_linux:       "bb5d365842acbf22398b01bccf7faf3c96f2ecad77fc6f0912b420ec90b901b0"
-    sha256 cellar: :any, x86_64_linux:      "1a875cb6689a635521ee24f64ce0b0edaebeafae1494aa0a2eaf62639710fe94"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a42f2520f6ced9d954778c78cdf55a63182ef946e6da660e8a4da0cd26c11a4f"
   end
 
   depends_on "cmake" => :build

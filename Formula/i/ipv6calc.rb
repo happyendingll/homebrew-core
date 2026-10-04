@@ -14,11 +14,8 @@ class Ipv6calc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dad89f5fbfaf81c83848dee0309f654a51079107ea0c76d778a4603d490cf86"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f694cc121eabb42e7190973671e9e909012f607a873525712ac71c1d854af0ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "47743fe1314cb83fe99bd58d72b38357e083342e0dec123cf5a1fe4c3e8bd001"
-    sha256 cellar: :any,                 arm64_linux:       "c6e1b0d2a7e29b5cfc0c5e2b3fe9d85778ece72b3c3f40bc10ccd113ffcaf8fa"
-    sha256 cellar: :any,                 x86_64_linux:      "e3c6436e04e7f5e7247fb832c14219edca0ab3f5fbc45f64f0b5aa45b8218fd4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "dafa893c099e146530962582399294806d1c19abfbb8d1a2d805b832b6cbe43e"
   end
 
   uses_from_macos "perl"

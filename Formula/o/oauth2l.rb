@@ -7,11 +7,8 @@ class Oauth2l < Formula
   head "https://github.com/google/oauth2l.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6c61591ae14f4782c3056235af85119ecaf92cb044fcfeb56406222b0680f9b9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6c61591ae14f4782c3056235af85119ecaf92cb044fcfeb56406222b0680f9b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6c61591ae14f4782c3056235af85119ecaf92cb044fcfeb56406222b0680f9b9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0389f1000fe2739e2e265b2c195dc1a25823a4b93ae4416dc46502de40ff474a"
-    sha256 cellar: :any,                 x86_64_linux:      "6d0f185f5202808bc62e620c388020124bd88a7c531910aa4984fa931f340b2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bfb19c1a795360a556e42166e862706cfd40d2910feb2b5c73d044d8b5c98194"
   end
 
   depends_on "go" => :build

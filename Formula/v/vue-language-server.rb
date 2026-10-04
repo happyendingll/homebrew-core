@@ -6,11 +6,8 @@ class VueLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c830a321b09cab7ff811c1a263c2ac9214898b0ab7e994c304fec76d5f5ac6f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c830a321b09cab7ff811c1a263c2ac9214898b0ab7e994c304fec76d5f5ac6f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c830a321b09cab7ff811c1a263c2ac9214898b0ab7e994c304fec76d5f5ac6f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5fe4a1579ebc3aab52df203d8a8c108387ebe0120d29090859d69388db06fe03"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7f4182f5b92a73cb033b66ef65875bb027b3f9c7dcbd532378194e8532473a6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e2d6e20d7fc83ffb468cf101d6bae87cb0e8265f34757dee4235ea149542294d"
   end
 
   depends_on "node"

@@ -6,11 +6,8 @@ class CargoInsta < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66d453af9becd015f430d9a2a4e7b0834a51d05d56cce59bdc6028c092f7860d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bff749424745429b805d49f9ecee77368813f2927d86e4360590bba3dc79569a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8064ed44a425ca2fa958e2c06c303ca9237419329447a66220e1fefc8c21009f"
-    sha256 cellar: :any,                 arm64_linux:       "945d27950d3dc8f1ff09be80c60c02932e95b8644fcb5b944d53fe696b9e47e7"
-    sha256 cellar: :any,                 x86_64_linux:      "2a05782154dbbc0d5b6a77997697bb44773f9a21f73e70bbc46f6108769860e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2bfb797369da14be2196e8a62525525cedafc5c876e9de00fa1591b072aa24ef"
   end
 
   depends_on "rust" => :build

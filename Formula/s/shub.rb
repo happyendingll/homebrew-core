@@ -10,11 +10,8 @@ class Shub < Formula
   head "https://github.com/scrapinghub/shub.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "04d94cf3aeaee9a76ac050efbfa4bfe3ebe91fa13e5157b61bc3b1d3030fe5a2"
-    sha256 cellar: :any, arm64_tahoe:       "bba10d15f5979360b98eb36febc95b1a94476a3a209a9880462f1c6628872a92"
-    sha256 cellar: :any, arm64_sequoia:     "dd1e1e4ffe14043b27ec931a6ec80b051c1b6b93e38e3ef6eb89f096ba224003"
-    sha256 cellar: :any, arm64_linux:       "009c7cc325c10f34519850db9c1ea27d32cea3268b75811c66fd462896cfd5d7"
-    sha256 cellar: :any, x86_64_linux:      "220e4d7edce2e0bda6856e10f87564135d146bedb6719986e191cb9364311e53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "190b595279a0a669f6b944eb795b860ad8153b0dc9c416a516be14ba9920842d"
   end
 
   depends_on "certifi" => :no_linkage
