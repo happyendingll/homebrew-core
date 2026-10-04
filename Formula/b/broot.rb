@@ -7,11 +7,8 @@ class Broot < Formula
   head "https://github.com/Canop/broot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6417664bdc1662a097eb747e07faaaaf21c02f506a5a0da3647c42c95765395a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b323344559b5525d7be270b9ffafdaa6761d738fd9b6c2dfb91a5e088c352881"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9b1e26724ae585f5d144a556d914f4ab6acfbc2d63fe61f5be9084406c20f37c"
-    sha256 cellar: :any,                 arm64_linux:       "0652cd6a330ea8574436e6c2f492be980c4a8168fed73166136b741ba44cc5ed"
-    sha256 cellar: :any,                 x86_64_linux:      "e9aa7ff88adcf1a602633c0c26eb4332d155c0b41227105051cb6a7eb8978f1b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc893b30cdd4ccfff33b2bdba707b2b5eeaeabdf788fa54948b04fd5013505e1"
   end
 
   depends_on "rust" => :build

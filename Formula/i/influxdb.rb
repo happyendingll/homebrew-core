@@ -15,11 +15,8 @@ class Influxdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2e082e82371c5912696947fc17bfea2833b2ebed9a4b6c160c24f86bd4534148"
-    sha256 cellar: :any, arm64_tahoe:       "d541ecb38d7ce7b2b09f425d81449147e09a0ed064b6173bb1128a479746f454"
-    sha256 cellar: :any, arm64_sequoia:     "b5986abca6dfe93c19ae6373e537dd49ad5aebe0db8877988e86a26527677d48"
-    sha256 cellar: :any, arm64_linux:       "2418ec169b10867d8a51d9fc7f43ae346dd9493fd720ed9d766714917896f1b5"
-    sha256 cellar: :any, x86_64_linux:      "e13c678707bb8964c33dc335197f327edf0eb600f2c9840c25bcfd2244271a2e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "26ac70d68414f1c6dd57dfbccad57b0682bdfad122163038420bfc8fdd9e4d3b"
   end
 
   depends_on "pkgconf" => :build

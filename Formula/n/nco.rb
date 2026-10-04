@@ -6,11 +6,8 @@ class Nco < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4cb9f469e182752e4f525a07c164c17070aeb318c814716a23c4c6787537b287"
-    sha256 cellar: :any, arm64_tahoe:       "e365175190faa9782633a2d607942a904fcbd07900b8081811a10c25dd2df1b1"
-    sha256 cellar: :any, arm64_sequoia:     "b95b9cd4b71e3995499911b56af40583e53fac14e154c2cf8f34e754267c4fe2"
-    sha256 cellar: :any, arm64_linux:       "e1bda50f0603c187a53df7451506746dd090b220ba6702bbe8f64545531d01d6"
-    sha256 cellar: :any, x86_64_linux:      "560afd5aa719f7996724043a0747f6a749db2bf378839064fbde0eaefec9d58d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "472a92505eaa731e79dee5ac2e912926a6f9f959f30bff8ce853f62a75b5db7b"
   end
 
   head do

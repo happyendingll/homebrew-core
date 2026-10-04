@@ -7,11 +7,8 @@ class Tfmcp < Formula
   head "https://github.com/nwiizo/tfmcp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b13a7b7e33962bf7cc11eb1cee0aca60e4ff7bd9dd8413c47b0832dacc12931f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bc5090189f95811b5e7fd7e78eee084af8595dab79fbc4afd866e6a261cc56ab"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b080181f0bdbeaa02de7b183b08c34bbea4f09ccf059de9de11b7fb6eb409121"
-    sha256 cellar: :any,                 arm64_linux:       "42737c0a9d274485d0bbbd7ffb2d6b890446ed703effedda6ef29c0b72151e37"
-    sha256 cellar: :any,                 x86_64_linux:      "50e140548e6e4452a80a0e10f3655226f1cec56fa9d16e0bda6645706662d513"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "748ce721855979feb6e9fca35588020d99eb2e5687136c6d878c226bd7b8f0f2"
   end
 
   depends_on "rust" => :build

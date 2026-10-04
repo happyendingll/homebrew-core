@@ -7,11 +7,8 @@ class Duckdb < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6fb6195dfa596481c4ebfa6c547791f83b0ffc5f0c9879340879fa1064d633a"
-    sha256 cellar: :any, arm64_tahoe:       "d4f0f070fbc0a92f0f6f9c830297b8ea77780801778cb1ad60baac827b882020"
-    sha256 cellar: :any, arm64_sequoia:     "a4cd9788544dd8ec72e7d15dd028ba932620bd201d9660a8cf94f09f62809c1e"
-    sha256 cellar: :any, arm64_linux:       "5822de81ddb3d04ce1744a1fa0cb13992abad1d3ad697def53304c3c2cea04df"
-    sha256 cellar: :any, x86_64_linux:      "6a8b842001b7aa25eb9b749a132f82e7631b7c92aa6b02ad2075be44cc48fe0a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "6645ad11a9d77935d82a3b2b0de5eafaca9041f2005396e750c40dc542f12fdc"
   end
 
   depends_on "cmake" => [:build, :test]

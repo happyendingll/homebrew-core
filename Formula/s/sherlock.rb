@@ -10,11 +10,8 @@ class Sherlock < Formula
   head "https://github.com/sherlock-project/sherlock.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b74c5b2a8b63d55fa7bdb6a89cf23b77aa2f6b8f2b11d41ae77439b4b8393aa2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6fec5cb545dc405ee029aa10432438cf1c1c8b750adaeb79143dd04db2737d75"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "be06eb18d8a25e9d5662b3abda3a94bf9d9a3a6cf32fcb2b91bb921c2f8326ca"
-    sha256 cellar: :any,                 arm64_linux:       "b2c8c9be1345955ff19cbfc2729ab7ff056f35738182f2da05621f43745ad8ef"
-    sha256 cellar: :any,                 x86_64_linux:      "9790e06763fe25d2ec68a0e9defbc033f4f04b33d85977fc292c4c0d3723cf60"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "97b3690b971ddfd9f9f349f60f4dba1e0449d6c1f1bba384b1933a1f691e80d7"
   end
 
   depends_on "cmake" => :build

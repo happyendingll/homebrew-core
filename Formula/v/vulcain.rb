@@ -7,11 +7,8 @@ class Vulcain < Formula
   head "https://github.com/dunglas/vulcain.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4da72bea38381670016d909b73f456958bd866d63b3faf61fdbe7c69bd9b8cef"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42357e323eb416eba8992d1c3a7b7f5cb63f66cf5e609c6a1b54db94fc13d07e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2581c5b6a8355054edc3ace06c0c3940ed383ce23e98a91f1b2c45e975ca430a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b3192b285bacca9f127643acbc34540c7d35393e46871cba2556d9488f2f94c0"
-    sha256 cellar: :any,                 x86_64_linux:      "85607cfa42d6a60cef566dbf0ae7a0c765146955b96f456eb18b924281a2267c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3ba5a78b0c741e4ef6bc14291cefc3716715555823a0c29245b180d0ff95af31"
   end
 
   depends_on "go" => :build

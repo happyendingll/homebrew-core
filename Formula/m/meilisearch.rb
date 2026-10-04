@@ -14,11 +14,8 @@ class Meilisearch < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4068bb3af93272972e5c9e6c4697503e9531f0b9c5a4c9d51cdf350d5f83fdb4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e7981fdc07bfc1d35fe2b4757cc6c226a497d2cf1d67ffd9238c33b8a2a00590"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0e3f223add055c3c9f9dfafcded8cd4bd9819109947d3ef65ee7becfb02cbf5d"
-    sha256 cellar: :any,                 arm64_linux:       "f891857407ba4db212c9b555b3902cc2c3d71e679ab865a6bf6141cbcd02ead4"
-    sha256 cellar: :any,                 x86_64_linux:      "590d76681bad9c192cfef833ce7245817c4ab5c54ea0d2f821da4b4b15ab4857"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "75e997e6f57a54c8f650746b9614403bc60dd74c5518cb1327c1bfce81c5a462"
   end
 
   depends_on "rust" => :build

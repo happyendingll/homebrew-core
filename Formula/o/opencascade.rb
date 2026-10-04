@@ -20,11 +20,8 @@ class Opencascade < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f3e8a4afb66a07801bd3977a165e9b897d4c49d3b65e41b556167ad1ff0b7cae"
-    sha256 cellar: :any, arm64_tahoe:       "cbbb914aee6197f6ce60cf75b26e8b558be68699265c79cfe7e51e9713a10ea8"
-    sha256 cellar: :any, arm64_sequoia:     "b62765e91c1b704cbee71297fc1901beb9db38d6a08d720735b490c10684b957"
-    sha256 cellar: :any, arm64_linux:       "567e8bba26485d08562963d9c9870ccaeb691e1acbefb07ee2606ff88040ace2"
-    sha256 cellar: :any, x86_64_linux:      "7118d9aee4489f4076b44ec19afa439de79466d5e4e96793467ed3bfb2b52e1d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "b88cb8c3d2bf17d5d1ea89a9e4d14c56ccd2fb777e4199947cfc07761ee0b1ab"
   end
 
   depends_on "cmake" => [:build, :test]

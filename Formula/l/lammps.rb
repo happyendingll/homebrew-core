@@ -29,11 +29,8 @@ class Lammps < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6f6e14eb5cbbb5d41a54a9d6c76c3b0c882aa202fd949c5b21d5c69265b4a950"
-    sha256 cellar: :any, arm64_tahoe:       "851a39ad686cac56b6ebf5164cd2443ad012206b25918ecb052a83cb6af4860a"
-    sha256 cellar: :any, arm64_sequoia:     "7fb6bd98c2ab1a4ab84c18a95a07300348a6a46b4ceaee191877a33041ace3d9"
-    sha256 cellar: :any, arm64_linux:       "5a91c04025aee5cf4a165bf0fb16d73f3c2e2b2841a7b4062744349746c17313"
-    sha256 cellar: :any, x86_64_linux:      "f027b78eeec3c905755f0baa6ebadf6a667714f7e7ed96ba99be9093e680f736"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "f774fb048435c7a82bbd8a1cb3ef356f335912ad03c8dd08741772bf93e04ca4"
   end
 
   depends_on "cmake" => :build

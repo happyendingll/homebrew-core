@@ -11,11 +11,8 @@ class Vtcode < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07b43f1544a155493da2f9f1ee5abdaa75bfdd60bd3a09febd83fd5fab457725"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bb6a7323bc6fc2fefad65a7c23a43f8b0a130a46ab17fd897c47d7e7b33c5ad6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b49f78b6486a160646a08b375ffd0e58b06383ac6dc15ee8017743bdcb0d7c78"
-    sha256 cellar: :any,                 arm64_linux:       "873521c3ac03e6b89bd0ee0946cbea418d231c703fcf32ddbbf44bd4ae24396c"
-    sha256 cellar: :any,                 x86_64_linux:      "aa38d50ec567a2f999463ce149af2d558d782bdce8cc0b5130b42ac1967520fb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8215159e7d49e342df51cee36dac432c9fb8fbe498d7a7be69b83d1cb6c875e1"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Pyrefly < Formula
   head "https://github.com/facebook/pyrefly.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ff84d77dbfa4beca5e65ce38b91a8462b0c3d2e0564c0a8074bf60c21120b951"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c22299efa2b12801fc8ff222b6b3bc0ed869ee1bb1806cb63e5230a8a77e58c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d2e530634d675dad2c52920508484711bdf3c56de5b15b655e6792f709ded6bd"
-    sha256 cellar: :any,                 arm64_linux:       "c702381da8b2fb81c01c1902ec54fa656a7c383be5fc95d5ab54412fc85b6e65"
-    sha256 cellar: :any,                 x86_64_linux:      "fa834b488910df012b1923ee1e538ff9145c703e2567d7987cecbd03aa2c0da8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "097c868893d05ec6a6cf9c44556df9969721f4ef82a0eecd5ceb6eaf73b43cdd"
   end
 
   depends_on "rust" => :build

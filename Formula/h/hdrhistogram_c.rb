@@ -7,11 +7,8 @@ class HdrhistogramC < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "532d825722f6529ffc01c4828831043da9919283f2e09dbeaca9ec19aa5f5b74"
-    sha256 cellar: :any, arm64_tahoe:       "b0987ffa1bbe7545fd5fe57f7508acf723e65df13073d4683fd2fff8e736df8d"
-    sha256 cellar: :any, arm64_sequoia:     "83285c4906088c1bfb67299ef198e381dfc5e7ba172641c26089110dd59475bd"
-    sha256 cellar: :any, arm64_linux:       "e0cb04b42342bde10ff4fb8eda57bf38dcb04d69fff4817027c622f094579134"
-    sha256 cellar: :any, x86_64_linux:      "d3b27766bf9ad7fd61ef91315e07df070ce7fc8ce3ea2cf6dca5d3cc1e5529fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "dcc4f73faa6365d8bc41083e0c8612a6dd1e15842a78da9f8d75557f9283435c"
   end
 
   depends_on "cmake" => :build

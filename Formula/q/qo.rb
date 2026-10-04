@@ -6,11 +6,8 @@ class Qo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f05829bcbcc717b3a5e15b983185fea5083152e0eac5ce78e3093e65f48cf2cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f05829bcbcc717b3a5e15b983185fea5083152e0eac5ce78e3093e65f48cf2cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f05829bcbcc717b3a5e15b983185fea5083152e0eac5ce78e3093e65f48cf2cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2d760bf562ac26e5267be27e4e151afbf4dfe4852ad26e9f8c8a9a7be6597074"
-    sha256 cellar: :any,                 x86_64_linux:      "be17fbd9dc26a779cc973e914246bc151bc9282ab36cf75b36fc769d70080e20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "3d1955a06fbaa19d48a193235905b20e57eead3b8631fd5bce65200dd1f8565f"
   end
 
   depends_on "go" => :build

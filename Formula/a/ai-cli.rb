@@ -6,11 +6,8 @@ class AiCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "750439fc3c49e6fd37aed3cf5aba9e2e30453a6e1f7ad8ebc596ccafb440201a"
-    sha256 cellar: :any, arm64_tahoe:       "750439fc3c49e6fd37aed3cf5aba9e2e30453a6e1f7ad8ebc596ccafb440201a"
-    sha256 cellar: :any, arm64_sequoia:     "750439fc3c49e6fd37aed3cf5aba9e2e30453a6e1f7ad8ebc596ccafb440201a"
-    sha256 cellar: :any, arm64_linux:       "58160cfbaea60531b4b5cb8fa4788917bbd2e549a751d60cff2e7012e7b91713"
-    sha256 cellar: :any, x86_64_linux:      "f50a4b413a340e5fc5a34e0c7bde570773a7b6c380ecfbc3cf5c847bbedf4703"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "49ada293f79987fa38d77c05ea20f8aa7261487bd902fc2a6fe8225698adc080"
   end
 
   depends_on "node"

@@ -10,11 +10,8 @@ class PulpCli < Formula
   head "https://github.com/pulp/pulp-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e67e813cbbe4f941c0e651841b6c3b4231b130e62a306f49da9252fe24b491a7"
-    sha256 cellar: :any, arm64_tahoe:       "09adb26cc228bb54e13bca27797472dda71ad1a3ab990f257dd02aacc6fd6b47"
-    sha256 cellar: :any, arm64_sequoia:     "562e4f2a743f8225b82a7fd9975eeb31d35cfbe42b691d1b5d3745afc125c33d"
-    sha256 cellar: :any, arm64_linux:       "c8b184cc1a883830ca685c0632ca897f592b9d74ba1be07c41fcccb369e4e4ea"
-    sha256 cellar: :any, x86_64_linux:      "8f1d7cb9a65ed9b75a400cbbffef7410ea75e4aa0dcba1e55bf7563a8b065552"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "dd8118911f28db70174d068c08611b89e6380f0e477cc4f52c018742ece99893"
   end
 
   depends_on "certifi" => :no_linkage

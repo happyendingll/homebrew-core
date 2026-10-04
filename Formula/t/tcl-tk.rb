@@ -13,11 +13,8 @@ class TclTk < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e9dcfc12059b2fee336ef75e8b0c1d206d7a11f28e7548a16380e6f0f6651021"
-    sha256 arm64_tahoe:       "f6e3459c6d92274911c795f794e5cbae42be7f8d0a69a3b399eced8482ab6fb3"
-    sha256 arm64_sequoia:     "efe600abce3a5ea633349a78b04930a026f64ea2093943e1c45d47c0204b2232"
-    sha256 arm64_linux:       "c9838590fc6e10a10efd572ef90261fc7f534a43545240785cae59f518687d8d"
-    sha256 x86_64_linux:      "924b1b2be4276d84a569f25bd14f9e3c1b594a02386118155c507ff98fb2779c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "9ff52bf189aa6b8f874e411d44b41dd954361bab4f660a42c7093cb5daafb368"
   end
 
   depends_on "libtommath"

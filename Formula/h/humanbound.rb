@@ -8,11 +8,8 @@ class Humanbound < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c9dadb2eb25bac2ded31add9482960d775e5b5dd3b15d8802325f5fb415ebdbd"
-    sha256 cellar: :any, arm64_tahoe:       "b88549bec3be5b5215fd7226bb715a99b3e430cc6d775148cc05038db540cf5c"
-    sha256 cellar: :any, arm64_sequoia:     "65c7d661f4123b4e1d96b6e4e69074618fdf44f15a3c9a5b69a48be1a04d8ce9"
-    sha256 cellar: :any, arm64_linux:       "11b3aa5a94087b0891229ccf8251acb1b550e6b1706bfe9ea09ef352ae19cfcc"
-    sha256 cellar: :any, x86_64_linux:      "1eb069d690ed10ec58fbc3a203b0380cd3d760a1658da06e57301bfe30613b7d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "f93a902d169558a89b73661d7f982a30f98b03bf80da09975ec7e62c11c9504f"
   end
 
   depends_on "certifi" => :no_linkage

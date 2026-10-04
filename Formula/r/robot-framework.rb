@@ -10,11 +10,8 @@ class RobotFramework < Formula
   head "https://github.com/robotframework/robotframework.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2b3473a2ba83ec157fdc092e5789309bdcf459fb5899cff191aa856e11f6271f"
-    sha256 cellar: :any, arm64_tahoe:       "aec0b05617440fc9ecd3f3af503640162bf7193a820efea7257756773a7b143d"
-    sha256 cellar: :any, arm64_sequoia:     "770808d290e75b21f7147072bdcb55225964401ece77125775b415637768d5d4"
-    sha256 cellar: :any, arm64_linux:       "210d92b7ffc177f31446d6deb3331d49cea9d490b7dce575a9c171fe6d21733e"
-    sha256 cellar: :any, x86_64_linux:      "a2a44d17306e356eb19db5b2f6c094ccdd76c223eddbce691ff890969da1c172"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "0a35139340e858dd89c41295b8b8e0c92658b08642400b07437de990faded09e"
   end
 
   # `pkgconf` and `rust` are for bcrypt
