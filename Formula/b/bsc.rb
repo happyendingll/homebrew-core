@@ -25,11 +25,8 @@ class Bsc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "323b3ea0ac72592a6c37f079d8ea0435c7c01a3077df20b2e92c41ef3e424205"
-    sha256 cellar: :any, arm64_tahoe:       "b049841441cbce5e98752172f20f402eab30a1f5eba5f0f0492d8c7e13499492"
-    sha256 cellar: :any, arm64_sequoia:     "7a1f6e535570500088d040698d2ed54ee6e37bf8cb56734a6d791cd07cef6c9b"
-    sha256 cellar: :any, arm64_linux:       "c2a8d89692430dd6653c285220305d7bd43070bf793c19e94742806335984fba"
-    sha256 cellar: :any, x86_64_linux:      "2728a37a36ec9642142af0522082ea9dccbb3f210f7948301ca33071aaa610fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "2bebe3267632bf962779601779e419a216bd4737b8ccb4f10ddf7402437347a9"
   end
 
   depends_on "autoconf" => :build

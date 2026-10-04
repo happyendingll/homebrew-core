@@ -8,11 +8,8 @@ class Yosys < Formula
   head "https://github.com/YosysHQ/yosys.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "721d4ca90b7a6e54444b0e966f0d8e2946c824521065d97c46badd02864857ae"
-    sha256 cellar: :any, arm64_tahoe:       "80d534c82b29426761d7308665713423f278c65442c0d826f13936c6b94ab885"
-    sha256 cellar: :any, arm64_sequoia:     "ebcf5c499ce0451b78916cecc0f7770c43078da2b51bbac793e0cbf47cb2eeca"
-    sha256 cellar: :any, arm64_linux:       "912f49b90da114f147df3d71e318269f8224dfb3d46126af9bdbe04cc209e861"
-    sha256 cellar: :any, x86_64_linux:      "af0c3a822e3fafca65fe16ccba425bfb813a458be15c11ac46211132b4792175"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "97561b138436d63cce1e74b287fb6330e7142e1c1a63cfde23cc63b59f0b31f6"
   end
 
   depends_on "bison" => :build

@@ -11,11 +11,8 @@ class PythonTkAT314 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "128a3adfdc43dcdb6eb62657b74c2685a3b637128345b50ccaca1476933da31b"
-    sha256 cellar: :any, arm64_tahoe:       "cced776a4fc9c4193d158d9631cab8732fadc2d41a9c4001daba603968a2c93d"
-    sha256 cellar: :any, arm64_sequoia:     "38b59b8dd4c5aca796713303518371a9ee263cc5e4f88048ec0aa410aff814be"
-    sha256               arm64_linux:       "36a7d1e8b32d7511c0d358e86aca6eb0666cf71072b4fcfd854888c074d732fd"
-    sha256               x86_64_linux:      "6c3db931d58c28f7b3856c7736d8d3b2fd0ebed1dcbd8f8d81d37b5bd6bea155"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "45cb86638bdc9168046e1798e09490791b81fc7ce3fe9aa7ef39aa2b84387741"
   end
 
   # https://devguide.python.org/versions/#versions

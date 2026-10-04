@@ -7,11 +7,8 @@ class Lmod < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8f584a30ead302d62a9b332bce4f8d2e3ba7d8af27d1a89fa066617fca143b59"
-    sha256 cellar: :any, arm64_tahoe:       "8fd5f752a0f2841ed57c5b13039e8b98a3a4e6440639b3ad04edf5342e9d4f35"
-    sha256 cellar: :any, arm64_sequoia:     "2050a3ab32d171e324b2378d294f1ca0c38a9660e7c8d1e42e7f530fbdfb8403"
-    sha256 cellar: :any, arm64_linux:       "86af1e05975c43f4b964c0e9d0342de42afc49fea2c359b6174205f8cd465be1"
-    sha256 cellar: :any, x86_64_linux:      "399b821f4109b27f0212854e701a04df62db43b2db9db9e7b98c08e41bc78cf1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "d61caf0baafe6acc5a6bf6d1b1e75e06ebea402b6db2dc3886110a684362daa2"
   end
 
   depends_on "luarocks" => :build
