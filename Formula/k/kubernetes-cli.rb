@@ -17,7 +17,10 @@ class KubernetesCli < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "20fa5d1f51e6295dc0d9584eabefe6995045b2d3f18fc5096aae695282ed68cf"
   end
 
-  depends_on "go" => :build
+  # TODO: unpin go@1.26 when Go 1.27's ML-DSA ClientHello no longer gets reset by TLS middleboxes
+  # Upstream also builds v1.37 with Go 1.26
+  # ref: https://github.com/golang/go/issues/81199
+  depends_on "go@1.26" => :build
 
   on_macos do
     depends_on "bash" => :build

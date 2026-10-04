@@ -1,8 +1,8 @@
 class DbxCli < Formula
   desc "Command-line interface for DBX database connections, schema, and safe queries"
   homepage "https://dbxio.com"
-  url "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.105.tar.gz"
-  sha256 "108be9b0c53c014375873c9b173b93f7a13f09b21236026fedf3eeb9c77cfd7e"
+  url "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.106.tar.gz"
+  sha256 "353009f50b0f9895b58219ee067edf2e602bdddf286e6bd64c7fcde1ffdf54b8"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class DbxCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "cf8fbdd138d65fdb8b1a38e82a1e7b83500eeefeb96a05bee3f64a6827a9372c"
+    sha256 cellar: :any, arm64_golden_gate: "38df404683ec5e3870478e7b055e1fb0dbadfa3c7f816242b7a43daa8c486e52"
+    sha256 cellar: :any, arm64_tahoe:       "fa40b9f06c2e52144f781ba526103db6b1f195c64da7bafb2245fe01efc8afc1"
+    sha256 cellar: :any, arm64_sequoia:     "7ad682b26ca550d1715cb2a40131159d6c2d0d113596c0bb40947ca683747e71"
+    sha256 cellar: :any, arm64_linux:       "72a03f46a60696c6eac6c20a6449fdc5d9037e0ad6cce3ac40a01fe4fdd299ee"
+    sha256 cellar: :any, x86_64_linux:      "bfe296bae11ee1a986c5f1bd709c24a9a7ccf246899bfd53f4d844caa5538cc0"
   end
 
   depends_on "pkgconf" => :build

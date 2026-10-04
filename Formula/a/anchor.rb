@@ -18,6 +18,8 @@ class Anchor < Formula
     depends_on "systemd" # for `libudev`
   end
 
+  deny_network_access!
+
   def anchor_workspace_toml
     <<~TOML
       [provider]
@@ -26,6 +28,10 @@ class Anchor < Formula
 
       [programs.localnet]
     TOML
+  end
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

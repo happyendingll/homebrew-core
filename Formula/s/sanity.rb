@@ -1,13 +1,16 @@
 class Sanity < Formula
   desc "Command-line interface for Sanity"
   homepage "https://www.sanity.io/"
-  url "https://registry.npmjs.org/@sanity/cli/-/cli-8.13.0.tgz"
-  sha256 "1f4e30cf70545acb829ca0d71fee415cdd253bbd07db73c2ab0feecba8890c84"
+  url "https://registry.npmjs.org/@sanity/cli/-/cli-8.13.1.tgz"
+  sha256 "f025bae184214b7747a09aa72f6255dc8ddab2254219d39dbec99d9ca575e2db"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "43a343867dd257919bb058d1ac405084a10ed652fbe53cef1171d6d8b1f44086"
+    sha256 cellar: :any, arm64_golden_gate: "9c62b2400a0291648e3a008fd71a65b273a2b75542eb08a59c9533937270ceba"
+    sha256 cellar: :any, arm64_tahoe:       "9c62b2400a0291648e3a008fd71a65b273a2b75542eb08a59c9533937270ceba"
+    sha256 cellar: :any, arm64_sequoia:     "9c62b2400a0291648e3a008fd71a65b273a2b75542eb08a59c9533937270ceba"
+    sha256 cellar: :any, arm64_linux:       "c95a9f14bf5d6c43dc266f898eed5a71314b9b838b3a488b8c5185975816e30a"
+    sha256 cellar: :any, x86_64_linux:      "9b31724185fe0417f74bc9aea122c73bfe353b59f9be8d19811a35a64e65039b"
   end
 
   depends_on "node"

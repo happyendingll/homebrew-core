@@ -3,14 +3,17 @@ class Pipx < Formula
 
   desc "Execute binaries from Python packages in isolated environments"
   homepage "https://pipx.pypa.io"
-  url "https://files.pythonhosted.org/packages/fa/05/279440e7618fd8a68a604673bdb656c8802980dd95132e657e8a71979c99/pipx-1.17.9.tar.gz"
-  sha256 "ca4c8ce5ddf1957cb072d1ca096e935d1be8659f0a4a9c1c194a82e13ec2bdae"
+  url "https://files.pythonhosted.org/packages/69/b6/343c1c1420d248aef3dc932ab92f2b8669f3fc5df06cddf8a5558d899fc9/pipx-1.17.10.tar.gz"
+  sha256 "efee1bf02ac4533c5d6c4e1432f5e769599b6d80de43b828c45629dd9a674469"
   license "MIT"
   head "https://github.com/pypa/pipx.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "aa206bab5bb62fbce8ce2cbd2f38c4241dcd8d697b1e181bb7a03a41d1a88e3e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3b8b7918f092c2bdb82e591ec113fa70196e336bcf3133ec0db99ad370c56ba0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3b8b7918f092c2bdb82e591ec113fa70196e336bcf3133ec0db99ad370c56ba0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3b8b7918f092c2bdb82e591ec113fa70196e336bcf3133ec0db99ad370c56ba0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "71352f3ec0c3f6acad8c41cb879bbc2c5f710ae9cdd46f2e6336394610985bc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "71352f3ec0c3f6acad8c41cb879bbc2c5f710ae9cdd46f2e6336394610985bc6"
   end
 
   depends_on "python@3.14"

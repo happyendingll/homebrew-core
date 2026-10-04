@@ -1,14 +1,17 @@
 class Ratex < Formula
   desc "Fast TeX engine written in Rust"
   homepage "https://github.com/leoliu0/ratex"
-  url "https://github.com/leoliu0/ratex/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "469fb82b5aeb24cba427eee292315141565aab40178353a2b0802fb40c25504d"
+  url "https://github.com/leoliu0/ratex/archive/refs/tags/v0.5.2.tar.gz"
+  sha256 "9301909678a06e6ce583dd42c8aeb51e3b595d2dd7cc7f9a45b459603f312cb9"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/leoliu0/ratex.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "747fb590252763c4ac29fa70d8cc786d148e292b9413acc00a1301f76ff62f98"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "84aee572dc9406f2079aa3e4c31a2eedae5fdf7b948334440adfc2e48edee25f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e57b5bd531bda754ed248bc6134c8f5f2b75d39f8754e9b44ebfbc2ae4bbed9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "19b2b9fadfc2c2bbb8332f05dd919242b979f7f29543971c9700b4a67c918989"
+    sha256 cellar: :any,                 arm64_linux:       "7ba092f9443380aceb2c25f30efb178a57755547f2ba0977670cf8bdde90fb82"
+    sha256 cellar: :any,                 x86_64_linux:      "b5409a24d37436f67e0682747fb51757befd89d5e4ccc506b7b551adab043878"
   end
 
   depends_on "rust" => :build
@@ -22,13 +25,6 @@ class Ratex < Formula
   end
 
   def install
-    # TODO: Remove these settings once a release includes upstream's embedded-archive memory fix.
-    # https://github.com/leoliu0/ratex/issues/16
-    ENV.deparallelize
-    ENV["CARGO_PROFILE_RELEASE_LTO"] = "false"
-    ENV["CARGO_PROFILE_RELEASE_CODEGEN_UNITS"] = "1"
-
-    # Every bin embeds the package archive, so linking them all OOMs; `ratex` dispatches aliases by name.
     system "cargo", "install", "--bin", "ratex", *std_cargo_args(path: "crates/tex-cli")
     %w[latexdiff lualatex pdflatex tex-bibtex texmk xelatex].each { |cmd| bin.install_symlink "ratex" => cmd }
   end

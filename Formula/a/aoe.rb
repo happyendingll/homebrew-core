@@ -32,6 +32,15 @@ class Aoe < Formula
     end
   end
 
+  allow_network_access! :test
+
+  def fetch
+    cd "web" do
+      system "npm", "install", *std_npm_args(prefix: false)
+    end
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
+
   def install
     ENV["AWS_LC_SYS_USE_SYSTEM"] = "1" if OS.linux?
     ENV["LIBGIT2_NO_VENDOR"] = "1"
@@ -54,9 +63,7 @@ class Aoe < Formula
     assert_equal 0, status["total"]
 
     port = free_port
-    pid = fork do
-      exec bin/"aoe", "serve", "--port", port.to_s, "--no-auth"
-    end
+    pid = spawn bin/"aoe", "serve", "--port", port.to_s, "--no-auth"
     sleep 2
     assert_match "Agent of Empires", shell_output("curl -s http://127.0.0.1:#{port}")
   ensure

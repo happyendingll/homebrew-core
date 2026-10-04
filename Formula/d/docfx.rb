@@ -18,11 +18,19 @@ class Docfx < Formula
   depends_on "node" => :build
   depends_on "dotnet"
 
+  deny_network_access!
+
+  def dotnet = Formula["dotnet"]
+
+  def fetch
+    cd "templates" do
+      system "npm", "ci", *std_npm_args(prefix: false)
+    end
+    system "dotnet", "restore", "src/docfx", "--use-current-runtime",
+           "-p:TargetFrameworks=net#{dotnet.version.major_minor}"
+  end
+
   def install
-    ENV["DOTNET_CLI_TELEMETRY_OPTOUT"] = "1"
-
-    dotnet = Formula["dotnet"]
-
     # specify the target framework to only target the currently used version of
     # .NET, otherwise additional frameworks will be added due to this running
     # inside of GitHub Actions, for details see:
@@ -30,21 +38,20 @@ class Docfx < Formula
     args = %W[
       --configuration Release
       --framework net#{dotnet.version.major_minor}
-      --output #{libexec}
+      --no-restore
       --no-self-contained
+      --output #{libexec}
       --use-current-runtime
+      -p:AppHostRelativeDotNet=#{dotnet.opt_libexec.relative_path_from(libexec)}
       -p:Version=#{version}
       -p:TargetFrameworks=net#{dotnet.version.major_minor}
     ]
 
     cd "templates" do
-      system "npm", "install", *std_npm_args(prefix: false)
       system "npm", "run", "build"
     end
     system "dotnet", "publish", "src/docfx", *args
-
-    (bin/"docfx").write_env_script libexec/"docfx",
-      DOTNET_ROOT: "${DOTNET_ROOT:-#{dotnet.opt_libexec}}"
+    bin.install_symlink libexec/"docfx"
   end
 
   test do

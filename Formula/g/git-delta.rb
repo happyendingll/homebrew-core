@@ -1,19 +1,17 @@
 class GitDelta < Formula
   desc "Syntax-highlighting pager for git and diff output"
   homepage "https://dandavison.github.io/delta/"
-  url "https://github.com/dandavison/delta/archive/refs/tags/0.19.2.tar.gz"
-  sha256 "f59b86f8c8dda4d76a3ba34b8553777a20c3b461646917d8e480fac6531bba9f"
+  url "https://github.com/dandavison/delta/archive/refs/tags/0.20.0.tar.gz"
+  sha256 "b1abf1dca07cc3dfee72484d2b0c1d1d97a27a0445fb8b2950c5c8e58c80b5e7"
   license "MIT"
   compatibility_version 1
   head "https://github.com/dandavison/delta.git", branch: "main"
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "e2852c91999ccb70a6d8ae54d354448147f16a1a3078a745a64401fa9e06358d"
-    sha256 cellar: :any,                 arm64_tahoe:       "c35e06abe0161e57beb2d763cb43ce0beccf024613dbcfb92b31a39093b3397d"
-    sha256 cellar: :any,                 arm64_sequoia:     "b45a48b049ca24a824a3f870a467412e3119dac4746f1c13443082bac9d9895f"
-    sha256 cellar: :any,                 arm64_sonoma:      "fa7ed02ac2fcbed7247f3fc58012c5e7cafdc609a849cd4295529c750a5b7df7"
-    sha256 cellar: :any,                 sonoma:            "f0aba2898cd9d587f33b330905c621c75e9230ba27f0ed249d0860fd3f641e46"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "622e704b1cfc9f303fabce8859215b32ce6871e30efbd7da80084709afa0d48c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4ef78e0c387f35781bb09dcbbadee5d2d10c7b21f00e6107962d1843fac73a5a"
+    sha256 cellar: :any, arm64_golden_gate: "297b7deefa1d120d27bbcadcef8cd12b0755259f728223607e4da2cb22b95e58"
+    sha256 cellar: :any, arm64_tahoe:       "0d7f73dc448e5a0cf470f0aebd531a89c2738021137345a04aa6445b071c93b1"
+    sha256 cellar: :any, arm64_sequoia:     "e123fdbf4756e9e04c584057e8a5bdaa01a6d790d2c013a464aee47dcf9c2e0e"
+    sha256 cellar: :any, arm64_linux:       "2a8b4986f44da31248039ab4da395e104802e1765453e27883160f632c432547"
+    sha256 cellar: :any, x86_64_linux:      "27958ce773a0ad35bed07b322446aef836b8311d457482ff50aea0760a6b83fa"
   end
 
   depends_on "pkgconf" => :build

@@ -1,14 +1,17 @@
 class Skillshare < Formula
   desc "Sync skills across AI CLI tools"
   homepage "https://skillshare.runkids.cc"
-  url "https://github.com/runkids/skillshare/archive/refs/tags/v0.23.5.tar.gz"
-  sha256 "2fc927b0b8d9ea5a13bd6cd50f0224db64ad204698e426f25c042b1529dda86c"
+  url "https://github.com/runkids/skillshare/archive/refs/tags/v0.24.4.tar.gz"
+  sha256 "bc065de72b7361ceadb23d78f0c34eaf7fd11a8129c7128553e08bbf9261cc3b"
   license "MIT"
   head "https://github.com/runkids/skillshare.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "e44e9ddb464885ed18f5287c8782f7dafa339d669bc12bbbeee49869167d7b7c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fdcd8ff268c53c54307aae13bd21aa0268eee43ac02223f3cc72693ae4e27ca1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fdcd8ff268c53c54307aae13bd21aa0268eee43ac02223f3cc72693ae4e27ca1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fdcd8ff268c53c54307aae13bd21aa0268eee43ac02223f3cc72693ae4e27ca1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5caffa07b172e81855de69ccfb193b67e206392c45b9525695969a84c2be7df7"
+    sha256 cellar: :any,                 x86_64_linux:      "c13736c3857e004e477e7715d74d66ea6068fb3bf896bf8b96e188f18274515f"
   end
 
   depends_on "go" => :build
