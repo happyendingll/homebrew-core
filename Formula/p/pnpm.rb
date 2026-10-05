@@ -15,11 +15,8 @@ class Pnpm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7be246eb12095441b8042a8bae16795cbdd9d63d69f00b6097fa720c619a5b84"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "379b827971db6a33f292530ef2ad94e3448439b9723ca625f9ac965482f76624"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c1d9e3e023853ae0c83bde79d3158120a49eaa20eb682364dc606c6a808f63dd"
-    sha256 cellar: :any,                 arm64_linux:       "7ae50f5685c5cce5d3e25700aa1cade7c1258748a3c26e650a9f9d62fceae4b4"
-    sha256 cellar: :any,                 x86_64_linux:      "7123b8ddf5637980ca5f2b46e47af15bcdbbe6277eaf68f020b975f65a8d9d6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ec69417e87229b0dd6d5c9e6b48c4d227a736f3e6835452cf5e1cd3d2cad7517"
   end
 
   depends_on "rust" => :build

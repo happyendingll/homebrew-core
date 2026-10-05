@@ -12,11 +12,8 @@ class Ioctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2fcf41ca1155b91fd0f8373e5e2e85e347555bf7a4885f92c7234ba0d221bf44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60fd09018c4786174137125eb9b8f872b6061615c25711c2a108ee60b50132de"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f31b129127cbff9f44c081b7dd918c81b71364eaf212c910652f70c79c5de9ae"
-    sha256 cellar: :any,                 arm64_linux:       "762b98ea81b0f5dfdccc6020823b270b6abbd41c7a5d6a54ef14c810cf231b1f"
-    sha256 cellar: :any,                 x86_64_linux:      "717777474cb9f58e534a13e1deeb05ce5970725c80992080c47199add7c57401"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "34d9aeb1082c269984300e138e19067fb23127118c377189fa4087dff56fe861"
   end
 
   depends_on "go" => :build

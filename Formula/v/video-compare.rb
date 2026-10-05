@@ -6,11 +6,8 @@ class VideoCompare < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ccc8d41ab89cbc5765ffb70e4673b7a8511c5f6aca6e554b9c0db68847617595"
-    sha256 cellar: :any, arm64_tahoe:       "d6b9db81b00a2041ec990736acc20378dc43f7a069fbb49afa2eb8a4a856036a"
-    sha256 cellar: :any, arm64_sequoia:     "0d9969a4da45a79c4c00062435039fbad54e414d4b9591280501df47f67dbe20"
-    sha256 cellar: :any, arm64_linux:       "dd464ac9fd35c15526000f6efd4c966a3e7b393d6f07ee2b6b64838559f67026"
-    sha256 cellar: :any, x86_64_linux:      "f2a6c794eab2b4979b0571b188a08336eee0431bb7e01c77777aba1d4fd96653"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "165eb0c71067452ee3c6853b77e33aa14038ba3ac7d36dead8e8a675a229a531"
   end
 
   depends_on "ffmpeg"

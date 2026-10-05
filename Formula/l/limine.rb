@@ -11,11 +11,8 @@ class Limine < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3bd4a3242691b8166c1d82a2453b0227726299d61fe7e3855f8ed57421cec77e"
-    sha256 arm64_tahoe:       "28853e1df785a26828c527964f9336b6c9f83da02853293d2479a36ed53154ac"
-    sha256 arm64_sequoia:     "8d9bb5591a3ef31b31c531500805a58091edc790f78a7b947cf039e0955ddac9"
-    sha256 arm64_linux:       "09620bec9d0dfe53263e0cf204c98989aff663385b71e698ed99165c777c4129"
-    sha256 x86_64_linux:      "6c7e9ad135555f8cb1724965a5229f5ec98e5c4794cb3a6989ef8c4c909bc4ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "0b747814213b00b562214a5b565fe29399eedebf187dee989f8305b783880bbe"
   end
 
   # The reason to have LLVM and LLD as dependencies here is because building the

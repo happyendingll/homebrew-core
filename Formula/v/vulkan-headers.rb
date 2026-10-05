@@ -13,11 +13,8 @@ class VulkanHeaders < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e29460a3bc874e18e407211f3e550cf60177c6f7614c04d3081beb94d8ad4ab2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e29460a3bc874e18e407211f3e550cf60177c6f7614c04d3081beb94d8ad4ab2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e29460a3bc874e18e407211f3e550cf60177c6f7614c04d3081beb94d8ad4ab2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fd0b8a24787166873dc36d747982d3164299c181340ef2e14d8968f7ca05636e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fd0b8a24787166873dc36d747982d3164299c181340ef2e14d8968f7ca05636e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd208d73636f78cbf021a554f3549689e2b04f4a0d0da3f9e2cf010df72e5a25"
   end
 
   depends_on "cmake" => :build

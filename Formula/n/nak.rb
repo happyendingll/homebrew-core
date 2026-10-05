@@ -12,11 +12,8 @@ class Nak < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8fd0d2d6d8e94f13ca15bf0c9c1814c761ab1bb10c6fc5dfe25c9232d4289104"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8fd0d2d6d8e94f13ca15bf0c9c1814c761ab1bb10c6fc5dfe25c9232d4289104"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8fd0d2d6d8e94f13ca15bf0c9c1814c761ab1bb10c6fc5dfe25c9232d4289104"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6a89b443cb907bd59d508fc694d8eb95e3074512f33c2d085568e3df2261520c"
-    sha256 cellar: :any,                 x86_64_linux:      "c5412cacadbda6ee4b9bc20c03f7595392fa53778b17c1bfa6ddcfadc2512666"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "21fa518b2172464bffdf6cf1a57425ac42b68d7bd049199918e961b327a1e293"
   end
 
   depends_on "go" => :build

@@ -9,11 +9,8 @@ class Snakeviz < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b4c0c3c87c072ec31a551feecd390d41641f400c3b9cfa0c827a1a8f3a179d1b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1f21a1bebd839288fe39da1a1ff2338ad2bd2b2724ef300abac26235bdb7b993"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c145df4b3d141ee54776efb5212f6345077ed4fb6f8a0857b8cfc27937e57711"
-    sha256 cellar: :any,                 arm64_linux:       "ee03539e1b52976da849941b179d521dc9986d485255714b1192de24d7d63d64"
-    sha256 cellar: :any,                 x86_64_linux:      "5152bf8b95a69daef77283201211ea5452adece99b856c9136491a245a828823"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "89fa5fbae91ad7204e79de473ed8160d8935525439b9c853ff651232336b0e46"
   end
 
   depends_on "python@3.14"

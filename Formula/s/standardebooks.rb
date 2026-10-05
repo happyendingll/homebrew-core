@@ -10,11 +10,8 @@ class Standardebooks < Formula
   head "https://github.com/standardebooks/tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3723daedb5a7e73a3fb186cdaa7c720dff741caa21d60cdc8c6ea94711bcde3d"
-    sha256 cellar: :any, arm64_tahoe:       "286847bd5237df96035f513ba3dc8ecbf8b768da0b9f87a1a3d9d15633abfe3c"
-    sha256 cellar: :any, arm64_sequoia:     "fa3e3527f06b420bb6d4e23a6650d72680ebb4b05532e544394763dc8fbe9852"
-    sha256 cellar: :any, arm64_linux:       "6b4f1e6bf3722dcea9bc97f60864a57765b119ffb72f7a643bd396dee7dbcc06"
-    sha256 cellar: :any, x86_64_linux:      "fc9c57900353df4fb28dad44203ce0621fecb75337a40c2e6ea167ab447b18ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "2f5e0a8f7f48e8068e738b65ab74ce35b73b75b4e1638938145e2007b03d86d5"
   end
 
   depends_on "rust" => :build # for selenium

@@ -9,11 +9,8 @@ class Skillspector < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7cda90007d87b4249bd0670aaff16c351593597c9055e7510ff3d8336a46e77d"
-    sha256 cellar: :any, arm64_tahoe:       "d1975688ebed7b8ff74b5916008f56597bfe48fe6ed52af8fb9dff9f969983d3"
-    sha256 cellar: :any, arm64_sequoia:     "248f2f64c16151124bdd50c6f7e1bf01e47b42c128d32917748e984830a86aff"
-    sha256 cellar: :any, arm64_linux:       "0f14c535aa8dd21123aa0b818f01a1e07b5d12fc07a235fbc1e0d1e10bf6b085"
-    sha256 cellar: :any, x86_64_linux:      "dce4690df8a164380cf90769f6b8b51c39ed172573d542fc81f81e9bccba7b7a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "c86b4d68c8f0bbf8bde12ab0bbee715991607e25e2fc7050aab3db9582c73720"
   end
 
   depends_on "pkgconf" => :build

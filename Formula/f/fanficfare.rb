@@ -9,11 +9,8 @@ class Fanficfare < Formula
   head "https://github.com/JimmXinu/FanFicFare.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fb172ec23fbb462d108f3b49cfd9e8eac0e2afbb3dff1223e7714c6993f7f88e"
-    sha256 cellar: :any, arm64_tahoe:       "79fffb8b07d48ee4e85d0e166540e612706944369d04682fba3a7550021ec2d9"
-    sha256 cellar: :any, arm64_sequoia:     "46c94b4c03e8d7ca1f5cd22266b150750abf368102d83bbf86e797377c2f0040"
-    sha256 cellar: :any, arm64_linux:       "22b152b2648d9b375ed38fef292a4e1da7c50ab1c38482611d654f3b573e51ec"
-    sha256 cellar: :any, x86_64_linux:      "66e46cc88b5bfde5d9c3d8e1ca8884fb413c3c0db43429f8bffd14dad837f7a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "7dcda547f7a63435a1f6102412c376e8dc18570fbf367185a65fb46ecf205cc7"
   end
 
   depends_on "pkgconf" => :build

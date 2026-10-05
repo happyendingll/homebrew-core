@@ -10,11 +10,8 @@ class Deepline < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cc23b11421b6f6afb8899ce3e2e682ccab3bf60ff1d90eb30b411082439e8504"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc23b11421b6f6afb8899ce3e2e682ccab3bf60ff1d90eb30b411082439e8504"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc23b11421b6f6afb8899ce3e2e682ccab3bf60ff1d90eb30b411082439e8504"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ee4eb385cb594fc239cd4961bd7e6f8a476e5f80a7d3719b40c5178be1e9ad4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b97124f7d60152d4aa5f3e3e3b117618d4552d8cade618fbff0ad58fb0f669eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4cdfe00c97697626d78fececb2c3ee3b6a0bf440360d32388928757ffdb0bbc0"
   end
 
   depends_on "node"

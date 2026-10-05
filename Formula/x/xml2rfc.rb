@@ -10,11 +10,8 @@ class Xml2rfc < Formula
   head "https://github.com/ietf-tools/xml2rfc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0ecb4fc0f781d92f1e01afbae1b63ae26cf1f4dfa66173d5234bd7fbf8931942"
-    sha256 cellar: :any, arm64_tahoe:       "ab5dd5e4a1e9c40f5209ef53f4cf87ead294b81ab2a53fbf2ce45ee075e003aa"
-    sha256 cellar: :any, arm64_sequoia:     "910482eded1ab2b73c7881ddbb2d1b668024b115cd3d1c755e78d9d289b237dc"
-    sha256 cellar: :any, arm64_linux:       "c00ca7fb86e4f98f0684c23bbbc79c70a366af32965581fa22da1c55f052b0a3"
-    sha256 cellar: :any, x86_64_linux:      "3860e0383a6065685ea2a58054750f85d47626266db62ea177329ed1802f77b3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "10cdb4a2fb0d5743c338be731e3f38496b3ea5541753290fca6c8563e6be71a7"
   end
 
   depends_on "certifi" => :no_linkage
