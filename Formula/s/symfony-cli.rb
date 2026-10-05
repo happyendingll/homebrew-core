@@ -1,13 +1,16 @@
 class SymfonyCli < Formula
   desc "Build, run, and manage Symfony applications"
   homepage "https://symfony.com/download"
-  url "https://github.com/symfony-cli/symfony-cli/archive/refs/tags/v5.20.0.tar.gz"
-  sha256 "07e528495409a1ba147a7a3905086f50c629762c60d186547d5483148e7a2cc2"
+  url "https://github.com/symfony-cli/symfony-cli/archive/refs/tags/v5.21.0.tar.gz"
+  sha256 "90ca2a8f88a52aebaafbdb3c4ec40476ebd763b2ffac108536b1681fcc457077"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "6646d7c9b05c832b5fc3b21d7682e9bc0367202a1b8cd2c904f5f090966f8a3c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c980351a2bd583dc70ab7f17974e9f545cd1228823c91a029aee8f69f18203cc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "448abc49a4e4d4b55e3b95f5728efaccf65f68e02454d3675561154d4430621c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "31c489bde790c5613bca779e0af30e262598a252e1cb9d1287fc9b06977e83ce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8424dd14cee025fa31b75f086dbc873735ac947611adc98bfbcfc4e4b40370d7"
+    sha256 cellar: :any,                 x86_64_linux:      "215c2f42ce34a018f929097e0736f3e8de05f1b97dfe829fcca99eaf0d17ee96"
   end
 
   depends_on "go" => :build

@@ -1,16 +1,18 @@
 class LibimobiledeviceGlue < Formula
   desc "Library with common system API code for libimobiledevice projects"
   homepage "https://libimobiledevice.org/"
-  url "https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2"
-  sha256 "6489a3411b874ecd81c87815d863603f518b264a976319725e0ed59935546774"
+  url "https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.3/libimobiledevice-glue-1.3.3.tar.bz2"
+  sha256 "920ce01382a32695f49b23292b4979a03f0afd16c58e8755d8b7f41804acc1a9"
   license "LGPL-2.1-or-later"
-  revision 1
   compatibility_version 1
   head "https://github.com/libimobiledevice/libimobiledevice-glue.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "e5d84a04b00e0d4272f715235f9ab24cf6a33013eb3f8840ccd4c907a5c0f2e4"
+    sha256 cellar: :any, arm64_golden_gate: "dc5369924a2c6a2a72fa0272ad2e555368d9202b5d277128ec9015ce118a4d38"
+    sha256 cellar: :any, arm64_tahoe:       "771ea125dd999af5879f39529abd5faa2cb1bff83a52f87c95e842d4c0cba942"
+    sha256 cellar: :any, arm64_sequoia:     "8b529b79effd76fac07f8a85e1596a3e7b6b0c18f06f07c1579b5b5c45b0110e"
+    sha256 cellar: :any, arm64_linux:       "09c546bf5ba30af4019a0e43d5bdc2a4e0a8b5f027d51407be7f430c7f380819"
+    sha256 cellar: :any, x86_64_linux:      "4ef415035d620334870921e36e0f6d4dd973af3507c9d20d464b3648647f008a"
   end
 
   depends_on "autoconf" => :build

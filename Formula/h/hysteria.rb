@@ -1,14 +1,17 @@
 class Hysteria < Formula
   desc "Feature-packed proxy & relay tool optimized for lossy, unstable connections"
   homepage "https://hysteria.network/"
-  url "https://github.com/apernet/hysteria/archive/refs/tags/app/v2.12.3.tar.gz"
-  sha256 "2679b76ab9cacbfd7574a48453325843865a347f1925858c4fb4fee3be132147"
+  url "https://github.com/apernet/hysteria/archive/refs/tags/app/v2.13.0.tar.gz"
+  sha256 "dfde427a93a0dc5ff65ddc1e239df3b1def54bf33f8b137c571daa7b27ecddd0"
   license "MIT"
   head "https://github.com/apernet/hysteria.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "dc7895d809e371031dc7b144450557f4076a90d5e3dd8051d5fe38792889a1b5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ec0a06ba1440d6d96028a33f5925eee9044669b13d9d0d319994cf36fa74d316"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8533b741108f98aafb2fde18ee5ed3de31d97630db481c58f7cb204c1c2a01f8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a4f804cd82d363bf3e4088ddd11a2628d22f1e887039e12e5b710ba389f19223"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6976e2a33f9235a6483374d06d46d37b0d321dbea9f8b41f40e84b9c4239b8aa"
+    sha256 cellar: :any,                 x86_64_linux:      "9305749be5e10ddfda0485efd1be4e19fb3d06d67aaaff5b8f079341f8203aee"
   end
 
   depends_on "go" => :build

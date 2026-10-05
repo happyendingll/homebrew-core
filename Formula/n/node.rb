@@ -2,7 +2,7 @@ class Node < Formula
   desc "Open-source, cross-platform JavaScript runtime environment"
   homepage "https://nodejs.org/"
   license "MIT"
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -31,8 +31,11 @@ class Node < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "2000a586dc4065e351bcaa3b4861a7aa59caa26d7649c548940f962f3e9e193e"
+    sha256 arm64_golden_gate: "227feb0486ba552d51b2b262b53b0c15950b03ac214099d61d45226b4ebdd5e7"
+    sha256 arm64_tahoe:       "e8723f370d99e7d2b9207068261267c8b3bdfa77ac1407e2a5c8b43f1dc43d7d"
+    sha256 arm64_sequoia:     "6bd0f4573a167bbac54a11d7ad9681be379d2d09c078d301ca5b4ca6acadbde1"
+    sha256 arm64_linux:       "d19e4090bcaf1f5058100c5151f52ef8690ae2d22134392984a0afa2a43b9df3"
+    sha256 x86_64_linux:      "7fb0019e5ae78b7bda4cc1929cc1c39835ad026c0bc6ef4e12d320783cfdc6b1"
   end
 
   depends_on "pkgconf" => :build
@@ -103,6 +106,8 @@ class Node < Formula
   def install
     # make sure subprocesses spawned by make are using our Python 3
     ENV["PYTHON"] = python3
+    # simdjson 5 `key_selector` uses `throw` in consteval, which clang <= 20 rejects with -fno-exceptions
+    ENV.append "CXXFLAGS", "-DSIMDJSON_CONCEPT_DISABLED"
 
     # Ensure Homebrew deps are used
     rm_r(["deps/icu-small", "deps/npm"])

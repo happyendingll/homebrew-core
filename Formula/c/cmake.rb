@@ -25,7 +25,7 @@ class Cmake < Formula
   uses_from_macos "ncurses"
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   deny_network_access!

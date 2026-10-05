@@ -14,6 +14,12 @@ class Vitess < Formula
   depends_on "go" => :build
   depends_on "etcd"
 
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     ENV["CGO_ENABLED"] = "0"
     bin.mkpath

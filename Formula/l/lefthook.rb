@@ -1,16 +1,19 @@
 class Lefthook < Formula
   desc "Fast and powerful Git hooks manager for any type of projects"
   homepage "https://github.com/evilmartians/lefthook"
-  url "https://github.com/evilmartians/lefthook/archive/refs/tags/v2.1.16.tar.gz"
-  sha256 "ba99fd7ae175120f94e6533dccf7bbe1b0f842b57044211d1f454d3b4be896d5"
+  url "https://github.com/evilmartians/lefthook/archive/refs/tags/v2.1.17.tar.gz"
+  sha256 "93b3bb1b52e63194b287ba6ab921a5c07b85f4911c8c9295dfc73228194c6789"
   license "MIT"
   head "https://github.com/evilmartians/lefthook.git", branch: "master"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "f4b772345d0610a6174259a2f6399037b425cd750f512cca0c5121663a77ff42"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1364d9e543f653c88c091e38a89eddc05dbb3416938f4510c84b3f913cd984e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1364d9e543f653c88c091e38a89eddc05dbb3416938f4510c84b3f913cd984e2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1364d9e543f653c88c091e38a89eddc05dbb3416938f4510c84b3f913cd984e2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a007fa787c9cef384422a3cde01e97c5be5b60716d9934cf247c23d81221ce98"
+    sha256 cellar: :any,                 x86_64_linux:      "57a972719e5bc5337f1bd011ff97505288b1911356e2e644d826196d40de292e"
   end
 
   depends_on "go" => :build

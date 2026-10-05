@@ -1,14 +1,16 @@
 class Lmod < Formula
   desc "Lua-based environment modules system to modify PATH variable"
   homepage "https://lmod.readthedocs.io"
-  url "https://github.com/TACC/Lmod/archive/refs/tags/9.4.2.tar.gz"
-  sha256 "30c9e29d6ab942a194e9c8f7c78430f4e26269d9439a68f451fe1ca4063da774"
+  url "https://github.com/TACC/Lmod/archive/refs/tags/9.4.3.tar.gz"
+  sha256 "1d3fff7afd398116ba5db0bd263b65219489843e51e011ebd5f1f99cb88ec292"
   license "MIT"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "d61caf0baafe6acc5a6bf6d1b1e75e06ebea402b6db2dc3886110a684362daa2"
+    sha256 cellar: :any, arm64_golden_gate: "5275f458f9ab865c13eb16106f0cd89d5713123ed93b727e01aa6835db59b5f5"
+    sha256 cellar: :any, arm64_tahoe:       "30de6a6c12cf8b66325c62d4bfcdeebf79dce586078fa4584409987484c5833e"
+    sha256 cellar: :any, arm64_sequoia:     "def22060965d6b3ec45a8836c41c67b96b9d7b69779046c18b2f9a787182f9d5"
+    sha256 cellar: :any, arm64_linux:       "035f4d84f1571ad3c43130538a9ed3a6522f2e8106ae7baed161f64b17b87975"
+    sha256 cellar: :any, x86_64_linux:      "af68368f87a53f0f3b79d99da90e4d67032546a6378240d5eeadb378bae51177"
   end
 
   depends_on "luarocks" => :build

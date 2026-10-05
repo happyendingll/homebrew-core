@@ -1,17 +1,22 @@
 class DejaVu < Formula
   desc "Local searchable memory over the session histories of coding agents"
   homepage "https://github.com/vshulcz/deja-vu"
-  url "https://github.com/vshulcz/deja-vu/archive/refs/tags/v0.21.5.tar.gz"
-  sha256 "96bd136f807af927e11180bb052ae3c1b47c73c39665d59a52089f8f5c9ad34b"
+  url "https://github.com/vshulcz/deja-vu/archive/refs/tags/v0.21.6.tar.gz"
+  sha256 "bf87ce4c86d72db1bbbcf85f63cb6ed10f9d15ae8fd151a2959c2a818ec9cc84"
   license "MIT"
   head "https://github.com/vshulcz/deja-vu.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "6a67155a7d035a3655b5ed839705bd003c5980107cf3201e306ee94599dcb2b8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "168998ada265c557cf442727e848677e68642afea977629fe31d2ffa1874443f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "168998ada265c557cf442727e848677e68642afea977629fe31d2ffa1874443f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "168998ada265c557cf442727e848677e68642afea977629fe31d2ffa1874443f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a8b14ab7f5edd9bc01820886db9c1388deece753fb3d5de9d4094b10de80c083"
+    sha256 cellar: :any,                 x86_64_linux:      "1a7942ece809559e7264621984ae3fe7ad7dc695cdf2506e20c809359e0d71f6"
   end
 
   depends_on "go" => :build
+
+  conflicts_with "deja", because: "both install `deja` binaries"
 
   deny_network_access! [:postinstall, :test]
 

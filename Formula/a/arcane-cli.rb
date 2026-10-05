@@ -1,14 +1,17 @@
 class ArcaneCli < Formula
   desc "Command-line client for the Arcane Docker management platform"
   homepage "https://getarcane.app"
-  url "https://github.com/getarcaneapp/arcane/archive/refs/tags/v2.14.0.tar.gz"
-  sha256 "302e11669a07c49e4d03f6982a3905a070b42ff336762167bfa42d93fa61faa3"
+  url "https://github.com/getarcaneapp/arcane/archive/refs/tags/v2.15.0.tar.gz"
+  sha256 "f180d833540e2b1e5f857022fe104e22ea760cf6013590ddbb2099f339c78d7b"
   license "BSD-3-Clause"
   head "https://github.com/getarcaneapp/arcane.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "49d0609ea235eee803749e768a6a1885c60d4a5f40e2b69e7fd594291a555f11"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5594950b0c3daa35ac09a4b83d60dafd4f2af4eba32b9d17381ee5fca4a81d36"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04f500fe42f50aebaba76ad16e980f8d1214a2ed0f16f99674fd2197e76a6556"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78ffdb71a793c1104b43a6c45a13ac8c1fd80dd255c0d00f6f7ff8930ea57493"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6e8eafb0ee0fb47f620d7d520e697363f5addd46566d472d462b4cdda9a5cf30"
+    sha256 cellar: :any,                 x86_64_linux:      "93e00e84a3b6cd32cea780f1d4872dbfed78c636dd111fd18bd415e513cf5cc4"
   end
 
   depends_on "go" => :build
@@ -45,8 +48,8 @@ class ArcaneCli < Formula
     system bin/"arcane-cli", "--config", config, "config", "set", "server-url", "http://127.0.0.1:3552"
     assert_match "server_url: http://127.0.0.1:3552", config.read
 
-    output = shell_output("#{bin}/arcane-cli --config #{config} version 2>&1", 1)
-    assert_match "Authentication is not configured", output
+    output = shell_output("#{bin}/arcane-cli --config #{config} version 2>&1")
+    assert_match "authentication is not configured", output
 
     assert_match(/^ENCRYPTION_KEY=\h{64}$/, shell_output("#{bin}/arcane-cli generate secret --format hex"))
   end
