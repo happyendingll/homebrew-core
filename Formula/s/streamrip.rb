@@ -9,11 +9,8 @@ class Streamrip < Formula
   revision 13
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "22a58711dc2eed9a2f92d85f05dd1dc088c4a0ee1d623c60eb1ffc950e40b92a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7099c079d574ef096510afd675d341ac300739827e9e44f72df6a14a21cee5cd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fbc5716a78dcc273c36c3d40bde37db48572d738cebf1dde2a1f3433f50d5d0c"
-    sha256 cellar: :any,                 arm64_linux:       "94dfa5115e44ceb42e4fdee34a379080194bd86f1d8fead1393b8c5be5765bd9"
-    sha256 cellar: :any,                 x86_64_linux:      "9281a8352eda4499849ed8af77d80cc374a7c91683397095bc7efc449d5b8e4d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e1304a14faa4741091d1269d057f3846d27fbfff856bfa4b138087921ebb2dae"
   end
 
   depends_on "certifi" => :no_linkage

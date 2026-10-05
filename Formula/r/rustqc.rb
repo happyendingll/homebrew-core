@@ -7,11 +7,8 @@ class Rustqc < Formula
   head "https://github.com/seqeralabs/rustqc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "993c0a29d1c51a2890b8cb0a41221f6b57f90c97349daf7ea61f3bf087be7f2f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2b1419ed17b22f68162252b1f4ada6162e2d14d030bc5591abe4d5971be73492"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82cd229a6d4de7d597bbabf4a2e5817f5445649afe72d6b52bd9e5296501a66f"
-    sha256 cellar: :any,                 arm64_linux:       "64fe2dd8ab1f91037e2a4735941f81e4d8c0a4edf1137bdd0d718b6652f5b249"
-    sha256 cellar: :any,                 x86_64_linux:      "4df4b7cf5df823bec6a8cc94f18e0477dee9c103649fd04e075f659e82b04a43"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c7fcb4edfae08eecb771e7a93b88320a116efb7e115056ab345c19733d9b0895"
   end
 
   depends_on "pkgconf" => :build

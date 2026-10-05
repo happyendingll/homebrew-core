@@ -9,11 +9,8 @@ class TerraformIamPolicyValidator < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "060f68490f86997bfca952f76aa688da8c669b08b92e32ea83797592befc76fb"
-    sha256 cellar: :any, arm64_tahoe:       "4a040b547925dc6f5c71f20824f323ae7506cdc47b16e3f5756e4ecec87308e9"
-    sha256 cellar: :any, arm64_sequoia:     "52ddedf69ced0c482e423bef3b1f71ac911cb684a25a73676c554320a5b9680d"
-    sha256 cellar: :any, arm64_linux:       "3a7d30e830bd92dc34f21ffcea29f4246b7643a04e4a825751559aa19fd40629"
-    sha256 cellar: :any, x86_64_linux:      "f8d181d481b6f373632890a6d5a4e9a736cec3a04c919ae5cc4dfdc562078fb4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e6bc090f3d7b95ff20dae3006a0154f151901b3a6dc4583e095355be91261208"
   end
 
   depends_on "libyaml"

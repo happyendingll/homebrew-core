@@ -9,11 +9,8 @@ class TrezorAgent < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "df1e7ded83ccd2cc4326941f7014c5bdf593340bddd5d0f1d4c38b84e68a0fc4"
-    sha256 cellar: :any, arm64_tahoe:       "1793ddbfefdc9104b8d7c84994b85423cb77d29aef19c5a8cdc2dbc17d737bc7"
-    sha256 cellar: :any, arm64_sequoia:     "ee47ecc78f80b2eb3a84b3173b1583fadac3014224b901b87bee527cc796f425"
-    sha256 cellar: :any, arm64_linux:       "96b5c1e9823a22629771ec5ce71f2de5c9646f7ff442e843804bc093124d2692"
-    sha256 cellar: :any, x86_64_linux:      "ee7b7f13e89e13884a033dd4dbfcba4e0d1b6e24fd7c463eb7fc544a1718d8d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a174c77208cf88ce94a1f6b6876cf66e38f977e1c76bacc734ac4882425223af"
   end
 
   depends_on "pkgconf" => :build # for hidapi resource

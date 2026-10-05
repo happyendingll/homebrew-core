@@ -8,11 +8,8 @@ class Sqlfluff < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8bc45001a5e14b9ac769d9975143847dbd531eec42de62fd752ac0f941332898"
-    sha256 cellar: :any, arm64_tahoe:       "a728345cee2ea58a26ca682e8e45a0e362706f423b2dea18aa3ea1634d59fee3"
-    sha256 cellar: :any, arm64_sequoia:     "6560c8072cf6a561cd7dcf2f047a7301a5da8aa68360ceac1c33963168c9484d"
-    sha256 cellar: :any, arm64_linux:       "6a8c8f78b975840f8178a6f4aafa0f67824e62ceaa226b077c2762cd3b8d8945"
-    sha256 cellar: :any, x86_64_linux:      "f089e9f77facc1bc4da93591cb3b83f80e7e59995d6457cf645c05d93b7e0c80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5d07d13081f8635b4f5c71602d82c5745660bcecc75bcaa0ff4ac991edda28b9"
   end
 
   depends_on "libyaml"

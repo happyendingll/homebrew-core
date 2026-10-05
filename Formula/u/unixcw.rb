@@ -6,11 +6,8 @@ class Unixcw < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "d7a1cb5967986fb0e6320f923ed328050abf0285ef71378cd8dbbc10abae3e6f"
-    sha256 arm64_tahoe:       "079ba0cf3e728c0993e9ee256e112015ec6402d2017321d583c62a2b3db0a360"
-    sha256 arm64_sequoia:     "d6cde37df3ce08b46974eb3bdb53408e83e38f4a8659841f4390ae9523dfe205"
-    sha256 arm64_linux:       "7bbbc4da0b72654ce4c7139f6c0aa51bffaa2cdef0aaf9dacfd0be670686db38"
-    sha256 x86_64_linux:      "f52c2947d70de1e09b910113a13ce6488d29499562ab0acf7498bd06f8ff6278"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "b555c0b1ba39fdac344aaa42e0bbe62918e25a519b826b10286e15b40003b36d"
   end
 
   depends_on "pkgconf" => :build

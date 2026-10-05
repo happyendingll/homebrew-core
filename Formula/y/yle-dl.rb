@@ -9,11 +9,8 @@ class YleDl < Formula
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf396fa1492095d3b0aeefe58ee6474e4292c16db6cae1a46e9725e75572e3eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3fa34e6d698cc529d9ec4c68ea5104520371b3cc1dc484723d3df3ac5c4107e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0d7dc122af136e6fa3c95078f938edd0bee88c2ed114e7414cc582c551d0493"
-    sha256 cellar: :any,                 arm64_linux:       "1d3edcb058315e14a7e63ab390b4f86a776c520c37537c361ad160b2df8927b7"
-    sha256 cellar: :any,                 x86_64_linux:      "d12fa0b478de116b0080998f5a8f73166efa0771f634a26d83f04a4aa6242d64"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c3a44561ffdd3c01aee6a3921eb883dbadc6c066fefcc00c065982a92fad891b"
   end
 
   depends_on "certifi"

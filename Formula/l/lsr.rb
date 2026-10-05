@@ -27,11 +27,8 @@ class Lsr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "577ac57e8263c5b755eeb0fb4338f3c53fbf01cd79d24a6e22122ff9b8ce95cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ccd32988799221a3430bb80dc827baf0e2a9f7be6d81d752abbd45ab60c77132"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0cf5a8ca472e8a19995e38950a377fe0ea877f90eb245f26ed6f02bad5cae1e4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fe3f66e3ab5c6fce70a483e641bbc52b84f2c26d10ccd419ba0a0db2b02b6b16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d5d6c7453f2d9901b7ffd9dec8bccb727df54a38b9e16a45154dc31cb14e858e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e63d3abd17b48ad6902b896e74e1898ba51006c6ae84ef417819f1b47d5a2a10"
   end
 
   # Aligned to `zig@0.15` formula. Can be removed if upstream updates to newer Zig.

@@ -12,11 +12,8 @@ class Newsboat < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0b1b40bb00f55601625942b6b687bc19b2a1c65c03106a5ec530cf456b7dc8cc"
-    sha256 arm64_tahoe:       "08fecbabd944f2b6fedda624f8c31e2d53ce9ba48edb5d97f2fc9071e3433a7c"
-    sha256 arm64_sequoia:     "21b41a9c832bbdcedc953bdf764b0b7d63bdfd0fa9a57dc2851cdce0d1606338"
-    sha256 arm64_linux:       "e3d6fddb777c157bac53fd3d76f575e5f9be11b6d48c66dc531702931473f6ae"
-    sha256 x86_64_linux:      "81b8b42948e7029d135bfbd66350104496be641dad5ac9c7aec214d3386fba3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "49922d7ae4695695003bb10dfdb92aa67a328a6ddfd9c50c6318b0c802be7b22"
   end
 
   depends_on "asciidoctor" => :build

@@ -10,11 +10,8 @@ class Watson < Formula
   head "https://github.com/jazzband/Watson.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "37b58c8f76faf942fa17cdfd569d6c2975bb0c880df2c5ff4f21b85973e257b7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7d28ed9124ff2ff2c5d70978fa091d24c115897f39f53ea06665218dae15b1d8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4822c1bafb5e4e3439f32b02a3655832b7f7671d8cde801024ec925de5ff1d91"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "009a696c823a2d9d38d2697ac7cc549cc76472128fd159a047a1e63bd4aedae0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fd3c960df175c85e2a9854a90eb31419ecab916cd1d6a4f5bae6654a70aaaad6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "be9ed960e4589c9594c44b5d83757ef0b2301efd9863197880772eca2cbc19f6"
   end
 
   depends_on "certifi" => :no_linkage

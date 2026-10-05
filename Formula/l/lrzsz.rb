@@ -11,11 +11,8 @@ class Lrzsz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "204bbbdada772172509824967c5690b1f0b84f6a799da6334d1af7c554653acb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cd00be92ae2f7349032af8fb8016b6c219d3a0e77197a4e5a7b4f9b8772ca021"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8ceb366f9174c838545587c7f289e5de7f658620a5e418e15afaaaec29f329c9"
-    sha256 cellar: :any,                 arm64_linux:       "305a9e4b3ebe0077785dfee8478a1d0026874cdc9937cafd6d9092636d7a89aa"
-    sha256 cellar: :any,                 x86_64_linux:      "5117d768a062a72f82de07fb1508ae290af22b371c08c1007bc2a90e83d3a5c5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "dee9edef971a20d969556ef4d1122544dd9f83d4a50e58414a0a6658fe273def"
   end
 
   conflicts_with "lrzip", because: "both install `lrz` binaries"

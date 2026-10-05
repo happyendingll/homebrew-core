@@ -8,11 +8,8 @@ class Trafilatura < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1acae7ea53a33a2084d1a74b7e282cccaa922e2f1896f4a358487fa52ae77505"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c862cce33f62bdee1717356d09e20fee4b8029333d0cbb355ec0f8e56d5ac689"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20056a144feb8c4f341e1e867267a55bc170b3c3e436e7a277097f1357dcd868"
-    sha256 cellar: :any,                 arm64_linux:       "e8c427e20cbafc9cd8ba3b9b6ece255294ad7999536caa3bb4c985d916626ad7"
-    sha256 cellar: :any,                 x86_64_linux:      "796915625b9a7c56ca7f13774bb3cb2bbca2a36a5088c871e33b326073c9299b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ee079f06d47b57dcaf60209b164ddac789faeea3f760109bb8d436553395d412"
   end
 
   depends_on "certifi"

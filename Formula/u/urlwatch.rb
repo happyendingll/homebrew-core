@@ -9,11 +9,8 @@ class Urlwatch < Formula
   revision 10
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "257d97276efe7b471eb1fd12cf088748db460d7db99801d8b09e88c032896b5b"
-    sha256 cellar: :any, arm64_tahoe:       "273ab245776803857496a9266b3c24debe60d28979180f22c540b8b00927270e"
-    sha256 cellar: :any, arm64_sequoia:     "f63fa849de1a8f3bfbd0eec462a2847a763d2f91cda26609aa3c71bab3e03665"
-    sha256 cellar: :any, arm64_linux:       "cd4200fc7af79d7b1e349033918db61b15bcf33e17e5f7fa262ad624eb3cd93e"
-    sha256 cellar: :any, x86_64_linux:      "7fcdfaeb46dc5b37548aeaeb5e55956a62b74f49057abbdf617cc05b180528a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "459884538fa744c97bcdf80e3a36e733300b44d222dc7f70d04cd692c5f11b45"
   end
 
   depends_on "certifi"

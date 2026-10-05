@@ -10,11 +10,8 @@ class Twine < Formula
   head "https://github.com/pypa/twine.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7e28214b20736b8429b7c21c407eaf81d0c63563290e4a245c6d1d6e06d4e126"
-    sha256 cellar: :any, arm64_tahoe:       "6d521f905655173b87dff48898f9c18867e6fdf40fd8d25f77f538800254aecc"
-    sha256 cellar: :any, arm64_sequoia:     "592ad8ed5eccc83abcdfa7b64e10fd90a7da1b1093767ed59763290d8677d1f1"
-    sha256 cellar: :any, arm64_linux:       "3c4ee18369af5fd44b4012a6f03c0f373ed82974e01009beae56f38d1fd489dc"
-    sha256 cellar: :any, x86_64_linux:      "e50b4f7ff1248f5957243944cef6465161eb3ad6114d0235f68eca765e8beaee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "449e76441cfefe9de6fe6e76e4881be20fb1d07b4bcab6e3712ee3aae4edb9f5"
   end
 
   depends_on "rust" => :build

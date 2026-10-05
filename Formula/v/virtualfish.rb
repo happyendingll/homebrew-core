@@ -10,11 +10,8 @@ class Virtualfish < Formula
   head "https://github.com/justinmayer/virtualfish.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0ec7d315ffa74e0af9509d52ac82f4407b2722f578c058ac60d76dfa5b93890c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4b589647c6d7eccb9ff5b6ad8322cde12d4179cc3a0547d1a9ea6684d6b8df7e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f4ea35f7009bdec568fa19c64f799247cadf99f9d47a4753cfc4fccaea42c1ec"
-    sha256 cellar: :any,                 arm64_linux:       "9d2c2c173f6474c6d1f6f1814c46c451dffaf660c33eb4c04f92f8c929444b8d"
-    sha256 cellar: :any,                 x86_64_linux:      "19ea5b4c379cff7ddb882aded55c0c99cd3aaf2d8beeb9df99d2d8bf922f1087"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fc6d97a75ca98edebffba2b1674bafd0072b96519429ec4772f3ee20aa24aa5e"
   end
 
   depends_on "fish"

@@ -7,11 +7,8 @@ class Criterion < Formula
   head "https://github.com/Snaipe/Criterion.git", branch: "bleeding"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6cb671bafa44818cdc8754d27b91434400ffa80ded53328e935d937da1d04538"
-    sha256 cellar: :any, arm64_tahoe:       "258f7fa60a5d5e9c7d7f15ce59b401257545516233cbac31e169bd5963a507eb"
-    sha256 cellar: :any, arm64_sequoia:     "dd76264619a9bf01c2f4702b6e254226c9599b95134ca97cbc9ea7444982cad9"
-    sha256 cellar: :any, arm64_linux:       "25a2c43c6b9a126868acb986505e6dfd535c7ab54b4d1beeca9e3ae764b2acd7"
-    sha256 cellar: :any, x86_64_linux:      "b526ef74e797e8467b6932af194e1a4faf3813796f470d1588cc4ca01b531741"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3f97bbb2cc9fb10b089ca79ed98ffcad6336a42b663bc960cc33b8f17be79451"
   end
 
   depends_on "cmake" => :build

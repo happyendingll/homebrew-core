@@ -7,11 +7,8 @@ class Muon < Formula
   head "https://git.sr.ht/~lattis/muon", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b75e9e9651745f3f0d77ae7c3470fb2942f3ea5b6c0fef1508eb871bccc1bd94"
-    sha256 cellar: :any, arm64_tahoe:       "866dcb5260e54fc2781a325c9710a3829454eb2aaf25549bf24af6643b241ace"
-    sha256 cellar: :any, arm64_sequoia:     "0b0bea767ed852dd5b5f8d8e57cf5d1a669ade43aaed53a09224209a9787a09c"
-    sha256 cellar: :any, arm64_linux:       "9dff2a1e250bfd230b7e47f85a0c8ccd64c5652ccf18fcd0625e1a60a9b55fd9"
-    sha256 cellar: :any, x86_64_linux:      "34325a3d2399fa798f73627834c834c86e7e710f42d6427274afbb7805637183"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "70101dda08a9e017411faaac896c7f5fb098311c941b736f11f897e352c8e041"
   end
 
   depends_on "meson" => :build

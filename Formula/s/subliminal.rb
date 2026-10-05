@@ -10,11 +10,8 @@ class Subliminal < Formula
   head "https://github.com/Diaoul/subliminal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3c3c82165a06440a83164945a977902037f0bb282fa32d4d6c39b2ab4e60d56c"
-    sha256 cellar: :any, arm64_tahoe:       "a657872282f663ada534ef27658c5a077589d131be25d6d4a86902d5ed698702"
-    sha256 cellar: :any, arm64_sequoia:     "c241a17cdebac7faff9fe6650de5e030d04a60c19a60307257901d603ab8e6d6"
-    sha256 cellar: :any, arm64_linux:       "d9193acdbeb97170c377e860dbfb2ff9c8a0ec18ede41f639ff4d5bc7f79a205"
-    sha256 cellar: :any, x86_64_linux:      "7c70b3e581df40f4a6452e506ad1551e976238af14482df08dbcb14331aff6cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "135a4a0817f33a1e2876e03e7f5c09d1f1b028e54dd002bf9759d736c179d0c9"
   end
 
   depends_on "rust" => :build # for rebulk > uv_build > maturin

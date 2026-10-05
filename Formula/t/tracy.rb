@@ -8,11 +8,8 @@ class Tracy < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "86c886dd9aa1df9ec1e2770ec914c88fe19545dd7554f6b2d29a3f42fe1a203c"
-    sha256 cellar: :any, arm64_tahoe:       "1ddc9848cebb0aa9525840066403eab154414756929c3cb2601ca4e6566c9cc6"
-    sha256 cellar: :any, arm64_sequoia:     "b68140824409c1ddfac310712044ce1ea0c560cfd4f35ec2fe007ce6a685305f"
-    sha256 cellar: :any, arm64_linux:       "96f39f7f1dc7916340ba7635ab28443ecbec189fb2307fa4473644aa1eab82c4"
-    sha256 cellar: :any, x86_64_linux:      "608694a84e1dfb3099d3b55d1f4a9d4f4f87eaee44eecef5b174c9919de9fd7d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f50fef5f6b6cfc1abab9e0c871c776493a91328b2e42afa96716a3ac5dba9758"
   end
 
   depends_on "cmake" => :build

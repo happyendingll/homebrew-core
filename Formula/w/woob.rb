@@ -9,11 +9,8 @@ class Woob < Formula
   revision 10
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9b4dd2283ec187cf230e59c15ded75ecf0f94c629a7cedd09f5d527d32d72e8b"
-    sha256 cellar: :any, arm64_tahoe:       "1b499f11ddce11a930f3d1e4223013da6d2b23acc990291f148b44194787e54a"
-    sha256 cellar: :any, arm64_sequoia:     "7e76c51b9a979679f0ba94300209076786262a05e0b91212ed7cf72594159c1b"
-    sha256 cellar: :any, arm64_linux:       "ec751713c2611501f3ca6c5af778fafd42decba62cba13ad8e01989f034a35d2"
-    sha256 cellar: :any, x86_64_linux:      "560028a448a7339d7c94338876129216545e2ef024a4e07b3fb6b9a6aa0a5b04"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "0e97e80edb2be4c6fbcbc6e5d87df3ee628041bb46c67c5eec5f91284127c9af"
   end
 
   depends_on "certifi"

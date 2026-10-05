@@ -7,11 +7,8 @@ class Stlink < Formula
   head "https://github.com/stlink-org/stlink.git", branch: "testing"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ab7d64c9957c451a8b6883f3ce0b574580cc1acf15c969ca17f6031304771b29"
-    sha256 cellar: :any, arm64_tahoe:       "0c7e6d248a855e8b2665b3b960d04f47b5eda457492b70f2f05660d047821810"
-    sha256 cellar: :any, arm64_sequoia:     "be6827c8f82ac06d921aa3b140ab047303df80f741d71057b2417935ef840aab"
-    sha256 cellar: :any, arm64_linux:       "ec0cdc190e4d23acb6349b17210b43de1e2f2fecacc15eb57aa9ab5e4c50a57c"
-    sha256 cellar: :any, x86_64_linux:      "4ce8ab2a91f525c0afd85fb9d881fff7a5ee849d4f6fe0e12fbe536b1e756281"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b75d41e44da7af07f5d48646c92333998d21ed872c40c520b90f1abbe1f0920b"
   end
 
   depends_on "cmake" => :build

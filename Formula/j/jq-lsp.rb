@@ -7,11 +7,8 @@ class JqLsp < Formula
   head "https://github.com/wader/jq-lsp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f633deb23fef675ace44a63d47d456eff6ffaeac9033f1280b88802668b1018"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0f633deb23fef675ace44a63d47d456eff6ffaeac9033f1280b88802668b1018"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0f633deb23fef675ace44a63d47d456eff6ffaeac9033f1280b88802668b1018"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8a84693fbda62cd933f841879ad3913567e6743c5dbccbb30fe6307546286308"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7fbc475491d70aa02aafeaee45788506e54a271a6bbc08b81747d92a01620bca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3c6bc0380d9dcc858022872899d174a81e63550c4b7f20271be2421f1c177787"
   end
 
   depends_on "go" => :build

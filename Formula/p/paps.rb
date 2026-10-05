@@ -6,11 +6,8 @@ class Paps < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5caf704b51a5f4dfa8309f5745cac17aef8c7296f5b5e692eff890f8a7c9e219"
-    sha256 cellar: :any, arm64_tahoe:       "4b57c006cf85f7dcaea18e19b05d8c25b55d4c166b625bf480e35c7af03ee421"
-    sha256 cellar: :any, arm64_sequoia:     "06edd9a9aae62a9eb6de5c9533d888c5960fd2064e6bdeda2c189f4b70826920"
-    sha256 cellar: :any, arm64_linux:       "6924713364576ad033b3f8955ff6abbec70353a1f00d5e8a53deadea0510c916"
-    sha256 cellar: :any, x86_64_linux:      "2f7da263f2626c6f5a02ceed30c918826a1b0b64fb4633e07e1200577c97fe32"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6a9181b65f051dde33a93138bbb339efe9cc5044882f69056ce007bb54b2d631"
   end
 
   depends_on "meson" => :build

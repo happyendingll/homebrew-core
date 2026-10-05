@@ -9,11 +9,8 @@ class Tubeup < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d4bdf4a00806aa1ea732b29d5874e36f13a5b3bd426cd929c1e0aec526658ad2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "484f977370b6fc51fc74fd24480b1e19a0de20750942652614c5797fac80e515"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "459056da0fd55f0a5af3d2da7ab1f2e80d10456f56ebd6f139d258ec12134727"
-    sha256 cellar: :any,                 arm64_linux:       "f00fb2e04449c8033321b79d9e4765669ba4b4a961246feb6512e3a7fa749976"
-    sha256 cellar: :any,                 x86_64_linux:      "26788e4e10e5001019fc7d17d8127511d0fac243968bae966e72fccfe777dde1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b53cd2dd9efd6a88b2f3c2072106fae71175d2b111de59374823c2acd029030c"
   end
 
   depends_on "node" => :build

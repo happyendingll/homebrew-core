@@ -10,11 +10,8 @@ class SolcSelect < Formula
   head "https://github.com/crytic/solc-select.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dcd444c503fe48bc0f82f5ee1262425501e23a9e08c9e4e2ffe0fd58ab91e2d8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7e21f8fb0ecfca55625e9fc0342faa4f9bf090ae716c28f1f4e60ed51a1d68bc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e18da01b24d61c9f4564add1e0792e114689d8a83167dc43f2f84fcf4046f912"
-    sha256 cellar: :any,                 arm64_linux:       "62c378f598113eba70a630d960802f1dcfa9ee1d2a54997815681c8a79874328"
-    sha256 cellar: :any,                 x86_64_linux:      "5e20fc1a22c02d1d892cea1b78c8b2b2eaf0ffcb65cca86252c8a913d86e15fb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e1bd724d7a6d7872d26ce06e61431c277fc80f8cd904e7fb6c7847f53f2fd947"
   end
 
   depends_on "certifi" => :no_linkage

@@ -6,11 +6,8 @@ class Symengine < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "801a3d5fa8670387af7ca4064a773c004fa292b2668cff252175b15eaa2bce87"
-    sha256 cellar: :any, arm64_tahoe:       "0c0cc9baa96d71eb7ef2434bc00acf7b0cef8156f800906125bc334c75685b26"
-    sha256 cellar: :any, arm64_sequoia:     "8f95dff39598085208a6ee4d3c68e42ad58fe1c503c6a959315a9bc47f2b65ef"
-    sha256 cellar: :any, arm64_linux:       "f2f2c1a6f048fa91634fe94e6ae84cff90cf3c8b5d796e422418c76ad7ba2ac7"
-    sha256 cellar: :any, x86_64_linux:      "5b96941e248f25cd56e9ddd5da5c332df15a72b84659fc5b9135046bf8f43c0e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f6852cc1fe1e5e7daebbd9a4529d4c065678a0ccf47342eddfa76c9bba12d5f6"
   end
 
   depends_on "cereal" => :build

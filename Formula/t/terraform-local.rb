@@ -9,11 +9,8 @@ class TerraformLocal < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2ef87f6bac651a620c62dac48b2ee87ff05ea7a462cb095494039350ae82f3d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4bbfef31720a5f3e1cbb985498aa2792dce4ac0db3ccd0893c41a841c8bd64b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c427f87dc4ae95cf4fe88158c803b48025158e8b0c2bfb80f1d0f3a028ecf15b"
-    sha256 cellar: :any,                 arm64_linux:       "5848a9094c949336713a4760d3f7c22a51d44b7e20aa59a908f73db1a7f6e826"
-    sha256 cellar: :any,                 x86_64_linux:      "ecbb3024b35e267b4d513fc02731c79d60d12391780980c5d1a0a50ae537c698"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c149e03e41dc6878fffcc014d2b39f6ba6a91793d06e49ccd068710d5e84ac23"
   end
 
   depends_on "python@3.14"

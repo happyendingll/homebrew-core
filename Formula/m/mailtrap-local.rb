@@ -6,11 +6,8 @@ class MailtrapLocal < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "02b99f7f272d527a59a0409b51994b4501607402cee94ceebc348c6cd03dcc9a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "02b99f7f272d527a59a0409b51994b4501607402cee94ceebc348c6cd03dcc9a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "02b99f7f272d527a59a0409b51994b4501607402cee94ceebc348c6cd03dcc9a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "37fa96834eeb61951ae208030d52b402ee4de6d5d3c16cfd37c2a7ddeb8c1fc8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4700a5e03b8d71641167d35f995834e41519df6b9996ef781100ae446537f834"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "17d4c201072b86ac1c282835c6cbf61eefec76bd7198e02d545dcf375caa22ce"
   end
 
   depends_on "go" => :build

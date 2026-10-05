@@ -10,11 +10,8 @@ class Trailscraper < Formula
   head "https://github.com/flosell/trailscraper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f13c9e8a10d5486c8c530bc3c117b44aa1c3772976b7011f8082faef02664206"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c4b6975531056857a239dd634fca456c76a654908f55abb430c5c5523dca8da2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "38a2b46bdd21cba9fbd22d1e491ffef40110871db1e6c1867ee3da944e0665e4"
-    sha256 cellar: :any,                 arm64_linux:       "aeeba5272056ed969c563ed7900772fa7b4ee0b696ba2270d15d2e94b9f43296"
-    sha256 cellar: :any,                 x86_64_linux:      "a514e3546c7f53236597048e7cde38403429609065d287d56ca0805896eb8570"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b2c642de678c6ae65ade51093b20619ca57b76eafc98e846a83b22a8cdf6b682"
   end
 
   depends_on "python@3.14"

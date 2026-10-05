@@ -8,12 +8,8 @@ class Gitversion < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "27eb919eded79ab5813b14491887641e3d98383c83a0eafd74be46f4cac31e59"
-    sha256 cellar: :any, arm64_tahoe:       "7f514ea7bd2159c84e06d03daba4e900aafa36df3569a54fc69399a377b63882"
-    sha256 cellar: :any, arm64_sequoia:     "fb0f4e2c648885d6fee65dce3f09942f2e7b00591f0ae2c02b9654de23d71396"
-    sha256 cellar: :any, arm64_linux:       "4f48cf0bc6bf56c1aa2375e0ef93a4fd6ef68cb6676b53b89053dd151cedfe57"
-    sha256 cellar: :any, x86_64_linux:      "773910581edef4075a4f6108f3e9216debaa0a41072040de5e7d0f034336c14c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "466e8ba03ae22feea26cab28a3c697338ce60d976a874298ac0f62d6099cd62c"
   end
 
   depends_on "dotnet"

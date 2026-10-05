@@ -6,11 +6,8 @@ class Sac < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_golden_gate: "b4effd458af55e1172c9e56e455e5fb5bb3cc2e50100c228a74ce4b1246c7674"
-    sha256 arm64_tahoe:       "9e9bbc30fbcb510a79c778d2d997d29d4ace345b4d4c213f0b4eb00c8af0503d"
-    sha256 arm64_sequoia:     "bcc90e2b9ecea74aa7e5a916e280b37d862bbf409060f2308e09796f57b17f8d"
-    sha256 arm64_linux:       "b8b24aee676362759179551ad36bc1d9064de969aa50098b291479d7c42a9d6e"
-    sha256 x86_64_linux:      "f3b04426d21c6672f3ef0b0679517f0cd87e6ec870dfce90798acaf618b35ab1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "3766603f187e621a120eaa22da3c60f08496076c597a1efb31abc878a7eb709d"
   end
 
   depends_on "pkgconf" => :build

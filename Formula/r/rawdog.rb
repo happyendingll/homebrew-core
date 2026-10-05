@@ -11,11 +11,8 @@ class Rawdog < Formula
   head "https://github.com/granawkins/rawdog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "933c6430478095a9d43380bd093bde173da97389f07afbe1eca58b149e51a561"
-    sha256 cellar: :any, arm64_tahoe:       "ba3592f844375142a4dc40b1a347c41e5bf228f04cf48ee685645adc19772cc8"
-    sha256 cellar: :any, arm64_sequoia:     "51c5d65bb8ab0eb2089508609ed9c0e5edf564af0b5882fe09bec19a59b2123b"
-    sha256 cellar: :any, arm64_linux:       "5f2e7bc1df0f2e3c1ce1e53ee8b51a9dc44844c3f633694ccc910f20cc97327a"
-    sha256 cellar: :any, x86_64_linux:      "c241c0f22cfcf8baca2b32603d4ee54345ce5c1b6a26f1e2159feccf071b3271"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "51265c2c96af890ff83bda2bd22e83dc25d7f903c5d5ed6a164ecaa2a2ac5234"
   end
 
   depends_on "pkgconf" => :build

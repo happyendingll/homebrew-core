@@ -7,11 +7,8 @@ class GitDelta < Formula
   compatibility_version 1
   head "https://github.com/dandavison/delta.git", branch: "main"
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "297b7deefa1d120d27bbcadcef8cd12b0755259f728223607e4da2cb22b95e58"
-    sha256 cellar: :any, arm64_tahoe:       "0d7f73dc448e5a0cf470f0aebd531a89c2738021137345a04aa6445b071c93b1"
-    sha256 cellar: :any, arm64_sequoia:     "e123fdbf4756e9e04c584057e8a5bdaa01a6d790d2c013a464aee47dcf9c2e0e"
-    sha256 cellar: :any, arm64_linux:       "2a8b4986f44da31248039ab4da395e104802e1765453e27883160f632c432547"
-    sha256 cellar: :any, x86_64_linux:      "27958ce773a0ad35bed07b322446aef836b8311d457482ff50aea0760a6b83fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e134149fcba05dafcbf7ab6d4a2b3f3de14d2124c1b3309a344a979e20b50608"
   end
 
   depends_on "pkgconf" => :build
