@@ -12,11 +12,8 @@ class VulkanTools < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "a9efdfab183d5b6ff4bf8babcb71b856fdd0be5c8385ab8a82a676138d364db4"
-    sha256               arm64_tahoe:       "475df8d2d3a13ee803dd7fbec882ba1979e4c3e62270df35e37159e3cc0e0bad"
-    sha256               arm64_sequoia:     "ac3cd2a2a54842864a752a177b8b9c0e6da671e28bf4e66a1b0fa119bf09bc88"
-    sha256 cellar: :any, arm64_linux:       "24e80b05cd6f8e515f0bec90b81d94fd54c2de901c12cd0bff4e847354b57d2b"
-    sha256 cellar: :any, x86_64_linux:      "0ca777b2c7023787d26faea9fc3eeb4d033a411603b8974c9f9ee39ed8af39ea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "28aec58ba656c7ef8d46e916bf5520a18e500d18b3e875e71ab844a145bf5222"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class VulkanValidationlayers < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "497a4f1542ce1b8bf7a0dace44ef3655f898bc59af3299ee6b7e218f20233d52"
-    sha256 cellar: :any, arm64_tahoe:       "32f049cddf7dbc010cde36684577bb4b3f59d021067481945ecde208bcc9d242"
-    sha256 cellar: :any, arm64_sequoia:     "a67c7fbd06a68d43f8d8462fb621a0ae0b2a26f66bd356eaf3467cc35b720ee6"
-    sha256 cellar: :any, arm64_linux:       "8246dd9c29042281d7f680319a23a6c81d34a640c2e395466b2aa15407147166"
-    sha256 cellar: :any, x86_64_linux:      "b9a6f704a6e8c387d99d4391ca40ec5b81781f1a059663db087bfdfffbf13148"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b31ec397741bae8d3d6d88c181bd58831794ae86ccbacda1986b2c326435c1b0"
   end
 
   depends_on "cmake" => :build
