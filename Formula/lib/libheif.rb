@@ -1,14 +1,17 @@
 class Libheif < Formula
   desc "ISO/IEC 23008-12:2017 HEIF file format decoder and encoder"
   homepage "https://www.libde265.org/"
-  url "https://github.com/strukturag/libheif/releases/download/v1.23.5/libheif-1.23.5.tar.gz"
-  sha256 "fd9036064c4432f0550d15072ddf34956a248279ee9aeaff0fba3fa0f77d8f1a"
+  url "https://github.com/strukturag/libheif/releases/download/v1.23.6/libheif-1.23.6.tar.gz"
+  sha256 "4484346dc5995319dbc11e3a1c35d0a2ec46511ce370900869337fd2c7033125"
   license "LGPL-3.0-or-later"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "33b67699a86d77b33c1f14bb0c2b20bf5c9e7dd0fbcb50be9aeea1880a66fc85"
+    sha256 cellar: :any, arm64_golden_gate: "7562bb568622d009107daafce5aa140f80f61692dddad7b79dac8951baba5af6"
+    sha256 cellar: :any, arm64_tahoe:       "10e52047c5f3d701368456964520a016fc30bc633e0d38d3ba8fc0431cc0f6ab"
+    sha256 cellar: :any, arm64_sequoia:     "4ac1617f3656072e0ece7eccfd5b863108156aa149fc18a536141297faa9b208"
+    sha256 cellar: :any, arm64_linux:       "3dc278cae7aa1b201edb0a960b11f1914c7d8ba12d5721aab45bc67ce2ebbdc4"
+    sha256 cellar: :any, x86_64_linux:      "3511f756dfb6a3f1b60dc563fb487ac38a9863b7dd087cf911096e86f799f98d"
   end
 
   depends_on "cmake" => :build

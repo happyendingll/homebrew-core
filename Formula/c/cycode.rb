@@ -3,14 +3,17 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/1f/f1/1897eadd9ed4411719cc8df491a263964c4dfbef4c083f16729045e928bb/cycode-3.25.0.tar.gz"
-  sha256 "b990f23af62f2418b8caa9a2e6fcf4522414d15c6b2f2559e20c4a67abbb5564"
+  url "https://files.pythonhosted.org/packages/29/fc/d970e60be390c10a4b2156f3188d4c9b80ef2b6e28cc2374f4506d76d9ca/cycode-3.25.1.tar.gz"
+  sha256 "edb205d0259e88df8332318802089d911620a40f90071eed02f95d4402950b1d"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "4f57c92e03b382bf00d34c698bbf6baee713eb23beef992d321fb57c5c436b59"
+    sha256 cellar: :any, arm64_golden_gate: "14bc1393ddc990fe60c4dd9d3d47da3176af2d3b2f90bb63827e9ab4927bcaec"
+    sha256 cellar: :any, arm64_tahoe:       "35cb6545801131db285100475a8d6674ad23d3476a1060fa5e94049efac25104"
+    sha256 cellar: :any, arm64_sequoia:     "2422467f21df62ed34325b74cc7dd8878a3b72fd4f0750ffe74ac082781eaaf5"
+    sha256 cellar: :any, arm64_linux:       "e16b0aba4fcd5950a55f2bbf54375d9db439eee1bba4dda2e48ab20fb285e7d8"
+    sha256 cellar: :any, x86_64_linux:      "4fccabee1da36bffa5e734c855537ff2d518eda9bc8582ccf0865bacba829368"
   end
 
   depends_on "certifi" => :no_linkage
@@ -223,8 +226,8 @@ class Cycode < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/e4/31/3d74fa778a63b98b7374323befcc0be5ab3bd94afd4096a0124e7379152c/tzdata-2026.4.tar.gz"
-    sha256 "f1b8bd365d8d210c55353f4d7f8d6d8561c0ba50d704b700d195a9424bba0d79"
+    url "https://files.pythonhosted.org/packages/d9/68/f1b440335057bfce71b6e50a9d09445aa2ecbd08359a337976627b8409e7/tzdata-2026.5.tar.gz"
+    sha256 "8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7"
   end
 
   resource "urllib3" do

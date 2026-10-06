@@ -4,6 +4,7 @@ class CoreLightning < Formula
   desc "Lightning Network implementation focusing on spec compliance and performance"
   homepage "https://github.com/ElementsProject/lightning"
   license "MIT"
+  revision 1
   head "https://github.com/ElementsProject/lightning.git", branch: "master"
 
   stable do
@@ -39,8 +40,11 @@ class CoreLightning < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "6176fc1d0fe2e44fc79f27cd610f2402f7d8f3c2b6bf4bf8e97681abae9348e9"
+    sha256 arm64_golden_gate: "94e732aaad8edc733f37b2e2a08f4e1b43b7fd5c2dba2492eba37d04f8d12446"
+    sha256 arm64_tahoe:       "01fb86392eae88d3140ba67a733c2bce01a1a141a37cedd857ca194d801fdb7a"
+    sha256 arm64_sequoia:     "1f41328d84503bd1e2d5092f631faee559d38e6ddd2e713e07a4cec82efa396f"
+    sha256 arm64_linux:       "970671feba47b0d5a6dd065e68d3856c4e2c650e185e7a7a92bcd391d1088890"
+    sha256 x86_64_linux:      "7d606b01046f23c01ab0e8c4f4189f4bf5c4b47af6f2eaf0641ef3012757e512"
   end
 
   depends_on "autoconf" => :build
@@ -72,13 +76,13 @@ class CoreLightning < Formula
                 extra_packages: ["mako", "setuptools"]
 
   resource "mako" do
-    url "https://files.pythonhosted.org/packages/2a/12/b5fa2353e2754cd67fb9f83793fa48ff42c213a5da7e719869d2301f6ab8/mako-1.4.1.tar.gz"
-    sha256 "d7904710b662996425a21627710c4777c45053146942cf8a7aebf757c92b8c27"
+    url "https://files.pythonhosted.org/packages/5a/09/e07c4b5579a79f4b16f8d4f29f6c54514ac787c4ad506b8c4f28a0e6b0bf/mako-1.4.3.tar.gz"
+    sha256 "cd6537fe88d5fec315c55c2f8529bc4ce7a9a352ad7db3eeaa6a66e2dd4ec37a"
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
-    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
+    url "https://files.pythonhosted.org/packages/38/9b/e422a865e1d5d57d0e509b4e0bf1c1a70a7f6382c29a5aa428df994c8bc8/markupsafe-3.0.4.tar.gz"
+    sha256 "2e9ad7dd851bf45fab9f75cbff4cb493fee9979e8d8c7c9c3ee119022518edd6"
   end
 
   resource "setuptools" do

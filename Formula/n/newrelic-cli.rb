@@ -1,8 +1,8 @@
 class NewrelicCli < Formula
   desc "Command-line interface for New Relic"
   homepage "https://github.com/newrelic/newrelic-cli"
-  url "https://github.com/newrelic/newrelic-cli/archive/refs/tags/v0.114.5.tar.gz"
-  sha256 "639af5c1a8e12c3f3755de63d0c993ff320a5f21b489b28e4f6f94caba170108"
+  url "https://github.com/newrelic/newrelic-cli/archive/refs/tags/v0.114.6.tar.gz"
+  sha256 "5c9571baf5269fef9dca5cdc6ea7a21f76a23856675fa59d910b5047ca31da58"
   license "Apache-2.0"
   head "https://github.com/newrelic/newrelic-cli.git", branch: "main"
 
@@ -12,8 +12,11 @@ class NewrelicCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "bea5f992a5d8d95c11234b86407662695dbc5a0ac565240ed55b204cb7865f5e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "030c79a18f02af393a5fd7db24522fb69cdc4b83262030f35034cfb4e5eaa385"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c5e163467baa5f4bd02b65afbf17e1c588213b50444d66a5270198ba5ec28ccc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1d4d85558cb398814b07e420bf8aacf192c207b67eba761384c8bae8afce78d4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3a04df471cfb1a39e2c110b1bb1153a0de8cdacaa772f54ba56846189474bab1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "82f495e54801d1a56a1659c271ba4db329c01f5bea1601c9cfaca0c19523fd55"
   end
 
   depends_on "go" => :build

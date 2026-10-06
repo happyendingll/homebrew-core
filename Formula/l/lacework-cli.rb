@@ -2,8 +2,8 @@ class LaceworkCli < Formula
   desc "CLI for managing Lacework"
   homepage "https://github.com/lacework/go-sdk"
   url "https://github.com/lacework/go-sdk.git",
-      tag:      "v2.19.2",
-      revision: "c71cecc606a28fd7abd145b3f60b118e4535cd11"
+      tag:      "v2.19.3",
+      revision: "3d7bc44180304cd409c74283e03325fbd30610e7"
   license "Apache-2.0"
   head "https://github.com/lacework/go-sdk.git", branch: "main"
 
@@ -16,8 +16,11 @@ class LaceworkCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "68bc2232d59d18071a25320b4886d94472f2452844ef61e0d628f5fd511daf79"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3a8ae86ab4d9c0902e77500cf2c9fea34a9164209e26dbe1d4a36e70d6b4ab18"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a8ae86ab4d9c0902e77500cf2c9fea34a9164209e26dbe1d4a36e70d6b4ab18"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a8ae86ab4d9c0902e77500cf2c9fea34a9164209e26dbe1d4a36e70d6b4ab18"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "85a5376efa125329791ac854fcf8ff5b6a4a2dffd2c6cd389118bbd590540938"
+    sha256 cellar: :any,                 x86_64_linux:      "d83c1299bd08c92c9350de43afafa3b822ac5e03c21aea79878e7209abfb7f43"
   end
 
   depends_on "go" => :build

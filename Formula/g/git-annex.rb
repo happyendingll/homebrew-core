@@ -1,8 +1,8 @@
 class GitAnnex < Formula
   desc "Manage files with git without checking in file contents"
   homepage "https://git-annex.branchable.com/"
-  url "https://hackage.haskell.org/package/git-annex-10.20260901/git-annex-10.20260901.tar.gz"
-  sha256 "f7843f937103819b93d7c436410ac5cd2db0a8863d14eabeb15712f2bfd74582"
+  url "https://hackage.haskell.org/package/git-annex-10.20261006/git-annex-10.20261006.tar.gz"
+  sha256 "f2f275f8b1bef3ab482935cde137a59a815886e5edc7545171c2081a9bf64a9c"
   license all_of: ["AGPL-3.0-or-later", "BSD-2-Clause", "BSD-3-Clause",
                    "GPL-2.0-only", "GPL-3.0-or-later", "MIT"]
   head "git://git-annex.branchable.com/", branch: "master"
@@ -13,8 +13,11 @@ class GitAnnex < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "287bf222934ef91ec5d650f1ba89b6d3e138f8856476eec5647d970905b5ef0b"
+    sha256 cellar: :any, arm64_golden_gate: "04006a4c0196c7505624b3531861d2a018e4803703d86bd21e82d077fd49494d"
+    sha256 cellar: :any, arm64_tahoe:       "121f0299b54bc071e42aedc4b2e8a0b8174913893c91f2561e49407b50d96fc2"
+    sha256 cellar: :any, arm64_sequoia:     "134875628893519f548f37aa525470542e407de90a43fb366db4ac7011d5dc89"
+    sha256 cellar: :any, arm64_linux:       "505d160fd064bf4b2023efd233f9de17f1e63e017556f3779a02998c27c81ae0"
+    sha256 cellar: :any, x86_64_linux:      "70ba9888a681ca4426697c435e121c7a4f9a4a9c498415a4ea6c9dfeeb75233a"
   end
 
   depends_on "cabal-install" => :build
@@ -30,12 +33,28 @@ class GitAnnex < Formula
     depends_on "zlib-ng-compat"
   end
 
+  # TODO: Remove when the ram compatibility fix is released:
+  # https://github.com/yesodweb/yesod/pull/1916
+  resource "yesod-static" do
+    url "https://github.com/yesodweb/yesod/archive/23f8d636842023c7cde36109ea24258df0d5ecd6.tar.gz"
+    version "1.6.1.4"
+    sha256 "0b523bd616673dad5e70da42149b426cfd19a7e5666e0550dad06bb9d989b82b"
+  end
+
+  allow_network_access! :build
+
   def install
+    resource("yesod-static").stage do
+      (buildpath/"vendor").install "yesod-static"
+    end
+    (buildpath/"cabal.project.local").write "packages: . vendor/*/*.cabal\n"
+
     args = [
       # Workaround to build with GHC 9.14
       "--allow-newer=base,template-haskell",
-      # Workaround for https://github.com/yesodweb/yesod/issues/1917
-      "--constraint=ram<0",
+      # TODO: Remove when crypton-conduit supports the checked-key API:
+      # https://github.com/psibi/crypton-conduit/issues/5
+      "--constraint=crypton<2.0.1",
       # Workaround for API breaking release of magic
       "--constraint=magic<2",
       # Workaround for QuickCheck 2.17+ providing its own `Arbitrary (NonEmpty a)`

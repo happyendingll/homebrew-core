@@ -1,8 +1,8 @@
 class WhisperCpp < Formula
   desc "Port of OpenAI's Whisper model in C/C++"
   homepage "https://github.com/ggml-org/whisper.cpp"
-  url "https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.4.tar.gz"
-  sha256 "57e280cee375ab02425b806ad5146b99f6eb9357e3c2b31357c8a6af2e2e44ae"
+  url "https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.5.tar.gz"
+  sha256 "ff1a9053feb509ff9d7729703355541ae9690073a6b1c40eb692c962e0dc1720"
   license "MIT"
   compatibility_version 1
   head "https://github.com/ggml-org/whisper.cpp.git", branch: "master"
@@ -13,8 +13,11 @@ class WhisperCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "0c092ffc1782e0936484ee4cb038f2bbee23eaa131b12c41715ab11de1e2e127"
+    sha256 cellar: :any, arm64_golden_gate: "4960b2068b6c9820ab0e686fc4fe58e2edeb19c58c9613751b417a4ea9ab7ec3"
+    sha256 cellar: :any, arm64_tahoe:       "8c72ed8b6624aab6d9058ae4de65e73190265fdaeb3a7cd3f7d96417dc67325b"
+    sha256 cellar: :any, arm64_sequoia:     "a6691f811f613d79d1e508a89c7523e69f5b13a58c10e26083e77f8909b6db1e"
+    sha256 cellar: :any, arm64_linux:       "da1155a46b4d2e8ede1d4bd9da94d17b3b5aeeff473701a4859d7de3ffb5c507"
+    sha256 cellar: :any, x86_64_linux:      "f4d28a5d683ad92571dc089d1e2ce0168ebd0dcfaef117311742714e61b2bd1b"
   end
 
   depends_on "cmake" => :build

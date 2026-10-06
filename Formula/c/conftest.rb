@@ -1,14 +1,17 @@
 class Conftest < Formula
   desc "Test your configuration files using Open Policy Agent"
   homepage "https://www.conftest.dev/"
-  url "https://github.com/open-policy-agent/conftest/archive/refs/tags/v0.71.0.tar.gz"
-  sha256 "c881be645a6295a6a5bb7d85e5d45f9f157d810c82d7c0a230072b1ab8df7b6a"
+  url "https://github.com/open-policy-agent/conftest/archive/refs/tags/v0.71.1.tar.gz"
+  sha256 "1bf5a6ff4b9d7bd943b9713ace13c83c40b77fd3fcf2a9659f32be67c4a2c368"
   license "Apache-2.0"
   head "https://github.com/open-policy-agent/conftest.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "a56d0c8a81cb6007ef2852e233be9a914a4e8913ba41ef5e7f72dd834ca988ef"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a3e738e62088ae315606901c412cedb6ea148c34eef552289af31648859ef6ff"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a3e738e62088ae315606901c412cedb6ea148c34eef552289af31648859ef6ff"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a3e738e62088ae315606901c412cedb6ea148c34eef552289af31648859ef6ff"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "597046efac10df441d73ea0069f22081ed87368de6709ed3b0b526f50c398b9f"
+    sha256 cellar: :any,                 x86_64_linux:      "42b3df729c4f77787a89a26e9c066d8afb6eb6be5c4e3b7d5b013f780093f95d"
   end
 
   depends_on "go" => :build

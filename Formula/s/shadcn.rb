@@ -1,13 +1,16 @@
 class Shadcn < Formula
   desc "CLI for adding components to your project"
   homepage "https://ui.shadcn.com"
-  url "https://registry.npmjs.org/shadcn/-/shadcn-4.21.1.tgz"
-  sha256 "59538fbf55a74e3492d8b66595af0662878b9fa3b6f114564ebe325211cb7932"
+  url "https://registry.npmjs.org/shadcn/-/shadcn-4.21.2.tgz"
+  sha256 "b2cbe1af97e38b743697c234fd5ac07a04999aae461a4b1dfbf1e7bd93eb2da8"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "78edab9c0463bed2d7ad7e2dd993da7a273ebd78ca482a77cd0df2b64612dfa8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e3bfc7c2c2897b094b80d9e0cdb4da35be75755131f5184f9be19f3249a13f4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e3bfc7c2c2897b094b80d9e0cdb4da35be75755131f5184f9be19f3249a13f4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e3bfc7c2c2897b094b80d9e0cdb4da35be75755131f5184f9be19f3249a13f4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3bfaf94e4ed327cb5ba626d65b723c17daa8c6ab4a9ff440ca373a7013da7646"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3bfaf94e4ed327cb5ba626d65b723c17daa8c6ab4a9ff440ca373a7013da7646"
   end
 
   depends_on "node"

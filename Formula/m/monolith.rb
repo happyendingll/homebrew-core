@@ -1,13 +1,16 @@
 class Monolith < Formula
   desc "CLI tool for saving complete web pages as a single HTML file"
   homepage "https://github.com/Y2Z/monolith"
-  url "https://github.com/Y2Z/monolith/archive/refs/tags/v2.11.0.tar.gz"
-  sha256 "757dc521ad88d3d334ee7323041c44c43efd5b0ec0e30c0c54a4bf9ade370bd2"
+  url "https://github.com/Y2Z/monolith/archive/refs/tags/v2.11.2.tar.gz"
+  sha256 "0591c98455662deb9cad92d3abf0e26f9133d917a1cc2ea13651bee69f5c9779"
   license "CC0-1.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "925877b81218c5bcddecf4ff3c16211c1ca0b353db26f21c0dd95fa8b4c3030e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f98e14e94c29ca4089c67492299aeb79ee9273fd1922846e404b2c3285cc4a6c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0a4ca331319a15e97cfc220dd05a35572196235a36d989906d3db823654dc0f0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2126a6254e8cfea1b43017f243094a28cb98f17649ef5a55b07aa15a957f3a31"
+    sha256 cellar: :any,                 arm64_linux:       "35b6c5ea095bf06bb35bd199f2b6d9b063a8457516073e5bf3443d769d074314"
+    sha256 cellar: :any,                 x86_64_linux:      "006884beff1756f61f3e97358763ba3fada4d964f176f704262de421a1256a9c"
   end
 
   depends_on "pkgconf" => :build

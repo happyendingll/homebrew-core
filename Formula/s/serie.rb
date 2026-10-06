@@ -1,14 +1,17 @@
 class Serie < Formula
   desc "Rich git commit graph in your terminal"
   homepage "https://lusingander.github.io/serie/"
-  url "https://github.com/lusingander/serie/archive/refs/tags/v0.9.2.tar.gz"
-  sha256 "0a47aa4f0fac15d6b87f37a3a637c65ccbb6a16a25a3fdd86f679e8a2d43fb4d"
+  url "https://github.com/lusingander/serie/archive/refs/tags/v0.9.3.tar.gz"
+  sha256 "2ee06db3694e8ac4c1c0e5e08f3a46de69780637539862b969896d9481032085"
   license "MIT"
   head "https://github.com/lusingander/serie.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "9dd09e2b693409e457520876c71a6ddfc012dc1b1032dd3c5dc3bd1cd0995e68"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "34ca6ee6372bcd9f2b628eeba50ffccfebff24d0f4c01ba55699609d2817f461"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a2a601e62cc74e16ec2a20369805d9d439b71006e62aaa72f89c31472f46c14"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bed1b9057bd0fd37e07b7460499cd89bb0530e6d3dc80049493a925bd367dd02"
+    sha256 cellar: :any,                 arm64_linux:       "9941b6c3d3d6f85afad4f2e5363b06069065a23ac7b37591fb7f6d511d83a6bf"
+    sha256 cellar: :any,                 x86_64_linux:      "59d8dbe92378c70ee45a5bdf36eabf1da971217f930f5aec9c400aa46fdc1af6"
   end
 
   depends_on "rust" => :build

@@ -2,14 +2,17 @@ class Packetbeat < Formula
   desc "Lightweight Shipper for Network Data"
   homepage "https://www.elastic.co/products/beats/packetbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v9.5.4",
-      revision: "ccdfcad1de773e22e494089f508162c52b027ee2"
+      tag:      "v9.5.5",
+      revision: "b80bf8464fba72f582cefed91dd72909eb7116db"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "5afa6db7fed4b62cf73c1bb48bd599b3cfd73217591e38a7074601f2c1b90a3c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "619863c60b27148812e4853fb79b2fd01f55c0bc485e858888680d66b6ce801e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "52f5c14e82062c26f70311410ea7e91b0fe9bb3b24a0a53c787711ae59aa0f14"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bcd619bccbb143a8b7c64c1dbb8fa25e2407a48cabf49b707c8a46ea39341da3"
+    sha256 cellar: :any,                 arm64_linux:       "bff56ca435add65d40b4d83202e932fc09eb0d60e9aac52df8150f576feef81f"
+    sha256 cellar: :any,                 x86_64_linux:      "fab03b6a23af044440037af95893916747c2487b59e4afaa3063659e47ce2f09"
   end
 
   depends_on "go" => :build

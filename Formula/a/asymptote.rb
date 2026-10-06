@@ -55,6 +55,8 @@ class Asymptote < Formula
     end
   end
 
+  deny_network_access!
+
   def install
     odie "manual resource needs to be updated" if version != resource("manual").version
 

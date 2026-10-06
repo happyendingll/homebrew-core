@@ -1,8 +1,8 @@
 class Ryelang < Formula
   desc "Rye is a homoiconic programming language focused on fluid expressions"
   homepage "https://ryelang.org/"
-  url "https://github.com/refaktor/rye/archive/refs/tags/v0.2.63.tar.gz"
-  sha256 "0649bd818b18611e4fa438f1f831701988686d4ef6e6e0aea37130190de7dd02"
+  url "https://github.com/refaktor/rye/archive/refs/tags/v0.2.64.tar.gz"
+  sha256 "56978ace26398ff7c80efa33e11f757598a9c6c45613e782671e292cd55ce77f"
   license "BSD-3-Clause"
   head "https://github.com/refaktor/rye.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Ryelang < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "82e1d0d8c2633910919d68f3fb58c8d0e746652e32e2918a8cc8960b268db861"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc90744628f70554182b7b0d2e4c980538e38a7264554b78c46e930dd89d246a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "52db176df5c1fc83cba7006efe906ed6720f59f28413a3e3708813b1354495af"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "451d4d4306a4aa9143657a1d6e94464318d85879462aad12fa54d325cbbebbc9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2637615ffa7c9e0b443e12811df3013cc7a561217d05c14de7087759e3de6227"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9a6e35c1fe04919fe10b93e2eb7772dc60ffecf68ba9b150b9bc94d133b845da"
   end
 
   depends_on "go" => :build

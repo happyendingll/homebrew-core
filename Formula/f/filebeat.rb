@@ -2,16 +2,19 @@ class Filebeat < Formula
   desc "File harvester to ship log files to Elasticsearch or Logstash"
   homepage "https://www.elastic.co/products/beats/filebeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v9.5.4",
-      revision: "ccdfcad1de773e22e494089f508162c52b027ee2"
+      tag:      "v9.5.5",
+      revision: "b80bf8464fba72f582cefed91dd72909eb7116db"
   # Outside of the "x-pack" folder, source code in a given file is licensed
   # under the Apache License Version 2.0
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "dd0fb409280836bac4da21e6de364297ff5e3e4971ffa2101dfaf1754864d9d2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c3ee777f0bf0d4df9eb474f88fdda2e36111972fc922ebddbb13aadb113e5b9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60f4cf4c2c378933f7462f3ef1f92be9e095db1fa81943d9c1fdc8e0a6b49435"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dbec80d03b04c61906b4025d407969170dd4f9549d8280e1736a3616c604b265"
+    sha256 cellar: :any,                 arm64_linux:       "2d7a66dcb25aa2fd4090eb4394ba4834fa01479f2375cdef1e7f375ec3e3a29e"
+    sha256 cellar: :any,                 x86_64_linux:      "7d29d33841de95f9b6b81c291117baff53059de5aa589d5e410f0e561f2ad215"
   end
 
   depends_on "go" => :build

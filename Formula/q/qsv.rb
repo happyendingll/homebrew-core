@@ -1,8 +1,8 @@
 class Qsv < Formula
   desc "Ultra-fast CSV data-wrangling toolkit"
   homepage "https://qsv.dathere.com/"
-  url "https://github.com/dathere/qsv/archive/refs/tags/23.0.1.tar.gz"
-  sha256 "90dcf4853a91184411c8f92cbe8e438769965cafa7b445f6b1de933a3e845b04"
+  url "https://github.com/dathere/qsv/archive/refs/tags/24.0.0.tar.gz"
+  sha256 "7db2e6ebb3c6a45c5604bff82291a957c62287a61e63aceb90c12335fc3cf8ad"
   license any_of: ["MIT", "Unlicense"]
   head "https://github.com/dathere/qsv.git", branch: "master"
 
@@ -15,8 +15,11 @@ class Qsv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "7787d427968943f780645e802c943878b6ff3d0d1d96aa664072a4d0bf747ee9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1922fdbcefa4c646d725cfb706e21398c5aaf7bcec3f9e80a1b511e610ec47d5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "83da6e27db3ab33f5cc4ba3c161043ff6c31b44d58e80e08cdc96af100e908c5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7b11fbff09a6717c98cec732f16851eb2282706206dc85f1b47c01629b0442ad"
+    sha256 cellar: :any,                 arm64_linux:       "3fb034c13511bd44566690514ce6b9ac2fc793dab52432e4bca29fdcd12f76c1"
+    sha256 cellar: :any,                 x86_64_linux:      "0e2c55314bd62b498f6fc24a70e31a9d238e9a211adf2d120a1039617e680cf6"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

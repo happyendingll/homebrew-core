@@ -1,8 +1,8 @@
 class Vtcode < Formula
   desc "CLI Semantic Coding Agent"
   homepage "https://vinhnx.github.io"
-  url "https://static.crates.io/crates/vtcode/vtcode-0.172.0.crate"
-  sha256 "a1c072ce6381ffbbf7a1ce31d276056f8331332fc47b63d9e6c7dceadee382a4"
+  url "https://static.crates.io/crates/vtcode/vtcode-0.173.0.crate"
+  sha256 "52bad43dcb612759375d034072662b2e8bb93b3fe60ad38dd71a5446825f3e38"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/vinhnx/vtcode.git", branch: "main"
 
@@ -11,8 +11,11 @@ class Vtcode < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d5f9b67246774cec828387318d21544071ae8ee1e2be2d934b9ac0d8968ef23f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "166dd2b28f0954686a0e186f441d51b54f9a5ee30528e7de84a2ae0c7f28460c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0167284465256f9074d76cb3cdb60292acb08d8226a062e9e8ec7968433ea50"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "be5c166c3dd26de91b12c5bd36aa34d9c83ce4587bf4f549295d19fcdb04b838"
+    sha256 cellar: :any,                 arm64_linux:       "056185825403b6ca274ee98d14fb42f4d630dc5a9007dafe5060cbeff2f0a402"
+    sha256 cellar: :any,                 x86_64_linux:      "4bf8e36efa61822ead2dc1b0dc17f33bd832509eae5fe76a0fde87c47f09a9b7"
   end
 
   depends_on "pkgconf" => :build

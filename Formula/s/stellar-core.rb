@@ -2,8 +2,8 @@ class StellarCore < Formula
   desc "Backbone of the Stellar (XLM) network"
   homepage "https://www.stellar.org/"
   url "https://github.com/stellar/stellar-core.git",
-      tag:      "v28.0.1",
-      revision: "947aad8413c189d85504acf72207e85eeda9b021"
+      tag:      "v29.0.0",
+      revision: "a9d72b0cac3a89ebbcf926af449ac73089e0f8f7"
   license "Apache-2.0"
   head "https://github.com/stellar/stellar-core.git", branch: "master"
 
@@ -16,8 +16,11 @@ class StellarCore < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "de49c4aee8ee9be5875b2559ee9359979bafb3db6524eaf0c1d13be320789d73"
+    sha256 cellar: :any, arm64_golden_gate: "95d56a34a921ea2e23eab49edc58c907b948e6fd522d6d6f4ef90fb5f16413e9"
+    sha256 cellar: :any, arm64_tahoe:       "884617cff2757c17589372284b085e9e268a17fe15e1563179fb6e4ff1ea6081"
+    sha256 cellar: :any, arm64_sequoia:     "b6918bb7dcf79e47b58c04636148f6a470d93e46c9140af6bf0d673fe76ececd"
+    sha256 cellar: :any, arm64_linux:       "de4b7b7a0a2f3de1d326f7d2ba6ff0df349264fe694083a2ff07f59f9ca8fbb2"
+    sha256 cellar: :any, x86_64_linux:      "7aa89eedf19160d9a080b17f51974d7d3dc8b8a73081cf4f227a79aa990e697d"
   end
 
   depends_on "autoconf" => :build
