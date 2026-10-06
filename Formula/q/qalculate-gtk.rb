@@ -6,11 +6,8 @@ class QalculateGtk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "594b279dce56c32b5c26aa0aabdc55a284becffc7b13039ef6f9c7cbff1a765c"
-    sha256 arm64_tahoe:       "b9d272c40cde50b5bf17ccbea3ade31871b65d9747a688e3a4e120447a50d24f"
-    sha256 arm64_sequoia:     "8c9d7f256ca51b722fefb05eb5b4fddc981fe10598d41cb35d824471f6c5bc64"
-    sha256 arm64_linux:       "d3358efc075596045efeeac4b7f461f1cdf28a7ff78fddb2cc81aa6b6dcf6071"
-    sha256 x86_64_linux:      "e0f930994f5c745d1102c7d1dc59aac1ddb1b1de1c5dd9f5cc28b047d8e003fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "00ad62b3f23fe191379336fb9da92d1e8886cbbac362ea9f5fa9ba7bda32f869"
   end
 
   depends_on "gettext" => :build

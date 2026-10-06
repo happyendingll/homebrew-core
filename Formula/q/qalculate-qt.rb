@@ -7,11 +7,8 @@ class QalculateQt < Formula
   head "https://github.com/Qalculate/qalculate-qt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c8201eb801250bc7650fde43eaf45e4f6b74b2d5e9f875aec5f5edf9dc2ab5b5"
-    sha256 cellar: :any, arm64_tahoe:       "c8201eb801250bc7650fde43eaf45e4f6b74b2d5e9f875aec5f5edf9dc2ab5b5"
-    sha256 cellar: :any, arm64_sequoia:     "d19947c29f17e1783e187b95a10c980fd44cdb699ee2b5e57746cb4befe9f110"
-    sha256 cellar: :any, arm64_linux:       "d703658dac8c80132d633068fbd0d6005460cf11dae3ee771b1f3c1b30e5c10d"
-    sha256 cellar: :any, x86_64_linux:      "980f4f7a9e7850c2e1178e1073cfe1a3e4f22d98759bc75c4035e93fbbc6756c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "becb6c45f51b7a83b8f0872ffd628ba46959e4e5b364988de1b0043bf9a21111"
   end
 
   depends_on "pkgconf" => :build
