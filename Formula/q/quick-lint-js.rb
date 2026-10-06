@@ -8,11 +8,8 @@ class QuickLintJs < Formula
   head "https://github.com/quick-lint/quick-lint-js.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ff0fb364799da0731d14f3b4feffb9ea9ff8bb95c02ebf844d09d967a085acb7"
-    sha256 cellar: :any, arm64_tahoe:       "9ae7f7cf9e5967556ec4f89da3e654c162c58c1f8611c73ac2d7ac5ad4700357"
-    sha256 cellar: :any, arm64_sequoia:     "d1972a38e29e867ca956a44de9eb1cc67662b47c99cc7133926834c89c8f15f8"
-    sha256 cellar: :any, arm64_linux:       "aa17edf1cc8a852e99988507346b2cba2ac09ec64afd65a03c2d98e370735290"
-    sha256 cellar: :any, x86_64_linux:      "f9b0c534b47a62ce84ab7d1f62caf3c850cd6affe761f5e7ee3a698b65cb8faa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "0219f40d57ae0f9d5a751b17d783cffe547b7e43e5b813114c56071879733086"
   end
 
   depends_on "cmake" => :build

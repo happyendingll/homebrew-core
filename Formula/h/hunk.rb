@@ -12,11 +12,8 @@ class Hunk < Formula
   end
 
   bottle do
-    sha256                               arm64_golden_gate: "7015a2c63789ba3be5330cc3abca004d1408f5f54f497f75f64de7e439737c20"
-    sha256                               arm64_tahoe:       "7015a2c63789ba3be5330cc3abca004d1408f5f54f497f75f64de7e439737c20"
-    sha256                               arm64_sequoia:     "7015a2c63789ba3be5330cc3abca004d1408f5f54f497f75f64de7e439737c20"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "abb5098d0b57e78d89443e5c6f94fcb2620dcb6156314285d542dc975a145c02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "dbbd755f1b4cbd964abe225c1cbcf127ed5f363e4eba8a155b41f1c7c584b7fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1745713e3f3b6db22f65e679973c3444a533c64785b65c7593054ef7700f4038"
   end
 
   depends_on "bun" => :build

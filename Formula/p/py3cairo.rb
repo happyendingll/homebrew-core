@@ -7,11 +7,8 @@ class Py3cairo < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ae8f55dd424356ded6562878fb0551b83673d2f8276b797383a27ae23e8d7419"
-    sha256 cellar: :any, arm64_tahoe:       "dd941b47d3fa4fc667dc1404455cae42e67c96ea1bff1bd95932a2b5ac1c0bae"
-    sha256 cellar: :any, arm64_sequoia:     "ce9d1133f153dea3cd011c383ff5cb0d4d8690491c6a89e22be799134dd0be7f"
-    sha256 cellar: :any, arm64_linux:       "43ee113c1a613f0df8112691bc3756f70d573b65ab2733c40950be2ec48ae611"
-    sha256 cellar: :any, x86_64_linux:      "16ee81bb6982f87fcb49eed4233a6517181e809ae6795fa87ae29fa286b5a3f4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "104ae2a3125b4fcb9da98cea01fef5d85ecb4148660bffcbf79e1fa36238bc58"
   end
 
   depends_on "meson" => :build

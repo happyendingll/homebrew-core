@@ -11,11 +11,8 @@ class Crowdin < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1a5d3e883742006eb9e08f7a8cd3665a13ea1d338fc3b3e449a2ed327362ec5f"
-    sha256 arm64_tahoe:       "bcfd13028c26f6769db373d5b13ea4f88696653d1dc8aecc8aee3e68d9571c2f"
-    sha256 arm64_sequoia:     "9856830456a19711430e6736e73054b308158367881a4196d9d12c570ccad651"
-    sha256 arm64_linux:       "dda741e3345822f89531f713027f81bc538531363fcc6ef7bdb5a8638cae163d"
-    sha256 x86_64_linux:      "ce855ec901b799f1145b78b22594a6a034bf4317ce62427ce38692a629d37933"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "978d19ab3728e9c0e484d350fd58ab2f2dc482ff1e02e8e06e26986fcc29f5cf"
   end
 
   depends_on "bun" => :build

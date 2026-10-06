@@ -6,11 +6,8 @@ class Libqalculate < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256               arm64_golden_gate: "831c8899dae768d2a0997125921c94c0f537db0f422d105b4f20060458c0f1d4"
-    sha256               arm64_tahoe:       "fe00c57938976f0baac6b4a8aebf56f04f836aba6ae95af64d979533e25ac769"
-    sha256               arm64_sequoia:     "79e80e008b6b045afe10bfb80744cdc5f9500fc92a3bf92f0924acbff29c3688"
-    sha256               arm64_linux:       "0e885ad9151b615604c6e7b658bce2f2ff07229efa572cc926093f5c1bbd1528"
-    sha256 cellar: :any, x86_64_linux:      "244fd81e469838d1aab1593f9c0eafd794587fcca67f5f661082a1bdcdf85870"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "87e8645d7fd707069bf5688940e97157f4c8ce7e0f7b007d6ff26e624eef0501"
   end
 
   depends_on "gettext" => :build

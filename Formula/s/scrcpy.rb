@@ -12,11 +12,8 @@ class Scrcpy < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0fbbcce5c43425e9d6d986dc280cfbbf00d8a054571573061062f7147e699e77"
-    sha256 arm64_tahoe:       "e15c53aff881e7d42a6eb941ca0561e36f4f61459ad01241ec3e9358900b2938"
-    sha256 arm64_sequoia:     "477a91ee3ff1ed0e2f1f074d5cc31928681ee8f6e278cfa47727e257b38a9f8b"
-    sha256 arm64_linux:       "303ec2793ed1dfe3792f740e76850df6f3f04bcbd931a39a0c3f565d558dc527"
-    sha256 x86_64_linux:      "e73d14c83073e71158e5874045b6515284a9cf3c9b5a53c8cced9febb8a6d980"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "a40cf1a662b6ce09062723f0910cbb1c9755e21358ce3db90ad99ea638e47a67"
   end
 
   depends_on "meson" => :build

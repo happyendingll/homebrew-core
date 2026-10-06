@@ -11,11 +11,8 @@ class Pixivbiu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2a6aea66383300432109d68651c39acd5902af0968d813212e284b1155091fd4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d028a5db3510b085b6d21f35689a9205bfd54dfdfe67e61be29f17e562b4714"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5bc2520af13085023424c96ff3ab59cc141c4352222896a2520cd5cf0ef881be"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6c8dddafaab472968d7077b363cc859d331229ac18fe33d8a31f4f1e24ea4179"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c437137b3b1e525bfb10a87e18fbd6b9128ea63bb4e8a150adea74dbb262a6b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "beb6ecd7ef049af2df2e4c617fcdceac99b469a6f38e2747c574b893cc5ec663"
   end
 
   depends_on "bun" => :build

@@ -7,11 +7,8 @@ class Gdu < Formula
   head "https://github.com/dundee/gdu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "81148adb5a876bb46ddb366e0aee802602d607677ca53e4fe885c37db91ae35b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "31f13067a9e650f4914cd674e58f26e2a13773541b81c4f965ba447c3d856ef0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac45990f6d9f9271e8d56a61a250ebde5a39eaeb8bfd9340246a055c985a89ee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "287d8a2596c4418ea43e422ccc8d6ff90e7b1674a9a28b018913eaed9f5de66e"
-    sha256 cellar: :any,                 x86_64_linux:      "b35ee0126abbdd6c4e45eefad9e15d94c9ac1d8dedfc19526b70d7896e8ed162"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fd47ad3154b87dcb93f2b5552ab4046fb60b7edea125c982913930a28b07ec8e"
   end
 
   depends_on "go" => :build

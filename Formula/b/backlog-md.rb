@@ -6,11 +6,8 @@ class BacklogMd < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "ead00f134b021487871aa767ccc7e1d52baa989d06d06e0a2f48e4f11558da69"
-    sha256 arm64_tahoe:       "a385efa66dfc99eaebb1f25eedb6ab5c3f4f0b258a90a80b1fe33df4a90bc0b2"
-    sha256 arm64_sequoia:     "bb9113816db429020a82530e116e554f0fa64fd4d7f41cbfe6f4ca0d8e662523"
-    sha256 arm64_linux:       "9d10bd2b3e8868e4fa41481855442101212b4ac7959e50b84c34774650099959"
-    sha256 x86_64_linux:      "07b0c53f0c399705ba33a198319cf2e6b5c5a69f4ff104a7461528db6977427a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d026732b5bbacda5fd21c3c390afd3b151f2de3d2e62ac570cecd2fea7d12a20"
   end
 
   depends_on "bun" => :build

@@ -13,11 +13,8 @@ class Libressl < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f9c01b29a759c53165307dfa8a2f3fecb22cd19b28c9a85737decd78af6035ba"
-    sha256 arm64_tahoe:       "70b864a828fe7c002439e4bb70b325056b7fac277e941bafda734c3cf39f0937"
-    sha256 arm64_sequoia:     "313bb8a92707253b3a3a72dd85dadfffd7e50c87b93841524056c38a7f42ed39"
-    sha256 arm64_linux:       "38410666367ab4ddc027d4c2ccbadf399d9f48b8e920de747bd0c386c0ae4102"
-    sha256 x86_64_linux:      "40e1373464b1eef05518f70f2c60bb9547dc4b9bb9ddd8d2d2491968a530229e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "b8377a0e8b5587ab84ddedd39fbb843ad78685289e98db8fbc2d9bbc02564b58"
   end
 
   head do

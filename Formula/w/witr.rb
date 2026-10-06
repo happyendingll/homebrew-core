@@ -6,11 +6,8 @@ class Witr < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "84a9999489408a0df28a3c3a2b6ef3221875028047b915976cdf7734562b358d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e0814a5a4d9ff19b747d4ba9625305e47c4cfad8b4e2fb62ea42f01508966f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f32dca5487d698306fbf0feb4b4ebe6d4d0c33c3592337c0bd5835cf67195df9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a3e0be9fcc483c779220e87413afe3d97fb9d1c3d00c0e26f87b69ebadea2667"
-    sha256 cellar: :any,                 x86_64_linux:      "79068f27483a8afafdaed815244c538c49b3e6778469c14e4561b4a2e9d1452a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b77781c0afe29c15a0364b7839688b68b0a828b6c05578b5a2dd74dda3f1ae34"
   end
 
   depends_on "go" => :build

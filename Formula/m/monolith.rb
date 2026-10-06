@@ -6,11 +6,8 @@ class Monolith < Formula
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "321483dc6bff880e4bce08e34410cfe13d868b0f0a429bbd215ee0500f27ae39"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6cc06e04ca53493fd09fd578779708443416d6f2348cb7509dc8c92323380652"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d5adf6ad330c858fd009d55fbe792e064cdd10be0460c4d830a6fe86a3c7e439"
-    sha256 cellar: :any,                 arm64_linux:       "2143571c71affe3cadd9efcc21c2477271c5a993f12196c851dbbb1379cc1b47"
-    sha256 cellar: :any,                 x86_64_linux:      "deb95ddfa1807a1564cc949acfa88dbea77fc96ffd1a5ae71301bf305935810e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "925877b81218c5bcddecf4ff3c16211c1ca0b353db26f21c0dd95fa8b4c3030e"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Fx < Formula
   head "https://github.com/antonmedv/fx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9597a3f0a0b165193379c2a3d38503a981df1dfeaf6ff8d8c29c616f276c33f2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9597a3f0a0b165193379c2a3d38503a981df1dfeaf6ff8d8c29c616f276c33f2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9597a3f0a0b165193379c2a3d38503a981df1dfeaf6ff8d8c29c616f276c33f2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3717c2e25ed32459307145a80bde8c884c05093875605cf893e8753c4eb8aa2a"
-    sha256 cellar: :any,                 x86_64_linux:      "b2180d9e1aaf98016eb42a269edf861cacf77e504e33657e935ac4757604064b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d80a4b321b25fb303d2e0554bedf960fdcef2b2cbfae8dcd8470b1a6bf31b916"
   end
 
   depends_on "go" => :build

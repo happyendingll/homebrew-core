@@ -12,11 +12,8 @@ class Supabase < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "eac119efaabd729d3233ce1c40b2a713a3c9ce5f35d14a6422ba8ea4f6a0767e"
-    sha256 arm64_tahoe:       "21a370119adf90d7169c513cdcfbbfccc43b0de5319cfa504f9cbd4e4723d145"
-    sha256 arm64_sequoia:     "2a5d12ccb53ee6eb17662c029d58af22d7b732b146f3751fe5af806d17259298"
-    sha256 arm64_linux:       "161303afe6a9834ea43ebc0115a7adc3beb15a730f35cff5f29f26051833f7fd"
-    sha256 x86_64_linux:      "31230514281c495345fedadf932aa9fc298c864ed4d252cd9a84b07fd7dd4b97"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed49265dd08da5404d3532a5bd49df697bfb4dcaf2c182c27349056b2eeed021"
   end
 
   depends_on "bun" => :build

@@ -15,11 +15,8 @@ class Micromamba < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "87a53aff6660ea15e8d92cc6f2a6411239ed48cc24e134a676ddfaa414a81b4c"
-    sha256 cellar: :any, arm64_tahoe:       "4b87f35b0c65420c7059018701e14243b5b5c1dd590e839a2528903238878185"
-    sha256 cellar: :any, arm64_sequoia:     "fd35af0fb4e6b1199909e7932c1af0655176e36ecb9e5804c965ef8abfd9832c"
-    sha256 cellar: :any, arm64_linux:       "2c01880ca50f3bfbb042fcda003e450a98f86e994029efc4ef6614975bfe891e"
-    sha256 cellar: :any, x86_64_linux:      "4cc19a0ab552e5c28e24838dee3c97b62f9737963715f896fc653a685b18eaf1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "71e51995282582d983f585283d2c26ecbc9071f3605af11bb8eac743ff55f9cf"
   end
 
   depends_on "cli11" => :build

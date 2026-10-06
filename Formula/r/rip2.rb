@@ -7,11 +7,8 @@ class Rip2 < Formula
   head "https://github.com/MilesCranmer/rip2.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6f967fb6f3431a6c4ab981a44f2684b712001c63b5d653bbd19374b481da1ae6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eb8162b1904822d5ba4ae34d49d9d8a2da2acdec0fc2251ce5c46012b772ad80"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fa8efa4b7b779fd88b61cfc77bf9d151bf045d04eb1f558523b73b10a7a6889a"
-    sha256 cellar: :any,                 arm64_linux:       "3d45726bcf83c28ccc1ae2cbf4d0ce24885de05a296ace8207c8e3466dffbae4"
-    sha256 cellar: :any,                 x86_64_linux:      "48edd668cb28e1477f327362a7b6cbf8bdf2a269ae60855349a50bc9fcd6f569"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "744ec5d9113d4ba05039ececad6d07b160242197fff1be939304d2bdc62d984e"
   end
 
   depends_on "rust" => :build

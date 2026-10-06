@@ -7,11 +7,8 @@ class Librcsc < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ff216664fe9e26575bd8a29302bd9ee58876ddafc0e7906a36c44d2838a6a897"
-    sha256 cellar: :any, arm64_tahoe:       "473a6fd79a67a2652d73b9a7a0e85dd3884f590ac602d7f541265da00388fc0b"
-    sha256 cellar: :any, arm64_sequoia:     "5b769b193f194f8e0f3e618233ff3e22d3861589150dccf7aa5225402a6124a6"
-    sha256 cellar: :any, arm64_linux:       "ffa79a25a183b18ed8b88a980997b33560e53a97f589157586eba342f991a56f"
-    sha256 cellar: :any, x86_64_linux:      "c2944f365246e754caf632d49be4d4bed5378f4054de4f5803197c9084a9fcb7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "fd665af034c7e3547a19a6c84135810a87e257cf0594fb17c60243fcc730183b"
   end
 
   depends_on "autoconf" => :build

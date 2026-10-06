@@ -7,11 +7,8 @@ class Katana < Formula
   head "https://github.com/projectdiscovery/katana.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dec77e1c8dfff87af921ad817adaa35430a6906935c51ced600cdace4fa6fe25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dec77e1c8dfff87af921ad817adaa35430a6906935c51ced600cdace4fa6fe25"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dec77e1c8dfff87af921ad817adaa35430a6906935c51ced600cdace4fa6fe25"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "699c15d47970d5462dd593ba30cfb61e5f1151295a6d2abe8ec5477a2e84670c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0d1b834047bfaf57c4f6335e53b8f882cc5d1f59832d7452a2e2276a47b67c35"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a1f1a67e71ad400ffd2bf1bbe7e7b4ec0c5b5155ee4eabb928501df919f08ff7"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class SoftServe < Formula
   head "https://github.com/charmbracelet/soft-serve.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f4f9266aa23b1fdf9cb12adc147ce74c7ada2578d7303ef5b1d54ccff2a92b51"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "da16b731d451389d9ee179c86ee459ef89821fd344781534be776a1ebbbb88fa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1e8d53da103a8b8bcba0a646820956846120c3bc2bbbb6f2a70f3551ff6f0422"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b30fca717c4e56c414f19f82ce7065afc18952b15edde9b1ed321d991fdff196"
-    sha256 cellar: :any,                 x86_64_linux:      "42d4a2c7c976ca4f3d44d1cbc39ce7ffbcba57cae0192c8d3e9546d032c79807"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0b2314328ba44b699b985c1cc5c0459293718b231c161a99c9aa4d5240abac43"
   end
 
   depends_on "go" => :build
