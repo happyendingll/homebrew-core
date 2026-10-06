@@ -7,11 +7,8 @@ class Reposurgeon < Formula
   head "https://gitlab.com/esr/reposurgeon.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7e25c4ad5a8243a515843881bbfb999dc44eb5251eab12f5ed68d6ae359ee481"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "853a13c4063f954df4aa9f56ac94bcd0096840b8f86d9746771e1a375fe17bf2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a77759a15d1798f603fb64dc4938406bb0136f037bcd11cefa6d3f825bb4044d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "85b762bbc886ad77564456037435492d7387a7ce81cd9379bfe55326b48403ed"
-    sha256 cellar: :any,                 x86_64_linux:      "7f714f7ab669ac1aabe7a22d9ed4c56b27f3560677836ace0560c8dd9a5d7e0d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f525488d7ffd58a2306fae4830066092b029979efa934166bf212f87825ffaca"
   end
 
   depends_on "asciidoctor" => :build

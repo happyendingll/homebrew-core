@@ -7,11 +7,8 @@ class Keploy < Formula
   head "https://github.com/keploy/keploy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ca2fbf5b413365827ab6d9c370d8709a2947105e361fd0fbb43eab92f72a10b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ca2fbf5b413365827ab6d9c370d8709a2947105e361fd0fbb43eab92f72a10b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ca2fbf5b413365827ab6d9c370d8709a2947105e361fd0fbb43eab92f72a10b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1ff8cbd7302061d0de92859fee82d42ff0befffd19405fd6e3479410b40f8bbb"
-    sha256 cellar: :any,                 x86_64_linux:      "e3cc08025fa0489be3819434572eefd01a2c08f70e0a77a4e05cfcdb32d793b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "30dc46c69db1419ba1e8ae2022d54ef4b2cfbfdee33073a06ea1b1ae551175b7"
   end
 
   depends_on "go" => :build

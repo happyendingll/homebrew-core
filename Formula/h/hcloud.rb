@@ -7,11 +7,8 @@ class Hcloud < Formula
   head "https://github.com/hetznercloud/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "873b650d8da9409dff4b1ad93836667315a7c2618ee1e2164d0818356abb015d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "223a5e878637838d8fb374d982f4c2aca0ecefe561f916bde0e4b086be6e8f99"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3b4b2a6c2704e0ca4bd915bfe6468ab93836daac07eb17969b92967322f5873"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a3b554baf1c7449c1be4b2f9f495b172354fd1733d09da654cee89833f7eb61a"
-    sha256 cellar: :any,                 x86_64_linux:      "52d5e81fcd442aca6159e6b1e16b85b2296323ee724835f4a2c55feddd1eb02e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "80031836a2412776f46ba40ff7947914ad9c44599c19ad1fc264b4f19c53b33b"
   end
 
   depends_on "go" => :build

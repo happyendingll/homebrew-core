@@ -7,11 +7,8 @@ class GitPkgsProxy < Formula
   head "https://github.com/git-pkgs/proxy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "46cb5fd118e0b0087cfece9db4af899f24762d81957c505983c9e2c5b0573b65"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0dc27086edada461c5388754be4d1ee6300f92eff3a9b5c87bd6d631ec1f0b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e10d09b39fcd7c1c168623a43a0b9768b2d63236c72f1bff1e15f76e70980e6b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a26ca577b28beedfcec54daeec9bef161da1e283e75a0a47feed8420165e84f7"
-    sha256 cellar: :any,                 x86_64_linux:      "0087edbf225d168965081a1b170f498060c0df6be36d39e9153a652d1e8e7f2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "6967674cc688ead7902d777e3aa7e2e5921336777704406b919202b38b1464f4"
   end
 
   depends_on "go" => :build

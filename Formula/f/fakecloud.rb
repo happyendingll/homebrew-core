@@ -7,11 +7,8 @@ class Fakecloud < Formula
   head "https://github.com/faiscadev/fakecloud.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "518076850a165db162bfa909e87c3ff277f172e1be5aca4248a050358a7e70f0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7f30215f882c55c623d15c474525c4d3f2e7711080d46ab450fc6b0203d86735"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87323e859a59c167bb3e92699ddb6cbde0c761f45a8d76ecad77cb4ed65752c9"
-    sha256 cellar: :any,                 arm64_linux:       "689723bb8d2eb408802e62a6d98a8d5eae84a987c9e53d302ba21cf3cad13b85"
-    sha256 cellar: :any,                 x86_64_linux:      "78bf66438ce39f1dd21bd892fec158624caed618f2198fc3465b3c26d353b5cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "55320d8e5e8bd94f32e35e5367836172c599db6dffd39eb0bf42ec933e095bf3"
   end
 
   depends_on "pkgconf" => :build

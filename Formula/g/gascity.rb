@@ -7,11 +7,8 @@ class Gascity < Formula
   head "https://github.com/gastownhall/gascity.git", branch: "main"
 
   bottle do
-    sha256                               arm64_golden_gate: "7d41f9aca007b375f741d3ea83ac27752a8423129b577eea7c0578cbb1ca6915"
-    sha256                               arm64_tahoe:       "aab58140f12f9bd093b149a89b2dfed47567197de7590eb7ca33410690319446"
-    sha256                               arm64_sequoia:     "4cf709f8fa783a0bd664ca705c9e19393b15a1c0cf8b0bb1710e875f24be559a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a4bb8299446be26ddeb7f00821c5a5446112f303ffe93c2a434422a593c60284"
-    sha256 cellar: :any,                 x86_64_linux:      "05d35bcc664ac55cdbfcdb3b6b46a2c4ac2a90b85dc694bf6e1842532f581499"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "4a8983a0e5aa3adee861afbdd39cddc6e98e17248a3e83a38ceacf8c01fdee67"
   end
 
   depends_on "go" => :build

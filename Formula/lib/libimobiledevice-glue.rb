@@ -8,11 +8,8 @@ class LibimobiledeviceGlue < Formula
   head "https://github.com/libimobiledevice/libimobiledevice-glue.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dc5369924a2c6a2a72fa0272ad2e555368d9202b5d277128ec9015ce118a4d38"
-    sha256 cellar: :any, arm64_tahoe:       "771ea125dd999af5879f39529abd5faa2cb1bff83a52f87c95e842d4c0cba942"
-    sha256 cellar: :any, arm64_sequoia:     "8b529b79effd76fac07f8a85e1596a3e7b6b0c18f06f07c1579b5b5c45b0110e"
-    sha256 cellar: :any, arm64_linux:       "09c546bf5ba30af4019a0e43d5bdc2a4e0a8b5f027d51407be7f430c7f380819"
-    sha256 cellar: :any, x86_64_linux:      "4ef415035d620334870921e36e0f6d4dd973af3507c9d20d464b3648647f008a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "301a9cd3679fe3a1151268bf4bc855ff7593b05610573a00e5c9eb613729034f"
   end
 
   depends_on "autoconf" => :build

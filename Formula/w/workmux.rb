@@ -6,11 +6,8 @@ class Workmux < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ccb4816b26acab88297c3baa094b7857262d6fa71fd08a00870680dccb20ad15"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c1506ad7393bff53f710bdeffc0bd57b900876e2a75c88f9979d4bd9c014a116"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07d429595e6a76827bfba48e348b33923de9a08f687e7cf29933716840b022af"
-    sha256 cellar: :any,                 arm64_linux:       "9c03b61ce2f8a9031336a2150d09c285f1c9c0e39f67a295d2851972d80217a1"
-    sha256 cellar: :any,                 x86_64_linux:      "63f04e8ad0c915a531d1eca2dcf2a499431d74cb6d1408a096375821e003a399"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4bfb2f5b630a7a9b795166290657e3fff0de68247bd5def7014046aa9f40ad71"
   end
 
   depends_on "rust" => :build

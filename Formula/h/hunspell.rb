@@ -6,11 +6,8 @@ class Hunspell < Formula
   license any_of: ["MPL-1.1", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6392b443edd890774960ff3d5186e3aaf8dace6233346f1223de7a50bc4238fd"
-    sha256 cellar: :any, arm64_tahoe:       "05b22bd827bc59b91f6c976e0e3621399474bd220f39b39b1e30b5f59d8c65c8"
-    sha256 cellar: :any, arm64_sequoia:     "a3d2964292b7f77eb11ed6e67a1c2ac092a1268454da7befbc592793fc52f46e"
-    sha256 cellar: :any, arm64_linux:       "fa741149c48e7ab6809b4f2344a5b2ac379fa9d32a3d85750fc201d9f6077035"
-    sha256 cellar: :any, x86_64_linux:      "6b5eec2c32d6b05051b8f7ca228d20e48f908ecae3e4a0216eb79432bdefb4ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "93708af003fe7f5532d3a852cb86073271304323eeeb34201b43cdb520be6bbb"
   end
 
   depends_on "gettext" => :build

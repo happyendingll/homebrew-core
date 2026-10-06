@@ -11,11 +11,8 @@ class Open62541 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1ca04e6a45ab219e7014de0d0e783ba7cd502f343c68d7a6ac39089fed4487d0"
-    sha256 cellar: :any, arm64_tahoe:       "b0ac13799809a3bed63b77c36400b377b0bedd2ece63eca14c00befb57f24343"
-    sha256 cellar: :any, arm64_sequoia:     "ff9b6b6bb6bcef204a321f231cee36b1882e48d44d63244f6e44e7365c8f2bd9"
-    sha256 cellar: :any, arm64_linux:       "8987337b1b8b2ee04bdcd3a0ea46e3c0375ab74f3d8e58236f372e6439cd4fba"
-    sha256 cellar: :any, x86_64_linux:      "fc5391fb1f18a63f211a654cfacc78fbee97e16df5d429a1ade4f25d2f9a635d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "5ad6bea16ce9f3dd5d75c1e10bdc967a3329d026390a94f78538f78ddec978f9"
   end
 
   depends_on "cmake" => :build

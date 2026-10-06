@@ -6,11 +6,8 @@ class Oxvg < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe8efed8cbdeb6a72bea6907b5d0f57b60e226f0a8bdfffd9930dbb2ee6c1988"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ce512a75a597faef9c1109f78cc536f49e8acd2479929d7ef87b3e60f2b1ebb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "736701722b4b7add1c2de0b91fee9a7731dd051dcd9a440e19dabeb27a1f1b3c"
-    sha256 cellar: :any,                 arm64_linux:       "627660ee168249d7445f4437515df4d69df5b71ccaa920b5104b6feacdd876d6"
-    sha256 cellar: :any,                 x86_64_linux:      "4b478fb010717f943254a966423c762232dd547984abf5604a3683a48f30aaa6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "47d984e08513181e91e1531bac5950c99f8b17eb33046c9df716fd30551c0f47"
   end
 
   depends_on "rust" => :build

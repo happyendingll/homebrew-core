@@ -12,11 +12,8 @@ class Remind < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "babe2446f0521e5fb41922775a5613ef88426425087a32e747097d13088c0ca6"
-    sha256 arm64_tahoe:       "7e31dbd119d74b26f6160ad07af51b3bc09b1ac53dc098916cf7d20cfec4f544"
-    sha256 arm64_sequoia:     "437b2a0ed70f9a062a75a29e377b650b729d9768ab81c89b035930dc8c13af08"
-    sha256 arm64_linux:       "b1cecebb277805bcbe49c6b41d86ce2c4ee6f396ef9dc77df142b6efea3e05e2"
-    sha256 x86_64_linux:      "c26ddac8a0b8a4f9a8e14fe23604cdb0aa0ee0b6584200bbe83e4275235477d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "bcf9fa369d9f2b643ef6e7b8fc093503be8dd8bd99de0a844ee064b054a2973c"
   end
 
   conflicts_with "rem", because: "both install `rem` binaries"

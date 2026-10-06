@@ -12,11 +12,8 @@ class Lazygit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0bcbe4f7d747240ee5339ac7f75bc9ad636f345e99241892ba3d0466c7e1ace2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0bcbe4f7d747240ee5339ac7f75bc9ad636f345e99241892ba3d0466c7e1ace2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0bcbe4f7d747240ee5339ac7f75bc9ad636f345e99241892ba3d0466c7e1ace2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b60fd901eb9e711855c1b64e145bf683e869eeabfb7203e2fa34a680eee11234"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "56a2ea6ba0838a305320fcca57e6286e288eaedc81b72d86960a094f0a3f7545"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "047f3effc194e52ee8dedefa3a509f4d1bce921e91dc9c23c1a2220e2c8e0e5b"
   end
 
   depends_on "go" => :build

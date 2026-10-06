@@ -17,11 +17,8 @@ class Simutrans < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6e6cef81ccaada65c6da17982d4ebbd5739d88eb99a0b05ef6d64f55ca92062"
-    sha256 cellar: :any, arm64_tahoe:       "33e918108571779adbba950ab0657b03f2225780bd387f66fa93d372bfa7d1c4"
-    sha256 cellar: :any, arm64_sequoia:     "876c640f5f46443e6d379c8bb2cf7702269564a248127ee1d64dd2e0aba19082"
-    sha256 cellar: :any, arm64_linux:       "d38cd926d1d3f213a201db32e0447946faa99e47b355514a0975dd6c026de4a8"
-    sha256 cellar: :any, x86_64_linux:      "29fca38adc8153e9d8dfab798ac9ed7e4f08390c585533a7270f1ed3ce85dff7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "2cb7e3123e255a10af1a32df9c78dfac02f01521d4becd096133186a2c040773"
   end
 
   depends_on "cmake" => :build

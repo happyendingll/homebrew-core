@@ -12,11 +12,8 @@ class Melange < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "12b8fdbd647174d55c08024ac3a4d4345b24be52de321bab0c8be92913a09045"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "823ddccd34d97fd20fbd14502be20fa258df096e10c2699622c48af35dfeca4a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc8cdaf7299cec0664b917b28c3b5ebb62cd0fe27e55349241748ca228ef128d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1776ba36ac2acda83d2dff24965e8cb274bdef65839145de327c959828ee8a4b"
-    sha256 cellar: :any,                 x86_64_linux:      "c3ef76b6ec25f76a73776a9a2ae7fc7c424788e5d3d2b651a7f260a64b469977"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d338039f8f7584b6b64954624ffd5682a35bcc4b4072074da098dcd2437eceee"
   end
 
   depends_on "go" => :build

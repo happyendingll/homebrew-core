@@ -6,11 +6,8 @@ class Sonic < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f92ea8b95c12bf04ca279fe0a04974a1cab1aebef7b634748c14fc195460018b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0946ed1d302793526b980f2eb17abf0c08ade6424c4b16ac52567d0544d6bea"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "387e0c28f7ed9849955a9134db57858106fedb2f7c470dbb276be24a2f20ced1"
-    sha256 cellar: :any,                 arm64_linux:       "f453c7a0e7e9b1d39f5e0b0619982bb3d88c28ae54f770047994282704f4d629"
-    sha256 cellar: :any,                 x86_64_linux:      "82389d4926b02a358afdbebb8741cb3691c42c3c80e48e87d08a9cb4a667bd34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9b509fb0c69272b5d42535fed89c4ef2fb2f0518f0689a4bfc3f98161b4bd697"
   end
 
   depends_on "rust" => :build

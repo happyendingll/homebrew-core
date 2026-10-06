@@ -6,11 +6,8 @@ class SatelliteTracker < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f753da683186bd736eebcf83f81e3ac239128f37852bd7df3a10dee5368b4c0c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0ee4fb14612d4c0b911a2ad9e5eacfb1fbcceb3225dcdc34936491867aa4c7b6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3f6785f9cff682c2469e2a97dc5f3a62358f8dd4cffea8f5fbf3f4d7c5aad19f"
-    sha256 cellar: :any,                 arm64_linux:       "ca2215c26fe977991b2d25c70d9dc8cc6ba771438ec9a3d407511ad0de60cbf8"
-    sha256 cellar: :any,                 x86_64_linux:      "b7cbac7f6e4dbe3bcc1b1ffce3693ec9e807038a88bac2e1315c6a5c96c38865"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f4c294b6b276dd2ae3a27c080aeb60a10f7e29cae9f3c7a3f3d00b6712e0e5ad"
   end
 
   depends_on "pkgconf" => :build

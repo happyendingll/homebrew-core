@@ -12,11 +12,8 @@ class Sk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "83a3bd0242e77ae5a3eb9314d3b93b107d5e41e1a4e308c474dcd0e4d52295a0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d6e21e6faef4d8c7fb4491e867a8684ca07f39db90cff4f4417146f9a19d663"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "56d234d1cace3e905f1000db2fbfc5a7875921e4b46c4c4b3706145af72f4724"
-    sha256 cellar: :any,                 arm64_linux:       "9bebc0bf9cbced2b86064f5d40b2ad1bc75651103d72f7f587f05937598be2ce"
-    sha256 cellar: :any,                 x86_64_linux:      "b9242aa3bd55257dba0503e126e8f1cf5c5e7c852e8d2e767d2a497b0b39b41c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b1113f9926e1836f8b19c6c1931cc807aa589c7b95bf7529937c5e5939df7a21"
   end
 
   depends_on "rust" => :build

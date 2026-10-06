@@ -7,11 +7,8 @@ class Tock < Formula
   head "https://github.com/kriuchkov/tock.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e09349c7b22bbc43c6635278d5a1489fcfb49ccd4b34c99f4db250d03b96c222"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "985fb2a7ab53c4ef495dfb451cc9d2ea3522d0e42fad3b4ced986f4d779276b0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "692ff935aa4cf57319fe616a6f47d4f35ab396f898f6f3dd2720b2939fb8c606"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f1962e655ababccd6136d7502404e8030f4766a001014f63da3cb70f14af7e66"
-    sha256 cellar: :any,                 x86_64_linux:      "426fa12e807720168132a01c8a0b1678ee8270cb6a4e0704b39ed152fbc70b93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "be52a05c8ffbc6adad28e68b090c6014eb1ce80af76e099ae9caafd520ce3441"
   end
 
   depends_on "go" => :build
