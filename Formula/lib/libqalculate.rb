@@ -6,11 +6,8 @@ class Libqalculate < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256               arm64_golden_gate: "6af799ff6771bf5602443dff16199c0b77e2be24613d4ebc5558194448a4301d"
-    sha256               arm64_tahoe:       "0f88adedbf0753257f8c37f46d3095f213b0d3f6e458ce530723cf92fae7e539"
-    sha256               arm64_sequoia:     "800fcc87061bb7b89ff9fdf90539623c9118a48486f5b2024a2c76527002293d"
-    sha256               arm64_linux:       "483803ca803cce78553fa36570da21dba7617ebbf8f3bcf93814bc77336aa275"
-    sha256 cellar: :any, x86_64_linux:      "4d0763979036d2e8606260cae8699e6f41f568f95ee419238303ff3fe94cdb5f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "a5a29bfd58081200d429041cfec8b6178b78395865f446971747580a86def21a"
   end
 
   depends_on "gettext" => :build

@@ -10,11 +10,8 @@ class LibheifPlugins < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "97f12e7aedb98708817c641b12fcd315c4718345a62f816ce2399b9ab6c1e897"
-    sha256 cellar: :any, arm64_tahoe:       "0030b009ee53e0237ddd77bb87537dadff5f0362fab4626a4da1fb400b6a4528"
-    sha256 cellar: :any, arm64_sequoia:     "36198396ac2716c18477f04bc6a882470039d252088621f5de8b8e444ae7297c"
-    sha256 cellar: :any, arm64_linux:       "f4de05680289ed8d32eaeef7d8da0c7a70d8e76462e6c2102a8cc768a6786cca"
-    sha256 cellar: :any, x86_64_linux:      "3dc365b977d94877733a33af0e0cb44238c4630da117926f56ba6488c477aadc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "75efed4fa9bbcdf78fb483fcc5e986434bae33074533825944b10362957f8336"
   end
 
   depends_on "cmake" => :build
