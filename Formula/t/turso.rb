@@ -12,11 +12,8 @@ class Turso < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2c6502fc4421c86f0f826bcbe0a49ce984acea566c0459aed19b3d37d4657432"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0afe20e2f25618456dcc365a7c33a2aa54aa131e68fe8b81e3a04bb055b7b477"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "08b0e326f7328111358f1ca8d1135b5559bb9b4b607b7439005b4db04a694c35"
-    sha256 cellar: :any,                 arm64_linux:       "ef7f8bf691028a531b12650545ba90ec7b2642486432a091d18688d4cb93ec9c"
-    sha256 cellar: :any,                 x86_64_linux:      "2ffd0daa14a38b44fae913fd9b065b5f3e7aa126a85da70f0eda43b3f3181152"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2490e6364035f7108a54e7768bb5fc04eaa367519294782180be2c494135e53b"
   end
 
   depends_on "rust" => :build

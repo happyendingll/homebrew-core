@@ -7,11 +7,8 @@ class Cloudflared < Formula
   head "https://github.com/cloudflare/cloudflared.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4d5a9323e8fc1841deb7b535fcf829d077935af068eb10865724532e710642b0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "402c99334e12beb2b075488827beafa1dc318dcdf24b1aa1d52eaf3e92239492"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "132412d184bd26d56536f951e7cd8d301f2ed8e2c75ef78756970f1c69a45e9a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ccde63b5d169ad20a5a9d478c6c62c80aef4f284699690e99eb172a8f0692505"
-    sha256 cellar: :any,                 x86_64_linux:      "472335b36a3ac8599fecb09d53ab87136646f5061ca99dfe9b962e2f420a34f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cd1fa5867c9acc7b106f2985dbff3ff3988f25ca00097b2645a6bf90e4c47d56"
   end
 
   depends_on "go" => :build

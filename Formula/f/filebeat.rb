@@ -10,11 +10,8 @@ class Filebeat < Formula
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c3ee777f0bf0d4df9eb474f88fdda2e36111972fc922ebddbb13aadb113e5b9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60f4cf4c2c378933f7462f3ef1f92be9e095db1fa81943d9c1fdc8e0a6b49435"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dbec80d03b04c61906b4025d407969170dd4f9549d8280e1736a3616c604b265"
-    sha256 cellar: :any,                 arm64_linux:       "2d7a66dcb25aa2fd4090eb4394ba4834fa01479f2375cdef1e7f375ec3e3a29e"
-    sha256 cellar: :any,                 x86_64_linux:      "7d29d33841de95f9b6b81c291117baff53059de5aa589d5e410f0e561f2ad215"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d629ec9f0d758dadf317189b07c808eeb5e1fe4101eeafd687bfda3b3cd365b1"
   end
 
   depends_on "go" => :build

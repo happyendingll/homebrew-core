@@ -8,11 +8,8 @@ class Metricbeat < Formula
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe51483546ff678d021b1b3acff053365a3f81039286d444f3a6edddd91378ba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "663d8065d00d7af5cb3518a32f39c7bb069721136d1c821cf4007b3d7b54f1fb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "53ad39f94ba65a6e4a947a720f3500ff8d8bfb720e61681ee9201003cefd1a14"
-    sha256 cellar: :any,                 arm64_linux:       "a96e94262d867f2db27ec6d5922d21a26bdb20a733c908e02eff5673b79d0556"
-    sha256 cellar: :any,                 x86_64_linux:      "6df9ce1d70d74d1a4ecb204e27b22555f33a23be93fb5e79d78c985730f13c93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cffc197cca991e673622d99b0659a03ab979e23a5aa8ab0cf6c2d20d85313ad1"
   end
 
   depends_on "go" => :build

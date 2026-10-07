@@ -15,11 +15,8 @@ class Expat < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4a50b358e04b16445f2a98d4b59c0719979312ada31789bfabe72eeed58d75e1"
-    sha256 cellar: :any, arm64_tahoe:       "f27ca89ccc08943551e4e942652e5f30181905396dc002ac9adcda62a3b58596"
-    sha256 cellar: :any, arm64_sequoia:     "d73e74304e6f0d5b4c2e70a8703ac9d7381106428390a6239693e937b6ec203f"
-    sha256 cellar: :any, arm64_linux:       "493f93f144d62cd704af57ab25201756252e80af66309fe4b249c0a180926590"
-    sha256 cellar: :any, x86_64_linux:      "b8f1785877c07e5f126c85b9610660f56bb5919fdfc668bbd5869d238c435571"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "e02ad7641c08f3418ade205682f8090aa77bab13bf8a4fa6634381a62c2f3731"
   end
 
   head do

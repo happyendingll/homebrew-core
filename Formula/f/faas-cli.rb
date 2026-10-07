@@ -12,11 +12,8 @@ class FaasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1ae43cef25afe0f3dfe5d96d21260d7eb4bb78b6892fe975d0716cc39246159b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ae43cef25afe0f3dfe5d96d21260d7eb4bb78b6892fe975d0716cc39246159b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1ae43cef25afe0f3dfe5d96d21260d7eb4bb78b6892fe975d0716cc39246159b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ef316625e043bee08fbcbc8ea373125c1de421b4f2bd970bc03a880e256bb277"
-    sha256 cellar: :any,                 x86_64_linux:      "a4c1f8dce13edf4924489c3cb511ac2b70af8b993e55375285658a05826e4f16"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f0fa6316e74eb4d5218a1310869b45d8175ea9f376423b0b66df9f8e2b354a20"
   end
 
   depends_on "go" => :build

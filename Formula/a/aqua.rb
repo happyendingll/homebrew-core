@@ -15,11 +15,8 @@ class Aqua < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4b0a040a7a39fa55fe3114b9d7cb9fa79e310dff45de07b8325f1aec8a388825"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4b0a040a7a39fa55fe3114b9d7cb9fa79e310dff45de07b8325f1aec8a388825"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4b0a040a7a39fa55fe3114b9d7cb9fa79e310dff45de07b8325f1aec8a388825"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c78bc07a329f728c0c9a794ab376ce5906da1fe9054fa55b4850e97fc963131e"
-    sha256 cellar: :any,                 x86_64_linux:      "f870ae753effa2bd2fb246a069a24783613990fa42c2aad36861055f75eeff52"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dbc0052b9708cc1977f2571b8d521422827d19f18619922d538b8b51abcfc6fe"
   end
 
   depends_on "go" => :build

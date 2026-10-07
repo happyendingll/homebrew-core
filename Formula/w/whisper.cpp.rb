@@ -13,11 +13,8 @@ class WhisperCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4960b2068b6c9820ab0e686fc4fe58e2edeb19c58c9613751b417a4ea9ab7ec3"
-    sha256 cellar: :any, arm64_tahoe:       "8c72ed8b6624aab6d9058ae4de65e73190265fdaeb3a7cd3f7d96417dc67325b"
-    sha256 cellar: :any, arm64_sequoia:     "a6691f811f613d79d1e508a89c7523e69f5b13a58c10e26083e77f8909b6db1e"
-    sha256 cellar: :any, arm64_linux:       "da1155a46b4d2e8ede1d4bd9da94d17b3b5aeeff473701a4859d7de3ffb5c507"
-    sha256 cellar: :any, x86_64_linux:      "f4d28a5d683ad92571dc089d1e2ce0168ebd0dcfaef117311742714e61b2bd1b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "514d9c4640a9b62754af3cc3b2258d8c9efb547756953c0978474df286e7d789"
   end
 
   depends_on "cmake" => :build

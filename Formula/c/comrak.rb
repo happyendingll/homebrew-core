@@ -7,11 +7,8 @@ class Comrak < Formula
   head "https://github.com/kivikakk/comrak.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "89aa1fb93b4a9f00fb5101e1f896c5348459cf08e9891277a88dd9397e415aa8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9dd39a48f2fd5e1ef8739b256edd2042e396d1263005fbb3e419c3b844c622a4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a8d88e03856d6372fdc6ac838b55c38cd6aa0b2986020b59281c4349a4bad367"
-    sha256 cellar: :any,                 arm64_linux:       "5f0b806b08ac090df258b60243d04516dd85b47b9e7697be7166836918f7b740"
-    sha256 cellar: :any,                 x86_64_linux:      "2e16f535beee2e4a1e26323aa77e754fe11f526f078d03a8b8ce721d7f042b08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "191511347fe61895d7cdde561ba760b1ba478f4954277405e03d06f69028ed53"
   end
 
   depends_on "rust" => :build

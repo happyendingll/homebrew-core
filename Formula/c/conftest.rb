@@ -7,11 +7,8 @@ class Conftest < Formula
   head "https://github.com/open-policy-agent/conftest.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a3e738e62088ae315606901c412cedb6ea148c34eef552289af31648859ef6ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a3e738e62088ae315606901c412cedb6ea148c34eef552289af31648859ef6ff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a3e738e62088ae315606901c412cedb6ea148c34eef552289af31648859ef6ff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "597046efac10df441d73ea0069f22081ed87368de6709ed3b0b526f50c398b9f"
-    sha256 cellar: :any,                 x86_64_linux:      "42b3df729c4f77787a89a26e9c066d8afb6eb6be5c4e3b7d5b013f780093f95d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "be7b4c6ee61b0bc80412ebcadac086dd14691074d170ea2c7973a785a6540bae"
   end
 
   depends_on "go" => :build

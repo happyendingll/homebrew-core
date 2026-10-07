@@ -13,11 +13,8 @@ class GitAnnex < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "04006a4c0196c7505624b3531861d2a018e4803703d86bd21e82d077fd49494d"
-    sha256 cellar: :any, arm64_tahoe:       "121f0299b54bc071e42aedc4b2e8a0b8174913893c91f2561e49407b50d96fc2"
-    sha256 cellar: :any, arm64_sequoia:     "134875628893519f548f37aa525470542e407de90a43fb366db4ac7011d5dc89"
-    sha256 cellar: :any, arm64_linux:       "505d160fd064bf4b2023efd233f9de17f1e63e017556f3779a02998c27c81ae0"
-    sha256 cellar: :any, x86_64_linux:      "70ba9888a681ca4426697c435e121c7a4f9a4a9c498415a4ea6c9dfeeb75233a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "7cb82172dcd83e73b86dd53d704416335be059b25bc72e14ca3ff81b087a8771"
   end
 
   depends_on "cabal-install" => :build

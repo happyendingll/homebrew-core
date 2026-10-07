@@ -7,11 +7,8 @@ class Jet < Formula
   head "https://github.com/go-jet/jet.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1a3b6de3f1297dc0ab77585cab6e64417f026c3dbd87ad447530342626e66a75"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3f66ef2a1a3b980dbbea32bb425ec64059e0a3e2b6c50cb26827570ab9557ce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b6b566288257f9231ffba2f053b2afbce12a21280cf93b98932528a677da6937"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "279928d50cf48947f49f871cf41c11fe6e7fc9b1fa2199f25b8d678ce8335238"
-    sha256 cellar: :any,                 x86_64_linux:      "ce6600352e1cfe63e5b51ce739b8e692b7e8c419b960604d5e526f96c8627d17"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8b228fb77fe9389c53ba6834f64f84babf775104df925927022f05d38c2714b4"
   end
 
   depends_on "go" => :build

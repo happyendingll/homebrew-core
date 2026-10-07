@@ -9,11 +9,8 @@ class Borgmatic < Formula
   head "https://projects.torsion.org/borgmatic-collective/borgmatic.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a6d6ad54de2239508b61f7b14d35a5c02ed0c4dd7e41c745188ece9c525fc42c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2a4b48ce7d36788a28d6ac0b08c807f81459d2f72d3934c6624a773e8a26b258"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "10667e573f0fd3af056f0c92d4c2b212b15cd3a91af68310ab55aca98f666126"
-    sha256 cellar: :any,                 arm64_linux:       "0b99651345fb429fcc7054a5423da9c04d7c256fddfb9af4fc8fbbac97ba0acd"
-    sha256 cellar: :any,                 x86_64_linux:      "ebe3b05e0714e118ac714cbc9d8bf5eeb0d66b80852a944244fa3194c4eded70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef8cfe04d07db258c80ea999a0586728c6b265c0ac7a30dace1e942dbd0b0fca"
   end
 
   depends_on "certifi" => :no_linkage

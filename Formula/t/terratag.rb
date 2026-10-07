@@ -7,11 +7,8 @@ class Terratag < Formula
   head "https://github.com/env0/terratag.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3c321ce81960611f1c49428dbdace9866586adf5e01bb519e4fbbed71df68c5a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3c321ce81960611f1c49428dbdace9866586adf5e01bb519e4fbbed71df68c5a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3c321ce81960611f1c49428dbdace9866586adf5e01bb519e4fbbed71df68c5a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f70e71aa665255dc95dbe7a9dcb58fcdf1dc310cb75deccd30d707c1f98386a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "13c7e2e035f8c43e551b313da97e9189f4f50dec454880cb52a706d8f59f8587"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4958ff7d8a1e26c0a3cb7713238401035982db2c2d15841d4d9069f87ca4172"
   end
 
   depends_on "go" => :build

@@ -13,11 +13,8 @@ class Librdkafka < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3e64820fd1e75723825b4134102329faf8a93688fb16cb851a16e9c21109cdef"
-    sha256 cellar: :any, arm64_tahoe:       "f0a4fcf1f1088cc99403cbcbf5d400d3ddcd990e56489867637becc88efc29e0"
-    sha256 cellar: :any, arm64_sequoia:     "ebb4812dca0663471306b27ac01113c39a4a09bc3a2ef0d1f8ce81592c64c083"
-    sha256 cellar: :any, arm64_linux:       "a57e3cc3e14a0f3a0cb911127da3c31d8194da3ab6ed4ef93ddfab59ff5a91fc"
-    sha256 cellar: :any, x86_64_linux:      "552e31352ddc5bbc4e8770f58e40acb3108fa4446030eb659bee810e0d4be607"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "846c301fd9b1f1944859b1c32eecc6a3dc9ff4b8c2245fbad6446ca9d474fee6"
   end
 
   depends_on "pkgconf" => :build

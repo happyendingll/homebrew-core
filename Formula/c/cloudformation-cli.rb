@@ -10,11 +10,8 @@ class CloudformationCli < Formula
   head "https://github.com/aws-cloudformation/cloudformation-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "73f7bff208f3329c348e301e3dceba247c5b805c2266b7841f4f3750058d87f8"
-    sha256 cellar: :any, arm64_tahoe:       "fa10aff59a486caa4d113dc26634a306c5a322d0f5b19ff1f26c32c8f7e7f6dc"
-    sha256 cellar: :any, arm64_sequoia:     "c5b339dc2099ac9458aaf862cbfcc3b8c7dbbcef619bab2f56560c9386215438"
-    sha256 cellar: :any, arm64_linux:       "5c0ad79fac964dea43551803729bf270ee1c59365067d4c0481aa7e90b55c643"
-    sha256 cellar: :any, x86_64_linux:      "85d45f7e8330a6368e519172a8f61a9707a45db851cda8b98814917056f77918"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "cf54f28132b9eac71bdbfda3a816ee612f33afed860f0f8f7fdd80266debf4cf"
   end
 
   depends_on "rust" => :build # for hypothesis

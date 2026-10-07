@@ -6,11 +6,8 @@ class IcannRdap < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e86c09a0ee1f9e0cbfa5d102d753eb77d122c94a2a0e0c369ac9acd45cc33992"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "174b969a8cec708cb4ee784fb02385c21da87f20d8f687d7ef357f8e40e21a61"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "321ebbbb76a2329406a9b1ceef92eea3d18228f6c629052db1c9e6c46aaa13ca"
-    sha256 cellar: :any,                 arm64_linux:       "d5839496936b1e1defbf3c17000b2190851a192819de32b1bced12c68115454c"
-    sha256 cellar: :any,                 x86_64_linux:      "8a985b37acdb0df46b4351d81313c0548fe83a04d7e9ec8af5b1fc7824ca4f80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0a505fe6885f10efe45d869565a105785ab578dde31defea8efbd947ff8858df"
   end
 
   depends_on "pkgconf" => :build

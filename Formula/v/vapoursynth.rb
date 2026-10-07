@@ -10,11 +10,8 @@ class Vapoursynth < Formula
   head "https://github.com/vapoursynth/vapoursynth.git", branch: "master"
 
   bottle do
-    sha256               arm64_golden_gate: "2a318d41bb6963f8546e0f4eb2d768476da92880c6d7caff4a53e331e8d20f77"
-    sha256               arm64_tahoe:       "48bf3ab7222cef90544cf75e586dbf514071a29941376e715371ba4fb9b69b5a"
-    sha256               arm64_sequoia:     "b63ff69b522fe1170be61e7d9273973cd5bf997c5622581151d0961ee1654f66"
-    sha256 cellar: :any, arm64_linux:       "4457331ad62a04e831e354eced5b3798d0c3ecf759e1e04206c5df2814313ed6"
-    sha256 cellar: :any, x86_64_linux:      "c722ac103ae236c34d1263ff66e0ad4fb84f413f3a0f86754078bc53e815c317"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "84a5d6d106b9dfa4d57e72269cc6e88dd7a3c609ed40f836fc75590cf5be4f7e"
   end
 
   depends_on "ninja" => :build

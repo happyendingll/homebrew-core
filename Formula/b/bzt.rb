@@ -10,11 +10,8 @@ class Bzt < Formula
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0c9386816803ce980ede0960f741215e0d0c9323a0a8acb658749a744d5f9c8d"
-    sha256 cellar: :any, arm64_tahoe:       "042523e659f8e72825d2478648a378d1d4f124aa661e4a0c432a31686d0bab4b"
-    sha256 cellar: :any, arm64_sequoia:     "9636bb6bbb6ab4fa5b22d7544ab4caad7108ae5c7a51f9e4648611cb3a1d34eb"
-    sha256 cellar: :any, arm64_linux:       "be351fca4bdd0f25084a8124044d76e2034f79d1a674596378824e1b1926c9f6"
-    sha256 cellar: :any, x86_64_linux:      "d93eb700c0b88780d24e27517b7ab88a80ba1e1745218543d88802ddcd06e242"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "2bec3417dab15f3085e4b232965277f81394df1f00a352a6070e278cc03fa349"
   end
 
   depends_on "cmake" => :build

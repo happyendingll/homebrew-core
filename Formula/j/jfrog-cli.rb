@@ -15,11 +15,8 @@ class JfrogCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "402e16c1c0f74d20777b6c626b2f42e18aee71b9b97489b32136951d516b3b3a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "402e16c1c0f74d20777b6c626b2f42e18aee71b9b97489b32136951d516b3b3a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "402e16c1c0f74d20777b6c626b2f42e18aee71b9b97489b32136951d516b3b3a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bde39ec0d7a49e096ae289908b7664d8536c269a7619911562137639f0e35eb7"
-    sha256 cellar: :any,                 x86_64_linux:      "307048edbaabf7b8dd698c86676bde05f3678c020c567ff6673f1e3f7fbffef8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4600328e9f3334e91c5b4eebddbc0b0ecdccf4c8b961ccccb8cf1f3cf9ff0380"
   end
 
   depends_on "go" => :build

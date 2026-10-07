@@ -10,11 +10,8 @@ class SmbclientNg < Formula
   head "https://github.com/p0dalirius/smbclient-ng.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf27301c47761b6d8c7b39079ccf5de0a339670cbe39972b5388a50e8208093a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c77b40df8ca784c630a45d502a67fe20e64529ac0ca364f7e68086f606bf53ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eaa41914a681e1ea5a2d156efd755aef3bb7130ed8b39d83df8860fb851e5902"
-    sha256 cellar: :any,                 arm64_linux:       "66416a2b01e46f4465a10f1280f0ab10502df8c15126ec0d82543fd0e00e1e32"
-    sha256 cellar: :any,                 x86_64_linux:      "cfe728a0517f39d8dc64c559fbaa80fbd09f0307619ebcaddaff940398f964a6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d28e024804a59cd6ed61837d7b4bd1475c22e61e641e8293483d9f5bcb233da0"
   end
 
   depends_on "samba" => :test

@@ -12,11 +12,8 @@ class Traefik < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1755ff2ebc444e9f2e74ae03ff99cf7da3d8b5ed65df1b9ab7b8faf091aae04"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "07a0dff342545217c4fa86b5cc669ee0af0b54580a4847e41d256addf6612dad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "df43b2e1438cbd6c1ee9b1c645839f15dcf415ec5cd620e4467d88ec88167126"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "98cc45285f39c06c249f3769b71b283cf32388de01cfa8ea2fc98a3bdcda854d"
-    sha256 cellar: :any,                 x86_64_linux:      "d4059747e930fd90d0f5e50ff7bce09b8c13e03916a6806af5141f9f333e125f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f569b1573007ac580399b16812ba94bb655982a6745de1b7e3fadccd05196379"
   end
 
   depends_on "corepack" => :build
