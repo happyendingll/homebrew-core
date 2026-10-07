@@ -18,11 +18,8 @@ class MariadbConnectorOdbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f9abf981a59eaaca8e7e8ab3ac893b51ff0adf9bee36cbaf816affa28ad89e5f"
-    sha256 cellar: :any, arm64_tahoe:       "47ed6682dfdf175ac189bba8855fbedc4474f6fbc98c3fe0de333d0a7fc96a24"
-    sha256 cellar: :any, arm64_sequoia:     "5adc3518e66d8c5060fe847b40dcaaa2ad4f591c9fba5a2994fce457ed0b5d65"
-    sha256 cellar: :any, arm64_linux:       "8dab92b09683f1bf99f65e6ad8dc399d8fc22083f673e1895b3b7a0185a5c5ac"
-    sha256 cellar: :any, x86_64_linux:      "60339d93d34e7d95cc53382193a76a485f26ce76b8e02d966e89c9d677edca69"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c7429716d7f1f54b1dfbc22332a1b76aed8907c93a27af84d0e1103f5bb58d82"
   end
 
   depends_on "cmake" => :build

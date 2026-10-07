@@ -13,11 +13,8 @@ class MediaInfo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a0b6129a593b8083d639f2dffcfeb9ae01d115faff9af8d431f4883070623b8c"
-    sha256 cellar: :any, arm64_tahoe:       "d6ab5fddf180d74df12bdc9c7394a474c422798230c6cbf710d5be6680b43c82"
-    sha256 cellar: :any, arm64_sequoia:     "dd56f31dfe6e864c8f11e89ab2d17f37120f6517c270d34a5fdd06a6c769dd46"
-    sha256 cellar: :any, arm64_linux:       "5e278256bc02cabfeb6ad5139fa2df4a358eb1cfcd61bb713d408d80408ab7f9"
-    sha256 cellar: :any, x86_64_linux:      "8e17d00b40e58d0bc6976aa1904d043a341140b700befff7e37e2f5013db1f6d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "686647a812c79453ac8b50c09124a6887840642e7c76a26afc9d51e797614890"
   end
 
   depends_on "autoconf" => :build
