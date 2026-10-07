@@ -1,9 +1,9 @@
 class Openvpn < Formula
   desc "SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension"
   homepage "https://openvpn.net/community/"
-  url "https://swupdate.openvpn.net/community/releases/openvpn-2.7.7.tar.gz"
-  mirror "https://build.openvpn.net/downloads/releases/openvpn-2.7.7.tar.gz"
-  sha256 "3ab8f48fd6c26d49ba2333a092433949afdb5c85c0e6a1ff265784fbc04a2463"
+  url "https://swupdate.openvpn.net/community/releases/openvpn-2.7.8.tar.gz"
+  mirror "https://build.openvpn.net/downloads/releases/openvpn-2.7.8.tar.gz"
+  sha256 "c070d1d2440b5a6fca6c2c68645c98cd492116ac36ef4f0946177115532c8e36"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
 
   livecheck do
@@ -12,8 +12,11 @@ class Openvpn < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "001d15288ba3498f0415ffb0b3e6ceaa5e78ceb8f4150bc64b7e706300bfad5e"
+    sha256 arm64_golden_gate: "bf80f32655cacacc02e0dd8ea1a2d86eefcbd8c0c704b38fe44b42715c57170d"
+    sha256 arm64_tahoe:       "ff8af38d97c1780a6c920ca25398d57faf241c0656e251785095d0587deab0fd"
+    sha256 arm64_sequoia:     "314c662194890eca6d48e8ce8771e152ceac2403fa119b7e5b10c6c1d231b19c"
+    sha256 arm64_linux:       "ae16c8aa3f0fcf557a4bb8478d95624b0b7cb68f5e3dd780050b72f1fef6f03f"
+    sha256 x86_64_linux:      "e869adc4eaf43209173c068bc886d5e6e287ec246984b899c896a1b051f8afe8"
   end
 
   depends_on "pkgconf" => :build

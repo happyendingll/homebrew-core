@@ -1,14 +1,16 @@
 class ProtocGenGrpcJava < Formula
   desc "Protoc plugin for gRPC Java"
   homepage "https://grpc.io/docs/languages/java/"
-  url "https://github.com/grpc/grpc-java/archive/refs/tags/v1.84.0.tar.gz"
-  sha256 "4ac03e3244da9565f13f62a24e87f57ee13baa7657033db35ea086e16fc32869"
+  url "https://github.com/grpc/grpc-java/archive/refs/tags/v1.84.1.tar.gz"
+  sha256 "d86d12da8668f49c3d0101ea8cbb83dbf380f89a429b7ec526224827f76f2c63"
   license "Apache-2.0"
-  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "bf6251ace1354beb2708c4be74dbdf93fb880eb320b417b290b459601dc2a14a"
+    sha256 cellar: :any, arm64_golden_gate: "81ea4bbfe17828183a079b1800a679bb516c071d526452d469815341fd33ee77"
+    sha256 cellar: :any, arm64_tahoe:       "66d6239ccf6feb438a61d9fdef376fe001396fd3c9ba29b683a2922ba0d433e8"
+    sha256 cellar: :any, arm64_sequoia:     "405831ff50e7e5a615eac8f40f9fd8094bd90396ef0082572d52a9bf65e94a30"
+    sha256 cellar: :any, arm64_linux:       "14bdee377ef1c706bc637c445ec94e447cec04725a290c23bfc73d41fe622ce6"
+    sha256 cellar: :any, x86_64_linux:      "1f084a36fc278945a303599ca0a9780cd186cf3dac5464ef1fc049287b42ea47"
   end
 
   depends_on "gradle@8" => :build

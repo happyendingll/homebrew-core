@@ -25,6 +25,8 @@ class C3c < Formula
 
   uses_from_macos "curl"
 
+  deny_network_access!
+
   def install
     lld = Formula["lld"]
     llvm = Formula["llvm"]

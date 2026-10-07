@@ -6,6 +6,11 @@ class Gascity < Formula
   license "MIT"
   head "https://github.com/gastownhall/gascity.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
     sha256 cellar: :any, sequoia: "4a8983a0e5aa3adee861afbdd39cddc6e98e17248a3e83a38ceacf8c01fdee67"

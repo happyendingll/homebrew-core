@@ -1,13 +1,16 @@
 class Ctrld < Formula
   desc "Highly configurable, multi-protocol DNS forwarding proxy"
   homepage "https://github.com/Control-D-Inc/ctrld"
-  url "https://github.com/Control-D-Inc/ctrld/archive/refs/tags/v1.5.7.tar.gz"
-  sha256 "6f5c1b95c41260911ff64c7074333fffcb9b5122cc9826075cd8ee51024cc0bf"
+  url "https://github.com/Control-D-Inc/ctrld/archive/refs/tags/v1.5.8.tar.gz"
+  sha256 "9cf8971abab920cc691bc5a9da5de16df31e3b2bec26a9d14a0652b18eb33ce6"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "b261cbda6d253f4b1727df35004aab4918db38637f3ba2b913216d77733b143f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e5e1c9ae933fdcaec9d07d86e867be0078cfcdfad1b002e04d40eccbde79bcde"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e5e1c9ae933fdcaec9d07d86e867be0078cfcdfad1b002e04d40eccbde79bcde"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e5e1c9ae933fdcaec9d07d86e867be0078cfcdfad1b002e04d40eccbde79bcde"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4b0fc00cf64d698e62b2462fe5539833ed4a86c1475d4e512e5a3ecbbbc49dfa"
+    sha256 cellar: :any,                 x86_64_linux:      "cecc9b7e31579c5a45ae4fb6e601dfe2a8597a00939252cdf7330d15b7d4bca5"
   end
 
   depends_on "go" => :build

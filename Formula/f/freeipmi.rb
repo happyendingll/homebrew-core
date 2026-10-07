@@ -1,14 +1,17 @@
 class Freeipmi < Formula
   desc "In-band and out-of-band IPMI (v1.5/2.0) software"
   homepage "https://www.gnu.org/software/freeipmi/"
-  url "https://ftpmirror.gnu.org/freeipmi/freeipmi-1.6.19.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.19.tar.gz"
-  sha256 "f95c2b73797c4a0341a42a7b3c43efb60954c4130d082ad348fd40da554b4e85"
+  url "https://ftpmirror.gnu.org/freeipmi/freeipmi-1.6.20.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.20.tar.gz"
+  sha256 "9cc644530ee629ffb94d6fd209e7cb4a8b8ae6677f89d2dc461efed9b2e709f2"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "d2af82469f5ba800f8f3baf33e37d93417eca03857bf16f70ef8337118b5581b"
+    sha256 arm64_golden_gate: "347bfaa6be50d30ca86a51aaf3b1dd7b5d7e467b8526ca9640b99b8a9a99ecc4"
+    sha256 arm64_tahoe:       "df9e2b1b93b118953d354f84b58b6bb4b6171cdab1dc17e9639f2241479e3e7a"
+    sha256 arm64_sequoia:     "35ffe138e00f0c9898de00644d3a69308ee163a7e479c45d703e83e7240b9772"
+    sha256 arm64_linux:       "0493c24b85ab162f0438af4f24d4e1c970d894e134c96380114c417e633a128d"
+    sha256 x86_64_linux:      "4a7e7ac968c87020c61ec7e22de57d99a692e617a11a0b135d201e30e0b13bbb"
   end
 
   depends_on "texinfo" => :build

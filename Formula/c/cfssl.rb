@@ -1,14 +1,17 @@
 class Cfssl < Formula
   desc "CloudFlare's PKI toolkit"
   homepage "https://cfssl.org/"
-  url "https://github.com/cloudflare/cfssl/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "8ab0c1a01f89efd9265a12bd0500beffbd520bacbee02a4476a4f5122fe49ae2"
+  url "https://github.com/cloudflare/cfssl/archive/refs/tags/v1.7.1.tar.gz"
+  sha256 "6eb828923ad1e43efacab8dde17d86bf05c17ab97c072114a5f17d0184d55a92"
   license "BSD-2-Clause"
   head "https://github.com/cloudflare/cfssl.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "32ee5680dc08a890e86b6fcdea51ccf4796663cab0e204fceb74ed671b7c489a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1ba1b3c16c901e62e5dc67a8381cd392cae4ba636d0d87530e9f412b0604d558"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "01295e3d9baeae7aed07ad69408c00ddb63cd736258fccc44c2caab60e8263db"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a2e43753519c987882fe1fc2564a2d5a72de7dbe541634dd25d2e1f8183b742"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9091b726bbc17f36cd81d77748be4dfb5f2f25c6d86e4abd435226e28537d17e"
+    sha256 cellar: :any,                 x86_64_linux:      "bdb5c66348316f7460b277dc6ae5643589a639c467687091d90ec6b1e64cf86f"
   end
 
   depends_on "go" => :build

@@ -3,8 +3,8 @@ class V8 < Formula
   homepage "https://v8.dev/docs"
   # Track V8 version from Chrome stable: https://chromiumdash.appspot.com/releases?platform=Mac
   # Check `brew livecheck --resources v8` for any resource updates
-  url "https://github.com/v8/v8/archive/refs/tags/15.5.35.14.tar.gz"
-  sha256 "1ea88768682a6e0afb638663ebc5671fa28d9b43ce0935bd4aebd4f1d1ecaf65"
+  url "https://github.com/v8/v8/archive/refs/tags/15.5.35.20.tar.gz"
+  sha256 "0755edce1e9a15dccc165171a3ba04a89e67a7ea75c45c9b741e21b7949f25e1"
   license "BSD-3-Clause"
 
   livecheck do
@@ -24,8 +24,11 @@ class V8 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "ef0e679e3521dcbdab5cfac905008e85bd4adadfb59dde4da7814dc0465bdd62"
+    sha256 cellar: :any, arm64_golden_gate: "12cd8e05b4b04348513a03ee05d96634ae6d3b26726d7dacf0c32b935307e1f3"
+    sha256 cellar: :any, arm64_tahoe:       "7b53efa50e2d29baaf9a516be9ecc7cf5484b071c52dcddedf98313ee78f59e2"
+    sha256 cellar: :any, arm64_sequoia:     "5e4cf92b0ef8068ac84c9889593d5e7d3307552a198d66ad6b81bd2c639e8887"
+    sha256 cellar: :any, arm64_linux:       "68a375f112c4018f7cd4783e43993f0f86686d17347b16f465a0f22dd79b6dcc"
+    sha256 cellar: :any, x86_64_linux:      "989357fd47ff98f1f61d5833781046a27698a1af25ddb4999e27bb6188d1393a"
   end
 
   depends_on "llvm" => :build

@@ -7,6 +7,7 @@ class Samba < Formula
   url "https://download.samba.org/pub/samba/stable/samba-4.25.0.tar.gz"
   sha256 "2e2cb7296833b35b8f7a7fb76045e0c57adc0c2cd03264b37df5d58e40f28437"
   license "GPL-3.0-or-later"
+  revision 1
   compatibility_version 2
 
   livecheck do
@@ -15,8 +16,11 @@ class Samba < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "d51bb7646b68df6cab139fa03ec0dcff5bd706df3baa7d8dab1ac16717c39f9d"
+    sha256 arm64_golden_gate: "2ea4a0299d6d0d9f6c336668da36558cd7cde3139f8d942ac942d8217efefcb8"
+    sha256 arm64_tahoe:       "2109e1383c12e66b905081164954b741a1f4be83ad80fddddf7775d02d7898a7"
+    sha256 arm64_sequoia:     "0ad1ca2d2ad0196af3d81440cda2292636d65bf1a07bbd8e9168e9373325add2"
+    sha256 arm64_linux:       "8daa4dd7113240db8ff05abd53c2a1fb43033dd62d4a6af74fc488e4e5630601"
+    sha256 x86_64_linux:      "cfed084cfa9361292111324089737519722e60b684fee8674d5e99d199f3d7b1"
   end
 
   depends_on "bison" => :build
@@ -28,7 +32,6 @@ class Samba < Formula
   depends_on "icu4c@78"
   depends_on "krb5"
   depends_on "libtasn1"
-  depends_on "libxcrypt"
   depends_on "lmdb"
   depends_on "popt"
   depends_on "readline"
@@ -43,7 +46,6 @@ class Samba < Formula
 
   on_macos do
     depends_on "gettext"
-    depends_on "openssl@3"
   end
 
   on_linux do
@@ -98,6 +100,7 @@ class Samba < Formula
       end
     end
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/private" if OS.linux?
+    ENV.append "LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac? # avoid openssl linkage
 
     bundled_libs_list = []
     # Upstream (https://github.com/lxin/quic) has no tagged releases, so we would have to add an arbitrary

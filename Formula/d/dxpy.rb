@@ -3,14 +3,16 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/98/98/7f8504aa4b04172fb73e8226696349111a92221db85016e6baf4e258f319/dxpy-0.415.0.tar.gz"
-  sha256 "62ca97b746e673da5428f0ab1cb2517aaed324173c340b1a2039dbdf5e3befd2"
+  url "https://files.pythonhosted.org/packages/2a/9b/979fd7e0644dc270e91b165dc60c88fc885750aa7665d869ab7e3fd96e2d/dxpy-0.416.0.tar.gz"
+  sha256 "d93bef77f30a4afcef32fba056c9624b6f0c73129360fa02089b7f51736f18a5"
   license "Apache-2.0"
-  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6f295f7031dd69ea9c5ae4f8d404f3d8aee19e74ed3dd779a2ba60b43cf93964"
+    sha256 cellar: :any, arm64_golden_gate: "22f03c55f68f225d4d0e063177f5b34e4d1c98779352d2b19ded08c8c7e263c8"
+    sha256 cellar: :any, arm64_tahoe:       "8fcb2f664175d520b80383acd60ae09242f17256fdccd25d81309c786e39c45b"
+    sha256 cellar: :any, arm64_sequoia:     "b3f267377efdf89e1147a1466747206fe8e8fd113b653d779d5aa2d333e1c27a"
+    sha256 cellar: :any, arm64_linux:       "6a5ca8f720e8d18a01db64079d428e18021f908086698a13093ed01cb536c2a1"
+    sha256 cellar: :any, x86_64_linux:      "4e630fb80fdfe383f4574432cd2321f29fb9500cfaf0fedaf4f6d04b71b33e3f"
   end
 
   depends_on "aws-c-auth"
@@ -25,13 +27,6 @@ class Dxpy < Formula
   depends_on "certifi" => :no_linkage
   depends_on "cryptography" => :no_linkage
   depends_on "python@3.14"
-  depends_on "s2n"
-
-  on_macos do
-    depends_on "aws-c-compression"
-    depends_on "aws-c-sdkutils"
-    depends_on "openssl@3"
-  end
 
   conflicts_with "deno", because: "both install `dx` binaries"
 
@@ -85,6 +80,8 @@ class Dxpy < Formula
   def install
     ENV["AWS_CRT_BUILD_USE_SYSTEM_LIBCRYPTO"] = "1"
     ENV["AWS_CRT_BUILD_USE_SYSTEM_LIBS"] = "1"
+    # Avoid overlinking to aws-c-* indirect dependencies
+    ENV.append "LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac?
 
     virtualenv_install_with_resources
   end

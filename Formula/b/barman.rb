@@ -6,16 +6,19 @@ class Barman < Formula
   url "https://files.pythonhosted.org/packages/eb/8c/b225bca1623a6370885f005e2f575f5f13c5c790eb9bef6695299efca4dd/barman-3.20.1.tar.gz"
   sha256 "cac6542ac7a8f7cf2a7892807509d78dd24346a021afc24a7c3ec5b1626cc636"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/EnterpriseDB/barman.git", branch: "REL_3_X_master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "2212bbf251f97528a02f352025c64213ed115cd233fde0d4f0b004ae959d4a89"
+    sha256 cellar: :any, arm64_golden_gate: "b7ba65d108ce13037ba8fd3ab6e78bea26a71c686fbb97980df5256ea7f0d04c"
+    sha256 cellar: :any, arm64_tahoe:       "bb489abaefe034ab4389e9d35a01eea6fe2f6e8ef57caabc29b3a64aa7f8b22a"
+    sha256 cellar: :any, arm64_sequoia:     "dfef3edb4f4813877728559cb86be7f47cc82a74e3791cb32644df6a49c5114e"
+    sha256 cellar: :any, arm64_linux:       "06fcf56e837b9e5e5c7ce5ca2e942655b65644e12191dd8970c98a1ed7cd80cb"
+    sha256 cellar: :any, x86_64_linux:      "737830f012caec14da3f7b06a1177cf29999c26637a905f7ee6f97bc095ab76a"
   end
 
   depends_on "rust" => :build # for uv_build > maturin
   depends_on "libpq"
-  depends_on "openssl@3"
   depends_on "python@3.14"
 
   resource "psycopg2" do
@@ -34,6 +37,8 @@ class Barman < Formula
   end
 
   def install
+    ENV.append "LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac? # avoid openssl linkage
+
     virtualenv_install_with_resources
     etc.install "docs/barman.conf"
   end

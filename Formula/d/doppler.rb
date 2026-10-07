@@ -1,14 +1,17 @@
 class Doppler < Formula
   desc "CLI for interacting with Doppler secrets and configuration"
   homepage "https://docs.doppler.com/docs"
-  url "https://github.com/DopplerHQ/cli/archive/refs/tags/3.76.6.tar.gz"
-  sha256 "a3c9a4aef2311d220e47e517916d08d7be245f59fcf99288357018aca71bc9a2"
+  url "https://github.com/DopplerHQ/cli/archive/refs/tags/3.77.0.tar.gz"
+  sha256 "bca8aeb766be2df346af72d82b84918872a69afc05c9a7d312040e216985ca3d"
   license "Apache-2.0"
   head "https://github.com/DopplerHQ/cli.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "ad886add0bc1bb73b2140475bf03d4c588a4ab4341e3ecee3e77cb1f57889778"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f778717cd6fc234b47f7c29b33e9db5c500b95459d0c3792c647466a54a05134"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f778717cd6fc234b47f7c29b33e9db5c500b95459d0c3792c647466a54a05134"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f778717cd6fc234b47f7c29b33e9db5c500b95459d0c3792c647466a54a05134"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d54e5b20ab552e1e705b683f1e868bc7f2ce91e3f0bd9290a6843ebbb914c68"
+    sha256 cellar: :any,                 x86_64_linux:      "f014c5286460aa416459323aa6078a2cf5a9c4e4cdb77970acbb6f4cbdafc939"
   end
 
   depends_on "go" => :build

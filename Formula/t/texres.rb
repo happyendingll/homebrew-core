@@ -1,17 +1,17 @@
 class Texres < Formula
   desc "Fast TeX engine written in Rust"
   homepage "https://github.com/leoliu0/texres"
-  url "https://github.com/leoliu0/texres/archive/refs/tags/v0.7.1.tar.gz"
-  sha256 "a048ccee034a2c9f269a3eeb4008a8b1f79a4c7f9126612e002ef9275234f0a2"
+  url "https://github.com/leoliu0/texres/archive/refs/tags/v0.7.3.tar.gz"
+  sha256 "876aead94987d03d70d8bb554f41ae26ff77201a93f6170755daff23318f5903"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/leoliu0/texres.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7330f86f2feb1777af2a0cae5b777ac698b35b5e60d0e593f25a6cb206ac1785"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "39f79d14c7a3bd03d138e5bdf5ffdde5d47395719ef315eabf3348f3503250cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "01f0e901a6023f81099d5cae34c246b7860f14a835003b2a9fa5fa1d6879bc55"
-    sha256 cellar: :any,                 arm64_linux:       "180d47b7238ccee087cf522ab491a191ffd645df87ee629c3cde51bdd4a21f79"
-    sha256 cellar: :any,                 x86_64_linux:      "b259fc4e5c8f96baede75144a9d2e1ec1bda4c8a0063cdf23de47d7df65b06c5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "500ebe3baecfd8cd3db760341d380c39c3f312ba25bbbdb5fd497a109631bb48"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "11530bc1cd5494bc246ca60b7010e59df4c65ac7125f57e62bae3f9ec58fc20a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ed23f62599bb7154c1bff5fbb2bb0d0b866daeb83dbaa8ef619db1a2f042e44"
+    sha256 cellar: :any,                 arm64_linux:       "54f51a062914877907be9f478cef3366adb60235b00ffa5c97702b42d3143cc7"
+    sha256 cellar: :any,                 x86_64_linux:      "6d5529cb9829541f3529aa5579e5ff722d10051c60edd7211166cda3aef39f4b"
   end
 
   depends_on "rust" => :build
