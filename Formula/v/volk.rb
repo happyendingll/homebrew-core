@@ -22,11 +22,8 @@ class Volk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "064a12142b6a5db630acdc6ad43739178ec1e5e92ae45d02546c1a691edf743e"
-    sha256 cellar: :any, arm64_tahoe:       "537a5468aeee011491cee324d7515d0e70309e8184b41af722ef049f0bcb50e9"
-    sha256 cellar: :any, arm64_sequoia:     "171af672ac4f4c50f1aca6c9e675e33774d2c2908f53720ec057dd0fbe3c7e0c"
-    sha256 cellar: :any, arm64_linux:       "6b8c1758e38fc748a047f67bfe5a2078cf3dd4893737c8fd591d2b5905b32866"
-    sha256 cellar: :any, x86_64_linux:      "8db67d0983446bd027566318c8debcc4058bc45eaef61dc5e8f06fb769d99eba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "21d53e9ff47236abce540e86ac45669f0f3470d91f6435bfe06c9f0166d8a924"
   end
 
   depends_on "cmake" => :build

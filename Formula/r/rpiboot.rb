@@ -14,11 +14,8 @@ class Rpiboot < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "89bc8eed4f37b8c53abb40f5370b7208ca1ce1c476df085254277a82e78fcf62"
-    sha256 arm64_tahoe:       "f63b5f67eecfe7d4bc7c24052705f456fe23a541722dfd5fac92d99fdb091727"
-    sha256 arm64_sequoia:     "9c5ed03e24b2fa0d6c3b05d021ff4f67ed245b42af97f95db8b730ccbb868449"
-    sha256 arm64_linux:       "8f4f810d4a22ac53ab9a5e9188b847b848ab036422817b3c3e2e90ccb413c157"
-    sha256 x86_64_linux:      "af46bd06e72ddc7794bae9a763b7a964a5947dc3d14218e2cbfa572add605761"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "8cb188a56c1144dea51c54abbfa08ba2041c9d8abcb89416021c5d79481b3b15"
   end
 
   depends_on "pkgconf" => :build

@@ -9,11 +9,8 @@ class Jupytext < Formula
   head "https://github.com/mwouts/jupytext.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6ba0a1c6c6f797f14d746ef8de790a98f82ddac22e8c819ef834f94fb0e93169"
-    sha256 cellar: :any, arm64_tahoe:       "cde528ccd886e16a0b26086131653a86ec8a7a546ce8f3939c7d69ff4688d864"
-    sha256 cellar: :any, arm64_sequoia:     "6c35e0934539e99b3ce559046826d6c2d44317adc54f87a4124f77ab8e345b13"
-    sha256 cellar: :any, arm64_linux:       "da93e7eb6a9d45ee2f92efa39d24a8604f1b66aa1edf2c02068b8b69afbaae20"
-    sha256 cellar: :any, x86_64_linux:      "fe7edaddd44063829849ef6c98ee3960a10497f07c0ec4a4828b6eb060f09f29"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "4a7940b04f5a9acef49f053329349154db1efb671494e8d447c48a7af3e02943"
   end
 
   depends_on "libyaml"

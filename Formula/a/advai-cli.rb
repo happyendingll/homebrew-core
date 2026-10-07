@@ -9,11 +9,8 @@ class AdvaiCli < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "647dcd5ae40d85b1b4cf7ce37bdb4539c3a3eda7deec752c257e52306fbb7e1a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "166f1a82988f0aba337a80a326fdadfb9728da384828fcd1168b466a3a45c3e2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "377660ae01a4698fe4b07101a2f29eddc17ae39c3ee615dd8993150c6dbf9099"
-    sha256 cellar: :any,                 arm64_linux:       "967c839835fd3cb8ff167a341ed51af52d745866946e853ace7c667987891f34"
-    sha256 cellar: :any,                 x86_64_linux:      "3b24fdf72b6914ce71849c8731989a19e037f94439c71f5fe8c0bda9cb335c45"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "98d325b4be616b52e22f38cef9a04c4dff9ad2c196a77f2f8499dea6cbd439d8"
   end
 
   depends_on "python@3.14"

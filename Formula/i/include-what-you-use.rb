@@ -16,11 +16,8 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4fce5918451b08ad5cd0a827748950af2b538d4f282fabbe342bfbfbc2b71dd5"
-    sha256 cellar: :any, arm64_tahoe:       "351fa8bc1e7418609ff30597104d5dc987f941f5a5129543de1fc8c1449def9f"
-    sha256 cellar: :any, arm64_sequoia:     "66c6f3859580a31a845875d49c30f5c3adc9adf66069765850c9d1058ba72413"
-    sha256 cellar: :any, arm64_linux:       "5bea47087378a639d64d68166a1e21e5f2afe1baa66f8a288cb76ba2ff801a59"
-    sha256 cellar: :any, x86_64_linux:      "24d4126ed0b06b7e3614b48327bec953e3e2e2fd29829b34b705be555501e7c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2530e23191b6132e84144448017a09b6c2dd8c378f0377603e8e33b668527fa0"
   end
 
   depends_on "cmake" => :build

@@ -8,11 +8,8 @@ class ChartTesting < Formula
   head "https://github.com/helm/chart-testing.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b93e26f8d7b204fbe9df598dfb786e8a8180071ca1790566fc6e9271dd33bdc9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b93e26f8d7b204fbe9df598dfb786e8a8180071ca1790566fc6e9271dd33bdc9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b93e26f8d7b204fbe9df598dfb786e8a8180071ca1790566fc6e9271dd33bdc9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "02e58a5224634b08f22405a15c0d814af02877fa3ae42eb45992a5f39e29066a"
-    sha256 cellar: :any,                 x86_64_linux:      "7f4cc7ac78d260193a07c7ba36d1b2ef056ed7092803683c22bc8b29af22f513"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "109f82bc2d5aadf2f1bc8fad43de3eeb9c31ea43dba53c6ebf9e2167ff752879"
   end
 
   depends_on "go" => :build

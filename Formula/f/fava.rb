@@ -10,11 +10,8 @@ class Fava < Formula
   head "https://github.com/beancount/fava.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "81a9b4efafd138b452633620b14e601e5073379ff9326c34a618a28a20cc86e3"
-    sha256 cellar: :any, arm64_tahoe:       "bd15f74b58ad964a2ba8e77192a61a3a9752e036609fce22fe9988a2279f2462"
-    sha256 cellar: :any, arm64_sequoia:     "5f30bff5f4cb61365e6e53cb81d3dbef8463bb659411cbd48fde2c722e23e9c5"
-    sha256 cellar: :any, arm64_linux:       "7babd11d589f98efa06ce91fb195c584e73792cccea2d90a31bc5df6928946c4"
-    sha256 cellar: :any, x86_64_linux:      "4615627de2dffcb1dec71ad8f83ce13096579d3479dd91658973e08bf9ba297e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "89b7964c5126c0bc34d32be17112f140bbb6004f455cd97e2bc6c34cf4d9ff6d"
   end
 
   depends_on "bison" => :build # for beancount

@@ -7,11 +7,8 @@ class Hyphy < Formula
   head "https://github.com/veg/hyphy.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "3697197128a0d8fa47732fcd170e00cad640128f566f6b4ed89e66dc6ab3c55d"
-    sha256 arm64_tahoe:       "b101d8a59fc60a19144aa60fc27c3b70634e2e2aa4f7ed849335290ec2657a6d"
-    sha256 arm64_sequoia:     "a222eaa19a6991771f70590c9b225c5f00bae1530970cff112859279099262e1"
-    sha256 arm64_linux:       "d1e4f009ac57e9b2afa5b6d42552419c38e6fb064fb4fbc046d8c7163cb972d5"
-    sha256 x86_64_linux:      "d792b20fbb7edf78f5e7466272c58b5ec56164f9325aef591acbdb2ebb903e33"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "4b4325ca16ddec2b0295843cc078d42f8f6e6e3e38e54c6ee9e2a5660b0aa933"
   end
 
   depends_on "cmake" => :build

@@ -6,11 +6,8 @@ class Qrupdate < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8de0c15f142b19be3831da75bb4d4ac7ba43d6b4144da6590f0c1cc484e0d702"
-    sha256 cellar: :any, arm64_tahoe:       "1a4ca84219584ba2ec5003c186d1cf09766b31042db215095b7a26c4b1314c96"
-    sha256 cellar: :any, arm64_sequoia:     "79d72c81b79cd10559d03a868c1aa060f138e45406a5cbe13b6c2977cb30d780"
-    sha256 cellar: :any, arm64_linux:       "4a4e8b69827605c9ea7ffe0af429f115a5245be335330ba7b1ddf78d81634125"
-    sha256 cellar: :any, x86_64_linux:      "d48ab978930aab7ca3186597dd05a4fc5e1593f06430d68fd85076533f527205"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e6f085568a030a7c3354e054fd249bc7b449f625448ecef6779319742583e14a"
   end
 
   depends_on "cmake" => :build

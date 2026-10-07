@@ -9,11 +9,8 @@ class Twtxt < Formula
   revision 12
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4aa71fbf65006f35536166fe0d820275b9f87718bd38a70f4bd0f5ce97c1e611"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c7f9543318cf3d8c49672de7c09c290d73875655cb2f2713b5692f3bcc0458b6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "47072dffdb8585785eb8c17f1840f560e57fee2c92b34743b1a64fb56291b8df"
-    sha256 cellar: :any,                 arm64_linux:       "96bc060049b25a0d642a5733bf45e38eb147152cd4bf4cdd6d1bfa3cb6239454"
-    sha256 cellar: :any,                 x86_64_linux:      "731fff664ca93db349805424545df2a5e106048458b02c026826ea2af6d1e928"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2e2f357ad1bcefcd9b6e9182d61d4f63abbb9c5479f59a662ddc8e676dabaaa9"
   end
 
   depends_on "python@3.14"

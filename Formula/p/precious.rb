@@ -7,11 +7,8 @@ class Precious < Formula
   head "https://github.com/houseabsolute/precious.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cd6e560afd5e11c758cd3cc323561a3a1e02c1f990f0104a30a5e9deb4c3d295"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ef04cc653f7eab5a37320e3ba3e5fcfd5e09853e4fb86108d7f45703a8fac3fe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "33b70577af36c3374977ed222df01eb4c46594011cac74159d86a98f7d0a36dc"
-    sha256 cellar: :any,                 arm64_linux:       "c26c92450445f44739f7764582d8f451b3bc1cb4a2681be9cf49dbb7128569d1"
-    sha256 cellar: :any,                 x86_64_linux:      "bdc0bc51fcc1b7cfa3aa72bdbed3e023942bab48e0f26e6fe4028ece23679344"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "38092eeb4b596620f4dd5905f3272d3ba0994e212e336fbf2ad70d69f6d06467"
   end
 
   depends_on "rust" => :build

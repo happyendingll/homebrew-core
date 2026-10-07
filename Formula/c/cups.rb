@@ -14,11 +14,8 @@ class Cups < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "5f59ea1a3f8f065f8ecfb09162f335d5602e48e1898803578f99ec7b6b05f3dc"
-    sha256 arm64_tahoe:       "ef58fb5920d8f32ec71840a0b5e9ce0df756be5e00f7e20562bf68a3b2c637e8"
-    sha256 arm64_sequoia:     "96aa911bc2a107bdf3de8b6488363ab9c92e86f0c30691f411ac9e8e8230d62c"
-    sha256 arm64_linux:       "0e8320ed95664408f90596bc0e043fda06d52606aa3e323bef6e6be48b0f5a55"
-    sha256 x86_64_linux:      "650c439a2c171bf498999727da56298900c677e87a4b995991b7ddace0397841"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "5707cb717fd908a17cfcbb7748b7bad0e2107f3a42a0f0b02a58bf95d82bbcb5"
   end
 
   keg_only :provided_by_macos

@@ -7,11 +7,8 @@ class Fourmolu < Formula
   head "https://github.com/fourmolu/fourmolu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6c9c0b5a984860433195de96e624f98bbf5898aea01bab14ec3be2d5f85ad8a7"
-    sha256 cellar: :any, arm64_tahoe:       "372ed995b99f77202edf4309dbf29abd5398c0f8d916d3135f6efb53b263eb4e"
-    sha256 cellar: :any, arm64_sequoia:     "a445de12f555689febce22828d26401c1ed6d611fc1555a216f2e071f0930df2"
-    sha256 cellar: :any, arm64_linux:       "8f2fc5ca1c0187aac0d85e4bd64db8b670aa0c59ef6bcb722195f5bdf4ab4605"
-    sha256 cellar: :any, x86_64_linux:      "4bdac27d3f5bbb9796aade0547174e95d3dde92beb92007e262b36741d360cd5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8170eecc6e8404ac69ecae11af92b4445b1d7810eb747a5ad45426a967203905"
   end
 
   depends_on "cabal-install" => :build

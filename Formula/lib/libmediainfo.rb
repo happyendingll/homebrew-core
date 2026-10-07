@@ -13,11 +13,8 @@ class Libmediainfo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cd110ce0d72727bf2e4433aa5bb5e5a7c29d966f440e0b70401a6064da18be51"
-    sha256 cellar: :any, arm64_tahoe:       "eda9eddad2c74ebf59e91541264a9323680ea0ba26cf77bdaf74b42e7448fd7c"
-    sha256 cellar: :any, arm64_sequoia:     "fbe973993be24f71841704cf04d5b8a79bf54c2a1d2f2a0d74b7102ade54c258"
-    sha256 cellar: :any, arm64_linux:       "e3f44abf0827c0c8dbe015988ca47d5124b050bf2a25d10bcdd68e87f88d125d"
-    sha256 cellar: :any, x86_64_linux:      "54f65c86fc90fa0b5529586fefade935c7f6a5bacd09031eac938f9625e28713"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d088dea736af76c62f70f93f0434796395ddeae2f7e87d26d6fea1f65b16e4c1"
   end
 
   depends_on "cmake" => :build

@@ -10,11 +10,8 @@ class Sacad < Formula
   head "https://github.com/desbma/sacad.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5484f27886f311788e2a9d676606433650b02ca292e33fe6cd0c2618e79165ed"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d5d754a8c2efde108a3e544739dced7ed72669c7ce19c6ec478ba243d4c325ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f1253b39559b58df7430244196f1dc7273fe7f3ea4ac07c43392564f17ca431b"
-    sha256 cellar: :any,                 arm64_linux:       "283162d99b33959f493c468625c480bf6c796a2ca811c615d677bcef0bc25f33"
-    sha256 cellar: :any,                 x86_64_linux:      "baa3647c3b311ea541bb8008f76d52f9b4ca0bcbebbe994a59534b6d6e54fb46"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c839c159d062d35e7dab22cb67b3a4ae7e2be451d418e157063d285618070af8"
   end
 
   depends_on "pillow" => :no_linkage

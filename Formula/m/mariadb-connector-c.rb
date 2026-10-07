@@ -25,11 +25,8 @@ class MariadbConnectorC < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6fcfebff6530c45deb26ebb70784698c02b01d277945f693a9e926575c74d3a1"
-    sha256 arm64_tahoe:       "420a7f7768d49a5c93f47d2a184ceb866fd9df9a33458978c4c78b6397f0b1c1"
-    sha256 arm64_sequoia:     "d67e937637051081cf1be657990a4fadb6f37fc97faf507312c77e30b673d069"
-    sha256 arm64_linux:       "f16858bc8708e73328f82ca24b1df8b9dd4b31d19b93345ad601ac9b11207979"
-    sha256 x86_64_linux:      "b28e7b5c7b9e7f34b6565f390460618432798ff4443eb537c52b8efacc13221c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "b13d1d24b6e05ff45f361782b4cf1e691a90a7af17c11964227f2d213a900a5d"
   end
 
   keg_only "it conflicts with mariadb"

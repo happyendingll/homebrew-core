@@ -6,11 +6,8 @@ class PhpantomLsp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c6b16232facd1af880b3c5cf483089cfb15ccc66a86a8b8dc0ce24c164295a10"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f322ab1b5093f5b0c9361353e741e248b5760d4727d41e49453feb2fb7cba85"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0ff5046d79c915f494af44ab93281831367539eb542a878dc1e134161e7b9355"
-    sha256 cellar: :any,                 arm64_linux:       "353668968f362af2f6fcda5c8c0ff61650456eae42984125f5895c8cca84e7ab"
-    sha256 cellar: :any,                 x86_64_linux:      "3f60eda4ee22c222be81d08e236a90b21455c84cdc5b2393363fcdad6799ac9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b772c263f0cfca75bbe3d659f3b96a615c4795a069d20791237581ca1f8f1748"
   end
 
   depends_on "rust" => :build

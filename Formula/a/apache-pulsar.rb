@@ -8,11 +8,8 @@ class ApachePulsar < Formula
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "de17ce9d40df6a9193253576db8ce4daf7fa53642ebe91b6d400a8927447e30f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "de17ce9d40df6a9193253576db8ce4daf7fa53642ebe91b6d400a8927447e30f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "de17ce9d40df6a9193253576db8ce4daf7fa53642ebe91b6d400a8927447e30f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0796e609d4435c32dd34ad70193abb42cc32822d30974a26f5a603851803bf17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0796e609d4435c32dd34ad70193abb42cc32822d30974a26f5a603851803bf17"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f981789644b70fa71afa43db7f9d519bfc0c40296b07b79f0bacc15c651cbd1c"
   end
 
   depends_on "gradle" => :build
