@@ -12,11 +12,8 @@ class Certstrap < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ebe6504825935cf434e26329c24322134900205abf67e2c77e38115175cd5612"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ebe6504825935cf434e26329c24322134900205abf67e2c77e38115175cd5612"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ebe6504825935cf434e26329c24322134900205abf67e2c77e38115175cd5612"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8c17d6dcaa0ca7d006b888379b7d7545702956154c0e02fa58754f1bc3238665"
-    sha256 cellar: :any,                 x86_64_linux:      "71c1333585167539ed1965c85f1fbed64479cc2ed403b2fbaffa9316ca92e6b9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "32f73ea28f471cad12f1a2f4fe9584916764cc80de7053673e7212d015918c25"
   end
 
   depends_on "go" => :build

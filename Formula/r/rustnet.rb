@@ -7,11 +7,8 @@ class Rustnet < Formula
   head "https://github.com/domcyrus/rustnet.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b35e186260713cd0a4d0a597923b104ca05d01069d0c1b69919fd4356ca7a3bc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4ac0572fc99041b35b70422aae060a83998cd8eacbdacb2a2cff2e055135fee8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d288af449c199ffb5aab9e1ddcef1bbeb7c02764748cf1934bcfe39c478aa50"
-    sha256 cellar: :any,                 arm64_linux:       "2246158eef64862eb211534ac540aeedf87cc317ff83f1373ee3558f804993f6"
-    sha256 cellar: :any,                 x86_64_linux:      "e748bd73ccbc8e0d499f6a29793191392613bc684c2d849ccd6720fb6a730cc4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fa654c3a34716c7a7364eb623eb409483b8c1e9dc1df44f95c0f602093fa958d"
   end
 
   depends_on "rust" => :build

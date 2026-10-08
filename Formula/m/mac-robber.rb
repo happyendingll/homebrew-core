@@ -6,12 +6,8 @@ class MacRobber < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "94a1d9c4a38418ea7b3faa63700f5e27ed8ae8daf213ebeba74ea1bb6438d711"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "554220e0bdcd9ca88279f3dc6070bf07158ba85468f52bbea7ac0f385075203a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39769b8a01d0d7b97d7b3ca95c5f17f79bba4fb431fc3dcc2a3c0f616c2c369f"
-    sha256 cellar: :any,                 arm64_linux:       "24baadae3e3ad583db3734a3985a8849f7eaac93dce06ac7ebc1bd32914bc541"
-    sha256 cellar: :any,                 x86_64_linux:      "d304cc5058841e57e8f3e32805a971e05d81dc55118a30a574e080037f730584"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "59d24a76965a2c4b3015bdf9300e531463afec6c7ae2c7eccbab11b57a4b1142"
   end
 
   deny_network_access!

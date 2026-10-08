@@ -14,11 +14,8 @@ class Aqbanking < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "e04bc57dcb71addae00e05648d20d149d250405d618b575382541420bad692e6"
-    sha256 arm64_tahoe:       "696efe863b32507dfbc6598c8e54fed1caae549e76edebc08964a176122b3df3"
-    sha256 arm64_sequoia:     "97ad082e12154aa94d3124e684ef8cfcb99cc512616fa6ea0504e05ba5e88cc5"
-    sha256 arm64_linux:       "109a28db4849a75fff7668e0a8d4641d5d807d21b4c96c120afdac275dedd357"
-    sha256 x86_64_linux:      "8f9ab05b78bab8b906615bcbae086e6ff3d9f7c740297719af73d31a4bca162c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "bfe0a3045ecb7faccd58ff82eb55cf6826d081b1de2a3d6c2e3b4d7c51787f9f"
   end
 
   depends_on "gmp"

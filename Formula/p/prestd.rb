@@ -12,11 +12,8 @@ class Prestd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a8625f33c88c7323ebf7fd8a26d93e0949bd2165dafb68b3e4a68f3e0a131af"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe173bf7e2f4a2509460fc56cfbcdce93221b10fb9a7c3ab96b71391cf616fd0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78c59bfd590e79e59577a15b636e6edeb1c7d7b77b5dccfdbe0016f41a680197"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b7eb9df5c294232f68d528f4d5e1a8df0d4400f2e8c4c993bbe1c4225374503"
-    sha256 cellar: :any,                 x86_64_linux:      "c492497ca8b43d0840e8ab6043e63110432fca7729b2724b72377ca574faa923"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "430cc03d87b990554ff59b99b142912eca415eb107fa93566dde43d472a9c06a"
   end
 
   depends_on "go" => :build

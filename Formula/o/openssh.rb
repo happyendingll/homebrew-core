@@ -14,11 +14,8 @@ class Openssh < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "8baeec2bb77a8645ae5d22c46f412e103f72b57bc6740cac038874a9a4274e4a"
-    sha256 arm64_tahoe:       "dc2c280852ca0254806901b26d5d52ec107cb7ddf40d5d6f90f8085d26eba2df"
-    sha256 arm64_sequoia:     "042e7bf6e6a8d384811cab3ca61160daad4f69f47edcdd34a50f0a521ca08abb"
-    sha256 arm64_linux:       "44d462f90e23eaaeac594951c9023cc4409050d7d12a1863df57fad558f8c592"
-    sha256 x86_64_linux:      "e7976aae0d5fa3b9c1a5305d02a0562f91b9ee7f7479a88431e3922c29688c89"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "9ebc52ae700e7e33d5487986834a537fc9cd0542ac1d7b19645baae673f47647"
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.

@@ -14,11 +14,8 @@ class Monetdb < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 arm64_golden_gate: "a38076d26c183ace8585540a0a48f70ebe3e15d00f82c8faaf9bed863ab62d00"
-    sha256 arm64_tahoe:       "44850ce0266da93c34d4a2a6538ec064d11bd0a75a53cf6fe2036ad068cc6ef4"
-    sha256 arm64_sequoia:     "f69d78a3b0e54962c7097587701e6673f57666350e6df11d77d049cf166b425e"
-    sha256 arm64_linux:       "6adf4506a21a461ad1d017021860f9dc8bc7627560e7949202598d2837296cd5"
-    sha256 x86_64_linux:      "c57093954a6ced9836f855da5110ded87e71028268cbe6f131b41a9ee39abcf0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "50956a9a128ebeec2db0346d12a652c6f936c53ec3c9452d2e2f59165bfa47eb"
   end
 
   depends_on "bison" => :build # macOS bison is too old

@@ -12,11 +12,8 @@ class Cadaver < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1fb4b0d7f42c9f14ef541bcde82fba19244327b655ebef8e712dee2502be65a0"
-    sha256 arm64_tahoe:       "a96c8dcab0526683df4873360e4dd490a8d2ddc88151b3d04587a19ecaa327f2"
-    sha256 arm64_sequoia:     "577e6ca9b77deaebe81ad1b413810fae2075084bffd44024c3de58d363e69a98"
-    sha256 arm64_linux:       "bebed637097af5ba7b2519b078c06b23848c1b1a257ea0ca5bda0b5171086e38"
-    sha256 x86_64_linux:      "c08f5bf10869797619d52d56af8958c1ac21103da291a8790d75ca76375410a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "8d6d47542ac3d520d6c5e385024e76e6f6e2d8d661273196e4ca25efbfcbb708"
   end
 
   head do

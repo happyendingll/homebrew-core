@@ -7,11 +7,8 @@ class Nanomsgxx < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "01912c3e6e92067cd9b234006271a00b235a3a91f15f5e1948aa7add4830b6b8"
-    sha256 cellar: :any, arm64_tahoe:       "8517e8dc49794d794f4a1fd2473039e6bb1d0e90065bb53123ddc4bcf652fbe2"
-    sha256 cellar: :any, arm64_sequoia:     "f6a068a937d9f6eb8f01697600b851a6e4a938349037d759f52b2f14133f7529"
-    sha256 cellar: :any, arm64_linux:       "f409ca07a6bbec34e33aa96c8306594731eedfb9aefce36fa7c863d9a222137e"
-    sha256 cellar: :any, x86_64_linux:      "8b59ee63415ff903446f997a7a8373cfc1803aa370e323cfdf68dd20fc4dd273"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e950d4569ddc366a202626b8ae94aa14a272b00b04a9e06cea25627bcf04656a"
   end
 
   depends_on "pkgconf" => :build

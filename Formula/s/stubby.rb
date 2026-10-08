@@ -8,11 +8,8 @@ class Stubby < Formula
   head "https://github.com/getdnsapi/stubby.git", branch: "develop"
 
   bottle do
-    sha256 arm64_golden_gate: "53cf1ae763ad5f9b2e9f406bb3c6acb88ce57b4a9c7f23245a41caf3e78aab17"
-    sha256 arm64_tahoe:       "78a752f51fc6e9bb87be7be10fde0e62b77b32a585318516f8d5a8e787b80b1e"
-    sha256 arm64_sequoia:     "2e789612111c36d6f8f9a181fbf29dece851640359f2421b622852fb859c4cb5"
-    sha256 arm64_linux:       "c3470c5c23c72716a6389633982ecf51c3b805dc755c0822aeb4cce62b88f8b5"
-    sha256 x86_64_linux:      "0f0ed9828ada0b10bbced52fd7f2f8d9aaf1691ee6c290d2d12fc9c911f8a890"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "caafb659626609ebb7b756a2327e77e926998dc0fe0e2e363565daff74c2394d"
   end
 
   depends_on "cmake" => :build

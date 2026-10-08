@@ -6,11 +6,8 @@ class Direnv < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "31b02d98faca1628f4e5e02e14bdccbe316043c1f5e7d5231f06edada325ff55"
-    sha256 arm64_tahoe:       "173e4e1e91ca247e5638bbcbb44e4e9d9b49e233451789934d8a25fb07dac180"
-    sha256 arm64_sequoia:     "553801244d17d10c5a2329b0726c33b5e85609cd225fa523e1d8a3d162c1b156"
-    sha256 arm64_linux:       "9fc7bc8e468de8e5f1096b34e88868e3830c3f805e406f58008bbf089fc54577"
-    sha256 x86_64_linux:      "6bac2a8c29e493dfcc14c00a35e1a5ecdad2b6e3cab0e4371b94d4dc5b5a2307"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "2986e6f1c4ffef535ff0c8f1f8cbfa76d139de49b2b81daae02c5c60fddb747a"
   end
 
   head do

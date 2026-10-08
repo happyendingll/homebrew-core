@@ -7,11 +7,8 @@ class C2048 < Formula
   head "https://github.com/mevdschee/2048.c.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "34d1b744f2e83653e15e47921aab9b516f010678e52b5e95b8d7b8d66c5769a5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7e2167cada11507d11613f88ff12ece3ef94c4a798e57f758c47fb719257c18a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "18e9b337d2b521fb6d57a1dec101bf9f68f22e1fd188a1a3f2be1a853b6e2b98"
-    sha256 cellar: :any,                 arm64_linux:       "41dd2678b0a9d85a7b54383c9ce8b2a4628875995430043691bf82f6d4265593"
-    sha256 cellar: :any,                 x86_64_linux:      "8f1a701fa1daba5eae8995d86cd031f78e59d7a65667220b6e29c559a0fd20ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c338c1f582bb0b43260a59b3c7442509008ec496b408129d383d1385d86b89ea"
   end
 
   def install

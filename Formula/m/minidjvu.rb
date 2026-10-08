@@ -12,12 +12,8 @@ class Minidjvu < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "281b013a773e8ecbd20ce404552b3b052e7bd7769c407e2586e550ded44f6ca3"
-    sha256 cellar: :any, arm64_tahoe:       "344f5764c5d83cb418143496312da7c9db8d17ca04b2f044e329ff5dbb450945"
-    sha256 cellar: :any, arm64_sequoia:     "ce4a9e99a9b3148e38073ec4d59bb065d09a3c00bd39cc664269f05e2b10059a"
-    sha256 cellar: :any, arm64_linux:       "69437755c726adf7540b08341a7dedfb6f1fb34edb07497c6e26c8d7f10a6ed0"
-    sha256 cellar: :any, x86_64_linux:      "b3d4785e9d16ae0362c46d350bf6b00d38e88c7404289e145fc36f9d08f38c91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "7457ee46d9b4bbbd4f70239eb97ff70a4746bb36ae7f71f7f2dda12bca40b69c"
   end
 
   depends_on "autoconf" => :build

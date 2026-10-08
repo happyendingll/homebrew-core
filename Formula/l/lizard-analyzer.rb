@@ -8,11 +8,8 @@ class LizardAnalyzer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "045cc6c308d4b953e966cddd7d0a9949f321959282ec366fdd9bb899cb9a0f0b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "79171dce4084e26b55985884b8358eca39462a9aa7e701236a2c1c9576804c8f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e6a9e0edd7f5bd4cb62a8bde1bf38ce1a874bec00e916e9f80506b75ec82a01e"
-    sha256 cellar: :any,                 arm64_linux:       "1ce391a094c9462b0fcfa5bf576b46e7d784b9c9f51137c2a56d4ded1a573070"
-    sha256 cellar: :any,                 x86_64_linux:      "1a20017c77a0c2b74ee871fb13077e5f10b6b386e1dc8401a111c0a609243b91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "77e6e3457ad5646649e69468c26567d32ede286f917d65386c195b0a02fd98e3"
   end
 
   depends_on "python@3.14"

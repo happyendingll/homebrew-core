@@ -7,11 +7,8 @@ class Nom < Formula
   head "https://github.com/guyfedwards/nom.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bee538a6d8d0f36180893980ae460d5829664a0437900d5465d1f3a8ba53e983"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1acb66ae33da31a7ed9a4e296c1d7c55729bb67d1185f7f9244909f8832e094c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c4560287dd42ddd00081aac369b57d309db5928e2d47806022539d87114f53ca"
-    sha256 cellar: :any,                 arm64_linux:       "25331967747301283fbd465e9c3b719f5696af3419a29c916c06df63b7dbc2db"
-    sha256 cellar: :any,                 x86_64_linux:      "15d8a5134f881583c72c3189b809864cc50c21ab5e2c030058b73240ee816e9d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2fbf2d8ed186e9718f053c16a6298cf33f69dc1ac553bd7f9202a49fa23c4f1e"
   end
 
   depends_on "go" => :build

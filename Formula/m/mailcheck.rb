@@ -6,12 +6,8 @@ class Mailcheck < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a4bc1f7c913076ef17c1b531efac03d16993d206cb7ad979b21dd416ab0ff51"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78a04acdb60b3a1876761dcf587175162fa9512b795863b3e7acbe78c3d4c415"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9f8feccdcd2c1ee2bed597b1195571b042969ef0a793fee7b239ab56dd6d6f3c"
-    sha256 cellar: :any,                 arm64_linux:       "7893498ebc75f1b60b5fe77842113b1211b7176d16f0e457613ce6338d4414ea"
-    sha256 cellar: :any,                 x86_64_linux:      "5b8bc9f845aa6912dc77eb59ab8caa16610513398f087e3f0ab213af73d146e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "730888e37af344324c6b06900ba69df3758628e0b053ff9538ff42d5458250bb"
   end
 
   deny_network_access!

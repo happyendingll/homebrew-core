@@ -11,12 +11,8 @@ class CargoCrev < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "7715a41968d82d25241c56d134cc8c0a15b92e26ee16abfc1278769956138128"
-    sha256 cellar: :any, arm64_tahoe:       "52765d78d0e19c29e71b554601533ba069e7a3ac25f4fd6ee162e4a097d2f55e"
-    sha256 cellar: :any, arm64_sequoia:     "8f06b458337b3463a93a32c48b90a43dd03fa13dd13bc382837248fe1b83b345"
-    sha256 cellar: :any, arm64_linux:       "76c32050e7b25b3bd79c03c20c83a204eaee1b2f09dfd574b34d29a9f28a34ee"
-    sha256 cellar: :any, x86_64_linux:      "ae71b1058eb105ad9facf57463d17604b657bbc0a7b86bef7e542974d90914b9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2d5c6d27dc4c1fac0af0c75ba4f295d182966d299520cb6f831838067a58e35b"
   end
 
   depends_on "rust" => :build

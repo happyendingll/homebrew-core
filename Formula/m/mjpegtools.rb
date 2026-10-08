@@ -7,12 +7,8 @@ class Mjpegtools < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "b837a632e4043b64a8eb3a6cc1fc8fd27358c6d6a79e0728ed8364b839afcfd1"
-    sha256 cellar: :any, arm64_tahoe:       "2abecdb0e554d4f388fff7348b628a47fb7895743cc8868541724ce4d85ae88d"
-    sha256 cellar: :any, arm64_sequoia:     "c47b25ab68df1da19d4fc125415cec33f6c19dfdb61e7df83a67f34571fb1540"
-    sha256 cellar: :any, arm64_linux:       "21c6aa501bd95efff455177f4f95651efc07094c77ea1bc0bf520996c2d51f44"
-    sha256 cellar: :any, x86_64_linux:      "3d7777e45ce7cdf38caecb5f96e0812d6a9247c378a81e88f7c2efba78de2b80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c1d1eb71761984fbf5ed7b812c68ce849de324b2272cb71de1da3f7b28b2f8e6"
   end
 
   depends_on "pkgconf" => :build

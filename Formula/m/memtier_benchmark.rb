@@ -10,11 +10,8 @@ class MemtierBenchmark < Formula
   ]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "76936ff1606569a753f9650698ff8599f4e8e32824b1974cc49b313fd9c8b844"
-    sha256 cellar: :any, arm64_tahoe:       "8c48b907c70f7ed7586c5d5c8c9bbf8f88b791f9d28863680b222f9682ba1428"
-    sha256 cellar: :any, arm64_sequoia:     "3226ddd0d70c71f64158e54597a31aecfcce48ea9a29e8fe23f94330f39c6f6b"
-    sha256 cellar: :any, arm64_linux:       "f6f38cd1747a6e0afae84873382c28d2b026f1f4329ce4d2bec7ab149d40fa6a"
-    sha256 cellar: :any, x86_64_linux:      "cb3d17cafca45d66f01c1ee16a9b0b08ec97b82a24928c7f2851e0ce9f8fdf8d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8cc37283983759dde59cff09e6e051da24d90ded243050c22af5f3947fa25804"
   end
 
   depends_on "autoconf" => :build

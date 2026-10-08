@@ -8,11 +8,8 @@ class Groff < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "6137ba5da230ae248b2ef6e7c9559059c555f8318401667eaa5692765bb02a10"
-    sha256 arm64_tahoe:       "c40cfaa1386664af0e5744ae609a83e278abf21b1fcac4e112ea5442b618525b"
-    sha256 arm64_sequoia:     "f7ee5153d808e5bdf5b7e7f0bf825c6afd2cda29970a8e45dabfb7c24bc07994"
-    sha256 arm64_linux:       "58ffd88667d41052d6ee88d40abdf08d78e33ef529454d7f7cd0bb7a421e3fb2"
-    sha256 x86_64_linux:      "f3f305a3916a841d50df9d05d0367e1871f96d2cc2f3f2358b4e57911e342a49"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "231ac54076447d1744746c2ae862d364216cc625f5fb36fffefc983548b1a01a"
   end
 
   depends_on "pkgconf" => :build

@@ -15,11 +15,8 @@ class Hubble < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ba68ca94bdf9877fc38aa8b433149f145145d2edc66967f46e825fc8b3491741"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d8410afe1378a9e3e9e0a07d91b7babd0c8a73df91626055aa84dcf2f78224e4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "218570f6f3228b9bdf28b8cdb2c89c5f1713d3ba2d91ab455e86d17c3d29481d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3cf1cf836071a993c81d142a7565a00fce0fe35452c59a3f40b3efd60218dda9"
-    sha256 cellar: :any,                 x86_64_linux:      "324a48155df75f132a1092d333b1a8e970c4ebac34730828b61c6f18df57ef49"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9f3e4dd77681cea4f55fdeba63e2db88b2fba803714237b53c01faddf51b14e3"
   end
 
   depends_on "go" => :build

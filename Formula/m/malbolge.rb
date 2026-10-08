@@ -11,12 +11,8 @@ class Malbolge < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9200d693051f33a58ff8e68f12928364d6653f3454308cac97d449cf98bcdfd7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9ed3ec05cff2e43fe1fc3b7f5f4f89a7fa3237500deb29d9b9d430483a6872f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd5f8220806eaf3c9b7095ccf6d1471026e86e6970ba04384e55d999ec986597"
-    sha256 cellar: :any,                 arm64_linux:       "fea2683e7e1da4731305b5185674c59c9566bfd4de6715faf6a5354dacbcf6b7"
-    sha256 cellar: :any,                 x86_64_linux:      "5c7fcd96f09124aa07f32b21e3edf807ee345d383edb50a3c66ba8e54cecb46e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "47a1fc38f09b7e72196896e880243789fa1ac73705a728fc3955bb99f653799f"
   end
 
   patch :DATA
