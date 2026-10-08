@@ -6,11 +6,8 @@ class Recode < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5347c12db883be84b0b18df0895ef8bd1575d0c4a907c02d69c39d0d35fbc994"
-    sha256 cellar: :any, arm64_tahoe:       "c4371f38696b416718869824909e9935820d6e7b3008fea921757133ab3e8394"
-    sha256 cellar: :any, arm64_sequoia:     "6b7e9e184a490e5118ca6179dabf74239fc1ffb477dbb6eb8032c2cd298a2df5"
-    sha256 cellar: :any, arm64_linux:       "10d4082e00cc19ab5a7919f0b964f0c933b1727e47dda5ad08c3f5896736c732"
-    sha256 cellar: :any, x86_64_linux:      "d83b3cca77a6c5c7719a2fb6135f74a73f9cbd77404e5162044c85b6f3a6c736"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "0628133b43c93d3e72118fa44a533dbd7d673d4b9427fd250169f78b9746dc95"
   end
 
   uses_from_macos "python" => :build

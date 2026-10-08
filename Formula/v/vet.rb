@@ -6,11 +6,8 @@ class Vet < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "387b8d242092d848a79804438f1e411359787785d287e03a16dcbbbb03be0d20"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "96b902ac256cef54a720a097a3f24c9c9eeb62d25c2f5b77728c1599ccb8b49a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "10a5339f1655bde060388ee95cd38e36faa0c23dceb831221d2463a35d79c2f7"
-    sha256 cellar: :any,                 arm64_linux:       "2b45fcbcf3d69f4ba03b0404d62a2f0d4eae50f4e0979fbd252107e541c588b6"
-    sha256 cellar: :any,                 x86_64_linux:      "f481046af7334b55849f26eb6a7151b67e86c91111eee4221f1fafe068be828b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "616dece1731c9bf2eac752e1382ae7f5251d76ad0a907741c8f87772170d89ac"
   end
 
   depends_on "go"

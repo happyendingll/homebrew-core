@@ -14,11 +14,8 @@ class Goenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9d45841c2a4104bfb19abcdb421451040da43be685b53d10147eacd1369dd195"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9d45841c2a4104bfb19abcdb421451040da43be685b53d10147eacd1369dd195"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d45841c2a4104bfb19abcdb421451040da43be685b53d10147eacd1369dd195"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7b1cabfd4d0e2e97d8a96ed661fd2aec16c220dec58c6e7a3e931fdeee4ebe66"
-    sha256 cellar: :any,                 x86_64_linux:      "1b1b6c1841ec6e61978ff36e4f47406cc6106d9449b9a32b07ae356098e712e1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "38c6a49c985ce8aee652a345de5f174244fc8f26ab5b51c5ccec0f2beb644dfa"
   end
 
   depends_on "go" => :build

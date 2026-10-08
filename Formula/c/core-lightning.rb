@@ -39,11 +39,8 @@ class CoreLightning < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ee50592a25e36387eca12934badc43ed5dc56ffa14b39e3ea83ec5f620b5fe92"
-    sha256 arm64_tahoe:       "9e0a711f1124eb2587a69be1671b2a8326f78a7ffdf9138312c73e0d1be0109a"
-    sha256 arm64_sequoia:     "8c23947e4dbc55bb84cb7cd202ecd76a9a0acfe0973236b6ff01ceac9e239aa4"
-    sha256 arm64_linux:       "be7d8b86a3e792f80a9bf8902371d5969d22b7d649bd57ff6bdad2a61966e2f8"
-    sha256 x86_64_linux:      "a4044c0d0e0fef694876a8582a082c3b341a07375f7ad4aafa506bd03d7fce81"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "5769452cbc6b871181e1dccd00bc5d40b531df263a08f619fb7e4fa1b74f683f"
   end
 
   depends_on "autoconf" => :build

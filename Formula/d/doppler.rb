@@ -7,11 +7,8 @@ class Doppler < Formula
   head "https://github.com/DopplerHQ/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f778717cd6fc234b47f7c29b33e9db5c500b95459d0c3792c647466a54a05134"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f778717cd6fc234b47f7c29b33e9db5c500b95459d0c3792c647466a54a05134"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f778717cd6fc234b47f7c29b33e9db5c500b95459d0c3792c647466a54a05134"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d54e5b20ab552e1e705b683f1e868bc7f2ce91e3f0bd9290a6843ebbb914c68"
-    sha256 cellar: :any,                 x86_64_linux:      "f014c5286460aa416459323aa6078a2cf5a9c4e4cdb77970acbb6f4cbdafc939"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed1240b7d0689e0a3ee43312eab98d5743ae298ca59cab819badd4b7a46de176"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class Openvpn < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "bf80f32655cacacc02e0dd8ea1a2d86eefcbd8c0c704b38fe44b42715c57170d"
-    sha256 arm64_tahoe:       "ff8af38d97c1780a6c920ca25398d57faf241c0656e251785095d0587deab0fd"
-    sha256 arm64_sequoia:     "314c662194890eca6d48e8ce8771e152ceac2403fa119b7e5b10c6c1d231b19c"
-    sha256 arm64_linux:       "ae16c8aa3f0fcf557a4bb8478d95624b0b7cb68f5e3dd780050b72f1fef6f03f"
-    sha256 x86_64_linux:      "e869adc4eaf43209173c068bc886d5e6e287ec246984b899c896a1b051f8afe8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "6eb0fc27c1fe8c92fa7349ae9db1fc676090664937fa7d144416230d359119f5"
   end
 
   depends_on "pkgconf" => :build

@@ -16,11 +16,8 @@ class Samba < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2ea4a0299d6d0d9f6c336668da36558cd7cde3139f8d942ac942d8217efefcb8"
-    sha256 arm64_tahoe:       "2109e1383c12e66b905081164954b741a1f4be83ad80fddddf7775d02d7898a7"
-    sha256 arm64_sequoia:     "0ad1ca2d2ad0196af3d81440cda2292636d65bf1a07bbd8e9168e9373325add2"
-    sha256 arm64_linux:       "8daa4dd7113240db8ff05abd53c2a1fb43033dd62d4a6af74fc488e4e5630601"
-    sha256 x86_64_linux:      "cfed084cfa9361292111324089737519722e60b684fee8674d5e99d199f3d7b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "bc284e3630abf07921bb7be63b7d16a5f9480adee29578d47c336d263d50e118"
   end
 
   depends_on "bison" => :build

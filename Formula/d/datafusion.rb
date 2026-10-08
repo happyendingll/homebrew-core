@@ -8,11 +8,8 @@ class Datafusion < Formula
   head "https://github.com/apache/datafusion.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ab5f9e4296f71c502ec8f12e16986396497ea176419f1d443249e94b81cc96e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c57b8a928455959805415ea96f88d88090bea60ab47b1c7d8153c5ec106dd6c9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "be84edd02726e6bdd14585ad6129753b3b82e2923afa0f51733729a824f40489"
-    sha256 cellar: :any,                 arm64_linux:       "16e609b22354759aba28d527a82ecf190bc445d593217659d0431d77f1f64093"
-    sha256 cellar: :any,                 x86_64_linux:      "a9fd52db40f5377a91daccd7933a2bab43cdb54c71b2674c015f0cfd96221108"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "148d48ca6c433f02c967ac9249c83842043ce9990ad4e5fb16873c47eb990fb6"
   end
 
   depends_on "rust" => :build

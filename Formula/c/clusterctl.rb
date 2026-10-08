@@ -17,11 +17,8 @@ class Clusterctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f5acf764e08379a0575f9b10e60950704b356382023644215665ea90217df2d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a340180f0483a6c6fa0733e39e4b50be6cb05e6d4f283db13b6ba7e72bf3bcaf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd6e04196bab561948d42e860369fa142eb2ef6b8b25739d68cb8c07dcd9c127"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2904c1b873e20a9642a33a41b9381a8a8d4e6fed7fa46a78506ea8476d3046d8"
-    sha256 cellar: :any,                 x86_64_linux:      "23407ef5f6e995398fb01dcfaebad3f82a0b7643279e06908dc8b8763482c20a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7ce0441686c5783ec75ae59d1e751cabc3d23d0a204491cebb5c7982a25a5944"
   end
 
   depends_on "go" => :build

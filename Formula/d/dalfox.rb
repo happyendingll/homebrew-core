@@ -7,11 +7,8 @@ class Dalfox < Formula
   head "https://github.com/hahwul/dalfox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b726844c173b079d2f6488675b8000f0ee996e6e9ac0b3971447837b500f265b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eef416373ad9387fbdaabb0f29c7733cff85776f2f6a6edc62f91b799646bfa7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "89008c93e722f1a9e7d0f98a5b89d86ad3cc508756bc4dbda0decc5595da6f9d"
-    sha256 cellar: :any,                 arm64_linux:       "9263241289ad07df307982b5c33627fe1703762e052604e95a743c7f39d37d35"
-    sha256 cellar: :any,                 x86_64_linux:      "b0cbd3dc90892899f64283d96360e8e18beb5674d292ecfb1b90485ac36b6a4f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a8cae3425d1a42ca4ae559d0127bd57e95c877a2e4dd0f7f0da7ca1442be4f3e"
   end
 
   depends_on "rust" => :build

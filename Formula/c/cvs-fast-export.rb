@@ -16,11 +16,8 @@ class CvsFastExport < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5b39729c3f12f7097903a9c0ee82d795cf9023d75b0c270c7c04345d0a1adb04"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5b39729c3f12f7097903a9c0ee82d795cf9023d75b0c270c7c04345d0a1adb04"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b39729c3f12f7097903a9c0ee82d795cf9023d75b0c270c7c04345d0a1adb04"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "783b134239039debbfebc95f54e35dd2ebbf7a7433d9111e8685115c037af56a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3b985cf99590771f6595a0123c47db41dc9b1c74a044de9bf01edfeeced83c30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2455aef0dacef70905cf03bee67b787d9f213ae7ae0bd952fab81d0bad999407"
   end
 
   depends_on "asciidoctor" => :build

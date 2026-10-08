@@ -7,11 +7,8 @@ class Fastp < Formula
   head "https://github.com/OpenGene/fastp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7b18c03f4b78f860f7a59a04898a97faf07a32c9380c286dcdac0648768c0ec5"
-    sha256 cellar: :any, arm64_tahoe:       "995312e7f01fa658e4d2c4d29c0350819fc48d2bcd00a37a51c82c867fab4f55"
-    sha256 cellar: :any, arm64_sequoia:     "fe550341fb5db9415ef784843397dbe04f26459ba5d14c2707f5bcb3bc30581b"
-    sha256 cellar: :any, arm64_linux:       "c68f24192b8fe96ad6a239682aa88c518794dff09539e22e740d1edca7c0b937"
-    sha256 cellar: :any, x86_64_linux:      "2c5c87a9f9aa944f14f022ee4eabe31f0ce0bb030448887a6d09cfbb46fe675b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "e1abc1e83a33cbe26a7d64dff522527ff8515a46fe0dfdb0af640690a605dd67"
   end
 
   depends_on "highway"
