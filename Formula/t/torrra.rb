@@ -14,11 +14,8 @@ class Torrra < Formula
   no_autobump! because: "`update-python-resources` cannot determine dependencies"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f74d59e3aca60f3a5e0595b0b5d12f389ea1dbe0f3ca023a136980c09ef4aff1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f74d59e3aca60f3a5e0595b0b5d12f389ea1dbe0f3ca023a136980c09ef4aff1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f74d59e3aca60f3a5e0595b0b5d12f389ea1dbe0f3ca023a136980c09ef4aff1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3f45a9aadf52ccdb6b20d7865464e1be47a544e2f1fd1aa802d88650546780cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3f45a9aadf52ccdb6b20d7865464e1be47a544e2f1fd1aa802d88650546780cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1b0d1d87e6dc95878ddb7a202c8e7b4401f5a9616783c32324b8c7f837ee7b1"
   end
 
   depends_on "certifi" => :no_linkage

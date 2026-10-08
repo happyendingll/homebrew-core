@@ -6,11 +6,8 @@ class ProtocGenGrpcJava < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "81ea4bbfe17828183a079b1800a679bb516c071d526452d469815341fd33ee77"
-    sha256 cellar: :any, arm64_tahoe:       "66d6239ccf6feb438a61d9fdef376fe001396fd3c9ba29b683a2922ba0d433e8"
-    sha256 cellar: :any, arm64_sequoia:     "405831ff50e7e5a615eac8f40f9fd8094bd90396ef0082572d52a9bf65e94a30"
-    sha256 cellar: :any, arm64_linux:       "14bdee377ef1c706bc637c445ec94e447cec04725a290c23bfc73d41fe622ce6"
-    sha256 cellar: :any, x86_64_linux:      "1f084a36fc278945a303599ca0a9780cd186cf3dac5464ef1fc049287b42ea47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "e1a51410b6547f61e5e49d69a36d9ed83a0337d7d424ffc5da7b9d12e8e93ccf"
   end
 
   depends_on "gradle@8" => :build

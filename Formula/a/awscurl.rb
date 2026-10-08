@@ -10,11 +10,8 @@ class Awscurl < Formula
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "52add76264a192c359e3d2f496f7aeb91c820c84e5243e13417f5dc43c4d7963"
-    sha256 cellar: :any, arm64_tahoe:       "cbba89b6bfa9f70c1a8cf5c1cbee4a43d702b14f81f3a9e291f71d38e901026a"
-    sha256 cellar: :any, arm64_sequoia:     "a158ded5905691e814aac6a10f908f1c516fa5802950cb2293b0a18e84714fb5"
-    sha256 cellar: :any, arm64_linux:       "834df39408d0fb5d1d358fc050ab84631d00dc05453792df218b29fb175dd8d4"
-    sha256 cellar: :any, x86_64_linux:      "61402da1e22c608204fd67c59667334e8bdb5147bc21c979a4093afa0319c077"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "879e8812c270fdce8ab07be194205cada43b4036393344841092db57ec0a6471"
   end
 
   depends_on "aws-c-auth"
