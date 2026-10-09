@@ -1,13 +1,16 @@
 class Aube < Formula
   desc "Fast Node.js package manager"
   homepage "https://aube.en.dev"
-  url "https://github.com/jdx/aube/archive/refs/tags/v2.6.1.tar.gz"
-  sha256 "69fe32b2a6cfc61828dc07fd4bd888eb58b2a6803a5d9e95fba5c511bdc3c8fc"
+  url "https://github.com/jdx/aube/archive/refs/tags/v2.7.0.tar.gz"
+  sha256 "fbe4cc7097b0374ee73fa1fa32f229a8a8ba48e6b9792661857e9499a1e20e1d"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "6bb6e6eba2eb0eaf5a3929298a2e3211c19823df1e9e1f0427c0421774ab864f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e98bcc1de17ea06abf9ca0854320bfc14313de9f2e16fc59563446ad40e864f2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2696e89a1f6659ab938c9ba5f062eb2df87bae10cd30636a8c6b4f9f834aaf01"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cb66d917ca00a5127cc6c9d451a18e0afe42aa573ddc7901552c405fd0bee707"
+    sha256 cellar: :any,                 arm64_linux:       "558baa49952f09cdd9102bc28b601245c44110a73d5dd14e090d55f410791ab3"
+    sha256 cellar: :any,                 x86_64_linux:      "7c5f821955fbe9a1511b09ad8748fbd2f7b175251ae0ad4e27fecc0b2e13c302"
   end
 
   depends_on "cmake" => :build

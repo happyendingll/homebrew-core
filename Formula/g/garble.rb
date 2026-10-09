@@ -4,11 +4,15 @@ class Garble < Formula
   url "https://github.com/burrowers/garble/archive/refs/tags/v0.18.0.tar.gz"
   sha256 "56ca8f1c354eb1043c18099726c7ab7b685751d5f020434561b1676308ea9754"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/burrowers/garble.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "2db7c4645385db2909ddf4dccb1dfc536e3aec4d79f9418d582c5a591ac2d939"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cb2a4103781b16daa229b9ac779617ee798d9215be6b1712575dacadba1d29dd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cb2a4103781b16daa229b9ac779617ee798d9215be6b1712575dacadba1d29dd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cb2a4103781b16daa229b9ac779617ee798d9215be6b1712575dacadba1d29dd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "335579e0142632841f58518894a5001dcf331bcddc40a6b45893916e68f82492"
+    sha256 cellar: :any,                 x86_64_linux:      "8987975c798693bf7d018ab853085a726cb998e5255d6776c224f827ed92ff82"
   end
 
   depends_on "go" => [:build, :test]

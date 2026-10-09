@@ -4,6 +4,7 @@ class ShairportSync < Formula
   url "https://github.com/mikebrady/shairport-sync/archive/refs/tags/5.5.2.tar.gz"
   sha256 "abcdb59674b6eedb4f3f6228f3c702e65d2cdc037231b0c48617fd90891b49e9"
   license "MIT"
+  revision 1
   head "https://github.com/mikebrady/shairport-sync.git", branch: "master"
 
   livecheck do
@@ -12,8 +13,11 @@ class ShairportSync < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "2d85e23a3c6b82a3d8b339aad807740d0100ad101ac03f4a06682c0e5689516d"
+    sha256 arm64_golden_gate: "ca485aa845f0ace913c96b738b163cfec02599168aba1f1db59df901b65a6f58"
+    sha256 arm64_tahoe:       "36feac3b5b915d840388c62e691a03ce76efed097f679a09a1856ea8fe069164"
+    sha256 arm64_sequoia:     "bf601a0a9329ce643f86ffe518aa743cbeee46ce1994c7d71aeb4c51dd68669b"
+    sha256 arm64_linux:       "eabcee3a05fe35cd898275815818244f658dbec8c783b17e7c35ab7bd6559da2"
+    sha256 x86_64_linux:      "035dacb2f4addfd76a3a18a44903f7c49f786c844bec821c909465dcee6df697"
   end
 
   depends_on "autoconf" => :build
@@ -23,7 +27,7 @@ class ShairportSync < Formula
   depends_on "libconfig"
   depends_on "libdaemon"
   depends_on "libsoxr"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "popt"
   depends_on "pulseaudio"
 

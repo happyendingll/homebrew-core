@@ -4,6 +4,7 @@ class SynergyCore < Formula
   url "https://github.com/symless/synergy/archive/refs/tags/v1.21.4.tar.gz"
   sha256 "369d789ae5616e6e43b5eeb6feac644ab7d3384c138748a13ed9f7e1df7361a6"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
+  revision 1
   head "https://github.com/symless/synergy.git", branch: "master"
 
   # This repository contains old 2.0.0 tags, one of which uses a stable tag
@@ -17,13 +18,16 @@ class SynergyCore < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "204d8e7fe029603c9292a9e1636c9ae2a962e0c480fe33acbee6bbf017e49cfb"
+    sha256 cellar: :any, arm64_golden_gate: "c1ab802ff146a1a572907710c609b058ae23d3d70f343ca907bc18406a8acd6b"
+    sha256 cellar: :any, arm64_tahoe:       "770c9b61bb90763e90eca4b4cdf65d803d97a5becf77fba77ccc949a636c3c2b"
+    sha256 cellar: :any, arm64_sequoia:     "fa5b3ee65abe63236ee4f0b0a1ee99e5e41f19d75b975f71f31b18f0f984c49e"
+    sha256 cellar: :any, arm64_linux:       "5498fa08d7cfcd8c96cacae311dda8cedb11e92ab1e02a387b85c9e90a42a400"
+    sha256 cellar: :any, x86_64_linux:      "9b1d6d2f72c1a5f5aca1537d0d496d86c65d3990767d2ac3666f08ef45164203"
   end
 
   depends_on "cmake" => :build
   depends_on "qttools" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "qtbase"
 
   on_macos do

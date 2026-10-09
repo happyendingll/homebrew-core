@@ -2,8 +2,8 @@ class Mimirtool < Formula
   desc "CLI for interacting with Grafana Mimir"
   homepage "https://grafana.com/docs/mimir/latest/operators-guide/tools/mimirtool/"
   url "https://github.com/grafana/mimir.git",
-        tag:      "mimir-3.2.1",
-        revision: "e49585d43c6e852225e114bd1ddd98da58a4c060"
+        tag:      "mimir-3.2.2",
+        revision: "b1fe15c38773edf871267735083e4445fc75c3d0"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/mimir.git", branch: "main"
 
@@ -17,8 +17,11 @@ class Mimirtool < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "bdd4e98bf84bc0c3246da78d377fbee8cbe51fdbc3c6ff95a5edc29981dcf391"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e66282d0d95d7a06b8924992b8088337f06db26b2ca496fdc11cecdffcbf7cb9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "79c78611c39cfc811052f47f8bdec8879a7b86d3d58e4e9159fb66ea0fade0a2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a7237635ea08d626817466d8dbb632d378c849fb9ab7c93a188e1b5105e0758d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4aef4a1fa4b4bcbd02d9a44984a9d1affa2ee4f0fcc51e5aeb6fec58dfbdcf2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "de19d12402e06aa0d24ea52379fcd5aa9fa6f210b725ff734914260df030bc47"
   end
 
   depends_on "go" => :build

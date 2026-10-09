@@ -4,7 +4,7 @@ class Libwebsockets < Formula
   url "https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.0.0.tar.gz"
   sha256 "f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962"
   license "MIT"
-  revision 1
+  revision 2
   compatibility_version 6
   head "https://github.com/warmcat/libwebsockets.git", branch: "main"
 
@@ -14,14 +14,17 @@ class Libwebsockets < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "eadfbf2893c0e0456a82a2620f15e227893215d3fa71a1c87cc60fd0c96698dc"
+    sha256 arm64_golden_gate: "768cb2ce7842fff8985617533464c1e64f632fab59543953aaf5180a45155e41"
+    sha256 arm64_tahoe:       "100fb7dd709a20adea80fc04fe9a2a1872ec0c6e3860b854192abe8602b7e809"
+    sha256 arm64_sequoia:     "1b6ef78b93a5bc27f4d7f4ed3c992e4f9e8e31b8d091c45a47aa442c2971ba29"
+    sha256 arm64_linux:       "db6fd512452137f98c625251314c8be70215ea846f0266e87a7956a8a2ea75f0"
+    sha256 x86_64_linux:      "ebf54cc13c6a4e919f87401a25e0f0aad62ed7f8b7b6595af83681991e7b1914"
   end
 
   depends_on "cmake" => :build
   depends_on "libevent"
   depends_on "libuv"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   deny_network_access!
 
@@ -35,7 +38,7 @@ class Libwebsockets < Formula
                     "-DLWS_WITH_LIBUV=ON",
                     "-DLWS_WITHOUT_TESTAPPS=ON",
                     "-DLWS_UNIX_SOCK=ON",
-                    "-DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@3")}",
+                    "-DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
@@ -56,7 +59,7 @@ class Libwebsockets < Formula
         return 0;
       }
     C
-    system ENV.cc, "test.c", "-I#{formula_opt_prefix("openssl@3")}/include",
+    system ENV.cc, "test.c", "-I#{formula_opt_prefix("openssl@4")}/include",
                    "-L#{lib}", "-lwebsockets", "-o", "test"
     system "./test"
   end

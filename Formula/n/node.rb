@@ -1,29 +1,11 @@
 class Node < Formula
   desc "Open-source, cross-platform JavaScript runtime environment"
   homepage "https://nodejs.org/"
+  url "https://nodejs.org/dist/v26.11.0/node-v26.11.0.tar.xz"
+  sha256 "aaad9242704524109e88d48be7bb7b7943486d931e740a352c02e97e107f18c9"
   license "MIT"
-  revision 2
-  compatibility_version 1
+  revision 1
   head "https://github.com/nodejs/node.git", branch: "main"
-
-  stable do
-    url "https://nodejs.org/dist/v26.10.0/node-v26.10.0.tar.xz"
-    sha256 "7b3a546d33cb7e15a43bdd7a57e0be5d5fd5ffc553e6e4c120033e66f0ba20c5"
-
-    # Backport support for temporal with system ICU
-    patch do
-      url "https://github.com/nodejs/node/commit/c4c11636b1420fd996e16a583b37309c179d17df.patch?full_index=1"
-      sha256 "7790de4db394b03fc6c8df8101c126ea401506347d67cc1555aeeb9be1ad87f1"
-      type :backport
-      resolves "https://github.com/nodejs/node/pull/65992"
-    end
-    patch do
-      url "https://github.com/nodejs/node/commit/bba34225c149b21f5fee96e168d7ee6f0bb5efb9.patch?full_index=1"
-      sha256 "68764ccc83203cd0a9e5b3693ffc4f9673f7dc348dffe76efb15948c07fa3d03"
-      type :backport
-      resolves "https://github.com/nodejs/node/pull/65992"
-    end
-  end
 
   livecheck do
     url "https://nodejs.org/dist/"
@@ -31,8 +13,11 @@ class Node < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "9710ffaaa590f884495a9906271087207ad847989cd75a68558b98cb23f07ca7"
+    sha256 arm64_golden_gate: "775ddcc23852a7c5d6040067ccbd1eb13f5dd8af5ea06fe000b3f999d693c387"
+    sha256 arm64_tahoe:       "47eaf1b352eb10d704bae5a6153727ac9a6f2042edf410feb6699deabc62ea66"
+    sha256 arm64_sequoia:     "18ad2cb6840b562bc9d265b36685175b4aa0e471084dd146115481e59e892843"
+    sha256 arm64_linux:       "1c2aa6197bf95b31b802417d0d4a6936b9b2e03bfec0d57ecf63b6912effb67f"
+    sha256 x86_64_linux:      "3a3e79b163a88115f7ef3b683e16a88ea56577495ace3635ef671ae868b233de"
   end
 
   depends_on "pkgconf" => :build
@@ -50,7 +35,7 @@ class Node < Formula
   depends_on "llhttp"
   depends_on "merve"
   depends_on "nbytes"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "simdjson"
   depends_on "simdutf"
   depends_on "sqlite" # Fails with macOS sqlite.
@@ -87,8 +72,8 @@ class Node < Formula
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-11.19.1.tgz"
-    sha256 "9f58bff01604cb1b14008fef14dceb14d836a49225e45c6c2e37de3be3e707f0"
+    url "https://registry.npmjs.org/npm/-/npm-11.20.0.tgz"
+    sha256 "d1a92f40e6c407b84c3a00c3cf978a10b24fd42f153c527e2016cef7bb34a483"
 
     livecheck do
       url "https://raw.githubusercontent.com/nodejs/node/refs/tags/v#{LATEST_VERSION}/deps/npm/package.json"
@@ -139,7 +124,7 @@ class Node < Formula
       "merve"         => ["merve",                     "merve"],
       "nbytes"        => ["nbytes",                    "nbytes"],
       "nghttp2"       => ["nghttp2",                   "libnghttp2"],
-      "openssl"       => ["openssl/openssl",           "openssl@3"],
+      "openssl"       => ["openssl/openssl",           "openssl@4"],
       "simdjson"      => ["simdjson",                  "simdjson"],
       "simdutf"       => ["v8/third_party/simdutf",    "simdutf"],
       "sqlite"        => ["sqlite",                    "sqlite"],

@@ -4,6 +4,7 @@ class Tsduck < Formula
   url "https://github.com/tsduck/tsduck/archive/refs/tags/v3.45-4798.tar.gz"
   sha256 "a35845430fff1385cf1cda9645bbfd0ec887ed440137fc6c26863c624c24eb63"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/tsduck/tsduck.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
@@ -16,8 +17,11 @@ class Tsduck < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "bf5f28772de6410c9177968017d1695ce2059def9c5db24bec68bc1d7707da02"
+    sha256 cellar: :any, arm64_golden_gate: "00e75b5b3b3b6a5d9a38764c543f6cada103841dbbf9b88c080f22103e754762"
+    sha256 cellar: :any, arm64_tahoe:       "951ddc68d24c793772712c6847893e0c52f9683efd52625acf47ce7da2a1da30"
+    sha256 cellar: :any, arm64_sequoia:     "35aea7a0a6fa99a069412ec76871eb6a704c870526e580c615d5a698974a20a6"
+    sha256 cellar: :any, arm64_linux:       "a24d0c99bf094e01725ac2d3099eee3d18fba1ca30de27723de8ca0937d022ac"
+    sha256 cellar: :any, x86_64_linux:      "65f41991a89fdc867ceed4a3aad9f157478f49cad8f9d5f1ba41d5d4b9d16b34"
   end
 
   depends_on "asciidoctor" => :build
@@ -26,7 +30,7 @@ class Tsduck < Formula
   depends_on "qpdf" => :build
   depends_on "librist"
   depends_on "libvatek"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "srt"
 
   uses_from_macos "python" => :build

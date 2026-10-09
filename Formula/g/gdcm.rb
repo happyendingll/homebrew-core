@@ -4,6 +4,7 @@ class Gdcm < Formula
   url "https://github.com/malaterre/GDCM/archive/refs/tags/v3.2.7.tar.gz"
   sha256 "b7b17b70c009677cf244cc7837b88386441e097f8861fdeee83aa27d1bc1b090"
   license "BSD-3-Clause"
+  revision 1
 
   livecheck do
     url :stable
@@ -11,8 +12,11 @@ class Gdcm < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "65e32f5801e2a366e609230a100a0c907488c509403c87873fc9f651fb3dc2ab"
+    sha256 arm64_golden_gate: "2ee1cedcbe12a7dc904cd90dd2fed07b4359e815c2b8fc5005999caec69016ea"
+    sha256 arm64_tahoe:       "da182dcf5e433917b034fe4c92847c314813abc756a5baa9ecd2d0753099d784"
+    sha256 arm64_sequoia:     "06bea333e514d4d2e03e497b03551efbc585b88519a22a0aa14e74e85053a93c"
+    sha256 arm64_linux:       "9f615c631ef1255e11832d527393b73030b014df150619a12da12ecca9af4928"
+    sha256 x86_64_linux:      "5561c82eade00a159c1de70e2e1ff9d508667ab57192f6d24965b10e209a5210"
   end
 
   depends_on "cmake" => :build
@@ -23,7 +27,7 @@ class Gdcm < Formula
   depends_on "charls"
   depends_on "json-c"
   depends_on "openjpeg"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "expat"
   uses_from_macos "libxml2"

@@ -4,6 +4,7 @@ class Qca < Formula
   url "https://download.kde.org/stable/qca/2.3.12/qca-2.3.12.tar.xz"
   sha256 "d4a2b3aa0272d73ea0c4cd2140960177fa34ddc2030e59a48ecfb80c757572c3"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://invent.kde.org/libraries/qca.git", branch: "master"
 
   livecheck do
@@ -12,8 +13,11 @@ class Qca < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "dc677c79fbb27ccc4d7dab7ce1945402b97258e4b406eb654dc5ea62c00b9ca3"
+    sha256 cellar: :any, arm64_golden_gate: "15f38f2cc195a259e995a5f4c93d74fccb41859d467d28acd5ce0f4c32f9a132"
+    sha256 cellar: :any, arm64_tahoe:       "fdddbeb7325df7769d112419f5c15bb663a6661dee5847600b9d8b7f3a6b5119"
+    sha256 cellar: :any, arm64_sequoia:     "63171f23c9da5eb39bf7f49e7d188df973b661aaafab5490c916cd7c59312279"
+    sha256 cellar: :any, arm64_linux:       "4ddab9b501ae5b2e76b72e2d86ed771a9d147eb93b61e7c34305906b30cb4fdf"
+    sha256 cellar: :any, x86_64_linux:      "49115eeea28e49601c9599049b9ed2f729187babc4239f0006ee5c2b57cce670"
   end
 
   depends_on "cmake" => :build
@@ -23,7 +27,7 @@ class Qca < Formula
   depends_on "gnupg"
   depends_on "libgcrypt"
   depends_on "nss"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pkcs11-helper"
   depends_on "qt5compat"
   depends_on "qtbase"

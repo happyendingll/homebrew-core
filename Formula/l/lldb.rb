@@ -1,30 +1,22 @@
 class Lldb < Formula
   desc "Next generation, high-performance debugger"
   homepage "https://lldb.llvm.org/"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.3/llvm-project-23.1.3.src.tar.xz"
+  sha256 "c44186a7762ed28954be72e5ff6df9808e0779d4f1bf014ecc4e7e211d31ee34"
   license "Apache-2.0" => { with: "LLVM-exception" }
   compatibility_version 1
   head "https://github.com/llvm/llvm-project.git", branch: "main"
-
-  stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.2/llvm-project-23.1.2.src.tar.xz"
-    sha256 "c98bbef08a2b4c2613cd50e9aa9ae7b69b1fe6c16b2c40373bc0ab6116fdf78a"
-
-    # Fix build with macOS 27 SDK, which defines `CPU_SUBTYPE_ARM64E_X1`
-    patch do
-      url "https://github.com/llvm/llvm-project/commit/923902483c7a6937a65b9679795a247ae2a2ad56.patch?full_index=1"
-      sha256 "779ad57084a91143c84907ea83f41925a1d08b396a08551c08ce39e7d35a0f07"
-      type :backport
-      resolves "https://github.com/llvm/llvm-project/pull/223090"
-    end
-  end
 
   livecheck do
     formula "llvm"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "ec3aeb3bd26d1a70d864f9603ed47cc3849d15804585c2ec7a3fada8dc7815bb"
+    sha256 arm64_golden_gate: "f01865566dd2dee88c983d321fa7b598aef90c8e077ec70097005c73acb64611"
+    sha256 arm64_tahoe:       "4839e1ec4ab04e2d7b4505720965644c0d47a31794f317467630e3078bd8171b"
+    sha256 arm64_sequoia:     "cd3c07b401906d6742fa80fbf72b7866f061b99209e3ee2988c9b302bbcfac06"
+    sha256 arm64_linux:       "d0e58e02d63c07727a51db8eff48fcb4672fa265e00c9b7843613623fe680d7f"
+    sha256 x86_64_linux:      "4e742d2345ae44215d83234b8b018caae081a27f98693b1cfa29948101d9f4d5"
   end
 
   keg_only :provided_by_macos

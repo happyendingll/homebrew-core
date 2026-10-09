@@ -1,8 +1,8 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  url "https://github.com/tmux/tmux/releases/download/3.7c/tmux-3.7c.tar.gz"
-  sha256 "7c60cae9a0e25288e2e24750aafc9e8800fc7fd4555e447e1b29ee4201cfb3bf"
+  url "https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz"
+  sha256 "e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e"
   license "ISC"
   compatibility_version 1
 
@@ -13,8 +13,11 @@ class Tmux < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "96afbc7d3fc164cd7b65be1c19d2ee2428a3cabc435c247451d83ba372547feb"
+    sha256 cellar: :any, arm64_golden_gate: "c01ce1665582878b8d62f8768b220409195c9883d9c34820aa9cb58cbc27f37f"
+    sha256 cellar: :any, arm64_tahoe:       "7af474204938c09cb35aef901d32e2633b90a27505eac076ac551170c3c393de"
+    sha256 cellar: :any, arm64_sequoia:     "b436a1f261f94981c3b99429131bf719a8d56437896502815caac53a735db041"
+    sha256 cellar: :any, arm64_linux:       "7c195f80f626a955f6d7843e543342b23bd9a3aad6d696734ef960d508437370"
+    sha256 cellar: :any, x86_64_linux:      "464256bd8654358881e8a29043eac0f9c154b0eb5c82568761728f8f28c5e710"
   end
 
   head do

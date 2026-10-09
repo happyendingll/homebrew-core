@@ -4,6 +4,7 @@ class Mupdf < Formula
   url "https://mupdf.com/downloads/archive/mupdf-1.28.5-source.tar.gz"
   sha256 "98a5c10cda20c3992cdf76ff6b2a1149c32bd79cc796d3f703230b1185b7e934"
   license "AGPL-3.0-or-later"
+  revision 1
   compatibility_version 8
   head "git://git.ghostscript.com/mupdf.git", branch: "master"
 
@@ -13,8 +14,11 @@ class Mupdf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "7a159ae4541599d2f54b75f150794bab759fc38f0ed5aa180e1150b5cc88f198"
+    sha256 cellar: :any, arm64_golden_gate: "da7273d5201cdf7fa4384d6e49001a8dabead2e6ebc175345b98513019499daf"
+    sha256 cellar: :any, arm64_tahoe:       "04a06dfe11422cea9963df49cbf1aec0f1f0068923b25480fd72e171be6c85a1"
+    sha256 cellar: :any, arm64_sequoia:     "7d01dc8ae26df4ea90ab41962f1a6b0e96712e5379deb6c1c25f0b1749052906"
+    sha256 cellar: :any, arm64_linux:       "531f5fa728b66c4e91b47ba2d4b4ec4b5d85a49aa699441c00d0755b5049b0d4"
+    sha256 cellar: :any, x86_64_linux:      "4c9b9aec789d1cfa4008db4f0a36b9efb9bad3d4e696a8086f84b6b18cb26179"
   end
 
   depends_on "llvm@21" => :build
@@ -28,7 +32,7 @@ class Mupdf < Formula
   depends_on "jpeg-turbo"
   depends_on "leptonica"
   depends_on "openjpeg"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "python@3.14"
   depends_on "tesseract"
 

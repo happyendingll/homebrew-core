@@ -7,6 +7,7 @@ class Bind < Formula
   # "version_scheme" because someone upgraded to 9.15.0, and required a
   # downgrade.
   license "MPL-2.0"
+  revision 1
   version_scheme 1
 
   stable do
@@ -24,8 +25,11 @@ class Bind < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "521b78cfc0f033f5d536577364a904daa86fc2821e1943837e44d0aa04763958"
+    sha256 arm64_golden_gate: "77dbd978bd0a3570e3e78cfccabd2778017d09fde41e54b4eee320d70091f74b"
+    sha256 arm64_tahoe:       "057103d28ec6ef77610210fa2f4b1def818d19de15fc399325ee09fe23d7d74b"
+    sha256 arm64_sequoia:     "8cb1b551e29400c75a85c88f92836855d5f370221e873d4d16e3eee80fcd0790"
+    sha256 arm64_linux:       "ea3eb234ad21347ff28abf728c2ae44f7f53fed732c522c925875361bdae015f"
+    sha256 x86_64_linux:      "c85d39263564d9d0c7e377f65c3d037cb40f96531f49b6eb1130ff2544b5b406"
   end
 
   head do
@@ -45,7 +49,7 @@ class Bind < Formula
   depends_on "libidn2"
   depends_on "libnghttp2"
   depends_on "libuv"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "userspace-rcu"
 
   uses_from_macos "libxml2"
@@ -76,7 +80,7 @@ class Bind < Formula
         "--localstatedir=#{var}",
         "--with-json-c",
         "--with-libidn2=#{formula_opt_prefix("libidn2")}",
-        "--with-openssl=#{formula_opt_prefix("openssl@3")}",
+        "--with-openssl=#{formula_opt_prefix("openssl@4")}",
         "--without-lmdb",
       ]
 

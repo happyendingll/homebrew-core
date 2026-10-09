@@ -1,14 +1,17 @@
 class Nx < Formula
   desc "Smart, Fast and Extensible Build System"
   homepage "https://nx.dev"
-  url "https://registry.npmjs.org/nx/-/nx-23.2.1.tgz"
-  sha256 "9da5b6ea573fb377221e13ede170c8a2576bd0819791193a09a55d52c8cfd28d"
+  url "https://registry.npmjs.org/nx/-/nx-23.3.0.tgz"
+  sha256 "462236d54b209ffcd61a39fbc777eeeaeda126328602936ea1f2cc38e78ad912"
   license "MIT"
   version_scheme 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "886f1ab217503fbb0aab92a25d1d6cd6bbdc9e3ae4932bfedcd6ca13e89ad389"
+    sha256 cellar: :any,                 arm64_golden_gate: "a4f07ced22e09d73a9381890881a806b6a173ddc15291dd4df5daf942245ed34"
+    sha256 cellar: :any,                 arm64_tahoe:       "a4f07ced22e09d73a9381890881a806b6a173ddc15291dd4df5daf942245ed34"
+    sha256 cellar: :any,                 arm64_sequoia:     "a4f07ced22e09d73a9381890881a806b6a173ddc15291dd4df5daf942245ed34"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3ef585c03f23a3b92688c71185bdf024a8eec2baf4f92fe8ac722d49ac44f2fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4ddf233bc32ef1b6dc69a3b2da19ae5d9be7ebcc624ea83fd8fdce8df2b4ac02"
   end
 
   depends_on "node"

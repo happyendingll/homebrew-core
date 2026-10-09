@@ -4,15 +4,19 @@ class Mailcatcher < Formula
   url "https://github.com/sj26/mailcatcher/archive/refs/tags/v0.11.0.tar.gz"
   sha256 "d8b704a7699bca68ac89f99ca40234120099683d58eb0646d1ab16bf06c7c593"
   license "MIT"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "12794adcf05a8da4434b069c856b32739a2dbab07682b924569d6373ebc6553c"
+    sha256 cellar: :any, arm64_golden_gate: "ea74ae070fccad891c9fd20f08bf085e2ea95d8dea5a840f7db8eabb1379acf9"
+    sha256 cellar: :any, arm64_tahoe:       "374eb24bc9b4bb16f262b72bdc74ad38aa486ebdf44dc2876ef9c058d4e1aa1c"
+    sha256 cellar: :any, arm64_sequoia:     "f161cba4425310c55c772cfdd4e19275fb0053165003ac73bd9c0081c49105d8"
+    sha256 cellar: :any, arm64_linux:       "4a005a007476ac29563930739c6fc602ad4f4c5a65c85663a60b494e24ca8981"
+    sha256 cellar: :any, x86_64_linux:      "4514cfc9256532af98dca1fb3b3a885d854e65a97c76533f8e2b90af2e583e70"
   end
 
   depends_on "pkgconf" => :build
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "ruby"
 
   uses_from_macos "libedit"
@@ -147,7 +151,6 @@ class Mailcatcher < Formula
   def install
     ENV["GEM_HOME"] = libexec
     resources.each do |r|
-      r.fetch
       args = [r.cached_download, "--ignore-dependencies", "--no-document", "--install-dir", libexec]
       args += ["--", "--enable-system-libraries"] if r.name == "sqlite"
       system "gem", "install", *args

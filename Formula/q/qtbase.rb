@@ -1,18 +1,29 @@
 class Qtbase < Formula
   desc "Cross-platform application and UI framework"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
-  sha256 "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } }, # qmake
     "BSD-3-Clause", # *.cmake
     "GFDL-1.3-no-invariants-only", # *.qdoc
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtbase.git", branch: "dev"
+
+  stable do
+    url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
+    mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
+    mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
+    sha256 "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22"
+
+    # Backport to support md4c 0.6.0
+    patch do
+      url "https://github.com/qt/qtbase/commit/032643f99e090e0304ef935c2ee11c109d55c8a1.patch?full_index=1"
+      sha256 "6870a711a6fb7ce6367f541e10ec9fe2785bd7d7484a2b1759b8d1f082a3f09f"
+      type :backport
+    end
+  end
 
   # The first-party website doesn't make version information readily available,
   # so we check the `head` repository tags instead.
@@ -22,8 +33,11 @@ class Qtbase < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "8ef0e500b683ad3b27c3dc615e9942d7315f2b54cc8019a587cc1440fcbe2ba1"
+    sha256 cellar: :any, arm64_golden_gate: "ee64b7f08ef251bd2585ecfdfd9c32f487b857e9a4052631a00dfa08de604215"
+    sha256 cellar: :any, arm64_tahoe:       "793d33d1496520c6d0ea5403680e4f2d99f771825115a8933bab373a36e404f9"
+    sha256 cellar: :any, arm64_sequoia:     "2273d27938c1646b7363f39a2ab68ba3307d71b252c70ef6041ff2aa635ab9aa"
+    sha256 cellar: :any, arm64_linux:       "735bb3d1442e40507af8db5dfce5b78ce1c73bc57552b32830b705f362b2c0a0"
+    sha256 cellar: :any, x86_64_linux:      "937513a3f45c7a7b204a83efb10232df9fd1e2d989f99b40b4bf8b76aa7a835e"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -42,7 +56,7 @@ class Qtbase < Formula
   depends_on "libb2"
   depends_on "libpng"
   depends_on "md4c"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
   depends_on "zstd"
 
@@ -52,7 +66,6 @@ class Qtbase < Formula
 
   on_macos do
     depends_on "molten-vk" => :build
-    depends_on xcode: :build
   end
 
   on_linux do
@@ -81,6 +94,8 @@ class Qtbase < Formula
   end
 
   conflicts_with "qt@5", because: "both link conflicting binaries"
+
+  deny_network_access!
 
   def install
     # Allow -march options to be passed through, as Qt builds

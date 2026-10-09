@@ -7,6 +7,7 @@ class Ffmpeg < Formula
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   # Passing `--enable-version3` changes the license to GPL v3+.
   license "GPL-3.0-or-later"
+  revision 1
   compatibility_version 3
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
@@ -16,8 +17,11 @@ class Ffmpeg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "f2e43a287b691f450a356eef2b7ffb8c23df8f73ea8380722a0a02ff6bff991b"
+    sha256 arm64_golden_gate: "d521452157b1117f909f441ce90165c360a7dcd9785c87d14cabc28934572a90"
+    sha256 arm64_tahoe:       "595b0bb854e692d7f6f89b866e860afacfdab5e3698451555547f58f523ed04d"
+    sha256 arm64_sequoia:     "65ba8ccb4778a0554346f416cd9a64c6cce2f92c7af5effb48deb6b757f01678"
+    sha256 arm64_linux:       "71883b27a7bea616321bb41458d4821ee31fe3855e0f262c9b27059fa4d56d91"
+    sha256 x86_64_linux:      "9b63fb0037cb84285b5c848606e3d84af3c8c39d17030ac9796de4acf631e951"
   end
 
   depends_on "pkgconf" => :build
@@ -31,7 +35,7 @@ class Ffmpeg < Formula
   depends_on "lame"
   depends_on "libvmaf" # dependent: ab-av1
   depends_on "libvpx"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "opus"
   depends_on "sdl2-compat"
   depends_on "svt-av1"

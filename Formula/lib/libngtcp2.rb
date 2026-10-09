@@ -5,16 +5,20 @@ class Libngtcp2 < Formula
   mirror "http://fresh-center.net/linux/www/ngtcp2-1.25.0.tar.xz"
   sha256 "2a34d2484ba17847a5d11965704e9dd0fac4c6d8efc75ffe1ec7de66d8c6b6fb"
   license "MIT"
+  revision 1
   compatibility_version 1
   head "https://github.com/ngtcp2/ngtcp2.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "bd08298b80a2aaa558f10e5992eb8726167f84f8c95c3e2e3d8a597bad513313"
+    sha256 cellar: :any, arm64_golden_gate: "540de48789ba48e74fd5d802db03bd3cba790336251d073396147f4079f31416"
+    sha256 cellar: :any, arm64_tahoe:       "6f3de07772fcd0b2c34b03276526de3c9ede59dbde95f6a5fafd7c5f9c584173"
+    sha256 cellar: :any, arm64_sequoia:     "9213450a97f4ddc6a0dbcdf1b2280b93efd0f02818d953b6935995d12a885ea3"
+    sha256 cellar: :any, arm64_linux:       "dba9d8ecbe77ccab7a7ed61dbfe900c7a0103afead91f3ba5a646f22cac4b15f"
+    sha256 cellar: :any, x86_64_linux:      "b277f7073873058bf547f6e6b75ac3a1f4dbea6a0a30704710b89a7e70c942a8"
   end
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   deny_network_access!
 

@@ -4,15 +4,19 @@ class Qxmpp < Formula
   url "https://invent.kde.org/libraries/qxmpp/-/archive/v1.17.0/qxmpp-v1.17.0.tar.bz2"
   sha256 "1c480d17489e0f83a976b670bb8a36b81e902152c9d5dcfe08b98e3d75f669e7"
   license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "d6862449c7044584bedbf313558706837b474d428d506dc4c46b0711114a3df5"
+    sha256 cellar: :any, arm64_golden_gate: "7232bf82e274a902bf541718cb43d404545481299976b859c018548d15cba245"
+    sha256 cellar: :any, arm64_tahoe:       "bfbda878563bdd741496f4972f13d5010f91c52eb4b446d7326f9429c2f72783"
+    sha256 cellar: :any, arm64_sequoia:     "df0a21ebbb0b8ddf8a60fcec6b6384c7461a8de57d670b1d133d26cb04f897ca"
+    sha256 cellar: :any, arm64_linux:       "54f13118756e3751341589ea5832700ccdbbccf5d776a79aa7ec475fd6fb524d"
+    sha256 cellar: :any, x86_64_linux:      "be31a7531150b247043a85e450928d72de03544f6e77203570dead66e455bbce"
   end
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "qtbase"
 
   on_macos do

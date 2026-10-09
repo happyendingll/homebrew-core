@@ -1,8 +1,8 @@
 class Mdfried < Formula
   desc "Terminal markdown viewer"
   homepage "https://github.com/benjajaja/mdfried"
-  url "https://github.com/benjajaja/mdfried/archive/refs/tags/v0.22.6.tar.gz"
-  sha256 "143518acf0765e1cc4425b28b9d8059a6097ee08a6690dcf052e906b5a3947bb"
+  url "https://github.com/benjajaja/mdfried/archive/refs/tags/v0.22.7.tar.gz"
+  sha256 "c6bb423d0547b563345482817b3cad7cbd25cbce68dcf9123375ecdbbedf445d"
   license "GPL-3.0-or-later"
   head "https://github.com/benjajaja/mdfried.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Mdfried < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "fa4b46a16c899430c109da5494628351bd820d7e0011665b14983536169cf5c9"
+    sha256 cellar: :any, arm64_golden_gate: "5ff4b9f58c25544fcb4368c03b2b2ab7fe4e027b3cd9cdecb0cf54ed319c930e"
+    sha256 cellar: :any, arm64_tahoe:       "b77aa3add48b98cc0e4573db76155c17972df88b537a7ca743417d3227803f55"
+    sha256 cellar: :any, arm64_sequoia:     "45bd4307c08ed25f4f19d7d5ed7e64606808d7284d59a73c777d7ef8f7b87387"
+    sha256 cellar: :any, arm64_linux:       "5c987a662ea3c0a2f41b48a2c975393692e1a5e4b6aface24d944ba59df06da3"
+    sha256 cellar: :any, x86_64_linux:      "e40051fe56a350062c623b2ce9d8565ba2161927251a7e113067234501a39818"
   end
 
   depends_on "pkgconf" => :build

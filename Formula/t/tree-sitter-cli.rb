@@ -1,8 +1,8 @@
 class TreeSitterCli < Formula
   desc "Parser generator tool"
   homepage "https://tree-sitter.github.io"
-  url "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.27.0.tar.gz"
-  sha256 "d35c96e68736bd9569d2757c3cc71052485f33082c3825f1aed9d0e86013a159"
+  url "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.27.1.tar.gz"
+  sha256 "982cd3d4d9eb7be18c243240a622423fd2e4ecb4bec2cd98832c2f3fa1f0f333"
   license "MIT"
   head "https://github.com/tree-sitter/tree-sitter.git", branch: "master"
 
@@ -11,8 +11,11 @@ class TreeSitterCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "41525f19ed1d9566c6c420157db14e6f090b205e249e28a4f80d012c05d83d27"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f40e48b912900b22df5ec20785cc08df23bc2e053cd2c6058b614a3a46f7cdba"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5b208d0e1ad8c0def5460ab590d893deaa320a8ad5fea0f6b3d88a7b023f046"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bee3a06c394bea639f4fc1ff0692262808a8b8873a4ec11e09bf466bd5637ab5"
+    sha256 cellar: :any,                 arm64_linux:       "b351897d830b56f8a39ff53e0d19ac1636241422c6c7949e5fcfec8af645ba3b"
+    sha256 cellar: :any,                 x86_64_linux:      "f327ee508d70ef71fa009615a8c2972d0a4e420faf7f0c148f522c5a69771347"
   end
 
   depends_on "rust" => :build

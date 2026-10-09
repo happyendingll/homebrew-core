@@ -13,6 +13,7 @@ class Redis < Formula
     { any_of: ["CC0-1.0", "BSD-2-Clause"] }, # deps/hdr_histogram
     any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"], # modules: phonetics
   ]
+  revision 1
   compatibility_version 1
   head "https://github.com/redis/redis.git", branch: "unstable"
 
@@ -22,8 +23,11 @@ class Redis < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "f7143413bf0963a13c042a2c88007f8ad4713adeeb3e89efa981b1e2b889023a"
+    sha256 cellar: :any, arm64_golden_gate: "c3959d984ae34c3a6454bd9a3636d93c92f75b95eca703a089d77f2db1e62d7d"
+    sha256 cellar: :any, arm64_tahoe:       "bfa3e42f26843f48a2aa934cc943bb6d8f3e4f1383ad044f55f2e70b8aba4af9"
+    sha256 cellar: :any, arm64_sequoia:     "c6067fd35eb174d21b5f77e8f002da2ff841801e29c67930373aa58e64748a37"
+    sha256 cellar: :any, arm64_linux:       "5f5854058876a22cd92b3c050d421008842f1280029e0132f59f06f710a00dc7"
+    sha256 cellar: :any, x86_64_linux:      "72cf0f14a24d0a5e6609bebaa1056d91c5b7b48ef82b6d866f480e72851a6a06"
   end
 
   depends_on "autoconf" => :build
@@ -33,7 +37,7 @@ class Redis < Formula
   depends_on "libtool" => :build
   depends_on "python@3.14" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "llvm" => :build
 
@@ -51,6 +55,9 @@ class Redis < Formula
     ENV.runtime_cpu_detection
     # FIXME: redisbloom's vendored readies has no `OSX_MIN_SDK_VER` past tahoe, leaving `-mmacosx-version-min=` empty
     ENV["OSX_MIN_SDK_VER"] = MacOS.version.to_s if OS.mac?
+    # RediSearch looks for Homebrew's `openssl@3` before anything else on macOS
+    inreplace "modules/redisearch/src/CMakeLists.txt",
+              "/opt/homebrew/opt/openssl@3", formula_opt_prefix("openssl@4")
     system "gmake", "deploy", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes",
            "REDISEARCH_GENERATE_HEADERS=0", "IGNORE_MISSING_DEPS=1", "LTO=0"
 

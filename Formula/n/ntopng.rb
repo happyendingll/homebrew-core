@@ -4,11 +4,15 @@ class Ntopng < Formula
   url "https://github.com/ntop/ntopng/archive/refs/tags/7.0.tar.gz"
   sha256 "fba4607596526d26c15bec3619a9b1ec7c0a482fdd4495cbbf29bb4cb2271521"
   license "GPL-3.0-only"
+  revision 1
   head "https://github.com/ntop/ntopng.git", branch: "dev"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "8054fb8ccb6e2178ae9addf447a72691027d62a1d5a67aa97c96ea1dc16a3398"
+    sha256 arm64_golden_gate: "b0c5642a8a921bfadeff0cafeb5047d942306426c4479786f43e342600a3b2c4"
+    sha256 arm64_tahoe:       "4ff5636754c94a9c543f147c5c0432a7e50dab67c3f73384f50ab02f17e55160"
+    sha256 arm64_sequoia:     "9556e2f2650a8b210f86813d410169be3b5b39da888c293d8003f5831d32f138"
+    sha256 arm64_linux:       "f56f2c141176d03b7f7e92dd7249d9393a715e2703b230ea641bbb171e248f2b"
+    sha256 x86_64_linux:      "e363ad435cc9735d5f77e149f7498e5d06b3e6a80c016fc7e3f57cec0a9304d3"
   end
 
   depends_on "autoconf" => :build
@@ -24,7 +28,7 @@ class Ntopng < Formula
   depends_on "libsodium"
   depends_on "mariadb-connector-c"
   depends_on "ndpi"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "rrdtool"
   depends_on "sqlite"
   depends_on "zeromq"

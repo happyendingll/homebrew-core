@@ -4,12 +4,16 @@ class Ccache < Formula
   url "https://github.com/ccache/ccache/releases/download/v4.14.1/ccache-4.14.1.tar.xz"
   sha256 "29f10de481ac2c41c91bfabead63d803bd2fe823e09752aade5b0b8704cc4f30"
   license "GPL-3.0-or-later"
+  revision 1
   compatibility_version 1
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "f61978037ac1431a04460116561d8e8c32895206be1c8e66c0dde80d46f673f1"
+    sha256 arm64_golden_gate: "11e7ae888dae9f976bb9d9998dda8d15dd19fd9f6872e46ae467cfecdd6e052f"
+    sha256 arm64_tahoe:       "6f206f6d5ed490c672d9c98ab467abc2ef76ff30bb34ed70e81769318a1d7308"
+    sha256 arm64_sequoia:     "80c68a802b0708869cb0bd9456e5d2df434f676601f26e15af0c5061cd8b5d5c"
+    sha256 arm64_linux:       "24d8ab852ca70d0bc88affaa47011496ecee0e6608cde5ccec70b4a507700206"
+    sha256 x86_64_linux:      "aaa452ec09271006a2fb2b03ab6c6cfde082fa9f5237104fc2b9255b7c33665d"
   end
 
   depends_on "asciidoctor" => :build
@@ -23,7 +27,7 @@ class Ccache < Formula
   depends_on "blake3"
   depends_on "fmt"
   depends_on "hiredis"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "xxhash"
   depends_on "zstd"
 

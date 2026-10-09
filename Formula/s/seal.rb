@@ -1,13 +1,16 @@
 class Seal < Formula
   desc "Easy-to-use homomorphic encryption library"
   homepage "https://github.com/microsoft/SEAL"
-  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.4.5.tar.gz"
-  sha256 "2ed7528b33c08589cfd0a8e964d8f68ca3fdc5293d25423c6ac6e67526916e06"
+  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.5.0.tar.gz"
+  sha256 "71bc8384effdc91350040a728319baf7d49732a92faf93b2508bb428b0e780b8"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "716b3918a7115865fb96c39065f28e485ad23c5bb87578e0a456834d3c780d71"
+    sha256 cellar: :any, arm64_golden_gate: "c338394a5384411a3c7aed945985d7c17f2357fdc665e38506d4dcab733fc189"
+    sha256 cellar: :any, arm64_tahoe:       "b562782fc44a65a394a1522a17bf886d2f01baff015f8ed8d5558f4e503016e9"
+    sha256 cellar: :any, arm64_sequoia:     "2b726165cc163d99b7dbc8472fee9da5530548ff692981b1f4338246e1ac6ff0"
+    sha256 cellar: :any, arm64_linux:       "20e1134282da453b63890955f9d1e5e7f01308bf2248fa546dfc0fc20d329efd"
+    sha256 cellar: :any, x86_64_linux:      "286c6b93adf298779e5bffde5b93af6bf15fe908c4eec88a85fe1cd889a07731"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -16,6 +19,10 @@ class Seal < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
+  end
+
+  on_intel do
+    depends_on "cpu_features"
   end
 
   resource "hexl" do

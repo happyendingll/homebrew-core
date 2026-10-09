@@ -1,8 +1,8 @@
 class Snap < Formula
   desc "Tool to work with .snap files"
   homepage "https://snapcraft.io/"
-  url "https://github.com/canonical/snapd/releases/download/2.77.1/snapd_2.77.1.vendor.tar.xz"
-  sha256 "10c824694cd9c9954ba7a826d245458d8fa1006d49937fe480dc9f36b57b1efc"
+  url "https://github.com/canonical/snapd/releases/download/2.78/snapd_2.78.vendor.tar.xz"
+  sha256 "197d5e5870ae7f3681276cea37339d5ee528ddfaf47f53509f858fdad46e4aed"
   license "GPL-3.0-only"
 
   livecheck do
@@ -11,8 +11,11 @@ class Snap < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "ff990399a1cd6cfa90cd7f9b71aa3a59947f6c98986a8aa0288d424000377c2b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "112d74d57a132f26cc59d79dde3d0692c011c6f30730c54749f4623cd0a4980d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "112d74d57a132f26cc59d79dde3d0692c011c6f30730c54749f4623cd0a4980d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "112d74d57a132f26cc59d79dde3d0692c011c6f30730c54749f4623cd0a4980d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7642a16c28ab449a9994175f6fa1955ba0d85a950d609385ac293ba6c04fe35b"
+    sha256 cellar: :any,                 x86_64_linux:      "6a6843b0b9758a1dbf2d0e08adc27cefa332dcd999af79f90f5e18437b5d6532"
   end
 
   depends_on "go" => :build

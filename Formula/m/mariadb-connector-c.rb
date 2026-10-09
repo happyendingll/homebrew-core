@@ -6,6 +6,7 @@ class MariadbConnectorC < Formula
   mirror "https://fossies.org/linux/misc/mariadb-connector-c-3.4.11-src.tar.gz/"
   sha256 "521c0712e9291fa96558df9e2ff431376a3a79329f13751896b694cae12765b4"
   license "LGPL-2.1-or-later"
+  revision 1
   compatibility_version 1
   head "https://github.com/mariadb-corporation/mariadb-connector-c.git", branch: "3.4"
 
@@ -25,14 +26,17 @@ class MariadbConnectorC < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "b13d1d24b6e05ff45f361782b4cf1e691a90a7af17c11964227f2d213a900a5d"
+    sha256 arm64_golden_gate: "ddf397ca3f6fc16c8a0e2e07327de560a767712afdd3e95e0b08cde122580347"
+    sha256 arm64_tahoe:       "87595e0874db22f73ce3851878ef6a1b1c245329483ab62bfea941192effefaf"
+    sha256 arm64_sequoia:     "17f850c2acfc88296813e47293805498c8138f9bc1bb2d8818602619445cf674"
+    sha256 arm64_linux:       "bd5e3301918492e473d4210569792505e8e22b47c7df86e7883a3edd209fe4ff"
+    sha256 x86_64_linux:      "8589a8b0b96508903ecb3f5b95cbc6a59353a9d1c80a1b9274ba5dc8b1adb450"
   end
 
   keg_only "it conflicts with mariadb"
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "zstd"
 
   uses_from_macos "curl"

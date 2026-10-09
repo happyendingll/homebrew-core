@@ -1,14 +1,17 @@
 class DockerBuildx < Formula
   desc "Docker CLI plugin for extended build capabilities with BuildKit"
   homepage "https://docs.docker.com/buildx/working-with-buildx/"
-  url "https://github.com/docker/buildx/archive/refs/tags/v0.37.2.tar.gz"
-  sha256 "6b4cdf64fd6b919b65be75fdfcfb6a42c9738730ee18453e26641132ecc177b4"
+  url "https://github.com/docker/buildx/archive/refs/tags/v0.38.0.tar.gz"
+  sha256 "f4705415fe4e011f19c6fe0fa324fef81236791815c51bb6210b3bbbca5b1319"
   license "Apache-2.0"
   head "https://github.com/docker/buildx.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "05a76e2d4c6928bd1b0f0f95d5a842613777d147dc3e029b48b731aedaf08230"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4accfcfd6ebc0f7ef47db24b93447bd5e1751cc74b2e1874e8f2e11b0e02d806"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4accfcfd6ebc0f7ef47db24b93447bd5e1751cc74b2e1874e8f2e11b0e02d806"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4accfcfd6ebc0f7ef47db24b93447bd5e1751cc74b2e1874e8f2e11b0e02d806"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "fb60f44e7da23fdf599d2309bd7d05848cd1d108c74accd60aba39b92136c547"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "cafde002ec747e49fc8b52e4eb0bf1b92bd1188e987162ec46cac951fa24c9ee"
   end
 
   depends_on "go" => :build

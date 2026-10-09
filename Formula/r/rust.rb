@@ -2,6 +2,7 @@ class Rust < Formula
   desc "Safe, concurrent, practical language"
   homepage "https://www.rust-lang.org/"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   compatibility_version 1
   head "https://github.com/rust-lang/rust.git", branch: "main"
 
@@ -84,14 +85,17 @@ class Rust < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "e201c7ee7f2f2ae55da4056eac0e065ddb86d6a7001c39aa619f503c008d8b0c"
+    sha256 cellar: :any, arm64_golden_gate: "0da15430cde258714a498cddf4ab7d32a70b843b83af8f3bc9061519f66044d7"
+    sha256 cellar: :any, arm64_tahoe:       "e8d91650aa4254656b78799e78d0219914103e5fd2452e6fb96893c4fbfe0f90"
+    sha256 cellar: :any, arm64_sequoia:     "ddac723f8c85f964f49235745a85a2efbc3ee09632d2dd2b0306d9c2bbdf46c9"
+    sha256 cellar: :any, arm64_linux:       "64a99b9c9fe16ed1ea2a5d5affabdbbd5b76fe234eb3b98491ae0bfa27ea4f7d"
+    sha256 cellar: :any, x86_64_linux:      "db380ae1e78c0763b101611a50d2a5afdfadfa97db40d3cbd0bbc80f8aeaf070"
   end
 
   depends_on "libgit2"
   depends_on "libssh2"
   depends_on "llvm"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pkgconf"
   depends_on "sqlite"
 

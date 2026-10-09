@@ -1,14 +1,17 @@
 class Lakekeeper < Formula
   desc "Apache Iceberg REST Catalog"
   homepage "https://docs.lakekeeper.io"
-  url "https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.13.6.tar.gz"
-  sha256 "8c83dfa8c3762fe431896ec92cab6637c4f5d8b30e7f11420d27f25ad6e6ad27"
+  url "https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "40a791daab5f37f2799ad653702a4447b162e9faedc58d4c358a1f79eaad258d"
   license "Apache-2.0"
   head "https://github.com/lakekeeper/lakekeeper.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "9c3e56d4dea4d3daf1b59810d76b667c8e7b97004143610fd318b6b2f9d84f24"
+    sha256 cellar: :any, arm64_golden_gate: "aad4db2adb2f173c88d1e0df0186232a44ec423c2a073f69868a0ca300a0bbaf"
+    sha256 cellar: :any, arm64_tahoe:       "f41a65bec5d95fd838990ffacf88cafe13ce4f58fa75d87e4955c2d474203330"
+    sha256 cellar: :any, arm64_sequoia:     "5d751c446d8cad6d24143df41de7cbba8b21d35a1dacd2a6f38f6c6d9115e795"
+    sha256 cellar: :any, arm64_linux:       "0bee96ff51460a2510fa960f6d9840dd7fc52ae0e02d94d688b95e01c0fac99f"
+    sha256 cellar: :any, x86_64_linux:      "53daac475a99a03377049df7b6929c3c064aae025ee6bb6270508c4f35b66f0c"
   end
 
   depends_on "cmake" => :build

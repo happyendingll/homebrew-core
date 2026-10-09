@@ -4,12 +4,15 @@ class Ttyd < Formula
   url "https://github.com/tsl0922/ttyd/archive/refs/tags/1.7.7.tar.gz"
   sha256 "039dd995229377caee919898b7bd54484accec3bba49c118e2d5cd6ec51e3650"
   license "MIT"
-  revision 13
+  revision 14
   head "https://github.com/tsl0922/ttyd.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "dc07589f04081c634af8b9ce2f503c1540e6c886e1ee5972ed46277141f2dc43"
+    sha256 arm64_golden_gate: "11f48dfa4ef0f29f80ea7d3e0173b4564272eb91360a2d741c53cb7838476493"
+    sha256 arm64_tahoe:       "c9f5788221927bfe0d5e491f0eced92c6369a73e7e968ea712639b66c1864f40"
+    sha256 arm64_sequoia:     "aedd77feb2ab16fd9b6faf4c15e47a62e6b1ce3f1342ad05b4b6e70fc04cb3e9"
+    sha256 arm64_linux:       "cd87a1a24e6a0d92900681fac6961559ea48f3350fa2e28a3209e3428f02e4bd"
+    sha256 x86_64_linux:      "f12a7a7151dc432a48cba81f11f004514ee729e28369e5491970c11e2329e610"
   end
 
   depends_on "cmake" => :build
@@ -17,7 +20,7 @@ class Ttyd < Formula
   depends_on "libevent"
   depends_on "libuv"
   depends_on "libwebsockets"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "vim" # needed for xxd
 
@@ -29,7 +32,7 @@ class Ttyd < Formula
 
   def install
     system "cmake", "-S", ".", "-B", "build",
-                    "-DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@3")}",
+                    "-DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}",
                     "-Dlibwebsockets_DIR=#{formula_opt_lib("libwebsockets")}/cmake/libwebsockets",
                     *std_cmake_args
     system "cmake", "--build", "build"

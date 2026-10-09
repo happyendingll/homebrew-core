@@ -4,16 +4,20 @@ class AwsCCal < Formula
   url "https://github.com/awslabs/aws-c-cal/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "9c6d424d206dd7822aa44fa39ce31575dcbaa83133620abdac8e56e4cea9667c"
   license "Apache-2.0"
+  revision 1
   compatibility_version 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "9e348e49ea1d5e3d806d611405d0713e99aac48564fb547b0cbad7d604ac094a"
+    sha256 cellar: :any, arm64_golden_gate: "4fe05862beb90cc62de65c114d28303e16b49784291033388deed1f962080e16"
+    sha256 cellar: :any, arm64_tahoe:       "b07ed49e2e61f65a1cf416669387dc582c6dfa254c639841220bac9be9e2ae8a"
+    sha256 cellar: :any, arm64_sequoia:     "f9aabf2cda22318de8d70e0eed3239885f7e9d8bc335096226ea88dd12bfa9e8"
+    sha256 cellar: :any, arm64_linux:       "69bb772ab91ce811dbe8a182ec4dc64ff5e8cdddd4731146f0a9e8812b29c12e"
+    sha256 cellar: :any, x86_64_linux:      "2671dffb067fe8702ee66e276c3419aba648b20aa8630e19271840eef8eb3aec"
   end
 
   depends_on "cmake" => :build
   depends_on "aws-c-common"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   deny_network_access!
 

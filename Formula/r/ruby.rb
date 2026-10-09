@@ -2,6 +2,7 @@ class Ruby < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
   license "Ruby"
+  revision 1
   compatibility_version 1
 
   stable do
@@ -29,8 +30,11 @@ class Ruby < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "5c65e999424b072479c2c28093e82c7c1fc6a361c42bbcc39382d680523ac5bf"
+    sha256 arm64_golden_gate: "42c252a757b8794b20229dc2f3d4b642bc5c7b293c1e454068047316daf99b70"
+    sha256 arm64_tahoe:       "c5f5264f6b1484a038cfdf0fc444348adc36f8588c11ecfe1dbbeba37b3d426a"
+    sha256 arm64_sequoia:     "b65a871b19ebcedb14e1ba06a3f365f09f3573a56fc2daf5aa413dbb79ef18f9"
+    sha256 arm64_linux:       "0adcca64574f55a9504aaf05f24dc923d67534f590b9ea4a774d9b14e29f345a"
+    sha256 x86_64_linux:      "712b24ac5b6a081e3d0ae59861b0dfdf2586562367bac34876a1b396fccfc8f5"
   end
 
   head do
@@ -42,7 +46,7 @@ class Ruby < Formula
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libffi"
   uses_from_macos "libxcrypt"
@@ -83,7 +87,7 @@ class Ruby < Formula
   end
 
   def install
-    paths = %w[libyaml openssl@3].map { |f| formula_opt_prefix(f) }
+    paths = %w[libyaml openssl@4].map { |f| formula_opt_prefix(f) }
     # Add versioned Ruby RPATH so user-installed gems can work when user is switched to versioned Ruby
     paths << versioned_opt_prefix if OS.linux? && !versioned_formula?
 

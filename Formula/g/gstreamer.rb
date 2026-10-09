@@ -2,7 +2,7 @@ class Gstreamer < Formula
   desc "Development framework for multimedia applications"
   homepage "https://gstreamer.freedesktop.org/"
   license all_of: ["LGPL-2.0-or-later", "LGPL-2.1-or-later", "MIT"]
-  revision 2
+  revision 3
   compatibility_version 1
 
   stable do
@@ -26,8 +26,11 @@ class Gstreamer < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "c9362d2fedd46e13573383ac9bf88f3387a3702f793aa57259478fe53d0e17ee"
+    sha256 arm64_golden_gate: "4b80f4e928a213644aa2bded4f6d909f34118994c7a0f8069c9b8fd31576d2f0"
+    sha256 arm64_tahoe:       "5ca86245b9322351b526bc8f53a8705ef8b651a5d79c374f196adcc2fe921bd6"
+    sha256 arm64_sequoia:     "f44e87a1ef8a298b0f2e423a7101092977ad01a35641085a10607da80f988cf9"
+    sha256 arm64_linux:       "19c3ce129309a0e59ea44fdea09184543df4664b4d5f3daba18e1b9e8b6dca93"
+    sha256 x86_64_linux:      "5560b42b3c7396f365a1fe8d7ab72ae537c5f05fa2c5c15a0d2fee5a53a00ba0"
   end
 
   head do
@@ -88,7 +91,7 @@ class Gstreamer < Formula
   depends_on "opencore-amr"
   depends_on "openexr"
   depends_on "openjpeg"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "opus"
   depends_on "orc"
   depends_on "pango"
@@ -242,7 +245,7 @@ class Gstreamer < Formula
     ENV.append_to_rustflags "--codegen link-args=-Wl,#{rpath_args.join(",")}"
 
     # Make sure the `openssl-sys` crate uses our OpenSSL.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
     system "meson", "setup", "build", *args, *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"

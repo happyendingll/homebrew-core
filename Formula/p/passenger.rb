@@ -4,19 +4,22 @@ class Passenger < Formula
   url "https://github.com/phusion/passenger/releases/download/release-6.2.0/passenger-6.2.0.tar.gz"
   sha256 "bd0e14538fa4a9f479a3ce60805a201bf10757d6051d23087759b1abbc811529"
   license "MIT"
-  revision 3
+  revision 4
   head "https://github.com/phusion/passenger.git", branch: "stable-6.2"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "6e48af3100f13488017631d6a1828fc6260e5979c00873847de4f1c4f72f7a18"
+    sha256 cellar: :any, arm64_golden_gate: "5f9bc36032d0ac4d2b54162a43ef3be3eba2cff5fe15c4593ee5d641f89349a3"
+    sha256 cellar: :any, arm64_tahoe:       "db18dc5c81f5e21339677b59c1b292a74941700ba0e97818d04ee6cfe7b67070"
+    sha256 cellar: :any, arm64_sequoia:     "4da6098bcbac23a69b4bb6528401abdaa05cb76b60627d6e5ca934acaf3a080c"
+    sha256 cellar: :any, arm64_linux:       "2ebca47cd07ec2281f170371ff8a7d3b72ff81582d19b2e99ce4a833adad21de"
+    sha256 cellar: :any, x86_64_linux:      "b9212c3c71a3ac9afc921324d576370dcdc2b3cc35895d384343be81f1b04575"
   end
 
   depends_on "httpd" => :build # to build the apache2 module
   depends_on "nginx" => [:build, :test] # to build nginx module
   depends_on "apr"
   depends_on "apr-util"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
 
   uses_from_macos "xz" => :build
@@ -36,8 +39,8 @@ class Passenger < Formula
     end
 
     inreplace "src/ruby_supportlib/phusion_passenger/platform_info/openssl.rb" do |s|
-      s.gsub! "-I/usr/local/opt/openssl/include", "-I#{formula_opt_include("openssl@3")}"
-      s.gsub! "-L/usr/local/opt/openssl/lib", "-L#{formula_opt_lib("openssl@3")}"
+      s.gsub! "-I/usr/local/opt/openssl/include", "-I#{formula_opt_include("openssl@4")}"
+      s.gsub! "-L/usr/local/opt/openssl/lib", "-L#{formula_opt_lib("openssl@4")}"
     end
 
     system "rake", "apache2"

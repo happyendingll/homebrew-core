@@ -3,14 +3,17 @@ class Commitizen < Formula
 
   desc "Defines a standard way of committing rules and communicating it"
   homepage "https://commitizen-tools.github.io/commitizen/"
-  url "https://files.pythonhosted.org/packages/75/67/aece79c673ad3574bd57affd915267f0d0f7ecbc2af24435e3da31f88db5/commitizen-4.19.1.tar.gz"
-  sha256 "a98fa17604b2b3777da4a3e23935e9c897dbe4821570ecffa66818d41d86c729"
+  url "https://files.pythonhosted.org/packages/c4/ad/ad4e6fafa0627f38ebd3c65ad63767f3f07e0b33b72cbff0d3cadddf6ecb/commitizen-4.19.2.tar.gz"
+  sha256 "af0fb25f2fb60956b9d64eecd6e3ec7b710c2f9b012ce8728cb32c728c2c5a8a"
   license "MIT"
   head "https://github.com/commitizen-tools/commitizen.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "693e9f5a2b83cc38464d3854e310526dfead53596af9ac89f7f3d46c32dab1c0"
+    sha256 cellar: :any, arm64_golden_gate: "635317d0d56c58ea1297cc6bbf28a20b0371ddbf30da41aa346e75ee1fe5d26d"
+    sha256 cellar: :any, arm64_tahoe:       "0af50392a3395c79d77037b787155355a284ea559b9162edb9ea58e9f3eeb4b0"
+    sha256 cellar: :any, arm64_sequoia:     "4cbb9d8e606d7f627c3265b0c2cd5949b34db9bfaa5603597d736d55ef4bdd83"
+    sha256 cellar: :any, arm64_linux:       "37a6f9ccb9c04ad8f9e3260ece503615bdbfbc94a93330e17797b32b130f18ec"
+    sha256 cellar: :any, x86_64_linux:      "a1bb82c4b986f171357d53b856b5fee00341586f461569f3045bdce10d26ed8a"
   end
 
   depends_on "rust" => :build
@@ -83,8 +86,8 @@ class Commitizen < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/dc/ac/3a943d2792c9bb368aaa8b50121c0f778460ba2d7fbdc0a0366201d9e761/wcwidth-0.9.1.tar.gz"
-    sha256 "5823209b0d43af322ce698c689380d7c15ca31fa8e6e3be8459f27031bef0af5"
+    url "https://files.pythonhosted.org/packages/f0/b4/7830542634bb2d3e62aa3b586a72d5b3b6c91c3168929e7000ef3fed041d/wcwidth-0.9.2.tar.gz"
+    sha256 "ae0ef90b90f6af38b54f1fe6d58662ec33b3cb4b8391958a62416d654231727b"
   end
 
   resource "wrapt" do

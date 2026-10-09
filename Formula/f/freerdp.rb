@@ -4,11 +4,15 @@ class Freerdp < Formula
   url "https://github.com/FreeRDP/FreeRDP/archive/refs/tags/3.32.1.tar.gz"
   sha256 "8803dd26ec9660550252f255cf2d672a785ddd8f544bb475834993e96807c87f"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/FreeRDP/FreeRDP.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "3b796d13ccfb4bc2451649f57acbc77e795d755a01f4543f9ff8d10cd6b844bf"
+    sha256 arm64_golden_gate: "3967d20fca4a3662ca38d1dae940828d34a016e68a2719e3df956f24ffb08972"
+    sha256 arm64_tahoe:       "c9114711256f4b4161b280f344ce55fcfaf4d9484e6a89ef652a03f334fba479"
+    sha256 arm64_sequoia:     "af48acb4359183c31759658d2b1f9751b52ce161b2e07dfea08d9da21d135a0c"
+    sha256 arm64_linux:       "be8d3e4149fd826e30306eb17487e907d14560249c207ac51a80570540392835"
+    sha256 x86_64_linux:      "0a061566853b61f12d1ec2537fc192f7a6e1ea120793b7bd64f58d88f07db068"
   end
 
   depends_on "cmake" => :build
@@ -28,7 +32,7 @@ class Freerdp < Formula
   depends_on "libxrandr"
   depends_on "libxrender"
   depends_on "libxv"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "sdl3"
   depends_on "sdl3_ttf"
   depends_on "uriparser"

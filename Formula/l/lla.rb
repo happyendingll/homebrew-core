@@ -1,13 +1,16 @@
 class Lla < Formula
   desc "High-performance, extensible alternative to ls"
   homepage "https://github.com/chaqchase/lla"
-  url "https://github.com/chaqchase/lla/archive/refs/tags/v0.6.5.tar.gz"
-  sha256 "f4d4be9b797dc6bd7ef49cbb65c573f3e72700614e77ebc90204980ee9328fb4"
+  url "https://github.com/chaqchase/lla/archive/refs/tags/v0.6.6.tar.gz"
+  sha256 "cfbb50f6e72d34485491743da1277b7095e0781efcb0bf4a3cf0b3665818fd5e"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "d112852452f27ef15ee2d483c95a60d8c501ce38fa55af059416c983a0c28d4e"
+    sha256 cellar: :any, arm64_golden_gate: "04ada9494ca692d23e6b3a71f04ca79fa5182e501e903ad2e2f558fc8e6fcbd7"
+    sha256 cellar: :any, arm64_tahoe:       "921b5c0b7f7980153d4c809ff4145483f4a2a41cedb6b3ebf3cf4ef643dd8eb9"
+    sha256 cellar: :any, arm64_sequoia:     "413fca6886be03317e5f84731554c9c4d38183e403ade79795a35b36bfd7b01a"
+    sha256 cellar: :any, arm64_linux:       "95378baa3bcd9becf0a87fcc953d3e2a81eeef0dc8172aa0c52db77117d533de"
+    sha256 cellar: :any, x86_64_linux:      "1b86f4774b945765814647bbdddd5258049ed885667d4523f4e200028b923fee"
   end
 
   depends_on "protobuf" => :build

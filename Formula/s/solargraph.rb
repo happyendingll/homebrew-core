@@ -3,13 +3,16 @@ class Solargraph < Formula
   homepage "https://solargraph.org"
   # Must be git, because solargraph.gemspec uses git ls-files
   url "https://github.com/castwide/solargraph.git",
-      tag:      "v0.60.4",
-      revision: "6dcb73338b372b25935406656e696c3ec1179e23"
+      tag:      "v0.61.0",
+      revision: "01e9bd8277634144b5fb4fe8d83eb24a9ee251c0"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "3ee238fe69c3d7783cf5a566f5d030d0cf0b319f5848c735db163a00768161ec"
+    sha256 cellar: :any, arm64_golden_gate: "d73fa278dc12d334dfb24917305aee193da8895b4fd092659466d0bdf9385109"
+    sha256 cellar: :any, arm64_tahoe:       "fc35102e0a80d9805fdd32e568b00d4a218826e2e12f19cebd984ae0e7b63ee8"
+    sha256 cellar: :any, arm64_sequoia:     "10da234208f325acf4ad781d52c0ba84bd8a66578e6520804aeb455e20aefc8b"
+    sha256 cellar: :any, arm64_linux:       "efd16fded4a05165e4bd02d3af0f36d9297149db1bc4f608c9a86f0664c9bded"
+    sha256 cellar: :any, x86_64_linux:      "8bdb582f9dbecc2577464045fff07b927d20e4c20642b0e67ce1aae136a56bcc"
   end
 
   depends_on "ruby"

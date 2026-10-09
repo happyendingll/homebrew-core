@@ -6,22 +6,14 @@ class Llvm < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.2/llvm-project-23.1.2.src.tar.xz"
-    sha256 "c98bbef08a2b4c2613cd50e9aa9ae7b69b1fe6c16b2c40373bc0ab6116fdf78a"
+    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.3/llvm-project-23.1.3.src.tar.xz"
+    sha256 "c44186a7762ed28954be72e5ff6df9808e0779d4f1bf014ecc4e7e211d31ee34"
 
     # Fix triple config loading for clang-cl
     patch do
       file "Patches/llvm/pull-111397.diff"
       type :unofficial
       resolves "https://github.com/llvm/llvm-project/pull/111397"
-    end
-
-    # Backport fix for macOS 27 SDK
-    patch do
-      url "https://github.com/llvm/llvm-project/commit/b8007a8e4020b8bca2b12e941660e10bf5bf6716.patch?full_index=1"
-      sha256 "e41e300eb6f5cca9172ab344e572c3fb24f0d05885ae23dd7cb4f9c2528839f7"
-      type :backport
-      resolves "https://github.com/llvm/llvm-project/pull/222721"
     end
   end
 
@@ -31,8 +23,11 @@ class Llvm < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "fe936f60388d6ec767e8b8ad79f24bf018808d49c2a0bc19339e26f19c348b19"
+    sha256               arm64_golden_gate: "ba0381d13c1d52b014262eec752de803c184711125af0c64139a82043a237918"
+    sha256               arm64_tahoe:       "bf93a745757808f0cd666820cb29027ee164296f69436ed169039aa89b37c791"
+    sha256               arm64_sequoia:     "e9ced6ddbd3afa53f0191e88d1f6ed590f5ea3501f5d82901894cb7fd74b6cf0"
+    sha256 cellar: :any, arm64_linux:       "4ecc49ac3a812ca0e5dfb4f8f265e9823749a269960130091950f847a93c16c2"
+    sha256 cellar: :any, x86_64_linux:      "020a4bf225150d7bd4031b0d9e929ceb617a2f4f37e0e5b23cc5f86ba8b61d0e"
   end
 
   keg_only :provided_by_macos

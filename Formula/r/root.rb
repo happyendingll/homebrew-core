@@ -2,6 +2,7 @@ class Root < Formula
   desc "Analyzing petabytes of data, scientifically"
   homepage "https://root.cern"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/root-project/root.git", branch: "master"
 
   stable do
@@ -25,8 +26,11 @@ class Root < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "bfaa0b8a9f25a2e1f1568d85b860dc3755a816cddc2f931fb1673779aeb17503"
+    sha256 arm64_golden_gate: "c5d82cbc85aa0d1159f44b6655d52d7b9fbd61da2a24a112ae340fda81ffcd91"
+    sha256 arm64_tahoe:       "8fdee074a7263dbc944701e203e5f7e153b45c433b2e2f7720339fd3c11dd8bd"
+    sha256 arm64_sequoia:     "67c153dec5f2cdb17c3c72a48575957b198e5bdc8a7c9a9b7e55da60b669dc98"
+    sha256 arm64_linux:       "2396bcd2efb1fe5054127934312c2e14f2488c27656667b6a65ae6d563752010"
+    sha256 x86_64_linux:      "ab15426ed07132237b2ccaa1d422949645d91ad9b70b96dde68359488f62b98f"
   end
 
   depends_on "cmake" => :build
@@ -50,7 +54,7 @@ class Root < Formula
   depends_on "nlohmann-json" => :no_linkage
   depends_on "numpy" # for tmva
   depends_on "openblas"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
   depends_on "python@3.14"
   depends_on "sqlite"

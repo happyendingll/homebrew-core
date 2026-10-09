@@ -6,6 +6,7 @@ class Dnsdist < Formula
   url "https://downloads.powerdns.com/releases/dnsdist-2.1.2.tar.xz"
   sha256 "9fcb469d7a1b5116606f2563761343d1c595523c1fd67808835fa4edc03c24ce"
   license "GPL-2.0-only" # with OpenSSL Exception (non-SPDX)
+  revision 1
 
   livecheck do
     url "https://downloads.powerdns.com/releases/"
@@ -13,8 +14,11 @@ class Dnsdist < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "50323d6492136e57efec51cd459e7bc16d698f0e765d14201c5753e8f512266f"
+    sha256 arm64_golden_gate: "29d94f308abaac9605be874ed3836ffd37da55db51a8a47ed8da301d58875135"
+    sha256 arm64_tahoe:       "ce14693985419ffad1ed1f66c912092ad48f1f99d4f2787209fb1578c1fc57c5"
+    sha256 arm64_sequoia:     "1f26f4d091834e062e03beece794ee5049168d222f15d8071588b93d01735d66"
+    sha256 arm64_linux:       "5893c54cfd7afb7c01f2ec2a7b0e1719cf3c90265fc4f1ad6658b54b2156ed48"
+    sha256 x86_64_linux:      "64590505cff41d67f133e8e0a1c02d716429d4f486643b9f9776c91dc063b754"
   end
 
   depends_on "boost" => :build
@@ -25,7 +29,7 @@ class Dnsdist < Formula
   depends_on "libnghttp2"
   depends_on "libsodium"
   depends_on "luajit"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "re2"
   depends_on "tinycdb"
 

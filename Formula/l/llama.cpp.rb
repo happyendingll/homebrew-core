@@ -6,6 +6,7 @@ class LlamaCpp < Formula
       tag:      "v0.6.0",
       revision: "d81235049384534c167caea52b85a694f6103d14"
   license "MIT"
+  revision 1
   version_scheme 1
   compatibility_version 1
   head "https://github.com/ggml-org/llama.cpp.git", branch: "master"
@@ -16,14 +17,17 @@ class LlamaCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "b7e15af41314f4e165c54dfc9f518b2802e1ede61389e50596378c42f36df32a"
+    sha256 cellar: :any, arm64_golden_gate: "c65c803af011e29f85d216cb935a6be43056a1b1fa9df4d7c88b5e2ed6565207"
+    sha256 cellar: :any, arm64_tahoe:       "496ae7208edbefb1b230bb04770c1e60da57bad8c3475f046fb72ee5efad7a8e"
+    sha256 cellar: :any, arm64_sequoia:     "4c348a41f66615498df783020e12b09a55ac83e897dedbc4658df5642a153fd2"
+    sha256 cellar: :any, arm64_linux:       "de77bc30a8e1dd89afd9a3e478b7799e8e428e76cb0b25306a4778635f20bd9a"
+    sha256 cellar: :any, x86_64_linux:      "f799b61fee7c8c2266aa08e6b745e08bb05c74f3e849b122b972da8b7f1dbc10"
   end
 
   depends_on "cmake" => [:build, :test]
   depends_on "node" => :build
   depends_on "ggml"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   # `test do` block downloads a model from Hugging Face
   allow_network_access! :test
