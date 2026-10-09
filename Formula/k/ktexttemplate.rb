@@ -1,14 +1,17 @@
 class Ktexttemplate < Formula
   desc "Libraries for text templating with Qt"
   homepage "https://api.kde.org/ktexttemplate-index.html"
-  url "https://download.kde.org/stable/frameworks/6.30/ktexttemplate-6.30.0.tar.xz"
-  sha256 "c3c229944d25294102e4e8a5b49fa0c0f481da9d33f8bec3782e8a53afd47493"
+  url "https://download.kde.org/stable/frameworks/6.31/ktexttemplate-6.31.0.tar.xz"
+  sha256 "461c0d1672430f646d98d89ec226912f7ace031fda020a209b9ce270fd146c0c"
   license "LGPL-2.1-or-later"
   head "https://invent.kde.org/frameworks/ktexttemplate.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "907a4ec7b9db53a40277d859fa65423690e3c6ea2a102e879e753072cc910e55"
+    sha256 arm64_golden_gate: "1efd8a37a3a19079628479d64184b475e7e453d5915ada0d61b7a7e8a9a540e5"
+    sha256 arm64_tahoe:       "bbb76b5be86749e81224fcc49c940e7a847b7d4391d4d76e2e5f1e758e9f334e"
+    sha256 arm64_sequoia:     "d4d065835b138c6ac05f43fd4ea639789b3c91c6b178555d259aa796cc3208a2"
+    sha256 arm64_linux:       "eec543b2ad9b1f1bdb742eb249d8b8a3a380a0f2d2788878fcb68d0a8b16d98a"
+    sha256 x86_64_linux:      "2e2feec0895b50c7086ffed558df3639a90b2113a5ee3afea9752f7e128d581c"
   end
 
   depends_on "cmake" => [:build, :test]

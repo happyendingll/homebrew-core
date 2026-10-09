@@ -1,13 +1,16 @@
 class ClaudeCodeRouter < Formula
   desc "Tool to route Claude Code requests to different models and customize any request"
   homepage "https://musistudio.github.io/claude-code-router/"
-  url "https://registry.npmjs.org/@musistudio/claude-code-router/-/claude-code-router-3.1.1.tgz"
-  sha256 "3a7cb06f392090ad77fa9174ed412c4e408b926c96bcb511b62140bd6bebba5a"
+  url "https://registry.npmjs.org/@musistudio/claude-code-router/-/claude-code-router-3.1.2.tgz"
+  sha256 "80de649136f5b5ccfe24b8c274bdcf2f1f9450263364b0487e112ca3a0459ecc"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "a62c4fe25360eb18cc1db22b85884cd75a47d7bbd966d0ecc157c32700f1a0f3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bfcf6540beefd9fcdaac436135429ce3b822eff42d678334210404779134dc3d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bbacf009be87e982950cbb7c1d36711ed06c8fae78b570751f4a6bc8fd3e28f0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5d84150bb99bc7b3c694b6205c1c300a5056f3145a3932d356ac73778efff215"
+    sha256 cellar: :any,                 arm64_linux:       "0997899c0260835b6c947919916820bdb7c38a816bb32501a32919e30d71972c"
+    sha256 cellar: :any,                 x86_64_linux:      "9aa91e638a0d2732f4578f25674c27d4f0367e85d8683862e773c9e980e76b54"
   end
 
   depends_on "node"

@@ -1,13 +1,16 @@
 class Seal < Formula
   desc "Easy-to-use homomorphic encryption library"
   homepage "https://github.com/microsoft/SEAL"
-  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.5.0.tar.gz"
-  sha256 "71bc8384effdc91350040a728319baf7d49732a92faf93b2508bb428b0e780b8"
+  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.5.1.tar.gz"
+  sha256 "77debe0a4a1d8b1b97cd66c7dad29c072d6e52108ed22ceb6669c2e7690a7c15"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "d93789c9306b3e84a34b4869319d6fc8290a9c8046a86361031eb2eddd3f1a13"
+    sha256 cellar: :any, arm64_golden_gate: "965588c516a8726756caec9bae0e64610dcfc442c42e04b9690c5efbe7d018dc"
+    sha256 cellar: :any, arm64_tahoe:       "c95f9e405c114050faa70e8af1e38b3f3e0817f3f384560ecf5030b8184ced9a"
+    sha256 cellar: :any, arm64_sequoia:     "e44e1a5bfd2a8cb5e635db977e31d2d978527b55942d4db9c2316f821dbcb401"
+    sha256 cellar: :any, arm64_linux:       "f6cb77cbf6d91bc8d75c0f03d351384e2397d683e576d32933b34cbb2fdb045d"
+    sha256 cellar: :any, x86_64_linux:      "21ca40ceddfefdb3067715adbd9921ea1a4525dc94a39a2a0a1819bbfc1995ec"
   end
 
   depends_on "cmake" => [:build, :test]

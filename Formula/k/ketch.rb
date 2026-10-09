@@ -1,14 +1,17 @@
 class Ketch < Formula
   desc "Web search and scraping for agents"
   homepage "https://github.com/1broseidon/ketch"
-  url "https://github.com/1broseidon/ketch/archive/refs/tags/v0.18.1.tar.gz"
-  sha256 "dca4d1b126c66e2a8d85f0beb762d6334e6cd0fb10df7ddce0b57884716ad9ce"
+  url "https://github.com/1broseidon/ketch/archive/refs/tags/v0.19.0.tar.gz"
+  sha256 "e493e64e8b0da049faea10e831c41964c8005c965ef3b5f74a58b247b171b227"
   license "MIT"
   head "https://github.com/1broseidon/ketch.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "239894c44d3ae8abae59b8fb98657f1028216c1bb299d004178770e244c9fb35"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "91772c0015f7a9edd2cad12f370c133ac29cabf359fe649cee7b05804f1827d1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "91772c0015f7a9edd2cad12f370c133ac29cabf359fe649cee7b05804f1827d1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91772c0015f7a9edd2cad12f370c133ac29cabf359fe649cee7b05804f1827d1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7360a21881be40d6da7868ee86488fe0d870085863fd6b32ca38a0f9d3808339"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f22aeccae661b941a4ee5b3407bc19c0f26b16f8f4377617ebe19eccdc79f0a5"
   end
 
   depends_on "go" => :build

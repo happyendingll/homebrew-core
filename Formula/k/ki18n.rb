@@ -1,8 +1,8 @@
 class Ki18n < Formula
   desc "KDE Gettext-based UI text internationalization"
   homepage "https://api.kde.org/ki18n-index.html"
-  url "https://download.kde.org/stable/frameworks/6.30/ki18n-6.30.0.tar.xz"
-  sha256 "dfbfc8af89b3bc68810b094bf87746db87c3eeb35b75caeb1882681ebed563bd"
+  url "https://download.kde.org/stable/frameworks/6.31/ki18n-6.31.0.tar.xz"
+  sha256 "9fa271c7a33b856451de1ed3ff105626c2763fbd3b11d3210b02cb30de43f2ba"
   license all_of: [
     "BSD-3-Clause",
     "LGPL-2.0-or-later",
@@ -16,8 +16,11 @@ class Ki18n < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "3ece39557fbae79923772678b93cf2f55aac1a84afc167b6e6c390e37a03cb7f"
+    sha256 arm64_golden_gate: "cda81323f59c26566d1b368d254a25f848f002d72ae228aad35e71dc4e59c072"
+    sha256 arm64_tahoe:       "0c98bfd8587afd0910dc57fac538dd9645f9a0ea2faba6d55fea661b32a4d6eb"
+    sha256 arm64_sequoia:     "45610c3c06bc8d1fc5fd957e9adac74128e57874d1683818787bb4c81ab3c476"
+    sha256 arm64_linux:       "fbb47fdc3a24e8d2dd7ebd6894caea12d592fd807db27ce4e19ab1c80024e240"
+    sha256 x86_64_linux:      "7130e43ed5eaf62cd7bd37b019137310b57718496a776e732b7c9a26602acb44"
   end
 
   depends_on "cmake" => [:build, :test]

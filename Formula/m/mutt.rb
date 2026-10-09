@@ -10,9 +10,9 @@
 class Mutt < Formula
   desc "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)"
   homepage "http://www.mutt.org/"
-  url "https://ftp.osuosl.org/pub/mutt/mutt-2.4.2.tar.gz"
-  mirror "http://ftp.mutt.org/pub/mutt/mutt-2.4.2.tar.gz"
-  sha256 "2703ff1a51a99c3163d4fd998ac22e982bbd5493d512a7c5bde716a8adba0394"
+  url "https://ftp.osuosl.org/pub/mutt/mutt-2.4.3.tar.gz"
+  mirror "http://ftp.mutt.org/pub/mutt/mutt-2.4.3.tar.gz"
+  sha256 "ce9154e3afede622d98b90a22c87d06f32051c930a9afb2b7ef41656c4dbc948"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -21,8 +21,11 @@ class Mutt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "d6c6b9b1cf15e458e8c2130ec1184362cf7c321d44f327f70da52ad0be6ae31b"
+    sha256 arm64_golden_gate: "fb5a1d999546eb8df575fee776272ed70ab0f347dbe0e3f3239ea304179a4bc2"
+    sha256 arm64_tahoe:       "a5dea152d206a4178c299a8348319868040520464ade6435eed2691d001cf1fc"
+    sha256 arm64_sequoia:     "5cac50648b70f7113acdc4d86ed59b7237d3c2a0223b89fec213215e51cd3c68"
+    sha256 arm64_linux:       "619a1595adf537ac28c7a513d69c1f45a8baedd5451cfaa2d0108cbc8f115c39"
+    sha256 x86_64_linux:      "a84a9fef43f33f7039b449ef6c45817539ca3793eb4f75bf96031b5f3c907ed4"
   end
 
   head do

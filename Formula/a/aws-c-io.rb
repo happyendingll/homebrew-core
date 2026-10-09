@@ -1,15 +1,17 @@
 class AwsCIo < Formula
   desc "Event driven framework for implementing application protocols"
   homepage "https://github.com/awslabs/aws-c-io"
-  url "https://github.com/awslabs/aws-c-io/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "5fecb19c2c0a165687cdd94723943a02ab23a0270deade5661fd935a3cd55e78"
+  url "https://github.com/awslabs/aws-c-io/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "a437ec3b5929582d79f43904e4939626db19d6fd30c44cb16841bc70c7d6548b"
   license "Apache-2.0"
-  revision 1
-  compatibility_version 2
+  compatibility_version 3
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "c81c4bba415b53a03bb39f8e4b1e5426288b55805589945658f3f441c12af396"
+    sha256 cellar: :any, arm64_golden_gate: "a7192b7f1838716ca24b671213d7cb86a98051066a47d5fc0dfd5a635add6cea"
+    sha256 cellar: :any, arm64_tahoe:       "b036392ace4c791d5c3166f7517f0238540175791e937587c66d631325135b0d"
+    sha256 cellar: :any, arm64_sequoia:     "5124450c7aa72d93315776bc2cb38ff67de0d15dacf72bfda3be41af62d3b96e"
+    sha256 cellar: :any, arm64_linux:       "be8e1fcbda881a60d58e4c924890794fc703c6f687f2624b68647e1cc5724aa0"
+    sha256 cellar: :any, x86_64_linux:      "4df75a873dc8ad4cf4c634972931ce3b4926e65531375e51e7632e3949c74679"
   end
 
   depends_on "cmake" => :build

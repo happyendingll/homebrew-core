@@ -4,7 +4,7 @@ class AwsSdkCpp < Formula
   url "https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.900.tar.gz"
   sha256 "35a895edbcf174ed8587859af62fcca85868e82034d019a5e584e27893dc7909"
   license "Apache-2.0"
-  revision 1
+  revision 2
   compatibility_version 3
   head "https://github.com/aws/aws-sdk-cpp.git", branch: "main"
 
@@ -13,8 +13,11 @@ class AwsSdkCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "ce5a6c630c77e0064b2cc83d654036ab9e140a74af3d75a7453e26595817067d"
+    sha256 cellar: :any, arm64_golden_gate: "637c767c401228446a8cd5d3317e81245074646440b299bd01092a36cc045194"
+    sha256 cellar: :any, arm64_tahoe:       "a02864cf17a4536c8e79e650b64aff6ba192d592790c98b7130a787546ad1fb2"
+    sha256 cellar: :any, arm64_sequoia:     "e55caea49928c8f86976d10d217906eedbc1612f79879c1633bd515c38198e87"
+    sha256 cellar: :any, arm64_linux:       "4fefb459da09c4f2e35ef288e81fd88f66fadabed0b01257a774d9be4e848ad7"
+    sha256 cellar: :any, x86_64_linux:      "ed71d874cc862566532e56c250cd4fd178667377803f5c5f4970f062a5d537b8"
   end
 
   depends_on "cmake" => :build

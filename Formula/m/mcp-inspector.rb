@@ -1,13 +1,16 @@
 class McpInspector < Formula
   desc "Visual testing tool for MCP servers"
   homepage "https://modelcontextprotocol.io/docs/tools/inspector"
-  url "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-2.9.0.tgz"
-  sha256 "0671ad3cc535b00cbfbd3a9aad7559a735ec471d72030f0e69b7add778f8ed09"
+  url "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-2.10.1.tgz"
+  sha256 "1786803aaf058445aaf647973e848f7a5c17391b99bd6e17ddb01b63d4ae7c96"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "86b9ae7b3dbb67a5fe0c0d2646a3ef0f793905db30679f8fc7c6c8d14be4da07"
+    sha256 cellar: :any,                 arm64_golden_gate: "924a88135da9a71dd21f52a92b58b0a96a6dd93e423b5e2e6386cb52b938e7fe"
+    sha256 cellar: :any,                 arm64_tahoe:       "9f04bbdd8118d917d0e053d6fcc45561f3dfdcbaf904f959fdef0a605737a9b7"
+    sha256 cellar: :any,                 arm64_sequoia:     "9522ea87ac02256905042386a6fc07f31f2d10c627050ee1eb20e02430f07d9e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0f24ad1780d03d999c7c91521619568995bb2f9b8dd3f5282f618e870c226e5f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a03a6a3c2a6776358f7f1d498ca1e41937f3df1dadafb27b4967e8ea7a429eda"
   end
 
   depends_on "node"

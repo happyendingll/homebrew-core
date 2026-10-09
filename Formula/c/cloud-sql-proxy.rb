@@ -11,7 +11,9 @@ class CloudSqlProxy < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "09f82c3b58a9587b9d8c7d224cccf56cc20836f2a83ef46abc8b68617b38a0f0"
   end
 
-  depends_on "go" => :build
+  # TODO: unpin go@1.26 when Go 1.27's ML-DSA ClientHello no longer gets reset by TLS middleboxes
+  # ref: https://github.com/golang/go/issues/81199
+  depends_on "go@1.26" => :build
 
   deny_network_access!
 

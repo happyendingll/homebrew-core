@@ -1,13 +1,16 @@
 class Bento < Formula
   desc "Fancy stream processing made operationally mundane"
   homepage "https://warpstreamlabs.github.io/bento/"
-  url "https://github.com/warpstreamlabs/bento/archive/refs/tags/v1.21.2.tar.gz"
-  sha256 "fb9198556a919a48961d8c2eb8774bb426bdcc882042ba65637d32cb75d82ba7"
+  url "https://github.com/warpstreamlabs/bento/archive/refs/tags/v1.22.0.tar.gz"
+  sha256 "37323b09e4f5f2c4213badacdee264488bfe6c934761f62249ac16e689440336"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "48a59662a5c14a3e1b8e617645e76f033114cae8c3d961b37e2a1b98c691b1d1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b1f6236b05589e83777f1326596dd69e8d643e45aa3f08f45ac08b83c7d5ea7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9a6593767cc4195972da3ffdde69d6d8fe9da971f5bbdbbc085bd0a9810fa5f0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bdb19355fa56a0be7334de6908c57700d941d51d856403c2dc697e845b0b7f9b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5cc02784864b61afa60a2125b8eba138ad0926f9a23bb51fe6378c066b43cec3"
+    sha256 cellar: :any,                 x86_64_linux:      "e6c7470774b967dbfee062964c780d19a15ebd99c24b96e00faad59199905d19"
   end
 
   depends_on "go" => :build

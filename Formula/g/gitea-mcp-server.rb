@@ -1,14 +1,17 @@
 class GiteaMcpServer < Formula
   desc "Interactive with Gitea instances with MCP"
   homepage "https://gitea.com/gitea/gitea-mcp"
-  url "https://gitea.com/gitea/gitea-mcp/archive/v1.8.0.tar.gz"
-  sha256 "5e5f6bf5a08f54bbd7ade8843a17cf96d6cb746fcbca3711f05db7c0d200129f"
+  url "https://gitea.com/gitea/gitea-mcp/archive/v1.8.1.tar.gz"
+  sha256 "6540170e363376fb241f59a4e2d3836f99fa1682ff9ae084fc45ad52ece77756"
   license "MIT"
   head "https://gitea.com/gitea/gitea-mcp.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "bf26f193ed737b5b46e45b9aa28ad49685b5c1f97cd6b23322de72087ea91ae8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e6e551c353c671487b6da4211ff750ded7f187c30f052e453dfc355d43f28dde"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e6e551c353c671487b6da4211ff750ded7f187c30f052e453dfc355d43f28dde"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e6e551c353c671487b6da4211ff750ded7f187c30f052e453dfc355d43f28dde"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "262a6555edaa40d706b2b8d102ed210addfed51f2ad1e1fe611a6f5cc5ced9d7"
+    sha256 cellar: :any,                 x86_64_linux:      "3c35138bc2569df9c6da56f336cf9da19dd130e8d3070d8f2d18d4979ae482a5"
   end
 
   depends_on "go" => :build

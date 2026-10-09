@@ -1,14 +1,17 @@
 class Pygobject3 < Formula
   desc "GNOME Python bindings (based on GObject Introspection)"
   homepage "https://pygobject.gnome.org"
-  url "https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.0.tar.gz"
-  sha256 "45068697de3ffe46840ca369705f23118b34db4f7deb63f6eff079a6734ddcca"
+  url "https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz"
+  sha256 "4c80598ade17fbaa7798e01a25d0bf29ce109740786026a074c5c62bb3e79d23"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "72950b9542c8a7c928bbada21b5d24b86d4f825c4567c2e8a2a394f611c44a60"
+    sha256 cellar: :any, arm64_golden_gate: "67d25c342b2782732307f63e75090f4a1aa1c71c90e71e6b76762c616f535643"
+    sha256 cellar: :any, arm64_tahoe:       "051de3dcdffb1a4293a248f2e7f24898809018279a73acf85bc3288bcf9e4ef9"
+    sha256 cellar: :any, arm64_sequoia:     "fe42393602b7a076beafa984296fb173256a96e5b269468d1dfefba5c81e0750"
+    sha256 cellar: :any, arm64_linux:       "10617d90191b5ea0c62a8d5b7a5332304c3eea7720c6a19e24583e0f6461f5e4"
+    sha256 cellar: :any, x86_64_linux:      "f25d6daf251bf93807fbaed0ec98a583ee15c4b1fe101111a076d68a550719ea"
   end
 
   depends_on "meson" => :build

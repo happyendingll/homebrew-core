@@ -3,13 +3,16 @@ class Mktxp < Formula
 
   desc "Prometheus Exporter for Mikrotik RouterOS devices"
   homepage "https://github.com/akpw/mktxp"
-  url "https://files.pythonhosted.org/packages/f8/ac/ab2c925a43b0451e57c14183071f1ef83cb2fd2ff46f82e3fb5378b83280/mktxp-2.0.3.tar.gz"
-  sha256 "0cc0b3619152b4be10070ccbb0e3c87657cdbff1902ef9d10cbe8cab07481a67"
+  url "https://files.pythonhosted.org/packages/c9/ac/f2dbad0af8d668efa862e9d0af153b43c2a0a6ffa94c47c736d2da737934/mktxp-2.1.0.tar.gz"
+  sha256 "243c791a1d376613e00dc794cf5d2208f4b189c36dce5a71bf4597d120ea2045"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "fa9289b7336bcac19564229266e835c1e9b6a86f70bb43db7b935312fd25c0d2"
+    sha256 cellar: :any, arm64_golden_gate: "d062bad94f53020d4b193d982140d9c786f3bba20315376a9830802b29077fca"
+    sha256 cellar: :any, arm64_tahoe:       "281be2729b5f845264ccfccc30b79cc83f9013dc09212988ea22391b0a0da120"
+    sha256 cellar: :any, arm64_sequoia:     "12dc183aa4be5278e3c939f945b845a45e1a3e3ad67a510e25d5bb6fe7778a09"
+    sha256 cellar: :any, arm64_linux:       "af2bf16080f116150084d5db472737be2f8291d44e160b33ed3d7699213a51e0"
+    sha256 cellar: :any, x86_64_linux:      "a0b56ddbf219ad6c59978a3c6d1683da1d2249dfa60e1fa585cb3a7487bbf26c"
   end
 
   depends_on "libyaml"

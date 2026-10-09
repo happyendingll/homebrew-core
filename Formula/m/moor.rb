@@ -1,14 +1,17 @@
 class Moor < Formula
   desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moor"
-  url "https://github.com/walles/moor/archive/refs/tags/v2.19.2.tar.gz"
-  sha256 "6a46ba770366b9d4993f1221ca5135f6668f88d64ee99c04e1a0c176e1893023"
+  url "https://github.com/walles/moor/archive/refs/tags/v2.19.3.tar.gz"
+  sha256 "17acfbe2cf7ea4c067ff010928e41e79a46c8f244596eea82deba99dad023e05"
   license "BSD-2-Clause"
   head "https://github.com/walles/moor.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "7fb4d10de1b817fe92b5f4192a298c69292de1c36604e2663462fcb24ef17310"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "92cf78d4330b519ab92a5fa5c5129d34231925d755aa45889627cfc56c2bb4f6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "92cf78d4330b519ab92a5fa5c5129d34231925d755aa45889627cfc56c2bb4f6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "92cf78d4330b519ab92a5fa5c5129d34231925d755aa45889627cfc56c2bb4f6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f625532d45886642ab031d91324e5e171ecff7c3f0072344b205ada1d444039d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "19f0f0e12f743e8bc522490918babc779c38ea976c2b628156c727b636ef19ef"
   end
 
   depends_on "go" => :build
