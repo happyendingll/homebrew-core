@@ -9,11 +9,8 @@ class Thrift < Formula
   compatibility_version 4
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e422a22ab3b0c6ab53ba603582a9d525680b2d108c97aab79105a8b60e69e364"
-    sha256 cellar: :any, arm64_tahoe:       "5fed3e2ce1c22f05597ac1f816553ab1c5a56aacf90a6b63b43ab88dfaf94176"
-    sha256 cellar: :any, arm64_sequoia:     "0b31de9285cc9bea55943b39d95f061bc1c691ad4d756ef371d3103a1c183558"
-    sha256 cellar: :any, arm64_linux:       "058cfa35038ce96bb3da141594199be5134c89ecdd9fd004ead76d17515fc529"
-    sha256 cellar: :any, x86_64_linux:      "47aba750ae2b682d73a52bb6c6d24c39e97db14e454f4d09a7f84db91532a54b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "89134832ede68d5826a29485c3a9362bea91d984fe0c59a874b1d04cdb41cd4f"
   end
 
   head do

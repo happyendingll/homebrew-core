@@ -15,11 +15,8 @@ class Cups < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "5a727441c523de179b6277404be515908bb4f778a1f967493502e9554411ffef"
-    sha256 arm64_tahoe:       "45c907c232389a65d84a2178f8f84e8c0a3d831066593a44da3324843759cdf3"
-    sha256 arm64_sequoia:     "0e9d882e26f6282def22c4a4dfc716c7f222b069ea98f7b1ee74dad0dfc2bf3e"
-    sha256 arm64_linux:       "08e6865b88ebee88ffeee1491c23dadbcdba000bbc6d5ff5ea5fdc33c2f3cff3"
-    sha256 x86_64_linux:      "e6b60a0d43398e4cf2356c4f930bbc010ffe1b7e549d2544f2a24c035f2b345b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "fed4d34879a1c78804391295690e3bc5e7ca6df5ada1c6cc8c92cc583df6d133"
   end
 
   keg_only :provided_by_macos

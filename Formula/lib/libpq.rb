@@ -13,11 +13,8 @@ class Libpq < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "00250f5c1a16dfd1955cb94b68a9171a2ccba739bc161a75f09a03393e21d8b8"
-    sha256 arm64_tahoe:       "7107ff901d0e9a402d6d210a96942a99bc834d7d7c15ef2e436e6f86d8549b81"
-    sha256 arm64_sequoia:     "9e91d1af37e0c44755059d6a402d6d94138e817c3f36400c4c9bfcfadc7ea054"
-    sha256 arm64_linux:       "3ca52e0715a50fd41c1ed19e96e8cd550afafc9fb328a4a053d29bfcfff49354"
-    sha256 x86_64_linux:      "3d151d8b1f3d49d608d06ad85929b5a814a7f1b10197e860bd0cfe2331e1fa97"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "2b2e1413a1b633784949e50ba411d79c943e6ece2820cb901c7440ff25cca19f"
   end
 
   keg_only "it conflicts with PostgreSQL"

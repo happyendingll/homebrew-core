@@ -19,11 +19,8 @@ class Nsd < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6f6faf2d1c1002104e3231cb54d659bdc99808dae8c9117afa68e484e0a100a2"
-    sha256 arm64_tahoe:       "72ab9f58ab5b1c9219b9e8c523097ba4047d4b20a5872fe863ff04967e79dcde"
-    sha256 arm64_sequoia:     "5b1c7b1d925c4cc14f085bcf7816be3da971d3996d073983c1d72375d0d8fd2c"
-    sha256 arm64_linux:       "97ea8dbbbb97727f412f160932784f62fe23cbfe312b159c836eb479f11b6945"
-    sha256 x86_64_linux:      "e14a1191f0d3bf9fade7935ad5b1733ea54aebf174e6ee2ee5ddcd6ed03632dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "3c7009709f124159420334ad3710916de345b4acd127587486e0f049fa3f4933"
   end
 
   depends_on "pkgconf" => :build

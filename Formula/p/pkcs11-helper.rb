@@ -26,11 +26,8 @@ class Pkcs11Helper < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5831ccf7599dce283920c440b34cc86d5e2f121a77c089bba18e77c040b884ea"
-    sha256 cellar: :any, arm64_tahoe:       "c9f3dc59eee6baeba82754476d23350f8059e27c131f032c24351519017cf786"
-    sha256 cellar: :any, arm64_sequoia:     "2293800c554d9b1dfd43839455e0c89548077a366238813e3c8bca5cb1c3bc85"
-    sha256 cellar: :any, arm64_linux:       "40d1774537910c39ed2ee7af16ba07f7f107f908adcd4647dacd8b64c1699ae7"
-    sha256 cellar: :any, x86_64_linux:      "632438929bc42615e8b8c6d09205f156cb0fe28e523e12990a2e362068ba3fc3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "fbf0eae150fef41e78fd20289041b4096938070aa8341b0c77f70b80d8f1bc3d"
   end
 
   depends_on "autoconf" => :build

@@ -13,11 +13,8 @@ class Libks < Formula
   head "https://github.com/signalwire/libks.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6b0888f7c1d2d8a5e439fe81600e680cfb85b995f4ffd96d2de7d72dd43116fb"
-    sha256 cellar: :any, arm64_tahoe:       "858b8192898015456503706b214165b833c6ed0ea983c32527c415693b86d666"
-    sha256 cellar: :any, arm64_sequoia:     "b114c142eee06c6cd4b58340e4dfcb7cfb697c5f2690002f45ccead1b2d819d7"
-    sha256 cellar: :any, arm64_linux:       "23a0b83aade5890794cbd86890c454ccdcaa33101529834f41a4f73e3bf1f4f9"
-    sha256 cellar: :any, x86_64_linux:      "40bb94abb01ceda140cb41e6f6f7fe9831f119db0c4f8c76e0ca307055cc994e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "d140db4caf278cb50aa59ec65e9e8de3e924c3875504fcc72f2de58c7fecde03"
   end
 
   depends_on "cmake" => :build

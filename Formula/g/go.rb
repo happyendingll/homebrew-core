@@ -22,11 +22,8 @@ class Go < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9db31a0d9486338e059fbfbd5ce6c7cabff043019c70fd7052d134a542bd5d8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b9db31a0d9486338e059fbfbd5ce6c7cabff043019c70fd7052d134a542bd5d8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9db31a0d9486338e059fbfbd5ce6c7cabff043019c70fd7052d134a542bd5d8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3d73e28e27c6fa3e2d1a17ece98256dd39eeb1c49bce459fe63be4f19f231ddd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9220bbbde40dd1255401e4a010e0914fee43f72f74a426f47a2cdaea2331ca6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d26ba4ea1f76cca1fb0b4088a404fdf54b25dd881a34763fb547145e8c5f7ebe"
   end
 
   on_macos do
