@@ -13,12 +13,8 @@ class Freetype < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f705e663ae79e8687317afd82ff7f2fd83bf06773b728f98c60eacf57e973f63"
-    sha256 cellar: :any, arm64_tahoe:       "12a2e191f4ef6b4fd3c624ac36ed76bb317474893b92b5dac4c5884eb9f1fec3"
-    sha256 cellar: :any, arm64_sequoia:     "6453db5c6dba77200b4a1a653912bc63d251bdf2c8649c69ce19c336cfb3494a"
-    sha256 cellar: :any, arm64_linux:       "6257cffda7c33bead9b19a1fc8999303191b2684e79c965439f945633e5a87eb"
-    sha256 cellar: :any, x86_64_linux:      "dce42875d737b81860b044edfb837626906d4d118cc5f66d03053dbcbcf72908"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "de34201b94a7ef0869e036873112fbf51ee9788bac607e531bd8279309a53458"
   end
 
   depends_on "pkgconf" => :build
