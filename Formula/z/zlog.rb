@@ -6,11 +6,8 @@ class Zlog < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6762b89a3969799654e217d8fd88a14e563c48d1308df70098e1e16610b3fbcb"
-    sha256 cellar: :any, arm64_tahoe:       "f31caf504a45c8972ed9cf0940447699c46e5dbb99e21db32d0cf23b69db7657"
-    sha256 cellar: :any, arm64_sequoia:     "ea3d476b22dac374ebbc2c4b598301441b3ef46fd17b2b8d94348c79ef3a49bb"
-    sha256 cellar: :any, arm64_linux:       "b573ec2caee71daa8165bf01fd09c6539b80df0b67c850c0f2a92e4b06bd80ba"
-    sha256 cellar: :any, x86_64_linux:      "506eae9079597d4b3468b85880ed8656db2b6251f3e4254805c434d94e60df24"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "e23c4c4354d85eeb5ad5328b48680e1f1d6e1724393b704a3228c12eb10a519e"
   end
 
   on_macos do
