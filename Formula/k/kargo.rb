@@ -7,11 +7,8 @@ class Kargo < Formula
   head "https://github.com/akuity/kargo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe07e382f8a4b68d422422ba03fb45dabe1a9855d067fa30ccb3a202017815ad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2298610a4467415d5ddeb0d82cc9684dc3887829e0fbee3c08bd1349b9e19ef0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "368999af7d42d2b319ac9a1a272b0689523747970d2201747171cb26bdfcf110"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "315851a65fe21512e7dc217d6acf29477e3f815d4e4a1814095578f6fef5fb86"
-    sha256 cellar: :any,                 x86_64_linux:      "4ed5b936a624f5d62dc5efe6adcb8f5504ecf963796bd887fbc333c85b2977f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "899e2c5f7f3a76287243ffc727c11e748d395a370fe2c3c2653aa694b08b2389"
   end
 
   depends_on "go" => :build

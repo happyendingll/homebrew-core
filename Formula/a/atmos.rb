@@ -14,11 +14,8 @@ class Atmos < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e5ad2b16b5d7375dfe35617ef1c1175aed70a1cb6f7769773712eb697a58a87"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "59370f4a9d437a3f3d958d49d53c1302189306358adfedd3342444273c7140d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6a31afceecb37b43fdbebea1de64e10c167b76c8d4f54898b5abce88e0a403ce"
-    sha256 cellar: :any,                 arm64_linux:       "30fe6e9fb1805f807528179e8813eedd95d1da82b592a58969365897adc34c8d"
-    sha256 cellar: :any,                 x86_64_linux:      "041ad911b6980a33dbd226e436d507571f62ed8f2d2490e8a625723a7ea93d43"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "581c3e304d976e3dbc085dec1880b9f5add4a76cdc374b56fbeeeec9c4848ab2"
   end
 
   depends_on "go" => :build

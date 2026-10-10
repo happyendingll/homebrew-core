@@ -7,11 +7,8 @@ class Ketch < Formula
   head "https://github.com/1broseidon/ketch.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "91772c0015f7a9edd2cad12f370c133ac29cabf359fe649cee7b05804f1827d1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "91772c0015f7a9edd2cad12f370c133ac29cabf359fe649cee7b05804f1827d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91772c0015f7a9edd2cad12f370c133ac29cabf359fe649cee7b05804f1827d1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7360a21881be40d6da7868ee86488fe0d870085863fd6b32ca38a0f9d3808339"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f22aeccae661b941a4ee5b3407bc19c0f26b16f8f4377617ebe19eccdc79f0a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "17bb3982b301fd2313827e250b26b150a536a70213cee7895f0e61a2d48a7794"
   end
 
   depends_on "go" => :build

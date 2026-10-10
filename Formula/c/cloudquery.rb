@@ -12,11 +12,8 @@ class Cloudquery < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1679b6c2ce02b58a1357dec7d750f9df68e1eb3ab43bf2db469a6afce45de949"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1679b6c2ce02b58a1357dec7d750f9df68e1eb3ab43bf2db469a6afce45de949"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1679b6c2ce02b58a1357dec7d750f9df68e1eb3ab43bf2db469a6afce45de949"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6b4545ea8197e95affe387e3b64fbc25ad17eb4f6f6e0241d89c2062086298f0"
-    sha256 cellar: :any,                 x86_64_linux:      "10a384283d9a6f92268444a94e65a00c202d8c11faa9a50fc8db97d498e1ae42"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2333a04bb9ad461db849c180b7a11524f958c70e5a9f630e4446e1b4874c41db"
   end
 
   depends_on "go" => :build

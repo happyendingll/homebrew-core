@@ -6,11 +6,8 @@ class Xdelta < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e06ba5f00d39b61c4cecf44a11da88219d448564152518507fd0ab022a4db59d"
-    sha256 cellar: :any, arm64_tahoe:       "41322090097c31f7c861e73eb75b967b071dfec9d26acf67fa13088e6b0001d9"
-    sha256 cellar: :any, arm64_sequoia:     "1a6a5ce5552fcbd970d7d5609fe0b70d84454b6213efd9989e564cddc5fda4c5"
-    sha256 cellar: :any, arm64_linux:       "89a95e3df30f84626127f5a760cf2c212252f49556265a0ef9cf9257da59b729"
-    sha256 cellar: :any, x86_64_linux:      "f26482cf7f221f5659c2f103430ad1ca5f8b596ac277fa50935d8c6cf46d51e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "4a444b3d9ae61d2a5e6e9e194532b49dca48f6b82bf76a5d7795424e89e87300"
   end
 
   depends_on "cmake" => :build

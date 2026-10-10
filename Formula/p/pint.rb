@@ -6,11 +6,8 @@ class Pint < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f9249f0cf268c59fdcbec7013bcf5720dd2c85597b3acb31cd4eb1873c8f0e88"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cbfe03cda97f74ec4399da04e8a127576ceb72aad82037d941f6657d1f03e0a5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ce1bfc8d9ad377df70a51f5b058c27af701855f0f9b7885cd8db58a67769851d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5a85547322c5337944eb093f1cac9a4320ab8b880f76092e0243b743fe252a79"
-    sha256 cellar: :any,                 x86_64_linux:      "9dd87455606744fe67413f1b72e4912f82e5e602d8cdb6c9bc16cde7adebfae8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "70f46fe81538e824ea993c57a0591fd08671cc10f55e0c7c482fb61366d92bbd"
   end
 
   depends_on "go" => :build

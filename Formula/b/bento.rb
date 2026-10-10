@@ -6,11 +6,8 @@ class Bento < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b1f6236b05589e83777f1326596dd69e8d643e45aa3f08f45ac08b83c7d5ea7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9a6593767cc4195972da3ffdde69d6d8fe9da971f5bbdbbc085bd0a9810fa5f0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bdb19355fa56a0be7334de6908c57700d941d51d856403c2dc697e845b0b7f9b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5cc02784864b61afa60a2125b8eba138ad0926f9a23bb51fe6378c066b43cec3"
-    sha256 cellar: :any,                 x86_64_linux:      "e6c7470774b967dbfee062964c780d19a15ebd99c24b96e00faad59199905d19"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "533fd52c4413778947782d995f7e05c651467a69fb91b5ddb2780b3bdc1eed60"
   end
 
   depends_on "go" => :build

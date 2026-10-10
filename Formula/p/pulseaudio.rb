@@ -26,11 +26,8 @@ class Pulseaudio < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "76c4d4eea0d3f8a452577dd6083cb1961866fb4a2d3062c9bfbf415c70e681d0"
-    sha256 arm64_tahoe:       "205b0d4e91803d44c893af002afd2d001f61edc426f7aa332b55994b86834a7a"
-    sha256 arm64_sequoia:     "1a26b32a8d3e13d7d9c31b0ab2c0caef7846fcc2b148704254b555e1f8579e6d"
-    sha256 arm64_linux:       "cc6e054232730f6d80dbdd2688a71c38b812e83f315aaedb3dbaef9fa0bc1b6e"
-    sha256 x86_64_linux:      "b6b965cbc6a3940f66034eb7322c8e1d0aab980f72a7625f879fed8c2a2a3edb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "e71c38ba740427a7cac8cd6a441a8b5c261d9c171b1a828ca77a4ab1e061131d"
   end
 
   depends_on "gettext" => :build

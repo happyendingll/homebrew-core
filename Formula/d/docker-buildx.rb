@@ -7,11 +7,8 @@ class DockerBuildx < Formula
   head "https://github.com/docker/buildx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4accfcfd6ebc0f7ef47db24b93447bd5e1751cc74b2e1874e8f2e11b0e02d806"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4accfcfd6ebc0f7ef47db24b93447bd5e1751cc74b2e1874e8f2e11b0e02d806"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4accfcfd6ebc0f7ef47db24b93447bd5e1751cc74b2e1874e8f2e11b0e02d806"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fb60f44e7da23fdf599d2309bd7d05848cd1d108c74accd60aba39b92136c547"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "cafde002ec747e49fc8b52e4eb0bf1b92bd1188e987162ec46cac951fa24c9ee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0d015fb512bf1489acbca20368552bff72261339b56310927f367706b20c6a23"
   end
 
   depends_on "go" => :build

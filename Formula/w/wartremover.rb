@@ -12,11 +12,8 @@ class Wartremover < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "98c429ae80b3516e29dfed49932e8496088559ac554896f44982bf3ebf95e186"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98c429ae80b3516e29dfed49932e8496088559ac554896f44982bf3ebf95e186"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "98c429ae80b3516e29dfed49932e8496088559ac554896f44982bf3ebf95e186"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "99ca5ada0097b2a5908b991d63fd06c322f17d9c7ebd431e871a24c261040aec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "99ca5ada0097b2a5908b991d63fd06c322f17d9c7ebd431e871a24c261040aec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fa9a8c2069b46b169b15d73bbdcf47307c0c211240da703660c753fa75c7b396"
   end
 
   depends_on "sbt" => :build

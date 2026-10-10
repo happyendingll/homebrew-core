@@ -6,11 +6,8 @@ class Qrupdate < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "20ae004b21fd7bdc2107a200d7f95330606f31d2fdd872dff653ffd28542850d"
-    sha256 cellar: :any, arm64_tahoe:       "5494926f72245393fc03f80befab79cd4d7bd9c7b6c00eb54706c211c33c73b4"
-    sha256 cellar: :any, arm64_sequoia:     "b61f3a3eea17f904797887cadb122bb00914ea64f6fac1657da312012c4d510d"
-    sha256 cellar: :any, arm64_linux:       "bb413db2276e5ff87bd07947dc2aa3be901b74b9e45756167df572fcd315ebc2"
-    sha256 cellar: :any, x86_64_linux:      "e2155413e91f6e08a2dc138e153dc0e0085483932e0d6eab3177731684b563f3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "1b3801ff23fc6c5aa469380ca4f8a8286739caef5e1d9e5bcf3950a9aeafb5d2"
   end
 
   depends_on "cmake" => :build

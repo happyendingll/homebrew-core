@@ -15,11 +15,8 @@ class Ldns < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5be2dfec48a0ef2c5af221172a93e8309149a5c0dcaed215964436c52dc87f7d"
-    sha256 cellar: :any, arm64_tahoe:       "03966b363928b66a20db0a6bd5e48f1c5229648709f91f208b5ceaa84b8a43f4"
-    sha256 cellar: :any, arm64_sequoia:     "d752514ae2395b210185bcb1159dfbd57d60acf397b66aff1c484fb59aa16246"
-    sha256 cellar: :any, arm64_linux:       "d002925575623e03940e6e000bbd307330db894f1b76821ac7078a63a4a74dd7"
-    sha256 cellar: :any, x86_64_linux:      "0b389096fc4ddb6d4288b88c22e943365a7f0e82f2ca45c6488cd06403581fce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "2082d5860a6c41459f82f05e92608b5d014db47b16a233a61e4249aeeaa2335d"
   end
 
   depends_on "swig" => :build

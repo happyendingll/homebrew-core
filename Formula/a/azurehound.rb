@@ -12,11 +12,8 @@ class Azurehound < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0533174698ec77990c5798974a602cb7cbeee68e4646e391c21dcf8df9e9fb43"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0533174698ec77990c5798974a602cb7cbeee68e4646e391c21dcf8df9e9fb43"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0533174698ec77990c5798974a602cb7cbeee68e4646e391c21dcf8df9e9fb43"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a18ec0e4e38d9eb620e84998102dda4acb2d8c2bd319b40498d2a1dd2cd6e24f"
-    sha256 cellar: :any,                 x86_64_linux:      "6399c058ba0d3d2e0211dae34f731a1b9bc2764d7d526986ba8a94c565bfd72d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "61e065e43a8425046ceaf55d5aad41c7e99bcc692ec59b8db770ce9079e8de77"
   end
 
   depends_on "go" => :build

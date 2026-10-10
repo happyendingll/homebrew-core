@@ -8,11 +8,8 @@ class Ntopng < Formula
   head "https://github.com/ntop/ntopng.git", branch: "dev"
 
   bottle do
-    sha256 arm64_golden_gate: "b0c5642a8a921bfadeff0cafeb5047d942306426c4479786f43e342600a3b2c4"
-    sha256 arm64_tahoe:       "4ff5636754c94a9c543f147c5c0432a7e50dab67c3f73384f50ab02f17e55160"
-    sha256 arm64_sequoia:     "9556e2f2650a8b210f86813d410169be3b5b39da888c293d8003f5831d32f138"
-    sha256 arm64_linux:       "f56f2c141176d03b7f7e92dd7249d9393a715e2703b230ea641bbb171e248f2b"
-    sha256 x86_64_linux:      "e363ad435cc9735d5f77e149f7498e5d06b3e6a80c016fc7e3f57cec0a9304d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "afab7e5a40686b690cf3a055ff04aae481e926c0fc22d8c3b7947eea80c9bbd5"
   end
 
   depends_on "autoconf" => :build

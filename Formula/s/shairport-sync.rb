@@ -13,11 +13,8 @@ class ShairportSync < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ca485aa845f0ace913c96b738b163cfec02599168aba1f1db59df901b65a6f58"
-    sha256 arm64_tahoe:       "36feac3b5b915d840388c62e691a03ce76efed097f679a09a1856ea8fe069164"
-    sha256 arm64_sequoia:     "bf601a0a9329ce643f86ffe518aa743cbeee46ce1994c7d71aeb4c51dd68669b"
-    sha256 arm64_linux:       "eabcee3a05fe35cd898275815818244f658dbec8c783b17e7c35ab7bd6559da2"
-    sha256 x86_64_linux:      "035dacb2f4addfd76a3a18a44903f7c49f786c844bec821c909465dcee6df697"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "aa5a8c5e4195134ca53ccb3d6a47a85bc333b55713d754371ccc2f3c4e15fb03"
   end
 
   depends_on "autoconf" => :build

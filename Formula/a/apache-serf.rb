@@ -27,11 +27,8 @@ class ApacheSerf < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aac88de1dcb7b335812f5b0a66a6b9434a39a4404d569aa769704db789afc49b"
-    sha256 cellar: :any, arm64_tahoe:       "9a3e8a999e79bd42442c8a39b756eef6021981a41b7a42256fd29b9f926344ba"
-    sha256 cellar: :any, arm64_sequoia:     "cf4ac030e7bd4999160a791d4625d88780e2175ef482ce66ec3d524b6b135cb0"
-    sha256               arm64_linux:       "64224d5140979c8b6f099a91354168e27b72a1551b6dcd95406207254840ebaa"
-    sha256               x86_64_linux:      "d67305eb9ee34479787e24159dd976e38958797975253ef7eb6133d0f6f0a6e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "59e483a0c14654cf7f7a9ada179ba39926f2fe37e85bc07fcb947e3f506e4ce5"
   end
 
   depends_on "scons" => :build

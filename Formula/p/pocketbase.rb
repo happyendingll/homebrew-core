@@ -6,11 +6,8 @@ class Pocketbase < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "befdd2c63e7ef5510370b32db78eeb99a93226f07d886c6b164a63a1a8625ac4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "befdd2c63e7ef5510370b32db78eeb99a93226f07d886c6b164a63a1a8625ac4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "befdd2c63e7ef5510370b32db78eeb99a93226f07d886c6b164a63a1a8625ac4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fa42469f2d8adac16bd79087e8d924cce91cb8025409b28ec58201ca9ad28936"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a354587ece6bccf1ee53bc097e4fb2e9eb65dfba89dd7f4adfbcb6bd8406ef8b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0a9e9f54edfeb5af361b425ac0c6cc1ee56436276a66a722a5aabe2e0b486cb1"
   end
 
   depends_on "go" => :build

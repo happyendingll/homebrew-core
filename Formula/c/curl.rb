@@ -17,11 +17,8 @@ class Curl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0a76e4dd00e6648d2cfeed4bce44633a9cda3deb8ce257f7aaa1408d4169fc8d"
-    sha256 cellar: :any, arm64_tahoe:       "1535802dbee99fd2141dad6f55b8395993306a2f394079fe32e68d401bc6e466"
-    sha256 cellar: :any, arm64_sequoia:     "d8aa7bafda1c7d74fdde3b6d52865aabfc347fab26f1c4a27df054c0d10cdc53"
-    sha256 cellar: :any, arm64_linux:       "9d83a4a64c13119edf771b6126140eb19c3deb4875208a94c19236f6420ec1e5"
-    sha256 cellar: :any, x86_64_linux:      "0adf8298a90a0c3a7b9fff6a606cdf0cbe813d614e88f493094c196197a55d88"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "36d179d9d2db281d3177db4a1309e7c723a2acd45de0bd172d7c9ffa7fa8eb3d"
   end
 
   head do

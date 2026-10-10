@@ -8,11 +8,8 @@ class Mktxp < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d062bad94f53020d4b193d982140d9c786f3bba20315376a9830802b29077fca"
-    sha256 cellar: :any, arm64_tahoe:       "281be2729b5f845264ccfccc30b79cc83f9013dc09212988ea22391b0a0da120"
-    sha256 cellar: :any, arm64_sequoia:     "12dc183aa4be5278e3c939f945b845a45e1a3e3ad67a510e25d5bb6fe7778a09"
-    sha256 cellar: :any, arm64_linux:       "af2bf16080f116150084d5db472737be2f8291d44e160b33ed3d7699213a51e0"
-    sha256 cellar: :any, x86_64_linux:      "a0b56ddbf219ad6c59978a3c6d1683da1d2249dfa60e1fa585cb3a7487bbf26c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "078d0a0b37504fea6ef8508294e24b968bba22394b15f6acb426ad49016fde83"
   end
 
   depends_on "libyaml"

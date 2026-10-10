@@ -12,11 +12,8 @@ class Gdcm < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2ee1cedcbe12a7dc904cd90dd2fed07b4359e815c2b8fc5005999caec69016ea"
-    sha256 arm64_tahoe:       "da182dcf5e433917b034fe4c92847c314813abc756a5baa9ecd2d0753099d784"
-    sha256 arm64_sequoia:     "06bea333e514d4d2e03e497b03551efbc585b88519a22a0aa14e74e85053a93c"
-    sha256 arm64_linux:       "9f615c631ef1255e11832d527393b73030b014df150619a12da12ecca9af4928"
-    sha256 x86_64_linux:      "5561c82eade00a159c1de70e2e1ff9d508667ab57192f6d24965b10e209a5210"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "edefe2d82675a598ba5403043e742ba6415ce593aa24e58c45c549cca6c6a0ce"
   end
 
   depends_on "cmake" => :build

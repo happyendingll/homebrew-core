@@ -7,11 +7,8 @@ class Cnats < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d292cae09692a23470f2979184e8f7d65cded4099ab1b296d33c1ad86e53d438"
-    sha256 cellar: :any, arm64_tahoe:       "0183f643903a67f0315b31e2171d3a3cbf67d9a83866267a2f876f50464a847b"
-    sha256 cellar: :any, arm64_sequoia:     "8c319f01345442e649e939c6659bf0cf66e1ebba5a447e24c966aca2fb142344"
-    sha256 cellar: :any, arm64_linux:       "6a07a305c20a94cf16b8db8d9576aaaa0156f9d07f9c38bddccdcbb2f17f2fc5"
-    sha256 cellar: :any, x86_64_linux:      "9a6d507ada1dc34a77eca2ee9af7d4b089a709b4695d1a0b6149abdc4c4b2b21"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "eceef71dd1f135b513ffc83dd72b03cc886cfe7c2ff7341a51b1d1446ee474ab"
   end
 
   depends_on "cmake" => :build

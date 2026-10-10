@@ -7,11 +7,8 @@ class Pgbackrest < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c9294ab2876ec2f905bc623cc56038ccf8f33cd3dd56cad0bfecdbf98f29bfdc"
-    sha256 cellar: :any, arm64_tahoe:       "dd9da8be4dd10a9f9fe24186e620fc1c50be46174f4c076a7b6457a39e614ff2"
-    sha256 cellar: :any, arm64_sequoia:     "e253dd5b91c6820fc3bbf3e8cd46f1c206a15c67d4c8aadb542334c70ac2a6f3"
-    sha256 cellar: :any, arm64_linux:       "12dcfe6c173c1eb866def53e5178ced58a4f0463253eb0c2c183edce47da2d98"
-    sha256 cellar: :any, x86_64_linux:      "5e0487cd496dc53f1e6ed415fe48aadbdef5e5f5a7922a0286224c3c2e7d2b58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "8df297078bdeac9ec4b7d9872296a34ce5f02a4dac3d3597db7b3f54b1f646f1"
   end
 
   depends_on "cmake" => :build

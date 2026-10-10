@@ -21,11 +21,8 @@ class GoAT126 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3886a258a2ba71afc7dbb4d064756bbd4d385cd42319ab6f9fa083c1f9dd2c9c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3886a258a2ba71afc7dbb4d064756bbd4d385cd42319ab6f9fa083c1f9dd2c9c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3886a258a2ba71afc7dbb4d064756bbd4d385cd42319ab6f9fa083c1f9dd2c9c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0bda0ad3696bda34e96fc10de3c35c98af3e81e345f299aaa3531c22473df38b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d7b8e9d9ac4150e907d0b79de2eac006d673ee8173aa3d5c3b1244ca85ad3515"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "27c1bc6739ef46c3ed829f59b7e5753bf1a2f016cd08dffdbb8abd74a914eaa4"
   end
 
   keg_only :versioned_formula

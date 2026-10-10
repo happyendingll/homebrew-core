@@ -13,11 +13,8 @@ class Xevd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a16754afa6aed4a775342f46366b599c4883094969d484b530cc37a945689fa4"
-    sha256 cellar: :any, arm64_tahoe:       "f095092643e78a002de5a4caa2451c8b3ac55c41deae5ef2e310a5c2dd6dcf6f"
-    sha256 cellar: :any, arm64_sequoia:     "4ac67dcddedf6b3dfe83ffc9b4d77023ba6610fc26a84826db96e0f4b23a3854"
-    sha256 cellar: :any, arm64_linux:       "51e8dd390bf3308f656b1b2a0089c477489056e6b8e005f0aa2637b4e022ec52"
-    sha256 cellar: :any, x86_64_linux:      "451d9ba4175b73da5e23187286de2527ddcbceadb8cfd1739a399629838456bd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "063e00a168f4e48e8ec46aee00692beb119bea1f856a6d82baaaa224d145a384"
   end
 
   depends_on "cmake" => :build

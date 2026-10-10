@@ -6,11 +6,8 @@ class ViSql < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e19456d678a3c2e82ccd2298bda8bb6241638b8aac4e1d411dea8539369821b2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e19456d678a3c2e82ccd2298bda8bb6241638b8aac4e1d411dea8539369821b2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e19456d678a3c2e82ccd2298bda8bb6241638b8aac4e1d411dea8539369821b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "99e420e0fc4e56a87c9d01cee176970ca3d1ebec10e70df86147a6cf9c8717a9"
-    sha256 cellar: :any,                 x86_64_linux:      "58b5818f06d46990add2fd2be44346d605d64cef4d48ea1fd399de6f5f9e63e3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "9d324d9d55b87030a8a632a823278f1079b4a9746f95aa6ac09566f59b1a1e99"
   end
 
   depends_on "go" => :build

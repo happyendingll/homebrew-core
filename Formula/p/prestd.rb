@@ -12,11 +12,8 @@ class Prestd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e6adecf6c2c607f16463611ec16ea813c467bca3fc91db216dd3fdbf17aa31aa"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c1672a0d8c596d85ff2b4befc2e1aa8d1870a443b39cb5f3eb9033b8ed5855a9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1e4f0ce8622375a1fae478149135dae9db107b7cdc22903ec434ebbdcc523e3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c7ac0a354ce18272fadc5cbeaedc5261027f2c64db12638e4f4152ba351b3111"
-    sha256 cellar: :any,                 x86_64_linux:      "367b0ec5fbb85ffab1f49a2af84c88f36067114165c110d9a3fe0033e3adbac6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "dde3bfe5b94e55b76a76e8c3fb20d423d7d5fe990b20140cedb9be56e02a1410"
   end
 
   depends_on "go" => :build

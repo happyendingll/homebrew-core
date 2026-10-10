@@ -11,11 +11,8 @@ class Snap < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "112d74d57a132f26cc59d79dde3d0692c011c6f30730c54749f4623cd0a4980d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "112d74d57a132f26cc59d79dde3d0692c011c6f30730c54749f4623cd0a4980d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "112d74d57a132f26cc59d79dde3d0692c011c6f30730c54749f4623cd0a4980d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7642a16c28ab449a9994175f6fa1955ba0d85a950d609385ac293ba6c04fe35b"
-    sha256 cellar: :any,                 x86_64_linux:      "6a6843b0b9758a1dbf2d0e08adc27cefa332dcd999af79f90f5e18437b5d6532"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed3a95f0b308f4e1c70e9ff1a4a0b299c83732b99c5ffdb8123cd809fd89cf2e"
   end
 
   depends_on "go" => :build

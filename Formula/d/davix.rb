@@ -16,11 +16,8 @@ class Davix < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d4d7f8c10dbc10d91414afc02a67cc8d6e26accce634872cc51af610f58ca8d4"
-    sha256 cellar: :any, arm64_tahoe:       "7b741a287cb9064e54af4f07d8c6a6377733b1bb2222fc0a4e1160b4a76d73f7"
-    sha256 cellar: :any, arm64_sequoia:     "8e75f4bbfa7dc97c3f389dcc417000fa4f1bf55a282e4825ffc4817f9615dc9d"
-    sha256 cellar: :any, arm64_linux:       "f547ec51dcb73fe92bb17f5b3bd87a5fb8830059885f2313f9e554853a39d4d6"
-    sha256 cellar: :any, x86_64_linux:      "b138417ed53c63ac93f20c822309d482ad4d584da210cb45228f9277c5d02f41"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "8b03fc4941e2066041962ea99268f908209808dfdbbf221bfe442e9da2450463"
   end
 
   depends_on "cmake" => :build

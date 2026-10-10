@@ -12,11 +12,8 @@ class Atlantis < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0df2df55d93414c4373c1b1b94847ce16db22531a50e71a6307943341e18f50d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0df2df55d93414c4373c1b1b94847ce16db22531a50e71a6307943341e18f50d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0df2df55d93414c4373c1b1b94847ce16db22531a50e71a6307943341e18f50d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4077db17750dd48ff59f8e4c31ee0e8f1f18da48b5bc7994b0d69c2d177dc133"
-    sha256 cellar: :any,                 x86_64_linux:      "7de55d80fa1de139238eda8678087209b8528fea6c760ee0abf30c8a8a221f5b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "676616391a470f66a2c21cd5b4dec4e19e254f1583a262d5b74675fbb1c66da4"
   end
 
   depends_on "go" => :build

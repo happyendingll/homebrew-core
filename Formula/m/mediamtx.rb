@@ -9,11 +9,8 @@ class Mediamtx < Formula
   head "https://github.com/bluenviron/mediamtx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "10d6e991c0bf95a93f310744a737a75dd3353cb69629b2f95125a820af74d2ea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "10d6e991c0bf95a93f310744a737a75dd3353cb69629b2f95125a820af74d2ea"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "10d6e991c0bf95a93f310744a737a75dd3353cb69629b2f95125a820af74d2ea"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7b1f3d5e11c04b3deed827f86bfdb0442dde938b0c9ecc0e502d7a68e5963791"
-    sha256 cellar: :any,                 x86_64_linux:      "67ef93de436a30e23c3e968f1e82511119f1ff36657dac6817512a668fd53476"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a02527b012aae43a83feba5ab5f2df28211af4c48a61264e36edc7ec78253a90"
   end
 
   depends_on "go" => :build
