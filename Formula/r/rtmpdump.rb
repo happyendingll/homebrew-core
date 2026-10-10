@@ -10,11 +10,8 @@ class Rtmpdump < Formula
   head "git://git.ffmpeg.org/rtmpdump.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2e68aa9521c8b2a3701128c07e6e32fa826a1a485401014735ef57c5a1a84a10"
-    sha256 cellar: :any, arm64_tahoe:       "821e2455e7920733f38c766cb53ade2724e88987bd1e22b9fdce1540f8edc20b"
-    sha256 cellar: :any, arm64_sequoia:     "c456358649bdfcd817cb89a2d7da1fc0f0bb6b0c50265e44a43c3987ed02c535"
-    sha256 cellar: :any, arm64_linux:       "3e7dc5e1de573721e652c737f9f04e164a2ecb6a6a7b21819d231cfa8b9422ca"
-    sha256 cellar: :any, x86_64_linux:      "2742eca7b4267e1398476a434e4f145b06edb8ab0369da9274be86260c969f45"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "d4308d7cebb45c079825ce8400905f47d1d26508cbe872c91a215b2462374f3d"
   end
 
   depends_on "openssl@4"

@@ -8,11 +8,8 @@ class Civetweb < Formula
   head "https://github.com/civetweb/civetweb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "024d02e19a39eef52b853e38e13edc39eafe8e0585abb6c8d8931ec75d28618b"
-    sha256 cellar: :any, arm64_tahoe:       "88c28b02f684f70e0d8470a38a66e61f25cbe08efbf0fe66dfc39cef93cf029b"
-    sha256 cellar: :any, arm64_sequoia:     "d04577184b0a9cfa245de4b96ae76734a97a4ab44ee04a21b8d04b17b3944dc1"
-    sha256 cellar: :any, arm64_linux:       "4126eb10798b8492e6ecbd52372c613e869308840634e8a1f0a6d359eecdb0be"
-    sha256 cellar: :any, x86_64_linux:      "dff4aa9a7567a9ca4c5dcb3c57b22678ca8fa7a790194cf81ba6d52df630807f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "0621d6a3105451df58e84fd241c335d8bf8bd8b301cb7342b8ef5e335d4dc838"
   end
 
   depends_on "cmake" => :build

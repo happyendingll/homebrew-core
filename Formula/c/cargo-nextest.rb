@@ -11,11 +11,8 @@ class CargoNextest < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4cdadc14037fc9ebfeafe1a6e3f3ca81d9fedbec943a06c80239e68df1aeb35a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "940d1a7b294a528bf97b6b7014b0b0dffc51f66fa1dff401eeeda87c8ff0765a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "31882a088a2e6b184ceb87075d09343960261b9aba4104d9a4c6dae76be35afe"
-    sha256 cellar: :any,                 arm64_linux:       "b99e55bed571f2e5d44a5f53c7518906734bd0807bde203f7e6b5aeaa617de78"
-    sha256 cellar: :any,                 x86_64_linux:      "05c966b812a1dd798b59ecbf580bda393fa9bf5f8530149785377c2a82ab3d4a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "5031c6dfe87bafda6fb6dd5e93b661ba302d590d26866d8da6af44126714fe97"
   end
 
   depends_on "rust" => :build

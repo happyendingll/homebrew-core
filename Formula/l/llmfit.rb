@@ -7,11 +7,8 @@ class Llmfit < Formula
   head "https://github.com/AlexsJones/llmfit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "28213e3624ec55b5d7845bb30fd446fb2ccd08de9ba03e3ae16dbddea623c1e4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "518102d38b30b74d5253897e83192f53a76251d2b2713547235de325fe8da0a8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a7e877a8c411b190bfcb08d4db9abe534b4cb66ea0f3fc8e2ece02a1fbd52ff"
-    sha256 cellar: :any,                 arm64_linux:       "610e1e2f166c2b2cb32f291acec81c3c52e8ea33ac7a507959c992d6b32be814"
-    sha256 cellar: :any,                 x86_64_linux:      "823b192f0aba28c06c2d0f4885ac9e2605a447fb811bdbdc1569025c21628102"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cde81352a2a6dc153dd26ed992101a9079b9a4d55045e9171d8125b5958bfc21"
   end
 
   depends_on "rust" => :build

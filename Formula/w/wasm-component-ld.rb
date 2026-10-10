@@ -11,11 +11,8 @@ class WasmComponentLd < Formula
   head "https://github.com/bytecodealliance/wasm-component-ld.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e815f44ca0906c1ded20fbaf406fb5474bf307fc068b906bf3d4607ff466a082"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3dbfb3d23ab7f6ad8cf353b87ae7b4b4a8bae3617de5255e0d2164666d3e919d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f69fc2c92272f318c51b78620e66c8370fc2642a0abe6edffae08df1e7d81b9e"
-    sha256 cellar: :any,                 arm64_linux:       "f7cd5060d7784b6c8dbd3cb96e93ff02a3016f6e8b4e27aa83b1c945d64b31fd"
-    sha256 cellar: :any,                 x86_64_linux:      "59ea45f4de76123c0af060ad140f66a2c7313966d5a44b38b2d75a568d519c93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b75d0a1f2f3c1320ac05a225cd29c14af74966e593eecc90887ac7a106b23b82"
   end
 
   depends_on "rust" => :build

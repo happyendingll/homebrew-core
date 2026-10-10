@@ -19,11 +19,8 @@ class Rpm < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "b9a09cd6636045ba84afea2d831165a32b919830371e5f416072eb39d54db07b"
-    sha256 arm64_tahoe:       "da9167d09a0febdf1c1b37417b5594ff2c44e31a9ed50fe5526a1e9525f7a3b6"
-    sha256 arm64_sequoia:     "e4fbc543bd34952c19310a53fc605c0070608caa307975930d9e886442cf6deb"
-    sha256 arm64_linux:       "819181f217e87378b793171b897191474e0e160cfa7708edc66adda360e5c612"
-    sha256 x86_64_linux:      "40b3c5f92eef86cafc86593949eac57928f88ded0210a770593447fed0c0173d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "a02bad66608a76bb301e9e0004a6b9d7c142d76194cc0c65a6499448f9f5fc84"
   end
 
   depends_on "cmake" => :build

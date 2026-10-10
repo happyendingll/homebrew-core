@@ -26,11 +26,8 @@ class Root < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "c5d82cbc85aa0d1159f44b6655d52d7b9fbd61da2a24a112ae340fda81ffcd91"
-    sha256 arm64_tahoe:       "8fdee074a7263dbc944701e203e5f7e153b45c433b2e2f7720339fd3c11dd8bd"
-    sha256 arm64_sequoia:     "67c153dec5f2cdb17c3c72a48575957b198e5bdc8a7c9a9b7e55da60b669dc98"
-    sha256 arm64_linux:       "2396bcd2efb1fe5054127934312c2e14f2488c27656667b6a65ae6d563752010"
-    sha256 x86_64_linux:      "ab15426ed07132237b2ccaa1d422949645d91ad9b70b96dde68359488f62b98f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "4b1c7a43cf02f3e197073c74306b915b6249e7064cc74664b05620b0975c43e4"
   end
 
   depends_on "cmake" => :build

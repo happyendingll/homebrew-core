@@ -23,11 +23,8 @@ class Redis < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c3959d984ae34c3a6454bd9a3636d93c92f75b95eca703a089d77f2db1e62d7d"
-    sha256 cellar: :any, arm64_tahoe:       "bfa3e42f26843f48a2aa934cc943bb6d8f3e4f1383ad044f55f2e70b8aba4af9"
-    sha256 cellar: :any, arm64_sequoia:     "c6067fd35eb174d21b5f77e8f002da2ff841801e29c67930373aa58e64748a37"
-    sha256 cellar: :any, arm64_linux:       "5f5854058876a22cd92b3c050d421008842f1280029e0132f59f06f710a00dc7"
-    sha256 cellar: :any, x86_64_linux:      "72cf0f14a24d0a5e6609bebaa1056d91c5b7b48ef82b6d866f480e72851a6a06"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "db4b00b9e006c26e5d91780f2f93ae64dc20f40538bd8d34a201ee7ec0b2d27b"
   end
 
   depends_on "autoconf" => :build

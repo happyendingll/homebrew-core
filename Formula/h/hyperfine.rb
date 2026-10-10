@@ -7,11 +7,8 @@ class Hyperfine < Formula
   head "https://github.com/sharkdp/hyperfine.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d797e75f328c0e8d5aae214f18640f82cdb620971b207b03105b1b4a25caec63"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bdef558822250a41bcc15d0ddfdb8edde44a93834abae3c8a33af18047332d97"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f6106d336697f7611ba071e98224b1e91a9225e1a40e996f752c1625c5e2da9"
-    sha256 cellar: :any,                 arm64_linux:       "629256719d1898bbbdd683a278110076028f1b3274f2749c0d80c90c1d60d838"
-    sha256 cellar: :any,                 x86_64_linux:      "1cb9dcf00e6071ddbe0ee63a1e0d06bcfe75b3e130130430b5fda2efa98740fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "5e6f76872d06044920df2cdb151faf6f845997f6e3ea2575e62eb78cf794ac3d"
   end
 
   depends_on "rust" => :build

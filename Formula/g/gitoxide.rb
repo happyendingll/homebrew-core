@@ -12,11 +12,8 @@ class Gitoxide < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "71f521996466298bac404f6d056e8edd3cd9218146d6d29db641f9030f0517ab"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c95fc49d6911d31b7a2a56f59259e7f470f1337b3428513d26c3d0a4bd9b78a6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4043ab496ba5cc2e731a9d6e57bf05f47348f28bfc9165536f9290a9f6ae09e2"
-    sha256 cellar: :any,                 arm64_linux:       "a6e7d4c3164536940a41a20bc307173e3ab6e2725330cf8167560127875d5aac"
-    sha256 cellar: :any,                 x86_64_linux:      "3639fdaf3c44300f95e254350375eac430e295632f48c3cf9275b9337820f7ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc6de83d2f7bae41e37f90e5058aaea59da2c09d5adbd9a2ada29ee75dced048"
   end
 
   depends_on "pkgconf" => :build

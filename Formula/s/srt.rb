@@ -14,11 +14,8 @@ class Srt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6d0783ae84caebbe1c8bd9204bf782b09c6a9cd1ecd579285b8ba2f39cf0d256"
-    sha256 cellar: :any, arm64_tahoe:       "def16cad7b4d1d7a2e498b9e46e59798612130e9170af096e60ee9e642737e24"
-    sha256 cellar: :any, arm64_sequoia:     "49961e6bb35fb555930142ccea104dacd22cc0d4de367741f6539ebe83a3624b"
-    sha256 cellar: :any, arm64_linux:       "2b49c5c88630415a538bc72d2a3c532970211cd6e194a838c523247b8b1705bd"
-    sha256 cellar: :any, x86_64_linux:      "5b4afd851b7cf690f24abcf4fe36237492351f35ae8a23d1660c73a91477e822"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "808f784997fdc5931068e9c13d916875dbec6f4cd13f3daaacb263affc75bdb2"
   end
 
   depends_on "cmake" => :build

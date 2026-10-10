@@ -7,11 +7,8 @@ class IntelliShell < Formula
   head "https://github.com/lasantosr/intelli-shell.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b73a5fcb281f71d90632be77d93a2c5f49b40d8efe2f0b6ecfdf97fd2bd5305b"
-    sha256 cellar: :any, arm64_tahoe:       "3bf51fe8e887746033a6ef9f42f5df97500ba89dfd8566dc97eb1661b97daa6e"
-    sha256 cellar: :any, arm64_sequoia:     "d275e4b14230e41611d8b8cefe90e735e641d7f20bf6b0813636379b129e7767"
-    sha256 cellar: :any, arm64_linux:       "7872d8f120a149bd822d0d62c1d2b909916b7d70584f6990b3cb6e15d041c7ad"
-    sha256 cellar: :any, x86_64_linux:      "2a0feb03d176f39468d2e673360faa2f73fd72ee51fe9f2136f227ea7a44be6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "32ad1b175c4bb273d66da1c44285ed1a9d7525a2ec086d4e032a2df3483f04a6"
   end
 
   depends_on "pkgconf" => :build

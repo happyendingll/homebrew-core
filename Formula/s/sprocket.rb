@@ -12,11 +12,8 @@ class Sprocket < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0890625965bf8f5f1e08dfcc3f7279815cdc076c48b9d2a43723d88453523e16"
-    sha256 cellar: :any, arm64_tahoe:       "232a8563b52070b97f1efe54d3ab07f69d4627fa6cfbd8b487dd892ddfd1ada3"
-    sha256 cellar: :any, arm64_sequoia:     "da063017c8e1fa86d56ad09ca88b4c3fee03fa03e9b950abec71b56e14cc6b1d"
-    sha256 cellar: :any, arm64_linux:       "c34b5d7f6624a356df0b51b7533a7ff66d81b6627dcb8aabce429ef401a95629"
-    sha256 cellar: :any, x86_64_linux:      "c09e1d9062b2df91e69aaf8fa6cb224bdfde927fe49b63b8902b7eb5e8f0e2d1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "98ae3d8eebe4f7f7d9f5fefd0a7039244f20dc02c3cf754cf29badec90e53db7"
   end
 
   depends_on "pkgconf" => :build

@@ -11,11 +11,8 @@ class TreeSitterCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f40e48b912900b22df5ec20785cc08df23bc2e053cd2c6058b614a3a46f7cdba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5b208d0e1ad8c0def5460ab590d893deaa320a8ad5fea0f6b3d88a7b023f046"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bee3a06c394bea639f4fc1ff0692262808a8b8873a4ec11e09bf466bd5637ab5"
-    sha256 cellar: :any,                 arm64_linux:       "b351897d830b56f8a39ff53e0d19ac1636241422c6c7949e5fcfec8af645ba3b"
-    sha256 cellar: :any,                 x86_64_linux:      "f327ee508d70ef71fa009615a8c2972d0a4e420faf7f0c148f522c5a69771347"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2550cddcd8e6049c1190abf39e57a69931403442c15d1b42b812aba7360ac7c8"
   end
 
   depends_on "rust" => :build

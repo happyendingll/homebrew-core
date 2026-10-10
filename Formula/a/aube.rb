@@ -6,11 +6,8 @@ class Aube < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e98bcc1de17ea06abf9ca0854320bfc14313de9f2e16fc59563446ad40e864f2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2696e89a1f6659ab938c9ba5f062eb2df87bae10cd30636a8c6b4f9f834aaf01"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cb66d917ca00a5127cc6c9d451a18e0afe42aa573ddc7901552c405fd0bee707"
-    sha256 cellar: :any,                 arm64_linux:       "558baa49952f09cdd9102bc28b601245c44110a73d5dd14e090d55f410791ab3"
-    sha256 cellar: :any,                 x86_64_linux:      "7c5f821955fbe9a1511b09ad8748fbd2f7b175251ae0ad4e27fecc0b2e13c302"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "99da5c824fb300e06453a84c983852ab8cab5ad45682377abe5ba4c81ba7470f"
   end
 
   depends_on "cmake" => :build

@@ -8,11 +8,8 @@ class Pushpin < Formula
   head "https://github.com/fastly/pushpin.git", branch: "main"
 
   bottle do
-    sha256               arm64_golden_gate: "7dd5c822711802736879f14fb249b7758d4fba07a28df9840361d87a89d077fc"
-    sha256               arm64_tahoe:       "828ea060490481960c1ffff82a85b649a8bc7f24dbe120fe9387f90d946353c1"
-    sha256               arm64_sequoia:     "de86a4d4656bbb757a15748d3a1062d66d0bcd2fa931f54049e795f4e865fcf3"
-    sha256 cellar: :any, arm64_linux:       "c482c8825e6f0a25672dd81a2ccaa19042e48419c7f698919e040609cb2f8325"
-    sha256 cellar: :any, x86_64_linux:      "683829c702a8c37bc1308b74e4f79887d7de1106972939d13b75e01dd45bafe7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "8b95531866ceef8ce4a7364c56b046672454020a63527b97113b3394545f9a9f"
   end
 
   depends_on "boost" => :build

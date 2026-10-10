@@ -12,11 +12,8 @@ class Flowrs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "268d6d8fbf609afcb148735bac910abe182788b4a2b8e9da0e71f25d224339ab"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5e598ae1e22f76814ef4a9032bb7730d098e69b919951c82d5ab175f8cd38412"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "858916b666a23e90514456c437667cca1b139f28dea92ae8f291cdc9669bf9ee"
-    sha256 cellar: :any,                 arm64_linux:       "0be1041a372157efd7fb1e404d971afde20e0b0b98f69b3d79e4c3f85060367a"
-    sha256 cellar: :any,                 x86_64_linux:      "97793b282aa2ad464f91fb26f564972f9c6a22f4ac887604751c3628aa58f60e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a907c661148f3bd5b4f68aade89c961ec5a3caa47e0c6d07ffa83708888260c5"
   end
 
   depends_on "pkgconf" => :build

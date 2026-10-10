@@ -11,11 +11,8 @@ class WasiRuntimes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "24b9504a93a939a39172134a6385d192bb93403983b5fd8822a841f343782954"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "24b9504a93a939a39172134a6385d192bb93403983b5fd8822a841f343782954"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "24b9504a93a939a39172134a6385d192bb93403983b5fd8822a841f343782954"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "aa6258873c537f99acf56f089eb537d25ec47b17b3fd004db7728dd89eba274d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8c16bd996632832d86d9cb51b20ca70492481fb989863e66421ec76b8fd3ba3f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "6827f587d57ff2c28482aad8bb2b1c32ceb06124c845068e3cd8ff70bbd4f8ed"
   end
 
   depends_on "cmake" => :build

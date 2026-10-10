@@ -7,11 +7,8 @@ class AwsCHttp < Formula
   compatibility_version 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "059e0606c8509e0d8b72c85795126eba0dcbc51a109f243a56adba91741409db"
-    sha256 cellar: :any, arm64_tahoe:       "10be882dc4c346fc082030531f29a117d36cdd6db8052f91a958482042ff68d5"
-    sha256 cellar: :any, arm64_sequoia:     "8336155f29f446f9d7dffe1c707258155f10b2855bb9c7e6198ffb53bd2b390b"
-    sha256 cellar: :any, arm64_linux:       "10a3a648ad85b9a71fd3af9cd1f2719d0911a5b7435b3239da11ad4afc573ed7"
-    sha256 cellar: :any, x86_64_linux:      "cc5c0d32994dd663701d49341b804e1f769e5e2330fd190b99fc57d9ccd9babd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "c11f321211b2554539303b77426fdca659ebfd87dc66ccc0e0d0c45579eeb216"
   end
 
   depends_on "cmake" => :build

@@ -9,11 +9,8 @@ class Commitizen < Formula
   head "https://github.com/commitizen-tools/commitizen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "635317d0d56c58ea1297cc6bbf28a20b0371ddbf30da41aa346e75ee1fe5d26d"
-    sha256 cellar: :any, arm64_tahoe:       "0af50392a3395c79d77037b787155355a284ea559b9162edb9ea58e9f3eeb4b0"
-    sha256 cellar: :any, arm64_sequoia:     "4cbb9d8e606d7f627c3265b0c2cd5949b34db9bfaa5603597d736d55ef4bdd83"
-    sha256 cellar: :any, arm64_linux:       "37a6f9ccb9c04ad8f9e3260ece503615bdbfbc94a93330e17797b32b130f18ec"
-    sha256 cellar: :any, x86_64_linux:      "a1bb82c4b986f171357d53b856b5fee00341586f461569f3045bdce10d26ed8a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "3d8127f40a8343ec5babba5249f765d5c65674ca34d6ceb80195cd09037ebd2a"
   end
 
   depends_on "rust" => :build

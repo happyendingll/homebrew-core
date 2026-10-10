@@ -8,11 +8,8 @@ class AwsCEventStream < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7f7a1f5d3435b401dadd509955225a96df462bcb40a470be2f69540fc04fbee3"
-    sha256 cellar: :any, arm64_tahoe:       "a4fa6ea2c5ca98bdff56e4570fb21301ce43b666b06311c9d57fa5f17a349147"
-    sha256 cellar: :any, arm64_sequoia:     "a14c5ec4f3ee3b3b825ffe9809c5ff027af33c04e77bb685ac80dd76c6135fd6"
-    sha256 cellar: :any, arm64_linux:       "bd10341b5a3aae1d541bd8640db708e333bc51fbedef51b57bafcf332a5a5096"
-    sha256 cellar: :any, x86_64_linux:      "7484d7bc56734a148d56b6ceb1b03792b5dbde78218ad94b7929a20f4c897fbb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "2adcc414264e8b50e48766578d90a2f1e85b3a27f7bcb6ef5094a6f4cfdf33df"
   end
 
   depends_on "cmake" => :build
