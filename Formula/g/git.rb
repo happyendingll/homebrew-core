@@ -10,6 +10,7 @@ class Git < Formula
     "BSD-3-Clause",      # xdiff/xhistogram.c; reftable/
     "MIT",               # khash.h; sha1dc/
   ]
+  revision 1
   compatibility_version 1
   head "https://github.com/git/git.git", branch: "master"
 
@@ -19,8 +20,11 @@ class Git < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "a60fd5a12906c452978d72233286bcaf3f4408e9db21bc9fa12a301dbba3153c"
+    sha256 arm64_golden_gate: "8ac72c13f283a7b997604b479683bf418650d931bd2d9b8fe2f9059642b81bd9"
+    sha256 arm64_tahoe:       "f932c1525a4d6aaf2d982c471f95992a1faafc8ff9e3f331395e6dd538cfa9ca"
+    sha256 arm64_sequoia:     "8761edfe7a24efa75e6ded6aa98489a0d978eeca053d51c1f7b2b74bf365a587"
+    sha256 arm64_linux:       "6df0cc15eccfad7112d82df088ed2abe60f068e6faa1bb5f1a23b5dea71b2d84"
+    sha256 x86_64_linux:      "7b9b5082c7ffbf3a5084d1a11a1126ea646fcb9bddec2d24edc4d11efe9b60b9"
   end
 
   depends_on "gettext" => :build
@@ -38,7 +42,7 @@ class Git < Formula
   end
 
   on_linux do
-    depends_on "openssl@3" # for git-imap-send (GPL-2.0-or-later), uses CommonCrypto on macOS
+    depends_on "openssl@4" # for git-imap-send (GPL-2.0-or-later), uses CommonCrypto on macOS
     depends_on "zlib-ng-compat"
   end
 
@@ -115,7 +119,7 @@ class Git < Formula
     args += if OS.mac?
       %w[NO_OPENSSL=1 APPLE_COMMON_CRYPTO=1]
     else
-      openssl_prefix = formula_opt_prefix("openssl@3")
+      openssl_prefix = formula_opt_prefix("openssl@4")
 
       %W[NO_APPLE_COMMON_CRYPTO=1 OPENSSLDIR=#{openssl_prefix}]
     end

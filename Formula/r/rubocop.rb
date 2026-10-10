@@ -1,14 +1,17 @@
 class Rubocop < Formula
   desc "Ruby static code analyzer and formatter, based on the community Ruby style guide"
   homepage "https://docs.rubocop.org"
-  url "https://github.com/rubocop/rubocop/archive/refs/tags/v1.91.0.tar.gz"
-  sha256 "e4fbd63ea5c3a7cc937f282579b4adedcdfe37a30df3d3aa2707ca930978b409"
+  url "https://github.com/rubocop/rubocop/archive/refs/tags/v1.92.0.tar.gz"
+  sha256 "c014e5542dd3512cf9e73a74a8d30be883ee2ef6cf39dc6ee1bddcdedca834dd"
   license "MIT"
   head "https://github.com/rubocop/rubocop.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "3615454d9bc39a6a39008baa527820031f0cb1923db7d3a30cf136adceda52ac"
+    sha256 cellar: :any, arm64_golden_gate: "7a0f00a01faf53d0972be7c9ef2a8d9f15ae8cd167631d79baf9752bb2a55ac6"
+    sha256 cellar: :any, arm64_tahoe:       "3b7433518f697db49005efc20c59f852c639080c2484efbb91d3082a5e6bee7f"
+    sha256 cellar: :any, arm64_sequoia:     "3173017c7660cd09e1b2cf621174a707273708d8f59409949548ad92a1e8a733"
+    sha256 cellar: :any, arm64_linux:       "437f474322713dfde96a5b8c8e42b2a0b2d62b24e6b9b0764936709d24b8466a"
+    sha256 cellar: :any, x86_64_linux:      "2a3131cf9be253006581f9b11dcbb75ed43b7207b9dcd26acb19c4d109a3b61e"
   end
 
   depends_on "ruby"
@@ -35,8 +38,8 @@ class Rubocop < Formula
   end
 
   resource "parallel" do
-    url "https://rubygems.org/downloads/parallel-2.2.0.gem"
-    sha256 "e1059c5fd7b649558a0aec38a769f06a42942bdb40503d005a59c352fe011cd8"
+    url "https://rubygems.org/downloads/parallel-2.3.0.gem"
+    sha256 "f75a3e904101ce6a1ccb6b8dc800cbafd42166d83330192438dcf29395167a6f"
   end
 
   resource "parser" do
@@ -60,8 +63,8 @@ class Rubocop < Formula
   end
 
   resource "regexp_parser" do
-    url "https://rubygems.org/downloads/regexp_parser-2.12.0.gem"
-    sha256 "35a916a1d63190ab5c9009457136ae5f3c0c7512d60291d0d1378ba18ce08ebb"
+    url "https://rubygems.org/downloads/regexp_parser-2.13.1.gem"
+    sha256 "5aedb6b7c35688f51e86eef17a15374dfd287c83f4ca644b2c5f3ec50a33b44b"
   end
 
   resource "rubocop-ast" do
@@ -83,6 +86,8 @@ class Rubocop < Formula
     url "https://rubygems.org/downloads/unicode-emoji-4.2.0.gem"
     sha256 "519e69150f75652e40bf736106cfbc8f0f73aa3fb6a65afe62fefa7f80b0f80f"
   end
+
+  deny_network_access!
 
   def install
     ENV["GEM_HOME"] = libexec

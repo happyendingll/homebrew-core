@@ -4,18 +4,22 @@ class Pygobject3 < Formula
   url "https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz"
   sha256 "4c80598ade17fbaa7798e01a25d0bf29ce109740786026a074c5c62bb3e79d23"
   license "LGPL-2.1-or-later"
+  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "8a4f569b7e10eff38f0cfa27381e02cb04c04d8e8ad85597d285bf6257c2d77b"
+    sha256 cellar: :any, arm64_golden_gate: "cca83b04f8a52af9170b2760a68fb79451e91575fa282cbcc411f1a76b062be5"
+    sha256 cellar: :any, arm64_tahoe:       "5cbf0e81e7a640d252750b4ec68d88576b4db40d68b43f670cdf55ea083a5991"
+    sha256 cellar: :any, arm64_sequoia:     "439f8bf0ac8846dcd7732f01329f6ec579065c83a7c8ac4e121b64593acff586"
+    sha256 cellar: :any, arm64_linux:       "beb4512e787416ca0951d53b60926690dafc5405db8b73a91de7f9e35140130c"
+    sha256 cellar: :any, x86_64_linux:      "6e3682a80ea3584c1bfde8c9f5c8d45cdef7f14b9916866b96b2e3b3b542e155"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.13" => [:build, :test]
   depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
 
   depends_on "cairo"
   depends_on "glib"

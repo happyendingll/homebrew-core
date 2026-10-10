@@ -1,14 +1,17 @@
 class Onnx < Formula
   desc "Open standard for machine learning interoperability"
   homepage "https://onnx.ai/"
-  url "https://github.com/onnx/onnx/archive/refs/tags/v1.23.1.tar.gz"
-  sha256 "c8732e2711faba94caf208b75d0c28c2ea473ab0bf57a01b1176e5f0d51a6c06"
+  url "https://github.com/onnx/onnx/archive/refs/tags/v1.23.2.tar.gz"
+  sha256 "2f23784e27d210a23b059a847c305e305034fb4a842fface3ff37283f85a2b40"
   license "Apache-2.0"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "7931a0fa711cc38fcafb5475511ca53be3f871dd516238779886ee4ae2b29e17"
+    sha256 cellar: :any, arm64_golden_gate: "4872a8c51537217c0821cd236a0064541fd6dcab565f641d3e3373b67e8b6e82"
+    sha256 cellar: :any, arm64_tahoe:       "7ab973b80e915c4820992315219ad134fd888c0b3ccc209b58cb2ec9cce38949"
+    sha256 cellar: :any, arm64_sequoia:     "88b768784e36f79fcc20e1eef3a48fce352c9b11b5b4a6e7c8bf14c28f4ba5bf"
+    sha256 cellar: :any, arm64_linux:       "e1ccf6d160726d65564ba109c48ab31585338645ba729859928b69064fb8c28a"
+    sha256 cellar: :any, x86_64_linux:      "265f8b31a813b42e5210993eb7f8497b41ecf193c3d185cc2dfa5ee2e4f6d712"
   end
 
   depends_on "cmake" => [:build, :test]

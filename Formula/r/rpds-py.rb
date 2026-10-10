@@ -6,16 +6,20 @@ class RpdsPy < Formula
   url "https://files.pythonhosted.org/packages/42/68/3bd46b8a5e01d3c2ebdf9c5e9497912e3fe0cde02bac21a7130ca866e403/rpds_py-2026.9.1.tar.gz"
   sha256 "4793ef7f78268b124b73fa933440f01d258bbae01de9fa53e9080c9ab0425a12"
   license "MIT"
+  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "96a9f07140dae5c87cc917edb9b820fb7aff1a28db5723a134fa479f3b5f7aa0"
+    sha256 cellar: :any, arm64_golden_gate: "a154a5dfe03e74b4c9e234b03857192b03d6481ed8778cdb10153520cdf71eb0"
+    sha256 cellar: :any, arm64_tahoe:       "cda0d16b742cbd255f000cec01112f8355b1dcd38d5b8258559867c0e69e4922"
+    sha256 cellar: :any, arm64_sequoia:     "7d5a8f7549ab54ef273b015bdb5c954f06854f2b15f42eba37a715023ed3d63d"
+    sha256 cellar: :any, arm64_linux:       "81a8d22e6e5b2ae6e6d1a3be6c2ff199ea67b54f00b8ad273ae8e1f920c529c6"
+    sha256 cellar: :any, x86_64_linux:      "1110f82cf16b2b59f14a609975a8ed0d96bbdf15db592427aab441437b6e979d"
   end
 
   depends_on "maturin" => :build
-  depends_on "python@3.13" => [:build, :test]
   depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "rust" => :build
 
   def pythons

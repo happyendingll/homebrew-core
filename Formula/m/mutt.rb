@@ -14,6 +14,7 @@ class Mutt < Formula
   mirror "http://ftp.mutt.org/pub/mutt/mutt-2.4.3.tar.gz"
   sha256 "ce9154e3afede622d98b90a22c87d06f32051c930a9afb2b7ef41656c4dbc948"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "http://www.mutt.org/download.html"
@@ -21,8 +22,11 @@ class Mutt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "9d5203697842b5fae20db3824bc043fb59a1c57871e85b58e604fd0234c989c7"
+    sha256 arm64_golden_gate: "919e6e5ba8d967a2b36270c11a19b2b1f77e6713c4a276342a0f148b7b9a5443"
+    sha256 arm64_tahoe:       "3eb26fc7b2b55bbb084c710489952b428070d952829243538f742b4f916268bf"
+    sha256 arm64_sequoia:     "b0627a57334416c3a042c4a622958099d908dfa472aeafa49eb1f309371e0bf3"
+    sha256 arm64_linux:       "292c17925597fd7c6d17cb5ed73db5ffdd4dd9ed28e434243af4f1f7080780a3"
+    sha256 x86_64_linux:      "6ddb3d4329a6d6d04be1a49709fe21b1dd328f788044b4791cd0e73cb422c52a"
   end
 
   head do
@@ -41,7 +45,7 @@ class Mutt < Formula
   depends_on "libidn2"
   depends_on "lmdb"
   depends_on "ncurses"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "bzip2"
   uses_from_macos "cyrus-sasl"
@@ -78,7 +82,7 @@ class Mutt < Formula
       --with-idn2
       --with-lmdb
       --with-sasl
-      --with-ssl=#{formula_opt_prefix("openssl@3")}
+      --with-ssl=#{formula_opt_prefix("openssl@4")}
     ]
 
     configure = build.head? ? "./prepare" : "./configure"

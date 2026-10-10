@@ -1,13 +1,16 @@
 class Evnx < Formula
   desc "Comprehensive CLI tool for managing .env files"
   homepage "https://evnx.dev"
-  url "https://github.com/urwithajit9/evnx/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "838c5f1d63c1fe229c5507851ebf1756384b7230c52887bc88bbb32c6413eebd"
+  url "https://github.com/urwithajit9/evnx/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "e15a8b7654f77bbe982335c2c127219d58af45d0ceb9b17612b858444c349e64"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "bb7bf3c8fa36468ad38fb3a68cc38557cfd989154e67e3901a7136d241cb9400"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c88808978f032300d27b363c046dcfbd776822c1d54a2be0b209afcff08c17e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "56a9c0fe9dfb904ff46964a91f4b09fc78932beaee199455ebb803f349a190c0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "81307cc62480c00bb537a7ab799e6431870c37f718bace773438bef360bc945f"
+    sha256 cellar: :any,                 arm64_linux:       "435c229964d7acdc52027a76a89dea698f99bc0fc5360fc21d85ff146d96a129"
+    sha256 cellar: :any,                 x86_64_linux:      "894b6e9216c90d2c8c78b01d1ce944bd75829b28e89b58e78b7557d2acc6f2c9"
   end
 
   depends_on "rust" => :build

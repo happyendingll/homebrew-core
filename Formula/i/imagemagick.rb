@@ -1,8 +1,8 @@
 class Imagemagick < Formula
   desc "Tools and libraries to manipulate images in select formats"
   homepage "https://imagemagick.org"
-  url "https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-32/ImageMagick-7.1.2-32.7z"
-  sha256 "5086d2268f4d2b9a0dd398dff5ad43f7d4e10159fe043a9cd8881c4d062ac527"
+  url "https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-33/ImageMagick-7.1.2-33.7z"
+  sha256 "11910dde700e836bb241be4ec57adce66a5d2f16563b1de26f31c3d7ec3072d3"
   license "ImageMagick"
   compatibility_version 3
   head "https://github.com/ImageMagick/ImageMagick.git", branch: "main"
@@ -14,8 +14,11 @@ class Imagemagick < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "6ee0b72f5ee4e4a395fdc52bef5f2efb497318665ddf33b49081348f5f53144b"
+    sha256 arm64_golden_gate: "d0330acea91b7e2d6ed33d46d38b0e6e853fa27d5fc6d6a3627e85a81d8b3086"
+    sha256 arm64_tahoe:       "4a56df9a5d3146f97cac464032fee52c7a79b7ae22c342e33127f525698b9f7b"
+    sha256 arm64_sequoia:     "c0caa27bb77253a24b341e0d24884a09e2e3865abc3f208644abde8dfe72ab73"
+    sha256 arm64_linux:       "56b4289523da4945fdac7183a1bc6c67f4e7260782b5671c26f6122137a98e16"
+    sha256 x86_64_linux:      "db3e0cbc084b153bfb046102b9e357cea942e3d177ad74ad6be5ebfc1c6d6089"
   end
 
   depends_on "pkgconf" => :build

@@ -1,10 +1,10 @@
 class Pkgconf < Formula
   desc "Package compiler and linker metadata toolkit"
   homepage "https://github.com/pkgconf/pkgconf"
-  url "https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz"
-  mirror "https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz"
-  mirror "http://fresh-center.net/linux/misc/pkgconf-3.0.7.tar.xz"
-  sha256 "c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a"
+  url "https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.8.tar.xz"
+  mirror "https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz"
+  mirror "http://fresh-center.net/linux/misc/pkgconf-3.0.8.tar.xz"
+  sha256 "943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194"
   license "ISC"
   compatibility_version 2
 
@@ -14,8 +14,11 @@ class Pkgconf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "4541713529fcd083637bf6aa528241ce334d90e461b1b9923aedd328a35a15b5"
+    sha256 arm64_golden_gate: "5bb5d8521f63317b2fdbc7852fc6a865d3e3a2ec32c3ff2daf8c4aa0dd6123b9"
+    sha256 arm64_tahoe:       "cfcd403c852da8f88324056c0881ce69880fcb675181b20345ff7ffc99d4f586"
+    sha256 arm64_sequoia:     "49d58eb2aa7368f027beff1cbc2c5baf648e5c81c3c3e163384f4717ba97b89c"
+    sha256 arm64_linux:       "42994339755a8405b04b3c52c55471ad9b4018588a6aa6617e09d570901b7dea"
+    sha256 x86_64_linux:      "ee273b8faae5547652cc11b61a13ccc08a7cfafd063956eed586bf400c035fbb"
   end
 
   head do

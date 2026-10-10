@@ -4,20 +4,26 @@ class Fnox < Formula
   url "https://github.com/jdx/fnox/archive/refs/tags/v1.39.0.tar.gz"
   sha256 "21669929b2517e7b5425263c75c5f055220126cac1720b40549c316c92db77a9"
   license "MIT"
+  revision 1
   head "https://github.com/jdx/fnox.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "b88d20ecb3abc2ae6ea0dff7b42a4ec38e1f0bdb9a566bd250e2dc94ab676a1a"
+    sha256 cellar: :any, arm64_golden_gate: "7e634880bb6086d437e0cf3ff5389db279d46ed6458ab66e9629849babbbc6d2"
+    sha256 cellar: :any, arm64_tahoe:       "68992fc04475d20ef800954ae98573232860c32a7d28b285663bbe45ce91b102"
+    sha256 cellar: :any, arm64_sequoia:     "5a8accba03935e73b28162736139436cb0683227215ea02efd16e142f3507e08"
+    sha256 cellar: :any, arm64_linux:       "e3e1f1abab3f82bea47a38a9d80b50dd9ed336f7ec40f0b7f2efc0c983bfdde4"
+    sha256 cellar: :any, x86_64_linux:      "a4a18e2b471a48939fa48dbae70c7a48368dbb8a0958989fc6330a8ea6ae8ab2"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "age" => :test
-  depends_on "openssl@3"
+  depends_on "openssl@4"
+  depends_on "sqlcipher"
   depends_on "usage"
 
   on_linux do
+    depends_on "aws-lc"
     depends_on "systemd" # libudev
   end
 
@@ -28,8 +34,10 @@ class Fnox < Formula
   end
 
   def install
-    # Ensure that the `openssl` crate picks up the intended library.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["AWS_LC_SYS_USE_SYSTEM"] = "1" if OS.linux?
+    ENV["LIBSQLITE3_SYS_USE_PKG_CONFIG"] = "1"
+    ENV["OPENSSL_NO_VENDOR"] = "1"
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4") if OS.mac?
 
     system "cargo", "install", *std_cargo_args
 

@@ -6,14 +6,18 @@ class Sqlite3ToMysql < Formula
   url "https://files.pythonhosted.org/packages/59/7e/cb1f5f1b238ea0ce7479641144acb7560e5c3564813e6f9f7a58c3529b20/sqlite3_to_mysql-2.6.1.tar.gz"
   sha256 "40fe6b82cb4dad3a3746bade8f3cd843c905b0da5e8663e4ecd00db8911f60ef"
   license "MIT"
+  revision 1
   head "https://github.com/techouse/sqlite3-to-mysql.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "12d4e947796dfd49a07fee9bd4dbd3f4ddb39b0e9e07e5975907b11528a1b94b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2c6e3d9dd0a5b5d29186a3d7a6ef0b63fa0617fccc5400d4f5834323f200b383"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ab9ddc4b241fdcf85cb8ecab90b5763b8e50c3bd9a5452070ef1f7375937f7af"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bfb76d90a33d94b314f2145f6900248db3881969ed36d60be66cc5d4d7d3e145"
+    sha256 cellar: :any,                 arm64_linux:       "4959d2adfcc7cde4e4fa975659a1098663efd59f1781baeacd12bbe0a0c379eb"
+    sha256 cellar: :any,                 x86_64_linux:      "67b447c420e1624523a24be6b39bce422a8b6b62c65790dc33c1882e1238c504"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "sqlite"
 
@@ -25,6 +29,13 @@ class Sqlite3ToMysql < Formula
   resource "mysql-connector-python" do
     url "https://files.pythonhosted.org/packages/f2/ce/a53b169388f8c6a595cfa9a653138381f3afef1d2af60f5c1972d015f52f/mysql_connector_python-26.7.0.tar.gz"
     sha256 "d8ff5ee236ea46661ee639336323e124ed868e37f3ea991bdc5de5a146f39fd5"
+
+    # Apply Fedora patch to support OpenSSL 4 / Python 3.15
+    # https://src.fedoraproject.org/rpms/mysql-connector-python/blob/rawhide/f/mysql-connector-python-python315-ssl.patch
+    patch :p2 do
+      file "Patches/mysql-connector-python/mysql-connector-python-python315-ssl.patch"
+      type :unofficial
+    end
   end
 
   resource "packaging" do

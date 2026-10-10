@@ -4,12 +4,15 @@ class IosWebkitDebugProxy < Formula
   url "https://github.com/google/ios-webkit-debug-proxy/archive/refs/tags/v1.9.2.tar.gz"
   sha256 "768f101612bf5d2507957f10a8e34e98675ea8fe3c63b8ed78772f8abd103fbf"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
   head "https://github.com/google/ios-webkit-debug-proxy.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "716ebd2840ed0c907f028af80284e71c34ab10c97afcd23087fbc11dbbdca18c"
+    sha256 cellar: :any, arm64_golden_gate: "c59efa369c0ea7dd80c9164d1001ef0e9fedb460f18b789f8a8aac483319374d"
+    sha256 cellar: :any, arm64_tahoe:       "4feede5d70f45f64cdc6c02228498bd9527584e514e082ebe4920fac06bd7ba4"
+    sha256 cellar: :any, arm64_sequoia:     "f570a1e916f859dca6ea38678d6120b0a94fc3074511e6a6954efee4404cafb7"
+    sha256 cellar: :any, arm64_linux:       "6eed93a15a8546a12746a4cda3444d94d302bebca0660469c8a659c22931aa16"
+    sha256 cellar: :any, x86_64_linux:      "2d258f272531b46e2ee4bd27f560d706ec8f3a3e0aa5549feef1a1f23a906e06"
   end
 
   depends_on "autoconf" => :build
@@ -19,7 +22,7 @@ class IosWebkitDebugProxy < Formula
   depends_on "libimobiledevice"
   depends_on "libplist"
   depends_on "libusbmuxd"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   allow_network_access! :test
 

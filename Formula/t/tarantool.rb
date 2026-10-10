@@ -4,6 +4,7 @@ class Tarantool < Formula
   url "https://hb.bizmrg.com/tarantool_repo/sources/tarantool-3.8.1.tar.gz"
   sha256 "84ba3129bcfc2a7eeb30cea17a955b7b3f96615b960497d5ca60eac1d14fd090"
   license "BSD-2-Clause"
+  revision 1
   version_scheme 1
   head "https://github.com/tarantool/tarantool.git", branch: "master"
 
@@ -15,14 +16,17 @@ class Tarantool < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "b156aad36d0980c5141ea8df1634ef3f77420d6ddf97a2440c2475d5f3b6c02b"
+    sha256 cellar: :any, arm64_golden_gate: "106434fbb91a2becd263891a5f3eacc9e56026ce1b5b07933601ec64b02b139d"
+    sha256 cellar: :any, arm64_tahoe:       "94c7be9c5a1a09fee56892433593e1fde94b8ebbe055c764ce7221c40c1eaeea"
+    sha256 cellar: :any, arm64_sequoia:     "868ef590aa257d6fab8a4c3b8b7cf0bdc1d3a56928a2d139125a4b7b257f20b1"
+    sha256 cellar: :any, arm64_linux:       "162b60397c56bc1e684d42584161dc3ecd8eeb00baeea13ab618e9c5ffc26466"
+    sha256 cellar: :any, x86_64_linux:      "23d3bb77b66ed8a28a6f1167a2b889ca9f3fc21564e02fb39c00483698643d18"
   end
 
   depends_on "cmake" => :build
   depends_on "icu4c@78"
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "readline"
   depends_on "zstd"
 
@@ -41,7 +45,7 @@ class Tarantool < Formula
       -DCMAKE_INSTALL_LOCALSTATEDIR=#{var}
       -DENABLE_DIST=ON
       -DICU_ROOT=#{icu4c.opt_prefix}
-      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@3")}
+      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}
       -DREADLINE_ROOT=#{formula_opt_prefix("readline")}
       -DENABLE_BUNDLED_LIBCURL=OFF
       -DENABLE_BUNDLED_LIBUNWIND=OFF

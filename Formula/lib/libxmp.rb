@@ -1,14 +1,17 @@
 class Libxmp < Formula
   desc "C library for playback of module music (MOD, S3M, IT, etc)"
   homepage "https://xmp.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/xmp/libxmp/4.7.3/libxmp-4.7.3.tar.gz"
-  sha256 "b6a98797e4fb9c9a705f5d53112aa5214561857e929a644928b9e658930d9440"
+  url "https://downloads.sourceforge.net/project/xmp/libxmp/4.7.4/libxmp-4.7.4.tar.gz"
+  sha256 "a25583aa3b031c78ba0b4e83387fa596fb05742622e60f60d1540ee2af79b8d9"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "9fdf37c97b4603d791f4e18ff4cf53d34b17b2a8c18137f88ed6590da7784d36"
+    sha256 cellar: :any, arm64_golden_gate: "93fda5c152b511eaaee3cd362886f86ea0492e08be785ce0f7bcc095bbb075c2"
+    sha256 cellar: :any, arm64_tahoe:       "f50aeb7e74e46c1c34934382db3c5847389ba5351e7ccaac6b822e8a3114bb9b"
+    sha256 cellar: :any, arm64_sequoia:     "998f473fab874225a675bcbd165dea19ed8d4efb9a08093bee2e453e3a9167cb"
+    sha256 cellar: :any, arm64_linux:       "76b4573938095a0b2d4151ac57dc36e8d3d5f3b53c0f860856ea2addf808661e"
+    sha256 cellar: :any, x86_64_linux:      "4706dd629fda1efe6140b300b87b6b251f4d3b3692f8ed644424afd82a7bb6db"
   end
 
   head do

@@ -1,8 +1,8 @@
 class DsdaDoom < Formula
   desc "Fork of prboom+ with a focus on speedrunning"
   homepage "https://github.com/kraflab/dsda-doom"
-  url "https://github.com/kraflab/dsda-doom/archive/refs/tags/v0.30.0.tar.gz"
-  sha256 "5ce3401f2975b330936c0739b62910ae3b193f0d8f323b7b246bb242e1987e19"
+  url "https://github.com/kraflab/dsda-doom/archive/refs/tags/v0.30.1.tar.gz"
+  sha256 "c8b14d5e6f5aba66745cb682297fe3aa97f3ef158d7f876798dd213a82e1de40"
   license "GPL-2.0-only"
   head "https://github.com/kraflab/dsda-doom.git", branch: "master"
 
@@ -12,8 +12,11 @@ class DsdaDoom < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "455ce71d2b9f0e83da2bc81000add3d99400cd236a61396d3a9061c499692050"
+    sha256 arm64_golden_gate: "f11498404f6c09aee804976c0f4c0efe8db6a798a427844b5ab00a6f3e3bf28f"
+    sha256 arm64_tahoe:       "f69ffe34c83585fb282111da97cf20a30f06466235a613a10079819e17ec0f3d"
+    sha256 arm64_sequoia:     "9512ee640ecb4545671beea06cda5b84bc564d7a8fcd67577356b23075ab86e9"
+    sha256 arm64_linux:       "90bbe4a5c71723642f3aed8ff3cf574aa6e0db46927a2f731895a3f7e7229682"
+    sha256 x86_64_linux:      "95dd0075d10612180013c782787e338e93cc3b56ab7d73922ea78b6716d1d296"
   end
 
   depends_on "cmake" => :build

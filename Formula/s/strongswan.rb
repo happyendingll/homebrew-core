@@ -4,6 +4,7 @@ class Strongswan < Formula
   url "https://download.strongswan.org/strongswan-6.1.0.tar.bz2"
   sha256 "fe6c97481298767213cfc2e9a1da29fdd8018d481ff4cb9cf0283099654f20d4"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://download.strongswan.org/"
@@ -11,8 +12,11 @@ class Strongswan < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "c5a337baf89d6c38932aac040fb3f76af033231d50975698ea8f81f9b04583d8"
+    sha256 arm64_golden_gate: "dbdcfd4cb3e7fab289441cd6bff5ed60d862f20c461cfddbde303f7fa95a59d6"
+    sha256 arm64_tahoe:       "17f42ae0f527c300c202edd8493c1a0712ebb06bf60dd681adbbfc6a106900e1"
+    sha256 arm64_sequoia:     "bccde74b4e79fe277f74013efd6c83ae3970dd02843b46edc0611c11ffd3cfda"
+    sha256 arm64_linux:       "71340c65a0ed2cd91646041324f2ccc1eecfd01d5f523f0f0116a2d23e2016e4"
+    sha256 x86_64_linux:      "d11806e02e78a35d4f6af0b60fa3170d6be9b58af74714a8432e0be57f230ca8"
   end
 
   head do
@@ -26,7 +30,7 @@ class Strongswan < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "curl"
 

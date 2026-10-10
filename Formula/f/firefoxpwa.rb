@@ -1,14 +1,17 @@
 class Firefoxpwa < Formula
   desc "Tool to install, manage and use Progressive Web Apps in Mozilla Firefox"
   homepage "https://pwasforfirefox.filips.si/"
-  url "https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v2.20.0.tar.gz"
-  sha256 "dc35ddba5c37351f0726dee0bbf85a2d1d7df3f95f43e958df8afb3d59a3c4e7"
+  url "https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v2.20.1.tar.gz"
+  sha256 "97ee2e61698f79629871b7eeca1d70c32ccfc68a49902b9ecd6da05b142bfe19"
   license "MPL-2.0"
   head "https://github.com/filips123/PWAsForFirefox.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "228636e094d78a81378e0b017099073074828bc3a260ed8d512c19902d38047a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26649dd862ec0fd836b5b5c36ac7c88b83a3cc4e88b9654d0abc2815a2e18e67"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d7e5034022ced004d696de2a89dab3c989ad075eb40e39480ab447a7b15dfc3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6a93df3bbb4d58673ee11fc9a1fc7b401d82c8513e15edc8284ddee4aa8bfe92"
+    sha256 cellar: :any,                 arm64_linux:       "4747caffa8cbf607cc5f94f17e80b044b30c1fd360e37c524c4ac4e8a1c07509"
+    sha256 cellar: :any,                 x86_64_linux:      "2597537067a34dcc50510a4ce7879c14080119423f4f7ecca8552eaf5e2b8967"
   end
 
   depends_on "pkgconf" => :build
