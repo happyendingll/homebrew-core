@@ -9,11 +9,8 @@ class Nvchecker < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "72c03e782af3e09ebedc02d98fb53db5f4ec8b315577f3160bc780990abd4331"
-    sha256 cellar: :any, arm64_tahoe:       "001d5fa744d2af67339008a2be1ee96c169b263da6ef028dfbcc1d972982c14f"
-    sha256 cellar: :any, arm64_sequoia:     "df02e04d94a54f04842b436b2285e69733ecafcffb2d87d736c29f1de120aadd"
-    sha256 cellar: :any, arm64_linux:       "63c6a701b6296528c58f9f30cc2adaed9cff0610c61abcc29547c0259b62abbb"
-    sha256 cellar: :any, x86_64_linux:      "d990d30f08325b8f81621e70ec5d9d9b5b7dad1615351b733e852c95399917e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "ecdb83417ed48f06b0d43c08e1d04a760214bb4381e54b17176cf73d47f79cfb"
   end
 
   depends_on "curl"

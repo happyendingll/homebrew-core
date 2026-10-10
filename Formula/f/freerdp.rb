@@ -8,11 +8,8 @@ class Freerdp < Formula
   head "https://github.com/FreeRDP/FreeRDP.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "3967d20fca4a3662ca38d1dae940828d34a016e68a2719e3df956f24ffb08972"
-    sha256 arm64_tahoe:       "c9114711256f4b4161b280f344ce55fcfaf4d9484e6a89ef652a03f334fba479"
-    sha256 arm64_sequoia:     "af48acb4359183c31759658d2b1f9751b52ce161b2e07dfea08d9da21d135a0c"
-    sha256 arm64_linux:       "be8d3e4149fd826e30306eb17487e907d14560249c207ac51a80570540392835"
-    sha256 x86_64_linux:      "0a061566853b61f12d1ec2537fc192f7a6e1ea120793b7bd64f58d88f07db068"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "e2ed0644de70cdb0c99488bdcb79c4cbe7d1305ce0e6b53bb77c449be14d0929"
   end
 
   depends_on "cmake" => :build

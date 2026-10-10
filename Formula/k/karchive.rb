@@ -17,11 +17,8 @@ class Karchive < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0e48e08e5c88476a4118c58da94ee1c4996b0ddb9388f495dabd403f8a232b44"
-    sha256 cellar: :any, arm64_tahoe:       "55527fdf81fe83a1fa8e872420e4ff4a829a83c0bab86cf3d2cc1c7296accaa0"
-    sha256 cellar: :any, arm64_sequoia:     "79b14a405384f8d6ed4161c6beb8f0d28e5fbad43814f76bd06c324421f3b5e7"
-    sha256 cellar: :any, arm64_linux:       "739005b07dc8f1e7ed138021b948590a08a6cadc56af7c068c7070fce37b7a24"
-    sha256 cellar: :any, x86_64_linux:      "497be836e817e825900f0c3c23343ecf7eacbbacd8c2f13d9bac705a55d1f51c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "592e5146f62cbcec04c701ab832a9e30feb5003bd1c860872977ee6cadea589f"
   end
 
   depends_on "cmake" => [:build, :test]

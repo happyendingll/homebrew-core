@@ -7,11 +7,8 @@ class Qxmpp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7232bf82e274a902bf541718cb43d404545481299976b859c018548d15cba245"
-    sha256 cellar: :any, arm64_tahoe:       "bfbda878563bdd741496f4972f13d5010f91c52eb4b446d7326f9429c2f72783"
-    sha256 cellar: :any, arm64_sequoia:     "df0a21ebbb0b8ddf8a60fcec6b6384c7461a8de57d670b1d133d26cb04f897ca"
-    sha256 cellar: :any, arm64_linux:       "54f13118756e3751341589ea5832700ccdbbccf5d776a79aa7ec475fd6fb524d"
-    sha256 cellar: :any, x86_64_linux:      "be31a7531150b247043a85e450928d72de03544f6e77203570dead66e455bbce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "4691abe90e2baa113d446c1645565bee7d553d4cef1ab89c427fe37d716e70ac"
   end
 
   depends_on "cmake" => :build

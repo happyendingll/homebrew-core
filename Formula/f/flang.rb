@@ -23,12 +23,8 @@ class Flang < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "4698ff642f581ed568172ad4ad8d09eb6bcb3e7ab4cb77ef6ce6459f3b33aab6"
-    sha256 cellar: :any, arm64_tahoe:       "db8f5bba7c53468f87e62998bb8c7f7983d54ce918923d9f26df1b0555a705b1"
-    sha256 cellar: :any, arm64_sequoia:     "fc336e774207f2a63fa8132d20571edcddb4676fef37d7be2a7eecb55b4d65fc"
-    sha256 cellar: :any, arm64_linux:       "8f1598d665dbed2db278166697c673d40b6f9bc734e469f5acf3b25115d70c56"
-    sha256 cellar: :any, x86_64_linux:      "d3d45b1f8aa76c7f0d3d79e1e6ab4bb7ee0a7f84fe60a77c365a38c2329eb838"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "6bfa0b49b72325dbcbd37f8616c6b2d068c87df8244d021d8706ca4271118b6a"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class Scrcpy < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9d2b278e630c10b9edea811ca98e24f911a598422a8eac9a8fd1a63a8cc9d54b"
-    sha256 arm64_tahoe:       "2be4dcfa74bed0423ad50e09f0ce1d355a353e0d5797272b7392550729af6246"
-    sha256 arm64_sequoia:     "310036896e90273ac26f052f3c70f8f07cf48a376620bf84fd977fe2a51de34b"
-    sha256 arm64_linux:       "b91a7c891dceca621544edc74327c69832109c85400a3f02322033a8642fd087"
-    sha256 x86_64_linux:      "7874f0753c6dab085c5de2aada26fce3efcfabcb4dd83a704c1d0ea580a412f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "fbb685f273f1f78e33fffb83c99fc6a46eef89cdee61f43b69f511f81ad3ef22"
   end
 
   depends_on "meson" => :build

@@ -12,11 +12,8 @@ class Pgbouncer < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7f864d2b7c89876a6743ae610d59a0e632f01bb504bf25c2d122962b042b1096"
-    sha256 cellar: :any, arm64_tahoe:       "4c47024fd069e6f55937d59ce37541fefa506ea8cb514d857b730208505f1517"
-    sha256 cellar: :any, arm64_sequoia:     "bad6fd2122f8dd5506b27a02b6333053fd8298e429476b90299c5d7ce5942d96"
-    sha256 cellar: :any, arm64_linux:       "e20d79043f76221b5bf1e7d487f98a00f805a08660934cc1ef12347a32cfbf61"
-    sha256 cellar: :any, x86_64_linux:      "d5b2160609831572bb72e72a8a81fe41a345af1e2ee2bc607b128ab278d51f70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "314d8accf3205d3fc11bce0cd14126d876ffde22f91f7788aebcb685bbd3d7b8"
   end
 
   head do

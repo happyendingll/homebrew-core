@@ -12,11 +12,8 @@ class Threadweaver < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "305546048e7e96940a90805f8a8585ce3b117d3b10a2d882a4a247b6ec01c9f9"
-    sha256 cellar: :any, arm64_tahoe:       "336299469231fa5c74773529683b1451d5764491fa35b904ad59d577ed300fed"
-    sha256 cellar: :any, arm64_sequoia:     "610cb982a1e5ba60855deb90a5ac20c09e80b29ffc61c7114f06f191e2a71508"
-    sha256 cellar: :any, arm64_linux:       "08137a3c8340eb51ac233b8a6d1238474cd600388daa74d27c3f524f9a9ccccb"
-    sha256 cellar: :any, x86_64_linux:      "f775ed346b48760135c3485d2e54ba11bdee8c42bf9416aa4ab103b8976f6130"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "60be932eadac92727fd9fcdc6f1ed80f832b7428a6f55e02a70bfc1b34c36d0f"
   end
 
   depends_on "cmake" => [:build, :test]

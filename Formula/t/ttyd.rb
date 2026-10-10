@@ -8,11 +8,8 @@ class Ttyd < Formula
   head "https://github.com/tsl0922/ttyd.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "11f48dfa4ef0f29f80ea7d3e0173b4564272eb91360a2d741c53cb7838476493"
-    sha256 arm64_tahoe:       "c9f5788221927bfe0d5e491f0eced92c6369a73e7e968ea712639b66c1864f40"
-    sha256 arm64_sequoia:     "aedd77feb2ab16fd9b6faf4c15e47a62e6b1ce3f1342ad05b4b6e70fc04cb3e9"
-    sha256 arm64_linux:       "cd87a1a24e6a0d92900681fac6961559ea48f3350fa2e28a3209e3428f02e4bd"
-    sha256 x86_64_linux:      "f12a7a7151dc432a48cba81f11f004514ee729e28369e5491970c11e2329e610"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "e58b953bf24d157d390288507b62cc18d87d49b401e3255705065d186fd596cb"
   end
 
   depends_on "cmake" => :build

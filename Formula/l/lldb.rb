@@ -12,11 +12,8 @@ class Lldb < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f01865566dd2dee88c983d321fa7b598aef90c8e077ec70097005c73acb64611"
-    sha256 arm64_tahoe:       "4839e1ec4ab04e2d7b4505720965644c0d47a31794f317467630e3078bd8171b"
-    sha256 arm64_sequoia:     "cd3c07b401906d6742fa80fbf72b7866f061b99209e3ee2988c9b302bbcfac06"
-    sha256 arm64_linux:       "d0e58e02d63c07727a51db8eff48fcb4672fa265e00c9b7843613623fe680d7f"
-    sha256 x86_64_linux:      "4e742d2345ae44215d83234b8b018caae081a27f98693b1cfa29948101d9f4d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "e0cb9e2fe8dce25dcc93c0c973bddd466c93dcb43478477b70efeebcd148ae49"
   end
 
   keg_only :provided_by_macos
