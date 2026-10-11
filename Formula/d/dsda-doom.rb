@@ -12,11 +12,8 @@ class DsdaDoom < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f11498404f6c09aee804976c0f4c0efe8db6a798a427844b5ab00a6f3e3bf28f"
-    sha256 arm64_tahoe:       "f69ffe34c83585fb282111da97cf20a30f06466235a613a10079819e17ec0f3d"
-    sha256 arm64_sequoia:     "9512ee640ecb4545671beea06cda5b84bc564d7a8fcd67577356b23075ab86e9"
-    sha256 arm64_linux:       "90bbe4a5c71723642f3aed8ff3cf574aa6e0db46927a2f731895a3f7e7229682"
-    sha256 x86_64_linux:      "95dd0075d10612180013c782787e338e93cc3b56ab7d73922ea78b6716d1d296"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "23712e8d5d1c11997e6e9c43c0900e0e3a79ef83967b483ed0a4138e1565e7c7"
   end
 
   depends_on "cmake" => :build

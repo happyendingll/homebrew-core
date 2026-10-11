@@ -13,11 +13,8 @@ class Opusfile < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "580b2a76a003a6d5afe91122cc0f010218b1e7dc32f7325e3b6ab8fc8afda755"
-    sha256 cellar: :any, arm64_tahoe:       "b0226b89dd01ee7b757ca8f0a683bb3486ebd56a066333bb7f0c4df1f9b1ff7c"
-    sha256 cellar: :any, arm64_sequoia:     "14df475fe484095b299c6fb39c5f63eede59b081da7ca468561a0a587507ecc6"
-    sha256 cellar: :any, arm64_linux:       "4f2a88200a058fdf3ac0afdba41e85c583d67d2bc5984dc814b11331a9a3ab73"
-    sha256 cellar: :any, x86_64_linux:      "0a219fc196b1906e1f597969e6d720b00752334a9ffc5fbfeb43de5e70ad593d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "df9296692564fa61956ee06ffe123a9493ea391c2984919fc3986d35b4cf6457"
   end
 
   head do
