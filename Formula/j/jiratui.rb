@@ -16,11 +16,8 @@ class Jiratui < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6b567aab8c5412c5c4b234fd6ad18da6e2a46537f1fd42956ac842edd9da9a51"
-    sha256 cellar: :any, arm64_tahoe:       "c556befc91568f7ced970df349dcc221b7834bc3502efabd9553fdc2777874b2"
-    sha256 cellar: :any, arm64_sequoia:     "5253096e0f67051ef9cf9aa710779059501f98ca6b6a2bbf6d2ef631fe7fcbda"
-    sha256 cellar: :any, arm64_linux:       "ccb1bfbef44ba871a76f5edc9e44ffcd810e8faa0c0213aef4103269c01482a4"
-    sha256 cellar: :any, x86_64_linux:      "5dcb0f4669637e0b76fa0fd92165c3ff57bfbf23df4d54bbbe52f1d6b098d24d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "96af5a5ee59123c7ff5438e1ba75bdff75e5aed730de3b08b407e3d44ffc76f5"
   end
 
   depends_on "rust" => :build

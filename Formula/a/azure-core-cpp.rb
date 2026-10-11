@@ -13,8 +13,8 @@ class AzureCoreCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "51d96e4be5a88ad4a4c6b64007ed742f16b21b158ad07cf8b4781adaa502b56a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "062b6d2bc8f7a021775ae0810dca05960b1c63430c68474eec1b757d9546652c"
   end
 
   depends_on "cmake" => :build

@@ -6,11 +6,8 @@ class Seam < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf0f210cef2bf921247acd182a836dcd8b40640adbc004eeeb0b89a328965610"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8987d19881a7970411850a8677605274449f9f165d3c29e32130aade28b34eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a663c67b59d2620b38cfaf10da8fd2c024f213d63307e9ac3b087d3d916a022"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5ddd48f46949dc5fbd9011c1a6336beb4932d11ab8b9e8615c4cab1e41bf76a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "861b2221c13369b24de5221230dc651da4ecf88355b1b140906949eb252017ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c29e56d4e875f98583f27c8d2d7fd2cfb42647018a3543d4a56267166b6613af"
   end
 
   depends_on "node"

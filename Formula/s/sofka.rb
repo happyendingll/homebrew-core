@@ -6,11 +6,8 @@ class Sofka < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9e20c3ba8445f8b709362d27ace0b687eaf67078799259b0f30b59362f1f156"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed4687f3a4fbb67c2339f4a05101c907a38430d74d3cd4139f857dfca76c69dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7aeea8a9d684aa4a40ee8e611b5bbd531d81d172ae720af9d99c467ffabc5224"
-    sha256 cellar: :any,                 arm64_linux:       "90aa791853374dc091f65e390911b1073a2c77f2df1bd25e4a5a67f1a45dd7d8"
-    sha256 cellar: :any,                 x86_64_linux:      "aed2c420d6d671058845fa9e2d9694d3774bcecd309b60f44a254e0b8fb971aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "56c12cf38887ebe80c1970056d6b5f67e59dfa6215d8d1269a4251a4ea8dc500"
   end
 
   depends_on "rust" => :build

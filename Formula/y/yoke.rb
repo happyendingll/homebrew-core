@@ -9,11 +9,8 @@ class Yoke < Formula
   head "https://github.com/yokecd/yoke.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "89e04efdbd13ea49b3d5bad3dfe40d590f3fef207815e4c996a65211f3291199"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6c6aac084348ae00d3482ad823a7cdadac25bafd01505f85361aa990ee74e295"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "76ff3817162472b2ff7d11f89d43c4bc75520701e3b74ae067d4cade42ecc1c1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5878ebfb89da104a134d525466364c564ab62dcf9d15e4f4897417a1287d3b91"
-    sha256 cellar: :any,                 x86_64_linux:      "3a8ec477042f95da1f35415490f7c08e6d93c50416e34414488692bff577d3ad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1cd76c1d3ad8d85f3231e15f9cbe36e0cb2169639a856706b62451a0f05bd717"
   end
 
   depends_on "go" => :build

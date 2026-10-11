@@ -12,11 +12,8 @@ class Strongswan < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "dbdcfd4cb3e7fab289441cd6bff5ed60d862f20c461cfddbde303f7fa95a59d6"
-    sha256 arm64_tahoe:       "17f42ae0f527c300c202edd8493c1a0712ebb06bf60dd681adbbfc6a106900e1"
-    sha256 arm64_sequoia:     "bccde74b4e79fe277f74013efd6c83ae3970dd02843b46edc0611c11ffd3cfda"
-    sha256 arm64_linux:       "71340c65a0ed2cd91646041324f2ccc1eecfd01d5f523f0f0116a2d23e2016e4"
-    sha256 x86_64_linux:      "d11806e02e78a35d4f6af0b60fa3170d6be9b58af74714a8432e0be57f230ca8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "199f9dde7ea363215fe59dfe9a68937803b10d2ec5023e897b765a23aa48d7a4"
   end
 
   head do
