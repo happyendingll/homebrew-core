@@ -22,11 +22,8 @@ class Mutt < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "919e6e5ba8d967a2b36270c11a19b2b1f77e6713c4a276342a0f148b7b9a5443"
-    sha256 arm64_tahoe:       "3eb26fc7b2b55bbb084c710489952b428070d952829243538f742b4f916268bf"
-    sha256 arm64_sequoia:     "b0627a57334416c3a042c4a622958099d908dfa472aeafa49eb1f309371e0bf3"
-    sha256 arm64_linux:       "292c17925597fd7c6d17cb5ed73db5ffdd4dd9ed28e434243af4f1f7080780a3"
-    sha256 x86_64_linux:      "6ddb3d4329a6d6d04be1a49709fe21b1dd328f788044b4791cd0e73cb422c52a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "205c9b0cb57f6fab2879d9f455aa5841d011c936e775495a3970531c5768c43c"
   end
 
   head do

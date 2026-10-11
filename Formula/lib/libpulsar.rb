@@ -8,11 +8,8 @@ class Libpulsar < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bbf80de57dcad2c7bb1da98e913e36b4e70a0a51ced6afb93567f984a65cd5e4"
-    sha256 cellar: :any, arm64_tahoe:       "a5c787e3d881e732744fe067657a554979668fa08c430c647b66222463e3f37e"
-    sha256 cellar: :any, arm64_sequoia:     "e32066daf506bcce8cde469159885a2d531fcbe14ce16a6d2446727cf939ff75"
-    sha256 cellar: :any, arm64_linux:       "44f61f92597fb8b4f702a453a469120ae70b82402d5f63b4da9b464ebb3a6f1c"
-    sha256 cellar: :any, x86_64_linux:      "2132023b616d4037fcda21bd8fd5e0e8cd410359e46a73958ae7b03a8bb7507d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "670391d1eb39bf73fd72287e5b64b93b49f7099794cba3400d59ce92673ad0b3"
   end
 
   depends_on "boost" => :build
