@@ -6,11 +6,8 @@ class Promptfoo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "27e2a7bcbaf490f44e0425e36f2b2d033beb40df284d40fabdd793855590ae7f"
-    sha256 cellar: :any, arm64_tahoe:       "f4af3bb74839a01b962bee63ca95a68f627bfa1e8544c48f37bf391e4d1f4fbf"
-    sha256 cellar: :any, arm64_sequoia:     "082bf000c14e3b79015410b90b2cd9eb78e25767a054ed3ee0885c0e0f871f40"
-    sha256 cellar: :any, arm64_linux:       "689c853a0deb58ecdd9386305e701f32dc81ef35411b6434828e2191b34f60d9"
-    sha256 cellar: :any, x86_64_linux:      "a235ba8cceda33a6ab9d094437c3c1a63a0f3d738db1eb7ae9108c33a7a3d58e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "dc21b3a04bef911fccff8daac9f84d6d29c9d654c61a6edc7dfcb24515ac144f"
   end
 
   depends_on "cmake" => :build # for `libsql-js` > `libsql-ffi`

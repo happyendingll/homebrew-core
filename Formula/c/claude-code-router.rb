@@ -6,11 +6,8 @@ class ClaudeCodeRouter < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3cc32e607f35f501f28eed529c5eda6425ac0a5b890b7737d66e4547d39366f6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a47b263fa41a619805f218cea8e93ebb7b855fff3e862c3dfe6f44faf6bdb54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f8fb371dc4172754125f801f1a0bbe0e5a4bea639578769c3f114ddd5656a1e"
-    sha256 cellar: :any,                 arm64_linux:       "7d2fd9973ad6332d35c4025fce77dff893df75091602e6b755754b0339a3425b"
-    sha256 cellar: :any,                 x86_64_linux:      "b57abfdf3bbb3924358719da5d35ce4ca8f232819a2a5f20fbf57203a8807802"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b60d3dbe17e6e101dc273ecf4fccc5726c66add9808ac73f84bb1b04b0658bb1"
   end
 
   depends_on "node"

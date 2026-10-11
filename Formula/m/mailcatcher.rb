@@ -7,11 +7,8 @@ class Mailcatcher < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ea74ae070fccad891c9fd20f08bf085e2ea95d8dea5a840f7db8eabb1379acf9"
-    sha256 cellar: :any, arm64_tahoe:       "374eb24bc9b4bb16f262b72bdc74ad38aa486ebdf44dc2876ef9c058d4e1aa1c"
-    sha256 cellar: :any, arm64_sequoia:     "f161cba4425310c55c772cfdd4e19275fb0053165003ac73bd9c0081c49105d8"
-    sha256 cellar: :any, arm64_linux:       "4a005a007476ac29563930739c6fc602ad4f4c5a65c85663a60b494e24ca8981"
-    sha256 cellar: :any, x86_64_linux:      "4514cfc9256532af98dca1fb3b3a885d854e65a97c76533f8e2b90af2e583e70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "3dd583b3c980ddd45797b751ed6b3cb9747a9728dbfa6fe030875128acfce00a"
   end
 
   depends_on "pkgconf" => :build

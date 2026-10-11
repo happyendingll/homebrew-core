@@ -6,11 +6,8 @@ class SnykCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "79fa877203ef6c7799e82494a73eb0af6b2d8ccb638fbfeb5518becbd16dbdba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "79fa877203ef6c7799e82494a73eb0af6b2d8ccb638fbfeb5518becbd16dbdba"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "79fa877203ef6c7799e82494a73eb0af6b2d8ccb638fbfeb5518becbd16dbdba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3221cc09f04cb2702d4d27455cb91f68c93959d056aeccb80973080b8729251a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6c96cd523bbaebd67f2ea4b01586d09d6770d9d3c872dea2ee591afda5f3d12e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "51040dbc6a3301401e32eca231079f42ef6d60316b72fcfddb624a10dc2aa058"
   end
 
   depends_on "node"

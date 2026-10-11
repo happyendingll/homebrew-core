@@ -6,11 +6,8 @@ class Vite < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "2bffc05182f01b50aa61776ff5c2b2e3f9c91c8584c42dbf51d15a884e7654c4"
-    sha256 cellar: :any,                 arm64_tahoe:       "2bffc05182f01b50aa61776ff5c2b2e3f9c91c8584c42dbf51d15a884e7654c4"
-    sha256 cellar: :any,                 arm64_sequoia:     "2bffc05182f01b50aa61776ff5c2b2e3f9c91c8584c42dbf51d15a884e7654c4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4db950971ce46f194a5e7d16af606e384bc4823a4ec2c5cc0a337f958420520c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b27aa801c8fe12542c475ce886d5e6924846973ad310a234c47a63221dd39343"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "ba8bc2f4dd738c327505c47b6365c932da570f70ebcaf292f1008353dea7fe44"
   end
 
   depends_on "node"
