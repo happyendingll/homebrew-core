@@ -17,11 +17,8 @@ class Pdns < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3f392cbd76db562bd68583c3ade8f58a3d74c10e1edfd37b9a71216942d4fb24"
-    sha256 arm64_tahoe:       "d7102fd99834a7b2585dd8e79ba7bd452349d4e177a34712216b4263193f3359"
-    sha256 arm64_sequoia:     "ed7507d7db6bff569d3e593ce1db5267f02ea4806f8fc1a4ae3dbd0ed5feb3a8"
-    sha256 arm64_linux:       "b274729ba5d613e72194b0d53087b56513118a5cb9468abcb94e35dd1baad417"
-    sha256 x86_64_linux:      "d75df0d2832314c396b48014b2f92539f7377261112a317df3ef45cbcbecbfa2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "4db52989e29a4ad635be3ed93b7adc17cbba9f236b709a4e66279cebbd461251"
   end
 
   head do

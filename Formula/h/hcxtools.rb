@@ -8,11 +8,8 @@ class Hcxtools < Formula
   head "https://github.com/ZerBea/hcxtools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b5f01178ab5387a809deeedc4197aa5f7e97e01dd7c312c1ee2e7f2972965c01"
-    sha256 cellar: :any, arm64_tahoe:       "9e01f404748137c27638c3464800c31f4dea874205be7af2c70eeb439db55946"
-    sha256 cellar: :any, arm64_sequoia:     "948b82734d6251902c54d3397525ea88667ab287c8e33c2a9657a668594fb713"
-    sha256 cellar: :any, arm64_linux:       "cab3a33d7881a68af1e80e1ddd8862616ac2ce99d93f03e139f0030367f4ba4a"
-    sha256 cellar: :any, x86_64_linux:      "4209db6ddbfa401e969326c7a6e364d00fab66d938d7d0be8d909c9bf0dfc949"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "22803a4e5ab0f1c33cadd5ac9af3c675179895fd5cf9572df8698b6ddc59bb20"
   end
 
   depends_on "pkgconf" => :build

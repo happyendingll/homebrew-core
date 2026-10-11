@@ -13,11 +13,8 @@ class Xeve < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ae721a0dee4271b950f4dc94536210c59262ae7b97d313dcad5438e8fc216052"
-    sha256 cellar: :any, arm64_tahoe:       "62a117c6092b511b95c154cce09dcf78a9c00a9dd8a1aee4af8ace139c70422d"
-    sha256 cellar: :any, arm64_sequoia:     "7c3263b3051e7960215f1806fa83fc6f4c9e000cdce7be15c6faa11e20b90e17"
-    sha256 cellar: :any, arm64_linux:       "b237217af12e381f3018ec96ae4c1dd33fac3f345574f97de8e6699c33c75e72"
-    sha256 cellar: :any, x86_64_linux:      "164691cea22b819ce23ca27643b59582a1e64896d0fdaaadbd7793f0ba4740a2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "875bd536763588306c52d18b66550eda32e313a4749b7ba0b8d7dfe52a81c16f"
   end
 
   depends_on "cmake" => :build

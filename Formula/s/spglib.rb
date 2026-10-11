@@ -6,11 +6,8 @@ class Spglib < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e8b975280903c1fb6a3a3ea890e2a91de371c5d968fa23a147bb6c0a62e5c4c0"
-    sha256 cellar: :any, arm64_tahoe:       "144813b55bece8d913a785a08bb26e0b5823ce674017170d16092a4f7be3c23c"
-    sha256 cellar: :any, arm64_sequoia:     "6842ee0219b21eb5c83230230246db97c5702af7d6b60b495efdf4996fb7cfb6"
-    sha256 cellar: :any, arm64_linux:       "555eb4ddff93a54c3de3fb1e5c1cceb04e65635d88b0f98422497069107ad710"
-    sha256 cellar: :any, x86_64_linux:      "972599aa13b7c239569fedf9c58c159b593abdf15025c0ee6916d9b5e62bb8a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5953842868199fefb88db3cec1c996b50c39156349c552587499b91a581854ef"
   end
 
   depends_on "cmake" => [:build, :test]

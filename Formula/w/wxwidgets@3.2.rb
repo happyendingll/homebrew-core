@@ -13,11 +13,8 @@ class WxwidgetsAT32 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b79a10b5d1b192df7347c5f4fc393cfed189ddbc9fe72a5182b2cd226cd4753a"
-    sha256 cellar: :any, arm64_tahoe:       "0f261fd4269bbe6bc56ef5b702c3df7eb6a1cc4e73def625843a6f6299f5ccfe"
-    sha256 cellar: :any, arm64_sequoia:     "0cc1f249b77dfd7cd22d22412ca659f8de99a890e7a8cb43e3b06db508348cdf"
-    sha256 cellar: :any, arm64_linux:       "f2a29f86d532c34e900e771dd7b50226592320d1216b51d4d6d6b9ef8834af76"
-    sha256 cellar: :any, x86_64_linux:      "df339caa3258d75f55559128ac9b252e8c7dcb6b577bf6bc3439ebaea170a4f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "cb8a2c7d4bca382914dfb4068980c2e600bb3da1fc10410607dc5bf144c97fac"
   end
 
   depends_on "pkgconf" => :build

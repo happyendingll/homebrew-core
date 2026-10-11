@@ -15,11 +15,8 @@ class Mercurial < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "d363fcc95236e6edca3bac88da8980df936f0b5463cf756a5a164e7c14de80c5"
-    sha256 arm64_tahoe:       "ebf09fb38004564a0ba4a541fd76311f81e3d6dfbdb62f50500747b83cbb3482"
-    sha256 arm64_sequoia:     "2eb365be6ed29ed8660821e397bd642109e1737dc260985c03c3249c5373a6a5"
-    sha256 arm64_linux:       "d98dadc553aeec645cb1474f907c32eeacfb21a3a1a0dba99a221fdd06fdfdbf"
-    sha256 x86_64_linux:      "1c0d442b34cff0e5d7ad3ecd0e09a6b65b0b4fb5718c6426889166b70bdc6710"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "31bf478c255b93c17c4974d1ed9d4f01f8fa6f4626ecaa35fda8ec8a2bb6a686"
   end
 
   depends_on "python@3.15"

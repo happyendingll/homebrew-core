@@ -12,11 +12,8 @@ class Monit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e71a6a2deb67c965d5d7348c1682c51608ce7559141db08c22ded93ec42210a5"
-    sha256 cellar: :any, arm64_tahoe:       "477331b19fc0b1cf7f425b2634ed2a214246b4dbf5c4a303096580af03e90f1e"
-    sha256 cellar: :any, arm64_sequoia:     "fa7d02a81004e486c5165dcbe9cd7411310f43b7a90d2c6a06966fbf920cb7f4"
-    sha256 cellar: :any, arm64_linux:       "17d2a2d43398ffd40ba1f436abbe4363733d27dafdcd86995fd31cae3b717515"
-    sha256 cellar: :any, x86_64_linux:      "f357307da065b779ff93bceef3d314403bd20841fef4393a3ff42f438a542fba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "96b3f0148611a503c3ca815dd6207855611121e72712fae272ebb0a47b1f1316"
   end
 
   depends_on "openssl@4"

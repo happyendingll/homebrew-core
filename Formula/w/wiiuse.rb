@@ -6,11 +6,8 @@ class Wiiuse < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "202c73205053c5693bf53258f36136a3aa513b41f98922a416da2ae96d53fa37"
-    sha256 cellar: :any, arm64_tahoe:       "c3799c163d4e1ac54f1dcadacdbd4efe6be1b17ea241c8a26ce9d04e16c3045d"
-    sha256 cellar: :any, arm64_sequoia:     "96402711a377e57842d8d00d97031162828270e23c61d50604cba4d3efc13b36"
-    sha256 cellar: :any, arm64_linux:       "45e1cac29dd121e10b42b68919a2bbd97593f2138267e4904f71d8a427726243"
-    sha256 cellar: :any, x86_64_linux:      "69110bbdc0be45011b7957145783023cdd56bf8406f38fd0b2bc232c75014c99"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "acbb16c66fcdc89dae1855113a6298917fff2cc90d143c45ae562c75c431282a"
   end
 
   depends_on "cmake" => :build

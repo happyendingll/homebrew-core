@@ -6,11 +6,8 @@ class Soapyremote < Formula
   license "BSL-1.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1e81605f29ac8beb96c1792a94ff8b699f7877fd8e5cfe5915487e4308471b99"
-    sha256 cellar: :any, arm64_tahoe:       "f8491c93d515099d719dfa0634ed2bda81dba4025f702537f0d0b2519bdcc83c"
-    sha256 cellar: :any, arm64_sequoia:     "e8e3c3c4a8c806d410eb6fbd044f801d289fb192106aa5c3d7b7452afb79e184"
-    sha256 cellar: :any, arm64_linux:       "2d37d79ce06179e400defacf5c71e0d4bf89674036cadec068e5907cd6e406dd"
-    sha256 cellar: :any, x86_64_linux:      "8826b60bef79250f443be41b6c54c1e238373269bd81cd1a214df1c0e6fecc5d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ffe49e8b17fcea3a6e599e2c4b760c70e3f4fb5561bfcb19556990349b70f70e"
   end
 
   depends_on "cmake" => :build

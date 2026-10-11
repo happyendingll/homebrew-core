@@ -9,12 +9,8 @@ class Keyring < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "86f94c50ce6737d913970d5badc8c67485df39bcbac166b3b691904ca33d7aa7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "86f94c50ce6737d913970d5badc8c67485df39bcbac166b3b691904ca33d7aa7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "86f94c50ce6737d913970d5badc8c67485df39bcbac166b3b691904ca33d7aa7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ff24b6a6160cc800f3ebe07d02542f89189a8f6a8e8bf8b137c57b66e66685ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ff24b6a6160cc800f3ebe07d02542f89189a8f6a8e8bf8b137c57b66e66685ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "48ee72347db1dc3fe6c96940a6a21ace077e902126cd4da487f7d744db7baf93"
   end
 
   depends_on "python@3.15"

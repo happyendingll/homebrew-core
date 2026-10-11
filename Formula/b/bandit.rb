@@ -10,12 +10,8 @@ class Bandit < Formula
   head "https://github.com/PyCQA/bandit.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "84dadd0f1b4908e7d570e0e9c85cccdcf6eba696b171e2e7111fa9a1e503dfce"
-    sha256 cellar: :any, arm64_tahoe:       "7b220b15e11f7bf7409104f55e23587b98ccfbbd79fdd7192a7884a484bf703c"
-    sha256 cellar: :any, arm64_sequoia:     "f6b617a2bbb58d5a64776529a66ac2e667d9c55853d7dcfca0816129d4268b0b"
-    sha256 cellar: :any, arm64_linux:       "1d0aa9c16fa45750c353feda2663b65b3a674f337050e51137ca58a4f4651f59"
-    sha256 cellar: :any, x86_64_linux:      "a6a0d8217cb5949023f91ae4fa0d4dbae96a36068f93612256bdebac3507b1af"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2c8fc6b22daff16acbba13de4550ed0f0912bdca0fc892ff91eb9e35171030b1"
   end
 
   depends_on "libyaml"

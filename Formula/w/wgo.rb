@@ -6,11 +6,8 @@ class Wgo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7a93f927cfd13cfdaa471ef6989099940680c8c58d1a01d7358811db79f1be9c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7a93f927cfd13cfdaa471ef6989099940680c8c58d1a01d7358811db79f1be9c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a93f927cfd13cfdaa471ef6989099940680c8c58d1a01d7358811db79f1be9c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f3399976abf61c70d48bee31aa034c64c2b9087943f6e67e94b0f78d116c7d56"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "daa8ca5f9db9c64005b810862bf7c1327959261febf7068a80409d3517938dfd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5fe15738e404f0eeaaa84015262bc9fdbb3ed466212a2460ea05e5c34080d8bf"
   end
 
   depends_on "go" => :build

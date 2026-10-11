@@ -7,11 +7,8 @@ class Anyquery < Formula
   head "https://github.com/julien040/anyquery.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eac4011032c61e1b1e2a63018e432cc363be06ecfa0d397a5f94145e0aa01af7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "81fca37f7fc7455f37b658b0b71851abe465e18a7629e68c4c02495e47fb4bd4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "34d3cb7608d5abbf79d41d91a55796afe09be16a029a37aa515f76e75e1ca469"
-    sha256 cellar: :any,                 arm64_linux:       "1714d4a06fd66e2258f835abde5b778fb7f20f865cd83176bdfa8daf25e63b43"
-    sha256 cellar: :any,                 x86_64_linux:      "5ffba65a9f9f6d10464a2e566bc355b086714dc9cc7d221b3a52efd833900ab5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "031ca8cc1eabf9c3107c74c712bc2e028a92b9de7c60e89348d747011ad55f9b"
   end
 
   depends_on "go" => :build

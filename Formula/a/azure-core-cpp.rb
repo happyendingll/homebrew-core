@@ -13,11 +13,8 @@ class AzureCoreCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a13c120f883413abcb8c0bc04b2d9030c27d49496f187cbcf9f0c8ad188fc1d3"
-    sha256 cellar: :any, arm64_tahoe:       "20326047f180a75904f9bd54283db5e8066c9f7fbb4ef1442b0524a3a4138ce6"
-    sha256 cellar: :any, arm64_sequoia:     "10ba6183849f3a316c696f1d7a24e41929fd55b97d7e794597ec9a6f098ef98c"
-    sha256 cellar: :any, arm64_linux:       "f6e1df55376d7dbe2be1bac31c2499a21ce69c8e95c93fc15f120eaa4890b702"
-    sha256 cellar: :any, x86_64_linux:      "4c62f87eade25286ee008be255ee4a9ccd9b75da3b18fa19cac725c52823fd86"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "51d96e4be5a88ad4a4c6b64007ed742f16b21b158ad07cf8b4781adaa502b56a"
   end
 
   depends_on "cmake" => :build

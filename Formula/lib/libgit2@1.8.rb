@@ -12,11 +12,8 @@ class Libgit2AT18 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c3588203cfc8d71c254ab494cf7fdd6037989b622508a4e34afbbf968f9cacb7"
-    sha256 cellar: :any, arm64_tahoe:       "f8dd1adefdec38f3e319f473a3d50bd422a306a918dd090d65ed7eef694561eb"
-    sha256 cellar: :any, arm64_sequoia:     "25421d777704cf52ae0dce7564c52f2f74c18b98a390f11a40010cd9d467cbaf"
-    sha256 cellar: :any, arm64_linux:       "f1d8318e44db8745c0c8a7152722c55638f127bfdaeb550b3c30325cd86a7331"
-    sha256 cellar: :any, x86_64_linux:      "e65cb12d6eb06c7a972df3b14da625785546a2f9399cc24e0192b78af9f7e9ad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b882befcb4dbbaff394da7499f02186eac942734c26fbcb574e54322705c302f"
   end
 
   keg_only :versioned_formula

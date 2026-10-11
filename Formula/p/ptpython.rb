@@ -10,12 +10,8 @@ class Ptpython < Formula
   head "https://github.com/prompt-toolkit/ptpython.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "87e04d534b33b4c7ff95ead0a062d651ed0e0d31278bc9b21c04ba3d0452b660"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "35b0f4d37c8fe8f11ec6197f21898ef6cc650b92fb8952be95249effefed6299"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bc207441f3f0e23e22ae149b0773e047ec83b746fc86e83616326abc430b20e1"
-    sha256 cellar: :any,                 arm64_linux:       "1de4ddfa6359f5a8a1adf7ed3f2e9d22968d96a14c7be12d40fdc31be13e31b4"
-    sha256 cellar: :any,                 x86_64_linux:      "a43c2bc7e894d0211347302ae2ed78e9c8cc3d94747c12152c9fa2f84e5c9497"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e2b314d8a2e8e96398ed2b553841da1ced805ecba7b72d1fd891c65be5f6d371"
   end
 
   depends_on "python@3.15"

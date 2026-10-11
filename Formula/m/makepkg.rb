@@ -9,11 +9,8 @@ class Makepkg < Formula
   head "https://gitlab.archlinux.org/pacman/pacman.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "46c4fc96d53e976fe47de36b55f0c0ab4b7e59a1731dc8d087b568e39a3c3141"
-    sha256 arm64_tahoe:       "72257a30b8c5f4bdf744c7023717c7b53bd8238bb23258b4620e8d6aee542de2"
-    sha256 arm64_sequoia:     "ae487ee514831cd971255fc79129896725b3fddcba0934a01b73eba4f5f231de"
-    sha256 arm64_linux:       "cdafd97a206d6872e741fc73edcfa7a45abe5323705687ec7d8904489f88d792"
-    sha256 x86_64_linux:      "52299e04c1713384411d0ae6f65851ee7656f98ffe4e32a898c5783057d0eeca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "25f3bfc29eeb42ea5617b145c0422b8ac620955dada6d5a18bd1a13afc64d574"
   end
 
   depends_on "meson" => :build

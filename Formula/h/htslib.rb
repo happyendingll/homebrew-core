@@ -13,11 +13,8 @@ class Htslib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c5b965119fbadd299b52d1027d37d45935bd620688998b9fd8d1beee6575afc6"
-    sha256 cellar: :any, arm64_tahoe:       "1b689c59676a02ec5bf4bacc7e5618e5bd730f7d7e945c78c632199008140c4d"
-    sha256 cellar: :any, arm64_sequoia:     "2ed460ed1b562c2dcd648482a8e4d75238b4b42254f92aa630287312121afdb4"
-    sha256 cellar: :any, arm64_linux:       "c2513ad5af566d4ddb92f8bdd4bad8a69970ed3341f74575ac0fe54e94d09808"
-    sha256 cellar: :any, x86_64_linux:      "01186d0699578a32d66f82be9b3529da09fb809d00c6ffcdac0c0cb0c2d7f303"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "647a784a706bfb31a1e30328283abfcfab7abdc44d933ba7531d6cea1ab76d4c"
   end
 
   depends_on "libdeflate"

@@ -12,11 +12,8 @@ class Ccls < Formula
   head "https://github.com/MaskRay/ccls.git", branch: "master"
 
   bottle do
-    sha256               arm64_golden_gate: "8f12ed6eb82b8f87fb4dbacdb8eb3f1286b3b9b3a5d28668866ec77b83e236e4"
-    sha256               arm64_tahoe:       "bf0d69403897572219e668f928febd2ca16eae7cfda186ebc756bc0d68433ce6"
-    sha256               arm64_sequoia:     "5a7d2853fc6670d0810aeecf95057da60e85257e86cc7427a97402a1026598e0"
-    sha256               arm64_linux:       "ed44add44f8f7b78b1171ae44f2eb0de162fb5900e1e48ecda66dca7da95a431"
-    sha256 cellar: :any, x86_64_linux:      "8ee0086daee5b5875b374d6fded0d542a2ee4821a97bb900985603d52feec2ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "e1f48ff5fa99276ab4f97a37e8b4a377145e9710e3e4bd77f047f8bbf82e47f7"
   end
 
   depends_on "cmake" => :build

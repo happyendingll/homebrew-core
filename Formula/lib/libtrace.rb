@@ -16,11 +16,8 @@ class Libtrace < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cdff88b830b9f51bb49203b3b585c968095f903722ca27c73918157b41988b40"
-    sha256 cellar: :any, arm64_tahoe:       "51730b4731944e1cb02fa1d64d83a1d8677163291c71b1837a36903412d34154"
-    sha256 cellar: :any, arm64_sequoia:     "1516903fc0297df9e8cbd5d753c7947670e0a2c3430adf40535001764cdab1bd"
-    sha256 cellar: :any, arm64_linux:       "77b01fb1e7881201ba11d55addb9d0c6e37c7528c9a622fdc7d93cda69fe7141"
-    sha256 cellar: :any, x86_64_linux:      "d110750546e2ae08fa1c5bee261658e7d78d9abaf260667b0a5ba995eaa9ef67"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "084e624f6a85655025e6a40c7ae45f1243c77b9637d7188698c1f957b9eab3e4"
   end
 
   depends_on "autoconf" => :build

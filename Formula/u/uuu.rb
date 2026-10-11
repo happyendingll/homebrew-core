@@ -14,11 +14,8 @@ class Uuu < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "cfba502f9184d051f13623d2c88669ece9028fcd852bb68c81d5fccc4b0dd838"
-    sha256 arm64_tahoe:       "383cb763767f508e112b6bd619e81a4b6779b1b1068e4321a10388f924f5f1bf"
-    sha256 arm64_sequoia:     "2e85d56d8536dc2b0e21e19aca7c04a3897b68bc09cf0af84358a4acea1a28ed"
-    sha256 arm64_linux:       "079a7c4fdab45b3e6fc32c3916b3b08272ce0f90ebed2a4c7f29cf91fdc28986"
-    sha256 x86_64_linux:      "16efd6cdeed716671e490ceee4c5e273b24c40dd60dba810750f53f73a3eab59"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "a0720d04c2afd92cad46cfa2be7b667b90542ef5e579c407d536e815b91b39b4"
   end
 
   depends_on "cmake" => :build

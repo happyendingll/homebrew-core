@@ -25,11 +25,8 @@ class Kcov < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "dc4911b119a8ef544c99f9f8fb7328540d4628813eff29982a4512f034ded671"
-    sha256 arm64_tahoe:       "5e54bdf13adaab924aa1b999dbfbd057f002b874ddc8bc07a9420948d827b62d"
-    sha256 arm64_sequoia:     "c141d20ae6e2e32741d2f8de9a9557bd95f64fab020c6115380af6b6e3804acd"
-    sha256 arm64_linux:       "f1943b4533447ff45e052a4274bf90c335763cda65a69600731cd1ed0983750d"
-    sha256 x86_64_linux:      "7c911603055d1dab3d6c52cb19006ab23b91d5bafbf00d8736a483f014a8e257"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "a7ee65241bb1ca42327dd587c1fea0ca721c6148133e9de2201eafa6c4b1b3fa"
   end
 
   depends_on "cmake" => :build

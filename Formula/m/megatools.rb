@@ -12,11 +12,8 @@ class Megatools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a558fd59a2bc6dda63704386585f2cfd8b59c5457fa345206daa087e9533ec74"
-    sha256 cellar: :any, arm64_tahoe:       "ea8d0afde706bd78b7ca8650bfcd7c91f9c68de7bec314148a0fb091eda4516b"
-    sha256 cellar: :any, arm64_sequoia:     "9b4aa9f649ca34303ddb843f76c3f6851f1d610e7fadd80341bbde0899a3dc77"
-    sha256 cellar: :any, arm64_linux:       "ad9043fd8e6a1151340b5e1cf6bafe0848806459148b19f6c664a90abce6dbf3"
-    sha256 cellar: :any, x86_64_linux:      "76afb86498cbb3a42671ead4447bda03fa41f34cbd38b246df9b7d6b1c3beea2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "19950c04f421931ffe81e3a788edac115dfc18536e7e17ad643529cc90841eb3"
   end
 
   depends_on "meson" => :build

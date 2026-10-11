@@ -7,11 +7,8 @@ class Kafkactl < Formula
   head "https://github.com/deviceinsight/kafkactl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b7d06f2fa80e91143c41a1ae9777f48ca9205769f6552fe505f1b96519bd6554"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b7d06f2fa80e91143c41a1ae9777f48ca9205769f6552fe505f1b96519bd6554"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b7d06f2fa80e91143c41a1ae9777f48ca9205769f6552fe505f1b96519bd6554"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2fcb9d9743fda85f10df4bb6590b3942bef045d1bcdd29524e0d6eaf73c56396"
-    sha256 cellar: :any,                 x86_64_linux:      "1d17274a6b484aa0132382398c92f30b4a154d9314617353d7a308a32dcc3f6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "91a4fec1383ddf7def5c4b3a98f5fed7013f344c7f7b7bfdd0e1f6724b71ea3f"
   end
 
   depends_on "go" => :build

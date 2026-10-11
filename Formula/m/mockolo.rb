@@ -6,11 +6,8 @@ class Mockolo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c2a52cf72ef0ad4e787b564358e27f925fb2db6201b2facf765766176a32c54"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9d8670e2a919766ae8a3c047aacda18bbb77bbf6b9609073cbbc9c659372ab7b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c9b24b30ebfd69eab92c1b7250c4e31c16730e615c1529448119a0ec8751781"
-    sha256 cellar: :any,                 arm64_linux:       "2a198131e0f6e738c750d91b3e9ed9bc70937087986005241d3e57724589732e"
-    sha256 cellar: :any,                 x86_64_linux:      "8ec480bff40b0a277261adbc438f4c621809d713a849fff248538217e50510b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "450e9f7e542850af3d8f792a98b3644e554bc0133355cdcc7f52a3c99efd89c5"
   end
 
   uses_from_macos "swift" => :build

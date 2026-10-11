@@ -23,11 +23,8 @@ class Kitex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7716007a4332f6c906d96e19c327d6d845590127772b7aaa82d085549f4f52c5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7716007a4332f6c906d96e19c327d6d845590127772b7aaa82d085549f4f52c5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7716007a4332f6c906d96e19c327d6d845590127772b7aaa82d085549f4f52c5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7c44ef269e7a959d8f93b81de9067fcabf0ea3a7296aa842f29d3d5e47d40351"
-    sha256 cellar: :any,                 x86_64_linux:      "0c7f056e36e2c322f143cc015d2a2f117f809a1736cd5d835605f21e14c13b5a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fc477aeb2bdfe22799fe9cc9ae6ea37707f7be12211645baa618dd29c0effb36"
   end
 
   depends_on "go" => [:build, :test]

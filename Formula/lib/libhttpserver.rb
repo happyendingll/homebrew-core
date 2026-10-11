@@ -6,11 +6,8 @@ class Libhttpserver < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ff0afd3a1a8230f6b88866bd3479bbc0a73b3c9ec163d156e684be494fee5020"
-    sha256 cellar: :any, arm64_tahoe:       "15bbcf2ce98a99c639113f41fbe376f3d57a81f56108ecf4f07192f4d99fa36a"
-    sha256 cellar: :any, arm64_sequoia:     "12458ccbe10f0e689d04cc02ecb01215b29ecceabd790cc60e9812582240369b"
-    sha256 cellar: :any, arm64_linux:       "96812298240d58906fbdb349ca7a2b0cfe97e125572f5505c81dfa959567ea17"
-    sha256 cellar: :any, x86_64_linux:      "b7e87e600cde95eb4535ba505bedbabfd562a3592679fd5a0f4dba4f2b99efcc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "32ef4327707446a9fb9e13d9ca6005f0615987870ac7cf28f78f6e98e177e265"
   end
 
   head do

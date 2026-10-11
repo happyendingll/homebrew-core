@@ -7,11 +7,8 @@ class Isync < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aac10990f0035a59af38824b644835090f4f40d35e74b1ed8efdd164ec3c9a8d"
-    sha256 cellar: :any, arm64_tahoe:       "b4c6e597e2d119bc81bf052a2c25ae0a648692e987d144e0e4752bd806e91f7b"
-    sha256 cellar: :any, arm64_sequoia:     "ebf1eb759ae36f017092f94daa95c07ead59c8de411e5a2c81aeddac3591368e"
-    sha256 cellar: :any, arm64_linux:       "4e9e22c05eef3b1bdf41704a5f05c4859ab0ef0fd50603d30795a52c4aa53993"
-    sha256 cellar: :any, x86_64_linux:      "e18321686c530f9067cbc9ad990476437cbaf235b2e841d3d741ed0265e6759b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8c20671ba7cfe8ec9b6d3baaecefc272676b8807c36dcf63ef8feb4ff477e027"
   end
 
   head do

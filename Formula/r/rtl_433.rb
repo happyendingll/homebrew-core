@@ -8,11 +8,8 @@ class Rtl433 < Formula
   head "https://github.com/merbanan/rtl_433.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cb63d1d4051c9c289f24a7f5c3484101836207eb2bceb5f28501682b8ff5bbc8"
-    sha256 cellar: :any, arm64_tahoe:       "60d880ae9575f44dc53d72ca05f666863b2dc87853ba74b14d4105dc3d56b1bc"
-    sha256 cellar: :any, arm64_sequoia:     "8b80046bfd0a6375b3a13e6955fed7c8acadd67e56a5a9c790ca634b0aaffb3d"
-    sha256 cellar: :any, arm64_linux:       "20749caddb277e63d473978de1839f542cd40bc3ee4f4f2156f535894a39dc19"
-    sha256 cellar: :any, x86_64_linux:      "a8987509422dc19f9cb1389816d3ddc8699af63c8864f3f2c4416ef0a38bec6d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2588f39a885742a5e22e23ae8fcbe72882d764ca1147a8ab95bc60690e8fa2ad"
   end
 
   depends_on "cmake" => :build

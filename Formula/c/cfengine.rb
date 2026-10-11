@@ -18,11 +18,8 @@ class Cfengine < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "aabd414cf300c8f8c0bb77c2284f838dcb08157159cf305c493c039de0143b25"
-    sha256 arm64_tahoe:       "5ca7354bb409f4a4368201c7238c3d57240484a2c52c338e4d0ebb9bd9737748"
-    sha256 arm64_sequoia:     "f10f8f15a6557e3c4dfad57819b2ef710b0d4c06c2079f423172c0a614f8eef6"
-    sha256 arm64_linux:       "af13e68cbae6695514beb559976b4698f19941f2466486ec6c850468f341478d"
-    sha256 x86_64_linux:      "761bf6e3cee2da013a822e892fe5793951828cab86506d7e8e2d9b6b253d65cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "885bb1f66dbc1b8e4a4b93c2223f46aaa0cba90114e1c95853e94e272e297e90"
   end
 
   depends_on "librsync"

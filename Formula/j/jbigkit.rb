@@ -13,11 +13,8 @@ class Jbigkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "38c8780667bfd91321c0523ced2515894d43907374103940ca60465d67d80748"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7607ddffbce1b972049f6825e34a887fcc01ac08ac075cbc22b5851a9650902c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9be34cc09553cb7ad2103b18140bfcc82c6a9143ecc3ad6c8141f0fdc6789d1f"
-    sha256 cellar: :any,                 arm64_linux:       "1e65dbd99b20a03c02096fe73149ccb4ec31a01b34e6c39cdc7a628be276d605"
-    sha256 cellar: :any,                 x86_64_linux:      "5d2f6fc8e42aa3d77b94c8f428438785c38b30b1adcba8ba4da668c6b91eac4e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a7383930ad4eae582c982be2d81b12783e5f5b627141d2f65bdfb939b2ea6b59"
   end
 
   conflicts_with "netpbm", because: "both install `pbm.5` and `pgm.5` files"

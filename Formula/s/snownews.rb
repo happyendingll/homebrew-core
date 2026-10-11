@@ -7,11 +7,8 @@ class Snownews < Formula
   revision 3
 
   bottle do
-    sha256 arm64_golden_gate: "df23d946e3615c38f9dd0611e57c51c6eb7ba61f98ae7c3fc5ec206af4e69aca"
-    sha256 arm64_tahoe:       "fd4780e0e097fb0fe14e4b4b23b253e2ec233df3cde2e05d64cb43266977ea1e"
-    sha256 arm64_sequoia:     "ebdf9f09a9eedbc6318d7f5e150af3495d70c33956d561175780b682939e0b3d"
-    sha256 arm64_linux:       "3edc1a87a4e493c7175fb956476d08b9ec6dca2bd5a0957622bc4e6c1022e27b"
-    sha256 x86_64_linux:      "615eb21e24063ea23cc7452df29625662a0b48cedf6afeeddf707959cdffab13"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "9cd4de9a380cae84514fc83a05fd98c72e1b945272635df48345925904eb356d"
   end
 
   depends_on "gettext" => :build

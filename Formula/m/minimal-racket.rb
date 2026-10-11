@@ -16,11 +16,8 @@ class MinimalRacket < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "b2348768dd8bf3c68b2d0809d00ba96c282db1bffd28e9f48ded2229cd17ce3d"
-    sha256 arm64_tahoe:       "3479008f05780ee8b5512897c73df988f1744dc88ca782fe94c23fa1346b0e33"
-    sha256 arm64_sequoia:     "ac8f242e9b8601b3c4b2a89314f2bb24c7d73b8d58071ab739c6e7f97d2548bc"
-    sha256 arm64_linux:       "2e77bed0516c7e8eea6d00163eb203d4c8579d5b1ed1f1136e341674a370a5c9"
-    sha256 x86_64_linux:      "cc96c4abe7aa7ac827300c53e6645456f8812c5f6cad78f5ec0285f9d07e5282"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "87c508d2046f783e0ef114e280a8c8169cba376bf5c6c0402a9191427feed09f"
   end
 
   depends_on "openssl@4"

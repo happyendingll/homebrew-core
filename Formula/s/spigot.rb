@@ -12,11 +12,8 @@ class Spigot < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6b4b302bd7d0b164553345e4e551a0a5776b1be1599593f1b0546445648c45ed"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "818f98f323835497f1deac7da157f6c788042fc816ae15b2fc32764d544c34b3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "921cfc9e039f02c27304e953a2281aee9c1594238067f842eaa0f0bff5511a74"
-    sha256 cellar: :any,                 arm64_linux:       "f2afc82630c54eb1a392a2c542aba412624a1957517adaf8f2a384c26a479cef"
-    sha256 cellar: :any,                 x86_64_linux:      "b6deee6ef0650b9b50d7bbe17d83ddf9823ed22b38f301c36905ca25620eac41"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "73a6dae9e3d887ae094c8c75be5da24d74470d5ed23ffaebce6a92d9b6fb3f47"
   end
 
   depends_on "cmake" => :build

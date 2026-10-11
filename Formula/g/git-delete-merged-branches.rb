@@ -8,12 +8,8 @@ class GitDeleteMergedBranches < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0cfc06a6fecaa00f349cf31b83231877d93cfa4ea549b392c5dd76ef877e5dd0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "830cce405a9df04de0821a02689529e0a34f861cd27ad8efecae00652543ce1a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6b26448707ef0b0089a5d8730bae3bb7fffa531c653d49656098e22a63fd5160"
-    sha256 cellar: :any,                 arm64_linux:       "0a1d152a9ae57ed3917ce1fd017299f6e334fd36aa1d3e887edfc5667a09d506"
-    sha256 cellar: :any,                 x86_64_linux:      "11ccbe0f7e7ea10f3e7fb6de6d0845105b124316a553aa440713255dfe862c55"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b787987458d5bd289315f5e6ce23f61b2abf6ec18e160b8023a72feea8f47ba7"
   end
 
   depends_on "python@3.15"

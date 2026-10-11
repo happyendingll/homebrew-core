@@ -8,12 +8,8 @@ class Dotbot < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "747b71ad01cbcc93da523220e9eec7032f2951d2290d8ebcb1c38a9bc51e8bc3"
-    sha256 cellar: :any, arm64_tahoe:       "60dad598a032220dedcd96532ac8b38f5aa7f9150ac1cfad03ac1688696d2d6a"
-    sha256 cellar: :any, arm64_sequoia:     "cb264c02e2061ecf7b6b8b6ee5bd3925af7381cf13b357edea1aa37d95dd9aba"
-    sha256 cellar: :any, arm64_linux:       "e50a0ef9a58f91d4de17d52fcdde5f7aef6906c8324eca1d71cc627c539e50e3"
-    sha256 cellar: :any, x86_64_linux:      "7d2e5fee46fa922ea245d4e3397c693e9de8a55c008f0283480bd5ea7da59fc2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f2787fa0720829505ff5e8ac80a697bfb467838ad161af43ccd0e6184d446d14"
   end
 
   depends_on "libyaml"

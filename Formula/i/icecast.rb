@@ -17,11 +17,8 @@ class Icecast < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fefe32bfb60ffe18efbe3035c0a2c67d673370b56fdb9a96018aba384175c91c"
-    sha256 cellar: :any, arm64_tahoe:       "b0781f681f51a39f7c40a7331259047ac989b5ddb5f72c02b7b84ebc516c3a4b"
-    sha256 cellar: :any, arm64_sequoia:     "32f81c5b48760d1dafaeb5d2731aceef27c6653926b21a090edf6af80912b635"
-    sha256 cellar: :any, arm64_linux:       "4813e7adf73f4f0db9cebcf5da2845ae15257a7814bda41e870a7214cf1b325c"
-    sha256 cellar: :any, x86_64_linux:      "eb5bca4283d7f8149c2417ad772754d9f853fcb49e5c3e735e8292724322bee7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "0e73b9f9d8b1ec4d653963e6745eac48cfc62ee5de8f0afa5337095de124763f"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Yeet < Formula
   head "https://github.com/TecharoHQ/yeet.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "737a2f5559852831e3f8a4bc65194d16b4c68c70b3d360635279fea438f79f79"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "737a2f5559852831e3f8a4bc65194d16b4c68c70b3d360635279fea438f79f79"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "737a2f5559852831e3f8a4bc65194d16b4c68c70b3d360635279fea438f79f79"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4ca6d1b34f1aaa9660c88aabb0ab2f60c0bc20f01706cbd3fecb3ffa02c0fefa"
-    sha256 cellar: :any,                 x86_64_linux:      "5a18cdf2626ffa9c36781889417d37d16781baf1d0c21de4439975c0da597ae3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d79f4ec1c198c94b9a9e83d7195a8c26608c9a33c7040495d8d6a6dad8155be6"
   end
 
   depends_on "go" => :build

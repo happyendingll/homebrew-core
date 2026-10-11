@@ -13,11 +13,8 @@ class Nut < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "076a5c7afd045db536a83937ffbf2b92018a2e9d0f85f3d15dd0c2cb07339721"
-    sha256 arm64_tahoe:       "6c21a836f940cae0738da89dfc631d6a78fe785788e1d694af658c97260053a3"
-    sha256 arm64_sequoia:     "1f59e67ae5955118fe767371f8b4cfbe168e0fd56149f24c6d69f75832615f6a"
-    sha256 arm64_linux:       "f68ec7f9ef05eb1353444eda6746ce98b37c03fc9829fd99aeed62024b1b4fec"
-    sha256 x86_64_linux:      "719ed46ff2df25cfefd7dcea584891c08333a8a593ac08c301977810628a7c73"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "bfb8518e12dcbcbc4e3c227899636eb28f6834f56f774c1edfa7440fa542b2ca"
   end
 
   head do

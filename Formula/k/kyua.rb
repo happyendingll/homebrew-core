@@ -12,11 +12,8 @@ class Kyua < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ce841a460112cecacd966c486318298df83e1f2676aa4944d89214a71ae962e2"
-    sha256 arm64_tahoe:       "65b2c61afcc098c9f59374acfe5627c66edd958a5df2b5f69f9ab06e168359a7"
-    sha256 arm64_sequoia:     "336fb34683c4b05447dce2656d4113837e4d166775e4bae03e5a306f583ae0e5"
-    sha256 arm64_linux:       "8195f9e6649d87bc9ff362553cbd473685d7b5ae44a2ea7914c1da9b3196792d"
-    sha256 x86_64_linux:      "f5e3897c933facff15119ee8fc9ca954af5bc4c8336dc12897855bf623fd782a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "01264d82ec5276177176f6500732e1a49d8950185eb13cadd975b1285b1c487a"
   end
 
   depends_on "pkgconf" => [:build, :test]

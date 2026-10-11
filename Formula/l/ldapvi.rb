@@ -13,11 +13,8 @@ class Ldapvi < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6b799d347aecd76ac20a01a8213e62085f9e9e58455f95a9ae86188340ea36d"
-    sha256 cellar: :any, arm64_tahoe:       "7513b0860ba84275ccdf408af93c082de9e9823e64a8ce7f71bca1b440c55826"
-    sha256 cellar: :any, arm64_sequoia:     "3f23ec23b01b2fc109822508fe456353d933a26258b5365b0f75f8ccda6db240"
-    sha256 cellar: :any, arm64_linux:       "af770777c23b7189ef30d53283a0054510a9a2172a8f7e3e9d67598b05936591"
-    sha256 cellar: :any, x86_64_linux:      "43a5645d5a28bb5646e07acd82bb5d22e97e86e172ac3d9545326d468fd61134"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "4df22b305aa402608537f69622dbcb1d2d0449c89087902d20241e995a0478e6"
   end
 
   depends_on "pkgconf" => :build

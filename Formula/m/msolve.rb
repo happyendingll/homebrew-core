@@ -7,11 +7,8 @@ class Msolve < Formula
   head "https://github.com/algebraic-solving/msolve.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6fe1ed9717a909ead0596ccba8505fff926225dcddf9d2a2179178e41305b491"
-    sha256 cellar: :any, arm64_tahoe:       "f36c3ed46e78f9eb35cce93cccad181ab2c4979d8a06a126278030d1d3f06447"
-    sha256 cellar: :any, arm64_sequoia:     "1ea47a3abadcc8b0a18657dcd90024e13d27a0f8d69a810362f2ac0d211ec6ac"
-    sha256 cellar: :any, arm64_linux:       "22d70b346bdf931508b5595cb4b66fda445f61058ef6eeb1989615b79e1dc84a"
-    sha256 cellar: :any, x86_64_linux:      "0d61e2c8d39eda667796a8f30eb24c65930422a0ed4ef2f626fdb5be85521f82"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d1d9d75b73fd2e5a79ac70b655dec42b12a771f01f35690a9f153ec1dd34b564"
   end
 
   depends_on "autoconf" => :build
