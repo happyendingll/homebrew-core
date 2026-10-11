@@ -7,8 +7,11 @@ class Cookcli < Formula
   head "https://github.com/cooklang/cookcli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "5abc84cb6dbc7798a2b6e4379bec3c496e2157bbaab280b4084692418a6f5502"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23d31c1718886310c182881c77df1712324b4d5ce6874303e63d54c21c8c0352"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "279f43ce467a66e460b19365c1ae2c6ff858e090cd880d8c1e9b5578b9570455"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a8891536e7357fd864de6a01ee5b00eafc061025938104c988b21235f475104"
+    sha256 cellar: :any,                 arm64_linux:       "3acf1cb6d0f29d1a3b0919538c4cd84e39a8b298822a3c6c91d065a65b4ce235"
+    sha256 cellar: :any,                 x86_64_linux:      "2bb151964decac9e9fb25e2ab61e3c29a5f6fafe642f09578391f6a0aef51b72"
   end
 
   depends_on "node" => :build

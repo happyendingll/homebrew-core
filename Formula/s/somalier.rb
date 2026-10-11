@@ -4,17 +4,20 @@ class Somalier < Formula
   url "https://github.com/brentp/somalier/archive/refs/tags/v0.3.5.tar.gz"
   sha256 "506f540589495cdc933b5c9e014f01b16261a567e003bcce60afbcf8de4519a8"
   license "MIT"
+  revision 1
   head "https://github.com/brentp/somalier.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "5ef7b9295d22152a023b62212828adc0471caf9702ac398eb98377148d352112"
+    sha256 cellar: :any, arm64_golden_gate: "47489292e066b50811cd332e16350fd722764bddbf1603c1d35a6ec4df75fb57"
+    sha256 cellar: :any, arm64_tahoe:       "8b6efdc6e672d19af061a0d4ee93f872f482daa71437a16423d81569103b1802"
+    sha256 cellar: :any, arm64_sequoia:     "4b74676aa9d352d203b20835b325ac30a8635f2c016c6da06196ee82ace16124"
+    sha256 cellar: :any, arm64_linux:       "9fa3af840d4f961870ca127983dc9da1d41db8a32ec91fefb245295a734e4795"
+    sha256 cellar: :any, x86_64_linux:      "4cff4cf723b05a256472f8961ba66333dd194a5b17448c2abd76c737a4dd4531"
   end
 
   depends_on "nim" => :build
   depends_on "htslib"
   depends_on "libdeflate"
-  depends_on "openssl@3"
   depends_on "xz"
 
   uses_from_macos "bzip2"
@@ -181,13 +184,11 @@ class Somalier < Formula
       "--passC:-I#{formula_opt_include("htslib")}",
       "--passL:-L#{formula_opt_lib("htslib")} -lhts",
       "--passL:-L#{formula_opt_lib("libdeflate")} -ldeflate",
-      "--passL:-L#{formula_opt_lib("openssl@3")} -lcrypto -lssl",
       "--passL:-L#{formula_opt_lib("xz")} -llzma",
       "--passL:-lz -lbz2 -lcurl",
       "--dynlibOverride:hts",
       "--passL:-Wl,-rpath,#{rpath(target: formula_opt_lib("htslib"))}",
       "--passL:-Wl,-rpath,#{rpath(target: formula_opt_lib("libdeflate"))}",
-      "--passL:-Wl,-rpath,#{rpath(target: formula_opt_lib("openssl@3"))}",
       "--passL:-Wl,-rpath,#{rpath(target: formula_opt_lib("xz"))}",
     ]
 

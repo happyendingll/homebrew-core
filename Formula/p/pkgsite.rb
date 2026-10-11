@@ -1,8 +1,8 @@
 class Pkgsite < Formula
   desc "Documentation server for Go packages"
   homepage "https://pkg.go.dev/golang.org/x/pkgsite"
-  url "https://github.com/golang/pkgsite/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "ec88faa9940cdcd58ed15058a1a932f81b4c3a21cf37b3119bf974a3137373fd"
+  url "https://github.com/golang/pkgsite/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "63643f608bf927d35b5216cf546b7c52d90ec88190a2c83cc78eca5d42191d61"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/pkgsite.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Pkgsite < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "5f3ad0486ccb8139a4f8a0ea7dafaac27fa7cb0debf978e065da334ade4b2f10"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "41196526d83f2b7918d0ace9b92a759eff1128da12da35e58b068d1fea93a044"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41196526d83f2b7918d0ace9b92a759eff1128da12da35e58b068d1fea93a044"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "41196526d83f2b7918d0ace9b92a759eff1128da12da35e58b068d1fea93a044"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ca159b28012fd6a341d17422a81769f8d2606833db5362c13b8d8c40e056d992"
+    sha256 cellar: :any,                 x86_64_linux:      "576294f06157b6cece61cef83caf2cc101c65a20608b944d432e7afecab43115"
   end
 
   depends_on "go" => [:build, :test]

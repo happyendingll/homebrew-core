@@ -10,8 +10,11 @@ class RpdsPy < Formula
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "969e220bdcff69249a18b2b63664882179e3a490ed284cbf54c4b487063f299b"
+    sha256 cellar: :any, arm64_golden_gate: "a154a5dfe03e74b4c9e234b03857192b03d6481ed8778cdb10153520cdf71eb0"
+    sha256 cellar: :any, arm64_tahoe:       "cda0d16b742cbd255f000cec01112f8355b1dcd38d5b8258559867c0e69e4922"
+    sha256 cellar: :any, arm64_sequoia:     "7d5a8f7549ab54ef273b015bdb5c954f06854f2b15f42eba37a715023ed3d63d"
+    sha256 cellar: :any, arm64_linux:       "81a8d22e6e5b2ae6e6d1a3be6c2ff199ea67b54f00b8ad273ae8e1f920c529c6"
+    sha256 cellar: :any, x86_64_linux:      "1110f82cf16b2b59f14a609975a8ed0d96bbdf15db592427aab441437b6e979d"
   end
 
   depends_on "maturin" => :build

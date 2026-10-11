@@ -6,6 +6,7 @@ class CfnLint < Formula
   url "https://files.pythonhosted.org/packages/41/93/996a8c4a8916ed10b71207de4276c7dbec4d13ad0f9a21830f9eed04f771/cfn_lint-1.57.2.tar.gz"
   sha256 "7e859164badf01d2bd62c6d362284ab6e814d036f0a64249ba6a05287d787d68"
   license "MIT-0"
+  head "https://github.com/aws-cloudformation/cfn-lint.git", branch: "main"
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
@@ -14,7 +15,7 @@ class CfnLint < Formula
 
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rpds-py" => :no_linkage
 
   pypi_packages exclude_packages: ["pydantic", "rpds-py"]
@@ -60,6 +61,7 @@ class CfnLint < Formula
   end
 
   def install
+    inreplace "pyproject.toml", 'requires-python = ">=3.10,<3.15"', 'requires-python = ">=3.10"'
     virtualenv_install_with_resources
   end
 

@@ -1,8 +1,8 @@
 class Byobu < Formula
   desc "Text-based window manager and terminal multiplexer"
   homepage "https://byobu.org"
-  url "https://github.com/dustinkirkland/byobu/archive/refs/tags/7.20.tar.gz"
-  sha256 "aa2563a0567f2c74e62d03b4a07bf7f1f005c88e8cf8007194c873c770371931"
+  url "https://github.com/dustinkirkland/byobu/archive/refs/tags/7.21.tar.gz"
+  sha256 "4d2836e528c9b3f6f761679badfecc085f4a05855337b4ee7772feceb444a08f"
   license "GPL-3.0-only"
 
   livecheck do
@@ -11,8 +11,11 @@ class Byobu < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d558bbc29699f508a099f8fc22364c5bc85b4ce56d2ef46d1bcfc28fd5b8e03a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "70b60f7b7d40f324afbdc82ae51c8781a9e4b538faeb95b832e9ee093d2f08be"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "70b60f7b7d40f324afbdc82ae51c8781a9e4b538faeb95b832e9ee093d2f08be"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "70b60f7b7d40f324afbdc82ae51c8781a9e4b538faeb95b832e9ee093d2f08be"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8e5f14d0958691c11927a11802da4ab90c60443e30e0131dd7f4f3f171f248ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8e5f14d0958691c11927a11802da4ab90c60443e30e0131dd7f4f3f171f248ec"
   end
 
   depends_on "autoconf" => :build

@@ -7,8 +7,11 @@ class Rubocop < Formula
   head "https://github.com/rubocop/rubocop.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "400fff380940921c7f4b86bcb7d83445c5e38aebefab55b5b2de074a3d284e7d"
+    sha256 cellar: :any, arm64_golden_gate: "7a0f00a01faf53d0972be7c9ef2a8d9f15ae8cd167631d79baf9752bb2a55ac6"
+    sha256 cellar: :any, arm64_tahoe:       "3b7433518f697db49005efc20c59f852c639080c2484efbb91d3082a5e6bee7f"
+    sha256 cellar: :any, arm64_sequoia:     "3173017c7660cd09e1b2cf621174a707273708d8f59409949548ad92a1e8a733"
+    sha256 cellar: :any, arm64_linux:       "437f474322713dfde96a5b8c8e42b2a0b2d62b24e6b9b0764936709d24b8466a"
+    sha256 cellar: :any, x86_64_linux:      "2a3131cf9be253006581f9b11dcbb75ed43b7207b9dcd26acb19c4d109a3b61e"
   end
 
   depends_on "ruby"

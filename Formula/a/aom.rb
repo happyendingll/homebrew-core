@@ -8,8 +8,11 @@ class Aom < Formula
   head "https://aomedia.googlesource.com/aom.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "3f6d7a791a696913b4b70ef6d84d440f387dace7dbc1b6a37c67c5250c0c4bf2"
+    sha256 cellar: :any, arm64_golden_gate: "ca3e34c2d919d712bdff0799bd15689ac8cbacea8d33508718a3813be45153bf"
+    sha256 cellar: :any, arm64_tahoe:       "abdf34de13cbb520adaa7ea5cb3cc1f8313d281a0f456c9c39fa415cddef82a0"
+    sha256 cellar: :any, arm64_sequoia:     "d8b133d6a8e7b2193f34f2f3cbc2cb327e8898331432daf2cc4cb84164871b35"
+    sha256 cellar: :any, arm64_linux:       "63fef63ada9e237e795c6da37fa399a633b9b6315d7e5a470468e3455ab575bc"
+    sha256 cellar: :any, x86_64_linux:      "ef4de0b57f137eecbd45f1461cc005dc46712c69f8c4a84308a3abfd85a23995"
   end
 
   depends_on "cmake" => :build

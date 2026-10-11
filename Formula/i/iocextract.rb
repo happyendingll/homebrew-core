@@ -15,7 +15,7 @@ class Iocextract < Formula
   end
 
   depends_on "certifi" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "certifi",
                 extra_packages:   "requests"

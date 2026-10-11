@@ -6,8 +6,11 @@ class LibxmpLite < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "97e7abde102ec92bac5e5f245ab17f5e47c9fe6b02907227e43c04a89c67addb"
+    sha256 cellar: :any, arm64_golden_gate: "5d04a6e0fd381f5fcfc00ba9a948ee7daeb66330081eb3078945a92c749d4054"
+    sha256 cellar: :any, arm64_tahoe:       "15856a8ed1651eb79386889ca0320d7f191a7a5bfff5864fa66f79674a53d3d6"
+    sha256 cellar: :any, arm64_sequoia:     "11b31446f7870e3d525f13308d30ee468d92fe451f3d6e6be468e8d8ae8cf0ea"
+    sha256 cellar: :any, arm64_linux:       "981228ea2ed0d3649add7c7e5248af7242f36f022d60a167e9f40d258430b879"
+    sha256 cellar: :any, x86_64_linux:      "aaa7543a5fd3e96675a2ce2f1d488936e6f7cc6a5e4568a4e80942751fbd396a"
   end
 
   def install

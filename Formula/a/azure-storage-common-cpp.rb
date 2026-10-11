@@ -13,8 +13,11 @@ class AzureStorageCommonCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "4a2453fd690ea43393424142102f101be89aa81794cb0f0c313491e3fa58e24d"
+    sha256 cellar: :any, arm64_golden_gate: "ee1f9ed0ce8e806de4e0bde1e60cf28296ac9b211369cbff843170859d154ca1"
+    sha256 cellar: :any, arm64_tahoe:       "7428638c7d38903793b71671ed2e140b4a632bc9ab7ed7ffad82acdd46741298"
+    sha256 cellar: :any, arm64_sequoia:     "53413259ed5b38e9c0d78b73a83ea2904c3eb39fe20cb93aa8094eac7331d1de"
+    sha256 cellar: :any, arm64_linux:       "08d585a80c652a38803b13d95f76d942621d579ce42846ec6a19e2032fd04303"
+    sha256 cellar: :any, x86_64_linux:      "0f1650f49d7e0b0fcee3b7f827bf6e3b82f40d30b5e958b8a67474036dc5a9bc"
   end
 
   depends_on "cmake" => :build

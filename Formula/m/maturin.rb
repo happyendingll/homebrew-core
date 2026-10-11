@@ -8,8 +8,11 @@ class Maturin < Formula
   head "https://github.com/PyO3/maturin.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "c4b35ec7d4becd6e69d19b504fa1f3c6267fc8df8b949c00d470c3832d39a467"
+    sha256 cellar: :any, arm64_golden_gate: "0d9e5afc1c1362e5c883b3f4d23a77f6b1b7b5b33ca8b527fdd7b9741cbff428"
+    sha256 cellar: :any, arm64_tahoe:       "86402b3a2b419ea2af740d7cf154e4c17b8ca653a33a01e81ab68a730748a96f"
+    sha256 cellar: :any, arm64_sequoia:     "15c8a97c9734a2fb7bb15c077877804ba96a8181f07ca5d69cf96f975d20aef2"
+    sha256 cellar: :any, arm64_linux:       "fbb5906ffdeeb1b89d7abf9b49ff0391c4b812533790931491840d0eb41095d2"
+    sha256 cellar: :any, x86_64_linux:      "2d54d813edb5375539436a0d7679fbf4bd9a194bd396380b443cc57e0b167685"
   end
 
   depends_on "pkgconf" => :build

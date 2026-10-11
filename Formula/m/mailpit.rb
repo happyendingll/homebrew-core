@@ -1,13 +1,16 @@
 class Mailpit < Formula
   desc "Web and API based SMTP testing"
   homepage "https://mailpit.axllent.org/"
-  url "https://github.com/axllent/mailpit/archive/refs/tags/v1.31.4.tar.gz"
-  sha256 "cd4d0d40044dde07df8ff5c168f6d95356770dca45627a9f9910ba66e70d7832"
+  url "https://github.com/axllent/mailpit/archive/refs/tags/v1.31.5.tar.gz"
+  sha256 "30f86f4fd9b5838ad146d8b3ac7495cfc86b89bb619d206a794945b4f3da052c"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "e2f2b0207e69fcba8ec9c7d6aa4385928eb663846a8b7c9e184adf693a5b6865"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c7e378b64e4b15489645d9e48984fe36b43db0494328aea1cd11dfa6adea6460"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "af2a438adf54b432147bfda4d462aaee304f5f4d01295ec4ab9de10329be08e0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cd1088b4da49e8131c3d4e3251e90805d9593678fc587b4da96062b32fe05b54"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2af45eef1b0c31cbd693683f2f73e4de593883422d2eeb4fb569bdcc40b8b97e"
+    sha256 cellar: :any,                 x86_64_linux:      "147c5f6cbf2092ea8a1441778b2c96ad120a0eea8866100c76290a8c52ee23dc"
   end
 
   depends_on "go" => :build

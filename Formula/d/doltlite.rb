@@ -7,8 +7,11 @@ class Doltlite < Formula
   head "https://github.com/dolthub/doltlite.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "237c4762fb528db42faa4ff2bc1c3eb5bd5a97ed4a4a8b4413357f39357cb599"
+    sha256 cellar: :any, arm64_golden_gate: "75142360a2f6cf56728cb677494f9cd8b6348bc35f1578cb2815348dc6f75ff4"
+    sha256 cellar: :any, arm64_tahoe:       "d02bd7563fba931139b47eceeeb68d05583bb03430a2ee046d1ee0b4bd25d7dc"
+    sha256 cellar: :any, arm64_sequoia:     "0d7e8bd651490a9e4193023409f6dd2324da609fa3f4c7080ed8c42486fbb66d"
+    sha256 cellar: :any, arm64_linux:       "1e042d2cd53a2403049ff14512505f4c6517deba1731b90cf9237c6597a36f48"
+    sha256 cellar: :any, x86_64_linux:      "0666ce35db6db64df6241eb438b7ea43fa84e8898f5d27edd818b8ea660923d4"
   end
 
   on_linux do

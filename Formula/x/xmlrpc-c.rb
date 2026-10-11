@@ -7,8 +7,11 @@ class XmlrpcC < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "36505f427a22a6f3ac42f3a7dd2deb5cd98281dd46cb52ac7b22efa67f2ba366"
+    sha256 cellar: :any, arm64_golden_gate: "320d56ff6025d45887470bee950ecfb5cdfda6f7739cefd2b6845e3de7ae3ae1"
+    sha256 cellar: :any, arm64_tahoe:       "e6b25a7720dd3c8f45f6d0e39d0e571b6e07af1a63a1b88ef50af33c56f147b5"
+    sha256 cellar: :any, arm64_sequoia:     "5cad13b02fa09ff044cc43d72f4f19a6893799d9b28b14df5eb724b82bfdfac4"
+    sha256 cellar: :any, arm64_linux:       "a03eb071175741b250d64748c13d226b2affbc19809ba29c39a967107ddf28bb"
+    sha256 cellar: :any, x86_64_linux:      "6a5262279f39aa1051f03f4ec43526aee049a5ff93f1062332fa6c13dfd1dad9"
   end
 
   depends_on "pkgconf" => :build

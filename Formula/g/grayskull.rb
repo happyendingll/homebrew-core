@@ -18,7 +18,7 @@ class Grayskull < Formula
   depends_on "rust" => :build # for python-utils
   depends_on "certifi"
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "certifi"
 
@@ -63,8 +63,8 @@ class Grayskull < Formula
   end
 
   resource "python-utils" do
-    url "https://files.pythonhosted.org/packages/5d/71/ec6665d4ce42ee5a59fffd31a4d5164f92da15ccb8c758dba13d2419ea53/python_utils-4.0.1.tar.gz"
-    sha256 "4e8e8ecaba3862f843a60c1982c99cda23b522f417006a807996a876c18beb8d"
+    url "https://files.pythonhosted.org/packages/8f/dd/fdc08309ce1122e77e5ebc3908aa6f4e2dfed3e08f6987ae650c2591ee0c/python_utils-4.1.0.tar.gz"
+    sha256 "218518ac7ba34a7d8ea66d19274e5246cd5de122efeedcf2e5b6c00965b969b7"
   end
 
   resource "rapidfuzz" do

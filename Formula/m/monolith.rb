@@ -6,16 +6,15 @@ class Monolith < Formula
   license "CC0-1.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "cdf3d5dbd60cda59043ae733f93f59a77bae47b4dec0749642fa04869b1b8f77"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ae29d77c77f845f4bbad865611aafc1a8f9b025318daa924b1dd0709c980c730"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6b1e7dfd94e12cf6a64ea02a6d7e2a1cebb5eb4d13be9257fb99d5f53c947967"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f884054114f0a333cdc8e9b92a29515df2e79b6f21ecc0dff442dd6ca7558399"
+    sha256 cellar: :any,                 arm64_linux:       "dd73bf03e24ad688ab8dc0e1b5e7205b0f4d31b8f898da1f336bc44e3200cb98"
+    sha256 cellar: :any,                 x86_64_linux:      "a5d99102fb2dab01c6028b5564d0f4e3f67844474750f3894625e70c9ecce174"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-
-  on_linux do
-    depends_on "openssl@3"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args

@@ -18,7 +18,7 @@ class Cyan < Formula
   depends_on "ninja" => :build # for lief
   depends_on "rust" => :build # for lief
   depends_on "ldid-procursus"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "llvm"

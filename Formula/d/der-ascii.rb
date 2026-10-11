@@ -1,14 +1,17 @@
 class DerAscii < Formula
   desc "Reversible DER and BER pretty-printer"
   homepage "https://github.com/google/der-ascii"
-  url "https://github.com/google/der-ascii/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "4335ed4f0229d0452e6a8793ce25d45d3fe633ff388f08cfba422d50a009a005"
+  url "https://github.com/google/der-ascii/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "bd1a4d6970d4ed9ec32541bc972ddc7dc64ff9357faf567f30bf1367159daf70"
   license "Apache-2.0"
   head "https://github.com/google/der-ascii.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "e92c0c36f5b3b6dd8e264e8e06d21e01f582e227f2a9b3e49ee724c190ba43f9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cee7ca36c243deb8b819de10afba2487850508083edfddd0c95b52a9a44d8934"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cee7ca36c243deb8b819de10afba2487850508083edfddd0c95b52a9a44d8934"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cee7ca36c243deb8b819de10afba2487850508083edfddd0c95b52a9a44d8934"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4707560a4961c18efd63cf9167f18be7cc96fa96252703a510d40979cab27dac"
+    sha256 cellar: :any,                 x86_64_linux:      "5a6169c18276048b713584fb4e9a55f13bb7ca6e02d7063319734b715a1f8461"
   end
 
   depends_on "go" => :build

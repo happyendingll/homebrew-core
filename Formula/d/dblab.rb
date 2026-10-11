@@ -7,8 +7,11 @@ class Dblab < Formula
   head "https://github.com/danvergara/dblab.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "416d31bbf58000107aed225cf26d96365cebd8c46c86f45f7d8c0ae72cd9a177"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c96e06bde901267c9d7f51b7f7d628ef584a854afa661742a1c59118d2167d6b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c96e06bde901267c9d7f51b7f7d628ef584a854afa661742a1c59118d2167d6b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c96e06bde901267c9d7f51b7f7d628ef584a854afa661742a1c59118d2167d6b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f311f8d8f19a5876a94119149a07a0ddd99b2c02f792108f162fe80215740ee3"
+    sha256 cellar: :any,                 x86_64_linux:      "b9e4a564a36058b6f467aa8246c11b6e28617e53a33f7ec506e6cb7c617d2770"
   end
 
   depends_on "go" => :build

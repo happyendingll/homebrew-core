@@ -14,7 +14,7 @@ class Fusesoc < Formula
 
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "pydantic"
 
@@ -44,8 +44,8 @@ class Fusesoc < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
-    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
+    url "https://files.pythonhosted.org/packages/38/9b/e422a865e1d5d57d0e509b4e0bf1c1a70a7f6382c29a5aa428df994c8bc8/markupsafe-3.0.4.tar.gz"
+    sha256 "2e9ad7dd851bf45fab9f75cbff4cb493fee9979e8d8c7c9c3ee119022518edd6"
   end
 
   resource "okonomiyaki" do
@@ -54,8 +54,8 @@ class Fusesoc < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/f3/91/9c6ee907786a473bf81c5f53cf703ba0957b23ab84c264080fb5a450416f/pyparsing-3.3.2.tar.gz"
-    sha256 "c777f4d763f140633dcb6d8a3eda953bf7a214dc4eff598413c070bcdc117cbc"
+    url "https://files.pythonhosted.org/packages/e4/11/b213bebff182584360cb8d17c72c1677fec5c5c228de439e63bcf8ab1c8f/pyparsing-3.3.3.tar.gz"
+    sha256 "928ae7e20211f3b6f3915a72f06a0cfd29ab9d24279dd6346b6b1a7146397d36"
   end
 
   resource "pyyaml" do
@@ -66,6 +66,14 @@ class Fusesoc < Formula
   resource "simplesat" do
     url "https://files.pythonhosted.org/packages/24/60/9c4a2534ae17dc5397c0536c3875a6ea8acf5d65f099ae617ce676433f3b/simplesat-0.9.2.tar.gz"
     sha256 "8cb800d09289bdc051126e725949368f8ac25105d40865cb93aa20eae9d46a9c"
+
+    # Fix import on Python 3.15
+    patch do
+      url "https://github.com/enthought/sat-solver/commit/cae79b0c938fc796c37474221e53b6e4fde87d30.patch?full_index=1"
+      sha256 "743079f81396d73fbdcd3eef97a9fbfd53f9a187cddd1d81e11d590fa6ad979a"
+      type :unofficial
+      resolves "https://github.com/enthought/sat-solver/pull/305"
+    end
   end
 
   resource "six" do

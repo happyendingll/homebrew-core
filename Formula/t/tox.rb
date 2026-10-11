@@ -3,13 +3,16 @@ class Tox < Formula
 
   desc "Generic Python virtualenv management and test command-line tool"
   homepage "https://tox.wiki/en/latest/"
-  url "https://files.pythonhosted.org/packages/cd/be/9a8d33841569fa73f998d22dfd4b614427072e7cb88cd14951670d9402d5/tox-4.64.10.tar.gz"
-  sha256 "7482b96fefe1e4b49e406a9a62b25b415690bec2cebe9cc0cd59e38af88ce671"
+  url "https://files.pythonhosted.org/packages/a8/2d/5b75b6e0fd3edc17bdfbf8adc343b3db17c7e3825ac601375dffbeead191/tox-4.65.1.tar.gz"
+  sha256 "bdbb7bd715a638f6a3f9eb6ffabd91c870db12de7ee2ba4d2c7c9af632f016ca"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "df09ea92f2d146ba9f7f8be1924b1cce6219ef9036ae9a114cd346a595d1a9e1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d754854ea2f7159b24a93694d36f63fcd2532941d2336cbeca6213ca8a14133"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d754854ea2f7159b24a93694d36f63fcd2532941d2336cbeca6213ca8a14133"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1d754854ea2f7159b24a93694d36f63fcd2532941d2336cbeca6213ca8a14133"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "70e56c8b250e8bd6db827df3e6b9fabf87a6e00665e738f55204eb39e3baa4ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "70e56c8b250e8bd6db827df3e6b9fabf87a6e00665e738f55204eb39e3baa4ee"
   end
 
   depends_on "python@3.15"
@@ -30,8 +33,8 @@ class Tox < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/53/e4/34efcb869715cf299e47d1ac7b2624d2bcb6f2d3dffc2f0abe8417f65ab2/filelock-4.0.12.tar.gz"
-    sha256 "cf42711a7ac791818b299fab0332a088c65aeeefa36290de98db92c434303b0c"
+    url "https://files.pythonhosted.org/packages/4c/58/6fd434bec86eff7c38a3168454cb132b762b2bea9b3ac094101a2f7bc32a/filelock-4.1.0.tar.gz"
+    sha256 "ad7f724afef953e731b1cc39bcd3a09166d72ed7fcdf29e6e88b1c3235c6715d"
   end
 
   resource "packaging" do
@@ -55,8 +58,8 @@ class Tox < Formula
   end
 
   resource "python-discovery" do
-    url "https://files.pythonhosted.org/packages/0c/57/250bd238b966cece44328235eb85290045d059265fdaf7527a3a958123db/python_discovery-1.6.1.tar.gz"
-    sha256 "cf87d3627dfb4412437fdd5b13eae402607722998d21567993aedbc59b23c15e"
+    url "https://files.pythonhosted.org/packages/b0/73/54993df8fc57e906dc9b7e01d1d9b0b2d3eb0ce3190639e33dccb12853f7/python_discovery-1.6.2.tar.gz"
+    sha256 "cd1738ca1d37c86ef9d0b654dd46fcee1e41c97c6add12575e8501ced39afdb4"
   end
 
   resource "tomli-w" do

@@ -7,8 +7,11 @@ class SingBox < Formula
   head "https://github.com/SagerNet/sing-box.git", branch: "testing"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "c02f714f4a0d891315a6c3e14f672193a6af3e4fabbe128338b10d493e72cd71"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "266e2f6c97f2251276429c44da9c9f329a102164583f8018092fef6cf775382b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f28b5e8504f36da5757fdf32f5456a393635966cac730c687b3ac29a4fb87f1f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "63c9da8c36b07b4888e0fee08bf9aaef560f62209bf12c17dda1b3b0fc1cf613"
+    sha256 cellar: :any,                 arm64_linux:       "21bb598481016a57003e90ef7ebf0e5baed17126a0dfd6196f9f276a27d88c9b"
+    sha256 cellar: :any,                 x86_64_linux:      "9a305d90f7e6d89e4d5e598e53fbdfa96bd72128a572061f2def3aa4f061b42d"
   end
 
   # TODO: unpin go@1.26 when sing-box supports go 1.27

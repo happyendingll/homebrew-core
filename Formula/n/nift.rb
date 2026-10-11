@@ -11,8 +11,11 @@ class Nift < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "2d6e5e72bf83e9d378d0e09bc2d1128e5486b1bbb76da9acae87bdcaa0546bce"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dcda6c6f0661c16b4ac65941a82af1c4bfa21beac9572b0150c073eaa039431a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9dfaad78bb30f0652827acb219c27739cfbf4e8c1652108b157505a5e2d9402a"
+    sha256 cellar: :any,                 arm64_sequoia:     "89b665a917e69292c0e6e3870f517e33d63a0e8c5ff43fa83836de1bb8163a46"
+    sha256 cellar: :any,                 arm64_linux:       "3bc5b59015594966a7e13216bcf662c37c1bbde975f6219774045d28ebfe3646"
+    sha256 cellar: :any,                 x86_64_linux:      "1cc5ff86ccf24a0ec26fac0b7a7aa7ba9d9fec263a34d6474d9fc98d768b62a3"
   end
 
   depends_on "python@3.14" => :build

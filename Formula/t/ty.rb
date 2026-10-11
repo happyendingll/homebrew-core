@@ -1,14 +1,17 @@
 class Ty < Formula
   desc "Extremely fast Python type checker, written in Rust"
   homepage "https://docs.astral.sh/ty/"
-  url "https://files.pythonhosted.org/packages/66/8f/8de9c4ff90e7131a3c832ea074e123d551fed84c899d37a522f649ca7c6a/ty-0.0.85.tar.gz"
-  sha256 "ef442cbc2fd6dad02eb00dee4213c1e0f18e09bcbeec2cdce6aa802603c5c6bb"
+  url "https://files.pythonhosted.org/packages/f1/fa/9b35728cc3c04d64f434c656836fa3c5f6e384a7813e48e63245510d5c69/ty-0.0.86.tar.gz"
+  sha256 "6edcaf52e207d653873d5f495c1a8470075b232030714c981f07f0a1075bc343"
   license "MIT"
   head "https://github.com/astral-sh/ty.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "4838db8fddcf91bd904429686558df8d4cbecce83b07163bf752b43aa6851d8e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "072ca77e197a61af2cede483691733c445bd8e6454ef2611157cbfb46683952b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "62a9f1ff4ea96e555f783ee3a207623639463e2d839a993861183fa0806ba421"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "16ffe70ce542d9cca07fa2fc434daa2cad211749d65655e90ecacecb6e4c722f"
+    sha256 cellar: :any,                 arm64_linux:       "dbfba26c163c14e19a22afe3ef11521ebb633a3f4a843e102632191ad203c140"
+    sha256 cellar: :any,                 x86_64_linux:      "224956e756d864c39f6c78198adfa72b9692f425fdeb701b8f5cdced1b0b851c"
   end
 
   depends_on "rust" => :build

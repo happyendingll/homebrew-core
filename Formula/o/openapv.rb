@@ -1,8 +1,8 @@
 class Openapv < Formula
   desc "Open Advanced Professional Video Codec"
   homepage "https://github.com/AcademySoftwareFoundation/openapv"
-  url "https://github.com/AcademySoftwareFoundation/openapv/archive/refs/tags/v1.1.2.0.tar.gz"
-  sha256 "970f65255896c906b22d7c9f9850deeee03fecf001415804848a03b6d1bbe41a"
+  url "https://github.com/AcademySoftwareFoundation/openapv/archive/refs/tags/v1.1.3.0.tar.gz"
+  sha256 "38f841ce44e80c40b682a5323b4f3ebc6e339b6071965bc1c705a17d46ab2fc8"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Openapv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "5d352b4f74d3ccf6e140096815f97d9163d05907511f1b47a3459b1812e9e297"
+    sha256 cellar: :any, arm64_golden_gate: "2a8715fd76c564d029a4ac0295481b6d412ad22d371e9017905d34eb9877f807"
+    sha256 cellar: :any, arm64_tahoe:       "2a11f2037eb3ae23d34b1b7d3bb8d35a1926b06f2dc4f7a3ed46a6f0027db52c"
+    sha256 cellar: :any, arm64_sequoia:     "c6e5d28d52c6ba6514ab78fa5e2041c5bdd6c3d25ffa0db15cf22729142cfd75"
+    sha256 cellar: :any, arm64_linux:       "669736bc07bf97ad792f0fae3144087aa201547d46455eab62cf03349e12d115"
+    sha256 cellar: :any, x86_64_linux:      "4595fa9445d051da79dfff9cbc7aef24f1682e4846c0f996e7e83372f6976eb5"
   end
 
   depends_on "cmake" => :build

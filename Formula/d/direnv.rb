@@ -6,8 +6,11 @@ class Direnv < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "30284bc57871775f12ef7c66fdb47d4c6695945224f89cc3a11558b3236848e6"
+    sha256 arm64_golden_gate: "c460fc9862ca2614bb9c9ea520dc7b132289e073b0569c15d327e424ec8906b6"
+    sha256 arm64_tahoe:       "b92163a782c058393fd678a546c6cabf11788cc5a4da73ecc078db1b37e770d1"
+    sha256 arm64_sequoia:     "6f0003e43f84ae7474e40bb56eba5e1f54bcf10694f71dd01ee2b3d4af92c496"
+    sha256 arm64_linux:       "d67158c1d4ceab9d49ae960708ea200900b4d80c2d1d6bcd9ec42186206ed741"
+    sha256 x86_64_linux:      "cccbbfdc7d35b21af86d2c237707976ca4a290ac419d27c94d4d8c5a5d36759a"
   end
 
   head do

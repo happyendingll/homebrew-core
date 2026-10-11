@@ -19,7 +19,7 @@ class Certbot < Formula
   depends_on "cryptography" => :no_linkage
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libffi"
 
@@ -57,8 +57,8 @@ class Certbot < Formula
   end
 
   resource "cloudflare" do
-    url "https://files.pythonhosted.org/packages/a2/67/66f7ba0227d7e36cb00008ffae58ce7d8ab1628839b2035ef84e1530edf5/cloudflare-5.8.0.tar.gz"
-    sha256 "d6537b331f0d061ccafd21501741b812d4f458d76f7ea62ce13f080126c4f0a6"
+    url "https://files.pythonhosted.org/packages/4b/52/5e736d63637e79c2381045250dbb6154a1fb4da8f3fd47518bff406c24d2/cloudflare-5.9.0.tar.gz"
+    sha256 "1c9b9e243602c754e03636204272422dc45776f3babdc67f8341ca4d559d49e8"
   end
 
   resource "configargparse" do

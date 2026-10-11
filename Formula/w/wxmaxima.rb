@@ -4,6 +4,7 @@ class Wxmaxima < Formula
   url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-26.09.0.tar.gz"
   sha256 "c490e30383e77e17de2005276429606ff4c5b43ae268aa889cfc3d4fb148a9e9"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/wxMaxima-developers/wxmaxima.git", branch: "main"
 
   livecheck do
@@ -12,8 +13,11 @@ class Wxmaxima < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "9de938cdf8a6902b6736d69ac7ba12eeaad8a8069a8b81cc5d0863b6b25e69e6"
+    sha256 arm64_golden_gate: "1ce64480996ac190fa9c2c16aa8fcfc51640d33be2cedfcdf82f4af502042779"
+    sha256 arm64_tahoe:       "6921b72bd5600525e2f30a1d85410d2ab702c8d9fe2b6c7b66c901d02f899753"
+    sha256 arm64_sequoia:     "da6a842c3b19cbad0335c3944c73e0384feb78489fd0aa4751329fd8f92b7666"
+    sha256 arm64_linux:       "ab91a67ca1091674c1935b532d90717a5103467919b99a8a2c1c22a2223f9135"
+    sha256 x86_64_linux:      "393319ee9adffcbef0a0e39d1bac12566950bbed21ab9580e304d0dfdc75401b"
   end
 
   depends_on "cmake" => :build

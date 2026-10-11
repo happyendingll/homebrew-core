@@ -9,8 +9,11 @@ class AnsibleLint < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "8861c73ff8c16a8a62f98b731acd51fb0a6946ea5558929df46d5d071c9ea9d4"
+    sha256 cellar: :any, arm64_golden_gate: "a180ef430132c276f557af1ebdae7fd8d7102ab6222ba32bcef86dd1f1bccef1"
+    sha256 cellar: :any, arm64_tahoe:       "8b3602c84f6648b5b751e8ac19b3bce6419c262dc4303a0dcc5b660216d68ba8"
+    sha256 cellar: :any, arm64_sequoia:     "0b9b1fa66f780b73aed4b5d0f7d05309d08a7f7829f1da96e461c71d36eaa742"
+    sha256 cellar: :any, arm64_linux:       "40581274b8bd59fea046e1a5e736967747766a9ce480b29832e938238f1862fa"
+    sha256 cellar: :any, x86_64_linux:      "69e4f5e429421c167123499f13b18aab662c1ab7ce1fbc47e473628b688681b0"
   end
 
   depends_on "pkgconf" => :build

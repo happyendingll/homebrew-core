@@ -7,8 +7,11 @@ class Libxmp < Formula
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "ff24f10a3df22b4887ea543c2b8da3a75b9efb43fcd3140a2c1e02d3f415823a"
+    sha256 cellar: :any, arm64_golden_gate: "93fda5c152b511eaaee3cd362886f86ea0492e08be785ce0f7bcc095bbb075c2"
+    sha256 cellar: :any, arm64_tahoe:       "f50aeb7e74e46c1c34934382db3c5847389ba5351e7ccaac6b822e8a3114bb9b"
+    sha256 cellar: :any, arm64_sequoia:     "998f473fab874225a675bcbd165dea19ed8d4efb9a08093bee2e453e3a9167cb"
+    sha256 cellar: :any, arm64_linux:       "76b4573938095a0b2d4151ac57dc36e8d3d5f3b53c0f860856ea2addf808661e"
+    sha256 cellar: :any, x86_64_linux:      "4706dd629fda1efe6140b300b87b6b251f4d3b3692f8ed644424afd82a7bb6db"
   end
 
   head do

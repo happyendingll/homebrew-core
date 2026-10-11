@@ -1,8 +1,8 @@
 class Lazygit < Formula
   desc "Simple terminal UI for git commands"
   homepage "https://github.com/jesseduffield/lazygit/"
-  url "https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.66.0.tar.gz"
-  sha256 "704b14509dae4c0212754d60d1c00181aea79c0734aafa2c83c89301dba1aefd"
+  url "https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.66.1.tar.gz"
+  sha256 "75d82496e7e99a4ae58279efd37186ee5d10de9bb751077775487639c07185af"
   license "MIT"
   head "https://github.com/jesseduffield/lazygit.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Lazygit < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "047f3effc194e52ee8dedefa3a509f4d1bce921e91dc9c23c1a2220e2c8e0e5b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e277cb254fc844733c5f933871d35aba510924f5e7c6d12d00638b4a96ddc5a8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e277cb254fc844733c5f933871d35aba510924f5e7c6d12d00638b4a96ddc5a8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e277cb254fc844733c5f933871d35aba510924f5e7c6d12d00638b4a96ddc5a8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1f9a996f757d67434ffcf85497029488ef6fa9e96523d8218125fa92cf6caacb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "444d4d8bf3d1ef602171aec1dbe2ffa585ccac36ff7d2aec37af24bfbbd8011a"
   end
 
   depends_on "go" => :build

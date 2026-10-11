@@ -1,20 +1,22 @@
 class Asccli < Formula
   desc "App Store Connect CLI to manage apps, versions, and screenshots"
   homepage "https://github.com/tddworks/asc-cli"
-  url "https://github.com/tddworks/asc-cli/archive/refs/tags/v0.18.5.tar.gz"
-  sha256 "6d8b1166277f39cd0a945b4cc199460528975d31695514c3b59fb2fb27b15555"
-  license "MIT"
+  url "https://github.com/tddworks/asc-cli/archive/refs/tags/v0.18.6.tar.gz"
+  sha256 "46fcffa4b6a0e046fa71a6116028b04fb87ac760dd1481f4ad7852a00f3dc302"
+  license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c10b0b96b0c199e02381d584585e3b640627b99c2981f2a51ae16380ca9f7bbc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8a3fdef0cbfc68fa1491352150530bfe545120247cf8f3e06e1bc507882e6b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f22b58d0640fa4af4d3f8a37c2209bac1381c61d19c3e97609721645509a8b58"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "395f5a8e3ac9752a23a1bc8eb70e0cd1b37b7dd6afcd4ce391d3a8a9b2c17815"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "523dad5c33740874d284614363c67bc4b7ab1272a54c8101113819b391dea24e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a0c04ef2da78a8c4615b9c75dca3c41f1f6d249575257e5f7bf64ac11a52000"
   end
 
   depends_on xcode: ["26.0", :build]
   depends_on macos: :sequoia
 
   uses_from_macos "swift" => :build
+
+  conflicts_with "asc", because: "both install `asc` binaries"
 
   def install
     # Fix Swift 6.4 runtime compatibility: https://github.com/apple/swift-collections/issues/733
@@ -27,11 +29,11 @@ class Asccli < Formula
     NEW
     inreplace "Sources/ASCCommand/Version.swift", 'let ascVersion = "0.1.3"', %Q(let ascVersion = "#{version}")
     system "swift", "build", *std_swift_args
-    bin.install ".build/release/asc" => "asccli"
+    bin.install ".build/release/asc"
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/asccli --version")
+    assert_match version.to_s, shell_output("#{bin}/asc --version")
 
     # `auth check` resolves credentials from the environment and prints the
     # account status as JSON, exercising real functionality with no network
@@ -39,7 +41,7 @@ class Asccli < Formula
     ENV["ASC_KEY_ID"] = "TESTKEYID"
     ENV["ASC_ISSUER_ID"] = "00000000-0000-0000-0000-000000000000"
     ENV["ASC_PRIVATE_KEY"] = "-----BEGIN PRIVATE KEY-----\nTEST\n-----END PRIVATE KEY-----"
-    status = shell_output("#{bin}/asccli auth check")
+    status = shell_output("#{bin}/asc auth check")
     assert_match "keyID", status
     assert_match "issuerID", status
   end

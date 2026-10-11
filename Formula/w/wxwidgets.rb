@@ -1,10 +1,10 @@
 class Wxwidgets < Formula
   desc "Cross-platform C++ GUI toolkit"
   homepage "https://www.wxwidgets.org"
-  url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.3/wxWidgets-3.3.3.tar.bz2"
-  sha256 "81b09d6dd9f1ed9301f8c55a968a488d0491f264dc2bab19a7e407ac67009482"
+  url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.4/wxWidgets-3.3.4.tar.bz2"
+  sha256 "815c16cafa4fcbfcf25c5c0a3418309c62257b8a3b6f91d85a1367a134f98c98"
   license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
-  compatibility_version 2
+  compatibility_version 3
   head "https://github.com/wxWidgets/wxWidgets.git", branch: "master"
 
   livecheck do
@@ -13,8 +13,11 @@ class Wxwidgets < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "3beda30fc4a2f5fd119389a8b85270f05d8461089d58dfd3813ab3e335b6792e"
+    sha256 cellar: :any, arm64_golden_gate: "0f554fde69b6abacfc3c6ed0f39611c9419295d8f6e19933300fe7028ee9359b"
+    sha256 cellar: :any, arm64_tahoe:       "a35d29c7870c3fe42f0f2688cd8c9d815db1887df164f16b52086ea44bbba1bc"
+    sha256 cellar: :any, arm64_sequoia:     "1244fb20ec6bd39217ad73118995696761a776f66a47f8f38761f0eb29d83892"
+    sha256 cellar: :any, arm64_linux:       "fa20fca19dae32d7e923c8088618dce8e4edfb32ff8b9cfb9cd2a24fb7fc94dc"
+    sha256 cellar: :any, x86_64_linux:      "07a9b1f8587df1e98500cda649aea6f035894619fcf61f089749da6d805872d3"
   end
 
   depends_on "pkgconf" => :build
@@ -27,6 +30,7 @@ class Wxwidgets < Formula
   uses_from_macos "expat"
 
   on_linux do
+    depends_on "at-spi2-core"
     depends_on "cairo"
     depends_on "fontconfig"
     depends_on "gdk-pixbuf"
@@ -42,6 +46,14 @@ class Wxwidgets < Formula
     depends_on "pango"
     depends_on "wayland"
     depends_on "zlib-ng-compat"
+  end
+
+  # Restore public `wxRibbonBar::AcceptsFocus()` for wxPython
+  patch do
+    url "https://github.com/wxWidgets/wxWidgets/commit/056bf3193a97d470d560b782b9f184017aa0593a.patch?full_index=1"
+    sha256 "467164bda254b801723fbf131f250b596a1fbced1336abb5f613598559397f4b"
+    type :unofficial
+    resolves "https://github.com/wxWidgets/wxWidgets/pull/27203"
   end
 
   def install
@@ -93,6 +105,16 @@ class Wxwidgets < Formula
   end
 
   test do
-    system bin/"wx-config", "--libs"
+    (testpath/"test.cpp").write <<~CPP
+      #include <wx/string.h>
+      #include <iostream>
+
+      int main() {
+        std::cout << wxString::FromUTF8("homebrew").Upper().ToStdString();
+      }
+    CPP
+    flags = shell_output("#{bin}/wx-config --cxxflags --libs base").split
+    system ENV.cxx, "test.cpp", "-o", "test", *flags
+    assert_equal "HOMEBREW", shell_output("./test")
   end
 end

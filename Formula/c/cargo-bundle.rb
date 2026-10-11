@@ -4,11 +4,15 @@ class CargoBundle < Formula
   url "https://github.com/burtonageo/cargo-bundle/archive/refs/tags/v0.12.0.tar.gz"
   sha256 "686592eca1e4d0bac0a29b28825214809d02b6552f2c9fd5e954920632b6016b"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   head "https://github.com/burtonageo/cargo-bundle.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "ca55e0a29d596c9f7d99468ce97c3330089e2f1b6e54da45c2024cf368daaa1c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bd88e7255e722bc01364958afb0af26a55b7ab5022576a8c7ef0c9e5a8bff0a0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e6cd6e199ef1ec95a34aaa6fc0cbbe4883f08481b99fe05ad9be1ab7712aa6f8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "265625df34d3dece4148cee7f08c9d9d1b376e9ae48bfb473305522141e76f5b"
+    sha256 cellar: :any,                 arm64_linux:       "2df287c9e1cf0525c2fe3be957ed789666a2ddc68c9f77fe0ca7b9568945f122"
+    sha256 cellar: :any,                 x86_64_linux:      "99d8cf87f996786235b96e5a4c1761b9bc58c50115da3516227775fbe0620807"
   end
 
   depends_on "pkgconf" => :build
@@ -17,7 +21,7 @@ class CargoBundle < Formula
 
   on_linux do
     depends_on "squashfs" => :test
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   allow_network_access! :test

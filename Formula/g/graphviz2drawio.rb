@@ -15,7 +15,7 @@ class Graphviz2drawio < Formula
 
   depends_on "rust" => :build
   depends_on "graphviz"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "puremagic" do
     url "https://files.pythonhosted.org/packages/24/74/ce5987ab9b8aec4ced06e2723ebb604205c9eb58abdad91453da93166380/puremagic-2.2.0.tar.gz"
@@ -23,8 +23,8 @@ class Graphviz2drawio < Formula
   end
 
   resource "pygraphviz" do
-    url "https://files.pythonhosted.org/packages/4f/03/14ba7e94e2a9107324b5435052a34c92df2637274343c26aa44361626b01/pygraphviz-2.0.tar.gz"
-    sha256 "7cc6cfff4bfa6c1bf389cbbf72f5995a717c69de69c18763544c04b41181f59e"
+    url "https://files.pythonhosted.org/packages/01/f7/a82e7f47573168960ce7e2a6c937a084a14d58599fe2a48ea3cde8ca555b/pygraphviz-2.0.3.tar.gz"
+    sha256 "e46818608638959ceabec66a36d2efc1d60b790a845f29705e403feecc7ee0c0"
   end
 
   resource "svg-path" do

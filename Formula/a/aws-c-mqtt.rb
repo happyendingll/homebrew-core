@@ -12,8 +12,11 @@ class AwsCMqtt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "054dc8cceed3842219b9721c83af0161e2296b480956023ff8f36714ab88c4e3"
+    sha256 cellar: :any, arm64_golden_gate: "151b169d45183e3f5af57eae8c214acd8f2a1d87f447fea18dc21b179a8e393f"
+    sha256 cellar: :any, arm64_tahoe:       "e81211e1a3061bbc72b68ce5a23a2bed3f4d2f31ee4dc218c0e784de58b0fbc1"
+    sha256 cellar: :any, arm64_sequoia:     "a227009eff4a9611443c2ddd787861ad4dd81ec5aeacba43c3e2396067918eb1"
+    sha256 cellar: :any, arm64_linux:       "3b5dbce47017e608d011b77978fb6d3f735bc680ad630cb263e1fddc8694a211"
+    sha256 cellar: :any, x86_64_linux:      "8e51e4e9d97c8184b83b5e349c723ea5e1cbfa9fb90e1dd2b5599df93d6e65e8"
   end
 
   depends_on "cmake" => :build

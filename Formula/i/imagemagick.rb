@@ -14,8 +14,11 @@ class Imagemagick < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "40334abe999ebdf2f9b68b5f5309382b597736a861afb09f769bc8c1c0fbd4a0"
+    sha256 arm64_golden_gate: "d0330acea91b7e2d6ed33d46d38b0e6e853fa27d5fc6d6a3627e85a81d8b3086"
+    sha256 arm64_tahoe:       "4a56df9a5d3146f97cac464032fee52c7a79b7ae22c342e33127f525698b9f7b"
+    sha256 arm64_sequoia:     "c0caa27bb77253a24b341e0d24884a09e2e3865abc3f208644abde8dfe72ab73"
+    sha256 arm64_linux:       "56b4289523da4945fdac7183a1bc6c67f4e7260782b5671c26f6122137a98e16"
+    sha256 x86_64_linux:      "db3e0cbc084b153bfb046102b9e357cea942e3d177ad74ad6be5ebfc1c6d6089"
   end
 
   depends_on "pkgconf" => :build

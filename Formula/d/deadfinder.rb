@@ -8,8 +8,11 @@ class Deadfinder < Formula
   head "https://github.com/hahwul/deadfinder.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "d6fac1b901938b8887b0227fb575ac86cef460e5725d25b98ba076a7ef8dae4f"
+    sha256 cellar: :any, arm64_golden_gate: "f14092874a87bac2119594d0648b5650bda38f4e867bb48258e4e6eb3bcaa593"
+    sha256 cellar: :any, arm64_tahoe:       "6bb11ef4b2d3756b6ad005cb547e3b9b890151f25696f1249d153ea4bcd5ff44"
+    sha256 cellar: :any, arm64_sequoia:     "34a1f7bcc759aa07b2486dcb6bc3412367180c8f57924f12bc4e4b1eb87b02ce"
+    sha256 cellar: :any, arm64_linux:       "5a1b427df0f88a764d114a8c288ade0fb42098254d3e309a5ff1eb39b5e799a0"
+    sha256 cellar: :any, x86_64_linux:      "a247599a12a2cf6b08d299b9e44bbba99893cb7343036b1a4a107d6b27bdffbb"
   end
 
   depends_on "crystal" => :build

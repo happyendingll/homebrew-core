@@ -8,8 +8,11 @@ class SpiceServer < Formula
   head "https://gitlab.freedesktop.org/spice/spice.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "1e5476fce3af94686ce9db6169920b18a89ff780523fd932486f17fd0c314e75"
+    sha256 cellar: :any, arm64_golden_gate: "ee519d2b1a6707336149094a3c67985f2645c917af937939db333cd21a3b9c1e"
+    sha256 cellar: :any, arm64_tahoe:       "208555b9383d1016fde6343e6b92d2b5ca89928b7d743675198f921566cebc43"
+    sha256 cellar: :any, arm64_sequoia:     "853367dd10048ed383c9a3544996ff80d40988f19d5312de43d60d628fa3eaac"
+    sha256 cellar: :any, arm64_linux:       "687aa0dc9759407b83f0f256cacbf1b4806c706c955aa1ddca9aee97fb9924cf"
+    sha256 cellar: :any, x86_64_linux:      "aaca9b5de28152a0cb015cddd822fcdc1943372713b968399b7bd7b3c0b8bd8b"
   end
 
   depends_on "spice-protocol" => [:build, :test]

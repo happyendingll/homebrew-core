@@ -10,8 +10,11 @@ class PiecesCli < Formula
   head "https://github.com/pieces-app/cli-agent.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "c3a5b822976f09c8920ca50cb3df71beb2cb085448de9b3afaeeb1d1563e404b"
+    sha256 cellar: :any, arm64_golden_gate: "30789dd5fb85131e9443cce1ec62e205415ac4cc0609ebeff16ce942f6f70f0a"
+    sha256 cellar: :any, arm64_tahoe:       "1d112e40129c8d3980178598e1db8d9339a424b91207ff9493474877a6b74d6f"
+    sha256 cellar: :any, arm64_sequoia:     "bafa5ec106bc7a04bbd08333b72066da4646a8d64e86373e4e25861ebb9d4392"
+    sha256 cellar: :any, arm64_linux:       "6b53521ee2c893b89413992a50e7c479b1181b0680e932c6de9e23bb1480591a"
+    sha256 cellar: :any, x86_64_linux:      "9e174714697558a6442111effdd487c18a255a0f5b5f81242578d38e9754e038"
   end
 
   depends_on "rust" => :build # for pydantic-core

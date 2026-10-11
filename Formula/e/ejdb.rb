@@ -2,14 +2,17 @@ class Ejdb < Formula
   desc "Embeddable JSON Database engine C11 library"
   homepage "https://ejdb.org"
   url "https://github.com/Softmotions/ejdb.git",
-      tag:      "v2.91",
-      revision: "abe62bfdb02c489e88f867ca1bcb8e076a00391e"
+      tag:      "v2.92",
+      revision: "a57c40eeb9a834359fb76b880a5eb350d44129bf"
   license "MIT"
   head "https://github.com/Softmotions/ejdb.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "4db7187012e3ed454a59625803ffc667ec3d6b84a2b426d74ba07555fad1897a"
+    sha256 cellar: :any, arm64_golden_gate: "b1f67422d8aea16e47d938568ed8f27b2df2af3eb0a6c32c4b954c9881f677db"
+    sha256 cellar: :any, arm64_tahoe:       "02d86f8264045ca0ef2a4c88b916f2c75ee302ad33683ce3a7e6779223548456"
+    sha256 cellar: :any, arm64_sequoia:     "f7185a5da23f5f0d5c250740639518964a4096e8ab4385552a3adafcea29a1d6"
+    sha256 cellar: :any, arm64_linux:       "ccfb01427cc7cd186ae40b30782a06593c3a663b1a43816eade4827f4dce4047"
+    sha256 cellar: :any, x86_64_linux:      "71ec322bd0654408acee22c0bce22ff13febc3c91fb02170c977ad04e02151da"
   end
 
   depends_on "pkgconf" => :build
@@ -37,13 +40,6 @@ class Ejdb < Formula
   resource "iowow" do
     url "https://github.com/Softmotions/iowow/archive/refs/tags/v1.5.2.tar.gz"
     sha256 "24b91edcc69a48a752b2a1892a0b935e980afb8a04eb659c699e77d29253ab61"
-  end
-
-  # Fix Autark shared builds, upstream PR ref, https://github.com/Softmotions/ejdb/pull/395
-  patch do
-    url "https://github.com/Softmotions/ejdb/commit/cfe8dbcf2650333372d9b943315aeee90e5a5d9d.patch?full_index=1"
-    sha256 "2df85c7d810f91a434e505868aa33f8e86ba7cf8b975fce457636c290f941234"
-    type :unofficial
   end
 
   deny_network_access! :test

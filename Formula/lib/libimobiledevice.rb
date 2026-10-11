@@ -9,8 +9,11 @@ class Libimobiledevice < Formula
   head "https://github.com/libimobiledevice/libimobiledevice.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "a20162f864781b1d0002ecf3c917d148059064b52108fe950fd4d740e2515d66"
+    sha256 cellar: :any, arm64_golden_gate: "bd24e96b92bdb9ea209c4231630bdbbbd087627555987cdebaf6ccfe8d0aaa3a"
+    sha256 cellar: :any, arm64_tahoe:       "967bd0bdccbd984f218e08c60fc3777def033a62252bd2b61ec6a37a77ad25cd"
+    sha256 cellar: :any, arm64_sequoia:     "7d80544bfe2cc2cc0f34865ffdb19d741b61d5162d520ade2a11e1e3999c630c"
+    sha256 cellar: :any, arm64_linux:       "94f1ff2abef7d2a468375c125f2e106b9d24631a1c5226bfff8215372a2c43bb"
+    sha256 cellar: :any, x86_64_linux:      "0cf6b1d55bd0dbb4c1cf7114cac78c0607e53e811e9c693f2ebb51a411bd2a43"
   end
 
   depends_on "autoconf" => :build

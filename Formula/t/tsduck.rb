@@ -17,8 +17,11 @@ class Tsduck < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "d300f0c75c7b71447bd124dc6ffbbc017b9f2f9017805f83ee8f74a4845b4198"
+    sha256 cellar: :any, arm64_golden_gate: "00e75b5b3b3b6a5d9a38764c543f6cada103841dbbf9b88c080f22103e754762"
+    sha256 cellar: :any, arm64_tahoe:       "951ddc68d24c793772712c6847893e0c52f9683efd52625acf47ce7da2a1da30"
+    sha256 cellar: :any, arm64_sequoia:     "35aea7a0a6fa99a069412ec76871eb6a704c870526e580c615d5a698974a20a6"
+    sha256 cellar: :any, arm64_linux:       "a24d0c99bf094e01725ac2d3099eee3d18fba1ca30de27723de8ca0937d022ac"
+    sha256 cellar: :any, x86_64_linux:      "65f41991a89fdc867ceed4a3aad9f157478f49cad8f9d5f1ba41d5d4b9d16b34"
   end
 
   depends_on "asciidoctor" => :build

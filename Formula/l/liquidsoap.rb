@@ -23,8 +23,11 @@ class Liquidsoap < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "604edcbc92a980373b7166a39390d002a23924728022b9d828c50f1a8aab68eb"
+    sha256 arm64_golden_gate: "8da59f128f2acbd15f8ef3fc35bb428d9b7f768872076b8be9e628c4e8f3d77c"
+    sha256 arm64_tahoe:       "c70998fb9ff3c2b969f60965d041dfd6fd89501b7be979ad4df5940756409323"
+    sha256 arm64_sequoia:     "117f18b6eade5c588742d639188758c6863bd4cf8f5b8def453c71c0af48474a"
+    sha256 arm64_linux:       "3e10060cb61360ec71c5670d67cecbf0fb60681a8a555dd5e3b1744f133b6c5d"
+    sha256 x86_64_linux:      "40c92d79c6bb594efd4aafcab60d552156364655f287b2429eedfc741ba242be"
   end
 
   depends_on "ocaml" => :build

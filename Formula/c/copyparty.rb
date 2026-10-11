@@ -20,7 +20,7 @@ class Copyparty < Formula
   depends_on "cryptography" => :no_linkage
   depends_on "libsodium"
   depends_on "pillow" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "zeromq"
 
   on_macos do

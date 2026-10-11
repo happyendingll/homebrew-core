@@ -1,13 +1,16 @@
 class VueLanguageServer < Formula
   desc "Vue.js language server"
   homepage "https://deepwiki.com/vuejs/language-tools"
-  url "https://registry.npmjs.org/@vue/language-server/-/language-server-3.3.12.tgz"
-  sha256 "5ac7ec99308a8ef0a14de602be448268793f4149692137c3e92d46b3ca1360a7"
+  url "https://registry.npmjs.org/@vue/language-server/-/language-server-3.3.13.tgz"
+  sha256 "39013d18a4e639db5988ebabfb2ff49393940c6cc492731dc54c5b8fde6b24de"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "e2d6e20d7fc83ffb468cf101d6bae87cb0e8265f34757dee4235ea149542294d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d601455a0c5e2c3c36afd487ef8e59324a7e10a841dcd77374cea3d6aa53f9e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0d601455a0c5e2c3c36afd487ef8e59324a7e10a841dcd77374cea3d6aa53f9e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d601455a0c5e2c3c36afd487ef8e59324a7e10a841dcd77374cea3d6aa53f9e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5a9394f78fe2a9536413963aa76efae87d2ba0da265c34cb5b4d40dfa788661b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5d1b370052bb1abb4e2bc8047b14f940ded3ffa6437badb66d330718fa37f695"
   end
 
   depends_on "node"

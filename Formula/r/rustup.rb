@@ -2,6 +2,7 @@ class Rustup < Formula
   desc "Rust toolchain installer"
   homepage "https://rust-lang.github.io/rustup/"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   compatibility_version 1
   head "https://github.com/rust-lang/rustup.git", branch: "main"
 
@@ -14,19 +15,21 @@ class Rustup < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "ffacc8cadb7db06c187ae6aaad0a79ff0ca478af116e7ef39015fe83c8a7f2e6"
+    sha256 cellar: :any, arm64_golden_gate: "4b477dd5e5de10a9d1518773de69521f27bf34053e54c5b63c7b60c0b378a8c8"
+    sha256 cellar: :any, arm64_tahoe:       "8bc2e3e7547cb990101e554542c85a0f28086ae34be929e23e8a2685222a47ca"
+    sha256 cellar: :any, arm64_sequoia:     "f91db8ed2e19c72ec4d4f4bbba0d76aebe8385d358582d59b32d78b4b626ba2c"
+    sha256 cellar: :any, arm64_linux:       "466409e46da5082156e59a46fba8150956fb131cd5e02c8b51bf71a36975c148"
+    sha256 cellar: :any, x86_64_linux:      "bc6d95ad7ebdf2ba63bd5e1cdc0dce33b45dc90670d28b046c4d7535ce2bb992"
   end
 
   keg_only "it conflicts with rust"
 
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
-
-  uses_from_macos "xz"
+  depends_on "xz"
 
   on_linux do
-    depends_on "pkgconf" => :build
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   # Test downloads a Rust toolchain
