@@ -8,11 +8,8 @@ class Bibtexconv < Formula
   head "https://github.com/dreibh/bibtexconv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "efa081db50f71a712a4245a18d387216fa5326514df658f40f2c95b61aec571b"
-    sha256 cellar: :any, arm64_tahoe:       "f15302fd9f3211df13c0ee81693aceaa933a76b51a0e22287fc0216e157d9a45"
-    sha256 cellar: :any, arm64_sequoia:     "97c864858aaf0f2d44dba852e86e7c98797f039bb2b01f161ebe7edc9573f7c7"
-    sha256 cellar: :any, arm64_linux:       "69fa5a3c65dd9609e30bc4fcf1c726dc93b9d76e8def2fbebbdddd30b41d210e"
-    sha256 cellar: :any, x86_64_linux:      "40071a18be50e6f73751926c6c7464d16baa25da36061c5c0ca5390ac6253e87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "65901dae9516b315ade41408e9b1c3161c8a87928c911817540c97d3999cac37"
   end
 
   depends_on "bison" => :build

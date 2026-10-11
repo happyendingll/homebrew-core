@@ -7,11 +7,8 @@ class WoodpeckerCli < Formula
   head "https://github.com/woodpecker-ci/woodpecker.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2d1d0b062570211c5ea157d760725b05c5708093ca79ec7f20b5cfb65e78304"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c2d1d0b062570211c5ea157d760725b05c5708093ca79ec7f20b5cfb65e78304"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2d1d0b062570211c5ea157d760725b05c5708093ca79ec7f20b5cfb65e78304"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d28ed52b112e5bab20d260aab62e275795507c4d673ee272dc2427a14315a379"
-    sha256 cellar: :any,                 x86_64_linux:      "7adf8c055df778b543f09b5432de8848b0c68290bcf99a71b6b19b82f0770072"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "54c65fdefff2d7700d74aba60229015aa78421f602559a87f11fa510a857d3f4"
   end
 
   depends_on "go" => :build

@@ -16,11 +16,8 @@ class Tarantool < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "106434fbb91a2becd263891a5f3eacc9e56026ce1b5b07933601ec64b02b139d"
-    sha256 cellar: :any, arm64_tahoe:       "94c7be9c5a1a09fee56892433593e1fde94b8ebbe055c764ce7221c40c1eaeea"
-    sha256 cellar: :any, arm64_sequoia:     "868ef590aa257d6fab8a4c3b8b7cf0bdc1d3a56928a2d139125a4b7b257f20b1"
-    sha256 cellar: :any, arm64_linux:       "162b60397c56bc1e684d42584161dc3ecd8eeb00baeea13ab618e9c5ffc26466"
-    sha256 cellar: :any, x86_64_linux:      "23d3bb77b66ed8a28a6f1167a2b889ca9f3fc21564e02fb39c00483698643d18"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "b6598851d8bfea8ec38d29445b9eeb2aeab6526d9da4f9beb85c145db6f975d0"
   end
 
   depends_on "cmake" => :build

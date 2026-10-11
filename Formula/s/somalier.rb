@@ -8,11 +8,8 @@ class Somalier < Formula
   head "https://github.com/brentp/somalier.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "47489292e066b50811cd332e16350fd722764bddbf1603c1d35a6ec4df75fb57"
-    sha256 cellar: :any, arm64_tahoe:       "8b6efdc6e672d19af061a0d4ee93f872f482daa71437a16423d81569103b1802"
-    sha256 cellar: :any, arm64_sequoia:     "4b74676aa9d352d203b20835b325ac30a8635f2c016c6da06196ee82ace16124"
-    sha256 cellar: :any, arm64_linux:       "9fa3af840d4f961870ca127983dc9da1d41db8a32ec91fefb245295a734e4795"
-    sha256 cellar: :any, x86_64_linux:      "4cff4cf723b05a256472f8961ba66333dd194a5b17448c2abd76c737a4dd4531"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "23e01058c6a590690ffee2c85cd0b0c939e3c61793b2815939d55b2ad8948853"
   end
 
   depends_on "nim" => :build

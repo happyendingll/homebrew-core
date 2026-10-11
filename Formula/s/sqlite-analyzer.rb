@@ -13,11 +13,8 @@ class SqliteAnalyzer < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "df5c1e1e2d979f12e4dc4ba529c17a01bf9ca8d2a1ab7fb341db9550a3769b01"
-    sha256 cellar: :any, arm64_tahoe:       "f94427de8aad841f5f005827093c19782e690ace6ac7ebdcde6570e3727b75af"
-    sha256 cellar: :any, arm64_sequoia:     "15a0d6eb7905ff09b38241573461bd180d42782a68228766ca17e95c480027d7"
-    sha256 cellar: :any, arm64_linux:       "3b9790fa38a934f9ec60adb89ff1ea6718a801b9e669630a3d1529d64d9514ea"
-    sha256 cellar: :any, x86_64_linux:      "b9a7debebb04ff155f8f1805f290c5aa596e123e8101d16dd09ad3502894df86"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "b15c58cb9d292f4cd2d7635ad66fda31c66a41d5c42b863e82e955e0f9f7cc3f"
   end
 
   depends_on "tcl-tk"

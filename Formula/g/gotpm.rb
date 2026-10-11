@@ -7,11 +7,8 @@ class Gotpm < Formula
   head "https://github.com/google/go-tpm-tools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "357375ab8d272e58da6c398879d088f292859d1b640937c29710b601e0f84320"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "357375ab8d272e58da6c398879d088f292859d1b640937c29710b601e0f84320"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "357375ab8d272e58da6c398879d088f292859d1b640937c29710b601e0f84320"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "63dc2143f4fc0b69b8ec3021c010654979df306f8bbd5543ebb4d969cbe09554"
-    sha256 cellar: :any,                 x86_64_linux:      "46e1a99d599b83312f486e9620394c2ed2f51f51a6186399da53a23096524d02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "c5c5ce423b5a29d3c72cfd3608d3f3957c375faf44bcfe1140b8f4721228319a"
   end
 
   depends_on "go" => :build

@@ -16,11 +16,8 @@ class Fortio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "854989c7b8bfa790956b9aa50caff1a780dc835e70d33534108ec3bdecad3581"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2436c65dc2ee54f2c177206ae4f023f659df343fa921f161b7ba202586c4e7cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "67f987b5ad193170817b4c0e97dfc37140c3cffe67731bd9feded935ab8c9547"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e8bd405659535b5e6c6abd81f1af5f493080ae0cc86007987e8c30094041a655"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d77c2692ecfb4af0a0b763fa8a18e7e90c5780304695e9ba87b1fc85dcae4204"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd3e4d9f125e176bb5668295ead54e8fdba4fda60159bae2e98c8c79808dd965"
   end
 
   depends_on "go" => :build
