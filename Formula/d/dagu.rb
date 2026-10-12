@@ -7,11 +7,8 @@ class Dagu < Formula
   head "https://github.com/dagucloud/dagu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bd109ebff9faa5f5da6d05ab690c435e2c71aa95a67251964d63c78df231c603"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d98f7d6c113d5585bdb2cd83cf3832bfafbf521ea5011f021347604de7a2779b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0b8b702d7881c7e87ef7351789735dd23b6cfae7ccd93771852c9a1289807ad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bcd5727ae4fb54619c71470148cda33a0c68f1794288576b96ae7899c1c0541d"
-    sha256 cellar: :any,                 x86_64_linux:      "11d93c3308a518ecfcba3c083a1c4a76714bc21208c6d48606954518601ca325"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4eef074916f94531c7edce36380957741f980033c84fb8dac7e69d946043a7b4"
   end
 
   depends_on "go" => :build

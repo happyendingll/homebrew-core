@@ -9,11 +9,8 @@ class Pillow < Formula
   head "https://github.com/python-pillow/Pillow.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3c5bc8e2a49d851a97da19117ce2cdafeafc055e1be464cecf2166d3e14d50d8"
-    sha256 cellar: :any, arm64_tahoe:       "38622dd480a77959c55acf9d1bba35db3e43cadda17f1fb5788544e51ca3eef8"
-    sha256 cellar: :any, arm64_sequoia:     "8ab334b3953a6ace637c4ad0ad7ba52ee41a7e1f419104574f1004585e644c22"
-    sha256               arm64_linux:       "151c06ee218d8a64d724c3aefb9b58cc8f9923b5d3b715672b60eb264e4ce001"
-    sha256               x86_64_linux:      "446c9258f15ad22d623c81a6e73fd82265c540a9b89b5c19fa1b19fb26a8be7f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "a7a1bd7662a6f1c0db7a89984337229561e65aee20fe5d2c499c7800cb47bc48"
   end
 
   depends_on "cmake" => :build

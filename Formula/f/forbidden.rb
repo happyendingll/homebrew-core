@@ -10,12 +10,8 @@ class Forbidden < Formula
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d80e61a72686b81ed5733c7a02f6e90151ff5989eba9c25f09b9b79b58fb013b"
-    sha256 cellar: :any, arm64_tahoe:       "a371f6d19deaa3e096bac512c40e08f509a08e923c4a0418354f4bb08e49de53"
-    sha256 cellar: :any, arm64_sequoia:     "c262822dee2838acdaf320cf0016042eba7fb36352db785360efe65b60df9fcd"
-    sha256 cellar: :any, arm64_linux:       "41dbb7dc0aabd66d1eb582e34a9cd5a98023d4cfdb67a93c2d13c6af4007dd53"
-    sha256 cellar: :any, x86_64_linux:      "432346dfd83dd4bfbbaa4bdfc1ea20bcdc1c9f7c407fec842d1e91551d58b238"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "97e4a41a8107b8c7f6d7bb46125cffe4d89bf57d9a446688af9f4dc474f5d6e0"
   end
 
   depends_on "certifi" => :no_linkage

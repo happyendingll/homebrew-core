@@ -9,12 +9,8 @@ class Cycode < Formula
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "0f6786520c989e6b38cd7396c1b7aee7aff22c1f0b9fb46ac6e1c08d93dad250"
-    sha256 cellar: :any, arm64_tahoe:       "d1d0a9f272abca5015d5f792b0bc598281c305b6f06173d0cfef6c703cb80e03"
-    sha256 cellar: :any, arm64_sequoia:     "08888e92632cd5a91850f9ad66e4316f97e38367cffb05a45e2849b986bf16e4"
-    sha256 cellar: :any, arm64_linux:       "2e9024489e3255326508c070b11ea8a1e1fa6139efcbc333a10aa080eff680d2"
-    sha256 cellar: :any, x86_64_linux:      "b18525b75aa4fd3f18b4ed87ec27b5abd44947bc23ff8b5e375d414fbb8a0541"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "22d91bc22cd164904c1865deff255934b6b6fc10a58e0eb542388b50ad565b15"
   end
 
   depends_on "certifi" => :no_linkage

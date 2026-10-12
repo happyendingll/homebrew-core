@@ -9,12 +9,8 @@ class Oterm < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "e9cf612f7d28f870271ce7871828e96bad155d8ed5371cf8d6b423df705c110f"
-    sha256 cellar: :any, arm64_tahoe:       "935815e5f858183570de8d2d34c55472cc8b300829cfa9dee2c06f2fdf3eaaec"
-    sha256 cellar: :any, arm64_sequoia:     "8dfb7cc6bb5ac5433e2b57605a9398ca920f0f3174f628dd130f97f432e103e0"
-    sha256 cellar: :any, arm64_linux:       "c029f651935ad01084b8c9cd3f5a4c1cfe7d31dced56797ab789b548b80be297"
-    sha256 cellar: :any, x86_64_linux:      "f8a3163239f3d36c76f29c92b9d15dde417a2b54a25d6604db49bfc55ae5f374"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "5da2035b31661a77f7d95a7ae1795b3be63c921a8f1536f19ba98bd750218a86"
   end
 
   depends_on "pkgconf" => :build

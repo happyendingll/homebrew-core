@@ -15,11 +15,8 @@ class HermesAgent < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4e1cc6ec79677bc3f0c8ca2a1585876850ab599eca61198c4501cf734ace92cb"
-    sha256 cellar: :any, arm64_tahoe:       "dcad7f732027d0c83d5fb7d8d3d682208e8b766f7b210e351c524670cc605139"
-    sha256 cellar: :any, arm64_sequoia:     "19f66a064f655a8de6398a67bf694e9f45ffebb1de71862ea18035831377714e"
-    sha256 cellar: :any, arm64_linux:       "c48fc6a814ae3716a6c68cc669a4a2a02c0c9b5b4cc6f05ee89d89ab1297cbca"
-    sha256 cellar: :any, x86_64_linux:      "50aee8dc22405af3bcc97c33e01dd59902e173e39c37ee0fb2e2e5a06c86035a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "cec8bf1ca6c344b26393e4e09a2c9db352f2ef29c46923e8bcad3c805a9dc7b6"
   end
 
   depends_on "pkgconf" => :build

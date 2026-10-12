@@ -11,11 +11,8 @@ class KeeperCommander < Formula
   no_autobump! because: "macOS resources cannot be updated on linux CI"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6bda0a3d5434ffa80ac78e64896a2ce2c7f938e7868350d1584d212b77ad0b46"
-    sha256 cellar: :any, arm64_tahoe:       "67bed7494f9fb1308533e76404d9860dcc2e70eb1e57be1f2ea42e2d19442f67"
-    sha256 cellar: :any, arm64_sequoia:     "4e86a6a264a9db5303e5a2124351b4088d0086565ec8164f62810b973dfd9e1c"
-    sha256 cellar: :any, arm64_linux:       "fe5e70990d1481ab983777b935fdfd883abc9b0a0b844d8e4d0c172580b5fa42"
-    sha256 cellar: :any, x86_64_linux:      "6baf0225c22d23577ce12a91ba8bdc949b38539d783f5c6acadc889e0785542f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "c54be29e6d8c826ff5e2e1a8cec42fcb14540667941289f658a361b5f308051c"
   end
 
   # `pkgconf` and `rust` are for bcrypt

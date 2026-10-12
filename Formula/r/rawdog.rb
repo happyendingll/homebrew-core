@@ -11,12 +11,8 @@ class Rawdog < Formula
   head "https://github.com/granawkins/rawdog.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "4092b443f8d094584bbadba27392ea173ff25dd4ebeb8567f2aa87d027f0ee54"
-    sha256 cellar: :any, arm64_tahoe:       "521d53cfa5ab35d2b81d1855c29a12dd2255cfd549e6a093a1a01313a42d3112"
-    sha256 cellar: :any, arm64_sequoia:     "0e84e2d856a4f278f81274bd293b2d836ac808766d59dcfe3433523cf5a8aeea"
-    sha256 cellar: :any, arm64_linux:       "6f366e88ca268334030db39c8b8479a1376f5e804af3e081edfd73c028e51d7f"
-    sha256 cellar: :any, x86_64_linux:      "6605f4683883e8e9ad2961f84f55328bf1eb4ad2de9d23eb2c3270bec28d18aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "595c292af50c1f214a12c6386a8b24caf85f8fc44170ec3dfde7b89dadd6077f"
   end
 
   depends_on "pkgconf" => :build

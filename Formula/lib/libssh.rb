@@ -9,11 +9,8 @@ class Libssh < Formula
   head "https://git.libssh.org/projects/libssh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "48110039ef444f383b5fab938dffbca01203784eafcf2a05135477cffef15751"
-    sha256 cellar: :any, arm64_tahoe:       "37a64163e5cc0960e54354c4159aa32d1f89cab7f2c338d5efe202ecbc1d41a2"
-    sha256 cellar: :any, arm64_sequoia:     "69507118740589ed52f4b4328694eeed6a07166527e001f0d43f9c6a86b09d1f"
-    sha256 cellar: :any, arm64_linux:       "24f3c7af9ddb26b6bcf3abc4bf37f3139ec9a5c41082f970a3f01007f5d608c0"
-    sha256 cellar: :any, x86_64_linux:      "ba38838f03c55465919f13f7dcd307e8195d1705dc066f4548d43776423a5d45"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "1ff8d67b968d52c3839a7d0a57784ae040d0bd0e681aace4e095551a0fda1e03"
   end
 
   depends_on "cmake" => :build
