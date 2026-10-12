@@ -10,12 +10,8 @@ class Bpytop < Formula
   head "https://github.com/aristocratos/bpytop.git", branch: "master"
 
   bottle do
-    rebuild 7
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "00cb4c1b77641395ada449f1954fd7fef0fafec953f57718c4a4de581ce5a9d5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed3b3902a8c0082d56296be270fb11c764018d810f1cc930e29366697e02f3ce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bc5641928ce45eb2198dac79fc9c8a559e6041c4f43401b3d6127ba98a2737f0"
-    sha256 cellar: :any,                 arm64_linux:       "9d087d3d7c6cd6f0d7895baed3c26c76f8a16d8b9b315b4493bdd5ffb9c27070"
-    sha256 cellar: :any,                 x86_64_linux:      "e5c2fa1e7c99d34c0000207b7d95b3607bdbcc61a294c402f50a2724c5c0c492"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7d4e83c1b1e12427a29ef05973f4e5f179a32a9e9246537ab4d3de5fa431c762"
   end
 
   depends_on "python@3.15"

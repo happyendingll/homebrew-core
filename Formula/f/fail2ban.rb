@@ -12,12 +12,8 @@ class Fail2ban < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c341041f3941e1b5d1e9ab68f5b18e4707f88e91e9e8da2e404075dbb3b5f2c6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c341041f3941e1b5d1e9ab68f5b18e4707f88e91e9e8da2e404075dbb3b5f2c6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c341041f3941e1b5d1e9ab68f5b18e4707f88e91e9e8da2e404075dbb3b5f2c6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "044e488e28be6c12bd14a17d4abe37e6041b86d96dfe570a79266f0e6947fbf4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "044e488e28be6c12bd14a17d4abe37e6041b86d96dfe570a79266f0e6947fbf4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fee6d87f480b182d7672188717d8fe342f6547a29bf0a8f6326b6600e3a9bbf3"
   end
 
   depends_on "sphinx-doc" => :build

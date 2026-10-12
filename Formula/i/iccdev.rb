@@ -13,11 +13,8 @@ class Iccdev < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dfc00808892abfebefc348e9db6fce3c6f349bd3a20cf3851e4fe74dcc1842f6"
-    sha256 cellar: :any, arm64_tahoe:       "9f97d2e565a33bc9bb3ae4b760e31f34330145001b373c7a4bcfc44de49aa4bc"
-    sha256 cellar: :any, arm64_sequoia:     "e5b8c30310656d3d67497386e575c91a6bdd8599422d4a05b00faaeffd598883"
-    sha256 cellar: :any, arm64_linux:       "e7a4c15007c9610c901ab392af7a27541602d4ed017f55d7349a420ccca67493"
-    sha256 cellar: :any, x86_64_linux:      "8eb53684f54a5a501bb303b4d5f7b379656d5e32f4cef637f662acdb5b39b7e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ff9ca3f1c08f24776c02128b92c1b3c26db498bc9ac1346ae62e95b935dd20e1"
   end
 
   depends_on "cmake" => :build

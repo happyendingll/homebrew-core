@@ -8,12 +8,8 @@ class Csvkit < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2d7d0460a853ae6c31b1fe3eb54b4dc60f6bc47d9f625bb36d3d87ac62cb7d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cb3eaa8d13cc298bd3f2c98d6809d2ff6ff7b5de9e66d5c1baac6b1e27b5b2ae"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd023d0a99815d167883bfef7f316fa230f4dffa2eecaaefa9adaf475c82b521"
-    sha256 cellar: :any,                 arm64_linux:       "604436f12b954904039061480b79ecae98e993760844da7134c11022b34e34eb"
-    sha256 cellar: :any,                 x86_64_linux:      "328979f494f8f170cd52fc7b613425bb6d7608f88515514eac92c089bfc204ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "995c7ba0d8925579147f03d3b526bd78918e5a9c40dbf4af39b95d7f108c9f7f"
   end
 
   depends_on "python@3.15"

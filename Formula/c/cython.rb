@@ -9,12 +9,8 @@ class Cython < Formula
   head "https://github.com/cython/cython.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "37f19a469bf74bda0c572e2e2e7be3814ffe92c5aad593f0cf26b64e43e5d187"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2a208c5730f3da08c8c95aa77842e59abb8a92f7f2c0c5e11744d3ddabd26385"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9a949b85b17f37f0b082e40464e798b136b5ce62f3dcc44ed780eb65a58dc7f9"
-    sha256 cellar: :any,                 arm64_linux:       "4ef15461753572eebc88566433af830d52ff75649fed50403916c20397c008f4"
-    sha256 cellar: :any,                 x86_64_linux:      "f19c58b1803794a428b237f7193dfdb594afa08f570aa3cb0177016d6dcd585e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "660fd015102ff9d8c5c9bd4472744922030fc9392d7afc78a34d9c56d2d00d34"
   end
 
   depends_on "python@3.15"

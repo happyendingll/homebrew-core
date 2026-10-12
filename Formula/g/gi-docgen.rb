@@ -10,12 +10,8 @@ class GiDocgen < Formula
   head "https://gitlab.gnome.org/GNOME/gi-docgen.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "51de041c1e7c0251ac6f23cbbf9b552bfb30f9be5bb54ad6b3ba5479886753be"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e8bd069b7b033e0ad35a0091eb760418ac8395fc0e9b2553105842bacba0730"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1930ae861501550ec82c48d91faac19067bd9b768b79083ebb2360453fe2416"
-    sha256 cellar: :any,                 arm64_linux:       "db99eb679926bace2f21b5205288ecf07f8f4b31558bc0dbc432beeed4b90e92"
-    sha256 cellar: :any,                 x86_64_linux:      "59f11e660c2f8665f57f11f1cbed9ddc4907ca1642136a3e089c92999639f696"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "23bf641d3ba6176696a10e8f2d4e6e8ac54db6713f2dd3dfcbad72b50eff9c81"
   end
 
   depends_on "python@3.15"

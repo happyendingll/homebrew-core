@@ -10,12 +10,8 @@ class Gdtoolkit < Formula
   head "https://github.com/Scony/godot-gdscript-toolkit.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "971d6af2b58c22e0654c258fab9f6dc8b138e0f86174e5eb72631f881705213e"
-    sha256 cellar: :any, arm64_tahoe:       "87c81cfac9e4460e846308c8808c3994a4d66b4e247b49cd5217c639608af952"
-    sha256 cellar: :any, arm64_sequoia:     "88fd03b09ae80a261c84fd42afb9205755960755ef2d9ffbe6de8583bc83775e"
-    sha256 cellar: :any, arm64_linux:       "63d9a670d4450fd24ff960d75be67772cc4c97ed85ef626df3762d78fba0ef72"
-    sha256 cellar: :any, x86_64_linux:      "f1050ea0e043b19718e680a5e8aaa1db8409b84ca2867a731ba61920a2b931d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a141188a3814c63db496bf18985adeb48d7533cc3a60ded56d1c7919813e1b46"
   end
 
   depends_on "libyaml"

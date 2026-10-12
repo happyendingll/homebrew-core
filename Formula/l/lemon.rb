@@ -13,11 +13,8 @@ class Lemon < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "afac095bd3f4cecce5aaaed5e18facab82848747beecfc45b49a20281a0630a5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e2a6a78c8ad44b810ad4f1f013f2b8519fe4c65fd8b0594b9c4c3ccc654f290"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "23d92c1ebea18451119b1d57068bcc24f296762c4d135557fcf1bd8933f6d32b"
-    sha256 cellar: :any,                 arm64_linux:       "7f6b8799f9da0d4588e81157230253b85f68493ed722dff15d55ebb70e505c69"
-    sha256 cellar: :any,                 x86_64_linux:      "714ace0643c3e7ddbcf02a7dcbabcec8c20959fb5b1e223952a0e03e3cfcaff0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4110658e39fdf43b1359c444dd9b2da04fa90a09b5a54a1ba1ed80cb0268d55b"
   end
 
   # Submitted the patch via email to the upstream

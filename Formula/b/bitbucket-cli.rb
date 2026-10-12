@@ -7,11 +7,8 @@ class BitbucketCli < Formula
   head "https://github.com/avivsinai/bitbucket-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "253116c7bf812feec58a2b05be88f4517b4ed3f5e11bb43f798e1f5d4206ec7c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06c3839f48fc514f79a2bab28f5f92ebf551186403750f3f69e860f9b710509d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "830127bb40f4588e29073e2a8a37e80ad56eb559b42805637b4a1823815dae39"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d405e92b3c3ffe45f1cdd0de6aea1681ab3926c0e3efd7e55bc12405c51273c0"
-    sha256 cellar: :any,                 x86_64_linux:      "d0d4a12ef320fc843e3d6b0dca0a4abcc0d1834ef2b215fd2b466dffdb83eb53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a4efdafeef85703492f746b87ff07a7933945cb6a9761981aeae9adafecc000e"
   end
 
   depends_on "go" => :build

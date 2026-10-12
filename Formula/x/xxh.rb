@@ -8,12 +8,8 @@ class Xxh < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any, arm64_golden_gate: "923abfd2d054fbfe70eb2e7a38ab8572730bc25bea1101f81fd238015f92cdf2"
-    sha256 cellar: :any, arm64_tahoe:       "bbd88ea9a7e45d7ef0311cd04e1ee522f616c182fb4b6c5e50fc063e97e3d727"
-    sha256 cellar: :any, arm64_sequoia:     "22c559c25b18d828a505323f020f6433b996e42f99e31084b90b6fe2c6c17d68"
-    sha256 cellar: :any, arm64_linux:       "dba58e415e8bd4c41eb30a26ae6dcc076890e0b46d73afab3b7b1e35b05562c2"
-    sha256 cellar: :any, x86_64_linux:      "6d3c717281bc03fb6df9f22554728dbe580f07a7cc99d7634b49e433c629d42a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "16c340b3589a296d665c70cb29da808762ac0e075c8760ae11b01dacdf2e0b95"
   end
 
   depends_on "libyaml"

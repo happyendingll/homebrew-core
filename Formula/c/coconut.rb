@@ -9,12 +9,8 @@ class Coconut < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1ef2e403670abf41e85c6f616d6951ed2925f1747e538ff2d66c99efebab6a30"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3bedf8b29dc4927e95d75a93f60b1e19366d6eaac35ddeeb21924480c000044b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ea5f1312d3cf8daf99adef877bc7b71070c45d88a3c6cd2dbd27d5af8adb2b8"
-    sha256 cellar: :any,                 arm64_linux:       "85d1bbe17311ee0af80aaef475550dc537cd22045fdaea7938f9f46417435a3c"
-    sha256 cellar: :any,                 x86_64_linux:      "8f1cd4c44e624cd602a1f70e93eedeafe2847490897754c6e417c6e62cbbaee2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0f4214777c1ed2f69106755eb1c26aae45919b77c65a459c826e7624df72815f"
   end
 
   depends_on "python@3.15"

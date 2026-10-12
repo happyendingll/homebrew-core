@@ -31,12 +31,8 @@ class Distcc < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "a66627ecc1e0a1900115180abb461071f455d40641a0c69d953ae7fc51560c4f"
-    sha256 arm64_tahoe:       "9f900b2ebc2e4c934e04e2c943997a3cad07ac5b7551c7106f22f62291939de5"
-    sha256 arm64_sequoia:     "050f3a4ba825136de3a4f446135c895d53d0d66056f15a3126aa70e306dbe44d"
-    sha256 arm64_linux:       "7eff919dba4794aa3b05bb6ce5c8fe4614e57b1432743582a7bd95677e0e31f7"
-    sha256 x86_64_linux:      "cef51d0d8a0c418b53be5159e26d663f88909fd57a8ade11c62790bfc9b66283"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "72bb6190ca168f4a6c88084e4643e3357eec24fafc79d07a0a2d2f1267c58257"
   end
 
   head do

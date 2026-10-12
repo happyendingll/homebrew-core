@@ -9,12 +9,8 @@ class Beancount < Formula
   head "https://github.com/beancount/beancount.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b0b3eb9f36172bb24d47c4cf5dab4e9c80fa0936bd0f0af8259c7cdc8f7d230"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec082b6f85cae519441872adcc0994f9edb34328983e2bd62ead3aacd230772f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eaa20c160d875fdf69dca36a92ba1325baeb273e7bf25b6f32fa304313fad941"
-    sha256 cellar: :any,                 arm64_linux:       "1aeef6039ddc1169a567e9beab060084a3fecbef0d0bc506a66f8ff91d0ca76a"
-    sha256 cellar: :any,                 x86_64_linux:      "cc85fbff9d255ffd8b9c69e367bfc030bae541b230daf2ac51b28761ba9f8edd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2db31b22434ece8def42e0b91821f333d21617af8b1d2d0beb4c42c94105394f"
   end
 
   depends_on "bison" => :build

@@ -8,12 +8,8 @@ class Gita < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b18bd40bbdad6e3ca2ff51905f61e54bb55ec4916b21c0b88277bdb357fe334f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b18bd40bbdad6e3ca2ff51905f61e54bb55ec4916b21c0b88277bdb357fe334f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b18bd40bbdad6e3ca2ff51905f61e54bb55ec4916b21c0b88277bdb357fe334f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a4dbac27efe6de013d6b48890a20ca425b509b3bb9b1ee8f60b9547f18056c93"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a4dbac27efe6de013d6b48890a20ca425b509b3bb9b1ee8f60b9547f18056c93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "72996b85ec1055a10416bbbc27f20e2b3efaa84de71cc1ba9c599c779c020997"
   end
 
   depends_on "python@3.15"

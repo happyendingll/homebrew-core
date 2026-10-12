@@ -8,12 +8,8 @@ class Esbonio < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "278831a9f7ef18b32165461987eb4293d9ae26e6933c152e976774a4314506e9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4de7dff017cf56b5463b1fa7a2ab744eea8c9e45df515dd74fcb738c5eae903f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "183da30c35fba7960d5aae46e549fa85ddf5578223d1667b830293982f388fb6"
-    sha256 cellar: :any,                 arm64_linux:       "dbaa8ed7b88b739f3fb1ffb9ba55d113364b7b77e56bcbb96233c699b8a6f148"
-    sha256 cellar: :any,                 x86_64_linux:      "94fe365da023c42d0882f9026f48ec00e3f0b84ab92824a652f1499a1e88fab8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b4c1c4165789b8cda5743a8be8931c6c997c271096b873f657daaf060c24d574"
   end
 
   depends_on "python@3.15"

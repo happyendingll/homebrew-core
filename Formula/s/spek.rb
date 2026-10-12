@@ -7,11 +7,8 @@ class Spek < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3f0e7cded5b4704e46bce1108c65461c76e97766824a46dfc7beb70330eed901"
-    sha256 cellar: :any, arm64_tahoe:       "e3ae8fbdcf8f3717b1af580d81fe0c36ddb6580fccdeed44bf4eabd3eee2ac2a"
-    sha256 cellar: :any, arm64_sequoia:     "012a25c9e3020c610fb9dcc7484ea5abb3cb98dc8d7b9b11b44bbb42ff20b508"
-    sha256 cellar: :any, arm64_linux:       "98970918fb0a328830d52277406b89c3e7620629b8ee0b691dc7cefa75694b7f"
-    sha256 cellar: :any, x86_64_linux:      "1a99f729488bd0f0880d5bb561131d20c925b83e0b100b8f0c7d3aca8c1c7d2e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d784f98462dd480c36d7e908fbc49e70f96f431fd9edef3518e7a28cf22a40b0"
   end
 
   depends_on "gettext" => :build

@@ -10,12 +10,8 @@ class Hapless < Formula
   head "https://github.com/bmwant/hapless.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8c4a8abad7a825e0af46936d46b1d7c37dbf3a3bdff7a94c2e119b0a27f37eea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "773eaf7faca505c02feaa8cc7a710414fcc832dbc6a7dde21612637bcf9ff1fb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0210b50e7a01cfb54fbd8c11007103b568e5265bad5d8b5368341d191342f1f0"
-    sha256 cellar: :any,                 arm64_linux:       "eae7e3a0a9e25df4d88c2f8f415ab64cf3fc17ba87cfa5d03aac2258e5bb2fb0"
-    sha256 cellar: :any,                 x86_64_linux:      "981461e9ee40c4146e2960e14194ab6d76fad5d70cb9d4c6e10f3acb535b83b6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bbd56823224b1416d8359050320eb955809b837bfaf4922202643eeabdf0d8a8"
   end
 
   depends_on "python@3.15"

@@ -9,12 +9,8 @@ class Xonsh < Formula
   head "https://github.com/xonsh/xonsh.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "36c7b830e631d3319e0d6a2f7cb6ba023c1ce0db0efb1344d24ffee7bb5bde48"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e925d9f218e1ecef77d43c965afab8025b36a2f17102eef144466a373302638"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c3503269de8c0e3f67056ca91f22789f01b578337336239b29fc1a4ba7a92461"
-    sha256 cellar: :any,                 arm64_linux:       "b515b02b0264355e59ddaaf1cd9c1006df1cde54c26390d384a670062ea7b391"
-    sha256 cellar: :any,                 x86_64_linux:      "e73b53b14f2ab5f0cbdbc7fe3c6d3aa0161bd955d16c535f86f8ff835df7fc3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9d312009927a7e75d4f3f2f3a5440904b3407480f70eaef79163c18002adcb7d"
   end
 
   depends_on "python@3.15"

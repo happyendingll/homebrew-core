@@ -10,12 +10,8 @@ class Dooit < Formula
   head "https://github.com/dooit-org/dooit.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "2bd7c59690e5bee6896bb59eadca2c0d72698a7183c72872ee47bef1614e961a"
-    sha256 cellar: :any, arm64_tahoe:       "c5cb004c0e1c71edea6e5d849345b34e500f0bb47fd8db8001c1765ea8464582"
-    sha256 cellar: :any, arm64_sequoia:     "7b68a1ae12d11ec94a29ec932793ca58c364461515009d86dc8d37b746066ef1"
-    sha256 cellar: :any, arm64_linux:       "ade0d0d7a686a235b174d21b28e1da9a624b18cceff7478e0614c8dbc41777b4"
-    sha256 cellar: :any, x86_64_linux:      "1e8c889670ad4a6412cec9b1e395ad9110daea2c21ab796e8a95a4d4df282bdf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9fb0ed53bd85d22478f8f5cd33107419cdbe547e06a21f3fc364083bebc2b01d"
   end
 
   depends_on "cmake" => :build

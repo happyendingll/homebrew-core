@@ -7,11 +7,8 @@ class Ktea < Formula
   head "https://github.com/jonas-grgt/ktea.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09aeed48dd2e16dc5810b40fa1c4e139dbb60665e0705fe0fe17b2aacfab25e4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "09aeed48dd2e16dc5810b40fa1c4e139dbb60665e0705fe0fe17b2aacfab25e4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09aeed48dd2e16dc5810b40fa1c4e139dbb60665e0705fe0fe17b2aacfab25e4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "961f31998caae9b59b26c4da397833f853f7aa1a6ec0da300319cccd9ba91bcf"
-    sha256 cellar: :any,                 x86_64_linux:      "e84b0cf20ab9452f7fd13f4f26edbfa0fd7aa66449f26c47f269beeaf3ff11b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a2601fd31e0da15810a3320c6fd1837a3ba2169f5cb428a687ce5cef694a95d6"
   end
 
   depends_on "go" => :build

@@ -8,11 +8,8 @@ class Homeworlds < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8fbdd9b444486de209290281698aaeec9bf3e5220a9db5dd3d37e674b4dd5813"
-    sha256 cellar: :any, arm64_tahoe:       "8b43666c54c4fc0223b792a696da1a78c4d8c84d61599f4142adb4e5b77fc8ad"
-    sha256 cellar: :any, arm64_sequoia:     "6b2094ee410a53953e6d12cce501ee7adca86cb7e3cde2fb06aaff038f7707ea"
-    sha256 cellar: :any, arm64_linux:       "8f453b57e22aa6e74610a3fa64fa71cd91ddd52e1cd1f8117c9e6920752cd36e"
-    sha256 cellar: :any, x86_64_linux:      "d17bc723913564e57e6cab33ad5c57a5193c95e7836c8306902eb193b0cabba0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e76a7529f20a47cb5535f533676b5d7eac9d11fed24003f41cced90605edf98c"
   end
 
   depends_on "wxwidgets"

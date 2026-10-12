@@ -8,11 +8,8 @@ class Soapyrtlsdr < Formula
   head "https://github.com/pothosware/SoapyRTLSDR.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6b8c88d60409fbc233955a162c565e41a773406c15a62868f893be62445606a6"
-    sha256 cellar: :any, arm64_tahoe:       "7253b0c4ebbbdcbea232179d096dde12345147204f10507f6cc97ca628a040e5"
-    sha256 cellar: :any, arm64_sequoia:     "34424db2bd5373cb465ca85223741d84584bb5ad6503b88d0256b7b963f6f1e9"
-    sha256 cellar: :any, arm64_linux:       "fbc1e76a6ad2dc14656676d88e085bbf3ad406aba753694c22cce05bc188456f"
-    sha256 cellar: :any, x86_64_linux:      "06df94d9559d5dab8da052200d0416ea1f34f7642d31166316c580b42332622f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b6303ddb34564ca41b2de8de70c1e991663722be8506b259ad9edd104e9858b3"
   end
 
   depends_on "cmake" => :build

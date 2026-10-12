@@ -13,11 +13,8 @@ class Sqldiff < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b54aad86efe756b1286464bc226fa59310737bc0f2fa72a798d25c657c15a52e"
-    sha256 cellar: :any, arm64_tahoe:       "9d3dc5663429f7faed6b5a516f3b1a1eea77f8f54626c92835f93b2281e7b3c2"
-    sha256 cellar: :any, arm64_sequoia:     "69bd442fe0b3759a3649dfc54a50f53be13407704238313546e1eba6260f7877"
-    sha256 cellar: :any, arm64_linux:       "b5831d5a63961a31111d78242718c22572d6c84157f4e05e24ab456d64813774"
-    sha256 cellar: :any, x86_64_linux:      "a645689ea00fc41e50203e9b6c8d53b053335f5e23555bf56a3c28d73b7ad49f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8383bee32d217044b2ba3b6779f352ef75f16b0ce693b8d07d48a92b46620e4d"
   end
 
   uses_from_macos "tcl-tk" => :build

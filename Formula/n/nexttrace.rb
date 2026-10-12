@@ -14,11 +14,8 @@ class Nexttrace < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "268e3a1ad283e73d4eecaba611760a785ca36c6c60452216fc9be2156222796d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "da7355775c661aed298da74cdb46383bc19f5aeba6abf2a831ee28bd419989a0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "839afd1575a75461f5b53afe67da61baece78c72196299c1c14137efe8db98b5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a2bc5d05f67cd031697023f5b30a678ae711ae2d8ebafa09697af61f741bf2dd"
-    sha256 cellar: :any,                 x86_64_linux:      "2e4cbc42bc700784a74f8e2e1d917be4b79bd80e286eb7a1dbf6124f6697b21f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7a5f874aa82cb2cd46776f89775f01d8070e2058cd9f421fa4e190ae2eb0bbe7"
   end
 
   depends_on "go" => :build

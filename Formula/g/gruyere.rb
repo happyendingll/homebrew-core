@@ -10,12 +10,8 @@ class Gruyere < Formula
   head "https://github.com/savannahostrowski/gruyere.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "29df3928d4b89687abd7224e4cbd7c19692778c9d08bf1afefbce80d095a4ff0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9c4d5ae61a3f7fcd00615d8e01f5b0ebda1e01ebaf4d7abe7d4886342cb61c0e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9a4150f9847075ec44ebcadcbae7b97af323b24e9e0fcdcc95b261c3faa07e30"
-    sha256 cellar: :any,                 arm64_linux:       "3e7f0b024ffd48db8545ee0110b6d25a84e1179e981bf39f188a9c68b262aaa9"
-    sha256 cellar: :any,                 x86_64_linux:      "c7ec88491a3e5549e9df176fe92636c3d956fed81c6624ca4318d5f78e75dc04"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6284d74665b389e67b0ce9b8e2502ec11897ba247c46c1ad6ed7324122b33803"
   end
 
   depends_on "python@3.15"

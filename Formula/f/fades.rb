@@ -10,12 +10,8 @@ class Fades < Formula
   head "https://github.com/PyAr/fades.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "133002dce2c6e6459dc3894023172639492bc27d81bc6390d3a5dba1eacac161"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "133002dce2c6e6459dc3894023172639492bc27d81bc6390d3a5dba1eacac161"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "133002dce2c6e6459dc3894023172639492bc27d81bc6390d3a5dba1eacac161"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "02dc87070190402af436f92ad3e10e63b92aff508f138b6b1d8d4abe16feb59d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "02dc87070190402af436f92ad3e10e63b92aff508f138b6b1d8d4abe16feb59d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "45adcfc3cc05be7e0fc171d68199c8897d7191742b4f98c9d4cfaa575fa30b76"
   end
 
   depends_on "python@3.15"
