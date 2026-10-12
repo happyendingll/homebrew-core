@@ -13,11 +13,8 @@ class ImagemagickFull < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "7b8b758d825ed0c1935fd246fa5281196a2933377fe210318acae5ca004b1651"
-    sha256 arm64_tahoe:       "81ba98ac90b39b155da037098dc2276097acb973d2bf2faea2c721529d318d07"
-    sha256 arm64_sequoia:     "66119f7bfea68eb9bbb0c360d8ee89a71d41f482f6f3aaabf5f190c3c9cbb6b2"
-    sha256 arm64_linux:       "691049ab5610c804c082c526419da686f5d0b47c64b9383ea6a161dbd09fd378"
-    sha256 x86_64_linux:      "a8a179f4979c75bb615782c6134c72995dae31a76e743a956f6d577b7d10a130"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "9b11f4802587101c12592df945d3bb2a39bb7516a190273d85e5a1502f2624b1"
   end
 
   keg_only :versioned_formula

@@ -12,11 +12,8 @@ class Pdnsrec < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6f75a61973dffa5d475d34c96453e57b8a92e6b8f45d23260006f1b833788e4f"
-    sha256 arm64_tahoe:       "6be0b40711d76356d4456e8691f93e3cc937a6ddef57f7fc55c25866fc4a3629"
-    sha256 arm64_sequoia:     "a2fa6071fee7a330dbc01b1f76cd630a8818a8ca11b7e265a96c85983b106701"
-    sha256 arm64_linux:       "5ca129d6bcaa3f7377dfd605e3b032bdc14982142647f7cd64f20c28178151da"
-    sha256 x86_64_linux:      "873596e213de53513c9ad3f31fedf34597a8b31193ff118ebe1356aa4031014d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "8a178784755a67bae837a15c8ca288a94fcd53fdba3ea9a802a63ba293209f7e"
   end
 
   depends_on "pkgconf" => :build

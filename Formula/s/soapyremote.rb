@@ -7,11 +7,8 @@ class Soapyremote < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "959e8c989590505c99f5689c2ad84e6a320a71d467c7932cdb8e40eb4db9030f"
-    sha256 cellar: :any, arm64_tahoe:       "55e369064ec119a4dfa60c431cd91731f5b18c297370f7b8d3b5788130f91d09"
-    sha256 cellar: :any, arm64_sequoia:     "feb1662facc60fb7d3b6a75500b688700887ddcfbf1559b3e31d519a39e27139"
-    sha256 cellar: :any, arm64_linux:       "b01873eb5becf5e4e601abf7ba8ada34d697ef0014496291889b86b5750846dc"
-    sha256 cellar: :any, x86_64_linux:      "129c00a601d93b2fb46e25a6dd46d73016de1ccddf828658e09ce390d560215f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "e4ec0fdca284f6e10d46b54bb8582cef63e6e1cf817380c6227043a69b7790cb"
   end
 
   depends_on "cmake" => :build

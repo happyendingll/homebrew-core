@@ -12,11 +12,8 @@ class Swc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "13e5a9347beb87866215a751d5b35853d788522d7c8d65b8903d52b2f62732ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8744d9e11e1ab025c6ffd4eed228020850bd316f0e7347da266d3cb1dd8bb37e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf19e3250318e8fb3d6c36b7017caaa81f060f3405bbd9b05145d8019070958f"
-    sha256 cellar: :any,                 arm64_linux:       "6371320635cada73fc04f2795ba46a0cc624435014f244c47ae1c3e55711a902"
-    sha256 cellar: :any,                 x86_64_linux:      "9c13a5733ae5c7ece42ccb8c78a45fe77af862458130d42a383f74e5cde86489"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "405e1979f296dbc4408d85a7fefd69f50fc0c74a918304407a18e06fb39de1cf"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class TechnitiumDns < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ab81e811297317d900503f3ce24e438dd0a01bffdcb0f05907e4a3da18a1c50c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b23eaaf97de4ae815b45b58fb8bdbb1cdee376d69dce816f2b52a22d054ef4a0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "962927e5dd9ae49d96ab935c11284a50950cc3d9d126d427b8fc867c6ec50d42"
-    sha256 cellar: :any,                 arm64_linux:       "4b860ee34fe4541b9f3f07f59ca33c2a0eddb4c9ec2c232a4075dd659754485a"
-    sha256 cellar: :any,                 x86_64_linux:      "866c264c4482b2209b6e6f29c1d099adb08cc183fd77eaab140f153dd4bee04d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "d69b22a603853017cd75cdff83b70c70dde6641083579916a43de30dba27f985"
   end
 
   depends_on "dotnet"

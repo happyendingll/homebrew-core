@@ -6,11 +6,8 @@ class Diskwatch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e18f2df490b9631d90c2f29091595c7d0ad37fc1c4979d26cb3c61f00ed37c0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fa3071ba0509a090a1a6e8377191490bd650c93348ce351c6b794ca5fd27b705"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fb7b267389430c3b97868d852496eeb223a236d2f26728d33ded03ae0a48e87c"
-    sha256 cellar: :any,                 arm64_linux:       "7b41c3edb91af85a3fc90ff902bea21cb75e15507a8a1dba56314a35d2143852"
-    sha256 cellar: :any,                 x86_64_linux:      "c9ccf7ef140d2e7353d1d68eb7ecce430f0182454f0db3762e31cc4c078cfa2c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "df5c45ac74433207e927608fad649e5ae332a70b37b34a7690b4a63ac5232495"
   end
 
   depends_on "rust" => :build

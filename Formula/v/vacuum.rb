@@ -7,11 +7,8 @@ class Vacuum < Formula
   head "https://github.com/daveshanley/vacuum.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "881f27d5d4ceaa6ca5f7bac35bf5e64b843732b3a9450fbf1b46200258378272"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "729ed7e05e2adb00a27de9834772c07e42c984d948b678d94a5a985bc25d824a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20afac32386c4fd0db37203fb04732d6f3ce318967cf53bcf5520f73a594f5d4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fe7aa95650a04a14ae28b7b337b294f2b4637be99d5fae7177a2a3f2e82cf9af"
-    sha256 cellar: :any,                 x86_64_linux:      "1166b1d00524dbf6013e3698b27001471aebccd19e0b8e51ccfe3be6713fa9cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "0658f79d7b275cb4ed2ab81ecc6565f7b3870a470aa4124660e4c9001d332cca"
   end
 
   depends_on "go" => :build

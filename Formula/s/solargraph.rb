@@ -8,11 +8,8 @@ class Solargraph < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d73fa278dc12d334dfb24917305aee193da8895b4fd092659466d0bdf9385109"
-    sha256 cellar: :any, arm64_tahoe:       "fc35102e0a80d9805fdd32e568b00d4a218826e2e12f19cebd984ae0e7b63ee8"
-    sha256 cellar: :any, arm64_sequoia:     "10da234208f325acf4ad781d52c0ba84bd8a66578e6520804aeb455e20aefc8b"
-    sha256 cellar: :any, arm64_linux:       "efd16fded4a05165e4bd02d3af0f36d9297149db1bc4f608c9a86f0664c9bded"
-    sha256 cellar: :any, x86_64_linux:      "8bdb582f9dbecc2577464045fff07b927d20e4c20642b0e67ce1aae136a56bcc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "dd1785513d00d79c35297143cc194a401168eab86a37cb94685cc936c633faf7"
   end
 
   depends_on "ruby"

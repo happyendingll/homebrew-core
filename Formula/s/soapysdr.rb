@@ -8,11 +8,8 @@ class Soapysdr < Formula
   head "https://github.com/pothosware/SoapySDR.git", branch: "master"
 
   bottle do
-    sha256               arm64_golden_gate: "3469254e475fe092bdecc175945e7cc4ff34d85467f3b0b2e6251102e99607e1"
-    sha256               arm64_tahoe:       "fba3e96fa13388d32a5cc49143bf70759155a0a13c9e49b5868337c4e99e65d8"
-    sha256               arm64_sequoia:     "b8358cb10b130a3049118b94ff30d34e8009bf3e254d83ecf334fb67cf9660ff"
-    sha256               arm64_linux:       "27fd6309c60ae3e93a0b6f4021f9305ec4ddd437cc2680fbb0b729f5206753fa"
-    sha256 cellar: :any, x86_64_linux:      "bfff74ca26f2f85dfe71381ffa8df93b0324e666ff4d2428dad6cfc1d2bc3765"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "462ae835a4fd10fd2ccda262267e997a69ddfc42b6e5db11e888e2347eb7a255"
   end
 
   depends_on "cmake" => :build

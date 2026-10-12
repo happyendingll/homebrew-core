@@ -6,11 +6,8 @@ class VueLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d601455a0c5e2c3c36afd487ef8e59324a7e10a841dcd77374cea3d6aa53f9e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0d601455a0c5e2c3c36afd487ef8e59324a7e10a841dcd77374cea3d6aa53f9e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d601455a0c5e2c3c36afd487ef8e59324a7e10a841dcd77374cea3d6aa53f9e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5a9394f78fe2a9536413963aa76efae87d2ba0da265c34cb5b4d40dfa788661b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5d1b370052bb1abb4e2bc8047b14f940ded3ffa6437badb66d330718fa37f695"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e8dd1fac2a92b6a9831643b61f0b768431779db316fcfd8c223c38c01f276506"
   end
 
   depends_on "node"

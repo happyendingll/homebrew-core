@@ -13,11 +13,8 @@ class Wxmaxima < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1ce64480996ac190fa9c2c16aa8fcfc51640d33be2cedfcdf82f4af502042779"
-    sha256 arm64_tahoe:       "6921b72bd5600525e2f30a1d85410d2ab702c8d9fe2b6c7b66c901d02f899753"
-    sha256 arm64_sequoia:     "da6a842c3b19cbad0335c3944c73e0384feb78489fd0aa4751329fd8f92b7666"
-    sha256 arm64_linux:       "ab91a67ca1091674c1935b532d90717a5103467919b99a8a2c1c22a2223f9135"
-    sha256 x86_64_linux:      "393319ee9adffcbef0a0e39d1bac12566950bbed21ab9580e304d0dfdc75401b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "c2a7871ee23476452359961945c57878bc634975bcdd246c4b4c44013136da55"
   end
 
   depends_on "cmake" => :build

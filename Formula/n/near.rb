@@ -7,11 +7,8 @@ class Near < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1918565d359e5641c05739646acc1dbdae6f55218cf9beeac967fa2a2b7afc71"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1bedd2e7f3bcf98bd2cde565aa3bc3553646e213309a23b428e3076524655688"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f9ec90712f734adf366edd9e4790a998b1823ee92f80d4ba747515b4536aa01"
-    sha256 cellar: :any,                 arm64_linux:       "39ba64c108e18433007f033d93f60b50068769fc5bf4400cd8321a2c8dc0e1ae"
-    sha256 cellar: :any,                 x86_64_linux:      "8dd188d6c42de851e24b0ddde97c74cd6802c6f0dc95fe9fdf0706d6191b6add"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "02ff43dacd15cf813a2e05bd8960ee92487b6221adc25419d8a13f5722f1e6c3"
   end
 
   depends_on "cmake" => :build

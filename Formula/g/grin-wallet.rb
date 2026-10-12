@@ -6,11 +6,8 @@ class GrinWallet < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e01b91580dfec6677f10837ebc8f02c4684fbf7c849c3a1c9c2dabb3a701263"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1c6e48938b1c77b6d37745316e794c1984c17b8ecce41809511d99541bc4ff52"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2d20e01f799e91beb3b67305ccf6c82e169829fb98af5a5af2d72ef2c6fef68e"
-    sha256 cellar: :any,                 arm64_linux:       "c72edd8da323d10e186f60a1c53cc86e3038d4716237c93ddcd6660d18a7979c"
-    sha256 cellar: :any,                 x86_64_linux:      "fce81743dd97a483c75c3abc138379dbdb589cc42c4483367b35211b442abbeb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4dfc50f6cb0476c32bfd938cf1a0e80f1b9200f098beed0d8fdf7bba48c13806"
   end
 
   depends_on "pkgconf" => :build

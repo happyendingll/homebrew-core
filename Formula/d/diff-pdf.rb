@@ -7,11 +7,8 @@ class DiffPdf < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b0f369e96595e1c71c820869b8c9e64878911d6a3d55b8e50dfee3e19b70cdbd"
-    sha256 cellar: :any, arm64_tahoe:       "fc79a1e968f7019d2e632ae2c03055907ed3240412c052aa51c411523ae62a2c"
-    sha256 cellar: :any, arm64_sequoia:     "94800b9fe7649ca7ba806692ca49cb749e8054653849f44ddd81baa9448e6f17"
-    sha256 cellar: :any, arm64_linux:       "8b395bf48d6e1adf3a62cb9050fe33e24b7b375cecb891ab165c732d775ccdac"
-    sha256 cellar: :any, x86_64_linux:      "15b8ff225c5839e99cfa1e878302002608412b78e9cde441638b26e8e3057dff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "763eeb43f2bdab5e33f29fcee201b790616ff1d3ba90fbbcd89eb770d4dad391"
   end
 
   depends_on "autoconf" => :build

@@ -9,11 +9,8 @@ class Black < Formula
   head "https://github.com/psf/black.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b389df385ac8a95cf64da540360440cbb0fe7c5343bfaf8a866dcaf1f4d125ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95cf0e42ea32e15238d7de7ab14774da6db374984f7f1f806628ce32035d23cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "049cac47655fbde1c946e9f1ef097b5aead749e0354b67f35b3f4e8d8e37df77"
-    sha256 cellar: :any,                 arm64_linux:       "e492acbb1d2eaedfa28e0b8221d768cb3a6b0141e7a29698e06e7d11f0a39db5"
-    sha256 cellar: :any,                 x86_64_linux:      "ffeabc52ecc743ae19689861e4e0935e5b63a2c769a98deeebf8c6ccc58fd65f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "fb28b31d5d88fa71f63fa3e55bc8a4b53d6fd9c79547428135fb7edabe7427fb"
   end
 
   depends_on "rust" => :build # pytokens -> mypy -> ast-serialize

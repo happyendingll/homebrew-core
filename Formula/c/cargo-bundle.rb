@@ -8,11 +8,8 @@ class CargoBundle < Formula
   head "https://github.com/burtonageo/cargo-bundle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bd88e7255e722bc01364958afb0af26a55b7ab5022576a8c7ef0c9e5a8bff0a0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e6cd6e199ef1ec95a34aaa6fc0cbbe4883f08481b99fe05ad9be1ab7712aa6f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "265625df34d3dece4148cee7f08c9d9d1b376e9ae48bfb473305522141e76f5b"
-    sha256 cellar: :any,                 arm64_linux:       "2df287c9e1cf0525c2fe3be957ed789666a2ddc68c9f77fe0ca7b9568945f122"
-    sha256 cellar: :any,                 x86_64_linux:      "99d8cf87f996786235b96e5a4c1761b9bc58c50115da3516227775fbe0620807"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "2603aa357476486531f1386b825747c95c7ca83254d23b6af7710f3fdc23a05d"
   end
 
   depends_on "pkgconf" => :build
