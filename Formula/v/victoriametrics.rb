@@ -14,11 +14,8 @@ class Victoriametrics < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ffd1097c812c3f3fd5542987b1f45e227caf68d3a10ff897aa1b53f747dda02a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9fa8a37333a5d7bb4121a11894dd46eba3a563736748437ab1fbabdcc83d1e7d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f0a29b7f1ed3415491c0551d930a9f46e805e8d0f4a324cefb5927b2e50eb95f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ab46743b46b513a2692c02767f9d44dea2c8d0e9d2abb7bc554d21e748058bb6"
-    sha256 cellar: :any,                 x86_64_linux:      "c873986c695530eb10a1c4a676cfd9274d45b56af49c57648581f3e7c0f09c86"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f2ea58ca3054ae8b2ed3a86b161fc64f5abcbcf44e2d824d63e65d8c42100f70"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Atac < Formula
   head "https://github.com/Julien-cpsn/ATAC.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "67388cc622f5850aa2d7f1af0f199e27233ecf4d7e8d05ad86f03afd26489d7a"
-    sha256 cellar: :any, arm64_tahoe:       "1b37cd21394c7e22cebe4c97817cd731148a5917d7aa6e5169cb45ff19670272"
-    sha256 cellar: :any, arm64_sequoia:     "65c774f656d17fe803f1ee0368f7282773365db68ce38f852dc521dd0952cf8e"
-    sha256 cellar: :any, arm64_linux:       "dc55cf5581582f8951902223f2acc4d1579c013992825884a2f62a5049215980"
-    sha256 cellar: :any, x86_64_linux:      "c2a6027961705ce7c5e9fc2a4a09efa1ecca2886e9c238e796e0e1bc391c34ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "ff1de40335cc887fe044667699e8abd6751c6ed92f7b5154810547b98071ee8f"
   end
 
   depends_on "pkgconf" => :build

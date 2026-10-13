@@ -14,11 +14,8 @@ class Nim < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4d2df55b1cf0c4978b44bbf4ff1814b6c3670062e2088b61aa0c7663d6176d75"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e2b09f464acfc030f26c79aad90f07bc112cd286f90689975b028f7a30ac4dcc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9f6cbe0feedbe93f81d51add47893da2a23f8d72e5c24715e2498e1dcad9756d"
-    sha256 cellar: :any,                 arm64_linux:       "84f955f610307ed247d01510aa163d1db1050dabad370f7236bf75a9b1592d20"
-    sha256 cellar: :any,                 x86_64_linux:      "ff26686250267609cf902c882d7f038478285dd6364c54da6e95a280621d2fcd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "a8f504fe199c8d5cd181d72fad23f2b94831796b2d657811121218a4b6be55e4"
   end
 
   depends_on "help2man" => :build

@@ -7,11 +7,8 @@ class Funzzy < Formula
   head "https://github.com/cristianoliveira/funzzy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ad1b3ea1b3c8bfc22526c6d298940269735bb36acbf1614e2c6f5943b01feae4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e938955195d1c31fc67858f12e7d9a06049145822138d370fef340772ad44cbd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a6086d1456b343981a0c95c93400956776754ac251ac2a32bee3b93dd7de4063"
-    sha256 cellar: :any,                 arm64_linux:       "4e153109de65977d5530ff52a705c919831f2eb8736f18a453ba7eb72924da68"
-    sha256 cellar: :any,                 x86_64_linux:      "279f2001b326cb2e0161793a7e1f7a6f3eb7e806cf089fffa7e9140bc4c3202d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cbd5ecc4307150c42a13e8a70537933089f8e2a2c3d7ad49c5d9f9ebd56ec34e"
   end
 
   depends_on "rust" => :build

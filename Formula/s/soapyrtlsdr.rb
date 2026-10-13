@@ -7,11 +7,8 @@ class Soapyrtlsdr < Formula
   head "https://github.com/pothosware/SoapyRTLSDR.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "136c704cbf3dc9d6fc14abfdb7cc0cd932da3d2ce599e9181edb1c976c039ca4"
-    sha256 cellar: :any, arm64_tahoe:       "309c2ad92ab86080e8d531570758962b3ce31ff83aa0f33b486637ed1a8a3fd8"
-    sha256 cellar: :any, arm64_sequoia:     "25919bc08646a423801c31624bedac3fcbabb7ea697cb66fe8f774dd2dc39aa2"
-    sha256 cellar: :any, arm64_linux:       "bb045b2445af5b1794977354c6fab9585ec1ef2e0c3e0eb743b3e6c05216967d"
-    sha256 cellar: :any, x86_64_linux:      "d2e78c02527ada8824f35a04f373913f63126146f851e22785e541f3707dde99"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "c6634a7200ce620840896d90c4f549f97e529d34a4ce72153a0061e9e4904632"
   end
 
   depends_on "cmake" => :build

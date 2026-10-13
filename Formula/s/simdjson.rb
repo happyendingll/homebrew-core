@@ -7,11 +7,8 @@ class Simdjson < Formula
   head "https://github.com/simdjson/simdjson.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "154795aac3d56668f3f09f66ca1fec0aa4f5d2b2eb015c1073420b5acfeb7cec"
-    sha256 cellar: :any, arm64_tahoe:       "f75a6b56634cfb69ebf86d002d2e988db785962b936ac0a26af3e7c3b6c741cb"
-    sha256 cellar: :any, arm64_sequoia:     "f4eddae4ec3df0bbb85a95d8d3ec6ff4db25042fd5ef8c6cd0bbb95a7280699a"
-    sha256 cellar: :any, arm64_linux:       "85f3b4bd95d120f79430251641396c3717a62bfe9935fad515117e9d1be6a70e"
-    sha256 cellar: :any, x86_64_linux:      "d4421f26e0afcd64e911355b50760e297201da89fddddef51aff4c1dadb90147"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "7a629c33cade53d75e63f5b8314f82e5ed04b3a0744704cfe6b2e63fc6a68a6a"
   end
 
   depends_on "cmake" => :build

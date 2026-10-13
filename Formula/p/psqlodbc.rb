@@ -15,11 +15,8 @@ class Psqlodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2e2003ae94d692fc6d5d88e484dace1f1c53c9af942ee3658ae6d312a0094896"
-    sha256 cellar: :any, arm64_tahoe:       "e2e300dca75e454193b8165610364d081a466697a5327935d4792fffbdd463f9"
-    sha256 cellar: :any, arm64_sequoia:     "055ae8ee30688693b9d1ff575d89ad19fe3f888bf1fe96d47d41c4186a9c60b1"
-    sha256 cellar: :any, arm64_linux:       "55b34e6c3bd17a68f72ca7d89b700b9f949ffea7ae97cc2b8247ab11379c3ecb"
-    sha256 cellar: :any, x86_64_linux:      "78a41a1d4bdd11d2280d6cbf8a00e0a2374a0872bc03adae07f9588d4cc1d869"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "dd2278c06249bfd48bd2498294f40f10a7a922437c4886f542e5ca62a1ca16a7"
   end
 
   depends_on "autoconf" => :build

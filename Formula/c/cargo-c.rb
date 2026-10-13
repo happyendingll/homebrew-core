@@ -12,11 +12,8 @@ class CargoC < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d4147427eef427595fe053c750508bc7f9e580cf946b2d374648319b25e20592"
-    sha256 cellar: :any, arm64_tahoe:       "3dbc1cc9570dcb085be641c3de1dd7cd38dc0ae03f011eadc6ebe413a6f65451"
-    sha256 cellar: :any, arm64_sequoia:     "5c0c3d446d1067668275333b63c24c348ce4732768368f808d12af907672d547"
-    sha256 cellar: :any, arm64_linux:       "8bdb4d595ea1a80873b37805379b3b5d8d3a338bd4faa70f52aa93df4a81624a"
-    sha256 cellar: :any, x86_64_linux:      "0ce0e3ed42df0a0d74eea5e66f726683d44cd65587039166c21e4b6cda43fb1a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "1fcf551d9645b9dae62c3db00574479c893104f83752e7630aee97d87153184a"
   end
 
   depends_on "pkgconf" => :build

@@ -9,11 +9,8 @@ class Codelimit < Formula
   revision 11
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aec9b310bffbc2de7c4c4326f49d4c46b045b913d724dabf7c7d529d56f9b8cd"
-    sha256 cellar: :any, arm64_tahoe:       "c2a6cc5417267f13751e9bcb753987b05ccc3ec686d7466496a2170b472e6f67"
-    sha256 cellar: :any, arm64_sequoia:     "c7a3aaeaedda13266cbae92f38c276011380a75487eec32c0b432e0bfa535df5"
-    sha256 cellar: :any, arm64_linux:       "1282f38c5df6ce0e278afcbb75258d37fad288fbdbb895190ac148a0bfa05c1d"
-    sha256 cellar: :any, x86_64_linux:      "21152f0e64505aff1cbb087275b8f4c738bd90a2fffd8a9146cb4dd87436dc2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "9671be9b4de5a8b01d1bf383ec53c140083f1ed0645da0f73c28939f108e4686"
   end
 
   depends_on "certifi" => :no_linkage

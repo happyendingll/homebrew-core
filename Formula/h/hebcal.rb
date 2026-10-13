@@ -7,11 +7,8 @@ class Hebcal < Formula
   head "https://github.com/hebcal/hebcal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0e5a378a686b38642748e07d926908836e7342138731be3004ddec40264781f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0e5a378a686b38642748e07d926908836e7342138731be3004ddec40264781f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a0e5a378a686b38642748e07d926908836e7342138731be3004ddec40264781f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1d9d7b097a7c03886e591be441ad7a1d2413c76c14792c0ed4e1a66f77c82363"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "db046f96d9ffdec02129531907cdc34875de14193f3d7ca1df671e7e9d6da21f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b3ed9a1fe7d42e0fa45942c30911635a578a114fcb866b60f50c271fed9fe852"
   end
 
   depends_on "go" => :build

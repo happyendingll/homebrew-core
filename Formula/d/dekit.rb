@@ -7,11 +7,8 @@ class Dekit < Formula
   head "https://github.com/pvolok/dekit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f0ac5fa01bd4e8c44b1cefdda90883bbe3ad421136fc2dcd21c225b42e962a6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "436ac14df953d0942447c29fac1e06cdda3f9c24c523ac787e61fa5914ca1a57"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6f917630c922dd8d17aa4b2f7a0d8ab4d766dfe11f9bd00b67ff24219d49c42a"
-    sha256 cellar: :any,                 arm64_linux:       "01143400623346d4e1d199a5e285befeb4697a438218170ff71f9aeb796a98d9"
-    sha256 cellar: :any,                 x86_64_linux:      "a79471a9e40fdb05a026d5ef6460ad7a82948fef6b3ed6901e7cfece3d1b4706"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "7ac0eee9ad89583895e8980e4a1f7333d26ca7723888fc70b3f9ebeb14ba028a"
   end
 
   depends_on "rust" => :build

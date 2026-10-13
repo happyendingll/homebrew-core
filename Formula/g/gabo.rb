@@ -7,11 +7,8 @@ class Gabo < Formula
   head "https://github.com/ashishb/gabo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7714f675b5d15895ebf5f4f7b0e5c44cb21d955d0079f3f1b50bafd4f69c3cc7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7714f675b5d15895ebf5f4f7b0e5c44cb21d955d0079f3f1b50bafd4f69c3cc7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7714f675b5d15895ebf5f4f7b0e5c44cb21d955d0079f3f1b50bafd4f69c3cc7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c9a13672b6d308c3a3d4a6056ebd8068f02b864679f029abee14b3f7d1b45785"
-    sha256 cellar: :any,                 x86_64_linux:      "28055d25342e199b0e9d6ffa71200b44fbdd10abc5560e41b9f9bc2cb2bbdf96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "53f19ffb7599a31b155399943def3127cb4e6a835cec80be8a57e2782fae9d6b"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Nextflow < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0c597baeb7b3b34fa89ac9ec64e8be02b42c1e9413a43b2657befc97d202fc7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f1022720fbf7a27e97732c5ea2204e41488859cdd9194f4a3d6e618de0684b40"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7ead13cda046c59c48e94809f840132e1d68f4aaca9678d669b1340ef81c25cd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c62e3ea19443bde3470abf34a217156d0a4f0f4286839dc8bae549fa5753a14c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "17e9c2055802cbffbbbc544e33f2b49d3a5d3391fb3177324fd60f790441676b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "e1338104c658f3e4eac16e3213cb96d5a1bc0f4c96cbde6f1b9d7d37690537cc"
   end
 
   depends_on "gradle" => :build

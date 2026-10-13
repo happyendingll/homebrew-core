@@ -7,11 +7,8 @@ class Dockerize < Formula
   head "https://github.com/jwilder/dockerize.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f1b3c9af1f245561318ac47c4c3eb96116f55695b1b8c6cdfec33fa6bf2efb7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4f1b3c9af1f245561318ac47c4c3eb96116f55695b1b8c6cdfec33fa6bf2efb7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4f1b3c9af1f245561318ac47c4c3eb96116f55695b1b8c6cdfec33fa6bf2efb7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "03db1a79afd112d06d4b246b5a7e0c333b15e102b044560a49c15129f37ea2da"
-    sha256 cellar: :any,                 x86_64_linux:      "5dd4a90caae346f3937e36bc1742acee0b81c3192969f14939d9a50d200858b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b8ead7efd491e99d396fb143157b520359faf9cc33c922d1ac3b8e08576e4e62"
   end
 
   depends_on "go" => :build

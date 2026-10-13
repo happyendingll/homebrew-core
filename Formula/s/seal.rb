@@ -6,11 +6,8 @@ class Seal < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "417bfdd6f945dad4e641511476a743e8767062d445df6cbcc9aee0cd7c899a15"
-    sha256 cellar: :any, arm64_tahoe:       "7629bcf6e5fcb78d64a91b0c9dbec9be5afd428680733704f3fb4a2716ab0acc"
-    sha256 cellar: :any, arm64_sequoia:     "c8dbefc9497d7d2fdcfeee756a9907be7151b5e8c913546e6a1bc855705c661b"
-    sha256 cellar: :any, arm64_linux:       "6feec47b16c9827af28c7a44da67e19c54c17009eb8c8b5a4d546aa8d70c2d2b"
-    sha256 cellar: :any, x86_64_linux:      "87a53fe29b700fd9bbdda8266acea229410d09459c8f2c63e9a7f27797fcf8de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "1c85d077c51f6b794849b1b85787b6027ecab7fe66730ebf6f4845bc0585fa73"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -6,11 +6,8 @@ class Scalingo < Formula
   license "BSD-4-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "721f7b3f24705a0cd5e399a0122177a1f80cf32c48cbe397e2fd48ab0acf4f32"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "721f7b3f24705a0cd5e399a0122177a1f80cf32c48cbe397e2fd48ab0acf4f32"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "721f7b3f24705a0cd5e399a0122177a1f80cf32c48cbe397e2fd48ab0acf4f32"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "324f6f138ad5d074a660ad57ad2c745ef8826241c9750e5415c759dc280f9aa0"
-    sha256 cellar: :any,                 x86_64_linux:      "0e89fef2bd02c1b2e9532571970b9225fb86ea8d9c940d3380bd4ac78fd5f8ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "1d818ed096f46e217db4da89ce15ca94c20ee51a2a130b8d312d3b98c7761d8a"
   end
 
   depends_on "go" => :build

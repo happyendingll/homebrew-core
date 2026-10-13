@@ -7,11 +7,8 @@ class Rqlite < Formula
   head "https://github.com/rqlite/rqlite.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cccb5569d7ae3f089248723c78146067e982efb09efd562b98b70c2a4e5af8dd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b6f7e2d26e8cb909c468c950cbda89a92d5955f4985a5afd65d5133d23473d32"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "06a3d4b01be2a08665c1a6579e5d249583fc98258b282d3318d86d1520e1a638"
-    sha256 cellar: :any,                 arm64_linux:       "3f1110add7a00bbbd946bd22532ec71a1580d03c9a8d8690651c5a6617bef485"
-    sha256 cellar: :any,                 x86_64_linux:      "97e9c9fdef92eb0f7866642e546d804d3e88c08dffc1b181290ef318d993cc9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "b4aa7c670e47e0277a805d43e82e8f0c1aba6728e6fe4114f73f751cfd8dce27"
   end
 
   depends_on "go" => :build

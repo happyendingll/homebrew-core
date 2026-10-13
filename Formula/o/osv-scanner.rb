@@ -7,11 +7,8 @@ class OsvScanner < Formula
   head "https://github.com/google/osv-scanner.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4e6182d28e59f75673d8772506034305c78aec123c836de69aaab698f9939f29"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e8eb1f9d874a3e991cd539cba03a279ffeaa46a485f4c55273cf1661be129606"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9710f629c378b9889ec24657478cdea1804af3ac979a0a360eb913b60f2a3ff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9531ccd8f5b46401982134fc0dfdbf68bc12113aa4369f233a66ffa897603515"
-    sha256 cellar: :any,                 x86_64_linux:      "72dfc42b3183928e8be9d40f53df78806ba0303d6e3e69a55145cd0876d32fe0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef9db912740bfe90bd23a40c9115a78718b04ecb1f74403f8a9b0e760378068e"
   end
 
   depends_on "go" => [:build, :test]

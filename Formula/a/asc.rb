@@ -7,11 +7,8 @@ class Asc < Formula
   head "https://github.com/rorkai/App-Store-Connect-CLI.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4373663d45e613666f29a43eaa4a9ba8a59371b3cb6424ccd530b84ac8a7736c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8652b6a0bbaeaa4178d6cd405f12905dca7b52aa4b97cd2b91b48fb20e24e63f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "54ceba2a4c20a952afae97223b853c9e3c9119214dc26cc6640c173d8c235568"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "13b217effaac8fb6707d240a7ef6416479888adffe3ab474428cbba8c9167f36"
-    sha256 cellar: :any,                 x86_64_linux:      "0cfd9c49bcadb63d95115953058d6f5193fbde52b7daf75e055856a5826c77e3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "f8f04b457ff60e0b19637d3da92d0db1016b37b0a7c32d1b23122fd0f952b31e"
   end
 
   depends_on "go" => :build

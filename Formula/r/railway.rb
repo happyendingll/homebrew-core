@@ -7,11 +7,8 @@ class Railway < Formula
   head "https://github.com/railwayapp/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9cd3dbfecb19ce0df545575debc19ae82d9cc0733c69caa52a90d5085e9f8d7d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d179835ac871da69bd9c71f426011c296d0ac2968be23cb730d21d1b3c1ce23"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f68c5c4afc9730e05b7e60c21205a6d1ab7411028d6a7e1f6dcfc4655dce8e7"
-    sha256 cellar: :any,                 arm64_linux:       "cd2843edd70346451aa23de5205bc5a3349e7e62febabc5206c68e1b3b6f5677"
-    sha256 cellar: :any,                 x86_64_linux:      "524ef5dff89c770b10ce36e5276154313df500ad7eeac8af8a81455256313d87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b191ccab7aab0eb6d432828b87f44d859413dd7df13f67105d9c16ca6c325ef"
   end
 
   depends_on "rust" => :build

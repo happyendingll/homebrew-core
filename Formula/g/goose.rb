@@ -7,11 +7,8 @@ class Goose < Formula
   head "https://github.com/pressly/goose.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d3c8dd6aa72f6cec81952d77ad30116861c205c9e919bdac9126aeeddead1bd0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "50eb1432ed5389f0cefc21f2164af8c8efa7be958498a780cf7e371da5d522c0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "556909e14ae4ef7648eb4fc4427ee2b92c14b71edd8b6e2922962c46c254acfa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "91d663baf463c6e09f1ecc5d99dda79d23faa1450d7ef80b28780329b61dc8ec"
-    sha256 cellar: :any,                 x86_64_linux:      "3c0e997c25b1ccf4bf1321029c73f6090225057ef3aed18176569251fd8d0404"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "adc39008304fd7904efd92150922cac7e0f89c36c60d5ae4e49ad919d5ff4520"
   end
 
   depends_on "go" => :build

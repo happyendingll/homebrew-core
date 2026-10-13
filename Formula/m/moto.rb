@@ -8,11 +8,8 @@ class Moto < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "07399867a434d3be325ae95fc8f81a50545367be7f38f094e19ac428eee3529b"
-    sha256 cellar: :any, arm64_tahoe:       "f6593577572d9fb255f26d2523e5c1268f8e30e325c328c4c0e4dbef1ac471b7"
-    sha256 cellar: :any, arm64_sequoia:     "9e87b0a9ca30ef0ad56522d43db00224445f3130989545a5e7df767e7f8cc12b"
-    sha256 cellar: :any, arm64_linux:       "920bfacf9bb0951c0a69d182fa7712f81c644a66976dcefa46a6cb7fece4bf9a"
-    sha256 cellar: :any, x86_64_linux:      "dcf988b0f3a3fecdb514c39291dd73c13f55d07ef9347ab919d8d4f1867d9460"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "e3b0e601c4da580f134ea7ae015a0af00ad3702692186c3997051e0200e0e7ac"
   end
 
   depends_on "rust" => :build

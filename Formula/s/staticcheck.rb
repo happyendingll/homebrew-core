@@ -7,11 +7,8 @@ class Staticcheck < Formula
   head "https://github.com/dominikh/go-tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f9dd05553e1faf09714fb5bbfbed2fa228577d5a55c1457233d0280652dcaa1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f9dd05553e1faf09714fb5bbfbed2fa228577d5a55c1457233d0280652dcaa1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f9dd05553e1faf09714fb5bbfbed2fa228577d5a55c1457233d0280652dcaa1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4a257e28f6c5bee671cd36d6f8c29c0761182068884dd21117c0fe9fcca4fe6f"
-    sha256 cellar: :any,                 x86_64_linux:      "83c06e974ea0d97b299d45604efd8ca585b6a4db887e84ceb17de662ac61dc7c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "8e600f70515e9fb5a6248b5801393c410578147efe00ed9b3a8256b3f5ee8dbe"
   end
 
   depends_on "go"

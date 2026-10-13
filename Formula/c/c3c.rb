@@ -15,11 +15,8 @@ class C3c < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1fa75fcb6af2a056b8a0c83c21ae005fcd211b963b5d56fd5412c20f8bfce9f9"
-    sha256 cellar: :any, arm64_tahoe:       "972ebe4783db914403ef8a5b1514c824b7ba34517a64032f97addf1eaffb2c3c"
-    sha256 cellar: :any, arm64_sequoia:     "8b3a849f56e9c17364befced0407a96a3c3011dece0ee877b6890d1961f797cb"
-    sha256 cellar: :any, arm64_linux:       "51635b604ccfcedfe081324ce2467047053840988da76fcd19bdab074fd61a39"
-    sha256 cellar: :any, x86_64_linux:      "401de8cf4231133a7fbf34fd29c84fc394642cee3f63e4ccec9abec45e053c2e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "4704fd18063b1cba5d8cf696983545e95db03c2d3a8716a02ed0b26db89ef3ae"
   end
 
   depends_on "cmake" => :build
