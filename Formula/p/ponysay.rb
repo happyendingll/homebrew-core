@@ -19,12 +19,8 @@ class Ponysay < Formula
   end
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3700eccd17ee72657164db2487c86463d1cbbfdcf793ea4a97c0612b9fdb9371"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e7ea464892cdd2b245c203e33e7679857663d444b923919da2c1285974939fe0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "af2695f055a97a313745266077f95638ac0103ee772184cababcb4f23e8d553c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e1aef0ab9599b29a34cce59e5214dbc906454052c0cdee80c989ed760459415c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "cbe2bf940b057a0d8e236d6f8398ea05aee04978a492398d1688053a2cce3dbf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "96b68a83ce3db0c9d6f84fbcc23e65b9379d081294d1b820de831d2b04eb7dcb"
   end
 
   depends_on "gzip" => :build

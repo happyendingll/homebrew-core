@@ -8,12 +8,8 @@ class Mitie < Formula
   head "https://github.com/mit-nlp/MITIE.git", branch: "master"
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any, arm64_golden_gate: "1ca2c42d4b8790ff3dac7d5b718198d0fe0e54b3813ce9c6e4f2716ac6138738"
-    sha256 cellar: :any, arm64_tahoe:       "0dd6bab4c4a4a9870b4da5bebcf14a6a2837bdb36e7ec67e156b7ad8b72c370b"
-    sha256 cellar: :any, arm64_sequoia:     "23d8154eeeb960958f53947bb3371496320b0303ede2982a05b6fa0306bce2f6"
-    sha256 cellar: :any, arm64_linux:       "ca9e8e502a74b0fe09599e1826761e7285661cbf5e8d5fc75b797c35b920807b"
-    sha256 cellar: :any, x86_64_linux:      "1361d9ac9cdc4d2bba59d950032e67568b9b47730aede3c0d3c8365ff56531bd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "df89eb85495e08eeab9c9d56a3d701f4e524b17945bb1b33b39a9e6affff68d8"
   end
 
   depends_on "python@3.15"

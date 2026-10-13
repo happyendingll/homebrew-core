@@ -13,12 +13,8 @@ class Bento4 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b0d0741e077625e3f78334e3d877c5dacbb45f1b7c56050b029b52b0ffe6b0cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "882958ba23fa8075fbb4df3057afc4ebef96342f54c41e2b9f87a51db734224f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6086fe613e55e496651ff30414e41ed8f7cf6ae772c9d3764bcaed2e1244c161"
-    sha256 cellar: :any,                 arm64_linux:       "daa34fb4d1bef9545fdcac787031c6628078caba276460c664f0701a5d31e65e"
-    sha256 cellar: :any,                 x86_64_linux:      "8b7956e1d2d64701850e5904c41f807ef7f7b74a7c2574c00571bc77674cb0d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fe0fd4899d35cc1d2ce7f9bbebfe74a8a28a031e77338c8e3bac2d21cc342c41"
   end
 
   depends_on "cmake" => :build

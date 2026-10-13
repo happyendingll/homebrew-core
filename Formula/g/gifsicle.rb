@@ -11,11 +11,8 @@ class Gifsicle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6beb9fdcf26ccd1a787913ec81fa54d22941b6ca4897d6b36346d10a63028123"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "68d013fc286c59a4bf3e3278019aef0fce9de2cceeee68e3849aa337b1a292a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2b70a92a797ea903eac7671e8e2e51d99c728205b127228bb3cdcf7a52f0bb70"
-    sha256 cellar: :any,                 arm64_linux:       "5ac9d75933a972d72cee89563e0e8e52a06df298f96ada531b10e7ed05ed62e3"
-    sha256 cellar: :any,                 x86_64_linux:      "c81594962a1fa63410da27146e0fe193f5c4d132d29326223166fea9c7340dfd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "97fd1cf622e1d63daf9247de2c8761123a821daa82c723a99fec969508a62cac"
   end
 
   head do

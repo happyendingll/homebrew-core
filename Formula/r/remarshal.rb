@@ -9,12 +9,8 @@ class Remarshal < Formula
   head "https://github.com/remarshal-project/remarshal.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b6c25d2667bd00593415155fa5a8a80ddc22b4ebfacefc870dd448ed9219698"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c27c6585ced0c8ba2d95be74405e5b8dfbd98fa94931a0e9e6727717e0cb82ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f4122c3ddc738739c1f62a834bb9e8ea4db8d5e60f1f3a1aceaca9b67903102"
-    sha256 cellar: :any,                 arm64_linux:       "2d89bf9164c508b1bb8847355735fb63f21b488ceb09e2cf5f6921897cdb947a"
-    sha256 cellar: :any,                 x86_64_linux:      "68366c4cbeab6c302cd31706c72953624361642eeb564d78cd2ea7798c7ce50b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d5ca2f16146d693bc0ed71df7e7b714aac37d4e137c2506b12db2f60fa168eae"
   end
 
   depends_on "python@3.15"

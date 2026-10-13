@@ -7,11 +7,8 @@ class Shell2http < Formula
   head "https://github.com/msoap/shell2http.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c7893bccd6eb781ae8bfc8cfa4b91b3783293dc42d21f8f2d144c810ef1e2d10"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c7893bccd6eb781ae8bfc8cfa4b91b3783293dc42d21f8f2d144c810ef1e2d10"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c7893bccd6eb781ae8bfc8cfa4b91b3783293dc42d21f8f2d144c810ef1e2d10"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4233b0211cc9ad306afc569bddf22f32b7c8253032ba7f12f6e1d669d2c44065"
-    sha256 cellar: :any,                 x86_64_linux:      "fdff7ea8ce953346e71c6ebbf8086313735f3fa2806aec15d93c09ce7f9e88fb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "98c14e1a4c52a35b6d2b0dc9134eb9983915be9d20189517108c7467b845c5ed"
   end
 
   depends_on "go" => :build

@@ -9,12 +9,8 @@ class Cutadapt < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "82b1a218e71c6a6064949edf56bc918103c7b8afcec3b89fcf16be8a10014d5e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fcd8478351c67f2ff26dc78dc11cda886607417dfe8b4870859a750503106fd0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ec95a806a3a9cb72096e44994d171fdc808c3dc6f1ed6b881c60b9489daeb336"
-    sha256 cellar: :any,                 arm64_linux:       "610c0b03ee24b604c8c3c156a468979908a3ccab8ca59bd2c64bdc6c1ecd45e9"
-    sha256 cellar: :any,                 x86_64_linux:      "2f6856e9492fe390de00d94a86ef82589e2d28648d7f4619026729198cfcb33f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2cfb878e42283e709c9607ef9bf27320ac5574550fb81f6fd0464dcbd0c93607"
   end
 
   depends_on "python@3.15"

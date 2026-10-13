@@ -10,12 +10,8 @@ class Peru < Formula
   head "https://github.com/buildinspace/peru.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "b58c5fd45085887e66448ce84898bfd92416acf768c6e450095ab3d4fd9611ab"
-    sha256 cellar: :any, arm64_tahoe:       "1225528b3151402c59e607982d0686643d77ae510b05ede6a829776cb05ab638"
-    sha256 cellar: :any, arm64_sequoia:     "3024f57fa07ba7b6251605bc99af6af490dd9463ba135e76b3b4a17993e2bd3a"
-    sha256 cellar: :any, arm64_linux:       "a48224577d15e40447662a6ea737292a36fad06bb13fbab73e7e6b009e2b2e01"
-    sha256 cellar: :any, x86_64_linux:      "c62725aec4d75736ab194f803f43c02eea5929cd75fed48216dff61030153405"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2a38c02b1d9115e12999cf2027faeb3bcb9f6be6144e458da23a6fe4494c8e8d"
   end
 
   depends_on "libyaml"

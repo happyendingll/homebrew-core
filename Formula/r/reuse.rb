@@ -15,12 +15,8 @@ class Reuse < Formula
   head "https://github.com/fsfe/reuse-tool.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc573fb13b8eb2f85268bd5ffcbb48475fec9758d7c35cdd7a5820c0b9f34963"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8fa0fd4e4929623042f81e4cac6d3dca46710e5ad1d756272c4834ec724d2df4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1043b8bec8d72e602cf2dc7edfebd75f890aa83dc0eecd6e5df760793939a549"
-    sha256 cellar: :any,                 arm64_linux:       "77460fd9c6f8d9130cd3efe93b963395d172e6618f711882ed2b3de490fce67c"
-    sha256 cellar: :any,                 x86_64_linux:      "d0e660560105789f2492451ad2a562c190e49001a40a712ded0892ccfd98561e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f907579238612cda36d3cfd65cb375ea34cf31dbe4e588adc5a73bf6b97f7440"
   end
 
   depends_on "python@3.15"

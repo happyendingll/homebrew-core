@@ -6,11 +6,8 @@ class Kfr < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "3549e334cf37a900f937f514089b140c0d37a30fc125a2f1af7ee4a591f6ade5"
-    sha256 cellar: :any,                 arm64_tahoe:       "eaa423a0e46ad5b7ce41783521a9528589526dd199c028813effc3c5daeec79c"
-    sha256 cellar: :any,                 arm64_sequoia:     "ca6b3cab25a9414b0ed1985d5effa9ae75d6e92a807005a5e308670147c642b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3bc284fe2d08bd24f52968a88745ba20b192eaa8b5050f6835d5b24111cec8ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f03134333e0dbc59dee0343b3c7dee2636f84f48c558738e24d6822fbe4967e8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8ea4985bad760ae543b8ca7f57bd1b00eff0b5474c20b9bad029720b908731fa"
   end
 
   depends_on "boost" => :build

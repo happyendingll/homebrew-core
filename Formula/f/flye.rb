@@ -15,12 +15,8 @@ class Flye < Formula
   head "https://github.com/mikolmogorov/Flye.git", branch: "flye"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5b33ea78b7d3239be461b15546746298fa97c61fd55154a44fb42452280a8987"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8cf39112533b510aba6d872c17d1d4488476c44e81e5455b687511c576717c21"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "62707abbb4e2af929c602c9c14feff1bfe4bff0a698e8777064f747fc9858581"
-    sha256 cellar: :any,                 arm64_linux:       "c076fce9b0285052cad327094ee3112c83f104923d968c06f17515db69488a90"
-    sha256 cellar: :any,                 x86_64_linux:      "64311add2fe8e416832d99a9037929124da14e7fcebf6537cbddbd501b0d6fdc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8831972d55e79a17a13cc4237a1e2e3031b19af2af91f6b4470e9d58b0ffbb52"
   end
 
   depends_on "python@3.15"

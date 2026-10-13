@@ -13,11 +13,8 @@ class PyenvVirtualenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f96328782e3a77ab7793580d119644e11c329106620d4c14a6ed81cba589285"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f96328782e3a77ab7793580d119644e11c329106620d4c14a6ed81cba589285"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f96328782e3a77ab7793580d119644e11c329106620d4c14a6ed81cba589285"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6976be94e436a8922a51e4816a003f38bf40b230164c90b8ed2fac0d9e7ac764"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6976be94e436a8922a51e4816a003f38bf40b230164c90b8ed2fac0d9e7ac764"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c2cccf2812d964bc6866a4a84851394587cc7ca21fa032e1aa3a43a0271b103c"
   end
 
   depends_on "pyenv"

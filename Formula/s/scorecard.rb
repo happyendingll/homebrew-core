@@ -16,11 +16,8 @@ class Scorecard < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "925a122fff00e4c9d9632ca983633a8e9405aecfd698b0e75cb50894faad7871"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c117afb0536e27405e498adf952e922eb981535cb4feffacae80365867422263"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "92cc86dde01294c7bdd8ba1137c33cf5f1ed862819bbb47add0444cc021cb8bd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "de23c9d8567206dbd11eba716fae89b70921a029212c4e524169027804feda85"
-    sha256 cellar: :any,                 x86_64_linux:      "2ec8fdf3760d75bcce397cde1723118ac9ebd2638ae3e51ebe8d96a5c94dd130"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc94d4fae35595d292d38d97bcd23ae8807d5c02532dc6191c4e8bc7023650c1"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class MinLang < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9ba7d908e8927e6e24c9d67c47e42dd0b93b78134ca7f71ce008d378836dccfd"
-    sha256 cellar: :any, arm64_tahoe:       "85d885093ce1e6278883aad1c181aff2697ab6d31ea824c0a8fc45829ff424a2"
-    sha256 cellar: :any, arm64_sequoia:     "b67aaaf74e17823951657eaafb271c530bbb73ef69c5e135bb7a2316c4d99839"
-    sha256 cellar: :any, arm64_linux:       "6769211ce2049d407d41d7d1f5f4973f22b22112c16b23f33d31dc15c99b2766"
-    sha256 cellar: :any, x86_64_linux:      "86dbf1981a452a9abcc2371b1b3de738071cea459c4248402965ef0a7de8fddd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e04a6077135ab1b04ba5956387b95f4196a6f8f9c8f37349cea546acb0cf3131"
   end
 
   depends_on "nim"

@@ -15,12 +15,8 @@ class Ispc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "71f5effcb42ca591e78651baf434f4ef46d2b725867e9ad266be4758337ca8ec"
-    sha256 cellar: :any, arm64_tahoe:       "318e4fbcc3ad01b2853b84b735cb03a32584ad632ddd823ad98bf36ecc4902c1"
-    sha256 cellar: :any, arm64_sequoia:     "3be3e6b2c8bd96adb633b50aadd491670afb0755398faad3441ade6c2e64923a"
-    sha256 cellar: :any, arm64_linux:       "5fe01ed96b41f24bd2fa0204dad4a102d7b3a49e5ee52dd89d75cffd11694163"
-    sha256 cellar: :any, x86_64_linux:      "e958ae79abb08ded50ebd89a39797a42987169e0188d4ffd4d65b1bbc93ed57d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "45b1874164f0ee603a86e5d8a5447f4273b82e4b5cb59a0094199ce3543d7ad3"
   end
 
   depends_on "bison" => :build

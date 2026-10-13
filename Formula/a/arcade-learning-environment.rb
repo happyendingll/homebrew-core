@@ -7,12 +7,8 @@ class ArcadeLearningEnvironment < Formula
   head "https://github.com/Farama-Foundation/Arcade-Learning-Environment.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "c259e8b4017e598eae705b27b51775028f2503d46337fd07611559d9edd0fae8"
-    sha256 cellar: :any, arm64_tahoe:       "8ec5becbe24e85c88b8c53dcd22ea41676a963795421d331db5a5e628f26d9c6"
-    sha256 cellar: :any, arm64_sequoia:     "2b9cd238cdae5d0005454fbba547ecfc098c650a7702bcb31443d8e4da3e2c9e"
-    sha256 cellar: :any, arm64_linux:       "61b52908b8f89c9d04c9b4d2eb03f9b9b78b8d6a46e6e7131a2155b85ce9aff3"
-    sha256 cellar: :any, x86_64_linux:      "b36db8db921a8d64b70ca3756b68e304eb2d7b3a4bbfcfdf6b29450c6ae946fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b75957d2973cc116736dda5102a28d873968a2b3f28e2c234e793ac8db65cb96"
   end
 
   depends_on "cmake" => :build

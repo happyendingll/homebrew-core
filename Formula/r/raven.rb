@@ -9,11 +9,8 @@ class Raven < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "905c5480df3e288357ac5c99c9fad0864e3417bdd9bfa970507da6ba3d74ca41"
-    sha256 cellar: :any, arm64_tahoe:       "0f332623bce5bcb2aa0464cdceaefdeaca376ef7bce3519a65f76deb88d66541"
-    sha256 cellar: :any, arm64_sequoia:     "caafc5679fedbab92575c72453eeba751ff1fdee03b5cee923e68ef4a9c4630d"
-    sha256 cellar: :any, arm64_linux:       "4a8584e63c49461b311989605ad075755a7d48b1e450d44ba2899dfa005336da"
-    sha256 cellar: :any, x86_64_linux:      "978fb4009feff657889650b061e30655b58cd3ea37b48ade99d80fded46f4df7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5dff6b9bdba3b7aabfacfcdc12ebb1a13a54b9d4402470f671d8b1cee071e442"
   end
 
   depends_on "certifi" => :no_linkage

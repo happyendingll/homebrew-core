@@ -7,11 +7,8 @@ class Litmusctl < Formula
   head "https://github.com/litmuschaos/litmusctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6d79030bd5dd8f034c4806cff51d6c3617ee88e8455328fc2545c319d0607d2f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d79030bd5dd8f034c4806cff51d6c3617ee88e8455328fc2545c319d0607d2f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6d79030bd5dd8f034c4806cff51d6c3617ee88e8455328fc2545c319d0607d2f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f4af354a6d97e65ae3197b8423d6491edacbc31c3e63f274b0ae36f9b9090905"
-    sha256 cellar: :any,                 x86_64_linux:      "56e79717f250d666f57af6fc8b8ef8c2beca356813c29cfdcf66b7f5bd41c3f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5aa713333d9835e0784152b943ffa0b4f77a45b2a742d797bb0087d47f722954"
   end
 
   depends_on "go" => :build

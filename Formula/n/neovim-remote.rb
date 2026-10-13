@@ -10,12 +10,8 @@ class NeovimRemote < Formula
   head "https://github.com/mhinz/neovim-remote.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "612df699c8c642cc6d79b49775848204fe60039cf3a466a00bdae02708751b23"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d5ac199e591e1e1a6048dfec74b89236e879f5926953d824068f68f271e0f30a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "226d62d0feebc6f551db155877641ae69b3d790d038b83b5fc4b972b85812525"
-    sha256 cellar: :any,                 arm64_linux:       "a09e857f19c7dd990ac7b45c3e0c1ab7ba23dab2bc223e563065742d34f052a9"
-    sha256 cellar: :any,                 x86_64_linux:      "2a9dc5d14783fb91cb847082e7fbc6cdd11e1a3d2316a99e23e028527fcd5251"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "82e8103d42dde057cf3eb8ee449aa4c6a14d04620d3dfbf7db245e4d217ab293"
   end
 
   depends_on "neovim"

@@ -7,11 +7,8 @@ class Mad < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b27f2d1b0265c6efa3d5af77f303aef8b47753bc69ac9d4060b19ad9126b0102"
-    sha256 cellar: :any, arm64_tahoe:       "0fcfb44bdf6c65c9d3578114baaaae4f3a2a7cad32d5985974d4bf5cb499d2d0"
-    sha256 cellar: :any, arm64_sequoia:     "d897ca79730bce903a767a9cd310dfa9a18d0df0bb8b483541197264c6cbff3a"
-    sha256 cellar: :any, arm64_linux:       "cb79367bd046df2fbbcf6149ba040f2e345c445c1c8c0abe52d3c28fb878e7ff"
-    sha256 cellar: :any, x86_64_linux:      "b48a4fbf2823cf570cbc1ba7afe186d9f53456a39d4ddc29b24fe2aee99c048d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "dedb2613979e316ba6947814b298abbd5fc64a423f134dcf327c3ae65dfd31e3"
   end
 
   depends_on "cmake" => :build

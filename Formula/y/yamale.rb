@@ -9,12 +9,8 @@ class Yamale < Formula
   head "https://github.com/23andMe/Yamale.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "623f6f77e7574a43e43ab2517b1df3de366de687e0ad15fb0d6bf3c6c177a978"
-    sha256 cellar: :any, arm64_tahoe:       "0cbc5945ca2f3a5e7640f225a7cc68ad26df0ec12497b5ffecd33956fc2b40fc"
-    sha256 cellar: :any, arm64_sequoia:     "226b343afae317a7f6667b9216131499457d2bf817ba151715386b58aa56c993"
-    sha256 cellar: :any, arm64_linux:       "331cfe0382a46001a4de2f5520a3ce6260a684565b5ac9bdd2a98e7dffd1b029"
-    sha256 cellar: :any, x86_64_linux:      "9f8ccec565c6092758145e6c2bd4e8e37ac9b5d9d913b63346e72eee55dfc740"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "260d6d065dab8faa96f8c685d37b983ab4e9c625352d3c250ed84ac0e2ce7629"
   end
 
   depends_on "libyaml"

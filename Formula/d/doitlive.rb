@@ -10,12 +10,8 @@ class Doitlive < Formula
   head "https://github.com/sloria/doitlive.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bfe840853cd36a39848c2445e56cb4ce03d084118422a4377bc124dba0d2e0a4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7d27cd0cc8eb296d75499181740375bd1df860590d08b9dc0900222ff268b74b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe2eba4a1d63f8e27fca2e6549c0a914467c2f6981dda19ab5af1cb037de6545"
-    sha256 cellar: :any,                 arm64_linux:       "b84c7a1a9334337c75b5adf78d3316af33246dc5af3e6d5eee7bdb7d26e1df3d"
-    sha256 cellar: :any,                 x86_64_linux:      "5e5760348d1317e9c9efe7a58368c0cca58ee5cc9fc16ef156432bc000153993"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "191ba6eacd680ff434c54adb01ab8bbf9855c658dc831aa820a3507ec3e78c7b"
   end
 
   depends_on "python@3.15"

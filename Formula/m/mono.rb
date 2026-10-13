@@ -13,12 +13,8 @@ class Mono < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 arm64_golden_gate: "bb3ced09c44ad6a265f35fbc4538151f340fe44c915042862b7557cd84f9d29d"
-    sha256 arm64_tahoe:       "599ff3c36efca4e2571c617384f96792f5286d6792b8bf1c7e48270f92c2480e"
-    sha256 arm64_sequoia:     "0cb30adb311d1acc39002eb8a69614b84462f3c4a9a4f799d0fce0acbed38c59"
-    sha256 arm64_linux:       "7acf75f6898683b38a47806cac02d04bb73323b77d651fbf34b8eec48615782e"
-    sha256 x86_64_linux:      "cc7138d13f44f75943f003dab7d7305ad79f9304e5607d2299983f1bd40441d2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "59f10370a01dbd914a4d6ff59589ee8e5cb4615007ad6b542c79192ecc60a799"
   end
 
   depends_on "autoconf" => :build

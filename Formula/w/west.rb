@@ -9,12 +9,8 @@ class West < Formula
   head "https://github.com/zephyrproject-rtos/west.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "062d58235bdb4f9c74349ea8ddd2efe13000443412e64be19d583ac71a51e538"
-    sha256 cellar: :any, arm64_tahoe:       "3563e97b83a0f5eb7d4069b8bc42807ab29965ca797fb86bc72f807a2f20b6a1"
-    sha256 cellar: :any, arm64_sequoia:     "1c38fc5007257acfaefd09f06a9b419d67696da0708ea685e00f17d74b9eeb3f"
-    sha256 cellar: :any, arm64_linux:       "4e7e12a57ad854decb237294c1bfbe1d453e75b46ed6f741f9f44e7c747cf9a6"
-    sha256 cellar: :any, x86_64_linux:      "08667f0c20a584fc0df99e2a266a28efacd224b6c33fd831a6a9bec5f30422f5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "32c2a72736e4932d65d02e60292b0d66d103c7b4738ba98374b0e8066443f1c0"
   end
 
   depends_on "libyaml"

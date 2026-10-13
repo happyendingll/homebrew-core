@@ -10,12 +10,8 @@ class ShallowBackup < Formula
   head "https://github.com/alichtman/shallow-backup.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "90349129364b6860f54827bb95b3d63162c3684f86766f17e8d60b07647a0fd8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "889b715655e0d750fc15bcb3da8dbfb328d63153a836daf186721c882c44417f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8e864381288f540be45ca058a44468e794253907d1456d461f2484800509e4c9"
-    sha256 cellar: :any,                 arm64_linux:       "64b8252069102479284e2008861cdd7d10d7f8fa2679bce60523533bc6411fd3"
-    sha256 cellar: :any,                 x86_64_linux:      "f30f2da048c4496052b69bddf272cd110888915688515dc2c87118414423af50"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "71b32e07aa569e33d15ead1a447cd98db174c1a2376ee74a3c7a93e92f7ccf4a"
   end
 
   depends_on "python@3.15"

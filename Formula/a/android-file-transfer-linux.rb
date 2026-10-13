@@ -7,11 +7,8 @@ class AndroidFileTransferLinux < Formula
   head "https://github.com/whoozle/android-file-transfer-linux.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0995dee98d1aa89c9190c32a295d6f5d4501170957660c80478274639846f4c2"
-    sha256 cellar: :any, arm64_tahoe:       "9c78f94ff23b86953403c7cb98850c7451d3dbb99797fc34cdfb91a049b60af9"
-    sha256 cellar: :any, arm64_sequoia:     "8c957e831a5b063889bc227ad54a3ad4b91d1df529432b2691a18b0cba527b0c"
-    sha256 cellar: :any, arm64_linux:       "ee640079803ca6dacc6cc6e5b674969db71ac4b8c6d3443d311855f04f4dedb5"
-    sha256 cellar: :any, x86_64_linux:      "3f0ad353f5ac9c2c1ece2d127432fa4e1b81d495f80cc86865e20c28e559f1e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8623249c8134dc09b090bc13d9407b35c073ffebfb0999ca9875dd73cf9a74d8"
   end
 
   depends_on "cmake" => :build

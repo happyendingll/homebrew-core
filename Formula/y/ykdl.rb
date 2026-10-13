@@ -8,12 +8,8 @@ class Ykdl < Formula
   license "MIT"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e9df4ce0de3b8c01800230e54f4dee9068dc06189c95cea6f985810e97bcda7e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d1295742edc685d573c2868fe922204650fbe46fb2526001f2c42f4d5229a4ba"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1295742edc685d573c2868fe922204650fbe46fb2526001f2c42f4d5229a4ba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e9df4ce0de3b8c01800230e54f4dee9068dc06189c95cea6f985810e97bcda7e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0202bf4551038aebf321541c746d08965f8797f36967c888dadc965cc9242af7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c41b9754528736d6ede7502943dbbed0208f97f54ebdc1527a16bf4dd0170456"
   end
 
   depends_on "python@3.15"

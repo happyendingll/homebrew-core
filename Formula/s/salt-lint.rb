@@ -8,12 +8,8 @@ class SaltLint < Formula
   license "MIT"
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any, arm64_golden_gate: "a977f3ded9ade7efab26c7cc9d6c7ff3a1981861c1024ba4370e2d5dfb8ea876"
-    sha256 cellar: :any, arm64_tahoe:       "463ca6e44950c80415077f7680c584957f1cc2ca113db9eb804aff0058361ae8"
-    sha256 cellar: :any, arm64_sequoia:     "3292bb3838f275d9786b9387d70b240106422ef46ba8ad94da82743857ddc89a"
-    sha256 cellar: :any, arm64_linux:       "fc4424e8b985981d483436d2591dd17c67212b8074401c96b3017ef5b76bd67b"
-    sha256 cellar: :any, x86_64_linux:      "9b50c064b8d76309a2b04ebe8aea65cf7fa8d191764d9021ac5d0964db0dbf40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "cdd0c86ee7c5394043c832d63758116dd5a689534e27b571cd4537292b39e22d"
   end
 
   depends_on "libyaml"

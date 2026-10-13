@@ -7,11 +7,8 @@ class Qdl < Formula
   head "https://github.com/linux-msm/qdl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "83c0c15c1edf2f49c6d78d4f42630634b2565a2a4777684bee316dbf927ed367"
-    sha256 cellar: :any, arm64_tahoe:       "c43438c633fc5b9da420e3e45796f01baeaca18c1cd675fa790fc96c380a7fb2"
-    sha256 cellar: :any, arm64_sequoia:     "196073586aae1ef5b115bbfb2250a418cff2bc2c8e2100a05d21af512eacb05a"
-    sha256 cellar: :any, arm64_linux:       "88b1b9fc24983223fe9cd3d5a5a32a465775cc82c63e2b77363c351b5c80cdc0"
-    sha256 cellar: :any, x86_64_linux:      "e8a3a741cf52cd92b695c28661c9c4a3efbaffb2afd7898ef9850d8c39fe5ae7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5015b420e5f71e73a98a6a4d614c2fa80ccc8d69c1144a3a5789c379841d94fb"
   end
 
   depends_on "help2man" => :build

@@ -8,12 +8,8 @@ class Mpremote < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "473071f1fc70e954d08258b295f52826843cbdafed173d79bc4c3d269d0a2491"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "473071f1fc70e954d08258b295f52826843cbdafed173d79bc4c3d269d0a2491"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "473071f1fc70e954d08258b295f52826843cbdafed173d79bc4c3d269d0a2491"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ad6d2c1b14903730c6aa412b5e27732c08b265d4ac39b6d7761719e6966df255"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ad6d2c1b14903730c6aa412b5e27732c08b265d4ac39b6d7761719e6966df255"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e6bd27e469482d04c9bab153640ae48d89d7eb4dca9d5f93b8da186374ee6812"
   end
 
   depends_on "python@3.15"

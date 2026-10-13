@@ -9,12 +9,8 @@ class Pyvim < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "256e18589710ad7ed0448f0bc0eb03670d7aa4cfad723af2538c96ca45db6c25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "599048dc5e4be6430fe595f912c32e2970db218522dcc985dc69de041c52a3b0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "617114c69fe69b9fa0ebf68bb5a03424eb7cb9bc446223d8d91f98ea916abd80"
-    sha256 cellar: :any,                 arm64_linux:       "8d9d355b9c701e002f27975eef712c148db7b905ac07f730c29a6ff13931fce6"
-    sha256 cellar: :any,                 x86_64_linux:      "bbe78217bd124726a8d1a099718b2b3352337192ae5fd035285422f8c9f84820"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc0fa490218175d6962a17d8e25f082abbb1a0de02a954e078fcff6fc2420957"
   end
 
   depends_on "python@3.15"

@@ -6,11 +6,8 @@ class Libxls < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8106160b907bc71a2d8361d482dffc72ff2d24e71ce3a914fb987cf6c5a00520"
-    sha256 cellar: :any, arm64_tahoe:       "e2ec987b75932f475d9256392b5e38ecde92bbea2bf01697db2e34d08a8b27fc"
-    sha256 cellar: :any, arm64_sequoia:     "ad42d9a4494d04a1e24edacc3944873062f12261169351844dd904570e61ee0c"
-    sha256 cellar: :any, arm64_linux:       "4f7fc830cd655200ff7f155014357798d24dd92734ccc98c6b26f64c900f6a58"
-    sha256 cellar: :any, x86_64_linux:      "9cb179bee11e0651c57cd2706d27365c74ed895cf7a7dad4c6fa3ba088770408"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "347a8ed13979d8d0e3d31c2c202d4662f49bb092ce02cbcd8d0a1ad1fd89b80f"
   end
 
   def install

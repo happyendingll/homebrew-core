@@ -10,12 +10,8 @@ class Vint < Formula
   head "https://github.com/Vimjas/vint.git", branch: "master"
 
   bottle do
-    rebuild 8
-    sha256 cellar: :any, arm64_golden_gate: "144985ca156cce73efc9f6d1a3e60e6ac20d8278b790dc5856316f099a666af1"
-    sha256 cellar: :any, arm64_tahoe:       "adcb2e82925f9dc290f910258cb425236e6700b503c2ee7009f5582a423526cc"
-    sha256 cellar: :any, arm64_sequoia:     "c23dfeef0c48935eaf313eb30a3d3d1b8da4967573b03e32cba7862147a81c69"
-    sha256 cellar: :any, arm64_linux:       "e4488650fd5a142036a4d2ead83f7b9d087e3a15fa69b7dc2ca15679c67a59df"
-    sha256 cellar: :any, x86_64_linux:      "6b3143ca1b4d6c4b50b1ba7d49a21cba01114a710b4fe157254d2945f80d67e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "84d4cf7b5bc28e45641766d432614d2f49eb3dfcca4fce7ddfeb8e98afec3eba"
   end
 
   depends_on "libyaml"

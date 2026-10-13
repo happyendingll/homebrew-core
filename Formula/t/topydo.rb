@@ -8,12 +8,8 @@ class Topydo < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ee3d2caa07f71f9585f4850d01aa020e885c3ece283fc4943e1d6365e33348dd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dd553ebd8c646ddcb106a464e66fee328e12b0db2c438f6f08a55398eac6b13c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a4d59de15cf6a613c9cf6ddac886af59cf3ecfcd204510fd89f72984ff05250f"
-    sha256 cellar: :any,                 arm64_linux:       "7dfcb8032a896db0b7e756fc944da3f83afd102eb939fff96bfa84fc3a445fff"
-    sha256 cellar: :any,                 x86_64_linux:      "bf1c64561f785f39151031b5250bc8d6ce27ace5670b673ea83290d935f45ea7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f87a271a45aa2af2603715c0ac589cd7b5dd5906d4e6dc1f064f77aab64490cf"
   end
 
   depends_on "python@3.15"

@@ -7,11 +7,8 @@ class Arturo < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6b1c3b757f0f08a102426ff62459c80886e7333b829ffbeba13b941b270c4844"
-    sha256 cellar: :any, arm64_tahoe:       "d26c05685142a1f3f38bc8e93b30e6e7bed671a7f73219f191e62863b354c441"
-    sha256 cellar: :any, arm64_sequoia:     "d59f8df9298dccbb14d97e27f97f2837d04c23cb1db172150fe77d03fa5c93fa"
-    sha256 cellar: :any, arm64_linux:       "691ccd432fcb433ea59611816d14081070e184f529af3b0f7c8c3e1e6dde34c9"
-    sha256 cellar: :any, x86_64_linux:      "203904c48c4b5e4e208bad2390d49c436e992fac68451adf62f63ac38acea15c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c2aa0165705836032e87db6c310642aec66a78f8a7ef66897390f7201e81670a"
   end
 
   depends_on "nim" => :build

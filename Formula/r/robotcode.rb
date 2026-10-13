@@ -8,12 +8,8 @@ class Robotcode < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "3982cffd2bad7ace4dad33e7b136d7ecdf5939f565634101bc988641ed14af1c"
-    sha256 cellar: :any, arm64_tahoe:       "02c68863ec2f5ff93504e1fdf7f2af4b78f2924489d7d793b02aaa756d01348b"
-    sha256 cellar: :any, arm64_sequoia:     "c61a3b4caad9b151297eedb4ade6d47c1c2bdbbf638e9511d3cf1be8ebbe8522"
-    sha256 cellar: :any, arm64_linux:       "4a0b7ae1db899b2f7f822472ae6b9fa377f44dcd6d13a3f686be4edb6143288c"
-    sha256 cellar: :any, x86_64_linux:      "c6718fff0640e8c10277b189796346faffb26289f4b5a01b659f654db646db75"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "69a4f0837d209350752c7267007b3e65ab9baef6ed0a4b9d8d7c4184cde995c0"
   end
 
   depends_on "libyaml"

@@ -9,12 +9,8 @@ class Cekit < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "9f412aa02a6b19a017219935680c16f0f19e9d8d10157e37c7faf70f62fa3733"
-    sha256 cellar: :any, arm64_tahoe:       "26a04179b69e9a591d1d7ec82eca6aef1b7575db8c41cdfdad9d98733cd9e8cb"
-    sha256 cellar: :any, arm64_sequoia:     "acc266993159621861f82f2e73baaf7cb7df1e20b803cc406e02e35b592b9f0a"
-    sha256 cellar: :any, arm64_linux:       "8417d00fef82155a947c9fad6e9defbbbb8527ff6063122616cf3dab8c1939d7"
-    sha256 cellar: :any, x86_64_linux:      "01843eac323265b1fac02a27cab377d156f7fc2bc89624a31259c4c42c0a3cd4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "78697b9739f6c283c6fa72989bba59befa1525749c7e82548138825e25b9c1c6"
   end
 
   depends_on "libyaml"

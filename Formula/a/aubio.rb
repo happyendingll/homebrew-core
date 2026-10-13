@@ -12,12 +12,8 @@ class Aubio < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 arm64_golden_gate: "93791777c67b8fa6cde559f3b799d9bb320b52f97a89b03a8c413aa9f708e05f"
-    sha256 arm64_tahoe:       "a867233c8e0aba10ccf0ec1458c8068d69a5b9c0af0a207f088f75f01553182c"
-    sha256 arm64_sequoia:     "b9bbe3be57a540aed82157cb8332378f589ee49ff8fee62d224c52e0668ff971"
-    sha256 arm64_linux:       "9c19c33e1ca6b94072d02c167352e6cf4f5101b29b2eca4e3f01ab4b7bacac57"
-    sha256 x86_64_linux:      "9d0fd367d58a6ddea8c8b4d7c32cc48e1b6593c2db63dfc5962f2e0d9dacf70d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "51c770978a06d547ee501ed6b13ead1b8122b8e000200a88d1e4194466615035"
   end
 
   depends_on "libtool" => :build

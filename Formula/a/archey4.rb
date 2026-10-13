@@ -8,12 +8,8 @@ class Archey4 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cfa6d2f78c76ed507c5c5b26fa024c65d421410f13d64df70cc67ce5543382a2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0154792e1fb2a7f5b04c5851e9ad65ad3d026c3f21668ad217ee299356de68cf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8c39d4d277039c216edf01fed49f92a5c8784c105a8352985f27fbeb1f287ba0"
-    sha256 cellar: :any,                 arm64_linux:       "82bf31327d381962b0fa2ab6b24c385b3039120b74f3df3c85c01f11b7085d73"
-    sha256 cellar: :any,                 x86_64_linux:      "9d8014e67b533b8e8331b86f9fe52b4a9d1b71145651fc76a69da78d48d62ee0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d7b0ad896067ee040a91c9e5e53f4c0228cdb8a3aec4ec3cab1c437d12464074"
   end
 
   depends_on "python@3.15"

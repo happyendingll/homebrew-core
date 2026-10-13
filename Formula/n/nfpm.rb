@@ -7,11 +7,8 @@ class Nfpm < Formula
   head "https://github.com/goreleaser/nfpm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2da6adba5332a0c099c314d716019779c1c748380ee5c0f029c70352d0120451"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2da6adba5332a0c099c314d716019779c1c748380ee5c0f029c70352d0120451"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2da6adba5332a0c099c314d716019779c1c748380ee5c0f029c70352d0120451"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "16de4d434f2791c82fd24304d89774d18e9cdcb494fc21ebd6fde3109b0b53b7"
-    sha256 cellar: :any,                 x86_64_linux:      "3d00d105d54bac9cabf3ad3795b19819b177c35641ae1e1221e2f51a400a33b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7adafed01dfc1e1f505b76c5f8535412243adc3933c6f16c5ab57b4e6e1f439b"
   end
 
   depends_on "go" => :build

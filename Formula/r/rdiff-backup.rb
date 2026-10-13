@@ -9,12 +9,8 @@ class RdiffBackup < Formula
   revision 2
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any, arm64_golden_gate: "6ed4437995d6dfb5354c16626742ab2330df442c4722e0f8f5d8293b19f95857"
-    sha256 cellar: :any, arm64_tahoe:       "3586159c45c3a4614efd126fc6c4b14070f59d462973db35640a15836bb42e10"
-    sha256 cellar: :any, arm64_sequoia:     "fe543f0236e963f360d46bad87fe34a5bcc46ab812c048ef156ccede727ca2ec"
-    sha256 cellar: :any, arm64_linux:       "de5aa5852eca3304c45d6a5809d64a118441bb1f3f0dffc8a6bbf186cf924672"
-    sha256 cellar: :any, x86_64_linux:      "f6671330b9e3e371e18829c5babec44df0c1147736addec60a39382fd944e3fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9f77884b14b7b832aec82ccf875fa1d74273fee0c6d5ee9dc8b856ba10c2ed08"
   end
 
   depends_on "librsync"

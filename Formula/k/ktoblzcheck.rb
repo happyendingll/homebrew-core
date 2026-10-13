@@ -11,12 +11,8 @@ class Ktoblzcheck < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "e62bc704239383a34267beb55fce405d2a8c2f7b006c2cc2758716ba1deffd54"
-    sha256 arm64_tahoe:       "bfb13def3ffbf8b7d1169bda69a633268bcc40f76f1156851759bc8addeffa57"
-    sha256 arm64_sequoia:     "edc711ab543ecbc5f5d2ad7b16b5233ce548e4533414a67631757740f2aa2876"
-    sha256 arm64_linux:       "81cd7bdfeb35ea839d1ec02702f8de8b98be40d8187c01114e8838bf60068d41"
-    sha256 x86_64_linux:      "d4540f3862230bcc48647ad02ce00047929412e6a2357c7aab9266d3bd08288a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "6823f265f39dd077cbcf6c986cb1bf226ba6f853b876b79495698c7f25759ed5"
   end
 
   depends_on "cmake" => :build
