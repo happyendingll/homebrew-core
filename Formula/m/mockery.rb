@@ -1,8 +1,8 @@
 class Mockery < Formula
   desc "Mock code autogenerator for Golang"
   homepage "https://vektra.github.io/mockery/"
-  url "https://github.com/vektra/mockery/archive/refs/tags/v3.8.0.tar.gz"
-  sha256 "166487e34348d95057252e5a1a172d272f12eb01902c0c05c2a948567028800f"
+  url "https://github.com/vektra/mockery/archive/refs/tags/v3.8.1.tar.gz"
+  sha256 "6db3558b8c9f70b23458696b856d2207dcd7c0a48d02192ebcb10ee2e03924e4"
   license "BSD-3-Clause"
   head "https://github.com/vektra/mockery.git", branch: "v3"
 
@@ -15,8 +15,11 @@ class Mockery < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "4c611da8ed8703dcb329d4164bdc4edc0f85b2d3ad258f4e49974d716f295a57"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7590d89c01326be5876a2b7b94ac67e6350c4494ea977aa80a16175b1496fb46"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7590d89c01326be5876a2b7b94ac67e6350c4494ea977aa80a16175b1496fb46"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7590d89c01326be5876a2b7b94ac67e6350c4494ea977aa80a16175b1496fb46"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a3ef9d534733e9b18f4c6f04085c8d1ed577c2d1ab942a4a006e90193f78e8d3"
+    sha256 cellar: :any,                 x86_64_linux:      "b136f6a8a81f51a09661c5d1816354d24b9f2c6a91f4d536dcd14aaa63d35cd1"
   end
 
   depends_on "go" => :build

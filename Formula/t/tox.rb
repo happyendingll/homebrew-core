@@ -3,13 +3,16 @@ class Tox < Formula
 
   desc "Generic Python virtualenv management and test command-line tool"
   homepage "https://tox.wiki/en/latest/"
-  url "https://files.pythonhosted.org/packages/a8/2d/5b75b6e0fd3edc17bdfbf8adc343b3db17c7e3825ac601375dffbeead191/tox-4.65.1.tar.gz"
-  sha256 "bdbb7bd715a638f6a3f9eb6ffabd91c870db12de7ee2ba4d2c7c9af632f016ca"
+  url "https://files.pythonhosted.org/packages/c4/a2/bd305bdb7b1c76a27f5e99d101059d9e1a65fa5dba1bd4a97f725f27a473/tox-4.65.3.tar.gz"
+  sha256 "1749d05a0fd04db8fed344a61ca047122d98b3347363d940d9cf6098b05e61cc"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "1aa90932effbe285e2e06cbc9e003e1d9a47392e7f9423d63d2ab992e8f506e8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ff5dae03b5b313fb811d7eafc73d74513fee875d0f126069ddd7450f98df3778"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff5dae03b5b313fb811d7eafc73d74513fee875d0f126069ddd7450f98df3778"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff5dae03b5b313fb811d7eafc73d74513fee875d0f126069ddd7450f98df3778"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c311e4553a3dfdc8dde59e489e17d66bbc81d9c52c5047394c43f76bcef185d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c311e4553a3dfdc8dde59e489e17d66bbc81d9c52c5047394c43f76bcef185d3"
   end
 
   depends_on "python@3.15"
@@ -40,8 +43,8 @@ class Tox < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/90/a1/d5f9002a70298c64a789779077d8dd90c10aa1f47fe40c86802df874f2a6/platformdirs-4.12.4.tar.gz"
-    sha256 "63743c02414e755de4e31b8f68125c1407495b86c5a006e203c01ff8b9924250"
+    url "https://files.pythonhosted.org/packages/80/a8/66d45abadff219e36e2a824181b8f6a67e7ed4572934d6252c71c29d5731/platformdirs-4.13.0.tar.gz"
+    sha256 "1aa0b0d3f224c1f07c295121e312a5a24a180d6ae5a8425ea1784b3e3863e9c0"
   end
 
   resource "pluggy" do
@@ -50,8 +53,8 @@ class Tox < Formula
   end
 
   resource "pyproject-api" do
-    url "https://files.pythonhosted.org/packages/d1/82/9cec47d1613bd5cdd918b82a6ffe54924c5462f1e14c59c71ef238fbc9cf/pyproject_api-1.11.4.tar.gz"
-    sha256 "42332ebb8e5e510a3a9ea498cedb5723134ddd46ddfe2d07693917b2ebea22a7"
+    url "https://files.pythonhosted.org/packages/3c/e1/148e4bbb469b26b6648dac4ee292aed80c1205c06ecd2e32987c7ed3e6f5/pyproject_api-1.11.5.tar.gz"
+    sha256 "79294e79953a30fd3eac04bdf8b57241d33e2c8b7230b94c1b76e4d765fe09ad"
   end
 
   resource "python-discovery" do

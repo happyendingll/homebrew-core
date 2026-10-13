@@ -15,7 +15,7 @@ class Esptool < Formula
   depends_on "rust" => :build # for tibs
   depends_on "cryptography" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "cryptography"
 
@@ -85,8 +85,8 @@ class Esptool < Formula
   end
 
   resource "tibs" do
-    url "https://files.pythonhosted.org/packages/57/cd/6cf028decf1c2df4d26077dd5d0532587d93d4917233d5e004133166a940/tibs-0.5.7.tar.gz"
-    sha256 "173dfbecb2309edd9771f453580c88cf251e775613461566b23dbd756b3d54cb"
+    url "https://files.pythonhosted.org/packages/9f/4e/731ae9c3ccc0e65363a4ce411cb8d887e07fa0cb6a3a860b8ce0c57483dd/tibs-2.0.2.tar.gz"
+    sha256 "63a7b87e262c558ccc16be67d34fe60620e39b49bf644ac65e71c4553173ac8f"
   end
 
   resource "websockets" do

@@ -16,7 +16,7 @@ class Flexget < Formula
   depends_on "certifi" => :no_linkage
   depends_on "cryptography" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rpds-py" => :no_linkage
 
   pypi_packages package_name:     "flexget[transmission]",
@@ -237,6 +237,13 @@ class Flexget < Formula
   resource "pendulum" do
     url "https://files.pythonhosted.org/packages/cb/72/9a51afa0a822b09e286c4cb827ed7b00bc818dac7bd11a5f161e493a217d/pendulum-3.2.0.tar.gz"
     sha256 "e80feda2d10fa3ff8b1526715f7d33dcb7e08494b3088f2c8a3ac92d4a4331ce"
+
+    # Bump `pyo3` version to support Python 3.15
+    patch do
+      url "https://github.com/python-pendulum/pendulum/commit/72a744e387a1b8f208a05e0ba7e8d9c03aff78ed.patch?full_index=1"
+      sha256 "d5374bfde8cfaee9e36bab687ec7cb7503bedd895555d641ef78fc202245900e"
+      type :backport
+    end
   end
 
   resource "plumbum" do

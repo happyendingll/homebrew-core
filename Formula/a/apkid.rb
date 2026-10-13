@@ -13,7 +13,7 @@ class Apkid < Formula
     sha256 sequoia: "ceb087eb986f5414c8b01ff2d81ea695d0e6c42cb18887185a7b762c9345dfbd"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "yara"
 
   # `yara-python-dex` has no recent sdist; link `yara-python` to Homebrew's `yara`, which enables DEX

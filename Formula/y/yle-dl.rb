@@ -15,7 +15,7 @@ class YleDl < Formula
 
   depends_on "certifi"
   depends_on "ffmpeg"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rtmpdump"
 
   uses_from_macos "libxml2", since: :ventura

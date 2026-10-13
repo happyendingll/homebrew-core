@@ -35,6 +35,13 @@ class Hurl < Formula
     depends_on "openssl@4" => :build # for `openssl-sys` build script, not linked
   end
 
+  # `test do` block requests hurl.dev.
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
+
   def install
     # `curl-sys` pulls in `openssl-sys` even though macOS uses the system libcurl
     ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4") if OS.mac?

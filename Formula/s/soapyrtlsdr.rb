@@ -1,15 +1,17 @@
 class Soapyrtlsdr < Formula
   desc "SoapySDR RTL-SDR Support Module"
   homepage "https://github.com/pothosware/SoapyRTLSDR/wiki"
-  url "https://github.com/pothosware/SoapyRTLSDR/archive/refs/tags/soapy-rtl-sdr-0.3.3.tar.gz"
-  sha256 "757c3c3bd17c5a12c7168db2f2f0fd274457e65f35e23c5ec9aec34e3ef54ece"
+  url "https://github.com/pothosware/SoapyRTLSDR/archive/refs/tags/soapy-rtlsdr-0.3.4.tar.gz"
+  sha256 "1602035b849bca2e9c189712a08d22dc0c7c3a936f9063ac9851bf3229d4460e"
   license "MIT"
-  revision 3
   head "https://github.com/pothosware/SoapyRTLSDR.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "b6303ddb34564ca41b2de8de70c1e991663722be8506b259ad9edd104e9858b3"
+    sha256 cellar: :any, arm64_golden_gate: "136c704cbf3dc9d6fc14abfdb7cc0cd932da3d2ce599e9181edb1c976c039ca4"
+    sha256 cellar: :any, arm64_tahoe:       "309c2ad92ab86080e8d531570758962b3ce31ff83aa0f33b486637ed1a8a3fd8"
+    sha256 cellar: :any, arm64_sequoia:     "25919bc08646a423801c31624bedac3fcbabb7ea697cb66fe8f774dd2dc39aa2"
+    sha256 cellar: :any, arm64_linux:       "bb045b2445af5b1794977354c6fab9585ec1ef2e0c3e0eb743b3e6c05216967d"
+    sha256 cellar: :any, x86_64_linux:      "d2e78c02527ada8824f35a04f373913f63126146f851e22785e541f3707dde99"
   end
 
   depends_on "cmake" => :build
@@ -19,9 +21,7 @@ class Soapyrtlsdr < Formula
   deny_network_access!
 
   def install
-    # Workaround to build with CMake 4
-    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

@@ -13,13 +13,14 @@ class B4 < Formula
     sha256 cellar: :any, sequoia: "49261833d82cc85c0f8f8708be1fb69be8f24b73a03e2b7d88e8f83eb819a338"
   end
 
+  depends_on "rust" => :build # for `dnspython`
   depends_on "certifi" => :no_linkage
   depends_on "cffi" => :no_linkage
   depends_on "libgit2"
   depends_on "libsodium"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
-  pypi_packages exclude_packages: ["certifi", "cffi"]
+  pypi_packages exclude_packages: %w[certifi cffi]
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/33/1c/f41d4e74c28ab327ff3acd36053f7ea506c55872d7a90b0fa71aa3ab0c89/charset_normalizer-3.5.2.tar.gz"
@@ -32,13 +33,13 @@ class B4 < Formula
   end
 
   resource "dnspython" do
-    url "https://files.pythonhosted.org/packages/8c/8b/57666417c0f90f08bcafa776861060426765fdb422eb10212086fb811d26/dnspython-2.8.0.tar.gz"
-    sha256 "181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f"
+    url "https://files.pythonhosted.org/packages/ef/4a/50822184bd67cc6493f0fb6a880749158fcd31ab3fa07409acfd91f9fc85/dnspython-2.9.0.tar.gz"
+    sha256 "b44dc6b18f07a8b1c56676a19fbfdb5209415b046a9cece286baafa87ff3f7f1"
   end
 
   resource "ezgb" do
-    url "https://files.pythonhosted.org/packages/bd/35/b765be847cd02e6282d8374d7082f97eec8afa6ad40efdf8e22e27ff9004/ezgb-0.2.0.tar.gz"
-    sha256 "f758d883ad63efead5afe5a1b311d6adc9ddc22eb67c901d474cced32d66e2f5"
+    url "https://files.pythonhosted.org/packages/f3/d7/8c1134b28950ea6d8be91aa172717c6091639c59c5dee8f0d95e10e43cb9/ezgb-0.2.1.tar.gz"
+    sha256 "7837ec0606c6c7ad657ab2ccd4295c7f1efaa357b456e7993ff30f454bb7fe4f"
   end
 
   resource "idna" do
@@ -47,8 +48,8 @@ class B4 < Formula
   end
 
   resource "liblore" do
-    url "https://files.pythonhosted.org/packages/d5/2e/f279d5202b6cdbc0548adc627b89e04e4d40739bc209a9fb3c0795851c38/liblore-0.9.0.tar.gz"
-    sha256 "0d9c57376a0787f57ee579c50b8ef2b2e434e4e03dd40ec253a00daf1d38c1f4"
+    url "https://files.pythonhosted.org/packages/05/3e/6cfd7bc2a24f263ee4c2b0bdb242da27c8c04a9b6f432cf8c9282175a020/liblore-0.10.1.tar.gz"
+    sha256 "37e6d756d810c78351179c1a348361ef2966c1649711c1350ae7217e5497f248"
   end
 
   resource "patatt" do

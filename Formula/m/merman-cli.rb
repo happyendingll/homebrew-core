@@ -1,13 +1,16 @@
 class MermanCli < Formula
   desc "Mermaid.js, but headless, in Rust"
   homepage "https://frankorz.com/merman/"
-  url "https://github.com/Latias94/merman/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "900fcb1c947e886ba501f5b5663f89455724fe16c3623fa5bb30b116bec7e33a"
+  url "https://github.com/Latias94/merman/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "b185e0c25e3ac24c6ef0d26846a838a72e1612d3a375aa117c0ab1fdf28182fd"
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "c886979baec2e2a4cccc3bdbc2480402d913203cd6b2b5f3b98d108bd2839827"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4b75b264a6249df640a0482645b146c97ca4df357e31203723f9c5c15b8d1ca9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2ebf24752f9cd6ea0fe34910b7a056b1f17b8008dfe098a7eb2065470fb0cd8f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "032e9d1b02eba6aafe03727c91cbfc996facdc10e940936360ab79f56a5338fb"
+    sha256 cellar: :any,                 arm64_linux:       "631378e1b951eed2b0874cd051e578e0c4a13476cad20733c860ea4ea260df4a"
+    sha256 cellar: :any,                 x86_64_linux:      "661b8923be476e0945759005295f057dad39286b89f1a7cafb2c6ecc407d3a93"
   end
 
   depends_on "rust" => :build

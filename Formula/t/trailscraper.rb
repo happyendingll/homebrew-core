@@ -14,7 +14,7 @@ class Trailscraper < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "b2c642de678c6ae65ade51093b20619ca57b76eafc98e846a83b22a8cdf6b682"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "boto3" do
     url "https://files.pythonhosted.org/packages/61/ce/d6fbf9cdda1b40023ef60507adc1de1d7ba0786dc73ddca59f4bed487e40/boto3-1.38.3.tar.gz"

@@ -13,6 +13,8 @@ class BitbucketCli < Formula
 
   depends_on "go" => :build
 
+  conflicts_with "bkt", because: "both install `bkt` binaries"
+
   deny_network_access!
 
   def fetch

@@ -13,7 +13,7 @@ class Livereload < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "3c3a991a7c537e80dd02b4997c503e66f88968b4441caf3f1e7ccc95c7a369b8"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "tornado" do
     url "https://files.pythonhosted.org/packages/06/61/53d562a57b28c08eda40b258c0f975e360541943ad7c7bef897a40caafda/tornado-6.5.10.tar.gz"

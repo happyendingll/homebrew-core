@@ -12,7 +12,7 @@ class AdbEnhanced < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "938fdb7f415048ac2bfe9ddfb0f3824748ceb2703585c52bf8d52d441768b682"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "docopt" do
     url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"

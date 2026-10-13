@@ -14,7 +14,7 @@ class Bup < Formula
   depends_on "pandoc" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "readline"
 
   on_macos do

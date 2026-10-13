@@ -1,14 +1,17 @@
 class Dprint < Formula
   desc "Pluggable and configurable code formatting platform written in Rust"
   homepage "https://dprint.dev/"
-  url "https://github.com/dprint/dprint/archive/refs/tags/0.62.0.tar.gz"
-  sha256 "0f0fcf1afff40f098dce20743730d69e1a192d69a927cf3cebdcf71ea7f26e5f"
+  url "https://github.com/dprint/dprint/archive/refs/tags/0.63.0.tar.gz"
+  sha256 "9e9719a43b2819f864206434feb8f3e236f7008ac461cf6cf39ef70c4197d874"
   license "MIT"
   head "https://github.com/dprint/dprint.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "33f1337f707e8f77a1a50a671d6a26f45b8ac853ad2f458aa0b30ffa6a1b8b90"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5d96ea315adc30417f1bbfe91d5cd6b254e063017055fccdabeefc0119b56202"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "431e4326894ae3b84bc48cfe295bee44c959c6753209a99cb33d6165bd052471"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a1f6226d3895348dc1f4507d2182b5b5b1e46f034637a64227c21220a022c3c8"
+    sha256 cellar: :any,                 arm64_linux:       "37040743fc9cc5736b678ef2a6b26e74920906b4accb09a95310b3d34eb89f50"
+    sha256 cellar: :any,                 x86_64_linux:      "3fb06c40313a96360c3fa73ea10eda140ac343c70980dbaa7679c85e9b9f69aa"
   end
 
   depends_on "pkgconf" => :build

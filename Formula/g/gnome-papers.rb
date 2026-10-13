@@ -1,15 +1,19 @@
 class GnomePapers < Formula
   desc "Document viewer for PDF and other document formats aimed at the GNOME desktop"
   homepage "https://apps.gnome.org/Papers/"
-  url "https://download.gnome.org/sources/papers/51/papers-51.0.tar.xz"
-  sha256 "4b8caf527d85f7eabc63ebe9d2320e0490653c2e138b88fbf42e6f41dd3e451c"
+  url "https://download.gnome.org/sources/papers/51/papers-51.1.tar.xz"
+  sha256 "ac0db229883b3d2aacbbda1700dc12aa69716664df201120926096f066e4796b"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "1b98f21531c9dbd357181e5cae50c658d081bfda7a20fcb8e745855b0c110be1"
+    sha256 arm64_golden_gate: "6f8be0e1cbcfd5137b4cdd00cae89547cb21740fc901d9588ad6f9ecf95e9c3b"
+    sha256 arm64_tahoe:       "da53f4399ec5f490911694b5f646260278de69c9ff81499fca84a905409bdc56"
+    sha256 arm64_sequoia:     "1bed9b320e5861ce1ef07297ba84648f358706a8afcd46381da9d7e4197eebd3"
+    sha256 arm64_linux:       "38091300352e41102547f22d85518e7e3975a777627a58767e9f1ff119b7c7ee"
+    sha256 x86_64_linux:      "c0f9bc83b5c0d628769b0ba1bee476390928c69ae0f6c004582186afcb344457"
   end
 
+  depends_on "appstream" => :build
   depends_on "blueprint-compiler" => :build
   depends_on "desktop-file-utils" => :build
   depends_on "gettext" => :build # for msgfmt

@@ -12,7 +12,7 @@ class LizardAnalyzer < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "77e6e3457ad5646649e69468c26567d32ede286f917d65386c195b0a02fd98e3"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "lizard", because: "both install `lizard` binaries"
 

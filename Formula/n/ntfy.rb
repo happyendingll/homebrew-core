@@ -1,14 +1,17 @@
 class Ntfy < Formula
   desc "Send push notifications to your phone or desktop via PUT/POST"
   homepage "https://ntfy.sh/"
-  url "https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.29.0.tar.gz"
-  sha256 "95e672f954b0453f27237e98faecf4fdb92caa1ddf2b54b03ac27d4c0850c9c7"
+  url "https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.30.0.tar.gz"
+  sha256 "89562f86c5426696c914b8c4bb6821c6d7454b30b12e864fa9dada8ea367b1b1"
   license any_of: ["Apache-2.0", "GPL-2.0-only"]
   head "https://github.com/binwiederhier/ntfy.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "0e48cb4a47bb0e4a62692a5d58aa374ee66a5c5d895b68bceb8be40242890160"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "10686be23d759b6a1d2094c483eb06b3750bd296299ffaf2d616e1a028867eab"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "10686be23d759b6a1d2094c483eb06b3750bd296299ffaf2d616e1a028867eab"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "10686be23d759b6a1d2094c483eb06b3750bd296299ffaf2d616e1a028867eab"
+    sha256 cellar: :any,                 arm64_linux:       "631b3408b88edb5c11be0f5a8f0f05ceefda9d6ba3d288de12bc83bb8ba4e3b9"
+    sha256 cellar: :any,                 x86_64_linux:      "f453734e009efacb9bfc2516b31e2bb737012d1cb8938d8a626b1bf29ae4184d"
   end
 
   depends_on "go" => :build

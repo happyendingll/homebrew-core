@@ -2,6 +2,7 @@ class Dotnet < Formula
   desc ".NET Core"
   homepage "https://dotnet.microsoft.com/"
   license "MIT"
+  revision 1
   version_scheme 1
   compatibility_version 7
 
@@ -37,6 +38,15 @@ class Dotnet < Formula
           end
         end
       end
+
+      # Backport OpenSSL 4 support
+      patch do
+        url "https://github.com/dotnet/runtime/commit/73ae2764c385c0f7dd6ecd53aeaa961fd6db508c.patch?full_index=1"
+        sha256 "5238ab26337672635a0ffc969680ef1db8399fa38e769a563a01a39568dbaf28"
+        directory "src/runtime"
+        type :backport
+        resolves "https://github.com/dotnet/runtime/pull/135534"
+      end
     end
 
     resource "1xx-manifest" do
@@ -67,8 +77,11 @@ class Dotnet < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "e75481b8feca2b2ecc92ea8978a8a74453fbe173c88f27c5aef3cfd7529bb92b"
+    sha256 cellar: :any, arm64_golden_gate: "fd2793f413fe9f83ace182f636abd8d44184185d80dc8e1fd23527934479b33b"
+    sha256 cellar: :any, arm64_tahoe:       "5ff0fd2eee7bf478f5bd546c21a9c723f0800365facdff1b430e1cc9404ffb1f"
+    sha256 cellar: :any, arm64_sequoia:     "8cf597a57a7b49286aa0c52f9c3f5f41a50232e892214eda60bdfe80bd4fbed9"
+    sha256 cellar: :any, arm64_linux:       "54bdde5fe4b356fd19493f892389d3e79ca963de0b9c3640f7824c460a928814"
+    sha256 cellar: :any, x86_64_linux:      "66a2980731a0f7e1a51e9cb12cab3eea87a2a2c251a4c88371b15179fdfc52fa"
   end
 
   head do
@@ -87,7 +100,7 @@ class Dotnet < Formula
   depends_on "rapidjson" => :build
   depends_on "brotli"
   depends_on "icu4c@78"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "cpio" => :build
   uses_from_macos "python" => :build

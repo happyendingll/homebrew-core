@@ -22,10 +22,9 @@ class Nanopb < Formula
 
   depends_on "cmake" => :build
   depends_on "protobuf" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
-  # Restore `package_name: "nanopb"` when 0.4.9.2 is on PyPI
-  pypi_packages package_name: "", extra_packages: "protobuf"
+  pypi_packages package_name: "nanopb", extra_packages: "protobuf"
 
   resource "protobuf" do
     url "https://files.pythonhosted.org/packages/d9/89/5b8517baa72f84a67b8a307ba953c91057af618bf40bf676f3c03551f8f0/protobuf-7.36.2.tar.gz"

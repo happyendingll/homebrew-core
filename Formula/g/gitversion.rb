@@ -4,16 +4,20 @@ class Gitversion < Formula
   url "https://github.com/GitTools/GitVersion/archive/refs/tags/6.8.2.tar.gz"
   sha256 "02b7efc0b9cfee26971c0f89b27724eb51d33c3230788963e77dc94070173c21"
   license "MIT"
+  revision 1
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "466e8ba03ae22feea26cab28a3c697338ce60d976a874298ac0f62d6099cd62c"
+    sha256 cellar: :any, arm64_golden_gate: "53dd452592c6c061609ed3ebc09588213ad73e42d082aedb7745d6e529f27f61"
+    sha256 cellar: :any, arm64_tahoe:       "67dc8435b985c3f4b81d60c87f61a4daad680471a453574c62b64f4243ffdaac"
+    sha256 cellar: :any, arm64_sequoia:     "f983efd2abb47dd6ae67aafb15c0d45dc87852cf2a2dc3bc3b1a44abf7f76375"
+    sha256 cellar: :any, arm64_linux:       "41ac3fea51b94565a08fa4f9ae6d4d10717ecad319efe979d69779731096c007"
+    sha256 cellar: :any, x86_64_linux:      "d9a08ba35f4c80a141529f090071640dc1bb20525dbcd02149b4e371cc2b72f6"
   end
 
   depends_on "dotnet"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   deny_network_access!
 

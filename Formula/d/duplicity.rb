@@ -25,7 +25,7 @@ class Duplicity < Formula
   depends_on "librsync"
   depends_on "libsodium" # for pynacl
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libffi"
   uses_from_macos "libxml2", since: :ventura
@@ -525,9 +525,12 @@ class Duplicity < Formula
   end
 
   def install
+    # Backport support for 3.15: https://gitlab.com/duplicity/duplicity/-/commit/4ca0c38058795826e20042bfa11e8f063fdb3fb9
+    inreplace "pyproject.toml", 'requires-python = ">=3.10, <3.15"', 'requires-python = ">=3.10"'
+    inreplace "duplicity/__main__.py", "sys.version_info[:2] <= (3, 14)", "sys.version_info[:2]"
+
     without = ["logfury"]
     without += %w[jeepney secretstorage] unless OS.linux?
-
     venv = virtualenv_install_with_resources(without:)
 
     resource("logfury").stage do

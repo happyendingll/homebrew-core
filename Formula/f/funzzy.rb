@@ -1,17 +1,26 @@
 class Funzzy < Formula
   desc "Lightweight file watcher"
   homepage "https://github.com/cristianoliveira/funzzy"
-  url "https://github.com/cristianoliveira/funzzy/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "79c4e934ea2035b365b01d5bcb1c7b72e6cc089543fae29c71800ae274638c0a"
+  url "https://github.com/cristianoliveira/funzzy/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "ebec4e15771fedf8c9bb0c32c0ec4b90b2d24887bc3b8fa054efe7b197f4a4e6"
   license "MIT"
   head "https://github.com/cristianoliveira/funzzy.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "0b78e18f4943bc58f55ee16df5a704f5bae9c08a2804ef590d2e37eca5ca3814"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ad1b3ea1b3c8bfc22526c6d298940269735bb36acbf1614e2c6f5943b01feae4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e938955195d1c31fc67858f12e7d9a06049145822138d370fef340772ad44cbd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a6086d1456b343981a0c95c93400956776754ac251ac2a32bee3b93dd7de4063"
+    sha256 cellar: :any,                 arm64_linux:       "4e153109de65977d5530ff52a705c919831f2eb8736f18a453ba7eb72924da68"
+    sha256 cellar: :any,                 x86_64_linux:      "279f2001b326cb2e0161793a7e1f7a6f3eb7e806cf089fffa7e9140bc4c3202d"
   end
 
   depends_on "rust" => :build
+
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     system "cargo", "install", *std_cargo_args

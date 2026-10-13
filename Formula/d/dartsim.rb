@@ -1,8 +1,8 @@
 class Dartsim < Formula
   desc "Dynamic Animation and Robotics Toolkit"
   homepage "https://dartsim.github.io/"
-  url "https://github.com/dartsim/dart/archive/refs/tags/v6.19.5.tar.gz"
-  sha256 "86539ba78f28a4e0d54eaac961a7b08c09d10ff6518ee77e401796133157bee0"
+  url "https://github.com/dartsim/dart/archive/refs/tags/v6.20.0.tar.gz"
+  sha256 "a203ee8c812b6b4a057b113eee15142da434a54d9f4c119c06a788defa80a30b"
   license "BSD-2-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Dartsim < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "5baf43379a6e8cc9234709359bd51cf10826ba7d1f864b66de9a619b9caa72e8"
+    sha256               arm64_golden_gate: "b283d82991be77494f7464fc40e1d5ab08722f9d80805f71f00cb3c5bcb3c653"
+    sha256               arm64_tahoe:       "19cc73fd7a1c8e1ac91c80897ac1a4b312acc087b52592a6fe172a8eaef08bec"
+    sha256               arm64_sequoia:     "04d2196942279f0b29464b192652e39b91888704085f4373e67fff7ed2541f18"
+    sha256               arm64_linux:       "3b24e78d9846974aa8980a5354d31ab39c872a52088e8a0261cb93f54f5dd681"
+    sha256 cellar: :any, x86_64_linux:      "77695f18dcb306475f64c852dccfbb80a9e187d001074eb50d79bca1eb3dd9bc"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -40,11 +43,25 @@ class Dartsim < Formula
     depends_on "mesa"
   end
 
+  # Keep DART's bundled ImGui compatibility patches without downloading during CMake.
+  resource "imgui" do
+    url "https://github.com/ocornut/imgui/archive/refs/tags/v1.92.8.tar.gz"
+    sha256 "fecb33d33930e12ff53a34064e9d3a06c8f7c3e04408f14cd36c80e3faac863b"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/dartsim/dart/refs/tags/v#{LATEST_VERSION}/dart/gui/imgui/CMakeLists.txt"
+      regex(/set\(IMGUI_TARGET_VERSION\s+"v?(\d+(?:\.\d+)+)"\)/i)
+    end
+  end
+
   def install
+    resource("imgui").stage buildpath/"imgui"
+
     args = %W[
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DDART_BUILD_DARTPY=OFF
       -DDART_ENABLE_SIMD=OFF
+      -DFETCHCONTENT_SOURCE_DIR_DART_IMGUI=#{buildpath}/imgui
     ]
 
     if OS.mac?

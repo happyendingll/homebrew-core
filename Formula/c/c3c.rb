@@ -1,8 +1,8 @@
 class C3c < Formula
   desc "Compiler for the C3 language"
   homepage "https://c3-lang.org"
-  url "https://github.com/c3lang/c3c/archive/refs/tags/v0.8.4.tar.gz"
-  sha256 "d689bbb43d9b392a994420ff801b6b58fe21d6c329a6a36f73c5f57711486ffb"
+  url "https://github.com/c3lang/c3c/archive/refs/tags/v0.8.5.tar.gz"
+  sha256 "9fc60b5092ec63bb77ee5cb80df49a0929e38b2d56ce76d4211ccedb391ca709"
   license "LGPL-3.0-only"
   head "https://github.com/c3lang/c3c.git", branch: "master"
 
@@ -15,8 +15,11 @@ class C3c < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "39033f737930da240a3bc28a35d1795623f6fc829a850b256b726538635d68e4"
+    sha256 cellar: :any, arm64_golden_gate: "1fa75fcb6af2a056b8a0c83c21ae005fcd211b963b5d56fd5412c20f8bfce9f9"
+    sha256 cellar: :any, arm64_tahoe:       "972ebe4783db914403ef8a5b1514c824b7ba34517a64032f97addf1eaffb2c3c"
+    sha256 cellar: :any, arm64_sequoia:     "8b3a849f56e9c17364befced0407a96a3c3011dece0ee877b6890d1961f797cb"
+    sha256 cellar: :any, arm64_linux:       "51635b604ccfcedfe081324ce2467047053840988da76fcd19bdab074fd61a39"
+    sha256 cellar: :any, x86_64_linux:      "401de8cf4231133a7fbf34fd29c84fc394642cee3f63e4ccec9abec45e053c2e"
   end
 
   depends_on "cmake" => :build
@@ -36,6 +39,7 @@ class C3c < Formula
       "-DC3_USE_MIMALLOC=OFF",
       "-DC3_USE_TB=OFF",
       "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+      "-DLLVM_DIR=#{llvm.opt_lib}/cmake/llvm",
       "-DLLVM=#{llvm.opt_lib/shared_library("libLLVM")}",
       "-DLLD_COFF=#{lld.opt_lib/shared_library("liblldCOFF")}",
       "-DLLD_COMMON=#{lld.opt_lib/shared_library("liblldCommon")}",

@@ -1,14 +1,17 @@
 class Atac < Formula
   desc "Simple API client (Postman-like) in your terminal"
   homepage "https://github.com/Julien-cpsn/ATAC"
-  url "https://github.com/Julien-cpsn/ATAC/archive/refs/tags/v0.23.1.tar.gz"
-  sha256 "af34280a23cf3d8cf1b6d79b35a61bfcaaac661e79358166b05548b5153df53a"
+  url "https://github.com/Julien-cpsn/ATAC/archive/refs/tags/v0.24.0.tar.gz"
+  sha256 "7d39488b1dbf30ad370c6fc033922db104aac42796188ee870adfe3e735d9d54"
   license "MIT"
   head "https://github.com/Julien-cpsn/ATAC.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "6b853d0423877650b385637bfa84eb0082e09e7d0bfe8561f9825932cbaff5b6"
+    sha256 cellar: :any, arm64_golden_gate: "67388cc622f5850aa2d7f1af0f199e27233ecf4d7e8d05ad86f03afd26489d7a"
+    sha256 cellar: :any, arm64_tahoe:       "1b37cd21394c7e22cebe4c97817cd731148a5917d7aa6e5169cb45ff19670272"
+    sha256 cellar: :any, arm64_sequoia:     "65c774f656d17fe803f1ee0368f7282773365db68ce38f852dc521dd0952cf8e"
+    sha256 cellar: :any, arm64_linux:       "dc55cf5581582f8951902223f2acc4d1579c013992825884a2f62a5049215980"
+    sha256 cellar: :any, x86_64_linux:      "c2a6027961705ce7c5e9fc2a4a09efa1ecca2886e9c238e796e0e1bc391c34ff"
   end
 
   depends_on "pkgconf" => :build

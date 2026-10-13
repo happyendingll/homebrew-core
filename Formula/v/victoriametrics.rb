@@ -1,8 +1,8 @@
 class Victoriametrics < Formula
   desc "Cost-effective and scalable monitoring solution and time series database"
   homepage "https://victoriametrics.com/"
-  url "https://github.com/VictoriaMetrics/VictoriaMetrics/archive/refs/tags/v1.153.0.tar.gz"
-  sha256 "ea0d38ebe710c5ce542158440bc873b0b744837d47e5268995a51c2c4c6da11d"
+  url "https://github.com/VictoriaMetrics/VictoriaMetrics/archive/refs/tags/v1.154.0.tar.gz"
+  sha256 "58af274d6088698d71ead526b280aafde96f8e26578db58fd91e9bbbfac0d561"
   license "Apache-2.0"
 
   # There are tags like `pmm-6401-v1.89.1` in the upstream repo. They don't
@@ -14,8 +14,11 @@ class Victoriametrics < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "73c9bdfce7693884bfe518bb78acde80a37d068a0df53f3ab02d55739b1dc348"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ffd1097c812c3f3fd5542987b1f45e227caf68d3a10ff897aa1b53f747dda02a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9fa8a37333a5d7bb4121a11894dd46eba3a563736748437ab1fbabdcc83d1e7d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f0a29b7f1ed3415491c0551d930a9f46e805e8d0f4a324cefb5927b2e50eb95f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ab46743b46b513a2692c02767f9d44dea2c8d0e9d2abb7bc554d21e748058bb6"
+    sha256 cellar: :any,                 x86_64_linux:      "c873986c695530eb10a1c4a676cfd9274d45b56af49c57648581f3e7c0f09c86"
   end
 
   depends_on "go" => :build

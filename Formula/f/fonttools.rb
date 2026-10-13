@@ -13,7 +13,7 @@ class Fonttools < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "b859aef1bc133bdc5faac176793e53e09bbd5d6984f2bd9fd690cc7fcf659f51"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
