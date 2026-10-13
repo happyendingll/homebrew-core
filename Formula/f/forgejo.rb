@@ -7,11 +7,8 @@ class Forgejo < Formula
   head "https://codeberg.org/forgejo/forgejo.git", branch: "forgejo"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "286e9e07d1025f9fd6953f5f06120b83af3e9bf09b6bca160af8bc0369623f6a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e53ff8db08b6bb2760475a950648f7de4a84ac20d26a0f258ec30ff63d7d9dec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "40548aa503becdde73d93200a487ae99350777631e6d520b95a7d37efd70cdae"
-    sha256 cellar: :any,                 arm64_linux:       "2b4126d98fd44fd61d9923f4747e5da1bd43fa5767fa307c5c9c9bb366051aa9"
-    sha256 cellar: :any,                 x86_64_linux:      "40abfef27d2241acc55bfdc8b024d4a64bca0f62ffeec940760f7b405858b9f3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc1526cfb42936e326a4cb1241f2c2f64bbd81cc13e072f7f4bddcf6cc6134e1"
   end
 
   depends_on "go" => :build

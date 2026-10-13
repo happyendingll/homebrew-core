@@ -9,11 +9,8 @@ class Gitversion < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "53dd452592c6c061609ed3ebc09588213ad73e42d082aedb7745d6e529f27f61"
-    sha256 cellar: :any, arm64_tahoe:       "67dc8435b985c3f4b81d60c87f61a4daad680471a453574c62b64f4243ffdaac"
-    sha256 cellar: :any, arm64_sequoia:     "f983efd2abb47dd6ae67aafb15c0d45dc87852cf2a2dc3bc3b1a44abf7f76375"
-    sha256 cellar: :any, arm64_linux:       "41ac3fea51b94565a08fa4f9ae6d4d10717ecad319efe979d69779731096c007"
-    sha256 cellar: :any, x86_64_linux:      "d9a08ba35f4c80a141529f090071640dc1bb20525dbcd02149b4e371cc2b72f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any, sequoia: "672b0268033764edf92ce25fb09fb4fc1000ea69056ccfabeb7aef39d639ce04"
   end
 
   depends_on "dotnet"

@@ -6,11 +6,8 @@ class GnomePapers < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "6f8be0e1cbcfd5137b4cdd00cae89547cb21740fc901d9588ad6f9ecf95e9c3b"
-    sha256 arm64_tahoe:       "da53f4399ec5f490911694b5f646260278de69c9ff81499fca84a905409bdc56"
-    sha256 arm64_sequoia:     "1bed9b320e5861ce1ef07297ba84648f358706a8afcd46381da9d7e4197eebd3"
-    sha256 arm64_linux:       "38091300352e41102547f22d85518e7e3975a777627a58767e9f1ff119b7c7ee"
-    sha256 x86_64_linux:      "c0f9bc83b5c0d628769b0ba1bee476390928c69ae0f6c004582186afcb344457"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 sequoia: "9837153693d69e4de7668afbd22a14badbdd0fc1aa5f5124d8857ec757b14d77"
   end
 
   depends_on "appstream" => :build

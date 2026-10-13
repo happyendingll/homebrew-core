@@ -18,11 +18,8 @@ class Argocd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "13256f768d8e22001e710a7a5d9d486bae06c3d31a36418161b56dc07b413f0d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ccd4889eee8e1f0364ccf03a977682cead28b9f656abb47fa67b40c1b8203baa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "42f9bdd62ddf0d31bbf0d81537498a0069bf380f9d395a079b1f31af1b6adb75"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1b5957dd7c28a45beb015e3cb57eec565f9c895c3c6f7a1bd1ed4382d59238c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b998e63c67f2b781c294cf94c632ac094ab0557b95aaa1fc05175e09f33b7d1b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
+    sha256 cellar: :any_skip_relocation, sequoia: "ba47a6c031f0298ea6c209bf72e1acbb349ed5e07a62c9aad9edd899fd3e069d"
   end
 
   depends_on "corepack" => :build # requires newer `yarn`
