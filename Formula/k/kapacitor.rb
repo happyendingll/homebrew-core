@@ -2,8 +2,8 @@ class Kapacitor < Formula
   desc "Open source time series data processor"
   homepage "https://github.com/influxdata/kapacitor"
   url "https://github.com/influxdata/kapacitor.git",
-      tag:      "v1.8.7",
-      revision: "732d0f06a862762529eda2d2743986d6fff5e940"
+      tag:      "v1.8.8",
+      revision: "5795d00a62fa02bec66c4ae0ed0c572cb7d2fa69"
   license "MIT"
   head "https://github.com/influxdata/kapacitor.git", branch: "master"
 
@@ -13,8 +13,11 @@ class Kapacitor < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "66fa5fea9a55c51612c7309c248a8243e025bce1e43e2e8501826018856b5a76"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6fbde5666d07e79d6bf9570434b225ebddd7639bfb054daee46311dbf069bbc7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a81557daaec013aa0297b6ce2b0daae7ca291a1ebdf14fbd884b8309d4e5f5df"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e7ae076f08d9895c6b48e4f10db375a0923e14a9f80f42add23c4d58a683fe7a"
+    sha256 cellar: :any,                 arm64_linux:       "22ece7e2ac1d8d7565b2c6fd4c170b4d6d4c87bf0364470a67e730222cea56c2"
+    sha256 cellar: :any,                 x86_64_linux:      "6dfc9e8f3c38ee4e785d43809c51bdcab0a5ac68109b01136f1115827f2261ad"
   end
 
   depends_on "go" => :build

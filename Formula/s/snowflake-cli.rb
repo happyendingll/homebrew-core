@@ -19,7 +19,7 @@ class SnowflakeCli < Formula
   depends_on "cryptography" => :no_linkage
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "snow", because: "both install `snow` binaries"
 
@@ -328,6 +328,8 @@ class SnowflakeCli < Formula
 
     # run separately to avoid `protoc-wheel-0` dependency
     ENV.append_path "PATH", venv.root/"bin"
+    # Drop `python_requires` upper bound to allow Python 3.15
+    ENV["SNOWFLAKE_IS_PYTHON_RUNTIME_TEST"] = "1"
     venv.pip_install(resource("snowflake-snowpark-python"), build_isolation: false)
 
     generate_completions_from_executable(bin/"snow", shell_parameter_format: :typer)

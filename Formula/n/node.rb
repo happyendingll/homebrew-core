@@ -4,6 +4,7 @@ class Node < Formula
   url "https://nodejs.org/dist/v26.11.1/node-v26.11.1.tar.xz"
   sha256 "2c79a3c1095c7da4c549c84e90b2d28df5479315ab6d0aff9bc71dcf4c9df1e0"
   license "MIT"
+  revision 1
   head "https://github.com/nodejs/node.git", branch: "main"
 
   livecheck do
@@ -12,8 +13,11 @@ class Node < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "3a88f1bd3946a069aa96b87b2579ab6bc6f2375a50943fb64b0e18d1ff2d3b53"
+    sha256 arm64_golden_gate: "b5d0dc3b43cee6777434c5bf69f4823a0f6d09a767075ca08a97a1ec710dfb2f"
+    sha256 arm64_tahoe:       "3a20ddbb067d55278e52c866d1f8e4f124086130328be8b19380447f3007cc3e"
+    sha256 arm64_sequoia:     "924125615b80bd8ba2469f6a29abee8f3b729ece703821d2c8d2edccd44e15d0"
+    sha256 arm64_linux:       "728242332e5513e8a3660a2598b974f7030cfc58aa02b85225ced65b2a52d76c"
+    sha256 x86_64_linux:      "9f8d3a229449f7d80b0df3babe161ef6f307fb2e7fe3e2d7e1b8d2c2db00f4f1"
   end
 
   depends_on "pkgconf" => :build

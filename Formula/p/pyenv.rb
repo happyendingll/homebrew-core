@@ -1,8 +1,8 @@
 class Pyenv < Formula
   desc "Python version management"
   homepage "https://github.com/pyenv/pyenv"
-  url "https://github.com/pyenv/pyenv/archive/refs/tags/v2.8.9.tar.gz"
-  sha256 "a6916ca4079461aea5715e205bfd370b7851b122a1bc32c32ea1191ca5b1c477"
+  url "https://github.com/pyenv/pyenv/archive/refs/tags/v2.8.10.tar.gz"
+  sha256 "d96206858db0ad8b1becb9840b99ba794d02ea3fa36bc8b504117948ae6d003c"
   license "MIT"
   version_scheme 1
   compatibility_version 1
@@ -14,8 +14,11 @@ class Pyenv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6d182534e029c4ed2640d21c48e85878359d5b9d7ef6aca9b9a88ac4613d487d"
+    sha256 cellar: :any, arm64_golden_gate: "d1148c7cc0808d0227e831de52dc0cc6b67ea663754486304e73f41e65184095"
+    sha256 cellar: :any, arm64_tahoe:       "3c4947ace401ebdd79c22c71fe56903a578c270327792b9d7cb378f4bc2962e0"
+    sha256 cellar: :any, arm64_sequoia:     "f0bcbae1a3ea3a2264f5cf08db0b08432c89ccd857c0622433f5bbc4636b215b"
+    sha256 cellar: :any, arm64_linux:       "7e4db771dd6995efec44c697418530fc2ed01e8df242106cd3d9156ff7cfbe99"
+    sha256 cellar: :any, x86_64_linux:      "d085708a1d4a0a899488fd343c6a32130d6f564fdb102a22a602ec06a381cf2d"
   end
 
   depends_on "autoconf"

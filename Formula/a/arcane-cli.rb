@@ -1,14 +1,17 @@
 class ArcaneCli < Formula
   desc "Command-line client for the Arcane Docker management platform"
   homepage "https://getarcane.app"
-  url "https://github.com/getarcaneapp/arcane/archive/refs/tags/v2.15.1.tar.gz"
-  sha256 "cc99866518c8e66481164d9d0de3c8b3149ce349c31114d2fc2981af6ac16fd1"
+  url "https://github.com/getarcaneapp/arcane/archive/refs/tags/v2.16.0.tar.gz"
+  sha256 "3a5ed5953472d8c313a0ea80fa9ae27f39135e5520b8bff28e90371a3ece7a6b"
   license "BSD-3-Clause"
   head "https://github.com/getarcaneapp/arcane.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "6687833d46a033b5dfd7d3a0753be3b0416fbfcd02ef30422e3556ba9353639a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "65bc2d6373391b127f17bb09632d411696d9cfa882525d23ed9e1cd41a7015ad"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "65e7761e8536e83f560d9456dc49b737c9e2b6a8bf93f6de958102b378e21b13"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "95f0bee40ef669fa457ae42d262730685bda8ce0a09e529436d334180eb826d6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "90f8ac47a71028a3b1513405db1a4edfba2519d81cb92f5907f424961c259882"
+    sha256 cellar: :any,                 x86_64_linux:      "065d6a7399b35960911e47399b6b08f1dd599ce8c8e0d78b509a24965716ae8d"
   end
 
   depends_on "go" => :build
@@ -25,7 +28,10 @@ class ArcaneCli < Formula
     ENV["GOWORK"] = "off"
 
     # Homebrew manages upgrades, so drop the self-update command
-    inreplace "cli/pkg/root.go", "rootCmd.AddCommand(selfupdate.Cmd)", "_ = selfupdate.Cmd"
+    inreplace "cli/pkg/root.go" do |s|
+      s.gsub! "\t\"github.com/getarcaneapp/arcane/cli/v2/pkg/selfupdate\"\n", ""
+      s.gsub! "selfupdate.Command(), ", ""
+    end
 
     cd "cli" do
       ldflags = %W[

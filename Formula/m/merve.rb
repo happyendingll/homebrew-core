@@ -4,11 +4,14 @@ class Merve < Formula
   url "https://github.com/nodejs/merve/archive/refs/tags/v1.2.2.tar.gz"
   sha256 "8f19c2132447b9113545ffd399cb2bc1e61c6166743921b04883f8e1d778d69e"
   license "Apache-2.0"
-  revision 3
+  revision 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "f82e08219f89cc7751616adeeb0a94aeeae31e68e7247608e5361f6ffe405f91"
+    sha256 cellar: :any, arm64_golden_gate: "eb81276048e809a4c28176af2240e5609180e0cc8e2aeef4fdc79c12fa7b97bb"
+    sha256 cellar: :any, arm64_tahoe:       "573b28f8a25f0b55132b83517661ad24408af9834c8f04f35ef6fab1db3b5432"
+    sha256 cellar: :any, arm64_sequoia:     "050ddc221175cdc56757c1d3b4bba486159470bbf9b9a79ce14931b488168276"
+    sha256 cellar: :any, arm64_linux:       "5d8412dc4a0a5b39e48fa2572a4f68fc55fba6c831663455a3d741b3646b3023"
+    sha256 cellar: :any, x86_64_linux:      "5fe0317b17f744a2473976a7c4a3e8ba8a0e42288a886f428761c62177403938"
   end
 
   depends_on "cmake" => :build
