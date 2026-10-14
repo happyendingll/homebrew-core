@@ -1,14 +1,17 @@
 class Kew < Formula
   desc "Command-line music player"
   homepage "https://github.com/ravachol/kew"
-  url "https://github.com/ravachol/kew/archive/refs/tags/v4.4.0.tar.gz"
-  sha256 "1b3b66f5003a272ac33f38415968b625f4dd0a6a9eb1417c14c739b580ad62bb"
+  url "https://github.com/ravachol/kew/archive/refs/tags/v4.4.1.tar.gz"
+  sha256 "b4a534501a4ce8813a8e9b06a87ce313af6cc53bb231c88c38c0d6b1a70358c5"
   license "GPL-2.0-or-later"
   head "https://github.com/ravachol/kew.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "d33b0537a46c98c5a32610eb09e51670dd9ad421246840fd598e94d8f4080367"
+    sha256 arm64_golden_gate: "8bc37b352f6c759d7dc775a13a4d3dfc76e78b2b441fc800a9ded432eea8acf0"
+    sha256 arm64_tahoe:       "3c7c767e9eb3745043ad7208c649941447cc3d83301e0949b50ca6ced6277ec1"
+    sha256 arm64_sequoia:     "f522728d32b4eea9b78dd6cae85a9c9c496147cd02cf3b33d37dea5fdcaa706e"
+    sha256 arm64_linux:       "f1a29927ee06dc187e45be167842411344c513e091023d2152681d285a516a75"
+    sha256 x86_64_linux:      "edd4564aefaf6c3fc1d56c116c34e716e33f34d34cd49e928770b05bfb1582ff"
   end
 
   depends_on "pkgconf" => :build

@@ -1,10 +1,9 @@
 class Pypy311 < Formula
   desc "Implementation of Python 3 in Python"
   homepage "https://pypy.org/"
-  url "https://downloads.python.org/pypy/pypy3.11-v8.0.0-src.tar.gz"
-  sha256 "829cef413d84383563488f0234b3cc537a8034e43fda13e0530500dad2d5dc3b"
+  url "https://downloads.python.org/pypy/pypy3.11-v8.0.1-src.tar.gz"
+  sha256 "7e5f2801ee87d52fb4de096fb650bca4d5605cd8b5fe278dba5500019fa3739e"
   license "MIT"
-  revision 1
 
   livecheck do
     url "https://downloads.python.org/pypy/"
@@ -12,8 +11,11 @@ class Pypy311 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "316daf9d8e4cc2014ff1f1393f655c98784a85219f121b82a8a51fd5c29767ee"
+    sha256 cellar: :any, arm64_golden_gate: "ca845243ea3f0e6c8ec1fd9fc2575e26c653af9a72d2d506291b3135c5bf2368"
+    sha256 cellar: :any, arm64_tahoe:       "ecfa389e41b553f51acce467a336b6b18a2d8e35122ba6c22c6a8d3deac16574"
+    sha256 cellar: :any, arm64_sequoia:     "abc52ea4fc5c308b145a11c9fe4d809298f660112db33f22148f1b0a024ce365"
+    sha256 cellar: :any, arm64_linux:       "ec6aabbf69b4000e0eaf31c9de8b9cfe8875bd85aa32c7a2c5e8637c90bafd43"
+    sha256 cellar: :any, x86_64_linux:      "f52576942c51569d7bb155bca6e8484a96c5c5922e83f0d71d203b70d589369c"
   end
 
   # https://github.com/pypy/pypy/blob/main/pypy/doc/release-v8.0.1.rst

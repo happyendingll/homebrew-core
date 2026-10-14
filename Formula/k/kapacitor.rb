@@ -33,6 +33,20 @@ class Kapacitor < Formula
     end
   end
 
+  # `test do` block runs a local kapacitord server
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download"
+    resource("pkg-config-wrapper").stage do
+      system "go", "mod", "download"
+    end
+    # `pkg-config-wrapper` drives a cargo build of libflux inside the `flux`
+    # Go module during `install`; warm the cargo cache for it here.
+    flux_dir = Utils.safe_popen_read("go", "list", "-m", "-f", "{{.Dir}}", "github.com/influxdata/flux").chomp
+    system "cargo", "fetch", "--manifest-path", "#{flux_dir}/libflux/Cargo.toml", *std_cargo_fetch_args
+  end
+
   def install
     # `flux-core` Workaround for `error: hiding a lifetime that's elided elsewhere is confusing` with `rust` 1.89+
     ENV.append_to_rustflags "--allow dead_code --allow mismatched_lifetime_syntaxes"
@@ -40,6 +54,8 @@ class Kapacitor < Formula
     ENV.append_to_rustflags "--allow hidden_glob_reexports"
     # `flux` Workaround for `error: value assigned to `<varname>` is never read`
     ENV.append_to_rustflags "--allow unused_assignments"
+    # `flux` Workaround for `error: use of deprecated associated function` with `rust` 1.99+
+    ENV.append_to_rustflags "--allow deprecated"
 
     # Workaround to avoid patchelf corruption when cgo is required (for flux)
     if OS.linux? && Hardware::CPU.arch == :arm64

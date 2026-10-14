@@ -3,19 +3,22 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/6c/ad/650e73b21e0f31152b2db697a16e86cbf30d3ea75b0c1c820f9d08a1df9c/schemathesis-4.30.1.tar.gz"
-  sha256 "f0abf5c92c8452a6a746c0d8c80fc327a9951105ce77b84339e4b73ff04999a7"
+  url "https://files.pythonhosted.org/packages/b0/a4/8431a1f5f841536bb74e5a3ac2240163f35107a06968232aa4219c15b5ab/schemathesis-4.31.0.tar.gz"
+  sha256 "2b9bb06ce2059a53bbaee0dd1cc60ec1c5bfd323f5c153dd82b23ce94d0be7f5"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "46fac939fe47944cc356f1cc7aaeb5e36e0a1df7b9670902141212eecf9d26e3"
+    sha256 cellar: :any, arm64_golden_gate: "d50d673bb40990cd00c3251b74f4de448a44ab0d1d852a644c16cf8986753216"
+    sha256 cellar: :any, arm64_tahoe:       "d4cb56251cd0f25f10643eeb02d63002d455bde33f52dadaadaad02a0d804bb0"
+    sha256 cellar: :any, arm64_sequoia:     "8ccca974e13122c5da97af6f23552fa6a50a176b6b3c494435b2eb407fca6155"
+    sha256 cellar: :any, arm64_linux:       "f82f816d0f67e3374191840bfa8965ac3d652db575e525dfe0857cf5f375fbd5"
+    sha256 cellar: :any, x86_64_linux:      "2144d0542a3501f98d0a9940799996de21302cdcf755589d7dac722134e390a4"
   end
 
   depends_on "rust" => :build # for jsonschema-rs
   depends_on "certifi" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rpds-py" => :no_linkage
 
   conflicts_with "st", because: "both install `st` binaries"
@@ -48,8 +51,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/93/a8/bd70d7c2966e561228b9fdc075ee77c0ba577dcbbfbf921edf614db14f6a/hypothesis-6.168.5.tar.gz"
-    sha256 "76b9226962fe11d40858253a967eda95bb65811365286317e0118f4ec8f808c7"
+    url "https://files.pythonhosted.org/packages/b7/b7/fcddfc235d1ab24b831e99ad3385361e87eb4fed427f527a7f15866214ad/hypothesis-6.169.0.tar.gz"
+    sha256 "b65749d7f7a2fddfb106bb57c9902db4ab25ce8724c821f4af50cc58891a6b7b"
   end
 
   resource "hypothesis-graphql" do

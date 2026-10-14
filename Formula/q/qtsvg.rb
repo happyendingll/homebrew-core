@@ -1,10 +1,10 @@
 class Qtsvg < Formula
   desc "Classes for displaying the contents of SVG files"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtsvg-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtsvg-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtsvg-everywhere-src-6.11.2.tar.xz"
-  sha256 "d594337feca84c26fb67fe87b85e6a5c12fda404b611d905f9d138210c311876"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtsvg-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtsvg-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtsvg-everywhere-src-6.12.0.tar.xz"
+  sha256 "e4ab39534ec97987b1b9b60ef7f4d3253d5912a69f8c713a01753174a4029331"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtsvg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "f342f96cfac7c97a6e0fa3eda9fd74e12a626c51235b111c199fcba35c80d788"
+    sha256 cellar: :any, arm64_golden_gate: "766966ea0536727b4c153d4cf8bec16a769bace7a0620557c7433e9675940592"
+    sha256 cellar: :any, arm64_tahoe:       "58aa1b5e16895e651a1d54bea91b783f1cd67a94201ac25bd815289fa08c6471"
+    sha256 cellar: :any, arm64_sequoia:     "6afb926d84442e565b251aec3231e8237178e1a9ef86da5f5dffe145b1aab73a"
+    sha256 cellar: :any, arm64_linux:       "6c7eee50f07137f754546614e814f7772478a65cc5bba7daa7acefafdf21f25d"
+    sha256 cellar: :any, x86_64_linux:      "58efe3465920a58733ab210bc5f9cd5b8e25c622ad36f226a083d943e289c3ee"
   end
 
   depends_on "cmake" => [:build, :test]

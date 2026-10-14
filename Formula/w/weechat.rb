@@ -22,7 +22,7 @@ class Weechat < Formula
   depends_on "libgcrypt"
   depends_on "lua"
   depends_on "ncurses"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "ruby"
   depends_on "tcl-tk"
   depends_on "zstd"
@@ -40,7 +40,7 @@ class Weechat < Formula
   end
 
   def install
-    tcltk = Formula["tcl-tk"]
+    tcltk = deps.find { |dep| dep.name.match?(/^tcl-tk(@\d+(\.\d+)*)?$/) }.to_formula
     args = %W[
       -DENABLE_ENCHANT=ON
       -DENABLE_GUILE=OFF

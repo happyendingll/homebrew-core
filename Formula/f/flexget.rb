@@ -3,13 +3,16 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/98/db/ccdabd924e6e9d954dcc683fdb4c0016f8fc21c7be3d79dd7fac2f1566c7/flexget-3.22.2.tar.gz"
-  sha256 "d1ae3caba93f89027cd4c9731fc11b69fe9784a729c5ea9dc24d488b296010ad"
+  url "https://files.pythonhosted.org/packages/ed/80/b471bdbbb60814ce6317b3f27ea19030fc7e9a01fd0b2f458c0ef297f585/flexget-3.22.3.tar.gz"
+  sha256 "f85a000908c1644112860adb75a6c2208ea399c1edabc7b07d83042c17bbe216"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "5a8aefcfbc344ace9959f67da92fb2f612dccc95af6a46bc76c62a151ba2f2b8"
+    sha256 cellar: :any, arm64_golden_gate: "c8cb878c8d7ace341d3f1e0834546aaf76991519bcc49ae819775245af992bd3"
+    sha256 cellar: :any, arm64_tahoe:       "78fadade302a0079e252faf9d4112a602f91f1b24e1730ba0496b90a1f3315be"
+    sha256 cellar: :any, arm64_sequoia:     "854399cf566044f166fa963f0243f97a3419e3515f98ca1e4cf2ab486525f10d"
+    sha256 cellar: :any, arm64_linux:       "90b92beeb4f0f25bb7fb5b02cfe4198ace32929f97d40bb385377b230f70ca78"
+    sha256 cellar: :any, x86_64_linux:      "62fdd9c4e925f58bf7e8d1f66b5390bd057221862ab7bbcdc40e857911376f44"
   end
 
   depends_on "rust" => :build
@@ -235,15 +238,8 @@ class Flexget < Formula
   end
 
   resource "pendulum" do
-    url "https://files.pythonhosted.org/packages/cb/72/9a51afa0a822b09e286c4cb827ed7b00bc818dac7bd11a5f161e493a217d/pendulum-3.2.0.tar.gz"
-    sha256 "e80feda2d10fa3ff8b1526715f7d33dcb7e08494b3088f2c8a3ac92d4a4331ce"
-
-    # Bump `pyo3` version to support Python 3.15
-    patch do
-      url "https://github.com/python-pendulum/pendulum/commit/72a744e387a1b8f208a05e0ba7e8d9c03aff78ed.patch?full_index=1"
-      sha256 "d5374bfde8cfaee9e36bab687ec7cb7503bedd895555d641ef78fc202245900e"
-      type :backport
-    end
+    url "https://files.pythonhosted.org/packages/d8/3f/345b5bc712ce806f3b5fbce6eea141f46713b2c1a7654eaead1b2593d5a1/pendulum-3.3.0.tar.gz"
+    sha256 "9aceb5b24e9f55381df08187397e88546b5ba82f698b741cbf1a05c5e2369116"
   end
 
   resource "plumbum" do
@@ -332,8 +328,8 @@ class Flexget < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/71/c3/1b817965ac12dc002d7c9cd7dfffdd7d4fbf9b45763ef2ffe7b86ee94670/soupsieve-2.10.tar.gz"
-    sha256 "49e9380d7d2905463583bafe285e818c7366a9ed7b3aee221c1ac79c905d8bc0"
+    url "https://files.pythonhosted.org/packages/5e/77/2dcfa996b01702ab8fd0763d84098f6a640d6162a328f1c04c2697579a1a/soupsieve-3.0.3.tar.gz"
+    sha256 "7dcf6022eed0399eb9934a75e020148f7a2024c37b7dfcd3cf2c5505d69c364e"
   end
 
   resource "sqlalchemy" do

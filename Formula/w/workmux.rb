@@ -1,13 +1,16 @@
 class Workmux < Formula
   desc "Git worktrees + tmux windows for zero-friction parallel dev"
   homepage "https://workmux.raine.dev"
-  url "https://github.com/raine/workmux/archive/refs/tags/v0.1.273.tar.gz"
-  sha256 "cbac0eedcd3d9f21a172a9b9f3a6f93f0f104ec4bfdcbdf14f7d00ce65280b0c"
+  url "https://github.com/raine/workmux/archive/refs/tags/v0.1.276.tar.gz"
+  sha256 "6caf4d834af5088ce5b1bb6ee2f65127ac31e1e1d7133e38a99e73d3b41b0770"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "e1ee12655fee6492dd9a67740163e66a949b8aeb67e7a23dd094950c69866bf1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc2b934281d55863985215892e829733abc7f1c12ff36f9ca2a37196bc35d5e6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "14dd3c695899aa209105a66e5f8fdcbfd502015ded6946c340f64d0bbc2aae50"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9502b91775a4e7263fde03706be363fa78d5cf03ecb83e56443bd8167332a801"
+    sha256 cellar: :any,                 arm64_linux:       "5a34baf2ec88dacf87008bda0943053740196ca0135132ce6d32cec4964632c2"
+    sha256 cellar: :any,                 x86_64_linux:      "6a3413ae50496b6b04bc1e2506aac0393870fbbdea0c2207b3c2052106750fb3"
   end
 
   depends_on "rust" => :build

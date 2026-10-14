@@ -17,7 +17,7 @@ class Gensio < Formula
 
   depends_on "glib"
   depends_on "openssl@4"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "tcl-tk"
 
   on_macos do

@@ -1,8 +1,8 @@
 class Murex < Formula
   desc "Bash-like shell designed for greater command-line productivity and safer scripts"
   homepage "https://murex.rocks"
-  url "https://github.com/lmorg/murex/archive/refs/tags/v7.3.1231.tar.gz"
-  sha256 "318a283faf9de54ef5caec711cb26a38bbd22f243f5940dceebc8c7b5f80c791"
+  url "https://github.com/lmorg/murex/archive/refs/tags/v7.3.1232.tar.gz"
+  sha256 "a907bea8e343c3c3627fe4934233f352de2cc0f87d53230745534bd8f0037de4"
   license "GPL-2.0-only"
   head "https://github.com/lmorg/murex.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Murex < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "454512e8d7758a9363111b937b68e75085732d21c3d8494c9923ba10cf9f7dfe"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ebec12002794e223cdc399161696710369675709e159db1c06364edd0f4e87d4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ebec12002794e223cdc399161696710369675709e159db1c06364edd0f4e87d4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ebec12002794e223cdc399161696710369675709e159db1c06364edd0f4e87d4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "731cdbaa96d155b1519715178c14f372803448817e8deaa255a7ffc67dad09c8"
+    sha256 cellar: :any,                 x86_64_linux:      "525c0d71c611fb36e689d81dfcf4b26dc21bb1ce0954e66343a91af3315250c5"
   end
 
   depends_on "go" => :build

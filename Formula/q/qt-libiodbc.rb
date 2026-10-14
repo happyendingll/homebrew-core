@@ -1,10 +1,10 @@
 class QtLibiodbc < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
-  sha256 "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtbase-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtbase-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtbase-everywhere-src-6.12.0.tar.xz"
+  sha256 "a951bd163c7b80fc6b8c88d7668fb56abf91c152373e13c10666763238131307"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
 
   livecheck do
@@ -12,8 +12,11 @@ class QtLibiodbc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "a90ae4c131050315049d3b9ef7febc17af151347247aefd2fa26994c40fd18a3"
+    sha256 cellar: :any, arm64_golden_gate: "39c33f46e789fbe041609d6adc454167b4e750490b58b11506f3d1697fe9717d"
+    sha256 cellar: :any, arm64_tahoe:       "a78c34196a59cfe1fcbee624214c347305aa969ab25e8c913f2ba68e21de73d9"
+    sha256 cellar: :any, arm64_sequoia:     "d47c57072b1d88ea8bdbf187f62b306173758c368b7d2a00d8017e7d145d3cc9"
+    sha256 cellar: :any, arm64_linux:       "19b10c6160f6b10e7cec097e488e2dd6b41ae5bf0708b7c0c2ffe9e816f5a2dc"
+    sha256 cellar: :any, x86_64_linux:      "41b5ccdecf6be1870ddf2f90f2eb5f9a8650878dd37a979a2aa321fb30fff36f"
   end
 
   depends_on "cmake" => [:build, :test]

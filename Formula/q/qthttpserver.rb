@@ -1,10 +1,10 @@
 class Qthttpserver < Formula
   desc "Framework for embedding an HTTP server into a Qt application"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qthttpserver-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qthttpserver-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qthttpserver-everywhere-src-6.11.2.tar.xz"
-  sha256 "f0f5763b2ba58f20f5cffdfbedb97e62e32b5c639df6d9a6378905028be7bd8e"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qthttpserver-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qthttpserver-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qthttpserver-everywhere-src-6.12.0.tar.xz"
+  sha256 "ede040264551d0930ea5f6c1a4c18a7a3dea59d635e71cd2e81f02567d7814a4"
   license all_of: [
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qthttpserver < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "a30995635dfb06ec9b97173bc1f3f52d822bf3c574d44c2681ecce6a52e684cb"
+    sha256 cellar: :any, arm64_golden_gate: "5cd6d053b5b9519455bb3a77959e697f4dc2337ad7c8d7fffd17fe56153b9d09"
+    sha256 cellar: :any, arm64_tahoe:       "32ae7509cc9a60f76d40d9d25761b88847e4c3c967f560f16be5f3fe33ba09c9"
+    sha256 cellar: :any, arm64_sequoia:     "acf6095fbb23bfbdac234384aaa82a88cb8be092a5ed88707f3ebb2f2ab4c59f"
+    sha256 cellar: :any, arm64_linux:       "4540c5a250715a336eee659486cd9d65dbf4f3e7677e242f76acad649c08cd8a"
+    sha256 cellar: :any, x86_64_linux:      "96abca1495061cf6eed27892aba3f6a018576760fe9bed0e70941290d4ccfb8b"
   end
 
   depends_on "cmake" => [:build, :test]

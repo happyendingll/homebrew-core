@@ -40,7 +40,7 @@ class Retdec < Formula
   depends_on "cmake" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => :build # needs python on PATH
+  depends_on "python@3.15" => :build # needs python on PATH
   depends_on "openssl@4"
 
   uses_from_macos "python"

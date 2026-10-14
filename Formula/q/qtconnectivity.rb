@@ -1,10 +1,10 @@
 class Qtconnectivity < Formula
   desc "Provides access to Bluetooth hardware"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtconnectivity-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtconnectivity-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtconnectivity-everywhere-src-6.11.2.tar.xz"
-  sha256 "85b01a57bd059583ab520a857990dfdf4021447507ff5b9498f036b7295e6037"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtconnectivity-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtconnectivity-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtconnectivity-everywhere-src-6.12.0.tar.xz"
+  sha256 "ed51f7f02c1f437fcf8a42940c7a84f6c0908c0ec7a4f5a5304fe68f47521954"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtconnectivity < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "5530d7ea286306a4b5790b98e51c8b39ada2676408b567dbf8a1f282c8d2c82e"
+    sha256 cellar: :any, arm64_golden_gate: "05bcea18fb3770c4c2818a35ac06d9e92f48e597a39dc9ca098d446e60e4bddd"
+    sha256 cellar: :any, arm64_tahoe:       "6b8e1893d4c9e40a8f9b93192b0e97d39b061992bd991540cc332177bc3a9df8"
+    sha256 cellar: :any, arm64_sequoia:     "8e36c2b4c7ffc4323a866a63f7bd4bd2361cf276ee6acdf1cd9176ef4ccc9278"
+    sha256 cellar: :any, arm64_linux:       "5174abe989d1e1aab261349fcf38c6fc68e5e960dbfd8ba037d78e45e65b7416"
+    sha256 cellar: :any, x86_64_linux:      "e50251fd12eaffb5a99a561fb321ebcc51b7b53c4984e265b1f66057790a4909"
   end
 
   depends_on "cmake" => [:build, :test]

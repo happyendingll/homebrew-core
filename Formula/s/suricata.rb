@@ -25,7 +25,7 @@ class Suricata < Formula
   depends_on "libyaml"
   depends_on "lz4"
   depends_on "pcre2"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libpcap"
 

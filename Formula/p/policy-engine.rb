@@ -1,14 +1,17 @@
 class PolicyEngine < Formula
   desc "Unified Policy Engine"
   homepage "https://github.com/snyk/policy-engine"
-  url "https://github.com/snyk/policy-engine/archive/refs/tags/v1.1.5.tar.gz"
-  sha256 "50bef12330c2b2fdefa21958af76f6109c4bf9ea7ff7d5b26bf3a9c60c9b727a"
+  url "https://github.com/snyk/policy-engine/archive/refs/tags/v1.1.6.tar.gz"
+  sha256 "294356f456510ed2d16ed30374d34855185277740cf1f818c4ddb660d98a1161"
   license "Apache-2.0"
   head "https://github.com/snyk/policy-engine.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "48eeebc4ee6f946310156b458d80a6850c813d66d9dfa3cba2e4c9c06b3fe56a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1fb7f4631fbea222793c24457fd17b6e09850ff21c963e58d7bb330123f779b1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6f7d070a9d470171f9b2967520ca63c3768b99c582c670907cbee82f8a0019cd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "155ea9ec2ed7466a50ba4f7ef4dbc640feb095725363389beb7ae62d5d03609e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9af8556f4cb1b8b3a8b0354a1d7d5d9319ac4c5e0f87734b3da84a998734d928"
+    sha256 cellar: :any,                 x86_64_linux:      "e88c2e9cc2947ffe07585ebe26f9f4d367ca076dcf4fbc2a405f735414b2c2a4"
   end
 
   depends_on "go" => :build

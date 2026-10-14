@@ -1,10 +1,10 @@
 class Qtdatavis3d < Formula
   desc "Provides functionality for 3D visualization"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtdatavis3d-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtdatavis3d-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtdatavis3d-everywhere-src-6.11.2.tar.xz"
-  sha256 "d24e6919c5d6f8a16dd19ce3c7c8f47689d39a72dbe4a31c1c1bcedfa60b661d"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtdatavis3d-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtdatavis3d-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtdatavis3d-everywhere-src-6.12.0.tar.xz"
+  sha256 "5f79b948eb1e81ff7f69e335b075c1b48953d88f5d97970b537e348dbbaa98dc"
   license all_of: [
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtdatavis3d < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "a2114a1308a22236d4c0071d4704662e13d0da3249886fd1e547e23968fcc6a6"
+    sha256 cellar: :any, arm64_golden_gate: "4a13e080ae1241293cdd11c2120ee78ba5149af03dcb0c9c10bb8d99b379941e"
+    sha256 cellar: :any, arm64_tahoe:       "0d82dacf06ea9f72347724c4e84d09b01e7cdabe4f2bae522a8857a7474df0e5"
+    sha256 cellar: :any, arm64_sequoia:     "60c0eb75412c42f55fa8a7504b78971356d7fd49d760162919c4c95ba647587c"
+    sha256 cellar: :any, arm64_linux:       "d2b106f896983c1f046f38feb8aeacc23191bbc3d83618e2f350ff2c52af5b86"
+    sha256 cellar: :any, x86_64_linux:      "47664819f135582bcb006d926064ecebd305981922b6e72233149d2bee19aa66"
   end
 
   depends_on "cmake" => [:build, :test]

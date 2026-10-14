@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v2.79.2.tar.gz"
-  sha256 "57dc26b59ac46f092b8dd59c3a1af174c9bd1f574d7f5d8ef335456fd6fa853e"
+  url "https://github.com/werf/werf/archive/refs/tags/v2.80.2.tar.gz"
+  sha256 "e2e2f90cb2b996d001e291f2f1e8d46be5a236ae9617eb63010059a5811a6cba"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Werf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "21dc9505c9f8f1ba60d7faa86a25df9fb5d22baebf82ac2ee7606d068df2568b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7221b79d7a17755e0f91668f88b7d2bc793b7fc85e3cd364138087378fc12e24"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "508d7679e6b1307e9b43d9394ce1b1b6dea138fced4c1fcb5e4b552f5cb22189"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf335967cd1283195eabf451f1e244bc4be262cc511905cd32496f709110f4c5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bf8b4349af9014c275adfa1f5253efcdc0950d21e82b56639fe5d84dba121a48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "629473de236003afbaf1d690e52419711699705807893a16cbf5447e9c357bc1"
   end
 
   depends_on "go" => :build

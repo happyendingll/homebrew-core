@@ -1,10 +1,10 @@
 class Qtwebsockets < Formula
   desc "Provides WebSocket communication compliant with RFC 6455"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtwebsockets-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtwebsockets-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtwebsockets-everywhere-src-6.11.2.tar.xz"
-  sha256 "2bfe25c383c37f7690e3c59b02c9907d2744cf8527b1f3f1fc2c785b2ff3c9a3"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtwebsockets-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtwebsockets-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtwebsockets-everywhere-src-6.12.0.tar.xz"
+  sha256 "21690a365cd5fbfa8dea051473e98968df9f4eca0121fed7481d1215b7455a31"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtwebsockets < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "31b2be439156586b5772a70346afdc42d2b68296b400b04484135ad3b51759f4"
+    sha256 cellar: :any, arm64_golden_gate: "d75e2e97c85b7c8b884f516c4fd5720ec637baeeabdbd7a1f656721f039dc68a"
+    sha256 cellar: :any, arm64_tahoe:       "b8f05527937c250e7719faa7e813a42d221b067287a50cf1fecc198330d1fd38"
+    sha256 cellar: :any, arm64_sequoia:     "5731573d4433979c1bf14a61e2f546974941f0d2530bf2c9208f7e380894f74a"
+    sha256 cellar: :any, arm64_linux:       "8ebdc7c9886d8d766356cd761cd2ed1287493c26555654b4d7a27cc33864d4a6"
+    sha256 cellar: :any, x86_64_linux:      "4819baf2ecd3b8564e03827393b8338e80f2a996927616ed2e1bfe89164f379f"
   end
 
   depends_on "cmake" => [:build, :test]

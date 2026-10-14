@@ -1,43 +1,47 @@
 class OpensslAT3 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl-library.org"
-  url "https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/openssl-3.6.5.tar.gz"
-  mirror "http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.6.5.orig.tar.gz"
-  sha256 "a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98"
+  url "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz"
+  sha256 "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a"
   license "Apache-2.0"
+  version_scheme 1
   compatibility_version 1
 
   livecheck do
     url "https://openssl-library.org/source/"
-    regex(/href=.*?openssl[._-]v?(3(?:\.\d+)+)\.t/i)
+    regex(/href=.*?openssl[._-]v?(3\.5(?:\.\d+)+)\.t/i)
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "9ed9599d2df434ad6706bb4065ab5cf758030b4d9b461ae96f9677fa7a500a0f"
+    sha256 arm64_golden_gate: "dcc989315a2efd06ca4a3fac5c33c237897a1059ed74f35c464a8967ffbb8aaf"
+    sha256 arm64_tahoe:       "e8d7a91a0599aca7c82b63ff708bde97b6c1535f6b74c951ac89e4e55d571872"
+    sha256 arm64_sequoia:     "82b33ce156b289eaf95657b9ec16e8f49cb49c882cdeaeaf57e3e7d67fa85e25"
+    sha256 arm64_linux:       "6c0de70f833c6fee4630c17f3412d953eebfe181ef643e7a823633932d30ce16"
+    sha256 x86_64_linux:      "279da65bfd7a9d068fd0a21863af4a4ede5bc837130df9acca2729c3d9b9b8ef"
   end
 
   keg_only :versioned_formula
+
+  # https://openssl-library.org/post/2026-09-16-eol30/
+  # OpenSSL 3.5 is a LTS version
+  deprecate! date: "2030-04-08", because: :unmaintained
+  disable! date: "2031-04-08", because: :unmaintained
 
   depends_on "ca-certificates" => :no_linkage
 
   on_linux do
     resource "Test::Harness" do
       url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Test-Harness-3.52.tar.gz"
-      mirror "http://cpan.metacpan.org/authors/id/L/LE/LEONT/Test-Harness-3.52.tar.gz"
       sha256 "8fe65cfc0261ed3c8a4395f0524286f5719669fe305f9b03b16cf3684d62cd70"
     end
 
     resource "Test::More" do
       url "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302224.tar.gz"
-      mirror "http://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302224.tar.gz"
       sha256 "6c366b8ab03553976dd1813940770b60bdb4396e7bbae8c263baa6e96ec52fd7"
     end
 
     resource "ExtUtils::MakeMaker" do
       url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.78.tar.gz"
-      mirror "http://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.78.tar.gz"
       sha256 "43b33c20f8d82dba7cc48f8cd702f8fc9811e9d07880886dfd31b7077bd4a3a6"
     end
   end
@@ -121,9 +125,6 @@ class OpensslAT3 < Formula
 
       and run
         #{opt_bin}/c_rehash
-
-      OpenSSL 3.6 is only supported until 2026-11-01 so the `openssl@3`
-      formula will be downgraded to OpenSSL 3.5 (LTS) in a future update.
     EOS
   end
 

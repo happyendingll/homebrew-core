@@ -3,14 +3,17 @@ class LuaLanguageServer < Formula
   homepage "https://luals.github.io"
   # pull from git tag to get submodules
   url "https://github.com/LuaLS/lua-language-server.git",
-      tag:      "3.19.1",
-      revision: "d11e79dc2745b5bfe654490eff234c6be2f6606f"
+      tag:      "3.19.2",
+      revision: "b144c872f081373a893b55979142fed651e4425a"
   license "MIT"
   head "https://github.com/LuaLS/lua-language-server.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "6619c9397bcc27ebd1f4675840862a95c61ea0f3a512160ef3617dbb6f074552"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e256addbc3a1385f5427c78691c2e1b4be4569c12adffa6b61ce0318c557f0c5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "14abaff25ecdc3f0682369270bcde3709c9130ce43e048cd83edde0a19b52273"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "51dc7f8ee13a0872712f5e1aaf78a6b9bc86396d933bd5f7e40c0c392406a8d5"
+    sha256 cellar: :any,                 arm64_linux:       "369fd39b8c2e6eb1285e3a54a1409c1b91ec81526010ebe6ea51ff5f7b91a0aa"
+    sha256 cellar: :any,                 x86_64_linux:      "45f61ac528f2beb3045c3c274e980a13f496f458c7f3a364bdcfeedb8a734439"
   end
 
   depends_on "ninja" => :build

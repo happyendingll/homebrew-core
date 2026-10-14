@@ -19,7 +19,7 @@ class Beets < Formula
   depends_on "certifi" => :no_linkage
   depends_on "libyaml"
   depends_on "numpy" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: %w[certifi numpy]
 
@@ -109,8 +109,13 @@ class Beets < Formula
   end
 
   def install
+    # TODO: Remove when jellfish supports python 3.15:  https://codeberg.org/jpt/jellyfish/issues/237
+    ENV["PYO3_USE_ABI3_FORWARD_COMPATIBILITY"] = "1"
     ENV.append_to_rustflags "-C link-arg=-Wl,-undefined,dynamic_lookup" if OS.mac?
     ENV.append_path "PYTHONPATH", formula_opt_libexec("cython")/Language::Python.site_packages(python3)
+
+    # Allow python 3.15
+    inreplace "pyproject.toml", 'requires-python = ">=3.10,<3.15"', 'requires-python = ">=3.10"'
 
     without = ["lap"]
     venv = virtualenv_install_with_resources(without:)

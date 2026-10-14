@@ -1,10 +1,10 @@
 class Qtdeclarative < Formula
   desc "QML, Qt Quick and several related modules"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtdeclarative-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtdeclarative-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtdeclarative-everywhere-src-6.11.2.tar.xz"
-  sha256 "215b7b70517e380123eabc6b92243f3c47b6f016a91d126057dbe53551c6b430"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtdeclarative-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtdeclarative-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtdeclarative-everywhere-src-6.12.0.tar.xz"
+  sha256 "311f3a2603e1973bb59baef9dfa740a376de713157d4782ee043681e889c9260"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } }, # qml
@@ -19,8 +19,11 @@ class Qtdeclarative < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "791b828407361c0073662da5eec11e915aa5b9d1ebffb8f14c3280c31912ba89"
+    sha256 cellar: :any, arm64_golden_gate: "32b56e37e126972bd7b7ea6a72c03d6d7cd13c7bf443e1b92686d03b9ee22905"
+    sha256 cellar: :any, arm64_tahoe:       "f6f2784b95036390a5fb6455d0e0880915ab0f085fb91d40d769bb78c2261773"
+    sha256 cellar: :any, arm64_sequoia:     "4bd05d020e8d337c8b356d4e5a7fc88876afd3848db1f5714442b6afc729c3a9"
+    sha256 cellar: :any, arm64_linux:       "30eb56ea24c024991a15ed8bbdea82535163084560b333ec7b9d79c1e7863756"
+    sha256 cellar: :any, x86_64_linux:      "21796791458d598c72da626bd80c8b37adae7864b73a4bd812842ad947c9a393"
   end
 
   depends_on "cmake" => :build

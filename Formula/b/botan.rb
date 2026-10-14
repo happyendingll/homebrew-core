@@ -19,7 +19,7 @@ class Botan < Formula
 
   depends_on "pkgconf" => :build
   depends_on "ca-certificates"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "sqlite"
 
   uses_from_macos "bzip2"

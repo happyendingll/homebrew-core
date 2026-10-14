@@ -17,7 +17,7 @@ class Pushpin < Formula
   depends_on "rust" => :build
 
   depends_on "openssl@4"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "qtbase"
   depends_on "zeromq"
 

@@ -24,7 +24,7 @@ class Znc < Formula
   depends_on "cctz"
   depends_on "icu4c@78"
   depends_on "openssl@4"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "cyrus-sasl"

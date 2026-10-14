@@ -1,10 +1,10 @@
 class Qtlottie < Formula
   desc "Display graphics and animations exported by the Bodymovin plugin"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtlottie-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtlottie-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtlottie-everywhere-src-6.11.2.tar.xz"
-  sha256 "f53c712716d9eba9a7ccb405b8cd2d30652097828fcfeb152f46b4ec40524852"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtlottie-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtlottie-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtlottie-everywhere-src-6.12.0.tar.xz"
+  sha256 "6b8f04c917f2666f8cca4e7804bcabb6edffe151406b89fb28de3bba5a5d997e"
   license all_of: [
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtlottie < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "0f48b8200e5d32c1ab1435e97bb2608a0e1ab466e0c75482bb4b505a04dc0c2c"
+    sha256 cellar: :any, arm64_golden_gate: "f4d2269cf7366c3db64c48bc2de2349e711695679e02f93c61d3c1c4698a3164"
+    sha256 cellar: :any, arm64_tahoe:       "3b7af01e392056e40594446fa2ad375b985f3b0bb88274630008a0a5da4526c3"
+    sha256 cellar: :any, arm64_sequoia:     "54c36ec8c568cdc1e13abe1c718cb936589598eb71869b97e53f20633c7b63d8"
+    sha256 cellar: :any, arm64_linux:       "070891135e4a10ad825a65f60a1102926633ab968ebc9f2938c6da6bf2d98d08"
+    sha256 cellar: :any, x86_64_linux:      "1d4fe4f122c1ed62f5061ed71e212dcace11f3d600dbe5ac385d8fc4a35ceaa3"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -27,6 +30,7 @@ class Qtlottie < Formula
 
   depends_on "qtbase"
   depends_on "qtdeclarative"
+  depends_on "qtquicktimeline"
 
   resource "rect_rotate.json", :test do
     url "https://raw.githubusercontent.com/qt/qtlottie/888fb0ca5d5e18fe5d8b88ed721544bf204ac158/tests/manual/testApp/rect_rotate.json"

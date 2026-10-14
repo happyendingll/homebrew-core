@@ -21,7 +21,7 @@ class Ldns < Formula
 
   depends_on "swig" => :build
   depends_on "openssl@4"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "drill", because: "both install a `drill` binary"
 

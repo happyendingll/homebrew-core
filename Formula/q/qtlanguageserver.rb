@@ -1,10 +1,10 @@
 class Qtlanguageserver < Formula
   desc "Implementation of the Language Server Protocol and JSON-RPC"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtlanguageserver-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtlanguageserver-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtlanguageserver-everywhere-src-6.11.2.tar.xz"
-  sha256 "38bc4272ecf4ca0eb1927227053e52be6b2e05733f46d03422306aace511fc5e"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtlanguageserver-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtlanguageserver-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtlanguageserver-everywhere-src-6.12.0.tar.xz"
+  sha256 "552119e37360c06c5fb0b54e91bbfdf8da5a80d2cb1441ef93e966eb3b7a426d"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtlanguageserver < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "5aed9f8e5053bfada7d6476c080f9e8c099d56cbcec955e3cec22c15f9127434"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc7b4b78756cd958f876fe68b7b64ebb8ad7027b3fe7f8643c6493928ea3d177"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6afc4fe59493d7b6e9b76d41cd25f2b953340d53bcc45b95f9ba19435bcdfe73"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2276931f0537d7b7f92f926586d631f6ed0b3a5d1c9a4a1c8045d685457ab7be"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e865b32c902f08d00bba8ba4a698f4be508e4d392f8c19a3eb92ddc454f71bd1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a4589da9e77d54e18daab31474180f259ee120c5fff4afa2a6539e166758286a"
   end
 
   depends_on "cmake" => [:build, :test]

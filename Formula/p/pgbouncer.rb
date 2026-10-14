@@ -1,10 +1,9 @@
 class Pgbouncer < Formula
   desc "Lightweight connection pooler for PostgreSQL"
   homepage "https://www.pgbouncer.org/"
-  url "https://www.pgbouncer.org/downloads/files/1.26.0/pgbouncer-1.26.0.tar.gz"
-  sha256 "afd25dd61ee6775d37b40629b87ce08736b3e6955f3057bb212e410fbf21c71d"
+  url "https://www.pgbouncer.org/downloads/files/1.26.1/pgbouncer-1.26.1.tar.gz"
+  sha256 "00886a2994b4844cd37110970df777772cfc42a74c400522c82fba509a3f42d9"
   license "ISC"
-  revision 1
 
   livecheck do
     url "https://www.pgbouncer.org/downloads/"
@@ -12,8 +11,11 @@ class Pgbouncer < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "314d8accf3205d3fc11bce0cd14126d876ffde22f91f7788aebcb685bbd3d7b8"
+    sha256 cellar: :any, arm64_golden_gate: "33ce961a07aabf35bb734bb6e59f95d7e324fc77efb73e3861e02f445811ac06"
+    sha256 cellar: :any, arm64_tahoe:       "8823b3d355d1f637a93a5ee495a0f77d5b95c0503730e4f80af7530bfebeef35"
+    sha256 cellar: :any, arm64_sequoia:     "2826a9b5bd3784b53a8ffc261da4524fb304cdd5bf401b3f6c8a9c51d3433964"
+    sha256 cellar: :any, arm64_linux:       "1b04827ae40fe2a6c0e4387f88e5e2297bc24eda8c7b9889ab038ba88fec1219"
+    sha256 cellar: :any, x86_64_linux:      "bb5169f6b1381ab86420e3d67b0ec056e12206a5a55e1db7faf4338d650d9734"
   end
 
   head do

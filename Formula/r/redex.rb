@@ -19,7 +19,7 @@ class Redex < Formula
   depends_on "libtool" => :build
   depends_on "boost"
   depends_on "jsoncpp"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -41,6 +41,10 @@ class Redex < Formula
   resource "homebrew-test_apk", :test do
     url "https://raw.githubusercontent.com/facebook/redex/fa32d542d4074dbd485584413d69ea0c9c3cbc98/test/instr/redex-test.apk"
     sha256 "7851cf2a15230ea6ff076639c2273bc4ca4c3d81917d2e13c05edcc4d537cc04"
+
+    livecheck do
+      skip "Test fixture"
+    end
   end
 
   def install

@@ -1,8 +1,8 @@
 class ProtocGenGrpcSwift < Formula
   desc "Protoc plugin for generating gRPC Swift stubs"
   homepage "https://github.com/grpc/grpc-swift-protobuf"
-  url "https://github.com/grpc/grpc-swift-protobuf/archive/refs/tags/2.4.1.tar.gz"
-  sha256 "536c1b0c5dfe8efa604c30bb2b831b49e765aa212b1180acda3d630714187197"
+  url "https://github.com/grpc/grpc-swift-protobuf/archive/refs/tags/2.5.0.tar.gz"
+  sha256 "dc6238a467fe3466477e6509773b0f8fe84a9f58dd97bc39f7fb082e3b222cf6"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/grpc/grpc-swift-protobuf.git", branch: "main"
@@ -13,8 +13,11 @@ class ProtocGenGrpcSwift < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "67aa39a3e5862f78d4721303f87783fb7e17486baf9c4aa05f21b1391847a958"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21d30314c4fac094a6ecb6911dc8718d334878f930a0e7f362096f8d4f1878c0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "196b5a47be2e46144ea958a7c46230845ebe66fb5706370f4a882d72b15fdba4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1669300e51c9bab8195b7ff0ee8ae07847e0cc62f07d2c0d479fc1a5ac6e3e42"
+    sha256 cellar: :any,                 arm64_linux:       "9049ddd123e27830c9cea04ec90560a868a39739999ae72067ac7ef66cb5abf2"
+    sha256 cellar: :any,                 x86_64_linux:      "b7b96a3579f31c69eab6df2011d67d7cf74b1cfb799220e9ce220e179226d16f"
   end
 
   depends_on "protobuf"

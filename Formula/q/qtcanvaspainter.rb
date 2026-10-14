@@ -1,10 +1,10 @@
 class Qtcanvaspainter < Formula
   desc "Accelerated 2D painting solution for Qt Quick and QRhi-based render targets"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtcanvaspainter-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtcanvaspainter-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtcanvaspainter-everywhere-src-6.11.2.tar.xz"
-  sha256 "8a90a27250ceef5ff659744e035ef4f5d3cd7392e027d5f953765b3f1083e760"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtcanvaspainter-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtcanvaspainter-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtcanvaspainter-everywhere-src-6.12.0.tar.xz"
+  sha256 "09c0747c3bef7c58e3154346ca5fe2702ab09f7ad4083243e6d20307245119e2"
   license all_of: [
     "GPL-3.0-only",
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } }, # qcshadergen
@@ -18,8 +18,11 @@ class Qtcanvaspainter < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "1e7aab2dcb592f3074c4f6abf80fd9e2fec2750ae7cb87f00b3537f577af7c64"
+    sha256 cellar: :any, arm64_golden_gate: "503849f6242fd7955c57752d5ebf165d25c39707078b87dc07df66ec947c8d9f"
+    sha256 cellar: :any, arm64_tahoe:       "b87b2bf00d96c481b660975715a5a0e9c89fa046cb68a8c9692c0f75a841bb44"
+    sha256 cellar: :any, arm64_sequoia:     "e85e2e2596f0d563dbc5c2199777bec038b82448f06ee59a6a30831cbe950d4a"
+    sha256 cellar: :any, arm64_linux:       "a230e0ece68d599bcd57082cf00ea2d1cf41d275b333a4880c8178df6551a80a"
+    sha256 cellar: :any, x86_64_linux:      "2ee7a78f35dff5e55b1a272cd5a30dd13b63f7ab752d0053bffafd4bcfc43137"
   end
 
   depends_on "cmake" => [:build, :test]

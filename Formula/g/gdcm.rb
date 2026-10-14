@@ -19,7 +19,7 @@ class Gdcm < Formula
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
+  depends_on "python@3.15" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
   depends_on "swig" => :build
   depends_on "charls"
   depends_on "json-c"
@@ -30,7 +30,7 @@ class Gdcm < Formula
   uses_from_macos "libxml2"
 
   on_linux do
-    depends_on "python@3.14"
+    depends_on "python@3.15"
     depends_on "util-linux" # for libuuid
     depends_on "zlib-ng-compat"
   end

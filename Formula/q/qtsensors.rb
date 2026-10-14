@@ -1,10 +1,10 @@
 class Qtsensors < Formula
   desc "Provides access to sensors via QML and C++ interfaces"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtsensors-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtsensors-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtsensors-everywhere-src-6.11.2.tar.xz"
-  sha256 "68c8e44dfb32e8e2182f63f5544c2f462089b1bb049574f1d504ee2648903119"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtsensors-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtsensors-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtsensors-everywhere-src-6.12.0.tar.xz"
+  sha256 "861df58be8808cef777a1b531d7bec804d25733ec34e8ebbdafbe27040319090"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtsensors < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "c3cc0ae9d0472b14525fc0735d71941dfdc78b46ae909b0e56c458b7944928db"
+    sha256 cellar: :any, arm64_golden_gate: "6d3453418c1abf15d92fd2ddadae05769204b50022b08716ade9eaad83f65461"
+    sha256 cellar: :any, arm64_tahoe:       "f0ca345e9c09bc2840d0c949c1b2951351f684836cfe0e329f1185dc7d0926a8"
+    sha256 cellar: :any, arm64_sequoia:     "6f16be8c16fc5aff33723326e8b206ce1f86478d661fb05323b099a976281489"
+    sha256 cellar: :any, arm64_linux:       "7e87f89c4d1da6317c199845125a6ca342b1617e0b8b40c8ff88b242450926d3"
+    sha256 cellar: :any, x86_64_linux:      "a72ade97ac670a9b5f536e9f617d601eec23ee705231df2ccb3df490301680d2"
   end
 
   depends_on "cmake" => [:build, :test]

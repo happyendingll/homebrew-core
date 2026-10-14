@@ -1,10 +1,10 @@
 class Qtquicktimeline < Formula
   desc "Enables keyframe-based animations and parameterization"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtquicktimeline-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtquicktimeline-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtquicktimeline-everywhere-src-6.11.2.tar.xz"
-  sha256 "250af10500a0c4045dde74e107448a69a44d58af8b7e9a91704a808d5f881d17"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtquicktimeline-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtquicktimeline-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtquicktimeline-everywhere-src-6.12.0.tar.xz"
+  sha256 "6919153c841478c113f0ad20526f40e606590968334762ec6ccbc96002f8da19"
   license all_of: [
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
@@ -17,8 +17,11 @@ class Qtquicktimeline < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "d723dbe6b8ecacf6da5410e1a221c96f0d6c9a4a92fb77b2f0d754d8b2db6930"
+    sha256 cellar: :any, arm64_golden_gate: "53b25fa6dc13127561a3bfd910dd9bf28b77898b2b11f44f01a77d931c18c00d"
+    sha256 cellar: :any, arm64_tahoe:       "223b501a5c82c4c995a8cbab0c224fe1c21e7e2e6fbdae4faf612030b7abd52a"
+    sha256 cellar: :any, arm64_sequoia:     "61747d337bd1fc584f6e551ce8fbb48161149fad2029953e672aaeb0af6ac2af"
+    sha256 cellar: :any, arm64_linux:       "570812fab067fd681283266c27a9ffcabbfec643f74f9ea5c5d5e321e3026b61"
+    sha256 cellar: :any, x86_64_linux:      "e0faf8ddb1b372f5dd51ac5a3557b751ce38542f6d46b12d57c07eed075e3690"
   end
 
   depends_on "cmake" => :build

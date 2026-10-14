@@ -15,7 +15,7 @@ class Spot < Formula
     sha256 cellar: :any, sequoia: "53ddf47dd4ac43950f134d694758ac811aeef1ef44e9f264967b4621779c226a"
   end
 
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
 
   def install
     system "./configure", "--disable-silent-rules", *std_configure_args

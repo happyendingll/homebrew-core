@@ -1,8 +1,8 @@
 class Yorkie < Formula
   desc "Document store for collaborative applications"
   homepage "https://yorkie.dev/"
-  url "https://github.com/yorkie-team/yorkie/archive/refs/tags/v0.7.24.tar.gz"
-  sha256 "7584ca442943851f3287b22ecc38d070e28cf0aaa8c96565df9bd29b88fefb0b"
+  url "https://github.com/yorkie-team/yorkie/archive/refs/tags/v0.7.25.tar.gz"
+  sha256 "37865315c8a4ae17f79eae1c81ec35ec011405519532526d0fdd48f396d3cd2a"
   license "Apache-2.0"
   head "https://github.com/yorkie-team/yorkie.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Yorkie < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "7d9577ea796ab4b1592373cc292463b1ba85e6cf6b813f21e3e93825b6b56a96"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bbaa0ce772ca1143ca11febe3cb549ef4b22824a2902dd58a92e696ebccf18ca"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8802758c51e649d484c6f504dac53ad79ded5ab6229894473bae8afb374562da"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "864617f59c6f7823e7f439d97adb1ccda5dd7300e85dc0d68d2167e013b2a5a3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "15804c96d6e9534a9cca23c55e67bd74f3bcc0977743acf3a188103f57ac0216"
+    sha256 cellar: :any,                 x86_64_linux:      "44f2ce0c2c8342f877f5516948fb71adca2ba3f15a98b9858f9984dd17bb0d0a"
   end
 
   depends_on "go" => :build

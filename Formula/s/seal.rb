@@ -1,13 +1,16 @@
 class Seal < Formula
   desc "Easy-to-use homomorphic encryption library"
   homepage "https://github.com/microsoft/SEAL"
-  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.6.1.tar.gz"
-  sha256 "42f38fdeca6fa0f24dcb031b6366db0bf407c2bbf659acdd72f47318a528dff3"
+  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.6.2.tar.gz"
+  sha256 "98e382852faf336808959c3dee0bbfff9148dbad1dab4e70dc39004cc94e93f6"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "1c85d077c51f6b794849b1b85787b6027ecab7fe66730ebf6f4845bc0585fa73"
+    sha256 cellar: :any, arm64_golden_gate: "ca6ec4b9c770ee04b44df2b7d67c5aa85b3aca804d86feb247de8afa218dd490"
+    sha256 cellar: :any, arm64_tahoe:       "1ba27deb9621ea509fcdb7cc69a550a6d5472f00d71edec5b3ecafad2b04e98e"
+    sha256 cellar: :any, arm64_sequoia:     "26defea1093638701fa36d50f8153645a3309d356ee826f2061b599edf09dc15"
+    sha256 cellar: :any, arm64_linux:       "d970bde44939d0f20106588515b0948937f2f5872a335c5bb4a32f78f447acb6"
+    sha256 cellar: :any, x86_64_linux:      "4233119a2d7e3d88edd46439975263b528aa0e028a24baaaba2b38a8a84853aa"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -30,9 +33,6 @@ class Seal < Formula
   deny_network_access!
 
   def install
-    # Support Microsoft GSL 5.x, which upstream has not widened its version request to yet
-    inreplace "CMakeLists.txt", "Microsoft.GSL 4 CONFIG", "Microsoft.GSL 5 CONFIG"
-
     if Hardware::CPU.intel?
       resource("hexl").stage do
         hexl_args = %w[

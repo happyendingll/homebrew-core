@@ -4,12 +4,15 @@ class Luvit < Formula
   url "https://github.com/luvit/luvit/archive/refs/tags/2.18.1.tar.gz"
   sha256 "b792781d77028edb7e5761e96618c96162bd68747b8fced9a6fc52f123837c2c"
   license "Apache-2.0"
-  revision 32
+  revision 33
   head "https://github.com/luvit/luvit.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "50f61548cc55ad288466e032b2c386b23f98a99a4324a259bc0f85d1ff795e9b"
+    sha256 cellar: :any, arm64_golden_gate: "a9fc174525411aebc174077dccc0a3660e471508c2667dcaf9605974f858dfe3"
+    sha256 cellar: :any, arm64_tahoe:       "b101e62921636514a3bc701101e8215d8b394f30cf94d4339ae41583d53202a2"
+    sha256 cellar: :any, arm64_sequoia:     "5c7bd3d6a90a8a49643d201d370e863d722015fb7a060c71e4f0f0b882fa0739"
+    sha256 cellar: :any, arm64_linux:       "cd2ff9d3af6a4bfecac11ffcd79ca7566cdff557b38a48fd6e6f22e0aae12631"
+    sha256 cellar: :any, x86_64_linux:      "20c356995e952f58ffedd562a5834a21d1380fa739bf1a19f33131a88db87f8e"
   end
 
   depends_on "cmake" => :build

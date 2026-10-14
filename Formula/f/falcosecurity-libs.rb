@@ -1,8 +1,8 @@
 class FalcosecurityLibs < Formula
   desc "Core libraries for Falco and Sysdig"
   homepage "https://falcosecurity.github.io/libs/"
-  url "https://github.com/falcosecurity/libs/archive/refs/tags/0.26.0.tar.gz"
-  sha256 "430b90236a345f913387adb4c042e7d9140b4fec128f7ef863b7e53f2fdd5e35"
+  url "https://github.com/falcosecurity/libs/archive/refs/tags/0.26.1.tar.gz"
+  sha256 "4ded90e99fe0ecdd50d63395e8c9a2333cfe1d839dcf4fdbbcc2201cf44628f6"
   license all_of: [
     "Apache-2.0",
     { any_of: ["GPL-2.0-only", "MIT"] }, # driver/
@@ -15,8 +15,11 @@ class FalcosecurityLibs < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "d8b41d5b23d610f8c01dd3e9b732c4273817b15932a47f004943fe62121eb2ca"
+    sha256 cellar: :any, arm64_golden_gate: "7faa0312af9cd0e728a6fb559661244844e30d2e4240f8af8322184e447434a9"
+    sha256 cellar: :any, arm64_tahoe:       "4358066777cbe6488a6dda0c13138a19e79ace55afe5a44a86f5ea1bff8bd456"
+    sha256 cellar: :any, arm64_sequoia:     "22380eb8a07e5c78185ec00e8ba8ce4f022417ea4b94a6377074afebc36f3466"
+    sha256 cellar: :any, arm64_linux:       "c94eb38240a294c6290739cc37374a12ffcad7dc463429bef1b21ca3a7364f90"
+    sha256 cellar: :any, x86_64_linux:      "f7d8872ef9d2dbbca707233685106332459d27ee8cca676e1b86df0bbf591cc0"
   end
 
   depends_on "cmake" => :build

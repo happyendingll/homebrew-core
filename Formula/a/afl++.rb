@@ -19,7 +19,7 @@ class Aflxx < Formula
   depends_on "coreutils" => :build
   depends_on "lld"
   depends_on "llvm"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "zlib-ng-compat"

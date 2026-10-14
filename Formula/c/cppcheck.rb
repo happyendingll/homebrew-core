@@ -20,7 +20,7 @@ class Cppcheck < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "tinyxml2"
 
   uses_from_macos "libxml2" => :build

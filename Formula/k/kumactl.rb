@@ -1,8 +1,8 @@
 class Kumactl < Formula
   desc "Kuma control plane command-line utility"
   homepage "https://kuma.io/"
-  url "https://github.com/kumahq/kuma/archive/refs/tags/v2.14.5.tar.gz"
-  sha256 "56cdecc20c8c95b53c37656c2bd19dbd807f98fb995360ee271b0bdecd8f2aef"
+  url "https://github.com/kumahq/kuma/archive/refs/tags/v2.14.6.tar.gz"
+  sha256 "7bfacaf7831033702ad7537bc3dbbd5b1d2c63b258158b2f3f36efb5dd19a776"
   license "Apache-2.0"
   head "https://github.com/kumahq/kuma.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Kumactl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "cede7ddfc8dcb649bb5f2fb95ca24e84916bcac0d1315c2a1949b31ac52bdb7c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "86bb1096532344f0adc65a0f55afab22d726b67921eda55dca4316dd1dce70a4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "380966a50daa0b37e32e563260f81792b6500957dd1abee9a18b8ca98094865b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d081fb7372c36554f27b5a57f2b95307640b052f4555d06baf6134035345da33"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8aa306d1e0aba0b25f26359f8a17ca70ae95477cc436d91312b2a1938c9c4ec1"
+    sha256 cellar: :any,                 x86_64_linux:      "4be70d966f5fb8c84395029b005b08d33c51d49fe3df0f7152d9dafe6bf184b0"
   end
 
   depends_on "go" => :build

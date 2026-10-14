@@ -1,15 +1,17 @@
 class RabbitmqC < Formula
   desc "C AMQP client library for RabbitMQ"
   homepage "https://github.com/alanxz/rabbitmq-c"
-  url "https://github.com/alanxz/rabbitmq-c/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "d57782c950ec04c7da3692cad6f02059dad6df90e588e2f6a1def632fa59f7d7"
+  url "https://github.com/alanxz/rabbitmq-c/archive/refs/tags/v0.18.1.tar.gz"
+  sha256 "0779bd4f00175ff2f722f9dc43b542bea3bc606ed079e7099fa8a18627c2ddc9"
   license "MIT"
-  revision 1
   head "https://github.com/alanxz/rabbitmq-c.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "1f58f42d7c967f818f6546e370c82eac65c6a44e77f65a4cef84e2a6650f0aae"
+    sha256 cellar: :any, arm64_golden_gate: "0dae886d1dcdb87c121a9418521e3f876c8a47a3b813df14de62410ecfd44237"
+    sha256 cellar: :any, arm64_tahoe:       "71a0c2d2f3b8345971bdac35f5ff640d55bca66b6ba8ba2236623dc58e648b1d"
+    sha256 cellar: :any, arm64_sequoia:     "2d24f97e779ca7e0d301a3c328f25ea7298f3623355208d744fb5f93d2b36aee"
+    sha256 cellar: :any, arm64_linux:       "4a913012f58d5ce947c855d38770ef6c44740633ea4ad0f876e838cfb9589042"
+    sha256 cellar: :any, x86_64_linux:      "3a8494afac1d8ae09ff91899e3e83ca14b02e215cba840f5d97ba638e8198285"
   end
 
   depends_on "cmake" => :build

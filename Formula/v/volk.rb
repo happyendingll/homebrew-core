@@ -31,7 +31,7 @@ class Volk < Formula
   depends_on "cpu_features"
   depends_on "fmt"
   depends_on "orc"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "vulkan-volk", because: "both install volkConfig.cmake"
 

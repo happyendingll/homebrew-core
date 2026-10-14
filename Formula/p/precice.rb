@@ -21,7 +21,7 @@ class Precice < Formula
   depends_on "numpy"
   depends_on "open-mpi"
   depends_on "petsc"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libxml2"
 

@@ -16,7 +16,7 @@ class Locust < Formula
   depends_on "ninja" => :build # for pyzmq
   depends_on "rust" => :build # for bidict
   depends_on "certifi"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "zeromq"
 
   pypi_packages exclude_packages: "certifi"
@@ -72,8 +72,8 @@ class Locust < Formula
   end
 
   resource "geventhttpclient" do
-    url "https://files.pythonhosted.org/packages/f1/68/34577ab9caad3bd9f6cde27cb0822a9f71d05a6d48969d7088cac2ead2f0/geventhttpclient-2.5.1.tar.gz"
-    sha256 "9a5e9baf254dc63f57e04bf606aa4475a858d005c191ce346bda2e63152409c6"
+    url "https://files.pythonhosted.org/packages/5f/e4/2835286913c2901f3d2246843deb8d99ba33de2b3a2ef8c4bb4c1a99f314/geventhttpclient-2.6.1.tar.gz"
+    sha256 "b15f0b0b959e75f4b8d97f3652e07db6d1050308027e1081eecddfbaa8412c92"
   end
 
   resource "greenlet" do
@@ -92,8 +92,8 @@ class Locust < Formula
   end
 
   resource "iniconfig" do
-    url "https://files.pythonhosted.org/packages/72/34/14ca021ce8e5dfedc35312d08ba8bf51fdd999c576889fc2c24cb97f4f10/iniconfig-2.3.0.tar.gz"
-    sha256 "c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730"
+    url "https://files.pythonhosted.org/packages/01/e1/2069291243c926a2ff1cd706c7f3eeb9b62144bf60f77c9fb9ff2fb26bd3/iniconfig-2.3.1.tar.gz"
+    sha256 "67f4b9c50da0dedf52af349e7749a80a9057a5031199791b906c3bb3ae878960"
   end
 
   resource "itsdangerous" do

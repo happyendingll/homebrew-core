@@ -4,7 +4,7 @@ class LibtorrentRasterbar < Formula
   url "https://github.com/arvidn/libtorrent/releases/download/v2.1.2/libtorrent-rasterbar-2.1.2.tar.gz"
   sha256 "3362546d9cd71b9e49ee6cac7d3f1f914ce9cdb217c86b63d5b22cbed0334dbc"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/arvidn/libtorrent.git", branch: "RC_2_1"
 
@@ -14,8 +14,11 @@ class LibtorrentRasterbar < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "799740569d5b8b348131fc551e03e88190bc9bf425c8d00ebbd7b9527c6d288f"
+    sha256 cellar: :any, arm64_golden_gate: "6a89ef19e50b0224335d6ae76fe440e3f8d99e6f33d1ef7ec3f4e42ca0294703"
+    sha256 cellar: :any, arm64_tahoe:       "f309aa3265ddbc39cabe72603df175e5c88e8faa1d410eebaf391186eeeb53c9"
+    sha256 cellar: :any, arm64_sequoia:     "42a6c62e568da3d24378dfb3f81897ae48432762e54af90aca629c72ce72923a"
+    sha256 cellar: :any, arm64_linux:       "674a733d7895c82e39f5834f7045d8289e2f185e1b1062637954f7cd7b038c73"
+    sha256 cellar: :any, x86_64_linux:      "add3131860b21e513e6e565e7d1cd1144af9a73947298ef479cc32736a2d4a97"
   end
 
   depends_on "cmake" => :build
@@ -23,7 +26,7 @@ class LibtorrentRasterbar < Formula
   depends_on "boost"
   depends_on "boost-python3"
   depends_on "openssl@4"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "libtorrent-rakshasa", because: "both use the same libname"
 

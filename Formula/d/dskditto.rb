@@ -1,13 +1,16 @@
 class Dskditto < Formula
   desc "Ultra-fast duplicate file finder TUI/GUI"
   homepage "https://github.com/jdefrancesco/dskDitto"
-  url "https://github.com/jdefrancesco/dskDitto/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "5202c2f0482b0496e272ced4ccd820ff47bbac73ed2237acad501091a79ec259"
+  url "https://github.com/jdefrancesco/dskDitto/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "bb017dea15bcd2a4b5877b33945b299afbfec903e07e75f8f3f0ec43112a0efa"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "1fa1cf9b49d5c04f3de1ce131349401a6ab832198057b5cf286b793c43e5285e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc3b03b384127ac8ea76b3c4cb94818c0e723b1723c3d73d3adc51ce36d5c53e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec7db1d2e4da9ed21f7ddf628adbb460fac9e6bd2f69688e1d30bbfc48217233"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "891c1d95587e1f64db1457a9248bb39676cd76fd7b86b25593b764c92c1f7797"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9065b44504b537f8c85d979b19cef8788a3a8bd2ff08a487435a545420d7a14b"
+    sha256 cellar: :any,                 x86_64_linux:      "d0623d67f84ec0e3fa537a2a3c405902625436e5793b1060559d9d18a5f1410d"
   end
 
   depends_on "go" => :build

@@ -17,7 +17,7 @@ class Cronboard < Formula
   depends_on "rust" => :build
   depends_on "cryptography" => :no_linkage
   depends_on "libsodium"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "cryptography"
 
@@ -27,8 +27,8 @@ class Cronboard < Formula
   end
 
   resource "cron-descriptor" do
-    url "https://files.pythonhosted.org/packages/91/75/b44b05ae7d1e49b59a27a917c44e04ce9aa4cebdd05dac42ba7df06a91b4/cron_descriptor-2.1.0.tar.gz"
-    sha256 "ecddb8b2f6c5286398949aaefe185364666af74f33b01877c61378e1fd4e38e6"
+    url "https://files.pythonhosted.org/packages/2f/51/7c6b4dc9a0f1db6a22cbdfb7a674c8ded4e6aab40531afa7d912a060f08f/cron_descriptor-2.1.1.tar.gz"
+    sha256 "0f55b469bb81f8c60602baebc08a78fc3b1eb234805793a08a4862f336760390"
   end
 
   resource "croniter" do
@@ -67,8 +67,8 @@ class Cronboard < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/ea/dd/65804b0c2925a1c821a05502ea57517b69a073ff400d25ab9faa3a2cf012/platformdirs-4.11.12.tar.gz"
-    sha256 "e8dc1cb58f1153fd7f61db1374317770baababec2480b37b8f01c6cc25b45267"
+    url "https://files.pythonhosted.org/packages/80/a8/66d45abadff219e36e2a824181b8f6a67e7ed4572934d6252c71c29d5731/platformdirs-4.13.0.tar.gz"
+    sha256 "1aa0b0d3f224c1f07c295121e312a5a24a180d6ae5a8425ea1784b3e3863e9c0"
   end
 
   resource "pygments" do

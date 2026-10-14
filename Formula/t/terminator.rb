@@ -13,7 +13,7 @@ class Terminator < Formula
   end
 
   depends_on "pygobject3" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "vte3"
 
   on_linux do

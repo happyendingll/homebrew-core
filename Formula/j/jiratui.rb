@@ -20,7 +20,7 @@ class Jiratui < Formula
   depends_on "libyaml"
   depends_on "pillow" => :no_linkage
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: %w[certifi cryptography pillow pydantic]
 
@@ -281,6 +281,9 @@ class Jiratui < Formula
   end
 
   def install
+    # Allow Python 3.15
+    inreplace "pyproject.toml", 'requires-python = ">=3.12,<3.15"', 'requires-python = ">=3.12"'
+
     virtualenv_install_with_resources
 
     generate_completions_from_executable(bin/"jiratui", shell_parameter_format: :click)

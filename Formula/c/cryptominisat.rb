@@ -6,6 +6,7 @@ class Cryptominisat < Formula
   # Everything that's needed to run/build/install/link the system is MIT licensed. This allows
   # easy distribution and running of the system everywhere.
   license "MIT"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -14,13 +15,16 @@ class Cryptominisat < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "3eb0c176eab5fdff50de667479c6fe24366dfb42b1c10dd7347a76fc22259e73"
+    sha256 cellar: :any, arm64_golden_gate: "98123e138ebaa54ea98ed4af772b815e463a16070f84499f93958cbba2e4e573"
+    sha256 cellar: :any, arm64_tahoe:       "f27be39f2ecf402ed302d5b9eb9b259a04212235d1c3275e3d57dbbc9bcd34da"
+    sha256 cellar: :any, arm64_sequoia:     "e00b73ab613b015a1aa370c2d75d541f4477e27375e5c101a60b77cb2bf471fb"
+    sha256 cellar: :any, arm64_linux:       "b8bfc3d85508d13dbcfba6387d9be9669361d76370fcc7dab0f5123ece36ddaa"
+    sha256 cellar: :any, x86_64_linux:      "d5978f9a937f31d3ea855cd97cc092095e64f4b39b2ca4d2143a4aec7f36aa59"
   end
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "gmp"
 
   on_linux do

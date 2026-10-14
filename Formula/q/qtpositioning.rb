@@ -1,10 +1,10 @@
 class Qtpositioning < Formula
   desc "Provides access to position, satellite info and area monitoring classes"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtpositioning-everywhere-src-6.11.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtpositioning-everywhere-src-6.11.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.2/submodules/qtpositioning-everywhere-src-6.11.2.tar.xz"
-  sha256 "d8cf15ad43a3b1520adac64cec5900028525cf75f01a4c82a0002e7ac1ae7499"
+  url "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtpositioning-everywhere-src-6.12.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/submodules/qtpositioning-everywhere-src-6.12.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/submodules/qtpositioning-everywhere-src-6.12.0.tar.xz"
+  sha256 "b060d410fac7413b05a0e7938bbf3325f7ad08d7df14af3956270f0696e76763"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # bundled poly2tri; *.cmake
@@ -19,8 +19,11 @@ class Qtpositioning < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "ff00f7f044c18ebe1033cdadab148f03d272a65368df4c7f09f78d7c2efca609"
+    sha256 cellar: :any, arm64_golden_gate: "72e5d9efa1150706ed93d5274a3f97a00120ef523e11daadb86554fb9c1f6c07"
+    sha256 cellar: :any, arm64_tahoe:       "6590f79ba4ad96ee8502cb7263b7103405038797a0cb597bdf87613c9d653d37"
+    sha256 cellar: :any, arm64_sequoia:     "5c87ad2518b73ee16f96497fa97e43b20ac64dcd8b9fc4f0f5a4f80cf6be69c4"
+    sha256 cellar: :any, arm64_linux:       "a6f53d9c9f2c9e4ffbc99e0f4b0b19b2b515a7b8e45ad5b2cf8b1029dac567fc"
+    sha256 cellar: :any, x86_64_linux:      "6d75f4a34d8f1390fa332308ffdd35dde11db64fea9067bc9a46ac8d38c4ecbf"
   end
 
   depends_on "cmake" => [:build, :test]

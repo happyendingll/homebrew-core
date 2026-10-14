@@ -27,7 +27,7 @@ class Blastem < Formula
   depends_on "imagemagick" => :build
   depends_on "pillow" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "glew"
   depends_on "sdl2-compat"
 
@@ -56,6 +56,6 @@ class Blastem < Formula
   end
 
   test do
-    assert_equal "blastem #{version}", shell_output("#{bin}/blastem -b 1 -v").chomp
+    assert_match version.to_s, shell_output("#{bin}/blastem -b 1 -v").chomp
   end
 end

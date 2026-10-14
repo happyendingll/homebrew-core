@@ -17,7 +17,7 @@ class Bazarr < Formula
   depends_on "ffmpeg"
   depends_on "numpy"
   depends_on "pillow" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "unar"
 
   uses_from_macos "libxml2", since: :ventura
@@ -41,8 +41,8 @@ class Bazarr < Formula
   end
 
   resource "webrtcvad-wheels" do
-    url "https://files.pythonhosted.org/packages/28/ba/3a8ce2cff3eee72a39ed190e5f9dac792da1526909c97a11589590b21739/webrtcvad_wheels-2.0.14.tar.gz"
-    sha256 "5f59c8e291c6ef102d9f39532982fbf26a52ce2de6328382e2654b0960fea397"
+    url "https://files.pythonhosted.org/packages/5a/8d/0597fa376df2f11dbd28fd4dca333d063d6f8fd993eb32563b80d09c6fc6/webrtcvad_wheels-2.0.14.post1.tar.gz"
+    sha256 "c740e93d24b5d0d7ecdd5548c43e37e2c88564826e869c861d5e3fa7f1cee7ff"
   end
 
   def install
