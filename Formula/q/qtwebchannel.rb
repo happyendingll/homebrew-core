@@ -17,11 +17,8 @@ class Qtwebchannel < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2adc10be8cc82dce24293d8a343c0c6141744c676f27a5373fcd164240a98dae"
-    sha256 cellar: :any, arm64_tahoe:       "7e239a134e5698575a5a8f98d546367c6fab7b8b842cad079e84cc8ef2ee2dea"
-    sha256 cellar: :any, arm64_sequoia:     "8666d892431aa55eb16980a1b416c6876b88d497100f52dd72e0ca8ed83fc31c"
-    sha256 cellar: :any, arm64_linux:       "558e530e1d8be2b772a61b719393a6b3f3814a74a00b6ed13b24e08422f6a1f5"
-    sha256 cellar: :any, x86_64_linux:      "ff08bf0324864108bd494a2ae52b2183dfa41f87060b8c1e797dc48b0c43b7d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "085611b25832319c9acc0e88cf452ba56aa92737aae4da96abc1f48d7dd37e4c"
   end
 
   depends_on "cmake" => [:build, :test]

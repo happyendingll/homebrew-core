@@ -17,11 +17,8 @@ class SynergyCore < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "21a13214c2e342729826c304cec3a1a2972315c0af7cbeca78e5011ccb5060f3"
-    sha256 cellar: :any, arm64_tahoe:       "58f8adf056ec963b144e7ae68d764423f4b5a42fae6a75a572d216143f577daf"
-    sha256 cellar: :any, arm64_sequoia:     "7a6895a7dd8fcdb78ad1e33ec46091e546e319aff50743dcd39cb0152de206b9"
-    sha256 cellar: :any, arm64_linux:       "07007e3721635b03b0e9e2577782327e4c0589006307db6d4a71175ada0d0387"
-    sha256 cellar: :any, x86_64_linux:      "b4a7916ce6bdec0b9db009ed39786cf08012b9ef7312b210cb7647a8c064efa5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "11c274ca6dfbb13f3e4a7394098b01f1655e771701752082063e90770e5925d4"
   end
 
   depends_on "cmake" => :build

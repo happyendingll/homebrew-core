@@ -18,11 +18,8 @@ class Qtscxml < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "baec4dc4ee72166852670c999761531ae872ed9f9b2d69f07018255679cd8efd"
-    sha256 cellar: :any, arm64_tahoe:       "81e03ebeb293035b6cf2536cc373ea19e4afd9b7db56912d41ec5f4cac4a75ec"
-    sha256 cellar: :any, arm64_sequoia:     "dab721dcc017ad7e1c4834e655458b8caa4bbd872e72c5ed3d031f037a112c8d"
-    sha256 cellar: :any, arm64_linux:       "3dd0e8a462ab90f6a9161b7d8ec3a3d13b2da0bf486808fb020ad920765ab544"
-    sha256 cellar: :any, x86_64_linux:      "3d39a325a1abec9349546fbe075af93b0ffda484b123b44011bb278392ac6c3b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4a8f9a39b684ae60f610a3a1d071b3baf144e0ebea36ca07b973e710ad0f379c"
   end
 
   depends_on "cmake" => [:build, :test]

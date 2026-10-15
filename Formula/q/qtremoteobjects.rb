@@ -18,11 +18,8 @@ class Qtremoteobjects < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "891979ee24943ff35bb3fd5a6436c6d72504f19fe021c3ddb34bed29282be8c6"
-    sha256 cellar: :any, arm64_tahoe:       "55f1cb322389aa3ce8430046a82caa1189e541ee4a4e150b401a62459b62de06"
-    sha256 cellar: :any, arm64_sequoia:     "f56b15511d28117f3aec3a5d8022ef134a95a22723293956f1a5be8c3e74c945"
-    sha256 cellar: :any, arm64_linux:       "984e67ed28403a17229e82f1b64fcaf6434059fe6345081d98df8879d8b9d9ba"
-    sha256 cellar: :any, x86_64_linux:      "b787a164b78324d03874c15505604d35d1d87cca152d8e0fb114d215b18e59e8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "faac1048a91c2a115f837390c04e9e41be07015880bdff9418c3d7695656a046"
   end
 
   depends_on "cmake" => [:build, :test]

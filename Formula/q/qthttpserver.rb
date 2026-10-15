@@ -17,11 +17,8 @@ class Qthttpserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5cd6d053b5b9519455bb3a77959e697f4dc2337ad7c8d7fffd17fe56153b9d09"
-    sha256 cellar: :any, arm64_tahoe:       "32ae7509cc9a60f76d40d9d25761b88847e4c3c967f560f16be5f3fe33ba09c9"
-    sha256 cellar: :any, arm64_sequoia:     "acf6095fbb23bfbdac234384aaa82a88cb8be092a5ed88707f3ebb2f2ab4c59f"
-    sha256 cellar: :any, arm64_linux:       "4540c5a250715a336eee659486cd9d65dbf4f3e7677e242f76acad649c08cd8a"
-    sha256 cellar: :any, x86_64_linux:      "96abca1495061cf6eed27892aba3f6a018576760fe9bed0e70941290d4ccfb8b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "55a0b39c2ead82c8ae322d05edefe62717c97bf42c3d9a267a47da7694b45046"
   end
 
   depends_on "cmake" => [:build, :test]

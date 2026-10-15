@@ -17,11 +17,8 @@ class Qtcharts < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "47f5d5cdef5b824198ec9423e160fc06a1a98c980c8da9a31d16e744a5a8c8e4"
-    sha256 cellar: :any, arm64_tahoe:       "62c13343b839216e7cafc46d31e78b73ed53a685d78c316f09062c8c6ab3cc9f"
-    sha256 cellar: :any, arm64_sequoia:     "cfd1904d7d28102cd9a11812ffe8569533b9b5028d1e1a5b0f42aaa09516bf6c"
-    sha256 cellar: :any, arm64_linux:       "09bdc0a82a589fe2a1fbe40cf4e643cafd61f6f8c880c3da6b16564db7c94479"
-    sha256 cellar: :any, x86_64_linux:      "64b30523a386eb4b07fdd974edabf2ba24f5b9af9b6242ee8a39ddcba04f923e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "c8d97bd40693383e83283ec18f317407e0e638938d2c2538239edca17a3e6d0c"
   end
 
   depends_on "cmake" => [:build, :test]

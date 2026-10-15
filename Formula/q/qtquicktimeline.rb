@@ -17,11 +17,8 @@ class Qtquicktimeline < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "53b25fa6dc13127561a3bfd910dd9bf28b77898b2b11f44f01a77d931c18c00d"
-    sha256 cellar: :any, arm64_tahoe:       "223b501a5c82c4c995a8cbab0c224fe1c21e7e2e6fbdae4faf612030b7abd52a"
-    sha256 cellar: :any, arm64_sequoia:     "61747d337bd1fc584f6e551ce8fbb48161149fad2029953e672aaeb0af6ac2af"
-    sha256 cellar: :any, arm64_linux:       "570812fab067fd681283266c27a9ffcabbfec643f74f9ea5c5d5e321e3026b61"
-    sha256 cellar: :any, x86_64_linux:      "e0faf8ddb1b372f5dd51ac5a3557b751ce38542f6d46b12d57c07eed075e3690"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "b433add47b4783debad85611ab5f9a2176713e3a9d205494c4972ae6e13d9aa8"
   end
 
   depends_on "cmake" => :build

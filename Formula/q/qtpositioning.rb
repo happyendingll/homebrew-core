@@ -19,11 +19,8 @@ class Qtpositioning < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "72e5d9efa1150706ed93d5274a3f97a00120ef523e11daadb86554fb9c1f6c07"
-    sha256 cellar: :any, arm64_tahoe:       "6590f79ba4ad96ee8502cb7263b7103405038797a0cb597bdf87613c9d653d37"
-    sha256 cellar: :any, arm64_sequoia:     "5c87ad2518b73ee16f96497fa97e43b20ac64dcd8b9fc4f0f5a4f80cf6be69c4"
-    sha256 cellar: :any, arm64_linux:       "a6f53d9c9f2c9e4ffbc99e0f4b0b19b2b515a7b8e45ad5b2cf8b1029dac567fc"
-    sha256 cellar: :any, x86_64_linux:      "6d75f4a34d8f1390fa332308ffdd35dde11db64fea9067bc9a46ac8d38c4ecbf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4fecad6a210003941f195e98a75d6513818d3fa7a879f09b446dde18cc98c73c"
   end
 
   depends_on "cmake" => [:build, :test]
