@@ -17,11 +17,8 @@ class Qtlanguageserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc7b4b78756cd958f876fe68b7b64ebb8ad7027b3fe7f8643c6493928ea3d177"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6afc4fe59493d7b6e9b76d41cd25f2b953340d53bcc45b95f9ba19435bcdfe73"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2276931f0537d7b7f92f926586d631f6ed0b3a5d1c9a4a1c8045d685457ab7be"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e865b32c902f08d00bba8ba4a698f4be508e4d392f8c19a3eb92ddc454f71bd1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a4589da9e77d54e18daab31474180f259ee120c5fff4afa2a6539e166758286a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4cac68823873134d81c3f95f884b84be56738f1fd3f9dd0f70dd33f1eefc2a47"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -17,11 +17,8 @@ class Qtserialport < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "88380548ee0932994ce17d314d306d9acc18ad3092d1bbc527ce7706a7b4e3ae"
-    sha256 cellar: :any, arm64_tahoe:       "e57a8afb5c96109a67043eb0b982c8ceae877be82a9c84382fe1f7103e53baca"
-    sha256 cellar: :any, arm64_sequoia:     "2250d641dbaae7132f1ca809b4c54d18bd32c9b46580870c5b85aa85746b3dc1"
-    sha256 cellar: :any, arm64_linux:       "8a476746535006e8191802c04ac15b9bcd3236816b6ff0453f3beb8472a6be00"
-    sha256 cellar: :any, x86_64_linux:      "10c9f19b02cc972d884c3849cf7b139d193d4d5a4dd123f13ebc15261b6a2c23"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4be0101848e2f3e186f8ba352d2edeb017a642c5e82cd0c85b628ffb38ef16a6"
   end
 
   depends_on "cmake" => [:build, :test]

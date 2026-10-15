@@ -17,11 +17,8 @@ class Qtnetworkauth < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "78980fa41ff6a8b7844cc7eb847871d8f4696a8ba6e8f9cd57267cf80852ae18"
-    sha256 cellar: :any, arm64_tahoe:       "bab9559065d670e0ee2ca1d4f819cab53eadd8b76a3e8e049cc83c01b8999293"
-    sha256 cellar: :any, arm64_sequoia:     "fd2f154b995d79cfe4bcdac96ddce987fa1b9fe7d252187240d0e191fe2a9ce1"
-    sha256 cellar: :any, arm64_linux:       "d4a7ff086221355047cea365bcc65220e4919f23ebdcbe5e33416d0a3f9479cf"
-    sha256 cellar: :any, x86_64_linux:      "dde5e695260822af24adca77580b00342681a608ee11634a660d7ea053a8d75d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "95466a256c7c0076efc3ca7e3a03e06171108e8f1d0fe943a6547a14f0997ac2"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -12,11 +12,8 @@ class QtPostgresql < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fa7feb235139b080e430c6ef5d8d82f3dcd74231cdb0cc511105c8123a047da6"
-    sha256 cellar: :any, arm64_tahoe:       "4925bf7bc0e0c0e53b7c4ab56318bbbee32518bcb2431c5aa9821f1d1c55b612"
-    sha256 cellar: :any, arm64_sequoia:     "14145d6df02f2d72b92b2713ad05155a51da9dd7777844ac9ef76870a154b78c"
-    sha256 cellar: :any, arm64_linux:       "4c80fe482705bd472aa51f054fb272e0bcaaeea4ed22c2882d1eef9212cce7c8"
-    sha256 cellar: :any, x86_64_linux:      "eaab7d49de636802b4cd6b0be7428d23e9e05532ce00a1dbf03d83dbddb5c474"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "5f2cec9265295733b34b3d6a70f62888457c7e2d80301402f18edcfc4bd1a882"
   end
 
   depends_on "cmake" => [:build, :test]

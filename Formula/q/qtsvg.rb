@@ -17,11 +17,8 @@ class Qtsvg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "766966ea0536727b4c153d4cf8bec16a769bace7a0620557c7433e9675940592"
-    sha256 cellar: :any, arm64_tahoe:       "58aa1b5e16895e651a1d54bea91b783f1cd67a94201ac25bd815289fa08c6471"
-    sha256 cellar: :any, arm64_sequoia:     "6afb926d84442e565b251aec3231e8237178e1a9ef86da5f5dffe145b1aab73a"
-    sha256 cellar: :any, arm64_linux:       "6c7eee50f07137f754546614e814f7772478a65cc5bba7daa7acefafdf21f25d"
-    sha256 cellar: :any, x86_64_linux:      "58efe3465920a58733ab210bc5f9cd5b8e25c622ad36f226a083d943e289c3ee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "862cba1bec1a8cd9dddea1e162f38a4291cfdc1a6ef452a577ad9a34332529d4"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -12,11 +12,8 @@ class QtMysql < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "503c55ed0a9665ddd3024dbe98fb9da9bbf91fc0ed5bd884be1e56cbc8f3b30a"
-    sha256 cellar: :any, arm64_tahoe:       "51327a7b9ba5cff2838129b1bbebb4066dd39e9e9e77d5816a1277113b87a94b"
-    sha256 cellar: :any, arm64_sequoia:     "ebc373ee76af6d947002c1a4e82384ffff395a80fefa623ae11fbd06c15e135c"
-    sha256 cellar: :any, arm64_linux:       "27e8b66e8a337f56aff987af364e0d8c55c98ca336d836068f09b3c0e1078339"
-    sha256 cellar: :any, x86_64_linux:      "b1e3698960e90c1eb3ed1ad0b10bce1cd2df364c2f996bf982c6b8a1c9637315"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "0b857f8f68ae05aaa2d07356db43683eda15c7e45cbe4225d893a56b5329c6dc"
   end
 
   depends_on "cmake" => [:build, :test]

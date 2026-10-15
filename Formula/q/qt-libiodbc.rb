@@ -12,11 +12,8 @@ class QtLibiodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "39c33f46e789fbe041609d6adc454167b4e750490b58b11506f3d1697fe9717d"
-    sha256 cellar: :any, arm64_tahoe:       "a78c34196a59cfe1fcbee624214c347305aa969ab25e8c913f2ba68e21de73d9"
-    sha256 cellar: :any, arm64_sequoia:     "d47c57072b1d88ea8bdbf187f62b306173758c368b7d2a00d8017e7d145d3cc9"
-    sha256 cellar: :any, arm64_linux:       "19b10c6160f6b10e7cec097e488e2dd6b41ae5bf0708b7c0c2ffe9e816f5a2dc"
-    sha256 cellar: :any, x86_64_linux:      "41b5ccdecf6be1870ddf2f90f2eb5f9a8650878dd37a979a2aa321fb30fff36f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "fc19bb89747749528a78f8ac5333d09e6a0333f44b56ca4ce287952a84c62fef"
   end
 
   depends_on "cmake" => [:build, :test]
