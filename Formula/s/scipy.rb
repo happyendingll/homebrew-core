@@ -9,11 +9,8 @@ class Scipy < Formula
   head "https://github.com/scipy/scipy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e8ae830f596de5db64742e9002200e2c5dd446931329ab827699e2ea9e17b216"
-    sha256 cellar: :any, arm64_tahoe:       "2c9d141fcf20b4d940ae8f6afc72f2701575fc01a43d9405c856ce6ac7de4c7b"
-    sha256 cellar: :any, arm64_sequoia:     "0e257740e396f1681e4db35423db83f19233d25b2d9d4f24d57e243f0c725ed7"
-    sha256 cellar: :any, arm64_linux:       "cd30b8a3e6f3b15a9c5f40a67e26c2d15c8cb9d6ba43ad04c2640eb68451ea0b"
-    sha256 cellar: :any, x86_64_linux:      "4cf54564e8ae2e6700f572be36b22337c16aba90b9be7db9d76f78beda6e0f2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "fd07afc5845a66ceaaabb3670647f499ef5a994b47add90f1e89973df2b961a1"
   end
 
   depends_on "meson" => :build

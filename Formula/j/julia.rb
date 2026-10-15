@@ -18,11 +18,8 @@ class Julia < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3cbbaf0a3c037e416f678135aa31e51b4206d570c7396393d8241b768593f2db"
-    sha256 cellar: :any, arm64_tahoe:       "7e5b77958ef24b606f635f7484375f25952671070124b98fe543cde662ee66fc"
-    sha256 cellar: :any, arm64_sequoia:     "add11f3fe793137df4cf383faa14c93ed702e1166a9f31e93204b017c45c567f"
-    sha256 cellar: :any, arm64_linux:       "0f92d33afec747226861e56d7f7cd88134dd1a4c803b4d917ef851c3954cd8b6"
-    sha256 cellar: :any, x86_64_linux:      "493933fa867049b8e06076549a562ac41e263c3b42542f1746a60595adc8aa11"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4c43e42304a47ae24dee2b6190e4ab858caa918e72a307be1f63052fbd97c8a7"
   end
 
   depends_on "cmake" => :build # Needed to build LLVM

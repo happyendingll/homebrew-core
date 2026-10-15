@@ -11,12 +11,8 @@ class GerbilScheme < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "645a7be1ea6315305ced4c9ace7649cf4434769aabfb48c8829db6a7848ea67f"
-    sha256 arm64_tahoe:       "9f0e9f0c40582159ad09a24edb9c6f7c77356081a14b6faad6471fdaff4f23c2"
-    sha256 arm64_sequoia:     "42b0fcf59dd86f661c824bab9fdc4cc0a6219c605f3dd5a96f6ba0d34147969b"
-    sha256 arm64_linux:       "163e1f4377da81f57b4286d575318e543b2b9f96d0808839d793e62f157c933f"
-    sha256 x86_64_linux:      "c5fdfb594b38294206186b90cf5d9bab89359386cdf30dcf0ec8df37de4c957e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "548dd0143a0893b95f1023e9aef1901bc0cbd42e5f0ab6c1546b1cdd3cebfb57"
   end
 
   depends_on "pkgconf" => :build
