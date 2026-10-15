@@ -7,8 +7,8 @@ class GoogleBenchmark < Formula
   head "https://github.com/google/benchmark.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "662bdad49b6913540a002d932e17a98b7f56ed0d2584f16998a46ff5e5c1d318"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e9740462fddba30ed412df0a1f283ea8b86565f228197772d041fa101c3564cc"
   end
 
   depends_on "cmake" => :build
