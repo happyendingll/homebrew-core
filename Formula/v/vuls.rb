@@ -1,8 +1,8 @@
 class Vuls < Formula
   desc "Agentless Vulnerability Scanner for Linux/FreeBSD"
   homepage "https://vuls.io/"
-  url "https://github.com/future-architect/vuls/archive/refs/tags/v0.41.0.tar.gz"
-  sha256 "4ac02e1831953d752b16e90900a55c571d2efe836b12797d8ffc45ad180a4d9a"
+  url "https://github.com/future-architect/vuls/archive/refs/tags/v0.42.0.tar.gz"
+  sha256 "361724c40b463825ef0106314353caacd49452156fffedf7dd415a888e83675e"
   license "GPL-3.0-only"
   head "https://github.com/future-architect/vuls.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Vuls < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "75eec16f97d478af9aa18bb3004e80e4961ba5ac5a5714905d9c2ed1756e9d42"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8cdb0c92768156f2365cc74373c032d04ba8c474255824a47af307f82cdb92e0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8cdb0c92768156f2365cc74373c032d04ba8c474255824a47af307f82cdb92e0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8cdb0c92768156f2365cc74373c032d04ba8c474255824a47af307f82cdb92e0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ba59c86ddf2bb4f24499b965616820dd7f8eeea8a91da20e117c2043f7677086"
+    sha256 cellar: :any,                 x86_64_linux:      "702cd0d4ba3cd62cc69b8300e68e3d6e222f2f68ad957a02f2ef3977a7f848ec"
   end
 
   # TODO: unpin go@1.26 when vuls (and trivy) support go 1.27

@@ -25,7 +25,7 @@ class Rpm < Formula
 
   depends_on "cmake" => :build
   depends_on "gettext" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "rust" => :build # for rpm-sequoia
   depends_on "scdoc" => :build
 

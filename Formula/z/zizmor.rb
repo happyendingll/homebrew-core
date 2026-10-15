@@ -1,14 +1,17 @@
 class Zizmor < Formula
   desc "Find security issues in GitHub Actions setups"
   homepage "https://docs.zizmor.sh/"
-  url "https://github.com/zizmorcore/zizmor/archive/refs/tags/v1.30.1.tar.gz"
-  sha256 "3224fd5b49b77b2ec1a8a0809587824e3bc346a7583e8272d8ad66f95d0e8cc2"
+  url "https://github.com/zizmorcore/zizmor/archive/refs/tags/v1.31.0.tar.gz"
+  sha256 "bdc0f89c667f599cf96e76e1016ac04b75044fc3a93387eec19b2f8414271feb"
   license "MIT"
   head "https://github.com/zizmorcore/zizmor.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "96037e9c3f93a9055e1868c0ee4ae5c0c45e235bb986228f48a82e88527dc978"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f0e0b813359315af0e3f18acc393eb11beb65da6083c8f533fac5dc91565d146"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3b9da4fa5f8f6a8226495c8ed9957cbec00f076060f6da63519ed4a402e798e2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9eae2f375009e26a5c91532ac94d1db49175988caa0eb90f1538641c7481511e"
+    sha256 cellar: :any,                 arm64_linux:       "1952e9c674bfa7f7a604fc07d79e33292fcfffb72f672c49114f0063cdf7ad28"
+    sha256 cellar: :any,                 x86_64_linux:      "7e565ea12c316a3e55201076d338752762a9d03234104ad64713b352fb682e5b"
   end
 
   depends_on "pkgconf" => :build

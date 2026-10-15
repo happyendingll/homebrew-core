@@ -4,14 +4,17 @@ class Repo < Formula
   desc "Repository tool for Android development"
   homepage "https://source.android.com/source/developing.html"
   url "https://gerrit.googlesource.com/git-repo.git",
-      tag:      "v2.68.1",
-      revision: "e1e215a14ea5373419acb8753b6865de19d1f122"
+      tag:      "v2.69",
+      revision: "a0bc2b14a30bef631b91a2ca37c5254d9af44718"
   license "Apache-2.0"
   version_scheme 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "d4afbeb71d4c84ec20021e77641face0e269ce379932b659c502a4f605873b26"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f34672379ad199dfabbfe96b15930f7e83fdbc375776bc38a8e01813dae7de7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0f34672379ad199dfabbfe96b15930f7e83fdbc375776bc38a8e01813dae7de7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0f34672379ad199dfabbfe96b15930f7e83fdbc375776bc38a8e01813dae7de7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "da56a49380bcc48a7a727ec9eb3a0a3d805a225cd9f2ec15ec84dad3ecea0dbd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "da56a49380bcc48a7a727ec9eb3a0a3d805a225cd9f2ec15ec84dad3ecea0dbd"
   end
 
   uses_from_macos "python"

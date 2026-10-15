@@ -14,7 +14,7 @@ class Soapysdr < Formula
 
   depends_on "cmake" => :build
   depends_on "swig" => :build
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   deny_network_access!
 

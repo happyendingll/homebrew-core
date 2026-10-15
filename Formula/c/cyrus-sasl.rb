@@ -8,8 +8,11 @@ class CyrusSasl < Formula
   revision 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "5be1efad7376d3e45c7be9a21461c32cfeb7424e5b711e4a9d6dcdbc335b786b"
+    sha256 arm64_golden_gate: "244e8389554db8ee28e01455456a62e72e18f006430ad95536609a1db4fcd090"
+    sha256 arm64_tahoe:       "f852e28532a0e63209f6704134adf775f2df531753d507ab4c9e2babe6543a3c"
+    sha256 arm64_sequoia:     "16e3956c0ff2617a467953aa8591b55cee40c0285d3a3fa59ce0d439c471ba58"
+    sha256 arm64_linux:       "ac7aaa2c5a23febd8db9e9585a0ef9e828fcf5cd508320c3d741a6240ddcbefc"
+    sha256 x86_64_linux:      "c79e51a24f74445d5ffd93ef531ddf9b86b97ba3ad756c7c9a59a11408aaf5ce"
   end
 
   head do

@@ -1,14 +1,17 @@
 class Zero < Formula
   desc "Terminal coding agent you own"
   homepage "https://zero.gitlawb.com/"
-  url "https://github.com/Gitlawb/zero/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "9f8ec37478f13d6e72b90b85f87ae586a8dea1debd94d035e8dce22eb67a1fa1"
+  url "https://github.com/Gitlawb/zero/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "250e6cd090ea4f8fc0c2b42267d7c0563ed54ff00080a810b907f26328f0d38d"
   license "MIT"
   head "https://github.com/Gitlawb/zero.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "88c76edf530504aa06628bd978e0a59f942eb6f26833a1b48d859c8fa7696f7d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4ac81658d12065320947d0f7149ef8236d96dba5fd01a253b7102948dd897872"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4ac81658d12065320947d0f7149ef8236d96dba5fd01a253b7102948dd897872"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ac81658d12065320947d0f7149ef8236d96dba5fd01a253b7102948dd897872"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "474e1b187ba2261d54baae682aabbee41fcae77319f3d6f8c912ab3dadfa351a"
+    sha256 cellar: :any,                 x86_64_linux:      "974678a3ed90422888d1b9094666f0b97f4a3188a3c88e449666de82685ff173"
   end
 
   depends_on "go" => :build

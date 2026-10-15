@@ -8,8 +8,11 @@ class GitDeleteMergedBranches < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f79df7ba8c42c7b414da9c3886abfb50e68e3b9784cf592ff74e946b1494382b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3be33f56aa1a810e2acd2af9f167bc45ccace4de9d82be49ef9d56ed9c68c8ba"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e49484beb977c01039ede0acfe52b41e52f7070d57b741a570761beee76dd030"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f8cbdd496861d1800b00353183ba20a6c63f6e66ac7249051ca82f25c455128f"
+    sha256 cellar: :any,                 arm64_linux:       "e5c25528cf9709f16b1db8b63589a27285f577c9c99cff96e26c4f4edf03c2ea"
+    sha256 cellar: :any,                 x86_64_linux:      "d7d2941dd363f3a33722424a67aa60c747fd38c7b33c993a999761016b088540"
   end
 
   depends_on "python@3.15"

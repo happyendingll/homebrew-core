@@ -1,8 +1,8 @@
 class Massdriver < Formula
   desc "Manage applications and infrastructure on Massdriver Cloud"
   homepage "https://www.massdriver.cloud/"
-  url "https://github.com/massdriver-cloud/mass/archive/refs/tags/2.4.0.tar.gz"
-  sha256 "a19a3709b39401eaf236323383aae1de1641e06f3d09b7a51b4c262a2ee2a4e6"
+  url "https://github.com/massdriver-cloud/mass/archive/refs/tags/2.4.1.tar.gz"
+  sha256 "07eeed96c8b9886e57e3b283c37c8b583ea45188cc19f7826d0737c6102fbd08"
   license "Apache-2.0"
   head "https://github.com/massdriver-cloud/mass.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Massdriver < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "873877c727685d3714991295f0ee9adf7aa38e608198477fe754d8dc34004eb3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5ddaf2327994fa4495d6a64b4d2fdf00ddfeb70a4298a3e88f347ed2649470fe"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ddaf2327994fa4495d6a64b4d2fdf00ddfeb70a4298a3e88f347ed2649470fe"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5ddaf2327994fa4495d6a64b4d2fdf00ddfeb70a4298a3e88f347ed2649470fe"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d00cf5645be9a5dc79bfcb9503964167c64d29cc21595dc86ee3b10d091055ef"
+    sha256 cellar: :any,                 x86_64_linux:      "c4105798ffc5f5237a0068ed4ffdbdc829717823d2fd24edb9116f45443fa3b4"
   end
 
   depends_on "go" => :build

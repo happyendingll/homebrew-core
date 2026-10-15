@@ -1,8 +1,8 @@
 class Nift < Formula
   desc "Fast dependency-aware website generator"
   homepage "https://nift.dev/"
-  url "https://github.com/nift-dev/nift/archive/refs/tags/v4.11.0.tar.gz"
-  sha256 "0c066043d6a98955dfc12f594e18b454cd9d6da9519f2f36136800c6f73a5d8d"
+  url "https://github.com/nift-dev/nift/archive/refs/tags/v4.12.0.tar.gz"
+  sha256 "5ed1468cefdc1b908f161a4492a74c9910618e10bcf8cbce5afb175c7ed378cd"
   license "MIT"
 
   livecheck do
@@ -11,11 +11,14 @@ class Nift < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "8b66271de6cd01b5c89bc73b737416768214df8ecf2cb12ee5108d3eb1bbf619"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c637828ac075b284da3a44e49d96732652d9f3763eacadeee137ccf6edea3dae"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eda0edbe84048db4e7c6751b23a4166c3ffabb9681e47447aedf96f1e3d9c149"
+    sha256 cellar: :any,                 arm64_sequoia:     "e0552aea8f5e1d30fd7cc9ae2b64d7ebc213623a65940020dc8a8aa652424819"
+    sha256 cellar: :any,                 arm64_linux:       "5592086e298322ca99b59b2e747e50ab788833ffcc28144648c9187edb68bcee"
+    sha256 cellar: :any,                 x86_64_linux:      "fa97eee937ba78bb6be439fa2f0037485590c4ad724347c020b73b30e2ff5d6e"
   end
 
-  depends_on "python@3.14" => :build
+  uses_from_macos "python" => :build
 
   on_sequoia :or_older do
     depends_on "llvm"

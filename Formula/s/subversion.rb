@@ -22,7 +22,7 @@ class Subversion < Formula
   depends_on "gettext" => :build
   depends_on "pkgconf" => :build
   depends_on "python-setuptools" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "swig" => :build
   depends_on "apache-serf"
   depends_on "apr"

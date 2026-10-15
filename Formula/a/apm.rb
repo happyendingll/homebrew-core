@@ -299,6 +299,7 @@ class Apm < Formula
     end
 
     virtualenv_install_with_resources
+    generate_completions_from_executable(bin/"apm", shell_parameter_format: :click)
   end
 
   test do

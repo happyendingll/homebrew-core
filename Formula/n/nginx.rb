@@ -3,10 +3,10 @@ class Nginx < Formula
   homepage "https://nginx.org/"
   # Use "mainline" releases only (odd minor version number), not "stable"
   # See https://www.nginx.com/blog/nginx-1-12-1-13-released/ for why
-  url "https://nginx.org/download/nginx-1.31.6.tar.gz"
-  sha256 "974ed5298a5e398e008704ed5db284e655fc270c596493dbccada452448fc9f1"
+  url "https://nginx.org/download/nginx-1.31.7.tar.gz"
+  sha256 "89ea8a3dc171511f7325043b50e4c036248d9fad5feb7ec809c0b82d5df42c65"
   license "BSD-2-Clause"
-  compatibility_version 11
+  compatibility_version 12
   head "https://github.com/nginx/nginx.git", branch: "master"
 
   livecheck do
@@ -15,8 +15,11 @@ class Nginx < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "52eabc1a1633089ed4c2f6241c76e578eba442da31f9d802eb289abb0c8ed473"
+    sha256 arm64_golden_gate: "956f0c24358e9ab300dfcb35e30667b1fffade596134cbd0988a7f6af8d3b5fa"
+    sha256 arm64_tahoe:       "b2f27db5d6c71c84a757579a44fee15e46bd7ede9f6ea664dd60603ca8f21be6"
+    sha256 arm64_sequoia:     "d7f2ae8daecc62e22b7f130dd38fc560fa5f91885fe4af4596fedba4d0193311"
+    sha256 arm64_linux:       "23a5e1137a6b220ae1adaadbbaa24f55f63e76fa1da73ecc0bdc8d503d131771"
+    sha256 x86_64_linux:      "406c3e14919a5529fcde6ecc057cf2ca05955c0b9c942e06a66e931580586329"
   end
 
   depends_on "openssl@4"

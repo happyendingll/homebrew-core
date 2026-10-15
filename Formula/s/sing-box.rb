@@ -16,7 +16,7 @@ class SingBox < Formula
   depends_on "go@1.26" => :build
   depends_on "llvm" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.14" => :build # extract_histograms.py fails with macOS python
+  depends_on "python@3.15" => :build # extract_histograms.py fails with macOS python
 
   on_macos do
     depends_on xcode: :build # for xcodebuild

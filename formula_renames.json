@@ -98,7 +98,6 @@
   "trust-dns": "hickory-dns",
   "twine-pypi": "twine",
   "vapoursynth-sub": "vapoursynth-subtext",
-  "vercel-cli": "vercel",
   "vultr": "vultr-cli",
   "wcurl": "curl",
   "whisper-cpp": "whisper.cpp",
