@@ -7,11 +7,8 @@ class Zxc < Formula
   head "https://github.com/hellobertrand/zxc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b83ab7b7f5ac6dc6e1383d70f1221aba5fdba3117e17d2fb9ce3db93c1a329c0"
-    sha256 cellar: :any, arm64_tahoe:       "83d44707240783cbd0dae015cc8bb484a6583e4982d4984122f574b955aaa28c"
-    sha256 cellar: :any, arm64_sequoia:     "075e9c4cbd264f2e33ab482556e971062d73cff69c944f84f2f41b88917eb085"
-    sha256 cellar: :any, arm64_linux:       "527dddd1118ae3530f3287de91ccfa6042891c5fbfc5680eb717906498bc1e1d"
-    sha256 cellar: :any, x86_64_linux:      "64f5d179a9bd60d2b6975f8057c73aaadb3eb94539f0c9790576c1f5d6176d19"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "f3e471c05b2ae7b4ee2f7738b677ed6ee7df28301f35f7d229d343b79759587c"
   end
 
   depends_on "cmake" => :build

@@ -11,11 +11,8 @@ class Nono < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "75dbd304cefc1242d7b7361b3819d50b997fdfeece82f2bc30d339bd46ac441a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "828d10db162ec08ecebad5d55e878ada6da7a37d99e1e840a1309f41dc9f9bb1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "adcfc32152419932bd25635447d71c2245adb073db8a88bcb2fdf2e3093b6aa3"
-    sha256 cellar: :any,                 arm64_linux:       "f86ed0d3b9fa4ab7904ce3850c3aa0ef4cb9fd455b0e9c54ea45d7ea6a1cfd11"
-    sha256 cellar: :any,                 x86_64_linux:      "03bb90f2a4face44ba35dc120caa7f1471d947885de12c2acf14b0fd1bd6e966"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4cf978306380dc91aebf3753809cfc786296d3f7b31012ac755adc4b6100e991"
   end
 
   depends_on "pkgconf" => :build

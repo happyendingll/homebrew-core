@@ -7,11 +7,8 @@ class Algolia < Formula
   head "https://github.com/algolia/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "435b641687ade9c0988f371280f1bb9f7ad1be9cb3d16cb550506495940a2096"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "435b641687ade9c0988f371280f1bb9f7ad1be9cb3d16cb550506495940a2096"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "435b641687ade9c0988f371280f1bb9f7ad1be9cb3d16cb550506495940a2096"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7c4b1de891d99e09653c7d2ca373a6643f97fa88dcd6dc2b5d63a3abeda4574b"
-    sha256 cellar: :any,                 x86_64_linux:      "ae03430e80d2292e2f810423607b883c342b0c3f2bbaa17c3f9170d59348fb13"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9b544155f8325e183164e9c4dd4224748548024d5f078ee21709449a449a0295"
   end
 
   depends_on "go" => :build

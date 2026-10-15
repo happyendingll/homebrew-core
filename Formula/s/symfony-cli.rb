@@ -6,11 +6,8 @@ class SymfonyCli < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d42f6395c650e7fcb8cc37348bb02d3c6289d0246f8f9cdf01c0ff61ee748306"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3aceaba46f2eed7b8a4cef71f2d4992b3c73e4e4d5ed7f32b8c21c57a4988593"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf68dc610e5b1b9bd0b093dfe7eba1da534ba38820dcf21e46ab3b8122fa0c18"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4e9b8e02e30a03c057bf15c7ba7f9457332e638b20b00c4ac900cc347726a2d2"
-    sha256 cellar: :any,                 x86_64_linux:      "11c4123a7b9ec68c0aaeb0fa9b8b9aa02f58150ef4c5a239390c7335514b8ae2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "31c634b08f107f2e783cdf5e71ec2d8607c7d44d1d007d6ae97908a94ea47b44"
   end
 
   depends_on "go" => :build

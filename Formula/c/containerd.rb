@@ -6,11 +6,8 @@ class Containerd < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc4aab39c42519f1bef0559850f778e44387a6ecaeb6bff13cf33005b6caaeda"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f073e764d73493825dcce277ceda20325960d37334a7fdc64adb0d8edad1acc1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "507dd8b44f657a3ccaf2f8029e50fc9e5429462be4d7dd4e848af80c8ab91e16"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9e2f2d804f9caa23429c170b45cfd18f6c04c47ea64969fd822f690754dd9f3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7700772e9daad4a8dd13443d2552ce2e21c36d268dffbed1ae0cf65bd1abe7da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc7a41a1cc7ad4315787318df9b87023d42faefb5391c6da30dd9b6d8f56a35c"
   end
 
   depends_on "go" => :build

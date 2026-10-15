@@ -7,11 +7,8 @@ class Deck < Formula
   head "https://github.com/k1LoW/deck.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fce8157a5275770e5c73064cf444fb1e31b0127100fa23820bc41b55be060262"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fce8157a5275770e5c73064cf444fb1e31b0127100fa23820bc41b55be060262"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fce8157a5275770e5c73064cf444fb1e31b0127100fa23820bc41b55be060262"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "16b9f3562e99593f54cd24987b24caad1829c34734c6f27ec22db30c6583e549"
-    sha256 cellar: :any,                 x86_64_linux:      "67d304ee51626b2e8ec7ef60ce448c3ff6d06a7e6525b7c13572f384abfbcafa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "76655fc0865be3b7f942d0f96b2548089da06980b4ccdaae1a217653cad0df33"
   end
 
   depends_on "go" => :build

@@ -8,11 +8,8 @@ class Molecule < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8c21b28e561a637d125af77a2380048794ba9df747627d16ef51ae3141b168c6"
-    sha256 cellar: :any, arm64_tahoe:       "7e6f9d71639fb433587c8f5a93960b1bd61a049ab02c3197108ecd5c19c82c6d"
-    sha256 cellar: :any, arm64_sequoia:     "067d19bc8be220401cb1fd21835c9c90c48dbeaea21b146d158713a7ac9c782e"
-    sha256 cellar: :any, arm64_linux:       "ad5aec7377389bbe6b8497ca36e1bd09d8b94f21d5a64435fde8b0ffa51b088a"
-    sha256 cellar: :any, x86_64_linux:      "df237a455c558c1f421c01eaffe370b0fa0715e1a3e78d27895d1d9e6080b792"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "1efced3cd01cae28e1b3f47bb871936873659dd80a8e8d1c81ceedc8059bd97d"
   end
 
   depends_on "ansible"

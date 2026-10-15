@@ -7,11 +7,8 @@ class Vitess < Formula
   head "https://github.com/vitessio/vitess.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b2268434c2e51838c54bd81784cb9892710bf172f87b931e943e2038663973c4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b2268434c2e51838c54bd81784cb9892710bf172f87b931e943e2038663973c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b2268434c2e51838c54bd81784cb9892710bf172f87b931e943e2038663973c4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1bc0acbc770a4553387c0e957ecb01f68eddc151ef6f379b9a1e72fc65fe522"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5f4b4aa4d82fd7a5054c966fe8292fa7c35c28ffb0dde089216457337bab57ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "76c1c598ff412511610d5c6b5e143a28da25ecf4684e6e03e1180ceb28cdec43"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Libmsquic < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bb3958d0bc64d3759dcf56c49cfea7b7bdb141c9c08a34d7fed7d9ff1d7ec094"
-    sha256 cellar: :any, arm64_tahoe:       "5a9a40b4ab6c8ee26b6232d2aa7baeb87758e2675fb96e213c71cf08f17d3efa"
-    sha256 cellar: :any, arm64_sequoia:     "09b65a75f47cadd722cfa12e6892712da18c1cf36b0a0fea7d0404f6f652bfdb"
-    sha256 cellar: :any, arm64_linux:       "0812d983e7d1d11444292bef8b1389135a25799320f96b4e96560856b9eedfa5"
-    sha256 cellar: :any, x86_64_linux:      "6f370716adeca51b887862a0a82db56d590a9c8c8eab6e4b67801d3666a1055c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "dad2455e178337a0234b650fdce168d5dc29c118768e19532e0356b578802963"
   end
 
   depends_on "cmake" => :build

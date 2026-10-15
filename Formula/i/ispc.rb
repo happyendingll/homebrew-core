@@ -14,11 +14,8 @@ class Ispc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "58a32becf7ec6476e04c77a74ed8b7a3b1ec16956bc7862b5212c7670663a643"
-    sha256 cellar: :any, arm64_tahoe:       "82bec983967c0d8fd9ac4390227cd1c1aa278d7127cdda7b766bf4ed51c22987"
-    sha256 cellar: :any, arm64_sequoia:     "2fe0d82015851d5cdab69354091881fa7a1ef4d6f408763302da78517445f292"
-    sha256 cellar: :any, arm64_linux:       "bc73fa3d46eacdd1658353e6dcf01ab6ba2455f9343c447bddd4234cb1c4a588"
-    sha256 cellar: :any, x86_64_linux:      "b94b7178f6ceaea3c6e7f142c06e33cb08628da63e5abc230d352b6fc8632403"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "6d858343fe07f35033497d6de77ccf3498ae54351b4300459441c60d24a976bc"
   end
 
   depends_on "bison" => :build

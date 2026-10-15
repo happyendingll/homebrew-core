@@ -13,11 +13,8 @@ class Simdutf < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d3b82534aef06319337f82e8d4ccb4391a9761eed92838a263108e26c6d42458"
-    sha256 cellar: :any, arm64_tahoe:       "8b87bf83cc005de8e6ed52166d58c9c3b6961908ee2cd0dde8f25b00131b9400"
-    sha256 cellar: :any, arm64_sequoia:     "6772b58998adc199ee3e9623ef2ee7e937eced9a1ab2ba9f0ea417b2402d788e"
-    sha256 cellar: :any, arm64_linux:       "16efbf0eab8b79f60c8c46394a1df58729919d9e693475dfccb6ef41ebef1f7f"
-    sha256 cellar: :any, x86_64_linux:      "3f4da72ae548ef0b1df1305f8b86b4ebb5fb670e17f929fefc877f057f834243"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "5a8578e204e63808bb67cd8824152eaa0e1a82207ad84ced484711ed9dc68a53"
   end
 
   depends_on "aklomp-base64" => :build

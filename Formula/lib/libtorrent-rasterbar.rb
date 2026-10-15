@@ -14,11 +14,8 @@ class LibtorrentRasterbar < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6a89ef19e50b0224335d6ae76fe440e3f8d99e6f33d1ef7ec3f4e42ca0294703"
-    sha256 cellar: :any, arm64_tahoe:       "f309aa3265ddbc39cabe72603df175e5c88e8faa1d410eebaf391186eeeb53c9"
-    sha256 cellar: :any, arm64_sequoia:     "42a6c62e568da3d24378dfb3f81897ae48432762e54af90aca629c72ce72923a"
-    sha256 cellar: :any, arm64_linux:       "674a733d7895c82e39f5834f7045d8289e2f185e1b1062637954f7cd7b038c73"
-    sha256 cellar: :any, x86_64_linux:      "add3131860b21e513e6e565e7d1cd1144af9a73947298ef479cc32736a2d4a97"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "cb800b09aebd5d5730374c857c755451e580e826a613264d31458f7e0ef66f23"
   end
 
   depends_on "cmake" => :build

@@ -16,11 +16,8 @@ class Libxmlsec1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f71dee49e3175a7ee6f3da3451cf087491d95b8ed71b87701faa425b1ca21045"
-    sha256 cellar: :any, arm64_tahoe:       "97494abca9775f6d866eaa4ffa98bee024f356c69a8f254d937fc8743fbf646e"
-    sha256 cellar: :any, arm64_sequoia:     "d99674498676dfd3281708e1b142af8d09bef6a7c12ba02da6b68ea4a2979d0b"
-    sha256 cellar: :any, arm64_linux:       "b6641f5d80eb48b4fe3f063855b1f5e8590cae9316661e4d1400344f8725bbf3"
-    sha256 cellar: :any, x86_64_linux:      "00d72ab9ef93447eec2a23ec937f45eb6ed57fd49b0b38218f720031e66a1022"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "edf85152a63435e6e8cde625ee0141b2651794626c37866b7d0050a961d61e35"
   end
 
   depends_on "pkgconf" => :build

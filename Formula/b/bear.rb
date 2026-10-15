@@ -7,11 +7,8 @@ class Bear < Formula
   head "https://github.com/rizsotto/Bear.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2c445a926e272eb3ead9bdff8a2e4d3b62c7533baba77a8dbbd998541370b757"
-    sha256 cellar: :any, arm64_tahoe:       "7353e6f874632db78f123de076a7b30bd9015cd9fef74a01268e0045397a093b"
-    sha256 cellar: :any, arm64_sequoia:     "8b78d97468c9ab433b9df184d5b5bdc7f28b93473e3d7cd46296a6496c10c97b"
-    sha256 cellar: :any, arm64_linux:       "fb9c0b47e5bd2b286f23e570362cdf1a2df6f093f6a7b345f5c50eeaf8ab6de8"
-    sha256 cellar: :any, x86_64_linux:      "89693fb1a122301d8600c0a226d0eb89ae704ba9535e3633d902fd20ad09f052"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "2cdb44a3be1e3c7b185110b2169aee8853f380ddd29ec8e106d8519c21e3fa0e"
   end
 
   depends_on "pkgconf" => :build

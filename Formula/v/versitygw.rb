@@ -7,11 +7,8 @@ class Versitygw < Formula
   head "https://github.com/versity/versitygw.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a9dc0bd5b7152864b62cae490a9acd9a7e34ec5bd51a74a6b85b4cfa1a0db020"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b3f0e1286521be25e6014f3cdca04c5587e9738696846aedf8d8110c77c8e796"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "783fac542e9d513893e4690e000fc273df8f074740c507c32dc7528ddc4becfd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "14c91adf8041aa518513d9dfd403e0e75dbc0b68cd68d22472ac7332f4a872fe"
-    sha256 cellar: :any,                 x86_64_linux:      "e193e1b3e05afd4051207e799e414e23f613ea15fd5ff4ecffb14ae802cdf3f3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2d0331b699f224668d1054015e4c063ad3863a24bbf4c76c6964ab6a687c8a0b"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class CloudfoundryCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09bc518822fb9be04129814a51e11baa75fa2a44818993a1cfc2ba1d1460ac1e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "09bc518822fb9be04129814a51e11baa75fa2a44818993a1cfc2ba1d1460ac1e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09bc518822fb9be04129814a51e11baa75fa2a44818993a1cfc2ba1d1460ac1e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "299182bf73121311c314c0f3cd8015da10846757e15fc51f660e422ed944cfd2"
-    sha256 cellar: :any,                 x86_64_linux:      "9728bb9b94400a5feba1dbbcbd3fbca8a904e22d962059af902946ccabd7a563"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8f83c49cd3e3c119acc0ccbd218c4c23f8fc6f86a06f7c502b402f3e16be7939"
   end
 
   # TODO: unpin go@1.26 when go 1.27 is supported

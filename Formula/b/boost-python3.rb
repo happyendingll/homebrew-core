@@ -13,11 +13,8 @@ class BoostPython3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6bb5059ac4bb4e34957bfd6f2a02670c2dd4fe25ffea6987992f2b8fdb0b2c30"
-    sha256 cellar: :any, arm64_tahoe:       "56e49a5b7ee435ec5379b9a3f73567e0d1724661433eaffea2e44ca7a2189184"
-    sha256 cellar: :any, arm64_sequoia:     "ed6d7e52dec067bcc3df8fe9efa5b9117f55359fe38b1bafae3a0c769cfb69b8"
-    sha256 cellar: :any, arm64_linux:       "dc07bad4ecb7765b37bb06418da7a6a091fc0c2f85bcabddd758edd7c6fc35c4"
-    sha256 cellar: :any, x86_64_linux:      "f612d076520472eab0d01f610e4122637c1c48469ea781f509faa54216a0a124"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "b498c8a87e465eccbd8e02969f033f45822177a5affa9ef3ad09adefe5bfa216"
   end
 
   depends_on "numpy" => :build

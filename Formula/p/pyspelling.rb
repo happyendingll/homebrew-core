@@ -8,11 +8,8 @@ class Pyspelling < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "12db2ce810e6f3cfa64f7c94718cc5bdbdb58fa91c2d43685f4e3536e9b45b5d"
-    sha256 cellar: :any, arm64_tahoe:       "78cf99aae0a98c0c26b423c69380a78bfac87a39bd2226d2b5a223bef8935cbf"
-    sha256 cellar: :any, arm64_sequoia:     "cb295663ea2da4d52f066d9fbca89c68dd5d2cd8866bedec74bbe293e6d398b6"
-    sha256 cellar: :any, arm64_linux:       "4dccbc6e828b64a291a46f7f755df4c53114945ae23736afcbfb77cedafa73b7"
-    sha256 cellar: :any, x86_64_linux:      "f95c38dfd655841039efbf35c9b04a96f976a2a68aacecfc6ec4ea667543506f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "fa27eef79ce3b24d98d79b51522878e0e8a2a0e841bb5152693110562660574f"
   end
 
   depends_on "aspell" => :test

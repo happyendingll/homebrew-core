@@ -6,11 +6,8 @@ class Goat < Formula
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "70aed9ca116e0b772a9a1c0ed9b60cd6a722f05d46912ea48f3635000634aede"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "92bff82ca06bd019b6bdc6b790977b1c16c7202d1290d21a98e427e80bb21140"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e41b0242c7eebdd8b10388ddc9b6d9a7bf36899ffd57c8d92fabde37fde362b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1ee89f9139cf1021e1572b669b5c47a50acbfd69f85d22609f8a80faae230259"
-    sha256 cellar: :any,                 x86_64_linux:      "26f814f28f8f29942a0f731fd90ee872ccacd28da4bf96eaa0517791c9dee79b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "98b15cde22086541b945500a4306af7ae502a6bbb53bcae97bc5679c81c18135"
   end
 
   depends_on "go" => :build

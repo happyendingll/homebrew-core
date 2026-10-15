@@ -6,11 +6,8 @@ class Dskditto < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc3b03b384127ac8ea76b3c4cb94818c0e723b1723c3d73d3adc51ce36d5c53e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec7db1d2e4da9ed21f7ddf628adbb460fac9e6bd2f69688e1d30bbfc48217233"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "891c1d95587e1f64db1457a9248bb39676cd76fd7b86b25593b764c92c1f7797"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9065b44504b537f8c85d979b19cef8788a3a8bd2ff08a487435a545420d7a14b"
-    sha256 cellar: :any,                 x86_64_linux:      "d0623d67f84ec0e3fa537a2a3c405902625436e5793b1060559d9d18a5f1410d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0ed97f47f107c0cf82e1df9f80ef431b3bcacdf55184fb3b41638ee8a129f7c7"
   end
 
   depends_on "go" => :build

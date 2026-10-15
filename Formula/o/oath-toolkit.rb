@@ -12,11 +12,8 @@ class OathToolkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4d70c86c3ae6ddb9bf3978b01249f7b94e1dd5ce7dd6d3a94e3d3aeac70c8c7d"
-    sha256 cellar: :any, arm64_tahoe:       "e4916bccb14b795fd7caf92402a2543726823de43d0cb3e3cb8c043692f1d025"
-    sha256 cellar: :any, arm64_sequoia:     "4fcf347f4312bcdcd4eb3e30f06f54616cdde25d6eee67e3ec104b3bf9f5308c"
-    sha256               arm64_linux:       "4843e3f37d4bf9566b9cdf1dfb9581d09561f811df140af9a95de871392fdbdc"
-    sha256               x86_64_linux:      "ccbfe9159ffa1301b9fb130982bd94e1b31ab4e9dc736cd2eb17d5a03803a3c7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "efb6a991d25864418c8725d6c1bfc0c250bd24eadb7329f3cf6f21f085ede8f9"
   end
 
   head do

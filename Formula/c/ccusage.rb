@@ -6,11 +6,8 @@ class Ccusage < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5837ee4733f25518d185b7f44f4e7109d55163b1064b79a4284761f60ba0a7ec"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a656466e7b92951e6503a922ae071a862bfa9f96c499961e8d88d7d8a0ec45d0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5ec5157147b247ec9b803856ab253b76f438b7194fa894d8d859293ca43ef6d8"
-    sha256 cellar: :any,                 arm64_linux:       "1e941ce31f1dd3bd1bb3916d73c1228a0366f31ed66f56a1f0c11016c7e1d066"
-    sha256 cellar: :any,                 x86_64_linux:      "bc66462762d2db93bd35dd773ace8a3cdd911689828a817d5171770ac4e30dd8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3e40a4fdf9dddfcff2b756b3e9c1b2e7f90e5c446273e9a02c574a66c9904caa"
   end
 
   depends_on "rust" => :build

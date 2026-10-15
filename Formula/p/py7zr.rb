@@ -9,11 +9,8 @@ class Py7zr < Formula
   head "https://github.com/miurahr/py7zr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf1e66ce13f5015342666ebe0fee3fc8ce061fcea63d43873f281bcd0b2d886c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d133c53a16c1f45cf35f344b2c63b6c3edb28fda3d396910090e7877d321d49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0166f521ff9822300eae45ca010b1989578adf0adf66985cedc0134adb0469f7"
-    sha256 cellar: :any,                 arm64_linux:       "fa72d91dbc535048b7d91b3a9ffc750c86016671f8ca31b490c67ac60ebcd3e2"
-    sha256 cellar: :any,                 x86_64_linux:      "8546ad3e682a00ec8e90ddb090009b10fd11659333a1127d1626071b377f4719"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b2a05f0cf434bbdb5eccd62958693ac4427ba2ae38a40a85ff23fc8266fd67d"
   end
 
   depends_on "python@3.15"

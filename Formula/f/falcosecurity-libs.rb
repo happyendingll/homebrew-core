@@ -15,11 +15,8 @@ class FalcosecurityLibs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7faa0312af9cd0e728a6fb559661244844e30d2e4240f8af8322184e447434a9"
-    sha256 cellar: :any, arm64_tahoe:       "4358066777cbe6488a6dda0c13138a19e79ace55afe5a44a86f5ea1bff8bd456"
-    sha256 cellar: :any, arm64_sequoia:     "22380eb8a07e5c78185ec00e8ba8ce4f022417ea4b94a6377074afebc36f3466"
-    sha256 cellar: :any, arm64_linux:       "c94eb38240a294c6290739cc37374a12ffcad7dc463429bef1b21ca3a7364f90"
-    sha256 cellar: :any, x86_64_linux:      "f7d8872ef9d2dbbca707233685106332459d27ee8cca676e1b86df0bbf591cc0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "7ec53bf103c32fef7ecdcd61a23c070bdb4fa69caa633f4aa15609ef8dd8d91e"
   end
 
   depends_on "cmake" => :build
