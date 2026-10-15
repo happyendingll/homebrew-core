@@ -16,11 +16,8 @@ class Anyzig < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "59f476bf71a90d6166bb03115d81576680f174d2158ee6d04fd073afe8191448"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b48dc89c7179364378d93e421209812f5514f4adcca340a3a88d4196dde79aa5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b7fc211cf8b92a6ba711060929c8f4091e9486be706dafb78037ccb02b48a6f0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c36b277f82fbd5b97605f15f09399006c656db2df8d48790cd7dbe13e7363466"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e0f6b8a9e59298eb131045a38d6444a3d26c735fcfc77916ae758936d8f0a5c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0f68089b0840d9d68163613bc01e004965e4300324eee8a244382e242bdf31b9"
   end
 
   keg_only "it conflicts with zig"

@@ -6,11 +6,8 @@ class Libunicode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d2f1804a670d8cf22d7ca18f3aea22125b302989fc84c6d55b46b946776ee1a9"
-    sha256 cellar: :any, arm64_tahoe:       "18a27e993661d55652d7ad6cd77659a24529ccbfe187e638edc6458d0a81ea2a"
-    sha256 cellar: :any, arm64_sequoia:     "3d31cf9950c1cd2c49405ed6429c6a164189ae6bff1feb4755b8066a256e6228"
-    sha256 cellar: :any, arm64_linux:       "961fdaf3a50a42d6e11729608ca9c665d4b061ca1dec9cbd2fe1eef671d4a7f7"
-    sha256 cellar: :any, x86_64_linux:      "39bdc083f2b2118dddfadcb0ff3ee72f05e61602d4a5581c36d7d64af63f829a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "921356897cb459bb4266fc0631cc9a165e0812103b8e89a6b13da654773d5ada"
   end
 
   depends_on "cmake" => :build

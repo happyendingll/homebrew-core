@@ -11,11 +11,8 @@ class OpensslAT36 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9b26d88fbeef0006bea7ff1dce2cd18b77924d199607135092dbb6af1bf4df80"
-    sha256 arm64_tahoe:       "af714c3eca585a0a9b2ab707a9cc9d54966ed34d6db09eefca0e1ffe4bfd092e"
-    sha256 arm64_sequoia:     "815c8d6a5ebdf26cab2d7f5f7a7e5a1ec5916f34cc9afe29ebf04aa7c7c97053"
-    sha256 arm64_linux:       "74b8e7df20d8069b957e9754d0affb207be9e56924b40734e32e60ce68284318"
-    sha256 x86_64_linux:      "cd4ad11e241dbb2b9c38964e97b3c8321366f5e59358bdc8d5523a99c3ad9c87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "82fd4a8cd255b8d5bebf106154e009fb554e2769808de4ee2d42484216b94d24"
   end
 
   keg_only :versioned_formula

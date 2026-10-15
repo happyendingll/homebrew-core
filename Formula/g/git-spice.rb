@@ -14,11 +14,8 @@ class GitSpice < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11b5416b83a28f982fc5cd79698d9c7dc502766d0f6879f145417e1046b55c4b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "11b5416b83a28f982fc5cd79698d9c7dc502766d0f6879f145417e1046b55c4b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "11b5416b83a28f982fc5cd79698d9c7dc502766d0f6879f145417e1046b55c4b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "37c23ad17b8c16b30fcf2b50c046732af050837b19169ed5b42925aff587dbdd"
-    sha256 cellar: :any,                 x86_64_linux:      "14b49a76545301cbfeec45f4d47e7b58b57ee2a358416eace22ee60562496d9c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e3ce21c88921e7e5e1de479dd89cff442a8ac59bd1a8b0b1af00a5d572d1da5f"
   end
 
   depends_on "go" => :build

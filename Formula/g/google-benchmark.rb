@@ -7,11 +7,8 @@ class GoogleBenchmark < Formula
   head "https://github.com/google/benchmark.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4cfb010a52dc70ed0f3eae99bc0132197e2a6c8ea098513323127213ba6a9bc4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "08aa1d2c26de8f05870eff02b3fff6b90bcb0b74ab64a1cd5f7e35638e45bfb3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7409914c8dbb678557f64ff5fccadb64f4549fc5d4b611dd3a7ae4cf31236fa4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d2947b225257fe50e79714ab9166a38096933673b61d5969726f2a1ed930ea65"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "76322ee48a1110c2e22923d0cd8aad14e60eff001cff0282e956fb892bef8f41"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "662bdad49b6913540a002d932e17a98b7f56ed0d2584f16998a46ff5e5c1d318"
   end
 
   depends_on "cmake" => :build

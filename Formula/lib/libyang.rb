@@ -6,11 +6,8 @@ class Libyang < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_golden_gate: "cda40e72aaeca6bcfe1fce5de806d3327822c60219ee4e6ab96791ae10ea10a8"
-    sha256 arm64_tahoe:       "2b2f9e9250633843249a274168940e6103a785691cef820a4da691ee46a19591"
-    sha256 arm64_sequoia:     "0736495a772692d11043f9cbee93372540930db413ef1514fa2c2e0b3ba940e0"
-    sha256 arm64_linux:       "5a2d7b9519e87c08a374be74c4b92fe541c079e1f815812f6d17975403e2f823"
-    sha256 x86_64_linux:      "32000a77ae1eca071c483bb578cf496d581b3d52259fe8eb6e05c48b9ba49f08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "700d8eee1f1d289a9dc25654d2e002d7c0e2d77baee5733570991254d31fdd9b"
   end
 
   depends_on "cmake" => :build

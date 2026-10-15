@@ -14,11 +14,8 @@ class Stp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f20949480e0757bce49451dc2daebf36031ff8beeedb5ea4f04ce845800d386e"
-    sha256 cellar: :any, arm64_tahoe:       "5727302d16e580e627c7dee12baf30b690332cd844f39ce118c8a86e437a75c4"
-    sha256 cellar: :any, arm64_sequoia:     "a78706e0ee2ab1b18a4c7f0883ebddcd3adf2668fe1775dd139ad46a2f86eecb"
-    sha256 cellar: :any, arm64_linux:       "1c991daf31f4d69de1f14d3d1915eb002063070a3ca4ffda915c573b2796c7bc"
-    sha256 cellar: :any, x86_64_linux:      "73675034aaf5c0029c9006edef7fd691082c4505fa39c46e3138b5312977b6df"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d943b6da4f4a7396f8b03b62c80b588132e11d048840206fda3ca56444ffccda"
   end
 
   # stp refuses to build with system bison and flex

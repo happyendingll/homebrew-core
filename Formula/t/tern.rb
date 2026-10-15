@@ -11,12 +11,8 @@ class Tern < Formula
   no_autobump! because: "`update-python-resources` cannot determine dependencies"
 
   bottle do
-    rebuild 9
-    sha256 cellar: :any, arm64_golden_gate: "2f8792cc5564670b095695582ce7a5702484ad164d3e3283a6725cc00bc94294"
-    sha256 cellar: :any, arm64_tahoe:       "b2a51e8185c05364051f5ffdf3e8f25e8e63bbc287a1e17815d3929869870e6b"
-    sha256 cellar: :any, arm64_sequoia:     "972ece72a1d99c200037818cf0679bd045e328638eafc445c950bbe0b0bfeb83"
-    sha256 cellar: :any, arm64_linux:       "9d1abb7ded8c2df166775fa8344a7b650b945f4477259bb6b681b58325e124f3"
-    sha256 cellar: :any, x86_64_linux:      "1119bfbce0c1a337fa872cbc2fd90be8580f5d5837a85c458f762921d17d1b42"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "55c9edf9b8add4c610fe3afa38a89e673d26040f9f8108ca3e45c86e3405ff09"
   end
 
   depends_on "certifi" => :no_linkage

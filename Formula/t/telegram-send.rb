@@ -10,12 +10,8 @@ class TelegramSend < Formula
   head "https://github.com/rahiel/telegram-send.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6fda32be93932ecbf57e174f4305be683fc32973aa37cfc14b11bc020175ca51"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6fda32be93932ecbf57e174f4305be683fc32973aa37cfc14b11bc020175ca51"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6fda32be93932ecbf57e174f4305be683fc32973aa37cfc14b11bc020175ca51"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "784b1fa70d25b36c5536c56b33e7e098023f20ac277ff37d7918e5175774f922"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "784b1fa70d25b36c5536c56b33e7e098023f20ac277ff37d7918e5175774f922"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "693a31edc808f1e11ee878d8b4068182197f17867e8dd94592731a1b532dc45a"
   end
 
   depends_on "certifi" => :no_linkage

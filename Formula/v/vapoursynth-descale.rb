@@ -8,11 +8,8 @@ class VapoursynthDescale < Formula
   head "https://github.com/Irrational-Encoding-Wizardry/descale.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "590bae183f8ba91eb69332ad98655cb8ec16692d107546799cd78dd26df095db"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b85bec238cb4346a056228ff9a145c86be263951947c9baca0687a5823ca3b42"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "57407f006c35ddb7b664767a56586b02ef8c110fa101534a9abb93a9083cff94"
-    sha256 cellar: :any,                 arm64_linux:       "d27ad72ab77db9916705bec025a8301277f3c61abc468af3b2fd7d04cf65355e"
-    sha256 cellar: :any,                 x86_64_linux:      "a6fd93e324c706af3f460d01017ba80ce636989c38b17b1e10da7d44d95a19cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3c451322028fb97cdacdfb3779acdf949d40697d66772b12bc9abab9232f79dd"
   end
 
   depends_on "meson" => :build

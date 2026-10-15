@@ -12,11 +12,8 @@ class Kapp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04de56b03471b69353046b44f3420a2fc8e8ce33baa753669da1a6a85bfb11d7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "58b6dc04084f5b119327022c3d2d7f9473d639318571bc082ae8145d10004167"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5e61b2026855cbbc187af25acaf67f854b487901c8726c47273f557eb3344b54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c4967f5363253bd58758a83a9f31b58853f5e067687462f0df842530eca274a7"
-    sha256 cellar: :any,                 x86_64_linux:      "659033e71b45ed261433c744b1b8a8c034cb42cb82c53956ffab1c5c05f09731"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "439edc7742ba4a645cd06e4585451b0ecfb133bad82adb62e3c6d380ff706b1e"
   end
 
   depends_on "go" => :build

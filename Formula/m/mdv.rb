@@ -9,12 +9,8 @@ class Mdv < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "091705d25749fcb42f4b9b8a8a1fc9d594a3fa19789e4ffdb63449787306a8d4"
-    sha256 cellar: :any, arm64_tahoe:       "fc2931ddac09fd9141814affe336efa306abd1571e7a8835ba0efbf3f31c226c"
-    sha256 cellar: :any, arm64_sequoia:     "be288bc4aff8d4e4b443be085a1bbb8b4306323f40a1693ee85488f0512df8cb"
-    sha256 cellar: :any, arm64_linux:       "10245bd506c8a0f0d9d69890e04c594ca767f1eee7222c2df51fc6fe8b095ce6"
-    sha256 cellar: :any, x86_64_linux:      "43fe07ae0ab0db6087249248e649c7b2685413c4ae0da26f83a74abc4804e38d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d9287e7512f8c9576246cb583d09a3553408709bee352488350e525dc391db7e"
   end
 
   depends_on "libyaml"

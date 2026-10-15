@@ -6,12 +6,8 @@ class Vcflib < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "0b339d97915ac67f305370bd1740bbdd9a75250960b4e71ad5a7c5d24d7654cd"
-    sha256 cellar: :any, arm64_tahoe:       "680d0feafdaec559754c45d28da285e78f0e856c524e9f20ae06c1dc68808e77"
-    sha256 cellar: :any, arm64_sequoia:     "d13ba9f4eb4c624162094da61897ac7952920a1db1dc178456462e40b24977df"
-    sha256 cellar: :any, arm64_linux:       "153b819d6f30821671f8804510f20f968a94bc3525795adba509863f4e0885c0"
-    sha256 cellar: :any, x86_64_linux:      "faa9ad16ac410cb8f59f2e55b0dc694c3ef734eaa3a5a48b66ea7737027a683c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "1b2f60927f64ae261f78a16dbc1426592f69531302ba64978743500b0140135e"
   end
 
   depends_on "cmake" => :build

@@ -9,12 +9,8 @@ class Scdl < Formula
   head "https://github.com/scdl-org/scdl.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6c2c8255dea9a001a01d775507dbca430bee406c8ec0e6817bd37eb89afa82ae"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "25cbdcdb875239546a0aaf373057ecb53b927ff8e74a958c8b3c7bba1239efc7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "56a5dc4b45d1ebba7e2fd84c670038ee7d3d1258c49283107cfe6d272389a659"
-    sha256 cellar: :any,                 arm64_linux:       "0d4e23266466239b2785a3246acea20231f6d8d11297864740cb790553ec92bd"
-    sha256 cellar: :any,                 x86_64_linux:      "f717f29b3c25cf788bc41b4685473320ca1aa9cf375b078a4078f46fe9e44295"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "00ca528d19dfc8d40f70ac50d58042727354699eb1eaa0550eb96d905f9613c2"
   end
 
   depends_on "certifi" => :no_linkage

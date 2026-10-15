@@ -7,11 +7,8 @@ class Prjtrellis < Formula
   revision 10
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6430f4541d908c19834b67477da8d756230469e040d0b66d5ebfaf4a90c30bc3"
-    sha256 cellar: :any, arm64_tahoe:       "57266af60eccbcdad436dbd72412e267fca9694936a0cf039e2a6d88e879f673"
-    sha256 cellar: :any, arm64_sequoia:     "a431c3b257ba19d73d658611309c74b3a83189a9d44478f3168fd0be3ac7a88c"
-    sha256 cellar: :any, arm64_linux:       "bc230beabaf50eed71be3f6f5f152e0f7c41c805f608af9e8342916ec8ecd3b7"
-    sha256 cellar: :any, x86_64_linux:      "b0f8c2c083a4fb6ebfc23ed1c93918436af4917f6d0af9a9c5ee7e755250047e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e2a8c5631b4077fef5a783d0aed0e5fa1bc794811ee186ed606fad0abba85584"
   end
 
   depends_on "cmake" => :build

@@ -13,12 +13,8 @@ class Ledger < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f0adc9be4b8bc90b8527fba0106347f5e81ef37ffadbf81f6746cc4d6205c055"
-    sha256 cellar: :any, arm64_tahoe:       "cf894e129f3f47955025c8ecf25eec2c77b295ba90dfa4c0ce9ac7a7040c93c3"
-    sha256 cellar: :any, arm64_sequoia:     "9437a3112a16f1b19696a7107aba68511b1b415d27f82e65bec7b15f62e56e31"
-    sha256 cellar: :any, arm64_linux:       "9eb605f899f7f93aae4d54535668e2b041bc50e258a9e962c2b4c9a8c374e9d1"
-    sha256 cellar: :any, x86_64_linux:      "efab455daed135b2f75a99989fc9c5b0c58b67f9cd5eb7a5c3a4f63daeb82d9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "cff5604e78750fdf115b2e9036d79ccb2312251175315bb9ef757f800e186ea9"
   end
 
   depends_on "cmake" => :build

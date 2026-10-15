@@ -15,11 +15,8 @@ class Virtctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "584f0253e580efc3cbed8943901993ae9ae1d1d4b9c3d272674a27d3a373d6b7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e67537c2b3cbb2cd7afa2c01f41ea045e9be21246b20705b1ff649924c421021"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f9258ec95ca46965617962fdd18c174d84627defa0daf92cfd9692f7dec6e5b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d7bbf839df9240c76373a48b8801b370b157c36f7abfcad8f48c9f2aa52df092"
-    sha256 cellar: :any,                 x86_64_linux:      "389320579bfd81f14ac7ee2137dfbd57a32af703aaa86d9fc1a8c6dcbc545023"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f0daa961dfe261117b85dd795c7260bbab68d05aacac34040a1963c7503e5785"
   end
 
   depends_on "go" => :build

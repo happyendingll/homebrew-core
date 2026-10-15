@@ -7,11 +7,8 @@ class VapoursynthVszip < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dddfa06563a0c12bd158063bf6a8c5bc81761f2a5af6f649f1de073601e5420a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e5b0241efb4b15eaa961932306d985fae2a86bc3aaeff159776310de1f0d6930"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "845006e5771a2c76e7dc91bcd5720006bbfc8188786a643f7a4d5db097a2232d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4ac5fc970fc22067131ef1512d6a496102b35a0cc01f672914b9ec61257d70a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5cdc4a3deac4aaff6e38fac617eae0a5513bec603cedd4610021def0071848a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9e606880b7231ed4eb6970956e9cd45863641eccaca1f013ce62b0341930d868"
   end
 
   depends_on "zig@0.16" => :build

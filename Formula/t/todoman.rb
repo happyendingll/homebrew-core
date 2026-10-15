@@ -10,12 +10,8 @@ class Todoman < Formula
   head "https://github.com/pimutils/todoman.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f981bba775cc347551fa91f085015bd294ffa6576d8b50352dbdeb0319ef6b07"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c0f9bdb456ac3070c753827ddaf665814afd598f9f1b93b6373563b384b8fd1e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1445c500af1aeab4ef8f2a0a3b13ea3282c8b3c8c0bb54896f91aa909e832255"
-    sha256 cellar: :any,                 arm64_linux:       "f8e5b9a1017bb671b36616dba7527134039d8cc1ddec9454a19a76a6ad1d700f"
-    sha256 cellar: :any,                 x86_64_linux:      "849e68b39d6d864c7d4d96a796028a1a5c1273c4f9c4ab4d0f74cb7996792f43"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0067bbe92c19a5bd2b42fa59fa0df4ae95dd8f2a7803fcb9cbc98b3c12a69d75"
   end
 
   depends_on "jq" # Needed for ZSH completions.

@@ -6,12 +6,8 @@ class Partio < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fa8064d24c572ed1cfb7721bb6cfb0552b4b565ce702c51e2040a8d53ccc7bcf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8ebc2b35475e030e86b69e4ad7eab359ddc2fa24e5141982f10a199737aec41"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "510fbaf0a745d1bc5241d325deb63dada2369059703022654874eaaee2308a0f"
-    sha256 cellar: :any,                 arm64_linux:       "596de5fcd13dda20ba19a26572a571bf2871f16ba31eec996f39f3e76e971d99"
-    sha256 cellar: :any,                 x86_64_linux:      "4bdf4326dbd61c5f2810ec12cc2275d964e388797fd9c4094cab0df05d7eaa02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "84e7db7a32138f18e3e44d64a4f6c0f2a19e09210952311a4cf70bc9aa7d2f11"
   end
 
   depends_on "cmake" => :build

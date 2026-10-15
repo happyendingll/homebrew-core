@@ -9,12 +9,8 @@ class MacCleanupPy < Formula
   head "https://github.com/mac-cleanup/mac-cleanup-py.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "16df5efa5d888a43507ebfa637852daa78d3061bcff170f3c1cf37003097cd0e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f26249588807d486ba02b29af1ba0810da38d670b501f5b50397ef6cacbc7bb0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d867b29daf8fd7ff360b3fdbc42d908b136c9dec12c1b14566514ec4de4072ce"
-    sha256 cellar: :any,                 arm64_linux:       "9bc2b1cbd5d5cbc342cfd708a31c3e1150f0fea080a1f7d8e306f29949a94f8d"
-    sha256 cellar: :any,                 x86_64_linux:      "9ff100b328563f5c0970d922cbe4807f7940f5fd3dfd6ccb7af8c289e076b8de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "84b1cca4ce51b67103a9bcc770e51e1fec2eb364d593ee1d9554828d0798b327"
   end
 
   depends_on "cffi"

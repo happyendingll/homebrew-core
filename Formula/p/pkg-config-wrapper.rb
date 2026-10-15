@@ -12,11 +12,8 @@ class PkgConfigWrapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9da0d9fb97c7e177a27f6dd18bb3c14b4d0363aa92e6632922a69ee57ad2b870"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9da0d9fb97c7e177a27f6dd18bb3c14b4d0363aa92e6632922a69ee57ad2b870"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9da0d9fb97c7e177a27f6dd18bb3c14b4d0363aa92e6632922a69ee57ad2b870"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b7802619668b45918472ed24c4a957f96219cff9ebd3ab90bc19c176d877fa65"
-    sha256 cellar: :any,                 x86_64_linux:      "2cfea79865ce32b2a09c9ca798e609769507991a4fdb3aecf62cc1402e99e8b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8ab40b919f8454d37ce1607d8636ef02e2849fe8f1afa5989f0337112dce7d3f"
   end
 
   depends_on "go" => :build

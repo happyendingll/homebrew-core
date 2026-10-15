@@ -7,11 +7,8 @@ class Charls < Formula
   head "https://github.com/team-charls/charls.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6f24c580dd9af1b9dd9e680edef59d026a5189c8a553f8c654a7756e32f799b5"
-    sha256 cellar: :any, arm64_tahoe:       "64b8f53f9a0c638f6168f0e22ec9517a7b13beddcecab47d70ddae652788fd33"
-    sha256 cellar: :any, arm64_sequoia:     "0dee7e1585e8c31b235fe7b33451496fea21cbf452fcd94674bd2e33adcc2881"
-    sha256 cellar: :any, arm64_linux:       "41f30e444b2c3d75809d10a2717ae277c5d1725505f7e5dcf587d19b06f1b91a"
-    sha256 cellar: :any, x86_64_linux:      "e4540a05130d1f6389e3c955827b60abbea45e65cf7904e2064249a0c10e0544"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "fb0874a02184f43ff574ddad62682df123a532cad4b9c17e48e6cee9ff871687"
   end
 
   depends_on "cmake" => :build

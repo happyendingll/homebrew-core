@@ -15,11 +15,8 @@ class Ffms2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "390bc343cb9bfb518424e86486b2caaf0795bb8e4b6d9259100244b25f10a280"
-    sha256 cellar: :any, arm64_tahoe:       "e655531ea369437dc0207603d7a40b5d1402350f753f6da925a7aa02377a314b"
-    sha256 cellar: :any, arm64_sequoia:     "b81d18042f0c46ca625e453167aa4e566742e195035a5ead37ecf76b97ab8c2b"
-    sha256 cellar: :any, arm64_linux:       "3ec9e963f78602bd3cecb7bf7e16e9ee6062ed0de1536438515f9ff581cb3863"
-    sha256 cellar: :any, x86_64_linux:      "c5b3e838cdd5c9e9fadb78d7cc96406268071e198deb3c5dc04e471e3356cd37"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2863f57a0e82a95001e0346a7cd9eff779cee2ba6840d44759424243ab44462d"
   end
 
   depends_on "autoconf" => :build

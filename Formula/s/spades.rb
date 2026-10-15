@@ -14,12 +14,8 @@ class Spades < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "9b10dd3d6fb5e845b8ec7d6c82ef6dd5429215939080f971991958e6bcc3df12"
-    sha256 cellar: :any, arm64_tahoe:       "6f043968584261307908fa06256d777c2d24afac9c8b2aea09cb9a86299d0eab"
-    sha256 cellar: :any, arm64_sequoia:     "a6c2383c796a629e2bf18a42c495351c6e4efa834c82dd765d94fd15a8301fad"
-    sha256 cellar: :any, arm64_linux:       "127fd223b1eca5ec7a6e3513b93ce1f26c8b37427c9703357c648114ea8cfa2f"
-    sha256 cellar: :any, x86_64_linux:      "2ca5c3b8032572072be3a889c7b357c3f518a3ecca2dd7d34a6e824b59bd3788"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "afdc9da49c8ca486faf5c914653038a0384531ef745615b6598fd0a647349ff4"
   end
 
   depends_on "cmake" => :build

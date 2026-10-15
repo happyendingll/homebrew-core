@@ -8,12 +8,8 @@ class Keystone < Formula
   head "https://github.com/keystone-engine/keystone.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "778ca2c22d2f7f31fe852406e0b843f337dd6339120e00b2ace28cece0ea6c6a"
-    sha256 cellar: :any, arm64_tahoe:       "6fdcb3473e6ef6e69c13deb8493faf16ef5b5fcf78487b1bef9d601ad10c2de9"
-    sha256 cellar: :any, arm64_sequoia:     "93f04ae45bc858856ae22ed8dcffa6cb8c946b24a134458a3f4e983cb076ca42"
-    sha256 cellar: :any, arm64_linux:       "f9d4e84a59e2d4923efccbf64fdc082963917c8e5789c3ee946974d50fdc9278"
-    sha256 cellar: :any, x86_64_linux:      "924a3a69cb37cf2300fac52336f07c48b688bfdea23403bad9703b38797ddc81"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ce1b470def341e4a774ffb8ef21efc83aba943faa3ed097aa77a5a9dd4dfb417"
   end
 
   depends_on "cmake" => :build

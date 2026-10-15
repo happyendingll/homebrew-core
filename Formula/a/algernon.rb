@@ -13,11 +13,8 @@ class Algernon < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "95e45c58f6153b4549ae6eed0538e0bbfa342aac7ec752cc8eeefd8c66ddff17"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95e45c58f6153b4549ae6eed0538e0bbfa342aac7ec752cc8eeefd8c66ddff17"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "95e45c58f6153b4549ae6eed0538e0bbfa342aac7ec752cc8eeefd8c66ddff17"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "87112ea5b0e02ec5b4166c12679fc51fec63b5fbc9aaaee873033c7f0ad7077c"
-    sha256 cellar: :any,                 x86_64_linux:      "031200b73844b9b8c1a32d1831a3492f594eeabefd70335e9643531890ee6886"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b0b056cff53d63a628ebd40bcafeed6604a91f6f121b98d237fe8eaf8f948c0b"
   end
 
   depends_on "go" => :build

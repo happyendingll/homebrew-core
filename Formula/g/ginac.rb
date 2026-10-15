@@ -11,12 +11,8 @@ class Ginac < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "fd73dcb1398309107724cf8b1e094ceff1d541cc7301b875bdc57876153fb284"
-    sha256 cellar: :any, arm64_tahoe:       "42063245188d936f4ad0b3087ca1314d0b8fa4d055f8e35ca07dd22233cb8584"
-    sha256 cellar: :any, arm64_sequoia:     "f15cbbcfe7a358f3c1d6b2e15b3e55aa5ff0f1b4cb9f8ae51da5a6cee6af5e16"
-    sha256 cellar: :any, arm64_linux:       "3199a98ce2b6b61c4361d13497e9b7f7af541f9498d0a4042be5bed5127b0126"
-    sha256 cellar: :any, x86_64_linux:      "4023287b0bdf4222019e5eb0897626ab012520c4319cbba2917e4fde98b45086"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "bae5c7a45edd13a554defa37fbf9bb59dced3c1f044aa57d00efbce32b7bdddf"
   end
 
   depends_on "pkgconf" => :build

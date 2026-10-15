@@ -7,12 +7,8 @@ class VimClassic < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "95c1df30090dcfbfc3d61ae796ac69226c6c6cd2d983933563879b72f00642b1"
-    sha256 arm64_tahoe:       "41ad80cc6adfa1dbed886f911b120a9eb35b3a49a19c210b1c8b5f22a775004d"
-    sha256 arm64_sequoia:     "20a4e7502969dccc8c90392246aa965cd949c0c78391315520cbc55518d25c8f"
-    sha256 arm64_linux:       "6156073b2dbeceaa09ca9018ac95024e74b0017ecb4947f2a9c200bf71b913cc"
-    sha256 x86_64_linux:      "f7d0fe354b048c8809b3d6964bc7f973d554d25055f0bf32b40cea5ad47ad265"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e2f4d6c8f5d817331cf4dbb6283ad7ee59f1d085d3773ae0701017f1a7065ef8"
   end
 
   # Homebrew Ruby installs (4.x) currently cause a linker error with vim-classic,

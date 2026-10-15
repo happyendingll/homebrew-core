@@ -6,11 +6,8 @@ class Quantlib < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2885f3cd85b501f49ec8fd7603ea9991e8606764b6947c19e948445c18313172"
-    sha256 cellar: :any, arm64_tahoe:       "42ee71a9b4188d1106f2395b96042fdab6c254ae1bc914d59cc00b6bb089cb8b"
-    sha256 cellar: :any, arm64_sequoia:     "82e15fc4efd544757aa4a054a8ff8e41eb61871d83b3240e4a14980aa73709da"
-    sha256 cellar: :any, arm64_linux:       "2d700f7ebcc97df96eb3ff9733a1d019cd2298612bc95b9bc030c35d35991ab2"
-    sha256 cellar: :any, x86_64_linux:      "30a0d7acb033600e2372d048fc000bac657aab67c9edf33ca638442b58ffff32"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b509ff7fd2cbcc9e4e655bdffd168b42c1dad5310c8b3ea2f6c1a076eceb4fd2"
   end
 
   head do

@@ -10,12 +10,8 @@ class Global < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "659d46ce7d1b8e3bd9c91a497af921cc6d0b9107f1038abbb399a254be4499cb"
-    sha256 arm64_tahoe:       "a323d15234aa887ab706d85c97a18166ee7e6a9fba7052709234528e927a631f"
-    sha256 arm64_sequoia:     "de5bb9af0b57a012e6d305a648d0e772b1f4daec89a5ba823497fab11bf420cd"
-    sha256 arm64_linux:       "4d24c39aab61adf5ff043c2d9532d132bdfd0eaa145e7fada1907674a66a557c"
-    sha256 x86_64_linux:      "dad9cc3baab9bec8e98f7497eb258a3dc9b7a3ae70833f4881222c0e5a80cd25"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "a2a4c31ddec6a95f99e0e861384c3597c49f5d658466338aa38471605d0b0618"
   end
 
   head do

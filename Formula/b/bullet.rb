@@ -7,12 +7,8 @@ class Bullet < Formula
   head "https://github.com/bulletphysics/bullet3.git", branch: "master"
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any, arm64_golden_gate: "c461c2ded66ee288ea1df87192f23570211f92e72cd4f80124194a27c446b3f7"
-    sha256 cellar: :any, arm64_tahoe:       "405a0fc527245d26e417c75a10b70056497436c62c5607e56368272c702dae45"
-    sha256 cellar: :any, arm64_sequoia:     "288b77ba8d42262bcdf224d709577e225717a4a6930874fe84009f98314d64a1"
-    sha256 cellar: :any, arm64_linux:       "e679ad6f9ef75949490c7ac9597cd778c3e85712bcb31eb7f5ade137bd65c488"
-    sha256 cellar: :any, x86_64_linux:      "32e84f29da00c6ce2e625f7e49a88faf2c858fba56d714b337a8449507f10a6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8b5f96b424c6121857cf2a8c647bd7937350fed041bf1a463c4906a140fa49ee"
   end
 
   depends_on "cmake" => :build

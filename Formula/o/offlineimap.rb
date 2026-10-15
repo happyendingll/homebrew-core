@@ -9,12 +9,8 @@ class Offlineimap < Formula
   head "https://github.com/OfflineIMAP/offlineimap3.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d0d3d932cae022ceb4e9f25f4d3d71e79710779e9a7fcb12bfdbc68aa8a21877"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d0d3d932cae022ceb4e9f25f4d3d71e79710779e9a7fcb12bfdbc68aa8a21877"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0d3d932cae022ceb4e9f25f4d3d71e79710779e9a7fcb12bfdbc68aa8a21877"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e59c45f8903ca8df1220d2080f5a245c7144426a25f46114fea4ef6e5feb9550"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e59c45f8903ca8df1220d2080f5a245c7144426a25f46114fea4ef6e5feb9550"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5081cd88b78af2638a555f0c68229ce18b20e288e44a1dbf8f133aa49e9502ba"
   end
 
   depends_on "certifi"

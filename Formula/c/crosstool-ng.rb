@@ -12,12 +12,8 @@ class CrosstoolNg < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "68c7ffab95388303d7d4c4fb22e434929987d171cc74abe3e65b4cfb61de5514"
-    sha256 cellar: :any, arm64_tahoe:       "23e2acff54566c0a6f06bcec2aad942904aec1120b7dd8dc33dce8905ed996a9"
-    sha256 cellar: :any, arm64_sequoia:     "6c86a6ff8e127ee0bed435f09abbfd11b06139055215cec83b0fd0ac9361b9d5"
-    sha256 cellar: :any, arm64_linux:       "4ff722a9ee61a81cbe2538f850c97f114b05a2a74dded7b7a1e4c722b6c5ad89"
-    sha256 cellar: :any, x86_64_linux:      "a2060b2e8e94be69af3d2c094470507efb0ff507acc4fe5187248314db871f53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b158e9a351f9ef5f26a00da9e55ee0a4a839c4b909ccd06c6edb58867e77aad0"
   end
 
   depends_on "help2man" => :build
