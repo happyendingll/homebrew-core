@@ -19,11 +19,8 @@ class MariadbAT123 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6c25ed808b4270ee2dc80093895c3ffc71bc92e591c78aa1fe3ccf37cc10f74f"
-    sha256 arm64_tahoe:       "dbe5e0c684ae4be33cfd38a3390d4da278ed986e9b24a08651e6d7e93dd4f480"
-    sha256 arm64_sequoia:     "f537386d9428d879192442ca5c465221b89e05fa8b3be0a42fcb829137f4dd4b"
-    sha256 arm64_linux:       "6e36af7b8cb26155c6febd2832b870bfffb7d19bc1f425b31f30b3e6dfa44222"
-    sha256 x86_64_linux:      "7fc5fe5f8bb74f6b0d64c041457dabaeb2d07b26296cd0469bbbc27d55b83abc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "355ed579fea7d230593b16b3ec4a9ffd9cb6acf2bf1bce8d0978bb657ad0d1b2"
   end
 
   keg_only :versioned_formula

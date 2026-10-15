@@ -12,11 +12,8 @@ class Pypy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "196eb7f1a3e130475dae88642b1c84b51a7cd6955b1797a8e1e66ca3c5f7c78b"
-    sha256 cellar: :any, arm64_tahoe:       "56a32512e3776d848580010a25d7372d56db5f42285b17d923fc474bf648ee5f"
-    sha256 cellar: :any, arm64_sequoia:     "a4349b59f50bddebcca60f96bed3524b53451b281aefe41816bd1313001fc9c9"
-    sha256 cellar: :any, arm64_linux:       "c59dbccaf9c1fbae1334396afefb32ebd2f7671a07dac6da8d361e076757b6a9"
-    sha256 cellar: :any, x86_64_linux:      "5fb0a61b99e84ea7f7b196724f783818dede997a684e6fd58573b46561f85571"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "20664c1765b74c06fe38531549efad2569a0c086aa7b1212af4dbeace6f65503"
   end
 
   deprecate! date: "2026-09-29", because: "is Python 2 and needs vulnerable versions of pip and setuptools"

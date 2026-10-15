@@ -8,11 +8,8 @@ class Oterm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6c81b2430704688cbfda4a9e9c9c895f7c96bf1f87b67112fa05a2e3a793324b"
-    sha256 cellar: :any, arm64_tahoe:       "23990db792b976a8a3cafa5f1f16c5f103ec90fcf46c9dbc0263d3a392a4306d"
-    sha256 cellar: :any, arm64_sequoia:     "dd44b29865d9f529ccb9a4f115a33a20fc78a64e771ae7164a9e4c3f758b84fd"
-    sha256 cellar: :any, arm64_linux:       "46219d3be4bf4d63b93f9236595bea2c07f25a39756945060095e9e25297c7f5"
-    sha256 cellar: :any, x86_64_linux:      "d35b8e63b60f81da8cc884378d9128742179b1cba5fa8370d9d3ac66e6f29ffa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "775b52a863e60482152d0f531f6699376a1c592be87b3f0feb242f926b21d182"
   end
 
   depends_on "pkgconf" => :build

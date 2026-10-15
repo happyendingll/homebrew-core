@@ -17,11 +17,8 @@ class Rdkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cc7299912e5ea88e5c2b18dd9989d6b6603e599bc0bd3b05e343fd2e79230e9a"
-    sha256 cellar: :any, arm64_tahoe:       "7659b2095d779622ee0cc1385cca073ea9e29a2584f2d7a94c5550686da8a6c2"
-    sha256 cellar: :any, arm64_sequoia:     "2195c188923bfc38103871bde616a0e0472a0ff0f8f705d2f314a8c907ab6d5c"
-    sha256 cellar: :any, arm64_linux:       "733aa225b08793d129fdc26f980af7d1e7c9bb979dfab818d89400b28f643baa"
-    sha256 cellar: :any, x86_64_linux:      "c01c00c00793e0a6d279d335c4cbe81be2c917621ddf101947ebeaaaf14a436b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4d8f3171c14ff6e04d3d322a0431fe7bdc4b9015f400a29934cdcd386382391a"
   end
 
   depends_on "catch2" => :build

@@ -9,11 +9,8 @@ class PythonMatplotlib < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "480528f7169b0eeb01798199b15b5fc7178b76bbb553fdc7b96ab88640140d9a"
-    sha256 cellar: :any, arm64_tahoe:       "07c9a09123943be9ffd92154047b12500d2c4ad5098a026b4dcca6cf7dd3f74a"
-    sha256 cellar: :any, arm64_sequoia:     "4c89d10cfc820d7c307fe398f29840dc0174e6b11385f121c287a9b354d29107"
-    sha256 cellar: :any, arm64_linux:       "c1cebfa7d0da66c810fc7255ab8fca987f12bddbaeea1ee5077cdc1d6468a88a"
-    sha256 cellar: :any, x86_64_linux:      "182d1654b4d1806a07b05742c027bd22ff2431e5b698c85e7d49425cc5b64a76"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "89cd17635b5f960b6bc4e8d3127599b01d89e610d1b6c3bdf7e74874a841ba11"
   end
 
   depends_on "cmake" => :build # for contourpy

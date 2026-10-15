@@ -11,11 +11,8 @@ class Pypy311 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ca845243ea3f0e6c8ec1fd9fc2575e26c653af9a72d2d506291b3135c5bf2368"
-    sha256 cellar: :any, arm64_tahoe:       "ecfa389e41b553f51acce467a336b6b18a2d8e35122ba6c22c6a8d3deac16574"
-    sha256 cellar: :any, arm64_sequoia:     "abc52ea4fc5c308b145a11c9fe4d809298f660112db33f22148f1b0a024ce365"
-    sha256 cellar: :any, arm64_linux:       "ec6aabbf69b4000e0eaf31c9de8b9cfe8875bd85aa32c7a2c5e8637c90bafd43"
-    sha256 cellar: :any, x86_64_linux:      "f52576942c51569d7bb155bca6e8484a96c5c5922e83f0d71d203b70d589369c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "8efbc05643687731e25a05e70d4f7ddd21ec2c4a371241ea5e272a99c09d64b4"
   end
 
   # https://github.com/pypy/pypy/blob/main/pypy/doc/release-v8.0.1.rst

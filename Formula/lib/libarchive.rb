@@ -12,11 +12,8 @@ class Libarchive < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f3af08b47c55d5b0b5730240978c899590b9cb66ddc77341b15a1c4bbe73d76d"
-    sha256 cellar: :any, arm64_tahoe:       "18b30e3f5753983dc16c61cc3bb127ce02818085b8c6483f3d720dbfe78d5aaf"
-    sha256 cellar: :any, arm64_sequoia:     "171706f55d0de1d512524bf20a62b1053b42603436a86fe4631043b7ac7be842"
-    sha256 cellar: :any, arm64_linux:       "3e326062ac2d7d1a6033b22c6892cd7fec33287ffd3da77c73e7380844621d39"
-    sha256 cellar: :any, x86_64_linux:      "bf0fc9aae7fa43927149765d4903eb38e91c59d35006d854480732c10dc9f61c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "9e09bd0c3d8e0deab4aa90604d8edaf1635d654dd5c56593ca4f4efce79e792b"
   end
 
   keg_only :provided_by_macos

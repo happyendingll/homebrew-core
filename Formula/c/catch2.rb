@@ -7,11 +7,8 @@ class Catch2 < Formula
   head "https://github.com/catchorg/Catch2.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7472a6ebbad97831aff9491feaa8d6c5e0ffd76f1e4d90065edbe61f090fb567"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7ded57838aa5d229e305adb3b7ada65e31697bca51607ee9ae1943c45822ddd2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "549dfe4e066817d3467b7c39df4112015e8a1c81d9b2008efef134400875dbbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dcaed6d498c6d708ba770d3e84c5a03d186fd7eee71f956252c5b98be332bb86"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9468f1be79a71a7d1ddaed94e780595f569d0e91e08edb86a24ef7cf151e40a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b1fcd03e3f0f1518004d2e4899d7e3d4f78383bddf21aaee652ca54797cfe10a"
   end
 
   depends_on "cmake" => :build

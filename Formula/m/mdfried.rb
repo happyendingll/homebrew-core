@@ -12,11 +12,8 @@ class Mdfried < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b5bcf103808b47687e5a01e64410bedce14289cd1cf763decd8cf6a3e6a4e27d"
-    sha256 cellar: :any, arm64_tahoe:       "ccfbfb1c3672b95779cab7d4d49553df089e93ae27c47c8836ec226ebfcb6612"
-    sha256 cellar: :any, arm64_sequoia:     "0ef65c20ffd6bdf17532a6373db7554d249f3624590d4e131616cfb96117cc22"
-    sha256 cellar: :any, arm64_linux:       "213a6726b1705c2c6b624da83de9160919c2c46643d69150596931320d8a6f9c"
-    sha256 cellar: :any, x86_64_linux:      "27cfad89c58dbc115be62c3bfd390328285187457d4ee2ef0ea9823b9af170c3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "d1e6913502e17f7fbeb90544a2f7ade5f1da9e2edb5ed5719113425821d12247"
   end
 
   depends_on "pkgconf" => :build
