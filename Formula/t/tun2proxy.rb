@@ -1,8 +1,8 @@
 class Tun2proxy < Formula
   desc "Tunnel (TUN) interface for SOCKS and HTTP proxies"
   homepage "https://github.com/tun2proxy/tun2proxy"
-  url "https://github.com/tun2proxy/tun2proxy/archive/refs/tags/v0.8.4.tar.gz"
-  sha256 "ab038ee45b727d121e544c1bd23ba4426a1b747b6ab279b43028e8733e3920ae"
+  url "https://github.com/tun2proxy/tun2proxy/archive/refs/tags/v0.8.5.tar.gz"
+  sha256 "e4a138e76a0256d60f577b9ba42a765c09932dd9c8289a8cbfb73a867a35434e"
   license "MIT"
   head "https://github.com/tun2proxy/tun2proxy.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Tun2proxy < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "597a655a7132d1c64ef48667ec068ce1701bdeab5bb58fa68230c6e64ff6ef13"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6eba2b6af4e16a78dfc86c421a2777a3663f05ac9008fab15c6d4b294ad94cca"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4d5b8dbf91ff17d117f254498398020fe975551d6d88c5d078202dd4c85768b4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba3daa1edf9d2e90fe88a29bb773cfed9758f1d9ff8527aad9771b36ab8b71d8"
+    sha256 cellar: :any,                 arm64_linux:       "9bcbfecba1a54c7b35e1258934ae40f640eef74d55ab5c40cd8fda4e7fdcf87d"
+    sha256 cellar: :any,                 x86_64_linux:      "195c7ccd490e0891f25897df4297aecdd52e04bea17eef003a00b49437576348"
   end
 
   depends_on "rust" => :build

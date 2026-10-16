@@ -1,8 +1,8 @@
 class PnpmAT10 < Formula
   desc "Fast, disk space efficient package manager"
   homepage "https://pnpm.io/"
-  url "https://registry.npmjs.org/pnpm/-/pnpm-10.34.6.tgz"
-  sha256 "44d7db90fcbb2315b581f85989a913466765421fc656c28e80fac1b7ab5be456"
+  url "https://registry.npmjs.org/pnpm/-/pnpm-10.34.7.tgz"
+  sha256 "c729f6538e005d234889910466fd1c4c44affb0b28ea86d93fcf88aa1aefa694"
   license "MIT"
 
   livecheck do
@@ -13,8 +13,11 @@ class PnpmAT10 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "35dd0a38bb391811f751c6113a5b673973f0b8aa566d6d482b781e1682b4535e"
+    sha256 cellar: :any,                 arm64_golden_gate: "c2a427f51a6ac825ddb2dd46a99d06e5268c1d5743596d21372d5675ee16049e"
+    sha256 cellar: :any,                 arm64_tahoe:       "c2a427f51a6ac825ddb2dd46a99d06e5268c1d5743596d21372d5675ee16049e"
+    sha256 cellar: :any,                 arm64_sequoia:     "c2a427f51a6ac825ddb2dd46a99d06e5268c1d5743596d21372d5675ee16049e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a878979d20b5c17a7fdd302e23f1ce848d5a5936225861d72a46d7c0629905b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a878979d20b5c17a7fdd302e23f1ce848d5a5936225861d72a46d7c0629905b4"
   end
 
   keg_only :versioned_formula

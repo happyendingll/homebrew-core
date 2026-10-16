@@ -21,7 +21,15 @@ class Librespot < Formula
 
   on_linux do
     depends_on "alsa-lib"
-    depends_on "openssl@3" # https://github.com/librespot-org/librespot/pull/1707
+    depends_on "openssl@4"
+  end
+
+  # Apply open PR to update openssl and openssl-sys for OpenSSL 4
+  patch do
+    url "https://github.com/librespot-org/librespot/commit/5ceaa54fcfca8ebe522e3463fb110dd49dade846.patch?full_index=1"
+    sha256 "3cd869925d498406c83878e55e6f26fc59b51554f8550b10f85bacf9168be9d8"
+    type :unofficial
+    resolves "https://github.com/librespot-org/librespot/pull/1707"
   end
 
   def install

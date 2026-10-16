@@ -5,7 +5,7 @@ class Manticoresearch < Formula
     "GPL-3.0-or-later",
     { any_of: ["Unlicense", "MIT"] }, # uni-algo (our formula is too new)
   ]
-  revision 1
+  revision 2
   version_scheme 1
   head "https://github.com/manticoresoftware/manticoresearch.git", branch: "main"
 
@@ -36,8 +36,11 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "99764674dd34db213a788fb584a1996cb8494a38108380cb4bc87d66dd45eabf"
+    sha256 arm64_golden_gate: "0923f5b6eadf34697fc478fccce0221b7876f76381278f1cc49036c493e9c3a3"
+    sha256 arm64_tahoe:       "d07a13884658435b6376a6c031c656e7628b84285d936353902d868819b6047f"
+    sha256 arm64_sequoia:     "7f83ed8151c4a68651e6ebabf0aecb1869d65eb7f6f0ed01d3cec36316424860"
+    sha256 arm64_linux:       "9ec9be6b7b4fa65a5e45883811c7f1e8685df8ca796d595c37cf573849f6e4b7"
+    sha256 x86_64_linux:      "5372b3eaaeb6112d29d98bde4be95b8e60131dee671cbe6633f7a6d206dfaa6d"
   end
 
   depends_on "cmake" => :build

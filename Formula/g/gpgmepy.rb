@@ -4,7 +4,7 @@ class Gpgmepy < Formula
   url "https://gnupg.org/ftp/gcrypt/gpgmepy/gpgmepy-2.0.0.tar.bz2"
   sha256 "07e1265648ff51da238c9af7a18b3f1dc7b0c66b4f21a72f27c74b396cd3336d"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/gpgmepy/"
@@ -12,14 +12,17 @@ class Gpgmepy < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "272ab330e2539ea42b1e8ea5a369a7896e1268bbdb0151f57b1808c83f9b333f"
+    sha256 cellar: :any, arm64_golden_gate: "67765915340994b0acd669d108070ee753de90d69e4bf054c1fb7da7239e5cb4"
+    sha256 cellar: :any, arm64_tahoe:       "9e1fa1d94dd0bcfc4897addca66ccb19c1fbf092faf80bce665d8fb88096871e"
+    sha256 cellar: :any, arm64_sequoia:     "d5c8644e326aa49b16499caf5f482eac879c6e285fc6318edd224502590ae647"
+    sha256 cellar: :any, arm64_linux:       "f2cdb0cad08229896c14a35f830e392278c966d5fd69c01d03bfe77b986b2671"
+    sha256 cellar: :any, x86_64_linux:      "2669d1fee16edac9e9bcfb1c00ca141e329984bc515a22a95f2a8d51e21990ac"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "python-setuptools" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "swig" => :build
   depends_on "gpgme"
   depends_on "libgpg-error"

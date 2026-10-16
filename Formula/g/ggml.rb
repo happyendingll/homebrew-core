@@ -1,15 +1,18 @@
 class Ggml < Formula
   desc "Tensor library for machine learning"
   homepage "https://github.com/ggml-org/ggml"
-  url "https://github.com/ggml-org/ggml/archive/refs/tags/v0.26.0.tar.gz"
-  sha256 "3db46896650440531f03fd5b6f29b4dbf4f5b0a4157e6f4be4786a12d8545971"
+  url "https://github.com/ggml-org/ggml/archive/refs/tags/v0.27.0.tar.gz"
+  sha256 "a4bec5021627a204984f8abd34781eb3bf5dee586b6337246c952d2103d7ef45"
   license "MIT"
   compatibility_version 1
   head "https://github.com/ggml-org/ggml.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "5dfeb3c158c8c8f7c521c9ebcaea8f27701c2bfdde8de1696a28c2493c4ee678"
+    sha256 arm64_golden_gate: "2139faff16fe43f5cc829a76b7eb395f9ebe01b374750f4c1d16cf48459606eb"
+    sha256 arm64_tahoe:       "a1ebd36cf2a5e07aa0194751d3cc041e360dab8cd82d29ec701d5cacedc3fe09"
+    sha256 arm64_sequoia:     "c654a80c06b0b01fd96794d61f3fce58a05fc2208386c441330d03b55d97c6c5"
+    sha256 arm64_linux:       "d9ed405d1d459e80c80d7436b746da264b0632a201541a2d2f1ec6ef5a2903e2"
+    sha256 x86_64_linux:      "f74ec60a7128e56e6c0fba5fa7f580a4c76e3f63410bb62e051702c46dd064f5"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -38,8 +41,8 @@ class Ggml < Formula
 
   # Lengthy test so not worth installing. Shorter examples/tests haven't been ported to new DL backend
   resource "test-backend-ops.cpp" do
-    url "https://raw.githubusercontent.com/ggml-org/ggml/refs/tags/v0.26.0/tests/test-backend-ops.cpp"
-    sha256 "ab8619ac74f8b752f866f0ad01ff2a78991b6f99ff40c78b59630ff584c62a17"
+    url "https://raw.githubusercontent.com/ggml-org/ggml/refs/tags/v0.27.0/tests/test-backend-ops.cpp"
+    sha256 "bc0d8a7a4ba1d9a9b67a56b099513f06f9d1b9f58a84efe3a5404b0d603dee1a"
 
     livecheck do
       formula :parent

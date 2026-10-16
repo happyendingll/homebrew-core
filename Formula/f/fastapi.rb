@@ -3,13 +3,16 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/0b/d7/6a8753ab6c1d432dc53703c3e1b92974a94531b7d047c32bbaae461ea844/fastapi-0.143.0.tar.gz"
-  sha256 "1acffe48206a80917cf7dac21992b5c44b25384e8902bf745c1fd9dabcf6c51f"
+  url "https://files.pythonhosted.org/packages/19/f5/4bbb2df9bb6f365151f2c02795ca3f17f78d08e670a394df963f3d8881ce/fastapi-0.143.2.tar.gz"
+  sha256 "e9e6d97018dcfd748da7d9e7c61cedefbe9eb91b1a3288e45b13fbae76df2d54"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6f1eb726cf43473c7dc23b77750c1306c298a34f277ac7c9386d681776069e36"
+    sha256 cellar: :any, arm64_golden_gate: "97e682fb1248aa06988dc713bdf01914093fbfb1dedbd748a0288387a9596ee3"
+    sha256 cellar: :any, arm64_tahoe:       "1a60c0f6471f0b18a461a8cec99d6155bc402e17df0e1e57b407e57be79420c5"
+    sha256 cellar: :any, arm64_sequoia:     "d4fc5f38c947cadb1f5ab6740fcc9157a7b55be9ac0dd6982e1c4ec960905f06"
+    sha256 cellar: :any, arm64_linux:       "3eff9fb686d07e0338b9fc7a405646d0b4a7f0010a1ef2a637c9f4ba840c1819"
+    sha256 cellar: :any, x86_64_linux:      "95837660e257dd3674b9f0594b645cda26cad6f4a0c1c73b452e547b6d4618d9"
   end
 
   depends_on "rust" => :build # for annotated-doc
@@ -177,8 +180,8 @@ class Fastapi < Formula
   end
 
   resource "pydantic-settings" do
-    url "https://files.pythonhosted.org/packages/68/ca/31c57507b13119d7d3cfa1576dad2911a4861e3be07b579395f4e9d393f9/pydantic_settings-2.15.0.tar.gz"
-    sha256 "694b793e84f766ba76a90ebdefc01d0a9a045dab0382bee70393da93712ad117"
+    url "https://files.pythonhosted.org/packages/2e/3b/a5d2294799b53b448319978cfb5bd139d5a9d45e862af91661614f14c922/pydantic_settings-2.16.0.tar.gz"
+    sha256 "5b6c578049ede4db0e2ef3b4eaa4ad4069cfa9211f83fb38df899dfade50a614"
   end
 
   resource "pygments" do
@@ -222,8 +225,8 @@ class Fastapi < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/67/93/9ef70bfb7346c778caf09b7cd10c17c33f601f2d17019fa1aedcda738b5f/sentry_sdk-2.71.0.tar.gz"
-    sha256 "7beb27a22f06396f3a05510c3da6ea10e1c79e02e859993c27ce4ff074e296d6"
+    url "https://files.pythonhosted.org/packages/26/c1/d2bbb2b03bdc2ef14b35e02b647b8489156c50b6e0b8bacc5fa303902e23/sentry_sdk-2.72.0.tar.gz"
+    sha256 "0d2ffbc28ee2e63cbaf3d015e93b448cffcc3ef3be03a44704ad36ade72faa95"
   end
 
   resource "shellingham" do
@@ -232,8 +235,8 @@ class Fastapi < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/7b/2b/3850dc6bf7ef71b088962eba31dafc6cffd2f96e577ebb0bb316df96da3e/starlette-1.7.0.tar.gz"
-    sha256 "c79f74ea63cff761804fbbfb182f1e0b440c2d07b164d24700c5a1bab5d6ff5d"
+    url "https://files.pythonhosted.org/packages/e9/0c/6efb252d091ecccd7d62048ae11f0ea35cd75a4fbaeea5e30f9c3bf91d10/starlette-1.8.0.tar.gz"
+    sha256 "1565dc0b35d5737a271ed1e0e04e949f4e81198799f216d2667b0a0fb9cf9522"
   end
 
   resource "typer" do

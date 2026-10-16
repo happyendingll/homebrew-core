@@ -1,14 +1,17 @@
 class HdrhistogramC < Formula
   desc "C port of the HdrHistogram"
   homepage "https://github.com/HdrHistogram/HdrHistogram_c"
-  url "https://github.com/HdrHistogram/HdrHistogram_c/archive/refs/tags/0.12.0.tar.gz"
-  sha256 "6bc54427b2e5c3639f08f13517a38deb242f8b97b44964d584834d44f02a0be1"
+  url "https://github.com/HdrHistogram/HdrHistogram_c/archive/refs/tags/0.12.1.tar.gz"
+  sha256 "b2cff564b49f900e7f951c95428100a4aed36561703237ffc5e41b4843d804ce"
   license any_of: ["CC0-1.0", "BSD-2-Clause"]
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "dcc4f73faa6365d8bc41083e0c8612a6dd1e15842a78da9f8d75557f9283435c"
+    sha256 cellar: :any, arm64_golden_gate: "1aadec5ca79aaa35ac1a23a67d68b5890d2c94da125ee9ad3b7d6412770296c1"
+    sha256 cellar: :any, arm64_tahoe:       "4fabc58a96b5d3444a23dfdb3963aa6d8b30ce7939ee445b01891822e9236726"
+    sha256 cellar: :any, arm64_sequoia:     "9ac2a2b0243ba0f796abfb23928e0362fbaa1b447354bb24b63fb96c901d0ed2"
+    sha256 cellar: :any, arm64_linux:       "3af4fb4d544da1208e4544b933d318808e7dd0dbbc35bb309bc39afcebcab416"
+    sha256 cellar: :any, x86_64_linux:      "5c10dd53f8f44d1ae7ef10a0ba3247c159b810a418b3a232d447a394289125c3"
   end
 
   depends_on "cmake" => :build

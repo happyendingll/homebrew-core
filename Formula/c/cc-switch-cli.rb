@@ -1,14 +1,17 @@
 class CcSwitchCli < Formula
   desc "All-in-one assistant tool for Claude Code, Codex, Gemini, OpenCode and OpenClaw"
   homepage "https://github.com/SaladDay/cc-switch-cli"
-  url "https://github.com/SaladDay/cc-switch-cli/archive/refs/tags/v5.11.1.tar.gz"
-  sha256 "8d9b6bc7f09f4e2177e3255a529b2616a76a514b5fcb4a90894cc86f84e8dc62"
+  url "https://github.com/SaladDay/cc-switch-cli/archive/refs/tags/v5.11.2.tar.gz"
+  sha256 "ebf5e0e7e8aa65ba68c1c5b062c2162a897d05b4bc917961bd1a2bdf27d36902"
   license "MIT"
   head "https://github.com/SaladDay/cc-switch-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "7e52d0861a56b5fe99c6adbbe77b3755ab2ce9af1c18ec5a0bc94c99bfbc7d8d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d46a311d2ba81e97301caf5ea00bcd811dfbd61e50e1dc59de1f31b1b66bf0c2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "61c5f66a0fb1a8af19cbb55db89529cf9aac98f7d8a563b1aebebeef7326cee2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "08addc8c8f598ce8c32de40f8248e2c1249eacf13646d930acd35430a7d9c0a1"
+    sha256 cellar: :any,                 arm64_linux:       "aec0d7f55839a147257cb2d9c2877a7fecbf3395407c568812a20aa6e789168e"
+    sha256 cellar: :any,                 x86_64_linux:      "a298706b4609dfe4041e7b2a50c9a5eaa678ebd490282d41ad98a442d9810909"
   end
 
   depends_on "rust" => :build

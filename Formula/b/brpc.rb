@@ -18,8 +18,11 @@ class Brpc < Formula
   depends_on "abseil"
   depends_on "gflags"
   depends_on "leveldb"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "protobuf"
+
+  # Apply OpenSSL 4 fix from https://github.com/apache/brpc/pull/3616
+  patch :DATA
 
   allow_network_access! :test
 
@@ -30,7 +33,7 @@ class Brpc < Formula
       -DDOWNLOAD_GTEST=OFF
       -DWITH_DEBUG_SYMBOLS=OFF
       -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@3")}
+      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
@@ -84,3 +87,22 @@ class Brpc < Formula
     assert_equal "200", shell_output("./test")
   end
 end
+
+__END__
+diff --git a/src/brpc/details/ssl_helper.cpp b/src/brpc/details/ssl_helper.cpp
+index 1673db1d87..25ee4c6a83 100644
+--- a/src/brpc/details/ssl_helper.cpp
++++ b/src/brpc/details/ssl_helper.cpp
+@@ -287,10 +287,10 @@ void ExtractHostnames(X509* x, std::vector<std::string>* hostnames) {
+ #endif // SSL_CTRL_SET_TLSEXT_HOSTNAME 
+ 
+     int i = -1;
+-    X509_NAME* xname = X509_get_subject_name(x);
++    auto* xname = X509_get_subject_name(x);
+     while ((i = X509_NAME_get_index_by_NID(xname, NID_commonName, i)) != -1) {
+         char* str = nullptr;
+-        X509_NAME_ENTRY* entry = X509_NAME_get_entry(xname, i);
++        auto* entry = X509_NAME_get_entry(xname, i);
+         const int len = ASN1_STRING_to_UTF8((unsigned char**)&str, 
+                                             X509_NAME_ENTRY_get_data(entry));
+         if (len >= 0) {

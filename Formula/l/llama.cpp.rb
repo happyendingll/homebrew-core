@@ -3,10 +3,9 @@ class LlamaCpp < Formula
   homepage "https://llama.app"
   # CMake uses Git to generate version information.
   url "https://github.com/ggml-org/llama.cpp.git",
-      tag:      "v0.6.0",
-      revision: "d81235049384534c167caea52b85a694f6103d14"
+      tag:      "v0.7.0",
+      revision: "620d2225cc436ab0b001e3200e590e3b286ef9ab"
   license "MIT"
-  revision 1
   version_scheme 1
   compatibility_version 1
   head "https://github.com/ggml-org/llama.cpp.git", branch: "master"
@@ -17,8 +16,11 @@ class LlamaCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "e42d09ba600f80b0366777cadca619987bc3d62cd5b3846ebfcebc7973e48e14"
+    sha256 cellar: :any, arm64_golden_gate: "3c43f075b95cf0740eaa7649a8eeb27433df182ee84d53efc7f24fafa9b1f7ad"
+    sha256 cellar: :any, arm64_tahoe:       "ed627dd159b28e65f339a32b8c3820f38805d67e4e8e6b5437495f15cea1c378"
+    sha256 cellar: :any, arm64_sequoia:     "feb0baf9bf9266e4cbdd5757ab811ca2ce06dc8b398a9f80c1f9822a798398bd"
+    sha256 cellar: :any, arm64_linux:       "e7f9bce860cf32c609dc03f1eee189161e0e165f1a44ee6c851446bb93964046"
+    sha256 cellar: :any, x86_64_linux:      "0de7a3151091d97149e812dc9209b9ad31f7aeee93f43f6f5a05b7c3c442955c"
   end
 
   depends_on "cmake" => [:build, :test]

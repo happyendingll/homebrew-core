@@ -27,7 +27,7 @@ class Ntp < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "b7e45f68bdcd6758f869f30271115cbe845d5b9e0d1b72b9429e63624109bc09"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@3" # TODO: OpenSSL 4 PR - https://github.com/ntp-project/ntp/pull/32
 
   def install
     args = %W[

@@ -1,8 +1,8 @@
 class Nextflow < Formula
   desc "Reproducible scientific workflows"
   homepage "https://nextflow.io"
-  url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v26.10.0.tar.gz"
-  sha256 "e4882e79511c4025f6687b823b3efa9090d1f7dcc227629f4383110390241c8f"
+  url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v26.10.2.tar.gz"
+  sha256 "496c91400a0757f2173b6baac0365303c9404d2ec515544e639015ddb55d9d91"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Nextflow < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "e1338104c658f3e4eac16e3213cb96d5a1bc0f4c96cbde6f1b9d7d37690537cc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "25ab34b9dedbad1427e46bd133899203b88fdf8f83c3de7c741f0e0eaf24118f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2f6b7bd59a6e9fa9fe81ceb9ca54d219faa8c6665df91c09922d707be863e4f7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "391dd19e0a6a59ae56768e6fab328ecf3b2dfc6ea642aa5bbdcbb55bb82565d4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3160047ae38e561d94f0003761a5fa3af26b98c7794738c1394d824e8ccc5c76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "07132b7121ac2cf58390692e34e9068e5b42ef00283906c022cb15d24c9ed723"
   end
 
   depends_on "gradle" => :build

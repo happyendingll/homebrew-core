@@ -6,10 +6,6 @@ class LlvmAT17 < Formula
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
 
-  livecheck do
-    skip "No longer developed or maintained"
-  end
-
   bottle do
     rebuild 1
     sha256 cellar: :any,                 arm64_tahoe:   "f2de15b5a454478b08b3e67e08bd9568a84b4468120194ec0856e2408123f9e9"
@@ -27,10 +23,12 @@ class LlvmAT17 < Formula
 
   keg_only :versioned_formula
 
+  disable! date: "2027-04-15", because: :versioned_formula
+
   # https://llvm.org/docs/GettingStarted.html#requirement
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.14" => [:build, :test] # NOTE: avoid migrating to preserve bottles
   depends_on "zstd"
 
   uses_from_macos "libedit"

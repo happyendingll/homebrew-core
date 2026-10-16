@@ -15,6 +15,10 @@ class Asuka < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "501ba0b71b2d4049a4d41042b470bf1d85596a86b55f1500a34d4ef21e68e663"
   end
 
+  # Last release and activity on 2022-05-05
+  deprecate! date: "2026-10-15", because: :unmaintained
+  disable! date: "2027-04-15", because: :unmaintained
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 

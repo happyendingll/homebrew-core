@@ -3,14 +3,13 @@ class Vermin < Formula
 
   desc "Concurrently detect the minimum Python versions needed to run code"
   homepage "https://github.com/netromdk/vermin"
-  url "https://files.pythonhosted.org/packages/24/7b/2c1b403f2a844e1acb36694fc336e323df742f7f752edb4188311ad43f9e/vermin-1.8.0.tar.gz"
-  sha256 "3621955ac2a2950175c5b4a9b2fc3bd24bd416da0388893c9eb6971264e4ca1f"
+  url "https://files.pythonhosted.org/packages/1b/29/4fa4bb0f381bbd257bc578e8cc5b535c60229dc370575f6c983ddf37ea16/vermin-1.9.0.tar.gz"
+  sha256 "92dfd9c23109b548d77bf50ccf47df22e5383a3f585a055cf3255febbad57127"
   license "MIT"
   head "https://github.com/netromdk/vermin.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "8f3e6bc4b10a13d0af9ae20cbcf3ab8fc96ddf2f0fb2b09d9a3ce902e3eb13dd"
+    sha256 cellar: :any_skip_relocation, all: "d429c49c21f32716b179ff39691d31fee0afea072378ef48d9bd19b0168d7408"
   end
 
   depends_on "python@3.15"

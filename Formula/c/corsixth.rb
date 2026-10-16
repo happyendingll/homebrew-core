@@ -4,6 +4,7 @@ class Corsixth < Formula
   url "https://github.com/CorsixTH/CorsixTH/archive/refs/tags/v0.70.1.tar.gz"
   sha256 "b3a37b09f168f30600d305314f5a823d3af10bf407074e9a837e0e85acfe9ba3"
   license "MIT"
+  revision 1
   head "https://github.com/CorsixTH/CorsixTH.git", branch: "master"
 
   # Upstream uses GitHub releases to indicate that a version is released
@@ -15,8 +16,11 @@ class Corsixth < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "5752bd75337fb3257af16e925b2430987731230cf613fb3514b495860062b9df"
+    sha256 arm64_golden_gate: "3856a3467381dccae4d53df0f15e8cc3f7a2840dd817d763a52d4f608fcb033d"
+    sha256 arm64_tahoe:       "5f2d60b52a1a2b875ca12e65e4fb68e1782ab38ae7e39c987036deb6c1f1d4b4"
+    sha256 arm64_sequoia:     "5130104cf6ae8667b12e771609edba1d6e650834223555375ea727a5a8d4b0f5"
+    sha256 arm64_linux:       "1890bf5f314820d7edceedf596e461a3153697ed4a675dd311560ff4211a1b5a"
+    sha256 x86_64_linux:      "5fa7f887fca9236171080c81fede282390d29dbff5873c9e918bfa709cb5c41a"
   end
 
   depends_on "cmake" => :build

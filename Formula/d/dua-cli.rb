@@ -1,8 +1,8 @@
 class DuaCli < Formula
   desc "View disk space usage and delete unwanted data, fast"
   homepage "https://lib.rs/crates/dua-cli"
-  url "https://github.com/Byron/dua-cli/archive/refs/tags/v2.45.1.tar.gz"
-  sha256 "d75fd6cb1c6a470b53d55051401a903f175a8a68d92d7d12d2c538fd8e70036e"
+  url "https://github.com/Byron/dua-cli/archive/refs/tags/v2.46.0.tar.gz"
+  sha256 "321e06440a8ba5dd05ecfd78904a127c9ffa556a40d886ab5862a9fe9aa9bd21"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,12 @@ class DuaCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "094aa45b764e2e306ad5653210489294c1d21cc4e310a20cd267e3b48562b3fe"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7e728ed0d5b741cab050256709ac34aee81b0d2036de23a87be16afb87054544"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a93918412fd520729b20b3e6cc7a4d98f4dbb811d7a3f79bf88a3a0ff696f2b3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "abfd426181cc6a25d5e39861268c6b64d0a051f410a90f2e28cdf9ecd7ac9669"
+    sha256 cellar: :any,                 arm64_linux:       "1b0d58074619c7eb1b276bea9b3aa8e40f9348cc38604921397aae5f3c953072"
+    sha256 cellar: :any,                 x86_64_linux:      "15eb1f2db2dbae8ec45312acb94895df780a2faa85097140119c2dab3c34ec8c"
   end
 
   depends_on "rust" => :build
@@ -25,6 +29,8 @@ class DuaCli < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    generate_completions_from_executable(bin/"dua", "completions", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do

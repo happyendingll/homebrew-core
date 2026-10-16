@@ -1,8 +1,8 @@
 class Magics < Formula
   desc "ECMWF's meteorological plotting software"
   homepage "https://confluence.ecmwf.int/display/MAGP/Magics"
-  url "https://confluence.ecmwf.int/download/attachments/3473464/Magics-4.16.0-Source.tar.gz"
-  sha256 "b5cf365e10e43abbb2e0b14db8e8d8db90486031f6c0de24b0b01c17a0197cf5"
+  url "https://confluence.ecmwf.int/download/attachments/3473464/Magics-4.17.1-Source.tar.gz"
+  sha256 "a0119c54c812b34a7b190ebf39c546bf523ede6c985e85ff3d41074b11f35598"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Magics < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "eb675a1c1cfbb395c99a47f508ce03f1543695df246ba8d25fb06e67931f927c"
+    sha256 arm64_golden_gate: "d9737c2e7d04839c1996eac86958d1a9bd39e3649a2f197cf913b77df0f1ef99"
+    sha256 arm64_tahoe:       "cd5a2ccfa9e68d8293eca06d86e51d3841b44803f9da2914090009292e86610b"
+    sha256 arm64_sequoia:     "c9b9a446d0d896390ebe374c377405855062445f3e1e63f58b8c03b52a1d499a"
+    sha256 arm64_linux:       "871f81372e1de4ff6832d65178016db2fb57e5e5d1e7fbc2c7a6031ce72b2dcd"
+    sha256 x86_64_linux:      "1505704aac2628905cbe29bcf44bce60ccb48d5a2c76087cfb66a585cc8cb7cf"
   end
 
   depends_on "cmake" => :build

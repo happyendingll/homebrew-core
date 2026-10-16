@@ -1,8 +1,8 @@
 class Thorvg < Formula
   desc "Lightweight portable library used for drawing vector-based scenes and animations"
   homepage "https://www.thorvg.org"
-  url "https://github.com/thorvg/thorvg/archive/refs/tags/v1.1.2.tar.gz"
-  sha256 "cd466f4abf2522a6dcdc1a69a75d04a214b7163c89731fb8481eceaa6cb73842"
+  url "https://github.com/thorvg/thorvg/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "ba9957aeeadb4151d4486f11c638ae118c00210fa4906daa7b30143aa341e690"
   license "MIT"
   head "https://github.com/thorvg/thorvg.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Thorvg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "a351a397d26a4492e6dfa408ec296d47c7440b3d92ea691dd0fde5a616fd2858"
+    sha256 cellar: :any, arm64_golden_gate: "c73d14a608ec13d72650b3c30261826bd08c889776411000d93c82a4c5707aad"
+    sha256 cellar: :any, arm64_tahoe:       "93142d78e65eac5121d6d4e4a9be9b38979714d767a69061abc88f7281de5182"
+    sha256 cellar: :any, arm64_sequoia:     "f4eceaf597931a5aaaaad62238abe9e92aa3ed9bf0beadc569eb5dc14a928ebb"
+    sha256 cellar: :any, arm64_linux:       "ba55c1a73481ae0bc3d7cedeae141a47f05893c7c4bbba172c9c123701eea440"
+    sha256 cellar: :any, x86_64_linux:      "8c9e50969fbd456b6a8d2c53650f91d273668dddcdb6319521486fb8a15630a4"
   end
 
   depends_on "meson" => :build

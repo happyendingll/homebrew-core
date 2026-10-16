@@ -1,8 +1,8 @@
 class Fastlane < Formula
   desc "Easiest way to build and release mobile apps"
   homepage "https://fastlane.tools"
-  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.241.0.tar.gz"
-  sha256 "53629d196dbf90b59dc0cb627c9307ebd2708e22cedaf04250684daeb1a96e70"
+  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.241.1.tar.gz"
+  sha256 "3f77e0ce5bb2ee66b85165c5d452e10e1863cfb1ffbf0d13e223333c84dac31a"
   license "MIT"
   head "https://github.com/fastlane/fastlane.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Fastlane < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "febfb36f680ec60cf6e9a138bdc65d0cb50b8e044b52c55c3dc1b8fe7ea0e434"
+    sha256 cellar: :any, arm64_golden_gate: "ac4c4398c6107f1bfda4b743ef80bc1888559b81b83e8960454cc5fe17425cb6"
+    sha256 cellar: :any, arm64_tahoe:       "1bcb6ee098038276be250987108233b76e946ee2203e7dfd8a9ebec6f57917ba"
+    sha256 cellar: :any, arm64_sequoia:     "ac423e4989dbee8d56f60e6521a636803837eb12e4218c2f97d30275efdeb9ec"
+    sha256 cellar: :any, arm64_linux:       "a0cd2812d4b172189724a06956179f4b872f632e067123e28023a7c1e16a50d3"
+    sha256 cellar: :any, x86_64_linux:      "a769ba3cd9b5d34990e43249a0f9a001461ef6eceb755c1702cf7e509cff6b9f"
   end
 
   depends_on "ruby"

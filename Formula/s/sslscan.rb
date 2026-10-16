@@ -11,7 +11,7 @@ class Sslscan < Formula
     sha256 cellar: :any, sequoia: "b7d0d530ef08c75e46120547fc57c075a20cdbb4ed3c8e7b04556fdc9f3b8215"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@3" # TODO: OpenSSL 4 issue - https://github.com/rbsec/sslscan/issues/361
 
   def install
     system "make"

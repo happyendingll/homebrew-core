@@ -1,14 +1,17 @@
 class Openapi < Formula
   desc "CLI tools for working with OpenAPI, Arazzo and Overlay specifications"
   homepage "https://www.speakeasy.com"
-  url "https://github.com/speakeasy-api/openapi/archive/refs/tags/v1.25.5.tar.gz"
-  sha256 "9990f7d8ec48f1479815153c45abf73e77491a635025d2f9add1a9bc75ff0c2c"
+  url "https://github.com/speakeasy-api/openapi/archive/refs/tags/v1.26.0.tar.gz"
+  sha256 "6811b537fcc4962038f8fcc6a952b783dd6c8fa44526970abf2ca89339afcc3b"
   license "MIT"
   head "https://github.com/speakeasy-api/openapi.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "b5a4871eb420f5c856e355fc03405205c37ac31f8de5bccd12580c37d41268c3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "87433abe33ff8855c821d4d5fea15098618728d212d7722f73f539350010a06d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "87433abe33ff8855c821d4d5fea15098618728d212d7722f73f539350010a06d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87433abe33ff8855c821d4d5fea15098618728d212d7722f73f539350010a06d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "59625bece51f93de6feab095eb2afbce974179a50f999fee6915af7d68adaf49"
+    sha256 cellar: :any,                 x86_64_linux:      "62c3de9d9c62aada078559080c1aded0183dfd4c6a4ba1e9a0fdf013af2c7521"
   end
 
   depends_on "go" => :build

@@ -1,14 +1,17 @@
 class GitPkgsBrief < Formula
   desc "Tool that detects and reports a project's toolchain, configuration, and more"
   homepage "https://github.com/git-pkgs/brief"
-  url "https://github.com/git-pkgs/brief/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "2f329799ee6772a13e1def9a767334cf58b682dfccd8078b040dde5e717a3670"
+  url "https://github.com/git-pkgs/brief/archive/refs/tags/v0.14.2.tar.gz"
+  sha256 "e01028fc5bc79a49b76b0804325ea5b12796c3275799f82b89e4cc0717bc3bb5"
   license "MIT"
   head "https://github.com/git-pkgs/brief.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "eb7cafce358ad3bc1dd3aa16d2c021b0ba586dffec386d299ed7e667a7458ad6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "42e1d008eaf9c58e0d52e0080daf2a03a03b8a270409ed986d6119621e4572e9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42e1d008eaf9c58e0d52e0080daf2a03a03b8a270409ed986d6119621e4572e9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "42e1d008eaf9c58e0d52e0080daf2a03a03b8a270409ed986d6119621e4572e9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "beaeb927b1e0a74da25dd10874a5589930a1292d0ed7c7c6169ef0cafe194d05"
+    sha256 cellar: :any,                 x86_64_linux:      "138c8219786b237c6b7ab293ccc67a9c9235a4bddd6818aa326f91a3d4b278f3"
   end
 
   depends_on "go" => :build

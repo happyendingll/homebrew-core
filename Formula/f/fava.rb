@@ -19,7 +19,7 @@ class Fava < Formula
   depends_on "ninja" => :build # for beancount
   depends_on "rust" => :build # for watchfiles
   depends_on "certifi" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "flex" => :build # for beancount
   uses_from_macos "libxml2", since: :ventura

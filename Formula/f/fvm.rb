@@ -1,13 +1,16 @@
 class Fvm < Formula
   desc "Manage Flutter SDK versions per project"
   homepage "https://fvm.app"
-  url "https://github.com/leoafarias/fvm/archive/refs/tags/4.3.1.tar.gz"
-  sha256 "08eeac980533f959582996a2f79b1093a61e0edf8a0975fba8414768e092db6e"
+  url "https://github.com/leoafarias/fvm/archive/refs/tags/4.3.2.tar.gz"
+  sha256 "e16b1e76eb4df5b22d00ab40fe77cfd8c261be6f968e94eb081ad39af5615059"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "524b1cedc669b37bda8e03ef84f560efbee8386fc47631edc6882d08c833568f"
+    sha256 cellar: :any,                 arm64_golden_gate: "61449e6d995559059dc4b12d2da037d3ce7d709e3dc300f1d0c099ede7e797d3"
+    sha256 cellar: :any,                 arm64_tahoe:       "89b653f484507d2e86e8feb860977708dcfd2fcf7e6826d71166813d9767fcda"
+    sha256 cellar: :any,                 arm64_sequoia:     "bf5d78483abf1d0284afdb602c16dcdff0ca60f77f98ffc0cde856e68ca087f5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "db5e871557ba7e037f70779230cd4dd54569755c859644c1678ce8d6350a6237"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "457bab104a9c5e0bc7fab0fbcb6f523e7c6873ed924d978bc47f7134aeed76c6"
   end
 
   depends_on "dart-sdk" => :build

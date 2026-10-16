@@ -2,14 +2,17 @@ class GolangciLint < Formula
   desc "Fast linters runner for Go"
   homepage "https://golangci-lint.run/"
   url "https://github.com/golangci/golangci-lint.git",
-      tag:      "v2.14.0",
-      revision: "114493f9b3e7257d29e4130f2b4a4aadefbb6845"
+      tag:      "v2.15.0",
+      revision: "25c5369a93aacb8cccea0d46e1569ca4a194564d"
   license "GPL-3.0-only"
   head "https://github.com/golangci/golangci-lint.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "6777bb408a69aa82fa92be1879fcc9dc69ec52481bec3c5b800df600b7a334f7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2ec69931c249c758e5c5dc01e240d161ae3a69bffab90fd32be9640b14bde8ad"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "307c70daa7188049fa69662b254540e08f52f0b63eb7f63a33612598d7ab5b86"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4730cfe51fcf4973575a38c81f344a3df206f5bfeff4a46958d5af7850a9d02d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "daffb2bfac39f4e691c0bfbbfb74b3558573dfe5e3ec7dddbd76a7ca510d7e63"
+    sha256 cellar: :any,                 x86_64_linux:      "eae202dc3e2e457e622982637d01ec5dc9ab457ccab27862b903dacfb32059f3"
   end
 
   depends_on "go"

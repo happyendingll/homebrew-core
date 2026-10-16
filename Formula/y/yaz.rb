@@ -1,8 +1,8 @@
 class Yaz < Formula
   desc "Toolkit for Z39.50/SRW/SRU clients/servers"
   homepage "https://www.indexdata.com/resources/software/yaz/"
-  url "https://ftp.indexdata.com/pub/yaz/yaz-5.38.0.tar.gz"
-  sha256 "c35f3994d382b42c43954253c1f24d1c0f93f0cb960532b69efa399b31b39b10"
+  url "https://ftp.indexdata.com/pub/yaz/yaz-5.38.1.tar.gz"
+  sha256 "755835efe8385d88725cc46a3b34dae2f5e784950832cbbe7f09ca0398de344c"
   license "BSD-3-Clause"
   compatibility_version 1
 
@@ -14,8 +14,11 @@ class Yaz < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "e83381ab02aa4363e50fa508e9ac0ab6ef11262203552ed03596a132ef60f45d"
+    sha256 cellar: :any, arm64_golden_gate: "bf4d71563df50a4feb41aeea1aa5c816209f62ebffded600cdb41c429638196f"
+    sha256 cellar: :any, arm64_tahoe:       "aecbef8c012fb602022283f1b6895dcd140ca49d4cc17717ecc0108517d9cd55"
+    sha256 cellar: :any, arm64_sequoia:     "aac010b3418f342a0ca2db7d5d593104287040441a0dfd7e07451281f9a54459"
+    sha256 cellar: :any, arm64_linux:       "5e275a632a8738493a3570bfd1b3560a82e88ffa455e73ea53865bd601f680bd"
+    sha256 cellar: :any, x86_64_linux:      "97edce17f241fb328f2939d9cc01e49772672fb3a8e95ac86f1522613405df67"
   end
 
   head do
@@ -39,6 +42,8 @@ class Yaz < Formula
   on_linux do
     depends_on "readline" # Possible opportunistic linkage. TODO: Check if this can be removed.
   end
+
+  deny_network_access!
 
   def install
     if build.head?

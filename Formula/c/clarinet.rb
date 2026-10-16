@@ -1,8 +1,8 @@
 class Clarinet < Formula
   desc "Command-line tool and runtime for the Clarity smart contract language"
   homepage "https://stackslabs.com/"
-  url "https://github.com/stx-labs/clarinet/archive/refs/tags/v3.24.1.tar.gz"
-  sha256 "5f5792d2d735c8072689001d4b1a597dac4957695331fda8349ca472327721c3"
+  url "https://github.com/stx-labs/clarinet/archive/refs/tags/v3.25.0.tar.gz"
+  sha256 "be5047f990e2fbcfd17e99b5ab716a0ba6724f9a8c47c4efd20fc376ee8ae571"
   license "GPL-3.0-only"
   version_scheme 1
   head "https://github.com/stx-labs/clarinet.git", branch: "main"
@@ -13,8 +13,11 @@ class Clarinet < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "946643b0af6c639880ceea72be2016472257f337722cf22069d5d027955e32b6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e61e9e1bbe46d8ad36349053e87269d5a8a7a04168cc59c11c750494271fcc4d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "43a0da29fd18624b0ffa9e26a8516c960a573cf93800484507573aacf502a01d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "826f6ffd3f4aac0e9bd8d4e691581d136df9fe9836e1b72ca29573387af85a23"
+    sha256 cellar: :any,                 arm64_linux:       "fcb6f3fe07b1364a0797092c8c846398d82f8a2209429f05a12e5c2701a59567"
+    sha256 cellar: :any,                 x86_64_linux:      "60221108e01c5e63409a311aec5f16eabcdcea0993a81bfbab5c8ffbcb42d5a3"
   end
 
   depends_on "rust" => :build

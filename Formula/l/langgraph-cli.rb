@@ -3,13 +3,16 @@ class LanggraphCli < Formula
 
   desc "Command-line interface for deploying apps to the LangGraph platform"
   homepage "https://www.github.com/langchain-ai/langgraph"
-  url "https://files.pythonhosted.org/packages/70/08/3eb73e792b106d7b95a35a2106334d78036a5a84c7eaeb685325ef4d2805/langgraph_cli-0.4.34.tar.gz"
-  sha256 "1a280cdfd6d76de6adfe4421a69f75db7c83ee19e975728b9378466d063d2502"
+  url "https://files.pythonhosted.org/packages/df/0f/b82a1cff738e03c144389599048ed8c39ab0ee79e5fa0495b5478e9bd6bb/langgraph_cli-0.4.35.tar.gz"
+  sha256 "48abc1bd2b277cafb80272e3a765c50f36627691662fbb5828053d46f79cab60"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "a5f0243a8b70032e54a95b0101b287f1c63b88a5c2655c2f1304a7ead1c1fa00"
+    sha256 cellar: :any, arm64_golden_gate: "84a50d77af36b170733cc2474cbb258877f989ca07a8112a188391cdd777855a"
+    sha256 cellar: :any, arm64_tahoe:       "ce3272527d7804ee92df52495d252413cb0a1f330c4556476077c70abc7da8f6"
+    sha256 cellar: :any, arm64_sequoia:     "48161ebf63bec63f03eba52f79f1a63a67266d87147f07712c1d7a015494b9cf"
+    sha256 cellar: :any, arm64_linux:       "1f55d8b550926cb4fcce299874380cc7d2cb56532f0b8fa68388a46e87f38543"
+    sha256 cellar: :any, x86_64_linux:      "636a83d5e0c5af725d8cf199581685168f0394a4867bdc612ba14c3baac1b348"
   end
 
   depends_on "rust" => :build # for orjson
