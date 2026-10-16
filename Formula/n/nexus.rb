@@ -15,11 +15,8 @@ class Nexus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b94862b13c26c205cfa196a5256c7f6d5e90658cfd6fcf84cfdf17cf2c089dce"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b863c3110eba9fd050586e72d27709df95e6f2a388c0970b81416c9a3b2c5c54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "31fd046cf84444fdce6bfbd5555910873d4c92027f0f4555d3db70216d1bfe3d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "558800ce293c15e17730f707b1181fbe1575279a725db76022097ddca706adc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ab1451a2067cf90c80f0a59be28f1f8b4e384b8565e0a9764dc5df4fdc47a39d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc71d7f0a88d28588e9a7cd15e653ce35be1aa94e71cd360dd6dfd5c0ea5d45f"
   end
 
   depends_on "maven" => :build

@@ -9,11 +9,8 @@ class LueReader < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a3466ec2fb32e22e2ef7f39a7c2452f0f92c3d556209d789aea888f9dc445c09"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "312ea4096ac0abb72839a6e736e7cc8f75b4b2f678af82747fe09a2c22636fb6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ea7f23a21f5cb923497ee3dd798be67a996ea0b3cae16d5ffb5eb81575c622d"
-    sha256 cellar: :any,                 arm64_linux:       "43b87dc476d4d4f8c48baf55bad0f619c49ca02e6304d286807724fc5c65e779"
-    sha256 cellar: :any,                 x86_64_linux:      "42395a06fcb87e29b55a8e72b85f992ec38620430ee5b730bcf4e44e6d50fb25"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a548adb10e2aef3d991cb3f854f7c561f79b22b4413be7c41c7ce5843140d91e"
   end
 
   depends_on "certifi" => :no_linkage

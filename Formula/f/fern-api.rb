@@ -10,11 +10,8 @@ class FernApi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "9f63dc3d936ce3759c71baa14d3de6af07180b34260221c2211b9a3dc4c910da"
-    sha256 cellar: :any,                 arm64_tahoe:       "9f63dc3d936ce3759c71baa14d3de6af07180b34260221c2211b9a3dc4c910da"
-    sha256 cellar: :any,                 arm64_sequoia:     "9f63dc3d936ce3759c71baa14d3de6af07180b34260221c2211b9a3dc4c910da"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5ad21d6939a5bfc7fb616350894690ab45e71277936e1b99e5687a594889f363"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5aad6a19708b941e011d3c8980413053c6de1eb14dd9aece6ecf712fbd5608fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4003e921301024f104fc0af7cc2eb1c35d896da3ca12b77f7073acb55f3ec9d4"
   end
 
   depends_on "node"
