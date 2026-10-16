@@ -7,11 +7,8 @@ class UBootTools < Formula
   head "https://git.u-boot-project.org/u-boot/u-boot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "44227749415024779958ece965c1f4d57002a27fe4c13eebfb495173ee84b76c"
-    sha256 cellar: :any, arm64_tahoe:       "43425048d4b74664ee9f14a37383edbe1b38fd57747246e4a81deb074c133899"
-    sha256 cellar: :any, arm64_sequoia:     "200480d90561d05d5879efb4c30c3157b7d18a232c2fa2bec85c2d932c61f0e6"
-    sha256 cellar: :any, arm64_linux:       "454681adb5858f6f09063bf4af640c1976267c9c8b8e6d0a6c3dd1537fd6ba09"
-    sha256 cellar: :any, x86_64_linux:      "04525b2ec07704fcde97bd10861e2f38e57e17b5c74b02743eeed53de33cfb85"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "7fbba37cb0912943c3861b3a534c523137239fd5feeb707a110f9be6cc66ff37"
   end
 
   depends_on "coreutils" => :build # Makefile needs $(gdate)

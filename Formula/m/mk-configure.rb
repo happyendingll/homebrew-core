@@ -11,11 +11,8 @@ class MkConfigure < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5ca1b1b6d144864ae8d9257167923eae61630a3850aee7e854674e00a233542a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9b63da219e7bcc87ce10ba4af30e82635f87d3db6992a2c8ac018e4bc62793c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e933f9d30e60ec9c0c501053a59bcf1858a6e26d2d701183e21931a6445cfe2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3a7b25e4f5d04d236ebdb29d1576c107b7b9b4901b5a639a71bb71d436668eb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e1f1b43c494096be65eff50c7e467a6a430f7814bdaad970a3ec205cf9b1e80f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a67428e8401d0ccfb5178912f2d95336b45b6304f169cdb47626b41e5c7b8336"
   end
 
   depends_on "bmake"

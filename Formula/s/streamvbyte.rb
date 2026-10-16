@@ -7,11 +7,8 @@ class Streamvbyte < Formula
   head "https://github.com/fast-pack/streamvbyte.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fcf08f07c02a8195fad6f067fc8f6ca07f7ec4296a1ce38cf6281bef99377778"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe8da80633904f934dfb331a161fdc6d46f5522a295dc46c35f16ad66f66c5b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f7972fd9ba9d0f7241dfa326e01b3b31118ebcc78b7f858d9ac7b19db016ca0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9a5bb6020eedf6474f99d38b4ffed2f1d7286795b9a951e403f8e6df492b9eb0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "45c5f80cb4524410f45ee5a68e21e4793756a11d04f27330d13bf76f0a6a5ae2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "830d44e90403a8c0c95a76326e4c16d2db75d98a04d2e02bf59fcc00b17eb786"
   end
 
   depends_on "cmake" => :build

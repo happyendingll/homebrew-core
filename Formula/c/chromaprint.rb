@@ -6,11 +6,8 @@ class Chromaprint < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9446f7a7a9204f250cc483249e06483b947b28997146f44ed41d8ee801fd0d04"
-    sha256 cellar: :any, arm64_tahoe:       "0008cd637f81515fd52cb97a589d1c13cbaeea5314561098b6735c176eec47a1"
-    sha256 cellar: :any, arm64_sequoia:     "181a34d298b3a98ceb26b6bf93b3089eaafd38544f4038a63767bd8d1b707cbc"
-    sha256 cellar: :any, arm64_linux:       "77ba669af47e4175bf717addf5cdb4f7aa66e174d4e4dcdae7b7baeb9302cec8"
-    sha256 cellar: :any, x86_64_linux:      "a9df07a75ffbb54c9beae2b9cb8be7d9d70ca17e25b809ab3918d3cb9c1c788b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "80b4fa8ddf98f10ebda674d48faf748a48d39aabc8b7efc9d75cd0b1f7ddc082"
   end
 
   depends_on "cmake" => :build

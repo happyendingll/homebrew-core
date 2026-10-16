@@ -6,11 +6,8 @@ class Titus < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a3ab9d71cbfbc8a90eb77af2b1cc3027c93813c0a0d7c1a1eeb3c6771d4e8391"
-    sha256 cellar: :any, arm64_tahoe:       "5523988ff8270965bb81199366e7adcc48cdc24d2048c92e448276de9500275c"
-    sha256 cellar: :any, arm64_sequoia:     "ff4d8ca75f2d173d5e89c961ecfc56cdb10a32938f7ebaa66d6a5886f06f0074"
-    sha256 cellar: :any, arm64_linux:       "efc35cec463fc095f08dfb91ba202b076912fd200828dc08e488b74e1c157013"
-    sha256 cellar: :any, x86_64_linux:      "79d88dea8c85422cfaf26bb01ea8f2a81d6e439e505eec9c19a1d3f5da106600"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b037bf70eed481fde521dc259fa05324a9059bfe54bb722e116861bf2c1fcf65"
   end
 
   depends_on "go" => :build

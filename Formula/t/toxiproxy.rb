@@ -6,11 +6,8 @@ class Toxiproxy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a731a98a748508b9d30866368f0fa1ca15095ae5aa31f92eada27542bfd3846"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "90bb61e1fb947cd1907fdcb9bf3cf034dadc3a98ed14fc9e690c408590ccc404"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d77388955bf69f8f43343f3ad967036273ae4a5f15650c1abd4eacdda0d8c37a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b68202f84502dee115b8e29991fc53f807cf5ce3d896f5942ebb502fce11aad1"
-    sha256 cellar: :any,                 x86_64_linux:      "78bc05c61235f417fe515c0300f35bf12965e9128294cf0d2509aea5fa719a3e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5b941cba8f9d43e3a68a09d1be80f0d178ac055d1bbb9b99e6efe8c0b1d39f9a"
   end
 
   depends_on "go" => :build

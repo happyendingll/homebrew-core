@@ -7,11 +7,8 @@ class Ghostunnel < Formula
   head "https://github.com/ghostunnel/ghostunnel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f8b7c2bc7d9000605636967bf3e6dd42ac66134d0fdb28e1f7b59ed11f9f9775"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ea7eecb64a0a8ef05b1785ec5178cd4eae49fb044a4c429fbdcc3c9c48aa008f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "96ae84b41bba980b76feacfbf8429ab868979b95fc2d31467363b9559355ce60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0c1f6bdd435f65f6e4cef39cc14087fb05a825a6d15ece416046cf05d62553e2"
-    sha256 cellar: :any,                 x86_64_linux:      "de6b6fe7c85e8dcab5eef74bf6a6ddc8296075187e0be5d2ddadac9177eeae74"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "eccffe0d856ce09ab1e4687d5447dad20ded8d96c018ad5fb0d22d246f68a06f"
   end
 
   depends_on "go" => :build

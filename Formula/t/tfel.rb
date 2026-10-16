@@ -7,12 +7,8 @@ class Tfel < Formula
   head "https://github.com/thelfer/tfel.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "1bbf558e0fb67a25e66b5b3abca3a0ab704652698ffbe65fe525fa857ccf853c"
-    sha256 arm64_tahoe:       "c8e07173e8aa8574e0662d090cb59833ef897e9d0f2a36c9ef3b9bbadbcef4b5"
-    sha256 arm64_sequoia:     "d9e48aea97a38f5cb1c72214c3703f607ecf6b3a664a705065dd30260fbc7546"
-    sha256 arm64_linux:       "a5a704b272fb1e769e023fe32194a4fd8db2861591c28ac8b4e1fd0d410e1a44"
-    sha256 x86_64_linux:      "6280050c2bdddc6925c327cf586968a2eeaebfe240bfa45bface948ffd88a6a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "95e29be4aae7c07c4cf4c6c84785e2fedc79b0cf9452d7f50510c769d5c7f14c"
   end
 
   depends_on "cmake" => :build

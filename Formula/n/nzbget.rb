@@ -14,12 +14,8 @@ class Nzbget < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d6cd2be80c4eed77d5eedaaa2749fadca1255e924def4ac12507e0664b1ecf94"
-    sha256 cellar: :any, arm64_tahoe:       "928e9f4486cf45d1806ef6dee8a99d6de7f38c656217c5c9b51ed7ca8e3b8d3a"
-    sha256 cellar: :any, arm64_sequoia:     "2e962f0bf0eefbcf4dd5e914b14a38f884cee57fa283903276e4310c6cea12f9"
-    sha256 cellar: :any, arm64_linux:       "635e164164e9a637190c8ccec96ce07d7c603c724355451edf5abe2e71ee31fa"
-    sha256 cellar: :any, x86_64_linux:      "e6e92c83062f465de2123529aecac0e28c691b15310d262a31e514994cefac32"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "c3366f67ea813bfa90064812187c3ad6b88447282d79bf1e13550639035e5ba5"
   end
 
   depends_on "cmake" => :build

@@ -7,12 +7,8 @@ class Mgis < Formula
   head "https://github.com/thelfer/MFrontGenericInterfaceSupport.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "93d3ad11a8a7be016d96188709fb77aae71e09945fddae2cd922115340c32b2f"
-    sha256 cellar: :any, arm64_tahoe:       "65d74f15dc392729d425774c8af8a30aaa280cc8ec6551eef21420f8c5cf95a1"
-    sha256 cellar: :any, arm64_sequoia:     "0e87d8c6178fa5ee20cdf9da93d7fccea5fb2fe808dd9bae82ba2a40a30c21cd"
-    sha256 cellar: :any, arm64_linux:       "1c868d1e538b72f95071c4709a79a5013cd52d4beea84b6db772bce16a3b290c"
-    sha256 cellar: :any, x86_64_linux:      "b44db19b511f7af1ffda2216cbc932320ec52997b78939218ea947d77c13184e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "11bcb16a70f652cfd572b6879962d23378fae558c98ef9eff48c65322b4e05e0"
   end
 
   depends_on "cmake" => :build

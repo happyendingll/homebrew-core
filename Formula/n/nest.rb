@@ -11,12 +11,8 @@ class Nest < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "4526de21f025292a04991033ae3db0e4cd01d4514ab0870807b4b9f805076e75"
-    sha256 arm64_tahoe:       "d92504fd5c36cad9f8074cd9e6e0a75c0fca51b4edcc70d9d08df489e48128b2"
-    sha256 arm64_sequoia:     "a5488e8621d032e13576d5d597efdba3dbc99a8c356a53c8ae6d94db9dbfe821"
-    sha256 arm64_linux:       "5e5315405e5cc62aba772793ca34e61643e1e4d7fea2ebc96587ae90b552f83a"
-    sha256 x86_64_linux:      "cb32c5520f06bef7340c01be12e1dd12754f5c5eeeaa46444b9e78fdda46ad87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "bafd0a57147bbdbd03b3ef16a9902301147753a6042e00252618b21ee15fdd96"
   end
 
   depends_on "cmake" => :build
