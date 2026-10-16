@@ -7,11 +7,8 @@ class Threatcl < Formula
   head "https://github.com/threatcl/threatcl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3eca2d972941adc236499967a52cca90b23bb27f1b9bc1b54bea500dd41a5c5f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3eca2d972941adc236499967a52cca90b23bb27f1b9bc1b54bea500dd41a5c5f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3eca2d972941adc236499967a52cca90b23bb27f1b9bc1b54bea500dd41a5c5f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "98f3d229d040721ab4a29a73cc3f33cbc3ca285cc0d42bf7d0d0f1b57cfbe72c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5eb307bd9a9cecb223fd7bd941fdd84d55111ffb94305e5d44d188ede90456ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "66ceb0346429f3cebeb9e0feae1916e910839aaee52ce9be1ef3c78b191b1bbe"
   end
 
   depends_on "go" => :build

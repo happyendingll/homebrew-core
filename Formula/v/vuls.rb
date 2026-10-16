@@ -12,11 +12,8 @@ class Vuls < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8cdb0c92768156f2365cc74373c032d04ba8c474255824a47af307f82cdb92e0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8cdb0c92768156f2365cc74373c032d04ba8c474255824a47af307f82cdb92e0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8cdb0c92768156f2365cc74373c032d04ba8c474255824a47af307f82cdb92e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ba59c86ddf2bb4f24499b965616820dd7f8eeea8a91da20e117c2043f7677086"
-    sha256 cellar: :any,                 x86_64_linux:      "702cd0d4ba3cd62cc69b8300e68e3d6e222f2f68ad957a02f2ef3977a7f848ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1bb2758f3f9af534d433463942e05615f25b0b2e3c40990ca2472d8644915386"
   end
 
   # TODO: unpin go@1.26 when vuls (and trivy) support go 1.27

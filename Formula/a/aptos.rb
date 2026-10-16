@@ -15,11 +15,8 @@ class Aptos < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "349d3a216821ff2894d803ccacf5e62ebe485caa22c4c463734c583ec5061404"
-    sha256 cellar: :any, arm64_tahoe:       "b78885ba252eb11cb6b63f2e1aee6182f210dfb2e081cfa2df47b1fc9d18ec27"
-    sha256 cellar: :any, arm64_sequoia:     "700c2a780c5e9b3639bc8885682655e903023efbecca4e087b0b576d95c20e48"
-    sha256 cellar: :any, arm64_linux:       "0a55cbe92fb0471e75e29b801c7cfecebc63aad670606e14d97c17b3654bba0e"
-    sha256 cellar: :any, x86_64_linux:      "1d3f461bbd1e4fc802586ccc997cb5f1052004e05abff7a9d9f9ebbf04361a95"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "c4f0440a51fe7de042b9394cb5e40612946270b53548d60b57afdc71dd3cc17a"
   end
 
   depends_on "cmake" => :build

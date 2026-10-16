@@ -6,11 +6,8 @@ class RvR < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8208f5eb25dadf851340982200032787f5247a1bebaf5f28702760cd1cbc0878"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04e2fb04f9bd0b7d04cf72b5fd8a5a42c9ed0bb5c2cbdf6afb67447cdf339255"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "71c4e7d7f5860a069972e0555a40337f01a7183fed6fea92a6c0587df7c565b1"
-    sha256 cellar: :any,                 arm64_linux:       "65b5b926d865fb5c9dfb3d78cbdd18e021c843d6ef5ca2b9c00dedef4b41c044"
-    sha256 cellar: :any,                 x86_64_linux:      "5d5ec16356eb5d4fa16eaad73652647ae6ca7c7803213be32247b58a9670cbfd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "93f4e3d1ecf314fe2a7e1f028b799ed3474fa46c139eff92bcfd795ce925a833"
   end
 
   depends_on "rust" => :build

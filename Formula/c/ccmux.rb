@@ -6,11 +6,8 @@ class Ccmux < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "791c90401483b733786967f5c491864286d9c9a489d4357b80cadf4961a1e531"
-    sha256 arm64_tahoe:       "eb0522fcbe954cb9725461684dd09f0099106421c75e96acbca037741d4a2235"
-    sha256 arm64_sequoia:     "04b3214b9909afddeb0ff6c978313a3c14a6d1061da09b62a452700c72b058f1"
-    sha256 arm64_linux:       "80f9995d444daa1d9b4b5dad45dc7de013ef6d382a862ab8a2c2dcf421a36108"
-    sha256 x86_64_linux:      "2f5ee925fa7272ab10b4a7afc62232edeeb403e7f827eb59386063658f19ec54"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed7cfdff4c2719f557ffc4714189783373e808343c728bf70e2e7907fc133453"
   end
 
   depends_on "bun" => :build

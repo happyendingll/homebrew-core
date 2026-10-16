@@ -12,11 +12,8 @@ class Eccodes < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "362b63e828a4cefb6183548d7ddcbf102f6289de13c2a5e2e3385c81b01d9f69"
-    sha256 arm64_tahoe:       "fda53c66557259c1740b54b9540c2af21225409fae37eb7d306f63f01033350e"
-    sha256 arm64_sequoia:     "01d443b5da39d4811df1b5c2e65797894cec7a5f784f3a77e2953cbe464af5e9"
-    sha256 arm64_linux:       "cddae40216a845888b0962a9572e6437df5958fd6970988203caec16a5ad9855"
-    sha256 x86_64_linux:      "2a0a9b8b204e3ad1761747627ba861090a0d2189e929eb7ec10e50acfbb3ce5f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "de670945bfebd305e969e249329a31d298a984022915314d6e4efc965ed394d9"
   end
 
   depends_on "cmake" => :build

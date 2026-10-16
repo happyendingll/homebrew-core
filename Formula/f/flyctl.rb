@@ -18,11 +18,8 @@ class Flyctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e0e285d1346a658075904fc407352a543a1fb7c884b56f4194f103fe8d637203"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0e285d1346a658075904fc407352a543a1fb7c884b56f4194f103fe8d637203"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0e285d1346a658075904fc407352a543a1fb7c884b56f4194f103fe8d637203"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e1b5720b122725ff3ffac15aacab2a9b3fe0eac31f944bf667994b80475043c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "693d8f31e225db70ee8e70f54dae239d8727e466a6076da31dd729af57ae217a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ddb858a7837041394a818d1ffff1cfe8f7bd2fb1aae8b807d2c9457930980745"
   end
 
   depends_on "go" => :build

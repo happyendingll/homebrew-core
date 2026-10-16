@@ -9,11 +9,8 @@ class SshMitm < Formula
   head "https://github.com/ssh-mitm/ssh-mitm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5dac6a46ac8ec89e69421034a7b747559a27d35e0394f52548eb691dd76c1031"
-    sha256 cellar: :any, arm64_tahoe:       "1aaf11d39f39551470a4ac3edcbc541d5a403fe82d1ee605957374f99479765c"
-    sha256 cellar: :any, arm64_sequoia:     "7417e6d87ac118477d31bd19744b134a89fef313d9cf636473d729431decbae6"
-    sha256 cellar: :any, arm64_linux:       "de8766219dc196948ff83f0a7895a6b0be013559b03e060b9d8e5baa58a290f3"
-    sha256 cellar: :any, x86_64_linux:      "33a3aa1e1922d3cbb6965caa04ebad1b2a075613b6e2db7407e650653ba96f73"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "859ebca5c689e98787a14593246b9b2c61edd156eb00cab5171b1fdcf7b37c4a"
   end
 
   # `pkgconf` and `rust` are for bcrypt

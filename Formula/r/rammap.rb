@@ -7,11 +7,8 @@ class Rammap < Formula
   head "https://github.com/jwanglab/rammap.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2fedad69bfb4425e5c0373f617dffeb98562f29fbac5e8f8b49816dbe1f05773"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c581cab3411839cea869625335457898c9e597b57d9d9c454eabc51438511a9a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "38b1ce9ff42b9f110c8602eb394c284e30bd8e4b103d781642151c8005974fd0"
-    sha256 cellar: :any,                 arm64_linux:       "a3d2969beb53ebe998c400587c1e4cc40821b8ad086554a6ffa529316e2f0526"
-    sha256 cellar: :any,                 x86_64_linux:      "8660ed0bf9b4750387fb5a92898d46e65d5ec1fa8e80fb14bff359997ea41285"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8ffd2b07a13fd554ed57e8c46c7798d331e45d37d57751579b2432f511c6d2b0"
   end
 
   depends_on "rust" => :build
