@@ -16,11 +16,8 @@ class Corsixth < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3856a3467381dccae4d53df0f15e8cc3f7a2840dd817d763a52d4f608fcb033d"
-    sha256 arm64_tahoe:       "5f2d60b52a1a2b875ca12e65e4fb68e1782ab38ae7e39c987036deb6c1f1d4b4"
-    sha256 arm64_sequoia:     "5130104cf6ae8667b12e771609edba1d6e650834223555375ea727a5a8d4b0f5"
-    sha256 arm64_linux:       "1890bf5f314820d7edceedf596e461a3153697ed4a675dd311560ff4211a1b5a"
-    sha256 x86_64_linux:      "5fa7f887fca9236171080c81fede282390d29dbff5873c9e918bfa709cb5c41a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "be8d7a7f943dc354c261a2f9504c9358caf524b768e629b9d6b5253e2d027114"
   end
 
   depends_on "cmake" => :build

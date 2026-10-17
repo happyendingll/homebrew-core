@@ -7,11 +7,8 @@ class Sqlpage < Formula
   head "https://github.com/sqlpage/SQLpage.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ef202eedf083b78ec0c1b52d15176833548f0649d283ad172a8467e3c2a7d30b"
-    sha256 cellar: :any, arm64_tahoe:       "00bfa750dcfdcd73cbaac031d0442ac6e40a415a5f22b1479eb60a1fb98f3dd5"
-    sha256 cellar: :any, arm64_sequoia:     "a83c7cc52d4a8e60ade2b628b36b2688728677907843f9317b99e6c29b58ad8f"
-    sha256 cellar: :any, arm64_linux:       "1a724509e0fac5d7573adf5f98568c7cbd81b325381e81696fa577a0c91c9a2b"
-    sha256 cellar: :any, x86_64_linux:      "701dd44cd760aeb646227e3c63f8f56e8329697c0309dc1f4e151241c095097d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "a1f3fa2c37980d8cacf25a9e6ea820ae2aa081097123accb2e6c10b2cfbb6638"
   end
 
   depends_on "node" => :build

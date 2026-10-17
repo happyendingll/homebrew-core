@@ -6,11 +6,8 @@ class Dnswire < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "af08e098cecfb092e02ee3691645f92ec7722c36d212cce26247694e26b2a118"
-    sha256 cellar: :any, arm64_tahoe:       "df58fe562d38ba6f322fc544785067297c906e36d16e1fd4f6c88247ed2325e2"
-    sha256 cellar: :any, arm64_sequoia:     "88561139efd02ecb260684607567214d0520c0149addfd311f3a14038981ca74"
-    sha256 cellar: :any, arm64_linux:       "d0d6700556292ab1529f023bd79b4e9ba51afb347f081f817532d071580b102a"
-    sha256 cellar: :any, x86_64_linux:      "f1a3ca678aa56cc9a823a59c381822fb718ad4a3212d161ab256cb7adb3192e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "482cba7448bd8eb2bd88e65598efef601a039c06b75aa6859401f8a7da974d6a"
   end
 
   depends_on "pkgconf" => [:build, :test]
