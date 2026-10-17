@@ -8,11 +8,8 @@ class Icestorm < Formula
   head "https://github.com/YosysHQ/icestorm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fdba6727b9028fba662c2c52f826cab7852e2533e415156add6fba0c5f72c191"
-    sha256 cellar: :any, arm64_tahoe:       "16d3eb61d416359779ab3686db2a2761c2557e7fa3d472a3a291aea191f95d38"
-    sha256 cellar: :any, arm64_sequoia:     "5f22368099b4364bb74d9d8a2c14e0193a76a0699c1096e1a4c2236d197dc67a"
-    sha256 cellar: :any, arm64_linux:       "5f7f97c344b00a1dbc4e68966fb690c9d45fe8cb24176b24c1a9b63c5436b0cb"
-    sha256 cellar: :any, x86_64_linux:      "5f009f8e4a25f80f657ef911b4b89b515cd0a45867bf78d08c1d6ef7306b6300"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "45bc17111bae6bddb0b4e0ca75049f36d98b3b74a8bd5e6e55181d25ace3ed11"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class Wmbusmeters < Formula
   head "https://github.com/wmbusmeters/wmbusmeters.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fd1faf6f31181ec2deb3a134d4536defc162cb7b118d4af95b8d8b08a0e551e8"
-    sha256 cellar: :any, arm64_tahoe:       "53bc61ea9e80426a33b0537c80f10e1f953567b46408eb3c562a0d675f40971d"
-    sha256 cellar: :any, arm64_sequoia:     "9f2129437a8a224d5daf2a0e9a97cd2dbd58592c50f47ce8725e6e4d370a1ad6"
-    sha256 cellar: :any, arm64_linux:       "8db3d80bb2b1b913d70c3b290e801447698feb256a441dbf738b5353c6e42193"
-    sha256 cellar: :any, x86_64_linux:      "dde0341287bdedeeaafbc51b5f4fc7d6415355e2be355ce034ef521df25b120b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "589d9eaee82a173e31c2cbdc2098227d40a8744200960a5cbf14a8a70a7a0faa"
   end
 
   depends_on "pkgconf" => :build

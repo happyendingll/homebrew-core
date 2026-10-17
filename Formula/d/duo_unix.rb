@@ -7,11 +7,8 @@ class DuoUnix < Formula
   revision 1
 
   bottle do
-    sha256 arm64_golden_gate: "3b5935a2638a5cf6fa4d7e6b554c89309b4730feae7f73ac3c4dcbca256b68dd"
-    sha256 arm64_tahoe:       "dfd6d7b03700aac925bde99493389f29c2b3435cef5ed6549355ca67ae242a55"
-    sha256 arm64_sequoia:     "09cff1b97c12ddef8fc7e996a82685afea8add1f01199cdfd612ec8eb9cf8ee1"
-    sha256 arm64_linux:       "12220e60c2d461a5b1ade8d65a950adcf51236c084779f69e398c4ee0d273da1"
-    sha256 x86_64_linux:      "2cb8d0014fff06baa054842fc2be74e80336ed20d80ae69d0a6cdee2abcc921b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "252421bf362be638878b2987c5175c0eb4fa5704a06960895579d279fc609586"
   end
 
   depends_on "autoconf" => :build

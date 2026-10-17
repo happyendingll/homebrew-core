@@ -6,11 +6,8 @@ class Spoa < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "917e9fadb2ca216ba79721022a4982e3e4074efe0cc1c4891595c9ba9a67fa60"
-    sha256 cellar: :any, arm64_tahoe:       "00eb584be69d6f80170e8cafe0edd4e6f2ebe86d297b961ae7979bb11b04bb57"
-    sha256 cellar: :any, arm64_sequoia:     "1068ae766eb60ed5755359cdcdaeab543574b607d0bdacc86e875122e2316a33"
-    sha256 cellar: :any, arm64_linux:       "25477b09120a0eb8037fdeee8f2473ef26bfa8bae9178bdf5deb67f3af29ca19"
-    sha256 cellar: :any, x86_64_linux:      "8cc7f361f9ba41108707430405ec6247769c9092fc644ba23671a0c41090a079"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "347ac375311c12e2b9cb16674185e4ae3288300121349898dc69d2a28564f21b"
   end
 
   depends_on "cmake" => :build

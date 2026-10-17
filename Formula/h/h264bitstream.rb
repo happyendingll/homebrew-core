@@ -6,12 +6,8 @@ class H264bitstream < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d3a17c017f2a07e9b1fcdbb28a13bcb77a832a13ca822c526ed3d950b579cd41"
-    sha256 cellar: :any, arm64_tahoe:       "2a26f743521111c30c2ddd9baa974de4b4908511a2bbc8caed57d46fe6790881"
-    sha256 cellar: :any, arm64_sequoia:     "da6abbf4e95da2578b850a730702a1cf3ca352109dc5dec1b2c75f255e76e0d1"
-    sha256 cellar: :any, arm64_linux:       "889ae466230e1cc674724a8122a766664306e0e1b99028d74c6eb7b7055b829d"
-    sha256 cellar: :any, x86_64_linux:      "678717fcf8026815b982d8d98509f43015b13c297c4dcc6c7e344ca9fd06a883"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "00ebd40b1b794493585189021366f6d13ee6231892692d1ede8edfc531cf48de"
   end
 
   depends_on "autoconf" => :build

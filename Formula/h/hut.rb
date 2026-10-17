@@ -7,11 +7,8 @@ class Hut < Formula
   head "https://git.sr.ht/~xenrox/hut", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d297d9701b3d05f8e92ec42d6bdf678ca49209117bbc8fffd630803bc3a443b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4f529f33e84d583e29dc836d49e41e43156906bd90072b251ff1d0fd47192755"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "43d4ce48eb0eae6d821b60288574fbe67e47efd6276a3ac52fd1e04bc30e4837"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ef3357461a6e166ebaead83b5d73617bab88352e0a8fa6c7da8c09b05dd175a4"
-    sha256 cellar: :any,                 x86_64_linux:      "ead0ed27f40ff314ea426f45ff202372bacd9f7bfed7cfc054247d7f21595344"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b016557a5a114cc18a0c6b2feeda3925f3ce76b02d37e14341fae861f53b13fd"
   end
 
   depends_on "go" => :build

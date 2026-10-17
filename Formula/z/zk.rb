@@ -12,11 +12,8 @@ class Zk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3bc5ab5a67dee41d60cd3357b1b0051246a183722d4772ad17fbb1cfd5bf0dcd"
-    sha256 cellar: :any, arm64_tahoe:       "86dea1eeb6c635caad1c0ef7a8db5405c2214195149ca45d50db28d80ace37ff"
-    sha256 cellar: :any, arm64_sequoia:     "a2797887ab6d8d0298fd184d896c0d7e8b63060cf9f7dca57f89cdeadb0bf449"
-    sha256 cellar: :any, arm64_linux:       "d271c4cd35b8dc7f46638b833588d6996292a8ffe89d94dbf00921d94de5b621"
-    sha256 cellar: :any, x86_64_linux:      "4ae991a44ee7a26e1141212d194b4a756b6e083e0194557db76e08e64274fa5d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c8fc7bf18cd75f4509480cf800dec222512401c10d5bbc27e90462fd0acb766d"
   end
 
   depends_on "go" => :build

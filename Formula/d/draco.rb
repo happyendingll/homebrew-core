@@ -7,11 +7,8 @@ class Draco < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "75458f215bf72aa807ac07049cd76cb666c9d2581fa7b48b27a9ca49217de918"
-    sha256 cellar: :any, arm64_tahoe:       "73463c7496e38b2d644e86a63867210a499214f4503b1d10a60ff75cdde34280"
-    sha256 cellar: :any, arm64_sequoia:     "a4888d9b21db5246d6c5f463a76fc25c69d277bb9d33c5eae9840cec2076d2b7"
-    sha256 cellar: :any, arm64_linux:       "8bdf152932b6cd59843b70ff79303f6133d61c9eb23e545d629e16623635a0a5"
-    sha256 cellar: :any, x86_64_linux:      "a5d58d6d8fbb89d69c7f48778c313f6bee19e8b02ff47bb40bfcdc108cde3c6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "bf3e563f8f7297c64e581530dad8d53613e5b9c880eda6bfe9a7999a3f636bb7"
   end
 
   depends_on "cmake" => :build

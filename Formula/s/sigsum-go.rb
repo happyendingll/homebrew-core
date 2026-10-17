@@ -6,11 +6,8 @@ class SigsumGo < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f226c3b60127bbc0fedd38392559de3ce2059ed6a91d61c5b4283e5a98f6cf4e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f226c3b60127bbc0fedd38392559de3ce2059ed6a91d61c5b4283e5a98f6cf4e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f226c3b60127bbc0fedd38392559de3ce2059ed6a91d61c5b4283e5a98f6cf4e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "993bb0c330b98231d7589966535effd30bab9a43ff886063204c8b1e3ed310af"
-    sha256 cellar: :any,                 x86_64_linux:      "5ab02af84651e72e7d23db690d70dda5240596a55e19cdcdeecd2ec100e275e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "caeb76a60ae4846b8e6383dd716408a3c4d7fec3830f28027b6385e613fa2564"
   end
 
   depends_on "go" => :build

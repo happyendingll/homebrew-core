@@ -7,11 +7,8 @@ class Cpuid < Formula
   head "https://github.com/klauspost/cpuid.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "13fbd13d92f676f52d9b95bebcf326271ce69b4c0248327cf22298592e9e5aba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "13fbd13d92f676f52d9b95bebcf326271ce69b4c0248327cf22298592e9e5aba"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "13fbd13d92f676f52d9b95bebcf326271ce69b4c0248327cf22298592e9e5aba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2b933c5ffbce708b98cb38aa8c4d469aa93c18fe57c116939201b7953be15c9d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1103e43c522c279f3b467341558787ef19373b7a48ff2723cf8d073d180176c3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9ef52a8448d880ba7939c658837f189e111bb253864c8320f3dcd05909ea9c69"
   end
 
   depends_on "go" => :build
