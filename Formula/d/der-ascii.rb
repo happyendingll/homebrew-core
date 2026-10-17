@@ -7,11 +7,8 @@ class DerAscii < Formula
   head "https://github.com/google/der-ascii.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fae19ef6e6b9ba686dba87022f687be7e7a3aff81586d57a1fa08f89a752b3fb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fae19ef6e6b9ba686dba87022f687be7e7a3aff81586d57a1fa08f89a752b3fb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fae19ef6e6b9ba686dba87022f687be7e7a3aff81586d57a1fa08f89a752b3fb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a18063794b78599ac1b0a1c65dbfa24068970bd4cc73c53207547a791ad1275d"
-    sha256 cellar: :any,                 x86_64_linux:      "8bcd0fc7e7d02e888601b4a7131903183bb567f20773de829c78b083b28bb8eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2e43599e6a30a86a00fce8f19f307be62af98dcd15c4280dc468b05dfdc4448c"
   end
 
   depends_on "go" => :build

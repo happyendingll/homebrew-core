@@ -11,12 +11,8 @@ class DuaCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7e728ed0d5b741cab050256709ac34aee81b0d2036de23a87be16afb87054544"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a93918412fd520729b20b3e6cc7a4d98f4dbb811d7a3f79bf88a3a0ff696f2b3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "abfd426181cc6a25d5e39861268c6b64d0a051f410a90f2e28cdf9ecd7ac9669"
-    sha256 cellar: :any,                 arm64_linux:       "1b0d58074619c7eb1b276bea9b3aa8e40f9348cc38604921397aae5f3c953072"
-    sha256 cellar: :any,                 x86_64_linux:      "15eb1f2db2dbae8ec45312acb94895df780a2faa85097140119c2dab3c34ec8c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "49b2866551fd12e7dd7373e58cd21ddece5e4e87d8badd468e4fb0d13fe24580"
   end
 
   depends_on "rust" => :build

@@ -13,11 +13,8 @@ class HelmAT3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9c46c273263e43c5cb3502cf39cdf8af6706daa33bd4cdd0a97b34d6a109fca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4256323bc6143e2593bbb794cf852736f23b0a9b53e22b2f0843625a27619f3b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "837ca4f9c9dc2f6a75764403dd7e5028d6067bdaf9706fff68e77321fab97ac6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "64fc0c0613e091a7eca078ce76e4191f612fc6697b4f70a98359923ac11e3636"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "83da0d582c811f39f24d8d30ca80b000586727c4088de8c855ded85ee2b2538e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7677d39c6181d3d42d1ebdfe8b9a3ab1d087715d3b81f35e85917e20921470e1"
   end
 
   keg_only :versioned_formula

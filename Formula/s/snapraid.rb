@@ -6,11 +6,8 @@ class Snapraid < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a2f425165f4bca9571b0362fb10fe2e3fc4af8fd01934e93fbb2c66a0f152861"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c076eb8036d68d5a76afa2155b869ec3badb64f81bfa00cb25ece2013215a0f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd8e5f73c7d268cc222878a1233bc9dd2a82b1df83e7b63a261c456b4ac99a65"
-    sha256 cellar: :any,                 arm64_linux:       "e4e71769bf98f690ea5592656c71ae18d3a7cd240b0aae9aaeda901265ce7afe"
-    sha256 cellar: :any,                 x86_64_linux:      "8387f7883b80460fd403de2cdf23f48b7d9ced552e453009c32d1fd13a4b9374"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1a51fa5e9ab77a15eb768055c6952c10cedebe926dd4638d046227c1fdcf61a"
   end
 
   head do

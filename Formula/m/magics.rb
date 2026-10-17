@@ -11,11 +11,8 @@ class Magics < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "d9737c2e7d04839c1996eac86958d1a9bd39e3649a2f197cf913b77df0f1ef99"
-    sha256 arm64_tahoe:       "cd5a2ccfa9e68d8293eca06d86e51d3841b44803f9da2914090009292e86610b"
-    sha256 arm64_sequoia:     "c9b9a446d0d896390ebe374c377405855062445f3e1e63f58b8c03b52a1d499a"
-    sha256 arm64_linux:       "871f81372e1de4ff6832d65178016db2fb57e5e5d1e7fbc2c7a6031ce72b2dcd"
-    sha256 x86_64_linux:      "1505704aac2628905cbe29bcf44bce60ccb48d5a2c76087cfb66a585cc8cb7cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "722630079494f0a4ec48ea192edd440692b7260ede3b943593f9482056fda728"
   end
 
   depends_on "cmake" => :build

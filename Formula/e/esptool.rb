@@ -8,11 +8,8 @@ class Esptool < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d3fcd438913417ef3235e07458151e715364dad1789fbc9b4c1e6a9a9e3e5431"
-    sha256 cellar: :any, arm64_tahoe:       "7c09ad796fb80a435ae7630d071c29218c05581a9060028c0d2943f9b6096d9d"
-    sha256 cellar: :any, arm64_sequoia:     "71b3f82ebadd6db5a6f7456cf7ddd36e3db4962feb8ec232a297ae47ca488ad0"
-    sha256 cellar: :any, arm64_linux:       "b5e7c6cf2dcbb8b7db668e2b77cb45be362da4ec5f7bd8ef1d21ccc4a645ff53"
-    sha256 cellar: :any, x86_64_linux:      "543df09a8a8c82a92a888fd0c76d5665925c04270a0210dadb998caa0754a8e1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "fba05a9d8ace8676885e911a4321c2c659de2c0996dbb7cb0f62cbfa7f90d8f3"
   end
 
   depends_on "rust" => :build # for tibs

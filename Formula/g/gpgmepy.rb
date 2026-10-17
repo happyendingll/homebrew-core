@@ -12,11 +12,8 @@ class Gpgmepy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "67765915340994b0acd669d108070ee753de90d69e4bf054c1fb7da7239e5cb4"
-    sha256 cellar: :any, arm64_tahoe:       "9e1fa1d94dd0bcfc4897addca66ccb19c1fbf092faf80bce665d8fb88096871e"
-    sha256 cellar: :any, arm64_sequoia:     "d5c8644e326aa49b16499caf5f482eac879c6e285fc6318edd224502590ae647"
-    sha256 cellar: :any, arm64_linux:       "f2cdb0cad08229896c14a35f830e392278c966d5fd69c01d03bfe77b986b2671"
-    sha256 cellar: :any, x86_64_linux:      "2669d1fee16edac9e9bcfb1c00ca141e329984bc515a22a95f2a8d51e21990ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "8f5ae909c8d0440231a5bf77180c485fa4378bb40d904ab3d2445f2a81ffa7e4"
   end
 
   depends_on "autoconf" => :build

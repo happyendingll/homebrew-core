@@ -12,11 +12,8 @@ class Thorvg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c73d14a608ec13d72650b3c30261826bd08c889776411000d93c82a4c5707aad"
-    sha256 cellar: :any, arm64_tahoe:       "93142d78e65eac5121d6d4e4a9be9b38979714d767a69061abc88f7281de5182"
-    sha256 cellar: :any, arm64_sequoia:     "f4eceaf597931a5aaaaad62238abe9e92aa3ed9bf0beadc569eb5dc14a928ebb"
-    sha256 cellar: :any, arm64_linux:       "ba55c1a73481ae0bc3d7cedeae141a47f05893c7c4bbba172c9c123701eea440"
-    sha256 cellar: :any, x86_64_linux:      "8c9e50969fbd456b6a8d2c53650f91d273668dddcdb6319521486fb8a15630a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "3b0e37dee4f51575d8a2bc3b3ee1ac2c07b2d7511accb11baeb656174b7ba760"
   end
 
   depends_on "meson" => :build

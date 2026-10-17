@@ -16,11 +16,8 @@ class Snapcraft < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4b39906b7eba4e89f97863e26ff3bd2b49073d1c4e2aae804e9609b6d76d6b94"
-    sha256 cellar: :any, arm64_tahoe:       "11d74a797473e536b1ff7cd01f49f2fc57c0736ad6eb323b20290283f4ab2802"
-    sha256 cellar: :any, arm64_sequoia:     "99b6e9895276b4beea70091f1fc9f39abc21d382756e8d7dc6781c563630f1d4"
-    sha256 cellar: :any, arm64_linux:       "0eb62e0999aecc79d49066d34d2c97b3693db537f9bf5229ce5daeb34b6bdcae"
-    sha256 cellar: :any, x86_64_linux:      "edcc1c278d536bdb40e0cfb3ef6604eed91b01cb27a03aa0b9033e6677f9b068"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "467e2f0386dd728a4a85df09440871372d3269aa07d62608961d485ae6e7531e"
   end
 
   depends_on "certifi" => :no_linkage

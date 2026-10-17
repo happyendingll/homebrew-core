@@ -8,11 +8,8 @@ class Trino < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "98dd750134ab167de0b3b8c8a46d700e90b18834baae19e2f5c823ec2404c924"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98dd750134ab167de0b3b8c8a46d700e90b18834baae19e2f5c823ec2404c924"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "98dd750134ab167de0b3b8c8a46d700e90b18834baae19e2f5c823ec2404c924"
-    sha256 cellar: :any,                 arm64_linux:       "28927a6147f02ca4a96852969da39eba6177c7cfce67ecf25c3f94f710a5bcaf"
-    sha256 cellar: :any,                 x86_64_linux:      "1587069d1a878dcc9006827f42045ba3c6af9397a12dff890867869cdfea8fc9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7cab9e10edfee802d70339f7749b2f24157ef844693bed62707651dc91458ad0"
   end
 
   depends_on "go" => :build

@@ -9,11 +9,8 @@ class Fonttools < Formula
   head "https://github.com/fonttools/fonttools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4a1890cdad1daac63b3438ad8158f4a5cac645210e77042112022da8afd73973"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "71382e354a02f2751c2542c1cc2c62fe10463f2e58555f09f2fc0af6840f9875"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "381827f7ab8f66771c12171ec86d612f163c09b261ba443e4e12a2f9f9621621"
-    sha256 cellar: :any,                 arm64_linux:       "43e0dff2b88a2a82c79187da1ca7dce7d7f668edd2cac904cf12baea9ed5f0ad"
-    sha256 cellar: :any,                 x86_64_linux:      "a5e7e670b48073756883dea2aef64d36bda5ab1b8dd39373a02c64a091ce4d1e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1d8875919d636387fac64bcb2c8ff1780ca140de30b2d7f136f3b7de83f4f798"
   end
 
   depends_on "python@3.15"

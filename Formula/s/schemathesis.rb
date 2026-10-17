@@ -8,11 +8,8 @@ class Schemathesis < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8c1062d6928679c3a93dea427e28d95b4f321e075e24485b0f07861c895d6a5f"
-    sha256 cellar: :any, arm64_tahoe:       "b4f7965473b2670014b2b4ec50aa46a5b3b2cc4577dc74b608fc546de42ba635"
-    sha256 cellar: :any, arm64_sequoia:     "3b75f7bf66c4612799c8b2df58b9a4adf1eef49ce7682db2249f2a10958da4a6"
-    sha256 cellar: :any, arm64_linux:       "ee61d33f0ea99cf4d400c85e39dd5c7302e1a75c8e9804d68aad7d81668f0ba0"
-    sha256 cellar: :any, x86_64_linux:      "06a657fb3511ace741205bd7b524dfd39a8194bf04f995f4c04d2fb8ea03fbb4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4418497ef5e22daef3faacaa74e9c9b902fff0a1f7277f7fedbb313ad5a45bf7"
   end
 
   depends_on "rust" => :build # for jsonschema-rs

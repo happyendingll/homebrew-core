@@ -12,11 +12,8 @@ class AnycableGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "05a302902169cf7635a41c7400b6110b09c0391c3f78206fd2cb26b8ddacdd95"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "05a302902169cf7635a41c7400b6110b09c0391c3f78206fd2cb26b8ddacdd95"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "05a302902169cf7635a41c7400b6110b09c0391c3f78206fd2cb26b8ddacdd95"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "92b1070a6538368777365295fd63938a94b9220d4197452eb2a8efafd68dfaa7"
-    sha256 cellar: :any,                 x86_64_linux:      "bbaa50eb9def58b18f4adf6aa5544554cfbe759fb0489eb65f7fe97653de8033"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b516795472aaa35733b24ed0df7ec393d0b4bb318176dfab01054f5e51603388"
   end
 
   depends_on "go" => :build

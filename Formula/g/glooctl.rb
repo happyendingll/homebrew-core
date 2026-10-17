@@ -16,11 +16,8 @@ class Glooctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "685572ce57f3c84dd2315c1192d886d81b5c8c60d2b8f2701e3f893603d5ff9e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "17ddb3fa36c188e1639de529a85cb562b12ce7c7df997b6b46f632364f384553"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b27208b6684f5e8bec34a82543be608b6d6fd7a0905ed5fd7b6cc2f3c6c4df39"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "10f94a5db2b16d7dbbf193dfbdc5a9414cdc1a26f8c1efa8eeac0e94693e7169"
-    sha256 cellar: :any,                 x86_64_linux:      "c89bedc8068b296da4fca2c48e8826f0d9029aed7a47f3a72cf77092f7f4b739"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "510513209b5d68bde396d959fd933f035598188a8c93ea2bd934f043e2059d35"
   end
 
   deprecate! date: "2026-12-31", because: :deprecated_upstream

@@ -15,11 +15,8 @@ class Spoofdpi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cfecb60f2c7a65d6deefe7e84ca0b8092f6069c612d3d351b22dab90e217772b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "03e29e3ddd92f6e96e132109cb9a8c5210b1c5d2c3aee23e06d9374932bdb8ee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6c971621ac05a7e8a058c14a25708d937b245830ae912c2aeea57f5c1df4bf7a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "851cac6fede0cd33245591a4697780b2036e47f38ada14d3a7661bcd66f07c6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4850a4d1d1e2a5a40f28b858661a0083e2156efdf10f987761f6d0b0c4e5dc4b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fe52ed0ca8e8e2ea81f64da8e9a4b24674c48b52a5cb840610caa6bb31897c5c"
   end
 
   depends_on "go" => :build

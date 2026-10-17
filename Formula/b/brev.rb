@@ -15,11 +15,8 @@ class Brev < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d1f101056926f7e4533ef978605b9d9a169ef1e2367263d90123fb6a5ddc124f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d1f101056926f7e4533ef978605b9d9a169ef1e2367263d90123fb6a5ddc124f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1f101056926f7e4533ef978605b9d9a169ef1e2367263d90123fb6a5ddc124f"
-    sha256 cellar: :any,                 arm64_linux:       "622c9aa3998110647a1f00b12ecf301cf44259d5a5944344badb058014b6d4e4"
-    sha256 cellar: :any,                 x86_64_linux:      "e5246c1f2419da32bcff591e52ca52615d0fefd519bf58525ad8279a728a6f67"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "451f217a9fd61770356d55ce4d28d40e4c194e1f129883dc450ed491c1bdd970"
   end
 
   depends_on "go" => :build

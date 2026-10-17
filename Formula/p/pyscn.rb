@@ -7,11 +7,8 @@ class Pyscn < Formula
   head "https://github.com/ludo-technologies/pyscn.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7a37035de372e1b1dbc21e4c83e0c56e02dbcfae4b8f22340a637c572a0083bd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fd185c29c09b2fe47bf3c82107ec3e85e0b9ac8d17cc6e74371f198936080a51"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d91649c5071b56ff539a879c3da6c15f2aefbbbac85a95dd6f9a44ca92296cfe"
-    sha256 cellar: :any,                 arm64_linux:       "ca852a4e505503e4c70952d7508c9e9bd187169d394ec0aabfdd93d4b7c1e958"
-    sha256 cellar: :any,                 x86_64_linux:      "2f4310cd6b3681570347161e1785a0ec065730583887dda02792ea38e771587c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b0717215759045871dad494f6742bd9a0bf2cabb8dddd489d7ad366cddb50b2f"
   end
 
   depends_on "go" => :build

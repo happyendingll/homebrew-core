@@ -12,11 +12,8 @@ class Solana < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5eb0930385e119ddf31f720e248539ed797b405aa08dbb57c07b1d1cd47471f1"
-    sha256 cellar: :any, arm64_tahoe:       "ce148e9b6748e17a077437005652bb725cb082499499e6e47144943c953ae02a"
-    sha256 cellar: :any, arm64_sequoia:     "6284ab5e7c10b23af9864501bc8a5ebb59107e94cc49ab45c485c64ffa3bcb8e"
-    sha256 cellar: :any, arm64_linux:       "3a717dd9277deee1f878f3a82b5b806a5dcb22f3cb0403cd1aba2b518e2883f1"
-    sha256 cellar: :any, x86_64_linux:      "cc0380781e998be4770ad6748182ea75587784bdf08622c913fa1ec88fcaa174"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "e1e3b90f0ca90efec136c632dd28f5dfd004b1c978e39f4a7943e13c5dfcf22e"
   end
 
   depends_on "llvm" => :build # for libclang

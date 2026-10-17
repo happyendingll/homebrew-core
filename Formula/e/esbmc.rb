@@ -12,12 +12,8 @@ class Esbmc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "44476a30964abea53df222aa536bd7d471bd1b39e943aa259baec8c1cd4bf08e"
-    sha256 cellar: :any, arm64_tahoe:       "0995d9e8ede3f65925393ff0102cf79a2259a8c8eb7da12c6ca2fa35f1fa0122"
-    sha256 cellar: :any, arm64_sequoia:     "7f355de6103d392b9259139afc71665206dfdee0204ce61e8764ccc99e001dfb"
-    sha256 cellar: :any, arm64_linux:       "e27f24bbda9154222a0de7c60859add61e858f26d3875bce0c7c3b2dbc215da7"
-    sha256 cellar: :any, x86_64_linux:      "894c0cce54af2776b08ca7530d071a5f929aeec07002683f2473086a53b768b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "9369cb3af2f63e71e4bf11a7baa14863b583c1ade672b66e9dfabca7a367e614"
   end
 
   depends_on "bison" => :build # macOS ships 2.3; esbmc requires >= 2.6.1

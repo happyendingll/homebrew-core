@@ -6,11 +6,8 @@ class Tinyframe < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7c4a52ea7a2018bf86a62e6fe77450e7273ad3270332657fe723b5cd835c95b7"
-    sha256 cellar: :any, arm64_tahoe:       "45c5916e69f53b359e526884988785d523e80fdbc62a8e9ff45b63839d68eb4f"
-    sha256 cellar: :any, arm64_sequoia:     "10e9111fef322f83934a25fd824796e014340dfa3d530da1df69807bdde33e1c"
-    sha256 cellar: :any, arm64_linux:       "3988479d468def85c0bce52961953f0b887b080a0331ebf91eca59e9932d3dd7"
-    sha256 cellar: :any, x86_64_linux:      "8b2d8f36f095b68be6d7d6fa5c810d36a602af8ce8abb1f669e04842ae7f9954"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "3aaef626b30dfbb42f2a89097685ce4c8bc814e611e2c8d42e4a52e225c81b16"
   end
 
   depends_on "pkgconf" => :test
