@@ -8,11 +8,8 @@ class NextpnrIce40 < Formula
   head "https://github.com/YosysHQ/nextpnr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d97901ecf10487fd92f7f34a193e1e0698499ca040003f9841ce676d42bc5f7a"
-    sha256 cellar: :any, arm64_tahoe:       "7f02efbd0f4bc7f93ffe34d0c640b59fc0cf942de0831832e39a880f6fe11e11"
-    sha256 cellar: :any, arm64_sequoia:     "3b43f3393502055f80869b1f9a4da0dfd12ea09e26dcfc334e03ed3eddf79ab0"
-    sha256 cellar: :any, arm64_linux:       "84f4dc9f9b0703b535b08fbd277702e0ae7528521bfb0f749df49bcaff0c844a"
-    sha256 cellar: :any, x86_64_linux:      "1d081f85065dc8535c8e9fb85ee16b99a2cc6f04be83d4ad4aaaa3daa9906fc7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b8dd15e50d9610d839eb881fcb6bb18f2041e3b90605bdbaf06745ce8727c01b"
   end
 
   depends_on "cmake" => :build
