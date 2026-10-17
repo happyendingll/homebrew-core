@@ -7,13 +7,14 @@ class Klee < Formula
   url "https://github.com/klee/klee/archive/refs/tags/v3.3.tar.gz"
   sha256 "baa73ad3d4bc345d28434c9aa54c639bfb504cd71c26852d1da1dd7cb22bfb48"
   license "NCSA"
+  revision 1
   head "https://github.com/klee/klee.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "f0dced93f38ab0239e8047bbd4c7ca9c43f15c2dce2d8cef3acd783a978e2a54"
-    sha256 arm64_tahoe:       "c4a323646af805eac4d209354f6d90e13f6164924e27d8a8625c3559efe7e3d1"
-    sha256 arm64_sequoia:     "d20a62da0142e01e86fa13cc171be56807cb4cd248100f9fa0ab079bce8ded75"
-    sha256 x86_64_linux:      "f951106dd15a9add34466a005f7ab042b6272fe618e582c6ce7e786e5569700d"
+    sha256 arm64_golden_gate: "61aaf5d4d30fca9d10fbad3563890f5cedc65c5f8373920f0e80687f98b8ca5f"
+    sha256 arm64_tahoe:       "289089d5a09bd037405ee3dcff07251839a72a8e8595169b745ab2608a34bd85"
+    sha256 arm64_sequoia:     "4d4fefa40af9f27c92592f897b7dcbc41c97977fc9062653357c08e5d9a60d31"
+    sha256 x86_64_linux:      "651476c37a969f617ef310d9929cf271245308782faec25be47e0af4daaece50"
   end
 
   depends_on "cmake" => :build

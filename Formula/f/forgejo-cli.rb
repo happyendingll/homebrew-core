@@ -1,24 +1,17 @@
 class ForgejoCli < Formula
   desc "CLI tool for interacting with Forgejo"
   homepage "https://codeberg.org/forgejo-contrib/forgejo-cli"
+  url "https://static.crates.io/crates/forgejo-cli/forgejo-cli-0.7.0.crate"
+  sha256 "a5c2eb931ed0c208ee432601850968158fbb1963a57313192db881e082060c46"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://codeberg.org/forgejo-contrib/forgejo-cli.git", branch: "main"
 
-  stable do
-    url "https://static.crates.io/crates/forgejo-cli/forgejo-cli-0.6.0.crate"
-    sha256 "4d56acd6ab5caab2870d6e301cd6e42741ca98761fc1d5890dad09b21b44780e"
-
-    # Fix issue with shell completions.
-    # Remove with `stable` block with next release.
-    patch do
-      url "https://codeberg.org/forgejo-contrib/forgejo-cli/commit/42136622787b3a289b80565d2756263394dda855.patch"
-      sha256 "f1ac36eb47411b1c11b1200de1750040a94f456b26655eeab1971c3767b28bec"
-    end
-  end
-
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "3364880792df537498daa8983eaad70545c0d60014f5b8f7e23e39125b4e797e"
+    sha256 cellar: :any, arm64_golden_gate: "3020dc89ba5936253fd1f99e907cce48ee6162afb7642ff40534dc3fc96525c2"
+    sha256 cellar: :any, arm64_tahoe:       "9b2f0e4fc3154f3ab676a6c2c1aa77a76a0adbf382f97eaebd8f0d6719f80bf0"
+    sha256 cellar: :any, arm64_sequoia:     "9b58e439afaf3d683beb4b4c8555d4f6abc96bd200aadd03ad3adc0b2788dda8"
+    sha256 cellar: :any, arm64_linux:       "a4d5178dbceababe1a25bd6322f1d236edb5b60ec7c63646e5e1eef899e29209"
+    sha256 cellar: :any, x86_64_linux:      "e27d590e5a4b8d077ba572fcf92e644b0253e9aab90c1fac1637a837da757ae1"
   end
 
   depends_on "pkgconf" => :build
@@ -27,6 +20,12 @@ class ForgejoCli < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

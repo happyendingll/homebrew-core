@@ -19,11 +19,11 @@ class Somalier < Formula
 
   uses_from_macos "bzip2"
   uses_from_macos "curl"
-  uses_from_macos "zlib"
 
   on_linux do
     # arraymancer's BLAS/LAPACK backend; macOS uses the Accelerate framework.
     depends_on "openblas"
+    depends_on "zlib-ng-compat"
   end
 
   # Nim library dependencies, resolved offline instead of via `nimble`, from the

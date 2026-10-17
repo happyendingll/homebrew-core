@@ -2,7 +2,7 @@ class Llvm < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
   license "Apache-2.0" => { with: "LLVM-exception" }
-  revision 1
+  revision 2
   compatibility_version 2
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
@@ -24,8 +24,11 @@ class Llvm < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "ba19651862709c32968611aa68020293e9c9b532456476d41bafad6dd1c3a7dc"
+    sha256               arm64_golden_gate: "f2435845b5fcd20ecbe28fc8206e0705d6abf72a47a443414629ab75ba72444a"
+    sha256               arm64_tahoe:       "100c1b67a834daa56b5ebe88cedef1b06caf085613f95c04b4b5a1f318315688"
+    sha256               arm64_sequoia:     "cd68b4b54d1bcd70da83984a3fd139b96cdfc4b4db3171b2b836b29d8e1f7ab6"
+    sha256 cellar: :any, arm64_linux:       "79cd22427ede911e8ff1abaaa0178bbc786f5550607ad30091cf0fffc7b431df"
+    sha256 cellar: :any, x86_64_linux:      "9cbc1a162b3d64fa6faaaea96e6ecf56dd4d33a124a8bfc79baf63b17801b74b"
   end
 
   keg_only :provided_by_macos
@@ -33,7 +36,7 @@ class Llvm < Formula
   # https://llvm.org/docs/GettingStarted.html#requirement
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "zstd"
 
   uses_from_macos "libedit"

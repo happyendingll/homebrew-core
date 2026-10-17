@@ -3,8 +3,9 @@ class Netpbm < Formula
   homepage "https://netpbm.sourceforge.net/"
   # Maintainers: Look at https://sourceforge.net/p/netpbm/code/HEAD/tree/
   # for stable versions and matching revisions.
-  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "5358"
+  url "https://github.com/jwilk-mirrors/netpbm/archive/1b46fe4049e370ddb84a0b1a8925fc1321f1ad60.tar.gz"
   version "11.02.30"
+  sha256 "1be456548e2df865bb1225af0b31fbd4ae4085fea75841a05ab100fc7638963c"
   license "GPL-3.0-or-later"
   version_scheme 1
   compatibility_version 1
@@ -41,9 +42,10 @@ class Netpbm < Formula
 
   resource "html" do
     # Rolling release, latest revision also documents previous software versions
-    # NOTE: Keep "revision" and "version" in sync
-    url "https://svn.code.sf.net/p/netpbm/code/userguide", revision: "5348"
+    # Version matches the upstream SVN revision
+    url "https://github.com/jwilk-mirrors/netpbm/archive/c40c8579cba246f61135ef690eb117be4377eb02.tar.gz"
     version "5348"
+    sha256 "32eb6dbee627533ce40b4f755e1f383f0e207af08cf5f2dff8a6abc2c74774d1"
 
     livecheck do
       url "https://sourceforge.net/p/netpbm/code/HEAD/log/?path=/userguide"

@@ -3,14 +3,16 @@ class Skillspector < Formula
 
   desc "Security scanner for AI agent skills"
   homepage "https://github.com/NVIDIA/SkillSpector"
-  url "https://github.com/NVIDIA/SkillSpector/archive/refs/tags/v2.12.0.tar.gz"
-  sha256 "c8c473512283a0025d74798ee300d96e570645fe2af2754284774352c9738953"
+  url "https://github.com/NVIDIA/SkillSpector/archive/refs/tags/v2.13.0.tar.gz"
+  sha256 "eb61b4631ec33d41300404b527ec75262bde52d55ac7ae43f9abb52722dc62ee"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "c86b4d68c8f0bbf8bde12ab0bbee715991607e25e2fc7050aab3db9582c73720"
+    sha256 cellar: :any, arm64_golden_gate: "08168f2c3478aa1a69415a4d12ff46e86fb97eec6d911f478e136d763dc325b0"
+    sha256 cellar: :any, arm64_tahoe:       "69502668b53e0d10a987d999e5457428e09e803fd8d2600848a076acfa772ee4"
+    sha256 cellar: :any, arm64_sequoia:     "387459dfae3195feba1deea21a113fd07f0d771f0855ff4446a33a3cbb89b120"
+    sha256 cellar: :any, arm64_linux:       "a42fd43ac348eec7c9558de686c8498b4a884f80fa3969502ed400d04df5eec3"
+    sha256 cellar: :any, x86_64_linux:      "fdb261fe85a79125c2e67b26fc6b6d16e609fb0e13b9fa2434f90d7a4f166509"
   end
 
   depends_on "pkgconf" => :build

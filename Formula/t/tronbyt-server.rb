@@ -1,14 +1,17 @@
 class TronbytServer < Formula
   desc "Manage your apps on your Tronbyt (flashed Tidbyt) completely locally"
   homepage "https://github.com/tronbyt/server"
-  url "https://github.com/tronbyt/server/archive/refs/tags/v2.4.0.tar.gz"
-  sha256 "0f65efae815dab1dd361c406cec2ef0ff2e66f5f33093cbd7703d6410d44041d"
+  url "https://github.com/tronbyt/server/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "551c952e528e3527c9e052de54de94f764cfe7604d6bd42995f7c095b53c6563"
   license "Apache-2.0"
   head "https://github.com/tronbyt/server.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "a10addd12d32ad40a70424e17ed534dfea5b00f675a9a6ca0f2683fd41e237f7"
+    sha256 cellar: :any, arm64_golden_gate: "97067b616e9c351101342ee0c278194b50f513398e566b7edb13fb7ac3e62151"
+    sha256 cellar: :any, arm64_tahoe:       "906aec62e8a369af5900a44385c3fc8d7dfe375f0808b08556047b3a37bcd67b"
+    sha256 cellar: :any, arm64_sequoia:     "2f83ec2ab3a338e51f6089c17fccbba6423834d50793542377a0a27f9362ae22"
+    sha256 cellar: :any, arm64_linux:       "d3b5c102585ccc77beb35cdedefbc66642052e0305cc3163e3761379f2478a72"
+    sha256 cellar: :any, x86_64_linux:      "77c57cb39c9737c6d53d04a0fc75da7258346c414a7a7c2e126fea584480b958"
   end
 
   depends_on "go" => :build

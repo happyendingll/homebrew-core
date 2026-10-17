@@ -1,8 +1,9 @@
 class Simutrans < Formula
   desc "Transport simulator"
   homepage "https://www.simutrans.com/"
-  url "svn://servers.simutrans.org/simutrans/trunk/", revision: "12334"
+  url "https://github.com/simutrans/simutrans/archive/40bbb12894793cc7c6ae5c93f31a16e7e7707627.tar.gz"
   version "125.0.1"
+  sha256 "7f2eebdefd5b13428f43d7b422231f9e0f0e374761a35ee1c62a305b386c8759"
   license "Artistic-1.0"
   head "https://github.com/simutrans/simutrans.git", branch: "master"
 
@@ -31,7 +32,6 @@ class Simutrans < Formula
   depends_on "sdl2-compat"
   depends_on "zstd"
 
-  uses_from_macos "unzip" => :build
   uses_from_macos "bzip2"
   uses_from_macos "curl"
 
@@ -49,14 +49,10 @@ class Simutrans < Formula
     sha256 "ba3304ec0980e07f5a9de2cfad3e45763630cbc15c7e958c32ce06aa9aefd375"
   end
 
-  # Translations are downloaded during `build` phase
-  allow_network_access! :build
+  deny_network_access!
 
   def install
-    # These translations are dynamically generated.
-    system "./tools/get_lang_files.sh"
-
-    system "cmake", "-B", "build", "-S", ".", "-DSIMUTRANS_USE_REVISION=#{stable.specs[:revision]}", *std_cmake_args
+    system "cmake", "-B", "build", "-S", ".", "-DSIMUTRANS_USE_REVISION=12334", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--build", "build", "--target", "makeobj"
     system "cmake", "--build", "build", "--target", "nettool"
@@ -74,5 +70,6 @@ class Simutrans < Formula
 
   test do
     system bin/"simutrans", "--help"
+    assert_path_exists libexec/"text/en.tab"
   end
 end

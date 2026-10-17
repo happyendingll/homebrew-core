@@ -1,8 +1,8 @@
 class RattlerBuild < Formula
   desc "Universal conda package builder"
   homepage "https://rattler.build"
-  url "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.76.1.tar.gz"
-  sha256 "2caad9c21e3293b04ff007f883ab42f465c8e619b230baffcd2a9d88a0979071"
+  url "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.77.0.tar.gz"
+  sha256 "7ca617a029b128e61a4b9e77fe02ba6c8291a9ade0490ef304a1f6fd265b80a8"
   license "BSD-3-Clause"
   head "https://github.com/prefix-dev/rattler-build.git", branch: "main"
 
@@ -15,8 +15,11 @@ class RattlerBuild < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "357a7f81e3ee1e022f078f56149838b708f15fbe16e7cd199c04eaadf5c1e83a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "414e1577c443ca1c784c2da85e8b39da153f8e43a87564bbb49b943312c69162"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ebec6bbfd0930aeef25b86c53ce1687e6e4736c61b357baab91449b2f5d975c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "658d8bc8496f459dee9474b9a8110f8ad1d6143affa33e736dbca6e788ddd5e2"
+    sha256 cellar: :any,                 arm64_linux:       "e4708393a93c3029a76349e1faf41b84babea4c38f75b749f07d3f681c540822"
+    sha256 cellar: :any,                 x86_64_linux:      "55fb31ec91dc39c8a39a3e71aea7ba1a7c5f6e097a13ed2bb47a5840173edcb0"
   end
 
   depends_on "pkgconf" => :build
@@ -28,6 +31,12 @@ class RattlerBuild < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install

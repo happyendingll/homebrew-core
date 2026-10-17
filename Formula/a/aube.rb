@@ -5,6 +5,11 @@ class Aube < Formula
   sha256 "fbe4cc7097b0374ee73fa1fa32f229a8a8ba48e6b9792661857e9499a1e20e1d"
   license "MIT"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
     sha256 cellar: :any_skip_relocation, sequoia: "99da5c824fb300e06453a84c983852ab8cab5ad45682377abe5ba4c81ba7470f"

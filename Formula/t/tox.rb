@@ -3,20 +3,23 @@ class Tox < Formula
 
   desc "Generic Python virtualenv management and test command-line tool"
   homepage "https://tox.wiki/en/latest/"
-  url "https://files.pythonhosted.org/packages/cf/da/fede1f079b72862a9383eeff8508fa87c26c2386427cc97eab0a589fd058/tox-4.65.5.tar.gz"
-  sha256 "9b7296cc43f358736665afecb9154b04309e500c1ebe6aafe86632211b8cad41"
+  url "https://files.pythonhosted.org/packages/65/17/183426a492c45f113fb73e26d7e17de63222338222a887b1da055356d0bc/tox-4.66.0.tar.gz"
+  sha256 "f9dc2cec9310a3ab5a560669cf860cf6ffad7d04733a0845c7ad7ac00d6b2808"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "8c83e4587da60cd92d56c5de30a0b74db7c8e8c802261b5e2d6ee844e6bf2c15"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b49b4b81bc72f6608294d2b44ade7bc1f3cd462834f0eba577c812b4427818f5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b49b4b81bc72f6608294d2b44ade7bc1f3cd462834f0eba577c812b4427818f5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b49b4b81bc72f6608294d2b44ade7bc1f3cd462834f0eba577c812b4427818f5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e58b1d97248b3b1a32bca3bf66a38a72eae8900d34c1665b6d9c66c9956165b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e58b1d97248b3b1a32bca3bf66a38a72eae8900d34c1665b6d9c66c9956165b9"
   end
 
   depends_on "python@3.15"
 
   resource "cachetools" do
-    url "https://files.pythonhosted.org/packages/31/44/71476a5812da1ddf2c9a3efd31ae76d01480a1cf03ed13ac28aa8f2402e4/cachetools-7.2.1.tar.gz"
-    sha256 "b1a7537025c06abf96fcc1443e496af9a3fb95e774e70e1f0af226f73f7f2dcc"
+    url "https://files.pythonhosted.org/packages/85/e0/27b467a38de29583a68973edbf99eeeee5b105567bdbd7d208e5b07525a7/cachetools-7.2.2.tar.gz"
+    sha256 "d521dc98d501ba9efd8d2b1663bbf88163509c0c0a090eea6dc154b421ec5410"
   end
 
   resource "colorama" do
@@ -30,8 +33,8 @@ class Tox < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/35/c8/1d457d9150ff948f2ce6ada7715e0eeebbe5d3b58a45271a1e222474bcd3/filelock-4.1.1.tar.gz"
-    sha256 "7ba0927482c5a814b0a7f391d029ccdb8010f576f0a74c0dcde1811e8bc4c1b6"
+    url "https://files.pythonhosted.org/packages/f4/a9/1af41b37c3279712b22cdc63aac78a52432202b6fe1f9666a2a3d2831fb4/filelock-4.2.0.tar.gz"
+    sha256 "7a60906c75227cf04d0c273afadc8219400f11aeb13cc69591d4f6cdc6c8036e"
   end
 
   resource "packaging" do
@@ -40,23 +43,23 @@ class Tox < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/80/a8/66d45abadff219e36e2a824181b8f6a67e7ed4572934d6252c71c29d5731/platformdirs-4.13.0.tar.gz"
-    sha256 "1aa0b0d3f224c1f07c295121e312a5a24a180d6ae5a8425ea1784b3e3863e9c0"
+    url "https://files.pythonhosted.org/packages/da/91/4a03cfdb03314cfca262921797fff04ff4054bd86a160aed76eddf8aa12b/platformdirs-4.13.3.tar.gz"
+    sha256 "5e567f664eb087ab8521c0179cd8d1bd60857d271136567a39719e28e2d383ce"
   end
 
   resource "pluggy" do
-    url "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe6ef3fa267035b518369d9511ffab804f839851d2779/pluggy-1.6.0.tar.gz"
-    sha256 "7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3"
+    url "https://files.pythonhosted.org/packages/bf/db/7fc19e6f2dc92a966727031389fc2e08b558f0f25eb7403c1119ad4713cd/pluggy-1.7.0.tar.gz"
+    sha256 "d1eaa46ebb595891b860ab086b4d09c8588af65ebd4361b8e8f4bb8920b90ba8"
   end
 
   resource "pyproject-api" do
-    url "https://files.pythonhosted.org/packages/3c/e1/148e4bbb469b26b6648dac4ee292aed80c1205c06ecd2e32987c7ed3e6f5/pyproject_api-1.11.5.tar.gz"
-    sha256 "79294e79953a30fd3eac04bdf8b57241d33e2c8b7230b94c1b76e4d765fe09ad"
+    url "https://files.pythonhosted.org/packages/ce/04/15a06959a6a40d62b5aa001f6df5d26bba3961a84563f745ac337a79e979/pyproject_api-1.11.7.tar.gz"
+    sha256 "408e31b80e054e70d26f11b0ae3f60210ae6d54cd050e904aac63462b56404e9"
   end
 
   resource "python-discovery" do
-    url "https://files.pythonhosted.org/packages/b0/73/54993df8fc57e906dc9b7e01d1d9b0b2d3eb0ce3190639e33dccb12853f7/python_discovery-1.6.2.tar.gz"
-    sha256 "cd1738ca1d37c86ef9d0b654dd46fcee1e41c97c6add12575e8501ced39afdb4"
+    url "https://files.pythonhosted.org/packages/fc/54/fad125f5c48f7821644ee6f223ebfcedc4e23597c1a16eeb13d33aa4a91a/python_discovery-1.6.3.tar.gz"
+    sha256 "a62b301d96cf5489cb96ab023b32e068421867fdd5df2e42eece877869047fa2"
   end
 
   resource "tomli-w" do
@@ -65,8 +68,8 @@ class Tox < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/dc/3f/935cf1757643381fb7f7cc98197b4bc119223d9c2cf37dc3b03ad2a4455f/virtualenv-21.14.7.tar.gz"
-    sha256 "5f427d56f39eb7e7447d641dd4b7ab1e9c92793f498f35f26da2e4972c5546ae"
+    url "https://files.pythonhosted.org/packages/0b/6a/fbdeea5c07d5674139639d42a97a41d26e9b9b8cb2a1265fa936f655ee20/virtualenv-21.14.8.tar.gz"
+    sha256 "394e45ed610ceffb5018e1a179e3a8012c02fd87fe792ab4aae67ce5e7e3afbd"
   end
 
   def install

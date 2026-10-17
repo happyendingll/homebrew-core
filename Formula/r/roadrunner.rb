@@ -1,8 +1,8 @@
 class Roadrunner < Formula
   desc "High-performance PHP application server, load-balancer and process manager"
   homepage "https://docs.roadrunner.dev/docs"
-  url "https://github.com/roadrunner-server/roadrunner/archive/refs/tags/v3.0.0.tar.gz"
-  sha256 "bf687e6ae9b544ef51db550a7d7588b4f35fa6e04de768c5e115d36f974030a5"
+  url "https://github.com/roadrunner-server/roadrunner/archive/refs/tags/v3.1.0.tar.gz"
+  sha256 "4a5647cdfba543fe04347ba7658a65866508ba50463023750a36a1d900bedd36"
   license "MIT"
   version_scheme 1
   head "https://github.com/roadrunner-server/roadrunner.git", branch: "master"
@@ -13,8 +13,11 @@ class Roadrunner < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "a20cf2d975746db4bb2807e872428ffd522f2b582c625dc4dcf0e023117e3ae4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9d98a719f45bb072470986638a77719b79da37ad51ae155cce9f03fb4a76c6a5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "da770c576d1102417e00f841f0f46dfa5772b1298ee29d371fd680199a0037d4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6659f34afd3e48431f3577c0933cf497383da4cc05f96fdaf02783a477c7009e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2e9154c1a8ee4d5f94b5a22ba919b6d9c4e1ab09ddff34ad2322de2e558eea42"
+    sha256 cellar: :any,                 x86_64_linux:      "0d43f174a9b3104e56e5cd9946f6f9c32d1dc4a533ea3db0f1d31bdd8aaac0ee"
   end
 
   depends_on "go" => :build

@@ -1,13 +1,16 @@
 class Ovsx < Formula
   desc "Command-line interface for Eclipse Open VSX"
   homepage "https://www.npmjs.com/package/ovsx"
-  url "https://registry.npmjs.org/ovsx/-/ovsx-1.2.0.tgz"
-  sha256 "c161a2730cd74021e087b7012e54070c438531abe51b2b2739390edefca9c59e"
+  url "https://registry.npmjs.org/ovsx/-/ovsx-1.3.0.tgz"
+  sha256 "bbdd792bc80942daceb8b79d8c1b35fb392e82aa3a8c7450e46aeafb86c9f45d"
   license "EPL-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "6c5d5161b4e58e7eea04a0d2db49e84086b8dd0917a4453ffa1f34c425027143"
+    sha256 cellar: :any, arm64_golden_gate: "fecdce141c37ee386b14c6d8a94842ee0eebec1bcd041e5601f11239d7acacab"
+    sha256 cellar: :any, arm64_tahoe:       "fecdce141c37ee386b14c6d8a94842ee0eebec1bcd041e5601f11239d7acacab"
+    sha256 cellar: :any, arm64_sequoia:     "fecdce141c37ee386b14c6d8a94842ee0eebec1bcd041e5601f11239d7acacab"
+    sha256 cellar: :any, arm64_linux:       "b96cd66ca60bb0e3b800d6224fd9314d0220f11e5f132b9e431229df4ea1a025"
+    sha256 cellar: :any, x86_64_linux:      "18047ac9c1b3d69ac9102016be57528917f6f802a763a3e6d2f24c6e227ef68b"
   end
 
   depends_on "node"

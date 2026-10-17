@@ -3,13 +3,16 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/ed/80/b471bdbbb60814ce6317b3f27ea19030fc7e9a01fd0b2f458c0ef297f585/flexget-3.22.3.tar.gz"
-  sha256 "f85a000908c1644112860adb75a6c2208ea399c1edabc7b07d83042c17bbe216"
+  url "https://files.pythonhosted.org/packages/06/fb/5eff4be880f2a54a6afd5a9f426efd018a5ab005f425a7805f556d658a1f/flexget-3.22.4.tar.gz"
+  sha256 "b0eb64f5c9c287148101cb85d0abcafa265289f5d0f7f4c6120af572b19d6c00"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "7af94b95093c0052562aee111278d19adb5b442e7d664c4d50d6ff9c94899983"
+    sha256 cellar: :any, arm64_golden_gate: "86aa1a2e64aa7f2791340f5c531956dac0317f40ba510a8b78c5c8dd088100e8"
+    sha256 cellar: :any, arm64_tahoe:       "72bd0596ec97b2e1239007b1baa7b05f339c2c159343535543c163e14adc1d53"
+    sha256 cellar: :any, arm64_sequoia:     "d0170a5b3b5c69402c33714016497a0568459697293505932345ba954bf91792"
+    sha256 cellar: :any, arm64_linux:       "64a490a7c3eb83d09669222d2fceae825cd1a11ca639a99e7a97269ef996599e"
+    sha256 cellar: :any, x86_64_linux:      "7ac7c20a60fd4780c9809497eac9a47f8b3fe897624d6529289be14ab681e112"
   end
 
   depends_on "rust" => :build
@@ -225,8 +228,8 @@ class Flexget < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/de/1d/f4da6f02cdffe04d6362210b807146a26044c88d839208aec273bb0d9184/more_itertools-11.1.0.tar.gz"
-    sha256 "48e8f4d9e7e5878571ecf6f2b4e57634f93cd474cc8cfbd2376f2d11b396e30d"
+    url "https://files.pythonhosted.org/packages/52/b8/c63995bebbb9ac9c059350e0fb8c82c2420c85aeca7d34e40aecf3df9281/more_itertools-11.2.1.tar.gz"
+    sha256 "cbf08fd0af284dc69718b9b76a8e6203df624d70209ea511e4219d350c856f63"
   end
 
   resource "packaging" do

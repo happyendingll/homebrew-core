@@ -2,7 +2,7 @@ class Alive2 < Formula
   desc "Automatic verification of LLVM optimizations"
   homepage "https://github.com/AliveToolkit/alive2"
   license "MIT"
-  revision 8
+  revision 9
   head "https://github.com/AliveToolkit/alive2.git", branch: "master"
 
   stable do
@@ -28,11 +28,11 @@ class Alive2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e1c4edff54cd5e70c6230fbffd2f6f9c589e9b7e60aa2a01ccc0e30ca8ac4435"
-    sha256 cellar: :any, arm64_tahoe:       "e9a3b24a72797f700bc0e13b64c81f9e528cd5efe6339e436ac85828275a1edb"
-    sha256 cellar: :any, arm64_sequoia:     "c4736341979f3aefbb3e22d6196c865b37fc3c5811e7e6a2ac4dce4b809dca75"
-    sha256 cellar: :any, arm64_linux:       "4c07a0ee1a8439fffdf7de8dc499acb3d64b1d61382b8369ec9c653f78f3fa58"
-    sha256 cellar: :any, x86_64_linux:      "822b6dc26e4cffef0f476e2c85d9ecf80b2c8d05dd843b407701a8e2453969c0"
+    sha256 cellar: :any, arm64_golden_gate: "9a61dfaf01f72c515cbd4b1127cf512ec33bbd147ed7f781da2fc00b2da15b12"
+    sha256 cellar: :any, arm64_tahoe:       "ada768e1465e47fbba98c9261b2d697a50cd384fc9d4e34e67d417dd84e7263f"
+    sha256 cellar: :any, arm64_sequoia:     "b2bcc15f25f024c240fc0a2803a76554adffd2338fe32a954936f550766e0900"
+    sha256 cellar: :any, arm64_linux:       "6e4d8da2108ed770615e5143e495fcc21bbf36cf18307c2f1fabe50a0358a23f"
+    sha256 cellar: :any, x86_64_linux:      "3b484db0bfb6537a57c9cd065849243e71afda39b2612f61245e3556fc47ded0"
   end
 
   depends_on "cmake" => :build

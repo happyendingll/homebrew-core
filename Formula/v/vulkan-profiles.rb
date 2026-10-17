@@ -21,7 +21,7 @@ class VulkanProfiles < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "pyinstaller" => :build
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "rpds-py" => :build
   depends_on "vulkan-tools" => :test
   depends_on "jsoncpp"

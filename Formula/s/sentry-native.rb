@@ -20,6 +20,8 @@ class SentryNative < Formula
     depends_on "zlib-ng-compat"
   end
 
+  allow_network_access! :test
+
   def install
     rm_r("vendor/libunwind")
 

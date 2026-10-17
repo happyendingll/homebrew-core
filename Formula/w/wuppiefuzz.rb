@@ -4,10 +4,14 @@ class Wuppiefuzz < Formula
   url "https://github.com/TNO-S3/WuppieFuzz/releases/download/v1.8.0/source.tar.gz"
   sha256 "8405309fc4b51fbabda282540c25605a00e741b4f3c0c73fe8e7a594ed23ca9c"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "b7a9a33e59f7867c02ed38c61020bd9d6d5d0cbe0c9120edd3252e9de5a382ca"
+    sha256 cellar: :any, arm64_golden_gate: "4911d8c8538fa900ed5b1acffc0edf3e7a95c001e60218e8d138c7da4ca63e80"
+    sha256 cellar: :any, arm64_tahoe:       "49d1ae2b76faa6ad0759dc174268ff5542a7405ae7bfd65f2a032d9fdf6ad5a5"
+    sha256 cellar: :any, arm64_sequoia:     "afa6ffa3eb01a5ffb3926ac945c5249a8f26d79bad0e1d14eeaf0dfc9365dd07"
+    sha256 cellar: :any, arm64_linux:       "56b1e7ef6fbba4e74dce403604703a8ea9c1257a01650517c76a920fea28604e"
+    sha256 cellar: :any, x86_64_linux:      "0e1644dbdd61027fccbf79d884914a0e2ab880ece310594f110eb02879ee9239"
   end
 
   depends_on "cmake" => :build

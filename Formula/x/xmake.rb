@@ -17,6 +17,8 @@ class Xmake < Formula
     depends_on "readline"
   end
 
+  deny_network_access!
+
   def install
     system "./configure"
     system "make"

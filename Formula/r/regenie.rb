@@ -21,7 +21,10 @@ class Regenie < Formula
   depends_on "gcc" # for libgfortran
 
   uses_from_macos "python" => :build
-  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   # Git mirror as the Fossil server (code.enkre.net) often answers HTTP 508
   resource "bgen" do
