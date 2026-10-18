@@ -7,11 +7,8 @@ class Azion < Formula
   head "https://github.com/aziontech/azion.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e124288da18063952725e68238558d4cf9657498a910cbe1e3a45698cc06d2a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e124288da18063952725e68238558d4cf9657498a910cbe1e3a45698cc06d2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e124288da18063952725e68238558d4cf9657498a910cbe1e3a45698cc06d2a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b73a924c5161a0da8bf8d37f657cc923567918969577a0cb63039fcfc37cd548"
-    sha256 cellar: :any,                 x86_64_linux:      "c747e417ce6d4406d0186d37e945fe2eb882c5bd46b66e1daee0fd7ba0825ae3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e1aa78378f9512b433176c1ecbb3eae92ccc4aefeddb82c5c3f0d9ceeb969515"
   end
 
   depends_on "go" => :build

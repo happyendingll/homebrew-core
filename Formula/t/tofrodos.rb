@@ -11,11 +11,8 @@ class Tofrodos < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "342942036f6109280bc10b0a27de08487212f40bbe71aa405a042b8123c7225f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1975780f21d7e2504649dc52b92bc234bff4e58064c0dd93c15da11acc56ed62"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e8cb6e9524618be985e77720471ffe31fe3e92b2132ed61509caefd537434ace"
-    sha256 cellar: :any,                 arm64_linux:       "c7ffd634393777ba666fe599bcf0d505a5f53d82b2378e4deab8e3b8428b033c"
-    sha256 cellar: :any,                 x86_64_linux:      "d2579e060f82887c9f9437672fb272a19721e5c78df6de434d9aa15ff82c8eac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "557e09fffbc4a376b9aeedaa0a962f0bceef4646e487badfb934b36075a750e9"
   end
 
   def install

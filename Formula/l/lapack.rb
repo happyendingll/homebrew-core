@@ -14,12 +14,8 @@ class Lapack < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "11ac29e3ffa3112e6f12bd39a759d16fe77e071e48dc3f1b37e5f7b563e5ae46"
-    sha256 cellar: :any, arm64_tahoe:       "47bfbef26340ca9eb6f7e705d9bea6068d50c5e040f71d39a7bfa9bc3bbeb425"
-    sha256 cellar: :any, arm64_sequoia:     "584aa15009434e3fdea6a01ddcb2dc980bf3747edafa87bdd6190075632ae79f"
-    sha256 cellar: :any, arm64_linux:       "80d6810574c54429c6d5793ba8efc0f7bb7826aadea8b7cc27cd2838d0c1dd07"
-    sha256 cellar: :any, x86_64_linux:      "df1be9cf808910a4c14e08f48b57d957261e6e08188c7d859cf9ada57b27b53a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "31595056f1ae16c6bc3b2be92c72a39f316638d3c7a2c4f902a2af4add38ad4b"
   end
 
   keg_only :shadowed_by_macos, "macOS provides LAPACK in Accelerate.framework"

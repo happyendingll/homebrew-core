@@ -6,12 +6,8 @@ class Libstxxl < Formula
   license "BSL-1.0"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c551ef2ed7fbb9a13218b7cb6a1640fe56bb94ba4cd4c1e945466c0acf70ed0f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "03c216058f8bc2bcc297b0703e6138afbb06eb45b4e2ac46cd72338d99afdb49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac60f2dfc0086a695e795f12152c7738118487cfe73195a0b26d4642e75fe668"
-    sha256 cellar: :any,                 arm64_linux:       "116a180c7ea88a3d33344e6aba74ae73bc71948c62f0b2589a71127d29e3499c"
-    sha256 cellar: :any,                 x86_64_linux:      "6661e2db6c85d5b2012445d59fa16804543eb328690fefde1b8bf22271c94cd7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a1ae6c5337f7b2d54d332dce4cc4f08b05711b3ffb682fef01f5beb4a3312e0a"
   end
 
   depends_on "cmake" => :build

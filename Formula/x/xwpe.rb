@@ -7,12 +7,8 @@ class Xwpe < Formula
   head "https://codeberg.org/mendezr/xwpe.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "3c9969071fe4a1d90908a343c4cf6fbfed7e754aae52519bb9386268cd4201a9"
-    sha256 arm64_tahoe:       "c5f25065066d35c1489cfdd1b2da866525c282609b62d807694e3afda2ca297e"
-    sha256 arm64_sequoia:     "fa4762b46bb0d24295b486fbb7fab42e355b22f0e6959a0a098ab4ad42d2c400"
-    sha256 arm64_linux:       "78c367bb664ba50ba49f1625df905286142344b93b11bbeeb62233b08e8703ff"
-    sha256 x86_64_linux:      "fb963dd6dc2529793c917ec9dd3043192c03f1dee70be8946f7529da8580cac5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "d8b5c054e341ff0be8f8def4940ce06cc8d56aff3afbd54a5656eff50d1c76c9"
   end
 
   depends_on "pkgconf" => :build

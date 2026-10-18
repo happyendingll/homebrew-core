@@ -6,11 +6,8 @@ class Btllib < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c0362c25bef5d56648e63f8bf50456eeb46e3420a8edd4507e0e14f909f39ea0"
-    sha256 cellar: :any, arm64_tahoe:       "15384b54b309de50ffdc7ff08201cc226a4be0ac53b3da42d2af487339ed8add"
-    sha256 cellar: :any, arm64_sequoia:     "e91b803f0a1aaa9620df553db4aadf18603a015eb0620152ecd2c182bcf07c77"
-    sha256 cellar: :any, arm64_linux:       "ba3dbf67c5756ad5ebb2e42d702a10df5cd1a33c522f38b670b76e6175094aa2"
-    sha256 cellar: :any, x86_64_linux:      "4877868f7d2238b0f33db9036d4b96bde72d9c6e42e3c2c5efa54b872adf79b6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "86127bda0fb07bb52b525f0fa074b77d3ed6ee029dac1e833de076dc11eefa5f"
   end
 
   depends_on "cmake" => :build

@@ -7,11 +7,8 @@ class LsLint < Formula
   head "https://github.com/loeffel-io/ls-lint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8bc8ac0bb2125206d838b62ef66679bfd294b580223ce95d2c3cfae45c33e206"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8bc8ac0bb2125206d838b62ef66679bfd294b580223ce95d2c3cfae45c33e206"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8bc8ac0bb2125206d838b62ef66679bfd294b580223ce95d2c3cfae45c33e206"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cb9f18723f384a33c3643fafc2dd0331ef5afd0c1665e8fdfc1d6c60586a09b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6cd8fb7da4ffda8f4050414ecb5f71a4a914f6d852cd1b14b9776ca75ed31a3b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1beaab66bc0b2915ae2665af4fe7be21cba383db65ea477041088f9bc919991c"
   end
 
   depends_on "go" => :build
