@@ -8,11 +8,8 @@ class Unrtf < Formula
   head "https://hg.savannah.gnu.org/hgweb/unrtf/", using: :hg
 
   bottle do
-    sha256 arm64_golden_gate: "a226864b8ca2d3a3fd005b4d15f67f42f2283d389a358d6a26519be44f67fa78"
-    sha256 arm64_tahoe:       "cc979e852f9b1e2a2e64354acde5b7beb7b9210147f6887293302b6914834b7f"
-    sha256 arm64_sequoia:     "b7fdfcdb1fa423dfff13a459a13b72a0d091eccf084138138575a9217bc22c5b"
-    sha256 arm64_linux:       "56e196c69663296a493424ebbb430b19620cce002966f670e83e2b7c50a23d2e"
-    sha256 x86_64_linux:      "6d15032cd02da2d37dfc830b5a1ded04f28490fcedd5d7e3e1ce625899fa2f54"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "08beb0c8b76fb431603d2803101b92a5a2e47fd8eb0c95654d567a94db8c57a1"
   end
 
   depends_on "autoconf" => :build

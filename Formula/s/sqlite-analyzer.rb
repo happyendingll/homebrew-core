@@ -13,11 +13,8 @@ class SqliteAnalyzer < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f53f7a6dd5b6b29e48a5f8d9cd046fcc9b5086678594d2ad2b232ec42191949e"
-    sha256 cellar: :any, arm64_tahoe:       "c2709a1c058a4f2d2f3d8c157781d4ae9d3f5a347690ae016f9d907fa9a7faa9"
-    sha256 cellar: :any, arm64_sequoia:     "8f75db3ed61dd7d432fcbee5d3d726151cde09b18d62a8c84e4cc18698f4c0fb"
-    sha256 cellar: :any, arm64_linux:       "e74886ace7be67306c0aebc62b5c80441a60f33e7c552922a670b6f9a61990a2"
-    sha256 cellar: :any, x86_64_linux:      "9d995cbca556e9d885debe9d1aa70ed5c9402a1abe27f9d1009462bccab71eca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "bebe2101c97d49b928ae6696bbe3da2cc720a977128f6bd0a7e4ee718155d622"
   end
 
   deprecate! date: "2026-10-17", because: :deprecated_upstream

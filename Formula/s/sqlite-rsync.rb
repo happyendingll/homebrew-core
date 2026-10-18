@@ -13,11 +13,8 @@ class SqliteRsync < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256               arm64_golden_gate: "ab5a91aa3f348951f3a228c71048aaa0633032a3b30c8319d6a06802657ca766"
-    sha256               arm64_tahoe:       "fdfd5bf20e1d5ffaa1396c901072366e712b04bdf3c90a867a3f6f223809ff0b"
-    sha256               arm64_sequoia:     "232359b75127e38b32a994b8c92990bbbedd4c3d38f038df9c9c6c19452d4e0c"
-    sha256 cellar: :any, arm64_linux:       "566ea2e356b994dc60812d92d323ab93f05386a1966d9215da8ef46a2e77e6a6"
-    sha256 cellar: :any, x86_64_linux:      "11aad8258f09503d664f1501549ab4ae312a3082567c26087d3838ce65d083d4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "e0768d433e2d29013dc32de6abca14dfbd4c9353011925addcde73a20ccb0c74"
   end
 
   uses_from_macos "tcl-tk" => :build

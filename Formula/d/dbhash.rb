@@ -13,11 +13,8 @@ class Dbhash < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c990a1919fd832cc83cf43a8a7556d0b90e095fa8e3f1ecf0a84c0182cdcd9da"
-    sha256 cellar: :any, arm64_tahoe:       "41476d5c27ab7ef028dca51329eae35457d2142e53b3b0f75ec95e4976afc848"
-    sha256 cellar: :any, arm64_sequoia:     "55b4cc15061fc531b0adafdd2966e6180b7dc6ecf4a79481d89480f311aed930"
-    sha256 cellar: :any, arm64_linux:       "e43c7616bc28867722d764a3d4a7efcc6f74b344053692b947fd15176c18a9a3"
-    sha256 cellar: :any, x86_64_linux:      "43856b93646cdb800ad70f5c75650b4515592ffd7548fe3fbc2070bed2d450ab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "5fd65da0f395f31491531e968e9f088b318d4dc2193aadcc23eb5e2f35dd8fc9"
   end
 
   uses_from_macos "tcl-tk" => :build
