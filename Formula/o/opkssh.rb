@@ -7,11 +7,8 @@ class Opkssh < Formula
   head "https://github.com/openpubkey/opkssh.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cf0aae9a25526199f66e22981d672717691f4663a45f1ded89ca5d121f3fc8e6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cf0aae9a25526199f66e22981d672717691f4663a45f1ded89ca5d121f3fc8e6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf0aae9a25526199f66e22981d672717691f4663a45f1ded89ca5d121f3fc8e6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1057a11323775efc19fbe5e31cc3ef7a6d9764a308bd4fb2f66bb13cadde2420"
-    sha256 cellar: :any,                 x86_64_linux:      "0a0811c0de7f266489dc1a6320df7573b5d669a64b5ba73c14f2b9dbc2c89aff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "26601f12c57bfc25dd289d716f59868889ac51b485d2666a1a49bdd86d0955e5"
   end
 
   depends_on "go" => :build

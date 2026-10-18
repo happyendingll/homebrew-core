@@ -19,11 +19,8 @@ class Pulsarctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f0d99fa8d217156b046df9447aca040417c27b0f9417264110ab1d5d5588fc79"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f0d99fa8d217156b046df9447aca040417c27b0f9417264110ab1d5d5588fc79"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f0d99fa8d217156b046df9447aca040417c27b0f9417264110ab1d5d5588fc79"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f713e9a60de1af4fcb8d3375fd0fc87024fd8e08e4ec291255415514779d83f6"
-    sha256 cellar: :any,                 x86_64_linux:      "111a1ae92d9a73078bd92a12d75b44ddb238fa0214acbf6da189d884bd9df011"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "32ac367b002118e28782495d23436ac2faef8d8d1a00bfd640d04089ea83dd7f"
   end
 
   depends_on "go" => :build

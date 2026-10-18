@@ -9,11 +9,8 @@ class Virtualenv < Formula
   head "https://github.com/pypa/virtualenv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6bad1b3224cecced703d9635b115115fe7611ef8b42f4afbc32a7af0e5e0eaea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6bad1b3224cecced703d9635b115115fe7611ef8b42f4afbc32a7af0e5e0eaea"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6bad1b3224cecced703d9635b115115fe7611ef8b42f4afbc32a7af0e5e0eaea"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "12e5c2056737ca7d87760ecad2d24539ebdf443659685244b3f2d9a9ce58ff64"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "12e5c2056737ca7d87760ecad2d24539ebdf443659685244b3f2d9a9ce58ff64"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "19bedc32c44350bc2f788d4413b7898bd4c63718a43fad486e2119f7539b240b"
   end
 
   depends_on "python@3.15"

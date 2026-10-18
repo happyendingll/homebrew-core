@@ -13,11 +13,8 @@ class Luau < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dfe064fe7fc1499bd42ba5db8caa99ed70b36dcae623e76ed4f75a401d5af2a6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d69519d0522947c490fd052a592e2694d6a4f962de84ccd4c7312aae86f05e56"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "750b001e0bf20f42de6c37ae1068dc767f1c03ba91970d2bc5df7239d14e62e0"
-    sha256 cellar: :any,                 arm64_linux:       "eb55e093551fef71cae58537b90e9571053b05dca2ed02a6ee54d0052290e5ee"
-    sha256 cellar: :any,                 x86_64_linux:      "471d6ef0a8ebe86849ada61b80e1ff535297804cf44e061bd9a99d6595d4a60b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "fc695061a61bed4dcc79dc9efc1e0d5799e5d33011fa83b8d36bd6a04f185057"
   end
 
   depends_on "cmake" => :build

@@ -14,11 +14,8 @@ class Epinio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66c1344b8dfe8a3dd1c5cc1f55df82709a93958f260de38abced55eade65f86c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "22eda95b361d588a0526ce47add0c6b8e7e40c26c8b5eb52de5c7ed91792a062"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d2ee8801ac288bb8a667a74dd84cd9e0f72cfb0e31a6fba04fa0acaf8e0d369e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6cda274fb9cd0f67b6920daf03ad51eeda107b9ee4ef73ad8b42c0ff70146955"
-    sha256 cellar: :any,                 x86_64_linux:      "783b0ef515ac4cdcc82e200c06e8c4a9bcd28352bf0ef4d7f7439095cd35c41a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bcbede3a273d7a6bb46b0a9cb5eab330fb56cde7145a497ffb34a958f7df8ee1"
   end
 
   depends_on "go" => :build

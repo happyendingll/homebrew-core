@@ -12,11 +12,8 @@ class Vfox < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "70c3e57f2016a0ed10743107b6e01649349b640eec54797f8b77b121a6be7b4c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "90e658923ce01fb94aff4903f9bb47cacb5bc43a95008f667bd4c7ed6af1efde"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9de0c26381186a2a464ca481f06ccc42238d11fc00081cad51d0fb1cc6f93fb0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d252859e393ee717371e2a213af25a53dce7117fadc02e2c034c95c905297a3f"
-    sha256 cellar: :any,                 x86_64_linux:      "544fb291d1a2b84077b6aae619af37ddcb4468f719604639e08747cc952db32a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c53f85b3ed7e3a5e6a60a4449526efb590c10043a5317737ef7d06e679a924a0"
   end
 
   depends_on "go" => :build

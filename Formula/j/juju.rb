@@ -8,11 +8,8 @@ class Juju < Formula
   head "https://github.com/juju/juju.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3ae6f03d11bff0adea61a37a092f405c3dfa48af05216efd418881edf2931b53"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5d766c7697c7cd664652eaad08730746700d7cecac030e791c896a58c5105a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "84b23fb82243756e3da22620f05267f756dc7265382116f6bd18af4370fe2c36"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2ee40e84630ecb98f7ae6f13fbed7c9df6561ea80ad2a0c24997b5a92eb0b7f3"
-    sha256 cellar: :any,                 x86_64_linux:      "8790befcc7228ecbfc67010043fc15d0ad227cf15f54a9b87a365901b99baa96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "10f6fa4772d13d1a50d60be390af63d0a1f2ee7c3eb621a01f22b395885be218"
   end
 
   depends_on "go" => :build

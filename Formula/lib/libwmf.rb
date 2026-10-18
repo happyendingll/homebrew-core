@@ -9,11 +9,8 @@ class Libwmf < Formula
   ]
 
   bottle do
-    sha256 arm64_golden_gate: "006ac0141ddd8c8a424eef3c52ed99229d959db73bde36f0272946025cf8fe72"
-    sha256 arm64_tahoe:       "e54795c9422298bc45a171945a33d8a026645c88163df26c4a830f4b7bd94166"
-    sha256 arm64_sequoia:     "a5da283fa2b15f912c3a1eb51e0b754da5e29ad5da55742e63f821978b145fe8"
-    sha256 arm64_linux:       "787faeebefce484a55f480f6fbe115fa1b584efbf84f1ef62fbc4013caf2be4c"
-    sha256 x86_64_linux:      "733107730c9afef7546ad3cf374f5c5fca9ca3d12388f79fc84fe8a02f690f94"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "4dfef4f88fbbd08c48dd713bc6d595a53199aba705b2843f9d6c161c29caf5e6"
   end
 
   depends_on "pkgconf" => :build

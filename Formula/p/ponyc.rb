@@ -7,11 +7,8 @@ class Ponyc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256               arm64_golden_gate: "4f743a3e003b765b81d943f2df716c14233dfc55aa48d906ed2c101ae4498871"
-    sha256               arm64_tahoe:       "bc614d752c83bee9ef352ee0a4b4b6b4eed7259e16bf2a8dceb977ac6f4a596e"
-    sha256               arm64_sequoia:     "c79204fe7b16fed525ad523091424aaf9826da5c09f61d7c83f35b9ac9d48193"
-    sha256 cellar: :any, arm64_linux:       "1c884057780393e290b68f1625f744d38b58fa3c8e5eac026fffc4dd9ad448a0"
-    sha256 cellar: :any, x86_64_linux:      "5a39566fe23096e82ecd1901ebba05a7b204132cba08aa14ff668d9c0b4dc5d4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "85b0b449864326d6cb5ae1607159ad8ab4b86831b8a4d91ed3e3d50d0452db1c"
   end
 
   depends_on "cmake" => :build

@@ -22,11 +22,8 @@ class Monero < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7db6efbbc0b6ed9c2abeebb2e58e6b93f7f9e779a4764cc2ff28644f6f23e4ad"
-    sha256 cellar: :any, arm64_tahoe:       "040ccd211d23d19d4b744e007d830604805087e3960fdc4f15b6789cd589f786"
-    sha256 cellar: :any, arm64_sequoia:     "dd99ad6352ac171d61b9d4fe5735554aa57f8538d8b2bc24bd68f06c788abed1"
-    sha256 cellar: :any, arm64_linux:       "eadd8258436a09cfe253418ecc13cf05a62052bcc9d45d91e1e6141b1e1c0a46"
-    sha256 cellar: :any, x86_64_linux:      "533819b7249ffe0577bd2987a98764c0a92ff70b845917d75021a65fef6b7d4c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "5b372abe1553fb912c0713695fcd74471e5e36b28d19c51ece7d7ca7b8497f2b"
   end
 
   head do
