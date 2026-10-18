@@ -7,12 +7,15 @@ class GobjectIntrospection < Formula
   url "https://download.gnome.org/sources/gobject-introspection/1.86/gobject-introspection-1.86.0.tar.xz"
   sha256 "920d1a3fcedeadc32acff95c2e203b319039dd4b4a08dd1a2dfd283d19c0b9ae"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later", "MIT"]
-  revision 4
+  revision 5
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "610bc217b0f797a5b3c78352e271f36364520b6a1cb54e7d144aee306f3cd6b7"
+    sha256 arm64_golden_gate: "bf75452655dd860a22248f3cd6f7978015212a7c63d5aee881daaa5de4bdb538"
+    sha256 arm64_tahoe:       "58065fd01aded5a2542e52430cfcc5fbb11f7f51421d12f05402c95f1fe2f375"
+    sha256 arm64_sequoia:     "f8ae7c52e7c71a75d187fab3c4d6e524ad2a33fa80a38f3b4a36989eb8c9b5a8"
+    sha256 arm64_linux:       "7e066ae8f54f1e69f625a6ff0a0599d18f2d03367a7e7799791ee580978ae4b0"
+    sha256 x86_64_linux:      "19ac75340133f5c431233f2741f2cc2f5de0fcee70508952c7eaf90fd0760958"
   end
 
   depends_on "bison" => :build
@@ -21,8 +24,8 @@ class GobjectIntrospection < Formula
   depends_on "cairo"
   depends_on "glib"
   depends_on "pkgconf"
-  # Ships a `_giscanner.cpython-314-darwin.so`, so needs a specific version.
-  depends_on "python@3.14"
+  # Ships a `_giscanner.cpython-315-darwin.so`, so needs a specific version.
+  depends_on "python@3.15"
 
   uses_from_macos "flex" => :build
   uses_from_macos "libffi"

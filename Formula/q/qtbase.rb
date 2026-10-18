@@ -7,6 +7,7 @@ class Qtbase < Formula
     "BSD-3-Clause", # *.cmake
     "GFDL-1.3-no-invariants-only", # *.qdoc
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtbase.git", branch: "dev"
 
@@ -22,6 +23,14 @@ class Qtbase < Formula
       sha256 "6870a711a6fb7ce6367f541e10ec9fe2785bd7d7484a2b1759b8d1f082a3f09f"
       type :backport
     end
+
+    # Fix `#include_next` forwarding headers when the framework path precedes them
+    patch do
+      url "https://github.com/qt/qtbase/commit/8c260a771ab1ed7d6cdb5f221854ee470e5790a6.patch?full_index=1"
+      sha256 "07742a103f8928457f7df8140a0f88589980f81670ab0b6c646b19dc8cc36344"
+      type :cherry_pick
+      resolves "https://codereview.qt-project.org/c/qt/qtbase/+/776003"
+    end
   end
 
   # The first-party website doesn't make version information readily available,
@@ -32,8 +41,11 @@ class Qtbase < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "8d769fec864e77b1b39a8bdd35b372930733a5e64f04cd589c041c9b00d40d0e"
+    sha256 cellar: :any, arm64_golden_gate: "cb6651ad22e6b506eb324d5f6b4d46ef85575ebb16c8ccb8721c99e1c37d6709"
+    sha256 cellar: :any, arm64_tahoe:       "116817e685a0f632be562632f199c621e9b1f85f5077ded56728a5f257873ae1"
+    sha256 cellar: :any, arm64_sequoia:     "9e8b2784e064475ee943a3a2dbbdbcdb99c4ae248a820f0acfcca17e8c9caa35"
+    sha256 cellar: :any, arm64_linux:       "a8bfddd97e4ec22fabbcf25428c921c0ebc6a9cb4dd71c1d22a4899f845ccb2b"
+    sha256 cellar: :any, x86_64_linux:      "0a8e461e254509d87594d7d81393510d2aeeb1dd004c0f23e6b75ef2b746e7f5"
   end
 
   depends_on "cmake" => [:build, :test]

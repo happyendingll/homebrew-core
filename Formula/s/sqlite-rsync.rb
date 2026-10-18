@@ -1,9 +1,9 @@
 class SqliteRsync < Formula
   desc "SQLite remote copy tool"
   homepage "https://www.sqlite.org/"
-  url "https://www.sqlite.org/2026/sqlite-src-3540000.zip"
-  version "3.54.0"
-  sha256 "8847659821e0c5116bd14a94644c82ba932b2d9a05ac81af2e34af814aad7c58"
+  url "https://www.sqlite.org/2026/sqlite-src-3540100.zip"
+  version "3.54.1"
+  sha256 "387e7f6cad4797b17848c07d453dc6606917bb356a6cfe5a3abafd38c240c71b"
   license "blessing"
 
   livecheck do
@@ -13,8 +13,11 @@ class SqliteRsync < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "f3ca62a184e792eb8c3c198fd8a34fe4ee8318aa4dc11fdced50820ffc8245e6"
+    sha256               arm64_golden_gate: "ab5a91aa3f348951f3a228c71048aaa0633032a3b30c8319d6a06802657ca766"
+    sha256               arm64_tahoe:       "fdfd5bf20e1d5ffaa1396c901072366e712b04bdf3c90a867a3f6f223809ff0b"
+    sha256               arm64_sequoia:     "232359b75127e38b32a994b8c92990bbbedd4c3d38f038df9c9c6c19452d4e0c"
+    sha256 cellar: :any, arm64_linux:       "566ea2e356b994dc60812d92d323ab93f05386a1966d9215da8ef46a2e77e6a6"
+    sha256 cellar: :any, x86_64_linux:      "11aad8258f09503d664f1501549ab4ae312a3082567c26087d3838ce65d083d4"
   end
 
   uses_from_macos "tcl-tk" => :build

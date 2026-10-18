@@ -9,6 +9,7 @@ class Qttasktree < Formula
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
   ]
+  revision 1
   head "https://code.qt.io/qt/qttasktree.git", branch: "dev"
 
   livecheck do
@@ -16,8 +17,11 @@ class Qttasktree < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "b76aa5908f0079981eaade351ce4f1561b42cef92d67a591757755ae9a39d069"
+    sha256 cellar: :any, arm64_golden_gate: "472e73f7476bd4e4abc01f8c7d24adc70cb8f6cbe29ea371c358f5e07e3fa96d"
+    sha256 cellar: :any, arm64_tahoe:       "a765704da0fe5c72bd44662059e58e0888117c3e18d468ccc292a53eaa3963ad"
+    sha256 cellar: :any, arm64_sequoia:     "d73d736d7e09c41f05d2b3f7a45a7bb05c53407a99f455123c4178a95ae843a0"
+    sha256 cellar: :any, arm64_linux:       "86e87d3111f27e228d08c0636a16291380148ad51ba9036b63fef422a35f4d8d"
+    sha256 cellar: :any, x86_64_linux:      "fede8b6f805ca65b0a256def7899c44185ffbc9b7a2e2d820c48a732e93c7a90"
   end
 
   depends_on "cmake" => [:build, :test]

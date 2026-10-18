@@ -11,6 +11,7 @@ class Qtpositioning < Formula
     "BSL-1.0",      # bundled clipper
     "MIT",          # bundled clip2tri
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtpositioning.git", branch: "dev"
 
@@ -19,8 +20,11 @@ class Qtpositioning < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "4fecad6a210003941f195e98a75d6513818d3fa7a879f09b446dde18cc98c73c"
+    sha256 cellar: :any, arm64_golden_gate: "12125c2ec3766ce780fa7bd9339dd254163e7526a96d27c7ac3e87d493cc0020"
+    sha256 cellar: :any, arm64_tahoe:       "55d3d1b360b6b960f7589d461f558cdcfcdf4dc278083b021213424fe32b47a7"
+    sha256 cellar: :any, arm64_sequoia:     "1810c555ac2c8915746e0567b643c4a40e81c2a7bca7783d686bba18237315ae"
+    sha256 cellar: :any, arm64_linux:       "998d1f2e4ce66aac4cfa2c51a57629f94488db507dd004ce077cb3bb5ee41dc8"
+    sha256 cellar: :any, x86_64_linux:      "0831b254e98f0ec298f3124e2aef9f83dedfc10e183d814f779e365893ea401a"
   end
 
   depends_on "cmake" => [:build, :test]

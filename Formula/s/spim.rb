@@ -18,6 +18,9 @@ class Spim < Formula
     sha256 x86_64_linux:      "c1b178dd6ac7d8be0bb3fc1c5cde0fa5da7ae94159ff69013a050fd0051676ba"
   end
 
+  deprecate! date: "2026-10-17", because: "does not have a checksummed source"
+  disable! date: "2027-04-17", because: "does not have a checksummed source"
+
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
 

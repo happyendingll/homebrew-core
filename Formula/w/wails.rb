@@ -1,14 +1,17 @@
 class Wails < Formula
   desc "Create beautiful applications using Go"
   homepage "https://wails.io"
-  url "https://github.com/wailsapp/wails/archive/refs/tags/v2.16.0.tar.gz"
-  sha256 "52f77b4dd53482e405d91fc42b587f6216b4f0beedb9ee919462e36357f10e3b"
+  url "https://github.com/wailsapp/wails/archive/refs/tags/v2.17.0.tar.gz"
+  sha256 "1a11268a482edfa984c8ff40415e7597c914f0ee0141574318b72a8f1f3c3d0c"
   license "MIT"
   head "https://github.com/wailsapp/wails.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "fa6359b8446a0556bd12fbd2dd77c9ca78c0e9c1da0387216a3f164272081f06"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dcf3e1ac66464e9994f77ad2b97d4e2600b637b884d5bd8bd37c20941ea6e955"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dcf3e1ac66464e9994f77ad2b97d4e2600b637b884d5bd8bd37c20941ea6e955"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dcf3e1ac66464e9994f77ad2b97d4e2600b637b884d5bd8bd37c20941ea6e955"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "aaa5545f7436a1a9e393d999b1174131b2b312ef4dfb714b30d1864f9da33ae1"
+    sha256 cellar: :any,                 x86_64_linux:      "b269524214250ae8b10f6a358ee1303af79f8904c0958f650f65e53641f28035"
   end
 
   depends_on "go"

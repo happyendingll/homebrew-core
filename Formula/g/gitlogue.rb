@@ -1,14 +1,17 @@
 class Gitlogue < Formula
   desc "Cinematic Git commit replay tool"
   homepage "https://github.com/unhappychoice/gitlogue"
-  url "https://github.com/unhappychoice/gitlogue/archive/refs/tags/v0.12.0.tar.gz"
-  sha256 "57925fead2e74773e45cd268d4c4905c8ef4856b642141411f58a3e36bee76c9"
+  url "https://github.com/unhappychoice/gitlogue/archive/refs/tags/v0.12.1.tar.gz"
+  sha256 "1d271302883be633d7d8dfdb7540d2382f2ab0742c9772e43a585e769230ea29"
   license "ISC"
   head "https://github.com/unhappychoice/gitlogue.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "19ff0bf54ae550a9841be02a52b6eddc8889dae32300b8c8e27af4db16824f9d"
+    sha256 cellar: :any, arm64_golden_gate: "0e836415cefe7aff2a809b38b18c6640c88d0e125891346d86c693d548b86b95"
+    sha256 cellar: :any, arm64_tahoe:       "4bc975efe411ef6196721117290251c2a360566a03f0a136e990a61c7afec627"
+    sha256 cellar: :any, arm64_sequoia:     "405b4fe91564718e05a52a500090d3d15033432a2698fb9d9362bdbf79c1330b"
+    sha256 cellar: :any, arm64_linux:       "77e90d887d1daf13ceb1be806b7693e9db86cf38b5baf74140032061fa4c73fb"
+    sha256 cellar: :any, x86_64_linux:      "95d1d0db0d287a3a3eef69be068c3b67ca85b19d32d82b67c69e093e4d3a9d7b"
   end
 
   depends_on "openssl@4" => :build

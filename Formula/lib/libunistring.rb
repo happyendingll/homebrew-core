@@ -1,16 +1,19 @@
 class Libunistring < Formula
   desc "C string library for manipulating Unicode strings"
   homepage "https://www.gnu.org/software/libunistring/"
-  url "https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.2.tar.gz"
-  mirror "http://ftp.gnu.org/gnu/libunistring/libunistring-1.4.2.tar.gz"
-  sha256 "e82664b170064e62331962126b259d452d53b227bb4a93ab20040d846fec01d8"
+  url "https://ftpmirror.gnu.org/libunistring/libunistring-1.5.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/libunistring/libunistring-1.5.tar.gz"
+  mirror "http://ftp.gnu.org/gnu/libunistring/libunistring-1.5.tar.gz"
+  sha256 "5b0ecd46cbf225375f20ab4056197e66a7ac590e2684c069af407ae3383c9d81"
   license any_of: ["GPL-2.0-or-later", "LGPL-3.0-or-later"]
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "7ffc80feb6e1b01164a958d84e73e78e1bede9c1deb243fc2aef8ee5bf236f9b"
+    sha256 cellar: :any, arm64_golden_gate: "fec6be46cabaefd1dc5d5ecd029c50aeaef6c93d9c7de4425968047811575e81"
+    sha256 cellar: :any, arm64_tahoe:       "b803434415743b204ffc6bc5415ebfceeaf3dbcb86c0c4ea8a6fc63d2a04f441"
+    sha256 cellar: :any, arm64_sequoia:     "5001abe192babcfaf0f97ad322e2e59958d0d991de3da9f2e941b24924b8a2b8"
+    sha256 cellar: :any, arm64_linux:       "142d02125d023a6908f2f407ab5b89f5fd5a9382d363d5f0b627b81d5a19f8f5"
+    sha256 cellar: :any, x86_64_linux:      "8064362db7a4b0a036feb1e0eb4513b1604da1b14fde4b7f3866d067d24808ca"
   end
 
   deny_network_access!

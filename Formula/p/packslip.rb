@@ -1,14 +1,17 @@
 class Packslip < Formula
   desc "Signed release manifest for vendor binaries"
   homepage "https://packslip.dev"
-  url "https://github.com/jdx/packslip/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "0d56b1059dc7167b12c3d33169a9a61861561ef436fa068e0ea333023f41750f"
+  url "https://github.com/jdx/packslip/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "f34158114ca8ae673c36603461520beeb6755b54886c18dd630f64f4e4331767"
   license "MIT"
   head "https://github.com/jdx/packslip.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "b5aa9087c32edf142691797fdebd5f00a83a4a1d57d307bd06797c69a3c1cc09"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf97dc8dd600b0fdd9e1bcb4bb5423ce7d4b5738bb98b7d96a197de69bdc4070"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "101a04185990b4fcb8913fe57086c027443db128ce445f3f59663e6dd562c176"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9633ec725cab82f2333c36b500bc3bd98f1cea17dd755c937eec6b856abd2974"
+    sha256 cellar: :any,                 arm64_linux:       "eb177d70b26019673f3a61f8854fcbf42e3c0fcccd6fa317a2f2a308965ade96"
+    sha256 cellar: :any,                 x86_64_linux:      "96f660faa28435146b7fd2a940c21c5e0cfa94f79e9c774a511887978353d7f4"
   end
 
   depends_on "rust" => :build

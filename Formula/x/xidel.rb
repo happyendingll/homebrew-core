@@ -22,19 +22,29 @@ class Xidel < Formula
 
   head do
     url "https://github.com/benibela/xidel.git", branch: "master"
-    resource("flre") { url "https://github.com/benibela/flre.git", branch: "master" }
-    resource("internettools") { url "https://github.com/benibela/internettools.git", branch: "master" }
-    resource("pasdblstrutils") { url "https://github.com/BeRo1985/pasdblstrutils.git", branch: "master" }
-    resource("rcmdline") { url "https://github.com/benibela/rcmdline.git", branch: "master" }
+
+    # https://github.com/benibela/xidel/blob/master/.github/download-dependencies.sh
+    resource "flre" do
+      url "https://github.com/benibela/flre.git", branch: "master"
+    end
+    resource "internettools" do
+      url "https://github.com/benibela/internettools.git", branch: "master"
+    end
+    resource "pasdblstrutils" do
+      url "https://github.com/BeRo1985/pasdblstrutils.git", branch: "master"
+    end
+    resource "rcmdline" do
+      url "https://github.com/benibela/rcmdline.git", branch: "master"
+    end
     resource "synapse" do
-      url "https://github.com/geby/synapse/archive/3026ab2ade62bc2e85e1c3cd8fa4ed99a3f8a98e.tar.gz"
-      version "40"
-      sha256 "a3f385971805bde2b57995da9c920ea39406385fb0d043cc020ea0322399c472"
+      url "https://github.com/benibela/ararat-synapse.git", branch: "master"
     end
   end
 
   depends_on "fpc" => :build
   depends_on "openssl@4"
+
+  deny_network_access!
 
   def install
     resources.each do |r|

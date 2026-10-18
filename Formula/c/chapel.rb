@@ -22,7 +22,7 @@ class Chapel < Formula
   depends_on "jemalloc"
   depends_on "llvm@22"
   depends_on "pkgconf"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   # Fix bug with newer libc++, full fix will be available in 2.11
   patch do

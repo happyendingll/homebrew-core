@@ -23,7 +23,7 @@ class Libomp < Formula
   uses_from_macos "llvm" => :build
 
   on_linux do
-    depends_on "python@3.14"
+    depends_on "python@3.15"
   end
 
   deny_network_access!

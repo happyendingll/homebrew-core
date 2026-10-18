@@ -13,6 +13,7 @@ class Qtshadertools < Formula
                "GPL-3.0-or-later" => { with: "Bison-exception-2.2" }] }, # bundled glslang
     "BSD-3-Clause", # *.cmake
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtshadertools.git", branch: "dev"
 
@@ -21,8 +22,11 @@ class Qtshadertools < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "7221e3b6a9e44440ed73e8c211ad734722f0892bdf1a7f638de1bb5ed0e8ba88"
+    sha256 cellar: :any, arm64_golden_gate: "ce0f6de39dc8979ba041360ab5fcbd5aa585f573e60dbb775d4ba8ef600cb50f"
+    sha256 cellar: :any, arm64_tahoe:       "ce8f56aa405011bebcaa4dcccefc310cb4b241396dcc2af4db3cefdd071ab44e"
+    sha256 cellar: :any, arm64_sequoia:     "5666a2efc40797b9e07f47175c8552025b68a581ac15427f7b432c23fdbd6248"
+    sha256 cellar: :any, arm64_linux:       "14f149ad4f3022336a96d8464de84ffbb8d95b98d3f63dba17efb50a9ad5a725"
+    sha256 cellar: :any, x86_64_linux:      "d441c46cbff4308b951820fa0183679d73e1a7ef8e73dcbd9cf27a5b6ab96997"
   end
 
   depends_on "cmake" => :build

@@ -1,13 +1,16 @@
 class Concord < Formula
   desc "Terminal user interface client for Discord"
   homepage "https://github.com/chojs23/concord"
-  url "https://github.com/chojs23/concord/archive/refs/tags/v2.6.2.tar.gz"
-  sha256 "8e13216c2510aa2e8cadfd6d9147f41aa50edc489d5c9033736b934166da497a"
+  url "https://github.com/chojs23/concord/archive/refs/tags/v2.6.3.tar.gz"
+  sha256 "473059af85ca8c7d2433ebd2a024951a8159c6109399fecaad238deaf2fd717a"
   license "GPL-3.0-only"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "7c11c7e99101c86e4a72273b854869fbfac3d93ca9c91145a7d82977092778cf"
+    sha256 cellar: :any, arm64_golden_gate: "9e4978b8d41176a7fc20c189a6208f644fd0605efd111119d57965f7b7098184"
+    sha256 cellar: :any, arm64_tahoe:       "71d4374817e8dd73ac361c553bd2cbbcac338356d3fc9e09905e88ddf6a53f48"
+    sha256 cellar: :any, arm64_sequoia:     "a3a2162de4ac77a7bc6e108a60b46108176ad8c6d0fbbe3c41022a472dedb275"
+    sha256 cellar: :any, arm64_linux:       "5a36e9eafd1798959dad64e00b1f79c8f350eefbdfa1590d88f889b206774895"
+    sha256 cellar: :any, x86_64_linux:      "1c2bea6a7b02efc8334038b9152cfe0aa5b741b571a5d2b397c2b04898553b79"
   end
 
   depends_on "pkgconf" => :build

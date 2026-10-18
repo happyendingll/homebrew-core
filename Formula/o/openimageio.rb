@@ -36,7 +36,7 @@ class Openimageio < Formula
   depends_on "opencolorio"
   depends_on "openexr"
   depends_on "pugixml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "tbb"
   depends_on "webp"
   depends_on "zlib-ng-compat"

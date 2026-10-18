@@ -5,11 +5,15 @@ class Coreutils < Formula
   mirror "https://ftp.gnu.org/gnu/coreutils/coreutils-9.12.tar.xz"
   sha256 "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210"
   license "GPL-3.0-or-later"
+  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "9ce81fdf6ecbd53f19c83c6aaea62082d6f5ee11a44fc367dab83a8621a8045c"
+    sha256 arm64_golden_gate: "3230dfda5ec735db8f69a113518a68f8f375f929178cab7c69f618c2606aae9d"
+    sha256 arm64_tahoe:       "38e01cd05410c44aa21fac5ae1700164771cd2028a9e1506f07a743b53a7b73d"
+    sha256 arm64_sequoia:     "c845a8ad8933ec45614e331e4f861862a4766a716ea7c13ee102e50a056c7792"
+    sha256 arm64_linux:       "51e6c759ba3872c59a82610c429bfa343926c48e7f4296bb6a1a23b863545ea2"
+    sha256 x86_64_linux:      "4a261303ec2ac867e77e32b156306fb9f27781a4a5cce754d4e9f249882a00db"
   end
 
   head do
@@ -26,6 +30,10 @@ class Coreutils < Formula
   depends_on "texinfo" => :build
   depends_on "gmp"
   uses_from_macos "gperf" => :build
+
+  on_macos do
+    depends_on "openssl@4"
+  end
 
   on_sonoma :or_older do
     conflicts_with "md5sha1sum", because: "both install `md5sum` and `sha1sum` binaries"
@@ -67,6 +75,11 @@ class Coreutils < Formula
       --with-libgmp
       --without-selinux
     ]
+
+    if OS.mac?
+      ENV.append "CPPFLAGS", "-I#{formula_opt_include("openssl@4")}"
+      ENV.append "LDFLAGS", "-L#{formula_opt_lib("openssl@4")}"
+    end
 
     system "./configure", *args, *std_configure_args
     system "make", "install"

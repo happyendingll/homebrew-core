@@ -82,7 +82,7 @@ class Libsigrok < Formula
   depends_on "libzip"
   depends_on "numpy"
   depends_on "pygobject3"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_macos do
     depends_on "gettext"

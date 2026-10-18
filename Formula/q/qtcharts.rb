@@ -9,6 +9,7 @@ class Qtcharts < Formula
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtcharts.git", branch: "dev"
 
@@ -17,8 +18,11 @@ class Qtcharts < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "c8d97bd40693383e83283ec18f317407e0e638938d2c2538239edca17a3e6d0c"
+    sha256 cellar: :any, arm64_golden_gate: "92bb58b8ef3c32e06f1eaf45d253c604f79e3d4e227d55c5d85b46f90bfaf6d9"
+    sha256 cellar: :any, arm64_tahoe:       "a57e6a43e6239130009db7aee3063a3562ae7744e96bf7a4e4a965b4d1c70964"
+    sha256 cellar: :any, arm64_sequoia:     "fe7f0666280a1f19ff274eedde82163cc136bec2e446682ec44bab8475c6030f"
+    sha256 cellar: :any, arm64_linux:       "0070ce4ae89782c4a2297f4a140a121dfd032f6e93dc35080542475d2db73893"
+    sha256 cellar: :any, x86_64_linux:      "e200fc51e6127566f465e8d60cb0694735b85c9e624e42c7328975fb823a36f4"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -1,14 +1,16 @@
 class Pgbackrest < Formula
   desc "Reliable PostgreSQL Backup & Restore"
   homepage "https://pgbackrest.org"
-  url "https://github.com/pgbackrest/pgbackrest/releases/download/release/2.59.3/pgbackrest-2.59.3.tar.gz"
-  sha256 "14037901db002e5536a948bf9f0fc0ff6cde31f4e675d3e9b46f129071bf2e5f"
+  url "https://github.com/pgbackrest/pgbackrest/releases/download/release/2.60.0/pgbackrest-2.60.0.tar.gz"
+  sha256 "6d3ee1b5defdadc85228969b4be804096f5e65e54707bb95c7c4c4ce41f5d007"
   license "MIT"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "8df297078bdeac9ec4b7d9872296a34ce5f02a4dac3d3597db7b3f54b1f646f1"
+    sha256 cellar: :any, arm64_golden_gate: "95df2decd2f9e146cd3de3fd0bbd94a0b073ae714490b6834a40679541bb60f5"
+    sha256 cellar: :any, arm64_tahoe:       "67dfc0e88fc5a7b8bce77d2d128037282c6e1144382fb233a9b52cac735ff082"
+    sha256 cellar: :any, arm64_sequoia:     "5657bc628b3b017db202ee0a63367966def23331dec49cc70519eb1efda014eb"
+    sha256 cellar: :any, arm64_linux:       "b51c10b3274577fc6b828a352658c42ebb3e048155eb9881888eb895bbe0052f"
+    sha256 cellar: :any, x86_64_linux:      "36a0dce8a41f209795b30592560815aa9bba7342b4d47abe54ae6f6cbffa2a19"
   end
 
   depends_on "cmake" => :build

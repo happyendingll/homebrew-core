@@ -9,6 +9,7 @@ class Qtsvg < Formula
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtsvg.git", branch: "dev"
 
@@ -17,8 +18,11 @@ class Qtsvg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "862cba1bec1a8cd9dddea1e162f38a4291cfdc1a6ef452a577ad9a34332529d4"
+    sha256 cellar: :any, arm64_golden_gate: "d698be4c6f245af24a86e6ac51263591d9482dda1e16c8bf39d537ed55e813c5"
+    sha256 cellar: :any, arm64_tahoe:       "1a50f2c17b353307677e196b992dd177245fcc89b0e729657928973f1af6b175"
+    sha256 cellar: :any, arm64_sequoia:     "a5c37e6d73df990d07e2211012db88abbecf978e163bfe7a02a558e14e8472e7"
+    sha256 cellar: :any, arm64_linux:       "b21b5c7e4201b8320439ec7029df8789f522d73e0cd35747170f6f0932fe165b"
+    sha256 cellar: :any, x86_64_linux:      "0d0096c2d0772cab89184b53e0cc8d6503d9edd5bf9393e89fcca8e268070e8b"
   end
 
   depends_on "cmake" => [:build, :test]

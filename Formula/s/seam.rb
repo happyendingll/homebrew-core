@@ -1,13 +1,16 @@
 class Seam < Formula
   desc "Command-line interface (CLI) for interacting and developing with the Seam API"
   homepage "https://github.com/seamapi/cli"
-  url "https://registry.npmjs.org/@seamapi/cli/-/cli-0.46.0.tgz"
-  sha256 "f57327ee4c49cecec407e2cf9b938f8392fb664aff4f17e75c71d08ffd2fdd6b"
+  url "https://registry.npmjs.org/@seamapi/cli/-/cli-0.47.0.tgz"
+  sha256 "6ec2dd549ab90848fc811f5d503b843f56d979f26bc56a62fef7e6b8e436c436"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "cc11fc07c9cfa7e200eb049ee4fb0a51a53dff38901f91b0fbe248f6a1e07f80"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aa531d166e3f1dde62c5576baf569de92f24ae7d93be16a99228efaba264b36b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7d5ed968de1bfa274cced219a8c89b32aff1852092077229b803b0a7f846c636"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "38ef9ff8f9aa47dd2fc2bcbce12f58ced34b237d7dda3a3f48036fa3a51b6abd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8ffca5187a64cffbab4b637a7c0f468a6af54234104d343748efe1a04f853674"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4bf0499a625f95ee300c8d187da4874a7f55017cd768ce05bc8f57d7a328fd1d"
   end
 
   depends_on "node"

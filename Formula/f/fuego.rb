@@ -25,6 +25,10 @@ class Fuego < Formula
     sha256 cellar: :any, x86_64_linux:      "7d77975632ed4d15595cddf57abf2eec648d2ffe7ccc9b536cdc83733748c33a"
   end
 
+  # Last release on 2011-03-13, last svn activity on 2019-12-10
+  deprecate! date: "2026-10-17", because: :unmaintained
+  disable! date: "2027-04-17", because: :unmaintained
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "boost"

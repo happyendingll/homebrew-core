@@ -16,7 +16,7 @@ class Vunnel < Formula
   depends_on "rust" => :build
   depends_on "certifi" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rpds-py" => :no_linkage
   depends_on "xxhash"
   depends_on "zstd"
@@ -233,6 +233,10 @@ class Vunnel < Formula
 
   def install
     ENV["XXHASH_LINK_SO"] = "1"
+
+    # Allow Python 3.15
+    inreplace "pyproject.toml", 'requires-python = "<3.15,>=3.13"', 'requires-python = ">=3.13"'
+
     venv = virtualenv_install_with_resources without: "zstandard"
 
     resource("zstandard").stage do

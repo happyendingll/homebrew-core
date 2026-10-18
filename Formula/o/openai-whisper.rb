@@ -6,12 +6,15 @@ class OpenaiWhisper < Formula
   url "https://files.pythonhosted.org/packages/35/8e/d36f8880bcf18ec026a55807d02fe4c7357da9f25aebd92f85178000c0dc/openai_whisper-20250625.tar.gz"
   sha256 "37a91a3921809d9f44748ffc73c0a55c9f366c85a3ef5c2ae0cc09540432eb96"
   license "MIT"
-  revision 7
+  revision 8
   head "https://github.com/openai/whisper.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "e954bd25714f05d1cd6f3ce391cd26d3b0dbed82220ac6a74233e7ec2139b5d5"
+    sha256 cellar: :any, arm64_golden_gate: "dc5064298320d54e5ee2eebcfe591dd1ad0cd4922a98d3f488e0d0ad35a8a121"
+    sha256 cellar: :any, arm64_tahoe:       "9947572517722534757225b638c99524bd01f394f2be922f0862b823e1e96de4"
+    sha256 cellar: :any, arm64_sequoia:     "db1377441a1934d0cec56668574a891baf97c48ba6b3f04a7ef477919838a605"
+    sha256 cellar: :any, arm64_linux:       "cbcf53ad0cbac056e8c2af122d7e1a12c2c82a3760460f634583d8dc1a7deac2"
+    sha256 cellar: :any, x86_64_linux:      "567931abf90be359ca0d11139e6e945c5b74c5ac7469fdf402dd2f9165f85b73"
   end
 
   depends_on "cmake" => :build
@@ -20,7 +23,7 @@ class OpenaiWhisper < Formula
   depends_on "certifi"
   depends_on "ffmpeg"
   depends_on "llvm@22"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "pytorch"
 
   on_linux do

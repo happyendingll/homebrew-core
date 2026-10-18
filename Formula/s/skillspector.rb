@@ -19,7 +19,7 @@ class Skillspector < Formula
   depends_on "libyaml"
   depends_on "numpy"
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "xxhash"
   depends_on "yara"
   depends_on "zstd"
@@ -192,8 +192,8 @@ class Skillspector < Formula
   end
 
   resource "ormsgpack" do
-    url "https://files.pythonhosted.org/packages/12/0c/f1761e21486942ab9bb6feaebc610fa074f7c5e496e6962dea5873348077/ormsgpack-1.12.2.tar.gz"
-    sha256 "944a2233640273bee67521795a73cf1e959538e0dfb7ac635505010455e53b33"
+    url "https://files.pythonhosted.org/packages/72/ae/aea2bee05bd61645daf97515174d71d8fd978a2c395b4dd5f0a5ada7facc/ormsgpack-1.13.0.tar.gz"
+    sha256 "4127e84b07816e1f36d557e95b5642041692df22bf77f2c2f563a2039ab8144e"
   end
 
   resource "packaging" do
@@ -222,8 +222,8 @@ class Skillspector < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/dc/0e/49aee608ad09480e7fd276898c99ec6192985fa331abe4eb3a986094490b/regex-2026.5.9.tar.gz"
-    sha256 "a8234aa23ec39894bfe4a3f1b85616a7032481964a13ac6fc9f10de4f6fca270"
+    url "https://files.pythonhosted.org/packages/fc/f2/af1da9d3ceed77bfcdce40427d49ba0be94e4fe84245e3bfef68c10e75b6/regex-2026.9.29.tar.gz"
+    sha256 "8b5fcc4771732191b2b7d1dd68d8f0353f47f8d90b6150f6dce58bf1112442cb"
   end
 
   resource "requests" do
@@ -314,6 +314,9 @@ class Skillspector < Formula
   def install
     # Link against the keg rather than the copy vendored in the sdist.
     ENV["XXHASH_LINK_SO"] = "1"
+
+    # Allow Python 3.15
+    inreplace "pyproject.toml", 'requires-python = ">=3.12,<3.15"', 'requires-python = ">=3.12"'
 
     venv = virtualenv_install_with_resources without: %w[yara-python zstandard]
 

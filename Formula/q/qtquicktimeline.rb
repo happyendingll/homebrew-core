@@ -9,6 +9,7 @@ class Qtquicktimeline < Formula
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtquicktimeline.git", branch: "dev"
 
@@ -17,8 +18,11 @@ class Qtquicktimeline < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "b433add47b4783debad85611ab5f9a2176713e3a9d205494c4972ae6e13d9aa8"
+    sha256 cellar: :any, arm64_golden_gate: "8e1c25ac92af0b667d7a65f85ede01a78ebb71026bb56efd161c6cd23d435f38"
+    sha256 cellar: :any, arm64_tahoe:       "df48d1792b7b60237609af44156cdf90c835a419643f341a5b103280a8bbbcc3"
+    sha256 cellar: :any, arm64_sequoia:     "c8287d3680eb2a02d3cb5245e4961b64de4924c5ba849e4a3c6ca9600e83ce4b"
+    sha256 cellar: :any, arm64_linux:       "81a9f5570175c47db4daa2b83bb761994e0d1c1a296a2954d38bd47be60046ad"
+    sha256 cellar: :any, x86_64_linux:      "fe3893f4aade36ed82423f8af512eb6de663bc7dc949221006ea13108cc6e903"
   end
 
   depends_on "cmake" => :build

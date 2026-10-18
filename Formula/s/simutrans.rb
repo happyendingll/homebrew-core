@@ -1,9 +1,10 @@
 class Simutrans < Formula
   desc "Transport simulator"
   homepage "https://www.simutrans.com/"
-  url "https://github.com/simutrans/simutrans/archive/40bbb12894793cc7c6ae5c93f31a16e7e7707627.tar.gz"
-  version "125.0.1"
-  sha256 "7f2eebdefd5b13428f43d7b422231f9e0f0e374761a35ee1c62a305b386c8759"
+  # Use git checkout to generate revision.h
+  url "https://github.com/simutrans/simutrans.git",
+      tag:      "125.0.1",
+      revision: "40bbb12894793cc7c6ae5c93f31a16e7e7707627"
   license "Artistic-1.0"
   head "https://github.com/simutrans/simutrans.git", branch: "master"
 
@@ -52,7 +53,7 @@ class Simutrans < Formula
   deny_network_access!
 
   def install
-    system "cmake", "-B", "build", "-S", ".", "-DSIMUTRANS_USE_REVISION=12334", *std_cmake_args
+    system "cmake", "-B", "build", "-S", ".", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--build", "build", "--target", "makeobj"
     system "cmake", "--build", "build", "--target", "nettool"

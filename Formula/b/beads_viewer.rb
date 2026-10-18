@@ -21,6 +21,7 @@ class BeadsViewer < Formula
   def install
     ldflags = %W[-X github.com/Dicklesworthstone/beads_viewer/pkg/version.version=v#{version}]
     system "go", "build", *std_go_args(ldflags:, output: bin/"bv"), "./cmd/bv"
+    generate_completions_from_executable(bin/"bv", shell_parameter_format: :cobra)
   end
 
   test do

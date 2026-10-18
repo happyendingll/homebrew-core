@@ -23,6 +23,12 @@ class Acme < Formula
     sha256 cellar: :any,                 x86_64_linux:      "d0821b518d6eb85209ad08ae73a4cfb13a611d4cc65fdd4092102712a9837a06"
   end
 
+  # Last release on 2020-07-10 with only binary distribution.
+  # Most repositories (Arch, Debian, FreeBSD, nixpkgs, etc.) have moved
+  # to following SVN revisions but not supported in Homebrew
+  deprecate! date: "2026-10-17", because: "does not have a checksummed source"
+  disable! date: "2027-04-17", because: "does not have a checksummed source"
+
   deny_network_access!
 
   def install

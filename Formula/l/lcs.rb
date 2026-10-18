@@ -23,6 +23,14 @@ class Lcs < Formula
     sha256 x86_64_linux:      "904d28296fecd92809997c0c3988d371d0373e5acaa1c4e45c39ccd51daa77db"
   end
 
+  # Last version update was 2013-10-20 and last activity was 2015-09-25.
+  # Since then, multiple forks have been in use by community, i.e.
+  # https://github.com/Kamal-Sadek/Liberal-Crime-Squad and
+  # https://github.com/King-Drake/Liberal-Crime-Squad, but
+  # these won't meet Homebrew's exception as no major distro packages lcs
+  deprecate! date: "2026-10-17", because: :unmaintained
+  disable! date: "2027-04-17", because: :unmaintained
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 

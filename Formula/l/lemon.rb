@@ -1,9 +1,9 @@
 class Lemon < Formula
   desc "LALR(1) parser generator like yacc or bison"
   homepage "https://www.hwaci.com/sw/lemon/"
-  url "https://www.sqlite.org/2026/sqlite-src-3540000.zip"
-  version "3.54.0"
-  sha256 "8847659821e0c5116bd14a94644c82ba932b2d9a05ac81af2e34af814aad7c58"
+  url "https://www.sqlite.org/2026/sqlite-src-3540100.zip"
+  version "3.54.1"
+  sha256 "387e7f6cad4797b17848c07d453dc6606917bb356a6cfe5a3abafd38c240c71b"
   license "blessing"
 
   livecheck do
@@ -13,8 +13,11 @@ class Lemon < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "4110658e39fdf43b1359c444dd9b2da04fa90a09b5a54a1ba1ed80cb0268d55b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d062dea96aa351b08e2bd0724b6d065b2ef857e2442e8f69cd73d88ea5d819f5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ceb1e2c8b3f1e89ab03d9fdc38fa801f9081b8d9e95806b38a28d7e33d9cb9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3cb2bbe18f6d3c3a430f06ffc9cc6e87a315d15ac611d3556ba258c7784f3d58"
+    sha256 cellar: :any,                 arm64_linux:       "e1faf8af77b3d9f125c638d7b00cea4155c106f4dc91df4d01a80d6532037896"
+    sha256 cellar: :any,                 x86_64_linux:      "4cb7443975efa0c0139cbe79535ef884da8351e667f4bea810d21d0502d5744d"
   end
 
   # Submitted the patch via email to the upstream
