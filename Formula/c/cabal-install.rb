@@ -7,11 +7,8 @@ class CabalInstall < Formula
   head "https://github.com/haskell/cabal.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e8a22d63f75f48a9aa72b598547e759380799e3814760880df6f81bba8d7d6c2"
-    sha256 cellar: :any, arm64_tahoe:       "e13c6ede5f2e25dd19b7d58ca06fc5129103e3dcbfb648732847e3d3f5c7a7a9"
-    sha256 cellar: :any, arm64_sequoia:     "5bce40512dced3f12d8511bee51b1661021ea097aa66457d76d48e69c07d5a7b"
-    sha256 cellar: :any, arm64_linux:       "7afc31d2b0bbb28005fbba15c1461455f8fc20e40f6fa2db810efe45137e3d52"
-    sha256 cellar: :any, x86_64_linux:      "8c9cad0a3f393454cc3bc05a2796773882ad06e0f8178aadedc275622e454599"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4f9934d9f242dde2ba6e9002515ce453a5ab20e16a2f6c244c5a8dd7d382c857"
   end
 
   depends_on "ghc" => [:build, :test]

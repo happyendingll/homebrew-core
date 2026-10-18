@@ -14,11 +14,8 @@ class Topgrade < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f9fd201ad0f95bcd489302a9420ace7fa697d1b1af6b033ab5fa7b6185cfc8c0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "857891b9ab6b9de6d239a304111ea5aadbc995bed12482d4d4661991dad69489"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "637266737a97943537010d02d2dfc3b0b03fdfdb7931a94193957455310ed58a"
-    sha256 cellar: :any,                 arm64_linux:       "2ecb7e1419659c84e1f06f901fa0a5cb16939c11068527acde331ccacefaa9a1"
-    sha256 cellar: :any,                 x86_64_linux:      "642122b92cf30d93c66790f7e78c1e604a4eab3df358a43a523978e4dab43a47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2ed09076a148ef9563ce01c989e232da75c7d8ec04704c296ae3fdf48ce4618f"
   end
 
   depends_on "rust" => :build

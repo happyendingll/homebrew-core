@@ -16,11 +16,8 @@ class StellarCore < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "41d48362f55480aa57590dd0f90938ed15a7cf096b5b43d39568d9e7df136d50"
-    sha256 cellar: :any, arm64_tahoe:       "4f2963bae1af06b037e8ce6e397719ed3721e093d89f98d8358f69ec457aa25c"
-    sha256 cellar: :any, arm64_sequoia:     "bee2b67e4625de8f1c63353e89cdf4acb348a62d9bc929d294562181c127b709"
-    sha256 cellar: :any, arm64_linux:       "fd6a9808efb97796fa4c185ebcb46e10875e51bd5f3ee4555e8de107fd3e534b"
-    sha256 cellar: :any, x86_64_linux:      "f9cbeb8c633bc22fbbf5fbbbc8fd2ba60c47f063173c0bcc6ed069360bc1fe44"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "323536c827b638ce9fb8c4f54d181a1944719dd49473d6ff33c09b4a52acda92"
   end
 
   depends_on "autoconf" => :build

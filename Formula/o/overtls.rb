@@ -7,11 +7,8 @@ class Overtls < Formula
   head "https://github.com/ShadowsocksR-Live/overtls.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c9fa3174816e578e1c6f5e4801d3047ee7130ebb646dfc71990ae8d1eb120305"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0d63c1b1027602a6da7448a24307595dd567a24618368c2165ba26ee7ffc1b6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ebb529f5868af0f6fa053cdbbd1fd21ce55f63642230ca26a766452479780740"
-    sha256 cellar: :any,                 arm64_linux:       "e07d680be915403fa69559ec9fa2a56ef647523221933124b993a1ffd0cafc04"
-    sha256 cellar: :any,                 x86_64_linux:      "ba2e22dc7bb23979de34a43308f9ce04b50f06f14d2dbc1c0f93cf25a56d1d62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d0e0686bc71963a75b67ed2c1817a417447642833a417aebed42bdeebc0ea63f"
   end
 
   depends_on "rust" => :build

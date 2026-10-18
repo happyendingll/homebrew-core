@@ -11,11 +11,8 @@ class Rumdl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "192b73e04cc39713fd3a51771bdaa42029f3fbe877a906682f0bd2e17a48a34a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "337ea5a077de3cf041e9d2523f69b1b95fe369b4bf2ecdb4d5a84e599a151806"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0ea767b104016234d80b7c73c0a65ac77d79b44218041b62175f0818dbfdf662"
-    sha256 cellar: :any,                 arm64_linux:       "7637a443127698b547d6685dd22d3f7c7f6079887cbc8859aff6064d26bc6b61"
-    sha256 cellar: :any,                 x86_64_linux:      "5654ff4d64ad63e7300259a10ac719a3099365eae243461ce096fcba0c430048"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3e1b40189f785f8bc794a63e66d1c20cbea20474aabacc39b99f6857676e3a24"
   end
 
   depends_on "rust" => :build

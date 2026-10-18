@@ -6,11 +6,8 @@ class Neonctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "7c553a1b42668c9d80737064f28ab345ec92d1fbfac101c5a5bcd27a3be59c3d"
-    sha256 cellar: :any,                 arm64_tahoe:       "7c553a1b42668c9d80737064f28ab345ec92d1fbfac101c5a5bcd27a3be59c3d"
-    sha256 cellar: :any,                 arm64_sequoia:     "7c553a1b42668c9d80737064f28ab345ec92d1fbfac101c5a5bcd27a3be59c3d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "95fd4f6d69b6b49e2b08a30266bb0f8a3df249b800d51d9e454769755a15c724"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "48931e37fef2a42cd696e8df4370ee972b711bd821aa1233f60aaaac76cbed19"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "5b31bd83d0608d918dff26c5983f25b59267f4fed03da18908b5249a5b3d175e"
   end
 
   depends_on "esbuild" # replaces the bundled copy
