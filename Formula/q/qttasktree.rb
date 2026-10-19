@@ -17,11 +17,8 @@ class Qttasktree < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "472e73f7476bd4e4abc01f8c7d24adc70cb8f6cbe29ea371c358f5e07e3fa96d"
-    sha256 cellar: :any, arm64_tahoe:       "a765704da0fe5c72bd44662059e58e0888117c3e18d468ccc292a53eaa3963ad"
-    sha256 cellar: :any, arm64_sequoia:     "d73d736d7e09c41f05d2b3f7a45a7bb05c53407a99f455123c4178a95ae843a0"
-    sha256 cellar: :any, arm64_linux:       "86e87d3111f27e228d08c0636a16291380148ad51ba9036b63fef422a35f4d8d"
-    sha256 cellar: :any, x86_64_linux:      "fede8b6f805ca65b0a256def7899c44185ffbc9b7a2e2d820c48a732e93c7a90"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "fd8314f77a69dbaf4dbd705d33541fa3fa4babb2b568f6d64615977d2d69b097"
   end
 
   depends_on "cmake" => [:build, :test]

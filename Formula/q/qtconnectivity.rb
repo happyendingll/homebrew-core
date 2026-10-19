@@ -18,11 +18,8 @@ class Qtconnectivity < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "276aeb46883320717bcf17b114b4d3886c5e45a9e163b60fda6882b8521b11a6"
-    sha256 cellar: :any, arm64_tahoe:       "093afb7946cd05be0f8454fbf0c1bbab1d117b02f6eac9f2f1a97e62ef70d934"
-    sha256 cellar: :any, arm64_sequoia:     "180887340213edff5abdf471ab94ad111751420666aa57d33932be64b3d9c6ce"
-    sha256 cellar: :any, arm64_linux:       "3741a7533163a016c4287e94bd022c0fb46392db4da4bd5c7b482ec06691f344"
-    sha256 cellar: :any, x86_64_linux:      "49c327f696faa14fe8e2ec4d554a626f09e181c798bdf1b7d203eaabd7fd5ead"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "931552dd1fb027967da4bf396062d4a8add74a4f11cfd0bc1555922fb2708ce0"
   end
 
   depends_on "cmake" => [:build, :test]
