@@ -6,11 +6,8 @@ class Libsail < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "d96d61570d4526332936b81290e8fc878acb54c7c867df01f5f5646a21181174"
-    sha256 arm64_tahoe:       "3b91a115670d4cc6574fe642342dfcee1b70ef69104a93a86129ed5d54b17d93"
-    sha256 arm64_sequoia:     "f23bb14fa37b29695cd953eeb1e657880a9ea494974f75b6067b47d0198b9174"
-    sha256 arm64_linux:       "8345d4937bd9c5f5921c67dea2694758692fd5bda4fd05b68ca9a8d5137b7f59"
-    sha256 x86_64_linux:      "5761de7ed9b9c107b00b0a40614df03cf9c47b92e8941850590a4f251850186b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "24f256c877acf212f1e8a2c2d02df6cb67b3c4000d632341166868734e320e39"
   end
 
   depends_on "cmake" => :build

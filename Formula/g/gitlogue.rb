@@ -7,11 +7,8 @@ class Gitlogue < Formula
   head "https://github.com/unhappychoice/gitlogue.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0e836415cefe7aff2a809b38b18c6640c88d0e125891346d86c693d548b86b95"
-    sha256 cellar: :any, arm64_tahoe:       "4bc975efe411ef6196721117290251c2a360566a03f0a136e990a61c7afec627"
-    sha256 cellar: :any, arm64_sequoia:     "405b4fe91564718e05a52a500090d3d15033432a2698fb9d9362bdbf79c1330b"
-    sha256 cellar: :any, arm64_linux:       "77e90d887d1daf13ceb1be806b7693e9db86cf38b5baf74140032061fa4c73fb"
-    sha256 cellar: :any, x86_64_linux:      "95d1d0db0d287a3a3eef69be068c3b67ca85b19d32d82b67c69e093e4d3a9d7b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "39bee79bbe996bc3270227c1186a0d5ea4418e802db8d46a36b195169703829d"
   end
 
   depends_on "openssl@4" => :build

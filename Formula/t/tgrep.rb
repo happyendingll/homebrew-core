@@ -7,11 +7,8 @@ class Tgrep < Formula
   head "https://github.com/microsoft/tgrep.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "16055ab30ad5591ffdf5fd9a98a641d3762b31653dc4fec25f80277c7578e342"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d8f07281023afeb7ca6f366d1d215c7c55e5684d515aae9ba7a66b5ace405ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7280a72411e2a5e368748e3c29d9ab3940ce914f6db5a901e603cbf59611f257"
-    sha256 cellar: :any,                 arm64_linux:       "029dac220f8b06b27ad6fb6766939efa844b2307cbe42c07260e26136bb896a1"
-    sha256 cellar: :any,                 x86_64_linux:      "57729d16628219c2a57dd55409d75a530c14174b02460ada2456201f71737d26"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0e0b0dfeeb5c940ecf36426f90780c919ef3a960bc395ad25bb388bb3f912c7f"
   end
 
   depends_on "rust" => :build

@@ -11,11 +11,8 @@ class GobjectIntrospection < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "bf75452655dd860a22248f3cd6f7978015212a7c63d5aee881daaa5de4bdb538"
-    sha256 arm64_tahoe:       "58065fd01aded5a2542e52430cfcc5fbb11f7f51421d12f05402c95f1fe2f375"
-    sha256 arm64_sequoia:     "f8ae7c52e7c71a75d187fab3c4d6e524ad2a33fa80a38f3b4a36989eb8c9b5a8"
-    sha256 arm64_linux:       "7e066ae8f54f1e69f625a6ff0a0599d18f2d03367a7e7799791ee580978ae4b0"
-    sha256 x86_64_linux:      "19ac75340133f5c431233f2741f2cc2f5de0fcee70508952c7eaf90fd0760958"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "d637278944ca3dc4136bfbc909d47093213ccbda327c8f6e354ecabdcf083ee2"
   end
 
   depends_on "bison" => :build

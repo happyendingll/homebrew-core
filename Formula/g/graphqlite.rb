@@ -11,11 +11,8 @@ class Graphqlite < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5c98b7d85d18faa3d3bac31915356cb80a3c2278007094b98cd5db818fe33735"
-    sha256 cellar: :any, arm64_tahoe:       "1799a1c97bdb69e04ac16c393a47f2e7f966a838dbcd07aac0d2f4120d892d6b"
-    sha256 cellar: :any, arm64_sequoia:     "d2d3e9042c7cd72623fdf7c802ec23908d8c16f8853ea413cd529dfb39b0357a"
-    sha256 cellar: :any, arm64_linux:       "d591109e6ad2285daaf8b6ab0e91e293832a180e36998a412443068940572673"
-    sha256 cellar: :any, x86_64_linux:      "bbef44a577a441ba0cce912ec3dab71ba201a7d9cd118a60764323b6995d3dec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "d0028ecb921f75e80a45c4ccb68302292f941614be78dd5d70195d741583ca62"
   end
 
   depends_on "bison" => :build # macOS bison is too old
