@@ -18,11 +18,8 @@ class Qtdatavis3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6d50b8b0760fc06ce06343c3bbe008bb129a7300570f0949d953595da9d86851"
-    sha256 cellar: :any, arm64_tahoe:       "36cf8c70cd02348f5e579e775f03bcb3ce7e1f7a5f72a15641736645a07a015a"
-    sha256 cellar: :any, arm64_sequoia:     "987721425856d7ad2ea8f7a0a088beb9500cf34be59ff5b05dd26001319878b5"
-    sha256 cellar: :any, arm64_linux:       "8fe868062608859ddb3d7d82e99b9119c5ca288a691c4026e578b4208dc6d35e"
-    sha256 cellar: :any, x86_64_linux:      "5b6c7da05c84993682b8146ae72aba692bb518f9885372909f0687fa37000342"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "0df6c9ae7e6196ca2061e8d59f864aee8a2b23059579bac06e0c82552b7e8a59"
   end
 
   depends_on "cmake" => [:build, :test]

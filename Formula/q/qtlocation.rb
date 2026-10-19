@@ -18,11 +18,8 @@ class Qtlocation < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1bce6b6cf3c4ee0b2ae44e9f53c8d3f0f9534ab1a7a2cd358b125c75bd576a71"
-    sha256 cellar: :any, arm64_tahoe:       "72811f07a0189d3cd97a35d2bfe7986259d532af6e3fb7ab30fd2764c82d925c"
-    sha256 cellar: :any, arm64_sequoia:     "4ea807c0e8193276e8be59b1a44ec74dc9da9d0566b14d7a01b378dc729e71e5"
-    sha256 cellar: :any, arm64_linux:       "758119b8a2d1b6b89997dd8667c9fc4e41451966a690d75b65d58bf7d06cb460"
-    sha256 cellar: :any, x86_64_linux:      "82bb25d19e039237b6cab8165f1a3277aea76acd1933049426726f52a23f68ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "c484650e1263135cee8bddea539b7396184626a6b09826e1e15f05c78d4e75cd"
   end
 
   depends_on "cmake" => [:build, :test]
