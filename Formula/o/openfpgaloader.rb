@@ -7,11 +7,8 @@ class Openfpgaloader < Formula
   head "https://github.com/trabucayre/openFPGALoader.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "5a9b6f924cbe2768a0dde221bdf79ed470d022154b7f3792d1b62c5e9fd1db16"
-    sha256 arm64_tahoe:       "ed2945e869e924658e54682aa59b4da277bf82f4c051a396b66abc4c974cf0df"
-    sha256 arm64_sequoia:     "bd2f4c86f02c64db798d79ba1efc49cbaa9725401596d9ba3bffa80d9c02b2d9"
-    sha256 arm64_linux:       "e9db39482df82beb0ebbb003b4cdc78f5f579f9e040198dc963e8ecb1f9a9c0c"
-    sha256 x86_64_linux:      "96b169928117d591a94c5a78cfd1ddf3e47c665f3a4d2180a9a82c007733af34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "890a467fe689420986dafd7c4a01e197ad4029205fdcf4e73cccc3b3fbbf342a"
   end
 
   depends_on "cmake" => :build

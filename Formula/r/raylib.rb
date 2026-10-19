@@ -8,11 +8,8 @@ class Raylib < Formula
   head "https://github.com/raysan5/raylib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "673a7b53ade625117feee008a1a88a77ca068c5c01cfd9981c13f727f6a57540"
-    sha256 cellar: :any, arm64_tahoe:       "a0f742f031ea902a5762fe6aded4461ffcad8d4c5d235b30f46919e01830a267"
-    sha256 cellar: :any, arm64_sequoia:     "87705d21de2e87e0128096bb059310f1cc4bd0673a543b5f55a9b0e4f5d43191"
-    sha256 cellar: :any, arm64_linux:       "0e0d6c2733a90fea8435402d5944b09ed587ec65576a4f0dbb9384c7459bbd15"
-    sha256 cellar: :any, x86_64_linux:      "817953eff8058abeeb098a5faed76159947d2368190107fee34f5d404f1b2cd3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "08ecd5e519c6f767bdfa1cc798b96464b3bd35a82838aa112b343f6ba94f11f0"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class Gomplate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "86c27eb30e8de6d3e24826df544fc2917215ab656ec6d6e11a937a1cc0e0f388"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8168604167f4210c0664e70a82eca375ee18d8c4e0258e8ea1c085267f1f0a9b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "871fbdb8d6a1b77ad428013fab0041c22116f8394197c217f30c0a41bdb49019"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b82c48194473461cbc569dead859e5ef2f00bb293f45590dbde6fe8a9891bb4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8293576433d3ee4e77212d2d3546a18498a4e2965234945db43ed683641b4932"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6e0c1e4db4edfe4c9d1b88ebbf655b5e559090f383319b89cea74406f79297b8"
   end
 
   depends_on "go" => :build

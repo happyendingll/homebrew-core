@@ -11,11 +11,8 @@ class Snobol4 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "51e4ad30abeb4b1c001228d6d175bbec94230900d05dc106c106178b8ac13fa5"
-    sha256 arm64_tahoe:       "c80279cfa87ff46136abbec138129acfccf7dd16faceb97a2d7f98cc39f374c3"
-    sha256 arm64_sequoia:     "c7b08260c55a95d175a0f0ff061759bf86c05cafa2190d7a46bbcec13a790423"
-    sha256 arm64_linux:       "063d8cb9abfbc08512ddfec704bda4e55505ad5cd53761c395d8cbf04c620dce"
-    sha256 x86_64_linux:      "feb2ee7a769a5a2117b2de1acf5e910bbaf2eebd48c9a01af212f0aba438ec74"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "0a117a3f364b5e75ee3db86a97db6051be59310c303d7aa917c70fec52d25230"
   end
 
   depends_on "openssl@4"

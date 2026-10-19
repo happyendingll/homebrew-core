@@ -7,11 +7,8 @@ class Sshguard < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a599097cf3d467ae7d5e47c1764d7e34317ce7a0874010f8cc2e2aacac191540"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "67daea1302f4a4f3f9bb989c0d858b92ede6efbb1f52f19267ddd3f27c0325bc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3079d307e121aac95c5afcf5935e2c8402c8127bb6919d6b43df1befa145eced"
-    sha256 cellar: :any,                 arm64_linux:       "950cd0e4cea4cda3ec1e0d85166a5ac7afa96a6a552241f657db79b5bb07e420"
-    sha256 cellar: :any,                 x86_64_linux:      "5a6145efdf01e865cbee5475e15ad63dab94265e169050e49336d2aa05f052b3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a7433d1ab487d6d2ba2f2fa1668229ee3e06cd45776529db738f317dbba949cc"
   end
 
   head do

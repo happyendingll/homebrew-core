@@ -6,11 +6,8 @@ class KubectlKlock < Formula
   license all_of: ["GPL-3.0-or-later", "CC0-1.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a4681cc233eadd8ed81bfc6479e7675fe8edacf699e0d29dc2a84932345c8e1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f29b9279987a99360dda140780976b30a440e856ed1282a9e2b18d200988fc09"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f1baf999ff858612bb0a8036e0306fe178e661a4de0004a327e21fceed3c0c81"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "918fa237fd7a6fdce41c33a83e68621d01559a1a40b9c9335603b29cf83f3484"
-    sha256 cellar: :any,                 x86_64_linux:      "6f04cc1e39ee523d2106a1cb3a5556676c057101916b0c52ddfd5f750c81ec22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "418a5c90cc5f59ce25c695234ec12af6cc7591ed2b44724137c0d1d533849821"
   end
 
   depends_on "go" => :build

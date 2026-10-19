@@ -22,12 +22,8 @@ class Lensfun < Formula
   end
 
   bottle do
-    rebuild 6
-    sha256 arm64_golden_gate: "0eaadc8c9a75308798d97b360663065c3b3d639a69f814459f6b95794d56a77e"
-    sha256 arm64_tahoe:       "e973bb3a6d390dd73ad7b80aab57c8addb8dac68adfcefe4a37f91879ad8f56c"
-    sha256 arm64_sequoia:     "994558434781a12b6bcb8a0c93aa4e92401ac2e189b00485b753f9c924acd463"
-    sha256 arm64_linux:       "e70c6ac65c2a23d3d28e4b84ed0f0b316a853c777e09c13d0d7c26f65a58cb6a"
-    sha256 x86_64_linux:      "db72b77fe5653b5c41df162c573e49057ef38a5dae6d1a6c4721e1b0ce0a3e39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "b05afa660f57850a65c4ef3f66d1324992019278fbafefbfe66f7e7289923c37"
   end
 
   depends_on "cmake" => :build

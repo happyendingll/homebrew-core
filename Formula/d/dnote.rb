@@ -12,11 +12,8 @@ class Dnote < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4c0f624aa1d2dc38208be0ae287a76e0c2e8fa6d688068ad31d1375499c27d41"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21fa4192d6a2339847043dd0594643ba4463cfc15a543e19c4bac6d425833370"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0edb2943f3e6812fe0d59141ce3dd403638e89436d4cffec7fc6d1f0f6eb3762"
-    sha256 cellar: :any,                 arm64_linux:       "271061a746c03a40565e4c9082b3a411c21ecfbe779ac775b3dfe80df2cb8374"
-    sha256 cellar: :any,                 x86_64_linux:      "60be9af2505c5c1073535d141ff5005a263e01e7a788858d769093a782ca0a8d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b42a6bd3994a025b802afec3a81f78e7990cc493cf09643454073bea23c0469"
   end
 
   depends_on "go" => :build
