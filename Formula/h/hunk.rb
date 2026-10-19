@@ -1,8 +1,8 @@
 class Hunk < Formula
   desc "Review-first terminal diff viewer for agent-authored changesets"
   homepage "https://hunk.dev/"
-  url "https://github.com/modem-dev/hunk/archive/refs/tags/v0.23.0.tar.gz"
-  sha256 "41ee0e79c56fc292d0fe09ed174736048be4662d867ca448506921e7b9a65fa6"
+  url "https://github.com/modem-dev/hunk/archive/refs/tags/v0.24.0.tar.gz"
+  sha256 "108120c25c64017d1b608e1aa2b7317dc1bb9220285fdccffcde6c67d89ace04"
   license "MIT"
   head "https://github.com/modem-dev/hunk.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Hunk < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "1745713e3f3b6db22f65e679973c3444a533c64785b65c7593054ef7700f4038"
+    sha256                               arm64_golden_gate: "a1be049ccf08e34c2a87688cea738ad9a092e2707ae75bb1268c7dc9d3cddbc1"
+    sha256                               arm64_tahoe:       "a1be049ccf08e34c2a87688cea738ad9a092e2707ae75bb1268c7dc9d3cddbc1"
+    sha256                               arm64_sequoia:     "a1be049ccf08e34c2a87688cea738ad9a092e2707ae75bb1268c7dc9d3cddbc1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3c7e40bc300711d615ba5dab36d753d4af0a00770aaa5fb508834a90ce818de6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "734966626ed961025dc9eb9d38d333e92cbce99c790f86bd761ff7e6907e907d"
   end
 
   depends_on "bun" => :build

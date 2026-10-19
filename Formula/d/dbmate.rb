@@ -1,14 +1,17 @@
 class Dbmate < Formula
   desc "Lightweight, framework-agnostic database migration tool"
   homepage "https://github.com/amacneil/dbmate"
-  url "https://github.com/amacneil/dbmate/archive/refs/tags/v2.36.0.tar.gz"
-  sha256 "a72ecd5a04ab627a6e2e0a3d0caace438e1f0a584d6ea5929640dda60fb8c8d9"
+  url "https://github.com/amacneil/dbmate/archive/refs/tags/v2.37.0.tar.gz"
+  sha256 "31bfdb3e87dc706dcc87a7f6a6343819f288af8c5ff0152c5793551e3cad1847"
   license "MIT"
   head "https://github.com/amacneil/dbmate.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d4451acaa55e895cc1469635eab6b674ff882865c96a694860829b36c8b7c437"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4e5f3e43334664bd29b284230008c6042e448e1401222cc9e81ba895d5ca18ec"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9f07aaacc670e1c1257364b260c0d51c0037438d7cd63ab2cf161a66f5b27c61"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c7d6eccb28ff6c1e19989989d9a24d32c36af142d932ec0ad1b1972431992edb"
+    sha256 cellar: :any,                 arm64_linux:       "c5920d16efc40a2d6187430556de77899c74685795c4b8ce675080f5c82128e0"
+    sha256 cellar: :any,                 x86_64_linux:      "a31f175631df9a1010bf61e34827ab2a43823856f51602176b127af671d26c74"
   end
 
   depends_on "go" => :build

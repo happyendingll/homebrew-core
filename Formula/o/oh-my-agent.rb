@@ -1,13 +1,16 @@
 class OhMyAgent < Formula
   desc "Portable multi-agent harness for .agents-based skills and workflows"
   homepage "https://firstfluke.com/oh-my-agent/"
-  url "https://registry.npmjs.org/oh-my-agent/-/oh-my-agent-20.5.0.tgz"
-  sha256 "dcbc3547820047cb121e33844453d748fd2796348795c64003130c06d2cb7b05"
+  url "https://registry.npmjs.org/oh-my-agent/-/oh-my-agent-20.5.1.tgz"
+  sha256 "7f1071cdec5a21198866098fda8f1e2eed3bf82f58130e507468f2e375a0fe31"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "eae1fce6293ddc6ff1a27c71a6cc66dde5fbe78fce21c377ba7fa683d3e98fc5"
+    sha256 cellar: :any, arm64_golden_gate: "ecf7353df594a06fd6e7f572aa50f444e8306b9dfb9cea61f152af2bf95ea646"
+    sha256 cellar: :any, arm64_tahoe:       "caca1640724a24aad760a5ab5412a6d859729972785c134dcfcde2803e00fe94"
+    sha256 cellar: :any, arm64_sequoia:     "eebf6e05316138fa603297b812176875aae556f30ae41d6e045b70fcc8412da5"
+    sha256 cellar: :any, arm64_linux:       "eb91d07fa3b74b03286516ac89302597dd960534161907fa76144c2bef5064c5"
+    sha256 cellar: :any, x86_64_linux:      "aa889126111e4d449ae7bcd52edd4dace5979c02fff9f33f0a7c15079eed37f1"
   end
 
   depends_on "node"

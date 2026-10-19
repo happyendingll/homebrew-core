@@ -1,13 +1,12 @@
 class Commitlint < Formula
   desc "Lint commit messages according to a commit convention"
   homepage "https://commitlint.js.org/#/"
-  url "https://registry.npmjs.org/commitlint/-/commitlint-21.2.3.tgz"
-  sha256 "4eec37fb1f5b6cbac943c03ab4c2ef622326adbe521edff71dfeb32246d1539b"
+  url "https://registry.npmjs.org/commitlint/-/commitlint-21.2.4.tgz"
+  sha256 "2943f4661aefbe10ccdb2a5da1b795e92b475a821eece7a687094a100619b4b6"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "7644d6fd7e933b1f57146f445b51d49b56595bade8791740fe07b858f92f9151"
+    sha256 cellar: :any_skip_relocation, all: "7f18d69515a6ae99c5f6f4729ccbdec7d30078bb2a27df60b41579dd27dc8dd1"
   end
 
   depends_on "node"

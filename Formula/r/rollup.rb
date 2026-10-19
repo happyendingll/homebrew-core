@@ -1,13 +1,16 @@
 class Rollup < Formula
   desc "Next-generation ES module bundler"
   homepage "https://rollupjs.org/"
-  url "https://registry.npmjs.org/rollup/-/rollup-4.64.8.tgz"
-  sha256 "fe1bbb60770b447cabb486e2053e29094aaade8d820a6f8530a4e1cb225e435f"
+  url "https://registry.npmjs.org/rollup/-/rollup-4.64.10.tgz"
+  sha256 "ff2cfd016753bd2e4c7532cee65b225ee9ebe4d75249dac1f8b0389cb6ec6df5"
   license all_of: ["ISC", "MIT"]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "3d93fb51fb2b33630a46a9746482816a5b993105036ac67c5668bde682620e47"
+    sha256 cellar: :any,                 arm64_golden_gate: "29b8693535cb14d9bbe5a38b682e4872c642d8d770d5e0e994979cc67163907e"
+    sha256 cellar: :any,                 arm64_tahoe:       "29b8693535cb14d9bbe5a38b682e4872c642d8d770d5e0e994979cc67163907e"
+    sha256 cellar: :any,                 arm64_sequoia:     "29b8693535cb14d9bbe5a38b682e4872c642d8d770d5e0e994979cc67163907e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b65531a8279f34475090c331f5117b9e4b085c21f41944a67a5410c4726668f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d2e8693f72a51db11321703cbf78827c87f66da506c42c98e5f734ddd68f1600"
   end
 
   depends_on "node"

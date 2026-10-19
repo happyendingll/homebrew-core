@@ -1,8 +1,8 @@
 class Pixivbiu < Formula
   desc "Pixiv client. Easy to search, browse, and download artworks"
   homepage "https://github.com/txperl/PixivBiu"
-  url "https://github.com/txperl/PixivBiu/archive/refs/tags/v3.1.5.tar.gz"
-  sha256 "dd49171a6a4895de51d6415f0bdfbeb768e6d603d6cd2f37af04df5bc49eb8cb"
+  url "https://github.com/txperl/PixivBiu/archive/refs/tags/v3.1.6.tar.gz"
+  sha256 "7d563a710921ac38bebd09d8c9e722b26ddeff42b449026bd6bacce835bd164b"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,11 @@ class Pixivbiu < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "beb6ecd7ef049af2df2e4c617fcdceac99b469a6f38e2747c574b893cc5ec663"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ea8f24a573df76ee04dddb2d19b37b7b8b58e651e910d54e6e22050a05528ba0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c050c4da900cf52160b69210e611fc2ac2a0863831832db6026bc0cd3ff02fe6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a493ad468051c5c33086d05d499e1b6a94cb5109f1b868ce76159675ce140c2e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7ff4af8a315f159411a8cd68ff6e024be1fbc428870e75b97b21686154e36974"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1aed6d9a0f13d84c18c5083defa405b2bf03980753d6c1986f972f75a78c6e76"
   end
 
   depends_on "bun" => :build

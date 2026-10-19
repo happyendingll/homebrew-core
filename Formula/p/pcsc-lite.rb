@@ -1,8 +1,8 @@
 class PcscLite < Formula
   desc "Middleware to access a smart card using SCard API"
   homepage "https://pcsclite.apdu.fr/"
-  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.5.2.tar.xz"
-  sha256 "60a08942d8c00a1d86a3bf4c64eddbf7a5569c7c54f6904e3f07801bb5316acd"
+  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.5.3.tar.xz"
+  sha256 "fe2bb733ecf95e52768907eb00da9f9f3daf180960283e514a05dcc090afa3bd"
   license all_of: [
     "BSD-3-Clause",
     "BSD-2-Clause",     # src/auth.*
@@ -16,8 +16,11 @@ class PcscLite < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "f66d964b10c907c6657016c8410a2dc65467c90464b41f0ee518bd216509a40c"
+    sha256 cellar: :any, arm64_golden_gate: "f3dcd0787951e799f44e19f443d133e54939dc39450d28d4747020b4a5c4ecba"
+    sha256 cellar: :any, arm64_tahoe:       "21581ced532ed140a32fc3918d2bd9f4636314153f33ccc8504a60672703d4c9"
+    sha256 cellar: :any, arm64_sequoia:     "682a173b73f5a2e698ee2fa35687f16449cd934d79d21ddca875ddc38318e8b7"
+    sha256 cellar: :any, arm64_linux:       "9c5fd338e35936862b3a1ea2614c5d0280df0e30d3a3e00b0f5a9ad5a4ec528c"
+    sha256 cellar: :any, x86_64_linux:      "74ab0056416c91b78ffb153cfeb4f34a2fb61b48c769de2ffa3a32d1474ebe11"
   end
 
   keg_only :shadowed_by_macos, "macOS provides PCSC.framework"

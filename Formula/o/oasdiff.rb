@@ -1,8 +1,8 @@
 class Oasdiff < Formula
   desc "OpenAPI Diff and Breaking Changes"
   homepage "https://www.oasdiff.com/"
-  url "https://github.com/oasdiff/oasdiff/archive/refs/tags/v1.33.0.tar.gz"
-  sha256 "ecd6c0b87b780749963d0b2948a0419b6d3e221d888043e539c3bec9c724268f"
+  url "https://github.com/oasdiff/oasdiff/archive/refs/tags/v1.34.0.tar.gz"
+  sha256 "75e2bf60dd2f0530385eb18fd1deb6daa0ea7f2d88600c23099ef93b716bfc09"
   license "Apache-2.0"
   head "https://github.com/oasdiff/oasdiff.git", branch: "main"
 
@@ -13,8 +13,11 @@ class Oasdiff < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "1416b2c85036827c766ef24b6eb6f51de87b4e7539b6696242e3782e5f3239ef"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b1a088aff5389a7018629ae7e66c9d9726c2655b0fd78e712771211a8e3cec24"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b1a088aff5389a7018629ae7e66c9d9726c2655b0fd78e712771211a8e3cec24"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1a088aff5389a7018629ae7e66c9d9726c2655b0fd78e712771211a8e3cec24"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5c8a0b674212d0f1582d4d9d9c910b4b0c228350ebd841ad855870abf851c3e6"
+    sha256 cellar: :any,                 x86_64_linux:      "dffacb2ae5d57ebcfdf74d86991bf272d0e9c605a634b83fdc1adc914c1c5621"
   end
 
   depends_on "go" => :build
@@ -46,7 +49,7 @@ class Oasdiff < Formula
     testpath.install resource("homebrew-openapi-test1.yaml")
     testpath.install resource("homebrew-openapi-test5.yaml")
 
-    expected = "3 error, 1 warning"
+    expected = "[api-path-removed-without-deprecation]"
     assert_match expected, shell_output("#{bin}/oasdiff changelog openapi-test1.yaml openapi-test5.yaml")
 
     assert_match version.to_s, shell_output("#{bin}/oasdiff --version")

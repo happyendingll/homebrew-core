@@ -4,6 +4,7 @@ class Biosig < Formula
   url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-3.9.8.src.tar.xz"
   sha256 "9d7298cb6e466eb3b9eb7f4c8bc501dc4c3a71dcdf2f4156bad0ca9797220422"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -11,8 +12,11 @@ class Biosig < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "313ef1b658fbea629ad3201a036f180b46bcc0e75d0589339b1236eb9a6df84a"
+    sha256 cellar: :any, arm64_golden_gate: "fbcebb16f18801a62104f57ac6aa7c897478520eec032e230f0957cfd228fe62"
+    sha256 cellar: :any, arm64_tahoe:       "b4427b3468999ddf9195a7e1dd6b6c973f457540b309ba8e3800d79540793503"
+    sha256 cellar: :any, arm64_sequoia:     "93f3265be17eb1a8a916036c99b15234320893f89985bbf092a7b4a575304e86"
+    sha256 cellar: :any, arm64_linux:       "d2d70ea3d7fa3511e95883f08f6a62dc2b6f81f211bbf3e72d1f88699902d64b"
+    sha256 cellar: :any, x86_64_linux:      "352815c9b25abac34d6f022e44735725cada7b8378b33f538a73cddc1ebb9593"
   end
 
   depends_on "gawk" => :build

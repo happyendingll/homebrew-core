@@ -1,14 +1,17 @@
 class Opkssh < Formula
   desc "Enables SSH to be used with OpenID Connect"
   homepage "https://eprint.iacr.org/2023/296"
-  url "https://github.com/openpubkey/opkssh/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "28d9658b09c138c69b0c4f6378518de5713227d1f9d3eded02cab75ca3ed3701"
+  url "https://github.com/openpubkey/opkssh/archive/refs/tags/v0.19.0.tar.gz"
+  sha256 "3094473a2eeefe10d2670537be107d068b7324231ebf031c96ff77e391d6e725"
   license "Apache-2.0"
   head "https://github.com/openpubkey/opkssh.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "26601f12c57bfc25dd289d716f59868889ac51b485d2666a1a49bdd86d0955e5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a3eb7b02a7a408c1d2aaf16fc7b37191aeeb0790456aaa7b9d88763e1a43d11e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a3eb7b02a7a408c1d2aaf16fc7b37191aeeb0790456aaa7b9d88763e1a43d11e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a3eb7b02a7a408c1d2aaf16fc7b37191aeeb0790456aaa7b9d88763e1a43d11e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ad319620ab05ec01dfae00255a6556e1ca3ba9626f62fb5352f3ad6fd4c9f50a"
+    sha256 cellar: :any,                 x86_64_linux:      "e3e37cee189689f4b0e0c8be338ff2cc77cd8458dcac841109b54faee0c02d0e"
   end
 
   depends_on "go" => :build

@@ -20,13 +20,14 @@ class Conftest < Formula
   end
 
   def install
-    ldflags = "-X github.com/open-policy-agent/conftest/internal/commands.version=#{version}"
+    ldflags = "-X github.com/open-policy-agent/conftest/internal/version.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"conftest", shell_parameter_format: :cobra)
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/conftest --version")
     assert_match "Test your configuration files using Open Policy Agent", shell_output("#{bin}/conftest --help")
 
     # Using the policy parameter changes the default location to look for policies.

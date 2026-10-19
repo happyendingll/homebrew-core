@@ -1,14 +1,17 @@
 class Onefetch < Formula
   desc "Command-line Git information tool"
   homepage "https://onefetch.dev/"
-  url "https://github.com/o2sh/onefetch/archive/refs/tags/3.0.0.tar.gz"
-  sha256 "2877f2473120b41a33d03cc09bcded9ff4280951dfe447c1709df45b029e6e8b"
+  url "https://github.com/o2sh/onefetch/archive/refs/tags/3.1.0.tar.gz"
+  sha256 "7381912c62ed1c8a3b1a443afac2fa22d8a10db8414cd44198c5d4997fab0d54"
   license "MIT"
   head "https://github.com/o2sh/onefetch.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "09d2745f7c43ecc735427a4d0c3d64529d7b91cfc218f27298af6b2afd56d7f4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "233bb972f47ac36e733f5a90cea45d6f7bbf782e1d91f51e1c586aab964256f8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75778b495504265d68d117bd6cedce95f1b892815f69e15f70ec98a13930d603"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "830edde54475ad69e07d492f4f88c9ac91e2d5e36586fcf0f4ea8cf223957272"
+    sha256 cellar: :any,                 arm64_linux:       "cda3ca78eddbc0cbca9be5289f8302d7578d61c9ab97336c0e4b6a0a024de337"
+    sha256 cellar: :any,                 x86_64_linux:      "4afb18872d9853223d6c77e68ca8296eb9c38182d4558b61f4547bc6bcb4fab1"
   end
 
   # `cmake` is used to build `zlib`.

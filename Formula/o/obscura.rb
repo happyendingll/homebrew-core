@@ -13,7 +13,7 @@ class Obscura < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "crates/obscura-cli")
+    system "cargo", "install", *std_cargo_args(path: "crates/obscura-cli", features: "render")
   end
 
   test do
@@ -21,6 +21,11 @@ class Obscura < Formula
       "#{bin}/obscura fetch 'data:text/html,<title>Homebrew Test</title>' --eval 'document.title'",
     )
     assert_equal "Homebrew Test\n", output
+
+    assert_equal "rgb(255, 0, 0)\n", shell_output(
+      %Q(#{bin}/obscura fetch 'data:text/html,<style>p{color:red}</style><p>x' \
+      --eval 'getComputedStyle(document.querySelector("p")).color'),
+    )
 
     # obscura blocks fetches to loopback/private addresses by default (SSRF protection)
     blocked = shell_output("#{bin}/obscura fetch http://127.0.0.1:1/ 2>&1", 1)

@@ -4,12 +4,15 @@ class Luvit < Formula
   url "https://github.com/luvit/luvit/archive/refs/tags/2.18.1.tar.gz"
   sha256 "b792781d77028edb7e5761e96618c96162bd68747b8fced9a6fc52f123837c2c"
   license "Apache-2.0"
-  revision 34
+  revision 35
   head "https://github.com/luvit/luvit.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "52d0e972b2f63c2d37ac3fe8a1f3e71c392497f71c959eb5a20966d373dca322"
+    sha256 cellar: :any, arm64_golden_gate: "35ada557448e63eea2bbeae27320c3e6dc2113efb4e57827f671f6cb91f36dfd"
+    sha256 cellar: :any, arm64_tahoe:       "c0c8c1dfa6fc483f6d1ad8d11bb70bd09a45dbf592752fb079ba2814b3c18d83"
+    sha256 cellar: :any, arm64_sequoia:     "a0b08ccfce6c5b08c4f27cb36dc8b7dd1aeffea2967c77d3fcdc5bae699df55d"
+    sha256 cellar: :any, arm64_linux:       "cb77879b327c6fbb23a07a729a5a76ef4a68298c93269a83e87ccc479ff8d4fb"
+    sha256 cellar: :any, x86_64_linux:      "0323d146b251c3f9ad164664f6a767946f51ace79d62208fcb547c5b70409c8a"
   end
 
   depends_on "cmake" => :build
@@ -72,6 +75,8 @@ class Luvit < Formula
     url "https://github.com/zhaozg/lua-openssl/releases/download/0.11.1-1/openssl-0.11.1-1.tar.gz"
     sha256 "b49a010d254a44669d4bb84292a5211d805fdd57e312ee78f799c261525abcaf"
   end
+
+  deny_network_access!
 
   def install
     ENV["PREFIX"] = prefix

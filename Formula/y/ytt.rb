@@ -1,14 +1,17 @@
 class Ytt < Formula
   desc "YAML templating tool that works on YAML structure instead of text"
   homepage "https://carvel.dev/ytt/"
-  url "https://github.com/carvel-dev/ytt/archive/refs/tags/v0.55.3.tar.gz"
-  sha256 "ff45d6b34342714223b75a98bf089c108c928b3d8247651c4aa70c152ee42719"
+  url "https://github.com/carvel-dev/ytt/archive/refs/tags/v0.55.4.tar.gz"
+  sha256 "4a970198c479330c49019be4ccb56513a58623e1e10300d1d188f30e14935a61"
   license "Apache-2.0"
   head "https://github.com/carvel-dev/ytt.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "8806061ed0fa191861235f6e6dd8964a65a6c3314e34fe251fb23522287a33bf"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26c958b6072705f2b5f99736988c66512ad1d683816103803654b69ffc413647"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26c958b6072705f2b5f99736988c66512ad1d683816103803654b69ffc413647"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26c958b6072705f2b5f99736988c66512ad1d683816103803654b69ffc413647"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "974da88c012968da79751db594567434b1b8c7e1f4ed00b1f297b86de1971525"
+    sha256 cellar: :any,                 x86_64_linux:      "3e5bc79a3b442accacc7f026b0978d45862c2031009b8258cb4c408208ae37a8"
   end
 
   depends_on "go" => :build

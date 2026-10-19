@@ -1,8 +1,8 @@
 class Wassette < Formula
   desc "Security-oriented runtime that runs WebAssembly Components via MCP"
   homepage "https://microsoft.github.io/wassette/"
-  url "https://github.com/microsoft/wassette/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "ed6ae36056fed2dc11f734623ca97f74159f648367b12c2d49c559b126f27ac0"
+  url "https://github.com/microsoft/wassette/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "62a8b7197a3193c604fa4374619529e2ec95e1416017863625fe9b1449453c48"
   license "MIT"
   head "https://github.com/microsoft/wassette.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Wassette < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "d3e950083e0c342a251d8711cf9db51e26ab38140e6ba7944021554e6db7efb6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef62c7ac5ad4d35d1341d27110d61dd581c599143237460b65d7fe3305c13974"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c00fb78d2effda46b3d6e418260abdac618dcdc239c202cf11199575db9b7c35"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "81d4110b0658d2fc2c14fb978ff521161785034e8ef3a6710809fe0681e770db"
+    sha256 cellar: :any,                 arm64_linux:       "4dad7b94d3d45624be3ce63d9d0651beebeeb956a84eb02238e1fdc8221fced9"
+    sha256 cellar: :any,                 x86_64_linux:      "7c853a29092ed9c65efa7732e354ec427277408c4c0e232174e747c632ad0d7f"
   end
 
   depends_on "pkgconf" => :build

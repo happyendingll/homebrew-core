@@ -4,11 +4,14 @@ class Gts < Formula
   url "https://downloads.sourceforge.net/project/gts/gts/0.7.6/gts-0.7.6.tar.gz"
   sha256 "059c3e13e3e3b796d775ec9f96abdce8f2b3b5144df8514eda0cc12e13e8b81e"
   license "LGPL-2.0-or-later"
-  revision 3
+  revision 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "1ef2c260ce62bbc58a9d71385068c7950a10ccf15b14a2abfebfe80fd939cc30"
+    sha256 cellar: :any, arm64_golden_gate: "afea12b155fa2547184e9bd141a4233248a3a450206d12b9a0750176e532f4fc"
+    sha256 cellar: :any, arm64_tahoe:       "a60842b845a7fd3e0ad73585b480df78179191296017ecd10761806968a62c15"
+    sha256 cellar: :any, arm64_sequoia:     "bb888bdb6f17cda6bca9801f286b8038b63f45298dd5b8f9948c8f51900907ec"
+    sha256 cellar: :any, arm64_linux:       "67091279cbbbaec014b36d797679a77090f1f7a76ca17ec560bcd67d3ef81320"
+    sha256 cellar: :any, x86_64_linux:      "e3af7824ad48ccca81064229d4f3062b3fb82173a204f8f8ebe44af3c1a8c9a1"
   end
 
   # We regenerate configure to avoid the `-flat_namespace` flag.

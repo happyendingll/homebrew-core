@@ -22,6 +22,7 @@ class SoftServe < Formula
   def install
     ldflags = "-X main.Version=#{version} -X main.CommitSHA=#{tap.user} -X main.CommitDate=#{time.iso8601}"
     system "go", "build", *std_go_args(ldflags:, output: bin/"soft"), "./cmd/soft"
+    generate_completions_from_executable(bin/"soft", shell_parameter_format: :cobra)
   end
 
   test do

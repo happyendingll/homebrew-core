@@ -33,6 +33,7 @@ class Calicoctl < Formula
       -X github.com/projectcalico/calico/pkg/buildinfo.BuildDate=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags:), "calicoctl/calicoctl/calicoctl.go"
+    generate_completions_from_executable(bin/"calicoctl", shell_parameter_format: :cobra)
   end
 
   test do
