@@ -7,11 +7,8 @@ class Render < Formula
   head "https://github.com/render-oss/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "89a8a7e77ccc262daff2d1cafd0b240c4dd9257cda014a884343c7bc1732bc83"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "89a8a7e77ccc262daff2d1cafd0b240c4dd9257cda014a884343c7bc1732bc83"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "89a8a7e77ccc262daff2d1cafd0b240c4dd9257cda014a884343c7bc1732bc83"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1c2fb6f8c3196450b53d7d288abdf51786e546248c05595afc17b101ccc0181b"
-    sha256 cellar: :any,                 x86_64_linux:      "e22522bf81ca7f128f16fd9f5578b0800f3d1f38c88d141c110479e618a00e38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "81de775d817671fd1999bdb1801e99f0c6b0a9a580e3db0e4b924d9b037679c1"
   end
 
   depends_on "go" => :build

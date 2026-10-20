@@ -16,11 +16,8 @@ class PcscLite < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f3dcd0787951e799f44e19f443d133e54939dc39450d28d4747020b4a5c4ecba"
-    sha256 cellar: :any, arm64_tahoe:       "21581ced532ed140a32fc3918d2bd9f4636314153f33ccc8504a60672703d4c9"
-    sha256 cellar: :any, arm64_sequoia:     "682a173b73f5a2e698ee2fa35687f16449cd934d79d21ddca875ddc38318e8b7"
-    sha256 cellar: :any, arm64_linux:       "9c5fd338e35936862b3a1ea2614c5d0280df0e30d3a3e00b0f5a9ad5a4ec528c"
-    sha256 cellar: :any, x86_64_linux:      "74ab0056416c91b78ffb153cfeb4f34a2fb61b48c769de2ffa3a32d1474ebe11"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4b260a379f3436a111b87739e7490d39d186f061b61e933d93be25a880b93d77"
   end
 
   keg_only :shadowed_by_macos, "macOS provides PCSC.framework"

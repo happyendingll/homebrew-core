@@ -7,11 +7,8 @@ class Dprint < Formula
   head "https://github.com/dprint/dprint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48a87656842532957c1502906b54603c5bace5512cb10e007e5a55935f2b1baf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2fbf7d7063df6ec01cc2d4620141045238183d78fb5046d97dc7480d4f0b0d8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "829d6289ca299ea990cfe0333331e8943b338fee57a5e2ce35fdf7f69648864f"
-    sha256 cellar: :any,                 arm64_linux:       "219265c4d02b83da9276b400ae0d5460bd8081c16e257b7bec1e352ab18ba3f3"
-    sha256 cellar: :any,                 x86_64_linux:      "ce51af0bacef07cb376d74f054c7d8feef3420d0a52343e3e090fcf184d4eabe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0710d664098f1f06cf68eecd8cd1136b55044438029878ea3d84768c38660ee5"
   end
 
   depends_on "pkgconf" => :build

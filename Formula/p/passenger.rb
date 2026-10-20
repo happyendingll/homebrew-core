@@ -7,11 +7,8 @@ class Passenger < Formula
   head "https://github.com/phusion/passenger.git", branch: "stable-6.2"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4b0eae8405bc2cd6e0755edceffcaa7939b9c31ba8e483da82893f77e9db2c8f"
-    sha256 cellar: :any, arm64_tahoe:       "c9d5b4e91e8f637de37fb39925d5120536f066bfc9843b156c8b520bdf864539"
-    sha256 cellar: :any, arm64_sequoia:     "a6156dd8150229ff7c3e0ac679a1fa325ea5088793d55f7c71f15bd623c07355"
-    sha256 cellar: :any, arm64_linux:       "d660ecaa6cb7a1c3b54c9233ea7ca269d7cbac26ca1a76eb601b44a96b74d024"
-    sha256 cellar: :any, x86_64_linux:      "d15e96f5910cd4f2a85fc848c5059f154fbb6dbaa6cc9715a7552a2f0d1d6999"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "843c08abdc2df567bc631f0ca71c1c8bc8dac3baf34a633b1c5cc1a380bee705"
   end
 
   depends_on "httpd" => :build # to build the apache2 module

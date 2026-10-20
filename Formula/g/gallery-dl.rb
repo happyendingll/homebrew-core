@@ -9,11 +9,8 @@ class GalleryDl < Formula
   head "https://codeberg.org/mikf/gallery-dl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2343bea0d4405b6aa63ff27cab0c544d8bd86d359e345973f2d47d4056b3cf78"
-    sha256 cellar: :any, arm64_tahoe:       "07210af70cf13f08ff430de66880a6933e9094317ba529d4ada16c78cafa70cd"
-    sha256 cellar: :any, arm64_sequoia:     "0d91966dba93929bc6c42a83e7cae2e5151f8b6925d34280570c6ad89caa011d"
-    sha256 cellar: :any, arm64_linux:       "55f7116cf36536f4e617be6560e7be8668ea7778de208df9ef22541fd0c7c896"
-    sha256 cellar: :any, x86_64_linux:      "4dfc4d37bd6a7068b0113e4b9a966401819adbebccd071d36f238a3db7eea292"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "25cb21e7e991ea71ae95a3937c5bdc44ee437a2ef2dc7116d330d0cdf08d40f6"
   end
 
   depends_on "certifi" => :no_linkage

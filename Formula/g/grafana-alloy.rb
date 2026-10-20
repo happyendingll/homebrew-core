@@ -12,11 +12,8 @@ class GrafanaAlloy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe893be4bb92572a9a78a6ecd9109edf726e9e63c3c300c8144910f9e179e08f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41727aa97e591a27dcfdc6d757323c48276202216c3aacf94310640d52160603"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a20633033bd60f5892541b721a55a37983188fa197239d044c12771446d722e6"
-    sha256 cellar: :any,                 arm64_linux:       "d3d5794182a26ec810ec87f62d11bf28b42ff95db3cee840320aeb8a2a8013ab"
-    sha256 cellar: :any,                 x86_64_linux:      "ca07149b7668619d2dfcd16d142d938e9737c057247f86b471082f17e2ef07f8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "60cf769deac64dddf6c42e1bf8d26467e7c87d2176f7d89c486200e27337ec3d"
   end
 
   depends_on "go" => :build

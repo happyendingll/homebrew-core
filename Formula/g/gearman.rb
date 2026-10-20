@@ -6,11 +6,8 @@ class Gearman < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "da498d8e5e0e1fa3fba4f9b80abbd7a16813a9927d9af78cb477d8f1a2bb0378"
-    sha256 cellar: :any, arm64_tahoe:       "032a27a02aa3dc453fbc8e53d63bb0e96fba75d3fab28c975b92f28ef09b99e4"
-    sha256 cellar: :any, arm64_sequoia:     "07bf9cfe00b8256dbef7c2675f0bf2ca775867020337163df1b0cf5abc355e54"
-    sha256 cellar: :any, arm64_linux:       "57aca997c644dbe6efabd1419d580d291e799bfd38919ea6bac498f8dbf5d486"
-    sha256 cellar: :any, x86_64_linux:      "6dbcf92bf03e5c9f8a58a644574d226a48311be20bccb3218ca80b5aa0ed27eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "22dc3b86d893a799b52ad98f34e67b78b2b217e46be303ce0d08d58b55074aad"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class B4n < Formula
   head "https://github.com/fioletoven/b4n.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7d88d63e8116cc2542c4711c14cfb92e54a7b5b0baec702b1f521717626f352b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8c4fa178946e9fc1d812c3ec36b73fcbef0990a1156d5cc5988cfb1c6d2b8143"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c02a3a57b5c2f2d40bd40933821f0d8d0c6244712f278467ce7643dda04fa0ce"
-    sha256 cellar: :any,                 arm64_linux:       "1fb4bf34c47511e3b0c8735c825af3d6d8af5f381a57306708af5030fa54c9f5"
-    sha256 cellar: :any,                 x86_64_linux:      "5023ee470e1d9db12de171726d8bdad2d8ad383c8429017994e5f45a5aa36ba3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "66f0cf099c6cee5ff7befc2ee4cb93ca64617a789d2bb41dd7ea834786f0997b"
   end
 
   depends_on "rust" => :build

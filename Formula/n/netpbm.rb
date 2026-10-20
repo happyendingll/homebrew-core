@@ -10,11 +10,8 @@ class Netpbm < Formula
   head "https://svn.code.sf.net/p/netpbm/code/trunk"
 
   bottle do
-    sha256 arm64_golden_gate: "ed9cb4f4f4594ef2c5d2afd7e5ba7bea80bd9d1bbb8d042302385fdce5caa05e"
-    sha256 arm64_tahoe:       "3e19506a833bc9090193d61b2c19b348a02ab377d743824f9d16db9e57ea1726"
-    sha256 arm64_sequoia:     "5c3d55c105decbc650943223197f02a6a35d08c9011a3ed8ce537332a1ff842c"
-    sha256 arm64_linux:       "cb22b0c20d45f0a62b274b8ce0d7c30d1231142f110cd8260007b7bd3f1b8bf6"
-    sha256 x86_64_linux:      "4d4afc6d0bc8f5806f2128fd96e868047b5f75b79e90b38f9367d8bb2ea47f47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "922965a35391bde7f61a2cfab3fad623669f1fc6e337b1e75165fcd8f41cbd9f"
   end
 
   depends_on "pkgconf" => :build

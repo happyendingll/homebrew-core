@@ -11,11 +11,8 @@ class Nng < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6a23df4b783b452c7376eb62aa6b43e0ead2a3139522f14a2887b72a738bb0c5"
-    sha256 cellar: :any, arm64_tahoe:       "3301e01ae1d82fb4962a41be1a9bbcaddf24aa366fd182f009f26c434557996c"
-    sha256 cellar: :any, arm64_sequoia:     "d1efd2236dee484683621428f4c8b569c36d8762b18fb948b18297999fb7bc79"
-    sha256 cellar: :any, arm64_linux:       "7e13311e7423747d8bac5e1420817f807d4bb7a29f06d6450c1a9de91ff716d8"
-    sha256 cellar: :any, x86_64_linux:      "6c7589529cc1b258a90f69c28015a5585e286fd52c1edbf56d8cf7ffb9a31527"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "5d978a748c55c5daa8288fe0db70fde1c92dc9be3c6c74794af5c7aade6df070"
   end
 
   depends_on "asciidoctor" => :build

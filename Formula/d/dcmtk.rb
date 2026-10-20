@@ -13,11 +13,8 @@ class Dcmtk < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "cd6399a121a4089fbbec6b09cf0bd99dbf3ef6e68650732a1e0b306676523a26"
-    sha256 arm64_tahoe:       "bf23acc9a0d33a5d1ea5c1b2a6da8ef3ef49b6cbdd5f2ec543ff91dbbfc40a6b"
-    sha256 arm64_sequoia:     "fad8788faceae37a90e72404877ffabf975024094c3bea61b12d7e969747489d"
-    sha256 arm64_linux:       "497449549b7c72e04cd36157b4fcb0628d0e25086e48e72ee8efa3b5d3442629"
-    sha256 x86_64_linux:      "4727ccad2f5ea0e2747dfbd138e54415c0ed1fca597a3eaa13e8873197afd07c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "ca5d789afbd13578f2a88e0231b402835e13e13e6b7e4df3101e084b2fa2b7fe"
   end
 
   depends_on "cmake" => :build

@@ -11,11 +11,8 @@ class Metview < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "55dea06ea5b4955dbb1487bf450a7582b5bd98b27bacefc4d63927253ce47a2b"
-    sha256 cellar: :any, arm64_tahoe:       "4057fcde198282a5df807e72dfd9ebca94d5eed333ee52d56231b0bf9dc4cddb"
-    sha256 cellar: :any, arm64_sequoia:     "2e41b93fda66bc5744d30db2fc8b0751513088f961be87d91bbf7602e9dd84bc"
-    sha256 cellar: :any, arm64_linux:       "0efe4526e5cefdfad2c78d90601f8a13d5972a79e64106b0af64790fb3adce3b"
-    sha256 cellar: :any, x86_64_linux:      "77a3da9cce7e0a31b7a3f68700f865d43469a31a8d835080f68796e105741ea3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "8f69678c5a5e0615a86985feb1611db92159af713d11f6d6cafe6f0c95883cb5"
   end
 
   depends_on "cmake" => :build

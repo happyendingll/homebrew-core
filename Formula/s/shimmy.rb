@@ -12,11 +12,8 @@ class Shimmy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9b29b42769b81af2c0a7e0c5848f5171ac955779a669e9e53f4718ba8be5c044"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e154d629e4bc0b71fe8b175b092f8f6f15d0af4b42506221c512ecd08b306374"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a7e33b7e2628e9c40137b7dfeb33ad378ab1446ba65b045fa0dbf6e5f1c79358"
-    sha256 cellar: :any,                 arm64_linux:       "b69916afa327967f4237b33433d4c41134b0fa972b92a706d93a2f1f24c17a9b"
-    sha256 cellar: :any,                 x86_64_linux:      "baa5dfa90a05bcdeccf7be569fd5e613cf758469560bd16e4440519a292def17"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "dc0d912182f9451df0b89667fe4d470b9b724af24f1f86acfd70787973fdd2ba"
   end
 
   depends_on "cmake" => :build # for llama-cpp-sys-2

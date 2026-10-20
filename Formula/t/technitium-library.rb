@@ -6,11 +6,8 @@ class TechnitiumLibrary < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bb244ea50399b9891ae553e8566cdd0bc75649823223c809d3eb79b7b14e9aa4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3786a0d640769b6650fb4e02404e8b361b3cdadbc276b74560ab9f2d26c1262e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd9ef5ae7dea6512ec2ae29a3016e4548a22cc990d428a07ddfc21f06d9d5b97"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a6bf98a335dc2004c08348eed07bc2b96b391ce3eb95122d5a51b1b3b2b3dcfb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "13e3ccc67a1c2bf59b423f2e4d744effc6d3f4032f1e8cdb145638b70d58389c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6af58baac11afc896cc8a0da43a0d34c13b593d3f9e186489617916423c9364b"
   end
 
   depends_on "dotnet"

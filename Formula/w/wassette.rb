@@ -12,11 +12,8 @@ class Wassette < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef62c7ac5ad4d35d1341d27110d61dd581c599143237460b65d7fe3305c13974"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c00fb78d2effda46b3d6e418260abdac618dcdc239c202cf11199575db9b7c35"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "81d4110b0658d2fc2c14fb978ff521161785034e8ef3a6710809fe0681e770db"
-    sha256 cellar: :any,                 arm64_linux:       "4dad7b94d3d45624be3ce63d9d0651beebeeb956a84eb02238e1fdc8221fced9"
-    sha256 cellar: :any,                 x86_64_linux:      "7c853a29092ed9c65efa7732e354ec427277408c4c0e232174e747c632ad0d7f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "612d09925a116301ce8d39f4d02998d81cd40bce4d1ab76479ac81a4924da1d2"
   end
 
   depends_on "pkgconf" => :build

@@ -8,11 +8,8 @@ class Termscp < Formula
   head "https://github.com/veeso/termscp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "229d4098d3139ed200796dbe72144d47366ec476de7b8621f77019eccf36c975"
-    sha256 cellar: :any, arm64_tahoe:       "74791107963ec3b77072b7c646b061d5af9cb25b454360f8412a0b0f9edc64b2"
-    sha256 cellar: :any, arm64_sequoia:     "db1dae93d335a3b99fd20da25b89b23ad603fa0327caeb9037eb9f3d4a5042e1"
-    sha256 cellar: :any, arm64_linux:       "ec6c0a71424e1b4d0c783262fe94af59e515884397da87f07d699fee2fd1429d"
-    sha256 cellar: :any, x86_64_linux:      "72db075e5c9f209242ee760b1bd18d6bd6596ae39e9610b6e71b26b860bc7af9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "40c9e5062cd332d1c6726f03c9df4188b4c2bd8b342662836f4f35bd676101d2"
   end
 
   depends_on "pkgconf" => :build
