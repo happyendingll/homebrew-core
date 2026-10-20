@@ -11,11 +11,8 @@ class Dartsim < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "7d746ec1477025edc137e589b1053793685fa41996593ab4e0a43ce40f49fafd"
-    sha256               arm64_tahoe:       "dfe2b76655c2513eab2f60e1768bf809703b639a795fe081857c9afdbbdc6cef"
-    sha256               arm64_sequoia:     "e4def02dfa8f947b1e2e607e46139592ba4785f63a14ba060346c0d86ce9ac00"
-    sha256               arm64_linux:       "629d9d734e03ff6c09f60e379ab9640080cdca4c55753da142c325687011cece"
-    sha256 cellar: :any, x86_64_linux:      "7cbec50a7e5eb8edbd903d750af3a289903a550de177e5ed650863cd5d284d57"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "f7671df4592b7c5a92ce3868698447fb5fef72a4597e20f5a616230809ddedd2"
   end
 
   depends_on "cmake" => [:build, :test]
