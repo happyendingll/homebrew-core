@@ -13,11 +13,8 @@ class PlinkNg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6b36e10047823c5a7878fd16226c18b1df9284aae17c7860b6b85328a0201c9e"
-    sha256 cellar: :any, arm64_tahoe:       "17b23b41fb6d08ef711ded4cf95a2188daddc2b7b0d770c5f15d898fca56a1b4"
-    sha256 cellar: :any, arm64_sequoia:     "26b57bc80cfc13cf302924b7344a9544de66231eb6358d378fc676e5bff62e0d"
-    sha256 cellar: :any, arm64_linux:       "67d4c9fdc5c008a7b660ee69ec174b9b7ff4aa0c6300b92dc2022ed2cc268727"
-    sha256 cellar: :any, x86_64_linux:      "67d7578574a3d202ed0f89782e0a6d91def91bc8906f9f8aeffb8b0e1669446a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "07202c0f4f79ad87b8820a34410938e02bd8c6df7c996798f77f0291478af174"
   end
 
   depends_on "zstd"
