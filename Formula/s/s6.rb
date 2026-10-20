@@ -7,11 +7,8 @@ class S6 < Formula
   head "git://git.skarnet.org/s6.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "13bc68dfa69cb632018545548b37673c0bc62b2d752e7f5be34e8d19e941a40e"
-    sha256 arm64_tahoe:       "d1055a78aee3f206636908c44fa1efdcbcb4b78395e497bd79f670ed51f60cd2"
-    sha256 arm64_sequoia:     "7fd232a6caacca72eb022646b320008142b9ad6288ee8066f8e81be14daca55d"
-    sha256 arm64_linux:       "9587a52cab4f67a1767c323a28c617bece2a8a1c9f5d33c23b1aa7c8d9fbf986"
-    sha256 x86_64_linux:      "5b62644f6c3154611b309fc0e358a258054f68267d265c81658b0d9b94fda5dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "1424904c3dce505f5d56cdd35c947d499d56f6b95676641b8d0d5a55bc2849ec"
   end
 
   depends_on "pkgconf" => :build
