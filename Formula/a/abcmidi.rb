@@ -11,11 +11,8 @@ class Abcmidi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3f3015993eccb6047f2d2224627ab0e1e21cd4905066381fbd093a440f714cf5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cf76ba43875c84c447e628bfa2a1752aded13e309e308edb8af230f44a343783"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1dbe97b2daa6d45e7d2402b6bc180254aa36bafb353d703d1ba2c155ed96ea45"
-    sha256 cellar: :any,                 arm64_linux:       "a518ccbb355d4edb7eb30391df4bd3a02f21cbbfc361480215eb7830d054405c"
-    sha256 cellar: :any,                 x86_64_linux:      "95a08f0a947024cfb69e3a637cf6999c9d0e9d6caf656f0c89651423bacc6a1f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ccbc5401de1bd36325d099b4096fcf16799762541752c422cfada4989e09b0f8"
   end
 
   deny_network_access!

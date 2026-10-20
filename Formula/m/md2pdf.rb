@@ -7,11 +7,8 @@ class Md2pdf < Formula
   head "https://github.com/solworktech/md2pdf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4dd7e9bb5330f38c08accb0af6d1afd11ab753d0e8a0cae06f8605a7d538d3b7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4dd7e9bb5330f38c08accb0af6d1afd11ab753d0e8a0cae06f8605a7d538d3b7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4dd7e9bb5330f38c08accb0af6d1afd11ab753d0e8a0cae06f8605a7d538d3b7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "59d4b2d8aa59b8ab7306209dd045cf3453c7c3918dc610b405a7ecd223c2e4ce"
-    sha256 cellar: :any,                 x86_64_linux:      "87e2913caf7e4dbac30503bed462b198a54c8f4516fcf22860f672fc8ef618ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "84eef166bf5312a420640ce879d4087d6d054a09b0f1128785ec8bb6a6ca4812"
   end
 
   depends_on "go" => :build

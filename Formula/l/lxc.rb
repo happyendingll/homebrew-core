@@ -12,11 +12,8 @@ class Lxc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "282193436ef282895b84e42ddb64cf58e47cf59392e3b4781cdd1b981d9ce214"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "282193436ef282895b84e42ddb64cf58e47cf59392e3b4781cdd1b981d9ce214"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "282193436ef282895b84e42ddb64cf58e47cf59392e3b4781cdd1b981d9ce214"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7e88613b3d095da9b232fd807458a691624bef005534ce2c1b8ee367bf38e015"
-    sha256 cellar: :any,                 x86_64_linux:      "2f113c483b8755802334a0784900e499db1cc2f9829dd85d2e7a2525c2b98152"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d5831e50a03cf8d7ba022ed0912650484793b4a168e36a24ca9e9484c9b375a2"
   end
 
   depends_on "go" => :build

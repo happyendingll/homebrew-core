@@ -23,12 +23,8 @@ class Spim < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "bfa493c9c80e365fe5721ab6226f244528ab8cebfe6dca8899579d1ca8eedf1d"
-    sha256 arm64_tahoe:       "fecdc6101845049336385f58800dc0c996698568336e6d3165f3c673f18f8f7c"
-    sha256 arm64_sequoia:     "0ee17f876d15fd6b88452e7d19f2c1a182ce248aef26c1182deee6ba30538d45"
-    sha256 arm64_linux:       "db5606732a7bb6086e650d673c3b4c22366a4a4cf6cd777a0681f16b18bd5793"
-    sha256 x86_64_linux:      "c1b178dd6ac7d8be0bb3fc1c5cde0fa5da7ae94159ff69013a050fd0051676ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "4a6cc6d0ed9e10405a2ca23dfc04c49f7511b9ccc890b434b10e0107db2c52d5"
   end
 
   uses_from_macos "bison" => :build

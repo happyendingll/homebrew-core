@@ -7,11 +7,8 @@ class Zls < Formula
   head "https://github.com/zigtools/zls.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "999e91008090c76179cd10f9a51300c4aee17c362b569f3b34dc0e13a6679823"
-    sha256 arm64_tahoe:       "d997a2712be7e252c15bdab97ec3508f4cf05cb8918e1fdcfa5874e36b3326cc"
-    sha256 arm64_sequoia:     "65246a8d4c16a17044328ba06466e4e1f6b9eec7e06691db96a6c9801b8ac018"
-    sha256 arm64_linux:       "7a76f669a2b4917028a6bef870a683b403e0b4e688ab136c55d82adf5f7ef48d"
-    sha256 x86_64_linux:      "d54feacbe9cd71284d5d907b3fc79e20ce65e01eddb3f0a837091e5dd4257908"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "3a1a430acb43a6edb7c8799643754b8c0fc7d2499349664920fd0662ba92e7bb"
   end
 
   depends_on "zig"

@@ -11,11 +11,8 @@ class Dillo < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9e53e2905cfea454df590baf4ffba3565df42dc44997b2beb634f527d4ff5aea"
-    sha256 arm64_tahoe:       "714182643dd7271f7db53ea0a741f169814781a5ed38dfce7cc4c00ff8553145"
-    sha256 arm64_sequoia:     "fb195740b308915c58205ea9dd0a0b2c8984671073a4325af5d5fe924a64d5d5"
-    sha256 arm64_linux:       "f351f9265065ca1f811fa2bedf39eb14d5127004d3e6e926f84d396f5b82ba70"
-    sha256 x86_64_linux:      "bafdfc3c73412595199131270a760b6c80a2f34d5432263b0caea40a7112f11e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "e6ad426a68f3bb7388ee1fcb66bfc4e4c005e8ad7f652cfeb514f74c7e981e1e"
   end
 
   head do

@@ -7,11 +7,8 @@ class Skalibs < Formula
   head "git://git.skarnet.org/skalibs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f9ea2841a10c1800bfe3b67edc23d2949f5f9d9cd6d449f9369f946451e7ba04"
-    sha256 cellar: :any, arm64_tahoe:       "4f07e606d0e15631dcfc2f81c210857feed5e4281ed28a5ca31e411eedf7f0b5"
-    sha256 cellar: :any, arm64_sequoia:     "1d2ae8a01779354d206527671c810e1be4d62d662c9d24803b6e84d6583952da"
-    sha256 cellar: :any, arm64_linux:       "ec8445c97a6082844f919e2c4599e9c524b4ab85bfc6d3fe2949da9efbf06687"
-    sha256 cellar: :any, x86_64_linux:      "c02de2dbba6a95bebabd422e6b7ceef7ceca626a2934ea1f047f15a2b29e5aaa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5100090d403212835eedb55501417f51b63ede408fa15311af6d7f7e1ce71967"
   end
 
   def install

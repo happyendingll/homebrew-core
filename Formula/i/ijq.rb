@@ -7,11 +7,8 @@ class Ijq < Formula
   head "https://codeberg.org/gpanders/ijq.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "718a953482cc92269a6d2de9959248b96e4524b1270ecbb00b8a79b634a1a289"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5e79b77282979f791c5348745b92f8295c818fbab9525b17f6df0ed30ff59f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "295676b10bd1564e13a09d8d59f6029207944adbdb3b940fdf2c47214fa4a9fb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a3f6f849e4100d19392308b6824b032f6784677220d0e93897523c692660f4ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7c819542c75d1bf62815fa87abeecf6e838240ee3e1ae5a1586dc8168cd2ff53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2daad25951d7a836cfc7c4dd2b2f047e56f2fc25d9276b32d55647819b778380"
   end
 
   depends_on "go" => :build
