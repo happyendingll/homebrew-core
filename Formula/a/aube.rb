@@ -11,11 +11,8 @@ class Aube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e421f92c77e91422c304ec53a21f3fa4ece13005df5d53cdc123b0dc9ebe6b31"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "38c0e83f7bba003d7edf4b7c1c80ed0b9d507f851fd5f4f4c68bd64cd6d31ed3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "abececdaa441488731095f65174a0629429bd66d4921dbd1ef3d8892ac9db798"
-    sha256 cellar: :any,                 arm64_linux:       "66fd9883c17321d22d7eb0de9ea8254a6c419b721b415c2bcb0c6f65109a4e19"
-    sha256 cellar: :any,                 x86_64_linux:      "b8a8eee1037e4a255f9e505db797c30173438a4415d00353245cfba2b43beca4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "57df9f1dcc3dbc615543642e80489ed6f3cf3921cf2c3c596f8de9711b7c4a61"
   end
 
   depends_on "cmake" => :build
