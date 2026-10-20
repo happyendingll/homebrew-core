@@ -1,13 +1,16 @@
 class NetworkDoctor < Formula
   desc "Network troubleshooting TUI"
   homepage "https://github.com/heymaikol/network-doctor/"
-  url "https://github.com/heymaikol/network-doctor/archive/refs/tags/v1.19.4.tar.gz"
-  sha256 "1c77fcdfd8899b691b41513379ec7573dec14595cf1833626b7f9c82decf2168"
+  url "https://github.com/heymaikol/network-doctor/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "c07b76f43623c528292cc6facbf51a8f512776d04ebd8aa80e45adb05c326527"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "7ef45dc6884ff2277b24944af8af16b3ad787425ce243c3cd8a0eaf625309af7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3453d56243ad0a971a7fbcbc6a321a406c5d4a5b2e2515645758fafdb01cafc8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3453d56243ad0a971a7fbcbc6a321a406c5d4a5b2e2515645758fafdb01cafc8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3453d56243ad0a971a7fbcbc6a321a406c5d4a5b2e2515645758fafdb01cafc8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "43e69cec067fadb86e0f1fdb15ce153cc118a02ffebc62bfedaf2ae59e08da83"
+    sha256 cellar: :any,                 x86_64_linux:      "68ae2f94c20083282c9de4a54b7f91b18e423d1bf5639141a8ea97fcf603b9b2"
   end
 
   depends_on "go" => :build

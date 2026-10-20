@@ -1,9 +1,9 @@
 class GoAT126 < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.26.9.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.26.9.src.tar.gz"
-  sha256 "9735d7dcdb65b35d3fa577f04064737c03b89cf1a2b71e6e69fe2f3c6f9fd4ca"
+  url "https://go.dev/dl/go1.26.10.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.26.10.src.tar.gz"
+  sha256 "fd63e883ba2f2bfca93c1646b31ebef63e2b1e4d2b317c9789d976a68d81f36f"
   license "BSD-3-Clause"
   compatibility_version 1
 
@@ -21,8 +21,11 @@ class GoAT126 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "27c1bc6739ef46c3ed829f59b7e5753bf1a2f016cd08dffdbb8abd74a914eaa4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "099d8441c76253d9d3aa9c057597d4e9feaa4fa80826fbe96f56790ef590500e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "099d8441c76253d9d3aa9c057597d4e9feaa4fa80826fbe96f56790ef590500e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "099d8441c76253d9d3aa9c057597d4e9feaa4fa80826fbe96f56790ef590500e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5d80350a37fd860c05222ce884f57aefc381bcc4616172facc7f906efac1f2ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3cae21734bfa28285f480327b576138cb80c550ab20fbbe26a9c18e2484560a0"
   end
 
   keg_only :versioned_formula

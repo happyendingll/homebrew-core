@@ -3,13 +3,17 @@ class Xxh < Formula
 
   desc "Bring your favorite shell wherever you go through the ssh"
   homepage "https://github.com/xxh/xxh"
-  url "https://files.pythonhosted.org/packages/d6/ac/fb40368ff37fbdd00d041e241cc0d7a50cdac7bc6ae54dcb9f1349acdde6/xxh-xxh-0.8.14.tar.gz"
-  sha256 "7904c35efdff0a6f50f76b30879d3fbfe726cc765db47a1306ab2f19c03fdfae"
+  # TODO: check if we can switch back to PyPI in next release
+  url "https://github.com/xxh/xxh/archive/refs/tags/0.8.16.tar.gz"
+  sha256 "a8100a831049be3131146da6a26d8cdb2fb15afc8d637521fcbdba37a3429a50"
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "16c340b3589a296d665c70cb29da808762ac0e075c8760ae11b01dacdf2e0b95"
+    sha256 cellar: :any, arm64_golden_gate: "43ffd6bfd6d48c4045309e9f2cf1913dff652797c5ff96aa08cd2b7896dab794"
+    sha256 cellar: :any, arm64_tahoe:       "c1a547e72717040e794c210a7d4e26220062dc39f9a27a3b84f78ef4f16745cf"
+    sha256 cellar: :any, arm64_sequoia:     "6d70f92dd850b2d888181945c58f678d171a386a4286d98e3773dcf7609de39c"
+    sha256 cellar: :any, arm64_linux:       "dd978859c9f1f98235abc247aa4ae550d6b8cecf43ec283460fc6aa92d487c00"
+    sha256 cellar: :any, x86_64_linux:      "7f788beb5e72d70cbebf2e193b84c16088028950e79fd9c0c58750ab5e59c1da"
   end
 
   depends_on "libyaml"

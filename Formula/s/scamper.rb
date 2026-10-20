@@ -1,8 +1,8 @@
 class Scamper < Formula
   desc "Advanced traceroute and network measurement utility"
   homepage "https://www.caida.org/catalog/software/scamper/"
-  url "https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20260902.tar.gz"
-  sha256 "a2c5bc636d6351a395f57e121b4d813f46c001e7b831b538fd467b9cbc7625de"
+  url "https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20261019.tar.gz"
+  sha256 "83fedacbea65c03d8ef754e0240d4dbfc2efb0cf3f62a5980d0d213c807c7698"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,8 +11,11 @@ class Scamper < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "469fc6af521c42a9f25bfcb12004337615872307e07288b94613c96a4b10dcf0"
+    sha256 cellar: :any, arm64_golden_gate: "f7a89c6e154c58941e99afa0f4f59d10aaee5fbbb28e6b190099d21c591e947c"
+    sha256 cellar: :any, arm64_tahoe:       "c3bd83158641a8b1e076cc75594943b74c48e9b91a830c364b26b85454eaa4bc"
+    sha256 cellar: :any, arm64_sequoia:     "aabfbe3969fd02d1d8f888f8c3abda8d7553e312f79f1925e65cf59df5bc73a6"
+    sha256 cellar: :any, arm64_linux:       "bd69a032f129ec03168834738774eee614235efb3ccf0ecde9eac2544471115d"
+    sha256 cellar: :any, x86_64_linux:      "4ea013d2c32064c1a119de0e742cc1198f9613466120b90e99084f485b8576c0"
   end
 
   depends_on "pkgconf" => :build

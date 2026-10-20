@@ -1,16 +1,18 @@
 class Pillow < Formula
   desc "Friendly PIL fork (Python Imaging Library)"
   homepage "https://python-pillow.github.io/"
-  url "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz"
-  sha256 "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce"
+  url "https://files.pythonhosted.org/packages/ce/a4/9cc30690a394a8305e8be4c9036aa16d0dfddadd09079860b582f562496d/pillow-13.0.0.tar.gz"
+  sha256 "cdcd1ba258178f7356d74170c9a81ba4eab6a5d55748bc402a5a2a6fe6be3510"
   license "MIT-CMU"
-  revision 1
   compatibility_version 1
   head "https://github.com/python-pillow/Pillow.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "a7a1bd7662a6f1c0db7a89984337229561e65aee20fe5d2c499c7800cb47bc48"
+    sha256 cellar: :any, arm64_golden_gate: "95f2ea71a71bb7bdd7452dccb088b26b92786f7eb72331e5971be97a2170deb1"
+    sha256 cellar: :any, arm64_tahoe:       "d681aa28322831e580d8711e1e2108b32267d637fc556ed84bbd5f679c7e769d"
+    sha256 cellar: :any, arm64_sequoia:     "0f5d9c2f49e51771b595f75ee188894c68068b26038f6bbd0bec566b6156a866"
+    sha256               arm64_linux:       "539a6ea91bc118114f8faafb3d7384e3f0bb54be8b182e43753748704d6b06e0"
+    sha256               x86_64_linux:      "c25e0e751300132842ca1a5bd4774838006751c067c07be47403566e6d55421b"
   end
 
   depends_on "cmake" => :build

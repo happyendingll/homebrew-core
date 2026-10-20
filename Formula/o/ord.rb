@@ -1,14 +1,17 @@
 class Ord < Formula
   desc "Index, block explorer, and command-line wallet"
   homepage "https://ordinals.com/"
-  url "https://github.com/ordinals/ord/archive/refs/tags/0.29.0.tar.gz"
-  sha256 "94e86c8202d3fb660f494d33b79017d3226baa9d8f3a2e3147ced90189beede1"
+  url "https://github.com/ordinals/ord/archive/refs/tags/0.29.1.tar.gz"
+  sha256 "58aae0aa6bce2cb022de51a9c0e36d4185945eabfb202e764bf1230aa564cefd"
   license "CC0-1.0"
   head "https://github.com/ordinals/ord.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "876172d8d33927c201deac89d16bc4d257d91d1cabc596216ea8077145ad75b8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "feb807887702429fd13df6bf5200a3d40b81661f036e3cf39e63e19401e45040"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bcaa804722edf48ae2ea0168957fb27013f1c7e4ddfff7d11997b7d97a7a7baa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e2648d262b9c0bf85ae5a027480b038a23c351dff1ff5040bc6160433410996d"
+    sha256 cellar: :any,                 arm64_linux:       "f909eef225c193c254758e71bd0d2d760d0109e486b96b9cbc5cb9617520022e"
+    sha256 cellar: :any,                 x86_64_linux:      "88812edfe4feef99ab05c792b004c1b103dbe91816c173a970e55fb4dd7b74c3"
   end
 
   depends_on "pkgconf" => :build

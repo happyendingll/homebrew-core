@@ -3,8 +3,8 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://archive.mesa3d.org/mesa-26.2.4.tar.xz"
-  sha256 "bce5f7fbebb934373b86c999a064d52fb5065878dc57f287f95346648ec832e9"
+  url "https://archive.mesa3d.org/mesa-26.2.5.tar.xz"
+  sha256 "794b3d1729075dae7ebd47c7283b7ca0cdb5dec668f7f11cc0a5d82f6138a0a5"
   license all_of: [
     "MIT",
     "Apache-2.0", # include/{EGL,GLES*,vk_video,vulkan}, src/egl/generate/egl.xml, src/mapi/glapi/registry/gl.xml
@@ -24,8 +24,11 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "197ae8894ea9fad758244fb58f0c36d2d8b508600d4238036d8fe4bd44db95b6"
+    sha256 arm64_golden_gate: "710f64bc7fe30d1f8b355271fbdd4e466b2ec99c6aaf5f24a0e2dfe3f76d6aad"
+    sha256 arm64_tahoe:       "f05d939a5681c706eb00eaca9deefed91b71b6a9f62536843ee88f144622b759"
+    sha256 arm64_sequoia:     "0c21ec4fa20a239b12c5490d6de9c0ce57f8d521d47408ae295587d1710d3a20"
+    sha256 arm64_linux:       "2a1547438da4741e84f2ad58d645ec2df5b4dc315998c69cb308b793a4b2e77b"
+    sha256 x86_64_linux:      "e30e9ea95ce74c4421fb8decf14105c8b8c3051ffbc315a4de2ddcabb5457814"
   end
 
   depends_on "bindgen" => :build
@@ -40,7 +43,7 @@ class Mesa < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "rust" => :build
   depends_on "xorgproto" => :build
 
@@ -93,8 +96,8 @@ class Mesa < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
-    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
+    url "https://files.pythonhosted.org/packages/38/9b/e422a865e1d5d57d0e509b4e0bf1c1a70a7f6382c29a5aa428df994c8bc8/markupsafe-3.0.4.tar.gz"
+    sha256 "2e9ad7dd851bf45fab9f75cbff4cb493fee9979e8d8c7c9c3ee119022518edd6"
   end
 
   resource "packaging" do

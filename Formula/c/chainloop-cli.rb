@@ -1,8 +1,8 @@
 class ChainloopCli < Formula
   desc "CLI for interacting with Chainloop"
   homepage "https://docs.chainloop.dev"
-  url "https://github.com/chainloop-dev/chainloop/archive/refs/tags/v1.125.0.tar.gz"
-  sha256 "2906c9c0016f6dfa22a6a2c2a505a5c1293a6161bc43f227d3bf382393081b7b"
+  url "https://github.com/chainloop-dev/chainloop/archive/refs/tags/v1.126.0.tar.gz"
+  sha256 "c36dc824812684a7c73095fd2ad253d4bfa685cf7845f1746127a8cd8713cde5"
   license "Apache-2.0"
   head "https://github.com/chainloop-dev/chainloop.git", branch: "main"
 
@@ -12,8 +12,11 @@ class ChainloopCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "1f0ad00fa17176a266b70dfc127c9f885c575e1e7c8afbc8b6e57c916474e798"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2f5a5e388e5b79506a6c3468bdc1bc3f16c06b4ba788b48525e87c0762f84952"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2f5a5e388e5b79506a6c3468bdc1bc3f16c06b4ba788b48525e87c0762f84952"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2f5a5e388e5b79506a6c3468bdc1bc3f16c06b4ba788b48525e87c0762f84952"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2f369694ada605132af1fad00c719fe2504ead2001c8bb668f7b7fbe0c427d6f"
+    sha256 cellar: :any,                 x86_64_linux:      "b5b6a209a4edf1065ff7e52bc3fb9e767b71f590a6a961d7135b97082cc04cae"
   end
 
   depends_on "go" => :build

@@ -30,6 +30,8 @@ class Thrift < Formula
     depends_on "zlib-ng-compat"
   end
 
+  conflicts_with "fbthrift", because: "both install `thrift` binaries"
+
   def install
     system "./bootstrap.sh" unless build.stable?
 
