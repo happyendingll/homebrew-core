@@ -9,11 +9,8 @@ class Streamrip < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a6615144922f18822aff2ab2ad3de62f196d3bd185461afcd11fa2a5cade61a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f12de47b8857aa9fc99178607f80cd3b1c5d23a9b5b143e15c214a1bd04d16c8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd1990c7fa67a2384d1559f6005bf435c642061e5ab468b03452d87c9837add2"
-    sha256 cellar: :any,                 arm64_linux:       "d7e8318d15f57f7d3949f691f3cc757de70981de24740059d05e744f77fcb2bf"
-    sha256 cellar: :any,                 x86_64_linux:      "4bd789ba246e5070d77d0d68f30a2babe4199007d5ff64a3f06576e4acd0e146"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "597d1420eff0dc2532c4fdc12dcc8aa1a118e8ec5b4d0755a10f59056edd85e5"
   end
 
   depends_on "certifi" => :no_linkage

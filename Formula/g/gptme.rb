@@ -9,11 +9,8 @@ class Gptme < Formula
   head "https://github.com/ErikBjare/gptme.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e18f06ff5367309ea27f51d75e1a14e5539085c75b3c7f9cfbd5f758f74bd1ba"
-    sha256 cellar: :any, arm64_tahoe:       "1c9d53762ef665c890be91d20e4207f49c3806639f0448eb8d0d1b8128b84ece"
-    sha256 cellar: :any, arm64_sequoia:     "4284e06d3479438af349647bdf615d6578ed1ede7d8e27f20c60382421dea459"
-    sha256 cellar: :any, arm64_linux:       "5a6fa4df400530763cc55cf05c5cd66ef4563d7ea4e1e1e0c524c91855e5aa10"
-    sha256 cellar: :any, x86_64_linux:      "84b6ba0a6d19b8f38fd09a8a435c4a114f9ee2c1b51e41f9c719a11959646ff3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "d8d59d4e5ac78a1185505cf37b8979edbec46214954f930e7475806f38a3b017"
   end
 
   depends_on "rust" => :build # for jitter
