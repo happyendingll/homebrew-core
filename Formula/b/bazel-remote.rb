@@ -7,11 +7,8 @@ class BazelRemote < Formula
   head "https://github.com/buchgr/bazel-remote.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cf3efbae3bf7f9892e0562be8305ba6f9c60c30ecda3a26e6c01e1641a0bac2a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "71c7ee727cd4039693b067a9b05e79b721c8016c0278b5c1c154f93641a15239"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "99964b04e4b93d0d888bb30bfc7cb15ec8743bf92b52b8952dd6005c1c33dd48"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5192a97b6590ff212acf4b882fbfc0eb152a87219a25d8dd66e5c8338f5bd753"
-    sha256 cellar: :any,                 x86_64_linux:      "b1960915ff290394492956a6d2da84eb1fd3aaa859a6a57c666e6722a67ab1d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "20eab4d9d1a6e8d3aead793fe78738f553234db8eff590e807ab04d08cfc3a53"
   end
 
   depends_on "go" => :build

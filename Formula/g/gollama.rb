@@ -7,11 +7,8 @@ class Gollama < Formula
   head "https://github.com/sammcj/gollama.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9f65ea39008a348d9d8efcfbb0e124aa68c62675d77d2b07a8b6c2d8fcc0b73e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e65cc109b52dd3d18743cd8bd15c1892981dafbf7180f055a9f65885837f3a9c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2453ed1c519e0efb69e6dbc564f4c154c93a9f7bca028a790ca559637298ede4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6cdc13898f529a94afcca48bee301c68672f8c6b2ce0d075b0434c696fee7c05"
-    sha256 cellar: :any,                 x86_64_linux:      "d85a0fbbabc7628d235c4ab92d25618e12c1f2a0705f4c773fd819cc0689300d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4fbefd49a01ae7666424991578aebd25a4f3aa30d62b98f83bb782c2bf007d93"
   end
 
   depends_on "go" => :build

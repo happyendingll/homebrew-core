@@ -14,11 +14,8 @@ class Kyverno < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "67d311a6f158a85e5a6740172b3e7aaabda2934806ab1a2478b3f2ecae5c4d25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6f2145f577c4131e72c57f0474e9d100cd4bf384f215fd47f0e6d33723c7f35b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1bf9bfc8e6cbbf2e421193e76aebcbe44e734e2479cfd780a6fe6595cf2be987"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "22dc9b4c2522c00ed451539161194c96ccd1856837669afad01dc18a17bed29b"
-    sha256 cellar: :any,                 x86_64_linux:      "20a48e61baf679f328a8ececac1e98369d7675c214ab855905fc56b604f1a846"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6fdf49705f67a584e530e0a55275197b5192b8e793717ffc75f6dbd48c94a5c3"
   end
 
   depends_on "go" => :build

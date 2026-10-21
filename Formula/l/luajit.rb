@@ -31,11 +31,8 @@ class Luajit < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "693cd60392ed5f5bdb079d8da159ad1ebb5944c3f051e2c987a284bd7eef30df"
-    sha256 cellar: :any, arm64_tahoe:       "da122b1da88dc72edb0c0d70c1184920e512a8d9f5077e8b63f43deae306bdf4"
-    sha256 cellar: :any, arm64_sequoia:     "e4ee1e21b4fa8a5067820156db556624f09497c158e36074451068fe796d1e9c"
-    sha256 cellar: :any, arm64_linux:       "51cde353e3f60640fda722dba29b0633bccab02176ac4d9c2d33daecce5b81f6"
-    sha256 cellar: :any, x86_64_linux:      "42773677e8f0ee890b96bedf2c843ab6c6452359f2fd64ceb0b1951bf72a9838"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "9a6ecdbb7dccdff379bfee716083b263366b2407057e00d1b7cfbc71fa3ce5a8"
   end
 
   deny_network_access!

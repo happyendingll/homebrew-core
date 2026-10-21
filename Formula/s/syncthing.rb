@@ -12,11 +12,8 @@ class Syncthing < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "62ff123f2be7ddec236279324354bfea2412641ee45a5c1f3daf2254a4c836c9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0c1b0fa89bf007e4170322d0070555c89b72be06f56d2001378c534f01c807f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9090a496ae06cd4c0f6f55d0b695b7d784c132269257c426c72daabfc43dc3ea"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f756645bb12c7ce359aa7ae5706fecc69c2ed1a09bbee4d46e98bcd71454c39f"
-    sha256 cellar: :any,                 x86_64_linux:      "2691a3754f48cf1b9c06c19ffe6a0498035399bcb269dc3ec9ea70c0cddc7e10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7ec8aee095a891d82f1c0723d6c0674e6c345b418d0817533c70c72867b352d9"
   end
 
   depends_on "go" => :build

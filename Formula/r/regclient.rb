@@ -7,11 +7,8 @@ class Regclient < Formula
   head "https://github.com/regclient/regclient.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dfb3204f430873c6f5a7bcbbe605fadbdc26927139c2a1dbbcef5c53a3347487"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dfb3204f430873c6f5a7bcbbe605fadbdc26927139c2a1dbbcef5c53a3347487"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dfb3204f430873c6f5a7bcbbe605fadbdc26927139c2a1dbbcef5c53a3347487"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a0c47b606c25f98f79076a1ac81736a806502f0b95a72cc6891d191cb889bf4f"
-    sha256 cellar: :any,                 x86_64_linux:      "b8803ecebbd1a59d25144f8a44609e8052f687ae571c60f2b820102e9863acf2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2ee94e2e300d3f8c18ba4b89b638a6131c375a01536e461234a9ec151ee3bffa"
   end
 
   depends_on "go" => :build

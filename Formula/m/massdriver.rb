@@ -15,11 +15,8 @@ class Massdriver < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a1801730ccfb81683f9fd08681e96e841e2414f4b310ea382aca337795257793"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a1801730ccfb81683f9fd08681e96e841e2414f4b310ea382aca337795257793"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a1801730ccfb81683f9fd08681e96e841e2414f4b310ea382aca337795257793"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "79570fdbabe4936b074c6f70aee08d4e74deac3993befcb423bd27205eb85bf9"
-    sha256 cellar: :any,                 x86_64_linux:      "3b46e2a7cb6bb60af766da631b7d67ec6213e7d02d4304dd7add8bdd74e88621"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1dc4e490373379e3e943b27c993d1c6116f09ddb88cb76ee8501d9acf7e63baf"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class Pypy312 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5b60fc781c5db0d801194a7cba1e5e13560fd597e663c2e14132eed313442831"
-    sha256 cellar: :any, arm64_tahoe:       "e3c607748e82b07838bb1fe691ff7264874e596bee15aadef20c410d2bb636f4"
-    sha256 cellar: :any, arm64_sequoia:     "79e8031412629b175a9685cab2fe51a86791a17331bfe2d95baba81372336c7f"
-    sha256 cellar: :any, arm64_linux:       "d4501020fee29afdbbd43d296cb405eacc76e96ac952c67a5c2a18c44919fb78"
-    sha256 cellar: :any, x86_64_linux:      "24c46483c77fb72d9a2980df39793ac8f1a8a4e9c70440db36efb744741e0d8e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "b66908f310916a1a4613d674be4d7b5ac9b67428c0be32db47072eb372d37805"
   end
 
   depends_on "pkgconf" => :build

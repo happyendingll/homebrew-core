@@ -7,11 +7,8 @@ class Biber < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fe83fcf2b2966d87e30ff12ed6a11ee38225598ff3103d185e69df34279bbbdb"
-    sha256 cellar: :any, arm64_tahoe:       "a89d5a44f32f29dd167b8abdfddc5656aceeae49f39618143a25ef4087a76b6f"
-    sha256 cellar: :any, arm64_sequoia:     "4534d8a7164307634cbbea6c68eaa61a3c33e76301f6c39a19e6777022f07720"
-    sha256 cellar: :any, arm64_linux:       "d141089193d6bae8c82a9864fc581e8d3f75f281a63e1d7c1142904951a49838"
-    sha256 cellar: :any, x86_64_linux:      "17020b2b91ca32d72b37223489394772b1ce0b32c7ac7092b356d92b812b76b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "2912d61505ad173d2e092ea8aaaecc4f0cf725bdefe89553fb1ae14e8b2de55f"
   end
 
   depends_on "pkgconf" => :build

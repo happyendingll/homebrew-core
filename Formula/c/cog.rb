@@ -12,11 +12,8 @@ class Cog < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "203ea08caaf1524d4e93005b0c623e19387f9f28e0962152a1e34d2e2832bd87"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cb57f8a893226767dd2d900846e960d9d93e050455159174174f4ce5ae1f4a4b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a5fa638a6bd2fd68c5b851022e041681fd5723a35098f41b01026ecb0899239d"
-    sha256 cellar: :any,                 arm64_linux:       "07e86cebebe39c5ee3bdce1f476c5870bd746abecf7ea5aaf39a8452d4ab7423"
-    sha256 cellar: :any,                 x86_64_linux:      "b8917602fa997da0af519bbcda81a44b8428a647b5860d38e2e460df3f263741"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "52f6e32f6f6d65f488d10de04a4142ad206b93a001a35d91a2b929aa4efc16e9"
   end
 
   depends_on "go" => :build

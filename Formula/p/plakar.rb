@@ -11,11 +11,8 @@ class Plakar < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0538efac4d572f0c18455ee66140828b0964769c1c2d59c5b288be08ff7e2087"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d90873ca05bd07c45b169d88a05f12a968d951f4e129efdcb6042b4a80b0f74"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7ef02950db3917ed603d22fae51efc34458e21e9a96b428f2a001f7ddefc95b0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "235d64feaf65d4edd7bfdc03984ef46cd1652c7428bfbc5b4b2e651101e39112"
-    sha256 cellar: :any,                 x86_64_linux:      "15afb82e80a9d6c2ccbe8a7126e722d898407de022265539b7489edbdc8c7619"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d02710bc48e603a396b735084aa867ba6e3f53f6a6bbffd031e36668de3ffeb9"
   end
 
   depends_on "go" => :build

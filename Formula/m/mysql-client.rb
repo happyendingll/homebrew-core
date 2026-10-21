@@ -12,11 +12,8 @@ class MysqlClient < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1448e2cec677d0ffcfecc0b39d9f22fe2d1d7241dc603bf7a3ef8562c50d6279"
-    sha256 arm64_tahoe:       "1014c1eba3a9611d464abdcfd204dc54f8e2d44ca0b25e7a014504b5eccc46d9"
-    sha256 arm64_sequoia:     "ce20251d4ed4d0f4d02b8cd08c899604b192d2a6ef80a71453f9e8a0259945ba"
-    sha256 arm64_linux:       "38f815111faffdce34b6326a53350296fafcd65fe1737ec0e8156c322f948cf4"
-    sha256 x86_64_linux:      "43204ebce82b3396a61226368d0628aad4739919c2e8e5c5b622777fc325f12c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "f5ae85aa63604dd413d95541e2f9184d6fa72d3c9cd3be9052dbd7cbfa71243c"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"

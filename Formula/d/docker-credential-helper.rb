@@ -7,11 +7,8 @@ class DockerCredentialHelper < Formula
   head "https://github.com/docker/docker-credential-helpers.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7288f7bb65c5d0f518b845e063cc2bee9cc52e5584f2fbab1df758281873f7a0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c89b0e8feeb67af50636c2f97b0ebd674e4a6b845d57da0df9e7f254c17a2c4f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b56bd705ce8f8dc51d32a66bfae498e82e90f5156df51919046e609f75119fc2"
-    sha256 cellar: :any,                 arm64_linux:       "db30a9bfcd5b06197b955c68999665c692de1ddf3fb597b3813d5f3218641857"
-    sha256 cellar: :any,                 x86_64_linux:      "3ab2960632a400f998b1ba73c3da3a110cf1071d1852fbfe4dc40f7a311de875"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "39624d46eba7bae4b3f7e1a4a9b72d679b13d97197e7ce88503c5261caca8611"
   end
 
   depends_on "go" => :build

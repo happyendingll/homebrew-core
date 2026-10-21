@@ -16,11 +16,8 @@ class Dnscontrol < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c4c05ab4737b16c11cc892aa205fb8f8ce4d68f6fa0da409061eddaee0a5fd8e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4273439b772de93442ccfae787939f2d8b211106685b3b97bbbfd1e78913207c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "29f5321b438759c168355572441e1d516aba4570f24b023e8834313cedb74155"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ad267d729be7ab441998874ec1838e2144f31802f5f948aee2441404669d95b0"
-    sha256 cellar: :any,                 x86_64_linux:      "72a889311166f4e89e4aaadd01ddf4d0b723d2195738e2dabfb25cc068d95f2c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "36496475822598777b00115eb8353049320cc255e7eb77d0cac161850b394b01"
   end
 
   depends_on "go" => :build

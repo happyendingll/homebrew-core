@@ -13,11 +13,8 @@ class PythonAT311 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2a9b48a3adcba59f9b147314d74c9b3e16b19d9ede9192e6c0a1aac3706dd5e5"
-    sha256 arm64_tahoe:       "c850890df7f46a52d85346cf92ffdc12d1d6ed775b196c59e780eca8bc808e03"
-    sha256 arm64_sequoia:     "8fb2b035b745e7f5e93f2c6c4238d43dcfef827c0e66eaf1027112731f58a8c8"
-    sha256 arm64_linux:       "d99033154fdd4bea46084d3db2e48746374e7e2a449a48dfa409e7f57f1f57d7"
-    sha256 x86_64_linux:      "ed05cb663f8cc78669d640a3bf04a86981a0d0d26a70f638de33ef697ad287fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "c09447f9030c2f09606f46c0723adf94fe48421d39790b8f525129f9279dc712"
   end
 
   # setuptools remembers the build flags python is built with and uses them to

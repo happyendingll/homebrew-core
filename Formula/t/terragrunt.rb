@@ -14,11 +14,8 @@ class Terragrunt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c086970e917ba358c268b919b478cba1a772e6cc26c83734b5574def9bb71eb2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c086970e917ba358c268b919b478cba1a772e6cc26c83734b5574def9bb71eb2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c086970e917ba358c268b919b478cba1a772e6cc26c83734b5574def9bb71eb2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e64433bf76bf4efd4dfc550b44b8a946323fbefad429cd00ce3d67f3b96532a4"
-    sha256 cellar: :any,                 x86_64_linux:      "56d688025bc65e60288689d5f2253b3da07746c8d786a3ca3a99607db216332f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "97aa194617ef5721be47f0b2750039539fa556be4bc3d7d44db709d4d4dcabe8"
   end
 
   depends_on "go" => :build

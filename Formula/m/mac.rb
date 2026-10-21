@@ -14,11 +14,8 @@ class Mac < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aed9114ef1a73593ec80a802cfed0a11bad6ee34ab0b43546f04eb65b9f1ae28"
-    sha256 cellar: :any, arm64_tahoe:       "7c05beee6f2b170664526c7bde320e11ec7cdeb2faeeabc7ee7cbc618fde2527"
-    sha256 cellar: :any, arm64_sequoia:     "e34a4253dd57c390c5e4d0a84f656aa56093787594abe8df91d893a3a5edd49c"
-    sha256 cellar: :any, arm64_linux:       "7d523fd4f81a11eaa8ba0e3deb1a6e256743d57f67f009ade760716ff6f881f3"
-    sha256 cellar: :any, x86_64_linux:      "6b041f9ba88b416c33bb83b742af5ba4754031c5ad0d9c95687faa406046292f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "427eedefba8290bfd1af399b9514626961ecc395f5eec022769bf3d828660b9a"
   end
 
   depends_on "cmake" => :build

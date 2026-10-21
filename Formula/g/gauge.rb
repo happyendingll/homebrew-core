@@ -7,11 +7,8 @@ class Gauge < Formula
   head "https://github.com/getgauge/gauge.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eb67e759b49099f1b0d26171141b893b8feda774147628f705f80dfc809e9928"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "74c366ac9955fdd1f1ceb5f8900e60640acf6ddab4b5cbac4f1779563532d4a7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ea8a7954bf1dc90fab3a446f276d907b48a525ad3d06e94af899c93de66b6c87"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b809bee9e9c0655bad506fc4065ff8c8b927c70c8f89468b0dc753ebe3710e47"
-    sha256 cellar: :any,                 x86_64_linux:      "4960498590cbd918f6eae09dfd9368528b20dd3fdaf5cbef272d98fefb930d4f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3bd71d73f14a00e89bf2126b848d0d8ba5699a781edb81f9342dc08dd96af31c"
   end
 
   depends_on "go" => :build

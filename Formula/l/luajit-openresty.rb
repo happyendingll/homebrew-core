@@ -19,11 +19,8 @@ class LuajitOpenresty < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e1bee7c226c933fc4c9373f0cc89681e5dc90d616d5b2ccf5c90b6a9b424b7ea"
-    sha256 cellar: :any, arm64_tahoe:       "463e35cd9e579a13ac427ad5239b8f8a0b3915479aff90a1c057878fadc550d9"
-    sha256 cellar: :any, arm64_sequoia:     "e7d95470d90e00a586ab58a2a990556c4c068a4707fafaba21d5f1e31321392b"
-    sha256 cellar: :any, arm64_linux:       "936a930f1dab5de02a3f21c40d5163e73dbdaf6011d8a6c1f26142922479c2bf"
-    sha256 cellar: :any, x86_64_linux:      "7ac616ae1eb17e09f0acbc87975e39ed00f9a335473640f4746e133b6e126c24"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "506cbead999617b6818a21ce51b23a9e4f10df8c38df3cb28e16e574f11b27bb"
   end
 
   keg_only "it conflicts with the LuaJIT formula"

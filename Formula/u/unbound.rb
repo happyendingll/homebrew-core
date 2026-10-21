@@ -16,11 +16,8 @@ class Unbound < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e45285e85ad19dcd50a8477b2fc32077c3e1fabec3c434dfff44c9d8b415fc1a"
-    sha256 arm64_tahoe:       "1ab3daeafae3e6dffa51583b8878e125c0aac2f68cfeddbfd2985a13b8c6cc85"
-    sha256 arm64_sequoia:     "37bed88914f3c5c272129ffc1f2dea45580955cc115ac9237d599121c57d6661"
-    sha256 arm64_linux:       "d9df0b4a4bd31fb7bd3b84796d51064378d41a7c8a427744b2bbdd75ccf71a07"
-    sha256 x86_64_linux:      "03bdb0c1c8806af2ab7837786e8c64bd56ddaae1f320a0a90b476367b9645ed6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "3a296db71302f84bee689d4166f600585736ad18980eec50c3759c83f7089c51"
   end
 
   depends_on "libevent"

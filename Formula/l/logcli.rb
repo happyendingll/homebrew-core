@@ -11,11 +11,8 @@ class Logcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "57124f1fc93eed486dc7a89dd8506c65a050c59f8361acd6fcbe9cb3ce72b3e1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6c8c271e5b5b7e0845a0fba930dddfa879e4e1733064aa69a92ac26382cad40c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f2a2545a3d42de18b4a4eb44e6b9a023a5efea5fc1804804f551fe7b5a94638e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a35783154251f990c79970113b4d72d6bfd76520f317e7946c72c39c6bd5e68e"
-    sha256 cellar: :any,                 x86_64_linux:      "293eb1a770734ff7bb1b056b0d389474301c7032800cb986e30998d39d8b10cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a15847863e859982de71f273ab808051d383487c5c23b973e8582f2355669451"
   end
 
   depends_on "go" => :build
