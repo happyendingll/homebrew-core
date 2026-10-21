@@ -4,10 +4,14 @@ class Biber < Formula
   url "https://github.com/plk/biber/archive/refs/tags/v2.22.tar.gz"
   sha256 "82adcff9e71b4fc02ad6132f9ccd79137ad390e4d3392c7f681a85246c0cdc01"
   license "Artistic-2.0"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "987b1aa9230fd8abca246451a133695bdb1cf062a26e181806fb183565d52bd6"
+    sha256 cellar: :any, arm64_golden_gate: "fe83fcf2b2966d87e30ff12ed6a11ee38225598ff3103d185e69df34279bbbdb"
+    sha256 cellar: :any, arm64_tahoe:       "a89d5a44f32f29dd167b8abdfddc5656aceeae49f39618143a25ef4087a76b6f"
+    sha256 cellar: :any, arm64_sequoia:     "4534d8a7164307634cbbea6c68eaa61a3c33e76301f6c39a19e6777022f07720"
+    sha256 cellar: :any, arm64_linux:       "d141089193d6bae8c82a9864fc581e8d3f75f281a63e1d7c1142904951a49838"
+    sha256 cellar: :any, x86_64_linux:      "17020b2b91ca32d72b37223489394772b1ce0b32c7ac7092b356d92b812b76b2"
   end
 
   depends_on "pkgconf" => :build
@@ -575,8 +579,8 @@ class Biber < Formula
   end
 
   resource "Mozilla::CA" do
-    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20260813.tar.gz"
-    sha256 "81f0bd9665eacbb6feef13b0fa16fbb30162c09292542b1206434e569196dd9b"
+    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20261020.tar.gz"
+    sha256 "1aeed97a463389e582e085e82de03ae0bffae74d46cf8ee4c511341e5508c21d"
   end
 
   resource "PerlIO::utf8_strict" do

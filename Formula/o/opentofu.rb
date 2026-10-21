@@ -1,14 +1,17 @@
 class Opentofu < Formula
   desc "Drop-in replacement for Terraform. Infrastructure as Code Tool"
   homepage "https://opentofu.org/"
-  url "https://github.com/opentofu/opentofu/archive/refs/tags/v1.13.1.tar.gz"
-  sha256 "54c534f3d1df253430cc02220d94b91c1d563e95f040bc24d29a4c45bc197838"
+  url "https://github.com/opentofu/opentofu/archive/refs/tags/v1.13.2.tar.gz"
+  sha256 "ea26bb64b303701fee619b7f28422459be9ff04ee87c5491d046022e1c24f499"
   license "MPL-2.0"
   head "https://github.com/opentofu/opentofu.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "09386ef79a591ca7b9e58b8d2cc9d56632a886ff378e79c6b8a1ab7710de9320"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0eaea68d29476e6596ebee4dff0c58c4cdc4614568b3ed7ad54147fc7842325d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2d57f970a5b7cdbf6a0b20e522f899379072ec91c2bcce388b116dec24fbeb87"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0e94fbaa3c0f75b2a8dc1b9a36c83cad522e0014eb347d3d5cf21660abf17ced"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1320f9e5029df96b206ef0e38fc3fdec6762e639e96c56fa5d8c1f0afd8c0cae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fe875126e511de1d1c8f333b978e05736656fcacf2cd4702f47d1a3eea9f648d"
   end
 
   depends_on "go" => :build
@@ -26,6 +29,8 @@ class Opentofu < Formula
     ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = "-X github.com/opentofu/opentofu/version.dev=no"
     system "go", "build", *std_go_args(output: bin/"tofu", ldflags:), "./cmd/tofu"
+
+    generate_completions_from_executable(bin/"tofu", "completion")
   end
 
   test do

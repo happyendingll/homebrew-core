@@ -2,16 +2,19 @@ class Pulumi < Formula
   desc "Cloud native development platform"
   homepage "https://www.pulumi.com/"
   url "https://github.com/pulumi/pulumi.git",
-      tag:      "v3.270.0",
-      revision: "4162541bb475bf097aaf858776a3a0e777e4889e"
+      tag:      "v3.271.0",
+      revision: "082147399d27dc2d19918a61a0508ff2146394ed"
   license "Apache-2.0"
   head "https://github.com/pulumi/pulumi.git", branch: "master"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "8518893b83c8b3cde6aaa9151c7be9d7e1b165edbdddd1c66dba765c6092d344"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1322dc6ce1ade8bff311868d6722a13495429e8b21d0ad1f0673254d5717ccc4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5406c337060601ceaccbc6954352c156e02b184847756685cf51cdc73ab09e55"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07ee96d9fc0b17c850607eb1fca71e8b85cd79dc7cca526373f0504dc1fc55f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "287574fc08523da48d25c51f5a539f368ddac1c85a3dbf826d7c462c7cc48d53"
+    sha256 cellar: :any,                 x86_64_linux:      "9e8bdc260350e5228e91c19f11d51c6196873277b8b28a2155d4005d233e5077"
   end
 
   depends_on "go" => :build

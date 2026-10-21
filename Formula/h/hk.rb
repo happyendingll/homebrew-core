@@ -3,8 +3,8 @@ class Hk < Formula
   homepage "https://hk.jdx.dev"
   # pull from git tag to get submodules
   url "https://github.com/jdx/hk.git",
-      tag:      "v2.7.1",
-      revision: "be970a0958068103911ec22eaa57de516b8826c9"
+      tag:      "v2.8.0",
+      revision: "672fd70a7e0cd1611b914c905cb4f47d9b7f2b6f"
   license "MIT"
   head "https://github.com/jdx/hk.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Hk < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "873289fda2e1370cc027bbe8cc4a07f1276c6a843e8db189981bb389fc8cd61a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d8613e225989bcb9349056a10e54d3fad9c7928320f2de1b75865107dbb50d3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "71a8bf289ebb4d9d2080253b2e68f0701426d7ce54635309929b2578c6ea014b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b8cf4717d96edfe1b38acff9bb4f899b482ee7410c3751da26ecb001b0457101"
+    sha256 cellar: :any,                 arm64_linux:       "a00618240d0f1aae6772d2fc5e2fed7316dcfc8fc5f195bbd322bf520201468e"
+    sha256 cellar: :any,                 x86_64_linux:      "f1fe8afb8c665340dd5a4197b3840b5d32f358d02cf58ab97b6134a767e4f2b5"
   end
 
   depends_on "pkl" => :build

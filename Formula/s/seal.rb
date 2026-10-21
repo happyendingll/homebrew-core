@@ -1,13 +1,16 @@
 class Seal < Formula
   desc "Easy-to-use homomorphic encryption library"
   homepage "https://github.com/microsoft/SEAL"
-  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.7.0.tar.gz"
-  sha256 "e92a6dd668e83d592c020b233538496d754721dc9a48c7629412a81c4e136717"
+  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.7.1.tar.gz"
+  sha256 "49dfc5eed8274c1aaa7cb7ccfea9ec448f8896ce9305db949e27d89f4f752931"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "c07875dec13ff321c9b595318fde82aef1f94bd4c70087dbaacde2fec8c532ae"
+    sha256 cellar: :any, arm64_golden_gate: "f4746248e1a760844bf12f69bd0ee196e4cf9a484791b1c9402b17a92345d88c"
+    sha256 cellar: :any, arm64_tahoe:       "a98bed98f1341203e17dff16938e36e45e1bbe385f979f9b544069aaa787e6ce"
+    sha256 cellar: :any, arm64_sequoia:     "26943293499ea5d53a7ca452f1aa9c553b016b2e5a3a9052ee14242b3f3ce686"
+    sha256 cellar: :any, arm64_linux:       "4a3bfe95683a55e6321ced5403bb5ad9a76a17ef0bccd0ca2d250fa011bf70d6"
+    sha256 cellar: :any, x86_64_linux:      "ccb5ae0868adec45b2985dda5a84eece09b60ead44f7c36899ea131a30c9b17c"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -88,7 +91,8 @@ class Seal < Formula
       # Import Microsoft SEAL
       find_package(SEAL #{version} EXACT REQUIRED
           # Providing a path so this can be built without installing Microsoft SEAL
-          PATHS ${SEALExamples_SOURCE_DIR}/../src/cmake
+          PATHS #{lib}/cmake/SEAL
+          NO_DEFAULT_PATH
       )
 
       # Link Microsoft SEAL

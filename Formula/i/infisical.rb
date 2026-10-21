@@ -1,14 +1,17 @@
 class Infisical < Formula
   desc "CLI for Infisical"
   homepage "https://infisical.com/docs/cli/overview"
-  url "https://github.com/Infisical/cli/archive/refs/tags/v0.44.3.tar.gz"
-  sha256 "b959eb188361ac635ce8645864d5c9393ae3f708d42dbb44081c7916c77e935e"
+  url "https://github.com/Infisical/cli/archive/refs/tags/v0.44.5.tar.gz"
+  sha256 "b88aaf8e3554bf36360914234827d9e83c9d9bcec65cb8b16534f55327766a45"
   license "MIT"
   head "https://github.com/Infisical/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "39464eab728068fa2252b042f83b45d6596451ee71dbdd7c4df72fca838e0c09"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "42a111a68dc339565a9c4d55b69d1b3da03768fd04a125a7b69e82493e86a5f9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42a111a68dc339565a9c4d55b69d1b3da03768fd04a125a7b69e82493e86a5f9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "42a111a68dc339565a9c4d55b69d1b3da03768fd04a125a7b69e82493e86a5f9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bdbe450e3c1e9e4b5b3dd4d9023dfcaa4a8e90e13df813699881f4510363ad53"
+    sha256 cellar: :any,                 x86_64_linux:      "72e58c22c69c28c3d24a34b3d0325822548a1a01560fa30744ab2d8842931d61"
   end
 
   depends_on "go" => :build

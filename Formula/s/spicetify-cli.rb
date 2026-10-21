@@ -1,14 +1,17 @@
 class SpicetifyCli < Formula
   desc "Command-line tool to customize Spotify client"
   homepage "https://spicetify.app/"
-  url "https://github.com/spicetify/cli/archive/refs/tags/v2.46.0/v2.46.0.tar.gz"
-  sha256 "580b4aff8b26880c6312cc5f3039a1cc99ee500d3a261e2746f9f7c685a50c24"
+  url "https://github.com/spicetify/cli/archive/refs/tags/v2.46.2/v2.46.2.tar.gz"
+  sha256 "f4251e342851d2a9edf01c3cee6a66501ee9a29c58b4adf79a0ca548b1044da5"
   license "LGPL-2.1-only"
   head "https://github.com/spicetify/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "abc0bce281be62f128933f6c9cdef88786c3e03c4f674ff408ebbfdc75499996"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7af2e191ea8e27f75c0e356db89909c5e6d1c44b4d61e178457e5634b8b46f8f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7af2e191ea8e27f75c0e356db89909c5e6d1c44b4d61e178457e5634b8b46f8f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7af2e191ea8e27f75c0e356db89909c5e6d1c44b4d61e178457e5634b8b46f8f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5262ab32e10c9a9a37a6959b4a62e87918b75390a1c5340d92d67551c074660a"
+    sha256 cellar: :any,                 x86_64_linux:      "de39d951f03bd12e0577410fe635e994c4cba94f1c19295574028870ad0cb076"
   end
 
   depends_on "go" => :build

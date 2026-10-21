@@ -4,14 +4,19 @@ class PythonFreethreading < Formula
   url "https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz"
   sha256 "438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68"
   license "Python-2.0"
+  revision 1
 
   livecheck do
     formula "python"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "16475bea9e283aa3c271d515ab181e8b41629ce176550c83b8a3719674598aa0"
+    rebuild 1
+    sha256 arm64_golden_gate: "0dc8f0367f0b5fdcadefe799c02444eee157f11d12f3229175dc13a3cd27e374"
+    sha256 arm64_tahoe:       "85788213c25037b3b205c74cf627dab34a6f7992f8e5a58b34e51d78bffd6f22"
+    sha256 arm64_sequoia:     "87f2b35f7f34420955082065d944c5e6b26c8d9056530950adcf34ecfe2f65f5"
+    sha256 arm64_linux:       "4a7c61243055a56612d8a278dbab9fd1fa458054f736d945dcd936805a5d376c"
+    sha256 x86_64_linux:      "9fe61c97abfcf3fe183a8dd766edd5945f6d3e26967c98c25d4dcb3935d3da9a"
   end
 
   depends_on "pkgconf" => :build
@@ -44,8 +49,8 @@ class PythonFreethreading < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/ae/15/4500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f/pip-26.2.1.tar.gz"
-    sha256 "f6ad667e89a1fe78046c8f13232b247200f5258d7828f3f7883d660878e0813f"
+    url "https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz"
+    sha256 "3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f"
   end
 
   # Modify default sysconfig to match the brew install layout.
@@ -129,6 +134,7 @@ class PythonFreethreading < Formula
       args << "--with-framework-name=PythonT"
       args << "--with-dtrace"
       args << "--with-dbmliborder=ndbm"
+      args << "--with-tail-call-interp"
 
       # Avoid linking to libgcc https://mail.python.org/pipermail/python-dev/2012-February/116205.html
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"

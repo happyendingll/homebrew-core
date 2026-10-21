@@ -1,14 +1,17 @@
 class CargoZigbuild < Formula
   desc "Compile Cargo project with zig as linker"
   homepage "https://github.com/rust-cross/cargo-zigbuild"
-  url "https://github.com/rust-cross/cargo-zigbuild/archive/refs/tags/v0.23.4.tar.gz"
-  sha256 "bdad52913b4b163777134e68be9b4ffeb010df459db00f4ddd071d223c891b85"
+  url "https://github.com/rust-cross/cargo-zigbuild/archive/refs/tags/v0.24.0.tar.gz"
+  sha256 "611154096d2e751185bbab692600b7ff535fafb87c65c2e12e49da2d7d880bda"
   license "MIT"
   head "https://github.com/rust-cross/cargo-zigbuild.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "cbd7e04b44567d1474e930808283939d75aa2f3ac192c34647368b253ba41ef5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "88de0358872e85e8fcaa05302a186b6cb1050f4cde14d7b54a5e6721989e8df3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cffacbbac5b8e00da8a81da4c8f2f84570e4801fb4706dda35ff4a97fce9d8fe"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "63dbf7f0a0136f5e3c60afbb1b7f171f3efeb63af0569550b03f29e33ba5d7eb"
+    sha256 cellar: :any,                 arm64_linux:       "3efc79220148a1dda0d7abd5c581cf3c02e310b1fd6d4419fdf539dc8ec758c5"
+    sha256 cellar: :any,                 x86_64_linux:      "d34b88bcb6e8c3ca25e8aa2897acf813842051162ee2002adda8724c024a4ae3"
   end
 
   depends_on "rust" => :build

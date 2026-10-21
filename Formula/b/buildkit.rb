@@ -1,8 +1,8 @@
 class Buildkit < Formula
   desc "Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit"
   homepage "https://github.com/moby/buildkit"
-  url "https://github.com/moby/buildkit/archive/refs/tags/v0.34.0.tar.gz"
-  sha256 "b51e3a6bb7e0a0381adef47bffb8527817409f477fc5d26054517af29a11ff65"
+  url "https://github.com/moby/buildkit/archive/refs/tags/v0.34.1.tar.gz"
+  sha256 "0f7d4a765b273359d0752aa1c8a309606578fd0db42e71f0fc5de845d3b1139b"
   license "Apache-2.0"
   head "https://github.com/moby/buildkit.git", branch: "master"
 
@@ -15,8 +15,11 @@ class Buildkit < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "8de3bcdb9c5930ae135dedd7d62e61fa53285d9e14b0f8d5c227901c8c3054fd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c0722324f498a0036b58d7ff0a5e9f006b701aa124b79ac4022926dd7047c227"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c0722324f498a0036b58d7ff0a5e9f006b701aa124b79ac4022926dd7047c227"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c0722324f498a0036b58d7ff0a5e9f006b701aa124b79ac4022926dd7047c227"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "39a5741a214f732b1b18ce4a83de432e124b434feff955c4f1d8cf9bb77019e9"
+    sha256 cellar: :any,                 x86_64_linux:      "2b334440734d40124d27f34904aff8d6f1fefd232fc2c60bd116c1d3a42ec361"
   end
 
   depends_on "go" => :build

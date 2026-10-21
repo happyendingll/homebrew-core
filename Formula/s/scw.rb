@@ -1,8 +1,8 @@
 class Scw < Formula
   desc "Command-line Interface for Scaleway"
   homepage "https://www.scaleway.com/en/cli/"
-  url "https://github.com/scaleway/scaleway-cli/archive/refs/tags/v2.65.1.tar.gz"
-  sha256 "051700be1322e38aa6fb01330e945dc2d538912ed8647a2ea197dfc5c2b50fe4"
+  url "https://github.com/scaleway/scaleway-cli/archive/refs/tags/v2.65.2.tar.gz"
+  sha256 "df7d2497515396a2f5822475b0b08b91d74298455fd948c176c76dd16e68db8d"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Scw < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "06256996115f97c505224f564495092edfbc9abda3c589cfec1b20325a1399f4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ddafeaf4edb70162cacfbe823da4858a276461c0629a3fe45c14eafb2b98590c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eaca370c1e605a29999bfb0502102fdabc091d35ccadb8fa9ace28355901312a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c5afe082db64d245fcc0e03080b538857ee7655f7cc59d36255b526ed56bcb1f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8d64cfdbcfeef77f0ee175e13e8dcf85dfca7a2d04d6ed3c736cf5f36dab9544"
+    sha256 cellar: :any,                 x86_64_linux:      "135a9874129a2845f7894b8e5cdb8e7952a5f8e94d58c3767c51a91931b43bdb"
   end
 
   depends_on "go" => :build

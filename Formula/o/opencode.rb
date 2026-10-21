@@ -1,8 +1,8 @@
 class Opencode < Formula
   desc "AI coding agent, built for the terminal"
   homepage "https://opencode.ai"
-  url "https://github.com/anomalyco/opencode/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "c2e3f3b1684c93e61efb5bf94ea3dec62f6cfaf9b4930e5103ab49b37d3b2a39"
+  url "https://github.com/anomalyco/opencode/archive/refs/tags/v2.1.2.tar.gz"
+  sha256 "a99505d27899664c4d0778ac40b8589401fbc2256ed56389ca70ee120c5047bb"
   license "MIT"
 
   livecheck do
@@ -12,8 +12,11 @@ class Opencode < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "ecfcc3a0b1f2c3d6aae242bac90e34f7ddd28ca0f666643dfa768e73390f3325"
+    sha256 arm64_golden_gate: "dfdbe7ab742d996f07384ef29e84f2fa34c655aab3be402703a3425bb560da3b"
+    sha256 arm64_tahoe:       "430424f2707c7ff5e05d891b23e3bd36a2c2cdee611ae64d40499b231378a98b"
+    sha256 arm64_sequoia:     "3c4a366e55778affffc04e7f8fcde998c9cd69cac2e74e376e88a809df9e7709"
+    sha256 arm64_linux:       "93337dc921e0b5661d9dd1ec30f11a1d80ed708320564252c546e850e742a31f"
+    sha256 x86_64_linux:      "995c1d53e9102d3bacd4c3d009c64c6c6517770f802f40967d6ce0d22c70deaa"
   end
 
   depends_on "bun" => :build

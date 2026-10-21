@@ -3,14 +3,16 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/2a/9b/979fd7e0644dc270e91b165dc60c88fc885750aa7665d869ab7e3fd96e2d/dxpy-0.416.0.tar.gz"
-  sha256 "d93bef77f30a4afcef32fba056c9624b6f0c73129360fa02089b7f51736f18a5"
+  url "https://files.pythonhosted.org/packages/c2/a0/1f16ce13dbc10b89ac1dfe2d61bc4c3d642b6fa3db2d1c36d66429c1118d/dxpy-0.417.1.tar.gz"
+  sha256 "ae65ba1d0eeae2df2f98feabe8ee4308106d9fe035389adb19c5304e2188ac90"
   license "Apache-2.0"
-  revision 3
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "8851e85d95d25ca9640c83d3edccad0d4c3c5a95cdc98c4a52b097fbb340386f"
+    sha256 cellar: :any, arm64_golden_gate: "20d777767e75b34b696c6f19141a1ce2a655a98ad3e26454a20f32f43055d8e7"
+    sha256 cellar: :any, arm64_tahoe:       "1cecb62e9766d3aff05f5ee68395e5a1bdc1a3368d9070f684398a025589bf98"
+    sha256 cellar: :any, arm64_sequoia:     "c6231eff5bb07be8b968d09efa29471093871be660387bdfca47a15bbb3fd761"
+    sha256 cellar: :any, arm64_linux:       "00393e4028c623112593818a2666ea3b5422643a4657f9758ce4a226ef5d87d8"
+    sha256 cellar: :any, x86_64_linux:      "121f175f917c09047deefb21a1d0f689697c490f01d7b5b78615c7d366a7276f"
   end
 
   depends_on "aws-c-auth"

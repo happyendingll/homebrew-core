@@ -4,7 +4,7 @@ class PythonAT314 < Formula
   url "https://www.python.org/ftp/python/3.14.8/Python-3.14.8.tgz"
   sha256 "a65b20a728f169f4e66ae143f40b1bd3d33c38d770251663f627c9767b79b210"
   license "Python-2.0"
-  revision 2
+  revision 3
   compatibility_version 1
 
   livecheck do
@@ -13,8 +13,12 @@ class PythonAT314 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "a2d4c06e0bf98726c56ef42fdb7c21f7a7d2dae665606439af7dd8de7e0b2481"
+    rebuild 1
+    sha256 arm64_golden_gate: "57ffe772408f8c9f9eb7346eb3a4ea1a0c5cd610177eede77283454a9d40bd3c"
+    sha256 arm64_tahoe:       "2ed708f639655bf3dd4273121b4b76d15349a2cb8f86b1e74ecd9160f146b436"
+    sha256 arm64_sequoia:     "5b0219d25e7c5ada753fea0431636e6205c70393ea2be38492dff42da84103f8"
+    sha256 arm64_linux:       "a90e10a3ce8dcc341e925f801c3180518af16ba1bb6903c6487a2988ae7eb17c"
+    sha256 x86_64_linux:      "c46ca996b222525204177285e5dc8b27973ed0dbb3b009cdeff5fe054abdf170"
   end
 
   # https://devguide.python.org/versions/#versions
@@ -56,8 +60,8 @@ class PythonAT314 < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/ae/15/4500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f/pip-26.2.1.tar.gz"
-    sha256 "f6ad667e89a1fe78046c8f13232b247200f5258d7828f3f7883d660878e0813f"
+    url "https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz"
+    sha256 "3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f"
   end
 
   resource "wheel" do
@@ -180,6 +184,7 @@ class PythonAT314 < Formula
       args << "--enable-framework=#{frameworks}"
       args << "--with-dtrace"
       args << "--with-dbmliborder=ndbm"
+      args << "--with-tail-call-interp"
 
       # Avoid linking to libgcc https://mail.python.org/pipermail/python-dev/2012-February/116205.html
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"

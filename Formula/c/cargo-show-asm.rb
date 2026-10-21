@@ -1,14 +1,17 @@
 class CargoShowAsm < Formula
   desc "Show assembly, LLVM-IR, MIR, and WASM generated for Rust code"
   homepage "https://github.com/pacak/cargo-show-asm"
-  url "https://github.com/pacak/cargo-show-asm/archive/refs/tags/0.2.63.tar.gz"
-  sha256 "d391fdea08cfd4e4638299ecfb86b56ef910b3f79f72462485b6e0713adefa29"
+  url "https://github.com/pacak/cargo-show-asm/archive/refs/tags/0.2.64.tar.gz"
+  sha256 "14faeada9a44344c1b45788e794f456eb0632a8e34621eb4c2b6064094e1823e"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/pacak/cargo-show-asm.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d6160b42448d06ef428e865c0ee33c0d43872d7d91026cd100343691d166545a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "58595fc62e385a006f4a8f5fa715f210f61dcd46a546f2ab6ac776b3050f2eb3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "beac5c12d995e5f11378805d89fcb34abc0d4614f750418d52517103899ac962"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ccdd36072c8a804b50bd3dbd928503bb2352b13a3bedbaea609bb4848d296074"
+    sha256 cellar: :any,                 arm64_linux:       "b6776b801a58f65f011751daa2246ebb2970d7b3cab2bfa347dc3a879cdad6f6"
+    sha256 cellar: :any,                 x86_64_linux:      "e2468a3bc9024bf5f179737bbc522d0eda5c0ca8a59623ecaa4ed1024b65ef46"
   end
 
   depends_on "rust" => :build

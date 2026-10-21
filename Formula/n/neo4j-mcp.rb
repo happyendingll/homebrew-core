@@ -1,14 +1,17 @@
 class Neo4jMcp < Formula
   desc "Neo4j official Model Context Protocol server for AI tools"
   homepage "https://neo4j.com/docs/mcp/current/"
-  url "https://github.com/neo4j/mcp/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "2aec25a09e477a79d7a220e756b21f04bddc3ccc9950732bc1d727fd4f760f91"
+  url "https://github.com/neo4j/mcp/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "08fcf97548428394e3262c52a0def70d317963ac81f6633816c409b8efd04387"
   license "GPL-3.0-or-later"
   head "https://github.com/neo4j/mcp.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "c36a885093e532ae4aec01428a28e2e43373d270ecd00d3514c7e747eb898a25"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e743c124447f34d7280e8cfb9813c3dbd79c213a506796d924366fb37b28126b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e743c124447f34d7280e8cfb9813c3dbd79c213a506796d924366fb37b28126b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e743c124447f34d7280e8cfb9813c3dbd79c213a506796d924366fb37b28126b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c011ca081676d557c2dbd0d3650241016a8fa8698f634635ae84caa1ad27faf9"
+    sha256 cellar: :any,                 x86_64_linux:      "20e68abd26e1290aea44dee26b7606b50461681fd243ff67b3360dfc6c3bed61"
   end
 
   depends_on "go" => :build

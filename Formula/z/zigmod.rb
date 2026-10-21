@@ -1,9 +1,9 @@
 class Zigmod < Formula
   desc "Package manager for the Zig programming language"
   homepage "https://nektro.github.io/zigmod/"
-  url "https://github.com/nektro/zigmod/archive/refs/tags/r105.tar.gz"
-  version "r105"
-  sha256 "b88a477602b63ce4f013701369ab4356ff91830915021443aa74380df474c1b3"
+  url "https://github.com/nektro/zigmod/archive/refs/tags/r106.tar.gz"
+  version "r106"
+  sha256 "faea9f58a0cf9f582d51ebd7252b624e062c1bb6e41ea98bddbe4592005999ae"
   license "MIT"
   version_scheme 1
 
@@ -13,30 +13,29 @@ class Zigmod < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "78e822702f710d5a71b0cda496713a4f6179007811e891b784ec7fdb269eecb6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48f1354039c373af7484e8c01d708e8a4a4b9cef3a79d6638e4e3388b9be8799"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8f569311a51a5a7aa1c9a5e8724f8343588750593fe9acef4f5f5681ab9393c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "15f5993924de3b66fa1d7730c850b500ac35ed8e4307df16b7ed32028a9d8f76"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "029e185a8e67b79bf24d1450efbc0b5d27bf9971546b6584bfd9105369291c7e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d04a4f7e7db74ba760cf6bef4866b38b5c024a0643fe6f40b0387a7a5d7b2994"
   end
 
-  depends_on "zig@0.16" => :build
+  depends_on "git" => :build # `zig build fetch` runs `git clone --revision` (git 2.49+)
   depends_on "zig"
 
   deny_network_access!
 
   def fetch
-    ENV.prepend_path "PATH", formula_opt_bin("zig@0.16")
     system "zig", "build", "fetch", "-Dtag=#{version}"
   end
 
   def install
-    ENV.prepend_path "PATH", formula_opt_bin("zig@0.16")
-
     args = %W[
       -Dtag=#{version}
       -Dstrip=true
     ]
 
-    # Upstream doesn't use `-Doptimize`, see: https://github.com/nektro/zigmod/pull/109
-    system "zig", "build", *args, *std_zig_args.map { |s| s.sub "-Doptimize=", "-Dmode=" }
+    system "zig", "build", *args, *std_zig_args
   end
 
   test do

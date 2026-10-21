@@ -1,11 +1,10 @@
 class MysqlClient < Formula
   desc "Open source relational database management system"
   homepage "https://github.com/mysql/mysql-server"
-  url "https://cdn.mysql.com/Downloads/MySQL-26.7/mysql-26.7.0.tar.gz"
-  mirror "https://repo.mysql.com/apt/ubuntu/pool/mysql-innovation/m/mysql-community/mysql-community_26.7.0.orig.tar.gz"
-  sha256 "95e949183b94bbe39e70c6355e6c90d2a640a62ede996ca5f7a6a3e0827a3260"
+  url "https://cdn.mysql.com/Downloads/MySQL-26.10/mysql-26.10.0.tar.gz"
+  mirror "https://repo.mysql.com/apt/ubuntu/pool/mysql-innovation/m/mysql-community/mysql-community_26.10.0.orig.tar.gz"
+  sha256 "984507622ddfa4d84ad23fc56ec5b5f18f4fda328af5a23e5f5b1a062301ea2c"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -13,8 +12,11 @@ class MysqlClient < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "21b11b70d61b9a8ea2d758f78ba1d521c2cbd471f7d2949807e81a5188b1317d"
+    sha256 arm64_golden_gate: "1448e2cec677d0ffcfecc0b39d9f22fe2d1d7241dc603bf7a3ef8562c50d6279"
+    sha256 arm64_tahoe:       "1014c1eba3a9611d464abdcfd204dc54f8e2d44ca0b25e7a014504b5eccc46d9"
+    sha256 arm64_sequoia:     "ce20251d4ed4d0f4d02b8cd08c899604b192d2a6ef80a71453f9e8a0259945ba"
+    sha256 arm64_linux:       "38f815111faffdce34b6326a53350296fafcd65fe1737ec0e8156c322f948cf4"
+    sha256 x86_64_linux:      "43204ebce82b3396a61226368d0628aad4739919c2e8e5c5b622777fc325f12c"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"
@@ -49,17 +51,6 @@ class MysqlClient < Formula
   fails_with :gcc do
     version "9"
     cause "Requires C++20"
-  end
-
-  # Backports to support OpenSSL 4
-  patch do
-    file "Patches/mysql/26.7.0.diff"
-    type :backport # https://github.com/mysql/mysql-server/commit/04ba58a223afc1339c75b080825042ad17a85b43
-  end
-  patch do
-    url "https://github.com/mysql/mysql-server/commit/a045c23214ec225c49d9bc4caeea78d3d1f99ba9.patch?full_index=1"
-    sha256 "b597781554b7fbcf4e13402dc8dca97bea59e059ed6e40e4eb71cd5c26a91ad9"
-    type :backport
   end
 
   deny_network_access!

@@ -1,8 +1,8 @@
 class LuajitOpenresty < Formula
   desc "OpenResty's Branch of LuaJIT 2"
   homepage "https://github.com/openresty/luajit2"
-  url "https://github.com/openresty/luajit2/archive/refs/tags/v2.1-20261015.tar.gz"
-  sha256 "b2f395142ae67255c77695c3974eb2377e7d03004bfe26f9a5e523f395d83557"
+  url "https://github.com/openresty/luajit2/archive/refs/tags/v2.1-20261021.tar.gz"
+  sha256 "8a2a60eb1d86bdc9cf5b4347f404e211445111e5e80cac40050c997c51002833"
   license "MIT"
   version_scheme 1
   head "https://github.com/openresty/luajit2.git", branch: "v2.1-agentzh"
@@ -19,8 +19,11 @@ class LuajitOpenresty < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "3c5e9dc6d9f7390f3f7c81e4a61b44a227169cb1e550aa23a5b543b5355d6047"
+    sha256 cellar: :any, arm64_golden_gate: "e1bee7c226c933fc4c9373f0cc89681e5dc90d616d5b2ccf5c90b6a9b424b7ea"
+    sha256 cellar: :any, arm64_tahoe:       "463e35cd9e579a13ac427ad5239b8f8a0b3915479aff90a1c057878fadc550d9"
+    sha256 cellar: :any, arm64_sequoia:     "e7d95470d90e00a586ab58a2a990556c4c068a4707fafaba21d5f1e31321392b"
+    sha256 cellar: :any, arm64_linux:       "936a930f1dab5de02a3f21c40d5163e73dbdaf6011d8a6c1f26142922479c2bf"
+    sha256 cellar: :any, x86_64_linux:      "7ac616ae1eb17e09f0acbc87975e39ed00f9a335473640f4746e133b6e126c24"
   end
 
   keg_only "it conflicts with the LuaJIT formula"

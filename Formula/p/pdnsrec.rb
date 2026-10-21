@@ -1,10 +1,9 @@
 class Pdnsrec < Formula
   desc "Non-authoritative/recursing DNS server"
   homepage "https://www.powerdns.com/powerdns-recursor"
-  url "https://downloads.powerdns.com/releases/pdns-recursor-5.4.7.tar.xz"
-  sha256 "02247a1e633ea1ae8777f933854ff3d0ed024d4e5c01c143af146a0783c7ccf4"
+  url "https://downloads.powerdns.com/releases/pdns-recursor-5.4.8.tar.xz"
+  sha256 "bb2fac755c3c301b6e1b9892e94ccdc652752f2bf88ec970e9358056973fe9bd"
   license "GPL-2.0-only" # with OpenSSL Exception (non-SPDX)
-  revision 1
 
   livecheck do
     url "https://downloads.powerdns.com/releases/"
@@ -12,8 +11,11 @@ class Pdnsrec < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "8a178784755a67bae837a15c8ca288a94fcd53fdba3ea9a802a63ba293209f7e"
+    sha256 arm64_golden_gate: "5db8d96c106dbb42d1cb09bdccbe0e7d28eb906a0b731078e9d7b744e7b6959a"
+    sha256 arm64_tahoe:       "e02e768fc746599cf313acfa69805714355dd7793f1c55e5804869883ae19372"
+    sha256 arm64_sequoia:     "d0442fd3899f9796643c8be622d77c87002782a5169dba32e38a754056f7f709"
+    sha256 arm64_linux:       "bb2fc659ebc3e22e13c44ae25afc35ed473cbb51267e5c1bd5c9a2357d85eb3b"
+    sha256 x86_64_linux:      "44e967f7386597489f5d71b598c6d95dd60db0b523a4c2a1dac5b3aa64c713fe"
   end
 
   depends_on "pkgconf" => :build

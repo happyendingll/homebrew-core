@@ -4,6 +4,7 @@ class PythonAT312 < Formula
   url "https://www.python.org/ftp/python/3.12.15/Python-3.12.15.tgz"
   sha256 "de1a241a519e0a3374fea98988d0b52c886743f9d953f23be8269cc7b59c5fab"
   license "Python-2.0"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -12,8 +13,11 @@ class PythonAT312 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "b94a206487b75c25ccb3b886ebd3fa924e999ab6e5b946f8246c0c33ac11756a"
+    sha256 arm64_golden_gate: "bd8b270ea74dc9fd8af5af93f9e481a43243334af62b356f2ac71e2bac421c55"
+    sha256 arm64_tahoe:       "1586b57de324ce56d6a35bbed1df95e53bc8c0836b4cbcce1f27482677d303e4"
+    sha256 arm64_sequoia:     "fcbc85289ebda72a2d0d20dc71f93e73d6bac36f5fec92d2ed15eae334fafbd7"
+    sha256 arm64_linux:       "754bc5a81dd58f749855f366e150c70a14d057097af6b2968a72287fc8920168"
+    sha256 x86_64_linux:      "d70ee70aad629b152da3bfb68072a47407f193236d2fd61055daa94c11b7fa4f"
   end
 
   # https://devguide.python.org/versions/#versions
@@ -56,8 +60,8 @@ class PythonAT312 < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/ae/15/4500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f/pip-26.2.1.tar.gz"
-    sha256 "f6ad667e89a1fe78046c8f13232b247200f5258d7828f3f7883d660878e0813f"
+    url "https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz"
+    sha256 "3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f"
   end
 
   resource "wheel" do

@@ -1,13 +1,16 @@
 class Sabiql < Formula
   desc "Fast, safe-by-design, driverless, Vim-first DB TUI with ER diagrams"
   homepage "https://github.com/riii111/sabiql"
-  url "https://github.com/riii111/sabiql/archive/refs/tags/v3.0.1.tar.gz"
-  sha256 "745738d629b618f7f02190c176a89cebec29bfd3dd3877ebc12cda5223e8672d"
+  url "https://github.com/riii111/sabiql/archive/refs/tags/v3.0.2.tar.gz"
+  sha256 "1708dab880503243817b8353499f6c42dc3edb2abdef62dab0fb7a971dbcd39c"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "0af234b0ad47c6d7acba2e4a07ea205e6221884a284cb06bf89ff8c359a109b1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e77773f32581d5f0b9359edd8bf1b31b0a750d1cdace3e2b187d1d1107959ea5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5e713ffba2f4dcfd1c74e57775d9501c2249f759cadcc0035128afd8cf4d2dad"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c4e983e5fe1fb85a211bf32db35da83a7b3dbeb7a55c825192773892483a3707"
+    sha256 cellar: :any,                 arm64_linux:       "e32c00d41fad873cc09bc7fc8058b9e030a895653dba2e0e7da45020b853a423"
+    sha256 cellar: :any,                 x86_64_linux:      "7e5422e9401edc8100473cd11f6d71c38af940eac86ec1e4f689d284371b1624"
   end
 
   depends_on "rust" => :build

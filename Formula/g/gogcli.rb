@@ -1,14 +1,17 @@
 class Gogcli < Formula
   desc "Google Suite CLI"
   homepage "https://gogcli.sh"
-  url "https://github.com/openclaw/gogcli/archive/refs/tags/v0.45.0.tar.gz"
-  sha256 "500a30dcffc88ab4299c59a2c7e36916f6f5c0d8d215c24ebe482594b785c7d6"
+  url "https://github.com/openclaw/gogcli/archive/refs/tags/v0.46.0.tar.gz"
+  sha256 "66a4eb3afe9ba126c1689aa1de0d78c9e34d43a42a0bd6a645816f8159863f89"
   license "MIT"
   head "https://github.com/openclaw/gogcli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "fe5fc3ce94ac940d30e89a126641c96ee109a14298851a4304fdc18490cdd3aa"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "652e50ba13496ed23e5de366b264b49a98ff9cb7c1ec3c79b5eb212e3805a551"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a9ea7023b1da4a8b0fc8e65a93d01b395303c9bf4570f998eb3a0ce61289090"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2f16265354db771ec7e411632fc0e8307e9470faec07a215b43efa7d4917b75"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f9f7ec2d0f31ac47b6b982d1551535dd14a0886cbbe2d2aa5838d5e3eb7e1eff"
+    sha256 cellar: :any,                 x86_64_linux:      "d69d7869439f0f45508e766562c87e68cb821ae86954c5aa82e1822fa30d56fe"
   end
 
   depends_on "go" => :build

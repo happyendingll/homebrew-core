@@ -1,14 +1,17 @@
 class Krakend < Formula
   desc "Ultra-High performance API Gateway built in Go"
   homepage "https://www.krakend.io/"
-  url "https://github.com/krakend/krakend-ce/archive/refs/tags/v3.0.1.tar.gz"
-  sha256 "ce423d762a2e2b514bcbde114036cca287d65f50ab1148953b33e3fb0bbf91b3"
+  url "https://github.com/krakend/krakend-ce/archive/refs/tags/v3.0.2.tar.gz"
+  sha256 "8f05f699e3161ec7396011f5eaf0cf4995f0f9f2ff9b925e044e1668d1bdbaac"
   license "Apache-2.0"
   head "https://github.com/krakend/krakend-ce.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "06158cee86e8c448a424d534b329038bcc038e14480a99ae292ab767efa11b2d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b1c9703b189ac2cb88e50a277be670a23860c6f7685cc5c0829c6a19d915d7a9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98eda82e6e1000eada6dedaeee99c5588964b3ac5374a82cdc5589a6be915f32"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6a658dae1df069df2a62a2b0fa99874beb609e4914943c18dc130f8d2a069b16"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "87ac8dc448a7389261a489d1644b480bc332131499a3a6d8f95b33ea09f01b64"
+    sha256 cellar: :any,                 x86_64_linux:      "79f81a24eef390e1e5d943af3e8de34f155834d6a217d3c722fe4dd2e1eec029"
   end
 
   depends_on "go" => :build
