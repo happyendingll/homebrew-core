@@ -9,11 +9,8 @@ class MoodleDl < Formula
   revision 14
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d4efabee3ce54df573d8a94757e5d06651a0977d25e78071ad750cfbf9c5fed4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "239c283d849d5ccc486aa277c1c53427bbf471bd642a239d7a898ac4a61517bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "58ad6896a227beafe6e1565cca27eddb034dd66a056274ec5b90f2ec9163fae3"
-    sha256 cellar: :any,                 arm64_linux:       "e8ca6b22b7c04a82738e61e67e6aa4800353b560cc75c38e6df4cfbb0414cfb1"
-    sha256 cellar: :any,                 x86_64_linux:      "9598ac9dcba40060643907e880c0844b0372297572781ae143b354bea83013ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "626c01d16c592629ba58b7da922775383980efcab60c206ed33a454d50169aee"
   end
 
   depends_on "cmake" => :build # for pycares

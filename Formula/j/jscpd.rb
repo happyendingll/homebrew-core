@@ -6,11 +6,8 @@ class Jscpd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "346a16d50e5b291920346713f553bcb1bc542a0d3f9488c9f67019129f44dfe2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "14f3ad3830da1e9043173b07c220cffb4bf12b0996e585a85af92b432fc920f1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8adbf9983a6d9d45023d6104dbe8d6881e0d9178341af627a8d8e87c10e2bba5"
-    sha256 cellar: :any,                 arm64_linux:       "53b1f435f94b937d25a82ba80f166a4d98200c200356d27faa015b0239e2468b"
-    sha256 cellar: :any,                 x86_64_linux:      "817e8bec7392b64392672865c2154437315541080ab8e15e1c9647a3513212b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4d55ff6a852aeb5a39035c5c86033a76bb45bac2c4407fc0a226834c659abfd9"
   end
 
   depends_on "rust" => :build

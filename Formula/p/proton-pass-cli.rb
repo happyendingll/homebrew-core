@@ -6,11 +6,8 @@ class ProtonPassCli < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a4931d2ddfd8e10bcd4dab8c88ea8ef82c975059b08f4ab1fd5927fb60b0843e"
-    sha256 cellar: :any, arm64_tahoe:       "4a4f15c6658c00dc05b02eeed347075557df51494bdaf6d76e5c708a74ea4853"
-    sha256 cellar: :any, arm64_sequoia:     "3ea5dacf92b4aca19ca7a014a5b1e999ec952ec73d1ea5504986831cd580fd96"
-    sha256 cellar: :any, arm64_linux:       "dc633f5a38ca787b91c12d8f319586f06a1c3af6a5a9b2177a952a334f15d679"
-    sha256 cellar: :any, x86_64_linux:      "4563d67c130399852bcb1ff90d212d673a769c9fb181ce224f3791a9bfe8976f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "1a36c1bab3a2cabc87d240d800db6e8251ebc4f66a3dec33f6eab6dfbf6ca1d4"
   end
 
   depends_on "pkgconf" => :build

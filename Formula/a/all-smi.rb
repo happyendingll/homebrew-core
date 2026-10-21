@@ -7,11 +7,8 @@ class AllSmi < Formula
   head "https://github.com/lablup/all-smi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "98b067d24093787f089a0e01da8e379f9aef1803da628d68a9dfa58cd75f109f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75087cbab7a9eccaec63519d6aa2b506fffb2f16de65aefeb1b0eaeae0ea9790"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6f59dc26866695f5bd45f830edf977959a9d8f13c27a7c66c2d2bd975e180467"
-    sha256 cellar: :any,                 arm64_linux:       "8abf87c04b25294d4f5c606ca738f18e8e0a99fcf1d6eb0cb03e5e112f42553a"
-    sha256 cellar: :any,                 x86_64_linux:      "1a72e59267865b328eecbffaa9a5d59e8988f28cb743b970f5e004f9ec33f736"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9aa19ad0b250c8c1272154a9826dc1477ab65b2837b49bdebdceb299b7c58337"
   end
 
   depends_on "rust" => :build

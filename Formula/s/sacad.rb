@@ -7,11 +7,8 @@ class Sacad < Formula
   head "https://github.com/desbma/sacad.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c5b59f5701b5984a2f221d29ac801b892e8be69a25f9d4247459a82c49581b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2b063668dc7680b1964e2aacbd7722a610878f4ab34f8aff5452cc60bae7d1df"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6a4d914c68d19da2954d07bc4a43f1d60ef10d54168cd8b00b0018906d5a7fcc"
-    sha256 cellar: :any,                 arm64_linux:       "fa54c383e22d43539e0973e3a5698eb905356d307ddeea04988b7eda3750e785"
-    sha256 cellar: :any,                 x86_64_linux:      "2d3a4ed945173cf6ca988fd75c3813791987124338d6a32b5013f7f5961943fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b6ee31dfb64bd464eac2f3fd735f59f357f5ceb3695b23dbc5b6f87e4a6d8abe"
   end
 
   depends_on "rust" => :build

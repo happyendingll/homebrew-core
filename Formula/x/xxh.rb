@@ -9,11 +9,8 @@ class Xxh < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "43ffd6bfd6d48c4045309e9f2cf1913dff652797c5ff96aa08cd2b7896dab794"
-    sha256 cellar: :any, arm64_tahoe:       "c1a547e72717040e794c210a7d4e26220062dc39f9a27a3b84f78ef4f16745cf"
-    sha256 cellar: :any, arm64_sequoia:     "6d70f92dd850b2d888181945c58f678d171a386a4286d98e3773dcf7609de39c"
-    sha256 cellar: :any, arm64_linux:       "dd978859c9f1f98235abc247aa4ae550d6b8cecf43ec283460fc6aa92d487c00"
-    sha256 cellar: :any, x86_64_linux:      "7f788beb5e72d70cbebf2e193b84c16088028950e79fd9c0c58750ab5e59c1da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "62b347d660f8e77d31346bea2ed7a1c7138a457cc4f2416270483a644be78665"
   end
 
   depends_on "libyaml"

@@ -7,11 +7,8 @@ class Ggc < Formula
   head "https://github.com/bmf-san/ggc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "84e714fdb673f9c9d4ce1c298c7f7802e68f0d77661a2252c350c16aef215938"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "84e714fdb673f9c9d4ce1c298c7f7802e68f0d77661a2252c350c16aef215938"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "84e714fdb673f9c9d4ce1c298c7f7802e68f0d77661a2252c350c16aef215938"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "69d0dc31becbd4eca6fa8fccaae1fde2c3295db66c3744f16b2b5eb9c9f9656e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "de86a67ee5e79727dd13289380ade7ef0f4267e174154e3f87dc628040997c92"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2fba7e55a3158a48cd0f5ae969a96c248bceec36374eeda913a35086394b9d48"
   end
 
   depends_on "go" => :build

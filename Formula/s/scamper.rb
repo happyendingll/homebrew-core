@@ -11,11 +11,8 @@ class Scamper < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f7a89c6e154c58941e99afa0f4f59d10aaee5fbbb28e6b190099d21c591e947c"
-    sha256 cellar: :any, arm64_tahoe:       "c3bd83158641a8b1e076cc75594943b74c48e9b91a830c364b26b85454eaa4bc"
-    sha256 cellar: :any, arm64_sequoia:     "aabfbe3969fd02d1d8f888f8c3abda8d7553e312f79f1925e65cf59df5bc73a6"
-    sha256 cellar: :any, arm64_linux:       "bd69a032f129ec03168834738774eee614235efb3ccf0ecde9eac2544471115d"
-    sha256 cellar: :any, x86_64_linux:      "4ea013d2c32064c1a119de0e742cc1198f9613466120b90e99084f485b8576c0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "3a6e04d468ac19b18b7e5f6a7df6a68acba427955e379979b40f9df9d5ee7eed"
   end
 
   depends_on "pkgconf" => :build

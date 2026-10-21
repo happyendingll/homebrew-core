@@ -7,11 +7,8 @@ class Ncnn < Formula
   head "https://github.com/Tencent/ncnn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8bcf7a7a39a4161194131eee348bd22d34f40991472e39e63418c27211c302e4"
-    sha256 cellar: :any, arm64_tahoe:       "1e6e67fe148fa5fb4430bb4972ed2a38246368c72d6ade6cd30cef4b24c95bf6"
-    sha256 cellar: :any, arm64_sequoia:     "647393223448ac8f41320d7e57c77dc4d576c447eb3129f664ff4d6f8c372966"
-    sha256               arm64_linux:       "b601b7eff935c552be5aa9dc035453bdba920a1729e05c41f95328676bf96d71"
-    sha256               x86_64_linux:      "51dba34cfdcf0068f625f0d59d56fd0d0018aad701e67c466e7e37d9849a2ee4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "79baed028c4bb384c59e66cb50ddc52d0515f856143d6fd54cf1549a84cbf1ca"
   end
 
   depends_on "cmake" => :build

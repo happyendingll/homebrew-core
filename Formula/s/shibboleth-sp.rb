@@ -12,11 +12,8 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "32b6a15b4b194bbeee48e7f97d167954cdc9bc80e7ad231d6d85c646e0714650"
-    sha256 arm64_tahoe:       "310022c7d540e88197aa85fd0e438d5bb178fd07209209a790f530e81f8e4e12"
-    sha256 arm64_sequoia:     "4e5c506fafc3b73752e30309a6accd074762d83488bcb10c0f99839853a0a99e"
-    sha256 arm64_linux:       "35729d64ab8cb59f36c464a6998ab31c67d17b7c098f16621f2d8f307be1790e"
-    sha256 x86_64_linux:      "a064975d662b3b11d94a0e1572c68eefd9ad810c685d6eec4b23ef95325a53ab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "f7367881c16b3196072f9016568f73d5ed14e1fad0988130b742d91c6f4dedc5"
   end
 
   depends_on "pkgconf" => :build

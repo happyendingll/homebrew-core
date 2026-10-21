@@ -8,11 +8,8 @@ class LanggraphCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "40b1263b55aa1fda9f46fbbf43493bd419072653611e5d9d517d4f91bb754aac"
-    sha256 cellar: :any, arm64_tahoe:       "4f1ecd3f6abe1effd7cc01ba4967fd818ed6fb45122370b487fe140db479a020"
-    sha256 cellar: :any, arm64_sequoia:     "26b43b2bb734d67f9f8bf6f77ef4885283bcf87bdce1528d3a457fc63b3ac704"
-    sha256 cellar: :any, arm64_linux:       "c289de5aaa57326ec02387ffb1cbe5044d6838a381bdcd20a97546ce46064de5"
-    sha256 cellar: :any, x86_64_linux:      "553bcfab0456d40ca03412384c226cc5c5814cb7b44ed5cfae86bf3ef9edf996"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "133a4775fe2000ff15e71cfcd892b4d978d65f7434ab49f6f5cc827a9c1ade68"
   end
 
   depends_on "rust" => :build # for orjson

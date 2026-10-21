@@ -12,11 +12,8 @@ class XmlToolingC < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "24f8416d12a12404f420d824d72a8b7ca6a8dfcab15902746c5d4bf3aef12193"
-    sha256 cellar: :any, arm64_tahoe:       "d889fdfae1d6248708e26a28c14d68b4e534a8106e921722740038b4db0b70f7"
-    sha256 cellar: :any, arm64_sequoia:     "cfd6b7765d312c1fde25856e0b1a57ef15c02a459666a7b8292e333567a781b1"
-    sha256 cellar: :any, arm64_linux:       "35257f3fb8970b5f719c149d2887d6b4dd1bc6d70985ae39a889a774aeb93a38"
-    sha256 cellar: :any, x86_64_linux:      "ced2458cb470dbbd61bd23b7bb3460f20670d4755431195e9ff65edd790e514b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "369d012f1c94d28b163bc12fd17b4e51c48bb0eb1e627957e7e775ddebdb8ab7"
   end
 
   depends_on "pkgconf" => :build

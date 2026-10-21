@@ -16,11 +16,8 @@ class AwsIamAuthenticator < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e6ee8e0fa1cec0c5e86864354d959d8f4884b3353abdb9a20d9025bce8705ebe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e4ff2e4a2cdef577619a78b5a943b0870a213058d3edaa3bf920b577c6d9095b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6305d93b31b7deea9f99976586d985c6b7bfd07e4bc583b74f7d68cd957d396e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f88471789f1500b106f36f54e826d0366d7c0980d342ae5c1f23497d6ef12b56"
-    sha256 cellar: :any,                 x86_64_linux:      "7fb049040f6774f41d564b95c96b45100b8c073af46e9f27e9ecc3755bf687a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "211db71796740fb97b0b69efbff249749b1de55102b8d0eaeaadae9eba2c37e3"
   end
 
   depends_on "go" => :build

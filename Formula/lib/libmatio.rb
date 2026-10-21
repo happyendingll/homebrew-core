@@ -7,11 +7,8 @@ class Libmatio < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ea6990edca07e7dd50b4654d08ad59ea7f37611a6c31e77f40b3fde1d300b7dc"
-    sha256 cellar: :any, arm64_tahoe:       "f5d198037e29963a23930586dbff4632a96f4ced4578732e3bb939884e89ffc2"
-    sha256 cellar: :any, arm64_sequoia:     "10db79a6aec8d6a18760edd33ba274a523ab86fdb53b190a278eab3dc559bc25"
-    sha256 cellar: :any, arm64_linux:       "b0a3228256de47e0c9980fa51e21bea90eed1293ae3b2ab60abdaae16238b26d"
-    sha256 cellar: :any, x86_64_linux:      "7e78d77454548519dee0f5891b9683f8c436b4d3f0082c6663c08de45189c4de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "a607a08b219fda9ffaba6fd0c38a50122caced3b0f6db516299e90da541372f2"
   end
 
   depends_on "pkgconf" => :test

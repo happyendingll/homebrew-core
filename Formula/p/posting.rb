@@ -21,11 +21,8 @@ class Posting < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "94bbdbca89ec9b49036e323829991fac296c507da0ee6e96e2dabcbc314ad9c4"
-    sha256 cellar: :any, arm64_tahoe:       "e418ea9903f008cdb4bd2a9c04528c4adc56c31774f6288bdfdf5847eff6a47b"
-    sha256 cellar: :any, arm64_sequoia:     "35338b638b18d6c1da9d25f726e735d26dc0db6d5f972f7571a563a7a712574b"
-    sha256 cellar: :any, arm64_linux:       "3a909fc72b0d4790ac81e6d8a6648cafc3ffc7a190ee1b6e1dcbc4387e05edd2"
-    sha256 cellar: :any, x86_64_linux:      "84edfd72ef6f95d829f2fcac05a1a12d413659618e52d4a825333387b62c087a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "1812754c5b8be64ac47d70f839bbe851b629482d1854fdd67d876b0cd12a6d34"
   end
 
   head do

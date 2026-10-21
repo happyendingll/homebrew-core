@@ -7,11 +7,8 @@ class Ord < Formula
   head "https://github.com/ordinals/ord.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "feb807887702429fd13df6bf5200a3d40b81661f036e3cf39e63e19401e45040"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bcaa804722edf48ae2ea0168957fb27013f1c7e4ddfff7d11997b7d97a7a7baa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e2648d262b9c0bf85ae5a027480b038a23c351dff1ff5040bc6160433410996d"
-    sha256 cellar: :any,                 arm64_linux:       "f909eef225c193c254758e71bd0d2d760d0109e486b96b9cbc5cb9617520022e"
-    sha256 cellar: :any,                 x86_64_linux:      "88812edfe4feef99ab05c792b004c1b103dbe91816c173a970e55fb4dd7b74c3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "30265860313b70e24c300557b86008e258c494c96ec84b8d23cd67e9097084cf"
   end
 
   depends_on "pkgconf" => :build

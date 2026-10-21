@@ -6,11 +6,8 @@ class Kingfisher < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "29c75eb5ecbc15f5c358dffdd89fe9e7fa9ca6cbee3a158a1c2263467a6f6c54"
-    sha256 cellar: :any, arm64_tahoe:       "7ec0139e985c19a0c1013120b92121f320841143bf1e94dac9e694ca39a104b6"
-    sha256 cellar: :any, arm64_sequoia:     "a4b28b0ec29b60e0283472471e916eac34554d4b3c79bbea778c3f004fdb11c3"
-    sha256 cellar: :any, arm64_linux:       "9e4feb56a501e76a1a8b8426be0de93d58c87cbbed4991800b89d6c3abde2ba9"
-    sha256 cellar: :any, x86_64_linux:      "3a9a4a1d41cd16386643547ea0fc362ef84af1b004890abcbfbaff48ba95f6bf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "6f938ad2884ef11bbb14a687454df3dd337d8bc33a590b8522097dacba17c736"
   end
 
   depends_on "pkgconf" => :build

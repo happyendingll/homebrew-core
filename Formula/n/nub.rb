@@ -11,11 +11,8 @@ class Nub < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f436e5d71a20fa0b5e68bc29332f27a118838755b5fa76abc940897b1e3b1a5c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3d4b23947c40bdfd95dd63eaa54f6f0c7c9048d9a04da26b6c7475e1fdab4a53"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "71f29e6b61e326abcde7a06e3ef4da7adf1eab65d9d7659fd4c221ba26093903"
-    sha256 cellar: :any,                 arm64_linux:       "de0a9bdf50bf48539bea45608c2d7633e3430fe1b622d9d8643aa510ac723339"
-    sha256 cellar: :any,                 x86_64_linux:      "51b966f4f98b82bf2af3d980974abf4ba259cc0bdd7b83eefcb836fb82fa5b9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3982372366357f4121b8e1ceaaf36ea48b9d521478df44631099750facf9f72e"
   end
 
   depends_on "cmake" => :build

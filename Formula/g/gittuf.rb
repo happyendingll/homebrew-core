@@ -7,11 +7,8 @@ class Gittuf < Formula
   head "https://github.com/gittuf/gittuf.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc03b460d2e8c61655bfda742dfd21155a2f91b8436249931058f2accdadbfcc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dc03b460d2e8c61655bfda742dfd21155a2f91b8436249931058f2accdadbfcc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dc03b460d2e8c61655bfda742dfd21155a2f91b8436249931058f2accdadbfcc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "432d4f279a7dc2136b4a31aa8cffbc52ff0c6fccbd821a1da3d35f380790adfc"
-    sha256 cellar: :any,                 x86_64_linux:      "5ad574624e89e3977121deb78b17717958e1f7fc416d6bee72897efa63c0cb5c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd6a551c3c0c6de78b07375a96f30371651ccba8fa07cf257fd10c78e6c8ce05"
   end
 
   depends_on "go" => :build
