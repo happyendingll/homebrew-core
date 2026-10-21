@@ -7,11 +7,8 @@ class Swctl < Formula
   head "https://github.com/apache/skywalking-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "39a3ce3fb1b08d2bfcdfb4e922239d9dd558b088233b58d6adb6c7474bcf49f4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "254f90510993dd04f46261ad3cc5286d143cbeac907cdd79ea2f5b7b1bc187c2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "95a0ad4824cc024500eb17a8427f69f79b4ea2f0a39ca79c35b9be4005572b60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1105428577f7c91e3780be2695f170f914e665450d5e5b40d836f5e39dc4d88c"
-    sha256 cellar: :any,                 x86_64_linux:      "59e44d71c95374511cb6e8ae142a51f60c6d6f99b1a4ffa26159c6d5ce041569"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "80f527fbc86e4775c4dd89a15e7ad0d3d2c19002e1dd1e58c2aadc77d5922fb2"
   end
 
   depends_on "go" => :build

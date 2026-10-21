@@ -11,11 +11,8 @@ class Uftp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "535007a39bbebae49254a421b6c89dc99526e7d347c4aafdc3744af257223046"
-    sha256 cellar: :any, arm64_tahoe:       "bfb1c112ec39c391a4a4b81464105f853bedc1cdf848e79e33fedd018cddc738"
-    sha256 cellar: :any, arm64_sequoia:     "997d48fe3ab6d8ba615b10a158713fe12b95ab246ae0cda58c9ea27dca60c4f4"
-    sha256 cellar: :any, arm64_linux:       "9479a6d96d509a30df78f82f5c950b7aa7612f618c579f7d8a185ded9b7673e4"
-    sha256 cellar: :any, x86_64_linux:      "debad6d8877f01b161f10d4f32ea4bba3b8caa2cef038ccf613be27db367f792"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8f8246689d2e6b7e621ba465ca9a7c550535acdc6f581d62d2e2a0f8dbaa9e7f"
   end
 
   depends_on "openssl@4"

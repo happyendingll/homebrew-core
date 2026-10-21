@@ -12,11 +12,8 @@ class DnscryptProxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "94a2fad33e0797c33f5e8a7ac03f970cd3aa36f58c96c179ab54f2363a1b5435"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "94a2fad33e0797c33f5e8a7ac03f970cd3aa36f58c96c179ab54f2363a1b5435"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "94a2fad33e0797c33f5e8a7ac03f970cd3aa36f58c96c179ab54f2363a1b5435"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c910f71a949ddbadfefe46d4b38340d469de64dc265c5ac1c918743f32b9bd27"
-    sha256 cellar: :any,                 x86_64_linux:      "bc184ee2d4ced35e65087e3d4bdafae2075bb0c3754f832bc544aedb6d928e7d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f50337519c4e14401eb5a178284d2d0dfd685aee4f728f567deedbe016aaf7d9"
   end
 
   depends_on "go" => :build

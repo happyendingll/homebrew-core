@@ -12,11 +12,8 @@ class Grepip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "809aafcba8b6fb8eefc407a159bea7a540fbc20cb553a1bfd6ac6522f852fbd4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "809aafcba8b6fb8eefc407a159bea7a540fbc20cb553a1bfd6ac6522f852fbd4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "809aafcba8b6fb8eefc407a159bea7a540fbc20cb553a1bfd6ac6522f852fbd4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "60f913de4ec38349b665bc204f7f45a8bfaa74a1adccf3a7e3ca9b288065c879"
-    sha256 cellar: :any,                 x86_64_linux:      "279883d3208201e3a3644a7167712a665a3b83939dc4bbd3e6a4a2640ca67d6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a8a256e771841e775586b91dbec2139017936a4af96c0f4e9fba20a6072927f6"
   end
 
   depends_on "go" => :build

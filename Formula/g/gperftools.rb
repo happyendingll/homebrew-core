@@ -13,11 +13,8 @@ class Gperftools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "642bc7196deddcecda46f7194b158423d1942276d6938abee3986d5bae75c103"
-    sha256 cellar: :any, arm64_tahoe:       "d3ff906f9eae5b6cc5947ec4fca0b17b8f2ccb61bef21cb548c0274e44328a3e"
-    sha256 cellar: :any, arm64_sequoia:     "892b72bed00f6077b7c4c166e180a17d6b43e525f9a71a9dc4ec77d548d4aaa5"
-    sha256 cellar: :any, arm64_linux:       "ed44f60ba0f3d59f69ab505b016d5b53003e1452d0030cec40e8c64cb10dcb60"
-    sha256 cellar: :any, x86_64_linux:      "a14f497ea88a4ef9a72fa731bdaae384ea09d9173f47cc18aa836b16a0133ccf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f1980277c0acb4c2d262f84106bff23e3b1d99a5ec5556c997fba5756c456ae2"
   end
 
   head do

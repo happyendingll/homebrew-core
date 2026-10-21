@@ -8,12 +8,8 @@ class Zopfli < Formula
   head "https://github.com/google/zopfli.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "02117d2bae99aaab9586b5a3aa395993d6f0c65a31b4e289d240d32e2aeaba7e"
-    sha256 cellar: :any, arm64_tahoe:       "3cf189287454c0abe8c1da5747609ebe859ba188a3b9763cb44dbb5f759d32ae"
-    sha256 cellar: :any, arm64_sequoia:     "4fe7df0649344fda621be648ce9c9d93b9d82e3e590fb292c7b7db3c54c70585"
-    sha256 cellar: :any, arm64_linux:       "7ca2a485245ef744247a319113e9d202f7adca1702a4f1a1b2bda367616055b0"
-    sha256 cellar: :any, x86_64_linux:      "bec0c8be797f1b8d0530193dd4bb13e23620dbbcc5cf6c26a62ddbdecd271c6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "cc4ba816ef424753523c2fcfb7264d88b93a160fde2e1b9cb44edc3018ddbadc"
   end
 
   depends_on "cmake" => :build

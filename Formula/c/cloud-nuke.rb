@@ -12,11 +12,8 @@ class CloudNuke < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "27a229d18d20696a30a1d1fb1534a884c52a4be611103c483d7c9942acbc3a8e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "27a229d18d20696a30a1d1fb1534a884c52a4be611103c483d7c9942acbc3a8e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "27a229d18d20696a30a1d1fb1534a884c52a4be611103c483d7c9942acbc3a8e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3c827358501fa098d400f70e87370418ba9b916fbf9387c2ca1fd4deb3f10de0"
-    sha256 cellar: :any,                 x86_64_linux:      "0d941b40d097b446bc3852a76a75e05f8bc8f211635b9184b1ae56a5196dc407"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "379c130cdd2e7c43551ee04d42509f1797c273a4941bd9f011bb850ae1c6774f"
   end
 
   depends_on "go" => :build

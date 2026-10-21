@@ -7,11 +7,8 @@ class Klog < Formula
   head "https://github.com/jotaen/klog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "392b4b7a819fa3f60bae2e65a25db261fb8ba140936698d24097cc56cebb68d2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "392b4b7a819fa3f60bae2e65a25db261fb8ba140936698d24097cc56cebb68d2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "392b4b7a819fa3f60bae2e65a25db261fb8ba140936698d24097cc56cebb68d2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7c4b9de0a3d9bea90c72dd928863bd7be857b8d6a974f5dc34c1c96cfefc3a54"
-    sha256 cellar: :any,                 x86_64_linux:      "16111061c4bde6d5c2125094ba163a4d86eda45ea6441a957aca92a12cc9dc30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e6e58314de5352ec8a3223e8907c54692b448983ebe83857394400c273d81911"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Miniflux < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b700e4960cf8e9f49c71e9e13de98f0886b7de32cc0d1e73e699baaa3da96b8a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "048a85767a9693f49295600d1be77d0486d5c6c61ddff2ee3739846f9e3de595"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "172e7b07e0f237a729a9a647c11a8b711f71de087c21602ae20c5b90ef9daa93"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9bd2212b00fdb9c5b3bd48d4114f906cfdcd584afef59588ea5dfeaf933c77c3"
-    sha256 cellar: :any,                 x86_64_linux:      "2b9fb2915a1a5293f428203721d43d7ab204bf8390e7a1d6db121461d78cec52"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "31f8a750bb45125560bb0e3392d67658a3ad4a65ab35b8e0acd775314a591036"
   end
 
   depends_on "go" => :build

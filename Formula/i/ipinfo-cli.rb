@@ -12,11 +12,8 @@ class IpinfoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "814e82a1ef3a6e357a41ecd8a6acc6271dfef5ca0cba5f389f69f5d8c63604bd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0d7e88fea22be9192c73746717aee4a8dc9315d62fa82fb50088f34439fdfb55"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4d8691d2c4b77907d472598b8b9ab7e755addcff37047b1a1d78b4b2f882fdbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "99af97f26dd7fa18d5a43a629450886b49b3ddfb52899f48d618a9c0c4094872"
-    sha256 cellar: :any,                 x86_64_linux:      "ce9533de4c89ef2bbfe68577dd2d7cfdf4db510afd4cb5b755e046175ea34fb1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f5d4583b26c2fdc343c45c0dfc137e49cb75006f59c8a7b716e5f035f496e771"
   end
 
   depends_on "go" => :build

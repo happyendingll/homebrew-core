@@ -12,11 +12,8 @@ class Hz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69c4f17bd9afe8ad207221f96a5188911ad1b243ee6b7a8823a02ad260d239df"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69c4f17bd9afe8ad207221f96a5188911ad1b243ee6b7a8823a02ad260d239df"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "69c4f17bd9afe8ad207221f96a5188911ad1b243ee6b7a8823a02ad260d239df"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5e39551f9ecadb14576f4c6a67b9b81a20d952897a63efe41adcb9bb9cce21be"
-    sha256 cellar: :any,                 x86_64_linux:      "211572493a980213ae0d6c369f40f0e8df969479261f38c6f6af8c54ab3e0c56"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "af7a3a85a807bb0a4916646d360817134276579c90c558945698bb4ba3c19967"
   end
 
   depends_on "go" => [:build, :test]

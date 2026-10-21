@@ -6,11 +6,8 @@ class G3log < Formula
   license "Unlicense"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "49873f2179186250fbac3998335926647dc3b5e9c0a6036e4005cf3f8c14201d"
-    sha256 cellar: :any, arm64_tahoe:       "f22f91e81fa7d15100763a8d0ab5cfe2cde57a32cbdc3f085a1ac300c482766e"
-    sha256 cellar: :any, arm64_sequoia:     "cd4b794fa87b8020a682335a2567748005acfa6aaf2aaf35c0daa01190c9fa2c"
-    sha256 cellar: :any, arm64_linux:       "904ad88c792807a2e1bb28d678d4438a1aed0a9988b9bab25dd2af5b6c815b77"
-    sha256 cellar: :any, x86_64_linux:      "08e099884a633ca4e933f828cffb3d38c3c40f26e82f615a072d5cae004160ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "20112ea4e90a7bb233583e83b93af5b223409169d69f3b4976839705f604a463"
   end
 
   depends_on "cmake" => :build

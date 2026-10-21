@@ -15,11 +15,8 @@ class Log4cplus < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4019cf235323c9599990790a890628be52b6067a7bb388841df916c7fda9beb2"
-    sha256 cellar: :any, arm64_tahoe:       "477e81e58b0473787ba1f4e14c2b305e292343a72265a9ea527b857f6ec3ab02"
-    sha256 cellar: :any, arm64_sequoia:     "632b145bc440e9b537e808104a71ce653e3ac095d34b6c8aca42986e5b66ae51"
-    sha256 cellar: :any, arm64_linux:       "2216d022fb9c6b828d773447cb27c05d00d551f882d8627304f608d6e957c275"
-    sha256 cellar: :any, x86_64_linux:      "f7baaa8ea55fa9f87b7fde6ac9ddb0e2c5ef6ffa4626f7b54e28e335de11a71e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c6063cb0561aff7a3eba36bafc673c5873ae491a6c77ef637b743c532ddcda19"
   end
 
   depends_on "pkgconf" => [:build, :test]

@@ -12,11 +12,8 @@ class Tarlz < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "328421f6970c6a2ef8d6761756cf430f9e7729288abd19f66ddc86db47b27ac6"
-    sha256 cellar: :any, arm64_tahoe:       "f86f03912b3b3a5249d1bb7654d29b914c2b117e125e5f22a8e1d9821fc54c62"
-    sha256 cellar: :any, arm64_sequoia:     "7496de4b57ec402943cbd955dd4aad174415dcc08c2f9db551e9785a4b09322d"
-    sha256 cellar: :any, arm64_linux:       "8f39075c4858a8a8f5dd0cedb75077c1a0e49d13fd44e08740a69b4359ec3b23"
-    sha256 cellar: :any, x86_64_linux:      "f5fbb0ecc6fbac68bc548dafeed95eea54527c80a58b6c6393719abe41b58114"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9c243e4544d91b5f821e889e741ff5d4fa2739283c920e55e905182fc637dcc5"
   end
 
   depends_on "lzlib"

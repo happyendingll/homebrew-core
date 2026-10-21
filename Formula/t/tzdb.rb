@@ -11,11 +11,8 @@ class Tzdb < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "b83eaa22c355d6fdf537abea80416cf2a2faeea9caf9abc889a5559d0f0a6483"
-    sha256 arm64_tahoe:       "b8d1a31f7357e2f9d2bbfbf09afccc83cd16ab1503fd2a16567cf1b322c50791"
-    sha256 arm64_sequoia:     "da20a09f521aa66c21e118262e54e7a32b0bc0a2226408affe6786189eb1a0fe"
-    sha256 arm64_linux:       "000ce740c7f20659c6d69312b2acf6bf8e7185f3d2e9733d457431b44b67f368"
-    sha256 x86_64_linux:      "67476d58f229c99b4235ea44e40967e86ca82f88dbbab7e07846a4095035e283"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "df141e0fea5fe8ab86a7303c1e7f2e4c7f7b4e0d2aa1f341773c736fcda95478"
   end
 
   on_macos do

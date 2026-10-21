@@ -8,11 +8,8 @@ class Premake < Formula
   head "https://github.com/premake/premake-core.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fb3a10cd4d06c6a765e9420c9e96093328401a9e3396d443942931b55f78ce5d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ab86f4550238dccd1dc4bf648add5bb9e8115f326306bf30058e015f165c409d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "72788f973fac2ecec163b6489253ff21c990d4aa710f1cd272c6a94f6b968af2"
-    sha256 cellar: :any,                 arm64_linux:       "11eefadb7a7d317a294614c48374a2c02c635202439d147622f250d87f77b1da"
-    sha256 cellar: :any,                 x86_64_linux:      "09b1c4d00cab87ccda6448c3665d06314914a9a24038343f32ba2d33c008e60c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f5e7671e356eb52cd617934789b98c2c89e7154a6645ddc22c951360fbb88abf"
   end
 
   on_linux do

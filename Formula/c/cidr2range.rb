@@ -12,11 +12,8 @@ class Cidr2range < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "56e6039e2c505b4816817547a268328f3d281aa10c2005801c9c7973d7fac493"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "56e6039e2c505b4816817547a268328f3d281aa10c2005801c9c7973d7fac493"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "56e6039e2c505b4816817547a268328f3d281aa10c2005801c9c7973d7fac493"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bbf42ecbcb2cc9ac2ca8c3c52e2ac265852ffc8da9d9f55b21d1cf5130c4244b"
-    sha256 cellar: :any,                 x86_64_linux:      "f3aed044873acf8e5e4d904c5f02ab8f342a3297619737894dbedeea2010d611"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "12c5cdc3c7edadf9a931be74b8fa0430bc0e87d14d635185a0e52d2776d33fa2"
   end
 
   depends_on "go" => :build

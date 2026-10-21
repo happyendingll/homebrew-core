@@ -7,11 +7,8 @@ class Openvi < Formula
   head "https://github.com/johnsonjh/OpenVi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a8f456479ef2c1176bb171bddd2a284e24575cc877847dc2504f5a3f2dda4ac0"
-    sha256 cellar: :any, arm64_tahoe:       "b278d6789c2a83808ef9e48e604f0fd368a7807fbff4b9526ec46840b88ab526"
-    sha256 cellar: :any, arm64_sequoia:     "241bd2cc5c703e7d4a47dea961df55ac529c516c51486aed245f6c9d849ea475"
-    sha256 cellar: :any, arm64_linux:       "4bb82ef0124cfadba4b92f0c2065fb2b90d8e6769017cb0fd967e033a186560e"
-    sha256 cellar: :any, x86_64_linux:      "c300971558c7a4c825c8f07f2c93727afe234a6779bb34aca15fec007fa29fbb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ef0266f543fed5e2f00a66f8e3194c98b90b0c9be9f3b22fd656c67e5bb3ca5b"
   end
 
   depends_on "pkgconf" => :build

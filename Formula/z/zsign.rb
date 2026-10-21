@@ -7,11 +7,8 @@ class Zsign < Formula
   head "https://github.com/zhlynn/zsign.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "18ec5a9df3e4010e28dcab846759b35960abc7fb1ab171568b6f9b036d3d9579"
-    sha256 cellar: :any, arm64_tahoe:       "0e779315821e2b7baa10144d8145393dbb0ec13ef248576d895322e2c08cb29f"
-    sha256 cellar: :any, arm64_sequoia:     "cefcee73206f34c7b07f1c5943c06022f43d9c32fe6781445a3cf643f03427d4"
-    sha256 cellar: :any, arm64_linux:       "b0366af68e249cdda4eead77ce69143fc999e957b5d073bfaa989b64f3b57708"
-    sha256 cellar: :any, x86_64_linux:      "811d835b6a4ca12324404742edb8cf71c7aafbc24d1af8acc9bdf1cec8f4d19a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "154b3ab023587fe8f14474960d4a2d3284aff4034215f8ff8122a615a25e6741"
   end
 
   depends_on "pkgconf" => :build
