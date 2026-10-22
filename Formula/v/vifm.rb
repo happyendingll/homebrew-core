@@ -7,11 +7,8 @@ class Vifm < Formula
   head "https://github.com/vifm/vifm.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "4c42284c284ae3d471ec352888ebd96f1c05b7875322d2b220a48319ef940f3f"
-    sha256 arm64_tahoe:       "7ff33180ccb9c5fe8a4cfbf0c13b5abfd73d4baf9a5ec972e5daec799ca3ae9f"
-    sha256 arm64_sequoia:     "b651ad7b0043153119dced70de580555b19bdeb76b47e11a6e8aae37b218c8b3"
-    sha256 arm64_linux:       "95d4b78ea9b179715d6f2a8865c3fdb556272c6af912d58f3fc1c8cb968171a8"
-    sha256 x86_64_linux:      "61a664205e4d0b405371c675eff792bc80ff6065d20122642af46c35899a1a49"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "6248e53339ab10be430aef0b150ba5298dc95a383d11861128ca64215b457a73"
   end
 
   depends_on "ncurses"

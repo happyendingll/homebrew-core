@@ -7,11 +7,8 @@ class Buildkite < Formula
   head "https://github.com/buildkite/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db6eedc6054fa4b273a3461a8f0dd1c6656c5e580ed931c88b0039edf630d1f8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "db6eedc6054fa4b273a3461a8f0dd1c6656c5e580ed931c88b0039edf630d1f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db6eedc6054fa4b273a3461a8f0dd1c6656c5e580ed931c88b0039edf630d1f8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "07dd53d34e772a3a500df039fc86de13ac38a564bea93b43c316f875b9492e8d"
-    sha256 cellar: :any,                 x86_64_linux:      "1e8e290cdafff689f0d7695d480798300fe1bba32ae8b2cd8fc09ba61d259849"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "74f9404b753acad7bc625d4cf6351d7b5ce043578dd56f6d61003b782d9f0134"
   end
 
   depends_on "go" => :build

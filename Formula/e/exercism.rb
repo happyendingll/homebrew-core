@@ -12,11 +12,8 @@ class Exercism < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fd1c5be55e0d9e25bde268f638b40c4004099534e7348e98ba87d8d9892ccf99"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fd1c5be55e0d9e25bde268f638b40c4004099534e7348e98ba87d8d9892ccf99"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fd1c5be55e0d9e25bde268f638b40c4004099534e7348e98ba87d8d9892ccf99"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1403c120e676f930dcbdef58415ae4bd20d031789990dff90aee7d576c046be"
-    sha256 cellar: :any,                 x86_64_linux:      "b2005e31ec7f40dfd1a98170054c71bf04527eea0f02530a9dff366ce274da95"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b64a7cffc19e17f82f527b1282fb0281e705edd225c7ffc8084509fef6ac0e3b"
   end
 
   depends_on "go" => :build

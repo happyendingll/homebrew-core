@@ -7,11 +7,8 @@ class Granted < Formula
   head "https://github.com/fwdcloudsec/granted.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43daf9b080c466caef450e7e058954cc2f25b794da90ad0184eb3f97f62f47d2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "363277496c26f442a65f7615d35d0042ec29f5f6a64eab8952f2891fb469cd3d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe2f49a68ef6316074e4f821f81b3eec881d600ee9ada24788b1ad5e7a1af3f8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3664074d3d18cc7b1db6ea00d6e3ca56cf9720b360c5a254cf9fc126353d194c"
-    sha256 cellar: :any,                 x86_64_linux:      "25a3ad5dda6862fa019357fd3296cc8849de376779f65d66f140cec64483059a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7e1d7eee18e99bc896b20dc336fcc2df0d9c2f2a2847c879bcdc8fbc17028901"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class HarborCli < Formula
   head "https://github.com/goharbor/harbor-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7e1fee4566243a5ecc79eac048c355eaf8675933aa1b07d45dd97cfc3764f298"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2aad6ee9ff1b0fb3cbcdb37f96b274a13d0de86f9b65a841621a847177feca33"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "199791643c4cf617a583a14088b71b9c5b78e75e4018742cc7252b059ea7ce9e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7b286359b013a340647a2363a8553d41befd069927e7c27f79ff4c068535b0ff"
-    sha256 cellar: :any,                 x86_64_linux:      "1bdf520456df029136dde1ad3b4a7cc48c6d86f187231b0c0b5ad05b789ef770"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "15b64f58eb5ba722c3d937f7281f4abf7c3339e9a5d56b99ba5babe047ae058c"
   end
 
   depends_on "go" => :build

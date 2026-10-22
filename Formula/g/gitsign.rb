@@ -7,11 +7,8 @@ class Gitsign < Formula
   head "https://github.com/sigstore/gitsign.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "541ab7e2bc2745da306de99d48600f74c4142f2d31b7f02f6644c57e2de2fc3d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bb3f400070762e48004d00857b5a50e78441d2b5de49e8542f0208ae5db6de78"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8db1fec475b6d26250ed5d3bf0181090e4c7adbcd71a262caa6d077de4122b68"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d83e588401b06b14dcee0f11c9c58c7000086287c349c0ce9a4135a10b92e9a7"
-    sha256 cellar: :any,                 x86_64_linux:      "b65b887928e3538c90a1bccc152b6f7633a6912f1664d68eb468761f6c6529a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b27623ccce54f3240b9d2816bcf0a625e0a13bb6d79f3f22cb558df47b72b895"
   end
 
   depends_on "go" => :build

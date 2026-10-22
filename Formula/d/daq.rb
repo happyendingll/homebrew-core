@@ -7,11 +7,8 @@ class Daq < Formula
   head "https://github.com/snort3/libdaq.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7a89b4b16c0687a5a9be075ba323202356767735ee02a4ef6be699372a84ddcc"
-    sha256 cellar: :any, arm64_tahoe:       "8721db9bd1ec3ff068a556475be3906909eb0cdacceab4fe21a9a9128c1b012e"
-    sha256 cellar: :any, arm64_sequoia:     "1fc47bdc946014528761ec801507ae7a7201d166cfee5350b119bbf332a09e8e"
-    sha256 cellar: :any, arm64_linux:       "d3150d2c1d289fd74b6881984a5ac80cf8482a33f000c4fe44a104d6165e1d54"
-    sha256 cellar: :any, x86_64_linux:      "df08f47fd60d1ce98c54c9a58e73720fcfb3b10486771baf7c7ab06101641ede"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5500f1137bc3a5c97ef79d50cb821fcd2cc798958fd48a52b538d90c890a1d53"
   end
 
   depends_on "autoconf" => :build

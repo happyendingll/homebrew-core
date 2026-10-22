@@ -12,11 +12,8 @@ class MysqlConnectorCxx < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3e0e6658995b94c714164677ea4f698d02b0234b5623ba7e33ae65921c4f8f6e"
-    sha256 cellar: :any, arm64_tahoe:       "17bffea0ae2c87a8ac512f377d795c13272cf3c0c630fee44f03e880bbd42952"
-    sha256 cellar: :any, arm64_sequoia:     "f8a0f6c03be9d1aa6da11bc1e3a8810cbc6ace9e52501c9062288981b46913bb"
-    sha256 cellar: :any, arm64_linux:       "cd8270917b88028c42c66fb7d9e6f836685f1bb2c1ca3b2bd02fc1737d4b1d2f"
-    sha256 cellar: :any, x86_64_linux:      "21766b9eeae2f3b0518fe70991cf9aa549ffdeb1e79e7e6667f1147240490422"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "69a0e54f6f715af91780661bdf5a949058ef7616556f2114f04e31fb1bd4f98a"
   end
 
   depends_on "cmake" => :build

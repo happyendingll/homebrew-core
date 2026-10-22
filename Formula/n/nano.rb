@@ -11,11 +11,8 @@ class Nano < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2791d87741b8f65529a08b22be01a73bbaf5a744521fa62699794c16601bd2e9"
-    sha256 arm64_tahoe:       "9e71ede2a9944e90b78a5e41bba39c935a24db7011b98746bc09f0a44a374b6a"
-    sha256 arm64_sequoia:     "a423e897b473dd3df29022aebf322940aa2c491bb7d8d2b132f7623ab8b105c4"
-    sha256 arm64_linux:       "d01bbe39ec4daa51571968a609308bbeb51127fa795edfda9e5b678320ae5de1"
-    sha256 x86_64_linux:      "fdfd36a96897a341ec02895569f71c7cf1a1b0e2d69ffdf2811518f689ca793b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "dd5c9a13b3a71ec1c05e5b86c111b5706342cb2d4cb31b621deec91f6134f812"
   end
 
   head do
