@@ -3,14 +3,17 @@ class Fastmcp < Formula
 
   desc "Fast, Pythonic way to build MCP servers and clients"
   homepage "https://gofastmcp.com/getting-started/welcome"
-  url "https://files.pythonhosted.org/packages/00/4d/06d37a333c3764ab300ad7ff84a30be33c9effffba624ea91f3944123656/fastmcp-4.1.2.tar.gz"
-  sha256 "1b70a8467ac4dd6416c7c101cd54562f089b55e6636a196b4a20bdac3ccb0284"
+  url "https://files.pythonhosted.org/packages/ea/f4/79169f9a2419e1f541b3b39b1bda1c57569b4c7c1ac4b606750c81471ad1/fastmcp-4.1.3.tar.gz"
+  sha256 "a1f79e9db929a1603c75331df603f74530fc236aa711e0ee2e185821c6d9888d"
   license "Apache-2.0"
   head "https://github.com/jlowin/fastmcp.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "bf99bffb491b5160e28ca27599b4bcaba4590718a5e30bed1c60fbbc73cc11f3"
+    sha256 cellar: :any, arm64_golden_gate: "ab490ac791473f23963e04b6617715c6ff0a98344dc25433c4cc3593583eab7d"
+    sha256 cellar: :any, arm64_tahoe:       "334125f5a2559edadab01c90ae62d756f3b160545b2b7783b89e950a716bba85"
+    sha256 cellar: :any, arm64_sequoia:     "767b811ee101485dd0ab6435989047b498f0141935ad6515dd3ce654a6f71e4f"
+    sha256 cellar: :any, arm64_linux:       "53acadc48054e928689708dfdb5bbdfe7d2f9dc2c8cfbc2a2012c4f931fa40b9"
+    sha256 cellar: :any, x86_64_linux:      "9c3639b627c19603979424ac8ccca04fc1e78048e67ffe056b055ad5c632e8b2"
   end
 
   depends_on "rust" => :build # for py_key_value_aio
@@ -91,8 +94,8 @@ class Fastmcp < Formula
   end
 
   resource "fastmcp-slim" do
-    url "https://files.pythonhosted.org/packages/30/c9/f4d0a0a39c64f7647e61c591377468a3afee7a6786a354a405c7c44db2fb/fastmcp_slim-4.1.2.tar.gz"
-    sha256 "4b703ddbd35165ebf03b2cc560688f458f3fe4db11e635074fcc303496734154"
+    url "https://files.pythonhosted.org/packages/81/86/01705c74106297c021e5f8a22ed051adb43061cc779cf543dc05a4d47aba/fastmcp_slim-4.1.3.tar.gz"
+    sha256 "d95277db0979e4cbfa84528cf9016ae079494b41ed8e88cc909fee8233db6035"
   end
 
   resource "griffelib" do

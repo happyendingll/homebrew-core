@@ -3,14 +3,16 @@ class Johnnydep < Formula
 
   desc "Display dependency tree of Python distribution"
   homepage "https://github.com/wimglenn/johnnydep"
-  url "https://files.pythonhosted.org/packages/2d/f6/f12b82239e1ac6ab9605e231db848574f88f38f25fba9ffa6d12b8024332/johnnydep-2.1.0.tar.gz"
-  sha256 "54f05293767aac2d5496f273299bb8d76529f737ba73a6123a65cb52846061ca"
+  url "https://files.pythonhosted.org/packages/e6/88/d9422dd8d382730672299f98c0425a89db56f6e6f890892aa0425bdf20f7/johnnydep-2.1.1.tar.gz"
+  sha256 "64296fedfdb98afdcec72f9dd68779bb99fd88eb42935730db3ba6ace8442b99"
   license "MIT"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "2fd489a38b49a95c01845dc151b7a72216bbed0e9234216df180bc0c5aa1ed00"
+    sha256 cellar: :any, arm64_golden_gate: "2c8a1091865dd6b79619217e92167bb1271d7f9938b2f2024d9aaf2ee10e16a3"
+    sha256 cellar: :any, arm64_tahoe:       "d608203065d00e243b3ff8633b5118ff273d16c49d14192f1bd11b47d45b5d72"
+    sha256 cellar: :any, arm64_sequoia:     "1afa1bece100d726a52a4cfe8168404167167d788c920f924a83578fbcae041a"
+    sha256 cellar: :any, arm64_linux:       "8423fcf90cc1cd135e46e740cc354a80cdc39579bd8821bf829a25c41d9fe3cc"
+    sha256 cellar: :any, x86_64_linux:      "e15135c6c6a08e30c221a38ec93acb9853374e8f7acc534b51feb1eaae49b95d"
   end
 
   depends_on "certifi" => :no_linkage

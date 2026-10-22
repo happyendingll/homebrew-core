@@ -24,7 +24,7 @@ class Mercurial < Formula
   # Backport to support Python 3.15 with OpenSSL 4
   patch do
     url "https://foss.heptapod.net/mercurial/mercurial-devel/-/commit/5f775798ca43e215b6b190a88733ad8751beb90c.diff"
-    sha256 "67d80601f03b08b7691511094647bdd2b6b438edcd09ecdcf1e1150b5b1216c9"
+    sha256 "41fc8b871057ea4c0649e907a8a5c29506273b350e9adb2b08840caad6136ca9"
     type :backport
   end
 

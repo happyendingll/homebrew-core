@@ -1,8 +1,8 @@
 class SwaggerCodegenAT2 < Formula
   desc "Generate clients, server stubs, and docs from an OpenAPI spec"
   homepage "https://swagger.io/tools/swagger-codegen/"
-  url "https://github.com/swagger-api/swagger-codegen/archive/refs/tags/v2.4.52.tar.gz"
-  sha256 "7707fa9771272644d7fab12a5eaee0f3f319bda746a44ed58ba726efa60050a9"
+  url "https://github.com/swagger-api/swagger-codegen/archive/refs/tags/v2.4.53.tar.gz"
+  sha256 "70f603ee89ed6c9249965930e375141e211b979f41e21fe6f13a32b563c2cade"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class SwaggerCodegenAT2 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "15a564c5fa6e564a52f370e174169f73d35b7883000d5db245da2a3d1b870ef9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6382463d1432c3ddf7b9c5847f895d3182e12ff793da6d7c6bf08138d2e78d63"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6382463d1432c3ddf7b9c5847f895d3182e12ff793da6d7c6bf08138d2e78d63"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6382463d1432c3ddf7b9c5847f895d3182e12ff793da6d7c6bf08138d2e78d63"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "60c1b8fb1026f3e3872249124e59bec4703a5f19555258f47f39fad3c586bc43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "60c1b8fb1026f3e3872249124e59bec4703a5f19555258f47f39fad3c586bc43"
   end
 
   keg_only :versioned_formula

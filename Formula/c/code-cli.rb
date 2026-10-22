@@ -1,8 +1,8 @@
 class CodeCli < Formula
   desc "Command-line interface built-in Visual Studio Code"
   homepage "https://code.visualstudio.com"
-  url "https://github.com/microsoft/vscode/archive/refs/tags/1.142.0.tar.gz"
-  sha256 "aa655902cc06c5773644f0154a9a561eb3efa092bae440eeb0b4743115903805"
+  url "https://github.com/microsoft/vscode/archive/refs/tags/1.143.0.tar.gz"
+  sha256 "eeb672f3aff0917a1f6eaeb97b8dad5458a9a0ed54404f4aae3d51f7b32b75f7"
   license "MIT"
   head "https://github.com/microsoft/vscode.git", branch: "main"
 
@@ -12,8 +12,11 @@ class CodeCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "26b5923754cad475b0b6bc49e2cb20dab792e0fc27672c4cb4eb474d8800b028"
+    sha256 cellar: :any, arm64_golden_gate: "e586b8e128b48408ba56372c7275695ef81cede1156b3a1e2db4fc307c71cb0f"
+    sha256 cellar: :any, arm64_tahoe:       "21fa943ea527988244a1edf8a816b03ff712d14c69180a8dd36d4888bd8003a4"
+    sha256 cellar: :any, arm64_sequoia:     "59240de7246d7a059e6a6b2346b185d9210a8231ebe0df2314f29e829980ddf9"
+    sha256 cellar: :any, arm64_linux:       "925f9a3088da257e4c5c0625bc4f1f29fdda5de75df3d66843046dbf36c2ec9e"
+    sha256 cellar: :any, x86_64_linux:      "51b3c9431edd86ac5722999d9d2c398666b97c3bdf0263c1de9b2c576c539b1d"
   end
 
   depends_on "pkgconf" => :build
@@ -24,12 +27,20 @@ class CodeCli < Formula
     depends_on "zlib-ng-compat"
   end
 
-  def openssl = Formula["openssl@4"]
+  deny_network_access!
+
+  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
+
+  def fetch
+    cd "cli" do
+      system "cargo", "fetch", *std_cargo_fetch_args
+    end
+  end
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
-    ENV["OPENSSL_DIR"] = openssl.opt_prefix
+    ENV["OPENSSL_DIR"] = formula_opt_prefix(openssl)
 
     ENV["VSCODE_CLI_NAME_LONG"] = "Code OSS"
 
@@ -46,8 +57,8 @@ class CodeCli < Formula
     assert_match version.to_s, shell_output("#{bin}/code --version")
 
     linked_libraries = [
-      openssl.opt_lib/shared_library("libssl"),
-      openssl.opt_lib/shared_library("libcrypto"),
+      formula_opt_lib(openssl)/shared_library("libssl"),
+      formula_opt_lib(openssl)/shared_library("libcrypto"),
     ]
 
     linked_libraries.each do |library|

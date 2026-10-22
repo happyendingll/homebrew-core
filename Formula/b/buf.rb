@@ -1,8 +1,8 @@
 class Buf < Formula
   desc "New way of working with Protocol Buffers"
   homepage "https://buf.build"
-  url "https://github.com/bufbuild/buf/archive/refs/tags/v1.74.0.tar.gz"
-  sha256 "09f5e4f103ff418bbce2f98ea342852b590f45357c8f3492e827a5976cb9075c"
+  url "https://github.com/bufbuild/buf/archive/refs/tags/v1.75.0.tar.gz"
+  sha256 "e1b688283938b19ff072789d37f371e9bdfbc866ebb719b20c1f1bdc4a9ca8ff"
   license "Apache-2.0"
   head "https://github.com/bufbuild/buf.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Buf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "a35db9d5ff8ba593c468bfb8014dfa0b7fe391e5988c46a9573a8f79ca18e853"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26ef8718b2394cab46f67eb88be5f0ee7084e1af79a0f9d2fc6ea2c9193a0d99"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ef8718b2394cab46f67eb88be5f0ee7084e1af79a0f9d2fc6ea2c9193a0d99"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26ef8718b2394cab46f67eb88be5f0ee7084e1af79a0f9d2fc6ea2c9193a0d99"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f522aefcbc0810caadbd88d89cf07093e0a4f07901b0b5f2f7c7fc5770f0cd92"
+    sha256 cellar: :any,                 x86_64_linux:      "0e7ef4b67ed02fb4ecc5f26877173106a95ea61aeba8fc64c83c47f2bf3c4991"
   end
 
   depends_on "go" => :build

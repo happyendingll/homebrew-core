@@ -3,13 +3,16 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/0a/69/8461d4c25490b5efe65b2178c857273785bd8b42a5555264b6b4f9bf2ed0/fastapi-0.153.0.tar.gz"
-  sha256 "5dbf5dcf6cf86388326c147566077c56a14c55b0f1bef370195da98e724a503f"
+  url "https://files.pythonhosted.org/packages/6c/93/6e785df7ec0bdbfef9d7bf1044bc7bfabd6d22641d147e8326a1f2ba210b/fastapi-0.156.8.tar.gz"
+  sha256 "cee65bba7890cd85264b3b06c7fdf88e84ca3510d00d4018cdbc2ce629e1ff22"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "b4c9192807e23d6c69b59a19028520a40104cf6550730ffe7b100d70eef62fa0"
+    sha256 cellar: :any, arm64_golden_gate: "91f8bd3d714d0b5a54d1e25e1551bbd2fabd2e4270fb4ba9bb1b2fce9c8a90b3"
+    sha256 cellar: :any, arm64_tahoe:       "0c649ba0f63c431bf519dda46318cd7c1c05dc43783ed8445623dab3917688b6"
+    sha256 cellar: :any, arm64_sequoia:     "a7212d814c70b13d3e80330fd38b1c0fdffef838c07e4348bc8fcbf04d140d59"
+    sha256 cellar: :any, arm64_linux:       "5893593f0ea44f8ce92a78e4775127e738e41eb64466b6ea4e236ee076519b96"
+    sha256 cellar: :any, x86_64_linux:      "bb712911b3b3fadf772dbb1f1ad7451306e91c026ffb3b6b791079b66944830a"
   end
 
   depends_on "rust" => :build # for annotated-doc
@@ -92,8 +95,8 @@ class Fastapi < Formula
   end
 
   resource "httpcore2" do
-    url "https://files.pythonhosted.org/packages/c2/a9/11bc39967bb9dfaab0981ab4d49f519818acbee662a7e76d06813319c838/httpcore2-2.15.1.tar.gz"
-    sha256 "a94b6b3e6260e1a3f035915408d3dcd7dc8e844c2b544b642e227cf98a747af0"
+    url "https://files.pythonhosted.org/packages/c0/61/afa9d6b7452f9eca73f73d45324eb0bb52f098fd5e6049bf6b8263be9b4e/httpcore2-2.16.0.tar.gz"
+    sha256 "c72cd0413563b17e1cd8354677dff887466f8ec2551679759e93126534428643"
   end
 
   resource "httptools" do
@@ -107,8 +110,8 @@ class Fastapi < Formula
   end
 
   resource "httpx2" do
-    url "https://files.pythonhosted.org/packages/7f/85/07978f4afd168d6b408fa75c1dc13e3010653a81e182aa1b6d89ab94d9c6/httpx2-2.15.1.tar.gz"
-    sha256 "ff75485308fbe441e75b1218546e4e78d884df41e1a9741c1f79335ed8fcfef7"
+    url "https://files.pythonhosted.org/packages/43/73/5ca2cedf5e4e50423d1c258877865a6b62793633b561c58499f8aeb33b7e/httpx2-2.16.0.tar.gz"
+    sha256 "0d54c98128e8f2ff7fbbde0fca8c359e5f032edeaaaac443cdb7f31f685bcd7f"
   end
 
   resource "idna" do

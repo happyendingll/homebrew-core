@@ -1,14 +1,17 @@
 class Sendme < Formula
   desc "Tool to send files and directories, based on iroh"
   homepage "https://iroh.computer/sendme"
-  url "https://github.com/n0-computer/sendme/archive/refs/tags/v0.37.0.tar.gz"
-  sha256 "bbde0e324ffcb4c2fae6d8dd3af2c8191796be2d34bd40f354692c44eea5e9cf"
+  url "https://github.com/n0-computer/sendme/archive/refs/tags/v0.37.1.tar.gz"
+  sha256 "c06c3c250bca80c9bcac4650c8e4eb8db6e0b28261bacebac1df0c93b674e62a"
   license "MIT"
   head "https://github.com/n0-computer/sendme.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "04daf5ad6e5d7ca62c42e022f409000de19ffc939665310e46e4c1912e14dde7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21678494bdaf39fd55b9efb2ab077a5d918af3f1fcb5ad9067ba424d171c1859"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1536807fb47ddb8e2b9db05c7ba5554f0220a2428ee3e841c3c6f9549145bf3b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0b857fd675f7ba1dda75ce99cec2a5c97970712d5783293c381c1e9ab383403"
+    sha256 cellar: :any,                 arm64_linux:       "0871823b7cfe6bf51e424862101502f43e57e21718c8148a65fd44f5523bf9d7"
+    sha256 cellar: :any,                 x86_64_linux:      "de29cfe60c2c32b54e06df95282057d807e65be70754657f2e48a9848169c077"
   end
 
   depends_on "rust" => :build

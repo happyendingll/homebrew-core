@@ -34,6 +34,7 @@ class Redis < Formula
   depends_on "libtool" => :build
   depends_on "rust" => :build
   depends_on "openssl@4"
+  depends_on "zstd"
 
   uses_from_macos "llvm" => :build
   uses_from_macos "python" => :build
@@ -45,9 +46,6 @@ class Redis < Formula
   conflicts_with "valkey", because: "both install `redis-*` binaries"
 
   def install
-    # RediSearch sets `CMAKE_CXX_STANDARD` inside a function without `PARENT_SCOPE`,
-    # so no `-std` reaches the compile line and the compiler default is used instead.
-    ENV.append "CXXFLAGS", "-std=gnu++20"
     # VectorSimilarity selects its SIMD kernels at runtime via cpu_features.
     ENV.runtime_cpu_detection
     # FIXME: redisbloom's vendored readies has no `OSX_MIN_SDK_VER` past tahoe, leaving `-mmacosx-version-min=` empty
@@ -56,7 +54,7 @@ class Redis < Formula
     inreplace "modules/redisearch/src/CMakeLists.txt",
               "/opt/homebrew/opt/openssl@3", formula_opt_prefix("openssl@4")
     system "gmake", "deploy", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes",
-           "REDISEARCH_GENERATE_HEADERS=0", "IGNORE_MISSING_DEPS=1", "LTO=0"
+           "BUILD_COMPRESSION=yes", "REDISEARCH_GENERATE_HEADERS=0", "IGNORE_MISSING_DEPS=1", "LTO=0"
 
     %w[run db/redis log].each { |p| (var/p).mkpath }
 

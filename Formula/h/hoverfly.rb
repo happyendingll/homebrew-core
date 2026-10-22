@@ -1,14 +1,17 @@
 class Hoverfly < Formula
   desc "API simulations for development and testing"
   homepage "https://hoverfly.io/"
-  url "https://github.com/SpectoLabs/hoverfly/archive/refs/tags/v1.12.15.tar.gz"
-  sha256 "3ac7c620995afb5b8bf08d35601f0c300b99911e4c1a43b301e291e82b242066"
+  url "https://github.com/SpectoLabs/hoverfly/archive/refs/tags/v1.12.16.tar.gz"
+  sha256 "3571f41cdc6f308a912130558d2a901b08f68cc81589a67313e40ef83fc79c54"
   license "Apache-2.0"
   head "https://github.com/SpectoLabs/hoverfly.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "b768da510835d0562223f975ffabb6190341c44fdc0761f8edcf5b5e6d3a486f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "590d5d50968a53693974f6b00d8d09451eb33832808f8b41dda008d312075e7c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "590d5d50968a53693974f6b00d8d09451eb33832808f8b41dda008d312075e7c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "590d5d50968a53693974f6b00d8d09451eb33832808f8b41dda008d312075e7c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8015b27c951a095936c497bf39c5b208603bcec010503b224056808cc3370d2e"
+    sha256 cellar: :any,                 x86_64_linux:      "58c3b4e4d0a1c7d3dec0b601d5901ec8d8cacba1c63ff22a14a8dd97ecd09274"
   end
 
   depends_on "go" => :build

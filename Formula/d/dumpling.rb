@@ -1,8 +1,8 @@
 class Dumpling < Formula
   desc "Creating SQL dump from a MySQL-compatible database"
   homepage "https://github.com/pingcap/tidb"
-  url "https://github.com/pingcap/tidb/archive/refs/tags/v26.3.20.tar.gz"
-  sha256 "7e483091aa8137c20e12d727d1cf459c53d78b47586ae56a0922e3655eb10f92"
+  url "https://github.com/pingcap/tidb/archive/refs/tags/v26.3.21.tar.gz"
+  sha256 "4af9c875702ad53ba9c3e1466c2c43e6f2dc1fd0082600ad9a961138b81f4f2a"
   license "Apache-2.0"
   head "https://github.com/pingcap/tidb.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Dumpling < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "8409a53cc6558280a0a8a4c4e5d2100edb848370c317c35d0a55cfde0f8c8663"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "422a1ea4f07d71f8bafcbca0e6b1fc5cb40015a411bd82880adfb2cee26ec394"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "05d501669892a7033796b5d8498d156e4eaf9072c7a5ef2160a319625e6830b3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "75ff7cdb0abe357a06c1ddf5c841862bdfc1000a3e0ac155cc22acb46f9a00af"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "032b1de6487b5dbd08a044849c7ba50d79146233c0954d8b6e81bc6bc3cb684d"
+    sha256 cellar: :any,                 x86_64_linux:      "6441dab0856a2d440d626f6fb868a6e155b16af2cdd0a9fbeed06c8fe0cbf9da"
   end
 
   # TODO: unpin go@1.26 when dumpling supports go 1.27

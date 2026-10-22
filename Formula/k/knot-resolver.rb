@@ -3,10 +3,9 @@ class KnotResolver < Formula
 
   desc "Minimalistic, caching, DNSSEC-validating DNS resolver"
   homepage "https://www.knot-resolver.cz"
-  url "https://knot-resolver.nic.cz/release/knot-resolver-6.5.0.tar.xz"
-  sha256 "84599bbf889ecc7892aeabc088753355d63326354e5992b53a5ec82306224ee6"
+  url "https://knot-resolver.nic.cz/release/knot-resolver-6.5.1.tar.xz"
+  sha256 "3b2a04626c1df9b42420960025bc94e28777744d31c567adb9580c37189aae97"
   license all_of: ["CC0-1.0", "GPL-3.0-or-later", "LGPL-2.1-or-later", "MIT"]
-  revision 1
   head "https://gitlab.labs.nic.cz/knot/knot-resolver.git", branch: "master"
 
   livecheck do
@@ -15,8 +14,11 @@ class KnotResolver < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "523413e474ad1566cbd4184ca7470bc93aa8b488451259646523e72008129cda"
+    sha256 arm64_golden_gate: "17e4ed5fc06566defc2d482ecec5926f1579e1719972670e88174dccc76585c0"
+    sha256 arm64_tahoe:       "f452bb5fad7c2016e1ef8a398428440d69457926938fb28f0b7f470fa2026a92"
+    sha256 arm64_sequoia:     "1e10d2b91f282207ea06afbe1ba0f193c840d3808e3378b87cb77dfbd21fcc26"
+    sha256 arm64_linux:       "396ef7cdfc0b6eaedda2acd930bd672ed18e973966c856373945bc208d36402e"
+    sha256 x86_64_linux:      "c782e5ff0350f4cc2b5a9dc0ac975cebfa9c811a4b562f4f8e74aa6388fd681b"
   end
 
   depends_on "meson" => :build

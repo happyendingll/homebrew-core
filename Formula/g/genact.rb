@@ -4,6 +4,7 @@ class Genact < Formula
   url "https://github.com/svenstaro/genact/archive/refs/tags/v1.6.0.tar.gz"
   sha256 "bff905d0717cd8d5567cca3a81b718b64e0c965b6a49b119bb83b6726858e31d"
   license "MIT"
+  head "https://github.com/svenstaro/genact.git", branch: "master"
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
@@ -11,6 +12,12 @@ class Genact < Formula
   end
 
   depends_on "rust" => :build
+
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     system "cargo", "install", *std_cargo_args

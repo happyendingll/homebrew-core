@@ -1,14 +1,17 @@
 class Terratag < Formula
   desc "CLI to automate tagging for AWS, Azure & GCP resources in Terraform"
   homepage "https://www.terratag.io/"
-  url "https://github.com/env0/terratag/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "3ffded4956af55a5a81e077c3e44eabcb76893cfba371df069fa296a2d07e606"
+  url "https://github.com/env0/terratag/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "677c79617ebd7ecf415d87be861e43f3b71b924b78bb461c24124cca13189510"
   license "MPL-2.0"
   head "https://github.com/env0/terratag.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "c4958ff7d8a1e26c0a3cb7713238401035982db2c2d15841d4d9069f87ca4172"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ea153103f457e9f5aa3fb8cc9e0f46dbfeae0d0ab8732127818e2a56ad6159d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7ea153103f457e9f5aa3fb8cc9e0f46dbfeae0d0ab8732127818e2a56ad6159d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7ea153103f457e9f5aa3fb8cc9e0f46dbfeae0d0ab8732127818e2a56ad6159d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c845e5b623d7a8203987c642391b75b2d6389e07858ce73105e96b56800b6143"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "468d84b6a10ef856e4ae24d28a91588a9da43e685286e5e05b373f81d5a2e6a3"
   end
 
   depends_on "go" => :build

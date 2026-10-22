@@ -1,8 +1,8 @@
 class Snort < Formula
   desc "Flexible Network Intrusion Detection System"
   homepage "https://www.snort.org"
-  url "https://github.com/snort3/snort3/archive/refs/tags/3.12.2.0.tar.gz"
-  sha256 "43000d6b0e0307bc1a735874d00deb61e8b6a96d074f8cc9b2fe2cde0058720b"
+  url "https://github.com/snort3/snort3/archive/refs/tags/3.12.4.0.tar.gz"
+  sha256 "5bab33f703ca09b74bc2de72d16d8be59c67ebb98dbd45e50c30989b5cdd510f"
   license "GPL-2.0-only"
   head "https://github.com/snort3/snort3.git", branch: "master"
 
@@ -15,8 +15,11 @@ class Snort < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "fcf863a1ce54ae9dc5d5a04c791b4809ed92fb1aec800d7af92dc992b7294141"
+    sha256 cellar: :any, arm64_golden_gate: "cc1bdc46cab2d0e8dfe91dbc2b4bc099ad9e9922434289fcfe8a54f6e1a7f077"
+    sha256 cellar: :any, arm64_tahoe:       "ba9d35f0404200941261b2b72ee4fc721d70210cafe11b51e733c9b73c12db0f"
+    sha256 cellar: :any, arm64_sequoia:     "e50af48297095b6d1698460fa90fb159b0a65a26ab93bb7f138cbcf10dc0efcf"
+    sha256 cellar: :any, arm64_linux:       "2a8d037c853d40691dc67dfd1a05a46d60e73a2c8bea5ca9b9903b9a8a271a05"
+    sha256 cellar: :any, x86_64_linux:      "9589d0ea20a7097a7cd557179cae739e3cf411bda149921410c4a4fa4088e762"
   end
 
   depends_on "cmake" => :build

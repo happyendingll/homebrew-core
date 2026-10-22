@@ -1,13 +1,16 @@
 class Netwatch < Formula
   desc "Cross-platform realtime network diagnostics TUI"
   homepage "https://www.netwatchlabs.com/labs/netwatch"
-  url "https://github.com/matthart1983/netwatch/archive/refs/tags/v0.35.4.tar.gz"
-  sha256 "0a5697327926d54b0c8b0b0ea6ad99ee718a0cfd4bd872b70a08b191221ae0ef"
+  url "https://github.com/matthart1983/netwatch/archive/refs/tags/v0.37.0.tar.gz"
+  sha256 "1c4450923fc0d0f075d8a1d8097f2d565670a19a159149f197f4fb373175c9d9"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "9d582e1bd06f2580db63326079d51a6b5cb919b1a20e6247036c3399dff5c2fc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "875eb13a7726ef013349c5dd12489ae8f554811ac1cd98a048c2fb4d0fc8b8cf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "11473c1f0accd8623cd775bebdd93680755e022f202c2c230db66368dc39592a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "45df13201c5a555891ee5844eddec78b822d2f23ffb06bd81b5591e982ff6635"
+    sha256 cellar: :any,                 arm64_linux:       "777ec4cf662d75d62023f3d58ee196b982d909b3f258a1993d7ec5fee0a8c07e"
+    sha256 cellar: :any,                 x86_64_linux:      "d00df47f4cdcb718737c7eeef60074dd3f262e80bc13a8e434fcd613e9bf5186"
   end
 
   depends_on "rust" => :build

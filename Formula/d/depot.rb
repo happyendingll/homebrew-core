@@ -1,8 +1,8 @@
 class Depot < Formula
   desc "Build your Docker images in the cloud"
   homepage "https://depot.dev/"
-  url "https://github.com/depot/cli/archive/refs/tags/v2.102.25.tar.gz"
-  sha256 "fa9e1b61f038c807098f5814d8b8cc6097269d821774e23b344c73628522a538"
+  url "https://github.com/depot/cli/archive/refs/tags/v2.103.0.tar.gz"
+  sha256 "35d5fc895a7cf6d63bc3dbb9e58d05d15695e05d9b0e5bd8c32d7dace0c9175f"
   license "MIT"
   head "https://github.com/depot/cli.git", branch: "main"
 
@@ -14,19 +14,14 @@ class Depot < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "c0a5da44f0ea5b3641b4c59155757747cbd1036af7470ead8744e6bc29626e6d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "91fef7fc34af255ad63ba19b614b07ebb650593e49857a6e0e085c72695b89fc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "91fef7fc34af255ad63ba19b614b07ebb650593e49857a6e0e085c72695b89fc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91fef7fc34af255ad63ba19b614b07ebb650593e49857a6e0e085c72695b89fc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "58d66eccdb23b3cdb20dfe0cdec82093ad5c24f0ac72aff643a1688448f3eb0c"
+    sha256 cellar: :any,                 x86_64_linux:      "62a4429d20443871ea1a4168282ccaeadc486a6160524183d1dd6c78c52ea4b6"
   end
 
   depends_on "go" => :build
-
-  # Fix linking on Linux arm64 with Go 1.27, which rejects cpuid 2.0.4's linkname to `runtime.sched_getaffinity`.
-  patch do
-    url "https://github.com/depot/cli/commit/627f8a6dfad7e7f2f33c774d3aa22af9884f0ebb.patch?full_index=1"
-    sha256 "bffa3eaea34bebeeb3c27fb9ed326137b8824a1ded170eeeb2cdd91c30dd48ac"
-    type :unofficial
-    resolves "https://github.com/depot/cli/pull/570"
-  end
 
   deny_network_access!
 

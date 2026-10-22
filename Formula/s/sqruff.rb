@@ -1,14 +1,17 @@
 class Sqruff < Formula
   desc "Fast SQL formatter/linter"
   homepage "https://github.com/quarylabs/sqruff"
-  url "https://github.com/quarylabs/sqruff/archive/refs/tags/v0.42.0.tar.gz"
-  sha256 "88edddc02ac4bab9868651aa6a1bf18a997219693223c9f33a3a49e7c2cee553"
+  url "https://github.com/quarylabs/sqruff/archive/refs/tags/v0.43.0.tar.gz"
+  sha256 "431a0fae3a184860fa0ac436cc0a9c14fa48cabc141f5993eeaed8fa27b80597"
   license "Apache-2.0"
   head "https://github.com/quarylabs/sqruff.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "074918ccfc1c4a1123f3c3c17348f946fb124ca95358857001203c0e697a9d4c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a51a02acdb8c18da358321cb8346c8a77598d1a8a0e35f1e8bdd4d24cb7fac0d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "14aff0e2a579172ec5d9e7cac1727b6aa0d37c405fb46a8defed690a82d4ab76"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "657bc709665355996d3f9085d156b3b1e0f671748c915eb5638cbbf60c5378ca"
+    sha256 cellar: :any,                 arm64_linux:       "afe9052f7b020b2bcb47935ba63f7c0bb38e49203edc3452671ea24f0c4fa9bc"
+    sha256 cellar: :any,                 x86_64_linux:      "5d885b8f78b7de567f6a9ca669fdbb6573e5b0942c074b9e34d08172ffb1044b"
   end
 
   depends_on "rust" => :build

@@ -1,13 +1,16 @@
 class Cdxgen < Formula
   desc "Creates CycloneDX Software Bill-of-Materials (SBOM) for projects"
   homepage "https://github.com/CycloneDX/cdxgen"
-  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.8.6.tgz"
-  sha256 "cbe766872a686a453d0178fab677eb725863a2c6ddbf8cbc1d4d6c1c87cc6b7c"
+  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.8.7.tgz"
+  sha256 "df3dfd0c2023f06f800d866ef52dac65255ce14f9b266a8003d0ac8ac2134735"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "a08ffc165d79b65180b8b78e5e2eaa841366f15478bea317635c1a2a55468be4"
+    sha256 cellar: :any, arm64_golden_gate: "d1e1fbff242a93a202cf6675cb570fdfaa7d51cbb002309978fa03eb2eba8344"
+    sha256 cellar: :any, arm64_tahoe:       "54116329f904e1c3c655ec3d6587fa046dc9ab3d66524f0a238b6e6164a4efe9"
+    sha256 cellar: :any, arm64_sequoia:     "ce05beae96df6620fc38fade0be8c66be43171f2f60498f702fd122bb1a7cbcf"
+    sha256 cellar: :any, arm64_linux:       "4cb5d0d16f8fd8f3b60e754de39bd20a9516a4bd4fff8754b38d76ecff151709"
+    sha256 cellar: :any, x86_64_linux:      "3916d07172f5c9314d5b83607700815e6a93f64288cc2d4821e18273b554004f"
   end
 
   depends_on "dotnet" # for dosai
@@ -45,6 +48,8 @@ class Cdxgen < Formula
 
     resource("dosai").stage do
       ENV["DOTNET_CLI_TELEMETRY_OPTOUT"] = "1"
+      # .NET named mutexes need `XDG_RUNTIME_DIR` (or `USER`) on Linux, which build containers may lack
+      ENV["XDG_RUNTIME_DIR"] = buildpath
       dosai_cmd = "dosai-#{os}-#{arch}"
       dotnet = Formula["dotnet"]
       args = %W[

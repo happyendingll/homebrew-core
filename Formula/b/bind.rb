@@ -7,12 +7,11 @@ class Bind < Formula
   # "version_scheme" because someone upgraded to 9.15.0, and required a
   # downgrade.
   license "MPL-2.0"
-  revision 1
   version_scheme 1
 
   stable do
-    url "https://downloads.isc.org/isc/bind9/9.20.29/bind-9.20.29.tar.xz"
-    sha256 "587029508b3b1b43229fae416c97e5543aba45809cefaca98a5004a02a5736c1"
+    url "https://downloads.isc.org/isc/bind9/9.20.30/bind-9.20.30.tar.xz"
+    sha256 "9e1443a40a72a30272cbc3196d020a6b2e26937111c83e59e101e82e1e3b4fef"
 
     depends_on "readline" # TODO: Remove in 9.22
   end
@@ -25,8 +24,11 @@ class Bind < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "4c526022c4c36ed354385971a0f64270df962a4b065cfff834474446c4f6cedf"
+    sha256 arm64_golden_gate: "a802e8c952a5d3a014671f4a2f60cba55fb66f21ff9266aaf80d767a899b4d5a"
+    sha256 arm64_tahoe:       "ff43cef2f7d9e9464a6c9a39a650dc61ba0e8a517d26449e9137372170cb560c"
+    sha256 arm64_sequoia:     "de9bc6de90a3e8bbd5f282c9eb739916f7655277802d22be30ba97dd27801fe9"
+    sha256 arm64_linux:       "ba6338a0b2a4cd6fec430ff9a350c7f90ce4efa10f49de74caaa8883ac15056f"
+    sha256 x86_64_linux:      "7eb78197a96eb11ed249fbf54221eae1a3d26e7725678d21dc37df56c00eeb78"
   end
 
   head do

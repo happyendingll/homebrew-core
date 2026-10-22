@@ -1,8 +1,8 @@
 class Steampipe < Formula
   desc "Use SQL to instantly query your cloud services"
   homepage "https://steampipe.io/"
-  url "https://github.com/turbot/steampipe/archive/refs/tags/v2.4.7.tar.gz"
-  sha256 "1c0bf12ef7435a39a74414a23fac1fb155febf7b234a4aa0a01fa60be04c7f41"
+  url "https://github.com/turbot/steampipe/archive/refs/tags/v2.4.8.tar.gz"
+  sha256 "ef7788006b0833509dca9cbd5194e1d0b66678b41cf0dee13b354b121b73cbdd"
   license "AGPL-3.0-only"
   head "https://github.com/turbot/steampipe.git", branch: "develop"
 
@@ -12,8 +12,11 @@ class Steampipe < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "d74f99ab89537334261686b69c98d52b06a6c6f511706a9d06cb33de1687f7ae"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "402cbc61dc88d0451dc3434148504ddd982ca879fd2d4ac12e6f03a9788fa97d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c827bcbcdf5afc216e131426458ec67ae683f7125856c7fff0b8d66561cbd0c2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "38d0a5eff0a88bb61117972a5ead4a508f204e29cbcc0097cfc51cb0a5e6ed9b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f6480faf500dcd3ad6207e7581500f8f986ebdb15f124bb810ad251ed4f83c86"
+    sha256 cellar: :any,                 x86_64_linux:      "14313fc5fab640f8eb212d4996a228b3f5bf5d74b9c15662e62cc368a3c537ca"
   end
 
   depends_on "go" => :build

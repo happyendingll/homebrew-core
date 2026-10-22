@@ -1,20 +1,24 @@
 class Aoe < Formula
   desc "Terminal session manager for AI coding agents"
   homepage "https://github.com/agent-of-empires/agent-of-empires"
-  url "https://github.com/agent-of-empires/agent-of-empires/archive/refs/tags/v1.20.0.tar.gz"
-  sha256 "fc83a9330807077a16df2c658d79535149fe0ec895299ace756f22096d13de70"
+  url "https://github.com/agent-of-empires/agent-of-empires/archive/refs/tags/v1.21.0.tar.gz"
+  sha256 "0d9a2da8ab5d99452174626d83d7804988051630bdcb408f9abe6e81d56a15e9"
   license "MIT"
   head "https://github.com/agent-of-empires/agent-of-empires.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "05f18e4e1112fec0b37ddb859dc023863235871e4d39541651e31444e669156d"
+    sha256 cellar: :any, arm64_golden_gate: "6ed41871f03d230974fbe40161ee1e2bcea6a133d1884520c4bf6061b20b0a32"
+    sha256 cellar: :any, arm64_tahoe:       "29766059cc24feddcedac554ddfe91ce8d63d315ae2d87681e8d81564c995f5b"
+    sha256 cellar: :any, arm64_sequoia:     "05129b16750c3f71428b6f910d3a2030fe9bed757cf347b9d0b2c612fbdade22"
+    sha256 cellar: :any, arm64_linux:       "81d7d48c4297baaf8c7bf74e851e40f01f710db771b3082eb34c163ba81eac54"
+    sha256 cellar: :any, x86_64_linux:      "7a7ff0c74fc4501239ecde386416c968d4a6906d95b2e1432f2e14db773f9373"
   end
 
   depends_on "node" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "libgit2"
+  depends_on "openssl@4"
   depends_on "tmux" => :no_linkage
 
   uses_from_macos "sqlite"

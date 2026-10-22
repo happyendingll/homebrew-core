@@ -1,8 +1,8 @@
 class Gperftools < Formula
   desc "Multi-threaded malloc() and performance analysis tools"
   homepage "https://github.com/gperftools/gperftools"
-  url "https://github.com/gperftools/gperftools/releases/download/gperftools-2.19/gperftools-2.19.tar.gz"
-  sha256 "97adc4509128200e21f3b29cd0f1184d4a41cfad892750cd15e6b8f5b5f96f21"
+  url "https://github.com/gperftools/gperftools/releases/download/gperftools-2.19.1/gperftools-2.19.1.tar.gz"
+  sha256 "4b0ac7a3803868685caa0ca4c190100ad8a302af6eb10b3e7482d36367f97309"
   license "BSD-3-Clause"
   compatibility_version 1
 
@@ -13,8 +13,11 @@ class Gperftools < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "f1980277c0acb4c2d262f84106bff23e3b1d99a5ec5556c997fba5756c456ae2"
+    sha256 cellar: :any, arm64_golden_gate: "d0dd9a78846de2a079c11cb778b9b6f62e66fa9150c15bb6178dc01bf6e38d7f"
+    sha256 cellar: :any, arm64_tahoe:       "2b58af0b84162b0d46e1d909542658688928f71ae0dee7196d97a55a1987b22e"
+    sha256 cellar: :any, arm64_sequoia:     "3ba1d5dbc2df27877317dd264ee64b1ce919227f2f8ba6a9bad6cb71fb4dab4f"
+    sha256 cellar: :any, arm64_linux:       "e42c1766f0042c368176b368d3bae5bcde2490a6d352c12b0bbc54b9cb13671f"
+    sha256 cellar: :any, x86_64_linux:      "166f2776700e803f5be436177651716f14530370b74df1c4d627c759f09a245c"
   end
 
   head do

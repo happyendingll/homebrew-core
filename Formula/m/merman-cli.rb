@@ -1,13 +1,16 @@
 class MermanCli < Formula
   desc "Mermaid.js, but headless, in Rust"
   homepage "https://frankorz.com/merman/"
-  url "https://github.com/Latias94/merman/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "2a0ac43e793446215d6f0ab0efdd1850eb8faeb460cc9a7ab89a9e7079b928a4"
+  url "https://github.com/Latias94/merman/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "423fd38280312c90bcb525ae214998497f935a3a8d3715d1b8bfc555084c076d"
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "17942f1fb39c1ad29ac51086c30e53dbffde52fb130aa5915491bf1dd7a1eed1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "431c6d85111e33afd401fa64a03e8884d369ab3a483de26eb198dbdf4bbf7bb7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e023702438e789cf4045c8fbd5d1850f07a319d63b678646cac97e4757b72b2b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e977e15660b4a736cebd13006fbc6c392704bbe8943793597f6992b9dd8f777c"
+    sha256 cellar: :any,                 arm64_linux:       "117cc94a53ee82739c385c22e4cd7c017b8a40d28b2f75ca5ba01d98b514b6ab"
+    sha256 cellar: :any,                 x86_64_linux:      "fbf8ad6ed44736d6220c58a07bf155a5a63f67e03d07c74001a41ee24234354e"
   end
 
   depends_on "rust" => :build

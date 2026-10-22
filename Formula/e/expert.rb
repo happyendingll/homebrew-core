@@ -4,14 +4,15 @@ class Expert < Formula
   url "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "af65f7172e2ba54fe19064c8dea9c38619d50bd70a97961ae826a3c4d3bc378f"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/expert-lsp/expert.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cd42560e7ca91b4ced24358eb8a9de6345035876192635d69d81bd9f07e1c26e"
-    sha256 cellar: :any, arm64_tahoe:       "c8b621ee0fdb8bdd7837ccaa293ef717979aeb184d8c71d2ecc9f95f0e07f3d2"
-    sha256 cellar: :any, arm64_sequoia:     "d245479eb5f4f576240d3e9afe4b2de2aaedf784bd684870b93dd8e035cca5b7"
-    sha256 cellar: :any, arm64_linux:       "015f073279455a0fa84f88200ec5947c2bc44014c2bc9a249d1341ebd7a79c79"
-    sha256 cellar: :any, x86_64_linux:      "250c631f836330bd19a4473a49faac3002be96a9533e0bd6af54d274d0940d52"
+    sha256 cellar: :any, arm64_golden_gate: "74af20ae4d17e8842f7212077225feb4976a942b95a8eb8976c8772497184429"
+    sha256 cellar: :any, arm64_tahoe:       "159358ec9792598243a01cd3fa900ede214c2836b9fb168f7eae00b9a2a34241"
+    sha256 cellar: :any, arm64_sequoia:     "cce840479721041225109fca581e240fd38ef2a7f5842e2b9c917454292f476e"
+    sha256 cellar: :any, arm64_linux:       "a972254509903e74d30ec51911c07fc6be6b6cbf576695bdbc4c6374dfd695be"
+    sha256 cellar: :any, x86_64_linux:      "3e25ee773156f96336203423365b6b581d4ec3c86d43d9c6356089582e2776d1"
   end
 
   depends_on "elixir" => :build
@@ -30,6 +31,11 @@ class Expert < Formula
     system "mix", "local.rebar", "--force", "--if-missing"
 
     system "just", "install", "--prefix=#{prefix}"
+
+    # Use brewed ca-certificates PEM file instead of the bundled copy
+    cacerts = libexec.glob("expert/lib/*/priv/engine_source/apps/engine/deps/castore/priv/cacerts.pem").fetch(0)
+    rm cacerts
+    cacerts.make_relative_symlink Formula["openssl@4"].pkgetc/"cert.pem"
   end
 
   test do

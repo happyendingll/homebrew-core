@@ -1,8 +1,8 @@
 class Tanka < Formula
   desc "Flexible, reusable and concise configuration for Kubernetes using Jsonnet"
   homepage "https://tanka.dev"
-  url "https://github.com/grafana/tanka/archive/refs/tags/v0.39.4.tar.gz"
-  sha256 "abf9585c22aca859ee2736a876a3d8622dbe277d53b669fe76c463d8ebdd1f7a"
+  url "https://github.com/grafana/tanka/archive/refs/tags/v0.39.5.tar.gz"
+  sha256 "3f08730f6e55f17992314c3edbdb3e6e69b665dd05d641b87b3c81d2de2d1725"
   license "Apache-2.0"
   head "https://github.com/grafana/tanka.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Tanka < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "64f612e147fdeceb41166c243522a3bc8061de5c4350905c328b30681f36e620"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "55728d20670b926712805061d8533df7450fb61d68b23d8f4295ab80cfb891a8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "55728d20670b926712805061d8533df7450fb61d68b23d8f4295ab80cfb891a8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "55728d20670b926712805061d8533df7450fb61d68b23d8f4295ab80cfb891a8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a416752ebb8dee8685136a0051407c83ea143752627a10c260c464c33f6169b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "04eb65fe462035bf8410e7e55cbfa881be375e78856bbf52b7aea0243c0d1817"
   end
 
   depends_on "go" => :build

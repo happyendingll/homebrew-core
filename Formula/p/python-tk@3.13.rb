@@ -1,18 +1,20 @@
 class PythonTkAT313 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tgz"
-  sha256 "cfac63bddf956deafb1172ca131ae5dcaafd6f95056086e233fca205593ed427"
+  url "https://www.python.org/ftp/python/3.13.17/Python-3.13.17.tgz"
+  sha256 "9cb057caa588f122577a5054a22531cd9c23ab6706f1a19bc95a55380a895177"
   license "Python-2.0"
-  revision 1
 
   livecheck do
     formula "python@3.13"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "a31afdcdc7fdcd6ca482a1cd81fbf28b90618f63eb27f86042617ebcf6c1f6ff"
+    sha256 cellar: :any, arm64_golden_gate: "74eee6f6551db16639dc68060dab2362def20ddb569f320249f1228aac2154ba"
+    sha256 cellar: :any, arm64_tahoe:       "04a2f09c859755ef839117cf55925a2f9532ea7bc3ce6328f04c54049c83c9ff"
+    sha256 cellar: :any, arm64_sequoia:     "177c335b045e36c01689eaa03937ef3dbd57150d5c15693b44b1d1f4025326d7"
+    sha256               arm64_linux:       "99c3ccca27b7185b0197b56f17abca87c3b115f4320c4a1623392f5e71bd0d1d"
+    sha256               x86_64_linux:      "9733e3361a47f646ded974a8b61e406aa4fb8ec48c1d1f84bd47d90c3089cc68"
   end
 
   # https://devguide.python.org/versions/#versions

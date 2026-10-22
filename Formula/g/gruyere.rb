@@ -3,15 +3,17 @@ class Gruyere < Formula
 
   desc "TUI program for viewing and killing processes listening on ports"
   homepage "https://github.com/savannahostrowski/gruyere"
-  url "https://files.pythonhosted.org/packages/16/0f/d951dda46ba3b3dcbdf14f55355130b016445f9aa6b021dd70a9a567026a/gruyere-0.1.0.tar.gz"
-  sha256 "3fe1ff4eef9a53ed46f17a7aa5efa2eb0212a2c6de618c2b36735bcc71d358be"
+  url "https://files.pythonhosted.org/packages/04/8e/29dff1a81e094bdaea0e8a2a6e49111c7b74e32dbb30f259eb6643b29c23/gruyere-0.1.1.tar.gz"
+  sha256 "de848e041a461629b9e76c5b6118c1ac84e0f4faa2cd14dc4b390298ea49a32e"
   license "MIT"
-  revision 2
   head "https://github.com/savannahostrowski/gruyere.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "6284d74665b389e67b0ce9b8e2502ec11897ba247c46c1ad6ed7324122b33803"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cfd050e5c656e07832f88d952a5380750cee15875e24a0435db208e33f009003"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a7cfa6be6f363a1883573e73fe9376ce945f989fe43f3635eaf760b083f957b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a1046f20c8630c5b10b74d4f985e620d8a5f6e9c1217fd90a0d0e7425422995"
+    sha256 cellar: :any,                 arm64_linux:       "def33013e146fe8412b68e7b0c4725299831a04a646e0ea813974d60c16eb88f"
+    sha256 cellar: :any,                 x86_64_linux:      "6a0768a65bb505476f3da80750114fd50b310e54e8df4a5f613869a0eee8cab9"
   end
 
   depends_on "python@3.15"

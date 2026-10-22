@@ -1,14 +1,17 @@
 class CargoDist < Formula
   desc "Tool for building final distributable artifacts and uploading them to an archive"
   homepage "https://axodotdev.github.io/cargo-dist/"
-  url "https://github.com/axodotdev/cargo-dist/archive/refs/tags/v0.33.0.tar.gz"
-  sha256 "d715c088d9ad6401d7ccb45a9298469e08f44e20cd6d54f51d5a3ae756836e92"
+  url "https://github.com/axodotdev/cargo-dist/archive/refs/tags/v0.33.1.tar.gz"
+  sha256 "b2d63c9dab0efb0400151e635ad42be94d4d70e51b930c60d97aecacff9588c9"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/axodotdev/cargo-dist.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "fa5486fdf6dfee8d303f61ff345ca10aee09eb620566c370ef754ff72329020e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f44481eaf3607bd83a2f960a3ff51b1761aac603ee29f52d8c0231b6e0bc4bc8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2f8baa5d51e987330b807d80ff8e820852463bb4b1f2420b3d41883e1f797a42"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c34aa66a987b65c025a394809b1624bd31724e691f56027c9eaddc32cb0e898"
+    sha256 cellar: :any,                 arm64_linux:       "c4f9350fe2cefe243e49f5923d945a3eb089dbe4557860674dd20540d20b60de"
+    sha256 cellar: :any,                 x86_64_linux:      "e39ecf0b640ebe795340764b1a5f529d6ecd8bc8f7fd167850a980cc42ab30f9"
   end
 
   depends_on "rust" => :build

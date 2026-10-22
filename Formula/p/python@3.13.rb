@@ -1,10 +1,9 @@
 class PythonAT313 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tgz"
-  sha256 "cfac63bddf956deafb1172ca131ae5dcaafd6f95056086e233fca205593ed427"
+  url "https://www.python.org/ftp/python/3.13.17/Python-3.13.17.tgz"
+  sha256 "9cb057caa588f122577a5054a22531cd9c23ab6706f1a19bc95a55380a895177"
   license "Python-2.0"
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -13,8 +12,11 @@ class PythonAT313 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "56d58138969d94f5b349ff2aed7f616f975927555deb5d8ec9c2f853ffaa3b6a"
+    sha256 arm64_golden_gate: "bdfff9104df2cde8465f79f360a5f6be389b3101afead3e3ff851e81188539a1"
+    sha256 arm64_tahoe:       "30537f4c2bd1c27ab6bca2e0643c6348a7cc5d9923635960cebe8d348794be4d"
+    sha256 arm64_sequoia:     "cb695aea81973433567d52fa64aff8c40220c62cf9d7f0a6fef7ab93324be8b1"
+    sha256 arm64_linux:       "16a58d58c998bd72c03a695de805b73d858467d57c29f60bdf63b65e29a98179"
+    sha256 x86_64_linux:      "00c743e33537cf729805d20d84a7dc872c195a019d7fc5a24b11b6aff9290cbe"
   end
 
   # https://devguide.python.org/versions/#versions
