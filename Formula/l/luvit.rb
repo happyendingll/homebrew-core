@@ -8,11 +8,8 @@ class Luvit < Formula
   head "https://github.com/luvit/luvit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "21f484b13cd609ccf69a4987fe97387132a07bd90fc75b62498e7259e91fb1fa"
-    sha256 cellar: :any, arm64_tahoe:       "87911ede5aae910b0aadce502d3ee324359ff84f98646a50350f434ba36db526"
-    sha256 cellar: :any, arm64_sequoia:     "ab30fc85c04fb3464b210bc4032229184e71d131fd2f1af1d739a7ecd7e02db6"
-    sha256 cellar: :any, arm64_linux:       "919783ff7debffdbe27612637988c89d2c1fa6450f301f657b757d8835b1a882"
-    sha256 cellar: :any, x86_64_linux:      "dcac706f4f611645400d993028ea9260c51dc7df73cba7f6ffffb5909259088a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "1e08025f6ebbf0b2249c9f6ca8be51010c318a99710e3c2a3b2ab308599ed989"
   end
 
   depends_on "cmake" => :build

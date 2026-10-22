@@ -16,11 +16,8 @@ class Wasmtime < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c3f8c7cddebb73b65556edb6cc29ff3160b13fc8c9710bc6b4bfb25e6c3a74c1"
-    sha256 cellar: :any, arm64_tahoe:       "5346bd8b74a2b0ca37ce7b9170c9dae81c92bbf25ff905949f5003581d240a11"
-    sha256 cellar: :any, arm64_sequoia:     "01f1703a5fc25d3d93bc989c0666c5c82fc4e7ee3b63187d8fd65969b3392366"
-    sha256 cellar: :any, arm64_linux:       "1dad786646c289882064e5eba995b5a6c596bc6764105adbec497ad6ca647f76"
-    sha256 cellar: :any, x86_64_linux:      "477e9144159557521c4d6ae357089c4d55e59094c9b9acfaee8ed487b0eff2f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "d98243431e996f1058b2d0e7d90ac4a866f87256d12bc0e00009f8a47f76d88f"
   end
 
   depends_on "cmake" => :build

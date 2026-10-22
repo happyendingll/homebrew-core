@@ -12,11 +12,8 @@ class Knot < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ee4be5ffb47a5903bee1cb6456c8a59785986057487d992f10c5c5c3038e1250"
-    sha256 arm64_tahoe:       "f668250d0b8f7ae8be2f56b0f205f7b9463789a24ce018faba554409be3466b7"
-    sha256 arm64_sequoia:     "1494d3d91b6ca219b9f48c0b49df6d3f4aa49d548e575f7274c7318970709d99"
-    sha256 arm64_linux:       "094437c1c148a5184a57130d91d5be035a9de4c9ef661d43b0003b14e1646355"
-    sha256 x86_64_linux:      "29d083f5d6c5acf29f10455dd7db660d56d6ba36915ef560d97339a64b29d824"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "8a7ede5c1c4a5b6b14d6629774df3855fc1cc01d57e82c4c776204b622414abf"
   end
 
   head do

@@ -7,11 +7,8 @@ class PocketId < Formula
   head "https://github.com/pocket-id/pocket-id.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1991243352642bc2b6eb8674c7af1b0890f0060e6e0733d5ad07b71679b99e38"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff40f4cd3e7ced941b49a8c951541213bbf8215e993f0682f8f0082f25bac43f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07916dcc6d9f0ac0cb97b512045f67c20ce3cbb059eaa5ff44cf0c6c077d6dad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4ef3bced708055d2119078b083ef74adfd255d16306fb01d6e59ab4bcddbc905"
-    sha256 cellar: :any,                 x86_64_linux:      "ad13cc698b65fc0d6310912186a34d8e99fa2fd04e0d1a524043de3d08aef4ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b221284e010b81bf2bc70834332f81f827ed90aa52eb7bcfac2369dad92a2779"
   end
 
   depends_on "go" => :build

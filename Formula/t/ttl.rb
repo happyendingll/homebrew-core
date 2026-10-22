@@ -8,11 +8,8 @@ class Ttl < Formula
   head "https://github.com/lance0/ttl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "59f1015fc9b7835b7580ddbe50579af68c2ceb7500b0fb9de24034d03d6c541e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8fdd5a009dd73f5224a759edb694a0cc5ed04871bbe13f2a6bbd19c621a036b7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "be450f738cee7af0315e01ee82d84caa67ce689ab05903b40896397cb78123a9"
-    sha256 cellar: :any,                 arm64_linux:       "f91e47a7f426674755faf6a56676f27bede878f92394678bb666fe30cec6eb72"
-    sha256 cellar: :any,                 x86_64_linux:      "35a9071e498e292b7e259dff44cc4669fe43d11776bb7cbdd76cc6c9905b06f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b55c0c5eb4bec31bc119a3e08c43ac435976aa03db9385c328d3759a120dc381"
   end
 
   depends_on "rust" => :build

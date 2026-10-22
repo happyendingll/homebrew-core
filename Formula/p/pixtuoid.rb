@@ -7,11 +7,8 @@ class Pixtuoid < Formula
   head "https://github.com/IvanWng97/pixtuoid.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e227a6697e13225f35e8a79546084b44f26f507a9e289f6849bb019511c09162"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f02f741bfa0738ce0f9205d9e4a6a3e676f6ae5ba92fb699922de07728c3c3ea"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "489aa00aeca111808c21630cc0101b1ac4521fd47f3672ad10a1b43785fd0c0f"
-    sha256 cellar: :any,                 arm64_linux:       "2b71445dd74db41037378c3ff067809119572f973e57fac82f4a34dc7f8111a2"
-    sha256 cellar: :any,                 x86_64_linux:      "f4a453516e8cfb74fb7292929b39af5fa86882dad1b835db6a1d203171bb4c35"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5aa51188a69622a19becce1c389097fe091d43fd180bf8e26ebcbdcb5bab1224"
   end
 
   depends_on "pkgconf" => :build

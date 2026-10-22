@@ -14,11 +14,8 @@ class Hk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d8613e225989bcb9349056a10e54d3fad9c7928320f2de1b75865107dbb50d3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "71a8bf289ebb4d9d2080253b2e68f0701426d7ce54635309929b2578c6ea014b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b8cf4717d96edfe1b38acff9bb4f899b482ee7410c3751da26ecb001b0457101"
-    sha256 cellar: :any,                 arm64_linux:       "a00618240d0f1aae6772d2fc5e2fed7316dcfc8fc5f195bbd322bf520201468e"
-    sha256 cellar: :any,                 x86_64_linux:      "f1fe8afb8c665340dd5a4197b3840b5d32f358d02cf58ab97b6134a767e4f2b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "75144823aaec5cd9ef95f90769a6828dfe6a4941fa77f903608feec9f2138fdc"
   end
 
   depends_on "pkl" => :build
