@@ -14,11 +14,8 @@ class Anyzig < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c2efa73f5e36b58fab5b8fc74e3883f6fe30d38da3157896f0548e0101a630f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3dcc69817eab9f039b7ad80a62b17311342857b534ab380daa5f3e06a1617af7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8822caedeb7b0d34db039bb4c3847e9ad8c02775613e08da2e35093cfe0eed8d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e0e33ea195631afd98a412bf1783c525bff9fe63487412cefb9fd101e868632b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e7c636b367dbf3c5e089ac3a3f914a26241b922049c3d14ec5ee03f0ac91a393"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "392f0f633398dcc675403ee515a7879c5e5fc2f7b4e36e29d13fc72f316c344f"
   end
 
   keg_only "it conflicts with zig"

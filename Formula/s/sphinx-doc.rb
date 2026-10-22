@@ -9,11 +9,8 @@ class SphinxDoc < Formula
   head "https://github.com/sphinx-doc/sphinx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "574731819db2b4db3679b4fd054486fb65253f3d57421c81c97ada6bb02e3b63"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1232041a4b0e11bdce466ebdeac561fc62f075dac59422f930a7e914a863286a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "baaa33c292f880c1f0ebc02712ea31df9d91be1dc440c509da0b09248383f0ae"
-    sha256 cellar: :any,                 arm64_linux:       "43d4d6f7656c389870228b684bfcaa07d0f36fd31fbdc39917407eafb2357699"
-    sha256 cellar: :any,                 x86_64_linux:      "186e53f2bc044ab4a2efc29b1c24e607b44b2f70d9b793c2963e18913bcc7a8a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3f3ae519852c4dbf2c176f290f9b21633fb5c246f9f832ce2c30685d422ad659"
   end
 
   depends_on "certifi"
