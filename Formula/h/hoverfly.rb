@@ -7,11 +7,8 @@ class Hoverfly < Formula
   head "https://github.com/SpectoLabs/hoverfly.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "590d5d50968a53693974f6b00d8d09451eb33832808f8b41dda008d312075e7c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "590d5d50968a53693974f6b00d8d09451eb33832808f8b41dda008d312075e7c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "590d5d50968a53693974f6b00d8d09451eb33832808f8b41dda008d312075e7c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8015b27c951a095936c497bf39c5b208603bcec010503b224056808cc3370d2e"
-    sha256 cellar: :any,                 x86_64_linux:      "58c3b4e4d0a1c7d3dec0b601d5901ec8d8cacba1c63ff22a14a8dd97ecd09274"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e60808104b4a4a240f0e416f54cbabc7347c98bb06c01a87269934de9a854995"
   end
 
   depends_on "go" => :build

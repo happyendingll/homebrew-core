@@ -7,11 +7,8 @@ class BoshCli < Formula
   head "https://github.com/cloudfoundry/bosh-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66dbccfad3b931828649c560671b1ce47de5de1b3f9c88be87f1eaf054d9d5f3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "66dbccfad3b931828649c560671b1ce47de5de1b3f9c88be87f1eaf054d9d5f3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "66dbccfad3b931828649c560671b1ce47de5de1b3f9c88be87f1eaf054d9d5f3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5974eb193dd7889ac81b794c7ba899d949665b2438d520c4c7d9f1db90850d65"
-    sha256 cellar: :any,                 x86_64_linux:      "5f132d5ee83052cb60380c4c9794448f7d6b9eeea530f390ae53cd9a079d44a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bbd351cba4c4ac14df8163440e208d5abc2f991a97acec27a0c5baaa88eb19ac"
   end
 
   depends_on "go" => :build

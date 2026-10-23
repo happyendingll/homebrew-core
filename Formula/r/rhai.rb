@@ -7,11 +7,8 @@ class Rhai < Formula
   head "https://github.com/rhaiscript/rhai.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "543010de189b974c7ae67fd0e31b3b8b2016de36449bfd16a5a9e6148c166bb9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "54004377055f06a9411e4a2e6e9f032b884d5ed510401ad0c6e88957a68e427f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2b5b014995c2cb48e78bb90834e87dcee4d2349955a1785f422cf582b63bb88c"
-    sha256 cellar: :any,                 arm64_linux:       "7817f283fbf740098aa4c17e91c70191e349575fe30aa5db99b60e384e1152a1"
-    sha256 cellar: :any,                 x86_64_linux:      "8c0a623f747ce0a96e89275c74b9a375993e3dc25b95590d82e9be8b1be8afd2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c7de8d5ab11c6e06b4387b0b33dc99085e9f2dcf24a7279da12216323be4299a"
   end
 
   depends_on "rust" => :build

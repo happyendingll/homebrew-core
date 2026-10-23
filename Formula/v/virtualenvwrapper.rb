@@ -9,11 +9,8 @@ class Virtualenvwrapper < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "864e463036509e705ef985673c772013cc739417d9dff1bbb199e6267ae70c01"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "864e463036509e705ef985673c772013cc739417d9dff1bbb199e6267ae70c01"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "864e463036509e705ef985673c772013cc739417d9dff1bbb199e6267ae70c01"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "af53d8cfddcb4ae6ad5376459034303520967c7c2be637755c70bbc7f078bd55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "af53d8cfddcb4ae6ad5376459034303520967c7c2be637755c70bbc7f078bd55"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ba65220cc6a6fd7e204529c8e00c877208359a6da2b58ab53fc9c57d693a014a"
   end
 
   depends_on "python@3.15"

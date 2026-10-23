@@ -7,11 +7,8 @@ class Ubi < Formula
   head "https://github.com/houseabsolute/ubi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ebf9d3609ad1512b19af739b29415c8ea256bc5498877f0f18adbb622a868c34"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "20918fa9c377859db9b6624da7e9089c630b39338499dba2570b0762dd8579bb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "98e0476022766b0c6e76000f812afb85f2c9d03f4ec0a0ca7d3ed435813ee99e"
-    sha256 cellar: :any,                 arm64_linux:       "519a4eab5cf7cec00fd37a5e44f888dfd47df3915bce74a270483880219938bb"
-    sha256 cellar: :any,                 x86_64_linux:      "40923dfd8d29b87459036126e6afd72e252390dada044edfdac5a421bbf4d751"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "10352ceb5687b01101d2ab6c310ec090ed416810543c195d29add1e0696c4065"
   end
 
   depends_on "pkgconf" => :build

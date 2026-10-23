@@ -7,11 +7,8 @@ class CargoRelease < Formula
   head "https://github.com/crate-ci/cargo-release.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "af056fcde5d30e8ccc9102e83d828197adcc6ac289af857f1e12494d1148e6a3"
-    sha256 cellar: :any, arm64_tahoe:       "bffa531c2bba6bc31234cef9f58c8cfa42503828f4d076fea3cf2d38908ebef6"
-    sha256 cellar: :any, arm64_sequoia:     "1082d9b1e57b001cffecc70bcdbb8635450b735920b83337e60a20d0127a69ec"
-    sha256 cellar: :any, arm64_linux:       "a525563f4d5c180bbb50be7b1d5075060fb91459c026c49a388cfb674587c4b9"
-    sha256 cellar: :any, x86_64_linux:      "3363223d8728f33cb394c3c726620593dee5f1c491b751790f49b862c8470b58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "0a46c55822ee23835eeb9ac3a1e0d0edf5dea465fa781f26765428cc91050c9f"
   end
 
   depends_on "pkgconf" => :build

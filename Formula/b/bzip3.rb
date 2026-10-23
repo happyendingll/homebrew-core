@@ -6,11 +6,8 @@ class Bzip3 < Formula
   license "LGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1146acb73885c6b8640bf7517221e34fda1b796327c60724ca69d282e63873ba"
-    sha256 cellar: :any, arm64_tahoe:       "3c44d92972b3d067382d423b1aef224ad0160a3dc6e0d3330d4b486aa3fd5e2e"
-    sha256 cellar: :any, arm64_sequoia:     "f2cfb9f2f5765127c50e9d47cf8fc9898e0782307d1610e04306ba1e161daabc"
-    sha256 cellar: :any, arm64_linux:       "65fca08bdd45e54ac956674290d1de88c9c365e84f1b8785ae4a8a4fcc1f35b4"
-    sha256 cellar: :any, x86_64_linux:      "25701f2f41e90d41121860142053769415ea3b8a088406e975a33de95eec8b0f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "4141a3503aca7429282733f5d51f4777238142add0d2cbae79aa62c521cc43cf"
   end
 
   depends_on "pkgconf" => :build

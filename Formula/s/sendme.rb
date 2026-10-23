@@ -7,11 +7,8 @@ class Sendme < Formula
   head "https://github.com/n0-computer/sendme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21678494bdaf39fd55b9efb2ab077a5d918af3f1fcb5ad9067ba424d171c1859"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1536807fb47ddb8e2b9db05c7ba5554f0220a2428ee3e841c3c6f9549145bf3b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0b857fd675f7ba1dda75ce99cec2a5c97970712d5783293c381c1e9ab383403"
-    sha256 cellar: :any,                 arm64_linux:       "0871823b7cfe6bf51e424862101502f43e57e21718c8148a65fd44f5523bf9d7"
-    sha256 cellar: :any,                 x86_64_linux:      "de29cfe60c2c32b54e06df95282057d807e65be70754657f2e48a9848169c077"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "be482892ac8036315fca6dbc035c3997a34fc4092ab53f02f12a74a04c02416d"
   end
 
   depends_on "rust" => :build

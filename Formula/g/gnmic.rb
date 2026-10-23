@@ -7,11 +7,8 @@ class Gnmic < Formula
   head "https://github.com/openconfig/gnmic.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe920e2a67076bad624a721f091509f65fe0ab1696732376adf24c313f5ed9cf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2073486f46ba8abf7e982d5046106ed0f0b5497373aaa65277d67294aa511782"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c74dc1e8e239ddfa83c7f7afc4b16155cdae49ea1a5f2090f102a5963185ff05"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e7b1be0e25c848345d113f330ef0050106ebd52f782dc9bf974a295502d97ce4"
-    sha256 cellar: :any,                 x86_64_linux:      "901bb60b010c26aad3e7bc34992a85b34fc28db336efb1b55b48c5fa705e3737"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "07804509fb457d812821619ef6e2a346ef4f666ed496418aaa1b26cfd0def600"
   end
 
   depends_on "go" => :build

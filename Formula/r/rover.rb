@@ -12,11 +12,8 @@ class Rover < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0000020cc190f7c81e00eb72a0d968fd9e1ee119799e17961ac523bc024e1214"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5954d0972fd599b19bddab2d080be5b589380f7e8e9b159b1c2d259712907435"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "329b4bef6482a76db691346c96a66d5e51448bbb334c9c48ae4bdae1026959e6"
-    sha256 cellar: :any,                 arm64_linux:       "e0a4a09f1c3c7558f20aba8310ab631fff23310effe78ce4c676a835b5136e65"
-    sha256 cellar: :any,                 x86_64_linux:      "5d0ada0ffb0191d60ffa6b4e4b8b7adc654bb0cd0791bbf7de4b8002b7317f0c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c17644fe99ab071ce2c3699660bce77569e7966c52b53a79ebf29fa54faa5091"
   end
 
   depends_on "rust" => :build

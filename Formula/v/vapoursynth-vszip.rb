@@ -6,11 +6,8 @@ class VapoursynthVszip < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dd810cd37b335772be7ea9219e240146ad4baad213fb2d22a287bfcb574817ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bc02aee7ae5724a476a6f96b315172c496f8626d300bbea6bf5ec5ea8854c544"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87443a9d918b108e0f691dcaf9417d1dc9e7d638ac4ea11d55a8d407d2ce11ac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f4be4f576c338877ca9fd323cc91ac063c497eba746cb493d3fbab46f2923f2f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8d8f14caf5709ff7995fb2cc5c8f61ea3f6f4b94f8ee80d4138f1a7cd70e0f2e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "98c58ac6015027f03dbad3b3ce39794eaddd6ab068cae55f62ccd8d2a6b26f7d"
   end
 
   depends_on "zig" => :build

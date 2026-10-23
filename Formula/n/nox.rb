@@ -8,11 +8,8 @@ class Nox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4041004fe4b71ceb89e991d0f0e206726c079a6ff8b334de71f0e6397e596051"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4041004fe4b71ceb89e991d0f0e206726c079a6ff8b334de71f0e6397e596051"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4041004fe4b71ceb89e991d0f0e206726c079a6ff8b334de71f0e6397e596051"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ae81bfec54987a56e46e0a9d48b485c174131cafc8b475fb9b3421924a0112db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ae81bfec54987a56e46e0a9d48b485c174131cafc8b475fb9b3421924a0112db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2c7a5e19335c0d731ab0bf0b860003c466c8884a918b466fadabcfecc1acd156"
   end
 
   depends_on "certifi" => :no_linkage

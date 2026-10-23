@@ -12,11 +12,8 @@ class Moon < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c12ef85e983a1962ecc5fcda7ae91aebe5ef77e0f62e8afde794bc5e1669ba3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1c5d59c6296ede84a0728a758d343826496685ff31ec5c169821f1a61e627e91"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8130827e7504c29c11691acb2411dd416371b51dd176a6cc39506972d202d64d"
-    sha256 cellar: :any,                 arm64_linux:       "49ea8446c128c508eb0072d711fe02fd15b31b74d1a32e0a5a4c61e2d2256cfb"
-    sha256 cellar: :any,                 x86_64_linux:      "5452f8ba89f322dbbec277086237c9fcfa72e2699663192a9f458ade2f6805f5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "88f76898eb796003e4e782a64939021660233c832cade38191aa820f3f3ff65a"
   end
 
   depends_on "pkgconf" => :build

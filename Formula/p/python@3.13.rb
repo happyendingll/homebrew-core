@@ -12,11 +12,8 @@ class PythonAT313 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "bdfff9104df2cde8465f79f360a5f6be389b3101afead3e3ff851e81188539a1"
-    sha256 arm64_tahoe:       "30537f4c2bd1c27ab6bca2e0643c6348a7cc5d9923635960cebe8d348794be4d"
-    sha256 arm64_sequoia:     "cb695aea81973433567d52fa64aff8c40220c62cf9d7f0a6fef7ab93324be8b1"
-    sha256 arm64_linux:       "16a58d58c998bd72c03a695de805b73d858467d57c29f60bdf63b65e29a98179"
-    sha256 x86_64_linux:      "00c743e33537cf729805d20d84a7dc872c195a019d7fc5a24b11b6aff9290cbe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "92189de1d3fbb36e43153f34a353feb56e50f429184514118971ff0559e06f9b"
   end
 
   # https://devguide.python.org/versions/#versions

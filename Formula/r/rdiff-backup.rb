@@ -8,11 +8,8 @@ class RdiffBackup < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bd794dd0f598c1069b8c19f2ecdbf703dd29d4ad449de318435badb5918eb4bc"
-    sha256 cellar: :any, arm64_tahoe:       "02e02612c2b348abe1ea2bfe25218ffb52e982f6a85789f4d474f13298dea740"
-    sha256 cellar: :any, arm64_sequoia:     "e40643ee8da8d16804b9900c0d872f5de44c3f02258a6c46604583e97f8d4896"
-    sha256 cellar: :any, arm64_linux:       "e2f94b9318635896b15aac24d9f2db6252432a9c6c9ab579b339da3270f0bb0b"
-    sha256 cellar: :any, x86_64_linux:      "6dd27b9aae721d3c8e8f1d9371fbcf85ac3edd118bc01830fa59d24fd9e049ea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "9dd35cf2dc3e7630612a71c60fb359da70a57a85a1fac2c0344573cd1735587b"
   end
 
   depends_on "librsync"

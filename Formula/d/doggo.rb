@@ -7,11 +7,8 @@ class Doggo < Formula
   head "https://github.com/mr-karan/doggo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dae82f090bc5602ac931bcd42e2e5b03316d83067124fc8b6214b78caee00d19"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dae82f090bc5602ac931bcd42e2e5b03316d83067124fc8b6214b78caee00d19"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dae82f090bc5602ac931bcd42e2e5b03316d83067124fc8b6214b78caee00d19"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2dd0006d0639aee6597c36d144e256d1760cb47f8a30430117e599dc849f0cb3"
-    sha256 cellar: :any,                 x86_64_linux:      "cb52ddb5b5db603f6e7fae7c554d89861e9d2a0c40279a5d15eccf928aafa24c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8f2871f1f4de3931e58fd53cfefe13b8ed329b833115e27a73478d4912652447"
   end
 
   depends_on "go" => :build

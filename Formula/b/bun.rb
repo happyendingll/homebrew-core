@@ -26,11 +26,8 @@ class Bun < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "368adf702a8164e83bc629c998d660a03caadff2d14025cd1225ce51ef550977"
-    sha256 arm64_tahoe:       "5a66e9d593a01a94173b6daf0122a900c7bdac04af370737edf5fb7aff995575"
-    sha256 arm64_sequoia:     "00200c4b9568ffbd0c4d29041ee7743bb11143d91f3b434f3fb760d263901c7e"
-    sha256 arm64_linux:       "649760242b683ee8f180ffd6ea3612bb9fd4925f0612093162907b7726063f5b"
-    sha256 x86_64_linux:      "fee2020e97a76e427cec41514e6c4895842c14f3b6c752428759af3d4d154970"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "11cca3b4f8d4a6ae2830ca15bb9e3abcf238b0fbb8a9c314cafbb6d073208610"
   end
 
   depends_on "cmake" => :build

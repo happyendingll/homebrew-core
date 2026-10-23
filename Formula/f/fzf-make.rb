@@ -9,11 +9,8 @@ class FzfMake < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "486a79258b3ea2101f97a85d83c0ad94cd6f2954cc08c42047ebfa619593049d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60be83d2587df54ee4818faa81d39e326d623b1739345e7898ee3d842250970b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9204faf108252e981975485d106247457411aca046baccaf1d9267976f56078a"
-    sha256 cellar: :any,                 arm64_linux:       "8479bb10fb8647a9c4b79d76f59c08a797d026ed93ec41897f20615f647061ba"
-    sha256 cellar: :any,                 x86_64_linux:      "1b57626bea4c085981aaf02c9162378dc8173c846f698011a4ac7556cd5ab778"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2e1a8035776b7a48e0f17e262f09a6f1500f5b416eecda6b22ac5c86081e1ad4"
   end
 
   depends_on "rust" => :build

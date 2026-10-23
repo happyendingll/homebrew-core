@@ -14,11 +14,8 @@ class Pinact < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5f717d6f8118a927598c767ec09c11ed8f7f73c45f6d92d77f8e5162f8c82108"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5f717d6f8118a927598c767ec09c11ed8f7f73c45f6d92d77f8e5162f8c82108"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f717d6f8118a927598c767ec09c11ed8f7f73c45f6d92d77f8e5162f8c82108"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b4fe908869c1c7b957d9ee98080343bf7eec24ecb424a5ff45b03219f786d584"
-    sha256 cellar: :any,                 x86_64_linux:      "8da4bc1c70173723e2ec66c32fa3f0c41dd29d32fe435b1e0de028c2c1ddf239"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "597c8695f75b8fb78727d29ffbb51580d1a94a4d1a79a99a67bb9802855a0819"
   end
 
   depends_on "go" => :build

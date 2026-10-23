@@ -12,11 +12,8 @@ class Azcopy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "782c4683bc1addbca6a8289d3c5901255298691e195041e48adffce9b734fb7a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9ff4fb83ea95240a69c71e630bea93cb911aafac5c98c6e5dc8d3ab222a7a4b3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "69f2c9eab08467e57654e726508a6c0c0b1911b2ab23b4af28551500af0f744d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "85774c164000bffad92cdde6360c50f0679e871de61f5176b36e8ad49fdf8a0a"
-    sha256 cellar: :any,                 x86_64_linux:      "479ff686a324841b3fd4e947f36bb64ae8da231fb5a0bd533ccdbc2fd5c26746"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "06dfcfec96fd848e507d37e4ec2b66bb79ba2b813eae114a4f197b535011be2a"
   end
 
   depends_on "go" => :build
