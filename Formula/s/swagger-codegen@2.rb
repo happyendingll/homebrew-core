@@ -11,11 +11,8 @@ class SwaggerCodegenAT2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6382463d1432c3ddf7b9c5847f895d3182e12ff793da6d7c6bf08138d2e78d63"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6382463d1432c3ddf7b9c5847f895d3182e12ff793da6d7c6bf08138d2e78d63"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6382463d1432c3ddf7b9c5847f895d3182e12ff793da6d7c6bf08138d2e78d63"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "60c1b8fb1026f3e3872249124e59bec4703a5f19555258f47f39fad3c586bc43"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "60c1b8fb1026f3e3872249124e59bec4703a5f19555258f47f39fad3c586bc43"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "677055e202d493fba7be228642dbf19a2d25c6dc1a75fc8eea48a36dba9abf46"
   end
 
   keg_only :versioned_formula

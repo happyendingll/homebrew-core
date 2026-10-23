@@ -8,11 +8,8 @@ class Johnnydep < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2c8a1091865dd6b79619217e92167bb1271d7f9938b2f2024d9aaf2ee10e16a3"
-    sha256 cellar: :any, arm64_tahoe:       "d608203065d00e243b3ff8633b5118ff273d16c49d14192f1bd11b47d45b5d72"
-    sha256 cellar: :any, arm64_sequoia:     "1afa1bece100d726a52a4cfe8168404167167d788c920f924a83578fbcae041a"
-    sha256 cellar: :any, arm64_linux:       "8423fcf90cc1cd135e46e740cc354a80cdc39579bd8821bf829a25c41d9fe3cc"
-    sha256 cellar: :any, x86_64_linux:      "e15135c6c6a08e30c221a38ec93acb9853374e8f7acc534b51feb1eaae49b95d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "548f141d04d17b1a18f68ed0c0db6fee2e043771880f5f33427ce53834c3f0f8"
   end
 
   depends_on "certifi" => :no_linkage

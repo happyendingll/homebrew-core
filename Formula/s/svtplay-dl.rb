@@ -8,11 +8,8 @@ class SvtplayDl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fd253431b7c5f817433c6ccc8307be72478a8c12e7ac6b12ca65439981bc6f93"
-    sha256 cellar: :any, arm64_tahoe:       "fbcd8e4bff6ad2210e10e61a40388768ff3f5f00f2ff8e5b727efb6fd719b539"
-    sha256 cellar: :any, arm64_sequoia:     "32b1f491988c1d4be42f450df1e5d4b5a74035e728bb26ff6137ce703b445624"
-    sha256 cellar: :any, arm64_linux:       "05d8593a140a3b06bfe5cab75f17f1cd9355c9036dda64d8fc2c4e770a08aae9"
-    sha256 cellar: :any, x86_64_linux:      "b2aeb1730f9eb7d0f7b802762e866f292aadb2873eee36a727aaa1d38a85e179"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "ac4e1acd9dda025279fde385673485ccc32cc9a8953f73cbd377cd60f229bedb"
   end
 
   depends_on "certifi"

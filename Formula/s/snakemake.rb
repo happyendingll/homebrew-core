@@ -9,11 +9,8 @@ class Snakemake < Formula
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5ec51dcf675b814735a0c6ad3899e98978fd11c4ffd3f4ab4bd27e5409eb2188"
-    sha256 cellar: :any, arm64_tahoe:       "b047d72277ee49e71543962f6a61d84a4ea21453d8d012be88098282467a309e"
-    sha256 cellar: :any, arm64_sequoia:     "e96450c9de54aae873e62e37d1762eab8d71eaab580f6578b5e970ac4e6810fb"
-    sha256 cellar: :any, arm64_linux:       "02f45a0485d94889c0887e1abd20727ce037c13171b40bc819449057a576942d"
-    sha256 cellar: :any, x86_64_linux:      "c0e5db38efeb82a556cd31304849448882c55af158dff141a47b24ca7c6bccc1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any, sequoia: "9da0bfafa5e5baffb6687988bdfd4bf9e4a3bc88f9f1b84d71b746cd3a9c9fa6"
   end
 
   depends_on "rust" => :build # for appdirs
