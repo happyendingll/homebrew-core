@@ -12,11 +12,8 @@ class Juicefs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fda4fb4547389e820a68d21770722446d7192a4df499adfba4d6e9381c446c73"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75930146352b0adf4b15733d71b3495810e2eb35dafc938d749d6e767165d94c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "af0a80a731e611a2add9532899662c6e99f04463ba9080b4871d24a6dd2a8c0f"
-    sha256 cellar: :any,                 arm64_linux:       "3179664dd63ee2b415d447b12792f206b303530a74cf112490fa8f6310a93936"
-    sha256 cellar: :any,                 x86_64_linux:      "2ab94d8b7fd498c03e803d4166203a01bb7ce21214455ee9d37138b68cdd6e99"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ca435b27f17d393f22c80b2de8c0d5d9621ae000de77b136fff0630258a139eb"
   end
 
   depends_on "go" => :build

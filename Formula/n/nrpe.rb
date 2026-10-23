@@ -6,11 +6,8 @@ class Nrpe < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "53a9deab35083b2965d61f1984df70dd46f845bad0fec3b9d7758d7b69ac6fa0"
-    sha256 cellar: :any, arm64_tahoe:       "573e537c720f51d9d7bc3c35100c0f89366369199194aab434bdace272f1486f"
-    sha256 cellar: :any, arm64_sequoia:     "039145ca0194d851d6f147b2b0538be03ffaee183772b2745cd4981556e387ed"
-    sha256 cellar: :any, arm64_linux:       "618dfa1d26af8f485dd1b4857d87d9651361037d4f04c1e226dd597986c149cb"
-    sha256 cellar: :any, x86_64_linux:      "70511e5e7cb13df75c8c1b6eb475739c35c8723696d7c639d38c6ef5f2dba4d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "263888ac5e44d28f57b68a2cdcb7ddff3d1c4e9e63ca9196a88ca6baf251abaf"
   end
 
   depends_on "nagios-plugins"

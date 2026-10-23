@@ -11,12 +11,8 @@ class Lilv < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "5defe8a7361e21a452aec3724fde3459e1e25cfa40577faf86167f9a72d828b2"
-    sha256 cellar: :any, arm64_tahoe:       "403ddd2d07bd03b70179ad59fadd51dc3845c948bff2d24aab720e5ba659dc69"
-    sha256 cellar: :any, arm64_sequoia:     "46cbff610130f72c345a23cf8e24ca6cda1f778fbd676bac1bea80011df9bea0"
-    sha256 cellar: :any, arm64_linux:       "ebcdcd63b87f5e8a1cb1dde20ab5adf43bd7b68fdc7feeff378b58f7aa50287e"
-    sha256 cellar: :any, x86_64_linux:      "1f9d46d8e7edada8da3440f25f31326ed276240f9eb571ae8834a54571255f66"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f7d798ef6064de4e0455f97334fe646915819c447ce47b2cc1ee9a76cbfd167d"
   end
 
   depends_on "meson" => :build

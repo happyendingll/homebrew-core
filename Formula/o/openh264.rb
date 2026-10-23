@@ -15,11 +15,8 @@ class Openh264 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "95c21ec2da9a56cbfaef773dcc57d3a3a7bd352398797b0614f7d2f539913f6e"
-    sha256 cellar: :any, arm64_tahoe:       "beb1f422f033063113f72bd58ce3a02d5bb18d9a771b817c22cd571f48ead5e2"
-    sha256 cellar: :any, arm64_sequoia:     "0b632e539507e013588158f6166725a7ca3e513d4d53014df812108095c4d49a"
-    sha256 cellar: :any, arm64_linux:       "7aed38887c4237fb733c06fa1629d0376e834ff50cfff7a257fc8726e06585b5"
-    sha256 cellar: :any, x86_64_linux:      "1a4d77ef4bd7268821be569d2d8c8317931e557c5dfae262e6a3223af723b47c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9aabda238cd81b4b5484d8b51d35813543687e51d5a2b7889f91352e4d4b5de9"
   end
 
   on_intel do

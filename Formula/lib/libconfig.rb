@@ -8,11 +8,8 @@ class Libconfig < Formula
   head "https://github.com/hyperrealm/libconfig.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3cecf81e99f63923dc8f475656aef0922387d8e0d465e7d79d07cfbeb520bba9"
-    sha256 cellar: :any, arm64_tahoe:       "e328b92ea0251f0c31d2215ff60126398f6f5329fafef8a3d2b08d7e6c4fceff"
-    sha256 cellar: :any, arm64_sequoia:     "89954857881c002763056e8d2c461bcc489f9528ee963bd04f9c5e08f7c00fb3"
-    sha256 cellar: :any, arm64_linux:       "7d4921783cbf9d32de337453d3916f5c967a2041e817d580d0314aea2c35ed90"
-    sha256 cellar: :any, x86_64_linux:      "c627568cc9f75ef47039f0c04f9595367e9051471c15a94d5b77c1ae35571176"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c8125e813a9c809847f296d4d25aa5710181b0c9c24ef07b43783d59f01c10e5"
   end
 
   depends_on "autoconf" => :build

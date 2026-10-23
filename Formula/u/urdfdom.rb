@@ -15,11 +15,8 @@ class Urdfdom < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "059fafc2c77cd21d7a7f821f7179cd5ccd77baf26c7c53afe96954f6df300c3a"
-    sha256 cellar: :any, arm64_tahoe:       "6514605da36dfe41c75d3cf236e394469b8835eb4cf24dd68c33c4cbf95f1e69"
-    sha256 cellar: :any, arm64_sequoia:     "d836ee6a42f31ca778ab5baf5810ec1af16296cb7460b87444db7e99e09deec1"
-    sha256 cellar: :any, arm64_linux:       "16c6726d59f2a91b2e11d717449f9063aafda7cfe3614c2afc92f540df530266"
-    sha256 cellar: :any, x86_64_linux:      "2663b0b878f77665c65eb59651efaac440e21525ad5b173920df1b57c8a5b039"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "870fc33579a1fd7c38cbfabf41e74f2445c06b1eac0c64842669cb0d15a5738e"
   end
 
   depends_on "cmake" => :build

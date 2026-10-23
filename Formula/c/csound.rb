@@ -14,11 +14,8 @@ class Csound < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "4eeb66353b17e65389ad1655d838f4d27e7efdd2eb68af8ecf488c835d7ddc4b"
-    sha256 arm64_tahoe:       "837bea4f223728b672dfe441764fef6f473eb4ecdec6dc386b6d92af5eec44dc"
-    sha256 arm64_sequoia:     "067a471c056b0f8104e6e5cd65a7d8afd3b34c9448c14378c9250743e5e3dc5b"
-    sha256 arm64_linux:       "da11afcf999246360aeb9dca9f5fe1a82a04254690436b99a71247ce459b8255"
-    sha256 x86_64_linux:      "516e75cebba359abab4a8eb002dce0c9f1ad6367ce79f3644651cdc5d92d32b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "1151873e11803a71c8101a0aefdbcafd044721fac5cdec360c50429034a8bb21"
   end
 
   depends_on "asio" => :build

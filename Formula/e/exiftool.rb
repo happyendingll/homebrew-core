@@ -20,12 +20,8 @@ class Exiftool < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "b2be112059660150c63351003a49503472acca8ff37cea2d14f16fad106d9909"
-    sha256 cellar: :any, arm64_tahoe:       "e6c1e9b3dfeb0a75ca5c85b03ece555aa69528d6cc0bae152b17ccef19054707"
-    sha256 cellar: :any, arm64_sequoia:     "d349210864b16b26f0896e5dc6869a065b6b32434519765f2b6ab25012d53e10"
-    sha256 cellar: :any, arm64_linux:       "ef6f151663dbd33f721e6d7cfeeaefe15fc7bbdf6c244f5430334ee55e500e60"
-    sha256 cellar: :any, x86_64_linux:      "91255626d9c2badf4f81b744b99b1d7f22f3628f3e8b2a1ed31b71da8e5b901d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f55387d076465f3505ed1b9dcbd28cc6fd692823dbfd1b491300303f53af3620"
   end
 
   depends_on "brotli"

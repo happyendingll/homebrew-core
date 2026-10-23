@@ -9,11 +9,8 @@ class Spaceship < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e24fdbc475fdae434850d6e8bc3558b2d78e949e92de709731e03023c5641eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e24fdbc475fdae434850d6e8bc3558b2d78e949e92de709731e03023c5641eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e24fdbc475fdae434850d6e8bc3558b2d78e949e92de709731e03023c5641eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0620325a81d139ec31ccbb7948c49b6ad1470821f10e3cf52c41f867035047dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "84cdbdd74a46f6d974edeb8fde461a15ac22e95f3f611a77a413bf8272892f62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "865d7e142dd160b37d84ab6eeed4212c12f584c41a7884eb9ec748971059b5df"
   end
 
   depends_on "zsh-async"

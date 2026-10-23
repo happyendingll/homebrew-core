@@ -11,11 +11,8 @@ class Mpck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "79cfebd954e23769957b0f14e6832d7ef024b514d259f47b9f1fb3c49940083c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1998cfe1d10043a5304f0ca5d157fa43569569c7e0316f3b5f09bcf2f9ed1c7e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cd158561858d161569f1d79edd398437c9424c9312ec59c8da588e23fb3c61eb"
-    sha256 cellar: :any,                 arm64_linux:       "e2905906761bca678f4ed082f5b4e4529f4530660b23ab951b36b27e3abf9ed9"
-    sha256 cellar: :any,                 x86_64_linux:      "d6f410b7db70ddfdd09e5aa2d49b1104913bf7c21efe761c8a680a431c80649e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c548fdd791b80aed78b5e8e22b710aca0e13170ec2ef603fd6485eec29b8cd92"
   end
 
   def install

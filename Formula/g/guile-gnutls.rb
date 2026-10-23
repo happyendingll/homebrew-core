@@ -6,11 +6,8 @@ class GuileGnutls < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "93e16d2e9efc8b4c198fb1eab6ad25d9f8962aa2f8d517cbb70536c9aadf71e9"
-    sha256 arm64_tahoe:       "075240290a35c9e2fdc8135fa2b964fd39f658ec6d224be1f6111376a4fd445c"
-    sha256 arm64_sequoia:     "0c86c9616f89f8638906860034bb711503ef5e1cf232d1702284fd9e82d43d97"
-    sha256 arm64_linux:       "79180d0624c48fd604650aabe1966c2982c7b4130b7eba74be13c761a3c075bd"
-    sha256 x86_64_linux:      "65ca6d57bd4c84239cd50e9c57becf6ffd80cbd2b52c23552d71756ab8d8d7a8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "dde91c8ff3452f8b71f584e5fd13b141588f38ad7db5d863029e79616c72b7b8"
   end
 
   head do
