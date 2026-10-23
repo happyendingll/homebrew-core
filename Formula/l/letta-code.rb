@@ -6,11 +6,8 @@ class LettaCode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256               arm64_golden_gate: "0cbc50c019043d9ad671a9aa9f03e9f852e2ac66915c001c3dbf1dc824b64a89"
-    sha256               arm64_tahoe:       "4f9f819002bdd941ee7d3130313178e78e7de8effe3a041a5abda04a62b9ce5c"
-    sha256               arm64_sequoia:     "77a319aec20c7ee01562d1ce26769b32a9033333ec49504ad7c23c635e613aa3"
-    sha256 cellar: :any, arm64_linux:       "eb22df235adb0469b222684f388c23513135dfdadcde85f632bdbeb330acdf58"
-    sha256 cellar: :any, x86_64_linux:      "0082cc844d3f7a25426527e5c4aea56fb2777a5d07656d1faef59aa4486d4a6f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 sequoia: "02e27fc014d4c5de43c02fc9b6e719743cf78e2bba9d21c27abc64e22aaeed3f"
   end
 
   depends_on "pkgconf" => :build

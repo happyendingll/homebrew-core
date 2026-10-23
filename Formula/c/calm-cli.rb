@@ -6,11 +6,8 @@ class CalmCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "339c653a3d2a25506fe74604a9da46da16e03afadd7ea2bd37467729f73c5b6b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "339c653a3d2a25506fe74604a9da46da16e03afadd7ea2bd37467729f73c5b6b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "339c653a3d2a25506fe74604a9da46da16e03afadd7ea2bd37467729f73c5b6b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "57f0003545ceb3c49ba38f6057fdd17f68c16b668a87c522f39eff10d4ce484d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0ce0b111ef977a0abde42577f3293af5fd2a708f35f94d5ba4747c48029964a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c0f6ca27bbc22f6b34e918fec9156470973f2f8221489999a643a9d94bdaaeca"
   end
 
   depends_on "node"
