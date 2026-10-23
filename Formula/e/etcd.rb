@@ -2,14 +2,17 @@ class Etcd < Formula
   desc "Key value store for shared configuration and service discovery"
   homepage "https://etcd.io"
   url "https://github.com/etcd-io/etcd.git",
-      tag:      "v3.7.2",
-      revision: "68c065e562994b89e333e77b039ad066f933c586"
+      tag:      "v3.7.3",
+      revision: "0a173d0410a96d01091b484daae81365bbcde57e"
   license "Apache-2.0"
   head "https://github.com/etcd-io/etcd.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "8c61e4c7ba2db68d0b7c90d78b78aed4110317de315c83cbcdd0adc94a5907fd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "918392ac5c6c31e2c45dd5694bd9f798bab45ebacd635f993b11c70d86fa18c7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "918392ac5c6c31e2c45dd5694bd9f798bab45ebacd635f993b11c70d86fa18c7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "918392ac5c6c31e2c45dd5694bd9f798bab45ebacd635f993b11c70d86fa18c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ffe8b520d04cceb18f21ac50e236a023ef9c1d2b08efa9d2dcbed85096b21732"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4013122232d70eb3a8a8d949116061f8d5678b4208ff5d4dd86e56d1575879db"
   end
 
   depends_on "go" => :build

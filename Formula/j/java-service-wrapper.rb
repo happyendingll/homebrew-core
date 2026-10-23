@@ -1,8 +1,8 @@
 class JavaServiceWrapper < Formula
   desc "Simplify the deployment, launch and monitoring of Java applications"
   homepage "https://wrapper.tanukisoftware.com/"
-  url "https://download.tanukisoftware.com/wrapper/3.7.3/wrapper_3.7.3_src.tar.gz"
-  sha256 "6e99f0ba7fcaea582ad5922a773c1b243a1dd4fe143c0fc4639e4cb18535d851"
+  url "https://download.tanukisoftware.com/wrapper/3.7.4/wrapper_3.7.4_src.tar.gz"
+  sha256 "d8c5936fb894d27701e96a5685fdbf8cf1a3d4d61c465c3abdc944361ea23905"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
 
   livecheck do
@@ -11,8 +11,11 @@ class JavaServiceWrapper < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "fcaab14aa6d129ba8ba1590108367d3428f21a7536aec2477d5b49504aed3081"
+    sha256 cellar: :any, arm64_golden_gate: "1e651d620cedc5a7181020b116f9934dc26573f6f73d9202dc92c85706ec9e7c"
+    sha256 cellar: :any, arm64_tahoe:       "9a7a72187165750e8557fdefa324a45190d8bae5bad3a7620c53de9dad4cc0fe"
+    sha256 cellar: :any, arm64_sequoia:     "a13d5d3891727ae53a31bd25211daee9010cf31384ac7d2abecb6ce8d34ee9d3"
+    sha256 cellar: :any, arm64_linux:       "1f798359967269be8b81ffad2563a4ad87e7ccc1a8bc64021e3535f77b4825ba"
+    sha256 cellar: :any, x86_64_linux:      "013e1e60fc8335865575ea2b25363dc30ba9cf2322bca596e8582ba6bb92dadf"
   end
 
   depends_on "ant" => :build

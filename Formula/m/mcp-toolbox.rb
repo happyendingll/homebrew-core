@@ -1,13 +1,16 @@
 class McpToolbox < Formula
   desc "MCP server for databases"
   homepage "https://github.com/googleapis/mcp-toolbox"
-  url "https://github.com/googleapis/mcp-toolbox/archive/refs/tags/v1.14.0.tar.gz"
-  sha256 "3dc8b7578b0549af3c7fb437cadb616d7fe9d56906692818edaac133fe6125ce"
+  url "https://github.com/googleapis/mcp-toolbox/archive/refs/tags/v1.15.0.tar.gz"
+  sha256 "b870a9f2be0ea64dd7d2706f22a60c9d0bcce47742cf674ab08702f8dad64e5f"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "e941f8170534ba28e60bb6d6ed5242b166326c88fe34df32821099266cce6bc1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9be68c6924b7a3eb21a27235e19f34466aaa7a004d27f2f1a9f6d5499bfe506"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2a7cdfd8f4fc38f069bc3a3043fb3fd74efc719909c2004e8d6013af28ab72e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f26e28bbc4d19d645ab688e521d30a217ee2a4a7053624acce7fc222850ce3b2"
+    sha256 cellar: :any,                 arm64_linux:       "492114e952b1c1c2fc8100b4a925a09f17810bc4f56d1fe71a27cf21fea89d16"
+    sha256 cellar: :any,                 x86_64_linux:      "eb6f29ad23a7fcd7b3da491f3623fb6e3dbe9e2f58248c7957ca8f50608bc0c2"
   end
 
   depends_on "go" => :build

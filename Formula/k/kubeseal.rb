@@ -2,8 +2,8 @@ class Kubeseal < Formula
   desc "Kubernetes controller and tool for one-way encrypted Secrets"
   homepage "https://github.com/bitnami/sealed-secrets"
   url "https://github.com/bitnami/sealed-secrets.git",
-      tag:      "v0.40.0",
-      revision: "7117727b801514f4c6e3b2cd23cdb74b81f57a86"
+      tag:      "v0.41.1",
+      revision: "f845e8f80a1ff6d112e2116d552f4670bf22895c"
   license "Apache-2.0"
   head "https://github.com/bitnami/sealed-secrets.git", branch: "main"
 
@@ -13,8 +13,11 @@ class Kubeseal < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "b5f3fa6949d3aeba3ca521c1859572375144d57115b77b301ea7ddbf42b1e55c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5d6d03f6adfe324c3e7359d1edb53dd4603c662a04d58eb609286a53903455f7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "13898dbd3db39bf271695e038ae69f091108f775ebb4ab12d1e1e4a9fe08192e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7fd61f5720992d518644d5fdcead13fedb6d07982091b36e6f744fe70596a267"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "53a94bd1ace4c61ef7b023c5fc6d42cc63be92b6e34a985d6ab0d352bcddaa3d"
+    sha256 cellar: :any,                 x86_64_linux:      "45963b145e72bf6f1eb1102d424a05b71a4a61e871a11438a38a24a25e498e14"
   end
 
   depends_on "go" => :build

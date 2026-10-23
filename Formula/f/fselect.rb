@@ -1,13 +1,16 @@
 class Fselect < Formula
   desc "Find files with SQL-like queries"
   homepage "https://fselect.rocks"
-  url "https://github.com/jhspetersson/fselect/archive/refs/tags/0.10.3.tar.gz"
-  sha256 "e2dc2d40c58c273a6e9efece80ad14dc05f07ad01bbafd0fba5da3ebd73464e1"
+  url "https://github.com/jhspetersson/fselect/archive/refs/tags/0.10.4.tar.gz"
+  sha256 "cbcfba22855b92363fe39722559d649f803bf7acb9a433f54d92f290df006fec"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "7d3a09c1ca53286bd167816bc46b04d13f36dd0af319629ff0703747d1637312"
+    sha256 cellar: :any, arm64_golden_gate: "75792175051c6e10e6d5afcd0313e0c8ee1d0227dd2996849e0d712c0c57dfc1"
+    sha256 cellar: :any, arm64_tahoe:       "f835b4014e16ff231fa17f605ce24c1f2391eccb2dd7cea2b332d6a4d7d3ff4f"
+    sha256 cellar: :any, arm64_sequoia:     "104da26de13a733c271f58c830ee332ca8b74a49d4d04c498d16f584387ffc98"
+    sha256 cellar: :any, arm64_linux:       "fe69e10977a217793d7d9b3b4aed9cfb5ff91f48fa6fa0c85a89aa2d88aa5ff4"
+    sha256 cellar: :any, x86_64_linux:      "ccdf7dbb04d1151b8f58e2655de8fc4def99770216871d30c1bc879d076cb47e"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

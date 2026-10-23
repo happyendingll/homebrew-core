@@ -1,8 +1,8 @@
 class DnscryptProxy < Formula
   desc "Secure communications between a client and a DNS resolver"
   homepage "https://dnscrypt.info"
-  url "https://github.com/DNSCrypt/dnscrypt-proxy/archive/refs/tags/2.1.19.tar.gz"
-  sha256 "33f11b7ee081f97c27f49cc96669fd68a68a524e6f9fddd4b744843fb3c54d1b"
+  url "https://github.com/DNSCrypt/dnscrypt-proxy/archive/refs/tags/2.1.20.tar.gz"
+  sha256 "2e6adb32e0f91cb755f1d2c060cddcc80ffca6a181bf03c90df22bbade121607"
   license "ISC"
   head "https://github.com/DNSCrypt/dnscrypt-proxy.git", branch: "master"
 
@@ -12,8 +12,11 @@ class DnscryptProxy < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f50337519c4e14401eb5a178284d2d0dfd685aee4f728f567deedbe016aaf7d9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aad39c5a59ab37b5f08295cab43bf99cb8e7ddacc672e7bfe39754c7650e2a83"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "aad39c5a59ab37b5f08295cab43bf99cb8e7ddacc672e7bfe39754c7650e2a83"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aad39c5a59ab37b5f08295cab43bf99cb8e7ddacc672e7bfe39754c7650e2a83"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5d8e0540af22e3f3be7fe5a171da497a669a62a5241e84cc708b20c52feecefc"
+    sha256 cellar: :any,                 x86_64_linux:      "e3513343c9c768710388fb1da3dd7b55a32f1b9f7c9e3334b66a4e8c9d20699c"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Libsolv < Formula
   desc "Library for solving packages and reading repositories"
   homepage "https://github.com/openSUSE/libsolv"
-  url "https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.40.tar.gz"
-  sha256 "30f529ad39d23bdc284b81ea3ed29679162011fc5fb9392635db0b4d1c8e3511"
+  url "https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.41.tar.gz"
+  sha256 "38b4ee1924f8bd1ec0f6b2ec147e4c54c6deac132db5f90b4214b43ccd32fdd6"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Libsolv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "8312eed5159b7d68343bc2638c7f85c173f393f4d6c0a7163d79465e791ab39f"
+    sha256 cellar: :any, arm64_golden_gate: "d933d98120851fcb1fac9c504692f7cf75b7671d503d1a787bab8609a4c9b984"
+    sha256 cellar: :any, arm64_tahoe:       "dc1d87aa724eabb7ab33863e237780a69df6abbb428d78fe2c87f20f713f13f7"
+    sha256 cellar: :any, arm64_sequoia:     "0811abf8219416237a8844c232b9ca687b6e61e60659bb8a1bf11b24a8fad047"
+    sha256 cellar: :any, arm64_linux:       "80095151a802734054c80f180da6c7684cec7926bfc8f88207f341b1e720c056"
+    sha256 cellar: :any, x86_64_linux:      "bacbac6a30c878bfd1819dcf756f6ce7619fa3533eec3d81c33b391818ff81a4"
   end
 
   depends_on "cmake" => :build

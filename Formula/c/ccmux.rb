@@ -4,10 +4,14 @@ class Ccmux < Formula
   url "https://github.com/epilande/ccmux/archive/refs/tags/v1.4.4.tar.gz"
   sha256 "e5e44bc18eab59ee68ffa33a398c6a254e11831b52a9c649201f36faaf3ee80b"
   license "MIT"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "ed7cfdff4c2719f557ffc4714189783373e808343c728bf70e2e7907fc133453"
+    sha256 arm64_golden_gate: "c156cde086c051602367eb02efc3824e3c1fa64dbd9f3ef29212eb4310480f2b"
+    sha256 arm64_tahoe:       "43335f70343f52d22f6e81f03315f53d0d8be1c0fa8024ab5e7546697ba67216"
+    sha256 arm64_sequoia:     "1d8900d823f8eccb3305b277a0825d638d596b8e107aa49d0ab056afe2fac423"
+    sha256 arm64_linux:       "95fe7911f3d06c780f4c598d17930fd378d42985c899ff902c9de34ae316a386"
+    sha256 x86_64_linux:      "824ea0248b96e75c1f665600a34f43896cd1694b3b90fc1043375aad256dd37a"
   end
 
   depends_on "bun" => :build
@@ -23,6 +27,12 @@ class Ccmux < Formula
     depends_on "icu4c@78"
   end
 
+  deny_network_access!
+
+  def fetch
+    system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
+  end
+
   def install
     if OS.linux?
       bun_icu = Formula["bun"].deps.find { |dep| dep.name.start_with?("icu4c") }.to_formula
@@ -31,7 +41,6 @@ class Ccmux < Formula
       odie "Update icu4c dependency!" if bun_icu.name != icu.name
     end
 
-    system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
     system "bun", "run", "build"
 
     # Without this the executable inherits the repository's bunfig.toml, whose

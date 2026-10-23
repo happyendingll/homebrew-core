@@ -27,6 +27,8 @@ class PortableZlib < PortableFormula
     end
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--static", "--prefix=#{prefix}"
     system "make", "install"

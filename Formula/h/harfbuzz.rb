@@ -1,22 +1,25 @@
 class Harfbuzz < Formula
   desc "OpenType text shaping engine"
   homepage "https://github.com/harfbuzz/harfbuzz"
-  url "https://github.com/harfbuzz/harfbuzz/releases/download/14.6.0/harfbuzz-14.6.0.tar.xz"
-  sha256 "d07a007327277708a2a73ae437887cdbaf282937f6d03ca5467723e9099af586"
+  url "https://github.com/harfbuzz/harfbuzz/releases/download/15.0.0/harfbuzz-15.0.0.tar.xz"
+  sha256 "968536e9abd782f07f7954044c0c4020199fcdd39b41d221ec42d2a3be4a44df"
   license "MIT"
   compatibility_version 1
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "98c3a06c5746a575441d7d56df94fbac1b6dc0dbf5cf5275155325bba414cda1"
+    sha256 cellar: :any, arm64_golden_gate: "6d406ba9a599aaf0cda1f57aa1cde191e3e6839b655c374cff08e7d0ccc923fc"
+    sha256 cellar: :any, arm64_tahoe:       "31457bf639bdee6e9d70a8e167f9e4354f60277d02d2a29b8deec7d15ea2b185"
+    sha256 cellar: :any, arm64_sequoia:     "90c783573c9a81fe679751aa9e2f66da7bc4a935aca3482efcc88da07c8a5ccb"
+    sha256 cellar: :any, arm64_linux:       "62d538c3bbafca523a69e25a82ef6632036da8b0583626f079257c6bd88300a9"
+    sha256 cellar: :any, x86_64_linux:      "114c87db7de0376e9180dba598e5f024d0019e8619ffdc843b4125d84bc8c090"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "pygobject3" => :test
   depends_on "cairo"
   depends_on "freetype"

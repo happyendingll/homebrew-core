@@ -1,17 +1,18 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://github.com/ip7z/7zip/releases/download/26.04/7z2604-src.tar.xz"
-  sha256 "9691944c0fe0d01bb49373a704fb983fd33bc98b1738695179dfbf99ac1734f6"
+  url "https://github.com/ip7z/7zip/archive/refs/tags/26.05.tar.gz"
+  sha256 "989c658cef4c13124ed1f4ff7330a6ce5ab22cefdbbc9daae9b2c110dde9a63b"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
   compatibility_version 1
   head "https://github.com/ip7z/7zip.git", branch: "main"
 
-  no_autobump! because: :incompatible_version_format
-
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "ccfde3824565cac777bed90a598153fed8ce949b369d707f9921b7ef68d74558"
+    sha256 cellar: :any, arm64_golden_gate: "25e1b051da85d7feeba001f790743e21639c9a0f1e28fbb30cd9b9eea85a1254"
+    sha256 cellar: :any, arm64_tahoe:       "f385225a2542b46ea2bf3e51be8913e04ab3d2f4ed753914621dad85d1439fa4"
+    sha256 cellar: :any, arm64_sequoia:     "e124aa458799b02323904f800b05a5442f79efb7818ee3cd654a745c501116a2"
+    sha256 cellar: :any, arm64_linux:       "7dc0668db03bad8ee202ecdc903e5d518089a8239a279af9ee303a4334934237"
+    sha256 cellar: :any, x86_64_linux:      "195fa267a96d283aa25572655660bbb8d7e6afb79347184d8a8901896c47b819"
   end
 
   deny_network_access!

@@ -2,8 +2,8 @@ class Seaweedfs < Formula
   desc "Fast distributed storage system"
   homepage "https://seaweedfs.com"
   url "https://github.com/seaweedfs/seaweedfs.git",
-      tag:      "4.48",
-      revision: "530be3e37337488ecc34d58441e0bc476e121c93"
+      tag:      "4.49",
+      revision: "b97ed0f1014050c41b3a7f0b8c0c91f579a79998"
   license "Apache-2.0"
   head "https://github.com/seaweedfs/seaweedfs.git", branch: "master"
 
@@ -13,8 +13,11 @@ class Seaweedfs < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "ec0b4a7ef6ebb3f45a74b91f2d4ca0348b0daa7af0ed848b7c9743d867a3d5fd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9a8fffcc019b0b57a2d312e4c81e6cc606dd89f5b58224f10f3a64090832ef77"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7b21be4e5df8a11b39cfe22794e6a0c4cc5d3e1ab1a0058839cbe1affd667f88"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8e0c35beaa9652f6b30a15fa8188a9fb282545e39c059a84fd9bfa6eda1dd63"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4c1ff35dde8a78fbf801c34d56b987083fd910a9c08fe140b4a39c76738838df"
+    sha256 cellar: :any,                 x86_64_linux:      "6dff9ba6856177b25b6ca59724178ff39281de46ccfa5c2001c5e11c37bc09db"
   end
 
   depends_on "go" => :build

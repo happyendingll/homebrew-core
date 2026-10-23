@@ -1,14 +1,17 @@
 class Hcloud < Formula
   desc "Command-line interface for Hetzner Cloud"
   homepage "https://github.com/hetznercloud/cli"
-  url "https://github.com/hetznercloud/cli/archive/refs/tags/v1.70.1.tar.gz"
-  sha256 "5b8f1d258a2f96d65f0fbd26ce41b35e6d529432b4bde77fc8b26245d4d01a7d"
+  url "https://github.com/hetznercloud/cli/archive/refs/tags/v1.70.2.tar.gz"
+  sha256 "0a1de1b3f2b6ee7a1cb45b482d4fde6d88d555fe5e93894d551910987e959542"
   license "MIT"
   head "https://github.com/hetznercloud/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "bd8b288c7266f5550bacb86de8076cbac071eb2494612aafc0b82d671f28d786"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "68a9be9f4756c6e0c8186b285d151da98260b1b42b93e7c661737f0b0d906fb1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "98d4dbdb27421a11d7937246839ac25f025c825ac74be959fa3782ffa71f2176"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ad04df98959f15f3cb72455902e47f764c1b54bd2abeaf1d0bacc82aff18b06f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "52c8a3a969d4a3ad88fa7087f8b994b6d1e2753d7858a568e829e0938b0132df"
+    sha256 cellar: :any,                 x86_64_linux:      "caef1cff9031ae00b1b1f34a96481b1e501b0e7a5a1605bc5c85a8d80fabcf2f"
   end
 
   depends_on "go" => :build

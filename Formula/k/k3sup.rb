@@ -2,8 +2,8 @@ class K3sup < Formula
   desc "Utility to create k3s clusters on any local or remote VM"
   homepage "https://k3sup.dev"
   url "https://github.com/alexellis/k3sup.git",
-      tag:      "0.13.13",
-      revision: "2fa773c9db8995a193d9ec7a79db00944931525e"
+      tag:      "0.13.14",
+      revision: "07ee3911f65dc978899f036586c7a99317a31996"
   license "MIT"
   head "https://github.com/alexellis/k3sup.git", branch: "master"
 
@@ -13,8 +13,11 @@ class K3sup < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "460b7fce7bc4601d9409d842795b609861803c4e80f297ebb649e11a0871d54e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e7645f21da208f50a433e710f270217848e817d2afdfd2c94952e9e8f0b16778"
+    sha256 cellar: :any,                 x86_64_linux:      "00e3e322c3b6b653fec8845dc1a177f80e82b10d7c1224b4c32cbdee84a41746"
   end
 
   depends_on "go" => :build

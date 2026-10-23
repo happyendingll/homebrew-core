@@ -1,13 +1,16 @@
 class Appwrite < Formula
   desc "Command-line tool for Appwrite"
   homepage "https://appwrite.io"
-  url "https://github.com/appwrite/sdk-for-cli/archive/refs/tags/28.8.0.tar.gz"
-  sha256 "a35f60a04b067caccae73749a41b8fac813f519487a9016342b900d5277625d8"
+  url "https://github.com/appwrite/sdk-for-cli/archive/refs/tags/28.9.0.tar.gz"
+  sha256 "f44c054f3e609cdf750a46c6e4e12ec3d37c4bad582aaffb2788be7f72bf3b6b"
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "458aa1258ec46a465b953050c83a0f06e13e2c13627bded6e685cb7251e7c35d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "302d3565bf42c83067023441d66c85cafef0f6cf045e72e2316c905d2e503896"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "302d3565bf42c83067023441d66c85cafef0f6cf045e72e2316c905d2e503896"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "302d3565bf42c83067023441d66c85cafef0f6cf045e72e2316c905d2e503896"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f30c455f856786137f43519c6a754bbf20130426d1d774c2ea7f9f68dff0bf2f"
+    sha256 cellar: :any,                 x86_64_linux:      "5a24a3cac2ae17d4df25777508861d5a13a9fc61e47cde0a0ced888342d6bf54"
   end
 
   depends_on "go" => :build

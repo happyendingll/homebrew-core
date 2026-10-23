@@ -1,15 +1,17 @@
 class Somalier < Formula
   desc "Relatedness, QC and ancestry checks from BAM/CRAM/VCF"
   homepage "https://github.com/brentp/somalier"
-  url "https://github.com/brentp/somalier/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "506f540589495cdc933b5c9e014f01b16261a567e003bcce60afbcf8de4519a8"
+  url "https://github.com/brentp/somalier/archive/refs/tags/v0.3.6.tar.gz"
+  sha256 "7dc3c8764d9dd962221b653353be0e444ac98e53d1c872e47d745674215f2da2"
   license "MIT"
-  revision 1
   head "https://github.com/brentp/somalier.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "23e01058c6a590690ffee2c85cd0b0c939e3c61793b2815939d55b2ad8948853"
+    sha256 cellar: :any, arm64_golden_gate: "919c21f88132cf860a5406a33bc21489da608aec62a42e976e46469110156e41"
+    sha256 cellar: :any, arm64_tahoe:       "8339bb65b3f264aec094fd38fa2a28583e83595a3f3f9baa70291491b9af7f83"
+    sha256 cellar: :any, arm64_sequoia:     "d86704716b9d3f7b880a32408110eacfea764ef2f42fe9debe48e5846130d202"
+    sha256 cellar: :any, arm64_linux:       "a052a2165ffcce9d82e79faf85c9e54641a1e0a123c3f8964ee580aab0f4b289"
+    sha256 cellar: :any, x86_64_linux:      "dc70c3e5ad1b83bf962d2d671c4660008ca2ff7cd1e1a49b0acfca9589fb5c03"
   end
 
   depends_on "nim" => :build
@@ -75,8 +77,8 @@ class Somalier < Formula
   end
 
   resource "hts" do
-    url "https://github.com/brentp/hts-nim/archive/refs/tags/v0.3.31.tar.gz"
-    sha256 "e2e8572156cced4557fcb75ecf5a7ee072bcc7abf81066d4b54d5bf674dab3e0"
+    url "https://github.com/brentp/hts-nim/archive/refs/tags/v0.3.32.tar.gz"
+    sha256 "98eb4da6140e61e1383946b77451b684865d8b7ea00ddc17a4bf331ee171892d"
 
     livecheck do
       url :url

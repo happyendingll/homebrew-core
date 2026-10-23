@@ -1,14 +1,17 @@
 class Sacad < Formula
   desc "Automatic cover art downloader"
   homepage "https://github.com/desbma/sacad"
-  url "https://github.com/desbma/sacad/archive/refs/tags/3.0.3.tar.gz"
-  sha256 "747a2b3847c85ad55f4b8ef53b9a133003c53ad9e3c644e74ed762756b613748"
+  url "https://github.com/desbma/sacad/archive/refs/tags/3.0.4.tar.gz"
+  sha256 "31780c419c4ca14310c8ac7023faf03ecb17a0098013f134af9fa750810d322b"
   license "MPL-2.0"
   head "https://github.com/desbma/sacad.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "b6ee31dfb64bd464eac2f3fd735f59f357f5ceb3695b23dbc5b6f87e4a6d8abe"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "85fe9fefb9abdda3c42ce04cd0b16d559f97503dda0ae934b0f46898970b8341"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3753da68c5c4aaa39b34f97e99e9852da040d5681eb69c0b3496f9b253326454"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "69e938bb1c21e4d9ee568926027577723621964691a0afb5da92636799443379"
+    sha256 cellar: :any,                 arm64_linux:       "790baf7e109be39f3b964ad69ef90ec5deb0042fc5a2b99cc141ea1eeb861536"
+    sha256 cellar: :any,                 x86_64_linux:      "a13151c36c1c2facd478bdc6cf145726abb536b2da7b075f108d8c363120725f"
   end
 
   depends_on "rust" => :build

@@ -1,14 +1,17 @@
 class AwsCSdkutils < Formula
   desc "C99 library implementing AWS SDK specific utilities"
   homepage "https://github.com/awslabs/aws-c-sdkutils"
-  url "https://github.com/awslabs/aws-c-sdkutils/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "ddf9d09ba137ad0697afe1c09f5d778d6b2f1aadb277dffd231ff615ae34bc82"
+  url "https://github.com/awslabs/aws-c-sdkutils/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "c74ce4e19304051d961255fdeb3cd431cfc81896c608a22f94c2321b5a19d6ba"
   license "Apache-2.0"
   compatibility_version 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "10dd3c4920b8d4abdf193e8336f452eccbcdd42b8849a8763bf9e415d21cc2e3"
+    sha256 cellar: :any, arm64_golden_gate: "5756276d411ed024984ee7bb45e373d7b4824704eced8b16f06d3108090a0532"
+    sha256 cellar: :any, arm64_tahoe:       "ea064e55171cfa96038657274b54d2794a771939039645817fd514793a0d313e"
+    sha256 cellar: :any, arm64_sequoia:     "8a2edf42ddfe0402d5c7fc9f905b0bf322c8702f8646746b4d9aaafbac3da1b0"
+    sha256 cellar: :any, arm64_linux:       "ca20b692fe49a7e38049d6e6a20e571f88e6ae158ec8274358b49ae91110908f"
+    sha256 cellar: :any, x86_64_linux:      "2837b0147c9f6f70f2927e721163f8bee7103396eeb95b8587431f7874981f0f"
   end
 
   depends_on "cmake" => :build

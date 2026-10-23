@@ -3,14 +3,17 @@ class Fwupd < Formula
 
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
-  url "https://github.com/fwupd/fwupd/releases/download/2.1.8/fwupd-2.1.8.tar.xz"
-  sha256 "8724305a52621ab6586de3290f6a78edb8393a4aa4bcb6c63f9228ae5e00acf8"
+  url "https://github.com/fwupd/fwupd/releases/download/2.1.9/fwupd-2.1.9.tar.xz"
+  sha256 "d45f3cbac06f1f6da300fb7c148237ff15c12df9981824e925bc2f3722bff233"
   license "LGPL-2.1-or-later"
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "1223dd2bcf842deb6f54376b3842ba4898d86db808d8e1c31546a03d91baf45c"
+    sha256 arm64_golden_gate: "b604cc6a061dd0a05986b1248e4713b1a47388c07b12f65e8a402659b038f5a4"
+    sha256 arm64_tahoe:       "5c59d56c27c3ba2882c3e16039342fc4cc6aeeb0053012f2f4841dcfab812bf2"
+    sha256 arm64_sequoia:     "fb9291d9e9d626b2f444a738144adfe1ab60aa66b121bea2620d482c595dca10"
+    sha256 arm64_linux:       "e2fa742515d9b9383844c6da6969c569d7ed35d9d7c0e219e5eefaf1c7429660"
+    sha256 x86_64_linux:      "d9775fba87bd1e962f322ab37506eacd05936af330faf41e5ccbd9c2d5464882"
   end
 
   depends_on "gettext" => :build # for msgfmt

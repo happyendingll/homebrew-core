@@ -1,8 +1,8 @@
 class GitLfs < Formula
   desc "Git extension for versioning large files"
   homepage "https://git-lfs.com/"
-  url "https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-v3.8.0.tar.gz"
-  sha256 "4f75492c6832038fa73d39a45316657208bb6caa23b273451cb4ec2358d42ccb"
+  url "https://github.com/git-lfs/git-lfs/releases/download/v3.8.1/git-lfs-v3.8.1.tar.gz"
+  sha256 "1939307bef808580f7c8954ede7072889d7e76721f5d6fdc4ab110bf907330ab"
   license "MIT"
   compatibility_version 1
 
@@ -14,8 +14,11 @@ class GitLfs < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "1fa7313fdbf2a6864bf9af8f1dd805f00349a60af4dce17245ef79a688616930"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eeebeea7809cebc90dc539f5c72fe607f5418f346e855a159c08d6b453f8b088"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eeebeea7809cebc90dc539f5c72fe607f5418f346e855a159c08d6b453f8b088"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eeebeea7809cebc90dc539f5c72fe607f5418f346e855a159c08d6b453f8b088"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8f482de6c05507eafc2132cc82400f73687f8768b6d43c6002571eb045f4c158"
+    sha256 cellar: :any,                 x86_64_linux:      "16986c189e2c86839c171a8ce1d6d05baebf5bf34825cfbe6db5cf821306a308"
   end
 
   depends_on "asciidoctor" => :build

@@ -27,7 +27,7 @@ class Pandoc < Formula
 
   def install
     # Workaround to build aeson with GHC 9.14, https://github.com/haskell/aeson/issues/1155
-    args = ["--allow-newer=base,containers,template-haskell"]
+    args = ["--allow-newer=base,containers,template-haskell", "--constraint=pandoc +http"]
 
     system "cabal", "v2-update"
     system "cabal", "v2-install", *args, *std_cabal_v2_args, "pandoc-cli"

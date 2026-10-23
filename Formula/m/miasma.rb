@@ -4,6 +4,7 @@ class Miasma < Formula
   url "https://github.com/austin-weeks/miasma/archive/refs/tags/v0.4.3.tar.gz"
   sha256 "2163817b6489517fa3dfd27beab9eb8429c53578a603fb984b8b05ecabd97159"
   license "GPL-3.0-or-later"
+  head "https://github.com/austin-weeks/miasma.git", branch: "main"
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
@@ -13,6 +14,12 @@ class Miasma < Formula
   depends_on "rust" => :build
 
   uses_from_macos "sqlite"
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     system "cargo", "install", *std_cargo_args

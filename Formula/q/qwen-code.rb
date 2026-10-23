@@ -1,13 +1,16 @@
 class QwenCode < Formula
   desc "AI-powered command-line workflow tool for developers"
   homepage "https://github.com/QwenLM/qwen-code"
-  url "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.25.3.tgz"
-  sha256 "e6e5d1b7ffd7442d16f6c0e3954bd5a69dbf81b0ae224f7fb6f3558d93be2742"
+  url "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.26.0.tgz"
+  sha256 "16dccd12a9ba433d0e7aa9a18637d2e340bf1a2a4ad01f0f3ca1eb5a69e5f2e1"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "7488d6c944dd4822b5185402dd3555e41c167239e579df6495e8a692e95b9742"
+    sha256 cellar: :any, arm64_golden_gate: "35a4e95973f388d3e2d55b6e9cf33635f6eaa13bfdf0bb79584354b5e66597ca"
+    sha256 cellar: :any, arm64_tahoe:       "35a4e95973f388d3e2d55b6e9cf33635f6eaa13bfdf0bb79584354b5e66597ca"
+    sha256 cellar: :any, arm64_sequoia:     "35a4e95973f388d3e2d55b6e9cf33635f6eaa13bfdf0bb79584354b5e66597ca"
+    sha256 cellar: :any, arm64_linux:       "720cd03842cd319774a83da14d116ed30d71f95f6ce2cb946571b2b1297989f4"
+    sha256 cellar: :any, x86_64_linux:      "9234355ee49052d5cbeb8c2756102d5ef3915522fc4feb05de296eb6f759e56c"
   end
 
   depends_on "node"

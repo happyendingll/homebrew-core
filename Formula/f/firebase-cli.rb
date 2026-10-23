@@ -1,13 +1,16 @@
 class FirebaseCli < Formula
   desc "Firebase command-line tools"
   homepage "https://firebase.google.com/docs/cli/"
-  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-15.34.0.tgz"
-  sha256 "9b62d1d317064360f5a521be91249f3df2b29441445f433b1f6ab6a58913323f"
+  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-15.34.1.tgz"
+  sha256 "1a106a3a99d2d5d7a998c764b753e92cb577b1bf548b624dcfd4ea8a537509fa"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "a8ed07946c5d6fdfd1c34d63b07dcad4efb1d7feae23e009258e4706509bfced"
+    sha256 cellar: :any, arm64_golden_gate: "f6db5682d42e5cd67b282ce0dedae17ff5b46f98645ef2daa01316245d8d8f50"
+    sha256 cellar: :any, arm64_tahoe:       "f6db5682d42e5cd67b282ce0dedae17ff5b46f98645ef2daa01316245d8d8f50"
+    sha256 cellar: :any, arm64_sequoia:     "f6db5682d42e5cd67b282ce0dedae17ff5b46f98645ef2daa01316245d8d8f50"
+    sha256 cellar: :any, arm64_linux:       "af194c407bdb8c4316a8ebc5f9eefd708eebc2eae55e7a1534bb3932a0bb5ddb"
+    sha256 cellar: :any, x86_64_linux:      "793476e2c2fc93d0a8af1c391dfc304425040c6b9a086826b4870f7da06fc97a"
   end
 
   depends_on "node"

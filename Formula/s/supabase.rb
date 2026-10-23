@@ -1,8 +1,8 @@
 class Supabase < Formula
   desc "Postgres development platform"
   homepage "https://supabase.com/docs/reference/cli/about"
-  url "https://github.com/supabase/cli/archive/refs/tags/v2.121.0.tar.gz"
-  sha256 "1333db3d6e3a83526745eb6400e46355f85ed14d46b504dbe87ec5920f2e81ec"
+  url "https://github.com/supabase/cli/archive/refs/tags/v2.122.0.tar.gz"
+  sha256 "67aca53ea123ffa3d385800eb858e3bfad08923fa77347f8d611f5a0d63245fa"
   license "MIT"
   head "https://github.com/supabase/cli.git", branch: "develop"
 
@@ -12,8 +12,11 @@ class Supabase < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "1c8548e9d3497283be17443a8a1a13ccc30e4edeb00c275919a844913e20e9b9"
+    sha256 arm64_golden_gate: "809df2217f5b16d94286cd64a908fc60ed6d1d3ac4839b6c55daf0b2ecc7409b"
+    sha256 arm64_tahoe:       "09a39a8843570f57bc88675adde017648baac9650ba656b78cbb3b26db8dd9f9"
+    sha256 arm64_sequoia:     "54071b94bbc5795004c52e3281724226867f41a991c70945dba3eb9af3361a94"
+    sha256 arm64_linux:       "d02fef7bd96e13a6f48fb9bb9c221760437185f982ea25fb0cecde4fd325dc53"
+    sha256 x86_64_linux:      "0e620f3afd9be54463306abde7fc7fc961c869da22bcd9472a78d3170c2eb783"
   end
 
   depends_on "bun" => :build

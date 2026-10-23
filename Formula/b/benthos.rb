@@ -1,14 +1,17 @@
 class Benthos < Formula
   desc "Stream processor for mundane tasks written in Go"
   homepage "https://github.com/redpanda-data/benthos"
-  url "https://github.com/redpanda-data/benthos/archive/refs/tags/v4.83.0.tar.gz"
-  sha256 "1e8453380769dcd4968f1da9b0249f458c2fe1741954d72e8009204d50054938"
+  url "https://github.com/redpanda-data/benthos/archive/refs/tags/v4.84.0.tar.gz"
+  sha256 "2b0da974dc367947643e7787a3d52792e5fd6439d34598a889834b4a692a2bc7"
   license "MIT"
   head "https://github.com/redpanda-data/benthos.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "8c5b93df416f425e8833a9ae37b36103943050bcf2e45b1d1819c2e3e32483ee"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0df2cfc096a267e2b10556e8da39e8471472a0f97ff7db98854bd80cdc5a6024"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0df2cfc096a267e2b10556e8da39e8471472a0f97ff7db98854bd80cdc5a6024"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0df2cfc096a267e2b10556e8da39e8471472a0f97ff7db98854bd80cdc5a6024"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "46cae72f0d9e4b3f1fab890b7262d24b4776bd86d0f21cf322f862c47454685b"
+    sha256 cellar: :any,                 x86_64_linux:      "306603ac5c4778a746405e2e73696778048547871c613f11dda307d0eb991be9"
   end
 
   depends_on "go" => :build

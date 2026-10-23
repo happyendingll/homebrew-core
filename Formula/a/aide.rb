@@ -1,13 +1,16 @@
 class Aide < Formula
   desc "File and directory integrity checker"
   homepage "https://aide.github.io/"
-  url "https://github.com/aide/aide/releases/download/v0.19.4/aide-0.19.4.tar.gz"
-  sha256 "47ab7c696f0745911479a41f90d7ad99d26536e186d66c4aad093bc72d20ff5f"
+  url "https://github.com/aide/aide/releases/download/v0.19.5/aide-0.19.5.tar.gz"
+  sha256 "6b004557e9493048ceb5fa84fb44b904c16e23bed8850dc21316e7c44247a350"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "5c3a57a58c1b70588e9cf8534a8f5414317ba0e85389f56481e4cd16045ce8bc"
+    sha256 cellar: :any, arm64_golden_gate: "0a5ed63b74a93bfad3ab08d88509e4fcf6bc4f8772048812369d616168b00f58"
+    sha256 cellar: :any, arm64_tahoe:       "f0bc01192335ba42f2a506089bd662604726f0173fb326a5e6751d4074ad9cb1"
+    sha256 cellar: :any, arm64_sequoia:     "c2317720077166aa280cca923c9335322c2eecbeea05aafefdcdb5904020a8f7"
+    sha256 cellar: :any, arm64_linux:       "92d70d69941ce479d3f028b6fd3814f982c6040146dd04f604a1a1a08265c344"
+    sha256 cellar: :any, x86_64_linux:      "0290a68491db40f1145dbe66a0e77912233e08eb30b64bc7b2dc35d2e24edbeb"
   end
 
   head do

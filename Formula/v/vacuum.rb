@@ -1,14 +1,17 @@
 class Vacuum < Formula
   desc "World's fastest OpenAPI & Swagger linter"
   homepage "https://quobix.com/vacuum/"
-  url "https://github.com/daveshanley/vacuum/archive/refs/tags/v0.33.2.tar.gz"
-  sha256 "da6199101310cd3d15faa9c8cc51fac0a16d052f98dd4af0474707a0547f1277"
+  url "https://github.com/daveshanley/vacuum/archive/refs/tags/v0.35.1.tar.gz"
+  sha256 "33d54819b8c285f094967667ec18e44346a8d95df44343dcc106d14e02da8161"
   license "MIT"
   head "https://github.com/daveshanley/vacuum.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "2d92ab7f15f875f8c9a5fc29e387948726412a1cdc4243908beec598baace7c0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7b23772ec2d6274404bc30abff65bb9561fa13073231113b79bcd06613116f5e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "254390b956f3fd859d7d9b63ecb680b6ca5e7c8df221ebff5b486b9db24bebb1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d46c00dd72d4b43b6e8b510f68624ed0a4f92a5aabd26541a3611825ada8aa26"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "edaa9e4a2a8921b802eb192a594759113e9ec0b55935a3cfb5eafa46da38884e"
+    sha256 cellar: :any,                 x86_64_linux:      "728a41b64a0de6e82ea1347c6bd13ca3a8bac50381731f52097b86bb4a5862b4"
   end
 
   depends_on "go" => :build

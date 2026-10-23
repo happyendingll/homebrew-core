@@ -1,13 +1,16 @@
 class Pocketbase < Formula
   desc "Open source backend for your next project in 1 file"
   homepage "https://pocketbase.io/"
-  url "https://github.com/pocketbase/pocketbase/archive/refs/tags/v0.40.5.tar.gz"
-  sha256 "daed8aa7ad904054b6d983f9e4ede95fafdb27594813987baa2e6a566a177dda"
+  url "https://github.com/pocketbase/pocketbase/archive/refs/tags/v0.40.6.tar.gz"
+  sha256 "f5ed3d708d1598b9c8b2bbf07e0f1bfd9f4f6235a3157013a9a889d5081147e1"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "0a9e9f54edfeb5af361b425ac0c6cc1ee56436276a66a722a5aabe2e0b486cb1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "35d06fb2ae04f98eb65ee49f8a57dfcb1b68393b366bb5ec14043d3896b6fac9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "35d06fb2ae04f98eb65ee49f8a57dfcb1b68393b366bb5ec14043d3896b6fac9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "35d06fb2ae04f98eb65ee49f8a57dfcb1b68393b366bb5ec14043d3896b6fac9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "19ef7a7827899fb377ebce1cdf33f05fc7e23cc7f10b5a8a770fc19de8e8af21"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f6386945e5d96c9734ed70c9d241ae40c082d5a7c9f80672f319e1808d2f6e96"
   end
 
   depends_on "go" => :build

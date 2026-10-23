@@ -16,6 +16,8 @@ class PortableLibxcrypt < PortableFormula
     sha256 cellar: :any_skip_relocation, sequoia: "9e65f412d3f83d123309e4dea686615302d07f726dff3cebbd916e5975b63a37"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", *portable_configure_args,
                           *std_configure_args,
@@ -29,7 +31,7 @@ class PortableLibxcrypt < PortableFormula
   end
 
   test do
-    (testpath/"test.c").write <<~EOS
+    (testpath/"test.c").write <<~C
       #include <crypt.h>
       #include <errno.h>
       #include <stdio.h>
@@ -54,7 +56,7 @@ class PortableLibxcrypt < PortableFormula
 
         return 0;
       }
-    EOS
+    C
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lcrypt", "-o", "test"
     system "./test"
   end

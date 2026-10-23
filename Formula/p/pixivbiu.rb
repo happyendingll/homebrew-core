@@ -18,6 +18,16 @@ class Pixivbiu < Formula
   depends_on "bun" => :build
   depends_on "go" => :build
 
+  # `test do` block queries the health API of a local pixivbiu server
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download"
+    cd "frontend" do
+      system "bun", "install", "--frozen-lockfile"
+    end
+  end
+
   def install
     system "make", "dist", "VERSION=#{version}"
     bin.install "bin/pixivbiu"

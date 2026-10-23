@@ -39,7 +39,7 @@ class Ghidra < Formula
     (libexec/"GPL/DemanglerGnu/os").children
                                    .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}_#{arch}" }
     (libexec/"Ghidra/Features").glob("{Decompiler,FileFormats}/os/*")
-                               .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
+                               .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}_#{arch}" }
   end
 
   test do
