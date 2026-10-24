@@ -10,12 +10,8 @@ class Libxmlb < Formula
   head "https://github.com/hughsie/libxmlb.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "bee744ed5228c334fecedfab294d3b511d94bb4f49451e2425a73b8073987c9d"
-    sha256 cellar: :any, arm64_tahoe:       "af9f57864d1e2a2dfde2a9c110e722edd97a4156fa981ddd57e4296201659d69"
-    sha256 cellar: :any, arm64_sequoia:     "854f351ce57f8242c8ab2378a3f41827b38dfb5f9c18d143c445a8847aa06cbf"
-    sha256 cellar: :any, arm64_linux:       "73692f36135bf7e666b3216a2c9daef7c36366757f0751e6d9cf2bc724ec6c27"
-    sha256 cellar: :any, x86_64_linux:      "5af2a76a6dd8cd6fa93d17cec28dcc6274f44c2b414975b8518916604918cb11"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "71f708095b5d7b7eb6f0ed6ba0a94eddd8801872994aa432786ab28253fb2dbc"
   end
 
   depends_on "gobject-introspection" => :build

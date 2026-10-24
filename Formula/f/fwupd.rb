@@ -9,11 +9,8 @@ class Fwupd < Formula
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "b604cc6a061dd0a05986b1248e4713b1a47388c07b12f65e8a402659b038f5a4"
-    sha256 arm64_tahoe:       "5c59d56c27c3ba2882c3e16039342fc4cc6aeeb0053012f2f4841dcfab812bf2"
-    sha256 arm64_sequoia:     "fb9291d9e9d626b2f444a738144adfe1ab60aa66b121bea2620d482c595dca10"
-    sha256 arm64_linux:       "e2fa742515d9b9383844c6da6969c569d7ed35d9d7c0e219e5eefaf1c7429660"
-    sha256 x86_64_linux:      "d9775fba87bd1e962f322ab37506eacd05936af330faf41e5ccbd9c2d5464882"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "00258925303d3d06cf0197d881fb230fe39e0b91f46c20c9cf3b816d38c5e5a1"
   end
 
   depends_on "gettext" => :build # for msgfmt

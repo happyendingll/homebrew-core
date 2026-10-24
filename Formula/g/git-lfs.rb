@@ -14,11 +14,8 @@ class GitLfs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eeebeea7809cebc90dc539f5c72fe607f5418f346e855a159c08d6b453f8b088"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eeebeea7809cebc90dc539f5c72fe607f5418f346e855a159c08d6b453f8b088"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eeebeea7809cebc90dc539f5c72fe607f5418f346e855a159c08d6b453f8b088"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8f482de6c05507eafc2132cc82400f73687f8768b6d43c6002571eb045f4c158"
-    sha256 cellar: :any,                 x86_64_linux:      "16986c189e2c86839c171a8ce1d6d05baebf5bf34825cfbe6db5cf821306a308"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "62e48fe0ac24176838042f0d670cf56fefff00ebf7649818891f5d6464f820fc"
   end
 
   depends_on "asciidoctor" => :build
