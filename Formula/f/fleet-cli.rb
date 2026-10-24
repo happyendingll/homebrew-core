@@ -12,11 +12,8 @@ class FleetCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4593d161cc0c230b5e1d0e0086a54ce8464cf9372d573c0077b009d415b778ed"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21c50f885dc01f1df8f706adbb5b2b395309dd3d780e90739c3561218c271b2f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac4afd281b1ce469d89bd618508ce813855d00c12b7d3d838a2f11376f0dc5db"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "82d1f4c652e8adca4612e0230e3a4cd44a78c1c4e5bd95769277248690110524"
-    sha256 cellar: :any,                 x86_64_linux:      "c65b032184a50ee6652df9dc72312dff3db6b9570610505e7e3605d714eb103d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a332a07faee8fb4fe5990b00509a2761b57404ae8b896ac395570e481cadcb21"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Evtx < Formula
   head "https://github.com/omerbenamram/evtx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f93ceb6d4490e491e561b777675193c0ac0f54d89b288d9dcbef69c01bcc0310"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "615443e1bb8e9288a83597eef82f412ad437f552febb4811565d411d317e0d56"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b15d89502f151bc68d77baced5f966e7f7f093ecb471255dee184f97e8551625"
-    sha256 cellar: :any,                 arm64_linux:       "c3f022434aed6551b6aa55a9d9ef12071f765421c64508c7b67ac836ff827409"
-    sha256 cellar: :any,                 x86_64_linux:      "1e693713019a879c7811577a5bf5dbe393ec4ec2b6cae35683dfadcdb5874d34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ff5e61a4fd8f21bcd0cbacf76a8162768a4a5a77e570513971dda67865927f76"
   end
 
   depends_on "rust" => :build

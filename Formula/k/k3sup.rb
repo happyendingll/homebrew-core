@@ -13,11 +13,8 @@ class K3sup < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e7645f21da208f50a433e710f270217848e817d2afdfd2c94952e9e8f0b16778"
-    sha256 cellar: :any,                 x86_64_linux:      "00e3e322c3b6b653fec8845dc1a177f80e82b10d7c1224b4c32cbdee84a41746"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e5bc27a606485837f4716c89f84e5d39a36980c763702943f0720ca5ad5c2145"
   end
 
   depends_on "go" => :build

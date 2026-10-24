@@ -7,11 +7,8 @@ class Godns < Formula
   head "https://github.com/TimothyYe/godns.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9bd2f3cc464a9b13ed3d180f2afaff2e52ee3aa8f814d35f714b03ffbd04e29b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9bd2f3cc464a9b13ed3d180f2afaff2e52ee3aa8f814d35f714b03ffbd04e29b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9bd2f3cc464a9b13ed3d180f2afaff2e52ee3aa8f814d35f714b03ffbd04e29b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0f454c4a029db52efb65a464e90eb29fea566f4e46efd19b37f7deb1e42063e9"
-    sha256 cellar: :any,                 x86_64_linux:      "073a73bc76f555f42912cad98f20c54dea8bbdcf558150927eea0850bcd5b49a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e17cd7ee17b690717722ed60496b68110f267d2ed5ff40da329f13325e8beadb"
   end
 
   depends_on "go" => :build

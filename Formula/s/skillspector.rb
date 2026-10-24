@@ -8,11 +8,8 @@ class Skillspector < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a24784d7424955844784f0ae9bb46ca79f87dea67e5a9277a7b377b54023fee2"
-    sha256 cellar: :any, arm64_tahoe:       "7c48830493eb8aee0bfb9dac840456f4d4e21ec8f5ad6e22ffa0944efbc28e26"
-    sha256 cellar: :any, arm64_sequoia:     "32db367cfb49e7697638969515722a2d1e16af7fb6fc2f7006a32b22fd63a218"
-    sha256 cellar: :any, arm64_linux:       "4f3fa009d9cfec0c31aaf439db43310c4722de3bcb265594ecb94d1002d9a394"
-    sha256 cellar: :any, x86_64_linux:      "bb168d464701cd448389c7e756f4cecda07e0c6bd9afca39fd338fc8c455da19"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "c95027e465d64f81213b485163877e3264cbd109323ebb93cf8d2a6ae5860f22"
   end
 
   depends_on "pkgconf" => :build

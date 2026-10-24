@@ -8,11 +8,8 @@ class B2Tools < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2187f3f11b818f8e53126d51073512aa37044669fcb273f800e12c6d150ad70"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c2187f3f11b818f8e53126d51073512aa37044669fcb273f800e12c6d150ad70"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2187f3f11b818f8e53126d51073512aa37044669fcb273f800e12c6d150ad70"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d371594558578d50aad10da9c35474ea963acb1f868b782c12f2d5bb72a276ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d371594558578d50aad10da9c35474ea963acb1f868b782c12f2d5bb72a276ea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "8bfe527946ce9854891721a09c065ce48fe53db7ad4376305a7da7d725451032"
   end
 
   depends_on "certifi"

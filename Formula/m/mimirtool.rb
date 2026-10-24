@@ -17,11 +17,8 @@ class Mimirtool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "32e23adbab34107580574ca1b14a9a29add8a0030b38845bc3d69b90720c9edb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "263c8c7194d5453187d5f33229b624c138744a4102fa8fd2bde01f2e273722bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c85cbe219a17ed354ba2d0b467d0ca6c4dee252bcc11cb65401f139b3674820b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ffab0960e90759ec976bee8b8320eaca7e50bcb1be623a78841cdf262e75ecec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2864506f0b286e5985a6f85dabc3daffaa887538e7e44dbe70803ccecf808dd1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "588332f24b2f23db4482dd16b75d26751b86b35c10ace61ee4f8de87eee947a7"
   end
 
   depends_on "go" => :build

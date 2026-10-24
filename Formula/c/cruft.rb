@@ -10,11 +10,8 @@ class Cruft < Formula
   head "https://github.com/cruft/cruft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9a191f8bc568b4650903c106808cc5d21db9e430b7d2a907a551851846e05242"
-    sha256 cellar: :any, arm64_tahoe:       "5f2571b5d4a8d137056e0f2afd4010aac6210a19989a13acbfea5e64e3f543d2"
-    sha256 cellar: :any, arm64_sequoia:     "f76451d0ed87d8002ef8ff764a943959c04e59b66d4ca9341863480ad3a2967b"
-    sha256 cellar: :any, arm64_linux:       "1f314f0adbfab89bce64a6a841065922d532612dad2c4ef0c53d46315d355583"
-    sha256 cellar: :any, x86_64_linux:      "92f31d4089692c60ffe3c656b11e6fd76d4c37f3458c946b678310b5491283c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "92ee03c7e710befcccf8721afc3c4c0aaea9817ef55d000dc704a2bbab51a56a"
   end
 
   depends_on "certifi" => :no_linkage

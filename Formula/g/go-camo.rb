@@ -7,11 +7,8 @@ class GoCamo < Formula
   head "https://github.com/cactus/go-camo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "58a649464b802dac0e5c4050fe81711b62615a9544768cd05dba663def3f312f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ffc650849bbf9725325b120fc17da6dd6d45cc3ab55af252575c23bbe34288f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eabaadbe864707dd5c80d4db8f23436bb8fe5d6ae56ae27adb3c49008080fff7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "db67533b9e84e55b4f5c925b2e670892f8b23fc38b85b9cdda63919fb04d91fe"
-    sha256 cellar: :any,                 x86_64_linux:      "4e73e9e1e2978502ff7162d6cc6c10e229a22b1d55e2e27b24eafd3a86e1a9cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "6cc0e36baa0011028d1ac09185a20a6c54687a4fcb9e58599beacd091febc3db"
   end
 
   depends_on "go" => :build

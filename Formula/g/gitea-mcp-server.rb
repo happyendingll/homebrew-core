@@ -7,11 +7,8 @@ class GiteaMcpServer < Formula
   head "https://gitea.com/gitea/gitea-mcp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "14b6b756dbe3baa70312b37498bc11c4930fce3d08dbec7a9a940bb0f92aefe6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "14b6b756dbe3baa70312b37498bc11c4930fce3d08dbec7a9a940bb0f92aefe6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "14b6b756dbe3baa70312b37498bc11c4930fce3d08dbec7a9a940bb0f92aefe6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4aa473d0c85fd94e370f3db32a3adf238d7d9550d575e0a2f4e9faa41df09d95"
-    sha256 cellar: :any,                 x86_64_linux:      "6064978a52f9aaab43543154aab0163f76d8d728bfbbcec60b1e927f59126eae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "6484d05968d3b7b2a9b21a5f3086d1ac40e79bbc74433d9d92ef558689bfcc5d"
   end
 
   depends_on "go" => :build

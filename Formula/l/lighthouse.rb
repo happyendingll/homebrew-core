@@ -11,11 +11,8 @@ class Lighthouse < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8cf12b361ef3c6726e77a7b85cca8d0e09b921bb65acbac5817faa9534a645ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "478c46b174a2f49b009aa298600689e74ee471040cafc53ad1b794068efe56bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c58e0f71fb9dbec43759cc4f43ba7f6b67986a8443e46d0ea48bf6724af09c4a"
-    sha256 cellar: :any,                 arm64_linux:       "db4eccc91d59207432b617235cf9917f23e43f198f97fb2c53e80aa7d578d2c5"
-    sha256 cellar: :any,                 x86_64_linux:      "edc3dd31c7bbb148cc96cbfde809337e4b3bf8aeed3e9e2b5fc13b937b0f046a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0560ecc78901aca56b4932de7b1aed1901331d21b0dbd8ef0af36e3183dff799"
   end
 
   depends_on "cmake" => :build

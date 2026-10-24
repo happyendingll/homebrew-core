@@ -12,11 +12,8 @@ class Certstrap < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a7341c7aa9cc1bdfcdd7fadaadf684fdf32edd25f519aa1e2d59f67b4c8100d4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a7341c7aa9cc1bdfcdd7fadaadf684fdf32edd25f519aa1e2d59f67b4c8100d4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a7341c7aa9cc1bdfcdd7fadaadf684fdf32edd25f519aa1e2d59f67b4c8100d4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a5c5a2061d82e3707c566464a5dd250960ac062a2060c46a6206826f4fb22298"
-    sha256 cellar: :any,                 x86_64_linux:      "625653ea662caee3e27c0ec38ff950c01b4d28682170bb1f7634ad818bbb6dc3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0b7df0fa83e6ea2574a33ad340274a93e361d5713dbad7e10b1f162646c96aaf"
   end
 
   depends_on "go" => :build

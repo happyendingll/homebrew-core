@@ -8,11 +8,8 @@ class Locust < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "20742d672f3a48f47340370b4f6895b83f013a4e5e8490ea92608c9ab293909e"
-    sha256 cellar: :any, arm64_tahoe:       "3e030e6001fc66a67f67b930eaf643a644499f41a1a711af65452ed012b00cd4"
-    sha256 cellar: :any, arm64_sequoia:     "c3aad3831dfddaaeaccb1d28474f5ea7ccbb4667b7b4ce02181a13928af7a181"
-    sha256 cellar: :any, arm64_linux:       "aacb50b1138d902de9e1ac9f3afd0dc6ca2b6ee42d34e8daf69be8692376eed9"
-    sha256 cellar: :any, x86_64_linux:      "5a275f24ffa74143aa375c1d59ed03f98534f471b49b448f1161f6c3b5e53a66"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a4ead9b855305e01f1d1d2a05bf1a95e50d6d3cdf29bd41f0ee55636ad0a256d"
   end
 
   depends_on "cmake" => :build # for pyzmq

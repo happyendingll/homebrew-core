@@ -9,11 +9,8 @@ class SshVault < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c7cf7959eb0cceb22fb7b6f8bca52345b9e81017195a623bf1efb8118265c0a1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47361e7bfa9c8b40eb5994722b24a722168911d3720a15a7bed7ba6f2d104004"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b75916fdd694e95a1c753b552d4a361b997b242a8d84152e7a456b3cbccca48c"
-    sha256 cellar: :any,                 arm64_linux:       "55330efe73da2869766a71991295b7f7af7c3f0c875fb34b86dae981509a57fe"
-    sha256 cellar: :any,                 x86_64_linux:      "c2993eeafbbec6d0d6bd655f379353e2fe65f00d6d8390dd79b6ea16840b75e1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "d16c15b4bbf09ddca21b48fb767155d4b5ff20498a32223524777c49619f548d"
   end
 
   depends_on "rust" => :build

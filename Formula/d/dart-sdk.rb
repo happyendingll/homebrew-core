@@ -12,11 +12,8 @@ class DartSdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "95088584b90c2338619fad110494b7e44d1f9fe61cd3fdccb01f4c9677e82dfd"
-    sha256 cellar: :any, arm64_tahoe:       "6ad0e27d397749539db7470ffd077d5f72733e101073942c9c027c769d4e0060"
-    sha256 cellar: :any, arm64_sequoia:     "d325b40b927d9921f84a84591d42121f21b15ad1bfcb97c71e1174cd11654a27"
-    sha256 cellar: :any, arm64_linux:       "30de9dac4b496d17ec3fb464c6f7f98d7195d29ff16605168e9dfe77f2b9de83"
-    sha256 cellar: :any, x86_64_linux:      "410563acd62ab44dcc7bde97d33d4f88869e1e0381739d733bdb21dd9dc4d98e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "fa3a04b51accaaea8af5ed983023359c6bce3d45a6afeac556356cc8275f2f2a"
   end
 
   depends_on "ninja" => :build

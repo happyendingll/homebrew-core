@@ -6,11 +6,8 @@ class Aide < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0a5ed63b74a93bfad3ab08d88509e4fcf6bc4f8772048812369d616168b00f58"
-    sha256 cellar: :any, arm64_tahoe:       "f0bc01192335ba42f2a506089bd662604726f0173fb326a5e6751d4074ad9cb1"
-    sha256 cellar: :any, arm64_sequoia:     "c2317720077166aa280cca923c9335322c2eecbeea05aafefdcdb5904020a8f7"
-    sha256 cellar: :any, arm64_linux:       "92d70d69941ce479d3f028b6fd3814f982c6040146dd04f604a1a1a08265c344"
-    sha256 cellar: :any, x86_64_linux:      "0290a68491db40f1145dbe66a0e77912233e08eb30b64bc7b2dc35d2e24edbeb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "e413236ae82091ebce778d959e1eb04eb4952ac61431028094a08e72b49402c3"
   end
 
   head do

@@ -9,11 +9,8 @@ class Acronym < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c4a6f34070c58dd94f8878cc09af9b731cfa727c1877860da2b80a45a963d242"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8ab6c66b1b93c3fc914bfcc8fe27b2d8cc68ac41c1978d5d71f838f941aaa64"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9ba340e6cf690a929ad22466884d07e6f8eaa52ea9ac4931a4c2d93d2be4c8b0"
-    sha256 cellar: :any,                 arm64_linux:       "2419cb78742501e7c0dc8cc38f136366cf91c28101abd68c581115771188ffe4"
-    sha256 cellar: :any,                 x86_64_linux:      "eb807b9ec4a9424876563e3e9cbfa56b1e89f0a44ed6ee5f50059cd00a8dfb69"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ea96a07abac8f20590cf8cc4c46432efbaacb0fd85f710dfce58d8ce27a3b812"
   end
 
   depends_on "cmake" => :build

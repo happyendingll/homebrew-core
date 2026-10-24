@@ -11,11 +11,8 @@ class Libsolv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d933d98120851fcb1fac9c504692f7cf75b7671d503d1a787bab8609a4c9b984"
-    sha256 cellar: :any, arm64_tahoe:       "dc1d87aa724eabb7ab33863e237780a69df6abbb428d78fe2c87f20f713f13f7"
-    sha256 cellar: :any, arm64_sequoia:     "0811abf8219416237a8844c232b9ca687b6e61e60659bb8a1bf11b24a8fad047"
-    sha256 cellar: :any, arm64_linux:       "80095151a802734054c80f180da6c7684cec7926bfc8f88207f341b1e720c056"
-    sha256 cellar: :any, x86_64_linux:      "bacbac6a30c878bfd1819dcf756f6ce7619fa3533eec3d81c33b391818ff81a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "9bacdf28fb51da494d279ea072c3bd5fd815e2b5b4b37addf902e00b2280cd8f"
   end
 
   depends_on "cmake" => :build

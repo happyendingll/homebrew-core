@@ -10,11 +10,8 @@ class Safety < Formula
   head "https://github.com/pyupio/safety.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d6c2ce16579e8098ef4fa1a873ccb8166cf0508d493f150267ac970c4280a88"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "898c9d6f7300ae6303b6a5a2a9675083adc6644122290fe2733abebe4e922d17"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eb9306721181da39035c7fada898bf99b134544957930b054aa0f6278a4310df"
-    sha256 cellar: :any,                 arm64_linux:       "6ef758975ee037c224f583e45db3f618d79f1a53ff6c0684c42776ee86895b4c"
-    sha256 cellar: :any,                 x86_64_linux:      "acd19ca3856a9b5373e2f58fcd1645bf60ff0d547020ea5628a8802c15a567b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "9da4b5b12efb75884e08b76866f09a413fc068ddd31b94438328100616ca5110"
   end
 
   depends_on "certifi" => :no_linkage

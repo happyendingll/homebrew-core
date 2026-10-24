@@ -7,11 +7,8 @@ class CfTerraforming < Formula
   head "https://github.com/cloudflare/cf-terraforming.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b0a73e0b93e3453ef0054cf7b121411ff829413cd28c0939ee34fc6a5b3e2f8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0b0a73e0b93e3453ef0054cf7b121411ff829413cd28c0939ee34fc6a5b3e2f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0b0a73e0b93e3453ef0054cf7b121411ff829413cd28c0939ee34fc6a5b3e2f8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d1467a9b2fd8f23ea8614c4c6daec8fb31cbbf2210a56e53c6be2a9bdecf18e1"
-    sha256 cellar: :any,                 x86_64_linux:      "e0aabd07bbe28358d1ab243ff65ae9fa667f24e7dbf775a4ba8f2544bbd27a31"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "9fa2f75e035d158b989c627b4c1d970bf956e6369e76bbe0b790f96ae4dbd097"
   end
 
   depends_on "go" => :build

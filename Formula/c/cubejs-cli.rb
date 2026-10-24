@@ -6,11 +6,8 @@ class CubejsCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f2bf7ae9e57a9a1525eb297680dcddccaec9c75d14183e2d88b5bcd203f3d40"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0f2bf7ae9e57a9a1525eb297680dcddccaec9c75d14183e2d88b5bcd203f3d40"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0f2bf7ae9e57a9a1525eb297680dcddccaec9c75d14183e2d88b5bcd203f3d40"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8868fc7455db74755c7e97c6704fb572eab3ccd2cf0cb6094b02a7b4c0bbb17e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8868fc7455db74755c7e97c6704fb572eab3ccd2cf0cb6094b02a7b4c0bbb17e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "8c1ec1c2ed0d58ae59b532897551456c69b1fde595c7a9abe22c049844543ec2"
   end
 
   depends_on "node"

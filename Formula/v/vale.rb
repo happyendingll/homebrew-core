@@ -6,11 +6,8 @@ class Vale < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0199ab66a55f7b30ed0c9181568087469748c57390ef3f73aaf31371aabb4ad8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "713e2ec29c21c1a7be12653fb10cd8fc9a178cc7550de5bcbd2b8904b0f066cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20e22ec83643e727e1567a4beea1e24469af1b8725e6ee517f3ae3e8ea4d83ae"
-    sha256 cellar: :any,                 arm64_linux:       "8f6ee8a8a50d72fb435d36d91c872eb94d83eccf900f56647505c5620ad897e4"
-    sha256 cellar: :any,                 x86_64_linux:      "0c1194ba5af2325440437c5cd9dbaad8f440b10095a3755955a3332835c42fc8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "140769c884f6b652fa398705e4ff574544f4e484f225ae8326b9373109193c2b"
   end
 
   depends_on "go" => :build

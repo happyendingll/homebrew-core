@@ -7,11 +7,8 @@ class LdFindCodeRefs < Formula
   head "https://github.com/launchdarkly/ld-find-code-refs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26acdf803b336880349694719afa1f246b1c8888397bc8a92ebe526b8471e10e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26acdf803b336880349694719afa1f246b1c8888397bc8a92ebe526b8471e10e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26acdf803b336880349694719afa1f246b1c8888397bc8a92ebe526b8471e10e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "94bae9a74944ae56c21f1ff7c4cbed864a9a75382208dc982110d129a0d8389d"
-    sha256 cellar: :any,                 x86_64_linux:      "e961cfc1592c7b85707d734df0a5c1bdf290bc47bb855a41e0a7de9b0bdb8259"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e9b088458eba9efa31b7289285eaaba52e3d83154f2df1c181c4878cebd60c00"
   end
 
   depends_on "go" => :build

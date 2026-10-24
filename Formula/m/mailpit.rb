@@ -6,11 +6,8 @@ class Mailpit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cfcb4e677b8bffedb9772d41176186caf008dc50521962079fbbc8421dad79b3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "70ba53bafbede9fd962456ccb9dc0dacf580b2eb38addbc1ffcbb111b240a2f4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bcdcc96baf6da0c942f9a4c38d35960d46b7270bcd253a8e13ece3cc2b7c0f22"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1d5a087323894e82ba38fbbf5ea6fa9c584fce0381bb91d85206a6f79668967a"
-    sha256 cellar: :any,                 x86_64_linux:      "c7eb9b56e8fb99b6c848646c265093a88d7c466f2fb6e0ca17c4ba1be8bcb8d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "996b0dbc32f67aeb796900f582523a87124586534e75c76a8def1d5ea51b2417"
   end
 
   depends_on "go" => :build

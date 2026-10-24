@@ -8,11 +8,8 @@ class Sevenzip < Formula
   head "https://github.com/ip7z/7zip.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "25e1b051da85d7feeba001f790743e21639c9a0f1e28fbb30cd9b9eea85a1254"
-    sha256 cellar: :any, arm64_tahoe:       "f385225a2542b46ea2bf3e51be8913e04ab3d2f4ed753914621dad85d1439fa4"
-    sha256 cellar: :any, arm64_sequoia:     "e124aa458799b02323904f800b05a5442f79efb7818ee3cd654a745c501116a2"
-    sha256 cellar: :any, arm64_linux:       "7dc0668db03bad8ee202ecdc903e5d518089a8239a279af9ee303a4334934237"
-    sha256 cellar: :any, x86_64_linux:      "195fa267a96d283aa25572655660bbb8d7e6afb79347184d8a8901896c47b819"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "3ebad46d92cbd2f64608ff195f0074eca708263c9f38e1740df9a50c1ea0484f"
   end
 
   deny_network_access!

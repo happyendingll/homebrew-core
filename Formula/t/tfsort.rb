@@ -7,11 +7,8 @@ class Tfsort < Formula
   head "https://github.com/AlexNabokikh/tfsort.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf0f38384d1c8c1aa483d2077cf125a3931874e7870cc2c58f7418cb1e1b2e99"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf0f38384d1c8c1aa483d2077cf125a3931874e7870cc2c58f7418cb1e1b2e99"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf0f38384d1c8c1aa483d2077cf125a3931874e7870cc2c58f7418cb1e1b2e99"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b54ad921476b49a3c389fa288d17d6ff7fbe67f133e0718b364df3d3cf63aabf"
-    sha256 cellar: :any,                 x86_64_linux:      "19654bf787c357d974637d2a228a877d1a4da3b997f55e411f6ade75fe15ad62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "6f5c5a0c49e24a899c18ed76095dbd32a2a4efb07175d7547e87354343fd9a38"
   end
 
   depends_on "go" => :build

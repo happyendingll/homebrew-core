@@ -7,11 +7,8 @@ class Sdns < Formula
   head "https://github.com/semihalev/sdns.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7738036d0e31b30ae9957bfdbef64eebf1b1c3ff1c1d86946976a7c0d4e737b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3401e556e8a796cf9f63e3f164b5b0311a7f0f97f39af856e4a72e3965ff257a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5dbd0604a691265ea9d0026e28fb5ec06ae2aa4cfc15f69810368d84f1125521"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1a492f3fdb31095e3d9feba86f7bad70801e6c13594b300e77616d3e45138188"
-    sha256 cellar: :any,                 x86_64_linux:      "0f2cd33734ff8239365ed68a5fa774cc098effc1ebef804a40c1c727ef123152"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "b8c9ecd1e3050b91d51b8c2025c51a4a71ac236a89324f50b1bbbee0ee1d7b85"
   end
 
   depends_on "go" => :build

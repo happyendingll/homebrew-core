@@ -7,11 +7,8 @@ class Gosec < Formula
   head "https://github.com/securego/gosec.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7dba80f404f85b06207eadbbd40fb2ba5089f636e7ace683e7a4305460069d6d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7dba80f404f85b06207eadbbd40fb2ba5089f636e7ace683e7a4305460069d6d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7dba80f404f85b06207eadbbd40fb2ba5089f636e7ace683e7a4305460069d6d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "48f3ecb3d9acfe73ac5f2f41548b86018f3d577b4da686aaff38ed43d5fbe5ac"
-    sha256 cellar: :any,                 x86_64_linux:      "6c098daff552aad6febd17a03158aa1bfcb27179a044c7150463f0716bfecbec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0fcc5845ccdd5bae09fe22150892dba5b7e326c890c6232215d2968e29849358"
   end
 
   depends_on "go"

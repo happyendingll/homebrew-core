@@ -8,11 +8,8 @@ class TerraformLocal < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e692e7ed37b7c1ae633a751b853418f08c670c09d68e5e4b16d4a0b3f60ec7ea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed349d431dcee4282f2f1007922e8a8319c658b0d42bd9e64930ad5c88bb8a13"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c70bfb54cc26212ce74a4c3e9264fd3f926750b089cdb6eff205f3b9f0e3768d"
-    sha256 cellar: :any,                 arm64_linux:       "439a1d475678354f3edbb6c1c23f5d259cc9c3ccfeb74f7e3dda08194bde7252"
-    sha256 cellar: :any,                 x86_64_linux:      "0c8267b48adb48a5a7de76c24efc61a7b14bbfd168decffbd80a1e3d9c993a10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ff42d0397da51b6e2b0d04b007bac8714a22032362882bf76df9297f13ca5f76"
   end
 
   depends_on "python@3.15"

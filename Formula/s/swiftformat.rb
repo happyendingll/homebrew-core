@@ -7,11 +7,8 @@ class Swiftformat < Formula
   head "https://github.com/nicklockwood/SwiftFormat.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69cec23dd75a483cb33fb4de0fa3f48f76ae8a38bd224f428d05063397ed9786"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0ef1235dd14aaaeba4f877a79f641231222e16bf5d8eb2f9485edc7c09b26836"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ef37b6b9288b761169d05bb7d44d4c5e95ab536bc992a01062058828e1341629"
-    sha256 cellar: :any,                 arm64_linux:       "743bb31d20aabb38526a150d22b3406932bc557b0b133b347c996d44ae84e9f9"
-    sha256 cellar: :any,                 x86_64_linux:      "1d168da011a8cc26774f5d7b71ab74e42609ba18059b0357890ba6b57a060ff8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "c74a6ad0270968bb13815779bff423c94ea1b76cd7b63ecb0645e5fa1dc8b74f"
   end
 
   uses_from_macos "swift" => :build

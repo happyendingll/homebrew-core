@@ -8,11 +8,8 @@ class Etcd < Formula
   head "https://github.com/etcd-io/etcd.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "918392ac5c6c31e2c45dd5694bd9f798bab45ebacd635f993b11c70d86fa18c7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "918392ac5c6c31e2c45dd5694bd9f798bab45ebacd635f993b11c70d86fa18c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "918392ac5c6c31e2c45dd5694bd9f798bab45ebacd635f993b11c70d86fa18c7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ffe8b520d04cceb18f21ac50e236a023ef9c1d2b08efa9d2dcbed85096b21732"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4013122232d70eb3a8a8d949116061f8d5678b4208ff5d4dd86e56d1575879db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "bac7ee170496db3140583362c5759278d7237af4f93367d9d237ce7811d2ac95"
   end
 
   depends_on "go" => :build

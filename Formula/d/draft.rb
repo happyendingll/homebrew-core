@@ -7,11 +7,8 @@ class Draft < Formula
   head "https://github.com/Azure/draft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "65e13fa31e68f6a6c717f128888468c152444758cdfdd1be368c839c78a32c42"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ae7fd37d0b78b09c242df73a0ca7d01a315ab166aca2ad98cfee248e89127b53"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f64fff3811ddf36a8982681e841d02da00e9cf174a6b3a20a47dd2742ed76696"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "eb8258843dc2120d19b4828a63a00143e1ac8716e968deed2fb2d74ff826a9cf"
-    sha256 cellar: :any,                 x86_64_linux:      "86dbb2a3c136387475e5cb796d5daa51cf2548cb9ae4e6abeb3b28a035491a52"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "7fa790912e08af95303baa1fd741f6a55fd6757eb016c96c32b58cc420e88f5e"
   end
 
   depends_on "go" => :build

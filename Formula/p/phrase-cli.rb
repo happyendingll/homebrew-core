@@ -13,11 +13,8 @@ class PhraseCli < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a066d0c1a0052528731bade992114edd8913ea555cf741e22fd8b662c303d1ec"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a066d0c1a0052528731bade992114edd8913ea555cf741e22fd8b662c303d1ec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a066d0c1a0052528731bade992114edd8913ea555cf741e22fd8b662c303d1ec"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8a5702d47941f9f7d671951aa79786c764aa0df1841513a78d69b3eb1e3f2022"
-    sha256 cellar: :any,                 x86_64_linux:      "1b83553ac071364a0566a5f7cba49cf89d507e0a07780f9d299c557f3c6439cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0327a25a1d3df2e5d1d3b61aebb698f6d8073da7a41d12e5740a12aa9b4e44e1"
   end
 
   depends_on "go" => :build

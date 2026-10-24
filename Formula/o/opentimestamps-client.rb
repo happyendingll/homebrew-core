@@ -10,11 +10,8 @@ class OpentimestampsClient < Formula
   head "https://github.com/opentimestamps/opentimestamps-client.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a6dc4b3b57f7b88d78af2b56d880848c7c443d7c64964cb49ee65656a3c3924"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9413dc071845c64ae09f9daaad30a89c7e81f0c3bb74897ee416940c6232e597"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "311e4362a363fbff2b4db34a47730902b31fcb089f868c8e5c30941802257101"
-    sha256 cellar: :any,                 arm64_linux:       "deb27b74f3c05c6617e56bc21abb4817c54a4254f3866ce2cd51f341d0e8d841"
-    sha256 cellar: :any,                 x86_64_linux:      "7f4d87cd84795e1dfd8544b0d7b035da7cf1923506a2ded70286bab0e87bdef9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "c461bec14b5b2830935da202f7ab2be9521ca9d127e10643fd79855658f2c471"
   end
 
   depends_on "certifi" => :no_linkage

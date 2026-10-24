@@ -10,11 +10,8 @@ class Cf2tf < Formula
   head "https://github.com/DontShaveTheYak/cf2tf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3b5afe1e4a68bfd9a04f763eeaca22fe5a8ddc0175f4e37a8bf553c83fbee538"
-    sha256 cellar: :any, arm64_tahoe:       "b0e54ceced89096201583986d4ba4eace95a9fe138b15dea1c62fc8c5546600d"
-    sha256 cellar: :any, arm64_sequoia:     "ba869c97666982a758cbd2de4e7f58040d794637ff4cf85f887e9f66c5efecb9"
-    sha256 cellar: :any, arm64_linux:       "1e85fd3cc6600e4f51ea58ddbd5d3262619fb5bec6c99fff8b3f86cab6f37ee9"
-    sha256 cellar: :any, x86_64_linux:      "3265ff6c237897e3e0f325ecce890097773c4ff09861a38a8f1aea291af2cc7a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a2cf5af9d23f7c21a1e7daad4247f4deb4e4cd6dc91d7cad0ce7e02673e60ddd"
   end
 
   depends_on "cmake" => :build

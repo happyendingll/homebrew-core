@@ -7,11 +7,8 @@ class Wasmedge < Formula
   head "https://github.com/WasmEdge/WasmEdge.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4dcf520433551e0c49e882da26ff2d8f0c0197862e28f01e3c7613d65b0eb4a7"
-    sha256 cellar: :any, arm64_tahoe:       "6ed658695e864cf2ca874c2e08f3130c7193c2f38a921595060f404d5b142962"
-    sha256 cellar: :any, arm64_sequoia:     "7760b67945473079962c1e35d305360e4797d3fd5dd2ccfe8cc4a7c12adce26e"
-    sha256 cellar: :any, arm64_linux:       "ab078226432d57bfbbc116ed79534dace8daef2bbc412a4c45cb8dc9bd83236b"
-    sha256 cellar: :any, x86_64_linux:      "ac67af200dda09762b4e099a568409581e57246e2e615c75d327618e97b7f158"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "0698e2f7e1d6315df6123b2a42ded24eee40168ed60a855c19b266f998a46010"
   end
 
   depends_on "cmake" => :build
