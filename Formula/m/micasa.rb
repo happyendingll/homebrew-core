@@ -6,11 +6,8 @@ class Micasa < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4ebf4031ccc3d057566f06003778ad4116ac440118bd417448b2b290397c1ae0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4ebf4031ccc3d057566f06003778ad4116ac440118bd417448b2b290397c1ae0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ebf4031ccc3d057566f06003778ad4116ac440118bd417448b2b290397c1ae0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4b241c603b9be23bb5e2c7f74beee36cc2aa40ba30023411c316cff9fbe93592"
-    sha256 cellar: :any,                 x86_64_linux:      "bdf1ab30e2d98274c99a16f687cfb63a026836aabbef4e7c3933cfd309296ccb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "68a5c918f1db6b982e64fef3038cf41164f3b7bd335ff856608dfb52ddab0ac8"
   end
 
   depends_on "go" => :build

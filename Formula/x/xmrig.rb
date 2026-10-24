@@ -21,12 +21,8 @@ class Xmrig < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "91fc0ca2c443b2bdde0cc8f6158cb54f498b7a614d7de191715fe989165c0d48"
-    sha256 cellar: :any, arm64_tahoe:       "cce70671130a53d2d89a41c07846fb11fa6c506a87933addae4aa25fcb0b303c"
-    sha256 cellar: :any, arm64_sequoia:     "85303f795b0068bcfab2e29738b284f89641b1fb71b618b4596554cdcb61aca2"
-    sha256 cellar: :any, arm64_linux:       "874fa7484247af7893a72540bb4721367104a8a116305f0d774f5d943ac1a772"
-    sha256 cellar: :any, x86_64_linux:      "8c84e849a137fd3106e0acce83290d0127f0f899adb5e313aa6bccfeb5445846"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c0e8a5b61bbf5e01f3d83e4b83b754a94a17f1b8eb8c185398b3645e47184e95"
   end
 
   depends_on "cmake" => :build

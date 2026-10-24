@@ -12,11 +12,8 @@ class Kubetrim < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "60312e501a1ab9a034a7e013cd55a6e4ab95b897af49d4102a9a842245ece92d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60312e501a1ab9a034a7e013cd55a6e4ab95b897af49d4102a9a842245ece92d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "60312e501a1ab9a034a7e013cd55a6e4ab95b897af49d4102a9a842245ece92d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3b7e561ad20d19896c56a6ad99469023acef1ef15f63f1eaa9cd0b34d15fc775"
-    sha256 cellar: :any,                 x86_64_linux:      "417d96982bb20a50681ec007db57da04a6dc508f7fabc3bfac0f0d28d4f881aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "247eaa985448c6eb554803c250ac70fc8e8eb77bc604c995961799cbcf085797"
   end
 
   depends_on "go" => :build

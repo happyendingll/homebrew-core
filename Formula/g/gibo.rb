@@ -7,11 +7,8 @@ class Gibo < Formula
   head "https://github.com/simonwhitaker/gibo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e0637f449bcff29b242d6fb81905f740e49706936bca9dd525ce16d4a2547fc7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0637f449bcff29b242d6fb81905f740e49706936bca9dd525ce16d4a2547fc7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0637f449bcff29b242d6fb81905f740e49706936bca9dd525ce16d4a2547fc7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "932b5dde0328e06cd62112565d321ae7b3fc446a9e3436d1937ab2a9a94c78fc"
-    sha256 cellar: :any,                 x86_64_linux:      "a88ebe4e23e494b5e14270a3a23100783aab87d7ba9834559497d928fa42b1a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8ba1dc01f79c11468e5a7e160b9b0bbbe5809ef5a84afe68d95e459c58f11b33"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class FlowCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d1dbc7fe2352a20f53fde05e0cb87ff4392a4b27ea1152b1d7b98688d85f3f5f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "053a0f42a8ee6a75e4b3a39a0e517161b8ba471a708d3d603d1004933f026642"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "80a65e3a7a70adc31e4cc6c4966a92b5c9c18045a322e24cdc265ec75bc27c36"
-    sha256 cellar: :any,                 arm64_linux:       "efb47bcf80a176f0dd2d616769d5f4302f7635597d9f55de16b31610c2db1027"
-    sha256 cellar: :any,                 x86_64_linux:      "5dae877551f9641108e8b96d553a9d8b2a43df4689688848a7ac4de6e32b2d19"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f2290862d71d1af93537f80e2568bb36a649374cf9b872650907020f6f881fa4"
   end
 
   depends_on "go@1.26" => :build

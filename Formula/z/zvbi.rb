@@ -7,11 +7,8 @@ class Zvbi < Formula
   head "https://github.com/zapping-vbi/zvbi.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "155d876fb904681a9a95ab7072c341ae82a0425320078664fe6e95726b21799f"
-    sha256 arm64_tahoe:       "d2bec4ffa3e7835411ec1661dd92ddedacb5b49b2b4aa3537657ff00507d90fb"
-    sha256 arm64_sequoia:     "dd3f630afe948a740915195ef9836aee07893cf1a4e21a8f34939eb372b65697"
-    sha256 arm64_linux:       "63772cf6df5e65fb32d0f3682b924ac4cc28f54f6a6034fd8e8ffa8c6b274a2a"
-    sha256 x86_64_linux:      "055ae4e06020a7103ee3bdcb28a70839900f746516c51f7b0b67c2b0f33bee8f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "d2506d2d5db5724257164a6d9fd3414a3777742c4af48c0efa4b05889389de34"
   end
 
   depends_on "autoconf" => :build

@@ -12,11 +12,8 @@ class Xray < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ab92f7076c6ccb14f1d5c313f265f4dcf91650a17e3eeebac90e0644ace8616b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ab92f7076c6ccb14f1d5c313f265f4dcf91650a17e3eeebac90e0644ace8616b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ab92f7076c6ccb14f1d5c313f265f4dcf91650a17e3eeebac90e0644ace8616b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c7effe6a9d5a8885b2a1880b3515e68d33578246471adc4f74a34891ac7e1153"
-    sha256 cellar: :any,                 x86_64_linux:      "3c42f1af15bd85199da217f44861b4b080349791f438fb933a858e16c91d4bfa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3e5c2797d21bffa2907b7843ee759666a30d24e6bc7e697112ece4642e185667"
   end
 
   depends_on "go" => :build

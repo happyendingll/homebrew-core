@@ -7,11 +7,8 @@ class GitCredentialOauth < Formula
   head "https://github.com/hickford/git-credential-oauth.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d62631e47c2f4fc6224e17edce6e55f905474052f4d3ef023662ca8abbf4cb00"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d62631e47c2f4fc6224e17edce6e55f905474052f4d3ef023662ca8abbf4cb00"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d62631e47c2f4fc6224e17edce6e55f905474052f4d3ef023662ca8abbf4cb00"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1c8d5262ee2a185c10cd56180f5168609670c7c2c973800fb88d50ec084590e8"
-    sha256 cellar: :any,                 x86_64_linux:      "24b2471eb247afd061647d8f71136492b8dc8baf5c61a3d1f6fc021dd2ec8db2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ce5820a9962d8457a2e4da0a6c0d3ed52cda426e25a91d4d77d66be161ed7348"
   end
 
   depends_on "go" => :build

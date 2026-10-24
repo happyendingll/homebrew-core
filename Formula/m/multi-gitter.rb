@@ -7,11 +7,8 @@ class MultiGitter < Formula
   head "https://github.com/lindell/multi-gitter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d05ff0240f138a63673f450ffdeed76334356e3a48c6b20d702e7065edc59e96"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d05ff0240f138a63673f450ffdeed76334356e3a48c6b20d702e7065edc59e96"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d05ff0240f138a63673f450ffdeed76334356e3a48c6b20d702e7065edc59e96"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a051f1c67488855ccbae81d9a6fe5919eb0f7b50c7c42a087fca51296deafd4a"
-    sha256 cellar: :any,                 x86_64_linux:      "5a66fb4f8232f7fc7014eeb308bb6df4ff3680149380edb8891cf61af38ca987"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "65165b6beb10683f8fe08f12c2db7b6262caf3fe47fe8e59a1081cf23855ab37"
   end
 
   depends_on "go" => :build
