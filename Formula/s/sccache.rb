@@ -2,8 +2,8 @@ class Sccache < Formula
   desc "Used as a compiler wrapper and avoids compilation when possible"
   homepage "https://github.com/mozilla/sccache"
   # TODO: Migrate to `openssl@4` after https://github.com/mozilla/sccache/issues/2780 is resolved
-  url "https://github.com/mozilla/sccache/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "14e37fc2cb4f21c188789d518e170181b7cd1ba523152880cdf8009269d79732"
+  url "https://github.com/mozilla/sccache/archive/refs/tags/v0.19.0.tar.gz"
+  sha256 "2da079033cd19fd8e2a09f56f9a7d9d1a72d591ff3acdc47d95b920145cf2671"
   license "Apache-2.0"
   head "https://github.com/mozilla/sccache.git", branch: "main"
 
@@ -13,8 +13,11 @@ class Sccache < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "eb36192027d2f773325e807818e418961dc1d99a4aaf7406c8a26854c476c4a0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b6bfdee03ac342b05651bd8dfd5ed432ec777c3546a4b30b9551b07d548998c1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7270ad53a598948172dc7603d84bddb80efdced568ea5707fb5b4942cf8aedc4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "afe7d11a3ef2dc181b849c73815abeeb13d478768c566b9b1f935dd8711bcd8b"
+    sha256 cellar: :any,                 arm64_linux:       "4e916202f37c48ee3c0c30b83d3a77ec0ee30ce42409597569a099cbf0575b3c"
+    sha256 cellar: :any,                 x86_64_linux:      "18964bb16d5f0df652ddc0705fdd1687e7c884fa4314a1f1b905bd475879dafc"
   end
 
   depends_on "pkgconf" => :build

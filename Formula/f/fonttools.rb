@@ -6,11 +6,15 @@ class Fonttools < Formula
   url "https://files.pythonhosted.org/packages/94/36/102e180f8f5dbaee88b26595b01ca8aa80bf4e62128d9aa94265b3996c96/fonttools-4.67.0.tar.gz"
   sha256 "3cb57e6600ca77c0b1729cf8adc23bc0652633a37f18cfa934d9c7bc3de25519"
   license "MIT"
+  revision 1
   head "https://github.com/fonttools/fonttools.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "1d8875919d636387fac64bcb2c8ff1780ca140de30b2d7f136f3b7de83f4f798"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f6919764460759dbede01bcc83a7212e6e2e225e259dd32c6f17508c5d68cd1e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cd46ad8a9a00d3bb64a9e9999456fe0810bfc0507f1f530f7d6f23397234d65a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6c228f5fe9250571386fb3edda3b232e703383a10381d552eb163c7fa53a1530"
+    sha256 cellar: :any,                 arm64_linux:       "eb5c27f5a351260c5c62a763049fdb33eac9f0015b3cdd0c6dd4fa99f4232842"
+    sha256 cellar: :any,                 x86_64_linux:      "070d36a9fb9b52d758e220f9af712d70901198b97547e8ad614360b48a3f8df9"
   end
 
   depends_on "python@3.15"
@@ -21,8 +25,8 @@ class Fonttools < Formula
   pypi_packages package_name: "fonttools[lxml,woff]"
 
   resource "brotli" do
-    url "https://files.pythonhosted.org/packages/f7/16/c92ca344d646e71a43b8bb353f0a6490d7f6e06210f8554c8f874e454285/brotli-1.2.0.tar.gz"
-    sha256 "e310f77e41941c13340a95976fe66a8a95b01e783d430eeaf7a2f87e0a57dd0a"
+    url "https://files.pythonhosted.org/packages/cf/81/1546c983678a9b4e77cb4718eaedd1b2caf24a6cdbf1eb8775938d22aff7/brotli-1.2.1.tar.gz"
+    sha256 "02b2f7b5a83485efe448a44ddf7983def05c3bb1dcf917d4f7154070260e13de"
   end
 
   resource "lxml" do

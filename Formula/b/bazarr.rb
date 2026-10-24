@@ -6,11 +6,15 @@ class Bazarr < Formula
   url "https://github.com/morpheus65535/bazarr/releases/download/v1.6.2/bazarr.zip"
   sha256 "82d1c61ea8508b28503d820bd5924360cc503467e7de51fa29205cac34c2627b"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/morpheus65535/bazarr.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "1853c52143d6ec0fa5ccca179b7a037fc316d8bf1367e67430a6248e2a33a83d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e58983f1f3de93c38149f1435ba36e30808e5e1f34fefd9f2a5633f50e82f17a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b145ed2eb343887e98b0559155cb3d7d56033c6d6aab75c92065766ed08c73a9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "27983886e6e8fc41c148503b3c67acaa6fc962b9fa9236cc40a56ae266cafd44"
+    sha256 cellar: :any,                 arm64_linux:       "9d5869c1c7f132ec7b327e51687fb2e3f71bc34fcf28e3c11b622c79c5396eff"
+    sha256 cellar: :any,                 x86_64_linux:      "e2073bcab6df4c44e999c99abd5e681cd70ccebf176391912717fc2c3ae5b894"
   end
 
   depends_on "node" => :build
@@ -36,8 +40,8 @@ class Bazarr < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz"
-    sha256 "f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73"
+    url "https://files.pythonhosted.org/packages/70/b3/c19426f783614d625699a4b247faf628ea9ab1db228674491767b417f9e1/setuptools-84.2.1.tar.gz"
+    sha256 "3ff8b3b5492a0aa66960f4419365a86b84e013070d4313e4d4a6894f5d64d6bc"
   end
 
   resource "webrtcvad-wheels" do

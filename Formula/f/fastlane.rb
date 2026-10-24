@@ -4,6 +4,7 @@ class Fastlane < Formula
   url "https://github.com/fastlane/fastlane/archive/refs/tags/2.241.1.tar.gz"
   sha256 "3f77e0ce5bb2ee66b85165c5d452e10e1863cfb1ffbf0d13e223333c84dac31a"
   license "MIT"
+  revision 1
   head "https://github.com/fastlane/fastlane.git", branch: "master"
 
   livecheck do
@@ -12,8 +13,11 @@ class Fastlane < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "3d1615366028fc319305384f8a171ef91a043611718fdd017c53b2c8e1261be9"
+    sha256 cellar: :any, arm64_golden_gate: "55403d6e50c902d8a62e133c49182b5101917f019911f93d08cfbf92ec8ab081"
+    sha256 cellar: :any, arm64_tahoe:       "640c43254819bcc2c3e0ae526bd6b101e117d12eefcc848fa41472bd10f40c38"
+    sha256 cellar: :any, arm64_sequoia:     "67ad3d1818241ece72c9186251d9813a9dd4c9f866c98cd33c78f7d4581f6303"
+    sha256 cellar: :any, arm64_linux:       "99caba85b5d0ca4086ad8fa5dfbd18b58c7e8efa9720d42a13eb2f174d16442e"
+    sha256 cellar: :any, x86_64_linux:      "76851432220ff68096202cd3eadb6dd9fcd37e0bf574c95d515bc5d52b7fa39e"
   end
 
   depends_on "ruby"

@@ -1,14 +1,17 @@
 class Tinycbor < Formula
   desc "Concise Binary Object Representation (CBOR) Library"
   homepage "https://github.com/intel/tinycbor"
-  url "https://github.com/intel/tinycbor/archive/refs/tags/v7.0.tar.gz"
-  sha256 "8b1b76001b9f987677f2ea7aa814fba1f810ff6cbbffa62ea3bac612c55b1a56"
+  url "https://github.com/intel/tinycbor/archive/refs/tags/v7.1.tar.gz"
+  sha256 "08c0a4c0a983000806f3d8c1599ec07995789ae49e9a23034db4cbfccc81c2e5"
   license "MIT"
   head "https://github.com/intel/tinycbor.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "8647bb8b8f69ef3c3e542934460c9ac878d1d9ceed0ab4d6fcafb51fecbfeaa8"
+    sha256 cellar: :any, arm64_golden_gate: "69bb0fb4fe8219830f9da5a9ea943b6712a89f0f11cfab53e161c511b55206a9"
+    sha256 cellar: :any, arm64_tahoe:       "9adda5625b21c4893bcfb858dc936594b3581cba54386aadb6b39a72f9afbb55"
+    sha256 cellar: :any, arm64_sequoia:     "65438bea60631c2f6b8f31d672cefbf84d2cfb6246c224078f8d0f3b029ed60c"
+    sha256 cellar: :any, arm64_linux:       "1bfaf2fa31faf745250e52f2229606c363f076a8803653a0d2ec364a8007402b"
+    sha256 cellar: :any, x86_64_linux:      "cc448c9b0c6e2bc2c0c545a869412c54ba36e4c1921f49dab8ddc02acacdf0a4"
   end
 
   depends_on "cmake" => :build

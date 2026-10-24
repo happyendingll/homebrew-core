@@ -7,6 +7,11 @@ class Ndpi < Formula
   compatibility_version 1
   head "https://github.com/ntop/nDPI.git", branch: "dev"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(:?\.\d+)+)$/i)
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
     sha256 cellar: :any, sequoia: "91cfec0ecf02f7d4c39289ccfd7aed1817d80af3ba3fb21977a614bb0cfc1ca0"
@@ -19,6 +24,8 @@ class Ndpi < Formula
   depends_on "json-c"
 
   uses_from_macos "libpcap"
+
+  deny_network_access!
 
   def install
     system "./autogen.sh"

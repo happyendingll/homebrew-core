@@ -1,8 +1,8 @@
 class AwsIamAuthenticator < Formula
   desc "Use AWS IAM credentials to authenticate to Kubernetes"
   homepage "https://github.com/kubernetes-sigs/aws-iam-authenticator"
-  url "https://github.com/kubernetes-sigs/aws-iam-authenticator/archive/refs/tags/v0.7.23.tar.gz"
-  sha256 "718bda8a0907fe01540733a4b3bf9770b9cd13e6eb2ed8b41cc2aaed6acb8949"
+  url "https://github.com/kubernetes-sigs/aws-iam-authenticator/archive/refs/tags/v0.7.24.tar.gz"
+  sha256 "388d274decebfe44dcea09e00bb3d11d97feb9b6f3fed5f069452a9c6df05754"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/aws-iam-authenticator.git", branch: "master"
 
@@ -16,8 +16,11 @@ class AwsIamAuthenticator < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "211db71796740fb97b0b69efbff249749b1de55102b8d0eaeaadae9eba2c37e3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "75ae15d50b6c4d41d993ff0431aa43a7f4a05b80ec9a11a1fe657f024c60984d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b01e322a4fa25e1c12d3829f3fdac435eb38b56eef2c2cc5ac3e8d9365557295"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "822e7574ca90f40a35574309a1c9721360d5e9d5be7ca0d8e7090bb709d9d608"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "66cb1f11fda974993f28d83af7fc85abc987e7f2696e761e00f965293a5a9a5d"
+    sha256 cellar: :any,                 x86_64_linux:      "c2a2d2e9fd6dcfe58c996f8306adda54b89a58d9401c6448060cd2e4cd7acc63"
   end
 
   depends_on "go" => :build

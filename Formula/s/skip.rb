@@ -1,17 +1,17 @@
 class Skip < Formula
   desc "Tool for building Swift apps for Android"
   homepage "https://skip.dev"
-  url "https://github.com/skiptools/skipstone/archive/refs/tags/1.9.17.tar.gz"
-  sha256 "22d33587fc3db881f012bb5690f5b13d993a738188900b62bb78013f53c8ca14"
+  url "https://github.com/skiptools/skipstone/archive/refs/tags/1.9.19.tar.gz"
+  sha256 "87e2531b8d7818b2afcf752485675b4e22e80b5d7f646f37ac73542af8855abc"
   license "AGPL-3.0-only"
   head "https://github.com/skiptools/skipstone.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "95a1e93a9897b90dbb57c42ba2944837b91a43bfc38c969a8c8ac8286f91aaac"
-    sha256 arm64_tahoe:       "81194a5cb6aa8971fa911b059686a44403552ef340f28de2556b434e03437f59"
-    sha256 arm64_sequoia:     "d7a53b0bdf33080947a4031c6895a2b3a088bec59865f3542b2d782776d4eb2a"
-    sha256 arm64_linux:       "cd1fb4c0b9d018ff2fa667ee64c72068be2d2380f36c349bd60cbf74e8334f50"
-    sha256 x86_64_linux:      "10bf12d5ac99424e2cd85c6adf9c3139adaeeeb75efba357b970233d41f2de0f"
+    sha256 arm64_golden_gate: "581d2e99fb397c40df6100ad981450954a1600eedcb14d9d44e3149ef8ddf566"
+    sha256 arm64_tahoe:       "7397c8014f1965b6a767f66cba2466967522dc7ea0dbf20d1d414f7b437c5fc7"
+    sha256 arm64_sequoia:     "3d9e0e7506349b67727502e7137e1d8dcd824ff198f1eed16d3af3e22753104e"
+    sha256 arm64_linux:       "69aed3e46bbe2e2b07c7ee1fac9f189320adcba1c80bfb4d7cb49e3273a89d29"
+    sha256 x86_64_linux:      "40bf238eda5b520980d32f95ac1382387aa39b33845acabf09ec74b0b7368433"
   end
 
   depends_on "gradle"
@@ -32,8 +32,8 @@ class Skip < Formula
   end
 
   resource "skipsubmodule" do
-    url "https://github.com/skiptools/skip/archive/refs/tags/1.9.17.tar.gz"
-    sha256 "b74fde5de050453ab22456ca233ac3b08b5861f712abe950fef6cb68f7be8240"
+    url "https://github.com/skiptools/skip/archive/refs/tags/1.9.19.tar.gz"
+    sha256 "820ec8a3c8aeb20c7f1b2081e66ca8eae1d4cffc27e0469c8574754b27dfb94d"
 
     livecheck do
       formula :parent

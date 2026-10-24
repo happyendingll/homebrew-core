@@ -1,14 +1,17 @@
 class Slackdump < Formula
   desc "Export Slack data without admin privileges"
   homepage "https://github.com/rusq/slackdump"
-  url "https://github.com/rusq/slackdump/archive/refs/tags/v4.5.1.tar.gz"
-  sha256 "02d97ccbff847274c475c523cdb017c3fab7a3c69502ad09644b454090513a2b"
+  url "https://github.com/rusq/slackdump/archive/refs/tags/v4.5.2.tar.gz"
+  sha256 "97a4ef100c9113c540e4e5b5ad1c023d9acc2a009f994269f59e347dd6f93a00"
   license "AGPL-3.0-only"
   head "https://github.com/rusq/slackdump.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "aefd4e3aec355ffda74233f82306967f47994b593a40aa937eae06fe090b72e1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ce23dce91ba52f7188056613949137918e63262781aa07b61d4228a9c1c1bd78"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ce23dce91ba52f7188056613949137918e63262781aa07b61d4228a9c1c1bd78"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ce23dce91ba52f7188056613949137918e63262781aa07b61d4228a9c1c1bd78"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e7ddd164948efc8bfc7fce5a0df17889d1079cc53569495e179b81e12a23fbfb"
+    sha256 cellar: :any,                 x86_64_linux:      "884a6d1b82fe8734e4c430432f5bb8b14105e378bcff58c50c8ae19afd965723"
   end
 
   depends_on "go" => :build

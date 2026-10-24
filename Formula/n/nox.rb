@@ -6,10 +6,14 @@ class Nox < Formula
   url "https://files.pythonhosted.org/packages/8c/ae/44b519e4074993256fa713a56d97a9e50e2afe0452e8486eaf41e235171f/nox-2026.10.20.tar.gz"
   sha256 "5da57c009c3dfdd762c068d9079b17966ec967a9eb02cd8ebcf016a946eaf67f"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "2c7a5e19335c0d731ab0bf0b860003c466c8884a918b466fadabcfecc1acd156"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "37f9d81c7d708417331deb7851d165ffda341daed65f6baf801a086654fe27f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "06c45287ce7f473ebbb313aa73733e9fd9e01c94431050175649b17788dead21"
   end
 
   depends_on "certifi" => :no_linkage
@@ -68,8 +72,8 @@ class Nox < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/7f/be/4d1d59d309db76b5808fcfd78bd5996f4e7241366691c38fc331a3136398/virtualenv-21.14.11.tar.gz"
-    sha256 "593052d8477ea8c55a842387ce111bd08c72618f0c1133c302cafe335e570a57"
+    url "https://files.pythonhosted.org/packages/70/aa/bff50daee0488e16d611258a9b6c5a1d0c9e128f8ca424e9f4e1c0444ef2/virtualenv-21.14.13.tar.gz"
+    sha256 "de5307ba4b9a0001d9c8ea02832d38f63ca432880f416c1bface61c4323fd905"
   end
 
   def install

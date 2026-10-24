@@ -4,10 +4,9 @@ class Samba < Formula
   # option. The shared folder appears in the guest as "\\10.0.2.4\qemu".
   desc "SMB/CIFS file, print, and login server for UNIX"
   homepage "https://www.samba.org/"
-  url "https://download.samba.org/pub/samba/stable/samba-4.25.0.tar.gz"
-  sha256 "2e2cb7296833b35b8f7a7fb76045e0c57adc0c2cd03264b37df5d58e40f28437"
+  url "https://download.samba.org/pub/samba/stable/samba-4.25.1.tar.gz"
+  sha256 "7f367545bca69aa96897628f82f0f04d4b66b3bcb36cb978b9bb952c4b4c428d"
   license "GPL-3.0-or-later"
-  revision 1
   compatibility_version 2
 
   livecheck do
@@ -16,8 +15,11 @@ class Samba < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "bc284e3630abf07921bb7be63b7d16a5f9480adee29578d47c336d263d50e118"
+    sha256 arm64_golden_gate: "0a61f14c38631e02eeb720bfb66e8f41a979bf04025c03c7b5d3d127e7f6e886"
+    sha256 arm64_tahoe:       "368d99324e40cb8758f9b5245f5e4736e8b083a348d4c5d09634fc871b7ba9d1"
+    sha256 arm64_sequoia:     "3b3285736a6737c571f17f4af5279e9968cece99200e2d49831f2bb9c1373b2f"
+    sha256 arm64_linux:       "6c824c78ee0eed2de233626aa47f2282631b13ae93a04e9fb2f73b45d4764357"
+    sha256 x86_64_linux:      "4f183c433c8950460a13ae0317c97fd512aa6e9830f8f14e814ed34df920fa0a"
   end
 
   depends_on "bison" => :build
@@ -58,22 +60,6 @@ class Samba < Formula
     sha256 "3810e998308fba2e0f4f26043035032b027ce51ce5c8a52a8b8e340ca65f13e5"
   end
 
-  # Fix the macOS build of the BSD-style `statvfs` code
-  patch do
-    url "https://gitlab.com/samba-team/samba/-/commit/5c855f9b484c99cedc224e1bf9536383cdf37057.diff"
-    sha256 "f017f43545e587e7960e9fe22edad4c3dfa0d76b8edc969b7dcd5075a2f65a14"
-    type :unofficial
-    resolves "https://gitlab.com/samba-team/samba/-/merge_requests/4728"
-  end
-
-  # Link `LP_RESOLVE` against `resolv` for `res_search`, which is not in libc on macOS
-  patch do
-    url "https://gitlab.com/samba-team/samba/-/commit/398068b565f6c97f09a9a7d97d623362d4e75b0c.diff"
-    sha256 "5f305220f57b8c1e7e70d217c71902b574882d0e68025974c627b49e8448e6bd"
-    type :unofficial
-    resolves "https://gitlab.com/samba-team/samba/-/merge_requests/4728"
-  end
-
   # Give macOS libraries `@rpath` install names so installed files don't reference the build tree
   patch do
     url "https://gitlab.com/samba-team/samba/-/commit/0da9389015101a855f4230a340165347f3f7b99c.diff"
@@ -81,6 +67,8 @@ class Samba < Formula
     type :unofficial
     resolves "https://gitlab.com/samba-team/samba/-/merge_requests/4729"
   end
+
+  allow_network_access! :test
 
   def install
     # Skip building test that fails on ARM with error: initializer element is not a compile-time constant
@@ -106,6 +94,9 @@ class Samba < Formula
     bundled_libs_list << "libquic" if OS.linux?
     bundled_libs = bundled_libs_list.empty? ? "NONE" : bundled_libs_list.join(",")
 
+    # Don't use `std_configure_args` here
+    # as configure script does not recognize
+    # some options
     system "./configure",
            "--bundled-libraries=#{bundled_libs}",
            "--private-libraries=!ldb",
@@ -153,11 +144,7 @@ class Samba < Formula
   end
 
   test do
-    smbd = if OS.mac?
-      sbin/"samba-dot-org-smbd"
-    else
-      sbin/"smbd"
-    end
+    smbd = OS.mac? ? sbin/"samba-dot-org-smbd" : sbin/"smbd"
 
     system smbd, "--build-options", "--configfile=/dev/null"
     system smbd, "--version"

@@ -141,8 +141,13 @@ class Sile < Formula
     sha256 "fcfa781a72b9372c37ee20a5863f98e07112a88efea08c8b15631e911bc2b441"
   end
 
+  # `luarocks unpack` needs network access
+  allow_network_access! :build
+
+  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
+
   def install
-    lua = Formula["luajit"]
+    lua = "luajit"
     luaversion = "5.1"
     luapath = libexec/"vendor"
 
@@ -155,8 +160,8 @@ class Sile < Formula
     ENV["LUA_PATH"] = "#{paths.join(";")};;"
     ENV["LUA_CPATH"] = "#{luapath}/lib/lua/#{luaversion}/?.so;;"
 
-    ENV.prepend "CPPFLAGS", "-I#{lua.opt_include}/luajit-2.1"
-    ENV.prepend "LDFLAGS", "-L#{lua.opt_lib}"
+    ENV.prepend "CPPFLAGS", "-I#{formula_opt_include(lua)}/luajit-2.1"
+    ENV.prepend "LDFLAGS", "-L#{formula_opt_lib(lua)}"
 
     if OS.mac?
       zlib_dir = expat_dir = "#{MacOS.sdk_path}/usr"
@@ -168,9 +173,9 @@ class Sile < Formula
     luarocks_args = %W[
       ZLIB_DIR=#{zlib_dir}
       EXPAT_DIR=#{expat_dir}
-      OPENSSL_DIR=#{formula_opt_prefix("openssl@4")}
+      OPENSSL_DIR=#{formula_opt_prefix(openssl)}
       --tree=#{luapath}
-      --lua-dir=#{lua.opt_prefix}
+      --lua-dir=#{formula_opt_prefix(lua)}
     ]
 
     resources.each do |r|
@@ -182,7 +187,7 @@ class Sile < Formula
       end
     end
 
-    configure_args = %w[
+    configure_args = %W[
       FCMATCH=true
       --disable-silent-rules
       --disable-static

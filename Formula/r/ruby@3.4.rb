@@ -44,6 +44,8 @@ class RubyAT34 < Formula
     end
   end
 
+  allow_network_access! :test
+
   def determine_api_version
     Utils.safe_popen_read(bin/"ruby", "-e", "print Gem.ruby_api_version")
   end
@@ -56,6 +58,8 @@ class RubyAT34 < Formula
     HOMEBREW_PREFIX/"lib/ruby/gems/#{api_version}/bin"
   end
 
+  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
+
   def install
     # otherwise `gem` command breaks
     ENV.delete("SDKROOT")
@@ -65,7 +69,7 @@ class RubyAT34 < Formula
     #       https://github.com/Homebrew/brew/pull/12508
     inreplace "tool/mkconfig.rb", /^(\s+val = )'"\$\(SDKROOT\)"'\+/, "\\1"
 
-    paths = %w[libyaml openssl@4].map { |f| formula_opt_prefix(f) }
+    paths = ["libyaml", openssl].map { |f| formula_opt_prefix(f) }
     args = %W[
       --prefix=#{prefix}
       --enable-shared

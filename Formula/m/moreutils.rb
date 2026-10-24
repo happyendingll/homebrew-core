@@ -31,27 +31,35 @@ class Moreutils < Formula
   conflicts_with "sponge", because: "both install a `sponge` executable"
   conflicts_with "task-spooler", because: "both install a `ts` executable"
 
+  resource "Date::Parse" do
+    on_linux do
+      url "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/TimeDate-2.35.tar.gz"
+      sha256 "baddd0306ae2e86e9ec28d3de5439e514643e80b3735e43bd0fbb426d73304de"
+    end
+  end
+
   resource "Time::Duration" do
     url "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Time-Duration-1.21.tar.gz"
     sha256 "fe340eba8765f9263694674e5dff14833443e19865e5ff427bbd79b7b5f8a9b8"
   end
 
   resource "IPC::Run" do
-    url "https://cpan.metacpan.org/authors/id/T/TO/TODDR/IPC-Run-20231003.0.tar.gz"
-    sha256 "eb25bbdf5913d291797ef1bfe998f15130b455d3ed02aacde6856f0b25e4fe57"
+    url "https://cpan.metacpan.org/authors/id/T/TO/TODDR/IPC-Run-20260402.0.tar.gz"
+    sha256 "d6a326a8b1ffb19495dea4ff5a09ef138bf3562ab1b069d3fb7efbc77b9f6aca"
   end
+
+  deny_network_access!
 
   def install
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
-
-    resource("Time::Duration").stage do
-      system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", "--skipdeps"
-      system "make", "install"
-    end
-
-    resource("IPC::Run").stage do
-      system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
-      system "make", "install"
+    resources.each do |r|
+      r.stage do
+        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}",
+                                      "INSTALLMAN3DIR=none",
+                                      "NO_PACKLIST=1",
+                                      "NO_PERLLOCAL=1"
+        system "make", "install"
+      end
     end
 
     inreplace "Makefile" do |s|

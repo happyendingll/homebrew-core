@@ -1,8 +1,8 @@
 class Astyle < Formula
   desc "Source code beautifier for C, C++, C#, and Java"
   homepage "https://astyle.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/astyle/astyle/astyle%203.6/astyle-3.6.19.tar.bz2"
-  sha256 "ae5ef4ddf1f88288bcc8f6d53266707f80a81fcc6decf4da5fe5c8e420a0ab1c"
+  url "https://downloads.sourceforge.net/project/astyle/astyle/astyle%203.6/astyle-3.6.20.tar.bz2"
+  sha256 "b058f3e176334dba65477fd126105d3df4eab9e954eab1c76b568cd5370cfbe9"
   license "MIT"
   head "https://svn.code.sf.net/p/astyle/code/trunk/AStyle"
 
@@ -12,8 +12,11 @@ class Astyle < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "8f3f948fd5f9df4d35cc198b83d7e0ed13d0e0e6fdf612f4e15bfba254d0d592"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "78c6bf31fc047f4bbd9350b402fdf89d07309ef125669094be5f03f58d7f4b8c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "798e77bc9686208deadc5af9974c434fbcc8ecc9307a5d0cda86fe25e7da8e69"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c0f9133209e507376ec928a8f8897bd6c113cbca455b82cd495fe837b644ef32"
+    sha256 cellar: :any,                 arm64_linux:       "d374e499c097e8f16329984872d8a9597a0a8d8cf282717cce56d9c3029d4cf8"
+    sha256 cellar: :any,                 x86_64_linux:      "17296480819c3e5c3a4578344dbbf1bf50024055706283358104f21a567bb47b"
   end
 
   depends_on "cmake" => :build

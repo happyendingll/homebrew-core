@@ -1,8 +1,8 @@
 class Moon < Formula
   desc "Task runner and repo management tool for the web ecosystem, written in Rust"
   homepage "https://moonrepo.dev/moon"
-  url "https://github.com/moonrepo/moon/archive/refs/tags/v2.6.3.tar.gz"
-  sha256 "11536a5c4d1f3a1f95ba35ae319cb4590cc912ff24bfe785ccca5eb22984fbcd"
+  url "https://github.com/moonrepo/moon/archive/refs/tags/v2.6.4.tar.gz"
+  sha256 "c1063b9aeac175e007126c3a6b86b839de766a0a8b0fc02a908075f9b6c2eb5e"
   license "MIT"
   head "https://github.com/moonrepo/moon.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Moon < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "88f76898eb796003e4e782a64939021660233c832cade38191aa820f3f3ff65a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cb5808591aa2cdebcdf7adf86b94af42cc1705d05034f4310dec06c7330f74a2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bfed90c01e274f22a705f99bc28f43db3a61464927741facf2ba568d518c316b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6efba6a431cb458ce4d49d9a864023acbaf1b583ed6e80406c8c1799ffd13221"
+    sha256 cellar: :any,                 arm64_linux:       "1736dd962ac61b460b95fd6b1790a8fd58e1e7c2aa83099593a26660358c7e74"
+    sha256 cellar: :any,                 x86_64_linux:      "26ed28b6ec13442a2e5d1c98d9a208c0204aecdad3b781bb93f4eb671d15f338"
   end
 
   depends_on "pkgconf" => :build
