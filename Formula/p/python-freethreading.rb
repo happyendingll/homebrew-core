@@ -10,11 +10,8 @@ class PythonFreethreading < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a132a71770ddc9cf7886b7629eec98ae13152832dffb7161d23dc3d461c6cd58"
-    sha256 arm64_tahoe:       "336f3541e15aeadf96aa9b35425631146f82bba8d0729e0f51348c7e657ce88a"
-    sha256 arm64_sequoia:     "40c68784e464ec4c6eee1045a1b63f82e0066f6236558019fa122eaf0599ad1a"
-    sha256 arm64_linux:       "09af016a48d7aa409bf0b76978b4336591929c874470b2a68834be0efb67ebee"
-    sha256 x86_64_linux:      "4980d282f08f5c2352b2429f2458bbf89c446db622313ef40b9afe4d2658eb00"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "181cfd0bb1f9750d1fdc1251a5dba959fc0a14e3ba1ca5cf2722ce0d7931f4b7"
   end
 
   depends_on "pkgconf" => :build

@@ -7,11 +7,8 @@ class CamlpStreams < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9ebe9ddfd875fb22f45f25ff0709fa92b5e3074068ac0726e0590bf3e48318cc"
-    sha256 cellar: :any, arm64_tahoe:       "a5c519c377b6436f0d1c2936eb7ffd60508528e7b84cfcc16f439fbf5c9a6b6c"
-    sha256 cellar: :any, arm64_sequoia:     "c70602c608ec248880aebee12d42f4aeb69403b6ce62137adc78e0953500c70b"
-    sha256 cellar: :any, arm64_linux:       "78e283cd0b41018d1a1fdc2fdd676a800090300133982ed3d9a20605da586a20"
-    sha256 cellar: :any, x86_64_linux:      "9ee5e440faa3f86571c01e8d8035f003fbf3ca7949ff6082edca8a5d6f1e68c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f538a96584b99e6c540cf43d6abd0c20f3326bbc3ac2e0e16dbfbaea4489ac5a"
   end
 
   depends_on "dune" => :build

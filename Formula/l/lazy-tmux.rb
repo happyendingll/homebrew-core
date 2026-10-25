@@ -6,11 +6,8 @@ class LazyTmux < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "75f5c0ae5689e00c85370defece3b317a4f75815746640fe4d92cb9bfcbf558d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75f5c0ae5689e00c85370defece3b317a4f75815746640fe4d92cb9bfcbf558d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "75f5c0ae5689e00c85370defece3b317a4f75815746640fe4d92cb9bfcbf558d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e825cd872bd6890719ab44dd7abb121b0428d9fc60f672c04141933f6d74fa11"
-    sha256 cellar: :any,                 x86_64_linux:      "d4ca09930b311b43f26826c8bfdb7a52b04a548474d4bb3b58689568ce008342"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "88ac0ec3665f7cd6d1523e6af54c380ac1c1ba629742fa15532ac11cae67e020"
   end
 
   depends_on "go" => :build

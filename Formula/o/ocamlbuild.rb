@@ -13,11 +13,8 @@ class Ocamlbuild < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "5722643be1d3d928c86f2f582bcf95aea02330fb8149d23a12726da276ee7918"
-    sha256 arm64_tahoe:       "a2aa01c207e970539ce7f2e9ae047ad76d7ff346cd5ba5e1146ef426973bb982"
-    sha256 arm64_sequoia:     "5baf9dc4ff8bd8c48873bfc67dd45ad68d889ef488096c7166fc1d575e9c09af"
-    sha256 arm64_linux:       "927b17d05056fc02775cf3799ed31bbf34600a5d94b1e0ecda9d011e28f654f2"
-    sha256 x86_64_linux:      "ad8116990ff7f3db73e0480822e1d97aea2178385719d73fb46b37d1f6d7574d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "dad22134c0389ff958962951ad1738e15973740d7bdad08d46b2813dadf98463"
   end
 
   depends_on "ocaml"
