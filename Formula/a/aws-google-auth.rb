@@ -10,11 +10,8 @@ class AwsGoogleAuth < Formula
   head "https://github.com/cevoaustralia/aws-google-auth.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9c1096d98a626d61a51acabb14c7e8ceb0a221d8ad027ea3f56bc29180250b9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78f877bc9e14c8722dd80e57ef905b0776a9d04fc4a03bee0894927be1afb8ec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cdefe2cee6db54aa31dd0b3ac7b81b0233b2e1634aff75ee61f6a6b69c2258fa"
-    sha256 cellar: :any,                 arm64_linux:       "e5565ee6330861de53e31de6648b844cdf9d7d95fdf153ee1e1f6eaae50f4343"
-    sha256 cellar: :any,                 x86_64_linux:      "e226c27005b472a8edb98c63a5d4f92b685185ee9e76a7ab8e6a46cf91ac31a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "fcac6a6d25c6c642bf49b353afdf8187d7f4288a40a0e342276a1bb71be58d9f"
   end
 
   depends_on "certifi" => :no_linkage

@@ -11,11 +11,8 @@ class JavaServiceWrapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1e651d620cedc5a7181020b116f9934dc26573f6f73d9202dc92c85706ec9e7c"
-    sha256 cellar: :any, arm64_tahoe:       "9a7a72187165750e8557fdefa324a45190d8bae5bad3a7620c53de9dad4cc0fe"
-    sha256 cellar: :any, arm64_sequoia:     "a13d5d3891727ae53a31bd25211daee9010cf31384ac7d2abecb6ce8d34ee9d3"
-    sha256 cellar: :any, arm64_linux:       "1f798359967269be8b81ffad2563a4ad87e7ccc1a8bc64021e3535f77b4825ba"
-    sha256 cellar: :any, x86_64_linux:      "013e1e60fc8335865575ea2b25363dc30ba9cf2322bca596e8582ba6bb92dadf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "3c2b50ccbf0cfff1396ae260f302965921c1f92034a4b4535805dc3afc902739"
   end
 
   depends_on "ant" => :build

@@ -9,11 +9,8 @@ class Pdfly < Formula
   revision 28
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cc4c9d8acef0be5d582869c0782f854ef9ea3cd1edbf1aa1db0d215f4e06575f"
-    sha256 cellar: :any, arm64_tahoe:       "74eff16bc3f972f296f8b2c389094a47f279f78b8cd160992d93fcb36e2a84bd"
-    sha256 cellar: :any, arm64_sequoia:     "b8d7304e1d2a80b1f2f315aa97c105603a12fed3232c9ecedf551ad84dcbba65"
-    sha256 cellar: :any, arm64_linux:       "45bbd07d14ac72d1d68a3bd8ebf3ce931a2b46d3d794fa5aad244b2735b5cc9d"
-    sha256 cellar: :any, x86_64_linux:      "469c5d1216b258e5566ecf548cbbd46c525202d87f63574ad81c576e68145f60"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "1925060de2b3435b08b6df7ad14a493016d4084ce46192874c5fb5fd08c35cc6"
   end
 
   # `pkgconf` and `rust` are for bcrypt

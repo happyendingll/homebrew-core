@@ -6,11 +6,8 @@ class Pkl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aeaf9ab0d02ba647314dc9361bbadf14439b1d7c4c7c01d2c234115f0894f212"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a6f087f7e63e446fbbdb6a384415c08a066b0d866f6766a875d512b6a301f73d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f7561b7aee0420b995b18f0165de4066476aea379ab13c3fc8964b1a6fd5b174"
-    sha256 cellar: :any,                 arm64_linux:       "d9e064da1399c0178e81c35497b983ae014847b2ab2d0fa0d38f44fe1f14dcd5"
-    sha256 cellar: :any,                 x86_64_linux:      "521d6d0b467cb296706e9b11c832b634b3f91445b854f7cbcd41546f40d3be6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "4ad084bd2a40d1d170190b7cc2942114c32926339cf4b08684c8580936082e65"
   end
 
   depends_on "gradle" => :build

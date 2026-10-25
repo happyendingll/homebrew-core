@@ -12,11 +12,8 @@ class Gascity < Formula
   end
 
   bottle do
-    sha256                               arm64_golden_gate: "889a380a0d1d3b2b1a6732cfa62508764c5742aafdeb4f9bc8c648526fce3aae"
-    sha256                               arm64_tahoe:       "5dc2c3f0a10543c8b92f11cb8d73a9e95c27f485d776c16b3c8267dbe1b4a153"
-    sha256                               arm64_sequoia:     "84ef90e6923217a80311c872d1dc944e1ef2c77d97cc6154d47d0f9595bfcb40"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cb27d63f0dc62e967a2e41cfc79709b95991b511a8788bd3f002a02efc2bd5e0"
-    sha256 cellar: :any,                 x86_64_linux:      "396feec8ea86d147f16a7111ff064c8fc9306a5472ad380b303f92aa5714b624"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "85b174b594b3e4610c63d832860bf85b24308daff95b1877bcf77b4733698c4e"
   end
 
   depends_on "go" => :build

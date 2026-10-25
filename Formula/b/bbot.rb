@@ -10,11 +10,8 @@ class Bbot < Formula
   head "https://github.com/blacklanternsecurity/bbot.git", branch: "stable"
 
   bottle do
-    sha256 arm64_golden_gate: "7f4498133fa4e8512b833a7b0e7a6639c2ecaca824dcd79d6328bf6a80ecf2da"
-    sha256 arm64_tahoe:       "68b577e2c86df2ea710474d3fc430bc72810718be84e0365d93dfcff9bbf29a3"
-    sha256 arm64_sequoia:     "025b78e93f38688a5f99f06637323981d0c8c62c0e0765c3947bb76234346396"
-    sha256 arm64_linux:       "f9ca3c945594abde4701da5eac7f39d37e3108e25723612d9763c39870862421"
-    sha256 x86_64_linux:      "5e091990222e82e00cdb86b7383f65b882df8ef24c28056ea4632c1d5371dc22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "64f8d4188ad2998ff388e656066e2448169d03b69fd52f9f9917c8a1ee198202"
   end
 
   depends_on "cmake" => :build
