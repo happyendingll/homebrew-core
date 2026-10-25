@@ -2,6 +2,7 @@ class Rocq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://rocq-prover.org/"
   license "LGPL-2.1-only"
+  revision 1
   compatibility_version 3
 
   stable do
@@ -20,8 +21,11 @@ class Rocq < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "92a07246732c9a9118c12fa1a8c95817e200b011f4a735599f0e1fd886339afb"
+    sha256 arm64_golden_gate: "ae25713bc09eebdab50517e429304ea475d3eaceca140ba07d514b6e65257efd"
+    sha256 arm64_tahoe:       "17b53c4360d77d0e016b56445c456e6764bc5864777dd5d9226d7294568f67f8"
+    sha256 arm64_sequoia:     "3a4fb957c7017f447a3a82d8e4f28c82ee84458252d07e1284c8428917f42c83"
+    sha256 arm64_linux:       "036b4fe7e0beeb9dc06dffffac6f69a314fdc549a05e934ea3fef98a79e64ea6"
+    sha256 x86_64_linux:      "c8d17bcba1dd7cbd4bde281275c913c78b277757e9c942faf24afd4957c575e4"
   end
 
   head do

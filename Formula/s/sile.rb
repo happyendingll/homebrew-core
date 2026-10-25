@@ -4,11 +4,14 @@ class Sile < Formula
   url "https://github.com/sile-typesetter/sile/releases/download/v0.15.13/sile-0.15.13.tar.zst"
   sha256 "5e97c19651aff710687b93292d5361cb411652094bcc8c62c811c19f7a81464b"
   license "MIT"
-  revision 1
+  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "abecc5dd554aa6a2c18cba92a69fabb44e17d763e24b8baf4653a2a3f7040407"
+    sha256 cellar: :any, arm64_golden_gate: "6baa65b3fcb48d8828020ae75be7734b163b1f0963d042b8cc09d71bb9c58cc0"
+    sha256 cellar: :any, arm64_tahoe:       "4e0c9f6178705ed8f01a737897b6636ef16f8a8394c5664bf3fe51ffee476665"
+    sha256 cellar: :any, arm64_sequoia:     "f9ac136a135208e8efdaef97e73dfafd181358aeeeb492895014e49a3e38e4bd"
+    sha256 cellar: :any, arm64_linux:       "04f08617992212e660ef40372992b8e2a8c7271fd64e352565766b5b48c74d49"
+    sha256 cellar: :any, x86_64_linux:      "8092b516ded548fc5da6e997fa9291d50b4e066a986409f6c6d3be9419f5e3f9"
   end
 
   head do
@@ -25,7 +28,7 @@ class Sile < Formula
 
   depends_on "fontconfig"
   depends_on "harfbuzz"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libpng"
   depends_on "luajit"
   depends_on "luarocks"

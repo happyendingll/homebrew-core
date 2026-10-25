@@ -4,7 +4,7 @@ class Libpq < Formula
   url "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2"
   sha256 "555610c24d53e4316da5b7d3fc25c279d96856d5e0e23ee308c328c5fa881d9f"
   license "PostgreSQL"
-  revision 1
+  revision 2
   compatibility_version 1
 
   livecheck do
@@ -13,8 +13,11 @@ class Libpq < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "2b2e1413a1b633784949e50ba411d79c943e6ece2820cb901c7440ff25cca19f"
+    sha256 arm64_golden_gate: "e15f512613e8e0eda46a495fda44ee79ee4c9f1ec2ea12db9b9963dec769a252"
+    sha256 arm64_tahoe:       "8da0ae94f7ba4d58bed2671175e38011679355f114d88ff56bf8b5715da10618"
+    sha256 arm64_sequoia:     "e4caec46b9de2c0015e898e47440f01e83ee9368a14952e473bc9dd2bf7a314b"
+    sha256 arm64_linux:       "ecdd24ce5012688f20a32e10891aa07cde26ad6cfd24e0d85a3a92e7c05d3961"
+    sha256 x86_64_linux:      "529aa49494e2eaac6fc9362952f0296640a60974dfcb9cb06d895ab753ca837a"
   end
 
   keg_only "it conflicts with PostgreSQL"
@@ -22,7 +25,7 @@ class Libpq < Formula
   depends_on "docbook" => :build
   depends_on "docbook-xsl" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   # GSSAPI provided by Kerberos.framework crashes when forked.
   # See https://github.com/Homebrew/homebrew-core/issues/47494.
   depends_on "krb5"

@@ -1,16 +1,19 @@
 class SshVault < Formula
   desc "Encrypt/decrypt using SSH keys"
   homepage "https://ssh-vault.com/"
-  url "https://github.com/ssh-vault/ssh-vault/archive/refs/tags/1.3.8.tar.gz"
-  sha256 "6e2d2b7e223c828db015cdda15b0d28e662dd9c8a13825f7a959f3bbd47071d5"
+  url "https://github.com/ssh-vault/ssh-vault/archive/refs/tags/1.3.9.tar.gz"
+  sha256 "f12f2c3052f32338a6bb01a4bcc3e4f5d705322ac41d533e80ae8aea9a1d7598"
   license "BSD-3-Clause"
   head "https://github.com/ssh-vault/ssh-vault.git", branch: "main"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "d16c15b4bbf09ddca21b48fb767155d4b5ff20498a32223524777c49619f548d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48048fe8f28e624def37117b03ef27d0fc52ec192f2b017440beb49def886707"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "05a4dde969d03817468ef74bd6d4e60255c0de0c0cb9a5512402b02721124f1d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c14e723a5151dbb503edc72c9d691155dae9703334116e09bfcd3193fdb14a14"
+    sha256 cellar: :any,                 arm64_linux:       "7db7078d2bd908236d5a82a02ff00e4b87cb3a23022595ebd37405547bb7c751"
+    sha256 cellar: :any,                 x86_64_linux:      "e0a387cf0993416f60b2d7b0f0532c869ed484a47b0070babcb9efeaebe18287"
   end
 
   depends_on "rust" => :build

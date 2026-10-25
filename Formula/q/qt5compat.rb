@@ -10,7 +10,7 @@ class Qt5compat < Formula
     "BSD-2-Clause", # src/core5/codecs
     "BSD-3-Clause", # *.cmake
   ]
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://code.qt.io/qt/qt5compat.git", branch: "dev"
 
@@ -19,15 +19,18 @@ class Qt5compat < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "9c665b307d27a39f004af823314d51fec17aaae9e10cac47a449f8a8d4359957"
+    sha256 cellar: :any, arm64_golden_gate: "1b4164ceff0806ce600699eac2c6faf3a707bd9d264f27643b4ee47cc65b468c"
+    sha256 cellar: :any, arm64_tahoe:       "5638357c11940429f756c79d54010bb195f0c365fcf57c3f801deb5c32f19511"
+    sha256 cellar: :any, arm64_sequoia:     "69454339b8f0a6e640e1244e1365b45d0bb957fee301e315a215e03343bb4bc1"
+    sha256 cellar: :any, arm64_linux:       "c024c73396d40ad93b973cd74d9bb0b7b5c30489938b18f429fe0b7248cabb41"
+    sha256 cellar: :any, x86_64_linux:      "37ec290e25d122a40f37e5467e70f85de2e2d80c9a21498acd6c62c2f3b2761a"
   end
 
   depends_on "cmake" => [:build, :test]
   depends_on "ninja" => :build
   depends_on "pkgconf" => :test
 
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "qtbase"
   depends_on "qtdeclarative"
   depends_on "qtshadertools"

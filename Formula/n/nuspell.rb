@@ -14,7 +14,7 @@ class Nuspell < Formula
   depends_on "doxygen" => :build
   depends_on "pandoc" => :build
   depends_on "pkgconf" => :test
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   deny_network_access!
 

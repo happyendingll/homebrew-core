@@ -21,7 +21,7 @@ class Doltgres < Formula
 
   depends_on "go" => :build
   depends_on "libpq" => :test
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   allow_network_access! :test
 

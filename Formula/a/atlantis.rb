@@ -1,8 +1,8 @@
 class Atlantis < Formula
   desc "Terraform Pull Request Automation tool"
   homepage "https://www.runatlantis.io/"
-  url "https://github.com/runatlantis/atlantis/archive/refs/tags/v0.48.2.tar.gz"
-  sha256 "bcc95e4e2b6b2565f58bb9cd2d503a61b6b6e50614ee83380b2f037796e6aa81"
+  url "https://github.com/runatlantis/atlantis/archive/refs/tags/v0.49.0.tar.gz"
+  sha256 "04d57095bf4163e03188f716b0525235b94624dca2a4137ff9a039aa6a9b1e63"
   license "Apache-2.0"
   head "https://github.com/runatlantis/atlantis.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Atlantis < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "526f7d6b0997a731e6c01a1229da4d0896225c3d6f29613f30e3b055e92755ce"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "393ed05c2d031b79f64d25063b913f167ff79daa210af6d233e42a62f3346800"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "393ed05c2d031b79f64d25063b913f167ff79daa210af6d233e42a62f3346800"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "393ed05c2d031b79f64d25063b913f167ff79daa210af6d233e42a62f3346800"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bb701a05ff9e0c85167bc9b5e84acae7ee091c03ac7e9da7e999b50365845425"
+    sha256 cellar: :any,                 x86_64_linux:      "8b5beee3ee9c2c7f9be801716e2e483157e3923856bfe26368cc37a15ef3a3b0"
   end
 
   depends_on "go" => :build

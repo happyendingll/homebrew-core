@@ -1,8 +1,8 @@
 class Pinact < Formula
   desc "Pins GitHub Actions to full hashes and versions"
   homepage "https://github.com/suzuki-shunsuke/pinact"
-  url "https://github.com/suzuki-shunsuke/pinact/archive/refs/tags/v5.0.1.tar.gz"
-  sha256 "37253e5545c5e27b04389df10bcc9b863dbe236117788e9841e416296b41036d"
+  url "https://github.com/suzuki-shunsuke/pinact/archive/refs/tags/v5.0.2.tar.gz"
+  sha256 "b01d407677164b59e21b3ff6f8c0bec4bfcfa42df7611c713de64c9ebf1e009d"
   license "MIT"
   head "https://github.com/suzuki-shunsuke/pinact.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Pinact < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "597c8695f75b8fb78727d29ffbb51580d1a94a4d1a79a99a67bb9802855a0819"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ff38858510913e93caeb1d84b0a8bbc5677b133fe857132ad6fcf6d30b9011ec"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff38858510913e93caeb1d84b0a8bbc5677b133fe857132ad6fcf6d30b9011ec"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff38858510913e93caeb1d84b0a8bbc5677b133fe857132ad6fcf6d30b9011ec"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "135a5f78670cc87fb4f7932240b2d2f44f77f8db16b41169da0fb20f3af2d8b0"
+    sha256 cellar: :any,                 x86_64_linux:      "22f439ee8611cd6eef077610ffbcdc945eb1de209e27daa41b69d0f6df74bed2"
   end
 
   depends_on "go" => :build

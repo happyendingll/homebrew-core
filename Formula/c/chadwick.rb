@@ -15,6 +15,8 @@ class Chadwick < Formula
     sha256 cellar: :any, sequoia: "1aff5a682dcbda2e8a5f044501f55f3c96ec2b9e7ab9ffd62986b3491b5b7c9a"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking"
     system "make"

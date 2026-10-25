@@ -1,13 +1,16 @@
 class CppPeglib < Formula
   desc "Header-only PEG (Parsing Expression Grammars) library for C++"
   homepage "https://yhirose.github.io/cpp-peglib/"
-  url "https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.26.0.tar.gz"
-  sha256 "a80f0f7cff743da505fd72f57b6c1c477d7c811e087841726351484b888a4031"
+  url "https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.27.0.tar.gz"
+  sha256 "c61a8edb590ee2ac171f79046421e40436b03e3e9730dbff3b68ab86419fc031"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "7b54977045dbcbdb4e2c769408c368cc69d4f047a63af530047d01031cac748b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9afef276785f08f460f2edc97518d3a0bf8d62395274f15ac4b7d45e2c34f68"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c47474808f84dd332df5cdfa5b6acc338f373d1ae842b2f18ddb6f4724fed451"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dfea0fd2abd5da79085f66cb4a9b8b70368cf21054fc6feb546a223165996002"
+    sha256 cellar: :any,                 arm64_linux:       "baad1e5f08ef6067ab60d6f5765363c6201788f93964d3fe320d68918e477a89"
+    sha256 cellar: :any,                 x86_64_linux:      "80ac176e20ce125ce4708c0c7c17fb208e329797b14a30e408778abbf3739c3e"
   end
 
   depends_on "cmake" => :build

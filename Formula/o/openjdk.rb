@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.org/"
-  url "https://github.com/openjdk/jdk27u/archive/refs/tags/jdk-27.0.1.0.2-ga.tar.gz"
-  sha256 "c0ff3893a386349331ef8604677f14954743713f0afa8a196da821cf7559a637"
+  url "https://github.com/openjdk/jdk27u/archive/refs/tags/jdk-27.0.1.0.3-ga.tar.gz"
+  sha256 "d4f0d695767eee4842b1e6a22daf5af6a87bcaeea68f0597538a97bd8fb340a6"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
   compatibility_version 2
 
@@ -12,8 +12,11 @@ class Openjdk < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "e0450fe44c88c49da05a0c07b60592446d510253fbb8150c33dae3093b21ed0b"
+    sha256 cellar: :any, arm64_golden_gate: "c811f9f8d2b7f085dca136bc566f4c6a036d7609d62d137ad99007f961102631"
+    sha256 cellar: :any, arm64_tahoe:       "4b7ecc864e73c4aa30ecfd6afba56e05d9b8e72fcc0b6fba51823a9354f6f8f9"
+    sha256 cellar: :any, arm64_sequoia:     "89272db6b1e558a97f89a6218060a5615c36816680ce0afc89453ef678276f32"
+    sha256               arm64_linux:       "e550f27dea1fb035013a8b0d812ff57a106ca4729d8780d3365955829264af91"
+    sha256               x86_64_linux:      "6403443b4a4f8f736ffbc68c7232feb2aebbc386f44d6039c6b7de1d62af4391"
   end
 
   keg_only :shadowed_by_macos

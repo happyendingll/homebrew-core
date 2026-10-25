@@ -5,7 +5,7 @@ class Manticoresearch < Formula
     "GPL-3.0-or-later",
     { any_of: ["Unlicense", "MIT"] }, # uni-algo (our formula is too new)
   ]
-  revision 2
+  revision 3
   version_scheme 1
   head "https://github.com/manticoresoftware/manticoresearch.git", branch: "main"
 
@@ -36,8 +36,11 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "b9ade59180305e9b0aa95e1cbd46a08f094fcc98288031ad5a634b0b33d0e49a"
+    sha256 arm64_golden_gate: "403c50ab9a26e98d7e46bf83412c40788397ec61d6a1bc3465072726214daf09"
+    sha256 arm64_tahoe:       "3a8a85834a4a3eec6c9e95ac700ef701987f08b25bc586cc4eb8003b93586c3b"
+    sha256 arm64_sequoia:     "36773643f7d80c6b8c7bdaf2548a6d576ff11983b95d1aa9804ff4f2d7cc0a10"
+    sha256 arm64_linux:       "30f0524c0ab19a6b20bbd6314ba1b0b61843c37dd139e6d6309a1b559d36a80b"
+    sha256 x86_64_linux:      "6a2f97b0284b15505914d8a55f7ed8b64f65eabafbcefcf9d3b86bdccee3f058"
   end
 
   depends_on "cmake" => :build
@@ -48,7 +51,7 @@ class Manticoresearch < Formula
   depends_on "boost"
   depends_on "cctz"
   depends_on "croaring"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libpq"
   depends_on "mariadb-connector-c"
   depends_on "openssl@4"

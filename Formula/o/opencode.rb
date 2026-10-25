@@ -23,7 +23,7 @@ class Opencode < Formula
   depends_on "ripgrep"
 
   on_linux do
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
   end
 
   resource "opencode-pty" do
@@ -94,7 +94,7 @@ class Opencode < Formula
       bin.install Pathname.pwd.glob("dist/cli-*/bin/opencode").first
     end
 
-    generate_completions_from_executable(bin/"opencode", "--completions")
+    generate_completions_from_executable(bin/"opencode", shell_parameter_format: "--completions=")
   end
 
   test do

@@ -18,7 +18,7 @@ class Zk < Formula
 
   depends_on "go" => :build
 
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   uses_from_macos "sqlite"
 
   deny_network_access!

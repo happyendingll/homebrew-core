@@ -1,8 +1,8 @@
 class Dartsim < Formula
   desc "Dynamic Animation and Robotics Toolkit"
   homepage "https://dartsim.github.io/"
-  url "https://github.com/dartsim/dart/archive/refs/tags/v6.20.2.tar.gz"
-  sha256 "61e6d2542d85c1891ae25471412617715b98e620a044be919514671116c0c5fe"
+  url "https://github.com/dartsim/dart/archive/refs/tags/v6.20.3.tar.gz"
+  sha256 "da78699a52468ac0931a4e03026ad2ff8a6bb03da99a23ba3fa2f7c58ee85538"
   license "BSD-2-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Dartsim < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "4bd28ebbe954ade8ef6cd347b2182199aacfe99653dce222ce11e5dbfca38bd4"
+    sha256               arm64_golden_gate: "38dbfba70bb139ce1b26840e90904bd953f7833d4217f7107bb0980dbd65d83a"
+    sha256               arm64_tahoe:       "f11493ba4bccffaa0a9b12cde633ebe3abefc45c63113a076b34fb2f4dde1614"
+    sha256               arm64_sequoia:     "d63295e6a8c354a4f995d727b895947aed3a119868eeba1bfcb5e9d6a8d670b0"
+    sha256               arm64_linux:       "28eb081ce7c20f762ebc43693ad117b96ae56716167ddcfe703773a0dfbcd349"
+    sha256 cellar: :any, x86_64_linux:      "e38969f68227b72927ecf11bc493621287a9ed982ea1a16751cda1951d41316a"
   end
 
   depends_on "cmake" => [:build, :test]

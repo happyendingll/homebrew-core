@@ -4,6 +4,7 @@ class Camlp5 < Formula
   url "https://github.com/camlp5/camlp5/archive/refs/tags/8.05.03.tar.gz"
   sha256 "a56ef4afe3eb81ab3d8371f887779f8c0cee3b82c0ada7e066b723e51590f78c"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/camlp5/camlp5.git", branch: "master"
 
   livecheck do
@@ -12,8 +13,11 @@ class Camlp5 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "fa191393d5d4da0af65a08eba088a0f57140ab47296ea2cc1565b6720c9ecb53"
+    sha256 arm64_golden_gate: "76e3889c55d2ad70e7b3fadfaaf5c1a114096549ee3fb4abdcebaad3ba4a6dc5"
+    sha256 arm64_tahoe:       "7745ebec965e8f9d8795f65f1253ce935a1beeb9fe2b88fe3bc65fb0a14d44cd"
+    sha256 arm64_sequoia:     "1c0ba5a0d5db137231c5f6c00f63912e8e8d0699b1312b65b1c53b26f99ca0f3"
+    sha256 arm64_linux:       "57d77263deebf9ca46ed294b765257310e2acf6d12d2fa26cfd8edf86656ad26"
+    sha256 x86_64_linux:      "f20d5e33d74d003a6b8f8e4629fc5c1b58820c3377faf2b06b34df354862579c"
   end
 
   depends_on "ocaml-findlib" => :build

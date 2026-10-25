@@ -1,18 +1,20 @@
 class PythonFreethreading < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.15.0/Python-3.15.0.tgz"
-  sha256 "438596cac081036d3c1d532ab7e7335eeb35567bc961749a0d5797176db0db68"
+  url "https://www.python.org/ftp/python/3.15.1/Python-3.15.1.tgz"
+  sha256 "133d85e118dc32621cda1d9d1d7d9694fe0c5e82bc339a7d528c109fe8b36387"
   license "Python-2.0"
-  revision 1
 
   livecheck do
     formula "python"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "9a8a8e0a81f527a532e3aef67eab33aa9432c3b66925456a1ad84870720d6ec0"
+    sha256 arm64_golden_gate: "a132a71770ddc9cf7886b7629eec98ae13152832dffb7161d23dc3d461c6cd58"
+    sha256 arm64_tahoe:       "336f3541e15aeadf96aa9b35425631146f82bba8d0729e0f51348c7e657ce88a"
+    sha256 arm64_sequoia:     "40c68784e464ec4c6eee1045a1b63f82e0066f6236558019fa122eaf0599ad1a"
+    sha256 arm64_linux:       "09af016a48d7aa409bf0b76978b4336591929c874470b2a68834be0efb67ebee"
+    sha256 x86_64_linux:      "4980d282f08f5c2352b2429f2458bbf89c446db622313ef40b9afe4d2658eb00"
   end
 
   depends_on "pkgconf" => :build

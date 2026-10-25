@@ -4,6 +4,7 @@ class Yaz < Formula
   url "https://ftp.indexdata.com/pub/yaz/yaz-5.38.1.tar.gz"
   sha256 "755835efe8385d88725cc46a3b34dae2f5e784950832cbbe7f09ca0398de344c"
   license "BSD-3-Clause"
+  revision 1
   compatibility_version 1
 
   # The latest version text is currently omitted from the homepage for this
@@ -14,8 +15,11 @@ class Yaz < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "58e6e16d990aa8cacb000dd6f698b426f13d0560b2a545794d6113f3dba53ec7"
+    sha256 cellar: :any, arm64_golden_gate: "dc3e9293442755aa6edba7f3e5cf501f97ceba18164a787db1168b94309d3e1c"
+    sha256 cellar: :any, arm64_tahoe:       "d4919b92294b43ebb36e61f4b3f26177061371e996d601dce948af47d60444ab"
+    sha256 cellar: :any, arm64_sequoia:     "dc594cb1418b46b6bc42807565f354ae28b93ee009a062b01b8c58fa65e2cdc7"
+    sha256 cellar: :any, arm64_linux:       "bebc077ec0aff57efcd1191c0ff67603f327b7a7d0c79c2d8a73ba31b37fe0e0"
+    sha256 cellar: :any, x86_64_linux:      "6c86e10b65f50af27a28590dd8611827eea489d652fd1c313a72e8d7377b5a76"
   end
 
   head do
@@ -31,7 +35,7 @@ class Yaz < Formula
 
   depends_on "pkgconf" => :build
   depends_on "gnutls"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"

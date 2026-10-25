@@ -4,12 +4,16 @@ class Harfbuzz < Formula
   url "https://github.com/harfbuzz/harfbuzz/releases/download/15.0.0/harfbuzz-15.0.0.tar.xz"
   sha256 "968536e9abd782f07f7954044c0c4020199fcdd39b41d221ec42d2a3be4a44df"
   license "MIT"
+  revision 1
   compatibility_version 1
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "52120a7b7534d24c9de009906ea23aed4b12ca273391cdcf84800332f60ddf5f"
+    sha256 cellar: :any, arm64_golden_gate: "474e9c051ca409ef2cca1c24db98816809d0dd50ae216838508a3e5be1062f85"
+    sha256 cellar: :any, arm64_tahoe:       "e465d30dc1fc03012d5bff48ce6452c4cc411392de11830d4743ebc739ef02e5"
+    sha256 cellar: :any, arm64_sequoia:     "a6286d242e42731cef8f3e4ad20bff6e45146c4235693cbfc0db73242ca9cc7e"
+    sha256 cellar: :any, arm64_linux:       "a2eeaf19441ac36affb2aa7f986df5993be4e94900145613755cf4864e5927c8"
+    sha256 cellar: :any, x86_64_linux:      "5389ca68e50532aeddbf7b831c4d1f4ae78ed33a7ec39f4a517033193206da6b"
   end
 
   depends_on "gobject-introspection" => :build
@@ -22,7 +26,7 @@ class Harfbuzz < Formula
   depends_on "freetype"
   depends_on "glib"
   depends_on "graphite2"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libpng"
 
   on_linux do

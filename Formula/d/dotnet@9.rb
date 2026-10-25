@@ -13,11 +13,12 @@ class DotnetAT9 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f4324540a50e222eb1ca636ac8fdc2b96f67af4003833c034364f3536b990aec"
-    sha256 cellar: :any, arm64_tahoe:       "ec2c087fd852d698826de2d12f249d87eec8d25456823fead86d2b63a3541ef0"
-    sha256 cellar: :any, arm64_sequoia:     "bb8b7599841935c38829b2b1de3f4da60d05a19e473fcb5dc07ae088ec04428d"
-    sha256 cellar: :any, arm64_linux:       "a70f620b1fd687217c8e35891c17c55d2ec34565ba5c4f8a673681d35f99ff3b"
-    sha256 cellar: :any, x86_64_linux:      "237932f6c9de0475350d7d45169caca042899fe647926c72e85a6372d11b860d"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "573ad02223795fc96303eda5859ccde81243a37e8b8a477152a51d453bd50cdf"
+    sha256 cellar: :any, arm64_tahoe:       "27a89d8794f8898b8ca87e8d213924503ac16b258214a2a575cbbf6292a54a83"
+    sha256 cellar: :any, arm64_sequoia:     "7ede2e5db25c3cbf93d05b0d831444cca37c59accf54ec56d57d1768be501814"
+    sha256 cellar: :any, arm64_linux:       "17242798424febda8337c51f76bf8c05bf864da26da9d85fa9b729510b3d626b"
+    sha256 cellar: :any, x86_64_linux:      "1c61f799b106975b9e445169f5e4851b3845c8df277ffe018b295d09e78cab79"
   end
 
   keg_only :versioned_formula
@@ -30,7 +31,7 @@ class DotnetAT9 < Formula
   depends_on "pkgconf" => :build
   depends_on "rapidjson" => :build
   depends_on "brotli"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "openssl@3"
 
   uses_from_macos "python" => :build

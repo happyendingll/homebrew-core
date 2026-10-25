@@ -19,6 +19,8 @@ class Execline < Formula
   depends_on "pkgconf" => :build
   depends_on "skalibs"
 
+  deny_network_access!
+
   def install
     args = %W[
       --disable-silent-rules

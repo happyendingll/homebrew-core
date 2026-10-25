@@ -1,13 +1,16 @@
 class MdTui < Formula
   desc "Markdown renderer in the terminal written in rust"
   homepage "https://github.com/henriklovhaug/md-tui"
-  url "https://github.com/henriklovhaug/md-tui/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "b86f03f536235e3016a0f5287ee86972e9a92293586b1c426d0e067b0dd3c0b2"
+  url "https://github.com/henriklovhaug/md-tui/archive/refs/tags/v0.11.1.tar.gz"
+  sha256 "8fbc544a08de290d2ff96265f79aeb035ac234c6937fe4fce910333ba275eae3"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "4a6513d2e0b8a67bb87ab6a3b172621cb31d51a5ef1f739e8a67eca8eab7cd32"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "58f100463c4efa9df950e2e8361a48afdb4897248421efb9da8e4b730a8a5bce"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf28a25802b60e2cc7e47d7f0d4a04febbc6178f562128cb5369fbc39b458340"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "37a2f1cc0b054a4fead28e6b4b796af209aa558034f76bdb2b37b1710caf3c27"
+    sha256 cellar: :any,                 arm64_linux:       "72c7f796f6a8dc14e629397e386332bd0e34a48bf36f2178d0434728169be5e9"
+    sha256 cellar: :any,                 x86_64_linux:      "ace0cd8f7f8cbd3d4b529eb2a1895cad00478e816fe95e61c2a230320a0f7bf5"
   end
 
   depends_on "rust" => :build

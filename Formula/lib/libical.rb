@@ -20,7 +20,7 @@ class Libical < Formula
   depends_on "gobject-introspection" => :build
   depends_on "pkgconf" => :build
   depends_on "glib"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   uses_from_macos "libxml2"
 

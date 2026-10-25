@@ -4,11 +4,14 @@ class CamlpStreams < Formula
   url "https://github.com/ocaml/camlp-streams/archive/refs/tags/v5.0.1.tar.gz"
   sha256 "ad71f62406e9bb4e7fb5d4593ede2af6c68f8b0d96f25574446e142c3eb0d9a4"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
-  revision 8
+  revision 9
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "3206db6595a1f9a450da49841ba483a7daa355e4ec40ea8809322ef2668e3016"
+    sha256 cellar: :any, arm64_golden_gate: "9ebe9ddfd875fb22f45f25ff0709fa92b5e3074068ac0726e0590bf3e48318cc"
+    sha256 cellar: :any, arm64_tahoe:       "a5c519c377b6436f0d1c2936eb7ffd60508528e7b84cfcc16f439fbf5c9a6b6c"
+    sha256 cellar: :any, arm64_sequoia:     "c70602c608ec248880aebee12d42f4aeb69403b6ce62137adc78e0953500c70b"
+    sha256 cellar: :any, arm64_linux:       "78e283cd0b41018d1a1fdc2fdd676a800090300133982ed3d9a20605da586a20"
+    sha256 cellar: :any, x86_64_linux:      "9ee5e440faa3f86571c01e8d8035f003fbf3ca7949ff6082edca8a5d6f1e68c8"
   end
 
   depends_on "dune" => :build

@@ -21,7 +21,7 @@ class Tarantool < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libyaml"
   depends_on "openssl@4"
   depends_on "readline"

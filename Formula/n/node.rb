@@ -1,10 +1,21 @@
 class Node < Formula
   desc "Open-source, cross-platform JavaScript runtime environment"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v26.12.1/node-v26.12.1.tar.xz"
-  sha256 "053e3b296859b6d8d93f99ef97fa9cec1c4ee171c72968100c649978c1dbd38c"
   license "MIT"
+  revision 1
   head "https://github.com/nodejs/node.git", branch: "main"
+
+  stable do
+    url "https://nodejs.org/dist/v26.12.1/node-v26.12.1.tar.xz"
+    sha256 "053e3b296859b6d8d93f99ef97fa9cec1c4ee171c72968100c649978c1dbd38c"
+
+    # https://github.com/v8/v8/commit/f607706154eabc4a949628a88b38dbe95cd2274c
+    patch do
+      file "Patches/node/icu4c-79.patch"
+      directory "deps/v8"
+      type :unofficial # cherry-picked from V8 but not in node yet
+    end
+  end
 
   livecheck do
     url "https://nodejs.org/dist/"
@@ -12,8 +23,11 @@ class Node < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "1800f523f0646da2cfaed084e63d001d29388addd061995c384d7cc87fa64686"
+    sha256 arm64_golden_gate: "dc7c3d36f969a6d003096966c2192ab6b893c25898c73d4087be18d67df094b6"
+    sha256 arm64_tahoe:       "93e19da2ee93d9bc2498e2c21c5ab30b61855afa2b845c9ca41b86d808c9885f"
+    sha256 arm64_sequoia:     "4dc4d07a1a672cfb62ba97a1304b726ff097774a6bca106efcef95a7ac069ab4"
+    sha256 arm64_linux:       "c0a45b9d267ba16762e3300afd3a22ebc7ee5b110e715425b377ef9119977299"
+    sha256 x86_64_linux:      "10920f692f62efcfca0af190f5dbf42f5a191127b53dcd4c394bbd19ef3c9718"
   end
 
   depends_on "pkgconf" => :build
@@ -24,7 +38,7 @@ class Node < Formula
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "hdrhistogram_c"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libffi" # System `libffi` is missing some definitions used by node
   depends_on "libnghttp2"
   depends_on "libuv"

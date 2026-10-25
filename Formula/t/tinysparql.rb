@@ -4,6 +4,7 @@ class Tinysparql < Formula
   url "https://download.gnome.org/sources/tinysparql/3.12/tinysparql-3.12.0.tar.xz"
   sha256 "40e3e3ae9811ae07a94ac7dfe8259f218679ebb1c9bc98d7ab345b2405926b57"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
   head "https://gitlab.gnome.org/GNOME/tinysparql.git", branch: "main"
 
   # TinySPARQL doesn't follow GNOME's "even-numbered minor is stable" version
@@ -15,8 +16,11 @@ class Tinysparql < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "5c64884d8413fd9f0161531b12703f5103095947db6d0407431881c126a823e6"
+    sha256 arm64_golden_gate: "f3a3fa79d247071aef1693e23736493547f6451d1023980f31d48eb83687c0e4"
+    sha256 arm64_tahoe:       "41f53597b99d193d0b0d97d3acfaf5749fae91e40508ce489bcb184ac1f33ac5"
+    sha256 arm64_sequoia:     "698818722e7f8cbada0871b90ffa22acb3d64adf3d533ecccbb3c5df3bb67385"
+    sha256 arm64_linux:       "ab4a0ba4c4c5c10142fe8a1e3199ebc49b6af97f17b7a030ea95f430f6af8339"
+    sha256 x86_64_linux:      "1c61bfa231a650dd43732b73854dbae8b20ddbb2b26524a12bd6f49e0def90df"
   end
 
   depends_on "gettext" => :build
@@ -28,7 +32,7 @@ class Tinysparql < Formula
 
   depends_on "dbus"
   depends_on "glib"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "json-glib"
   depends_on "libsoup"
   depends_on "sqlite"

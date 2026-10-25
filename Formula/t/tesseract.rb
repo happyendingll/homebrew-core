@@ -4,6 +4,7 @@ class Tesseract < Formula
   url "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
   sha256 "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884"
   license "Apache-2.0"
+  revision 1
   compatibility_version 1
   head "https://github.com/tesseract-ocr/tesseract.git", branch: "main"
 
@@ -13,8 +14,11 @@ class Tesseract < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "8c19405c2836e608f720a0a9f0bd6088034a4b67f2b8324804d9e1471379049e"
+    sha256 arm64_golden_gate: "28b1ec8bc20c7ba5ea65221466d923a559ea7545cfb01b49d98755c97c8c21dc"
+    sha256 arm64_tahoe:       "0c8bcbe7f7f01a3efd9e04eb1252c09e3a68beac94ea78ad555720b7c50e25f0"
+    sha256 arm64_sequoia:     "d4356db8fc84e1ebf65c4b5e9d80857f8e346db44c7d5d566dd858450a7ede5d"
+    sha256 arm64_linux:       "bdd30996a3f45cc8110285efa114907498ed173d12da3ad64413f35f38152c4e"
+    sha256 x86_64_linux:      "2c1f05e3f06997ae0468e81a406505a842f979c982a393a5e83953b4a4bf4f38"
   end
 
   depends_on "autoconf" => :build
@@ -25,7 +29,7 @@ class Tesseract < Formula
   depends_on "fontconfig"
   depends_on "glib"
   depends_on "harfbuzz"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "leptonica"
   depends_on "libarchive"
   depends_on "pango"

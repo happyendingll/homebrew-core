@@ -4,11 +4,15 @@ class Freerdp < Formula
   url "https://github.com/FreeRDP/FreeRDP/archive/refs/tags/3.32.2.tar.gz"
   sha256 "9ccb8357bf0188044a460de775c7ea289ca7d2a2a917eca0f0a7c4dc9c8b08ea"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/FreeRDP/FreeRDP.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "7ab86c67f94ea6da3d95d4dc70a3df28e027681f7e62582ba3f184c8787f5979"
+    sha256 arm64_golden_gate: "af4295631083597b02aa886e27cfd50d8769d662ff65041aa8e57d1ee5112738"
+    sha256 arm64_tahoe:       "07ab1ec85bbec2c32f2725cb0e7e65fc633aaf5a6cccacca7beb1c54e8e2e48e"
+    sha256 arm64_sequoia:     "27975351f6b63753375710ebe68f969a428f381e2038b6e7daad465d13fbb18e"
+    sha256 arm64_linux:       "dd468533dc1d43fab69a34edc4827723729ee4cc0b3ee3356868a5d93590b229"
+    sha256 x86_64_linux:      "1c9d40f9475dcbb79e14fb1c654e1f2547d99ffdf04852196d443c610f3acd16"
   end
 
   depends_on "cmake" => :build
@@ -38,7 +42,7 @@ class Freerdp < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "glib"
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
     depends_on "krb5"
     depends_on "libfuse"
     depends_on "pulseaudio"

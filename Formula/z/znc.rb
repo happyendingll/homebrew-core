@@ -5,7 +5,7 @@ class Znc < Formula
   mirror "https://deb.debian.org/debian/pool/main/z/znc/znc_1.10.3.orig.tar.gz"
   sha256 "68f3f6641b480c041010c5596e1234043e05c9137eda06233845017603095f5b"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://znc.in/releases/"
@@ -13,8 +13,11 @@ class Znc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "4a62afcac14be53d778e0ac7f918d0c7c86a252153a9786d0388b6e19cf927b7"
+    sha256 arm64_golden_gate: "679a9e32470742f87d57f966750719744043696f200fb53bdde0caba2d2237b5"
+    sha256 arm64_tahoe:       "47d26904e4f30b0244626623d2e4913a6b7143c6b232dacebcd4f7591b3aabc8"
+    sha256 arm64_sequoia:     "5123fcb3933cd787a570b66c42ec3bed2f14c4cb02784eba5b6005514433a96a"
+    sha256 arm64_linux:       "9b6bf71c0003770d62caf97affcf9cba0508eea4ee023a9f95243d8809c449b4"
+    sha256 x86_64_linux:      "424535a69668e0741d24b18549ad16774d6214766145382b2f6be75d23126707"
   end
 
   depends_on "cmake" => :build
@@ -22,7 +25,7 @@ class Znc < Formula
   depends_on "pkgconf" => :build
   depends_on "boost"
   depends_on "cctz"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "openssl@4"
   depends_on "python@3.15"
 

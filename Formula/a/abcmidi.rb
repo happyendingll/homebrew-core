@@ -1,9 +1,10 @@
 class Abcmidi < Formula
   desc "Converts abc music notation files to MIDI files"
   homepage "https://ifdo.ca/~seymour/runabc/"
-  url "https://ifdo.ca/~seymour/runabc/abcMidi-2026.10.16.zip"
-  sha256 "f865e7a0107f30b0b6fa005c063c14e7c830f81cd626d872ec9788a912488048"
+  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2026.10.23.zip"
+  sha256 "5d91850dd116fab9e313e4e28ea257b0dde3b290b779f436c9a875577c289573"
   license "GPL-2.0-or-later"
+  head "https://github.com/sshlien/abcmidi.git", branch: "master"
 
   livecheck do
     url :homepage
@@ -11,13 +12,17 @@ class Abcmidi < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "ccbc5401de1bd36325d099b4096fcf16799762541752c422cfada4989e09b0f8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3f75ffa5980d4d7d1ff420718da152b0905da69abd54bc23acfbaf0d80492e4a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a95540316b9b28df68cd92831303aa45b2506d90b5d732493e641e498fe4cb17"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3420c46bb603cd58ca7458708edf6cd162832ed8ca3ab974f42841d4adbdde05"
+    sha256 cellar: :any,                 arm64_linux:       "9a88d323f668edae57ec5e6d1c10810aebced31638f4cf47212d19a63356ce59"
+    sha256 cellar: :any,                 x86_64_linux:      "fabdb45f4eaf39d67a2edb7e699247e7bd8736bb31f8ea35ab0d169a8f454b0d"
   end
 
   deny_network_access!
 
   def install
+    chmod "+x", "configure"
     system "./configure", *std_configure_args
     system "make", "install"
   end

@@ -1,8 +1,8 @@
 class Cdncheck < Formula
   desc "Utility to detect various technology for a given IP address"
   homepage "https://projectdiscovery.io"
-  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.3.2.tar.gz"
-  sha256 "1650ebf692abaa27caf2ad8939d3471aa37ff9ac351d31e7c7d5a6b48ef8851f"
+  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.3.3.tar.gz"
+  sha256 "cb1abddb3100d44ece057a37abfcc100d97920681e3ca94f2e5d8b4e515c027b"
   license "MIT"
   head "https://github.com/projectdiscovery/cdncheck.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Cdncheck < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "9005585197a069cf88ca02125a4f2f1d7e8147b1d5d6ae505d4077d0c563caeb"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "227be5037ae76ad5beff96037a0bb8d2609bb1519e7f090d8696631b240a55a6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97e56606b503a06d454bf8407df52607442717a8c018e8c92474badea26b297e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d6b09df02b30f3f962c482f014f71d8dfb7820e94b3410d926782fd9114980ca"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dcac066ddc4459e6665812f077e8b45e5655977bc4e308c85a3d15b4dc73c548"
+    sha256 cellar: :any,                 x86_64_linux:      "4b541778bb58e8d14b9b6f20acdc16efe7725a3e2db7c5222645505f60d89fdf"
   end
 
   depends_on "go" => :build

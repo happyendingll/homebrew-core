@@ -1,9 +1,9 @@
 class OpensslAT4 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl-library.org"
-  url "https://github.com/openssl/openssl/releases/download/openssl-4.0.3/openssl-4.0.3.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/openssl-4.0.3.tar.gz"
-  sha256 "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9"
+  url "https://github.com/openssl/openssl/releases/download/openssl-4.1.0/openssl-4.1.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/openssl-4.1.0.tar.gz"
+  sha256 "50c17baf54cb008f6ce42d50deb4b28050a1aad711636cabd4b241c7e90cc2fd"
   license "Apache-2.0"
 
   livecheck do
@@ -12,8 +12,11 @@ class OpensslAT4 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "10a582b518d61c9f6c16e4090277f6aa8b2a6222b38b6c855041213a47fb1b82"
+    sha256 arm64_golden_gate: "d239639f77a275caa217707e126790b3f5f5c86e5bc6e2a996e5df7fdaed44a6"
+    sha256 arm64_tahoe:       "382f63e829b116d5fb9a2b186147e489631b5bbbb06ac0089f795a3fed1085c4"
+    sha256 arm64_sequoia:     "6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978"
+    sha256 arm64_linux:       "e76f5b649d8c593a802fc377a52b2d963807b8a1d79e3e256647f35c4fc9088a"
+    sha256 x86_64_linux:      "4818b19c5662c2ec0c699d5bc8ebddb91f92d799fb91420de26a98fac6ca68c3"
   end
 
   depends_on "ca-certificates" => :no_linkage

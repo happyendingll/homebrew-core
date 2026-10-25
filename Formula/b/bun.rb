@@ -19,6 +19,7 @@ class Bun < Formula
     "Zlib",              # zlib-ng
     "Apache-2.0" => { with: "LLVM-exception" }, # __cxa_thread_atexit
   ]
+  revision 1
 
   livecheck do
     url :stable
@@ -26,8 +27,11 @@ class Bun < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "11cca3b4f8d4a6ae2830ca15bb9e3abcf238b0fbb8a9c314cafbb6d073208610"
+    sha256 arm64_golden_gate: "d981e4819b919a82ba31c4bd99886618147611891196bfddba1b7b1ea5e86c07"
+    sha256 arm64_tahoe:       "040e2cad4ffa635a17f79f513a8a9648e484db77da281bec277fc93f2165e9ca"
+    sha256 arm64_sequoia:     "c6c0f34c89aae77baa9f67bff67b7f52dd1bacee8c50e2065611cffe04f9504e"
+    sha256 arm64_linux:       "5233d6f3912d69bb260625d38a11bfc0f583fe627651db5108ef11bd347facc9"
+    sha256 x86_64_linux:      "2cdbd6f703b13288d7c78e865b26c0defc0d9a0daf4592cf3f8ea7bbac8088fd"
   end
 
   depends_on "cmake" => :build
@@ -43,7 +47,7 @@ class Bun < Formula
 
   on_linux do
     depends_on "lld" => :build
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
   end
 
   on_intel do

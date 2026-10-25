@@ -6,11 +6,15 @@ class Pyinstaller < Formula
   url "https://files.pythonhosted.org/packages/63/41/f90302845945abd4ed647933ff5ee7c6ac93983187be67f897b6cb613331/pyinstaller-6.22.3.tar.gz"
   sha256 "05eb2f5615503e72939a7224d68b4aff572c6b0438ee4a17d0a4b481f399362d"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "ec44d510d80f4bc9ae432b65d8da45434a48f014f696271769ae2295b512415d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "778cf65f9f6d9914c254d0a8ed921f574a3e4e4d588b16dc0e8a77fae9cb853c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a627e7d9a2512d36d045e0316905c25c8fccd116e8aebfdb64a4ec2e0318ed2a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf2e5ba2bd4c14ef54ef6563113238f8156580afc057ea1bcf2948fc5b52a4e6"
+    sha256 cellar: :any,                 arm64_linux:       "ca8f013836cb4cdefd248f35f17fa6e6eb36f2840d12deb1579b65358c6aee30"
+    sha256 cellar: :any,                 x86_64_linux:      "11a4f4b1831a81d66d74b77cf1f672497130f1af29be54ce1e627daaa6226c08"
   end
 
   depends_on "python@3.15"
@@ -37,13 +41,13 @@ class Pyinstaller < Formula
   end
 
   resource "pyinstaller-hooks-contrib" do
-    url "https://files.pythonhosted.org/packages/c9/3b/fab1a12a21bf9223af012e5dd002b7d4265683d21d9fabbd0ccb347316e4/pyinstaller_hooks_contrib-2026.8.tar.gz"
-    sha256 "4d825786ad7a9b7dbcc52d612748a34562fe273461bcfd88f4d549c594bbf8f9"
+    url "https://files.pythonhosted.org/packages/96/25/e47c6188228281372be7e9911a93931e01ec8798c02c93abd680b9b9521f/pyinstaller_hooks_contrib-2026.9.tar.gz"
+    sha256 "2748767901acb5cecd1304652b6c7add5bffcff1d71d01207fe24a5d42942a56"
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz"
-    sha256 "f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73"
+    url "https://files.pythonhosted.org/packages/70/b3/c19426f783614d625699a4b247faf628ea9ab1db228674491767b417f9e1/setuptools-84.2.1.tar.gz"
+    sha256 "3ff8b3b5492a0aa66960f4419365a86b84e013070d4313e4d4a6894f5d64d6bc"
   end
 
   def install

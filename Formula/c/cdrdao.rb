@@ -26,6 +26,8 @@ class Cdrdao < Formula
   depends_on "libvorbis"
   depends_on "mad"
 
+  deny_network_access!
+
   def install
     system "./autogen.sh"
     system "./configure", "--mandir=#{man}", *std_configure_args

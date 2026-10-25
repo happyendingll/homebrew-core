@@ -5,6 +5,7 @@ class Mysql < Formula
   mirror "https://repo.mysql.com/apt/ubuntu/pool/mysql-innovation/m/mysql-community/mysql-community_26.10.0.orig.tar.gz"
   sha256 "984507622ddfa4d84ad23fc56ec5b5f18f4fda328af5a23e5f5b1a062301ea2c"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
+  revision 1
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/?tpl=files&os=src",
@@ -13,15 +14,18 @@ class Mysql < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "1fb8ba905d084297a91e9809b36ce688e4eee34b756449bb5818e92527c16b02"
+    sha256 arm64_golden_gate: "001dfd1b4f5aed976df07de0c1ae8820b20a589b0cd73d05e5c415d780209e99"
+    sha256 arm64_tahoe:       "dfb7e53b85c1287da1f7d25eee0df4b5a1944bdf4214a2f92cb5cb4811332174"
+    sha256 arm64_sequoia:     "102d1fd659336a5c50f2862c8f92f6ab5e78043611a5d97e6761b21e46a65863"
+    sha256 arm64_linux:       "45b0bc21b2d0864c46d0199c830d1091270934206f5944188d23c9d602cc70cc"
+    sha256 x86_64_linux:      "72ef41ad06530721ac66715e7f3560c20ffbb771f8edf000382cac4c8329d55f"
   end
 
   depends_on "bison" => :build
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "abseil"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "lz4"
   depends_on "openssl@4"
   depends_on "protobuf"

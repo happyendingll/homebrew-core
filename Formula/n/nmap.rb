@@ -5,7 +5,6 @@ class Nmap < Formula
   sha256 "0c12660eddbf7eabeff6996cb0c044a4eadf2bb0c6fbcb340d6cf72b1caee402"
   license :cannot_represent
   compatibility_version 1
-  head "https://svn.nmap.org/nmap/"
 
   livecheck do
     url "https://nmap.org/download"
@@ -15,6 +14,12 @@ class Nmap < Formula
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
     sha256 sequoia: "b357b9d1db239e6801386ac75e5bc01d8beaab37e9d4087c9a04bf403e8e66c9"
+  end
+
+  head do
+    url "https://svn.nmap.org/nmap/"
+
+    depends_on "autoconf" => :build
   end
 
   depends_on "python-setuptools" => :build

@@ -108,6 +108,8 @@ class Bash < Formula
     depends_on "gettext"
   end
 
+  deny_network_access!
+
   def bash_loadables_path
     [
       "#{HOMEBREW_PREFIX}/lib/bash",

@@ -21,23 +21,16 @@ class Stanc3 < Formula
     sha256 "44e66f05cc7be4d0e0a942b3de03aed1a2c2abd93dbd5607542051d9d6ae2a0b"
   end
 
-  # Update pinned OCaml to 5.5.1
-  patch do
-    url "https://github.com/stan-dev/stanc3/commit/a580643374c9390e7c7a9ec3db014ebb65f0e7bc.patch?full_index=1"
-    sha256 "4f6489e6144dbada19046eda03b66ad4d120ca8e659b7c7187aa65fc13264807"
-    type :backport
-    resolves "https://github.com/stan-dev/stanc3/pull/1707"
-  end
-
   deny_network_access!
 
   def fetch
     system "opam", "init", "--compiler=ocaml-system", "--disable-sandboxing", "--no-setup"
-    system "opam", "install", ".", "--deps-only", "--download-only"
+    # Upstream pins an exact OCaml version, so build against ours instead
+    system "opam", "install", ".", "--deps-only", "--download-only", "--ignore-constraints-on=ocaml"
   end
 
   def install
-    system "opam", "install", ".", "--deps-only"
+    system "opam", "install", ".", "--deps-only", "--ignore-constraints-on=ocaml"
     system "opam", "exec", "--", "dune", "subst"
     system "opam", "exec", "--", "dune", "build", "@install"
 
