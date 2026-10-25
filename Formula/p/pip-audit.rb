@@ -10,11 +10,8 @@ class PipAudit < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cb4947c5743fc8e1d8d9ec7c0fbc2e6074fc1f0f01309d7156951ebf2879d152"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e056634e7d9e79b38a5fe8e3ea79a44a76a4ec4ebaa25a9151b7eba4ef722cd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ab906ba2a0b4c449f21775b54224561d180367973859f28e88c7988e3248280"
-    sha256 cellar: :any,                 arm64_linux:       "31838258b00f67191fddf2db8060f1dc5a6befb0440f7c653ea7c3d935111f74"
-    sha256 cellar: :any,                 x86_64_linux:      "8728e9883543f616b87cdcb04136a5b68d3dd782d40df912ea6740d8945de918"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "3f33edeaa26586aa4d8ea55227734d3aa98b8f11b3bc7f6f81e966696eae6fdc"
   end
 
   depends_on "rust" => :build

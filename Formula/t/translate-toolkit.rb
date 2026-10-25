@@ -9,11 +9,8 @@ class TranslateToolkit < Formula
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "495bc5e1a7f13c870f6bba891110b73cf5adab0c6dc63e5f5e2c6dc2f5d2cc76"
-    sha256 cellar: :any, arm64_tahoe:       "0dd909e2479563ac52ad392f8f76f3946f15e3673b20831764ce0ffff6baf1c1"
-    sha256 cellar: :any, arm64_sequoia:     "4f9bee581de00c5b65fd401b4fdf81b81dca5556d2b3abe296e1f21ebcca4987"
-    sha256 cellar: :any, arm64_linux:       "1bb0aa1c14fa110b72f68f909d766a9c325c41f293a6ad76151eea87710fc689"
-    sha256 cellar: :any, x86_64_linux:      "09115e4f61e620feb437584290a8740571601d9ecda605a7b7d4a845be5f6afa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a45360ccffcfa0de5a3e1e0580dc8a3af6daedf090331d28beac8968b09b72f2"
   end
 
   depends_on "rust" => :build # for `unicode_segmentation_py`

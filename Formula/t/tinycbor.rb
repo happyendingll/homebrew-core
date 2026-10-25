@@ -7,11 +7,8 @@ class Tinycbor < Formula
   head "https://github.com/intel/tinycbor.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "69bb0fb4fe8219830f9da5a9ea943b6712a89f0f11cfab53e161c511b55206a9"
-    sha256 cellar: :any, arm64_tahoe:       "9adda5625b21c4893bcfb858dc936594b3581cba54386aadb6b39a72f9afbb55"
-    sha256 cellar: :any, arm64_sequoia:     "65438bea60631c2f6b8f31d672cefbf84d2cfb6246c224078f8d0f3b029ed60c"
-    sha256 cellar: :any, arm64_linux:       "1bfaf2fa31faf745250e52f2229606c363f076a8803653a0d2ec364a8007402b"
-    sha256 cellar: :any, x86_64_linux:      "cc448c9b0c6e2bc2c0c545a869412c54ba36e4c1921f49dab8ddc02acacdf0a4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "17c7643bdf151809701f8a94a3115855e163a5fd0c259b5827143b2ffb2a104b"
   end
 
   depends_on "cmake" => :build

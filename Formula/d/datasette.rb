@@ -10,11 +10,8 @@ class Datasette < Formula
   head "https://github.com/simonw/datasette.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "372b056e2a789eff03381cf2220f2cf5a1f87c6d8fd5ecee8181e60ad567080a"
-    sha256 cellar: :any, arm64_tahoe:       "ea16d15ad0c9613adb4d26591f44ad11848d2924089970d6fdb0dfb9903b0f5e"
-    sha256 cellar: :any, arm64_sequoia:     "d324fa35ea58fc89ec06dac6b29ae81830d1972738f8a0e3cdad4eb2c78dc974"
-    sha256 cellar: :any, arm64_linux:       "8592e985c6112f83d53e463847f96137ad961eb2b31f6be8a1bc8ddd8ac917de"
-    sha256 cellar: :any, x86_64_linux:      "af755a6420204a6d7966514c0f6b5d49afa1af046aaf07617d4bc2cae81b54f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "64c4ad09e84f9d57d46f3177ef9a1694cd82299f1705c3066546e32e2e4c31a3"
   end
 
   depends_on "certifi" => :no_linkage

@@ -10,11 +10,8 @@ class Cython < Formula
   head "https://github.com/cython/cython.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66f85e2a3c54639d600c5f09c388bb56faeaf83d742df30166075d8a7cca285d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "deea525b5975cf16e6fc8a3f21fdf4e03411686ea6ebef037ae57c5bc28e1336"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6bd1c91f24ac61ce04fd5114a59ab606ee62dd97c813fb85037ee0d9956478d7"
-    sha256 cellar: :any,                 arm64_linux:       "34e1c32b3315d379d68f07c608a2b2eb067d228d50a1f5b9f5edbbd638dc3176"
-    sha256 cellar: :any,                 x86_64_linux:      "dd564be2ef4792ec5c325228b40277a417f1098954144146ce69be5a1fe1ea53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0bd1634625aa146d44df17379ee6ffca0c0a735d863d46107a2ab57dd7fe22d8"
   end
 
   depends_on "python@3.15"

@@ -9,11 +9,8 @@ class Llm < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5d48b3dbcac8669ceb35c0d9b1cf49c49b62210b76b55c60b510542833896bcc"
-    sha256 cellar: :any, arm64_tahoe:       "a31a03d10b559ef5b1f638887b340a60ae86b4ea900d871ba8ee824eeefd5865"
-    sha256 cellar: :any, arm64_sequoia:     "b4786557992bd156090af65a82e9d9aae632301b2be44596b17d179d8ba6669f"
-    sha256 cellar: :any, arm64_linux:       "81890deffc77a14db1c269dc131403b65bd4ca17ede55c7b24387998f8dd37cf"
-    sha256 cellar: :any, x86_64_linux:      "55e0ce5edd269a9427bb3c228957e5f3eb943398e7571187ee86356bc06ef013"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "09e42ebc5d8445db3b48fa15d9c35c81d19717a82dd15be73d139899e5c48b2f"
   end
 
   depends_on "rust" => :build # for jiter

@@ -7,11 +7,8 @@ class Kekkai < Formula
   head "https://github.com/catatsuy/kekkai.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f858b8c934c378a8ead7b9bb5b8f17f2c5de51bcfba0009eec769b3cdcbfac38"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f858b8c934c378a8ead7b9bb5b8f17f2c5de51bcfba0009eec769b3cdcbfac38"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f858b8c934c378a8ead7b9bb5b8f17f2c5de51bcfba0009eec769b3cdcbfac38"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4e1673ddca2059446ebed653e571582d560d3940a4f85e52accb9237249a71ae"
-    sha256 cellar: :any,                 x86_64_linux:      "7b92bc630db01a243dbe0032b18f7cd98de38af4e00d82ab455b95ea3d118214"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "733b3d1b638ed5aa9e512dfc7c083d158509ef680d1ccdd08d2e750291e8a9d7"
   end
 
   depends_on "go" => :build

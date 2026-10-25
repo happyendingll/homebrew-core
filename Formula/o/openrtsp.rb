@@ -14,11 +14,8 @@ class Openrtsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "399b955d831813ae8cfcbdf65276a63a8dec5d9255759ee9d712fda1d45f0d17"
-    sha256 cellar: :any, arm64_tahoe:       "208de763aebfb5dad8cf9b334f1a8e79eaea21dfd85884f8fcd5f8d6ebe31f03"
-    sha256 cellar: :any, arm64_sequoia:     "705f646a11bc379d70ae159b839e7436a91f3610be79203cd7fefd2915643507"
-    sha256 cellar: :any, arm64_linux:       "17f15a73f8b4a203b487874c7404f2cbfcab66dec2f32ab002c4add3bd300c08"
-    sha256 cellar: :any, x86_64_linux:      "7bfef47e959598318ae2d2279594ed9529b61b9309002f4417ce7a9f0159ea25"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "836d23df3309228b8fb0a65020e464f7317458abe2f1fdc8e1dc6f250e6b75d8"
   end
 
   depends_on "openssl@4"

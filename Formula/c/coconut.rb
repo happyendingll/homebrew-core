@@ -9,11 +9,8 @@ class Coconut < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69bb75faa0d17adbcdede9b3b5dd61f6431584bb49f0adcb1de8268134121cc3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "30506434e84de574edb173ae77d56d24a58401ba7f4f7143498f6776b9c571b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fd6dc8fcb05ab81b665f03f956c7340ebf4ff416462b56d9bfd8f09feb7909ff"
-    sha256 cellar: :any,                 arm64_linux:       "046ec68a9226676814f7ea21680ec15aa1f038370f27ebf45511c8596217f527"
-    sha256 cellar: :any,                 x86_64_linux:      "0d6362a4d8e0df67da4280512c3b0699fdd5676c06a51e7d0a2d7da60fe257d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "b12aed08f7e390f11894e0db34f7aede25262f938580775a6770c2b39fe481ee"
   end
 
   depends_on "python@3.15"

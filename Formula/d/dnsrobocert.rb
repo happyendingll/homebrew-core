@@ -10,11 +10,8 @@ class Dnsrobocert < Formula
   head "https://github.com/adferrand/dnsrobocert.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4b226f4dc0063938b1a50ea32a48bb6feb41b4d54ad86bc33c46b7c91913fd01"
-    sha256 cellar: :any, arm64_tahoe:       "7ee3bde396b4ff526007817f3e23ad17d69e961bc481e8533c8983c6b66299aa"
-    sha256 cellar: :any, arm64_sequoia:     "45823c52ca8b70246ec43ef202044a834b1edcb00dfdb0d75064d3be2eb4a549"
-    sha256 cellar: :any, arm64_linux:       "81e9cc9e2fb1803b67290bde3fc468e8426a5a7203c4b46c7e75f971166fab3a"
-    sha256 cellar: :any, x86_64_linux:      "a4947b20fdaf51075354a8e356056bdb0cac922d8d8c85e4fa94d47cb0aaddbd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "afb1c37b61ef6eb0c6fd35cea909ac5b0ea15aa2df254126d60660cb2af7e706"
   end
 
   depends_on "rust" => :build

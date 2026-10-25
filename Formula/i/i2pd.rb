@@ -6,11 +6,8 @@ class I2pd < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fa2215f7408627641f18b4bd209e5e288e564ffd376557ea9b419db59182e802"
-    sha256 cellar: :any, arm64_tahoe:       "6738bb8b5afd3e42c8a13cd966c8e6895b729e9e49755ec0aed57c0d585e4308"
-    sha256 cellar: :any, arm64_sequoia:     "e841c5994c8ebcf2a9195859de569107da920212281eef7bd74b647bc51fd313"
-    sha256 cellar: :any, arm64_linux:       "9518101d1fcd84a9f26b3992f0bae9e924c756ad534bb08201c3b635a7a2e16d"
-    sha256 cellar: :any, x86_64_linux:      "9fa2f09285867f6d5be9736d9464998a53254551274464c6dd34f886dadc848a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "7dab6d665c2df05e700ae1411c5389b9d1ed0f78b07746c76c91691a4f8f1cfd"
   end
 
   depends_on "boost"

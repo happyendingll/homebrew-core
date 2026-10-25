@@ -10,11 +10,8 @@ class Httpie < Formula
   head "https://github.com/httpie/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e306852d0a5e75a218431613da34abf665372884bdd8b494a42360a505f1ba3f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed55babbf4a59a7d7049de97a814e74a1bc627111b6c94093f1ce00b284fc405"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c324153c25c231d37d45893e53ed46311829edad9e7338a43f6f2f2278817757"
-    sha256 cellar: :any,                 arm64_linux:       "990b148e13bde74e2755beacde75a9de3bb48bcd1f7e9945649955595254b02f"
-    sha256 cellar: :any,                 x86_64_linux:      "d83af621c353dee7dc7862b07fcdb23ed0e13e0c75be9f0506307feb708e3668"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "434635d12f6999101cd05aac944b0139e6dc363a107dfe2588d0fbe3c7e77288"
   end
 
   depends_on "certifi"

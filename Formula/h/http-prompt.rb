@@ -10,11 +10,8 @@ class HttpPrompt < Formula
   head "https://github.com/httpie/http-prompt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cf557ac9e70a76b9acc3fcadac64f959eaeade9ad155927c59cbac646d61c619"
-    sha256 cellar: :any, arm64_tahoe:       "3110e32a38e1f7cf1a97ca03dbccaf198c624f151b8862cbe6d17033589b55e8"
-    sha256 cellar: :any, arm64_sequoia:     "3f9e1624b4a615a25388de78cf4bbe825a4126d9a5d2f0f7c413ab20a8cdc97c"
-    sha256 cellar: :any, arm64_linux:       "49e5c5e45e4c8ef0b0ced6508656671fcf2cf176093bebda9874eeb15e8dd48d"
-    sha256 cellar: :any, x86_64_linux:      "0f236b4b44962c619492989de18d85efaba75fa9fbff72461889fddc59d7486c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "8f39d68ca0a6c0582611a5fe4a3e4780dd136add85c0d1907178b7c04cd353eb"
   end
 
   depends_on "certifi" => :no_linkage

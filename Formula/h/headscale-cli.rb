@@ -11,11 +11,8 @@ class HeadscaleCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b36ad5a46805ca5199e075ddbec15f5923b3fc3a2392f8989470494a99d839ee"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a974461ca4527ca9e7c3450ce617ab504fbf88100ab7619688b58fc6bedda4ce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c3a45663f18f37ba5575955914aa656ec1d561231eb3b099fae0aff2b28e304a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "47cb39c51da444b5d06b54e3315c2688b5d4ae2c13dae433530678a651a48fa4"
-    sha256 cellar: :any,                 x86_64_linux:      "68383136ec635744de707c0a1986be604ef886302bd3ee76925d6334e7d600ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "63c1aa9e73f7401776a88fbf98c10c639eaf4dc8531a097449f97f12bb0cccfe"
   end
 
   depends_on "go" => :build

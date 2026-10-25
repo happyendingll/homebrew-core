@@ -10,11 +10,8 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2102ef4b935355f8534b289f8c77c7e6954f9dddcc3adea0f16b29e96db752bf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e19e50e903c34710daef713df426ad2a1acd6984b78d57da8749ac246b6359fb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "83234a69684a842b689691dd393d7dca1fd7818fe21b150ad9945c6b5422ae92"
-    sha256 cellar: :any,                 arm64_linux:       "843d22293f4af3e77c75eeaa7dc3954f2bece665ecc644bfd9824f277053d08d"
-    sha256 cellar: :any,                 x86_64_linux:      "3cace4ce9135b1f7b324d2f441ac0e8d6abe2d559bf1d7f2c735526cde9e68f1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ade0557ca4d78dfcc49bc194f3f51e567103c66057bbcf366255762820afc04d"
   end
 
   depends_on "certifi" => :no_linkage

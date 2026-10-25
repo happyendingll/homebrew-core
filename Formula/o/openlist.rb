@@ -11,11 +11,8 @@ class Openlist < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c4a89a567eee82236d660c57f06dc159baf4b18a2fda8b9b8e1d881cabf246aa"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d452ac621d05f6cddc526fb5d9a58520e9644468de477de7ed326ae3b9c80afb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9604f7ebd274e085e59231f6bc70604243af769ca561c55227db5372d23badf5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "97fa0b6b78cad7a89e5321cb66cd8ac3341b5d1c9416db0d5745ffa1bc237b0c"
-    sha256 cellar: :any,                 x86_64_linux:      "6c0631c557ff7c6b3601fd86e08d051ac28f497255d75ee270de4e512480ab1e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd9d63441ee080e6f480b8cae0fad19714cc658f7260fa1298b6df5630a3ed85"
   end
 
   depends_on "go" => :build

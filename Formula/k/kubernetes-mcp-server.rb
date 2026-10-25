@@ -7,11 +7,8 @@ class KubernetesMcpServer < Formula
   head "https://github.com/containers/kubernetes-mcp-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "06414aed821e20ded62b1d0e7b6e95313963aa32566b5d9a43d39cd87bfe5588"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "18dc9b832e3863b11067f6a6ac7d9caaace0eab52166c714af7c745eb794d65c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1d1bd3abdb87182905970a9d2d35c3255a383a20c3a4c88a689ce73e6787ea49"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dcc71722884e276e79583f9fe092bf43fe2bf9a86c0e199eb85d68fadb800663"
-    sha256 cellar: :any,                 x86_64_linux:      "4d421244fa8501f5eb675bf1dddb6b176a416a05dffaa219e84bdaf8c3db7d9b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "1ba3c3566bbccb9435854b915ee35e3cebbb4f064e551f80e581d5937e67fc86"
   end
 
   depends_on "go" => :build

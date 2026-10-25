@@ -12,11 +12,8 @@ class PvMigrate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bb5d1d90f2dc1fe444bc67018d59797a05df490f3900e1774b3c096d0d2ebf43"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "65f7cd1102f66dd709c24b4e3c863ffad8ddfdd05db12d007ce19fe2efcab3eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6cd45b90daadf92db74c818ed1ceb2478d6093698333e92045a4cc0e29865c95"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f1f4c7cce8db102960019011cf4451a59ac614eea60faed64f351b3e6637f314"
-    sha256 cellar: :any,                 x86_64_linux:      "241a8846bc73f44b19056aa986dc32160ccab478b0ad1b7883843815e20a5f8e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "8b720cf1eeb7c557f6b49ff41c4ecd22415b47c2cecb0b85001abe96614be010"
   end
 
   depends_on "go" => :build

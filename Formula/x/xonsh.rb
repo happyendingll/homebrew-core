@@ -9,11 +9,8 @@ class Xonsh < Formula
   head "https://github.com/xonsh/xonsh.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e6bef787c86b4d3c103522ecbb59e9ef54fc8631a659ddd9888097e49cc75b6f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "733875464be2647887d2dc800dd5413305ff98b02faf478f88713cb44d64e9c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4191aaaacda7249c6d7a7ef81ff568023caccd2f9d639f9aec0f5a3ed8989075"
-    sha256 cellar: :any,                 arm64_linux:       "5ce4d5714d3b7091c5484d020f8ece81e8ff497321ebab0b4f80bd8f42ac9317"
-    sha256 cellar: :any,                 x86_64_linux:      "0a42afa2f0b03575c5c8ea2d3300b02a69e57a53ac20ac9e7a72766d25ba8b93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "b579304ec3fab56f701d96f0d4cdf0e5596f438da34290e91733a383b2cc9d32"
   end
 
   depends_on "python@3.15"

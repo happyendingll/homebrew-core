@@ -10,11 +10,8 @@ class Gdtoolkit < Formula
   head "https://github.com/Scony/godot-gdscript-toolkit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3a3701c39c9ed659965415b1de6cb5f6af0b0ef74e3f13123500ad93a782c163"
-    sha256 cellar: :any, arm64_tahoe:       "58bfb8a793290379afe32a957bf0cd0b22a799ca367a173c1bfec6d56994f609"
-    sha256 cellar: :any, arm64_sequoia:     "f5c6caaa69d03d6a2aff6d574dc27f23ae490fe7d07f986eae697e5a1ee61831"
-    sha256 cellar: :any, arm64_linux:       "f9493236e127af0ef8e6da5d2ca73122325841bb4b3651695744472685677ecd"
-    sha256 cellar: :any, x86_64_linux:      "29d649c5ad1c0ff236929cfd785ff9ea7f3f1ca32ba54156853c13eda0dbe39c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "43adfc1d04e1717ed1e085ede2bd45757b8c137ccdffa6218107b57668fc125a"
   end
 
   depends_on "libyaml"

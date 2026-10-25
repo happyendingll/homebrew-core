@@ -7,11 +7,8 @@ class VitePlus < Formula
   head "https://github.com/voidzero-dev/vite-plus.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "461edea9e67350d06870e347e923c44ccefaf75a5f1c35486a7a939d384a4a6b"
-    sha256 cellar: :any, arm64_tahoe:       "9fbf3fd6ae3981b779ee486e06124eaa17aa7f36842cef9517e3dd52a4f70a3a"
-    sha256 cellar: :any, arm64_sequoia:     "7aecbb69c0e2aa0b06a7675b5760d67fa340d3096f36248b57fc9a5d7ba61405"
-    sha256               arm64_linux:       "cf45083e25c8c5712a727fdf0f1bb8b490c22876a679ae72fc89c914de25c343"
-    sha256               x86_64_linux:      "07a3cd269d27bd949e7617fadb2cd64c1b8da42de5d358821d1086701988c50f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "cb6d343f6d2191383e8e6b811ee948cdacacfe748c64de55af8842d4ce0838dd"
   end
 
   depends_on "cmake" => :build

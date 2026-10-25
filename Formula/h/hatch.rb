@@ -9,11 +9,8 @@ class Hatch < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04dc2cff644a010a38e2134513e223933e67fc9481cca3e97dd0ebce85c52c9e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04dc2cff644a010a38e2134513e223933e67fc9481cca3e97dd0ebce85c52c9e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "04dc2cff644a010a38e2134513e223933e67fc9481cca3e97dd0ebce85c52c9e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "670a885301dfc3db4012b5dff574d51594216f37a934e516bb042ee73d37497e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "bbe9da894e90237ae0cf7cbe771a0a736793b92810205b9e2f99e7e7cd3ae001"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "cce6f42195b4c04e5d0e3d02150e50b427d68f61cdc35969f44676578d92c7b1"
   end
 
   depends_on "certifi" => :no_linkage

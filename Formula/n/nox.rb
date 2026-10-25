@@ -9,11 +9,8 @@ class Nox < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "37f9d81c7d708417331deb7851d165ffda341daed65f6baf801a086654fe27f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "06c45287ce7f473ebbb313aa73733e9fd9e01c94431050175649b17788dead21"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "8a12bdc35d274aa96689a88d866fb77945fbd8af39ef76b315c64255cbc55457"
   end
 
   depends_on "certifi" => :no_linkage
