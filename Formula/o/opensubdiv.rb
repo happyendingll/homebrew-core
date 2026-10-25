@@ -14,11 +14,8 @@ class Opensubdiv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fd9df1b0dd9efd930ff813cb27a9f4ed307226e564f406982c23a60e4465aca9"
-    sha256 cellar: :any, arm64_tahoe:       "17528f2329b0ffd0a2f4291835056536f9357b752e278a44c0930e2eb69f1497"
-    sha256 cellar: :any, arm64_sequoia:     "6a86d1ae248449cd02249da79c79903b955ef759846ef706265a3e1bbbc9e41f"
-    sha256 cellar: :any, arm64_linux:       "b3e947cbc26c44936701ca240271eb8415558e97437ac4e5e610db1fe0a73c10"
-    sha256 cellar: :any, x86_64_linux:      "047da92192493df5cb2cfdcbdac29859e49bcca8ca39e4cd5fc7934683fbc647"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9f0310c3ae799ffeed90e061726cc25d74ba136ea8d5217e23e2d4644e40c73d"
   end
 
   depends_on "cmake" => :build

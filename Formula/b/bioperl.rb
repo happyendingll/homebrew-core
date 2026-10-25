@@ -17,12 +17,8 @@ class Bioperl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "19b723e4c20210e3e27250dafc3aa659fe3a224387fa5bce48e8a8a9b5cfa4f3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d83d9db3a6fed7f4d5a04efe1d52af7f1f5801faf34c26721bfb4a0c38ff7d4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "655e18a7ba7f2f704cc49a3f0cfd66f570287f7927e1b907b3ffaa5fc4dd4c0d"
-    sha256 cellar: :any,                 arm64_linux:       "6c9c53a258059f7cfe6e7b670dcf93f01f2251ae28bab7c26aae76af4ed5d161"
-    sha256 cellar: :any,                 x86_64_linux:      "e54dabcfbbc73f209b186b20c934ca630c0746e8919972f0f0f78a5231b61625"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "25ebaa8408737c8b9ad0dcbcafc11e2117bd3d84b1e7d61c2f73f802b0d1d5f7"
   end
 
   depends_on "pkgconf" => :build

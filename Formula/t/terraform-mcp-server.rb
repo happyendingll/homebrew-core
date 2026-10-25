@@ -7,11 +7,8 @@ class TerraformMcpServer < Formula
   head "https://github.com/hashicorp/terraform-mcp-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43bde70b5a0176e3c97cde0710b392b82cebc7f34028d7e957865e090bd569a1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "43bde70b5a0176e3c97cde0710b392b82cebc7f34028d7e957865e090bd569a1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "43bde70b5a0176e3c97cde0710b392b82cebc7f34028d7e957865e090bd569a1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7e2f08506e098a32a03e8a736f504a61b80f6721e7ad4ede778278c707187337"
-    sha256 cellar: :any,                 x86_64_linux:      "d4c5583d9031f436ecfcc6f68918feeb82bb4941f7c69a1a3cd374d2a3742eb8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "892639cd56d27f475b0546b5be9ea36411409548c50084d5998ee3ce3fc47d2f"
   end
 
   depends_on "go" => :build

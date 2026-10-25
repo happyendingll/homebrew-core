@@ -7,11 +7,8 @@ class Gpatch < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b1381f45a7565f59b5e14294855454764e6e5464b784f2cffa3467a1b449834"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eae0f543c862bce1c2c4573bbb6ad58d2b28aa9afbf9d1e384b922474e82481a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "035c677c43e4d3563c180b7d628fcf227469e2207219d86c8d0059a1a5d63e0c"
-    sha256 cellar: :any,                 arm64_linux:       "85b72be46eabb77cffc2140eb1c1b0c75fee19800390c433009195990c98740e"
-    sha256 cellar: :any,                 x86_64_linux:      "fdb287af00677fbc8e72209e586632811c004ea178505cd48796362bae162c04"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "429c0a36337d53f863ffe1769a532c7d7a776d652d762cb1a1fe5ae16b9f9c7d"
   end
 
   deny_network_access!
