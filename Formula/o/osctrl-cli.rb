@@ -7,11 +7,8 @@ class OsctrlCli < Formula
   head "https://github.com/jmpsec/osctrl.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db41c8bc7b26b56296e9417b6cca11b2d3a14a7716a05194903e2ba163d048b1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0a8174766f0dccec6bb40b731a4b8c09aae669aa086254e1733d99dd7af85353"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bcc4ff56abb91a379d4cd0b3e4344ac797bdb56bbd535b4096ffc50cbd0f8fe6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "02d4b5b3efa954fd3c42312da4c95a025f356fb4b83b27d33c1ec0aab1ee2ffc"
-    sha256 cellar: :any,                 x86_64_linux:      "daf8e20b76a0ae71a04ff4282e14add1c8b682e31ea7aab1fed7e9406d914634"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "21b0e975fa4b811fd05cc3b40bd01a9805ef2f0df96f0155fb87fce3fd8321fc"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Oj < Formula
   head "https://github.com/ohler55/ojg.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "301658560bcd95d8d4cff304e3de80b371a344fae0968296dca6ce6c52f55bbf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "301658560bcd95d8d4cff304e3de80b371a344fae0968296dca6ce6c52f55bbf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "301658560bcd95d8d4cff304e3de80b371a344fae0968296dca6ce6c52f55bbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "06fe1dbcca6ee5d57e79bed9024b1983d532e40d91e97a3194cfb11e0823f843"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "76ee74e1c273d3a5c7f675f9ea5a3f45cff01c1644f95f72ceafb90151574489"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "d3e361f89b9da941333a94f799cd5049c1fea91a0e40f5eeddc4e87307c20381"
   end
 
   depends_on "go" => :build

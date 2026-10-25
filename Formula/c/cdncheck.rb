@@ -12,11 +12,8 @@ class Cdncheck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "227be5037ae76ad5beff96037a0bb8d2609bb1519e7f090d8696631b240a55a6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97e56606b503a06d454bf8407df52607442717a8c018e8c92474badea26b297e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d6b09df02b30f3f962c482f014f71d8dfb7820e94b3410d926782fd9114980ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dcac066ddc4459e6665812f077e8b45e5655977bc4e308c85a3d15b4dc73c548"
-    sha256 cellar: :any,                 x86_64_linux:      "4b541778bb58e8d14b9b6f20acdc16efe7725a3e2db7c5222645505f60d89fdf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "6ab5edc84711718fd4bb5932c791f482bc3a3339d0d50d7b229c44985f665a8a"
   end
 
   depends_on "go" => :build

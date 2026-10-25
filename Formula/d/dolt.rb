@@ -14,11 +14,8 @@ class Dolt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8845e4cfc7115967bd29c35a95715f04bb9c7d67c90e5b8b057a2d6a4460af38"
-    sha256 cellar: :any, arm64_tahoe:       "f12dcd93d3b1a5dc55cba238774ddb055ce2f855ed46b8ab5d4c65cb159b7154"
-    sha256 cellar: :any, arm64_sequoia:     "8b51ff9cf6d216e4d93897b0c5b6ab7a06e75e4f368f526b9b50530e45f439a6"
-    sha256 cellar: :any, arm64_linux:       "b7de5565ae528de8e0b021254d336224d4879fe6e253f817a65e5a969a8166ff"
-    sha256 cellar: :any, x86_64_linux:      "acfa62362f7bb967c45b3f3aabeffd8efbea34faebb0aaad59674535140242bc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "7550cd4b8233f4ee8e998e268e93e119359e55637d0281762a711f2948684651"
   end
 
   depends_on "go" => :build

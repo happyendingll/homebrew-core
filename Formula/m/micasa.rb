@@ -6,11 +6,8 @@ class Micasa < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3afb0919e7cb736e73bc0b0c40ca38d865a5fb771de0e068cdd50a10c67018f6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3afb0919e7cb736e73bc0b0c40ca38d865a5fb771de0e068cdd50a10c67018f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3afb0919e7cb736e73bc0b0c40ca38d865a5fb771de0e068cdd50a10c67018f6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "45d153d07ca9d96ca2b8f88599b68af2f7ddab98b4c33d89dcdda0cdf3749afc"
-    sha256 cellar: :any,                 x86_64_linux:      "8aa14c3b3cd9727d68eba4a0cce33297b34b20c6ec99012e07f2a5cea5145ac9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e3b26128e2831a68246ea7a0f00433a059477e20f6b3dff1c18a4badc509f42c"
   end
 
   depends_on "go" => :build
