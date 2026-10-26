@@ -6,11 +6,8 @@ class Elm < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "58aab6f16a5900cad12eb45300f7d80ca00cbf4ab993cda6b4a7ec0ef98963ad"
-    sha256 cellar: :any, arm64_tahoe:       "d7269573de9e73adb8940893d7009eca38c008236e8738119ab02e9f5c77d057"
-    sha256 cellar: :any, arm64_sequoia:     "71ef1668e5f6c738e40bbd154cf72e94f0c4e2616b295c5694b2319e943235ee"
-    sha256 cellar: :any, arm64_linux:       "6baa8a969d9e526575606ff040499e3e13be19c11e8dc5914f4a9af6920aaf3d"
-    sha256 cellar: :any, x86_64_linux:      "4fb7148cfee2d86353a61e0e78b9534ce79c8d84154d3cf4f8365cf0182aca5b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ae9447b3c1f0ecafc4a33e28479eb8286a98420844750228775dce0bc59b7b60"
   end
 
   depends_on "cabal-install" => :build

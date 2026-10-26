@@ -9,11 +9,8 @@ class Unar < Formula
   head "https://github.com/MacPaw/XADMaster.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ea808be2583ab45c14d465dda2a50e4d555b2dfe5d12fbcb6810bd58076cfff0"
-    sha256 cellar: :any, arm64_tahoe:       "17809eba6ca093f4496f78a9bf332e9255b06e8784293bf0f5fc98137e365a04"
-    sha256 cellar: :any, arm64_sequoia:     "31c4d5dc4e3fe4e666230bf56375827fa5c5dc11768feb3c1cb58fc4be349654"
-    sha256 cellar: :any, arm64_linux:       "e61076b0c6cefe43baec000cc4620661d09e99c8aaf1ea8a07ae8ed967c1e60b"
-    sha256 cellar: :any, x86_64_linux:      "83f1b81ca27a4bca4f70da935bbfafa457d37608ba05a410b9a640c1970d2dc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9dd99fdd1731a6195bc0b3ec87956239e4dd9b24d6ad26055707ee8d6f7d6572"
   end
 
   uses_from_macos "llvm" => :build

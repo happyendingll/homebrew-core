@@ -7,12 +7,8 @@ class Urweb < Formula
   revision 13
 
   bottle do
-    rebuild 3
-    sha256 arm64_golden_gate: "85fe75f9c21273edbc5bfb1f496d229826dd87b2d97e9d63d7897ce2980ed1fc"
-    sha256 arm64_tahoe:       "79dfe35abdcaf3f9be1986272952f8c09e02ebf0c0a1caa632592666259aa71c"
-    sha256 arm64_sequoia:     "84d7b02b05ddcae5bfeb4c0c48cf973aebbf58e43ef62ba8fbec8a199ae3969b"
-    sha256 arm64_linux:       "57976ec45c07ca3d1098d2012452c106d430fff21eba36ac924304000a918a81"
-    sha256 x86_64_linux:      "38d159c35a80ea70441e2c6109d709a690ee69bd926ae85be545b6db1c24b3fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "d9b651ce6e6a7437440e8c1614500fa86ec7ce3c29a1496d62fce1629465afc2"
   end
 
   depends_on "autoconf" => :build

@@ -7,11 +7,8 @@ class Slivar < Formula
   head "https://github.com/brentp/slivar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "993133ef7542879a16400018397cd3b20690d1c484b402e65444f0c23a810042"
-    sha256 cellar: :any, arm64_tahoe:       "18cb73d9290617045eb20e836df9815d5a356940d0d9331e07cd49042ca445d2"
-    sha256 cellar: :any, arm64_sequoia:     "807c4c8ef842fbbe1f97059da2449ed2a7bb72cfab3f33d75ccbab1e5b530392"
-    sha256 cellar: :any, arm64_linux:       "094c6416d3a5326b133b04480f8d15d13dfc0a365eb7c4c111f25d188f2f2339"
-    sha256 cellar: :any, x86_64_linux:      "f739ddf5ffa5d002d499667aa10278c85f55a42a1c57a1a13de4ce70f4864ac4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "29ba1f8803a587240a1b84fa9f7b87b75d2be7d6e1c86b6afa64e756a037dff7"
   end
 
   depends_on "nim" => :build

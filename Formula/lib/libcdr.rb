@@ -11,12 +11,8 @@ class Libcdr < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "81ed0e5d207a8d214b9bb4385545f7ff980fd14e42062a6c25aff387ba771908"
-    sha256 cellar: :any, arm64_tahoe:       "aae1e1ff4225174b8985a56f585ba4830edd6c742ffe83430fa679b97dd4b9b2"
-    sha256 cellar: :any, arm64_sequoia:     "8ad1285cdbcb5cc534f8c3c48eb19a8542e6b0eb74c8e3f661367e0fa1094e26"
-    sha256 cellar: :any, arm64_linux:       "6ad8939bd6153da91ad2bd70cd2461eec1bec0441e6fe051c748a3c5d5d043e5"
-    sha256 cellar: :any, x86_64_linux:      "f99fb7e3aa6398e7feb12caf051b4f4301fa6897d4dec4d1e50449f2a3a77139"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "1d2b6499d2b272b3475f98bc14dfa10f6ca1b81cd62bef5ef8b53c6a19f7b88f"
   end
 
   depends_on "boost" => :build

@@ -11,12 +11,8 @@ class Libvisio < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f6c46631395a9695cf7240e38290ebe11e4932ae6f569d1ebf0925e888d64f6d"
-    sha256 cellar: :any, arm64_tahoe:       "536572b5add38a100515efc8e55de85eaedfba4736a9121eaa7307bd52891a5c"
-    sha256 cellar: :any, arm64_sequoia:     "7b612c0a6c487ac18f4665d020a5df3c2f62f5b4414d1daf65f80f3e94a17557"
-    sha256 cellar: :any, arm64_linux:       "209a7ab01a37b20cc8067759e0cc3ad150826a7dbecb18ddcaa643d15b25ce03"
-    sha256 cellar: :any, x86_64_linux:      "b4ef239f44233e716211b36fc5eebb8d5abb664edcee44d12734f80ed2b17e66"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2c09cb3ea0a703f8044875ebc8363071a9ea4d6730c783247e2679ac3fc87343"
   end
 
   depends_on "boost" => :build

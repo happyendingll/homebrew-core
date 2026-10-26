@@ -7,11 +7,8 @@ class Btop < Formula
   head "https://github.com/aristocratos/btop.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8414523e63c686c1e33e8ccaf225e64e49b98e7c93a36f00ae385b630853227b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f7d7c84714637054285b2afb9887ea97d915b85902d66ae4e533baf196639b1b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "df46dfdc76caf0ae48eb013bb50557baaf3fba82a43fe62047305dd0dc03d194"
-    sha256 cellar: :any,                 arm64_linux:       "da03ce7be074d6e3a844fbb4df04d204d9663c1cc3df9019fd9452774e5defb8"
-    sha256 cellar: :any,                 x86_64_linux:      "0fd909f7c8a4c6252627bca79554041dbcc734c6c94faf4ff0724e0cc89fa07e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "18c9a0055b921eb4665372569adb1015793ce746895341a2ea7690d2f10a03b7"
   end
 
   depends_on "lowdown" => :build

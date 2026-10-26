@@ -8,11 +8,8 @@ class Liblcf < Formula
   head "https://github.com/EasyRPG/liblcf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cfa7265ad02447a6e381dd7565e4f50235e61454771f5328af862515693b9384"
-    sha256 cellar: :any, arm64_tahoe:       "8d03fd474505ff1154e6d85b1c66134dc3578ef81010475253764f3da7e6305b"
-    sha256 cellar: :any, arm64_sequoia:     "b3044c38bc74dcd8126e52d44d8ac5f7210eb3cd3cc67fe53bf07d6cbd3408c7"
-    sha256 cellar: :any, arm64_linux:       "ae65923c3407a2db89adefb82d534ca00e0a49ff591a551d73aca54177997c6a"
-    sha256 cellar: :any, x86_64_linux:      "79f5d4b294c566931f16e1d0ae4491ceddcdbc49ad71dff7f41fbb51cd25fe81"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f33b269225a593696080c0ae6a360a72c468aaf2e4e9114993348631ccdef4ac"
   end
 
   depends_on "cmake" => :build

@@ -12,12 +12,8 @@ class Dwdiff < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "a0d24f9d39d3fcc02d92974d7ce0a3311e8e8065faedfc50cdd06b4966f6b8f1"
-    sha256 arm64_tahoe:       "ed410b5ab3fb27bc8dc7751270ad50d5128fb84471400c3c61e7226f10f1e69e"
-    sha256 arm64_sequoia:     "e757347e5a6d1b1ce170d46415a23c96b919a16b054c2b0d7247314f249187b2"
-    sha256 arm64_linux:       "c75c475a47e16bb292ba1de66eb13717a7f457404a84ddaf4eb7f2f07f98a30e"
-    sha256 x86_64_linux:      "1e22e1d0698ff7f973ef12dfddc135e71ad1d9c6214b2c1af593ad8f2c690932"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "8de935814bf19f0d1c7a5191ee2e508f4930231e0a6e25ba99e074605580f1c8"
   end
 
   depends_on "gettext" => :build

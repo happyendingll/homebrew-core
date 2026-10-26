@@ -8,11 +8,8 @@ class Apngasm < Formula
   head "https://github.com/apngasm/apngasm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "34eb99ef62534d8959ddee800747b4054f8c309b74f308c4f5392348b70b02f4"
-    sha256 cellar: :any, arm64_tahoe:       "b6f8dcf3a802c7a363ab2baf2f266bd82a0f42e746761ee80bf28240af102097"
-    sha256 cellar: :any, arm64_sequoia:     "1640c525530ee781d02d2c390e75c2860b9bc6e8e46369d297454c3218679eb7"
-    sha256 cellar: :any, arm64_linux:       "6c16341e64e6f183ea9f4400003366858e0db45b5173e90f1ad9a104f58fc58b"
-    sha256 cellar: :any, x86_64_linux:      "738255c58d06c961675b647440bdee4ced5a4844dd197eedba3c8203ac4ea58a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "942a5f9c83aee8e3280974a3d6267bc6a5c4ebe9d33fa13907e8f2dcb735832a"
   end
 
   depends_on "cmake" => :build

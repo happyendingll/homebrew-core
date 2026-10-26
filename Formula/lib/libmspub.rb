@@ -11,12 +11,8 @@ class Libmspub < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "2d2d887b00c5dc3eeefeae2e46d77bf8fe040965b702bc2d5defdbb0a7fb4999"
-    sha256 cellar: :any, arm64_tahoe:       "9edbd5a611b9ed669cda39d9842df08944f786ccccba4155042850a024508df1"
-    sha256 cellar: :any, arm64_sequoia:     "2c27502c0e1bbcceceddf64ed75d918c5478f8455ebb5fc77a1fe3e36c96df15"
-    sha256 cellar: :any, arm64_linux:       "f781d3ab7663805e0040a89735dae80b07ab28f9bee7e92ebb6db9c626872820"
-    sha256 cellar: :any, x86_64_linux:      "a45a555d1b3164fa73178bc062ff9a2e970936d47d363a554e61a92991911327"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b049712cb7fe68516fd320d552d6721cfbf35d6955f63c946f4127590c9bcab1"
   end
 
   depends_on "boost" => :build

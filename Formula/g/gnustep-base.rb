@@ -18,11 +18,8 @@ class GnustepBase < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8f9a8d57bc18bb6f2da416deaec2df707e89979a7b73811f7fabc2605c98de5e"
-    sha256 cellar: :any, arm64_tahoe:       "b737d6b89bd089eb3fc35b05fee93a33487768c14c1fe29857e899df95f35e2a"
-    sha256 cellar: :any, arm64_sequoia:     "4b963c6b12be222eb24d90ab874bfce04ae0b8049088c63d423d14165fc8da91"
-    sha256 cellar: :any, arm64_linux:       "387fc3d7f0244c3f3a1e88be1a40432df0fccb5783bdd1f809c8ec9a1113c32e"
-    sha256 cellar: :any, x86_64_linux:      "412706d13d9a42340210cba245e6624e54fa2accc37e6449181b480bae16de40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "832ef2bb37010fe44ae96c0edbaf56280f8ff1b5f31ffe86d7c86feeeb060af5"
   end
 
   depends_on "gnustep-make" => :build

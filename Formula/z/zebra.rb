@@ -12,11 +12,8 @@ class Zebra < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e75de204bccfd984aa544ac7be99337ee2e0c4f97bcb8794e15d0a22cdfb30e8"
-    sha256 arm64_tahoe:       "6f2d39bb8881559788a41d4aa0983818a8a46ae07b30b05df33a67f8dc2533c8"
-    sha256 arm64_sequoia:     "45666b5a6246de532ffa5387733b1bf735d3826ce512f178d054ee3617114db6"
-    sha256 arm64_linux:       "5b4ddb1aedd0fc2ecd193be7b474afd9482066be0fc8b91ed22d57aef881f655"
-    sha256 x86_64_linux:      "c4f77d2e56ca41e3594b308047ecc106b334b3580634d2c8519c226d0fe7f2ab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "7df62d89d3a2a3ebe20e22e82dcc7da88197b2296d53e3d8c80f584c513a80d1"
   end
 
   depends_on "pkgconf" => :build

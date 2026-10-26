@@ -16,11 +16,8 @@ class Icu4cAT78 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aa02ab2fceec7d651d424608d74bf58d7a2561c715ca1ac302342abc103c82f3"
-    sha256 cellar: :any, arm64_tahoe:       "91443211e1f1681ac6a0b6490a542e849176172a63f875704f51c03aa6dcaeb5"
-    sha256 cellar: :any, arm64_sequoia:     "734f061857f642065372351d05fb8f1c8c2b9dc379aa8844fcdb702c0682ef81"
-    sha256 cellar: :any, arm64_linux:       "87c02697af512c80fd292b8cc687c4403e8bebaf2098618d55644c197ee7caf7"
-    sha256 cellar: :any, x86_64_linux:      "462bd64d4a899c4d031f7af2e58d5ddee82257e78a6703f5d43600d33fa29032"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "69e3054341c172b7e2d48c2f43c1436d04308d5a1fb8346d64b27f06cc553e77"
   end
 
   keg_only :versioned_formula

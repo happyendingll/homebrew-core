@@ -8,11 +8,8 @@ class Gastown < Formula
   head "https://github.com/gastownhall/gastown.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "16569af307eb9f748826dc349752cbdf1af973d165cdbc3bea6a9f3c97229f07"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "16569af307eb9f748826dc349752cbdf1af973d165cdbc3bea6a9f3c97229f07"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "16569af307eb9f748826dc349752cbdf1af973d165cdbc3bea6a9f3c97229f07"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2f228cd4bcf6538fc2763dcf93dcfd19954d5a6e569fa909bb3eee6a38a0f79f"
-    sha256 cellar: :any,                 x86_64_linux:      "ba271ecd30c05d75634e1abfa64034877dceec64197c947cc259b291b05d0af0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "83ce507ff92dc70ddc176fea981d00fdc94b32638412e3f70334c63f39852a23"
   end
 
   depends_on "go" => :build

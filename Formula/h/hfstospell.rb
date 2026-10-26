@@ -12,12 +12,8 @@ class Hfstospell < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "6f37dc919e6b410812d812e9572f59e75152367de402c65022b84fa21e800e68"
-    sha256 cellar: :any, arm64_tahoe:       "6acf41656584d5141ae13139ceed08bf56e057e2de4cef793b3267a5a2d0a772"
-    sha256 cellar: :any, arm64_sequoia:     "f2987bd478497991ef7b8cb85e63a54b0c771deae132a90c790bf5590279e089"
-    sha256 cellar: :any, arm64_linux:       "a9fcdd6331abec1f58754e6942bba07f20556cea45a86fcad45218de17b79b2c"
-    sha256 cellar: :any, x86_64_linux:      "ca706cd78e71a507c9fee26db0a6dc6d65d0a89ef18e0e83beb7aaf7e637d1e6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "7e5ecff393a920c1b2baee864ad8cc2035657c6b8be904c6de67d3870c43f023"
   end
 
   depends_on "autoconf" => :build
