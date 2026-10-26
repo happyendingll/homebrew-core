@@ -25,6 +25,8 @@ class AprUtil < Formula
     depends_on "unixodbc"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--with-apr=#{formula_opt_prefix("apr")}",
                           "--with-crypto",

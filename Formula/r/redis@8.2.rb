@@ -1,8 +1,8 @@
 class RedisAT82 < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-8.2.10.tar.gz"
-  sha256 "d33935732f7fc15476295fe05f5ce740927bc14847798e47b3f67b4f27b8b478"
+  url "https://download.redis.io/releases/redis-8.2.11.tar.gz"
+  sha256 "fba14b77c4bdcb2d5418b6741fc0cdaac4b78bc73eab9b2e5f3c255d597f16fa"
   license all_of: [
     "AGPL-3.0-only",
     "BSD-2-Clause", # deps/jemalloc, deps/linenoise, src/lzf*
@@ -17,13 +17,18 @@ class RedisAT82 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "7fe9487df48d6f225f238334ee0ce7f93bcd4ecb4323fec215aba8469d674dc1"
+    sha256 cellar: :any, arm64_golden_gate: "2437f13575a06fe650b06b60f498cd9d6999bf0af3accfebccfb9702c3f97756"
+    sha256 cellar: :any, arm64_tahoe:       "259a321b90c0d0bca18a4878ad5429dab239f73064e4354c1daca088674c9181"
+    sha256 cellar: :any, arm64_sequoia:     "4879c4e8d1b2be1958672229e9464b8d995d28bcc560ed1f06b18731e8a03d5d"
+    sha256 cellar: :any, arm64_linux:       "0e51dc70d858bf576fb0e6336f3148b7cfbceffdbe7662a50df31b026b4e5e71"
+    sha256 cellar: :any, x86_64_linux:      "63db52d5338553b9439f481bbf90b66c634296ad65ed29d24e0f9cc0abdab076"
   end
 
   keg_only :versioned_formula
 
   depends_on "openssl@4"
+
+  allow_network_access! :test
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes"

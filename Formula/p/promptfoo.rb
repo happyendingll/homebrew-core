@@ -1,13 +1,16 @@
 class Promptfoo < Formula
   desc "Test your LLM app locally"
   homepage "https://promptfoo.dev/"
-  url "https://registry.npmjs.org/promptfoo/-/promptfoo-0.125.0.tgz"
-  sha256 "0a77f65bb179f2ccc22a61016b29036238f74e60db67ee43b1a5e6b9aa31b709"
+  url "https://registry.npmjs.org/promptfoo/-/promptfoo-0.125.1.tgz"
+  sha256 "2db2ed847568f1e8f2f2391cb7cdfad901d20bf16a40f207933ad3c2ba0b49e9"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "996e250bb5d82468dba62140c97400b0f0136277efb7b7dfeb72134ed0cfe53b"
+    sha256 cellar: :any, arm64_golden_gate: "a19ac4da839942c8ec93b1ac8ca058e7ff90a7bbd1cf86e4c10c798f71b6bb75"
+    sha256 cellar: :any, arm64_tahoe:       "cd2c07dac51238819838590e72e984629f02263732ee3abf44e16b2363ce21c6"
+    sha256 cellar: :any, arm64_sequoia:     "fddb12e665e21f9d315bd435d0f362ba9648a2e6f3331f1d5a13cc676f28f1a2"
+    sha256 cellar: :any, arm64_linux:       "300fd1b04277268966bd9522db102769b6f34db865d07769d100723bd88c27a6"
+    sha256 cellar: :any, x86_64_linux:      "516b2b3c337cc97b666bd1cf6dce8a7aabced393c7b27b11145a3c6e2aaac936"
   end
 
   depends_on "cmake" => :build # for `libsql-js` > `libsql-ffi`

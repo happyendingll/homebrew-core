@@ -1,14 +1,17 @@
 class Tabiew < Formula
   desc "TUI to view and query tabular files (CSV,TSV, Parquet, etc.)"
   homepage "https://github.com/shshemi/tabiew"
-  url "https://github.com/shshemi/tabiew/archive/refs/tags/v0.15.1.tar.gz"
-  sha256 "20d2c3e83b0f27fbe48c9ac0be95533361d29897bff1e3c5ce498ff46ae84580"
+  url "https://github.com/shshemi/tabiew/archive/refs/tags/v0.16.0.tar.gz"
+  sha256 "e90301e79d0f0e6416e85204ed78d9e80752ca9fff76f9456f3edb9e8de6b8b4"
   license "MIT"
   head "https://github.com/shshemi/tabiew.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "46f2cd806796bba905c31612bdb1a47ba7e7aef6393927cf437a9cde03a07292"
+    sha256 cellar: :any, arm64_golden_gate: "b59474a2591256ae50667a83c3d447b629b1eec31643cf761e2cb4b2df44044f"
+    sha256 cellar: :any, arm64_tahoe:       "c02c30f78ceb8f751645ec8dfa778f3ae8b533a268ecf3eaf6ba3a7a2762894d"
+    sha256 cellar: :any, arm64_sequoia:     "4a3f135a4f55fac03083770d7ebc184157792ca1d8f562b5bf9878dcc5f392c7"
+    sha256 cellar: :any, arm64_linux:       "03f8a836204a491fec13261d645fe4cdf7a905dfb7fcafa63b04d9fd77e17cb1"
+    sha256 cellar: :any, x86_64_linux:      "5b9197b043b2238211c7adc646c6ef5417f867a6477e591c8735434f7d8fdf18"
   end
 
   depends_on "pkgconf" => :build

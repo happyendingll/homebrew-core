@@ -3,15 +3,17 @@ class GalleryDl < Formula
 
   desc "Command-line downloader for image-hosting site galleries and collections"
   homepage "https://codeberg.org/mikf/gallery-dl"
-  url "https://files.pythonhosted.org/packages/4e/7e/3ba52253f4edc121c2e5d4cc1bbc613c29822acd3435eecc54e6308157a5/gallery_dl-1.32.17.tar.gz"
-  sha256 "7e49b3140d23b88e020ff24049dfac59edd855d6fdfb11bc725ad44b0335bbb6"
+  url "https://files.pythonhosted.org/packages/ec/55/e40b8ce403489e7b3122eee28693efd885ca68256a9c6344fdfbd0842c3e/gallery_dl-1.32.18.tar.gz"
+  sha256 "1c5562af3799a0bec96be0f64d95a416aee688fd09fe3893ca3a6c87bbe65bcd"
   license "GPL-2.0-only"
-  revision 1
   head "https://codeberg.org/mikf/gallery-dl.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "7641c7009da911d52413c3a4dc1f4f6243772f3d91a7c2cce18a7df06f29c17e"
+    sha256 cellar: :any, arm64_golden_gate: "d2170f42f98b751e8532558c0c9e902391d00c3911f5a8a03bfb468200a27534"
+    sha256 cellar: :any, arm64_tahoe:       "b6af939c965d65106deab173bd12be492948e3e40db870906fc7eb33926d88eb"
+    sha256 cellar: :any, arm64_sequoia:     "eb7793229ce1c19bfa256c381fa9ed165ce3193f64c81bc5ea2a20003f7628f8"
+    sha256 cellar: :any, arm64_linux:       "1ac41b37c282df65369e7f5d5e9700effa7d982e877a80932dc43a35b049271f"
+    sha256 cellar: :any, x86_64_linux:      "56543e1d05f1499727a3f89e05df592ce178820722d47e7b65d0d8f213e5a0b1"
   end
 
   depends_on "certifi" => :no_linkage

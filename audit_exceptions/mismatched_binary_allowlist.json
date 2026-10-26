@@ -6,6 +6,7 @@
   "elf2uf2-rs": "share/elf2uf2-rs/examples/*.elf",
   "faust": "share/faust/android/app/lib/libsndfile/lib/*/libsndfile.so",
   "ghidra": "libexec/docs/GhidraClass/ExerciseFiles/Advanced/*",
+  "hashcat": "share/hashcat/extra/fpga/zc706-sdboot/fsbl.elf",
   "i686-elf-grub": "lib/i686-elf/grub/i386-pc/*",
   "lima": "share/lima/lima-guestagent.Linux-*",
   "picotool": "share/picotool/*.elf",

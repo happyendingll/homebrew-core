@@ -1,8 +1,8 @@
 class Meilisearch < Formula
   desc "Ultra relevant, instant and typo-tolerant full-text search API"
   homepage "https://docs.meilisearch.com/"
-  url "https://github.com/meilisearch/meilisearch/archive/refs/tags/v1.55.0.tar.gz"
-  sha256 "f7d5a7ac3fa7a200c2fe32f9c9d75d778fbc5ac4cac75296085c4a1f2a50328a"
+  url "https://github.com/meilisearch/meilisearch/archive/refs/tags/v1.56.0.tar.gz"
+  sha256 "a89d9d687d5c008d220fe01a35ab5071ef90f7911403079c85f2a57526d69641"
   license "MIT"
 
   # There can be a notable gap between when a version is tagged and a
@@ -14,8 +14,11 @@ class Meilisearch < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "f6df1955224e6e4027eb16e95facf86483a2b82931457087ee32b0033589c9ee"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a6002a6948046c9051da3bfec7b9191451e8928b76450bcd370c835b9b163a67"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a9e2aed6ade8661c7c8aa91361e98c38663136eeda0f25298d4b540cc00d55df"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "063f7472b3805621892247c20b70e1f8ec2489fcfda984498e22864664fa1ea3"
+    sha256 cellar: :any,                 arm64_linux:       "d9caa304ea60ac848b611c6af7b6647acbe6d59da59e973067dcd2f4076aa5c1"
+    sha256 cellar: :any,                 x86_64_linux:      "39af4dd173bb027e99629302c8cc1eeb633e6b5fa053d7a4eb32fc3f2abf0b64"
   end
 
   depends_on "rust" => :build

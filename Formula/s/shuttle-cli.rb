@@ -1,14 +1,17 @@
 class ShuttleCli < Formula
   desc "CLI for handling shared build and deploy tools between many projects"
   homepage "https://github.com/lunarway/shuttle"
-  url "https://github.com/lunarway/shuttle/archive/refs/tags/v0.25.1.tar.gz"
-  sha256 "7112b1b562aee1f2b9af17362aa18891a02571ab405d64719fb67ce887a3c5a3"
+  url "https://github.com/lunarway/shuttle/archive/refs/tags/v0.25.2.tar.gz"
+  sha256 "a7b6f4b0642ceef9fb3e1da96ec65a1784bf520a380dcd95992371fab4416a30"
   license "Apache-2.0"
   head "https://github.com/lunarway/shuttle.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d059bb67152dba19a49cec686c83d502bf15994b6a8f065d8fdcc65d2086270d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b42db6a5913fdcbda428184902ed19bfe684dd978a04053d86ef52e8802cbc46"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b42db6a5913fdcbda428184902ed19bfe684dd978a04053d86ef52e8802cbc46"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b42db6a5913fdcbda428184902ed19bfe684dd978a04053d86ef52e8802cbc46"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c67919f591e02ac1db10320f8fb235c05fb7359648f5a10e853ced59f9e00bb4"
+    sha256 cellar: :any,                 x86_64_linux:      "d57f8975647e08c0471263914968370a4af0077943f019eab89490e00906378a"
   end
 
   depends_on "go" => :build

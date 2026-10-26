@@ -7,6 +7,7 @@ class Yamlfix < Formula
   sha256 "05f6add13959637564f278e9237f6e201ff75e061a0a4cb9fc06fa95c3001a22"
   license "GPL-3.0-or-later"
   revision 3
+  head "https://github.com/lyz-code/yamlfix.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e48609d764baabfe99ac4b0e9c536ad056453965ea6840fb9fa8fb9e06bb71c8"
@@ -15,6 +16,10 @@ class Yamlfix < Formula
     sha256 cellar: :any_skip_relocation, arm64_linux:       "3d4d0a675ba30ddc9be9cb5194292ded9d5bd40fff3af71744d3f014ce4573d9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "3d4d0a675ba30ddc9be9cb5194292ded9d5bd40fff3af71744d3f014ce4573d9"
   end
+
+  # https://github.com/lyz-code/yamlfix/issues/272
+  deprecate! date: "2026-10-25", because: :unmaintained
+  disable! date: "2027-10-25", because: :unmaintained
 
   depends_on "pydantic" => :no_linkage
   depends_on "python@3.15"

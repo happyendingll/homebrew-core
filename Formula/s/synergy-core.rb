@@ -4,22 +4,15 @@ class SynergyCore < Formula
   url "https://github.com/symless/synergy/archive/refs/tags/v1.22.2.tar.gz"
   sha256 "c80a1bc6c0e40fe60e8614e88e988d34ccf5a04b57d3560de946989282d526c9"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
-  head "https://github.com/symless/synergy.git", branch: "master"
-
-  # This repository contains old 2.0.0 tags, one of which uses a stable tag
-  # format (`v2.0.0-stable`), despite being marked as "pre-release" on GitHub.
-  # The `GithubLatest` strategy is used to avoid these old tags without having
-  # to worry about missing a new 2.0.0 version in the future.
-  livecheck do
-    url :stable
-    regex(/[^"' >]*?v?(\d+(?:\.\d+)+)[^"' >]*?/i)
-    strategy :github_latest
-  end
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
     sha256 cellar: :any, sequoia: "11c274ca6dfbb13f3e4a7394098b01f1655e771701752082063e90770e5925d4"
   end
+
+  # Upstream replaced the source repository with a signpost: https://github.com/symless/synergy
+  deprecate! date: "2026-10-25", because: :repo_removed
+  disable! date: "2027-10-25", because: :repo_removed
 
   depends_on "cmake" => :build
   depends_on "qttools" => :build

@@ -1,10 +1,9 @@
 class PythonAT311 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.11.17/Python-3.11.17.tgz"
-  sha256 "53cdee63ac4bf12387b7b33a53d3b1f8f4941cad73807a7b4fe91bb001ef004a"
+  url "https://www.python.org/ftp/python/3.11.18/Python-3.11.18.tgz"
+  sha256 "5f62711b12470fd435f83f1451c1b1ef4a179aebc715c716874b0967567d814e"
   license "Python-2.0"
-  revision 2
   compatibility_version 1
 
   livecheck do
@@ -13,8 +12,11 @@ class PythonAT311 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "5a60c4cca04f625103dde4d39df011ea755ccf735e66462cab77f91db00e0c94"
+    sha256 arm64_golden_gate: "82ddcbdd13d6e6aa1e959050aae5284c9286ceddc6ac56f02bf7b3dab23ee346"
+    sha256 arm64_tahoe:       "3e9416f393391bb5f7e00c84d284e01ec508de9416c9c6cc7af57f7996e045b8"
+    sha256 arm64_sequoia:     "c77feba77847b3293d30e63fefdecf06d261321745f37499aa534e36aedaf792"
+    sha256 arm64_linux:       "c58dba0224765d7fe20a699584480468735824ffe94f7ff74432cbf53b627753"
+    sha256 x86_64_linux:      "96a35ff3ca7edcbe3eed8a3ec7b2a883dbd13e988d1b4d0386df608fb3c63fa7"
   end
 
   # setuptools remembers the build flags python is built with and uses them to

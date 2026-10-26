@@ -1,14 +1,17 @@
 class Dekit < Formula
   desc "Process manager for dev and prod"
   homepage "https://dekit.run"
-  url "https://github.com/pvolok/dekit/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "6acfd19444a371ce04557af1a755accc4735c64e650704ae257aaf9f2e1168ba"
+  url "https://github.com/pvolok/dekit/archive/refs/tags/v0.10.3.tar.gz"
+  sha256 "175467fb30195c084df4bd38bf2000fad80f7e03b1e3488c29e3b114f3587ca9"
   license "MIT"
   head "https://github.com/pvolok/dekit.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "7ac0eee9ad89583895e8980e4a1f7333d26ca7723888fc70b3f9ebeb14ba028a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8419898240bc8a5758aaaacae90cb3440762e4da4c495ac92e2f6aa8294dd50b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3f97d29329ced8fb3335a48881f06183aff2b9b0fdccfbfd94b0b590a25db1ee"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "64f0a7eddb055b3d0dce0407f851e78c917ef068c54e5d3659660000fa4601d2"
+    sha256 cellar: :any,                 arm64_linux:       "00f3afef623b98e2cc74ac1b99315db0057b95d2c9ec62b5e4a15d88b9ea878c"
+    sha256 cellar: :any,                 x86_64_linux:      "329625bb18156e92cd67286a9e9b7a774cd7de7c072b4c1624788db09d4766f9"
   end
 
   depends_on "rust" => :build

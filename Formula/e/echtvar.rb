@@ -10,14 +10,26 @@ class Echtvar < Formula
     sha256 cellar: :any, sequoia: "a0d6b76f63bba221e1d5e9a8984aa879e28d64b9c24fedea953115971cc53add"
   end
 
-  depends_on "cmake" => :build
+  depends_on "openssl@4" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "python@3.15" => :test
-  depends_on "openssl@4"
 
+  uses_from_macos "bzip2" => :build
   uses_from_macos "llvm" => :build # for `libclang`, used by `hts-sys` bindgen
-  uses_from_macos "bzip2"
+  uses_from_macos "xz" => :build
+  uses_from_macos "curl"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
+
+  # Resource to avoid building bundled curl, xz and zlib-ng
+  # Issue ref: https://github.com/rust-bio/hts-sys/issues/23
+  resource "hts-sys" do
+    url "https://static.crates.io/crates/hts-sys/hts-sys-2.2.1.crate"
+    sha256 "fc7e68eb880b02c80cfb41e8dc7904062a3ea7e27b7c4556e88d648dd2f038da"
+  end
 
   # Fix build with hts-sys 2.2.1 bindings (no lockfile upstream)
   patch do
@@ -33,7 +45,15 @@ class Echtvar < Formula
     ENV["RUSTC_BOOTSTRAP"] = "1" if Hardware::CPU.intel?
     ENV["LIBCLANG_PATH"] = formula_opt_lib("llvm") if OS.linux?
 
-    system "cargo", "install", *std_cargo_args
+    # Use system curl and zlib instead of building bundled curl, OpenSSL, xz and zlib-ng
+    resource("hts-sys").stage("hts-sys")
+    inreplace "hts-sys/Cargo.toml" do |s|
+      s.gsub!(/^features = \[\n\s*"static-curl",\n\s*"static-ssl",/, "features = [")
+      s.gsub!(/^features = \["static"\]$/, "")
+      s.gsub!(/^features = \[\n\s*"zlib-ng",\n\s*"static",\n\]$/, "")
+    end
+
+    system "cargo", "install", "--config", 'patch.crates-io.hts-sys.path="hts-sys"', *std_cargo_args
     pkgshare.install "tests"
   end
 

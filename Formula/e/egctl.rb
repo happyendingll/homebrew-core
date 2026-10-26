@@ -1,14 +1,17 @@
 class Egctl < Formula
   desc "Command-line utility for operating Envoy Gateway"
   homepage "https://gateway.envoyproxy.io/"
-  url "https://github.com/envoyproxy/gateway/archive/refs/tags/v1.9.2.tar.gz"
-  sha256 "52878ac962ec0b377974de7f62e336b0b26936ce6c65d01aa874bfa6e210c5ac"
+  url "https://github.com/envoyproxy/gateway/archive/refs/tags/v1.9.3.tar.gz"
+  sha256 "e508d2e81edf674005058e6acc07d21bf869932393b9a1baca5c4e75a88bd9db"
   license "Apache-2.0"
   head "https://github.com/envoyproxy/gateway.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "18140f3f9f77b270b1fafdbc6b052ea63c93b67e7a8a6c24a6750b8b2a812599"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f906bfc4c0f0bf382b524d9df9ff74f6425da662f30beb0177b6810ca9e76274"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7903dfa5c1b489058dbe9fca4f742190c5f30eefdd29bb6f930c97d98e3cb624"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fcf87f218d2c99308391a5d29f99938b155b1bf6a648ee14197b3490527dbac9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e0e31d406f896a718fdea040785d0c15f3edf18ba5a24a3a593ee66f3d061fae"
+    sha256 cellar: :any,                 x86_64_linux:      "feab10e4e965bd24a0f119c9ca5b2a31cbd9e74032584e086f4aba750faa1d2f"
   end
 
   depends_on "go" => :build

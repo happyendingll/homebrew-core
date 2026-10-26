@@ -1,14 +1,17 @@
 class ArcaneCli < Formula
   desc "Command-line client for the Arcane Docker management platform"
   homepage "https://getarcane.app"
-  url "https://github.com/getarcaneapp/arcane/archive/refs/tags/v2.17.0.tar.gz"
-  sha256 "ffe767c2cbed06ec783a8853fef6229981241240667bd665d099c603e504c0a7"
+  url "https://github.com/getarcaneapp/arcane/archive/refs/tags/v2.17.1.tar.gz"
+  sha256 "ffb7f055a86e9f6345b57aca4386529a848b2dfbc7e6f37035d4adf202e92f65"
   license "BSD-3-Clause"
   head "https://github.com/getarcaneapp/arcane.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "97fe6551522ecaeb10b99a2ba3a159937ac2d5c9e17aaea5ff62240ee5f953d9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a6d310cb1ed9c0075365f2dcf224f218db5f97489560505f682ddc0661c807c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "30481fd82398fba55c19bdb1ceb961639d6ee941a97fda6aae946a87348a60a4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09121664d6e586c32c99296a5e0f01d423184fc90809cdd8f54f4c23864e8e18"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c917f64d3d117e48921e53a12a1059a864a1256ce72a514259f870db274f28f7"
+    sha256 cellar: :any,                 x86_64_linux:      "75c1c0d3a70cf852c9540b6c818966baca88db92a9513b81e470e99c1082c617"
   end
 
   depends_on "go" => :build

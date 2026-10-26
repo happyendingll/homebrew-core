@@ -15,6 +15,8 @@ class Bwfmetaedit < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "216228b55e045a942e5baf504b7ae5141e15a78ae75fa061f611c68118004425"
   end
 
+  deny_network_access!
+
   def install
     cd "Project/GNU/CLI" do
       system "./configure", "--disable-debug", "--prefix=#{prefix}"

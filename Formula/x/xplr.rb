@@ -1,14 +1,17 @@
 class Xplr < Formula
   desc "Hackable, minimal, fast TUI file explorer"
   homepage "https://xplr.dev"
-  url "https://github.com/sayanarijit/xplr/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "f4a6c8c550d240813fbf5683de98f6f7a519e549d6370a3fc777a93a88396f66"
+  url "https://github.com/sayanarijit/xplr/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "25029a01d5c849cede183ec7bccc6c8bdb4e68c8070d573b288169671dc3ee3e"
   license "MIT"
   head "https://github.com/sayanarijit/xplr.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "502fc980aed0f2966c92d16522f94f4cf58e89c06ff842545dcef9ec0c973b4f"
+    sha256 cellar: :any, arm64_golden_gate: "c49b4cf0cd872bdcf451a12eede23634f338f1f6ebd72f6f4ec933c548780e00"
+    sha256 cellar: :any, arm64_tahoe:       "92895a7d0f1891b03c1b346156b53ff6c2ca571dbfee47a607424290eabb0b59"
+    sha256 cellar: :any, arm64_sequoia:     "fc30d537eb34fad2c3716bd78109d1bbf7a8734e2eb59cd3492e3dbf8b34aa52"
+    sha256 cellar: :any, arm64_linux:       "a5e2ad47c5a58f7826ec2af8aea1a2cdbf7050b3b13332981d69ea7ba437ad1f"
+    sha256 cellar: :any, x86_64_linux:      "26b3866701e1006078cc8b512e7f1a21422ee9c19851337c8240ad9b6508c5a6"
   end
 
   depends_on "pkgconf" => :build

@@ -1,8 +1,8 @@
 class Feluda < Formula
   desc "Detect license usage restrictions in your project"
   homepage "https://github.com/anistark/feluda"
-  url "https://github.com/anistark/feluda/archive/refs/tags/v1.17.0.tar.gz"
-  sha256 "67f2c71fa894480d9ac8d03abd786b34be07ad0c7b117a40adadf5c8bd98168f"
+  url "https://github.com/anistark/feluda/archive/refs/tags/v1.18.0.tar.gz"
+  sha256 "c66576852092def1c1fa8161a3fab53a59c6e1ae8242958e6e208bed132c493d"
   license "MIT"
   head "https://github.com/anistark/feluda.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Feluda < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "861e650716bfa7a0395e4cece0a857fb2f78a25eb7162c63cf7e4b045faf324b"
+    sha256 cellar: :any, arm64_golden_gate: "dbe15da30f855a8551317ee53a07674b706ae3f2fb3897c378798d453b66c05c"
+    sha256 cellar: :any, arm64_tahoe:       "d1905151681b909e3d60d720e93fced95036ed852aae4b91b50e7b73b5052048"
+    sha256 cellar: :any, arm64_sequoia:     "0a90d3b7fa0842ad9635cc709f2d2fe0504b578ca4e35b5f50b04b2eaa967b51"
+    sha256 cellar: :any, arm64_linux:       "6e1e2ec5a3f299a49cbf046c3323a766198e30803a81c1656899b5a941e3198e"
+    sha256 cellar: :any, x86_64_linux:      "c9e2ae4cd44845bbada15f67625e0b2c43b2da318ff2405a6e3c18462bea604a"
   end
 
   depends_on "pkgconf" => :build

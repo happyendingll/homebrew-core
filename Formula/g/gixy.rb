@@ -3,13 +3,16 @@ class Gixy < Formula
 
   desc "NGINX configuration static analyzer focused on security"
   homepage "https://gixy.getpagespeed.com/"
-  url "https://files.pythonhosted.org/packages/dc/83/e7454baaa6db43cfde942d583f81b8537faab7cbc5d683e83a15731628a4/gixy_ng-0.2.57.tar.gz"
-  sha256 "7feabc25746e12ad6f7b3dd5b1de09bd588986c174ad199a3ad975270697a588"
+  url "https://files.pythonhosted.org/packages/9e/2a/b9ba8bb796a3c7199f1f4499c9a289e491894c36aa923e03cbdd90b4a6d8/gixy_ng-0.2.59.tar.gz"
+  sha256 "6f49c0507c04acc7ac50b1f2455cd625b29a039d9ddca49b7c9f20603a501bca"
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "ee5427fc79aa86df7e5630b43b80c1ba524928a7e9b98fd69438c107de70b8ca"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8036c0d68b103946d3c89cc0537efdd465872a38e15ab28890644d67a72628c3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06faf7ace77106cfdd7923f17083263857d27aaeb1f53257991f4d098e0d1c8c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9cb129766eed03999a9c00124918ec4ed0281502c4c8cc49f1babac617fa02db"
+    sha256 cellar: :any,                 arm64_linux:       "6e76efeccf4273ae9e3fc7fcf01a6511701963fb2810bf71303e52d2e83989e6"
+    sha256 cellar: :any,                 x86_64_linux:      "e62ec499ab9636defb94a2439e427f471ff55c5a1a2e76a9d527551e623b2bce"
   end
 
   depends_on "python@3.15"

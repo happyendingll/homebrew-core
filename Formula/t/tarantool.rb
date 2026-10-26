@@ -1,10 +1,9 @@
 class Tarantool < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://hb.bizmrg.com/tarantool_repo/sources/tarantool-3.8.1.tar.gz"
-  sha256 "84ba3129bcfc2a7eeb30cea17a955b7b3f96615b960497d5ca60eac1d14fd090"
+  url "https://hb.bizmrg.com/tarantool_repo/sources/tarantool-3.9.0.tar.gz"
+  sha256 "32d8ec8489b7f7bb2b22d89b801039334c53462046998aa019588ec8ee03419b"
   license "BSD-2-Clause"
-  revision 1
   version_scheme 1
   head "https://github.com/tarantool/tarantool.git", branch: "master"
 
@@ -16,8 +15,11 @@ class Tarantool < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "b6598851d8bfea8ec38d29445b9eeb2aeab6526d9da4f9beb85c145db6f975d0"
+    sha256 cellar: :any, arm64_golden_gate: "f618eddaf4623349b7862c51b33f90596a36adc7d70125ab9c5809c6d3e33e2a"
+    sha256 cellar: :any, arm64_tahoe:       "69e51ceadecce0a6c62f2164701f5f3855269dfa967e884203a4779e6cfaf767"
+    sha256 cellar: :any, arm64_sequoia:     "bf46e1dadea709cf177cad6885bad6633d0142561f4e2d00e7b4483e1c10454c"
+    sha256 cellar: :any, arm64_linux:       "257a0e1c81c7972763696a68828891947e492ddcdc2e81e3c5326660200fa70f"
+    sha256 cellar: :any, x86_64_linux:      "d2baaf2211c18dbae48a65ad23c7a3c3e0567388b56496e2681e07a9db9e8494"
   end
 
   depends_on "cmake" => :build

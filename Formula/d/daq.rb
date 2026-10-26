@@ -18,6 +18,8 @@ class Daq < Formula
 
   uses_from_macos "libpcap"
 
+  deny_network_access!
+
   def install
     system "./bootstrap"
     system "./configure", "--disable-silent-rules", *std_configure_args

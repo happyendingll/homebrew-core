@@ -1,8 +1,8 @@
 class PythonGdbmAT312 < Formula
   desc "Python interface to gdbm"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.12.15/Python-3.12.15.tgz"
-  sha256 "de1a241a519e0a3374fea98988d0b52c886743f9d953f23be8269cc7b59c5fab"
+  url "https://www.python.org/ftp/python/3.12.16/Python-3.12.16.tgz"
+  sha256 "710c3e75dac8b2f258d9cd0f76e5c4c2e9175fac9e249c98901552f7cf33b7dd"
   license "Python-2.0"
 
   livecheck do
@@ -10,8 +10,11 @@ class PythonGdbmAT312 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "f2c2e613d8fea4c4fde5615155183c865521e49f3c16bf4dab49ff8ccc6684b8"
+    sha256 cellar: :any, arm64_golden_gate: "a3aa3ad20a488df5d5f3d6b0e2ae4b7065f827786bf16219570f937e5094f8f6"
+    sha256 cellar: :any, arm64_tahoe:       "59ce85237eb97a378d3b752232429a2efb948637b6c36f45ea83922e8ff2930b"
+    sha256 cellar: :any, arm64_sequoia:     "8fff985b0bf0d916a1b2e482a91963cb94a7cfb0c4e750870212ec868d4c9216"
+    sha256               arm64_linux:       "24c6b704ea80bb9e0051744b68d11d32817bc5e2a30e8f26ee5082eab37dcd46"
+    sha256               x86_64_linux:      "5a1267ce9ba476a0531e721ef54e2e5a5d0a9970d51be3bdef06f447b49e708a"
   end
 
   # https://devguide.python.org/versions/#versions

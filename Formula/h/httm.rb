@@ -1,14 +1,17 @@
 class Httm < Formula
   desc "Interactive, file-level Time Machine-like tool for ZFS/btrfs"
   homepage "https://github.com/kimono-koans/httm"
-  url "https://github.com/kimono-koans/httm/archive/refs/tags/0.51.0.tar.gz"
-  sha256 "4c83d3a54aa2b4089e8009049dcf61f501ede0d5b6d03691b8d783bd43bb960b"
+  url "https://github.com/kimono-koans/httm/archive/refs/tags/0.51.1.tar.gz"
+  sha256 "4c7e8947d41478f6f995046987614a1903e35766fe8a1a8e0847de7a7b805b24"
   license "MPL-2.0"
   head "https://github.com/kimono-koans/httm.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "a9e1c10c79879e79120dd2e5009a81b3769d6013d13926d41cde0df83c79239c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e3d65f41ccaaf9d42e59bb8411426f38615db96752cbb674e6219ba507b3e88e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f093959bdae23e8ecee8df9b8bd3c5998dce40740d53b8c8a30b01df85fe3c49"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3a761da79e41be6c9f49ab7d7afc9f8cab9570bb6344618fe1694fbeceb8fb4"
+    sha256 cellar: :any,                 arm64_linux:       "fb72b77786d49a55b94596b8a2ba7c03046554ddba1c98b6255af046493cfde2"
+    sha256 cellar: :any,                 x86_64_linux:      "4600d73a9dd8a9b781666b487c3f8f0bb56b235a742d1028de45b123326547c9"
   end
 
   depends_on "rust" => :build

@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-8.10.2.tar.gz"
-  sha256 "b9ffee226b5eecdba98a679260dad764b2a4ebd90dce4ad5ac9e9f3eef9c02b3"
+  url "https://download.redis.io/releases/redis-8.10.3.tar.gz"
+  sha256 "edde778f6bdee7581e42fc139ca9e07e2822212092f7501f99989656e3629d02"
   license all_of: [
     "AGPL-3.0-only", # modules: VectorSimilarity, LibMR
     "Apache-2.0", # modules: ScalableVectorSearch, cpu_features, friso, cndict
@@ -13,7 +13,6 @@ class Redis < Formula
     { any_of: ["CC0-1.0", "BSD-2-Clause"] }, # deps/hdr_histogram
     any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"], # modules: phonetics
   ]
-  revision 1
   compatibility_version 1
   head "https://github.com/redis/redis.git", branch: "unstable"
 
@@ -23,8 +22,11 @@ class Redis < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "db4b00b9e006c26e5d91780f2f93ae64dc20f40538bd8d34a201ee7ec0b2d27b"
+    sha256 cellar: :any, arm64_golden_gate: "db851530b19202d1b50530c36128656acbbe8cb1ca612aa4abc76c77a9ec1b25"
+    sha256 cellar: :any, arm64_tahoe:       "44874ce5ce9d799b185b1b5fe635b5b02d94e3b7e457d21181f2bdd7252876d5"
+    sha256 cellar: :any, arm64_sequoia:     "525e115d143cc4750aded54af1f131aae75193cb81e5073cc2d7887f10fd7859"
+    sha256 cellar: :any, arm64_linux:       "fa0458a46a96c824be288b73a43a15ab1211851084394031d578f3ae8678e29f"
+    sha256 cellar: :any, x86_64_linux:      "91f873084654203ae87b25e8d954927fe2d92b5ca8c46ec3511a4b5df348ffeb"
   end
 
   depends_on "autoconf" => :build

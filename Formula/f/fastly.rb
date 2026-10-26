@@ -1,14 +1,17 @@
 class Fastly < Formula
   desc "Build, deploy and configure Fastly services"
   homepage "https://www.fastly.com/documentation/reference/cli/"
-  url "https://github.com/fastly/cli/archive/refs/tags/v16.2.0.tar.gz"
-  sha256 "52e971b7ef0fd57ff6e751a7deb34843b5a3f591fce8b79e11c708b6a7bdd22b"
+  url "https://github.com/fastly/cli/archive/refs/tags/v17.0.0.tar.gz"
+  sha256 "4e9056f72509a375afb30c07883ea738434bb5b2ae0b2a8d5d0dd776101463e5"
   license "Apache-2.0"
   head "https://github.com/fastly/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "5a83a77666f3dd27e2bf6ae4525c8c4e92c89cb9888fc6b6ae858a10089e3764"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c6d601b1a3daa49e97d0ce05a664ce048a577af775c94d0c72f9d4e1bf1c8e5b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c6d601b1a3daa49e97d0ce05a664ce048a577af775c94d0c72f9d4e1bf1c8e5b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c6d601b1a3daa49e97d0ce05a664ce048a577af775c94d0c72f9d4e1bf1c8e5b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "fe28c059a7f86497ca444eb490197f28e20f128896ed6e45a40288bc217cd6c8"
+    sha256 cellar: :any,                 x86_64_linux:      "ce8514129542d18000b2af4f2ac514a312cff1ecc272b996869b57051fbecd05"
   end
 
   depends_on "go" => :build

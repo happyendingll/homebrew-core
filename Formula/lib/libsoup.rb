@@ -1,14 +1,17 @@
 class Libsoup < Formula
   desc "HTTP client/server library for GNOME"
   homepage "https://wiki.gnome.org/Projects/libsoup"
-  url "https://download.gnome.org/sources/libsoup/3.8/libsoup-3.8.0.tar.xz"
-  sha256 "bbf08fa3e03a88c31a3d27a0d87cb422e9490f2d08e149211103df6d638a2238"
+  url "https://download.gnome.org/sources/libsoup/3.8/libsoup-3.8.1.tar.xz"
+  sha256 "5013dcef9136f6f861e6529fca578af50c1f52a39219027fb5aff652d1371a04"
   license "LGPL-2.0-or-later"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "9a46d88b5d6ba623df56008664138e6fffe6a85b3c12d80e761a437e1a6921b2"
+    sha256               arm64_golden_gate: "9972898e51d4ce692eeb5a7c782e784251bff824cbaf19572d214ed3c7099a83"
+    sha256               arm64_tahoe:       "9d8674786ce145b207a0c8b4205bd1d698efc4187f96369bb477fd1098748b75"
+    sha256               arm64_sequoia:     "9c89d18ef67af64d64f50233ca81116beca8c3dfd528c90f442c96da45e508cf"
+    sha256 cellar: :any, arm64_linux:       "52e8e0ce0fe7cb8b5b9392637fff233d0ba1a582472bcc4dfae0c81cf34312ba"
+    sha256 cellar: :any, x86_64_linux:      "e611c826cdd8b56e06a28aa8e79a5fe4a1c8a0b11fef9c28e68d29699085d740"
   end
 
   depends_on "gobject-introspection" => :build

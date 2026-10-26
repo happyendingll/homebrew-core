@@ -1,8 +1,8 @@
 class Nexttrace < Formula
   desc "Open source visual route tracking CLI tool"
   homepage "https://www.nxtrace.org/"
-  url "https://github.com/nxtrace/NTrace-core/archive/refs/tags/v1.7.4.tar.gz"
-  sha256 "62adaafbaf263dde37b3e464f6ee8285123a0214be92a056591a02bd6463bdee"
+  url "https://github.com/nxtrace/NTrace-core/archive/refs/tags/v1.7.5.tar.gz"
+  sha256 "b53fe4af76fde3c4726625e97fb27acb62ce1fe4f7208dd9f2a2166c5e9b7cc4"
   license "GPL-3.0-only"
   head "https://github.com/nxtrace/NTrace-core.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Nexttrace < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "7a5f874aa82cb2cd46776f89775f01d8070e2058cd9f421fa4e190ae2eb0bbe7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca22935d5d82f0b2262c8d727ee9bfef022856a9c8ce3f9f18196020dc03c08f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a22b0cf4aa2c3f89aec13b5e7145776dc22c2f7a71c6cd9840b05663575c5325"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d48a09de0c9c088902593e63e81e62df8814e219122ed452e69fc89c7ddb0473"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "637fac418be9e8773d138808d473b1eba51529acde6549cff34a73854f95d056"
+    sha256 cellar: :any,                 x86_64_linux:      "30826d80e7762e6062b2d6b19d58b1173ee54d1ea2068ef1d7a57f55a7bc25b4"
   end
 
   depends_on "go" => :build

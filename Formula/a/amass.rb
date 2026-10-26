@@ -1,14 +1,17 @@
 class Amass < Formula
   desc "In-depth attack surface mapping and asset discovery"
   homepage "https://owasp.org/www-project-amass/"
-  url "https://github.com/owasp-amass/amass/archive/refs/tags/v5.1.2.tar.gz"
-  sha256 "7b3dc9b8954f29f3bdfd74bf2fa6d8ab6737e6443b5b283ce3e19d172fe2d08e"
+  url "https://github.com/owasp-amass/amass/archive/refs/tags/v5.1.3.tar.gz"
+  sha256 "9f2023027ed418e49ff0a7d941dae050db0f73b948fefe997aef416876cfb416"
   license "Apache-2.0"
   head "https://github.com/owasp-amass/amass.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "324dae4c49c6bd7bce3239d92fb37ebb71fbddbc204626d29401405093a299c9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1aa38aaf84268c4f6a611738f2de94502c6a8359475e73660e6b007062bda12e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ab4312afc237c520b92785e0c28136cf056eb0aaad1b8f6b143b9cf6e1459f6c"
   end
 
   depends_on "go" => :build
@@ -21,10 +24,6 @@ class Amass < Formula
   end
 
   def install
-    # TODO: check if version patch is still needed in next release
-    # https://github.com/owasp-amass/amass/issues/1157
-    inreplace "internal/afmt/print.go", "Version = \"v5.1.1\"", "Version = \"v#{version}\""
-
     ENV["CGO_ENABLED"] = "0"
     system "go", "build", *std_go_args, "./cmd/amass"
   end

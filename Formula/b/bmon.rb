@@ -22,6 +22,8 @@ class Bmon < Formula
     depends_on "libnl"
   end
 
+  deny_network_access!
+
   def install
     system "./autogen.sh"
     system "./configure", "--mandir=#{man}", *std_configure_args

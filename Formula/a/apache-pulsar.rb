@@ -1,15 +1,18 @@
 class ApachePulsar < Formula
   desc "Cloud-native distributed messaging and streaming platform"
   homepage "https://pulsar.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-5.0.0/apache-pulsar-5.0.0-src.tar.gz"
-  mirror "https://archive.apache.org/dist/pulsar/pulsar-5.0.0/apache-pulsar-5.0.0-src.tar.gz"
-  sha256 "ba9cbbc8db22d756b4c0917ce2a1606962a7210e4cc3ba953bc8e8216308f67c"
+  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-5.0.1/apache-pulsar-5.0.1-src.tar.gz"
+  mirror "https://archive.apache.org/dist/pulsar/pulsar-5.0.1/apache-pulsar-5.0.1-src.tar.gz"
+  sha256 "687e2670dfb71ad10fd9972957de7426e4596a095b08781364950c4aa3fcafde"
   license "Apache-2.0"
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f981789644b70fa71afa43db7f9d519bfc0c40296b07b79f0bacc15c651cbd1c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "055caa7795442f432aa9fc10a06d4165659c5fe05a78dfb41dfbc9490a89fecc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "055caa7795442f432aa9fc10a06d4165659c5fe05a78dfb41dfbc9490a89fecc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "055caa7795442f432aa9fc10a06d4165659c5fe05a78dfb41dfbc9490a89fecc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "01e7b60f61ad34c7c1cbf299bd5b0d938a48137772c57d48e54ae0f752abb7ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "01e7b60f61ad34c7c1cbf299bd5b0d938a48137772c57d48e54ae0f752abb7ec"
   end
 
   depends_on "gradle" => :build
