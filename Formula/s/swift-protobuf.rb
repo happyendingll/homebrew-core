@@ -16,11 +16,8 @@ class SwiftProtobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c36fe0110251be806be013a57013efc95178bc5aecace8043088551f007b9f7c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "23e2a614c306c04d56c8efb2ceba53d9451c3a8d53e16542aefebb3e206fc7dd"
-    sha256 cellar: :any,                 arm64_sequoia:     "0df15f5637eb488c691c5d59ab466b23d150a56ab3f795ea5f77ee693093810d"
-    sha256 cellar: :any,                 arm64_linux:       "646512d0fcb762fa964cb22ab210bad51823c5baf732c32c785eabbda6603e7d"
-    sha256 cellar: :any,                 x86_64_linux:      "373019a3b45b5613e8c9709e35ece9764ee4499ed8579bf01a2d5745b6d15e4d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "9ea63928fbc7d44c94f401c38c61fd63f7d0a3fc74458b4875ba6c5cbe98c3b3"
   end
 
   depends_on "protobuf"
