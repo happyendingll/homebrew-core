@@ -36,11 +36,8 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "403c50ab9a26e98d7e46bf83412c40788397ec61d6a1bc3465072726214daf09"
-    sha256 arm64_tahoe:       "3a8a85834a4a3eec6c9e95ac700ef701987f08b25bc586cc4eb8003b93586c3b"
-    sha256 arm64_sequoia:     "36773643f7d80c6b8c7bdaf2548a6d576ff11983b95d1aa9804ff4f2d7cc0a10"
-    sha256 arm64_linux:       "30f0524c0ab19a6b20bbd6314ba1b0b61843c37dd139e6d6309a1b559d36a80b"
-    sha256 x86_64_linux:      "6a2f97b0284b15505914d8a55f7ed8b64f65eabafbcefcf9d3b86bdccee3f058"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "bff892fcba237798a736d3c9cb693249c71bce28f0f243f4011e0baec50b84d2"
   end
 
   depends_on "cmake" => :build

@@ -11,11 +11,8 @@ class Redex < Formula
   head "https://github.com/facebook/redex.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "20a063c4644e2531248458e23c1b6a3001de8fef0e2873f2ee3699210bad3dd1"
-    sha256 cellar: :any, arm64_tahoe:       "35d57c0731d2e992dcf7239194a2cdebc2ebf72bb071bd694ad0086593a7633b"
-    sha256 cellar: :any, arm64_sequoia:     "12cb20a278dea9becf6315273bf333ddb0f671513db1752d4b1424c19cd54c2a"
-    sha256 cellar: :any, arm64_linux:       "d94f1c627bca1a8e875fcca1a31b796531684943a263bd37d7ec2680a58f1525"
-    sha256 cellar: :any, x86_64_linux:      "6ae288548ccd9ba4fc9a148cd6599a55278810aaaf703338ba82f5c2a159a73b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "fd36dee39a2739501a2acb4bf2c542e9d3150d9b7f3f3c01d994b5942e1af18f"
   end
 
   depends_on "cmake" => :build

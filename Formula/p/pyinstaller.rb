@@ -10,11 +10,8 @@ class Pyinstaller < Formula
   head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "778cf65f9f6d9914c254d0a8ed921f574a3e4e4d588b16dc0e8a77fae9cb853c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a627e7d9a2512d36d045e0316905c25c8fccd116e8aebfdb64a4ec2e0318ed2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf2e5ba2bd4c14ef54ef6563113238f8156580afc057ea1bcf2948fc5b52a4e6"
-    sha256 cellar: :any,                 arm64_linux:       "ca8f013836cb4cdefd248f35f17fa6e6eb36f2840d12deb1579b65358c6aee30"
-    sha256 cellar: :any,                 x86_64_linux:      "11a4f4b1831a81d66d74b77cf1f672497130f1af29be54ce1e627daaa6226c08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "43b82192b3becfbacb1d0160ced78736b82197ca0bcad8740978847dd1f66744"
   end
 
   depends_on "python@3.15"

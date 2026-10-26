@@ -8,11 +8,8 @@ class MkdocsMaterial < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "95ac208be9135b4d133a86aa5fd9c27aaf4ff365976f14a00dad18d13b8a3898"
-    sha256 cellar: :any, arm64_tahoe:       "356810bea06c89a975455035293bdd31883aa4a40c60def2ae2235557f0b31cd"
-    sha256 cellar: :any, arm64_sequoia:     "1dec40b7bb6ec13b345a86c11ebfdde40ca9d06340eecb2d2e562d6399dab91e"
-    sha256 cellar: :any, arm64_linux:       "2706c4a831310c56e9c570062a1b844e14fce496d56699c9edd7f5e717c774d3"
-    sha256 cellar: :any, x86_64_linux:      "0df9eb8b681fefd17d232a208b3a4bb17c37b715ad5a9060d1a3310b1580c395"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "1d8fbd3fdeea94dd8f202f18ce1753ad799a92e5070cdae147b2e176e23cc653"
   end
 
   depends_on "certifi" => :no_linkage

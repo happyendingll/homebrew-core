@@ -13,11 +13,8 @@ class Camlp5 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "76e3889c55d2ad70e7b3fadfaaf5c1a114096549ee3fb4abdcebaad3ba4a6dc5"
-    sha256 arm64_tahoe:       "7745ebec965e8f9d8795f65f1253ce935a1beeb9fe2b88fe3bc65fb0a14d44cd"
-    sha256 arm64_sequoia:     "1c0ba5a0d5db137231c5f6c00f63912e8e8d0699b1312b65b1c53b26f99ca0f3"
-    sha256 arm64_linux:       "57d77263deebf9ca46ed294b765257310e2acf6d12d2fa26cfd8edf86656ad26"
-    sha256 x86_64_linux:      "f20d5e33d74d003a6b8f8e4629fc5c1b58820c3377faf2b06b34df354862579c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "51b098264e7d73b707c3763b8e695b0eaaf8549fba674246fe365ddaad9276e4"
   end
 
   depends_on "ocaml-findlib" => :build

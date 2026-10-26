@@ -10,11 +10,8 @@ class Shub < Formula
   head "https://github.com/scrapinghub/shub.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7f46bd1bede4980dc8caccfe48b6f71204941771cb22127325a2110ab85de400"
-    sha256 cellar: :any, arm64_tahoe:       "cd9ff0011163011b29e85e9c302a78c9a45a5017924c9ed77627154b7f7c6521"
-    sha256 cellar: :any, arm64_sequoia:     "4d71fbb076a90c20fad7aebbada1eabd6ea0c986d7810ece95147fad74a12c38"
-    sha256 cellar: :any, arm64_linux:       "93f0ee7e0752d0affded3f0689c811063623e8c095a47f9319ffedec1d1498e1"
-    sha256 cellar: :any, x86_64_linux:      "94f89911d8cb1a51d19201cb73e4aebf60ab4dd3a3962158cd367bc108f92757"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "b0228c0e70e71413d802052642c118d9584216f0b5ec876ccd27136ec124d914"
   end
 
   depends_on "certifi" => :no_linkage

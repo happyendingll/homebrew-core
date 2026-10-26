@@ -7,11 +7,8 @@ class Menhir < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "546e1cd4ba8a7893da26fec78ce33d2eaefad4b3118b5fc841d544e61d8ade54"
-    sha256 cellar: :any, arm64_tahoe:       "78e2e65727781c9c4e63ab1b3d31810f6439dcdd8027e9eb75827ca7f5a7629a"
-    sha256 cellar: :any, arm64_sequoia:     "6ff99714f26c7c8dfa9202d955855b7498435c9c7695ddc944ec399bf6796ef8"
-    sha256 cellar: :any, arm64_linux:       "da010085a0f23f548ba035d9d764eb52e645baced3eca9b25f53e6bd9034f5e0"
-    sha256 cellar: :any, x86_64_linux:      "2df00f7cee4cb6d2b3357c8a679292485de187925865429247daa53ded6c4a53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "98d8565b99c668017d0e05cedc3b447751a64c563077263275d0714bb5ad38e6"
   end
 
   depends_on "dune" => :build

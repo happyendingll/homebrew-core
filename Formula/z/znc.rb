@@ -13,11 +13,8 @@ class Znc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "679a9e32470742f87d57f966750719744043696f200fb53bdde0caba2d2237b5"
-    sha256 arm64_tahoe:       "47d26904e4f30b0244626623d2e4913a6b7143c6b232dacebcd4f7591b3aabc8"
-    sha256 arm64_sequoia:     "5123fcb3933cd787a570b66c42ec3bed2f14c4cb02784eba5b6005514433a96a"
-    sha256 arm64_linux:       "9b6bf71c0003770d62caf97affcf9cba0508eea4ee023a9f95243d8809c449b4"
-    sha256 x86_64_linux:      "424535a69668e0741d24b18549ad16774d6214766145382b2f6be75d23126707"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "29c0408c500dcb7be6f6a9cca10aef72ef141dcc1da813120ec6d4b2aac2ae49"
   end
 
   depends_on "cmake" => :build

@@ -15,11 +15,8 @@ class Yaz < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dc3e9293442755aa6edba7f3e5cf501f97ceba18164a787db1168b94309d3e1c"
-    sha256 cellar: :any, arm64_tahoe:       "d4919b92294b43ebb36e61f4b3f26177061371e996d601dce948af47d60444ab"
-    sha256 cellar: :any, arm64_sequoia:     "dc594cb1418b46b6bc42807565f354ae28b93ee009a062b01b8c58fa65e2cdc7"
-    sha256 cellar: :any, arm64_linux:       "bebc077ec0aff57efcd1191c0ff67603f327b7a7d0c79c2d8a73ba31b37fe0e0"
-    sha256 cellar: :any, x86_64_linux:      "6c86e10b65f50af27a28590dd8611827eea489d652fd1c313a72e8d7377b5a76"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "4bd023752788a0ac5e19ed761d0b1bb3849d313e435702388448f4a30a960b51"
   end
 
   head do

@@ -17,11 +17,8 @@ class Boost < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "007333f4d5d919653b401a0aed4da917ca9004da4b01f7ae5c1d9bfaaffb902f"
-    sha256               arm64_tahoe:       "4f6a8e1e42e5d7f53b0c1458e571d0368ad79fd88eba171b9944541a64156734"
-    sha256               arm64_sequoia:     "bc88ce997d845e2aac0a1cebc6c89447ae4c31489064f000744fa5c3683c48a6"
-    sha256 cellar: :any, arm64_linux:       "039557b2aebfd808349f902889e36fc34edc8b432b6c01898874145342d78db5"
-    sha256 cellar: :any, x86_64_linux:      "ea658fd6375ac6702e1295ceb1c6ba31a795389968a771a78577cd5c864396cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "83df3d2e7a39c19ac12d3405209bdaa598cacbc3ad0f2f1d869ab7835cf7a3a7"
   end
 
   depends_on "icu4c@79"

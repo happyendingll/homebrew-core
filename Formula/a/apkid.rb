@@ -9,11 +9,8 @@ class Apkid < Formula
   head "https://github.com/rednaga/APKiD.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "3195941c4d6ecf513f63a725621221513c4e2a60f9f2883d4f14807c56c8e523"
-    sha256 arm64_tahoe:       "39975317af3bb7e15840124c81e8466ae8d5e587ac4f2e4f9ec96993264623f3"
-    sha256 arm64_sequoia:     "7ba7adc981bdc5af666100300b80a5f83dfaedcc6ee1c7fe526310e7b9f582cf"
-    sha256 arm64_linux:       "ea2fcec4a31623d23456922396ebcadb1ec798a314eb69b63f4ef329871b340a"
-    sha256 x86_64_linux:      "896b8bf3a1a8a4cbe8c26b61623f1aae66d7d2819c14951d3e5d3e31a9f3451b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "7a6a7ada20f462874cbb150a9214a0ae4799cadc489fc5b061f6fd7d3649c53e"
   end
 
   depends_on "python@3.15"

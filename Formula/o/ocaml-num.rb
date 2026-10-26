@@ -7,11 +7,8 @@ class OcamlNum < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8349429bb4a3cdb4f9b0e738059f01514795d86f33ef261674282370abbb1338"
-    sha256 cellar: :any, arm64_tahoe:       "ef15b3831114422acc88995db4eec4e9aee44ad456f55c7c3f60c34396f1abc6"
-    sha256 cellar: :any, arm64_sequoia:     "02ac14d66bc42588f9a2cf29e41cb21fe1b7b3809704ccb7bdbe848f4ea1308a"
-    sha256 cellar: :any, arm64_linux:       "68e1f62ca8dd2ab506a736ab3ee0d7856dd99a9fea748dd90d48c3b295350cb5"
-    sha256 cellar: :any, x86_64_linux:      "4ba99c3802dcf641cbdc8340b580f02ef33033d1ae23bc6cf65c6ecd191a3d81"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "3a6240af6ead85e504025569d48008728a612f4e939bfa88a4155f34a2b8f0ed"
   end
 
   depends_on "ocaml-findlib" => :build
