@@ -11,11 +11,8 @@ class WildflyAs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e15ba595522ebff78f2a3f47cbf76604712f5972da053e739bee05b9c912e954"
-    sha256 cellar: :any, arm64_tahoe:       "e01973832f9f060ee7986e6309d7483883f1d72e83663c3a61af0e7939e3c321"
-    sha256 cellar: :any, arm64_sequoia:     "ca64ad72e71315d85e54617590a638adae720940286ab64382164fad5cd9e8b4"
-    sha256 cellar: :any, arm64_linux:       "6a6207427b143a2bf17cc40b73faf5c8892f9f7357fc9eaedc45a74a28c32473"
-    sha256 cellar: :any, x86_64_linux:      "5fcf40f36811f08903598d1e60355ad564625b1bc2b7582d76519a270efbc93c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f3db4f1132fa7eb268e002796542ff1952bb96cadd64f861ae6b046cd8be2c4e"
   end
 
   depends_on "autoconf" => :build

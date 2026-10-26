@@ -12,11 +12,8 @@ class Hunk < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ee2dbfde1f7145781f71bcafbf7808778791d531bdceb558a49017912280970f"
-    sha256 arm64_tahoe:       "26c3e36c12591b3afef294cc98d02442b108804519136200b9e1789eddd805b9"
-    sha256 arm64_sequoia:     "0fb23342d7371b87d0092a5e09fafba1b65fffa217e2be64d956efd651ae5772"
-    sha256 arm64_linux:       "7c6613ae59b58b5a6e25d08166b2a4a85f0a0659d45314fb388e44482b296779"
-    sha256 x86_64_linux:      "e21a6f2b0d1d28e00d67770ed8249d770e420553474d9c312b9487600300dbc6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0107ce04cc6707da86bebf8a60e7523db91ba18b14fe6ff4ade8b3a1888e44ee"
   end
 
   depends_on "bun" => :build

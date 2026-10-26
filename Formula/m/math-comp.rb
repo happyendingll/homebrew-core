@@ -8,11 +8,8 @@ class MathComp < Formula
   head "https://github.com/math-comp/math-comp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7d3144438d31c6be437e7c32ef2ea3106adb4d4adf34cc6fd5974a4ffa43a2c7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "273e510695540191133aa6e07ba33526dff91161acf1ba0439f789d9c7914977"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6d1f87332891e7942bc92301f48ac7906771f23554106c3fbbe8b162c8643b16"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "03b93870692eddc46c61bf0eae94046b2161c1b0f86b84262050558eacbd8a4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "bc856370b46bedef0f1e168c771f9a0a4c5e9cc77bc6ed737b6a77a99ffc7843"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "21e1f483ceab8ebffb9851ab682c28b8e1cdffc91c917ebb5c76aa697c58e5c3"
   end
 
   depends_on "ocaml" => :build

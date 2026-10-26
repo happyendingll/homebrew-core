@@ -6,11 +6,8 @@ class OpenclawCli < Formula
   license "MIT"
 
   bottle do
-    sha256               arm64_golden_gate: "4a2b897ae3aa64a45febc1fa6d8acffd82bc926d9f775a82836915b5a501d285"
-    sha256               arm64_tahoe:       "4a2b897ae3aa64a45febc1fa6d8acffd82bc926d9f775a82836915b5a501d285"
-    sha256               arm64_sequoia:     "4a2b897ae3aa64a45febc1fa6d8acffd82bc926d9f775a82836915b5a501d285"
-    sha256 cellar: :any, arm64_linux:       "2f871919b1720f3febc3453c4b0fa70606209e49d92a4d53678f16eed6731a52"
-    sha256 cellar: :any, x86_64_linux:      "98c2b3fa50fcab309eb39bea331fd69c27b722eaaa98080206af886edfd54f5e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "9f10a731f7b4121e288be3d16366d298efa8ab71d811a1faa2baf4b903f53d7f"
   end
 
   depends_on "node"

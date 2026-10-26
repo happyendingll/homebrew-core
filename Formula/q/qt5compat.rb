@@ -19,11 +19,8 @@ class Qt5compat < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1b4164ceff0806ce600699eac2c6faf3a707bd9d264f27643b4ee47cc65b468c"
-    sha256 cellar: :any, arm64_tahoe:       "5638357c11940429f756c79d54010bb195f0c365fcf57c3f801deb5c32f19511"
-    sha256 cellar: :any, arm64_sequoia:     "69454339b8f0a6e640e1244e1365b45d0bb957fee301e315a215e03343bb4bc1"
-    sha256 cellar: :any, arm64_linux:       "c024c73396d40ad93b973cd74d9bb0b7b5c30489938b18f429fe0b7248cabb41"
-    sha256 cellar: :any, x86_64_linux:      "37ec290e25d122a40f37e5467e70f85de2e2d80c9a21498acd6c62c2f3b2761a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f496a885adc00d8513ee4769e12393a9cbd0961a75d9d029a2f66ca7c9a395b5"
   end
 
   depends_on "cmake" => [:build, :test]

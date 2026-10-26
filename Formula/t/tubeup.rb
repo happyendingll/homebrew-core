@@ -9,11 +9,8 @@ class Tubeup < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f3c97bb5ad286010905db69e9088cf8dbed7f788c7f450fcd84af86c197cb88c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "52ec32dde267a6b5b4d71e1fa7f237be9b863dc4be98fa49b2bd27cfbb73e7f5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f110f568b590461c5d7235fcb9dcbe876d9e73ac52c6effa0553d9650419445e"
-    sha256 cellar: :any,                 arm64_linux:       "93038067c961f273b19cc179bbbb4197b7d209406ede52c061bc736633a3f5e5"
-    sha256 cellar: :any,                 x86_64_linux:      "331aa02cebf59bc76548740f29b5e1122ef228d516afc5c71a3f073097ab560e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "86dd1f3ab1819f7327aa6c3a4b93e7d4f17d1f7d55acbd60a1a070dbe1e76a73"
   end
 
   depends_on "node" => :build

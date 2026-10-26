@@ -7,11 +7,8 @@ class SpicetifyCli < Formula
   head "https://github.com/spicetify/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "53b4c2e3ad512f88893a8690948aeaf25bf776ffc8490bb0b27bde51514e8127"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "53b4c2e3ad512f88893a8690948aeaf25bf776ffc8490bb0b27bde51514e8127"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "53b4c2e3ad512f88893a8690948aeaf25bf776ffc8490bb0b27bde51514e8127"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c031c3aaaca80b91b752c5ce26d433397397e15cab42532d4c5ac594a6269aaf"
-    sha256 cellar: :any,                 x86_64_linux:      "e9d00babb3f082333b2e3b1d5c891b428bb32718483bda52c7a24aad8f8cd431"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "4298a44172a245195deb99022a918b20d33fa5445ae34ec7a146d75334dd161e"
   end
 
   depends_on "go" => :build

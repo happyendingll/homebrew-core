@@ -6,11 +6,8 @@ class Openspec < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ecc673a89a3a360aac21a6519104f102462e02d887442672e673df120d051a49"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ecc673a89a3a360aac21a6519104f102462e02d887442672e673df120d051a49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ecc673a89a3a360aac21a6519104f102462e02d887442672e673df120d051a49"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d2ef6178af8af18a18e811568ddcd1e04bf781f965802c550575fb98812429e5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d2ef6178af8af18a18e811568ddcd1e04bf781f965802c550575fb98812429e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "1207fbd1adb05e65940ef0bc855ceb070320b8ddce5a459b8c8709a8c198e9d8"
   end
 
   depends_on "node"
