@@ -15,11 +15,8 @@ class Ledit < Formula
   end
 
   bottle do
-    sha256                               arm64_golden_gate: "991855179eac253440d7e9286c46839ea9ce0fea6475ee1a9462120a14ab14ab"
-    sha256                               arm64_tahoe:       "4588fe36e65c0dc2aceac049ce08b4896dbc68c3937894f973c9b3302efd7400"
-    sha256                               arm64_sequoia:     "d5591770d02fd1dbd69441274604e91269742865c2ac64dedeb95cd3f8cdabc4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "35264e3ace14f2b900d145b92577cc47ae4ae4208ba1cf01e6e2b1ed4618153e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "35264e3ace14f2b900d145b92577cc47ae4ae4208ba1cf01e6e2b1ed4618153e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "2349a905536c179b48013034b1063a9b615db04ecf6e17cffd3053bf8477b62e"
   end
 
   depends_on "ocaml-findlib" => :build

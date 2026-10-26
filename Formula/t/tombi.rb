@@ -12,11 +12,8 @@ class Tombi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e39cfafa7ae6619a6a9a1c8589c882627de0205e4a687c29c0a6ed3a508adb7a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "50d0d9e2d0c308405782c49c697cae3ab507c59bcd1a397a3f5f9a8506748351"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4e954c634533beb61d5570a1eb7416a75f564b5cf877553fe9086d3fe6d4ca25"
-    sha256 cellar: :any,                 arm64_linux:       "94f5d23a725936d8a7476f9aafff1aebbba352f6d28b1743567be44f56f45fb6"
-    sha256 cellar: :any,                 x86_64_linux:      "6dc9b43dd4e51e45f22131094de76f5e4ad468bffaf726bfea0bb62e16eb1088"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a09e284b715fe9c4d67e42043ecdd10ff378aa72c2020249637981e49a537023"
   end
 
   depends_on "rust" => :build

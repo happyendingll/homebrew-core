@@ -7,11 +7,8 @@ class DomainCheck < Formula
   head "https://github.com/saidutt46/domain-check.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c3141987f2defe531925977d9c04542513c88f8afb227cf711fd4625f7e29b88"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c21f777d0a5bb22c766e927c047ea45bd98329ed149982027070505d00ca289b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac1a0e5fa22dc5bbb29b1014d8f0375058e150f270089d157185e5a5c4ad4d16"
-    sha256 cellar: :any,                 arm64_linux:       "3816ad65c085a2c9577af0a42cf86855838550104a84152e4b1e092e4fb181bd"
-    sha256 cellar: :any,                 x86_64_linux:      "4b46bbc27a845659cb95baebd4b7e4c2741d73377c89493f96b7e36368cee1ea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e5ace164cd5530e47119b3d842a6ee5e215800c3e8fd86bc7398b891288523e0"
   end
 
   depends_on "rust" => :build

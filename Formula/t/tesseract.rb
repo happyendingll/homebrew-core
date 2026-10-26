@@ -14,11 +14,8 @@ class Tesseract < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "28b1ec8bc20c7ba5ea65221466d923a559ea7545cfb01b49d98755c97c8c21dc"
-    sha256 arm64_tahoe:       "0c8bcbe7f7f01a3efd9e04eb1252c09e3a68beac94ea78ad555720b7c50e25f0"
-    sha256 arm64_sequoia:     "d4356db8fc84e1ebf65c4b5e9d80857f8e346db44c7d5d566dd858450a7ede5d"
-    sha256 arm64_linux:       "bdd30996a3f45cc8110285efa114907498ed173d12da3ad64413f35f38152c4e"
-    sha256 x86_64_linux:      "2c1f05e3f06997ae0468e81a406505a842f979c982a393a5e83953b4a4bf4f38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "8a2fb7de9e5875322045924a3066c2eda894d85e95714e72339598382e7cd1c8"
   end
 
   depends_on "autoconf" => :build

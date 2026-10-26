@@ -10,11 +10,8 @@ class Scoutsuite < Formula
   head "https://github.com/nccgroup/ScoutSuite.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ff4a1be8dccf897a2b1f9820bd35f1c9da48ee99c93500499c60ebbc56a3bef2"
-    sha256 cellar: :any, arm64_tahoe:       "6c5dcecc42be331dfa94242427140fb7630ec03f17e5a2a1742cc49a775f75ad"
-    sha256 cellar: :any, arm64_sequoia:     "ef4e6fb3fa131d95d561d8c73745b1d9660e87a616a3e8964207bff2ebfec23c"
-    sha256 cellar: :any, arm64_linux:       "f55ec795005962a89896280da0a2b34b9079372b86beee1922e08ed87e1ab771"
-    sha256 cellar: :any, x86_64_linux:      "043f61cd965e518470b269aa9efe54e819cdd34a7e7a109fa4676de96a2a66eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "c0e16008b4e2e32a577bfd0b9b097a6666cf59bd7ecda805e10fe47337f09237"
   end
 
   depends_on "certifi" => :no_linkage

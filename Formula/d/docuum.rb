@@ -6,11 +6,8 @@ class Docuum < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5ea72985b2b2b2d6fd355a002b0d437893dc87fc7fa4990a87bcc2b8c003f21b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26599a4f791ac3ce4307629716cd3f997d0098d02b43358960c8f7c589d4b4a4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eaf5a7981382fa0076c830a90d425f44e4df825ebad90c974385b675cbe66150"
-    sha256 cellar: :any,                 arm64_linux:       "b0f442e3ee000009f3a5d942528890f54f6a1ae84ff3b5ee9a241278e732c55e"
-    sha256 cellar: :any,                 x86_64_linux:      "c3727eaea41def05bf1171aace456996f07d8c0a77f25ef11dc36eaeabf47686"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0320b93f56928b2028142f3de214c136978112f805540a38c02bc952acd4fac5"
   end
 
   depends_on "rust" => :build

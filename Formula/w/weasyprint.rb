@@ -9,11 +9,8 @@ class Weasyprint < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2f3ca5ef535806e5ff5cb05d601129d9ae0220d4e09554ca3e0b8493ee3e4e7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b386a8eeb59a00ee8f9025edcd8fe156baf4d6461f5feac859bf758d16be6ca0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c93b1e4548b86ef1c555682303956111f13775e4effa7ca9b4b27fdca72cd042"
-    sha256 cellar: :any,                 arm64_linux:       "7655055d9a1aec93a24eb9d46e92b997b99ff3d288e3dce9b0327ec0de06c6ea"
-    sha256 cellar: :any,                 x86_64_linux:      "4f2b0bdbffb02c1cb15de9df4cddb9789ff1ebfc2a9848751514d415dc59e22d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "bb2232c17a11f9cb65e133d9c60e28d4e95a552631bb9dd1deff3fcb90ed5a4e"
   end
 
   depends_on "cffi" => :no_linkage

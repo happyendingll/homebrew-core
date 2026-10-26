@@ -9,11 +9,8 @@ class Tmt < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1bf200e2144ade74c6b10137042edd1f226282ecb31feb537d5aedc1a4c7054d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69f88276f470cd7cbdc75ed2de2833e9819b52987526304a6e49503cced93fe8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78b7e92288eed9b9245b2b87c8967e9a4d381a7f03152058c3db35d4898bb524"
-    sha256 cellar: :any,                 arm64_linux:       "9dd749c7f7591933e3537c59c832d07751e6c954deb651e23f04bb9fc7d397e4"
-    sha256 cellar: :any,                 x86_64_linux:      "24f9a0e0c7163ede7d0948c20940d698e3e22328486614aa7fb4c05a949a272a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "062d09ed8c893861eab87de42fbe4e9b09e7b45d67d0d0eee7f3d420779dba5f"
   end
 
   depends_on "beakerlib"

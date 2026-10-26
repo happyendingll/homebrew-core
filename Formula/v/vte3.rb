@@ -8,11 +8,8 @@ class Vte3 < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "51272c6d161f500b9a1c32da6878125667d24216f5842c203b1784ced8bbc804"
-    sha256 arm64_tahoe:       "118e76e7be10ce3ba1010a332c44e881773470e5f9c03f96d4ab03d79878df28"
-    sha256 arm64_sequoia:     "92d41fe06844b332f57776f9ae3b7a2cb5ea9417cb8a897807f2698185749c78"
-    sha256 arm64_linux:       "bfaa619a7bda9287048be238f9449e54b77c39e233bd4fada93f3d157a37e9fc"
-    sha256 x86_64_linux:      "cfbad4be25b7d4566b16fb42acc450e1de3c0843d5cacc2b25d358a709970603"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "eda346e7e20cd39dd34ba9a347ca213f551c7e9ea222c2c4a9e5df9f2b57e128"
   end
 
   depends_on "fast_float" => :build

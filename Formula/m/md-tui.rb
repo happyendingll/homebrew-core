@@ -6,11 +6,8 @@ class MdTui < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "58f100463c4efa9df950e2e8361a48afdb4897248421efb9da8e4b730a8a5bce"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf28a25802b60e2cc7e47d7f0d4a04febbc6178f562128cb5369fbc39b458340"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "37a2f1cc0b054a4fead28e6b4b796af209aa558034f76bdb2b37b1710caf3c27"
-    sha256 cellar: :any,                 arm64_linux:       "72c7f796f6a8dc14e629397e386332bd0e34a48bf36f2178d0434728169be5e9"
-    sha256 cellar: :any,                 x86_64_linux:      "ace0cd8f7f8cbd3d4b529eb2a1895cad00478e816fe95e61c2a230320a0f7bf5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a2ddb6547419eb1a6cf79f3b754e1de3ce497d9fa615ed1909dfe85283fc4f8d"
   end
 
   depends_on "rust" => :build

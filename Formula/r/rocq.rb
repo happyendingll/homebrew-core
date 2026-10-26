@@ -21,11 +21,8 @@ class Rocq < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ae25713bc09eebdab50517e429304ea475d3eaceca140ba07d514b6e65257efd"
-    sha256 arm64_tahoe:       "17b53c4360d77d0e016b56445c456e6764bc5864777dd5d9226d7294568f67f8"
-    sha256 arm64_sequoia:     "3a4fb957c7017f447a3a82d8e4f28c82ee84458252d07e1284c8428917f42c83"
-    sha256 arm64_linux:       "036b4fe7e0beeb9dc06dffffac6f69a314fdc549a05e934ea3fef98a79e64ea6"
-    sha256 x86_64_linux:      "c8d17bcba1dd7cbd4bde281275c913c78b277757e9c942faf24afd4957c575e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "385b75e57caf24edf9e7074a71c0daea6d95327e56cac5fe36f7001c742c8839"
   end
 
   head do

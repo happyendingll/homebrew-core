@@ -16,11 +16,8 @@ class Tectonic < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "33c055a3a94b0b37f747dca29d57df64874fa874541c77ae889fdbde6ae37df6"
-    sha256 cellar: :any, arm64_tahoe:       "306cae677bbe62d270d3a774dc0311726619c08765782493755e61f32f9a1804"
-    sha256 cellar: :any, arm64_sequoia:     "b12e7b8260d56a20e726e7a17bd1b9d0df1497e08b4e389fd09c41d00ecd1cc7"
-    sha256 cellar: :any, arm64_linux:       "c5078e4c8e721b4f61c603f6c182b871dc5bc77d0733a4f02709e77c9f91f48a"
-    sha256 cellar: :any, x86_64_linux:      "68b31b599b77c5effd6eab4eaace8ccb4d6d4ad409fd830be985e978ee3a5296"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "0f1588932f4830f45e61a481cd50729eb1fab38ecc74989d87fb26cb9f396266"
   end
 
   depends_on "pkgconf" => :build

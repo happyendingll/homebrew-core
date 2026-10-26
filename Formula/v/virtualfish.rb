@@ -10,11 +10,8 @@ class Virtualfish < Formula
   head "https://github.com/justinmayer/virtualfish.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9f24f5626391a07c6cdf35fc471bc931d83f6fc7dc8b37ca8ceab897889682bd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d9dfb64fdd9cf60820dfdace9c35390be32f70a8221af2f9f094e0a5f9940955"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c67a02f6cbce9e7e9cdef5af38f4d37a254d2f6aa83f7ef0253b408ed64ab318"
-    sha256 cellar: :any,                 arm64_linux:       "70b40d2ebdb6b2e9a8dd36376482e17f36bf9b7d23c84bbd16625557b42cbeb3"
-    sha256 cellar: :any,                 x86_64_linux:      "8411e7ae03390d333135a0d27dab660f6a73f3340b4b03848d4c7d687d91ea68"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "fb52bfe7e89c55ab391cef9b7d4b3d4058400093581837bf5a79fb9f3c238287"
   end
 
   depends_on "fish"

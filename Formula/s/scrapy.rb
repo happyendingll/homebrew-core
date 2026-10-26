@@ -10,11 +10,8 @@ class Scrapy < Formula
   head "https://github.com/scrapy/scrapy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d2259546b8d5946122d0c9b17e8acf61605b236b15306c5d4e5132255c5c268"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dea8c5d6f499e6ec04511a3f02970e719ece9f85b6dd0087d5e7a47fc9d1154c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e6e3a3a87d27eb2036527489a821581a1bbeb5b36402101d575ca22465b05f7"
-    sha256 cellar: :any,                 arm64_linux:       "b61491c59e409b59533fd67d4992c833c8767659aa6f55f4aba517fbb05137fe"
-    sha256 cellar: :any,                 x86_64_linux:      "534d0838345dca76b1697cf659d2852a1948e369a3b4f8dd3676a7bbbea6f6eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "8c8b45c8bd0fd3ef91ccff9e42a1ceb6dd7d7f87abe35eb820582767194fa8eb"
   end
 
   depends_on "certifi" => :no_linkage

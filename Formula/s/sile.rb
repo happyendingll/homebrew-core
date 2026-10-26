@@ -7,11 +7,8 @@ class Sile < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6baa65b3fcb48d8828020ae75be7734b163b1f0963d042b8cc09d71bb9c58cc0"
-    sha256 cellar: :any, arm64_tahoe:       "4e0c9f6178705ed8f01a737897b6636ef16f8a8394c5664bf3fe51ffee476665"
-    sha256 cellar: :any, arm64_sequoia:     "f9ac136a135208e8efdaef97e73dfafd181358aeeeb492895014e49a3e38e4bd"
-    sha256 cellar: :any, arm64_linux:       "04f08617992212e660ef40372992b8e2a8c7271fd64e352565766b5b48c74d49"
-    sha256 cellar: :any, x86_64_linux:      "8092b516ded548fc5da6e997fa9291d50b4e066a986409f6c6d3be9419f5e3f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "16bb2fc8b0987786d675392d2edaab37eac623942c2417e05aa5b071b095ee53"
   end
 
   head do

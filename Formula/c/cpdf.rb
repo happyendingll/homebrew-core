@@ -7,11 +7,8 @@ class Cpdf < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8059499ca3542482e155c6ea99547f4c3c88bfe8b9f91f2c15761869add29670"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "103a0357ee1e1fa53298a81682317154757074fb9d0b965bab01a170d257487c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5beeaab1939e7b3765860942066bca2ac524c23a5b2eb2ed22ad7f2ce02d4f04"
-    sha256 cellar: :any,                 arm64_linux:       "460cf4edef075fdedb30647d948f2ea1a0f71de54664153b81ff437810b7422d"
-    sha256 cellar: :any,                 x86_64_linux:      "d434f1fce53557bcb3e5b253a75c857b655ff49bcd491e5e18d966f4af075c72"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "59a3dac963a2e1a716b4cde2f2cc0d34b25fc98dff5f0daf601deb11eb93257d"
   end
 
   depends_on "camlpdf" => :build

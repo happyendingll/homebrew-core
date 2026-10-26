@@ -9,11 +9,8 @@ class AwsSamCli < Formula
   head "https://github.com/aws/aws-sam-cli.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5bb900db5aa5cb22e9b1111cc17318fbf7f95737902c42c9232da9cc5f36e047"
-    sha256 cellar: :any, arm64_tahoe:       "9215d4ee42827b8b33a722ed4615ba5a9f4d4bba929df0d507ffbe688506b28d"
-    sha256 cellar: :any, arm64_sequoia:     "a38a1f3935ef2ff41ba8d2afdfbd134dca8a34e7c5cdcff115bf150839c7a3b4"
-    sha256 cellar: :any, arm64_linux:       "fa509e1cdb1a91ba1dbc396fb07d8bef34323349b778041520b633d876c3db95"
-    sha256 cellar: :any, x86_64_linux:      "ccba6159113767f77aa4b5f804336fd280a767334d829bf909c23ed927a781f8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "6a50e21db1c8f3d2f1ebd6725a16820f3a9620186fdc95384994ed3aaff75a28"
   end
 
   depends_on "go" => :build

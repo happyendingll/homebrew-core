@@ -14,11 +14,8 @@ class GlibNetworking < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "d29d9f4eb558298dc6eff44d95783df7729eca49a11ffc79d3e86c8da175d291"
-    sha256               arm64_tahoe:       "91c6c43978f91a348e3e622d117b1f02b46b0ce3ade7d414160819b7d48e67c3"
-    sha256               arm64_sequoia:     "81429551d7888762f6e7fc1d776dd9bbd1b494ca3bea6eae94ff675e06645642"
-    sha256 cellar: :any, arm64_linux:       "a60feae8c630e3c3fa6e7576ff76514c2e816c4856e161febe5dac5d57efb572"
-    sha256 cellar: :any, x86_64_linux:      "d44392d3fe60dd996c2c4b6a955a3f796ad87bd733eb152fcdddb7a405925479"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a28eab19c9bb7bd15398817fa85c1dbd17cd3eaff3a95d22d44f40657f179227"
   end
 
   depends_on "meson" => :build

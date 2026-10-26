@@ -10,11 +10,8 @@ class Theharvester < Formula
   head "https://github.com/laramies/theHarvester.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cea880c35962ce2286e05d4d454c5df9d4a828f4bc31e168bde139689462a3c1"
-    sha256 cellar: :any, arm64_tahoe:       "0fe7f25e5e3e0667d7740655eaabccfe98a843e214e7f5c86363d41f5eed18ab"
-    sha256 cellar: :any, arm64_sequoia:     "bfd93caacdbe9259d50bba6fe19db3975651239836d40b7b1db1655f2cec067a"
-    sha256 cellar: :any, arm64_linux:       "df45c9df0b8801c052efbaf37f7179a4f9db2d69a1887d523c657d737f3b6571"
-    sha256 cellar: :any, x86_64_linux:      "8229c9bfe9ff3f1e65aa7f9c74a4bbc19f5950689bf171c1c51adcecf05cb709"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "826a5bde03856221a968d58df4c9c95bb16a75fdad8e5490709c9643524190af"
   end
 
   depends_on "cmake" => :build
