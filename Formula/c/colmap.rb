@@ -7,11 +7,8 @@ class Colmap < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "51509300c16685a71c056c50de841a14ed5e42507c74790e2a786a3826db0b0c"
-    sha256 cellar: :any, arm64_tahoe:       "faf4c5f48dd4c7f7c0e8ae847c49a7bcf492e8ad14339ba3d02fbaab7a5e031d"
-    sha256 cellar: :any, arm64_sequoia:     "3677dbb2c44c310ffc1c720329c34ed6b8e6d9bb263cd41a4cdd7c1372598979"
-    sha256 cellar: :any, arm64_linux:       "a46af8382f3562d1cfc9a8c143bb21669e9fd3e20e4a80ac2debc72411e095fe"
-    sha256 cellar: :any, x86_64_linux:      "9c7b70269d0d98e41ab1c32b3f93f9c3937eb17584bbcd0ec5947588434850de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "1e5a0f778f99885ac6f7c9b8530022e8bf87f1fd7cda1b10eb2958994df3f428"
   end
 
   depends_on "cmake" => :build

@@ -14,11 +14,8 @@ class Aqbanking < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "629e8f3ee5692f3f5538cfb704ff8f23ee3a4cb38bee5fc8ec2fc8c5c8d77782"
-    sha256 arm64_tahoe:       "0df5c83604300fc1b70b8549c0559841496a02e0f1ba5a6f103c59f17aaaf6b4"
-    sha256 arm64_sequoia:     "4fc0da60ea3cf71d31af15da9fa781f36f5a9278fa43a125127b4705f33b972e"
-    sha256 arm64_linux:       "93f030d976154906be9e6751ee680b37a4f29c07dd152eee759f5de18ee35103"
-    sha256 x86_64_linux:      "7fcefd526dc83eac4bdf3733e311bdbe094e5a1cb12f7d41f30e6356de68c907"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "adb4b7671bebd7290005e8ff3796023f48b65cb88e4c1eb2b8ca4a67ddaa3e35"
   end
 
   depends_on "gmp"
