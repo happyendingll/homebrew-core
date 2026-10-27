@@ -15,11 +15,8 @@ class Werf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a214a4d9359ae48eed1830b5d38ff1e8ed4e6314dcebbb30e08a1021893676b5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e276a6b530a94928eb43ea02b73f33df89ded21c64b0872535a875cab6f4141c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "31f74251960c96e19217c99b5bc3b005fe52d7ff29d9c251fd437e90d7600562"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3a650fe391037301e8408f684095835ce2983ebb46b478c8ab55e809445b4507"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "096bef65e2f1de25e056a938ef523f2019830479c3b56168af77be9435dea2ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "7bc8c17b566e876d6a329cdb7998e1483f5e74e754789733ddafee0ff54bb5fb"
   end
 
   depends_on "go" => :build

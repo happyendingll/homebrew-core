@@ -16,11 +16,8 @@ class Got < Formula
   no_autobump! because: "GitHub runners are not abile to access the homepage or livecheck URL"
 
   bottle do
-    sha256 arm64_golden_gate: "458b9bf4825f5630e5329182af66f6bf54d2f4c591b7d614d3982eea475996cf"
-    sha256 arm64_tahoe:       "56d7c6f4eb7bc370989d31b13289b65a04ee25e8e66d0a4bbb98b5b8babbe3d2"
-    sha256 arm64_sequoia:     "8febc62458cd9c4c9c48ff55fd04635dc4bc97f26fa7806888b0a1f8c5f5e439"
-    sha256 arm64_linux:       "7614e7a2ad97dfe241658f7b7d5f50de07d96fdc880310b24d7d77ea27f99277"
-    sha256 x86_64_linux:      "5d9ce5c85b50b973280a38b34787a82f1df188714cb4c54da6c632bec722a0dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "60cf0e822be370fcca64b0fbefe06cb4bb7632664b3e452aeb30fd37d8ff5ab9"
   end
 
   depends_on "bison" => :build

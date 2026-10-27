@@ -7,11 +7,8 @@ class Mado < Formula
   head "https://github.com/akiomik/mado.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43d3e42cc1f5c331a18ef310c62ff243d2cea6c93e4bdedd52d8731bcb6ff9e2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b4ab0157e03de32712356af74ed9e451c36f9621c60ee6f070ff1e31221c5fe0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c3183576fde63bb42114e780b77cf4ae8fd1e7b509ca02e1c1cc3ac10cf8d0e2"
-    sha256 cellar: :any,                 arm64_linux:       "53dd3bf9c81fa304291d03febe3c78af3cc163771b7bfb45c0c19787445975c5"
-    sha256 cellar: :any,                 x86_64_linux:      "ec2df4bebd2130e730da224fbcfdafde3a481663383edaedee56f5a6d043f342"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0cdd907ee4200615143b070d29f04de63d6180746adfc0ccdfad64d57288c7df"
   end
 
   depends_on "rust" => :build

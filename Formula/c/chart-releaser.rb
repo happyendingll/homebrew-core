@@ -7,11 +7,8 @@ class ChartReleaser < Formula
   head "https://github.com/helm/chart-releaser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2645a78a232b6d29271e985f39396bf806acd9370033a9e33936d28dff6e3a86"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dad50acb064a88b70ec49faf32bc4f8bf8ce8f35e1e0507b1c4c464c5c505ff8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "343c287cf48bc35a092fba14907fbd295d58c68aea1326515fb5e6500cd36e72"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1995af325cf65b713788a07dcb2a0e99d3db893e514377723b112bdb304b3647"
-    sha256 cellar: :any,                 x86_64_linux:      "b597bf36a3cabfcbe324f2db05569a39c43e48ff9495d4cd11f8324421b2a796"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "305fbe30d3fcb110be9fea4710d57f9e36d245149694240c38987359a5507593"
   end
 
   depends_on "go" => :build

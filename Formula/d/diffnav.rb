@@ -7,11 +7,8 @@ class Diffnav < Formula
   head "https://github.com/dlvhdr/diffnav.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9740daad89efefff55e3ef19b0275d88500dda80e54af6f5cb674adf5196918b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9740daad89efefff55e3ef19b0275d88500dda80e54af6f5cb674adf5196918b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9740daad89efefff55e3ef19b0275d88500dda80e54af6f5cb674adf5196918b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "120a93dfdb444473de3de797112647400555dd75e969247ad4832da9372a7fab"
-    sha256 cellar: :any,                 x86_64_linux:      "2a08dec7502bb422cb6cb99d5442683b4ff57a2d7d6871b4da98769c90336f55"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "2b3cb871f2b150e17009c1b03e80c9bfb72d793b13a5c97727cd3ae5b94bf952"
   end
 
   depends_on "go" => :build

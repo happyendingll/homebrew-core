@@ -7,11 +7,8 @@ class Hister < Formula
   head "https://github.com/asciimoo/hister.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc1bdf302a57c4196af776d653a4b660702f0f0ef08f993b861df33c8aa6321b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "990dbbff43e4ef24bf054604107a4efdb1ed766f28664c37439c589527ec491f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "23e9708c7c039ac7ce0b571c51a18757c149f667c4672625c877c465bdc51a6d"
-    sha256 cellar: :any,                 arm64_linux:       "cbf070c038bf7b0848f113b990e00fe735503fff9ab8c0f86f13cebdbf14d10e"
-    sha256 cellar: :any,                 x86_64_linux:      "76758589fbfbfa6af3b07dba818718e5ebb934bba78eda801d93496069672f15"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "9b63e62c6fa565fcc4c842bc6e3ed8f99402ca2a95b71717f8d7dbdf0f856e22"
   end
 
   depends_on "go" => :build

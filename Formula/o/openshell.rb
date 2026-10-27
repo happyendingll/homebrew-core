@@ -12,11 +12,8 @@ class Openshell < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3e7a1b0d2dc584c6bc7da8ddec40a04f1860bfee368e3be9c5e6a623b5ee6e31"
-    sha256 cellar: :any, arm64_tahoe:       "667a6738e08ea923f592ca6af269e1883c373606c8e77adf88b1b35052602f1f"
-    sha256 cellar: :any, arm64_sequoia:     "fd12d652429439b8544e3d994d655cb6f6f9c2a723449cf8a43c670c75a17e8e"
-    sha256 cellar: :any, arm64_linux:       "ade819bfe74a1ccaef9f96f41aea039566482d8cc7270ff7f908e8fbc4a3b95c"
-    sha256 cellar: :any, x86_64_linux:      "916442af4e0f3543ac80062b5a13d2ea894b5c6466c3244ba814c90c608a2ddc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "aaaa5a501c070ceed6aaf56e1b53e0717db6e432fbaa24b36c640fe111dc1c21"
   end
 
   depends_on "pkgconf" => :build

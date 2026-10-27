@@ -7,11 +7,8 @@ class PolicyEngine < Formula
   head "https://github.com/snyk/policy-engine.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dd908f95562d2451ea3d3edce5760eb8a4ac252f89a013fee0a4249aa0abc2c1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dd908f95562d2451ea3d3edce5760eb8a4ac252f89a013fee0a4249aa0abc2c1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd908f95562d2451ea3d3edce5760eb8a4ac252f89a013fee0a4249aa0abc2c1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "47c8f63313af7b7445f83c399b1ef0f146b6570bda6da8f9ccf790358cd6c00c"
-    sha256 cellar: :any,                 x86_64_linux:      "61af8f200b52b583e3a875322a150799bbb265de7b6a26651a4af9cce3de9a76"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "aee38732eafa256b13e20d560f01b12627c4560586c4e03336df2b8b904a93a2"
   end
 
   depends_on "go" => :build

@@ -10,11 +10,8 @@ class Repo < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1df0e670c469b5c7cac6e2754c589f98593c2dca0795e84562bae85282219ba3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1df0e670c469b5c7cac6e2754c589f98593c2dca0795e84562bae85282219ba3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1df0e670c469b5c7cac6e2754c589f98593c2dca0795e84562bae85282219ba3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e0af7cd8e7ef0da54e491f3abbd08c33742b235daf4c06b36b0c7469b1a38c8d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e0af7cd8e7ef0da54e491f3abbd08c33742b235daf4c06b36b0c7469b1a38c8d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "67a31022dd922d47569e046510f910099b2a3e132cc5e5e515d600835dc55967"
   end
 
   uses_from_macos "python"

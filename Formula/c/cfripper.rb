@@ -8,11 +8,8 @@ class Cfripper < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2334702a23d9094948845be7c6a6b928d4f0f45cce80ae48ea30b8e61abfdbb2"
-    sha256 cellar: :any, arm64_tahoe:       "9e31b33c73075e9e082412ed0ec651d33de9e373178c3c026c88ba87bc42a6fb"
-    sha256 cellar: :any, arm64_sequoia:     "4c3383454e5038acc0ed3f5dbe2dd374e279cc855a957b2f30e5f39861d7a5b3"
-    sha256 cellar: :any, arm64_linux:       "007ec71e0d59d22f948cbe0e0334c53ce78524be86523f13f94abc51c08349c4"
-    sha256 cellar: :any, x86_64_linux:      "151d0856029a77faf20be5cd321c86d0ffe12d86a46b3ebb5bdeef0063c81ada"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a3aaf8fabe762def0c04bab69dad47f4cc867b128d28f763867ef9173be18267"
   end
 
   depends_on "libyaml"

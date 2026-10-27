@@ -7,11 +7,8 @@ class Cmctl < Formula
   head "https://github.com/cert-manager/cmctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bb85f23d67cf27f6bdc08a39bff5a237178259c41b3875d678a0b8fd56297c6e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a881921ec3321d24f748ebf90006bc22890261054f1271891f8e2afb9248fe81"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b3ae32507235bd3c48de6e25c9d32efd67a01754d5a8401bf9723021a8192897"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8420e51c988ae22c0fffe39dcee1e993aa66a8f81e6fd05cd6b31134972eda26"
-    sha256 cellar: :any,                 x86_64_linux:      "1b9bfcf48c1ae1944d0d5d94c10a804738c04eb096e07ff85920129e426ad097"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "32b85055dfa8ed217425f52e914b55f205102c41ebd6b5fb44716fe116f80ddd"
   end
 
   depends_on "go" => :build

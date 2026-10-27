@@ -12,11 +12,8 @@ class Conduit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "926ad2cda8983575174472a9bebfda24cdb515dfbcc35eeffb1529509a1bb69b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "32a1e9db0e672f45e82b5590f42192ff79ec6c74eed3359956a2c8871feb4d36"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b7bec45277a904e354dc8ed2034c34b5042947638bea621249e962b3a5e75bb1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6ba1ca275f5e4ecebef75f3de37cbd7833130b5dc4c8210730d78e4627408c1e"
-    sha256 cellar: :any,                 x86_64_linux:      "1392e7d39aa55d4c573bc1eab353693193d65605ade0d64f487b941856c00f77"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "f05bd4ca5ebce82b0c4adaf4b990f8c48b2426e9f0158c2c77a00c7dfb124209"
   end
 
   depends_on "go" => :build
