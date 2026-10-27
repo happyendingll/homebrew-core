@@ -10,11 +10,8 @@ class Libplacebo < Formula
   head "https://code.videolan.org/videolan/libplacebo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0e9ea5b942841c88eb8941ea2a38a5cafddd7a1210a482adf18196db40bd99f3"
-    sha256 cellar: :any, arm64_tahoe:       "ef19764cff218aade9c8cfadb88c9899efaac51c701b756cadb83d79164a8ce9"
-    sha256 cellar: :any, arm64_sequoia:     "a96048b194f3423ef6fc5c888fa349ea70979fb3135719b8c5290889ff6e44cd"
-    sha256 cellar: :any, arm64_linux:       "fc08a0bf041c5aa11c06a8e0802448f0f96292b372a45a41b9426f3ff5dec0bf"
-    sha256 cellar: :any, x86_64_linux:      "894e1ba117e487d7edabdd5b1e05a6ce38f07efbd39859c2c3239214b2adc864"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a4c1d5b59917b90d06ab58b2c8febc2a106614de944df416339898f2e9e30d34"
   end
 
   depends_on "fast_float" => :build

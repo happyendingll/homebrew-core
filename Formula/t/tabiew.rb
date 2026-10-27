@@ -7,11 +7,8 @@ class Tabiew < Formula
   head "https://github.com/shshemi/tabiew.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b59474a2591256ae50667a83c3d447b629b1eec31643cf761e2cb4b2df44044f"
-    sha256 cellar: :any, arm64_tahoe:       "c02c30f78ceb8f751645ec8dfa778f3ae8b533a268ecf3eaf6ba3a7a2762894d"
-    sha256 cellar: :any, arm64_sequoia:     "4a3f135a4f55fac03083770d7ebc184157792ca1d8f562b5bf9878dcc5f392c7"
-    sha256 cellar: :any, arm64_linux:       "03f8a836204a491fec13261d645fe4cdf7a905dfb7fcafa63b04d9fd77e17cb1"
-    sha256 cellar: :any, x86_64_linux:      "5b9197b043b2238211c7adc646c6ef5417f867a6477e591c8735434f7d8fdf18"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "e44e657cc857b61791db4cb26afd41255a2c6b03cc499f206ab2fbb955b74a73"
   end
 
   depends_on "pkgconf" => :build

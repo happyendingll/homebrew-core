@@ -14,11 +14,8 @@ class GitSpice < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "731c4a4fd9d507881ae09d1296622da18a199f9c94b1ad61a43a5b937f7032cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "731c4a4fd9d507881ae09d1296622da18a199f9c94b1ad61a43a5b937f7032cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "731c4a4fd9d507881ae09d1296622da18a199f9c94b1ad61a43a5b937f7032cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e4509faf1f4cb04ef626471e88a5d25e21dcdde9dddd563ffb6cbe0934b87d32"
-    sha256 cellar: :any,                 x86_64_linux:      "3742536a1d6b6e0d487a590a919a47cdcdb46dcfdd719e6703a263bf6cc2dc2b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc2007a150d83740638bc11a14ea57123be6bff8a04a5a85768201536db4f072"
   end
 
   depends_on "go" => :build

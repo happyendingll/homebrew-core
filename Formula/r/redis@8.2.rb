@@ -17,11 +17,8 @@ class RedisAT82 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2437f13575a06fe650b06b60f498cd9d6999bf0af3accfebccfb9702c3f97756"
-    sha256 cellar: :any, arm64_tahoe:       "259a321b90c0d0bca18a4878ad5429dab239f73064e4354c1daca088674c9181"
-    sha256 cellar: :any, arm64_sequoia:     "4879c4e8d1b2be1958672229e9464b8d995d28bcc560ed1f06b18731e8a03d5d"
-    sha256 cellar: :any, arm64_linux:       "0e51dc70d858bf576fb0e6336f3148b7cfbceffdbe7662a50df31b026b4e5e71"
-    sha256 cellar: :any, x86_64_linux:      "63db52d5338553b9439f481bbf90b66c634296ad65ed29d24e0f9cc0abdab076"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "64d2c84f956f5d06d5942d7d48e91bded29b956d2f7e702fd0914f15b666725d"
   end
 
   keg_only :versioned_formula

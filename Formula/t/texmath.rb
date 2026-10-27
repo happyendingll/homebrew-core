@@ -7,11 +7,8 @@ class Texmath < Formula
   head "https://github.com/jgm/texmath.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5b5f891885d4232b517884c92d749bd2482bd338861e9d41f033f704b59f5293"
-    sha256 cellar: :any, arm64_tahoe:       "ac7791baa2a58cffa55b170a3624888cf93ab7263dc56229612c1d2b6506cfd8"
-    sha256 cellar: :any, arm64_sequoia:     "734a9bc159f1cb265bbb2525ad356535c66ad60ada809829818d79557becf400"
-    sha256 cellar: :any, arm64_linux:       "759df06f297c91e14b9411cbba950847bdb3205f9801abbba4cc2bae6cfdb653"
-    sha256 cellar: :any, x86_64_linux:      "a8f73f651e4af3577403bfa61415eb662805fe4233783899f9179c7750c3b368"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "9e801ac4568ee10a8978386fcebac79268f28729b9e9f402e6d11d7e9c72b341"
   end
 
   depends_on "cabal-install" => :build

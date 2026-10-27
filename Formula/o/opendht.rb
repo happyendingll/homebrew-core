@@ -14,11 +14,8 @@ class Opendht < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b8bfccd9a2a4add58a338cba78fb4b9038f77070480feb4a1f40edb7954fb714"
-    sha256 cellar: :any, arm64_tahoe:       "84d53a0045df8178a8b159aa3c8287713c78c0c599eedb1bb498dec1fe6349f6"
-    sha256 cellar: :any, arm64_sequoia:     "a7ab83e0a0ae4a38d225a771a0270804a4e32aea08531446adfb8bc8bf713eea"
-    sha256 cellar: :any, arm64_linux:       "c5d0a3e2cb3b22e5d5ef94c5f5f0ee28c032edaa71149f529f657d5c7e7ae146"
-    sha256 cellar: :any, x86_64_linux:      "84b4a132abefd4cf8acb36790dcc2b578d6727d0af431b6593621d1c18914b05"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "ad28b18fc0813163ebc82f46e3eb90ad632817631feefdf66b4d511744bb3036"
   end
 
   depends_on "cmake" => :build

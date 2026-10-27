@@ -6,11 +6,8 @@ class NetworkDoctor < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c16649cd00a74888f50655c33af043b8b4d8dc4e5a3f3ccab708939848cfd8b6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c16649cd00a74888f50655c33af043b8b4d8dc4e5a3f3ccab708939848cfd8b6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c16649cd00a74888f50655c33af043b8b4d8dc4e5a3f3ccab708939848cfd8b6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c492ea5e012e4b440ea9552b64581de5c3bc773ba77e65b89d48b1d807c9c072"
-    sha256 cellar: :any,                 x86_64_linux:      "eb894b9ecadf56221152f5421908b29fcdbf058ed53f00e51df3653804424f06"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd411f6fe958e52c2c501bea5e790575cd993c17cac596f533692684663896ba"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class AlevinFry < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3c07f204da2d05f7cb001ccaf12fa4fc76e86cf53bb6a20cae2ed8db835b1406"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed347d8ddebe01bb425cc2b3135ae48a6611c684cf9139a87b45a246d1fc3dce"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d90bd1c323ce9995bd29873fe5e80e0a6eba8f7090f124546923ec32d574ce04"
-    sha256 cellar: :any,                 arm64_linux:       "f4287662145b193a04b24f03ecc7e69b5e45ed1e45d4f9567d8fcce2ed918ca1"
-    sha256 cellar: :any,                 x86_64_linux:      "a49227111f374185df3b44aafc1f20a9c17f2862ebcef49082b1d677db6acb34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "f22d567b1550dfd26669b1a2a4b849c0c3c0bbf3170daa3cbd6455a63bc85ce0"
   end
 
   depends_on "cmake" => :build

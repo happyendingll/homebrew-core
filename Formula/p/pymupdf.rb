@@ -8,11 +8,8 @@ class Pymupdf < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b0fed251ae621bc71fa438bbe76335134f1e31cea3fb6603a97b3857a8b4ddd6"
-    sha256 cellar: :any, arm64_tahoe:       "1cd5778f6e625ab842e012d3d91b16b49ed4ccff670b80f959ece77151a4641c"
-    sha256 cellar: :any, arm64_sequoia:     "c314fa8e603d3729b90a19ec4c4ae4c92ce5381453c64fa7da7177ed4dec4e1c"
-    sha256 cellar: :any, arm64_linux:       "d13eb47a04d59a4f6fabf46ae90e4b5413d738418e922d07c8219e9d40e9376b"
-    sha256 cellar: :any, x86_64_linux:      "3fc06fa08c0b44e5ee47f743120b891421ad211458dcf1a46a118cd312597619"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "e3e40b9ce2132debf6b3cb7e107bdc82522b11e374491e9c3cc2d92bd176a20f"
   end
 
   depends_on "freetype" => :build

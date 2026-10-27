@@ -18,11 +18,8 @@ class StorjUplink < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2299f0d52e3329b53d99c1c83bf950a808856a857450edfeea8d23e852b4712b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2299f0d52e3329b53d99c1c83bf950a808856a857450edfeea8d23e852b4712b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2299f0d52e3329b53d99c1c83bf950a808856a857450edfeea8d23e852b4712b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9b32730d49f2152a6961fbd5002a8d266bf96b6defbf7a201648e9b7339cd1d5"
-    sha256 cellar: :any,                 x86_64_linux:      "160150a9cf8549798a0bcb9112ec09da762f7e37e6e9d02539f8b663bbae3074"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "810bf174be69a658c7ad4e713b9db9262133c9dcc7ae2c5acf6ae11e12890fe5"
   end
 
   depends_on "go" => :build

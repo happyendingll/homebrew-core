@@ -7,11 +7,8 @@ class Tuios < Formula
   head "https://github.com/Gaurav-Gosain/tuios.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e17e53f8e1df63e2efcbb50229e68a32f0bcdfafdc7d058648ea62063face855"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4aab61569a73d19e98e762d3442974a45378cf1e2b7329e9e3198bb4903ca1ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "96ef7f4a68601f3334e315e70bc5366f5e070c8f769c5dca4e44cb716fd8f44c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b1a71fa2a7ad7f68698e549d2be37a56793e8f90513fbc4edadd941310d86222"
-    sha256 cellar: :any,                 x86_64_linux:      "40814144a5c08967ca29102e4f6f430d9a066659006a69bc4735718fa152a92e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "138342b7191a0b308c47d632d6122b5b16b9de6392f1a49b881ae9e734423b44"
   end
 
   depends_on "go" => :build

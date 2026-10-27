@@ -7,11 +7,8 @@ class Minify < Formula
   head "https://github.com/tdewolff/minify.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "39a2f8065667b1211ce8becabaf820c1c21e47ff0b3629bc07ff7ac26699be60"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "39a2f8065667b1211ce8becabaf820c1c21e47ff0b3629bc07ff7ac26699be60"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39a2f8065667b1211ce8becabaf820c1c21e47ff0b3629bc07ff7ac26699be60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0ee143cfa8e14d54c078ec0a9af5f2dc0339e7dbf3b3078a88ee477652306c1e"
-    sha256 cellar: :any,                 x86_64_linux:      "7c4c1c0cf244c505f886df3f90f99300171dba4725c774832c33109e4e91e9ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "6d4bed4c2c6067788b4d3e4cf2c884fc7b3065e50a9cf40155134c898ccc28c9"
   end
 
   depends_on "go" => :build

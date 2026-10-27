@@ -7,11 +7,8 @@ class Kubecfg < Formula
   head "https://github.com/kubecfg/kubecfg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e1f051e8074ed32546e20c7152cbf5a5c2b3465ac1449c59a5da8cb6298664f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c220a996635b869f09cea968caf84070b909d1f8ad5d430a31816a69d1cc7139"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7e975cdd1d6c824817ee71810ab0ae42f703eee4f14a7f6fe4122c62d52d8a05"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "aeb2954da95e5ef6e838ae7c4177b915615b4514603be05414c60c9130254a85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1540135185bebd982adce6f98f9c033a8724ae7ab5cdfbb1d7b13e95280d0793"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "04a4bbc9f52fe934591f3ef7fb6239f2390c4019a1034b1453bfb04c2acbb6e4"
   end
 
   depends_on "go" => :build

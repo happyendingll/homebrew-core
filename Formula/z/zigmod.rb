@@ -13,11 +13,8 @@ class Zigmod < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "566f26869092260bbad93032711fbfca01d0c4e415d100b488fc3cd4d207f6d1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "61bdccd7913c453c2edc27ef7ccc7ed308801908b55ae3893f614a79a613b1e1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1c7323a3e78481e79801d875d5e87b90537daa8a6b6848fa8c7ca5a55abc0eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "520766208b32b76ca67a2eedacd7c01a5d3bc67675aeb88b5b56e896afaccd3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ae5622a497b30880ea2a015fdc59cc6bbcbaab9f10d10fba1f06c7c8d091b5f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "c7bbe8d4e4ce93771ed65130d6fb947b73f3b37621c7febe15210efc7d096cc0"
   end
 
   depends_on "git" => :build # `zig build fetch` runs `git clone --revision` (git 2.49+)

@@ -7,11 +7,8 @@ class CloudflareSpeedCli < Formula
   head "https://github.com/kavehtehrani/cloudflare-speed-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f0e53e485b12c9b45fe53d36c4171ba150c3b85c51174528a554a4a4634d4561"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e50c3936c7eb57afa168ebe592f4012bac23ebc95d8b3c0e5d8163f7d7bf4bc9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3d118a437b02d6f8d397f4639d8fb06361e45884ecc68b1bcc51e6e9c9a051e"
-    sha256 cellar: :any,                 arm64_linux:       "3c758fa4b24ca0ee92c71fa3ce1318733f54caac7368e150cf45d571d90c6a9c"
-    sha256 cellar: :any,                 x86_64_linux:      "0b0587b35112ecde87c6676a72b65223b5b828d7c2d0056c3da85f20350e45f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "de70274a6fd9f58162479dd6034e86a5fb768a85f47db7577a76899424880f1e"
   end
 
   depends_on "rust" => :build

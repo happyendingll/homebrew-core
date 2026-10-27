@@ -12,11 +12,8 @@ class Fastlane < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cdc8b0377f8906ec7f57241d0fb0067decee8c1587483a36c0a7a1548ae82b37"
-    sha256 cellar: :any, arm64_tahoe:       "71db8aa13b4a2eef0b5fb23b5f6c4d38dcf9de62db42d6a811be4ff8f2dfe5e1"
-    sha256 cellar: :any, arm64_sequoia:     "152145bf2484b00407cb6ef026d344d0bbedb9dfa12e5c42620c584e2f7825a8"
-    sha256 cellar: :any, arm64_linux:       "3dd2ae43085a9d6b00636bb82513dd29bc6d01d5ad015a7d4ba8e9aacf208872"
-    sha256 cellar: :any, x86_64_linux:      "33c27cad292baca6ac184d78c9512a9b0bfc36a057c3d13b39bc3cbd2e6a6bc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f5a1ef56481e3ec919e3165481d9f5e1669785589861725e30d87f67da2b2354"
   end
 
   depends_on "ruby"

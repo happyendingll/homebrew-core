@@ -7,11 +7,8 @@ class Nats < Formula
   head "https://github.com/nats-io/natscli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0874c83c1bd1c1cfd4a135c4cd47796242e129e82e1e2594122422e4a4b84751"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dccd6710994aaec87c4303f4c73242bd6f2c2773a4232a7a02a6a81ffd1c64e5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6b0b07f92419d681e843a8e703a6a71853fa9180353a92722152bb0f75dbfca5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "eb2374380592382003ba5ecd19cf300acf4c6128ab72f489d034b9dca2a7af8c"
-    sha256 cellar: :any,                 x86_64_linux:      "56d346fecdd7ad842af7212b93d4f6d2ab4b88771e79e78bebb30e5dac1dde97"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "98359f43f012a165283b5d6aa3765ff6873dd2170763b8adcd863c3b13335dba"
   end
 
   depends_on "go" => :build

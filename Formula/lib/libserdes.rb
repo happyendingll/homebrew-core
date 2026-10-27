@@ -8,11 +8,8 @@ class Libserdes < Formula
   head "https://github.com/confluentinc/libserdes.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "95963b951c6c6ebdfdb11fad80d64425892f8dfd21517cf326264dca5f8cc7a9"
-    sha256 cellar: :any, arm64_tahoe:       "54b89818ea82113639f8398c95ce28f18dc8fed5d7c5d4feb05e561a2cc4b534"
-    sha256 cellar: :any, arm64_sequoia:     "cc9bb24ccf45a34a126662c8614453a0343b85e89d1628817305657a3aa1a5c2"
-    sha256 cellar: :any, arm64_linux:       "a27540c0b909b9ff8787d0f9248db2ce5b0ac6d8bd3bbe5f1989b126fcbe7318"
-    sha256 cellar: :any, x86_64_linux:      "25642093ed022718029b05f7e1a049e643e3c8034dfa6e1f2f32dac9d878b952"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "b6738ee6ec74106538b068cea6b6fe51a38d19262fecbe7a3dd09076a23640bb"
   end
 
   depends_on "avro-c"

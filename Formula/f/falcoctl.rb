@@ -7,11 +7,8 @@ class Falcoctl < Formula
   head "https://github.com/falcosecurity/falcoctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0744e56b024fb92e89925d4e10031dbbcd299cc28c253a6d67ca564daf76af69"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ffe85cfee40b9950209a31eea3b744d535553f51207df03186299816921aa21e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7387c8f93b980b48fc7b49792c0a8be9948ac963bc5069f314bd09ea26accb40"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ee336256998066832dfc6fa13e6cc95f1c8d5187b2233fea8c7caf7f005b6231"
-    sha256 cellar: :any,                 x86_64_linux:      "89aa850b1f37e1fa129faac65a7efff9f4758c1769f7861360b3b02938c21254"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "274c5900f66d48c036702084b6577100dfa8436347cb0a45ad9b0399fd7ff3b4"
   end
 
   depends_on "go" => :build

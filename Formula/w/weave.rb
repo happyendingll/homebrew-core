@@ -7,11 +7,8 @@ class Weave < Formula
   head "https://github.com/Ataraxy-Labs/weave.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "027fb9fc1b6b231a6b030c93b1f593ec8a4ae8166638b8fdf6ea2f5199615e54"
-    sha256 cellar: :any, arm64_tahoe:       "45b6c78b39e53950e07452fa926f3a43099e1ed8de2ec0dc54d924ff4feb3d70"
-    sha256 cellar: :any, arm64_sequoia:     "441d2cc71520d3c2effcb0615081f0e4d445710f058907eda9c45a3a2fbe3f31"
-    sha256 cellar: :any, arm64_linux:       "b42979991974fcb699af6b111a63f95525fa632ba1e5aa79313d437f69c6e417"
-    sha256 cellar: :any, x86_64_linux:      "17c04f442923c875b28d5f6aa3866c4876361651cc57b6c5e078f811abfdb2ab"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "2c33565d1d5c527847da1ae44006cbaefacdb94911253ec67bea2c8603d2023e"
   end
 
   depends_on "pkgconf" => :build

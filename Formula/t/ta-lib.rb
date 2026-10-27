@@ -6,11 +6,8 @@ class TaLib < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9a2e16d1c396f11e40ae72ce31e563352d0982f1fa573dcd8ba94cf94a711218"
-    sha256 cellar: :any, arm64_tahoe:       "da7b5a46fc40202dc7ed8eb5f051a60a69b976d9a236850bea7a88cff1b88c0b"
-    sha256 cellar: :any, arm64_sequoia:     "d747d9fb966ef2105c4bf74c7e0ae8e2197dc5d9e0821173d03bc0933af6f623"
-    sha256 cellar: :any, arm64_linux:       "f077a20a046456125e06614e069c213d87bf9497bdd1920531b8ac87e6f2e91d"
-    sha256 cellar: :any, x86_64_linux:      "b15a93e0d67c3c8270f46f3101c853cf9a4e210a22491de4970cad4db1ec449c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "2363482a68a78562473367bc5deab06d6f0d858ee17d1836f422b890b19a7eab"
   end
 
   on_macos do

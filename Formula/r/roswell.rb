@@ -7,11 +7,8 @@ class Roswell < Formula
   head "https://github.com/roswell/roswell.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "891d1e1bd58d41e95e0e172f4f043e61eb4b6b7e6236b0cad40a2bb903c25726"
-    sha256 arm64_tahoe:       "760e161842a5126a2ea13180a472f5d6001c072865ea4c58292859d30a911945"
-    sha256 arm64_sequoia:     "70d8877fa10b4e06ae24b4299f97dd84e8b03481c69eb3180e29d825615b1153"
-    sha256 arm64_linux:       "4a9da299112fba5848d3809af70cecd2275e4a39979e5e822be80257fb352be3"
-    sha256 x86_64_linux:      "ea2d27a44280f039b3a80ee62d36fd94083311b5f2735faed0b391a4602723da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "3605b4b78d2b68049cb8917ea296868337a611a8d8e1c3c1705053edc6f22ae1"
   end
 
   depends_on "autoconf" => :build

@@ -6,11 +6,8 @@ class Readsb < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9482f3e9a4c16de32a071f0acd0983fb7548f37bbd0bae574108bfe64c4e5747"
-    sha256 cellar: :any, arm64_tahoe:       "f695eb6c7e94c653512e3ebc48c7d5ef58ae8be73b54e73cbaea2dea7a3212f1"
-    sha256 cellar: :any, arm64_sequoia:     "4a4f10faa731c7e181da726a31f21a2e5ef4b0ee57014f60f5b8570ddb3bf846"
-    sha256 cellar: :any, arm64_linux:       "a3e3ebeb3e2b5d12df6dd24dfd017d599ff3363cc0885a07c76b9171740afc4d"
-    sha256 cellar: :any, x86_64_linux:      "458adb8f3be52dadf0baf5797c106c5a46e294d152a9e903322b5875612251a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "3956a3c42d42cb9c83cebe170a6bd8e941dec4e11c25aacac2bd59a89203db45"
   end
 
   depends_on "pkgconf" => :build

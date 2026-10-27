@@ -7,11 +7,8 @@ class Sesh < Formula
   head "https://github.com/joshmedeski/sesh.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e2f503bb1b8d06f41e551ee4e1543533188da24b4acce4f40bd9d2505aa6b66"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1e2f503bb1b8d06f41e551ee4e1543533188da24b4acce4f40bd9d2505aa6b66"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1e2f503bb1b8d06f41e551ee4e1543533188da24b4acce4f40bd9d2505aa6b66"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4d651f243273e16a1f28fff5eca36eec8cc47afafdea6917ff64023cf141a141"
-    sha256 cellar: :any,                 x86_64_linux:      "a77c654c5a58cccc88048d59926805f23422f2519973b40b5256120c193f3cd3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "2ec655fe00b81bfb3340d3702ce1161340fefa0e609830bfaa2ee361c7fca48d"
   end
 
   depends_on "go" => :build

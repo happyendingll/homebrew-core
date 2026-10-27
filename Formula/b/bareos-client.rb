@@ -12,11 +12,8 @@ class BareosClient < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "57018722bef53776dc455e0603e3fa415e2bce143ed644a0f00acf0e766d56b5"
-    sha256 arm64_tahoe:       "40c5aa57636874a384d06b020ba1d3139c99083f90e3696a612a151b20debcab"
-    sha256 arm64_sequoia:     "80677ad50f57e4c244b9c00a0613aadb275f4a5923dcb1986b754abbbd55f535"
-    sha256 arm64_linux:       "be07c2b5014850060aa8bfb54c3d00b83b997183adc00cb502b701b402ffbf51"
-    sha256 x86_64_linux:      "d687f13b737805c57dbad2c6ad4c214ed77c155481056810d153e1bf50bebcf5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "9bdee97e93a71a7cc2417ed5486f03fbfe3638c6a8ae0850fe781bb4e7af3aab"
   end
 
   depends_on "cli11" => :build

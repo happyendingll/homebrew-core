@@ -11,11 +11,8 @@ class RRig < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "930e63fcb6daaeb0c0737b4872bb980f1ce4d24ae0643f441babc0d02e81e1de"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "00d7873e7fe117e0851062d991c1431cc51da993d135258c504cacfdc2c9d761"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8a547dd661605d52f41651e9da9fff524465d0f8680da7056203508b23d5920b"
-    sha256 cellar: :any,                 arm64_linux:       "c6856624e03c1e9bdb9056c3bbe66e741eb72a48b5b52bb6ea7db2f6916a675b"
-    sha256 cellar: :any,                 x86_64_linux:      "afc9a23e7bbf9928d5b76e4f1610abc1e00dbdb46a9ab4bf19b1eb100401515c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "6f5b72cc097bb9024fe6577f00d1017869b81c539a09cf68675457cf5dcaf663"
   end
 
   depends_on "rust" => :build

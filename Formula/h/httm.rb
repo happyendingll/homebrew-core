@@ -7,11 +7,8 @@ class Httm < Formula
   head "https://github.com/kimono-koans/httm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e3d65f41ccaaf9d42e59bb8411426f38615db96752cbb674e6219ba507b3e88e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f093959bdae23e8ecee8df9b8bd3c5998dce40740d53b8c8a30b01df85fe3c49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3a761da79e41be6c9f49ab7d7afc9f8cab9570bb6344618fe1694fbeceb8fb4"
-    sha256 cellar: :any,                 arm64_linux:       "fb72b77786d49a55b94596b8a2ba7c03046554ddba1c98b6255af046493cfde2"
-    sha256 cellar: :any,                 x86_64_linux:      "4600d73a9dd8a9b781666b487c3f8f0bb56b235a742d1028de45b123326547c9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a973839eccd82c0324f0a27cac5dbf9735f25af0e3a443fe55ff916a320a6274"
   end
 
   depends_on "rust" => :build

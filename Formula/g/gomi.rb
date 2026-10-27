@@ -7,11 +7,8 @@ class Gomi < Formula
   head "https://github.com/babarot/gomi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a9265e068d4230b86a02f58faacc32f39d94248fb0579cd8d8b2b3117622b5b8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a9265e068d4230b86a02f58faacc32f39d94248fb0579cd8d8b2b3117622b5b8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a9265e068d4230b86a02f58faacc32f39d94248fb0579cd8d8b2b3117622b5b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8d964b6cad10d4b665557eef37d4ed9c0f22f2a9b57a9bea5a2801778cda55a4"
-    sha256 cellar: :any,                 x86_64_linux:      "57b578ce1ef478767012a4eb5149338bd19baecfbc88bb91e1fbbc1454f72c17"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "5e794efe3d607d6247f180862da12b51933739d45e89b9e6029a63317ea08023"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Amass < Formula
   head "https://github.com/owasp-amass/amass.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1aa38aaf84268c4f6a611738f2de94502c6a8359475e73660e6b007062bda12e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ab4312afc237c520b92785e0c28136cf056eb0aaad1b8f6b143b9cf6e1459f6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "739848585fa96cd12ee3054365118f67a199307206b1519f2f25c4049507f225"
   end
 
   depends_on "go" => :build

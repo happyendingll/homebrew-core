@@ -7,11 +7,8 @@ class Zot < Formula
   head "https://github.com/patriceckhart/zot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a4dffb4cd43b69ce795b225e0cfc46571583ce30f2169f58e4ebbb2a94698594"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a4dffb4cd43b69ce795b225e0cfc46571583ce30f2169f58e4ebbb2a94698594"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a4dffb4cd43b69ce795b225e0cfc46571583ce30f2169f58e4ebbb2a94698594"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d8ade03d0f18f22ca929da214aa1bfcef0c7c0a5490215dfedc157d0c17f1193"
-    sha256 cellar: :any,                 x86_64_linux:      "4427d7fd9040db5e73abd37a5dfd45d41dc8e0f3e236d2b4b69a7ff2ee2c9ee4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "4d389818112ad2bf157dc43332cab3f61330ef072662707dab6cdc27145bdce0"
   end
 
   depends_on "go" => :build

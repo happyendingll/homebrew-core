@@ -14,11 +14,8 @@ class Nexttrace < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca22935d5d82f0b2262c8d727ee9bfef022856a9c8ce3f9f18196020dc03c08f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a22b0cf4aa2c3f89aec13b5e7145776dc22c2f7a71c6cd9840b05663575c5325"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d48a09de0c9c088902593e63e81e62df8814e219122ed452e69fc89c7ddb0473"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "637fac418be9e8773d138808d473b1eba51529acde6549cff34a73854f95d056"
-    sha256 cellar: :any,                 x86_64_linux:      "30826d80e7762e6062b2d6b19d58b1173ee54d1ea2068ef1d7a57f55a7bc25b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "f155314884602f7977763ee9aafd0b5dbc9f7b558cff3a6e85fc43a456a762f0"
   end
 
   depends_on "go" => :build

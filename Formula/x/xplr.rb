@@ -7,11 +7,8 @@ class Xplr < Formula
   head "https://github.com/sayanarijit/xplr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c49b4cf0cd872bdcf451a12eede23634f338f1f6ebd72f6f4ec933c548780e00"
-    sha256 cellar: :any, arm64_tahoe:       "92895a7d0f1891b03c1b346156b53ff6c2ca571dbfee47a607424290eabb0b59"
-    sha256 cellar: :any, arm64_sequoia:     "fc30d537eb34fad2c3716bd78109d1bbf7a8734e2eb59cd3492e3dbf8b34aa52"
-    sha256 cellar: :any, arm64_linux:       "a5e2ad47c5a58f7826ec2af8aea1a2cdbf7050b3b13332981d69ea7ba437ad1f"
-    sha256 cellar: :any, x86_64_linux:      "26b3866701e1006078cc8b512e7f1a21422ee9c19851337c8240ad9b6508c5a6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "b37810a0a44fadf642002a8131e3edf64138fc4b1201e6fada9f4226be9fca5b"
   end
 
   depends_on "pkgconf" => :build
