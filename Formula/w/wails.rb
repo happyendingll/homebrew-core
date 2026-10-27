@@ -7,11 +7,8 @@ class Wails < Formula
   head "https://github.com/wailsapp/wails.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0be646f0154dd387fec816f162703b117730ae6d3a39abce08e58acf97ec364f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "147319c9b2bba0e960bae4cc69c4fef9cd3019d9a33d3435f3deb9742c963d61"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8d2278b38796ea5d7f62a446ad6f2316b6ddf580fb201653a27142d934e037f2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "85067d82fd8cb6caa4b3d55b2c42bd9893171606fa7f63ed52e3c666a27bbb84"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9ce0375c3fdc6b7a5d79a7c006600e9c37e4ddcb2532f53a82ca80ec5296b414"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "21ad917230b66d71faea335c585b7fc3b4c64920051f74ae157c5dc8d80e365c"
   end
 
   depends_on "go"

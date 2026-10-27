@@ -7,11 +7,8 @@ class Cloudlist < Formula
   head "https://github.com/projectdiscovery/cloudlist.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ff57b04ea186c9be99e90ef7b2ee67c0484449ae0a8a8f5c60c4104f2e6ef21e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ade0d1a6bf00725c57fe270668e0500577fdbc3f11e01cffe2948fccb9dffe30"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba2fa24605a11a613281aab0d87b4be30bc4f4519b4253a25b75701861eb6a3c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "920eda07c530e846b861410778f665d6cfb79ecbbc8cdc512a9e8e0f321e8f4c"
-    sha256 cellar: :any,                 x86_64_linux:      "8cb96cfbcdfddc2bef6c4f6a6d836f4dea49f621466f5fd37628a0cb0c457b8c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "3903e36d57718598a3ad60c5c953b8416aed0747976631ff323de2dc4bd626b7"
   end
 
   depends_on "go" => :build

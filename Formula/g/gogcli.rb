@@ -7,11 +7,8 @@ class Gogcli < Formula
   head "https://github.com/openclaw/gogcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b2ced1fdf3b061259a1c116cdeb5082c3fdb108b847d12f6d2c209122530f43c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bee49873bb881e9e85b5567646c830b6aae1242416eb846ea48534d1f12f03c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc2ee87154e13315e097fe51608698efa53d610aeed4cf79861a60d89d31fc16"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8a36a4b7330533af459cccb94b78834e8621a40e651b85ce53818f7276b81d74"
-    sha256 cellar: :any,                 x86_64_linux:      "e9593fc0cdff650fa45ae94e6f2472789b2ffca1724c45922e2dcf6f2b250f91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "1bfc51e90be3cfff157759689c7feaccf158dfcf48573c0f45196452333e603d"
   end
 
   depends_on "go" => :build

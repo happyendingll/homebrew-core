@@ -6,11 +6,8 @@ class Tpack < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db5abb348c763c4c00589b280dad6d927375d85291b81cb203e100f5bfb0e0a8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "db5abb348c763c4c00589b280dad6d927375d85291b81cb203e100f5bfb0e0a8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db5abb348c763c4c00589b280dad6d927375d85291b81cb203e100f5bfb0e0a8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "69a0edbf6b193dc33d3b1cb56edcb82d50b387fbd45ee272d85d1778624d14d6"
-    sha256 cellar: :any,                 x86_64_linux:      "06ce291852f17b88ceaa22cc6335406f364f2adc807a7f66e726628c5174f5b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "8306f4c7018c4a074dd25730897f2aea4974d8f26052baeae5621cd675734c00"
   end
 
   depends_on "go" => :build

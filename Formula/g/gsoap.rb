@@ -19,11 +19,8 @@ class Gsoap < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f7789b187b9138d7a604ace931651103359c7124f79a916821cc134733cab7fd"
-    sha256 arm64_tahoe:       "ac051966f82c8d8fcc15bbdfb179479d4f4c5b2e4eaf774a7fd9cc60b6702356"
-    sha256 arm64_sequoia:     "e5a7cc5cdeda86ec221a015cff01c3e8bd94a6e2618aae04e2a0114695ed0272"
-    sha256 arm64_linux:       "bab8f147af658942102765070caedfe2136c853c2fbf3513941a13ba4ce07ec8"
-    sha256 x86_64_linux:      "96188e888bf686d35b80dd809852ab4de81888e0aaec5449d1c724d6f4835305"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "a5f37af26b29df14433a21e16d11f6123c97582f32041f92e3e8ac32a384ee63"
   end
 
   depends_on "autoconf" => :build

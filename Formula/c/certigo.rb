@@ -12,11 +12,8 @@ class Certigo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66e418225d8c827889ac59638663843652fef1e1c48b7946c3dfdde27026a937"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed417bb2fc43a4919012b7c622bed90fafa8374c9e6a2c2b08126e9be7d3930a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "af42a80a591f440ef0cdf3c94c8e09d2d1ac0478836d688c817fe3d288178968"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d362715b9e75e69a9f997c74b5c2fb6aa5961842638529bcf0db725e275d8fb9"
-    sha256 cellar: :any,                 x86_64_linux:      "25d966542eeab79fe5c94e21e41d53cadc2be17324a8ed319bb390150684eca1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "2c907a3f6b9ddc055897a5bf55b4f37fbef8bad3ca3e32f220d328d1dce50ca0"
   end
 
   depends_on "go" => :build

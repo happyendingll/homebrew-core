@@ -13,11 +13,8 @@ class Valkey < Formula
   head "https://github.com/valkey-io/valkey.git", branch: "unstable"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bf1d6cf0f83558024ff7c2e8bd47b0ad9bab6b833e30d2d6591c356386127f97"
-    sha256 cellar: :any, arm64_tahoe:       "7750c1dda4336e76ee0392f8d70a25574456cb63ac9edd69cef4e659601c4713"
-    sha256 cellar: :any, arm64_sequoia:     "06a7170e3c0c86884b25578bcb083b68bc47715c5e5ee4ce31e8b95311e22027"
-    sha256 cellar: :any, arm64_linux:       "8fb34f24c8e09d0060dbb860f5fc826ccb8fd20b2335a6a43d640ed82fae4bf1"
-    sha256 cellar: :any, x86_64_linux:      "e509dc1946dd3c33bd0bdc6c50788fffb4821fcfc510f46b838d0970b79b095b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "089b59f2ca6e3f0c2d67e6d7c2332bf2530965db466a4b660db66b0c0b2beba3"
   end
 
   depends_on "openssl@4"

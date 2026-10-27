@@ -14,11 +14,8 @@ class Pyenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "07b36168987ba18420266ab6e13f15dcfdd6384ddf00bc24fc1043cbf6079c02"
-    sha256 cellar: :any, arm64_tahoe:       "a2b32abca6682dfc8e44efab996abd681355b45c312f2ea51b5277a7ea194d57"
-    sha256 cellar: :any, arm64_sequoia:     "56addadca7a081b3924d7ea9af73aeabc44e86b561148bf57f50478100a8a50a"
-    sha256 cellar: :any, arm64_linux:       "5c0f613e4cd7b6a8622bbb4484f9843f2ab70dfdbc62bae8c16bf8785050e1ac"
-    sha256 cellar: :any, x86_64_linux:      "a62152c622520d02eb84d37e7c99fae424347fce25eeb14460afcd5a3ebea354"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "3ad3184a63bfac51a27250b0332272c83ddb6c1dc339ebe1c65e78e3e404d47c"
   end
 
   depends_on "autoconf"

@@ -15,11 +15,8 @@ class Govc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "19bcebe8ae361f839a14f1993c29b1e495c757d96940b43a71184b4f7e8c792c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "19bcebe8ae361f839a14f1993c29b1e495c757d96940b43a71184b4f7e8c792c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "19bcebe8ae361f839a14f1993c29b1e495c757d96940b43a71184b4f7e8c792c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9a8d2ebb6a52570669038962fc7aa9cbe52ba59a854e356159989787de9ebfe2"
-    sha256 cellar: :any,                 x86_64_linux:      "85ad40938a22b2a138818b6586078f0fb6d8fa9e33778bf2fd4bd036f284ad8b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a41f149199ca86be4b663a60fe5f947893f64745cf452b0f5f0c5334f5a6998d"
   end
 
   depends_on "go" => :build
