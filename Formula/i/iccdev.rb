@@ -1,10 +1,9 @@
 class Iccdev < Formula
   desc "Developer tools for interacting with and manipulating ICC profiles"
   homepage "https://github.com/InternationalColorConsortium/iccDEV"
-  url "https://github.com/InternationalColorConsortium/iccDEV/archive/refs/tags/v2.3.2.3.tar.gz"
-  sha256 "0748d2759b5c010efa84faf1820d9743f88adf79f4d3dc740651a7b579517e62"
+  url "https://github.com/InternationalColorConsortium/iccDEV/archive/refs/tags/v2.3.2.4.tar.gz"
+  sha256 "f2dd851d0dca99fa1e30a636e7e6051bc0690b80ffe57e42e8c59575a9ae7c1f"
   license "BSD-3-Clause"
-  revision 1
 
   # Skip `wasm-` tags
   livecheck do
@@ -13,8 +12,11 @@ class Iccdev < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "ff9ca3f1c08f24776c02128b92c1b3c26db498bc9ac1346ae62e95b935dd20e1"
+    sha256 cellar: :any, arm64_golden_gate: "6022e967ff7c38ef4a542b9b28273150de744006be95551ba00a3c333b2fec98"
+    sha256 cellar: :any, arm64_tahoe:       "8d94f9af590215e04aee8bcc7c2473a19d5b0717d9d94bd0eddc6ca062b1bb25"
+    sha256 cellar: :any, arm64_sequoia:     "39270898403ce95a70a00a055281e6a901f346af62ed79d408d61f296fd8bedd"
+    sha256 cellar: :any, arm64_linux:       "caeee63a4f3f20cea6431b2d0a6fc692decf2ddd43b1eada21687dbb6e847da1"
+    sha256 cellar: :any, x86_64_linux:      "d9058a5314d6551b343bed4f7f7b9a157c939e3221d10447e0a5f772e71bed34"
   end
 
   depends_on "cmake" => :build

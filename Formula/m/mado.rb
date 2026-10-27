@@ -1,14 +1,17 @@
 class Mado < Formula
   desc "Fast Markdown linter written in Rust"
   homepage "https://github.com/akiomik/mado"
-  url "https://github.com/akiomik/mado/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "6df6348a59170c19858d24512ba0a7eba9a5b5ec51f3f2bfa14e32327cc0f806"
+  url "https://github.com/akiomik/mado/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "55e3c611a5096f7085e9d439c4ba91b8a8d749de6cd313ba09771d84f484607a"
   license "Apache-2.0"
   head "https://github.com/akiomik/mado.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "df4d911f7b6f685f7ad49fac8e34244927adb2a72ed8a01b7b6f907b7279c8db"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43d3e42cc1f5c331a18ef310c62ff243d2cea6c93e4bdedd52d8731bcb6ff9e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b4ab0157e03de32712356af74ed9e451c36f9621c60ee6f070ff1e31221c5fe0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c3183576fde63bb42114e780b77cf4ae8fd1e7b509ca02e1c1cc3ac10cf8d0e2"
+    sha256 cellar: :any,                 arm64_linux:       "53dd3bf9c81fa304291d03febe3c78af3cc163771b7bfb45c0c19787445975c5"
+    sha256 cellar: :any,                 x86_64_linux:      "ec2df4bebd2130e730da224fbcfdafde3a481663383edaedee56f5a6d043f342"
   end
 
   depends_on "rust" => :build

@@ -1,14 +1,17 @@
 class Hister < Formula
   desc "Self-hosted search engine for your browsing history"
   homepage "https://hister.org/"
-  url "https://github.com/asciimoo/hister/archive/refs/tags/v0.20.0.tar.gz"
-  sha256 "211743f169766ce9a8d7b8a4ebd69a9e5d3bd656150e76c7a0e2fe4e1321a623"
+  url "https://github.com/asciimoo/hister/archive/refs/tags/v0.21.0.tar.gz"
+  sha256 "b47d349d5c14b4b0c142ed7dd9583d276c20658677a483fcf7331beb9735bf0a"
   license "AGPL-3.0-or-later"
   head "https://github.com/asciimoo/hister.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "e927f980e19c45858abf394e9adf764f122b4da0bfff65b7958439421464fb8c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc1bdf302a57c4196af776d653a4b660702f0f0ef08f993b861df33c8aa6321b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "990dbbff43e4ef24bf054604107a4efdb1ed766f28664c37439c589527ec491f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "23e9708c7c039ac7ce0b571c51a18757c149f667c4672625c877c465bdc51a6d"
+    sha256 cellar: :any,                 arm64_linux:       "cbf070c038bf7b0848f113b990e00fe735503fff9ab8c0f86f13cebdbf14d10e"
+    sha256 cellar: :any,                 x86_64_linux:      "76758589fbfbfa6af3b07dba818718e5ebb934bba78eda801d93496069672f15"
   end
 
   depends_on "go" => :build

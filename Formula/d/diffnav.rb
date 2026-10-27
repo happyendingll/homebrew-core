@@ -1,14 +1,17 @@
 class Diffnav < Formula
   desc "Git diff pager based on delta but with a file tree"
   homepage "https://github.com/dlvhdr/diffnav"
-  url "https://github.com/dlvhdr/diffnav/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "c0915b7960db053479cbdd2dd9745e5822531ea17f3c8228da7a77842be92d97"
+  url "https://github.com/dlvhdr/diffnav/archive/refs/tags/v0.13.1.tar.gz"
+  sha256 "0276d21f3a4a2aa90b84c89fa2e7f08f7cecef1ddcf624103594ce93f959de2b"
   license "MIT"
   head "https://github.com/dlvhdr/diffnav.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "4ac445c92711f78044eab28952c4f73215be554dbeac9111c22bf8d0d0c007db"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9740daad89efefff55e3ef19b0275d88500dda80e54af6f5cb674adf5196918b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9740daad89efefff55e3ef19b0275d88500dda80e54af6f5cb674adf5196918b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9740daad89efefff55e3ef19b0275d88500dda80e54af6f5cb674adf5196918b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "120a93dfdb444473de3de797112647400555dd75e969247ad4832da9372a7fab"
+    sha256 cellar: :any,                 x86_64_linux:      "2a08dec7502bb422cb6cb99d5442683b4ff57a2d7d6871b4da98769c90336f55"
   end
 
   depends_on "go" => :build

@@ -1,14 +1,17 @@
 class Activemq < Formula
   desc "Apache ActiveMQ: powerful open source messaging server"
   homepage "https://activemq.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=activemq/6.3.2/apache-activemq-6.3.2-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/activemq/6.3.2/apache-activemq-6.3.2-bin.tar.gz"
-  sha256 "543e9ca8a234d118a8c195d802a110994a59b7973d75ae0a7ccd47dc2cc2c5c1"
+  url "https://www.apache.org/dyn/closer.lua?path=activemq/6.4.0/apache-activemq-6.4.0-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/activemq/6.4.0/apache-activemq-6.4.0-bin.tar.gz"
+  sha256 "75d0c6cbf32a9381b875e70e59f4ce855bf80948fa0520f8a7c4ae38c31ea6af"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "f88cc29099a4a483213dd82f3bb7666a2332c57016aa063ab161102f254dfc75"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b7a8d338912b292ecd0f91d70e87270070b7d4dc7f6eb72e81328017c24b3cc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "15fb88356942e7a62d14a0d608bb3461082e2a05220f194873f54d05e8de17de"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a0a4578add367a68f78ed243cb597759706e4791dcb7bca513c4294cfff9e92"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "78980158e2a27b7dc96f0515a738d298dd36e4ef8d6cb69e09a1f04acff6b360"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "765dbf91fe271f7a65fbccb53c1759f0369668863cf7c656642793c3dd35b2e2"
   end
 
   depends_on "java-service-wrapper"

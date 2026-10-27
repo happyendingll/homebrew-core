@@ -1,14 +1,17 @@
 class ChartReleaser < Formula
   desc "Hosting Helm Charts via GitHub Pages and Releases"
   homepage "https://github.com/helm/chart-releaser/"
-  url "https://github.com/helm/chart-releaser/archive/refs/tags/v1.8.1.tar.gz"
-  sha256 "288fd5a6c6b761312103f499a0e6a797f5ca11ae903f5ab88a6557712b962715"
+  url "https://github.com/helm/chart-releaser/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "454227be63cad9dd8449898ebb5649de165a32fdeb7fc8d96e3d2871f738ebe5"
   license "Apache-2.0"
   head "https://github.com/helm/chart-releaser.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "655844d846bb4d7ff5af635981a911a37d9765a9ac611f35a15b89fe4ee7ac3a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2645a78a232b6d29271e985f39396bf806acd9370033a9e33936d28dff6e3a86"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dad50acb064a88b70ec49faf32bc4f8bf8ce8f35e1e0507b1c4c464c5c505ff8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "343c287cf48bc35a092fba14907fbd295d58c68aea1326515fb5e6500cd36e72"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1995af325cf65b713788a07dcb2a0e99d3db893e514377723b112bdb304b3647"
+    sha256 cellar: :any,                 x86_64_linux:      "b597bf36a3cabfcbe324f2db05569a39c43e48ff9495d4cd11f8324421b2a796"
   end
 
   depends_on "go" => :build
