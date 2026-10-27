@@ -8,11 +8,8 @@ class Pferd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7607e444eecec3a6de8df1c7653a93e080c7de2651398df0101d7515dfe56114"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7bb991a9a42a4701835b473c6ff1440f62ae2eca7a363fb362d1681378959a4a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bb0cbda7c62ef404befd14a464594b4a2e3deab4e5ddfdaa139587ef6ee9fee2"
-    sha256 cellar: :any,                 arm64_linux:       "d9d4d71763fcbcf80b5198dcdea41b1033a576c67490a62045d8c6b720616190"
-    sha256 cellar: :any,                 x86_64_linux:      "83e8a0d20326b317c9acf9df5aa3add1249a39ec2a90426a3e702842d240304a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "47546e5fa2561575ac57d178f53b427d44d62c99292214b50824a93d593561b0"
   end
 
   depends_on "certifi" => :no_linkage

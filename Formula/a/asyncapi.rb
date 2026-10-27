@@ -7,11 +7,8 @@ class Asyncapi < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9ff298c824d0b9b0bcc964c91bcd6b7034ead4dbc955b3dde490a08a807de4f4"
-    sha256 cellar: :any, arm64_tahoe:       "9ff298c824d0b9b0bcc964c91bcd6b7034ead4dbc955b3dde490a08a807de4f4"
-    sha256 cellar: :any, arm64_sequoia:     "9ff298c824d0b9b0bcc964c91bcd6b7034ead4dbc955b3dde490a08a807de4f4"
-    sha256 cellar: :any, arm64_linux:       "1fdc0f75930d4d2a2e534d5b0431b63b6d93bf68eaf9dbd435669d70259f879e"
-    sha256 cellar: :any, x86_64_linux:      "e25fedd51ce9bff097be40d42f7e89a7c1bd665642c8fe7cad23fdd410cbd4eb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "b385305254ce7308ef925ed0accd09d2769784b9ebbb336718d4fe152a8ba930"
   end
 
   depends_on "node"

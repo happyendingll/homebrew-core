@@ -12,11 +12,8 @@ class Nmap < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "224b7bc076c6dc0f138c257625c4d8ac29d13f35b5f03bf49adc2677617e9970"
-    sha256 arm64_tahoe:       "d73f46bc48f88239668916175d56817240f6e8673b1411b55560d9e9828dc067"
-    sha256 arm64_sequoia:     "8f09090b946adaf527925c0a837250fc791166fbc5263e21774a067cb5079ce6"
-    sha256 arm64_linux:       "f18f36e19b5254ba6a2c92b0f701319d0d9043c706763382763fc681fb20b637"
-    sha256 x86_64_linux:      "8d0587a88a10f7fee0d7f73716116003e1fbbe85ed9e440f0cee9b7b8bf782ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "90aed06427d9bead273bab5a8dda53f24a9e8b99b3c930144661ac6449d40d03"
   end
 
   head do

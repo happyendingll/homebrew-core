@@ -7,11 +7,8 @@ class Pup < Formula
   head "https://github.com/DataDog/pup.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c65212a28d99bd98891bfd44cf961ba01cb7ad2681036dcb35a2e499ed910e90"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2d9a849175ae4cefed14496e76305337f3118028bd486cfe1c6074a47197a4a7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9f3a1b5789fa2ad965c1d80c8696da75e861f01573786fddb718c7c7bc1e8d18"
-    sha256 cellar: :any,                 arm64_linux:       "b25bc0f0eac05394627fc439bfca2dfdf2ec43fa821c2a6a1e1371373c04affd"
-    sha256 cellar: :any,                 x86_64_linux:      "9cf81a3edb4f2c85fa332721c5e53ed8ecbba8cc743afeb3840d3c80fca28c2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "74d4d3c865b176a910357d10622c395d0456431c4f2b00c79e542ce77223b15b"
   end
 
   depends_on "pkgconf" => :build

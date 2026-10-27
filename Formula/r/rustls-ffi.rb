@@ -7,11 +7,8 @@ class RustlsFfi < Formula
   head "https://github.com/rustls/rustls-ffi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "962d4869e7a62c838fa28932b70dde8c5439f18612647c63c8801b146e4eaf2a"
-    sha256 cellar: :any, arm64_tahoe:       "383c8baedbbedbb1b790bdeb05c236a31ee61790619c48d3fb193633db31d65a"
-    sha256 cellar: :any, arm64_sequoia:     "39b67c1c8eea59f81bf81394c799206c1a0d4a8b9ba1f6cf3bb3794858790d24"
-    sha256 cellar: :any, arm64_linux:       "f6822afe6a7b20c6e4c6b6c79b79a66cc938a70e2332fa1efc7e84813432a3bd"
-    sha256 cellar: :any, x86_64_linux:      "7685134d0a89ba1705f464b12ec244da4b3e6169df95a6834e3da0a707cf7d37"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "c88aacb3bea60767a6dd67cc61285305da0f2bd453c2705dd0ae6088b13da542"
   end
 
   depends_on "cargo-c" => :build

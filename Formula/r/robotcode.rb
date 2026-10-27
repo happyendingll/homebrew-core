@@ -8,11 +8,8 @@ class Robotcode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "33b61e981d171a07a984e549b5a44403d52f7fffe9a73ce47575572e3ef7a2e1"
-    sha256 cellar: :any, arm64_tahoe:       "66cbe35468c73dbd6ac996b4a5869b1cf1ded43630e11ec34075d47c88e77ceb"
-    sha256 cellar: :any, arm64_sequoia:     "f3949cc0ecf675b9be9da4c8139b03397df8cdc96e07fcf7f873e00726fc1007"
-    sha256 cellar: :any, arm64_linux:       "65ef3c3d19f94bb9bfc02aca1bddf753d9f58c801c517a8df565b0849052294e"
-    sha256 cellar: :any, x86_64_linux:      "34cdfb02ccf6e03c70fd15dfd635a672d541d2075e05a467e5ca2933a5cbc84c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "749c1d786a3e3661d80e27f4cd45e69e24900cc70d1545d22319759bfe7063da"
   end
 
   depends_on "libyaml"

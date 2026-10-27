@@ -8,11 +8,8 @@ class Flexget < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "033c166cd921d03c5809d381062dbed8789f2f7c0cb3225d6c3040aefac0cc3d"
-    sha256 cellar: :any, arm64_tahoe:       "7f0fe80b0a907d23edd23dc7e7ca0f704d2049768cdd90b464740270cc6196b6"
-    sha256 cellar: :any, arm64_sequoia:     "483e14a14e7d3bd3e13cfc1e3c15babf2d35a691f52f06dfa7b6cc477feee070"
-    sha256 cellar: :any, arm64_linux:       "7d32b35664b8031d4571b2c4e5bf25be20aed486dbee823ce0f28f3258f7346a"
-    sha256 cellar: :any, x86_64_linux:      "6e249ce280efdbd980bd87555c257a1c086b099e7dc9bac3e8165c17012c4ca1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "00424c8808c5ebedc93cf0a6078a536f49cc7f36a992480975a65b9fbfa609a5"
   end
 
   depends_on "rust" => :build
