@@ -1,14 +1,17 @@
 class Kubecfg < Formula
   desc "Manage complex enterprise Kubernetes environments as code"
   homepage "https://github.com/kubecfg/kubecfg"
-  url "https://github.com/kubecfg/kubecfg/archive/refs/tags/v0.41.1.tar.gz"
-  sha256 "71e0f6ad576581f203a25e332c47320a5271199efbc0d614b78c79aaf6f30c76"
+  url "https://github.com/kubecfg/kubecfg/archive/refs/tags/v0.42.0.tar.gz"
+  sha256 "bb360e2fb604c8c963e689e05c2db765a9592f35030707ff693ac2f0792776bf"
   license "Apache-2.0"
   head "https://github.com/kubecfg/kubecfg.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "04a4bbc9f52fe934591f3ef7fb6239f2390c4019a1034b1453bfb04c2acbb6e4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6807de461c5584f42fd39f626ff2f227b846075dbb168f555bb0c16340f8edcf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b54c552f270c20abacc5bd26d57233c8976d849be8e319ec84ec0570a6694aaf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "864d9f54534ff84b052e6b7f406c1eff11e680e37163307d6e8f11eb9aa965d1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f63ff3030fbbf028389ea03efaa055e94d05f1ff13549c399c6fd95f6d2c4f97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fdd1977ddb42062290044c6524f86392e23771da94144b8ae9ad54ef903daae8"
   end
 
   depends_on "go" => :build

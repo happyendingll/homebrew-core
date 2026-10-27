@@ -4,7 +4,7 @@ class Aqbanking < Formula
   url "https://www.aquamaniac.de/rdm/attachments/download/654/aqbanking-6.9.2.tar.gz"
   sha256 "244b5f7a139f829928f5cdc3f5f7488517b3e8aa63625a92741c3efc1892bb3f"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://www.aquamaniac.de/rdm/projects/aqbanking/files"
@@ -14,8 +14,11 @@ class Aqbanking < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "bfe0a3045ecb7faccd58ff82eb55cf6826d081b1de2a3d6c2e3b4d7c51787f9f"
+    sha256 arm64_golden_gate: "629e8f3ee5692f3f5538cfb704ff8f23ee3a4cb38bee5fc8ec2fc8c5c8d77782"
+    sha256 arm64_tahoe:       "0df5c83604300fc1b70b8549c0559841496a02e0f1ba5a6f103c59f17aaaf6b4"
+    sha256 arm64_sequoia:     "4fc0da60ea3cf71d31af15da9fa781f36f5a9278fa43a125127b4705f33b972e"
+    sha256 arm64_linux:       "93f030d976154906be9e6751ee680b37a4f29c07dd152eee759f5de18ee35103"
+    sha256 x86_64_linux:      "7fcefd526dc83eac4bdf3733e311bdbe094e5a1cb12f7d41f30e6356de68c907"
   end
 
   depends_on "gmp"

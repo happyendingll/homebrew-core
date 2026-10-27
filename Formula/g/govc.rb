@@ -1,8 +1,8 @@
 class Govc < Formula
   desc "Command-line tool for VMware vSphere"
   homepage "https://github.com/vmware/govmomi/tree/main/govc"
-  url "https://github.com/vmware/govmomi/archive/refs/tags/v0.56.1.tar.gz"
-  sha256 "da5ed306f41a0ee2e8bf56f85e39092863ea34a008d80fdf63d43062c75ec161"
+  url "https://github.com/vmware/govmomi/archive/refs/tags/v0.56.2.tar.gz"
+  sha256 "0a5b002dbf1e396465a62d90ca75c77c9c170e02886dce3b32c9f7cdfb224972"
   license "Apache-2.0"
   head "https://github.com/vmware/govmomi.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Govc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "9360b736c377b52e50525ed8ccea7e79bf21885631a478679b639172829a1453"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "19bcebe8ae361f839a14f1993c29b1e495c757d96940b43a71184b4f7e8c792c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "19bcebe8ae361f839a14f1993c29b1e495c757d96940b43a71184b4f7e8c792c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "19bcebe8ae361f839a14f1993c29b1e495c757d96940b43a71184b4f7e8c792c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9a8d2ebb6a52570669038962fc7aa9cbe52ba59a854e356159989787de9ebfe2"
+    sha256 cellar: :any,                 x86_64_linux:      "85ad40938a22b2a138818b6586078f0fb6d8fa9e33778bf2fd4bd036f284ad8b"
   end
 
   depends_on "go" => :build

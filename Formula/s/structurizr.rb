@@ -1,13 +1,16 @@
 class Structurizr < Formula
   desc "Software architecture models as code"
   homepage "https://structurizr.com/"
-  url "https://github.com/structurizr/structurizr/archive/refs/tags/v2026.09.19.tar.gz"
-  sha256 "bcf0f09ecd3209c931cce0211f87b914991870364f4321a83c59cf4ecbe40d94"
+  url "https://github.com/structurizr/structurizr/archive/refs/tags/v2026.10.26.tar.gz"
+  sha256 "cf841dec442e4cb4970ce3bb692eacc55e8e29cb755a4e557091d8d5e575beea"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "1cf3b1a0c014ab5ad99bda919ace2b12b23f2e1308eda224e6a8d107d86b8f39"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d90e0bc830044703d251452daa61d0574c01d326f2baaf4d0b5664db38094cf4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d90e0bc830044703d251452daa61d0574c01d326f2baaf4d0b5664db38094cf4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d90e0bc830044703d251452daa61d0574c01d326f2baaf4d0b5664db38094cf4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e29af0bab627d6a7e2d1f6a6fe30f86481ee390ac5fccf9596eb1835000b3da7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e29af0bab627d6a7e2d1f6a6fe30f86481ee390ac5fccf9596eb1835000b3da7"
   end
 
   depends_on "maven" => :build

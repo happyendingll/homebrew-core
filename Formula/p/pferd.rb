@@ -3,14 +3,16 @@ class Pferd < Formula
 
   desc "Programm zum Flotten Einfachen Runterladen von Dateien"
   homepage "https://github.com/Garmelon/PFERD"
-  url "https://files.pythonhosted.org/packages/16/cf/35aedbc5da2fb46fe45b00d8449f817c336e7020ea08aab7c95db67301f9/pferd-3.9.4.tar.gz"
-  sha256 "3085b9387d3157b90b311330f799975a732dafa919f2e72a319c9605d534505b"
+  url "https://files.pythonhosted.org/packages/ab/f6/e8467cbaae08b5cae54a2ce31fddbc076d13174d9e5e028cfcb535195a46/pferd-3.10.0.tar.gz"
+  sha256 "8ba7f642eabd518f428845177d7f08e129171db4002c98b3c193fffc2d630c46"
   license "MIT"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "c45e26fc4085134abc4c65b927fa7e3e255b6854525447f212b670491123cfa0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7607e444eecec3a6de8df1c7653a93e080c7de2651398df0101d7515dfe56114"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7bb991a9a42a4701835b473c6ff1440f62ae2eca7a363fb362d1681378959a4a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bb0cbda7c62ef404befd14a464594b4a2e3deab4e5ddfdaa139587ef6ee9fee2"
+    sha256 cellar: :any,                 arm64_linux:       "d9d4d71763fcbcf80b5198dcdea41b1033a576c67490a62045d8c6b720616190"
+    sha256 cellar: :any,                 x86_64_linux:      "83e8a0d20326b317c9acf9df5aa3add1249a39ec2a90426a3e702842d240304a"
   end
 
   depends_on "certifi" => :no_linkage
@@ -91,13 +93,13 @@ class Pferd < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/de/1d/f4da6f02cdffe04d6362210b807146a26044c88d839208aec273bb0d9184/more_itertools-11.1.0.tar.gz"
-    sha256 "48e8f4d9e7e5878571ecf6f2b4e57634f93cd474cc8cfbd2376f2d11b396e30d"
+    url "https://files.pythonhosted.org/packages/52/b8/c63995bebbb9ac9c059350e0fb8c82c2420c85aeca7d34e40aecf3df9281/more_itertools-11.2.1.tar.gz"
+    sha256 "cbf08fd0af284dc69718b9b76a8e6203df624d70209ea511e4219d350c856f63"
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/f9/79/84ddb5ba16c4eb2c69c71db76ae3c579fe546e511f7170c7e27eedbab7c1/multidict-7.1.0.tar.gz"
-    sha256 "61a4e5d81b8d4e4ad61964b230129e7a2b914793d96289029078fc9009f074ec"
+    url "https://files.pythonhosted.org/packages/7b/6b/29ef8e752f5854dcc267ded0652c475bec99b86f255957a0d4fcad657b18/multidict-7.2.1.tar.gz"
+    sha256 "e8af3e6f1bdbc31fd762b094133b478b89988eaebc63cbe82b1d9e3bbd15cede"
   end
 
   resource "propcache" do
@@ -121,8 +123,8 @@ class Pferd < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/71/c3/1b817965ac12dc002d7c9cd7dfffdd7d4fbf9b45763ef2ffe7b86ee94670/soupsieve-2.10.tar.gz"
-    sha256 "49e9380d7d2905463583bafe285e818c7366a9ed7b3aee221c1ac79c905d8bc0"
+    url "https://files.pythonhosted.org/packages/19/63/0b6bae54546aed98d72f12d09df57b19a287f01c84d22047fa2e23772ab9/soupsieve-3.0.4.tar.gz"
+    sha256 "924fab84ae21604c19e175e1f39815eb6fa83ba23836e09e9de180925e5bc4c0"
   end
 
   resource "typing-extensions" do

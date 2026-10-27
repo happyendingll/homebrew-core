@@ -1,8 +1,8 @@
 class Certigo < Formula
   desc "Utility to examine and validate certificates in a variety of formats"
   homepage "https://github.com/square/certigo"
-  url "https://github.com/square/certigo/archive/refs/tags/v1.18.1.tar.gz"
-  sha256 "a9f3014ce5f25b6be6cc88b5ca6e08d0ead9263f246d147f85f3f89ac289dba8"
+  url "https://github.com/square/certigo/archive/refs/tags/v1.18.2.tar.gz"
+  sha256 "4beda5fff4fe99c6f69c7a5484cb92b9b10a209f1730ad593b4cd7b060a6ee27"
   license "Apache-2.0"
   head "https://github.com/square/certigo.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Certigo < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "9218861a6c832ea55d5553be9855cdf1b232362148dde0c844357b4d00aeae69"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66e418225d8c827889ac59638663843652fef1e1c48b7946c3dfdde27026a937"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed417bb2fc43a4919012b7c622bed90fafa8374c9e6a2c2b08126e9be7d3930a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "af42a80a591f440ef0cdf3c94c8e09d2d1ac0478836d688c817fe3d288178968"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d362715b9e75e69a9f997c74b5c2fb6aa5961842638529bcf0db725e275d8fb9"
+    sha256 cellar: :any,                 x86_64_linux:      "25d966542eeab79fe5c94e21e41d53cadc2be17324a8ed319bb390150684eca1"
   end
 
   depends_on "go" => :build

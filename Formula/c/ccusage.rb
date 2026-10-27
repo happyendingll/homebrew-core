@@ -1,21 +1,24 @@
 class Ccusage < Formula
   desc "CLI tool for analyzing Claude Code usage from local JSONL files"
   homepage "https://github.com/ccusage/ccusage"
-  url "https://github.com/ccusage/ccusage/archive/refs/tags/v20.0.44.tar.gz"
-  sha256 "3f3faa51e437b091c3c85e341cc57c85cb852079689bdd1a83658625a532a938"
+  url "https://github.com/ccusage/ccusage/archive/refs/tags/v20.0.45.tar.gz"
+  sha256 "ef6530be9b83b79b9908a0e4d1c18c8c8d1ff0c62ca88b2437d73f9c865b4b29"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "4745d8fdbbbb89219dfa698baa44a36de054986a73d74822a692aaacfe365e34"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f753683a0e7cfcaf077368e7b7b225722c42ce6606b0a8c34319e73e2be8c1e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f290651ceef5c3b1abc6a145b350a6ef3d9e320ab2e83c1ef7e37985ee9cd74b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "28b3d98f5cee357914fd13d3f97b252226d924500e32adb116f070992b98cf37"
+    sha256 cellar: :any,                 arm64_linux:       "c1f352b441126425f75ef9355eaf7378cd51f579bb70aab0334857be49690125"
+    sha256 cellar: :any,                 x86_64_linux:      "b53302a44e65ff1b9a5934e4af3ede9d03f29dbee457a2c201e5aa7a625391f0"
   end
 
   depends_on "rust" => :build
 
   resource "litellm-pricing-json" do
-    url "https://raw.githubusercontent.com/BerriAI/litellm/1418c1990fcc403d7598d97832f1272f45049299/model_prices_and_context_window.json"
-    version "1418c1990fcc403d7598d97832f1272f45049299"
-    sha256 "7cebbf93cc81f6cf20763782eb0122020c86e1a7ea164bd53ada49d4dc14a773"
+    url "https://raw.githubusercontent.com/BerriAI/litellm/2e27a02a9fce9bdc6ece13ba3cb8222dc5b6ecfa/model_prices_and_context_window.json"
+    version "2e27a02a9fce9bdc6ece13ba3cb8222dc5b6ecfa"
+    sha256 "db69fee424413c7abfb45616f2db08b6a8cfdc934a264ec7ac17e333e1a9df02"
 
     # Fetch the latest available resource
     livecheck do

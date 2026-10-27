@@ -1,8 +1,8 @@
 class PythonTkAT315 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.15.1/Python-3.15.1.tgz"
-  sha256 "133d85e118dc32621cda1d9d1d7d9694fe0c5e82bc339a7d528c109fe8b36387"
+  url "https://www.python.org/ftp/python/3.15.2/Python-3.15.2.tgz"
+  sha256 "f74e1db0eabd651cd01e4e2a00201bd41866abe74869ab716f9bf33cbbaa0943"
   license "Python-2.0"
 
   livecheck do
@@ -10,8 +10,11 @@ class PythonTkAT315 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "684a03e0ad8605334d3fe73ffa9265b1ec6840155fe2679bd139c71166fbb9b9"
+    sha256 cellar: :any, arm64_golden_gate: "666d1266f790f741951d03b54b138d8a9fb7eade02b549c49d363fc7012353e0"
+    sha256 cellar: :any, arm64_tahoe:       "334c1f60479962b5c992c2c539d6c7a1200b20d11e5e197849c2ebfa92c1a5e7"
+    sha256 cellar: :any, arm64_sequoia:     "e909687eca8d310f4fdfdb3ec29ffcd3fad90f544afdfc28e0560d571221cff0"
+    sha256               arm64_linux:       "bcc14a32bc04bef88fefcae46ed5ab2a611c0797012fbdc7d1b9ce11fdf9eac2"
+    sha256               x86_64_linux:      "70c16eac15d3276ce64448fb58265509550665cf6398594722840dd10b1de93b"
   end
 
   # https://devguide.python.org/versions/#versions

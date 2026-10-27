@@ -39,8 +39,6 @@ class Grpc < Formula
     depends_on "zlib-ng-compat"
   end
 
-  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
-
   def install
     args = %W[
       -DCMAKE_CXX_STANDARD=17
@@ -69,7 +67,6 @@ class Grpc < Formula
       }
     CPP
 
-    ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib(openssl)/"pkgconfig"
     ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("zlib-ng-compat")/"pkgconfig" if OS.linux?
     flags = shell_output("pkgconf --cflags --libs libcares protobuf re2 grpc++").chomp.split
     system ENV.cc, "test.cpp", "-L#{formula_opt_lib("abseil")}", *flags, "-o", "test"

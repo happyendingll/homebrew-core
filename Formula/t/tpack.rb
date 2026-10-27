@@ -1,13 +1,16 @@
 class Tpack < Formula
   desc "Drop-in replacement for tmux-plugin-manager (tpm) with a TUI"
   homepage "https://github.com/tmuxpack/tpack"
-  url "https://github.com/tmuxpack/tpack/archive/refs/tags/v2.0.6.tar.gz"
-  sha256 "d730b97b7f7c9dd70310bba6fa7ce9016e62624b16099612a468e13ba7853976"
+  url "https://github.com/tmuxpack/tpack/archive/refs/tags/v2.0.7.tar.gz"
+  sha256 "c3d7937421c09bc7f746facb0d484c1ba23897e8fd9ddb8e92e795fcc03b19be"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "65572cd0938ce78a40878a6a97834dd12e358cc402316e3bf5e98cf5cd6c4f00"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db5abb348c763c4c00589b280dad6d927375d85291b81cb203e100f5bfb0e0a8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "db5abb348c763c4c00589b280dad6d927375d85291b81cb203e100f5bfb0e0a8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db5abb348c763c4c00589b280dad6d927375d85291b81cb203e100f5bfb0e0a8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "69a0edbf6b193dc33d3b1cb56edcb82d50b387fbd45ee272d85d1778624d14d6"
+    sha256 cellar: :any,                 x86_64_linux:      "06ce291852f17b88ceaa22cc6335406f364f2adc807a7f66e726628c5174f5b4"
   end
 
   depends_on "go" => :build

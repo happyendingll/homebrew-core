@@ -336,21 +336,14 @@ class SnowflakeCli < Formula
     ENV["SNOWFLAKE_IS_PYTHON_RUNTIME_TEST"] = "1"
     venv.pip_install(resource("snowflake-snowpark-python"), build_isolation: false)
 
-    generate_completions_from_executable(bin/"snow", shell_parameter_format: :typer)
-
     # Remove pre-built libraries
-    os = OS.mac? ? "macos" : "linux"
-    arch = Hardware::CPU.arm? ? "aarch64" : "x86_64"
-    native_subdir = "#{os}_#{arch}"
-    native_subdir += "_glibc" if OS.linux?
-
-    venv.site_packages.glob("snowflake/connector/minicore/*").each do |dir|
-      next unless dir.directory?
-      next if dir.basename.to_s.start_with?("__")
-      next if dir.basename.to_s == native_subdir
-
-      rm_r(dir)
+    rm_r venv.site_packages/"snowflake/connector/minicore"
+    bin.each_child do |f|
+      f.unlink
+      f.write_env_script libexec/"bin"/f.basename, SNOWFLAKE_DISABLE_MINICORE: "1"
     end
+
+    generate_completions_from_executable(bin/"snow", shell_parameter_format: :typer)
   end
 
   test do

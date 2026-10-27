@@ -1,14 +1,17 @@
 class Dagu < Formula
   desc "Lightweight and powerful workflow engine"
   homepage "https://dagu.sh"
-  url "https://github.com/dagucloud/dagu/archive/refs/tags/v2.23.0.tar.gz"
-  sha256 "cf4ef72418144802a31280c47574d6ac69169a484cde65b0c975192f515e0743"
+  url "https://github.com/dagucloud/dagu/archive/refs/tags/v2.24.0.tar.gz"
+  sha256 "cf23c332513bffe224a9f6aea2e6a11bb879ff1600704ed6248c8c04dd3dda40"
   license "GPL-3.0-only"
   head "https://github.com/dagucloud/dagu.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "553f9e7f28dd3a078dea9f5bf42e279f95a2bb9d3e29e9b9986e44e73f76deea"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "266805f91681d781a1e517e340be716eba488a8f779c8b823a56e3e49de9d725"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "804ac3dff2a8ad9a56022859550a5f109995e495faaaec32bd02d03df5ab86cc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39f19524a10dff5e6916a06161126cec55da5ee88a7fa5334f9f7db5187cbcbb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "201b59576dce36f1ba6a37839e526062e721954f2a4f79e793221893d6a1f6cf"
+    sha256 cellar: :any,                 x86_64_linux:      "cee83165bda25729ca81795dc57deb5729594cbee7ddc0057437ee42e71791ad"
   end
 
   depends_on "go" => :build

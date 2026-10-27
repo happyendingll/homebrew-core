@@ -1,8 +1,8 @@
 class Nmap < Formula
   desc "Port scanning utility for large networks"
   homepage "https://nmap.org/"
-  url "https://nmap.org/dist/nmap-7.992.tar.bz2"
-  sha256 "0c12660eddbf7eabeff6996cb0c044a4eadf2bb0c6fbcb340d6cf72b1caee402"
+  url "https://nmap.org/dist/nmap-7.993.tar.bz2"
+  sha256 "270e55f04915bfcecb5db8feb959d4c5ba86a48c094520a4f1c07571e1c79c59"
   license :cannot_represent
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Nmap < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "b357b9d1db239e6801386ac75e5bc01d8beaab37e9d4087c9a04bf403e8e66c9"
+    sha256 arm64_golden_gate: "224b7bc076c6dc0f138c257625c4d8ac29d13f35b5f03bf49adc2677617e9970"
+    sha256 arm64_tahoe:       "d73f46bc48f88239668916175d56817240f6e8673b1411b55560d9e9828dc067"
+    sha256 arm64_sequoia:     "8f09090b946adaf527925c0a837250fc791166fbc5263e21774a067cb5079ce6"
+    sha256 arm64_linux:       "f18f36e19b5254ba6a2c92b0f701319d0d9043c706763382763fc681fb20b637"
+    sha256 x86_64_linux:      "8d0587a88a10f7fee0d7f73716116003e1fbbe85ed9e440f0cee9b7b8bf782ed"
   end
 
   head do

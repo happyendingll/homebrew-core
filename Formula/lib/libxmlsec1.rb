@@ -1,12 +1,11 @@
 class Libxmlsec1 < Formula
   desc "XML security library"
   homepage "https://www.aleksey.com/xmlsec/"
-  url "https://github.com/lsh123/xmlsec/releases/download/1.3.12/xmlsec1-1.3.12.tar.gz"
-  mirror "https://www.aleksey.com/xmlsec/download/xmlsec1-1.3.12.tar.gz"
-  sha256 "24045199af12d93fe5fdbbbf7e386e823e4842071e9432e2b90ac108b889a923"
+  url "https://github.com/lsh123/xmlsec/releases/download/1.3.13/xmlsec1-1.3.13.tar.gz"
+  mirror "https://www.aleksey.com/xmlsec/download/xmlsec1-1.3.13.tar.gz"
+  sha256 "7e500061eed734c55d74c786998e7562e55b1aaa72a2dff8ce3130b4c5b832d5"
   license "MIT"
-  revision 1
-  compatibility_version 4
+  compatibility_version 5
 
   # Checking the first-party download page persistently fails in the autobump
   # environment, so we check GitHub releases as a workaround.
@@ -16,8 +15,11 @@ class Libxmlsec1 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "edf85152a63435e6e8cde625ee0141b2651794626c37866b7d0050a961d61e35"
+    sha256 cellar: :any, arm64_golden_gate: "291e4edfb032ad38b4990cdf504175c2d5c70dbfacdcf50f03f7804ecf86f444"
+    sha256 cellar: :any, arm64_tahoe:       "514ba1e09ca108ffd3fb6f1b08b71960943524e2f086b232e9c4ec0870288e81"
+    sha256 cellar: :any, arm64_sequoia:     "d832a71f46f7c8c8e9b63b1cc1620daf30a7993d0fb7475c89251e53b4d168b8"
+    sha256 cellar: :any, arm64_linux:       "92ae5b98d8a7c680de56508a76dd02ca8ed457619f500a2029fcaf2f0ac1deca"
+    sha256 cellar: :any, x86_64_linux:      "494b438bb6f2fbebe55c6a6e0d76bc3cca381d423f3e2e0714065325a895f8a4"
   end
 
   depends_on "pkgconf" => :build
@@ -25,9 +27,6 @@ class Libxmlsec1 < Formula
   depends_on "libxml2"
   depends_on "openssl@4"
   uses_from_macos "libxslt"
-
-  # Add HOMEBREW_PREFIX/lib to dl load path
-  patch :DATA
 
   def install
     args = %W[
@@ -49,17 +48,3 @@ class Libxmlsec1 < Formula
     system bin/"xmlsec1-config", "--version"
   end
 end
-
-__END__
-diff --git a/src/dl.c b/src/dl.c
-index 6e8a56a..0e7f06b 100644
---- a/src/dl.c
-+++ b/src/dl.c
-@@ -141,6 +141,7 @@ xmlSecCryptoDLLibraryCreate(const xmlChar* name) {
-     }
-
- #ifdef XMLSEC_DL_LIBLTDL
-+    lt_dlsetsearchpath("@@HOMEBREW_PREFIX@@/lib");
-     lib->handle = lt_dlopenext((char*)lib->filename);
-     if(lib->handle == NULL) {
-         xmlSecError(XMLSEC_ERRORS_HERE,
