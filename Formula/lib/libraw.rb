@@ -12,11 +12,8 @@ class Libraw < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3e328426ade77de1722d25c7649c4658556bfa4059da951cb37cbc1ca2626ca3"
-    sha256 cellar: :any, arm64_tahoe:       "d1eb97ac93caeff19b655788fc2e57762f80e869ce30b5e0ff15fc787b42ed75"
-    sha256 cellar: :any, arm64_sequoia:     "5c38386ead9d07465b4855a5cf06883460d9f4528b14a22813b9cd98277cab26"
-    sha256 cellar: :any, arm64_linux:       "e736dd3937afbf8c5f9a40ec5f0336ffbc9092859f415073f5930511eeaaae58"
-    sha256 cellar: :any, x86_64_linux:      "9e4e2b9d488641d187fa131a928be510ea032172695f9494a075f8f0692d6da7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f057423846e34a42eeb46c5a684a339229383586d75a5252a970092c3061f704"
   end
 
   head do

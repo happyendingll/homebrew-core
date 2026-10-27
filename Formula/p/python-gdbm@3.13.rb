@@ -10,11 +10,8 @@ class PythonGdbmAT313 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b036ee8b5904cf2c1480213adfe2673f6c226950af78452926c0aa2d0cc72af1"
-    sha256 cellar: :any, arm64_tahoe:       "cd858f5bc2d7d8f4860ef8cd41c421ac111d72b2e8e6c343115379e403c0fb38"
-    sha256 cellar: :any, arm64_sequoia:     "a56370a3fc31569e29cd9a2cb30a1a4757c8cf68d7721b31cb49aa76a80fafe4"
-    sha256               arm64_linux:       "99f6ac3e1bdf5452af57d6f95be6e18e5ae8bc6ff63c37a1a14c33280e4e8083"
-    sha256               x86_64_linux:      "401dfb2cdfc06191935c2040588d28cbafbaf0663a8d47e338871c5453901bc7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "054f7380b5c3064e89f5473f3c0b8a37d3b40c5d8b5e5f17af94587e1fe43405"
   end
 
   # https://devguide.python.org/versions/#versions

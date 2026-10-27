@@ -8,11 +8,8 @@ class Tmt < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e445c9585d385a0b563c06c47c52c8fca35f35cdd3921ef10ead5c07b96ea6e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d69ef0468279c25830b7c3625f1f3c3758c604cd1b5fff3a36bf263c61709364"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dfea0e64b0dc12d781748e332d16bc09e431f27ff33e5064830b1549a7e48780"
-    sha256 cellar: :any,                 arm64_linux:       "befeabbb73a1ca84884d2c87d3bac5c2ffd2e3fbec531242e58c0f831bfd8934"
-    sha256 cellar: :any,                 x86_64_linux:      "5c694bc6122f00dd65f22130130948a3d897f2a8bf45ecb966cf86516ce0df14"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e57ae59271c142c735ebd29c49396170d482feb4a884ed4fffe94fd63924ee6f"
   end
 
   depends_on "beakerlib"
