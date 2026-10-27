@@ -7,11 +7,8 @@ class EpicsBase < Formula
   license "EPICS"
 
   bottle do
-    sha256 arm64_golden_gate: "ed77fd6ad61f706d1e35fcda9f0600b6d8877a6cee59722dac39cefba59bd165"
-    sha256 arm64_tahoe:       "fae2436bdcc40f6c1c563997827270e24ef61a96e7a7cbfeccb384c7f2c2c3e3"
-    sha256 arm64_sequoia:     "778f9ff0bd8eecefffebe17c556adb40b5aa5fbf3068f80904074a2d1c1c78af"
-    sha256 arm64_linux:       "a9569da7e1f7e5f34bef7b13edb573dc4a78cbf3c2afd924b70dbbb886cce94d"
-    sha256 x86_64_linux:      "8aa6aa76b66159dbcd5920fbc4441ce956af9e3e006363bf5ba0a701d53553b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "17311873550ba037718d6099b17c7b14e832e2f8dbbf5d77647e154043c969ee"
   end
 
   depends_on "pkgconf" => :build

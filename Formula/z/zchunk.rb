@@ -7,11 +7,8 @@ class Zchunk < Formula
   head "https://github.com/zchunk/zchunk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aa6c207ed017c10456cf2f9508c53c0ecd0b9ab6c97a40614e0491f9a757c2da"
-    sha256 cellar: :any, arm64_tahoe:       "b030a00b404781aaa84a6ac6b7e6feb3509320ef32888f765f778afb194449de"
-    sha256 cellar: :any, arm64_sequoia:     "e20c02455b87833c1487901e044f91b11ccfc7bfe98d92a7f9d9c9a4be8d7401"
-    sha256 cellar: :any, arm64_linux:       "a0742ee145330fb71578253d572c54207291a73038eef4714e2e1998f7883391"
-    sha256 cellar: :any, x86_64_linux:      "e94ed931d69a35816530b90350f363e8d3e9ef86b685d7a133649063962e4b13"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9ab11058f76a3492ff3c3f66c517456b777fcaaf476fa45b0232ed3eca362e27"
   end
 
   depends_on "meson" => :build
