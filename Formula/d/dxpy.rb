@@ -9,11 +9,8 @@ class Dxpy < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b25b8f8fe4899dfdb0e85761b18786f745fbe07a58e8ceb021544f369329d7e4"
-    sha256 cellar: :any, arm64_tahoe:       "3c80a29f96eac25615a441380e650de8c9b7b1062092b567efc4e4219bfad954"
-    sha256 cellar: :any, arm64_sequoia:     "7672faf291519d5405b2662a035dce2000aa8c06779b14002c85c05a492083aa"
-    sha256 cellar: :any, arm64_linux:       "18206bb5110b159d66155d99f2401dfa16fa5be716fb90c305b69c15da3eb444"
-    sha256 cellar: :any, x86_64_linux:      "600f9c8701744165fde76389ce64a481c4097999acc07c9e26f73f93df7b121f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "e68f22e7104adcb015adfb5bb8e099ab598cb6fbd501778fe3010401634a6895"
   end
 
   depends_on "aws-c-auth"

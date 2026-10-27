@@ -8,11 +8,8 @@ class AwsCrtCpp < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f40dc411ba97ec3c2997fb8d885196bffd0910c64cafc94d96bb453d82e92a77"
-    sha256 cellar: :any, arm64_tahoe:       "feb20057bdbf72194a5dcc9d1f4f594c5f62a30203d7653416537153d2949f70"
-    sha256 cellar: :any, arm64_sequoia:     "77596f4c7b268e2a99dc7b4b256383de400b67c870a7fb5f893e0f24afea9e6f"
-    sha256 cellar: :any, arm64_linux:       "bd358ee08c586bf724c35917e8373fe4183d595f64ba95a33b3779029fd5da01"
-    sha256 cellar: :any, x86_64_linux:      "6c6b1a20362fad29a366313cb2687f8749b6f5e18f9e413c892cc95a01eaa5aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "5659e9cd95d4992edc1dfbddf7a8270ea27e4f92e5d1b662bd82d41fe2bee9e0"
   end
 
   depends_on "cmake" => :build
