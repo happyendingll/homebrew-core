@@ -7,11 +7,8 @@ class Ktor < Formula
   head "https://github.com/ktorio/ktor-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0088c7a990eda7ccb705bc161fe753c1da32c18a1ddf629adaebd8fdd005b6b3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "855e7b79185c9d6e2bde31070b4b3b036a4df86ea5494c795be653e58b9d8736"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "228305902ce369c7415b24fc01ceec9eb6e07fb954b2df96ca5f23c65f72c773"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e06f73b85ed6aeafb44ff23b2616b0e4e865e7af49f5fded59994b7132672e52"
-    sha256 cellar: :any,                 x86_64_linux:      "de16e77e3bcd9876976edc30022a1b7d5ec99fd2c3c6d89241f6b40dd278d303"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "11c8d89d6539d5873f862103d02082b289e3537785543525e2974e4c76270928"
   end
 
   depends_on "go" => :build

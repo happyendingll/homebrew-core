@@ -6,11 +6,8 @@ class Thanos < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1b7c4b19af963a94c5a3d5da625af911891bb6277ebff266dbc26db452f00044"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7a167f10a4652d4e2bb8cd08fdcc14d67d8e65bb7a36b411f4caf11c94e1dcc4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "149dd3a9bb1d85e0f9783eb893e42e2e1c0b44eea890ad7937bedc0ff7c0d5f6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "deaee7e48e8a9c0aacbba2e1328ee8b20e9d69ab40dafaab6e672b5aaf079e7f"
-    sha256 cellar: :any,                 x86_64_linux:      "9f46a8353cb20150641cbcab774b511251fc5e23fb145f0baf2b483690a3a313"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "28412ea19e3d0d6d01c3866e535c27dbe8629851369e820b50652b97ea76219b"
   end
 
   depends_on "go" => :build

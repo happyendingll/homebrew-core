@@ -13,11 +13,8 @@ class Bcftools < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2d5b76e3eb12c96e82f928673e1e9268086c4959b1a6b2705e77441084ec2932"
-    sha256 arm64_tahoe:       "788fda609666ad0d17b1345da17fdbc1bae4543e5886e5795e5a4cf0ead42579"
-    sha256 arm64_sequoia:     "1d18e3822d3fb8e0e5d9425989a54e0f747740564cdc3cc03b37d6d0175e91f5"
-    sha256 arm64_linux:       "a0df12e410127716116332849f454886a0ca678949c4149c85d9a53d285ade9a"
-    sha256 x86_64_linux:      "273e8611537036fac905d87805f12c4719fa7de1f090ce7bfe8b0f7a8d11bbe0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "1e8656b1d191fb7f3d6a0bb379439791cc6209929c932bab86ae342db84db4b9"
   end
 
   depends_on "gsl"
