@@ -6,11 +6,8 @@ class Cppinsights < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b5633c0e313c6fd70f9410ffd5a10617ecbbaaa152713b912d5da69cfa814863"
-    sha256 cellar: :any, arm64_tahoe:       "30982f0823a19c63dc716f05d93eaa5c7ac2597d7a31de8234160b90d9de5eb6"
-    sha256 cellar: :any, arm64_sequoia:     "3e791d40ac93afe5c9fef513e43f01c5ab05dd6eb5bd98d5c95c9adfba99824f"
-    sha256 cellar: :any, arm64_linux:       "ad14e8ac3e990a2361d68aeee61268b7c2df80df4df147191bfee0b858a2384f"
-    sha256 cellar: :any, x86_64_linux:      "b8122edafbeda16ff1136088b5a8c8d0174340ec7e24ac48d11c04566141661a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "21703b5c5e91e4445b930fabd85dedf0242d88111fb86c455542c6b29a21a7e9"
   end
 
   depends_on "cmake" => :build

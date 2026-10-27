@@ -15,11 +15,8 @@ class Akku < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "37e126f095dc67e5b18a65b47b7a355469bc342162cfe3ef887d127483033326"
-    sha256 arm64_tahoe:       "457250776255ad2fb9c09e9c6f1359e1abf0a27c2149f79ee2b22905c181ce6c"
-    sha256 arm64_sequoia:     "b0bb1fc129fb8dc57b718a680b48ba47ba06b9355292ba58fcae8e63a20c2881"
-    sha256 arm64_linux:       "63236c2d35f1582bc778671f52cd94bee6a6877b4271d41c84416fb958f1086d"
-    sha256 x86_64_linux:      "5ecb9b8fb57b0a716f77474c94ac92c4bebcdee9647e8a91db5bc5a5169cf4d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "9d320fd0164595b87cf63f5faf21911ee51929c16e6f9634af52764f4dbcefe0"
   end
 
   depends_on "pkgconf" => :build

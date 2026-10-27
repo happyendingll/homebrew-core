@@ -6,11 +6,8 @@ class Tcpreplay < Formula
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause", "GPL-3.0-or-later", "ISC"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9f3959451fd95fd2300d7c5389ffe810484fb38b9577cefa4b1c7accbbddf023"
-    sha256 cellar: :any, arm64_tahoe:       "9c83ac7509ff1ffc75ebda9f16404a461b5ce52ed96543ca17e5eaaaf6384e93"
-    sha256 cellar: :any, arm64_sequoia:     "2eccecfe49e18611db2e13388984529e50a94d1ad52058a81acf0118662491cb"
-    sha256 cellar: :any, arm64_linux:       "e66b9c71d410a403ea26f83206b70a5f0c52725b27a5907c404dc2db7fe9c7e6"
-    sha256 cellar: :any, x86_64_linux:      "1b4286a1196a6ea188b35e5d4fa8f576f6186f9dd4c471d0bf08e1bc06062acf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "afbc161397825be739883e4b453f39518a51ed4ce7fec3f8b496bec75e57d0a8"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class Ghalint < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21c2dbc1b734ae53fffdf4c3b542de262dcc8e35eb1edcbd3fbc80ba2a460341"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21c2dbc1b734ae53fffdf4c3b542de262dcc8e35eb1edcbd3fbc80ba2a460341"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21c2dbc1b734ae53fffdf4c3b542de262dcc8e35eb1edcbd3fbc80ba2a460341"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "979bcc3a4299849ba4ea0079ab594cab34cb312078d4a0de6621944a1f55f299"
-    sha256 cellar: :any,                 x86_64_linux:      "1fbf835bc4f3b307fedc0fb1f737417f550c4d5a8c10ddd1194c1e77e3e330d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b5cebe64817419ef48a38521c39e52721b81c077f3ba8078936376846172b77a"
   end
 
   depends_on "go" => :build

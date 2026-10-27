@@ -7,11 +7,8 @@ class Iodine < Formula
   head "https://github.com/yarrick/iodine.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c23d061dc129cf30f6cdcdf2758904f08291da21d3310dfc659f18928d328e12"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dca30894391b99f3d335c8cb9f7250c6ea721bda437f7b11efe238057dbe2254"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "96d12e4e2462963d731ae4774c5376d554d2278550816228d9e1bfafac5f5ece"
-    sha256 cellar: :any,                 arm64_linux:       "28b91fd060c383e4335adc2ee159e8a3d8bc92ae1d3d41b0c9c520e152f5e874"
-    sha256 cellar: :any,                 x86_64_linux:      "997a362cbade1270b400c7fead51055de11fbf0e9fb9b2ff5fa669196339462d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a61bb68d9c578adfbebf9a0402a1350f38228aa47f33e55460a5c04153a34a2c"
   end
 
   depends_on "meson" => :build

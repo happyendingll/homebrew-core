@@ -7,11 +7,8 @@ class Tfupdate < Formula
   head "https://github.com/minamijoyo/tfupdate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1a60c2d0662fad98e211810f06420391d9135f71e0500300235ce3ce02066cba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a60c2d0662fad98e211810f06420391d9135f71e0500300235ce3ce02066cba"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1a60c2d0662fad98e211810f06420391d9135f71e0500300235ce3ce02066cba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c30a1b75e3c10f15ba647c050403f0ccba41a4b3c7bfaff2d35eae262e50015f"
-    sha256 cellar: :any,                 x86_64_linux:      "92c4bdd089aceb6d70167eea5000d87bc0481958a9b805b315180ca2ad0c034a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5c43ec3e160ac7793fb26f9eac47a94762c543ab68b947ec18c033b1b72fcecc"
   end
 
   depends_on "go" => :build

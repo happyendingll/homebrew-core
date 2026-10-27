@@ -11,11 +11,8 @@ class Jags < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e5158a007a1c28d0469d29ea32a97377ea1fa9c85f91ee85447274e4e9673387"
-    sha256 cellar: :any, arm64_tahoe:       "fc1b94f196773844fae0c4447653ea9795c2d53af57636431286bc971c18346e"
-    sha256 cellar: :any, arm64_sequoia:     "a60d2a3e289b45a694e402b4774696558546f51980c13500716398fe3efdfae3"
-    sha256 cellar: :any, arm64_linux:       "6cc4fc64a63d61b678ca1e4b2b6da50121dd983166a2d58af591db52e1a4e751"
-    sha256 cellar: :any, x86_64_linux:      "7960338f0de0e165d39490a66de7e6da052a669a1ee6948137711e34c9f7371b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5de99162ba32d2530e9130dc24568a5a1a204ff5e11b1ee2148b8e497159d2d3"
   end
 
   depends_on "pkgconf" => :build

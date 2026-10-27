@@ -7,11 +7,8 @@ class Asnmap < Formula
   head "https://github.com/projectdiscovery/asnmap.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b6b2bd38faa8f0da00cbb343edcbda98e4c7f884eeb776dedf337418ea18a840"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e53399ddacff111529151d6cb08937ae8c45fada3bcd69fadd6b9cdacf71d3c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5c38f58ab963ca734c3148079225a6bfa73ca6adc721cf1ba8c2cc528623a16c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7c607f263a752f19ba7d634be951ae986441cc841129404dd38e860fd4e49b64"
-    sha256 cellar: :any,                 x86_64_linux:      "d179bf79692bbcd03c9abd3046559507449d7d407e314172668bef7eb41d497f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d503c56434e33073b745432a684e5b42c3af6ba0d8d97432cbfb248817b6002c"
   end
 
   depends_on "go" => :build

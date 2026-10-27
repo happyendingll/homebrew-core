@@ -6,11 +6,8 @@ class Retry < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "da33a5e97f32fc809d45071ccf84d230b9647c14092eb7ce36b415df2b8b8c34"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60acf30cd8124a07ca056a042cc970d73801333d61358e57a63c6b04d2fdc896"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c52292ebe19072bb8aa91d19d49e5741d17839166b309c37fe130e22c7f545bc"
-    sha256 cellar: :any,                 arm64_linux:       "6b45ef0a3bbb613e1268d4305586dff4dafbf65b8e392651c43ca2ef26cc192c"
-    sha256 cellar: :any,                 x86_64_linux:      "eb370252234a39ee8886942351dc1a1193d7dd0eb272bd1ffd2d223d5d7a39e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7fb3f16b144918aeae325a30be4fddb78e3e957c39c80c3c194bf6ec810aa386"
   end
 
   def install

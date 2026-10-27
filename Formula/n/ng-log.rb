@@ -12,11 +12,8 @@ class NgLog < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e0eeba20eab668631b51933cbc5f2e546fc5b9f241fadb048f217fd9360b8e02"
-    sha256 cellar: :any, arm64_tahoe:       "48b17089d29acefbd4dc2cdecccef9c40b88e600b310ae9a161ef07e5e6cdc74"
-    sha256 cellar: :any, arm64_sequoia:     "62712c2766a71cdaa0fa8d7b5c61d681b4986ad203ae17522dff3b87ad8256c2"
-    sha256 cellar: :any, arm64_linux:       "d17f12fdb0bb93ca1225d8648204822638e78fee49995e22d317857158a8e5d8"
-    sha256 cellar: :any, x86_64_linux:      "d9a5e0ef6cd5376ab76be3cf1f6087c8e476ca984d98e61db026813bee02aff2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3e87bdb50934a9ddb4a65ddce91c548738a6130ef460444e91e848c72813dad6"
   end
 
   depends_on "cmake" => [:build, :test]

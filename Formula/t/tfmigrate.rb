@@ -7,11 +7,8 @@ class Tfmigrate < Formula
   head "https://github.com/minamijoyo/tfmigrate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fcdf0d825c18afec4c69ee35b9eb3c703bb94fa42f330ebf1f918d154bd6eedd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fcdf0d825c18afec4c69ee35b9eb3c703bb94fa42f330ebf1f918d154bd6eedd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fcdf0d825c18afec4c69ee35b9eb3c703bb94fa42f330ebf1f918d154bd6eedd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a6124225b046f4f93b341eed5dbd25e75046f8191cd69d9d20838bd407d54c8c"
-    sha256 cellar: :any,                 x86_64_linux:      "e4f8c139e611603338636066dc8c63ab5169c835c15ccbebb12efcf92f38a5b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e6d19584c0a543fe26586cfcbb38f2d477a181944b959fb94e46421e75acc338"
   end
 
   depends_on "go" => :build

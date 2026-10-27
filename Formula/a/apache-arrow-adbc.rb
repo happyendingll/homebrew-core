@@ -13,11 +13,8 @@ class ApacheArrowAdbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "913d51d369ae668e04cb14bc178ace59798107324769c76495e1320b272ee6e1"
-    sha256 cellar: :any, arm64_tahoe:       "a7497abc5c44788a6fb95b4152b09d38f58bb387771ec3e27a229aaa829e8c51"
-    sha256 cellar: :any, arm64_sequoia:     "361a3dd8ad3ace591f31a16157d754e8bde3635680f184ab0003dc87cf5c6e71"
-    sha256 cellar: :any, arm64_linux:       "339cbc94d9a79077c26c94998c9ab36ea9da0a4065fffb742c6d3d03e700268a"
-    sha256 cellar: :any, x86_64_linux:      "1df214b730bf0302fab407434c504aecd2164e55293007ff15c38f3d21c1596e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "fbbf681669c8e87eba85193f1ce815b929c9e1d5376e34aafa46b3d31b1e5c49"
   end
 
   depends_on "cmake" => :build

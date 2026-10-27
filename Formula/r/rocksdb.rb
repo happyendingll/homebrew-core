@@ -8,11 +8,8 @@ class Rocksdb < Formula
   head "https://github.com/facebook/rocksdb.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "976ba36835c91c3ef39aada5c87ef6054aeebc767e9ef5ff46a7eba4681dc226"
-    sha256 cellar: :any, arm64_tahoe:       "9e4f35d308c40348f5811ebe7d934a2b57966892ec3b25a6f1284308ca4f0799"
-    sha256 cellar: :any, arm64_sequoia:     "0725359d1634582f7c9a3b25f71fe6159ff8e516636ef0550df6c08df078a0a7"
-    sha256 cellar: :any, arm64_linux:       "131c1d0ccbba30bc70b8d7b11d75ff53e5db315dbe3ae455cad0c444419d68ea"
-    sha256 cellar: :any, x86_64_linux:      "ac6a6b17629fad12fde37d2ea790f0da50994e2789a8f1fba1ef8748c85471b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6fd3a5ef4ced2ba46ddafa9556a5ff227ad8bfc5f5296cc063ae31ad545e16a2"
   end
 
   depends_on "cmake" => :build

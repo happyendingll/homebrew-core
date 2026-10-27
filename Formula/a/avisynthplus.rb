@@ -12,11 +12,8 @@ class Avisynthplus < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9f8926380d3e19a56eb2222e149e5383e8f670c428f9a34405b32ea39301db95"
-    sha256 arm64_tahoe:       "41b2bc58ddf5cfbf87c78705239d3c660741fdb8dc50a91076939d4e0340aa7d"
-    sha256 arm64_sequoia:     "69f00da4f099e889cca4d58a0f69344533332093b4061bca6b12534aa58114a5"
-    sha256 arm64_linux:       "b494d3dc138aa1b7ef4c977b3aad34606fb5c7359b6d9523808f39511a3296e3"
-    sha256 x86_64_linux:      "c3886160551d7752b811d0511a84368750e8c6872832a1e50215dfdf26124827"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "2c27129c46a8dbd3cbcf174f9fecb5fdb3595fc3b89b149d7df5e017b69b1d7a"
   end
 
   depends_on "cmake" => :build

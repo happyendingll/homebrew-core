@@ -6,12 +6,8 @@ class Mosml < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "12330982905c21a44082b1c229a6cc82a7347b83dd8112f1d87a5303199637e0"
-    sha256 cellar: :any, arm64_tahoe:       "1a7e823a23f184f14b86c7f1c09aae850e733352f8b369a7460a4b4dffb2f7ab"
-    sha256 cellar: :any, arm64_sequoia:     "e7767561750b13027b053e1a080b8bcac8d5e34bfdff98089b4e51c4c0c9e8bd"
-    sha256 cellar: :any, arm64_linux:       "4664f97ff7d7e8b3564a4fbef73d34e6823320a76a4c5e0cf0591fcaff9b096c"
-    sha256 cellar: :any, x86_64_linux:      "4f1904f936092b64032a55a37510d8e865051485ee6ca7efd5b0d6a0cceacb58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "dd7b57aa4d9f29ff115a07972d6eaa40e2f8641db272c049d5e355a4ae05ead2"
   end
 
   depends_on "gmp"

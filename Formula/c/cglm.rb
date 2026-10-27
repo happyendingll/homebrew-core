@@ -6,11 +6,8 @@ class Cglm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9be593ffe528f33536114691a8a6c414b3e33f59cbe42cda9e6f5bdec30f6764"
-    sha256 cellar: :any, arm64_tahoe:       "87f7219dfd53d2c6727eea73adf042b0d7b738477b0abe6179ae82b56797153d"
-    sha256 cellar: :any, arm64_sequoia:     "74a856f6275e385834b4120442714bbb1884ab94261128004d24205b96f0a2a7"
-    sha256 cellar: :any, arm64_linux:       "1643f8ca8ea56a8f4a713b3176cc0381bc4714b2dd77b75161b51a2141c32878"
-    sha256 cellar: :any, x86_64_linux:      "58910e2caf5056addc3bc9b3351b3702f13152fda26c10280d710d00137e7f0e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "01f2de52287e6c24a352cb432ae0ed19d28a869ef8c8b6048f38d9c34abb7784"
   end
 
   depends_on "autoconf" => :build

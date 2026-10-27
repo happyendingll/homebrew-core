@@ -7,11 +7,8 @@ class Hcledit < Formula
   head "https://github.com/minamijoyo/hcledit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ee9942a766ff5c2674c6fafc20f5cb2329b731f17a4be00ae646d45d441b334f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ee9942a766ff5c2674c6fafc20f5cb2329b731f17a4be00ae646d45d441b334f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ee9942a766ff5c2674c6fafc20f5cb2329b731f17a4be00ae646d45d441b334f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ddcd6855be0a7538995124d36476590e98a934d10628c8dc21458ce5c78262ae"
-    sha256 cellar: :any,                 x86_64_linux:      "f1594efba998e64ee6c4a31a93bb6e8dd6a480c1a46920ff79e9669b71c40101"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "98c5c3572f6b8e9f98c79ecce91210d83a3d16430ed660eba2a452128412bf2e"
   end
 
   depends_on "go" => :build
