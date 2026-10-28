@@ -7,11 +7,8 @@ class Austin < Formula
   head "https://github.com/P403n1x87/austin.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "763a64952097fb53780d9b7daec7e389623d65cb7800217436cd4afe97357f25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f180633908671f28c4d68a7a50892f6325ea7a37b33680b671d62ca127c83dca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b5e13e3db248c5f918b5504626139f7ff5eb73897e77365b54cfec0dc340aee"
-    sha256 cellar: :any,                 arm64_linux:       "240cdd46555c72ec9d4ca3c24ee7c092dd6684c96e63b1844ca089cdf5975a75"
-    sha256 cellar: :any,                 x86_64_linux:      "3b0ec667ba56f3593ef5bd32436fd358accd66db63bf3d5fd8bf7c212b08ea0f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6ea92ffe36996065d59334862a51b1badda005625aa2d8d73370642c4db5c9e8"
   end
 
   depends_on "autoconf" => :build

@@ -7,11 +7,8 @@ class Tfprovidercheck < Formula
   head "https://github.com/suzuki-shunsuke/tfprovidercheck.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7273c1d9ab1294a7c1491186878b1c783ca5f4d62c909fe59505ba22ce382cb1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7273c1d9ab1294a7c1491186878b1c783ca5f4d62c909fe59505ba22ce382cb1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7273c1d9ab1294a7c1491186878b1c783ca5f4d62c909fe59505ba22ce382cb1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b7a43fb52f9890ffd82363b13dbc86d28b43e77d87437d89cd3bd1ef7d5ac559"
-    sha256 cellar: :any,                 x86_64_linux:      "8ea1e5f6e157086867c29665aeb62b7854d7971fdae39ab6cf8964b6cd671005"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c3a69a165cf7168fc428e82bf63584b44221512da784716c740041dffc96540d"
   end
 
   depends_on "go" => :build

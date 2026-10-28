@@ -6,11 +6,8 @@ class Samtools < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c7d4f2a00b5e769a8674b5a515665786af7d5551352b51092c0b78c67f5c9b0f"
-    sha256 cellar: :any, arm64_tahoe:       "0957908dcf06a7b52629ed06aa6cc9627e02bb1afaab1d0efbc7f9780c2b4672"
-    sha256 cellar: :any, arm64_sequoia:     "2eeb0091bba04d3bd38e4f72325f8f4fafad4936f8871e756ccb94b3a67ee220"
-    sha256 cellar: :any, arm64_linux:       "46c6eb1108e1f479211eaa5e509f4d66c0d926bc07a1f1c08722376e87cbf3df"
-    sha256 cellar: :any, x86_64_linux:      "b02b9577d79e69f3b651a282cf4553920084a46db486024aa45a9475c4f98898"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "89150cafd226da131ce593ff0c80a49a75c5856254c8b4d11c029faa347d4ffc"
   end
 
   depends_on "htslib"

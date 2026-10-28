@@ -11,11 +11,8 @@ class Siege < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e3756d9d1f62cba420dc2df43ac3603467d14f06b0282500122183beb7048440"
-    sha256 arm64_tahoe:       "2cdb19baca89915784b97b94d03db26c9dcc6bf0f40fb7f0a2be5396f6cae544"
-    sha256 arm64_sequoia:     "85f0075bab6dbc6748b14de742aae5eda40056eccf78cd9c30ee3e0f2d23e4ca"
-    sha256 arm64_linux:       "3fd4d02b50048d06549817338fba5195623a203d7e5f032be8758afcca868477"
-    sha256 x86_64_linux:      "150eac7765690911ee5ed08cd22786519a382ba7056ad8aa138dc7b7d8e7deae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "cded3d2c31b0d885d341d12feb6f6005ffea83f8eaba8946be77b332ee094f0f"
   end
 
   depends_on "openssl@4"

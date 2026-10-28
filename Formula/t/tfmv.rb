@@ -7,11 +7,8 @@ class Tfmv < Formula
   head "https://github.com/suzuki-shunsuke/tfmv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a6b8eda21963e159deb2ca52e2d393eaedfcecd91cc42c2eb1e49c2e116c13d7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a6b8eda21963e159deb2ca52e2d393eaedfcecd91cc42c2eb1e49c2e116c13d7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a6b8eda21963e159deb2ca52e2d393eaedfcecd91cc42c2eb1e49c2e116c13d7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0afc7eeb09b97a8d3394d20bac5e76ced9026b854ef1d808f816c62f6e475935"
-    sha256 cellar: :any,                 x86_64_linux:      "4625bc4345a4a1460df4adf46aaf7b911af7103980aa4c52f6367403ba5e299e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7761b866dc8fc62f2837fe2fe465445d65e54e6b581487a11b7c4b2602a63a9a"
   end
 
   depends_on "go" => :build

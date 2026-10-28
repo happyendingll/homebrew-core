@@ -8,11 +8,8 @@ class Kn < Formula
   head "https://github.com/knative/client.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f70cdf577526e93fd4e5496c58e9f5c9410821a97632d70a555f246a85985e7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4efd6d4c334062e1b563a465c1479e90090d3b5be8634cedf530d0a939a2fe09"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "785cfed2cb10469a9dd2a274caf6f2d708bcde030a78c4ff9a07cda47e72a62d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "79720ec6d058da2ab7d17a001a684498686f63f9f413322b85fd4e249721b898"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "61da0d0cadcd2e204e1c0c78df4c5c9c27965aa3dfbcde03e9eb4b3c26d6c58c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d45231d3529fda4e6ae6ad674856c16867823152ada0f88b0e8eff1737c4035f"
   end
 
   depends_on "go" => :build
