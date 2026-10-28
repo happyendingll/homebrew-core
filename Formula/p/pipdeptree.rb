@@ -8,11 +8,8 @@ class Pipdeptree < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "008da61c8f60585df3d96d7ce430a506d18824555ff9c12fdb76484f1c659edb"
-    sha256 cellar: :any, arm64_tahoe:       "3b3659432ca54355d4c4834be18c2276adb55de8ed79042008b80c0a60c59bc7"
-    sha256 cellar: :any, arm64_sequoia:     "86ddf02330e3bb3b6fcd6f7dca1fd4f9c45f5e0eeaa54f19d6bf1f05c06e618f"
-    sha256 cellar: :any, arm64_linux:       "974c0448b69d9fed84babc6b96dd38cc60f5b036a28292559be85e5ffa256bec"
-    sha256 cellar: :any, x86_64_linux:      "b725b252a41282bdd666d15d62a1fa0ecb1d8e718f7ae0c3de7d47c5af96c2d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "9c4b77ec08723eac53d9909e7fa752e1344037a6864f875f89e79e512a6efb09"
   end
 
   depends_on "meson" => :build

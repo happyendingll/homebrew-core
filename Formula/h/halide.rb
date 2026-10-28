@@ -13,11 +13,8 @@ class Halide < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c586c3da977b977e10474a44056f97cc9ff5195dda4a6555c8e754b649d95780"
-    sha256 cellar: :any, arm64_tahoe:       "85b61890e1fc5e57cd810402a3c37d0b25177b0d73c11c100abe799a032ba880"
-    sha256 cellar: :any, arm64_sequoia:     "6e1e564e06aa5de6d592f6e7152fbdbec297c56890cff6535d5b885780f062bb"
-    sha256 cellar: :any, arm64_linux:       "6f8526ee12cc6b07ddd4633b7ba26d348ddf7ba8f78b285e5551e17ad5194359"
-    sha256 cellar: :any, x86_64_linux:      "cb1c77d4b844ac31c049e768a5372840f7c6987da19aec845f510bd3a91c36af"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a92b759bc40b812bdd9c2629d224c2803a47c12fa2138639898030aa875ca0b5"
   end
 
   depends_on "cmake" => :build

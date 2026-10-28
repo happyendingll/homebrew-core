@@ -9,11 +9,8 @@ class CheckJsonschema < Formula
   head "https://github.com/python-jsonschema/check-jsonschema.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "16a70e0608e2a48eb99bdec6a1d0d2b923aaf7a9d1a494494ca749af863170c0"
-    sha256 cellar: :any, arm64_tahoe:       "6dd0cc67e06595c11162a14713bbe11ef69cc7fcb7d8f2d53794f95b1e6d9eb2"
-    sha256 cellar: :any, arm64_sequoia:     "54c2e3c49866902cebfced9b0f5533a5000629d9d4aa7e199b63cfe0582e97b1"
-    sha256 cellar: :any, arm64_linux:       "074d320930f8e643582a3e1707332b93c2a9b4280796d0d528491691326e86dc"
-    sha256 cellar: :any, x86_64_linux:      "1091f18dea09ec12604c8fdac83e7df8f4037d5b3fa0931457cb1b670f1c5e9e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "06f9a20ffdd765669ba42e06c7942bf0f923b61705a07170a70e6c666351ec92"
   end
 
   depends_on "rust" => :build # for regress

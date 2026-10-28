@@ -6,11 +6,8 @@ class Iir1 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fb1447fc77cd41cd22080c4b3cbaea302319df9cd2ca86b84fdae381a6cb8a8b"
-    sha256 cellar: :any, arm64_tahoe:       "2dd89ed006de829e65d26195f19f1d9a2e7a68bcd052789c963f0d9f92d52946"
-    sha256 cellar: :any, arm64_sequoia:     "c7364004c8cfb3e774dd350005cad09020123b4e31710eb1c0b2a1fa7f6690e5"
-    sha256 cellar: :any, arm64_linux:       "76b6fc1a45e0963f1c5bcdae2eb445baf60d8249d6272012318364159a325813"
-    sha256 cellar: :any, x86_64_linux:      "0e462e7b0cb0dc9b0d5e58c5271e0f0f1f3f6d2b26e5129df3332c7d6dff80c2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "68d53cf256c1b98d73b85adeaceb5094fe9da74e80532ad680eb50490c85f357"
   end
 
   depends_on "cmake" => :build

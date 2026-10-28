@@ -9,11 +9,8 @@ class Otterdog < Formula
   head "https://github.com/eclipse-csi/otterdog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ca5701ffc95164724ecfd57f9c4a79e977082bee5a3c0ab61ac109b4cd5d5ed8"
-    sha256 cellar: :any, arm64_tahoe:       "3e9d18bf20f59586118b62840360a75de8e5db7e07526d4f36d1721f1986f9e0"
-    sha256 cellar: :any, arm64_sequoia:     "e223c9ea0b6f746370523533397b408605d044df29e4403a16c40756bc3a6fc9"
-    sha256 cellar: :any, arm64_linux:       "eca923742d7e5b3acf3cb88400c5f9eba8d82646a05d096d4c0f0a5e4d36aa20"
-    sha256 cellar: :any, x86_64_linux:      "cebc45d914e8f78c65c9db9a290dd9cc6b1b246dced409a675c1b5abeba29551"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f0dbab6a3a8441934b04f3f06ce1a2bf2d1a1880241c39340bef9e31d05ba3c0"
   end
 
   depends_on "rust" => :build # for rjsonnet
