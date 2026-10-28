@@ -1,13 +1,16 @@
 class AgentBrowser < Formula
   desc "Browser automation CLI for AI agents"
   homepage "https://agent-browser.dev/"
-  url "https://github.com/vercel-labs/agent-browser/archive/refs/tags/v0.39.4.tar.gz"
-  sha256 "3c2a46ff1f89ef1d14c8ee2f5b5521336b9cf48208475cccb0958ed5ec56ea44"
+  url "https://github.com/vercel-labs/agent-browser/archive/refs/tags/v0.40.0.tar.gz"
+  sha256 "f28a4f0b4d5d6eff4925a2b442d5d930c96ed6932f283f014dd120dc1bc174ef"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "4fdb29af362bb80b457f6d5d2aca1b27db48db5da40cc20311084ed638dedee4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "070f7fc1265ca225475a135094f41fe249ae38c9d21f550572bb563515548f40"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47007e2cb1ffe375a85f3f13c6b88f8dcea3e9f8614e694aaa882bf41fb0cfee"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c29950a64c9c50c3c76988732e61423a5f8d4e7b5964cd4f616ca27253b5cddc"
+    sha256 cellar: :any,                 arm64_linux:       "dea27f9598adf361f8974dec6415775bac88309e26ec97f61953ac258b0268dc"
+    sha256 cellar: :any,                 x86_64_linux:      "e5ed58df8b3be16cf9ac4e37e3472c3e3fee51b95971e6fcc964799fccb78edc"
   end
 
   depends_on "rust" => :build

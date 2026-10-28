@@ -1,8 +1,8 @@
 class Pdfcpu < Formula
   desc "PDF processor written in Go"
   homepage "https://pdfcpu.io"
-  url "https://github.com/pdfcpu/pdfcpu/archive/refs/tags/v0.16.3.tar.gz"
-  sha256 "4864561bb99633c06f917eae780eccbc98b3ede259b4a774e699a893eff2a56e"
+  url "https://github.com/pdfcpu/pdfcpu/archive/refs/tags/v0.16.4.tar.gz"
+  sha256 "d10377ca44063427b86732b2cbb110b56d10311e8961bf402889baa942d979ff"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Pdfcpu < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "880e1cbb7615d8804e7ccc8619d8ad8365361e520418bd9853af614c91266b13"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d0d57692e77c6b626c1fd3096d7ec10dc995732793641c2d75dac72f76ff353b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d0d57692e77c6b626c1fd3096d7ec10dc995732793641c2d75dac72f76ff353b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0d57692e77c6b626c1fd3096d7ec10dc995732793641c2d75dac72f76ff353b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b66fbecbc66cf4280de42688a12788138d85a0d61a8dd90a91971cd837a67da1"
+    sha256 cellar: :any,                 x86_64_linux:      "19cc3fdf8c7d927f6454dd4b2aa849e513623ddbd3cd3e77ba09c897b5429809"
   end
 
   depends_on "go" => :build

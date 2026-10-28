@@ -1,13 +1,16 @@
 class SatelliteTracker < Formula
   desc "Terminal-based real-time satellite tracking and orbit prediction application"
   homepage "https://github.com/ShenMian/tracker"
-  url "https://github.com/ShenMian/tracker/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "2cfb81377db86b39faba1159fbbc81481eeb9418ae8c943a49d1aba5bc2b1473"
+  url "https://github.com/ShenMian/tracker/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "f09223c10ae65d8b6e92a6ce2fac6489c6f0f110fb014514988160ef47f2cd1a"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "f4c294b6b276dd2ae3a27c080aeb60a10f7e29cae9f3c7a3f3d00b6712e0e5ad"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "449f90c16cf63783f9a5cc7c8267c89b9ee374fb138878a98c1f4aa217b42d22"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7dcc00926d667b08827468779c5bd6f21a654e200bc1861d8bf176d99be751ff"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "891082793dede1336b80e8ea07abac8db7053d2296768027b3b7530c59b5692f"
+    sha256 cellar: :any,                 arm64_linux:       "047292109959d07d3867c8b95d60933945af2fa6c5716208f5c8b61a14d5f947"
+    sha256 cellar: :any,                 x86_64_linux:      "8093bf71f10c6dd322873c93cd1bdffe979b2b8af01e58ec2ce69a24df2820e8"
   end
 
   depends_on "pkgconf" => :build

@@ -24,6 +24,9 @@ class VulkanHeaders < Formula
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--install", "build"
+
+    # Build an `:all` bottle
+    inreplace include/"vulkan/vulkan.hpp", "/opt/homebrew", HOMEBREW_PREFIX
   end
 
   test do

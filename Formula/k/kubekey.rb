@@ -2,8 +2,8 @@ class Kubekey < Formula
   desc "Installer for Kubernetes and / or KubeSphere, and related cloud-native add-ons"
   homepage "https://kubesphere.io"
   url "https://github.com/kubesphere/kubekey.git",
-      tag:      "v4.0.8",
-      revision: "f6b1019891844091ddb14580a8d3aeb3251c02fe"
+      tag:      "v4.0.9",
+      revision: "0cb245f681f91f1305fd1880f292076e21343dab"
   license "Apache-2.0"
   head "https://github.com/kubesphere/kubekey.git", branch: "main"
 
@@ -16,8 +16,11 @@ class Kubekey < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "c173646ca7695919ee71b4136550dc392e2c6aa4673144c18cbf4d7221dcf136"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cb0abd3a1eb5b0b485fed992309e7020fd80f2fb3448900800fab8c33a9cb5c6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a16c15a563d73d1b15fb3a37e7daa96d409dcf7d9b3319778f718631bef512f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "42e1a4948cf80460edc03ab44ed61298d337c8756e963d82ed5fa20fcf54d7a4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f84e56a5dc8a814635055e2b4e8c164ec3a8d2fa309e3416b7bf0eb6ad042e03"
+    sha256 cellar: :any,                 x86_64_linux:      "8da8a4f5a9793e7875919b3aa381467ffb0689d2e61faad42506f2dd6c6ba6ae"
   end
 
   depends_on "go" => :build

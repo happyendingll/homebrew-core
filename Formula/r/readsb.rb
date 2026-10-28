@@ -1,13 +1,16 @@
 class Readsb < Formula
   desc "ADS-B decoder swiss knife"
   homepage "https://github.com/wiedehopf/readsb"
-  url "https://github.com/wiedehopf/readsb/archive/refs/tags/v3.16.19.tar.gz"
-  sha256 "944d2a84f389f5a6a32aeae9e22c7d7261db8bfd335b46b25c0de0e3e322df5c"
+  url "https://github.com/wiedehopf/readsb/archive/refs/tags/v3.16.20.tar.gz"
+  sha256 "6692ac30c768d0f683e383abc1f10cd5d762bad2dcc141edc8bd218a0d9fe29c"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "3956a3c42d42cb9c83cebe170a6bd8e941dec4e11c25aacac2bd59a89203db45"
+    sha256 cellar: :any, arm64_golden_gate: "0f38924a2bfffc272a80415c100a78eb792631693e53d4df4857a7c23104386a"
+    sha256 cellar: :any, arm64_tahoe:       "82c636034ef206c6779a64ff46b1a7367a4b557538444543ab5c561853bfc526"
+    sha256 cellar: :any, arm64_sequoia:     "d6588120fe39887659faab09113e37f43c552b67c8e61e0d73f32c7d5d9f7d4a"
+    sha256 cellar: :any, arm64_linux:       "7e403d547b33746cd399874e05a911a768385a9a05f8e2696ee6f273d8551c96"
+    sha256 cellar: :any, x86_64_linux:      "f91171be628803ffe0068ceded7868fa88f1a48cbba129ef2113ce145d8ac7ff"
   end
 
   depends_on "pkgconf" => :build

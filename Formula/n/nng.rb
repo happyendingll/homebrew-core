@@ -1,8 +1,8 @@
 class Nng < Formula
   desc "Nanomsg-next-generation -- light-weight brokerless messaging"
   homepage "https://nng.nanomsg.org/"
-  url "https://github.com/nanomsg/nng/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "439241ca7afd059e2c5635491e430e37b591430c25aa57c0ba07995c3fbdffa6"
+  url "https://github.com/nanomsg/nng/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "e2fdcdf126b530e331b4727812b710629cdb5d90d230ce8f080e2eb520299d8d"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,11 @@ class Nng < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "5d978a748c55c5daa8288fe0db70fde1c92dc9be3c6c74794af5c7aade6df070"
+    sha256 cellar: :any, arm64_golden_gate: "ec1bef381a4d61836c1e3fa2d401d366ebe7adeecd7ae4c7a5bbe73a5943a972"
+    sha256 cellar: :any, arm64_tahoe:       "bd6a1d41d16373cd33011f3e08f8d665670b9bead1edd2aa3045ae345950fab4"
+    sha256 cellar: :any, arm64_sequoia:     "848aff0b27a0e33493e3df97158366dddb89d0387f783e90a9b1a66aba19c6ce"
+    sha256 cellar: :any, arm64_linux:       "c344ae1f83575389f80b130d747575b915d9532a93e1957b12411ea87db039b6"
+    sha256 cellar: :any, x86_64_linux:      "27451cd129626439c64fe15b864ecdd8c22e98420f96d48e345a493acda78f3b"
   end
 
   depends_on "asciidoctor" => :build
