@@ -1,8 +1,8 @@
 class Sui < Formula
   desc "Next-generation smart contract platform powered by the Move programming language"
   homepage "https://sui.io"
-  url "https://github.com/MystenLabs/sui/archive/refs/tags/testnet-v1.82.2.tar.gz"
-  sha256 "291c9078dc400cab30a81b707d9e8d8b2f0641bfe10712154c4a9ab16262a6ed"
+  url "https://github.com/MystenLabs/sui/archive/refs/tags/testnet-v1.83.0.tar.gz"
+  sha256 "7260ce2215b07bbb193726054911e74da7a6057feabbbc026209f5e8519890ec"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Sui < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f3283242da5724e76b412bc8a8abd82a4c2fa7f233bfe2df000bc4b26d4d609d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d30e1ff6604ee69d97f3f7b771b4381adef28d0e154a30810bc11a4c5e857c3d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "31d71deaac42c04f6dfa5b37062769180f386b2dd227fe6d6cc3cdeab1927c72"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c964e9fc519f0e1c018cdd5bf9d2180e0a260dadd51339c156ba63be1e128299"
+    sha256 cellar: :any,                 arm64_linux:       "765eb407a358301eb6b284a0d013821fbd775b99ea36f06cfdc1a9314cd69458"
+    sha256 cellar: :any,                 x86_64_linux:      "8dd79cc53162b04e3f10be3232a483e5ddd1a7176e49a6afc4fab149d7557dc2"
   end
 
   depends_on "cmake" => :build

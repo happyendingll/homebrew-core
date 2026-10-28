@@ -3,13 +3,16 @@ class LanggraphCli < Formula
 
   desc "Command-line interface for deploying apps to the LangGraph platform"
   homepage "https://www.github.com/langchain-ai/langgraph"
-  url "https://files.pythonhosted.org/packages/13/9e/af18592c463c331bc455c8df5cd8faf2a89013cb3321df5201fe0b8fe6da/langgraph_cli-0.4.38.tar.gz"
-  sha256 "545211d0641cbbf1a923b47c18d86f76eb815531410c29b45217db348f4f2e90"
+  url "https://files.pythonhosted.org/packages/89/22/1e4e41edf27845dff37e2196970037327e2a0032c46253de77854e3d2e6d/langgraph_cli-0.4.39.tar.gz"
+  sha256 "0b49dfc49398f862ac17814c918a69d155822536e493ffa64e4386592be48751"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "9d8419a572feda7f52739da7b4a2a27b2cca70d06fd893f874c4bee716dd2b3f"
+    sha256 cellar: :any, arm64_golden_gate: "0420a3bc65c5b79a5bafe23f3d230f8c59f3f44ba8057d65f86008fe61b4f3a7"
+    sha256 cellar: :any, arm64_tahoe:       "56ebfd8446738dcf8bff9c4888e399bca8b2db06af8fe07807cf820fae6c8f79"
+    sha256 cellar: :any, arm64_sequoia:     "710ddbc6c28f4e07772960295d290c982dffac4c0e3527e4b6322878b7480d6a"
+    sha256 cellar: :any, arm64_linux:       "f1c7e5bd44c32eb9516bacfa9a7682f0bb0b6a6be8442eac25f6353be9034b11"
+    sha256 cellar: :any, x86_64_linux:      "07ca129367261a2c09c49f18437fd0c788050b2d7081d6a532da75cc6412401e"
   end
 
   depends_on "rust" => :build # for orjson
@@ -73,13 +76,13 @@ class LanggraphCli < Formula
   end
 
   resource "jsonpatch" do
-    url "https://files.pythonhosted.org/packages/8e/39/c534bb172e9318400d5631074b1eda6c78b7c918d0f04233b50caa8e2c10/jsonpatch-1.36.tar.gz"
-    sha256 "7e110cb3c5a1c8768f7170bf8fb9887c4aa575fba74c95239e868b494bd9a522"
+    url "https://files.pythonhosted.org/packages/dc/90/7b87a9f5f148f4a04f51b154384c58be6f74c1a33e1b8c49faf672710436/jsonpatch-1.37.tar.gz"
+    sha256 "04288ef93e60084bcb118101cd9d53424e627b91bb47ec5a95c02ec3795f6d23"
   end
 
   resource "jsonpointer" do
-    url "https://files.pythonhosted.org/packages/52/77/9be5cce647fa4d7afa9047c0c1029bc73292c27430e64fc9d2393ccf6727/jsonpointer-3.4.tar.gz"
-    sha256 "e57015ae65af3821c6a3976069860789cf326103f38b22b2178d41d021adad25"
+    url "https://files.pythonhosted.org/packages/21/b8/fe0d28b5a2f14e501a9fd300c49273a05c78920a1925c36c487d539035bc/jsonpointer-3.5.tar.gz"
+    sha256 "81f28618a019cf1b011a6cf757439737972de1ccbeca2e1f86dfb4d661800792"
   end
 
   resource "langchain-core" do
@@ -158,8 +161,8 @@ class LanggraphCli < Formula
   end
 
   resource "uuid-utils" do
-    url "https://files.pythonhosted.org/packages/d1/89/3720bd4ef165d9694530290d4bf639f4b45b92b28279f7e37acade45d14c/uuid_utils-0.18.0.tar.gz"
-    sha256 "20e21f57fdc985132c65ab19c03c08c06f186f5bae62fc8a88ea84365ba9da37"
+    url "https://files.pythonhosted.org/packages/f1/0f/cd9b3e495e514441e9af3a42c5c63436aee620f61412cafcce67e259228b/uuid_utils-0.19.0.tar.gz"
+    sha256 "4b2996bb9d12da9b62f6f4c64a066b26926fa75dbe47b4f8e309e24e187abf1d"
   end
 
   resource "websockets" do

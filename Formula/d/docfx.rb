@@ -20,9 +20,10 @@ class Docfx < Formula
 
   deny_network_access!
 
-  def dotnet = Formula["dotnet"]
+  def dotnet = deps.find { |d| d.name.match?(/^dotnet(@\d+)?$/) }.to_formula
 
   def fetch
+    ENV["XDG_RUNTIME_DIR"] = buildpath
     cd "templates" do
       system "npm", "ci", *std_npm_args(prefix: false)
     end
@@ -31,6 +32,7 @@ class Docfx < Formula
   end
 
   def install
+    ENV["XDG_RUNTIME_DIR"] = buildpath
     # specify the target framework to only target the currently used version of
     # .NET, otherwise additional frameworks will be added due to this running
     # inside of GitHub Actions, for details see:

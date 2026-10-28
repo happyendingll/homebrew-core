@@ -5,6 +5,12 @@ class Libqalculate < Formula
   sha256 "cf8d3eaf3d85030115701e997b6585e69573e71add88e7758486c5d1b01d3cc3"
   license "GPL-2.0-or-later"
 
+  # Upstream sometimes creates Windows-only releases.
+  livecheck do
+    url "https://qalculate.github.io/downloads.html"
+    regex(/href=.*?libqalculate[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
     sha256 sequoia: "a5a29bfd58081200d429041cfec8b6178b78395865f446971747580a86def21a"

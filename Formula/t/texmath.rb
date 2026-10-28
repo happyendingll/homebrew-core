@@ -1,14 +1,17 @@
 class Texmath < Formula
   desc "Haskell library for converting LaTeX math to MathML"
   homepage "https://johnmacfarlane.net/texmath.html"
-  url "https://hackage.haskell.org/package/texmath-0.13.3.2/texmath-0.13.3.2.tar.gz"
-  sha256 "64dc5357ec7aa51d3e1e39c8f2da1e8a5f307f2bee98c35e521d134a421ad435"
+  url "https://hackage.haskell.org/package/texmath-0.13.3.3/texmath-0.13.3.3.tar.gz"
+  sha256 "844015c5c6b5725fb2a39e4258923a40934c440692030d04b76f2a54fb8248dd"
   license "GPL-2.0-or-later"
   head "https://github.com/jgm/texmath.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "9e801ac4568ee10a8978386fcebac79268f28729b9e9f402e6d11d7e9c72b341"
+    sha256 cellar: :any, arm64_golden_gate: "b2de4dbcc793b561534acdee7554abdbb6d0c56df7801d8fce6b0e1875b4a1e1"
+    sha256 cellar: :any, arm64_tahoe:       "958694d9953ce4f3c84cd38ea3d1a9d8df95f444927a5d5436578531f203bc0e"
+    sha256 cellar: :any, arm64_sequoia:     "47855bfd566aeefce5a4998895e84602b8e9d680114df14dfb49937eda1b50cf"
+    sha256 cellar: :any, arm64_linux:       "13a88deaf172ba2b053c1aebe7474f62907149cb7932a0ca6386a3a4a9dc5b99"
+    sha256 cellar: :any, x86_64_linux:      "8d241bdd8fff7c3c97fef73008ca0cd568591a100ac9c8d52c2de3a3260c5673"
   end
 
   depends_on "cabal-install" => :build

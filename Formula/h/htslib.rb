@@ -1,10 +1,9 @@
 class Htslib < Formula
   desc "C library for high-throughput sequencing data formats"
   homepage "https://www.htslib.org/"
-  url "https://github.com/samtools/htslib/releases/download/1.24/htslib-1.24.tar.bz2"
-  sha256 "28a8de191381c7a97a35675ceac76fa1ea95e7b678d6a2e9d600a7874e4077de"
+  url "https://github.com/samtools/htslib/releases/download/1.25/htslib-1.25.tar.bz2"
+  sha256 "158c271e4e2986bb2dd11283b640edc10c56695b293df77a109ce99480303730"
   license all_of: ["MIT", "BSD-3-Clause"]
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -13,8 +12,11 @@ class Htslib < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "647a784a706bfb31a1e30328283abfcfab7abdc44d933ba7531d6cea1ab76d4c"
+    sha256 cellar: :any, arm64_golden_gate: "f6fffd5e60809ca366c36a88857cdbb5b08439096449e0d5f6183ae7f9a6e838"
+    sha256 cellar: :any, arm64_tahoe:       "82449dd9519fd1399fc3afbf4c6c71dbb554de80aae76a6472b743477d47cf9f"
+    sha256 cellar: :any, arm64_sequoia:     "93facfb91f1ea0426afc19bbac3c90a0f07f1f4e3dc5aba030f9656d8defe75f"
+    sha256 cellar: :any, arm64_linux:       "114bd0fa08392cbdc70b8605602b00c1b1960cea579776644b1cab4ecdebcd8d"
+    sha256 cellar: :any, x86_64_linux:      "b872122faad374b5469a29824bac6bd149b528a3edf6407ebd8ed2322df8ab9d"
   end
 
   depends_on "libdeflate"
