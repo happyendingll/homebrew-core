@@ -11,11 +11,8 @@ class Libmikmod < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7381c5f385a259badb7c64f91e8f0980f74b5d1bd659e2a7c3b071e79b0b2690"
-    sha256 cellar: :any, arm64_tahoe:       "6ea51e8c9075edbd6c69609a1cbbff78dc255ebf65563eef342bb39ce1508b85"
-    sha256 cellar: :any, arm64_sequoia:     "01e0d8558366a914db9912127103d31c30df44667eab6bbaedf98939014e8eec"
-    sha256 cellar: :any, arm64_linux:       "c2f86b6d443462a961be14eb86fae10c310820aeb4158c0b37a26949579800c9"
-    sha256 cellar: :any, x86_64_linux:      "232cf91bec8db7f780a45ce8753662a523f0ce8a6b5114009ddb78cb379ffe05"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "caf1f8042d51debaf2deb57bb86bb8bd529763d8215ae46b285542da4e9f5b2d"
   end
 
   def install

@@ -7,11 +7,8 @@ class Activemq < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b7a8d338912b292ecd0f91d70e87270070b7d4dc7f6eb72e81328017c24b3cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "15fb88356942e7a62d14a0d608bb3461082e2a05220f194873f54d05e8de17de"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a0a4578add367a68f78ed243cb597759706e4791dcb7bca513c4294cfff9e92"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "78980158e2a27b7dc96f0515a738d298dd36e4ef8d6cb69e09a1f04acff6b360"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "765dbf91fe271f7a65fbccb53c1759f0369668863cf7c656642793c3dd35b2e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "c407674c0cb986684cda0b4a5bea0e9bea843762ca72e7694289b0d3e84d3063"
   end
 
   depends_on "java-service-wrapper"

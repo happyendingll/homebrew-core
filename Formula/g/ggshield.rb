@@ -9,11 +9,8 @@ class Ggshield < Formula
   head "https://github.com/GitGuardian/ggshield.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d56af1c607bb06e677070e62c9c39fffd03f8ee0e3c98b7786d156855798218c"
-    sha256 cellar: :any, arm64_tahoe:       "688dd687cfd651bb5b3baeb522cea404391345a1627638bea7c1a4ac6d8e50a7"
-    sha256 cellar: :any, arm64_sequoia:     "6609665b82f8ada6732c52ab76fe757e21a4d5896ee80b073a9526a2ae08facd"
-    sha256 cellar: :any, arm64_linux:       "4fd0ac4dce94d42ba5924209fac3f3f62ffd8f2f3e596c93aca778971041ad9d"
-    sha256 cellar: :any, x86_64_linux:      "13dc64c828b7d995ac25a2b34c3ecf8ecfec9e5f396a67f718850470fe5ddd5d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "5dcb65ae8516faace0dd4ce166e47f121746cf026f83b5d4675c729eb3b7e0f7"
   end
 
   depends_on "pkgconf" => :build # for `rfc3161_client`

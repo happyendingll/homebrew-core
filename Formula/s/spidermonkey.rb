@@ -16,11 +16,8 @@ class Spidermonkey < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "792257b3c4fdbf501c4411a49224e89200659fdba2864e74c567a8fa73f7c51e"
-    sha256 cellar: :any, arm64_tahoe:       "5cf1930afd625004efa8686f8eae3bc29f7b4921373d4bda29fb121b1ea311cb"
-    sha256 cellar: :any, arm64_sequoia:     "60371c27fd3a5a08fa1c39d303a7ded4e4d49a6263e8218119339fc9438a9861"
-    sha256               arm64_linux:       "2e7835d5c3e8f314188e40de1e6de6710b49911c1bcae799d111ae5b24fbf142"
-    sha256               x86_64_linux:      "b5e23bf27004cb2d56d110f16e97d3fa2cc4206c7d2034f6acf6169350d43baf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a0b1647399d93c54017219a3f6a1a1aa048bbfcac3c5ef3aad06be93ea218131"
   end
 
   depends_on "cbindgen" => :build

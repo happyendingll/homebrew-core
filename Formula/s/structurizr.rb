@@ -6,11 +6,8 @@ class Structurizr < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d90e0bc830044703d251452daa61d0574c01d326f2baaf4d0b5664db38094cf4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d90e0bc830044703d251452daa61d0574c01d326f2baaf4d0b5664db38094cf4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d90e0bc830044703d251452daa61d0574c01d326f2baaf4d0b5664db38094cf4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e29af0bab627d6a7e2d1f6a6fe30f86481ee390ac5fccf9596eb1835000b3da7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e29af0bab627d6a7e2d1f6a6fe30f86481ee390ac5fccf9596eb1835000b3da7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "43f0202da93312d05407883a583bb086987179555a2951e57f0afacde042f04f"
   end
 
   depends_on "maven" => :build

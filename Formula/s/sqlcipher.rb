@@ -7,11 +7,8 @@ class Sqlcipher < Formula
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3dfcba2386d9c18d2e143dd4b0dac1d797fe5db5741a8bb5035651eeb5e9dea4"
-    sha256 cellar: :any, arm64_tahoe:       "2c02731856d55c9ca87704239fcfaa6a4d894d26ca045a4109af58907db8faec"
-    sha256 cellar: :any, arm64_sequoia:     "4e3dcb761e6f51081248b5c6d062014294208862f7186ba0465d699956705e9f"
-    sha256 cellar: :any, arm64_linux:       "94a037ed932d04c692f1a67aab6c6990f0fa1d0be6c1957a4293e8112dbe9cee"
-    sha256 cellar: :any, x86_64_linux:      "acfacedec0da5b23ab88de0dec65dcafb9f8f1e5047fc49c7b0dc30742deaa53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "646b137e4edd9ccd57c29ff2128bfdb5db9a8ce94bec6632e5abc5d43a22259d"
   end
 
   depends_on "openssl@4"

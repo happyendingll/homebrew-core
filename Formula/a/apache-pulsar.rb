@@ -8,11 +8,8 @@ class ApachePulsar < Formula
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "055caa7795442f432aa9fc10a06d4165659c5fe05a78dfb41dfbc9490a89fecc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "055caa7795442f432aa9fc10a06d4165659c5fe05a78dfb41dfbc9490a89fecc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "055caa7795442f432aa9fc10a06d4165659c5fe05a78dfb41dfbc9490a89fecc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "01e7b60f61ad34c7c1cbf299bd5b0d938a48137772c57d48e54ae0f752abb7ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "01e7b60f61ad34c7c1cbf299bd5b0d938a48137772c57d48e54ae0f752abb7ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "623743314af899284451543cd59799514cc11ee10f8f3b894798665c4ffcb01d"
   end
 
   depends_on "gradle" => :build

@@ -11,11 +11,8 @@ class Sui < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d30e1ff6604ee69d97f3f7b771b4381adef28d0e154a30810bc11a4c5e857c3d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "31d71deaac42c04f6dfa5b37062769180f386b2dd227fe6d6cc3cdeab1927c72"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c964e9fc519f0e1c018cdd5bf9d2180e0a260dadd51339c156ba63be1e128299"
-    sha256 cellar: :any,                 arm64_linux:       "765eb407a358301eb6b284a0d013821fbd775b99ea36f06cfdc1a9314cd69458"
-    sha256 cellar: :any,                 x86_64_linux:      "8dd79cc53162b04e3f10be3232a483e5ddd1a7176e49a6afc4fab149d7557dc2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "84099044acc248be65ef3d6568fe12be2ac1a9c6e5176b24a8cdd1fdeb84b0e6"
   end
 
   depends_on "cmake" => :build

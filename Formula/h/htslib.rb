@@ -12,11 +12,8 @@ class Htslib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f6fffd5e60809ca366c36a88857cdbb5b08439096449e0d5f6183ae7f9a6e838"
-    sha256 cellar: :any, arm64_tahoe:       "82449dd9519fd1399fc3afbf4c6c71dbb554de80aae76a6472b743477d47cf9f"
-    sha256 cellar: :any, arm64_sequoia:     "93facfb91f1ea0426afc19bbac3c90a0f07f1f4e3dc5aba030f9656d8defe75f"
-    sha256 cellar: :any, arm64_linux:       "114bd0fa08392cbdc70b8605602b00c1b1960cea579776644b1cab4ecdebcd8d"
-    sha256 cellar: :any, x86_64_linux:      "b872122faad374b5469a29824bac6bd149b528a3edf6407ebd8ed2322df8ab9d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "735e8ed00ca013dd61d58d97518fb71556ceb8a8b47155e8510d75e06d109b6b"
   end
 
   depends_on "libdeflate"
