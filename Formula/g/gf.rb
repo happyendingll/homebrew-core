@@ -7,11 +7,8 @@ class Gf < Formula
   head "https://github.com/gogf/gf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "049464afad56fd974001e708e9973328c4c1b707d897828aa64a10bbb188870d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "049464afad56fd974001e708e9973328c4c1b707d897828aa64a10bbb188870d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "049464afad56fd974001e708e9973328c4c1b707d897828aa64a10bbb188870d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "019256d0615f76ff80b0272f44019aed473ec3e05912129f26bb26de41bd6c01"
-    sha256 cellar: :any,                 x86_64_linux:      "409bd8d350edc7d61e47aac0f9c3d964ef3bb080d8a266676d821ed9da4dd09c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bf4b4c0979bd75e4bfa4ab37f1e5a0fce879fec1b8742df6fb872cdd9066c815"
   end
 
   depends_on "go" => [:build, :test]

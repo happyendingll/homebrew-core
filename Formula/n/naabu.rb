@@ -7,11 +7,8 @@ class Naabu < Formula
   head "https://github.com/projectdiscovery/naabu.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43eaf2ff0a6310150d63af7f0cdff1ca2827347707391956b42d69ab674a3cff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e12d1745a05845af476aba7e0d9c7c49fe57872c81564cce1c312976722b8e7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2443dc47eea700044e9c0a02eb09c2bad20388bf8d5dcbe17abf83265cc31600"
-    sha256 cellar: :any,                 arm64_linux:       "9234f71b59a2a79453b47dd23549236f6f81ad715466bfcc4353fa506e6cd5f9"
-    sha256 cellar: :any,                 x86_64_linux:      "ae2a47bdb85536670cd643a5aa1eae5bb9a8daaa198a37e6c8a4c78ec4daa5cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "58b9504e1f9b4d9e540778cf39c355a968667363e8cf673e0d8691fb0daf8529"
   end
 
   depends_on "go" => :build

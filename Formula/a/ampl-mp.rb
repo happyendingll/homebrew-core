@@ -11,11 +11,8 @@ class AmplMp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "166695612818fb39ea32b55fe4d58f7e89495faf99d008d35fe59ce6a290c232"
-    sha256 cellar: :any, arm64_tahoe:       "8f55048c9b2ea9a3501ea2f6c368651ecd3371325ea2f32f3b79216fe3067fc9"
-    sha256 cellar: :any, arm64_sequoia:     "6362a6b2e95c988449cb36a53599f4ea219752f7252edefd2a3566cfbe4736c3"
-    sha256 cellar: :any, arm64_linux:       "9a33fb40feeaba970f0fbbb2ff193be6b841a72dd9c8c29f551d3d488e7a4b64"
-    sha256 cellar: :any, x86_64_linux:      "606acadace4028e6846da525ceb2d568c0e75c5442c79137f20b9f18d520af23"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "17c154e353dde680ec03cb85df7d6b75481d367197ab5d3bc0d549bd09244fe1"
   end
 
   depends_on "cmake" => :build

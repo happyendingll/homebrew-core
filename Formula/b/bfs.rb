@@ -6,11 +6,8 @@ class Bfs < Formula
   license "0BSD"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "83e4c96d705d6f79dc3927eabaceaf4255d8a8de5036633b0a1bf7eaeb2f4e41"
-    sha256 cellar: :any, arm64_tahoe:       "ee5a76e170183bf201058b74e1d315d8ccdde4feb5c1d680250c2267c2681c52"
-    sha256 cellar: :any, arm64_sequoia:     "e61022fd6866cee8e1057c76971f5531327f799786c4f6168e111bd3851937f8"
-    sha256 cellar: :any, arm64_linux:       "6484b727170d1eb281464db71e62daee227e75f987c4549d86413c2c90c83b31"
-    sha256 cellar: :any, x86_64_linux:      "28261238752522d2048f830e3bf4f62b6f5a37454a39e356f9fe5fc0d36ac367"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5faa5804a686536138ae550201fb2b88fbfdaaa708cee4e379730307eea5005c"
   end
 
   depends_on "pkgconf" => :build

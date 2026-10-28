@@ -7,11 +7,8 @@ class Akamai < Formula
   head "https://github.com/akamai/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c359067b64ff126a1d8b136f6f348d53857c42e3570c972be87e5cd08b155af9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c359067b64ff126a1d8b136f6f348d53857c42e3570c972be87e5cd08b155af9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c359067b64ff126a1d8b136f6f348d53857c42e3570c972be87e5cd08b155af9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "383615d46ec13498b0732dd513b412121983bbd677ecc565740c3b1a3b4598d3"
-    sha256 cellar: :any,                 x86_64_linux:      "6c999d303372298ae485fff5c56d4b2e0bf4f196f44e98652a68da4f68f33715"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a83bcb91dae30964351a0f641ea7b6346f4d7456ffcbea4a6fbc101b71a25d5c"
   end
 
   depends_on "go" => [:build, :test]

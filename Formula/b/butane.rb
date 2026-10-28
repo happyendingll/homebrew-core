@@ -12,11 +12,8 @@ class Butane < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6fa01310a34c27563015629b237b79be4ae16150149779d2605bd09346f03950"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6fa01310a34c27563015629b237b79be4ae16150149779d2605bd09346f03950"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6fa01310a34c27563015629b237b79be4ae16150149779d2605bd09346f03950"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d6d41c21df5b794b7e7f8a097f0977ceaf64049a9416168f98eb575bdbfb3936"
-    sha256 cellar: :any,                 x86_64_linux:      "991c898d2691bfb062728e420231fb523fa4593dcfef4767c120b0ef2a3f2dbf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d4a8098fc452a470cc50103ec378fa8e6cc85834ebd24cfdfa2ab9b094cc2e6f"
   end
 
   depends_on "go" => :build
