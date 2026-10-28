@@ -7,11 +7,8 @@ class Erpc < Formula
   head "https://github.com/erpc/erpc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "52ccb24f609f9b60eff127042d78536861effaae4181fe546046d7423f73ab55"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dd3336e55bd122271381fd4b9a43e241aecb582a69c3d18e592be7a1f05f7726"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e595520a17bc8ee26a9309459a3e5d2fc453505bbf328644917fbac9a283328"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "411e70a577ce12b114b456f83b05ca214d48f661577e7129bde8081bc48d810a"
-    sha256 cellar: :any,                 x86_64_linux:      "8c7f6939cf296adca91f0d93b32ee1a48abe68095dfc3aedf6164253eb605599"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ca19c50fa554ac16e0b3d04bc8c884d45f60aaec2fe3cd55c1d540642f356602"
   end
 
   depends_on "go" => :build

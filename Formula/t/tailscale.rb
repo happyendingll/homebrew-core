@@ -13,11 +13,8 @@ class Tailscale < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d50e116fbeaeb81e5a2442bbd25aa7e17f3d9b7822205a4353b3c9096b32061"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a434b096b53ed574842cc98e6d6794a32c04ea91d7a17bc1abe3ee9199bf2632"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1061554fe93c7358a0e51160a14e70a7dcfe32f9ce67e556ff072bd91782f2c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "29ea0832ae50d41a76add3a3c66f22cdae593cbb737ccf4f0e22916383d692a0"
-    sha256 cellar: :any,                 x86_64_linux:      "4898e338835ebc0cbec46c5dfd2ebfb998a58019b1526cfbcbc7c770bde75a14"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "14c34d6e8988c354ca9003d5bf9aa3954caa15eded5c4a6a91a2520bfa0e739d"
   end
 
   depends_on "go" => :build

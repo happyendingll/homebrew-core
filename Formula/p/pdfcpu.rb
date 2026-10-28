@@ -11,11 +11,8 @@ class Pdfcpu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d0d57692e77c6b626c1fd3096d7ec10dc995732793641c2d75dac72f76ff353b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d0d57692e77c6b626c1fd3096d7ec10dc995732793641c2d75dac72f76ff353b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d0d57692e77c6b626c1fd3096d7ec10dc995732793641c2d75dac72f76ff353b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b66fbecbc66cf4280de42688a12788138d85a0d61a8dd90a91971cd837a67da1"
-    sha256 cellar: :any,                 x86_64_linux:      "19cc3fdf8c7d927f6454dd4b2aa849e513623ddbd3cd3e77ba09c897b5429809"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "48cd9030ed72c084570b4e9322198b86b6411657259e6e6b72d9e63954456495"
   end
 
   depends_on "go" => :build

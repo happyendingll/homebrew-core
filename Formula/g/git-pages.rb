@@ -6,11 +6,8 @@ class GitPages < Formula
   license "0BSD"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c0beaddd2629285579286eded99dee551ac711f3c65df2719471d274c236f8d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "83910ef499b764521b16b2cfab948a5be6643bb9a9e933e6198e40e262c6b392"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fdf7b0768261543e003c4b3ad38bc1d9d5d44a8be5128b074cc500f5bf34811e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2ccea151aa99ced2eeafbae36cf261f4c62563b926c17be0c125c671d5e2c997"
-    sha256 cellar: :any,                 x86_64_linux:      "13fe3e6ce5af4725a2ff4603f4afd9016d3905b8a35654e04374a58f6e6635b3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "aa243f2fece4190128110bc02b8221c68d80d2ab589bed63426594107b9cd001"
   end
 
   depends_on "go" => :build

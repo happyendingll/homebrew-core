@@ -12,6 +12,11 @@ class Roadrunner < Formula
     regex(/^v?(\d{1,3}(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "f386ab21ed4dcbce58e6be3868f46a38e083da5ee73e133ef65e3628dc52118a"
+  end
+
   depends_on "go" => :build
 
   allow_network_access! :test
