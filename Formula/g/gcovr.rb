@@ -3,14 +3,17 @@ class Gcovr < Formula
 
   desc "Reports from gcov test coverage program"
   homepage "https://gcovr.com/"
-  url "https://files.pythonhosted.org/packages/09/47/c19e5c16988ef485210825101e78ab9ea05b08c2361aa4e51b40d6c484ac/gcovr-8.7.tar.gz"
-  sha256 "cfb9b2c373cc5be4b1cbe53250a5e4446fe6d4723c6900d3f41aa83540c8ddc8"
+  url "https://files.pythonhosted.org/packages/84/5d/75f6913653852720651790bf611e37355ee53cdd298c7f1561cde8773e02/gcovr-8.8.tar.gz"
+  sha256 "0320230a432c033c1a41f34ba943082f450008c789bee05d414e532f380fd788"
   license "BSD-3-Clause"
   head "https://github.com/gcovr/gcovr.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "d377f9199e63a64a802c25e1b35766df6c9100f1941ebf0ec30f7f158bd9565b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cfede2b0df62e8e982bc45a2f891e6809becfd22fb52324f80ee8c317a037556"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "20ef4bc5d10ea700df93c319c420f663986a4c02dd3e2f2ce1f570669e0a3462"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1c7fcea0a995ac322e619866c38d32379d553ddf06cfe58567f9acfbb0aa71c"
+    sha256 cellar: :any,                 arm64_linux:       "31a36ba0bae1c6503ed7fc75eb9396b4a3085d95d791c1645aa8725fd70783ea"
+    sha256 cellar: :any,                 x86_64_linux:      "abd62c30b86859df50ea264e2480b6a67044bc78b2fde64f57e1cd4f67a39fbb"
   end
 
   depends_on "python@3.15"

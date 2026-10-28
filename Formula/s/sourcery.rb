@@ -1,15 +1,18 @@
 class Sourcery < Formula
   desc "Meta-programming for Swift, stop writing boilerplate code"
   homepage "https://github.com/krzysztofzablocki/Sourcery"
-  url "https://github.com/krzysztofzablocki/Sourcery/archive/refs/tags/2.4.0.tar.gz"
-  sha256 "09adaed81fbe6539b8f8eacc6e207d595f23dc8428e0de74a09c39aedd514b1d"
+  url "https://github.com/krzysztofzablocki/Sourcery/archive/refs/tags/2.4.1.tar.gz"
+  sha256 "6ed3b89e22dd9612d0558b75e47117edcfc745acf1825dade151fcc0c085afb2"
   license "MIT"
   version_scheme 1
   head "https://github.com/krzysztofzablocki/Sourcery.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "99dff04bfb942812b436cef0236ec8b51389eb5ff23fdb7b290367496bfba588"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e1b536836e2d8850e44b9a818b0d3709aad05e99abe6bd53fa467977917fcd5e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2286ce97036b0091e5037ef08773fbb18efc1ff0f5723710b2d97e395d6ab667"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "53a201824024b709f9c39167ab4636edfabd0d58f50e1d5262ad308caf151220"
+    sha256                               arm64_linux:       "e4c004c754ad37efb97f8397c08880e9ab93506e7a2596156e8ddc98567ac310"
+    sha256                               x86_64_linux:      "5a1a609457bc912e1e98ee55d81e99a7df9e8fae3a13335270a690e195543563"
   end
 
   uses_from_macos "ruby" => :build
@@ -22,12 +25,6 @@ class Sourcery < Formula
 
   on_macos do
     depends_on xcode: "14.3"
-  end
-
-  # Fix version string, upstream PR ref, https://github.com/krzysztofzablocki/Sourcery/pull/1468
-  patch do
-    url "https://github.com/krzysztofzablocki/Sourcery/commit/31eb9213a681e80f57dd68f7aff159daaca30c0b.patch?full_index=1"
-    sha256 "2315a2c27c351144b5eb4652814b28b4965ff14cd2f08edeed225cf3dce47628"
   end
 
   deny_network_access!

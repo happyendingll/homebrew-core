@@ -10,7 +10,7 @@ class Git < Formula
     "BSD-3-Clause",      # xdiff/xhistogram.c; reftable/
     "MIT",               # khash.h; sha1dc/
   ]
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/git/git.git", branch: "master"
 
@@ -20,15 +20,19 @@ class Git < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "2a9852f9b38ff9d66a949330cd3c99f1afd36e2d16bd2067b793ddf9883ef1f4"
+    sha256 arm64_golden_gate: "a974c47b8f63bbc98389df7e942aae13fb881f05f9cd94c2bdca0767a19e2554"
+    sha256 arm64_tahoe:       "ae0057867c6fc57d89f7b141e095f084a39bb30dc5fd1fd81ab984de5a74740c"
+    sha256 arm64_sequoia:     "6106c08b84b66b28800b2b837a77a855b7b600bc922f6999d1980e8d78b53294"
+    sha256 arm64_linux:       "a01aed6fe7b7f9e8c4f1a97f42006cdc0539babe58e5daadc4b4b8eb11e5b3cc"
+    sha256 x86_64_linux:      "1f39b14814e57cae3556d3cee9a84cce6d6d0be87a7d0d64b4e4383fc653a2a9"
   end
 
   depends_on "gettext" => :build
   depends_on "pkgconf" => :build
+  # TODO: Replace with `uses_from_macos` once Apple fixes their CA bundle.
+  depends_on "curl"
   depends_on "pcre2"
 
-  uses_from_macos "curl"
   uses_from_macos "expat"
 
   # Don't try to add a libiconv dependency without reading this PR first:

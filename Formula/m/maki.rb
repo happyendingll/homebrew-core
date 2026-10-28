@@ -13,7 +13,6 @@ class Maki < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -26,7 +25,6 @@ class Maki < Formula
   end
 
   def install
-    ENV["OPENSSL_NO_VENDOR"] = "1"
     system "cargo", "install", *std_cargo_args
   end
 

@@ -1,14 +1,17 @@
 class Openfga < Formula
   desc "High performance and flexible authorization/permission engine"
   homepage "https://openfga.dev/"
-  url "https://github.com/openfga/openfga/archive/refs/tags/v1.22.0.tar.gz"
-  sha256 "73c3672da826ce48c62736b7780aebcc1bb5650f272c310302d8ff778939993f"
+  url "https://github.com/openfga/openfga/archive/refs/tags/v1.22.1.tar.gz"
+  sha256 "48c409e8f58e48d0646cd64aac8cc81c9b17bf46b4be5dc2ac25a1c376610d46"
   license "Apache-2.0"
   head "https://github.com/openfga/openfga.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "0cfc899c11d644c6cde45561b26329eab748281a573b29952f2e58571dec042b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "df8a0a964d7273a35bcf626cfd57c71cb947996387e4764f329ea1df02aec534"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2eb008a5b5fee18c0aa9922afd033da94114f9f590df99a80027d14c2435888a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aeac0c31a450b58dafe87fb56038c2ada9154a0e213a6e1b0e55b71c54819ec9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "01fbbc040af32ba73e01288684615fbb501dd9ecda41f6d77a352c6450c81a68"
+    sha256 cellar: :any,                 x86_64_linux:      "f737313388ef0ef65f43fa20caeb2d32a96b9a7146bdaf606bb975df4f6305b6"
   end
 
   depends_on "go" => :build

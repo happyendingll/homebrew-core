@@ -3,14 +3,17 @@ class Otterdog < Formula
 
   desc "Manage GitHub organizations at scale using an infrastructure as code approach"
   homepage "https://otterdog.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/c9/fd/033fac3fb5506b6edd81621b1f8ad47cb76f56e968906a6b6c97a633ad6f/otterdog-1.7.0.tar.gz"
-  sha256 "0bc09559a687409a4dfd8a408fdf2c4c47ebc3ade943c080e6583ef4081eb3bf"
+  url "https://files.pythonhosted.org/packages/97/ed/0aab520521cc8e210c8f50fca3a0b2d01afe922fbc24ac7e34d337cc9309/otterdog-1.7.1.tar.gz"
+  sha256 "7b732c97a4eb149893624fc1d0a5bc700f765e27678deaeb8843c05dd41a377e"
   license "EPL-2.0"
   head "https://github.com/eclipse-csi/otterdog.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "f0dbab6a3a8441934b04f3f06ce1a2bf2d1a1880241c39340bef9e31d05ba3c0"
+    sha256 cellar: :any, arm64_golden_gate: "c7e2dbac833b9587899df5da987acf567123f6da8fe61a9829f46368884ac483"
+    sha256 cellar: :any, arm64_tahoe:       "b23d60940012ac63428302cde76b6ad86720e21a5175e9336c528fcd95e39988"
+    sha256 cellar: :any, arm64_sequoia:     "33d8ea6482b97cac8c0b2d051ffb22e2a0520b431b26c68587e07ce21858a5a3"
+    sha256 cellar: :any, arm64_linux:       "38fb0dd3b7a416a5a3472ca74bc77b3dcf267a3f80aea588ccf956ec5c890a73"
+    sha256 cellar: :any, x86_64_linux:      "8a58e97e33972c6c31a2cbdaaee0b7d58c01060e7924c884ca0c10a29d4fbf7c"
   end
 
   depends_on "rust" => :build # for rjsonnet

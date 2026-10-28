@@ -6,6 +6,11 @@ class Wails < Formula
   license "MIT"
   head "https://github.com/wailsapp/wails.git", branch: "master"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(:?\.\d+)+)$/i)
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
     sha256 cellar: :any_skip_relocation, sequoia: "21ad917230b66d71faea335c585b7fc3b4c64920051f74ae157c5dc8d80e365c"

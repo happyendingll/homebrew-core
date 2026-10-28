@@ -1,10 +1,9 @@
 class Tesseract < Formula
   desc "OCR (Optical Character Recognition) engine"
   homepage "https://tesseract-ocr.github.io/"
-  url "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
-  sha256 "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884"
+  url "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.4.tar.gz"
+  sha256 "a8dbf8b8c8ee427ff6ad1d99116502feaf59440af1adb893caf60a6576826cf4"
   license "Apache-2.0"
-  revision 1
   compatibility_version 1
   head "https://github.com/tesseract-ocr/tesseract.git", branch: "main"
 
@@ -14,8 +13,11 @@ class Tesseract < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "8a2fb7de9e5875322045924a3066c2eda894d85e95714e72339598382e7cd1c8"
+    sha256 arm64_golden_gate: "a1043ac1d8f9b6516a229053b2a7a3582262a5e0e8bffcfb0ea6c690bbe9163d"
+    sha256 arm64_tahoe:       "776289553b4fa083cc1aff802da6b5e21ce237b3c27ea7f38ab0db69970c8a56"
+    sha256 arm64_sequoia:     "162eaadab1881452c05f8241590594f16f8b79276625d3058eb80f24cd6baad4"
+    sha256 arm64_linux:       "d2d715da52c8ca14be8ad09f6a5802bc78e7d27a3ecfac9f36b900169b39c0de"
+    sha256 x86_64_linux:      "bfd71cb56ca4a37693424184a3162c7e22fdaaad0fe2a05992860f4c27c03a98"
   end
 
   depends_on "autoconf" => :build

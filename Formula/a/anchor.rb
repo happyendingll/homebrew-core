@@ -1,13 +1,16 @@
 class Anchor < Formula
   desc "Solana Program Framework"
   homepage "https://anchor-lang.com"
-  url "https://github.com/otter-sec/anchor/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "c346ba9189b0d3e500653fdf7331940b8bca9b2fbf7286c53976b9ac55b8975f"
+  url "https://github.com/otter-sec/anchor/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "2e4dd35104e003ef09890c35b29b45e1bf66f8f214dc749adbcecae9c0e467e2"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "0feac195298a515589c990f35b2dcdb6018393b99f50223204be84657e4d1426"
+    sha256 arm64_golden_gate: "4f95eea51bf17a81c0d96e7fa277ed22be35f485bd6f4decd4a4c35a4b88e4e8"
+    sha256 arm64_tahoe:       "d73080046f6cfa6f47ebc05dc9f386694647ead7977ded0b228872118c3daeff"
+    sha256 arm64_sequoia:     "4fe59e203357472cf93e8745017c2161282b5116e3804c94d7bfaeb7682d49f8"
+    sha256 arm64_linux:       "3eb818198d3a9234f2d8bfb01135000dedaa8db7505598632e0be0d5240445b5"
+    sha256 x86_64_linux:      "09bb968a6d886515d9cfd5faf7e285ede2bf53cd154bb83f1c67c3993f7ce429"
   end
 
   depends_on "pkgconf" => :build

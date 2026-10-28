@@ -1,8 +1,8 @@
 class Lxc < Formula
   desc "CLI client for interacting with LXD"
   homepage "https://ubuntu.com/lxd"
-  url "https://github.com/canonical/lxd/archive/refs/tags/lxd-6.10.0.tar.gz"
-  sha256 "4ede1d19dc6980234e1d8d68c74b09fe5631d7cac1b69081937dca42995da994"
+  url "https://github.com/canonical/lxd/archive/refs/tags/lxd-6.10.1.tar.gz"
+  sha256 "687495b7b989da5f29ab009f7e728462f845ebf65696d30c5a6a0d646ce3fb58"
   license "AGPL-3.0-only"
   head "https://github.com/canonical/lxd.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Lxc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "d5831e50a03cf8d7ba022ed0912650484793b4a168e36a24ca9e9484c9b375a2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1f2b1e6c6621e2c20f22cd3e87c4aa776e57fc80d83275d702b6785e8cfe9e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f1f2b1e6c6621e2c20f22cd3e87c4aa776e57fc80d83275d702b6785e8cfe9e2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f1f2b1e6c6621e2c20f22cd3e87c4aa776e57fc80d83275d702b6785e8cfe9e2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "93c7c4dbb6bd03ce7bc1ff97c5e1f7b603c2711c49fceaf41c73fc6fef350d73"
+    sha256 cellar: :any,                 x86_64_linux:      "9e3e672cc1a855074267ed4c80ce2fcfedda3d38c621114201245c0316f90fc6"
   end
 
   depends_on "go" => :build

@@ -6,12 +6,15 @@ class AwsSamCli < Formula
   url "https://files.pythonhosted.org/packages/0f/b0/216a29632ed601fd53b9ce97187799888c7ab875893bebc5bd6cf391a217/aws_sam_cli-1.170.0.tar.gz"
   sha256 "5fbaadba4beada832ad6fba1edeb8a1b32bb7a8fcff28168e47f788064e4f878"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/aws/aws-sam-cli.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "66d911a93e6c2052fd36a80f1039c281ef4fcddb2e7b14c28368dce7f4e352c8"
+    sha256 cellar: :any, arm64_golden_gate: "990f6801d7efc284b384fdbba2778bdd04a41ae3035f695dece0d670679a2f85"
+    sha256 cellar: :any, arm64_tahoe:       "0f9bb1c1f0409a8687b52b5e0b8fc43dc028093cacbf11c80a68c0c1b45f1e8e"
+    sha256 cellar: :any, arm64_sequoia:     "5d216128b54959d289655ceb034dad5e1c6e7613a7cf09b8d4c25a3e17d36e98"
+    sha256 cellar: :any, arm64_linux:       "24502b8385355480220897dae22dfa107a02a9b7d45b485391dffe460d7d8c77"
+    sha256 cellar: :any, x86_64_linux:      "5f93598736ad062751aecb634f4e8b4264985e6f3dd2d9d206ba6f38b52bf70c"
   end
 
   depends_on "go" => :build

@@ -1,10 +1,9 @@
 class Qsv < Formula
   desc "Ultra-fast CSV data-wrangling toolkit"
   homepage "https://qsv.dathere.com/"
-  url "https://github.com/dathere/qsv/archive/refs/tags/26.0.0.tar.gz"
-  sha256 "166d3e9c9133098ba4705671e0dd68644c6daa343dc454f33718a6ba18963eec"
+  url "https://github.com/dathere/qsv/archive/refs/tags/27.0.1.tar.gz"
+  sha256 "23631f14cce714bd1aed45d07a04e71471ab26851f469ce25a503b471c8d3b4c"
   license any_of: ["MIT", "Unlicense"]
-  revision 1
   head "https://github.com/dathere/qsv.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
@@ -16,8 +15,11 @@ class Qsv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "12c07169ed71bcf3f65be7053105a97b81281d2f3002457e7f293f3d07e87d7c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1dc5f2ac37762322f128b6e5682291aa34b56a480ed71ae18f3934603b10002"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0141c8c58bedef9740b8b19df193b3ce8d89099deb81c7bcb69bf840bb58570"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "02eb5b082f6882495d689be213e06f331d16d012f0fe4fedadb6888c408e195d"
+    sha256 cellar: :any,                 arm64_linux:       "b9daa8ebcd55b983886f59183790245e1102e477578bef5f7b652564706998cd"
+    sha256 cellar: :any,                 x86_64_linux:      "5485715146f98d39b7ceba22338e6860a9841838847a03aaad0ee0a240488fa5"
   end
 
   depends_on "cmake" => :build # for libz-ng-sys

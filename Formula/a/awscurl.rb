@@ -6,12 +6,15 @@ class Awscurl < Formula
   url "https://files.pythonhosted.org/packages/c8/77/7da6af880d56aed4a4023bb7c725e15c72a3088afd729ffd373eed0f5a18/awscurl-0.44.tar.gz"
   sha256 "13056e867ac33f556f29d3662102bfc3c40259ea037c6d817c5914dbb2bbd948"
   license "MIT"
-  revision 9
+  revision 10
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "e246a1d7fc1714a4369b876b3bc4b4ed44cfe6115d92c74e22c2f1a059e75768"
+    sha256 cellar: :any, arm64_golden_gate: "2352b591519cce2b3e014cce55c90674a2e5fa39a6803679408ac6db007bd9fc"
+    sha256 cellar: :any, arm64_tahoe:       "36ea407331cf39d0eeeceee9cee51f2991f527b906115ca91175e44ad27a4d05"
+    sha256 cellar: :any, arm64_sequoia:     "b0c128bdea138eeed71e84bc4ac27a48c03d5cd423007d016f7e3b1c134ef25d"
+    sha256 cellar: :any, arm64_linux:       "39d839aa0e6bb2dca2f9cba9d899b882a41001906a648b6c3fc8777ea101e501"
+    sha256 cellar: :any, x86_64_linux:      "e93a48416ab86012d1afb576d96fe5a3b13cc60d522ea0c90388854be8ffec36"
   end
 
   depends_on "aws-c-auth"
