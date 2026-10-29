@@ -7,11 +7,8 @@ class Lmfit < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5fddb0bcd6abb2a223e53da9d98d398786f323a268b2b644dccead0eb8cf4cd3"
-    sha256 cellar: :any, arm64_tahoe:       "839792cbf8dd7a8627bdc500caf8ae6c279dce94937ca0a29bc64eac84b04a61"
-    sha256 cellar: :any, arm64_sequoia:     "62cb813717de3f62c9e223d3d5e1ed666ffd9978858bd8975f29bf8f9b8d16f6"
-    sha256 cellar: :any, arm64_linux:       "1483d5045101dd23fd4a750e097b1821ceb01991e3318725be59ae450584d1e6"
-    sha256 cellar: :any, x86_64_linux:      "e5ee64c71c21fd70b457d6fb2c9e5c5cd02f62d10466a19051e1d8ba1ff6b46a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "b1f88cbd8d236de9bde339e7c18d30b0b63fcb16a36cde15d8a3482555ae200c"
   end
 
   depends_on "cmake" => :build

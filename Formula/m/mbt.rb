@@ -7,11 +7,8 @@ class Mbt < Formula
   head "https://github.com/SAP/cloud-mta-build-tool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26ced2d0d4d37e5b11577486a298acab7d7133586bef15e2e5ab2b24a4598475"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ced2d0d4d37e5b11577486a298acab7d7133586bef15e2e5ab2b24a4598475"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26ced2d0d4d37e5b11577486a298acab7d7133586bef15e2e5ab2b24a4598475"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "479e19bea05f2b232764bfccdbd4cc1e1f1495d3479a45d8bd56d5c26c49e663"
-    sha256 cellar: :any,                 x86_64_linux:      "546ac48ea2ab0d18cafc7795e39796210666d2ae0a11d35615cf8a18e10de7e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "689d9abf985c36df88b781945c66eea03c671e0bfc1ce10dc27859826502f73b"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Rsyslog < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "496779e87ffea15fbd810053d73f70b1c78511c8187d623ddc391d73f563bcda"
-    sha256 arm64_tahoe:       "66451958b574eccaadd2265bab8c961f8134448ecbd39ef303a5f5b27e25c1c2"
-    sha256 arm64_sequoia:     "fb2e72d665c373f10e12dafb739e1a0b34c5ee678fe116a0a5510d0be8c0f00b"
-    sha256 arm64_linux:       "9eaa6e927b4f747b92fc93b1049c3a157516c562501f1ee332907f739f99f1f0"
-    sha256 x86_64_linux:      "1f58321974ce94c746b566c595525f3d305bd522bc2dc703b4da2ce2f86f10a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "dc5bf72ede32fea3a25e910a9c4d1834aa2e8410fa53b100d9543dbfcdd74e32"
   end
 
   depends_on "pkgconf" => :build

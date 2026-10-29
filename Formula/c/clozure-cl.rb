@@ -12,11 +12,8 @@ class ClozureCl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8b5b1be3282c54d8514b89cc45c91f6268bbac2cd5aa80a4777433f9653bced3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "25022257c0255ef2f2e180a2a8795965a9f8862aa53f4f8f1b44e6f616d54cb6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ea12d8bcc5606182ab2561f78ceb262d534a051c4f60ab93415fd6b048e369b9"
-    sha256 cellar: :any,                 arm64_linux:       "cce229f0106748228548070a08beb92d6bc76676315772066698c1dd120df353"
-    sha256 cellar: :any,                 x86_64_linux:      "12f5ce9962be5ce7dc49039c2ec38f1e28c872d8a9780bc75f937c6ab85018a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0db0a1c1d05e4035186f4b89dbd11041edb0d5fb56e0cb6ac942c82e142b125b"
   end
 
   on_linux do

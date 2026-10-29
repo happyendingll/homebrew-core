@@ -12,11 +12,8 @@ class TerraformLs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ba2f4176cacf594d14d2b4659588041cc19d8a987c8e6da754ca0cbd25c9131f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba2f4176cacf594d14d2b4659588041cc19d8a987c8e6da754ca0cbd25c9131f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba2f4176cacf594d14d2b4659588041cc19d8a987c8e6da754ca0cbd25c9131f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7343e8bd8c406f697a41521010a243e89b105abf11bf046b86e9ea5924738aa0"
-    sha256 cellar: :any,                 x86_64_linux:      "45290fa4a72a6d02f4c8d891aaed428fd901e8065711ef3207b7a3712ce78f89"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7ed35e7b677d0586a5d3a58b76466dbfae50e4c1d5d14d9041f3d3ca358353bc"
   end
 
   depends_on "go" => :build
