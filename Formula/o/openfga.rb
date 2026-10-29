@@ -7,11 +7,8 @@ class Openfga < Formula
   head "https://github.com/openfga/openfga.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "df8a0a964d7273a35bcf626cfd57c71cb947996387e4764f329ea1df02aec534"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2eb008a5b5fee18c0aa9922afd033da94114f9f590df99a80027d14c2435888a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aeac0c31a450b58dafe87fb56038c2ada9154a0e213a6e1b0e55b71c54819ec9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "01fbbc040af32ba73e01288684615fbb501dd9ecda41f6d77a352c6450c81a68"
-    sha256 cellar: :any,                 x86_64_linux:      "f737313388ef0ef65f43fa20caeb2d32a96b9a7146bdaf606bb975df4f6305b6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a2130f70e17785420fee610e6b5258701a9302afefdd2bc21bb58bafb7c03108"
   end
 
   depends_on "go" => :build

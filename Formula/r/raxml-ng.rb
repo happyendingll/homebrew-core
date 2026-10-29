@@ -7,11 +7,8 @@ class RaxmlNg < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69f538593adc3d032ee4e3177b4aef428669606b8b493e297a3d942d25fdc176"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "73dd969d016e8229cabb33eca14a519dc8499fea54dc8776676b6b4b7f676970"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f61e3237c383b35063a5f24ac1093bca22cf47d1111bc94c9ae05bf0b7e39ae6"
-    sha256 cellar: :any,                 arm64_linux:       "049f2b0bd2f3180278c7f22fd6d70a743d409f827a3ea701230c562a7c3ecfa7"
-    sha256 cellar: :any,                 x86_64_linux:      "35ee1827b72a447166d1757cfbb4fff2ec540994102de494d441c77e5dcfe1c0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc293209172ed8ea2beb5d00f745315b955d8788c848abfa1bbbc2fe9c0add04"
   end
 
   depends_on "bison" => :build # fix syntax error with `parse_utree.y`

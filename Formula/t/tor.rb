@@ -20,11 +20,8 @@ class Tor < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a0ce7e7a4d30ed67fba3805be4838a3fc9ac7d3ca4150aa1ce6221b757b9be4e"
-    sha256 arm64_tahoe:       "592f4dd86706fc050f2e26708efc6fefa67e004b48771851dddca47f82603673"
-    sha256 arm64_sequoia:     "2faa868f5e0613f61b6d8f197164cca2a0a6e7be63e7a430b8274a3f4b88747a"
-    sha256 arm64_linux:       "9feea987259778da9c802b18f351ef5590c41936b95be33c7ea95252a91245d4"
-    sha256 x86_64_linux:      "a82cf1db5be775e8c233bd648352c984509df9367c6264b3a7e93ca9e7ddb78e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "81d99a854f4c1fe327cac3c3c4bf15e2c7b5775ea6c339f6f0661f9f92f1d033"
   end
 
   depends_on "pkgconf" => :build

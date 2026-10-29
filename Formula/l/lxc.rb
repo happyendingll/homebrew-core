@@ -12,11 +12,8 @@ class Lxc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1f2b1e6c6621e2c20f22cd3e87c4aa776e57fc80d83275d702b6785e8cfe9e2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f1f2b1e6c6621e2c20f22cd3e87c4aa776e57fc80d83275d702b6785e8cfe9e2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f1f2b1e6c6621e2c20f22cd3e87c4aa776e57fc80d83275d702b6785e8cfe9e2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "93c7c4dbb6bd03ce7bc1ff97c5e1f7b603c2711c49fceaf41c73fc6fef350d73"
-    sha256 cellar: :any,                 x86_64_linux:      "9e3e672cc1a855074267ed4c80ce2fcfedda3d38c621114201245c0316f90fc6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "e10526c395bf01c9e2029485f237b3fc724b2b9e5ec5fd6880e5d927d15963a0"
   end
 
   depends_on "go" => :build

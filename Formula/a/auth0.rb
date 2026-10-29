@@ -7,11 +7,8 @@ class Auth0 < Formula
   head "https://github.com/auth0/auth0-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a2e168b06068abe8902d68a6bb3d87f920d4d71b10ff921cd010c575731ba91a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2e168b06068abe8902d68a6bb3d87f920d4d71b10ff921cd010c575731ba91a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a2e168b06068abe8902d68a6bb3d87f920d4d71b10ff921cd010c575731ba91a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b23d55862d934f5a5cb720f4454c83840b8c33fac6996f0fffb55ebee3b76597"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "497d2bf9659cd2e9ce882ce99352619e8f4ddf1e8498765da8a9258d03521dfa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "a20106097f76c1e2f66707a42ace35e759cef0ebbdce0f9295303faf98ddd1a3"
   end
 
   depends_on "go" => :build

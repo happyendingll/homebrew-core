@@ -18,11 +18,8 @@ class Openmsx < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2ae66970aac4664f3373b1b892da9efabc19ed01193dabf4c09ac8fd3261ec68"
-    sha256 cellar: :any, arm64_tahoe:       "23a7bb25f72ddfe64eed971fdaa8b1fd566f49dcadfe6eadcaa888e760b1c988"
-    sha256 cellar: :any, arm64_sequoia:     "13d30058a4ea35d335fb7346384ed4a55a4b3c5c7577c15b30b296c2b65228af"
-    sha256               arm64_linux:       "630da52fe283a2255a4f519e7b89b59af4c014699a8c48d14cfe3dce053a66b7"
-    sha256 cellar: :any, x86_64_linux:      "33c9c41de524de68fb790f3cb56557443403888299bfc68bbb68ea29911c5a46"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "8bec66f469fb536f7f84cd6f15338a245af8951faac8c5294c6260e8e7484007"
   end
 
   depends_on "freetype"

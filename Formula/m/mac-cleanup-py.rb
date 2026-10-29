@@ -9,11 +9,8 @@ class MacCleanupPy < Formula
   head "https://github.com/mac-cleanup/mac-cleanup-py.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "182e1e360f28cdfb01b36226c254e06f2dc445eb04e4ea36710b984841fdb1ad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c73433bdc35eaa57fc42067e98680bf2733b55b71450ecb8e15129c254614eda"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fbd980f1ed9cc8838ffbd36dbe81fe3f2d2586f069b70d56f904a64560919e05"
-    sha256 cellar: :any,                 arm64_linux:       "30eef582c998495df16e9d69ff6ab2454418ce9568791f8849430e63c455084d"
-    sha256 cellar: :any,                 x86_64_linux:      "f79b5678365ca0cb6e21824ab14294845595b0df597baff6fc8b66964bb7436c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "21ab6f22b36a94f7b0460e3bf992ac886dd91a32ed0d922548d3788e7abaae4e"
   end
 
   depends_on "rust" => :build

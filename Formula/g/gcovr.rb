@@ -9,11 +9,8 @@ class Gcovr < Formula
   head "https://github.com/gcovr/gcovr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cfede2b0df62e8e982bc45a2f891e6809becfd22fb52324f80ee8c317a037556"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "20ef4bc5d10ea700df93c319c420f663986a4c02dd3e2f2ce1f570669e0a3462"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1c7fcea0a995ac322e619866c38d32379d553ddf06cfe58567f9acfbb0aa71c"
-    sha256 cellar: :any,                 arm64_linux:       "31a36ba0bae1c6503ed7fc75eb9396b4a3085d95d791c1645aa8725fd70783ea"
-    sha256 cellar: :any,                 x86_64_linux:      "abd62c30b86859df50ea264e2480b6a67044bc78b2fde64f57e1cd4f67a39fbb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "5f7acd91522cc696e8773f70de23bc1afde93081a69436b4af6d4d8c90b1ed06"
   end
 
   depends_on "python@3.15"

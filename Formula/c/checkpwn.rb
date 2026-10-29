@@ -7,11 +7,8 @@ class Checkpwn < Formula
   head "https://github.com/brycx/checkpwn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "49d78d9fd0e9a536aa0f29ab6765fc835c9e47b900bf81898c28628403f3a384"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "68fc56d3cd07c8df4f635caca6cebd9b9138848ef11f43e25c5a556c4b78bc69"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3c5ddd241bfed931325824782c1ccc6c16f1536985a4189eb6483d3bbd4f056"
-    sha256 cellar: :any,                 arm64_linux:       "c552d434eb493c0d61b90de6ec2cdd966b83359a5559945c6eb2e876ec7c7b79"
-    sha256 cellar: :any,                 x86_64_linux:      "d6641c7a6f8ba8b89ca995f0a3554a40e991c12f412987574227449d5a9e8d31"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "61ad3bfda76ea4cf0a6e703e5d076c68b20443c9968822615d21e0668e7a4a83"
   end
 
   depends_on "rust" => :build

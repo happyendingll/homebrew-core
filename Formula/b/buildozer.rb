@@ -7,11 +7,8 @@ class Buildozer < Formula
   head "https://github.com/bazelbuild/buildtools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cc7fda4afb798da9aec69f3ea70d6850de19622fcb43cef163d070e44e938627"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cc7fda4afb798da9aec69f3ea70d6850de19622fcb43cef163d070e44e938627"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc7fda4afb798da9aec69f3ea70d6850de19622fcb43cef163d070e44e938627"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "55103874a8bac3ddbfeefd934707e5c000c9cdb83c09382801a70c0ea4c62864"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f5af593934075a34a420fd02bdbb3c5270cf19fc01d6552b5311d0567252b94e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "b0a22933445aca4398213b30aa92a2b4dda788f129efcca701b969fabab6c5c8"
   end
 
   depends_on "go" => :build

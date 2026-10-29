@@ -12,11 +12,8 @@ class Infracost < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6848f8225e5311f2638980dd7f2766fe6b6da7214c6e30c5d91602a9826593a7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6848f8225e5311f2638980dd7f2766fe6b6da7214c6e30c5d91602a9826593a7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6848f8225e5311f2638980dd7f2766fe6b6da7214c6e30c5d91602a9826593a7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3880063d884bb494509dfecdcb7df826941a3841d91f1091d6192b16e93dc422"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "bdb6975da0360728986bfda95b85604a29b8e52c25eb81e6980f136500c93a58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "185948aef36160c41ceb6ac539b31e0f8477327b89a4cedbb0d35dd3540df140"
   end
 
   depends_on "go" => :build

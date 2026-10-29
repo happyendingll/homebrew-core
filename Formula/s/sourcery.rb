@@ -8,11 +8,8 @@ class Sourcery < Formula
   head "https://github.com/krzysztofzablocki/Sourcery.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e1b536836e2d8850e44b9a818b0d3709aad05e99abe6bd53fa467977917fcd5e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2286ce97036b0091e5037ef08773fbb18efc1ff0f5723710b2d97e395d6ab667"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "53a201824024b709f9c39167ab4636edfabd0d58f50e1d5262ad308caf151220"
-    sha256                               arm64_linux:       "e4c004c754ad37efb97f8397c08880e9ab93506e7a2596156e8ddc98567ac310"
-    sha256                               x86_64_linux:      "5a1a609457bc912e1e98ee55d81e99a7df9e8fae3a13335270a690e195543563"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "0a835a455d6e1e471bf7fd979f6ee7d2d6a5d2b1754335dd8dd74ff5d94995d2"
   end
 
   uses_from_macos "ruby" => :build

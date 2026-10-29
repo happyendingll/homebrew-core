@@ -7,11 +7,8 @@ class Neo4jMcp < Formula
   head "https://github.com/neo4j/mcp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e17ab0c5250cd4ba8a879c186b8c1bb9b6662136468aad3948d31158993b6f24"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e17ab0c5250cd4ba8a879c186b8c1bb9b6662136468aad3948d31158993b6f24"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e17ab0c5250cd4ba8a879c186b8c1bb9b6662136468aad3948d31158993b6f24"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e9bfc2e4385b52f5f481745af9302dd2c64337732c6405ffe088cec1eb254850"
-    sha256 cellar: :any,                 x86_64_linux:      "e336abdfe391eec59096457a47421eca434cad1e02309d4e9b1ce9c7adf59a3c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "67649c4203657cf74c65a2d38daa9d9df6b447394f9f4453cbadd2243bbe4fc1"
   end
 
   depends_on "go" => :build
