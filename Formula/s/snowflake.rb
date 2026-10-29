@@ -7,11 +7,8 @@ class Snowflake < Formula
   head "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d052b2b93494d8dc7a8b2d4d1d746477429356d09e9169d3f659cc578558f0b2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ebe0ab1d18579a2b3e4c6f87df5586b103992c8c1b413cc5146c844b09aa6f0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4f02213b074f37600b7f959f31aa291b815bbcb2a7b4a1f23782e91f10503104"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4d7afeff521fec223a8525ad2fa0071671678ac8c4de2a02761fbff0f981f332"
-    sha256 cellar: :any,                 x86_64_linux:      "9f9c2cd23beb897fcf12323db886e9037b1ef24f872691986b6b2d861230e51a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "cbebd9adfcf86583d65460955833cd36c121941edb53683efb683cc06ee75338"
   end
 
   depends_on "go" => :build

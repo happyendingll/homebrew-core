@@ -12,11 +12,8 @@ class Cidr2range < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ed1f6a33718cd9599007d74182ffb81c8951af956392892065bffcf5df0edde0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed1f6a33718cd9599007d74182ffb81c8951af956392892065bffcf5df0edde0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ed1f6a33718cd9599007d74182ffb81c8951af956392892065bffcf5df0edde0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "03a609e4c18ffa805a259fd21e61a199fb4165846b4e5026c5c50434e5c3b2e0"
-    sha256 cellar: :any,                 x86_64_linux:      "0386358ff85e926961c81ae77cc6c687dad0326ca54059c9f5aedf3243609730"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "bae9b02b9f530660655da4663e5c8dd335a34538cae5f84c5b67e21964b8611f"
   end
 
   depends_on "go" => :build

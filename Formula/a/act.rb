@@ -7,11 +7,8 @@ class Act < Formula
   head "https://github.com/nektos/act.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bc6f111b75b7002c87506466aa920cce75d9f862870f138be80d0b32975a3505"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78978b8c1b3a34917d5170d6dd52dc321d97fdc578c8e2bc21c07a05dac1aed1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e836b978b079763f463d2f754bf87f324abab6b440beb8e2cc5266c1dabdb4ab"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2ce5c4576b694b668fa3b4311252a404642a2730a3844720209ec48245bf4f70"
-    sha256 cellar: :any,                 x86_64_linux:      "2b391c9e26ef7eb2cd0ae29b326b8e34b4d7546dba0897c44ae56162943ad79b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "443ae90369d4e3819d95d4ee778b9570c0e54f1515972319e859a71e885fa69d"
   end
 
   depends_on "go" => :build

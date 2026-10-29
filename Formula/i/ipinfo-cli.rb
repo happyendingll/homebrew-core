@@ -12,11 +12,8 @@ class IpinfoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "997776d2a075b800bedadb7f30b11105d140b35da80a8f798ff7d61940d780e9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ecfb071b20462f6047533b2ba3362eb149c429490c258969531f4d9aeae5465"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e27c413463d04d20cc00a1292b13c7f556dae3d3c4c5d130e6cf9551b7586041"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "01f803952e26050acae7b18aa6870884740cd4a2b586273a76f21110936dc754"
-    sha256 cellar: :any,                 x86_64_linux:      "6138a40bee5081e696f17b0f9a73769b6f45d9b00b948021bfe6089e090e027f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "5ed5ce2c6b7a306360db96de34561eac37e6b7b33d04aeb0da47461d792610d7"
   end
 
   depends_on "go" => :build

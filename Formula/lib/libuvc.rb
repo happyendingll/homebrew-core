@@ -7,11 +7,8 @@ class Libuvc < Formula
   head "https://github.com/libuvc/libuvc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8d0eb73050dc38d7b3f9b1ea67c1bdd3f63b1015e8176b22420f463d66daa8d0"
-    sha256 cellar: :any, arm64_tahoe:       "faa9fad40a8c3996eb1fecc8b7423efc262c2e3ce082bfe9e1419c6666344216"
-    sha256 cellar: :any, arm64_sequoia:     "a79956a7e56ec8daabff9b189021da651e18e9a61d988eb3d07bc620741eb3dc"
-    sha256 cellar: :any, arm64_linux:       "3b6fa7380573054257b010db77ed52cb677b696cb30c1d8b9616ea8ab8487dd7"
-    sha256 cellar: :any, x86_64_linux:      "fbd8a55dcb6621c91e7edc2f4dd09b19757a9721d4fd86810d707d178af6f5bf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "96b7403977d1a107ed200dd3f3d94191a0a88a949071514881a828c34a05900d"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class VapoursynthBestsource < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8a83450bb6659509b78f57c137a5796d78c43245066fa187cfe427b8b7bf4fd6"
-    sha256 cellar: :any, arm64_tahoe:       "d8aa49b70135998fd2ec0d9b67b6044a709cc4bc1b19a05a61e91fdae7712e2b"
-    sha256 cellar: :any, arm64_sequoia:     "5c941a7240dbfb5ac9b75d8a06d1bedf552844b0f02a456bb15df77aebddd708"
-    sha256 cellar: :any, arm64_linux:       "52c9a753b99e12e5d05896c54542c8643288610647aab2abdf7ef0e973664180"
-    sha256 cellar: :any, x86_64_linux:      "f7d31522be39c19bb4fdee8b3199f12b883de5740bfba4099fbfbcea54efd1c9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "3f3110c2eb68c5811f584aab98f668736750ad2847f43a8d08d35e4f4bca178d"
   end
 
   depends_on "avisynthplus" => :build

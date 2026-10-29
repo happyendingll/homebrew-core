@@ -7,11 +7,8 @@ class Htmldoc < Formula
   head "https://github.com/michaelrsweet/htmldoc.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "a5671cedaad53dcaf702bed77192b62fb310592bb47e8b28529f15404b87b9f3"
-    sha256 arm64_tahoe:       "728772581167872430766dcd23ef396b62b1bdf3af60a51c0342f510e67fb560"
-    sha256 arm64_sequoia:     "f44cd8e1733a2c85afd2e7d7b9da8a00de294289416b12f22e504802b32f169d"
-    sha256 arm64_linux:       "304e6916c3f765440cc991d7c76fb17c19393138c7a8e802cd372bee2b6f3d00"
-    sha256 x86_64_linux:      "1f31b1d98f9e5d70a765d8507d24555ebfb074cf04edc8933f7917337ba698aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "c25865204a05f24f670a3c63ebd14fa9c9c374454926a30effe808aeb9a11cb7"
   end
 
   depends_on "pkgconf" => :build

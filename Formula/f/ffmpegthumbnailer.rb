@@ -8,11 +8,8 @@ class Ffmpegthumbnailer < Formula
   head "https://github.com/dirkvdb/ffmpegthumbnailer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ed1dfa202553d02e4725c73f39943a8d31588024c32bae86ded123c3e763cbfe"
-    sha256 cellar: :any, arm64_tahoe:       "e6fb754b04946426830ad3b6f75a19e197e01c512ca440904d4d1dfeb6b852a4"
-    sha256 cellar: :any, arm64_sequoia:     "f4a27514b90c933bff1ebfb2bebe39129d8e0acccc715c25b4143b6497ba2458"
-    sha256 cellar: :any, arm64_linux:       "8c5e09a4f51e223fac402580e5b5367fb28106eda87a2a71e0c6b397b0f39dcf"
-    sha256 cellar: :any, x86_64_linux:      "b5b3af4a888248c20f423018c45833ba1782a8ed234df12a4f83a7d7c0df6708"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "34f5724106aa90a365e609a7f5466e1065aad18486e88f6facb255062c409653"
   end
 
   depends_on "cmake" => :build

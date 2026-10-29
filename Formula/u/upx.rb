@@ -7,11 +7,8 @@ class Upx < Formula
   head "https://github.com/upx/upx.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0221455439f71bae5c477e0d9bf910d11ce06807ec2eb4ce76060777a1925fd8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d386010d5ee741e78644f2c81ff1f5b4aac24c90d0fd66594967f1669050ea46"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d681512b0e136be5bb26c289c69afb0773f2520f02b731e94c3b554eecf8ea0e"
-    sha256 cellar: :any,                 arm64_linux:       "8ce472a508224feaf8bda4f20525fbff4917682f95b82590c3121f2cab4935e9"
-    sha256 cellar: :any,                 x86_64_linux:      "0ab28030c8c138dac11167b43f2be9c4cec29562b48986e0140ead780bb888f1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "02d90647f5824ee79f6bb2e30a564ec66fc56b77ecc0593e28129ab047db6916"
   end
 
   depends_on "cmake" => :build
