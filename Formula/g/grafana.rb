@@ -1,8 +1,8 @@
 class Grafana < Formula
   desc "Gorgeous metric visualizations and dashboards for timeseries databases"
   homepage "https://grafana.com"
-  url "https://github.com/grafana/grafana/archive/refs/tags/v13.2.4.tar.gz"
-  sha256 "fdd57503b5f591e951ea3dff80ab53a41487c3373dc89370da2e36e7bf752f52"
+  url "https://github.com/grafana/grafana/archive/refs/tags/v13.3.0.tar.gz"
+  sha256 "f38dded2a24994e32f408aec2db1d75a4b5d00217d3ba7c3741d44cdffce4f6e"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/grafana.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Grafana < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "e399f3bed8d0f6844f5ab85ba76970ad3b0980a175112cf1a1293c19e43d47fa"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "16240c0b2cd286e59e3a675e9cbe5d00b4eee82ecbe43e6b63034cf4ce309f4e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ed2e5d83f54021befd70b69bd393289d9f518cb9e8b5ace319b1671277ed0cf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff1e8e6139da129636ff0ed36f5358dcc4a2664c26105b963e8b3609c72d1ee4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "694a90ba9b567ead1859b3f36ed564f8605fb657e9739d556f5aab6dc763fa5e"
+    sha256 cellar: :any,                 x86_64_linux:      "7c5b886f40f7a4f0df60b9fc372bcd606d1d55a2a776731bbb38eee01f1a2f76"
   end
 
   depends_on "go" => :build
@@ -48,6 +51,9 @@ class Grafana < Formula
     system "make", "gen-go"
     system "make", "build-backend"
 
+    # Avoid Nx daemon and plugin worker sockets, which the build sandbox blocks
+    ENV["NX_DAEMON"] = "false"
+    ENV["NX_ISOLATE_PLUGINS"] = "false"
     system "yarn", "build"
 
     os = OS.kernel_name.downcase

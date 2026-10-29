@@ -1,13 +1,17 @@
 class PandocCrossref < Formula
   desc "Pandoc filter for numbering and cross-referencing"
   homepage "https://lierdakil.github.io/pandoc-crossref/"
-  url "https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.26.tar.gz"
-  sha256 "17c1ec465291d779e23c14bba23730d2de927c0ed35a8fd24c3ddd6e91463660"
+  url "https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.26a.tar.gz"
+  version "0.3.26a"
+  sha256 "ad91b050326e8389413336b8bb66c363fe7e16ef5a588a2668b82789a900c1e8"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6564beb76e7255933157eee39493219c87727625921c857570a666c971ad3127"
+    sha256 cellar: :any, arm64_golden_gate: "40055739827ce7268fb094e894dd6c717df224a5d7f14db76ea3ffbaa256e26c"
+    sha256 cellar: :any, arm64_tahoe:       "cc2d2cc96012d76a2df53d51e0cdb06eedf205745055ba6e2b88d2f9b9cdfcb7"
+    sha256 cellar: :any, arm64_sequoia:     "16d3ba470cdb85d60094be727ee974391a852fa35f37c5d1750ae1aa6b4c20e7"
+    sha256 cellar: :any, arm64_linux:       "dc949778c90c942fe81fd7e04fd2ba957ab7180cada566637d00f55d056b11a6"
+    sha256 cellar: :any, x86_64_linux:      "95bb6da0527fa0c6ce287c828ee21e5e60a2d020b9577b9265c01d1df6ec917d"
   end
 
   depends_on "cabal-install" => :build

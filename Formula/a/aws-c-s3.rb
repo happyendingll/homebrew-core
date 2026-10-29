@@ -1,14 +1,17 @@
 class AwsCS3 < Formula
   desc "C99 library implementation for communicating with the S3 service"
   homepage "https://github.com/awslabs/aws-c-s3"
-  url "https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "cf9c52820af5bfcf4da25d2babd351bb8f359bf4cbb046d8ff8e914fb864e1ad"
+  url "https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.5.1.tar.gz"
+  sha256 "61614d846899bdc01869477fbb9b7c045a8448383d93c92eefa44c7bf94e36bb"
   license "Apache-2.0"
   compatibility_version 8
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "a9b106c95ed0e8696b0dd5767bd992af04e5be9164dcf0e683f45afd8225673c"
+    sha256 cellar: :any, arm64_golden_gate: "1bd8bb00b68ebb764703cf73965692bca56414b2a6e3ad8a2e5b3d7001c009b5"
+    sha256 cellar: :any, arm64_tahoe:       "0ab0960943c6454a956e367efa21bae06cecd13e034ae1b23660cf896b6ad920"
+    sha256 cellar: :any, arm64_sequoia:     "2b26036b845d1740b6c69bb60bacfa835cf5f10ba6457fedfff927121348a60a"
+    sha256 cellar: :any, arm64_linux:       "82feb238a582fa47819b159ae0b35d9d3645fde61817fbc9a23c4d27d5d3128b"
+    sha256 cellar: :any, x86_64_linux:      "db4be9cdbe264b483fc4aea8e568c7d9073cd15c7ac4b1f9dc758cdedcce44af"
   end
 
   depends_on "cmake" => :build

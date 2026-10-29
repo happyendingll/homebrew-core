@@ -49,6 +49,8 @@ class GnuSmalltalk < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
     # Fix compile with newer Clang
     if DevelopmentTools.clang_build_version >= 1500

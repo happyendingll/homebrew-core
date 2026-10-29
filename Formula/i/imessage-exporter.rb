@@ -1,13 +1,16 @@
 class ImessageExporter < Formula
   desc "Command-line tool to export and inspect local iMessage database"
   homepage "https://github.com/ReagentX/imessage-exporter"
-  url "https://github.com/ReagentX/imessage-exporter/archive/refs/tags/4.3.0.tar.gz"
-  sha256 "aaa19f21a3144bf9d115ce02a77a988bfdf3485fcd1d35cdb9ac4c81b86e2400"
+  url "https://github.com/ReagentX/imessage-exporter/archive/refs/tags/5.0.1.tar.gz"
+  sha256 "4c1f3ce78b36547c68196a5d4557b1bdf6864e3cc542930b523938d71985a1a7"
   license "GPL-3.0-only"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "bb07462bf5b563acabdbbd51ecd7feb34f209ef5481515f2de0c1371e4d97b18"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c387d20eb047a541f114dcbc23bec32f7cf846b62b2d5bc803df3a745a5634fc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bca89660d3df455c6eddc0f2ca0a70f4b40cb2b7a5aeeaf22273be47c6ed6d71"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cfde0edfde7c933affebd47d94440092197ce2aa068606ca50a1738b112fcdbc"
+    sha256 cellar: :any,                 arm64_linux:       "01fe1303be39b21abb45e86ff2f1f1cc0c71035ec9e2406474dc19df2f1a2b8d"
+    sha256 cellar: :any,                 x86_64_linux:      "74dc16d6785c5924ae83e2d15a028d757c32b223b78a3452b9688edc69560e4d"
   end
 
   depends_on "rust" => :build

@@ -1,13 +1,16 @@
 class Nvc < Formula
   desc "VHDL compiler and simulator"
   homepage "https://www.nickg.me.uk/nvc/"
-  url "https://github.com/nickg/nvc/releases/download/r1.23.0/nvc-1.23.0.tar.gz"
-  sha256 "10dab7ea016d8a2f7c4ea74a438b6c999423007aa69c0568fedb59564440b3e2"
+  url "https://github.com/nickg/nvc/releases/download/r1.23.1/nvc-1.23.1.tar.gz"
+  sha256 "6e3d1551a3fce8087c96daf9bb8a5514be68850f1c4a30a5e05b8ee2be03acdd"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "1d685b8c35b623960dd2cc7c1919b3aaba12e63ad92e33508c8a72b8c2cf36bc"
+    sha256 arm64_golden_gate: "3f02b1685f4025a60c17ae1ec48eb6749bc1b47f190b80d61cf0f2f97d9f845f"
+    sha256 arm64_tahoe:       "82433b55e8597004f2bc83802922116c09b36231dc5626db2137d868cab4c3f3"
+    sha256 arm64_sequoia:     "e331069b4c5ec9eea363bc619829e865def0c3ca27d4d7cc144613389e5cd657"
+    sha256 arm64_linux:       "0fa759d56f04c8b705aed826fc96e4e9329cd6012718d9aa068ebab74b8ae2c7"
+    sha256 x86_64_linux:      "d1a2819b90467271bf0b80d565f1d5b7d3b6c3e7073cb7c773ae6e0636667e39"
   end
 
   head do

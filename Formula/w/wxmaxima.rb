@@ -1,10 +1,9 @@
 class Wxmaxima < Formula
   desc "Cross platform GUI for Maxima"
   homepage "https://wxmaxima-developers.github.io/wxmaxima/"
-  url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-26.09.0.tar.gz"
-  sha256 "c490e30383e77e17de2005276429606ff4c5b43ae268aa889cfc3d4fb148a9e9"
+  url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-26.10.0.tar.gz"
+  sha256 "6098d3b54b531ed59cd2aff568f70039b41f6e7f89cbb84d1da2e5b796a7bb71"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/wxMaxima-developers/wxmaxima.git", branch: "main"
 
   livecheck do
@@ -13,8 +12,11 @@ class Wxmaxima < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "c2a7871ee23476452359961945c57878bc634975bcdd246c4b4c44013136da55"
+    sha256 arm64_golden_gate: "2abd7a2e0ed1660cd92a2ad44b9aff1b7613fd6dbceeb41345a58e9022286cf8"
+    sha256 arm64_tahoe:       "c45d6e4433850ed3378da18d8ebabc0db4c87fadd7d861afdb85224da2b6abe8"
+    sha256 arm64_sequoia:     "39161c42d8015ad2bacf4fb342c37a0308b5c2222c67477f63b4090ae7713d83"
+    sha256 arm64_linux:       "fca82ecdcc2f4100e4a74395d65955a9033bc98a84c4626af480cc48b49674b5"
+    sha256 x86_64_linux:      "e90de197e91139da291c8654230caa1d0e1c94c27696f8a776670b2cbe046c1d"
   end
 
   depends_on "cmake" => :build

@@ -2,8 +2,8 @@ class Flagd < Formula
   desc "Feature flag daemon with a Unix philosophy"
   homepage "https://flagd.dev"
   url "https://github.com/open-feature/flagd.git",
-      tag:      "flagd/v0.18.1",
-      revision: "21c850300d05a3617a877ed6d0bb2d7b8c6b7204"
+      tag:      "flagd/v0.18.2",
+      revision: "71490eb4de5cc590de53ffbda99813ff41b8366c"
   license "Apache-2.0"
   head "https://github.com/open-feature/flagd.git", branch: "main"
 
@@ -18,8 +18,11 @@ class Flagd < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "6600b9cf7c4689f0b5ed3b244dec32c984e6f08439901141683b65abedc2a0a8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c53e017e8579602107d730fd948bb1e94e90d3915b5c348bc8344b3c58193e43"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8c19af2bfa8da2a5b6cf84fae09b1b47920d7bd4926e96d8d82ce9e625f9dfbe"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bc583609063b3999e855a36cbf123cb5bc49336b0877be56ae881fbc231f1d9f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ec63dfb59c488ab87d66f35f5b0295af1e63f33fe89c9eaf504e35d0011ce396"
+    sha256 cellar: :any,                 x86_64_linux:      "0f1c47634c9224f6fc3e77b22e14ffbc632013d6a8332a37e2eab3e94f6294af"
   end
 
   depends_on "go" => :build

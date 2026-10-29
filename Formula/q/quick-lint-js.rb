@@ -12,6 +12,9 @@ class QuickLintJs < Formula
     sha256 cellar: :any, sequoia: "0219f40d57ae0f9d5a751b17d783cffe547b7e43e5b813114c56071879733086"
   end
 
+  deprecate! date: "2026-10-29", because: :repo_archived
+  disable! date: "2027-10-29", because: :repo_archived
+
   depends_on "cmake" => :build
   depends_on "googletest" => :build
   depends_on "pkgconf" => :build

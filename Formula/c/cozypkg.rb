@@ -1,8 +1,8 @@
 class Cozypkg < Formula
   desc "CLI for managing Cozystack packages"
   homepage "https://cozystack.io"
-  url "https://github.com/cozystack/cozystack/archive/refs/tags/v1.6.5.tar.gz"
-  sha256 "8ab201b539c8f950fd10a03c4600341d5bc958630ecefb67955521959ccc7d54"
+  url "https://github.com/cozystack/cozystack/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "95312775f6fec2bb176873a9475b5bb3eb9b0aeca3de26c86e55494cd07af2b8"
   license "Apache-2.0"
   head "https://github.com/cozystack/cozystack.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Cozypkg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "7875ae1b38146bdadd2c1f67abe4298587682a4cc7e1974dfa36df995122ce2d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f6fb6fc7240cbae281703b80c856acce60e19b68f12d77a90b7031177fe2fa74"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5b5e542fdb1ef1e747d9d9e0fa0462e3e258ce5a5d47e83bf3ffbbaf65022f28"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4a7d0ff53fb66369d9d900376c5c8e7e59d19669a308d6d45e76dcb4febb40eb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "77eef4ae8169bb2f16becb0099b3e563e58bd6be4e0bdb200c422b97d0abe891"
+    sha256 cellar: :any,                 x86_64_linux:      "2a8939532d23fa66899ce4d7f5131299bad8648dbbe5ccf3312e7024148953f3"
   end
 
   depends_on "go" => :build

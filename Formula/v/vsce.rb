@@ -1,8 +1,8 @@
 class Vsce < Formula
   desc "Tool for packaging, publishing and managing VS Code extensions"
   homepage "https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce"
-  url "https://registry.npmjs.org/@vscode/vsce/-/vsce-4.0.0.tgz"
-  sha256 "de32bbd17a76ff3471a36e0feff4e07510b3783065b77b1c094685b0accb1d7f"
+  url "https://registry.npmjs.org/@vscode/vsce/-/vsce-4.1.0.tgz"
+  sha256 "98b9b08ee2d8e5004755d6c9df99006e8883a1ff81d4e9ecbadddb44bb1d7c7d"
   license "MIT"
   head "https://github.com/microsoft/vscode-vsce.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Vsce < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "6fb575ba5fc01e0114beec2ce81004fd5b1043829f3ea7815abec37ec41d729b"
+    sha256 cellar: :any, arm64_golden_gate: "27e15b224723a6c122549ce89544785e326ae4bfd9ee271708d438113c76c7e9"
+    sha256 cellar: :any, arm64_tahoe:       "27e15b224723a6c122549ce89544785e326ae4bfd9ee271708d438113c76c7e9"
+    sha256 cellar: :any, arm64_sequoia:     "27e15b224723a6c122549ce89544785e326ae4bfd9ee271708d438113c76c7e9"
+    sha256 cellar: :any, arm64_linux:       "cbdcd3223dc76481316c7ba3251de9abe6cfcc6bdcd8b3dd94a2ebc385ffd17b"
+    sha256 cellar: :any, x86_64_linux:      "11a7f7637982f59833e4419425eb39bacf00e66b8617d621900f408c278ce152"
   end
 
   depends_on "pkgconf" => :build

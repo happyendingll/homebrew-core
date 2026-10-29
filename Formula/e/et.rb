@@ -1,14 +1,16 @@
 class Et < Formula
   desc "Remote terminal with IP roaming"
   homepage "https://mistertea.github.io/EternalTerminal/"
-  url "https://github.com/MisterTea/EternalTerminal/archive/refs/tags/et-v7.0.0.tar.gz"
-  sha256 "3580962861589c0b69efd6b385ff92ad8fdf688c91d1a0edc1a83278205e28e8"
+  url "https://github.com/MisterTea/EternalTerminal/archive/refs/tags/et-v7.1.1.tar.gz"
+  sha256 "7f5ab26f5cc18e66184d806648a2437c447b549ca106a7e6107f793435e39270"
   license "Apache-2.0"
-  revision 5
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "ae72c2c75c960c2c03eeb9c267feaae8181fe4cbe612a2be8f89bfe9be556959"
+    sha256 cellar: :any, arm64_golden_gate: "dc91389f42b64e0b88a0eb3c8dcd2d5c0c376d69e8d2cbcb964fda7263813ec4"
+    sha256 cellar: :any, arm64_tahoe:       "381012be6ccc37c626b73cbfb06463e0f64ba99092627163c9afa64751fc2a93"
+    sha256 cellar: :any, arm64_sequoia:     "428d43af63d8a75a9bf0726f70de8394c4261c868b41e89c2ddd3ec26e9f21d5"
+    sha256 cellar: :any, arm64_linux:       "c80bab11c9d161d746c748506257bf8f81c8f8905a656b2f2bfc9fbae2fa28f2"
+    sha256 cellar: :any, x86_64_linux:      "f0a406a9eaef5507f1690e9db57cd59576023724120743b90699ee0b1c3f3e83"
   end
 
   depends_on "cmake" => :build
@@ -43,6 +45,9 @@ class Et < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
+    # Remove Windows-specific script
+    rm bin/"et1.cmd"
+
     etc.install "etc/et.cfg"
   end
 
@@ -57,23 +62,21 @@ class Et < Formula
 
   test do
     port = free_port
-    pid = fork do
-      exec bin/"etserver", "--port", port.to_s, "--logtostdout"
-    end
+    # Avoid the default `$HOME/.local/share/etserver` fifo directory, whose
+    # ancestor checks open `/` for reading and fail inside the Linux sandbox.
+    pid = spawn bin/"etserver", "--port", port.to_s, "--serverfifo", testpath/"etserver.fifo", "--logtostdout"
 
-    begin
-      require "socket"
-      Timeout.timeout(60) do
-        loop do
-          TCPSocket.open("127.0.0.1", port).close
-          break
-        rescue Errno::ECONNREFUSED
-          sleep 1
-        end
+    require "socket"
+    Timeout.timeout(60) do
+      loop do
+        TCPSocket.open("127.0.0.1", port).close
+        break
+      rescue Errno::ECONNREFUSED
+        sleep 1
       end
-    ensure
-      Process.kill("TERM", pid)
-      Process.wait(pid)
     end
+  ensure
+    Process.kill("TERM", pid)
+    Process.wait(pid)
   end
 end

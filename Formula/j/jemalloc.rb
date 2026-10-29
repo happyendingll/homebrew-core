@@ -17,6 +17,8 @@ class Jemalloc < Formula
     depends_on "docbook-xsl" => :build
   end
 
+  deny_network_access!
+
   def install
     args = %W[
       --disable-debug

@@ -55,6 +55,8 @@ class Krb5 < Formula
     type :backport
   end
 
+  deny_network_access!
+
   def install
     cd "src" do
       system "./configure", "--disable-nls",

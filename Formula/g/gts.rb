@@ -29,6 +29,8 @@ class Gts < Formula
   # This software hasn't been updated in seven years
   patch :DATA
 
+  deny_network_access!
+
   def install
     # GTS uses K&R function definitions, which C23 no longer supports.
     ENV.append "CFLAGS", "-std=gnu17"

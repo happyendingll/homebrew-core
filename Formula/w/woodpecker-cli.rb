@@ -1,14 +1,17 @@
 class WoodpeckerCli < Formula
   desc "CLI client for the Woodpecker Continuous Integration server"
   homepage "https://woodpecker-ci.org/"
-  url "https://github.com/woodpecker-ci/woodpecker/releases/download/v3.19.0/woodpecker-src.tar.gz"
-  sha256 "9e0a7beb36786d9180c121c95c36ab9b820a44c2b4e417c947ccbde6921baea5"
+  url "https://github.com/woodpecker-ci/woodpecker/releases/download/v3.20.0/woodpecker-src.tar.gz"
+  sha256 "c68b9692e7df7774a86ea37eba4eb65334ccc4c0526e3af050c5ec7b707cd78b"
   license "Apache-2.0"
   head "https://github.com/woodpecker-ci/woodpecker.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "54c65fdefff2d7700d74aba60229015aa78421f602559a87f11fa510a857d3f4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e4ecb442afccefcb7fd3a9cdb0c03b5c82db5fa22bc2eff69608bd2920fb1c2e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e4ecb442afccefcb7fd3a9cdb0c03b5c82db5fa22bc2eff69608bd2920fb1c2e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e4ecb442afccefcb7fd3a9cdb0c03b5c82db5fa22bc2eff69608bd2920fb1c2e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "47d74380f0e4d50b14feea6e33464a69bba99c3a707026b87e46f7a40d8f8f07"
+    sha256 cellar: :any,                 x86_64_linux:      "8c3d510db180167fa5d7cf16c0c64736431868a637c56eb564875c17605161e6"
   end
 
   depends_on "go" => :build

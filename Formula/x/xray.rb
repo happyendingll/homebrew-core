@@ -1,8 +1,8 @@
 class Xray < Formula
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://xtls.github.io/"
-  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v26.10.21.tar.gz"
-  sha256 "44ef4874529a03848c90f1fdcfb763350fbc5f1de741ec90e0024d651df25650"
+  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v26.10.29.tar.gz"
+  sha256 "ee22c6f21855f70a52e19bff02fa71f4b28ce071d83ff9154fafcaa0f315a642"
   license all_of: ["MPL-2.0", "CC-BY-SA-4.0"]
   head "https://github.com/XTLS/Xray-core.git", branch: "main"
 
@@ -12,20 +12,33 @@ class Xray < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "3e5c2797d21bffa2907b7843ee759666a30d24e6bc7e697112ece4642e185667"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "05041f95d1a72d1639a2e046a9d8b98a17b1c8b86b6f6c840fba61fe38585ad2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "05041f95d1a72d1639a2e046a9d8b98a17b1c8b86b6f6c840fba61fe38585ad2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "05041f95d1a72d1639a2e046a9d8b98a17b1c8b86b6f6c840fba61fe38585ad2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c2a9f22f36e2a9e276510eac5728220beee8558cef29e594e97c7e977daee5c9"
+    sha256 cellar: :any,                 x86_64_linux:      "558f913be653a46610a2560ca7e1df0ab386c90a951ce26ad760c0c830d33615"
   end
 
   depends_on "go" => :build
 
   resource "geoip" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610212206/geoip.dat"
-    sha256 "4a1b1eddabf5614fa51dd93ac0498856cb82dd65933cd6d6d5890d8c7bb5e902"
+    url "https://github.com/XTLS/Xray-rules-dat/releases/download/20261028222509/geoip-lite.dat"
+    version "20261028222509"
+    sha256 "36e0e76145dba3f13ac4bf7be0b738d7eae957835fefd2ee220e7034fe52a4d1"
+
+    livecheck do
+      url :url
+    end
   end
 
   resource "geosite" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610212206/geosite.dat"
-    sha256 "77cc7cc99d8a6f606a8c266308501e26fd7038b9c0508db0e551b933c41cdedf"
+    url "https://github.com/XTLS/Xray-rules-dat/releases/download/20261028222509/geosite.dat"
+    version "20261028222509"
+    sha256 "b8a31ce12d3ec997358bf2bde95be502df7402179d1c93d1e8b3eda6f7b08f3a"
+
+    livecheck do
+      url :url
+    end
   end
 
   resource "example_config" do
@@ -50,7 +63,9 @@ class Xray < Formula
     (bin/"xray").write_env_script execpath,
       XRAY_LOCATION_ASSET: "${XRAY_LOCATION_ASSET:-#{pkgshare}}"
 
-    pkgshare.install resource("geoip")
+    resource("geoip").stage do
+      pkgshare.install "geoip-lite.dat" => "geoip.dat"
+    end
     resource("geosite").stage do
       pkgshare.install "geosite.dat"
     end
