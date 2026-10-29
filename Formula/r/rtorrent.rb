@@ -6,11 +6,8 @@ class Rtorrent < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8b4390c3dbcdda7c242a9bf8af339afb38969b450741cb9d94dac5d2dcb64282"
-    sha256 cellar: :any, arm64_tahoe:       "af89b562b20f9a41f3fe14621da1bbed1f53928b6f13668b64c59ce4e8a4ba05"
-    sha256 cellar: :any, arm64_sequoia:     "e0d37d9003ecfdb6e6d1e9cb6793e01c2f328d312098b26289dbcf6a2188c420"
-    sha256 cellar: :any, arm64_linux:       "d61916491008cbfeb460b09418512e590924680ba6ce49aaa79f15812b6f0d3a"
-    sha256 cellar: :any, x86_64_linux:      "0890319ab9cfd42ee705fa928502a3937543284531b0ca17a5cad145024124c9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "1d0d0399767b98d3758be320fdaaee8ee320e7d7ff1056d1d61ce6719429dae9"
   end
 
   depends_on "autoconf" => :build

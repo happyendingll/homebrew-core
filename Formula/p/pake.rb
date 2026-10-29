@@ -6,11 +6,8 @@ class Pake < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bf940226b65728aaac2a8b8bf1f5e9c396235227de497f58f82e0be48e291418"
-    sha256 cellar: :any, arm64_tahoe:       "7aa1d55f18205334494e181d9f561ae5dfef82916b4efff495c6d3fc54d265bc"
-    sha256 cellar: :any, arm64_sequoia:     "174f95480173fa0c188a17cd1dbc1267e3375fc91eb397ecb56546aafff5f5e2"
-    sha256 cellar: :any, arm64_linux:       "b433662e220e87eba8bfcf5bdad1112eaa5ded8f918818936983ac9f8c20b445"
-    sha256 cellar: :any, x86_64_linux:      "75fad3b447bb76280691c119b260246ea7d2657a65668cf647d7b50241a0bee5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a9a546505ef50cdf29b6516e379361247f83c9ca0dfd61ddc6694fe5cca415cb"
   end
 
   depends_on "pkgconf" => :build

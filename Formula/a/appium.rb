@@ -7,11 +7,8 @@ class Appium < Formula
   head "https://github.com/appium/appium.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0abebe647cf45cb03fad84f3d722f7d3e07022d6214f2b19c671de5c50ccaa73"
-    sha256 cellar: :any, arm64_tahoe:       "6cd6c780504bb1080634c84cd9d2a24ca9aaa7528255a5b40a82cbaa28630820"
-    sha256 cellar: :any, arm64_sequoia:     "a472cf674e01b79126b83b69a4f820b7c7a8e65ed221b11d631dc75276b29f70"
-    sha256 cellar: :any, arm64_linux:       "e2e937077983dfebc391863ab513218dc139eab085ff6cd7ef6b5c0b17f3aae5"
-    sha256 cellar: :any, x86_64_linux:      "ade0ae26726db48d80d725c472feb481677dc5e9ff4db0a4f738caf3105abf8d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "30f5a3dda406c23ce811eb85c96c9bf4ce4c9f72e0f737ff8c6a7c55e6accdb9"
   end
 
   depends_on "pkgconf" => :build
