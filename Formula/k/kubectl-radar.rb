@@ -11,11 +11,8 @@ class KubectlRadar < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "49da3717e258f03b96bd945734fdc7e5cf7fbab1c30f980decf2427897ba1157"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "19e66f90acf702679a2ebfca992184bc0a04e354aa83cf240dd29c3ba3e566b0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a2e34c855217b55b34ecd5cbb8786b87bafbcaac725d6c7bab27601adf62a73"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "80103afded2cf93616abf2f355905fb8be02b1682608642c3be1e903a2bcc2af"
-    sha256 cellar: :any,                 x86_64_linux:      "4df736ff573a703b011bda60e07cc4cbfffda7fc6496ddea4c45241f47ddc61a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "103a2fec22dcd27cdbe074012d4a149f3be2f2adaf9d1841e7e110256c031bab"
   end
 
   depends_on "go" => :build

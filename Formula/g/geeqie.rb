@@ -12,11 +12,8 @@ class Geeqie < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2ac1c596142885943e9f9f7d7f720e1d9849253c68a8f207fb0d4d8f14f34e9a"
-    sha256 cellar: :any, arm64_tahoe:       "7dd58c0b569ce33b8d37006670f00e359425d316779ae4506cffe3680cee6742"
-    sha256 cellar: :any, arm64_sequoia:     "3085bb550bf0c5855e9e10b2f199d97544914df17bdda31827623ef539023a26"
-    sha256 cellar: :any, arm64_linux:       "b6450a8ae1440ab1886af320ead5c9fca42d3a4f4b5eec595a8d8c086b00eceb"
-    sha256 cellar: :any, x86_64_linux:      "35019ede0eabae940ac575f8378241213fcd739e0607349a75a282f6d2327f08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "d0a73874a2b3005dc31fb9b9e8b640ef85b8180c6d055a5d946a0241074cfea2"
   end
 
   depends_on "gettext" => :build

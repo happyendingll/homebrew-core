@@ -6,11 +6,8 @@ class Rollup < Formula
   license all_of: ["ISC", "MIT"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "93b9325b984588a1677fde7024761b69ada4b583c9007229a7c788f1f1a43c36"
-    sha256 cellar: :any,                 arm64_tahoe:       "93b9325b984588a1677fde7024761b69ada4b583c9007229a7c788f1f1a43c36"
-    sha256 cellar: :any,                 arm64_sequoia:     "93b9325b984588a1677fde7024761b69ada4b583c9007229a7c788f1f1a43c36"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9d04c60e48fd0c9cd60ae809ed8396f6414dbcbc6227b4b910194cb14e8004c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a3630ac8d51618951d23087963879a965148d5d8fb3f42b11325a377af45bb23"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "226232d91775884aa044be495871b090b2962319953a51aaba9227accc76f020"
   end
 
   depends_on "node"
