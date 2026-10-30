@@ -12,11 +12,8 @@ class Pumba < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f9d0bf4add8a5be45644c06dfa00ec910cb56ae2bb28522cc5da1d935b1f1921"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f9d0bf4add8a5be45644c06dfa00ec910cb56ae2bb28522cc5da1d935b1f1921"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f9d0bf4add8a5be45644c06dfa00ec910cb56ae2bb28522cc5da1d935b1f1921"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "363a886bfb0517e6ca6cdb6e7b7154a266a3ac58e71eb11c46953d440e5d7835"
-    sha256 cellar: :any,                 x86_64_linux:      "10fba1b46a4e3070ecd8d013703de58284daef6d075d54121cee1d61b803ec0f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f831b9b68a4bdac41e6f69f1bfb8f318d95330e981388353e1542260b5de6739"
   end
 
   depends_on "go" => :build

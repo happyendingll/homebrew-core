@@ -12,11 +12,8 @@ class InfluxdbCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2025db0610e7d193082a57d859a96fb901f30125d25210882fc8a76e7069235"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e2025db0610e7d193082a57d859a96fb901f30125d25210882fc8a76e7069235"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e2025db0610e7d193082a57d859a96fb901f30125d25210882fc8a76e7069235"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "83c9b2e10261809b33410f5c232c063ca80afe72cd0244d53857b508037dbe8c"
-    sha256 cellar: :any,                 x86_64_linux:      "02ea0b70b62b66bba90d785ba425b960fdf4276c65f9bdb3f78776ce3418fd20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bf4ae6785b9ec36429dccb6b17560e5e163d98411932ce0270fcb0485ace663d"
   end
 
   depends_on "go" => :build

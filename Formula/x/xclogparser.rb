@@ -6,11 +6,8 @@ class Xclogparser < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ba5d571c43da427646d3fa96040306e2f77de9e1abe0e7be6a334b9e869dabe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2421eb83c5d32b86b451a600cbccf5369953d1e7bd020df77369ff4142e38efb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6df028fd0d5fb6a9f0cc32b141d30e66af196ee64af63e0b63a4c551a2c9df11"
-    sha256                               arm64_linux:       "6b06a6bbf9d2734d45cffde2a4611987798891c92f14a794ff1d3a18d8909b05"
-    sha256                               x86_64_linux:      "2155f9e7d01d30bdf57160f874b16909302bbbfcb7d80d20ed0dec162ca7f616"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c78ef2fd8a4c48856ca5984baf57f8d8a540b7d8d7f2aaaa3ec659a94423d1c3"
   end
 
   uses_from_macos "swift"

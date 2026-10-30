@@ -11,11 +11,8 @@ class Cracklib < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "338032be69343873244d35917f59d3b473e3e69250067f5443b399e3bbf267c0"
-    sha256 arm64_tahoe:       "2acc254c0266961551117cd05fb21668aa629ef2598e55b8968f4f452e811f58"
-    sha256 arm64_sequoia:     "975f55605589226ccb62a8d6d4b204f54d0ca186314a6c125365c778c72be9da"
-    sha256 arm64_linux:       "eddea1c7ade1c56b95b704f4bbe8feb45a2090abdfe4cc76de04969d350b1002"
-    sha256 x86_64_linux:      "9c73178ee4504c9c3e3d7abb8a046dac67a8fb6b6aee2b9ac3c9473e587c1642"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "ef22ba082b5df498f610d8c0328a77911491b674f2975d8e52d00a6b36ce1006"
   end
 
   head do

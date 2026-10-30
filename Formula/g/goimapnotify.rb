@@ -7,11 +7,8 @@ class Goimapnotify < Formula
   head "https://gitlab.com/shackra/goimapnotify.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a41d5ff5bfe6145f6d21c3b69a84726c473314b0182a2c24984ebc12fa4fdc54"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a41d5ff5bfe6145f6d21c3b69a84726c473314b0182a2c24984ebc12fa4fdc54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a41d5ff5bfe6145f6d21c3b69a84726c473314b0182a2c24984ebc12fa4fdc54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bdbcecc8c2c95f79bc26977997c9531ea23c2d97b5b9d5f4f4ab9944bde2586f"
-    sha256 cellar: :any,                 x86_64_linux:      "326155ff39c82b694c49921ec87f8c1b766eddf1104388d9072a4be2a1dab51d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1f9a734cfd3d79b4ca7b57f716ad72d798395721e5a0819bdaf8d8da6c280d91"
   end
 
   depends_on "go" => :build
