@@ -12,11 +12,8 @@ class Itstool < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a31dcf345f29a0fd0fcfc1d6cf0c34bc7e7482f87349f458acdd8c54b0dfcc85"
-    sha256 cellar: :any, arm64_tahoe:       "798b7493e61251f654eeef9e0d2b83be3a320e2e61c4d812315a8c9febb57d5d"
-    sha256 cellar: :any, arm64_sequoia:     "88fb9fd3d60d99ccfef02dafc07ec1dab2fd420c5b9a0e1720f9cfecb357ce3e"
-    sha256 cellar: :any, arm64_linux:       "87b1be0ca0cf01f2aecc766040c560754fd0c217e49c23210c55f6fa48fcd4e1"
-    sha256 cellar: :any, x86_64_linux:      "1997de57a1e67740115325154dc6b3e06e878a2f4397dea354dbd531c6a93bf5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "8fc569707d84b3e71dcf7b53697b0c2b09787985fc29d4a2cb64a3cb00cfc9aa"
   end
 
   head do

@@ -7,11 +7,8 @@ class PandocCrossref < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "40055739827ce7268fb094e894dd6c717df224a5d7f14db76ea3ffbaa256e26c"
-    sha256 cellar: :any, arm64_tahoe:       "cc2d2cc96012d76a2df53d51e0cdb06eedf205745055ba6e2b88d2f9b9cdfcb7"
-    sha256 cellar: :any, arm64_sequoia:     "16d3ba470cdb85d60094be727ee974391a852fa35f37c5d1750ae1aa6b4c20e7"
-    sha256 cellar: :any, arm64_linux:       "dc949778c90c942fe81fd7e04fd2ba957ab7180cada566637d00f55d056b11a6"
-    sha256 cellar: :any, x86_64_linux:      "95bb6da0527fa0c6ce287c828ee21e5e60a2d020b9577b9265c01d1df6ec917d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "f971220b58bb85e2d9370df917dbc26c906b078119591b28faa6eafb5d2d1222"
   end
 
   depends_on "cabal-install" => :build

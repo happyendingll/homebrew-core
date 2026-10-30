@@ -7,11 +7,8 @@ class Fnox < Formula
   head "https://github.com/jdx/fnox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3beb96fdcd6c8a01c398e03b034d0050fb251e1e26db699ec34db1c67222e2e1"
-    sha256 cellar: :any, arm64_tahoe:       "cb7f97c2967f7fe4daf2eadf47c9791757d785e4c4a4007e4378a6b134b52710"
-    sha256 cellar: :any, arm64_sequoia:     "2282b8064645c789170bd4d28fa8544b0f0b490be1c757b414d78a2e27829d3e"
-    sha256 cellar: :any, arm64_linux:       "ac73a8cec087b205145152b42f2a45a5d8057de8e5d535de0a07b10e3fbd6ea4"
-    sha256 cellar: :any, x86_64_linux:      "f410c90e65119703a7376325553e95d7a9741791501a0ef035696afb129948e6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "6f57c9fa6e2ab524079ef2754a7313f1841e9a890ff2d887ffa69ba510bd221c"
   end
 
   depends_on "pkgconf" => :build

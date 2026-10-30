@@ -12,11 +12,8 @@ class Opencode < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "60f2da8e6cee5c00d9922199d35ddfd82bbef4ee67621ce0927b98eb642f61f0"
-    sha256 arm64_tahoe:       "e263310c0c760d97bc2b9ea6e65a728c1e352309b7be04c4d8bc9a68179374b5"
-    sha256 arm64_sequoia:     "a46a1d503c966f67148d24c5017ed8522b7fbc103789eec0e54f5fdf3ac329ef"
-    sha256 arm64_linux:       "73c30b0c0a050790e6093c0c2bc540847af743b226907c6d71b66bc1d981c8eb"
-    sha256 x86_64_linux:      "1049dc5dfea56a2243ba7a91014f5ef3210235c43ded9281e661c12f39614538"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "fa6529fd8040f21b3828fa8f8723dd658325108b9727c308402685e4996f78ad"
   end
 
   depends_on "bun" => :build

@@ -7,11 +7,8 @@ class Tbb < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3d1677c85dad2c9d18fce14e69d12d3a0521226afa1c1b9e87bc6f2ed4e6078e"
-    sha256 cellar: :any, arm64_tahoe:       "245d6a77dc0e52db1c57c41558b175f9746bb08dea5cadc8fe0a46683479871d"
-    sha256 cellar: :any, arm64_sequoia:     "b42c154310ff3819dd5efcef8a52e6f12547bf52d2299c9e60bf88e4c22b46bd"
-    sha256 cellar: :any, arm64_linux:       "2f9bc4dafac1d7c87755199bb4473ab56ad2e614069e6a8ec552ccd2be215ab7"
-    sha256 cellar: :any, x86_64_linux:      "a487a69a8296f6f1cf116ab66fa01113dd2729993bf64da38030f5523c983805"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any, sequoia: "a347b43f5a94b84fb75185712e31b45e4acc740bcff1cf55efaa26576119effd"
   end
 
   depends_on "cmake" => :build

@@ -6,11 +6,8 @@ class Espflash < Formula
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4527ea31980a49e3dc6bb7ada57450bd49ac4892421e989a5c8eb265c9584ab8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0544da064806152aa6786c550cb4011c0396f574b3c95ed00d3044cbaaaf3ba6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c83b49d2e8b761d2456455cf7b9814777dcb5801603af4c2b52ff337eb0f10ea"
-    sha256 cellar: :any,                 arm64_linux:       "ecfd70c42a65b769501b84cd849ffd04c011d50e322efd81a6bb036e71d712f1"
-    sha256 cellar: :any,                 x86_64_linux:      "d81e66fe918a2d697d5c8ccb4ca3285b3db72c0c080cf10f3f5dccb845694c73"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ab2b3828e31505733edf5c3e6882aa8cb79fb775a47ec35198e70a0b99a08e5e"
   end
 
   depends_on "pkgconf" => :build

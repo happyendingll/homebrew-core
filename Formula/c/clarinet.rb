@@ -13,11 +13,8 @@ class Clarinet < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "321cc64db986c8ee3c05432760d16551cc937bac501afa67a9f44877b7edbf42"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "87b7b3a26767f93617f9dd58fbc6a4d1e9617068e8a5ff3edb60c2b7986627b3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "660ecdab8357520c7683e027a114b23787d8f16060016b995d6ebc0b1ae4b51c"
-    sha256 cellar: :any,                 arm64_linux:       "dfe29109d3cb6cec316e1511ff12e5776fcbd8e2f00322a4746d3591aa9a2335"
-    sha256 cellar: :any,                 x86_64_linux:      "ca4bd15ea625df09dc47e19b84b7c0b9ac0c736267a39110fa731e2533eaec57"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "100103704da9365d339bdf8c520c94f28a0b477429e4d4229a528425c78594ff"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class Nvc < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "3f02b1685f4025a60c17ae1ec48eb6749bc1b47f190b80d61cf0f2f97d9f845f"
-    sha256 arm64_tahoe:       "82433b55e8597004f2bc83802922116c09b36231dc5626db2137d868cab4c3f3"
-    sha256 arm64_sequoia:     "e331069b4c5ec9eea363bc619829e865def0c3ca27d4d7cc144613389e5cd657"
-    sha256 arm64_linux:       "0fa759d56f04c8b705aed826fc96e4e9329cd6012718d9aa068ebab74b8ae2c7"
-    sha256 x86_64_linux:      "d1a2819b90467271bf0b80d565f1d5b7d3b6c3e7073cb7c773ae6e0636667e39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 sequoia: "f1fb1900b57025a0f519fb429a91705f9401c8b2eb22738ec97188d5f761961e"
   end
 
   head do

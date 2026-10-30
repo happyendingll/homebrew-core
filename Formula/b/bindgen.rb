@@ -19,11 +19,8 @@ class Bindgen < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "233f5ef309bcb2552916b19ee35a58303242658ead042361f9dcf7d237d17e73"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2e36f26086055c9d97dbd9a00f016f23722a1e4e35687fbde5861e385fc01fc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4727fb2c47f3db6e467d9bde023287bba803eaee791bec099d58394cf57e27f5"
-    sha256 cellar: :any,                 arm64_linux:       "07f6b9b07bb0f20fb22a5a01c6fce0af621cd3553790ace3c15e79c152c2e6b0"
-    sha256 cellar: :any,                 x86_64_linux:      "248dc6ae5dc944decb8597d3bc0ed4d3cafaa9ad1988e48840e949b86942f878"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
+    sha256 cellar: :any_skip_relocation, sequoia: "ba0cebc5d951f5cfd20c56410d354d090837dd3a7a855f37cc37de28751de649"
   end
 
   depends_on "rust" => :build
