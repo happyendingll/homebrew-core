@@ -1,14 +1,17 @@
 class Evtx < Formula
   desc "Windows XML Event Log parser"
   homepage "https://github.com/omerbenamram/evtx"
-  url "https://github.com/omerbenamram/evtx/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "618d66d3bf7cb151260b0d3f7e9c42229b6af3141abec5670040c62abb1f3e2a"
+  url "https://github.com/omerbenamram/evtx/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "0cc10f27423fbe51e6809530cca05e375f1a5b8a855915fce3cd5891c79743e0"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/omerbenamram/evtx.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "ff5e61a4fd8f21bcd0cbacf76a8162768a4a5a77e570513971dda67865927f76"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e710e1c9588c1292ce78b81bfb8718f97111b9a0e75111887e636a0d32f49a9b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d3e9ffed5202f53fbb060bdd979bde496cb3815afa77d51d13209646ed150d17"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "59c3a236c4cf87bf076fdfa262355bb02dd8cba3df0671d461b51dedb0bd783f"
+    sha256 cellar: :any,                 arm64_linux:       "5f267b2140e411665a048f6fa4208e62ad822c4eee7f1add8bf72bb0232b174c"
+    sha256 cellar: :any,                 x86_64_linux:      "69834933acb34eec9f6e1b87c9e67c695e9e10672df28f5e2ce468c644f26856"
   end
 
   depends_on "rust" => :build

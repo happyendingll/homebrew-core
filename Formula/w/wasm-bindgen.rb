@@ -1,8 +1,8 @@
 class WasmBindgen < Formula
   desc "Facilitating high-level interactions between Wasm modules and JavaScript"
   homepage "https://wasm-bindgen.github.io/wasm-bindgen/"
-  url "https://github.com/wasm-bindgen/wasm-bindgen/archive/refs/tags/0.2.129.tar.gz"
-  sha256 "7f30b65dca17a5f2f2524ee21414a05ad84b37970c7140a594db4779ffc4c31b"
+  url "https://github.com/wasm-bindgen/wasm-bindgen/archive/refs/tags/0.2.130.tar.gz"
+  sha256 "d4adfbf05d68171bacfe07fef38e7de98e97aa51e06e53937e2786202d34c35b"
   license any_of: ["Apache-2.0", "MIT"]
 
   livecheck do
@@ -11,8 +11,11 @@ class WasmBindgen < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "37fffd2b21a864d1b7b6917c03967f38e2ae0a7644d15e3c1b9b54c69e9e0b5f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d22d2f668e02ea827d9b9bc0f0c30f8faa294ef5ed227bfe02f8273f644f77f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "932c0b7d566444fb8c5040211029c86b0f453429c9ab5a372bdb78cb260b2dec"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c713ef118fdf937941f0fb46a0c83394bf2dcf01adc4f013437189d0cd36d738"
+    sha256 cellar: :any,                 arm64_linux:       "6f3edc5dcb7e5ab9be8451223ca96c6116bda61ec4bc4ad9fae013ea752a67ac"
+    sha256 cellar: :any,                 x86_64_linux:      "52ed8a5d30792f3aef9039041f301f1af3f0eb28a4fae0aecc987b09f274dadb"
   end
 
   depends_on "rust" => :build

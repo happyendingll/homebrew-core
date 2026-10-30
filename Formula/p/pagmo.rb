@@ -4,6 +4,7 @@ class Pagmo < Formula
   url "https://github.com/esa/pagmo2/archive/refs/tags/v2.20.0.tar.gz"
   sha256 "8d684e9a3667dcccc844489083906c35aba7610594c5fce0f4eccce9c2264f4d"
   license any_of: ["LGPL-3.0-or-later", "GPL-3.0-or-later"]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

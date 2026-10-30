@@ -5,6 +5,7 @@ class Ponyc < Formula
       tag:      "0.77.2",
       revision: "c4844d2c631039fc195def492ac118c33efbfa86"
   license "BSD-2-Clause"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

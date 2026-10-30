@@ -1,13 +1,16 @@
 class Tmuxai < Formula
   desc "AI-powered, non-intrusive terminal assistant"
   homepage "https://tmuxai.dev/"
-  url "https://github.com/alvinunreal/tmuxai/archive/refs/tags/v2.4.0.tar.gz"
-  sha256 "7713f52ce96ac968821b28d5d324719fabd9780cd31a9ff04f95d359d56593f5"
+  url "https://github.com/alvinunreal/tmuxai/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "99dfaaaa0d475873fd9004355e48354c7d8c6e1c009d767e2eb4300d9cfdbe4f"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "89de03356715e19c7d667d8cfc9c5c6705015aa6799979a53c86a6f1ca1d15f7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5749cbc97020da11ea6156bdc0a4edfd00d57b3b1522cdeb9b5bb23ced7eecf5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5749cbc97020da11ea6156bdc0a4edfd00d57b3b1522cdeb9b5bb23ced7eecf5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5749cbc97020da11ea6156bdc0a4edfd00d57b3b1522cdeb9b5bb23ced7eecf5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5935cb341c884aedc80bb1216343b060b7d2ad31951b88e9332f78512a16c51d"
+    sha256 cellar: :any,                 x86_64_linux:      "c3d9ae5be9ee446c42d5b12ae7aef430ab951357e9faac2f9ca89cd36687aaba"
   end
 
   depends_on "go" => :build

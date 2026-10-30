@@ -4,6 +4,7 @@ class Hunspell < Formula
   url "https://github.com/hunspell/hunspell/releases/download/v1.7.6/hunspell-1.7.6.tar.gz"
   sha256 "9c650ace31d4d8cc1da925a9507c3de1d50f1a54857af2f72429f517d5d53467"
   license any_of: ["MPL-1.1", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

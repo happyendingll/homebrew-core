@@ -1,8 +1,8 @@
 class Prog8 < Formula
   desc "Compiled programming language targeting the 8-bit 6502 CPU family"
   homepage "https://prog8.readthedocs.io"
-  url "https://github.com/irmen/prog8/archive/refs/tags/v12.3.4.tar.gz"
-  sha256 "8e1489ce11ff0ec4d2d7b9377f5cfcd648d798e8c0da8471a18df71dec4e4398"
+  url "https://github.com/irmen/prog8/archive/refs/tags/v12.3.5.tar.gz"
+  sha256 "e347107216577ae1c3b2c876d9ddd127a8113f6ab4edb2153c6afff49bf88465"
   license "GPL-3.0-only"
 
   livecheck do
@@ -11,8 +11,11 @@ class Prog8 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "71554b7143ce61a33100eac7c9a13a13993c2b4e6b489ae58bf40c3a2aa20c52"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2d03d41f353bac8a9e512f015a93ff8f493fb90f16382678b524b9ec13275856"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "44b7706fdf1c8d126ab55d9b20bac38029dc4836b21a54006515f5892c5e3ef1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "679a03c0982563c55905f33a4faa094d0973b937c96566eff9dbb7062d2fdc2d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8c623c100046e3d8c3f510537457d7da95b29717e293a376e08d2f873698876a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "127c7c27eba1cf47e73f144839c03afd5b089cbf7057fb6c458fc0482524c52d"
   end
 
   depends_on "gradle" => :build

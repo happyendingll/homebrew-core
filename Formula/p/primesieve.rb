@@ -4,6 +4,7 @@ class Primesieve < Formula
   url "https://github.com/kimwalisch/primesieve/archive/refs/tags/v12.16.tar.gz"
   sha256 "753530ec2b4cbf3b62808b0661ab00e0382d47bded8a57c4fe41a6a4409f7c94"
   license "BSD-2-Clause"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

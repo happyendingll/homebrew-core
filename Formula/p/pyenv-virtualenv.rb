@@ -24,6 +24,8 @@ class PyenvVirtualenv < Formula
     depends_on "coreutils"
   end
 
+  deny_network_access!
+
   def install
     ENV["PREFIX"] = prefix
     system "./install.sh"

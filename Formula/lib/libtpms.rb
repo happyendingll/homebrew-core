@@ -5,6 +5,7 @@ class Libtpms < Formula
   sha256 "edac03680f8a4a1c5c1d609a10e3f41e1a129e38ff5158f0c8deaedc719fb127"
   license "BSD-2-Clause"
   revision 1
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

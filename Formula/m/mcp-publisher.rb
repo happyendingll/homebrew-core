@@ -1,14 +1,17 @@
 class McpPublisher < Formula
   desc "Publisher CLI tool for the Official Model Context Protocol (MCP) Registry"
   homepage "https://github.com/modelcontextprotocol/registry"
-  url "https://github.com/modelcontextprotocol/registry/archive/refs/tags/v1.8.6.tar.gz"
-  sha256 "ae040950959cbd94923c57540746b5754e4369c1c464d9af4f5df84dd0c45bf6"
+  url "https://github.com/modelcontextprotocol/registry/archive/refs/tags/v1.8.7.tar.gz"
+  sha256 "08e70094a9171da957f0bdd5514d37b47b315f7e1eedaf850a8e2d9fadd6a00d"
   license "MIT"
   head "https://github.com/modelcontextprotocol/registry.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "2438cb20a8d9c1259bdd9a6303ee0dd4e947e0e9583540d8044209c8608d36f5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ceffbebdf02d4f7d2c3621e1fb8347d8585e194fbf72382e17641272ea42f92"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ceffbebdf02d4f7d2c3621e1fb8347d8585e194fbf72382e17641272ea42f92"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ceffbebdf02d4f7d2c3621e1fb8347d8585e194fbf72382e17641272ea42f92"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ace99e2d0c45c9fadcf5df9731569c5a1b03a84cb34e83b1efd6f2945b3c348b"
+    sha256 cellar: :any,                 x86_64_linux:      "100778d12ee4e5f4585d161d0027c781e5595c6a915d4bd19b6665a61deaadb5"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Pumba < Formula
   desc "Chaos testing tool for Docker"
   homepage "https://github.com/alexei-led/pumba"
-  url "https://github.com/alexei-led/pumba/archive/refs/tags/1.3.0.tar.gz"
-  sha256 "f2f84bf57d97e5c4cf90307c7f1db284c0e4a25a42ac5d8c864af9cd0169303f"
+  url "https://github.com/alexei-led/pumba/archive/refs/tags/1.4.0.tar.gz"
+  sha256 "74f2b50eb62d83ba33ae0a8d6308c44e65a7080f1f5dea46e247f163a48ea393"
   license "Apache-2.0"
   head "https://github.com/alexei-led/pumba.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Pumba < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f831b9b68a4bdac41e6f69f1bfb8f318d95330e981388353e1542260b5de6739"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9d7529684b63728b372dfeadf897a91ab1aa23b208edeeae6f04f91d740d9c32"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9d7529684b63728b372dfeadf897a91ab1aa23b208edeeae6f04f91d740d9c32"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d7529684b63728b372dfeadf897a91ab1aa23b208edeeae6f04f91d740d9c32"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f1185dcd53967d1673498d2afe721b0cd1e3294c90617098ec818a217979763d"
+    sha256 cellar: :any,                 x86_64_linux:      "b051e57932e1846dc09376941ade86e973a80411bc8a955c4cb21ab1bfd69462"
   end
 
   depends_on "go" => :build

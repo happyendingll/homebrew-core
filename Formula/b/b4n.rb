@@ -1,14 +1,17 @@
 class B4n < Formula
   desc "Terminal user interface (TUI) for Kubernetes API written in Rust"
   homepage "https://github.com/fioletoven/b4n"
-  url "https://github.com/fioletoven/b4n/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "e64b874aae85ff3759d5082339688c9a6ff3ef8326e327b0014b0eba8385a5d7"
+  url "https://github.com/fioletoven/b4n/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "e2efd3d5d132794d3b5b46a3d219c61cfe8c2f40e6c8408917a554fd47464601"
   license "MIT"
   head "https://github.com/fioletoven/b4n.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "66f0cf099c6cee5ff7befc2ee4cb93ca64617a789d2bb41dd7ea834786f0997b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f7653b5efea8ba1e5362ae9608b02e4700aea8a4031b7e5c2ba645d012f16074"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4ff94fd8087e3945774f722ff77b9ccc23ac88f299e9a0b7e99d70d8d849646a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff20811066e3af989c40d5361f21c90e2b31ddcfa19edaaff586b56d78ce2f21"
+    sha256 cellar: :any,                 arm64_linux:       "537c71ddc3e4b130dccca49aa73443a463b16578246c756b939555e6ce2a27cd"
+    sha256 cellar: :any,                 x86_64_linux:      "d3605d6bb1a6af4803dddef2c831dfeb7c029c1e5ff65f6dd11573efee3bffa0"
   end
 
   depends_on "rust" => :build

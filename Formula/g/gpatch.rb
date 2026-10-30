@@ -5,6 +5,7 @@ class Gpatch < Formula
   mirror "https://ftp.gnu.org/gnu/patch/patch-2.8.1.tar.xz"
   sha256 "3240c7959c5347c8ed347e3c4201c0337bf4240d5cf09d68889e58eeaba30e17"
   license "GPL-3.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

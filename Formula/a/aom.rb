@@ -5,6 +5,7 @@ class Aom < Formula
       tag:      "v3.15.2",
       revision: "af3dc9aadc793c1b00edc003e3fc19a44fdeb574"
   license "BSD-2-Clause"
+  compatibility_version 1
   head "https://aomedia.googlesource.com/aom.git", branch: "main"
 
   bottle do

@@ -6,6 +6,7 @@ class ApacheSpark < Formula
   version "4.2.1"
   sha256 "8766fd9132079ddf3f0b54a51796d05bf442871c62a51374ca9e18d345bb2bd6"
   license "Apache-2.0"
+  compatibility_version 1
   head "https://github.com/apache/spark.git", branch: "master"
 
   # The download page creates file links using JavaScript, so we identify

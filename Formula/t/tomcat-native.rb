@@ -1,14 +1,17 @@
 class TomcatNative < Formula
   desc "Lets Tomcat use some native resources for performance"
   homepage "https://tomcat.apache.org/native-doc/"
-  url "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.16/source/tomcat-native-2.0.16-src.tar.gz"
-  mirror "https://archive.apache.org/dist/tomcat/tomcat-connectors/native/2.0.16/source/tomcat-native-2.0.16-src.tar.gz"
-  sha256 "785fdd99a202f442b085bc718d2fbeb393b85979aa4a2943302118c4acd68630"
+  url "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-connectors/native/2.0.17/source/tomcat-native-2.0.17-src.tar.gz"
+  mirror "https://archive.apache.org/dist/tomcat/tomcat-connectors/native/2.0.17/source/tomcat-native-2.0.17-src.tar.gz"
+  sha256 "35a8aee8ab2ccce587dfea5ea3c78847f72f733fec4184ab7521d0d3a34d29a5"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "69789c969ea0729e91499fd89ac24ac85e658f4b5a8a467d8fbd91de851b1d5e"
+    sha256 cellar: :any, arm64_golden_gate: "dc934497c32239fc13dfbeb08f58ff47b828497b804cebb55bde114c204fabda"
+    sha256 cellar: :any, arm64_tahoe:       "1b63900a41828bd4573a306ea94729905316f9e3a9e84237b4d2189a01c78a4e"
+    sha256 cellar: :any, arm64_sequoia:     "9dd8a053bd1885ea76fbbb815e9a42664c3b3893b470f892bcd7c2e823a46187"
+    sha256 cellar: :any, arm64_linux:       "a525ca2b758e4f29d6a686fa98c58d89cb9f1f12f600af4e2d2a949631e4cac3"
+    sha256 cellar: :any, x86_64_linux:      "7e661e20ebe71d0047a6e2927a1c3a143a94b756614a3ba877ac84d04b413d31"
   end
 
   depends_on "tomcat" => :test

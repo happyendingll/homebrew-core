@@ -5,6 +5,7 @@ class RustAnalyzer < Formula
       tag:      "2026-10-26",
       revision: "0c4d74686b21f2b3bd8872b6d3cf36ad2e740d49"
   license any_of: ["Apache-2.0", "MIT"]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

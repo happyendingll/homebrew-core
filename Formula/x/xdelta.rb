@@ -4,6 +4,7 @@ class Xdelta < Formula
   url "https://github.com/jmacd/xdelta/archive/refs/tags/v3.2.2.tar.gz"
   sha256 "995319ccb7fe721a523fb3142376f5813093685b1cc302d07018ca97d2584af2"
   license "GPL-2.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"

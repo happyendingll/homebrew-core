@@ -4,6 +4,7 @@ class Spoa < Formula
   url "https://github.com/rvaser/spoa/archive/refs/tags/4.1.6.tar.gz"
   sha256 "5c69a2329456f9d7f611eccddf5cc8e85414a2f2ad23b539f77140919ba0da27"
   license "MIT"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

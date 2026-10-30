@@ -1,15 +1,18 @@
 class Luv < Formula
   desc "Bare libuv bindings for lua"
   homepage "https://github.com/luvit/luv"
-  url "https://github.com/luvit/luv/archive/refs/tags/1.53.0-0.tar.gz"
-  sha256 "bd393b5918f320c79a2c6405e3abebe01c024557c32b9fb9006bee20ce71e19e"
+  url "https://github.com/luvit/luv/archive/refs/tags/1.53.0-1.tar.gz"
+  sha256 "e7d7c872637560e9e9ac0cdcaad1b06c4058152fb0eb9d039f38612b183d01a7"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/luvit/luv.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "0339e927f2cd2c0b2a489a5f9711207e2b1d80487365080d6440e0b1ab8a05dd"
+    sha256 cellar: :any, arm64_golden_gate: "c7feef2e5f46fdff6938d2441eaf4887a471a6de27d12acfe45a315013c27087"
+    sha256 cellar: :any, arm64_tahoe:       "5d5ad73e60e824d7389316ef9a8dd011f2fdb1c340d4768df8e61eb247f230db"
+    sha256 cellar: :any, arm64_sequoia:     "e45eba813ec01282a98ab1ea8df8c1cc66fe691694b262ceed5da32565af0fd0"
+    sha256 cellar: :any, arm64_linux:       "26fff14b6e3453f50ac599fa5e8748eb5008cd5591c304254d2a45fab2ebbb5e"
+    sha256 cellar: :any, x86_64_linux:      "e947ce69495c53720579adabef7684baca25179c5469af8e42212b616a533c6b"
   end
 
   depends_on "cmake" => :build

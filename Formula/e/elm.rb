@@ -4,6 +4,7 @@ class Elm < Formula
   url "https://github.com/elm/compiler/archive/refs/tags/0.19.3.tar.gz"
   sha256 "e051f8700578a0920024ba9eb3496df6336119058ef996579b1b4a574b8313fa"
   license "BSD-3-Clause"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

@@ -4,6 +4,7 @@ class Recode < Formula
   url "https://github.com/rrthomas/recode/releases/download/v3.7.17/recode-3.7.17.tar.gz"
   sha256 "1b0aebe7283b79ff46bc0a06ee21faf65b4d0b304632cbc855721c25583d8ea3"
   license "GPL-3.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"

@@ -4,6 +4,7 @@ class Pkl < Formula
   url "https://github.com/apple/pkl/archive/refs/tags/0.32.2.tar.gz"
   sha256 "ca6a2efd6e89e8e9c230023fafa2a58b746c84db7c1c17a6f6b9ade4a7d63eab"
   license "Apache-2.0"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

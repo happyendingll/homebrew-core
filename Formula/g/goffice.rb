@@ -4,6 +4,7 @@ class Goffice < Formula
   url "https://download.gnome.org/sources/goffice/0.10/goffice-0.10.62.tar.xz"
   sha256 "500eaff50628faa75adb3cd560236a4db498d9e7c52c036b78fa9a57f21805b3"
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

@@ -8,6 +8,7 @@ class Libblastrampoline < Formula
     "BSD-2-Clause-Views", # include/common/f77blas.h
     "BSD-3-Clause",       # include/common/lapacke*
   ]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

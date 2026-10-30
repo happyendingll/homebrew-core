@@ -6,6 +6,7 @@ class AprUtil < Formula
   sha256 "96de1dd6f6a0476d2d2e7964926d8c1ddc3bb0e210e1b1812d3ba5a454a392e2"
   license "Apache-2.0"
   revision 1
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"

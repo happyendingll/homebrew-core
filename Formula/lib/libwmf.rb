@@ -7,6 +7,7 @@ class Libwmf < Formula
     "LGPL-2.1-or-later",
     "GD", # src/extra/gd
   ]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"

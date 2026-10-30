@@ -1,14 +1,17 @@
 class Difftastic < Formula
   desc "Diff that understands syntax"
   homepage "https://difftastic.wilfred.me.uk/"
-  url "https://github.com/Wilfred/difftastic/archive/refs/tags/0.71.0.tar.gz"
-  sha256 "d6afd26103c6492a91307dc6779c7dd0ca4d4c85499f81d7dc53fdfa5107331d"
+  url "https://github.com/Wilfred/difftastic/archive/refs/tags/0.72.0.tar.gz"
+  sha256 "ed8e2d59d44d62289b17c9d241e469bd72565fadf13c260676fc7a23bc28a844"
   license "MIT"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "8e2df8e567b5006e23732923887977cd8a0f5528c009fae6fadac85d0feb433a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "723b703f2dd8d40a55b8d25b4281d03910afeadc999e894564e10325629b601e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9693c05f15d218cac89059bf485fb18184042794d6b11970c285b1baa18ccbc7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ee1042381b293f2e1f013399651970efa781d06830238df8b01f3a63ff8dd2d1"
+    sha256 cellar: :any,                 arm64_linux:       "37022c7048f3db689bc71ee0f47e286da757c390cbb9cb336e017345cfc5229f"
+    sha256 cellar: :any,                 x86_64_linux:      "198745b464c6af1e417e5ae3eb30152792980593a396e5ae36fc1eb156188ede"
   end
 
   depends_on "rust" => :build

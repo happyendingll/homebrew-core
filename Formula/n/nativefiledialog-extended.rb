@@ -4,6 +4,7 @@ class NativefiledialogExtended < Formula
   url "https://github.com/btzy/nativefiledialog-extended/archive/refs/tags/v1.4.1.tar.gz"
   sha256 "4a01eafa921169f009f3e83bea8e287d9e5d0b94ca9064cf7f0a546652d7c884"
   license "Zlib"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"

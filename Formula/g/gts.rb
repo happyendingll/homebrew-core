@@ -5,6 +5,7 @@ class Gts < Formula
   sha256 "059c3e13e3e3b796d775ec9f96abdce8f2b3b5144df8514eda0cc12e13e8b81e"
   license "LGPL-2.0-or-later"
   revision 4
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"

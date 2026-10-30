@@ -5,6 +5,7 @@ class SignalwireClientC < Formula
   sha256 "336c88a28015cf666bdbb070e9e11ce53dfd05baec074171fe8866945b68e8f9"
   license "MIT"
   revision 1
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"

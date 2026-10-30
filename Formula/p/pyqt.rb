@@ -4,18 +4,19 @@ class Pyqt < Formula
   url "https://files.pythonhosted.org/packages/8b/77/73ae0fd2ce7915ce87269743fd11f14f009b8db60a58759afc1c402327f2/pyqt6-6.12.0.tar.gz"
   sha256 "d3e021b716bae880224422f9d1b894d2d53de7e60e60dbc43f860723f9cc300b"
   license "GPL-3.0-only"
+  revision 1
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8eecdfad8a382c9c7a71781971b6373ae6830cebc77106f7e3b2637cdcc78153"
-    sha256 cellar: :any, arm64_tahoe:       "c9187889d43c1ebf9914bc83114ce1d01b876145920f74a53bbf1e3136f2d45c"
-    sha256 cellar: :any, arm64_sequoia:     "83b016be7185e955f31dec6a69da7846d4da07a888e498b3aee4f5d17c5fd1cb"
-    sha256 cellar: :any, arm64_linux:       "2bae9b307997beeb7b20c70be22f917b38b3a04f020c971b5d4315d3099300ac"
-    sha256 cellar: :any, x86_64_linux:      "95eaf20bb310b8a1859ddc100283f46e3af5b8be0ad6fb029ec8460bc4b70595"
+    sha256 cellar: :any, arm64_golden_gate: "f975ee0c94a3fa4eaac19655ff7bb46fe1b598b000f84d2efb4fd722faf1c072"
+    sha256 cellar: :any, arm64_tahoe:       "acfa6cdcdf77f26f2f6bd94f153a81f0112f8a2cab452e7ed078736871dd4da7"
+    sha256 cellar: :any, arm64_sequoia:     "8cfb9c238b970be44f7b461b96e340f7413b8a6c35919e45a7231cf4f5d0a2cf"
+    sha256 cellar: :any, arm64_linux:       "6dc1bfcb5d8212f73cd13aab856175c8bc310f6db98af1b28a2a71a6990a484f"
+    sha256 cellar: :any, x86_64_linux:      "307388a644fc895cc62490e401d8b31edc1c1546c0b17635261fea182b46c2b9"
   end
 
   depends_on "pyqt-builder" => :build
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "qt3d"
   depends_on "qtbase"
   depends_on "qtcharts"

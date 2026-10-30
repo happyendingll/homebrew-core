@@ -5,8 +5,8 @@ class Crystal < Formula
   compatibility_version 2
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/refs/tags/1.22.1.tar.gz"
-    sha256 "134da23412c2493ec34ae2dda2d5dc10310d8e0c83ba7463bdc4a4269b392002"
+    url "https://github.com/crystal-lang/crystal/archive/refs/tags/1.22.2.tar.gz"
+    sha256 "fd07dfa5e798b43cdf351494365e039c07fee15326d175c10490ae12e5f69edc"
 
     resource "shards" do
       url "https://github.com/crystal-lang/shards/archive/refs/tags/v0.20.0.tar.gz"
@@ -20,8 +20,11 @@ class Crystal < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "ab022df6ebc4dd3b9349bbbdc19d201bcfc6f7fc3ba9f2b096183f8ae4e24df7"
+    sha256 cellar: :any, arm64_golden_gate: "e4cfba6eaae5bea720b17c929837c9aace083379bacd3b02f95a01ad4e04ff9a"
+    sha256 cellar: :any, arm64_tahoe:       "37051a235ae4a2a308d602e4cc4e79c127d7634e687ea0ae160b7593bf11a641"
+    sha256 cellar: :any, arm64_sequoia:     "4c091d11e0afaa978c9690f59077238502dc36e855030f37221256c6553b1950"
+    sha256 cellar: :any, arm64_linux:       "f233e5198cea3d2552d2b6763e8cc67c89105a8e4f9898d932ab5439f5a4d666"
+    sha256 cellar: :any, x86_64_linux:      "5cb40cdf037c3ed3465f20ca498d08c7362c2ac381c78574f19310b2ea878d29"
   end
 
   head do

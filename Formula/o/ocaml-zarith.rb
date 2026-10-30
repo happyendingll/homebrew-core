@@ -5,6 +5,7 @@ class OcamlZarith < Formula
   sha256 "5db9dcbd939153942a08581fabd846d0f3f2b8c67fe68b855127e0472d4d1859"
   license "LGPL-2.0-only"
   revision 7
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

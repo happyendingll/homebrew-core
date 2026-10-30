@@ -1,14 +1,17 @@
 class AutoEditor < Formula
   desc "Effort free video editing!"
   homepage "https://auto-editor.com"
-  url "https://github.com/WyattBlue/auto-editor/archive/refs/tags/31.7.2.tar.gz"
-  sha256 "8dd70c1f56b2533995249f2029ba807e9f630355514994aca8ca65ba88bebf89"
+  url "https://github.com/WyattBlue/auto-editor/archive/refs/tags/31.8.0.tar.gz"
+  sha256 "045944d594d611d367fafcf78de352483247dc413be86ee2125455119b3685fd"
   license "Unlicense"
   head "https://github.com/WyattBlue/auto-editor.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "8b997d4220f3f19777e66b19c21403ea7ea844299e3635e941507c36d46d5558"
+    sha256 cellar: :any, arm64_golden_gate: "d363f0788383d2979218190a57571feeb5a52cb0993a66ccdb23500857e4e00d"
+    sha256 cellar: :any, arm64_tahoe:       "b0755c556d971829d1580c30d36f4a0eb30b4d52f05b0cd85d7bd5d33da2401b"
+    sha256 cellar: :any, arm64_sequoia:     "fd580bcef4826b0cf80bfdae4f90ce747424b07efb39ba56c6f26124a3222214"
+    sha256 cellar: :any, arm64_linux:       "a4e54e40c0ae8d7df138d46dcf773f5223f6a5902fc7af3f44deb7742ff71539"
+    sha256 cellar: :any, x86_64_linux:      "0655032995aae3105136b0aa1e090fdec76bd22087cef5757d0f7319dae4e5da"
   end
 
   depends_on "nim" => :build

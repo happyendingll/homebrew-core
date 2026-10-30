@@ -5,6 +5,7 @@ class Papilo < Formula
   sha256 "3ab6e4a41667aa1edc87697dfcc0dc7d517d047d4366abafd8858d22e02d4f2f"
   license "Apache-2.0"
   version_scheme 1
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

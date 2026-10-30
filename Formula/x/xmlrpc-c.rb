@@ -5,6 +5,7 @@ class XmlrpcC < Formula
   sha256 "509c3a3bffb77c81e2c364175ac70b95b799e5b695cc37d4bf833ec28fdfe0b6"
   license "BSD-3-Clause"
   revision 1
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"

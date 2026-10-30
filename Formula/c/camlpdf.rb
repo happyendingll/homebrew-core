@@ -5,6 +5,7 @@ class Camlpdf < Formula
   sha256 "b90f79dacd9cfbae140581c8548b3d2e5cdda7176ce62d2724e616f94750f6cb"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
   revision 1
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

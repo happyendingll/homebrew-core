@@ -4,6 +4,8 @@ class Micromamba < Formula
   url "https://github.com/mamba-org/mamba/archive/refs/tags/2.10.0.tar.gz"
   sha256 "396cf6c08f16ecbc0a98b45a3f14469911aa2f6dda9c3b4ca98d010cea017835"
   license "BSD-3-Clause"
+  revision 1
+  compatibility_version 1
   head "https://github.com/mamba-org/mamba.git", branch: "main"
 
   livecheck do
@@ -14,8 +16,11 @@ class Micromamba < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "fc4e81caabec76bd4dd65e297a87c326b9a0ea0d9e671456022a306460b9c363"
+    sha256 cellar: :any, arm64_golden_gate: "00a413935ece99a39602e9ece1c68c83e8a732d01699942f50e9b641134ab9eb"
+    sha256 cellar: :any, arm64_tahoe:       "061bee86694da7be81ec06b9e351ce41fd4b6b600f53b6e4d51b14afa9c8f8bd"
+    sha256 cellar: :any, arm64_sequoia:     "fcdad6e1da3c57aeeb8992aff82ce70412089d5de307affd905c80c9e325c68e"
+    sha256 cellar: :any, arm64_linux:       "ae2a003a97e3249a148c2b03500aaf78851c9a5c158d43954b61f16b334a9725"
+    sha256 cellar: :any, x86_64_linux:      "8c9fe0f59ad27eb65983f664293636d59dc64e805b0ba90b50faa82204e51163"
   end
 
   depends_on "cli11" => :build

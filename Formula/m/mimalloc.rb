@@ -4,6 +4,7 @@ class Mimalloc < Formula
   url "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.6.0.tar.gz"
   sha256 "c663101ba193b5b823c8541c1b719ab67e3ebf9976e425a02359a5cad5e52990"
   license "MIT"
+  compatibility_version 1
 
   livecheck do
     url :stable

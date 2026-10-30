@@ -4,6 +4,7 @@ class Openlibm < Formula
   url "https://github.com/JuliaMath/openlibm/archive/refs/tags/v0.8.8.tar.gz"
   sha256 "721bab18ff37160fd9e903eb211ff26fdee38c3d0041d556b07d76089c435d17"
   license all_of: ["MIT", "ISC", "BSD-2-Clause"]
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

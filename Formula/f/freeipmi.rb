@@ -5,6 +5,7 @@ class Freeipmi < Formula
   mirror "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.20.tar.gz"
   sha256 "9cc644530ee629ffb94d6fd209e7cb4a8b8ae6677f89d2dc461efed9b2e709f2"
   license "GPL-3.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"

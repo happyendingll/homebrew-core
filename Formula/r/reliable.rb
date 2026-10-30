@@ -4,6 +4,7 @@ class Reliable < Formula
   url "https://github.com/mas-bandwidth/reliable/archive/refs/tags/v1.4.5.tar.gz"
   sha256 "102627cd8643b97865413053f443cd891134a6d0e1d20ab3939e8b09f5c54356"
   license "BSD-3-Clause"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

@@ -5,6 +5,7 @@ class PandocCrossref < Formula
   version "0.3.26a"
   sha256 "ad91b050326e8389413336b8bb66c363fe7e16ef5a588a2668b82789a900c1e8"
   license "GPL-2.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

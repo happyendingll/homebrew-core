@@ -1,14 +1,17 @@
 class KubernetesMcpServer < Formula
   desc "MCP server for Kubernetes"
   homepage "https://github.com/containers/kubernetes-mcp-server"
-  url "https://github.com/containers/kubernetes-mcp-server/archive/refs/tags/v0.0.69.tar.gz"
-  sha256 "621e07933333f9915a55e02abe479be61251627657ad9e8467963f783f7e1c2b"
+  url "https://github.com/containers/kubernetes-mcp-server/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "37189b9939dabab68d2d5f0cb4eac20525027b2317d1d7f468d9e4144c97410d"
   license "Apache-2.0"
   head "https://github.com/containers/kubernetes-mcp-server.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "1ba3c3566bbccb9435854b915ee35e3cebbb4f064e551f80e581d5937e67fc86"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0315260a1ef3b33a1c8b4640eb5180d565ad18ef7c2be06bfd275717c76d6360"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2e2212494537f0b25cda85b78cc8e48138242004d3a98cad44047e4191bfe33"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "da24a32a56ee04f9cb0108bb91cd65cae04a00db23ee22236f5bd21f465ef721"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9ae0ed74c8c425892ad224f242cb043fab4ad372429d1c3dde84a453ebd852ee"
+    sha256 cellar: :any,                 x86_64_linux:      "ba1767e75b41c1b3ead3815ff8c61e343fe7a74b95a2f9e78b37c2e7babd1132"
   end
 
   depends_on "go" => :build

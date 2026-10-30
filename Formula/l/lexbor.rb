@@ -4,6 +4,7 @@ class Lexbor < Formula
   url "https://github.com/lexbor/lexbor/archive/refs/tags/v3.0.1.tar.gz"
   sha256 "08ce3d18efdd09b8b3488779b97509f83cc181e09a5a4cd8162ac08d77266600"
   license "Apache-2.0"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

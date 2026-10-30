@@ -5,6 +5,7 @@ class CamlpStreams < Formula
   sha256 "ad71f62406e9bb4e7fb5d4593ede2af6c68f8b0d96f25574446e142c3eb0d9a4"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
   revision 9
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"

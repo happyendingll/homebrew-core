@@ -5,6 +5,7 @@ class Gengetopt < Formula
   mirror "https://ftp.gnu.org/gnu/gengetopt/gengetopt-2.23.1.tar.xz"
   sha256 "3b9def48422bd45f78af95936200b7f9287369a3db76c4907c42fe10f4922ab6"
   license "GPL-3.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

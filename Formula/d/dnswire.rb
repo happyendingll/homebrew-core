@@ -4,6 +4,7 @@ class Dnswire < Formula
   url "https://www.dns-oarc.net/files/dnswire/dnswire-0.5.1.tar.gz"
   sha256 "b0b52b95e20eda768256794097080b5f5725d9fe841ef03568c51987b02673b4"
   license "GPL-3.0-or-later"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"

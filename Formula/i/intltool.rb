@@ -5,6 +5,7 @@ class Intltool < Formula
   sha256 "67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd"
   license "GPL-2.0-or-later"
   revision 2
+  compatibility_version 1
 
   bottle do
     rebuild 1
@@ -26,6 +27,8 @@ class Intltool < Formula
   on_linux do
     depends_on "perl-xml-parser"
   end
+
+  deny_network_access!
 
   def install
     system "./configure", *std_configure_args

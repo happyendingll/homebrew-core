@@ -1,14 +1,17 @@
 class Timoni < Formula
   desc "Package manager for Kubernetes, powered by CUE and inspired by Helm"
   homepage "https://timoni.sh/"
-  url "https://github.com/stefanprodan/timoni/releases/download/v0.36.0/timoni_0.36.0_source_code.tar.gz"
-  sha256 "06425e0517dd8e042bdf2af611c5628d16f36b5eb0acee2048dad2ec6164f270"
+  url "https://github.com/stefanprodan/timoni/releases/download/v0.37.0/timoni_0.37.0_source_code.tar.gz"
+  sha256 "8d86203b291a6b3790d07c4c53658b1fb251c9f341c94f424afdede43b5d8959"
   license "Apache-2.0"
   head "https://github.com/stefanprodan/timoni.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "88c475d5830704986d1d9ca20b85e25857d5bbb2705ab193051ef75fe90ac190"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "211a035ea172378bfd4889b534f4e62d7e52d5f0b93bfc615618e99fedefaa96"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cd0f315f4196bd7abd273885b3b022785d40a28710069069722577d45e9acd2d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "651fa177ff52787fe04385c306978f782522b88be329c6669a2d734a287482a8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8b47619c17bafb6a047f81e0146098945c94f6a590b08a8ccbec5b07183ca916"
+    sha256 cellar: :any,                 x86_64_linux:      "fe59c4ca7eec3cb70dc4b63de5942f516da765563ed495ab23063e5705cced5a"
   end
 
   depends_on "go" => :build

@@ -4,6 +4,7 @@ class LiquidDsp < Formula
   url "https://github.com/jgaeddert/liquid-dsp/archive/refs/tags/v1.8.3.tar.gz"
   sha256 "18fa83b73db8bb6fe6ea0376e4b5aecf8645970f4604d10d9dadbf609f3f95e2"
   license "MIT"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

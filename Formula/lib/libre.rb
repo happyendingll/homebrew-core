@@ -4,6 +4,7 @@ class Libre < Formula
   url "https://github.com/baresip/re/archive/refs/tags/v4.12.0.tar.gz"
   sha256 "707b6194dd3b8d3fb1641ca08a0999aaac1d38d36b5c45514777a13ded311923"
   license "BSD-3-Clause"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

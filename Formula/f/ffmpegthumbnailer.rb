@@ -1,15 +1,18 @@
 class Ffmpegthumbnailer < Formula
   desc "Create thumbnails for your video files"
   homepage "https://github.com/dirkvdb/ffmpegthumbnailer"
-  url "https://github.com/dirkvdb/ffmpegthumbnailer/archive/refs/tags/v2.4.0.tar.gz"
-  sha256 "0f2ed039b7f495da217e266a509108e914156ef0e321b49342ebb37b345ccec6"
+  url "https://github.com/dirkvdb/ffmpegthumbnailer/archive/refs/tags/v2.4.1.tar.gz"
+  sha256 "779ff290a2b874fc889b28aa4c89fb5d1dbc9a15ee1d09524ed346bd83a4d920"
   license "GPL-2.0-or-later"
   compatibility_version 1
   head "https://github.com/dirkvdb/ffmpegthumbnailer.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "34f5724106aa90a365e609a7f5466e1065aad18486e88f6facb255062c409653"
+    sha256 cellar: :any, arm64_golden_gate: "45ea24d61f5136608419650a77691f3849d0b0399a4293bc507f859c43ac2523"
+    sha256 cellar: :any, arm64_tahoe:       "c9ff10aee8faa1ee031739de1e434218fd7925801618c48a0da688bbaba0bc31"
+    sha256 cellar: :any, arm64_sequoia:     "2b642810fe81ed407220413df34259e81aeebd2dd675f4f80252a68a16551385"
+    sha256 cellar: :any, arm64_linux:       "ddf034f5725cfbba42be4acf597af6d42e056eead5603c1ff13bfc9ef0494375"
+    sha256 cellar: :any, x86_64_linux:      "80160c522eaffd221af58efccc52d50d6a3dcd59c1555709f14ac1cb737bfa9a"
   end
 
   depends_on "cmake" => :build

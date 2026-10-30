@@ -5,6 +5,7 @@ class Opensearch < Formula
       tag:      "3.9.0",
       revision: "4ee42a94e87f66fbf1e62a9871b1b87f91e02472"
   license "Apache-2.0"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"

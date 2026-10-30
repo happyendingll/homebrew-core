@@ -3,8 +3,8 @@ class Suricata < Formula
 
   desc "Network IDS, IPS, and security monitoring engine"
   homepage "https://suricata.io"
-  url "https://www.openinfosecfoundation.org/download/suricata-8.0.7.tar.gz"
-  sha256 "a9d46a9c8f40e81f8a6df3ecc2c5a9a8e8da985876299108d92da547c013ba8c"
+  url "https://www.openinfosecfoundation.org/download/suricata-8.0.8.tar.gz"
+  sha256 "bb56bbaeb4da81b4c90e61148f93b789ea924412207388bc9cba0a7ac6a24a8f"
   license "GPL-2.0-only"
 
   livecheck do
@@ -13,8 +13,11 @@ class Suricata < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "8e87f0d3120e2b946658e25f9beed3c344e18f3acb932a7c9b4688ef84f086aa"
+    sha256 arm64_golden_gate: "97ba78e4aa1c5fa011f1a8483307b87b45bb1459a1355957f12092ecffaddd44"
+    sha256 arm64_tahoe:       "229c7815a5c5dc52e6f95bbe71a68695f3ff61a9dd312f3976c4b323430aaca5"
+    sha256 arm64_sequoia:     "c38ac7d8545866d4e0776162bba4dfed9ff272da72802ba86808c8d6e4e5f37b"
+    sha256 arm64_linux:       "0c443a96c2d510a817c640c7609a901f20fdb13a155a8312f483041e041576dd"
+    sha256 x86_64_linux:      "80f3d3b4cf0b5c16362f148b5cf8f20ab5b8218b00ba1775761e22801d827adf"
   end
 
   depends_on "pkgconf" => :build

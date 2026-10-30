@@ -4,6 +4,7 @@ class Libjodycode < Formula
   url "https://codeberg.org/jbruchon/libjodycode/archive/v4.2.tar.gz"
   sha256 "eeb54fc50b9ebec4e43c954704e69f56c104fede67aaee9f375fbecbb87933b0"
   license "MIT"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"

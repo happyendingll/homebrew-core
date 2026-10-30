@@ -1,13 +1,16 @@
 class Bob < Formula
   desc "Version manager for neovim"
   homepage "https://github.com/MordechaiHadad/bob"
-  url "https://github.com/MordechaiHadad/bob/archive/refs/tags/v4.2.0.tar.gz"
-  sha256 "eec4a76b145ab8cfb29cc4aa3fa668747050bd253f92667445583d19e9ea5aaa"
+  url "https://github.com/MordechaiHadad/bob/archive/refs/tags/v4.3.0.tar.gz"
+  sha256 "1f026e303bf79274da0ef2ad72ea5de3d3b75001fc17998437f9e3ce2ce87454"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "4be7bf3fdf416242f1ea249d26158a061f4070b07f4b52082434df8b6aa4f1ed"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2ce9fe5b3f78f2e5528cc04de2e4b086a5adee9ee139b153f79d50a8ebb4b3b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5b07709a4646b4ab5fa8fe53a86e0789e6b83ae3cad2b6e51190c9d10d5763c4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "14343a61594aea0fa8bf60db1870cc2bba3ac02e6973b967cf543e8322949abf"
+    sha256 cellar: :any,                 arm64_linux:       "cb1c369dbdd6706425db6247905342b670d23f1c14e2006f9d44219ca94cc539"
+    sha256 cellar: :any,                 x86_64_linux:      "8ab8550262dd5c1042262d8cdfcdf206ba8cf8994fde4fcaf99b285d89f1ff9a"
   end
 
   depends_on "rust" => :build

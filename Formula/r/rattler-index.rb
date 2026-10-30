@@ -1,8 +1,8 @@
 class RattlerIndex < Formula
   desc "Index conda channels using rattler"
   homepage "https://github.com/conda/rattler"
-  url "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.34.2.tar.gz"
-  sha256 "acecfe1230383cdc73afc4f711292dd6813fb4377fe91e60bc221aef98eead05"
+  url "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.34.4.tar.gz"
+  sha256 "f997e5cc21dbe48cf89e0e30efe53d9b38ce89c9baa10932279bfc833a18e40d"
   license "BSD-3-Clause"
   head "https://github.com/conda/rattler.git", branch: "main"
 
@@ -12,8 +12,11 @@ class RattlerIndex < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "a70f3c90dc2a706cf2f03ddf9686c37f37b4a5b6189403d3644dddff7c552379"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f3a8b08bf3d300e74a3f795b8d011bbe04624de83071f2715b5f62774c5b0548"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "773e28a6d883597809b3f8838ec3bdad67fb6782672012e8a3d6fd67a8e60742"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2ab39c21acecea486f0a259ac8bd4465b9071c33a1d89f5cac83c9b921d1917d"
+    sha256 cellar: :any,                 arm64_linux:       "d036a8b0922f08bce53b05a69bca2ca9befb2a7f64e422bc75cfd6d0a9d02efd"
+    sha256 cellar: :any,                 x86_64_linux:      "a5a109197b209471d045542025aefbf433fa61078bd7fb1e1c13ba06d17703ae"
   end
 
   depends_on "pkgconf" => :build

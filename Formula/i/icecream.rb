@@ -4,6 +4,7 @@ class Icecream < Formula
   url "https://github.com/icecc/icecream/archive/refs/tags/1.4.tar.gz"
   sha256 "249dcf74f0fc477ff9735ff0bdcdfaa4c257a864c4db5255d8b25c9f4fd20b6b"
   license "GPL-2.0-or-later"
+  compatibility_version 1
 
   bottle do
     sha256 arm64_golden_gate: "2f765b64494fb9733f369d30a457deb0c55017ccad9d50de16e5ee15a9c88d3a"
@@ -34,6 +35,8 @@ class Icecream < Formula
     depends_on "llvm" => :test
     depends_on "libcap-ng"
   end
+
+  deny_network_access!
 
   def install
     args = %w[

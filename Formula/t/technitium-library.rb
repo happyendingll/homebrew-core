@@ -4,6 +4,7 @@ class TechnitiumLibrary < Formula
   url "https://github.com/TechnitiumSoftware/TechnitiumLibrary/archive/refs/tags/dns-server-v15.6.2.tar.gz"
   sha256 "e7f5add92da555fc3120991fabd802c0605ab9c45cb4b56137dfb0699a006cec"
   license "GPL-3.0-only"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"

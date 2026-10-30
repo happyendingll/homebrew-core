@@ -4,6 +4,7 @@ class I2util < Formula
   url "https://github.com/perfsonar/i2util/archive/refs/tags/v5.2.6.tar.gz"
   sha256 "8e9e15f6ccf7b7c5edd509350de6f7507b3f8121f09d9f9de4439d18e4026ea0"
   license "Apache-2.0"
+  compatibility_version 1
 
   livecheck do
     url :stable
@@ -22,6 +23,8 @@ class I2util < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+
+  deny_network_access!
 
   def install
     cd "I2util/I2util" do

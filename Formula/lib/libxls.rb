@@ -4,6 +4,7 @@ class Libxls < Formula
   url "https://github.com/libxls/libxls/releases/download/v1.6.4/libxls-1.6.4.tar.gz"
   sha256 "064ee1da6cf3d481d8af4a936e0e0ce0190114e468fb7dfef5a81610746081e0"
   license "BSD-2-Clause"
+  compatibility_version 1
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

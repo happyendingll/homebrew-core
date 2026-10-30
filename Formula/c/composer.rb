@@ -4,6 +4,7 @@ class Composer < Formula
   url "https://getcomposer.org/download/2.11.0/composer.phar"
   sha256 "9674f12a2a181100d889ebfd0b4510805b3e94cea57869b14b383753d602599b"
   license "MIT"
+  compatibility_version 1
 
   livecheck do
     url "https://getcomposer.org/download/"

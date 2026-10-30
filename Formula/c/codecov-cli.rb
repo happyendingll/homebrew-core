@@ -3,15 +3,17 @@ class CodecovCli < Formula
 
   desc "Codecov's command-line interface"
   homepage "https://cli.codecov.io/"
-  url "https://files.pythonhosted.org/packages/b8/c3/d097b669f1d794d956e4afc52cf5d2ce3d1d0bc42cb3505092fbb5b4d319/codecov_cli-11.3.1.tar.gz"
-  sha256 "316bd39d0e90491b9bd609bc4ad0c2c037ee9c724faf4b2b72c1f70755d4e616"
+  url "https://files.pythonhosted.org/packages/f2/19/1367324bced99f812abb12258ea210aa15a35de424916fd2af6eea47da69/codecov_cli-11.3.2.tar.gz"
+  sha256 "efe8c3aad2fae8f1645d9498d56647e57acfc8f97bcb22167233f7f9f3dfb95b"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/codecov/codecov-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "c9a7e7953deaf5cb9add9ef282334c0211c792c63b9b45d81fb21a30ca679392"
+    sha256 cellar: :any, arm64_golden_gate: "be39a692b3532dd6916f0fe7d7818eb96db4b894cee6215257d3de6911216bbb"
+    sha256 cellar: :any, arm64_tahoe:       "7275d21d76a057e7bbde21764739c56eefe0e37bb7b18b51600e65dde2ecee8d"
+    sha256 cellar: :any, arm64_sequoia:     "676f8c0815bf63119e0feb666c5131d66fcc2cba469127acb8cd72225a36a45e"
+    sha256 cellar: :any, arm64_linux:       "6609005450b7a72cd19669bffb4ee0393df578e6a4c1898a3ece4e591206aeb7"
+    sha256 cellar: :any, x86_64_linux:      "756d48462d90aa5abe13a6bd06db1a69b839b730237823fadde2ec3f19ab8aa6"
   end
 
   depends_on "rust" => :build
@@ -37,8 +39,8 @@ class CodecovCli < Formula
   end
 
   resource "ijson" do
-    url "https://files.pythonhosted.org/packages/3a/06/b31f040a8764336a11152e474a7abcb3782fedb0d1cdf78f442b82878c56/ijson-3.5.1.tar.gz"
-    sha256 "af40bd1a85f55db0b8b30715c858761306bd92d5590148636f75c3309e6e76bd"
+    url "https://files.pythonhosted.org/packages/75/61/4066af787ed25bfca02c3edd2d7fd489b1b5ca27b54b400b187e5f2865e7/ijson-3.6.0.tar.gz"
+    sha256 "ec8f9265524e724905ecf00bdd061c374baaa8d5045ef50425695fb06efb45f5"
   end
 
   resource "pyyaml" do
@@ -52,8 +54,8 @@ class CodecovCli < Formula
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/67/93/9ef70bfb7346c778caf09b7cd10c17c33f601f2d17019fa1aedcda738b5f/sentry_sdk-2.71.0.tar.gz"
-    sha256 "7beb27a22f06396f3a05510c3da6ea10e1c79e02e859993c27ce4ff074e296d6"
+    url "https://files.pythonhosted.org/packages/c5/3b/1e47acf2456781c26e12007379ecc154bf310b8f64d40390d78b791d55c3/sentry_sdk-2.73.0.tar.gz"
+    sha256 "4a2ab97b16e4693c325ab361c7bbbb346dbc7d0bc0150922d795a25bac8d5280"
   end
 
   resource "test-results-parser" do

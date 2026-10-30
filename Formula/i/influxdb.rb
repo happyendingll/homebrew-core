@@ -2,9 +2,10 @@ class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
   url "https://github.com/influxdata/influxdb.git",
-      tag:      "v3.12.1",
-      revision: "692ea4a9943fc343c5fdf830d7dff82eef1f7fca"
+      tag:      "v3.12.2",
+      revision: "cc9769917ab399ed5b48567a92b5d34ed4d918ea"
   license any_of: ["Apache-2.0", "MIT"]
+  compatibility_version 1
   head "https://github.com/influxdata/influxdb.git", branch: "main"
 
   # Upstream no longer creates releases for tags on GitHub, so we check the
@@ -15,8 +16,11 @@ class Influxdb < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "f8f50101bc71bb500b65b4aae92dacc6d87bf5ee3c7ba9fda2447673911a97e8"
+    sha256 cellar: :any, arm64_golden_gate: "bf0d0a438df8a6e8031b4be30edda0da413156785bcf665db733e22fb86b1063"
+    sha256 cellar: :any, arm64_tahoe:       "4282ad6ff2919791ddc7e056dfb5306d26cef7a819a4ae9a095987d25a2d521a"
+    sha256 cellar: :any, arm64_sequoia:     "1c23dfb3c9eed7d644064f9e2ee7b158469fff9b41d5f48897f2a2527c294952"
+    sha256 cellar: :any, arm64_linux:       "78b0c577759548fe420830634d6eb2708b5da163de352c46df6d5144fb1b88a5"
+    sha256 cellar: :any, x86_64_linux:      "6b1cc4fa8aa460857ffcc172127abe4b086c09287844fed3fa3f46c2ec319dd0"
   end
 
   depends_on "pkgconf" => :build
