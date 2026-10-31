@@ -24,11 +24,8 @@ class Node < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "c072ecd0c4246024c5136309e1ffbd323c5a065aea0cb65234ae0f326783ef9b"
-    sha256 arm64_tahoe:       "4fe17e0092ba4c1abca8d97107e39062c488f5362fb05a830f8c3ed7a6c047e3"
-    sha256 arm64_sequoia:     "70b3f333184a9f9c1388ac782ab5961fb08e84966df1e4f9c50bae0cbb114d88"
-    sha256 arm64_linux:       "d9702c2e188fe887f15614413c2cf489e04fa3cba22ada629c806c889eada3f1"
-    sha256 x86_64_linux:      "d45b09ff71517ad1f1945400e51e06f019832f350f82a5fbbad3b3036a97d6b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "9338266d1ad1f821bac728287e1e22f1cea5162a5208333209164d6f4bbe7431"
   end
 
   depends_on "pkgconf" => :build

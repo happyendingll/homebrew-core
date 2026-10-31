@@ -47,12 +47,8 @@ class Mesa < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "897e0d3f764d267662bde849fa4cf7d51ef7878e2a792b4ad29330990a52c4ed"
-    sha256 arm64_tahoe:       "5108b036f37f60527e13cd9e4b9a6b8b03c580bd9fe4f2b03bea6acb07e46bd2"
-    sha256 arm64_sequoia:     "04f8a08bd1fff4311e8014ca89054d0bfd4967548a76f3a5903295917884d484"
-    sha256 arm64_linux:       "2f887b328f704e50cbd546176edecae4ac63379cc58495e2ce2314b5b359a260"
-    sha256 x86_64_linux:      "3fd20b664ea4f77c4588e5714f3394df8647a42eacf3c945efd0334711ed1920"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "0ef07793e9e7dabdba22231ae1ff71fe6d6df45e2484fd7ecb1ba15fa4fb9795"
   end
 
   depends_on "bindgen" => :build

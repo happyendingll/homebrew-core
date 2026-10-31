@@ -14,11 +14,8 @@ class Groonga < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3701cd6b92b5053c5d9f2e7f25fcb18e5718f81a5252244a53a560629104ab06"
-    sha256 arm64_tahoe:       "de89ed2566207eb300e1b51bbdb5b46e0c5b72ec3c1ca8d0ce1c5c7ff2173858"
-    sha256 arm64_sequoia:     "2fbf451feaca2b5fb727ff302ecc208639566540a92a432a45bcfab458717088"
-    sha256 arm64_linux:       "00b2b981c5b40c362ab2068ae037a089c3c6053448527f9f959eb27757c27919"
-    sha256 x86_64_linux:      "7a9b1860f876e91b8d574a5fc806c460d4e692dd2c56da370e49a4c9e031effa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "4e3c1f1e00cf5e7a7baaaf814c8961564782e84698f102795fa4d95070fdeaec"
   end
 
   depends_on "cmake" => :build

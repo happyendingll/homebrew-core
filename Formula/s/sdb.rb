@@ -7,11 +7,8 @@ class Sdb < Formula
   head "https://github.com/radareorg/sdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e277f7ecb1a1608024872e64e3351ab88e6487cff28741d9dd86b239d0977158"
-    sha256 cellar: :any, arm64_tahoe:       "aa39a46946575bba03d6ebb8b5b739fedeb3d1e1985d290919cbfece8883e023"
-    sha256 cellar: :any, arm64_sequoia:     "ea585f1d772a1c0dc1947d07c0821dcc42d76dea2bfa53d488c6cf76c8f5201a"
-    sha256 cellar: :any, arm64_linux:       "f74249699807cb5901cdffa067b4f8ccac3c784bf15bc725718e323c86d60c08"
-    sha256 cellar: :any, x86_64_linux:      "dc7c200fc2b7f969ee41c64badcfc86a0479069ebfb51b42d125d7d265e28501"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "a8bc95ee9693956cb31d2126d0d36885d52e15a44c269131fc22c473a039566c"
   end
 
   depends_on "meson" => :build

@@ -12,11 +12,8 @@ class Gnuplot < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2fd945496dc795654ebf62ecb365fcfb6fd7b37b5eed6561ccbc885e8dca2849"
-    sha256 arm64_tahoe:       "b4699393b6588be003f891e0fd87836a10024d11e10b3cff71cdb9aabd53ac1f"
-    sha256 arm64_sequoia:     "5359d6afc0ddef2ed2f1f283f9ca50b66d6acca3f72b8976ea6b8008e098d293"
-    sha256 arm64_linux:       "93d755518376d97d006c73a8fffe249d66eb7fcb19ab3fe13bad0e6f402dfc4d"
-    sha256 x86_64_linux:      "971767f481066ec6d1842eaf86cc2cdd99ce2f2ad3ba545942d8ad9522e9d07d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "54a3c11e9475a4f0570beb0e97ab5804faf8f0d5a3905d005e40f31f654bc662"
   end
 
   head do
