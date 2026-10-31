@@ -7,11 +7,8 @@ class Rqbit < Formula
   head "https://github.com/ikatson/rqbit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5424d8dcaa06035c2ef8c61741a4cf5cfbb152c70322bae916cb812b7ccb599f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cfc65b9a5980ce607c476dc6171f4207097d5b74f46420afec2d242ba9cd95a8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a86b8a4944c47bc763a08be24610270f83a1d8c450b2845efd096c4143b37dea"
-    sha256 cellar: :any,                 arm64_linux:       "5915cad2671dc54512c556af877ee9296a3b7f4d1ceb499f1dde223a932f7f12"
-    sha256 cellar: :any,                 x86_64_linux:      "15ee248b2a00d7b1d952d053dd82d2f0529c9e0122184d0e542cfc7b629e23ee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4ea05a935210d3ff1090778c3e9f24adb352c168e3520b655fc9ee933524072"
   end
 
   depends_on "node" => :build

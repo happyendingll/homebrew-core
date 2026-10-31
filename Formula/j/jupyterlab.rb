@@ -12,11 +12,8 @@ class Jupyterlab < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4a4f5f7c05cedfb9a524d94257d5868c9b6b2eb56c807a96d4095f57430f1080"
-    sha256 cellar: :any, arm64_tahoe:       "c7f9f6ff304b25e0e003fb4eee9938d7c90cef8d8d37e3f2c3f305f1df796695"
-    sha256 cellar: :any, arm64_sequoia:     "1a83437b0bcb322bf653f28b1233fb8d5de5e9be11e6655c5cbacae58a5a020e"
-    sha256 cellar: :any, arm64_linux:       "b4e137d4112dcc2efc824088d44563acfb6562b55708b61c00de94d509f3962d"
-    sha256 cellar: :any, x86_64_linux:      "3aa4c35675f7302ac20be590ebde16f9bdf6ae6f6ed36baf6474a93af4ef012a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "e5b7105d2e1f0fb35d852bf5c3d1c87719cbe3a26d1bc1a7c96ddb48ddca1e34"
   end
 
   depends_on "cmake" => :build # for ipykernel

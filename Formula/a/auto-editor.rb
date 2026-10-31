@@ -7,11 +7,8 @@ class AutoEditor < Formula
   head "https://github.com/WyattBlue/auto-editor.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d363f0788383d2979218190a57571feeb5a52cb0993a66ccdb23500857e4e00d"
-    sha256 cellar: :any, arm64_tahoe:       "b0755c556d971829d1580c30d36f4a0eb30b4d52f05b0cd85d7bd5d33da2401b"
-    sha256 cellar: :any, arm64_sequoia:     "fd580bcef4826b0cf80bfdae4f90ce747424b07efb39ba56c6f26124a3222214"
-    sha256 cellar: :any, arm64_linux:       "a4e54e40c0ae8d7df138d46dcf773f5223f6a5902fc7af3f44deb7742ff71539"
-    sha256 cellar: :any, x86_64_linux:      "0655032995aae3105136b0aa1e090fdec76bd22087cef5757d0f7319dae4e5da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "07b29e38af2e297b712ab23b055674f2a7626e20f773503682bcd0477d3cb2b0"
   end
 
   depends_on "nim" => :build
