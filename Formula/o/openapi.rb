@@ -7,11 +7,8 @@ class Openapi < Formula
   head "https://github.com/speakeasy-api/openapi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2c15de82e8f965396a76e1c99bf39e994011b432a1ce418eee0b941e007ad3ea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2c15de82e8f965396a76e1c99bf39e994011b432a1ce418eee0b941e007ad3ea"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2c15de82e8f965396a76e1c99bf39e994011b432a1ce418eee0b941e007ad3ea"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1fd0db6fa1a654e1d7980fd26f5b0d528199d1b6496e723ba776a240d1faabc6"
-    sha256 cellar: :any,                 x86_64_linux:      "725b027d2b765126ecf8bd0d2aa8e2de473ea4982c3c8a87998682c16ea05d3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "6d7be1b193f4dd735b4c137f014ab0a8d1d2a7de133c586462e1dd10e77829f4"
   end
 
   depends_on "go" => :build

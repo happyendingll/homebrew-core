@@ -7,11 +7,8 @@ class Moor < Formula
   head "https://github.com/walles/moor.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e49863af56645075d42102e02287971b23c3b63618e5479ae18ba5719efffde"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e49863af56645075d42102e02287971b23c3b63618e5479ae18ba5719efffde"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e49863af56645075d42102e02287971b23c3b63618e5479ae18ba5719efffde"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2274d85d998e7afa1942ba969343440961192e8f020b7cf06c6951a3afe832d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9bf493ca9905e2385cc7c5cfebec83014d20914a231a6d046eb1ad188fa5a88a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "173d8725441159882f484d0d85009cb54895ce0afae231c800e3a34fb8f80487"
   end
 
   depends_on "go" => :build

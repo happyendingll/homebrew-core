@@ -12,11 +12,8 @@ class Libslirp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5081aebdcf1a0c08f2b7bc92c2279c2a7b9d93650c2ba54d421aac888c67e935"
-    sha256 cellar: :any, arm64_tahoe:       "4a5b0100041e92a6b61b01cb7b393b76c7a9a1391d706e7da52267507f004535"
-    sha256 cellar: :any, arm64_sequoia:     "c42971e7df9e9a58df62547c10ce1621ec994db2fd274e21692680b11b538432"
-    sha256 cellar: :any, arm64_linux:       "501bc6bfbb89b2eb9cce5186b3275cb4a12214f36dc4d399b9105ba690cbd83c"
-    sha256 cellar: :any, x86_64_linux:      "74ddb28a719477e19713edc0ba386f928b31655fba284e4b2db0f38b3b336144"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "3fcb1a1cee0fffcfc1768a9ef9a7027d24c979ccbfa97d61ac35cd3f51059bb9"
   end
 
   depends_on "meson" => :build

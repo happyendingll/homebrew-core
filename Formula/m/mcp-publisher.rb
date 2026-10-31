@@ -7,11 +7,8 @@ class McpPublisher < Formula
   head "https://github.com/modelcontextprotocol/registry.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ceffbebdf02d4f7d2c3621e1fb8347d8585e194fbf72382e17641272ea42f92"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ceffbebdf02d4f7d2c3621e1fb8347d8585e194fbf72382e17641272ea42f92"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ceffbebdf02d4f7d2c3621e1fb8347d8585e194fbf72382e17641272ea42f92"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ace99e2d0c45c9fadcf5df9731569c5a1b03a84cb34e83b1efd6f2945b3c348b"
-    sha256 cellar: :any,                 x86_64_linux:      "100778d12ee4e5f4585d161d0027c781e5595c6a915d4bd19b6665a61deaadb5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "bef1fd75aee6020cefa768f8cf4f5fc25501a96c76e515185ea911184f89c04b"
   end
 
   depends_on "go" => :build

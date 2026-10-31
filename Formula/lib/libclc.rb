@@ -13,11 +13,8 @@ class Libclc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d01bb75e1befb15fb370ba715caf5f12b338af34d0776c76db39dc63d708cd4b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d01bb75e1befb15fb370ba715caf5f12b338af34d0776c76db39dc63d708cd4b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "63da17025a75cfa99964805fd86bf818d31f57b75c9c005aaf0e63ae31ffa07c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4c78c63f3bc44d009d68350f9abbda33de690cecf9d5101fc33b91d7f4fe4cca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4f3e09173647a65a61316939f59de416bc2faf20e078935f5f1070d6429c8581"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "683eaf3f83eb851f8e350bdae8df26e83cf7c2449c2ecaa41f30a074005b312c"
   end
 
   depends_on "cmake" => :build

@@ -11,11 +11,8 @@ class Range2cidr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cf311bec29e8f58692a4b1dd01ebb667fddc281f00d4b0974836f4e6d787d7fd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cf311bec29e8f58692a4b1dd01ebb667fddc281f00d4b0974836f4e6d787d7fd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf311bec29e8f58692a4b1dd01ebb667fddc281f00d4b0974836f4e6d787d7fd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2c26d810c4f6d078b0d0bef07c25acf5949ba5ffc09f3da5ae9e86a49c19f65f"
-    sha256 cellar: :any,                 x86_64_linux:      "67939934e2d010c9cf51e3d682052b9cc717b1d2d710268f67b4e4fcbaec0eb9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "4dcabfa6ec84d35583a628b8a51fad5d31ec9e143d80f8ce457931371d4a57fb"
   end
 
   depends_on "go" => :build

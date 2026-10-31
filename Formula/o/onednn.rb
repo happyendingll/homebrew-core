@@ -12,11 +12,8 @@ class Onednn < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b44ca7c39bbdc6847b883283351d544783e0139595e1ed53bafd7f6413f3da1c"
-    sha256 cellar: :any, arm64_tahoe:       "f943131dd844ab66b628c1157fda6a5d96ff67b231a75710ede44f8467514101"
-    sha256 cellar: :any, arm64_sequoia:     "7fc864746c2e041a3a497ab61fdaee66be516efb31ad93d7d10686df29fbedf1"
-    sha256 cellar: :any, arm64_linux:       "70ace16e963b9531102f6b07b63bef01ebc692069c2717f6fc9d818d4583568c"
-    sha256 cellar: :any, x86_64_linux:      "ad88e413b9c35574100872183009cb38e6aad691698894a03e32a593461e7a71"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "dffb4752aa91111f23e96d76f26f9c19e3365c41531b548d1d661712cf4bcca6"
   end
 
   depends_on "cmake" => :build

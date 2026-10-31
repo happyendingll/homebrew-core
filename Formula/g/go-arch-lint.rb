@@ -7,11 +7,8 @@ class GoArchLint < Formula
   head "https://github.com/fe3dback/go-arch-lint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2b10fe9c840447a62e693526fbb4a09e25ec501793b9a1ffacc3b1080891b5e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c2b10fe9c840447a62e693526fbb4a09e25ec501793b9a1ffacc3b1080891b5e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2b10fe9c840447a62e693526fbb4a09e25ec501793b9a1ffacc3b1080891b5e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8e159ab3bad30ca229312f4f599343d961c46a0f5370d010768112252d173abe"
-    sha256 cellar: :any,                 x86_64_linux:      "81a64ce8c1bd2408bda01a50e78691c9e78e1d5972d58db77f99ace737671bcf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "4a18e3af256343cf86c8d08c8b29b01e8480c9a0490b0ebf3bbea7288b0eccaf"
   end
 
   depends_on "go"

@@ -9,11 +9,8 @@ class CodecovCli < Formula
   head "https://github.com/codecov/codecov-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "be39a692b3532dd6916f0fe7d7818eb96db4b894cee6215257d3de6911216bbb"
-    sha256 cellar: :any, arm64_tahoe:       "7275d21d76a057e7bbde21764739c56eefe0e37bb7b18b51600e65dde2ecee8d"
-    sha256 cellar: :any, arm64_sequoia:     "676f8c0815bf63119e0feb666c5131d66fcc2cba469127acb8cd72225a36a45e"
-    sha256 cellar: :any, arm64_linux:       "6609005450b7a72cd19669bffb4ee0393df578e6a4c1898a3ece4e591206aeb7"
-    sha256 cellar: :any, x86_64_linux:      "756d48462d90aa5abe13a6bd06db1a69b839b730237823fadde2ec3f19ab8aa6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "6b09c556d0fa246c1882e4f5f847e937e2e321eaa9e8776ec6aac42b085602c0"
   end
 
   depends_on "rust" => :build

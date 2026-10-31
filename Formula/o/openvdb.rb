@@ -7,11 +7,8 @@ class Openvdb < Formula
   head "https://github.com/AcademySoftwareFoundation/openvdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ea5c68ef31d5d0237ddf5e232c49f02bf944848dde09d11e44c105e9c73f07eb"
-    sha256 cellar: :any, arm64_tahoe:       "35ddf4d68eeba9c4a981780be45c602e5e83ca2d41ecfb36339ff806d34abec6"
-    sha256 cellar: :any, arm64_sequoia:     "a51529bb6a783246010c75e71e318fb50cf9804773346ec76a446d99897f9033"
-    sha256 cellar: :any, arm64_linux:       "dc16e7f6ea3385843ab2cea6a89ff82934be6c1fab679f664f34da87e0bbe0df"
-    sha256 cellar: :any, x86_64_linux:      "41e3e7721db850fa5fdf632a027d183cf329eba77041f385053548d015b4938f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "5d3fcd4e03afd0c1f186dd98bf112dfa462c0ee20360f0d116fee0a1dbd1e235"
   end
 
   depends_on "cmake" => :build

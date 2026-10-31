@@ -11,11 +11,8 @@ class WasmBindgen < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d22d2f668e02ea827d9b9bc0f0c30f8faa294ef5ed227bfe02f8273f644f77f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "932c0b7d566444fb8c5040211029c86b0f453429c9ab5a372bdb78cb260b2dec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c713ef118fdf937941f0fb46a0c83394bf2dcf01adc4f013437189d0cd36d738"
-    sha256 cellar: :any,                 arm64_linux:       "6f3edc5dcb7e5ab9be8451223ca96c6116bda61ec4bc4ad9fae013ea752a67ac"
-    sha256 cellar: :any,                 x86_64_linux:      "52ed8a5d30792f3aef9039041f301f1af3f0eb28a4fae0aecc987b09f274dadb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e299a8e962b1ba5d4ab26ead45249ad9de32c551599557def594e951d5711d25"
   end
 
   depends_on "rust" => :build

@@ -6,11 +6,8 @@ class Tmuxai < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5749cbc97020da11ea6156bdc0a4edfd00d57b3b1522cdeb9b5bb23ced7eecf5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5749cbc97020da11ea6156bdc0a4edfd00d57b3b1522cdeb9b5bb23ced7eecf5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5749cbc97020da11ea6156bdc0a4edfd00d57b3b1522cdeb9b5bb23ced7eecf5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5935cb341c884aedc80bb1216343b060b7d2ad31951b88e9332f78512a16c51d"
-    sha256 cellar: :any,                 x86_64_linux:      "c3d9ae5be9ee446c42d5b12ae7aef430ab951357e9faac2f9ca89cd36687aaba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e88c4f1823226707017a1b4cdeeb958ed6f229760f3978d1222704f4b438a14f"
   end
 
   depends_on "go" => :build

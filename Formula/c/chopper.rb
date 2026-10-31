@@ -7,11 +7,8 @@ class Chopper < Formula
   head "https://github.com/wdecoster/chopper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2da445b34e705eb275c041c09dbbaba477589fb44cfdfd5ab0323e884a6044e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf94e9510a482e0c5c3f53b2f98b919a7dabe03ceecaaedcd27ff9cf1995bf6c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9134d08fd6e25bfe15149d6c72302ddb77692d1650a99cb09b7c0a419c598af4"
-    sha256 cellar: :any,                 arm64_linux:       "d453e22fa8c541a560e4b39cc976f3e540fde59dfe5d84f0e63deb958f0d8059"
-    sha256 cellar: :any,                 x86_64_linux:      "4368ac9b3050ca90d9edf9a9c85caa6716119f9897a03f470d3af87b2d4be04f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "4eb0282be9e2322f235e457477864b0d0079c55829a6dfa8be036ded79eda0e1"
   end
 
   depends_on "cmake" => :build

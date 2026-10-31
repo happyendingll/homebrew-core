@@ -12,11 +12,8 @@ class Mongocli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b56090f60056367def7597e125dfa765e598f5982251500ad5a63196e4825042"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "07fb492f7603c422165552eb4e34335f7c49ccc9d54e7e2329d5567f13fb3a6c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a716563e0236c581be17a30737c5ed836c0af0b79820a555c5015c0b2a62dd01"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fc3b7072f0605a0a99d9785d6cb3ae9b0128f9b0f7fcffc19cf7f7b96a474ef9"
-    sha256 cellar: :any,                 x86_64_linux:      "062f8ab909bccd2f424e8b1f1bf2cef15533a0083bbb1847d53f3b9cb6328510"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "72c0c78656e0d84b33811ea8bd417f7bce5aceedf18f4b96f9b8317c19486785"
   end
 
   depends_on "go" => :build

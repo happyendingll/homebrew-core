@@ -6,11 +6,8 @@ class Labctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f1f0d785d5d76089849e9f0f552aebdab09bba44a6bd0790a1102c65c02490e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0f1f0d785d5d76089849e9f0f552aebdab09bba44a6bd0790a1102c65c02490e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0f1f0d785d5d76089849e9f0f552aebdab09bba44a6bd0790a1102c65c02490e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b7c5d7bbce2083c0cabcce4a520628aaf2626afb1184136e24779d29411ceb2e"
-    sha256 cellar: :any,                 x86_64_linux:      "37319fa84cbcb84bede55c1bc90ad6e31072b5c1a7e8ef47fc998cb9845d3cad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "464c18c336b61d2b892bdb9fd5f984c60f0c5078f8243db6bc2c462b43b8ebe7"
   end
 
   depends_on "go" => :build

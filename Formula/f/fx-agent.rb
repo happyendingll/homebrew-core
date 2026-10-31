@@ -12,11 +12,8 @@ class FxAgent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "134f9c9aebf68e186e0561d8179889e7e5861c5b8b20788c2443e4939a358863"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "582e431caa02f34e91ee3d6518443f49db8344e199ea59b92622f5ee4620722d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a49fd6867638c38ac2ecf19a5e5202e3209ece7d856cd74877ebe3292aede652"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9c725e164844340b8db3a04d81de7ab2ce3463cea1860880f5d9883caf20eb37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4dbd0b5c33155cadbb5313d9de6c255125c445cc18bf72a3b769ca5859b13f3d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "9aa67dfd749fef41839316441b6b3b0d1bf224aed22e6a8ea6d47e717724e8e2"
   end
 
   depends_on "zig" => :build

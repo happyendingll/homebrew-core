@@ -7,11 +7,8 @@ class Sqruff < Formula
   head "https://github.com/quarylabs/sqruff.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "572b0a437663e0862672efb6c624a342a62b74113784f973afe2b39c70f70aad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "db9eebe4dd421cca72b0057ff65176b817013ef4856437f43a0dce80fa219d67"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba33d7216504ea0f59ac419f8499584463eb22ee0d6a2f3a01691435de5c74ea"
-    sha256 cellar: :any,                 arm64_linux:       "d5d05d974078bdb5508a0bf13e6acf83f906b97e80c30ca481d44e854acee4ae"
-    sha256 cellar: :any,                 x86_64_linux:      "84f06721d3ceb28d77ed2c3d6a95cf2726e9b5ae62c1d37601bb7c0ca071354d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "2cbaaab42b7d3076d90cb40bf9dc04d3bcb612f0b79684075cccd71a8cf67fc0"
   end
 
   depends_on "rust" => :build

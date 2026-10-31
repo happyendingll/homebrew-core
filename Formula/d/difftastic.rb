@@ -7,11 +7,8 @@ class Difftastic < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "723b703f2dd8d40a55b8d25b4281d03910afeadc999e894564e10325629b601e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9693c05f15d218cac89059bf485fb18184042794d6b11970c285b1baa18ccbc7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ee1042381b293f2e1f013399651970efa781d06830238df8b01f3a63ff8dd2d1"
-    sha256 cellar: :any,                 arm64_linux:       "37022c7048f3db689bc71ee0f47e286da757c390cbb9cb336e017345cfc5229f"
-    sha256 cellar: :any,                 x86_64_linux:      "198745b464c6af1e417e5ae3eb30152792980593a396e5ae36fc1eb156188ede"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "3cdd2c6dc8c8663c91977ef6dc448ae4d866d2fb2e2b9a4abd14a942994d361f"
   end
 
   depends_on "rust" => :build

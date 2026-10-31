@@ -7,11 +7,8 @@ class Tsuzuri < Formula
   head "https://github.com/jaisuriya-11/tsuzuri.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "302cb42d968393983986cf660964934f0ece39061e03c9d80c9751877be66b54"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "302cb42d968393983986cf660964934f0ece39061e03c9d80c9751877be66b54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "302cb42d968393983986cf660964934f0ece39061e03c9d80c9751877be66b54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "177907e8e461eab6998dce412eb9d1d74481525048018e06c7aea12aa4acc8e5"
-    sha256 cellar: :any,                 x86_64_linux:      "de88f2e963bd8be3c7427f62cf31a112acee45fe8c7a04f89ef2648f46955e19"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "9a1061739ed8d697971d0cfe3ff123fd0d42dd5e29ae2f3c541a4065300537a4"
   end
 
   depends_on "go" => :build

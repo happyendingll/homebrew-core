@@ -15,11 +15,8 @@ class RancherCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "12682b135c7688704906dc2c8e40c518a7c5df498ebf9afe31cfdd2d390f3f42"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1f08de710ecc0713fa98fc9086fa08ece8286b96f03fb439929560869e70e289"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21a686a8625d95c913be56a080eb34b3f5abba2cc578aff14479c23046f46385"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "71efa382996c6045d5681db82b9602f252df11ff068996d801705fe28ee482f1"
-    sha256 cellar: :any,                 x86_64_linux:      "b8875ebe746efc820f9e81eecc94414b56ed31d88e3f6da5da705073125de736"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "eb5fe550d6ccb2cbf2d9cc1458a62eeacb2c11110345f5f1c97f99fb02ecb7c4"
   end
 
   depends_on "go" => :build

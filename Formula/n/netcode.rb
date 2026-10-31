@@ -7,11 +7,8 @@ class Netcode < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5bd5199c2645b18bd8baa3bbc6fe35da3ebedfdec2d0269d2ffc4d61151cf632"
-    sha256 cellar: :any, arm64_tahoe:       "49c78dd045d551df4b53d37122cd65c0b98274d276b62b1ecb6bc7e646da8c37"
-    sha256 cellar: :any, arm64_sequoia:     "24d0ce692e834e7840b059a644f8241cae209abb1b38ddf43a213fe96b1fce8c"
-    sha256 cellar: :any, arm64_linux:       "926a3ce6ce9762e38667aa2cdb26f6981a03793c24bf41d1337f38da69ee6700"
-    sha256 cellar: :any, x86_64_linux:      "00584a9bcd008628834719c0cd522c37ad277824f240f365a4d556bce079cb87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "fe550a0b8ef7f95a96d930b466480d4259a8544e9ab38692063b13ca0e2e6f0c"
   end
 
   depends_on "cmake" => :build

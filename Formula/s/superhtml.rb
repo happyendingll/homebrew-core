@@ -6,11 +6,8 @@ class Superhtml < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6f732d36799b5cf8266aa082a4068b42394e343be5adccf62b18153caba76aa9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1012d715d16b4ee40dec42a806c81cfa4ee95abde83b96c51fb24d1e4ce02f8f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b1825c82f70d7eabfe05296d6ed53fed4ac06cdcf367da3af50fb90b9c55be3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ddba2ecc25ab24ad140dfea8e3bb6dbe62853c747c786c26accce1e69423a9d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "31a6d7a3b3df3b5538e4f384a9fac0254ac60cb3878cdef455bb3b13deec9bd6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "27d21ba4f9bd89537975474edf7eda3c7d467dc19ca2b6a80839429f5a3f4b52"
   end
 
   depends_on "zig" => :build

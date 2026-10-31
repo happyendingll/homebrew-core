@@ -7,11 +7,8 @@ class TomcatNative < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dc934497c32239fc13dfbeb08f58ff47b828497b804cebb55bde114c204fabda"
-    sha256 cellar: :any, arm64_tahoe:       "1b63900a41828bd4573a306ea94729905316f9e3a9e84237b4d2189a01c78a4e"
-    sha256 cellar: :any, arm64_sequoia:     "9dd8a053bd1885ea76fbbb815e9a42664c3b3893b470f892bcd7c2e823a46187"
-    sha256 cellar: :any, arm64_linux:       "a525ca2b758e4f29d6a686fa98c58d89cb9f1f12f600af4e2d2a949631e4cac3"
-    sha256 cellar: :any, x86_64_linux:      "7e661e20ebe71d0047a6e2927a1c3a143a94b756614a3ba877ac84d04b413d31"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "c894baaf2b5fddd958acf024291daee8916f02fda2cf71d4ebb6e44c162f36ca"
   end
 
   depends_on "tomcat" => :test

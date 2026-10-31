@@ -12,11 +12,8 @@ class Incus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "51dc23b3808c29a15c9f2cfe3aa37fb2a5048636e45022981884329b03724f9f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "51dc23b3808c29a15c9f2cfe3aa37fb2a5048636e45022981884329b03724f9f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "51dc23b3808c29a15c9f2cfe3aa37fb2a5048636e45022981884329b03724f9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "74209d89911b148665453128ad8bd85b057e2943383cfda34d36ce033f52362b"
-    sha256 cellar: :any,                 x86_64_linux:      "4ab6c53fd785c9cb254ca1959f216071d93346c07f1c0e5560941554f030b4f5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "add4fe5fc71a0e3b2b78d80e979d1c70628759aa860e139ca76d0bf606bd6be3"
   end
 
   depends_on "go" => :build
