@@ -1,9 +1,9 @@
 class Mac < Formula
   desc "Monkey's Audio lossless codec"
   homepage "https://www.monkeysaudio.com"
-  url "https://monkeysaudio.com/files/MAC_1343_SDK.zip"
-  version "13.43"
-  sha256 "3fd1c60f994daba536902f30b1bebc2235099c8b8a039d8b37d9d27d4827e0ca"
+  url "https://monkeysaudio.com/files/MAC_1345_SDK.zip"
+  version "13.45"
+  sha256 "b12bda0eb9e31dbe01d54a970d387add3a8c1079901141021d257de17a6a9106"
   license "BSD-3-Clause"
 
   livecheck do
@@ -14,8 +14,11 @@ class Mac < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "54925e25c2ad9380dfac4afd2fe0befab3d51c6fa4fc686fc81865a1850cf2c6"
+    sha256 cellar: :any, arm64_golden_gate: "eac9e72446aa69a6fc3270be308a1c9a0c35864d9aeb9e7e2c5fa8cb8a2f5607"
+    sha256 cellar: :any, arm64_tahoe:       "31e7e33da627419479e0e15f29bd7d4b3732b2bdc47e79d7465a36f36488bb7f"
+    sha256 cellar: :any, arm64_sequoia:     "d85783d80a40ea9f93f5fc6cd2c5ef99174c2140b25c567e6fc3e14854b409a9"
+    sha256 cellar: :any, arm64_linux:       "c89b3163807f25e2d433662f2ee52944fc54eef6d617b62b1c0e2cbdb3bd4a04"
+    sha256 cellar: :any, x86_64_linux:      "a69f7e8db1bcd88f8b8c1195c1aeacb6ccbc1b672d7df01cfd28d4cb81c39487"
   end
 
   depends_on "cmake" => :build

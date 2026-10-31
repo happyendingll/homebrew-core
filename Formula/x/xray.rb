@@ -1,8 +1,8 @@
 class Xray < Formula
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://xtls.github.io/"
-  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v26.10.29.tar.gz"
-  sha256 "ee22c6f21855f70a52e19bff02fa71f4b28ce071d83ff9154fafcaa0f315a642"
+  url "https://github.com/XTLS/Xray-core/archive/refs/tags/v26.10.31.tar.gz"
+  sha256 "be44f95d497ad4ba6e9d1dcfbbd71e8e51f812aff077d4c15c9947eff5e3046a"
   license all_of: ["MPL-2.0", "CC-BY-SA-4.0"]
   head "https://github.com/XTLS/Xray-core.git", branch: "main"
 
@@ -12,16 +12,19 @@ class Xray < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "aeccf2ed3aa0dfa49f185a5505b05c5eecb241fe060d1ff331d6f57c84c530b5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "272647a033e73191c5b876c4fb5a4ebf0757609ab710f086d0c38b533f2c3344"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "272647a033e73191c5b876c4fb5a4ebf0757609ab710f086d0c38b533f2c3344"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "272647a033e73191c5b876c4fb5a4ebf0757609ab710f086d0c38b533f2c3344"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bc5d4d8a39a119ff73abe726be825d931259d35eadcd415076ba6932ac9669df"
+    sha256 cellar: :any,                 x86_64_linux:      "826c179ccf8812c647c7344f6fbeeace3af0a06fd780e0c94c00c0fff15fb89d"
   end
 
   depends_on "go" => :build
 
   resource "geoip" do
-    url "https://github.com/XTLS/Xray-rules-dat/releases/download/20261028222509/geoip-lite.dat"
-    version "20261028222509"
-    sha256 "36e0e76145dba3f13ac4bf7be0b738d7eae957835fefd2ee220e7034fe52a4d1"
+    url "https://github.com/XTLS/Xray-rules-dat/releases/download/20261031001536/geoip-lite.dat"
+    version "20261031001536"
+    sha256 "ce90dc02a81528109c99d769e1f8fe3071ded6b02a574f31e62d8f4eee312563"
 
     livecheck do
       url :url
@@ -29,9 +32,9 @@ class Xray < Formula
   end
 
   resource "geosite" do
-    url "https://github.com/XTLS/Xray-rules-dat/releases/download/20261028222509/geosite.dat"
-    version "20261028222509"
-    sha256 "b8a31ce12d3ec997358bf2bde95be502df7402179d1c93d1e8b3eda6f7b08f3a"
+    url "https://github.com/XTLS/Xray-rules-dat/releases/download/20261031001536/geosite.dat"
+    version "20261031001536"
+    sha256 "9ee94acb06e2f795831fb1589c0dc7af9242b0fb8d9196afd981b915b1097ed3"
 
     livecheck do
       url :url

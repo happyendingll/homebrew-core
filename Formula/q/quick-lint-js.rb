@@ -4,12 +4,15 @@ class QuickLintJs < Formula
   url "https://c.quick-lint-js.com/releases/3.2.0/source/quick-lint-js-3.2.0.tar.gz"
   sha256 "f17b39726622637946136076c406e89d3a98ae363d5e3c2a93ab1139bf0e828d"
   license "GPL-3.0-or-later"
-  revision 14
+  revision 15
   head "https://github.com/quick-lint/quick-lint-js.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "5fcddee79ca4ce1691e204b618e7ad602f198a48c577e67fd83d2b5d26f6a737"
+    sha256 cellar: :any, arm64_golden_gate: "b7caa9b0ab17148fe3ff006837b2133c7849f2448bea3308f0e45c3db7c91c6d"
+    sha256 cellar: :any, arm64_tahoe:       "493b8be17c53a8bce31f032104c2986b78a26db1d7429fef94f139f1727a194c"
+    sha256 cellar: :any, arm64_sequoia:     "45f9b4ad4aea37a30667198864569aecb7362f93bcc3afc0b080d36cda9830cc"
+    sha256 cellar: :any, arm64_linux:       "0771eaf982c12cb8e30b6b4bbbed6855289b8061c736c6e436ae3cd2f144be77"
+    sha256 cellar: :any, x86_64_linux:      "4ca0f31f5239376e43f5c711b2f931fd18bd3e37c436b3d90f13763bbfd9fdb1"
   end
 
   deprecate! date: "2026-10-29", because: :repo_archived

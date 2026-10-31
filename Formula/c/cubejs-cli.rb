@@ -1,13 +1,16 @@
 class CubejsCli < Formula
   desc "Cube.js command-line interface"
   homepage "https://cube.dev/"
-  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-1.8.14.tgz"
-  sha256 "1f296eeb164aa88439dec249076c5b8ece9485139a2991f13f81e9a52e5401ef"
+  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-1.8.15.tgz"
+  sha256 "671c381f805d47287ba2c2ee0a5d680340a8f8d67f3eb6d20f671d04caf47387"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "5965dea10f78206a72e6cac007d923050dda9789f1009b9c9b092e3d12a08219"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7c78e1973aa5f90f5d8556cb8f22bfd54f5900301e5119658ac3370bc7a8b386"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c78e1973aa5f90f5d8556cb8f22bfd54f5900301e5119658ac3370bc7a8b386"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c78e1973aa5f90f5d8556cb8f22bfd54f5900301e5119658ac3370bc7a8b386"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3157617198a9585faacabfd4ce6faf1a55005ab96dc67c749a22d9b04ff1ff35"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3157617198a9585faacabfd4ce6faf1a55005ab96dc67c749a22d9b04ff1ff35"
   end
 
   depends_on "node"

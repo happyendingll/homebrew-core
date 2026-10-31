@@ -1,14 +1,17 @@
 class Modflow6 < Formula
   desc "USGS modular hydrologic model"
   homepage "https://www.usgs.gov/software/modflow-6-usgs-modular-hydrologic-model"
-  url "https://github.com/MODFLOW-ORG/modflow6/archive/refs/tags/6.8.1.tar.gz"
-  sha256 "16b9368d582c66de83106a4c075d22c2a7a08daa7d8dfb7f40e21a5d983be699"
+  url "https://github.com/MODFLOW-ORG/modflow6/archive/refs/tags/6.8.2.tar.gz"
+  sha256 "f40c64d333cf2d5089bb777cb296aa05a8b4ba11a49a1602d6e5e8626019dade"
   license "CC0-1.0"
   head "https://github.com/MODFLOW-ORG/modflow6.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "e0ec7189c913d5cc2ab2f3ed97dec210ca50c4675b82c29889e4448878d1f69b"
+    sha256 cellar: :any, arm64_golden_gate: "2b9b464b0b1cebc7dc22822b1df9e21f1b83a2fd40df5d62b65f7811e915510a"
+    sha256 cellar: :any, arm64_tahoe:       "cc8c167ce65886751d438a3ebff4033ecd70b516e4d90b918900201681298e71"
+    sha256 cellar: :any, arm64_sequoia:     "07a4ad99135c42d13edeb566db37e73b4ade8573496bd304d93e6b6782f29c4f"
+    sha256 cellar: :any, arm64_linux:       "64e489d79d6ed71b34e32fd223f4ccdb20da7f7d092ec0a71de37decac960d2e"
+    sha256 cellar: :any, x86_64_linux:      "43a88d58e4dc23d5596d8f716e7914750466d20876ba4614049ccc8e22b52d59"
   end
 
   depends_on "meson" => :build

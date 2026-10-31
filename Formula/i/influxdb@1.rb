@@ -1,8 +1,8 @@
 class InfluxdbAT1 < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
-  url "https://github.com/influxdata/influxdb/archive/refs/tags/v1.13.1.tar.gz"
-  sha256 "8a5546252029301889172ccc6b4516be8d3b216d702390d8529d59d3847699db"
+  url "https://github.com/influxdata/influxdb/archive/refs/tags/v1.13.2.tar.gz"
+  sha256 "b14af6f3eeb2a81f1fef94f867348d399ee528230fbcc9b947303f3f500ee1f1"
   # 1.x is using MIT license while 1.x and 3.x is using dual license (Apache-2.0/MIT)
   license "MIT"
 
@@ -12,8 +12,11 @@ class InfluxdbAT1 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "82eddc0abe1e759779aaa83bfd87bbaa3d1d7deaab5049da495d0a768e041878"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "547734fd16584d8a5aec851062d49b2bec94d5345e3f82f8cf930fe516a334bf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8c99ac93d42f58a9937287ce06f54bd41578dda299142c31467eec9bc1d3805e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "166bb7c6e0dca84a4ff51f2bb4e6ef8f89cfa7b45e8f18cc2e22f9b5216233df"
+    sha256 cellar: :any,                 arm64_linux:       "337e6ce73dfd2160f3c1eba64180daf367332750680ad7ec7d95c338025b16f8"
+    sha256 cellar: :any,                 x86_64_linux:      "d57fd348fe58b0955af44cc88f0c7d0f0544b5f14902b342b5bb054d3d588e49"
   end
 
   keg_only :versioned_formula
@@ -35,7 +38,7 @@ class InfluxdbAT1 < Formula
     ENV.append_to_rustflags "--allow dead_code --allow mismatched_lifetime_syntaxes"
 
     # Workaround to avoid patchelf corruption when cgo is required (for flux)
-    if OS.linux? && Hardware::CPU.arch == :arm64
+    if OS.linux? && Hardware::CPU.arm64?
       ENV["CGO_ENABLED"] = "1"
       ENV["GO_EXTLINK_ENABLED"] = "1"
       ENV.append "GOFLAGS", "-buildmode=pie"

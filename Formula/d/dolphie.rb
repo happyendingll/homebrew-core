@@ -17,6 +17,7 @@ class Dolphie < Formula
   depends_on "certifi" => :no_linkage
   depends_on "cryptography" => :no_linkage
   depends_on "python@3.15"
+  depends_on "zstd"
 
   pypi_packages exclude_packages: ["certifi", "cryptography"]
 
@@ -136,7 +137,13 @@ class Dolphie < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_install_with_resources without: "zstandard"
+
+    resource("zstandard").stage do
+      args = std_pip_args(prefix: false, build_isolation: true)
+      args << "--config-settings=--build-option=--system-zstd"
+      system venv.root/"bin/python", "-m", "pip", "install", *args, "."
+    end
   end
 
   test do

@@ -1,8 +1,8 @@
 class AmplMp < Formula
   desc "Open-source library for mathematical programming"
   homepage "https://ampl.com/"
-  url "https://github.com/ampl/mp/archive/refs/tags/v4.2.0.tar.gz"
-  sha256 "4dc9e5e86e5b5c32764243e405f82b5168c300b85e3a5000485837cf0cfe3f69"
+  url "https://github.com/ampl/mp/archive/refs/tags/v4.2.1.tar.gz"
+  sha256 "800c5f69a15f9e7bb543f429fcae02a917c1d9365e609a52ed80663b31a80cd9"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,11 @@ class AmplMp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "17c154e353dde680ec03cb85df7d6b75481d367197ab5d3bc0d549bd09244fe1"
+    sha256 cellar: :any, arm64_golden_gate: "2694e480ea5f65152d17fb741aa6cae2095beeb7920ac5769d5744e2c1c0ba19"
+    sha256 cellar: :any, arm64_tahoe:       "edd7fd778c50bb9ba1c719fd00323f8560ff8e3adf0e3216a95215961117043f"
+    sha256 cellar: :any, arm64_sequoia:     "f000a45a16bf1a93b297689cc72879293db23e3928bad674fa1d4dcccda879f6"
+    sha256 cellar: :any, arm64_linux:       "6cb8595a71369176cefcf5e4131ec311e0984e0ab4578db23d92d89c6557bf76"
+    sha256 cellar: :any, x86_64_linux:      "f527f89fca9a3e455c435ddc76ec8e6a6009c009bbd30e0e99797691424aac22"
   end
 
   depends_on "cmake" => :build

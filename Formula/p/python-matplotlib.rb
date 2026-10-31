@@ -19,6 +19,7 @@ class PythonMatplotlib < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "freetype"
+  depends_on "libraqm"
   depends_on "numpy"
   depends_on "pillow" => :no_linkage
   depends_on "python@3.15"
@@ -74,7 +75,9 @@ class PythonMatplotlib < Formula
     venv = virtualenv_create(libexec, python3)
     venv.pip_install resources
     system python3, "-m", "pip", "--python=#{venv.root}", "install",
+                                 "--config-settings=setup-args=--wrap-mode=nodownload",
                                  "--config-settings=setup-args=-Dsystem-freetype=true",
+                                 "--config-settings=setup-args=-Dsystem-libraqm=true",
                                  "--config-settings=setup-args=-Dsystem-qhull=true",
                                  *std_pip_args(prefix: false, build_isolation: true), "."
 

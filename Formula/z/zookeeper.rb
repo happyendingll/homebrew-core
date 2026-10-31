@@ -1,16 +1,19 @@
 class Zookeeper < Formula
   desc "Centralized server for distributed coordination of services"
   homepage "https://zookeeper.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=zookeeper/zookeeper-3.9.6/apache-zookeeper-3.9.6.tar.gz"
-  mirror "https://archive.apache.org/dist/zookeeper/zookeeper-3.9.6/apache-zookeeper-3.9.6.tar.gz"
-  sha256 "9277edd177f795c68b3a92cb411a79076b12ad3184fbf900c0d7cec9a0a52e0a"
+  url "https://www.apache.org/dyn/closer.lua?path=zookeeper/zookeeper-3.9.7/apache-zookeeper-3.9.7.tar.gz"
+  mirror "https://archive.apache.org/dist/zookeeper/zookeeper-3.9.7/apache-zookeeper-3.9.7.tar.gz"
+  sha256 "43142998ccb71a65cb18a354d1086163da9217a71d39b7c0464be9de41a286b8"
   license "Apache-2.0"
   compatibility_version 1
   head "https://gitbox.apache.org/repos/asf/zookeeper.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "112a50dd9d0b040b727cd3714b792c080136ef9e14b1e6dafa1ff981cb7f3ccc"
+    sha256 cellar: :any, arm64_golden_gate: "1efde61644c462911189fc82e2021acea49fca8c8ab6e167ef2f8e4785f06fdf"
+    sha256 cellar: :any, arm64_tahoe:       "fc805bcac17a6dbeb9b4c6ea9972222a8b23d8e675b4bda5897b3ec5d7a8aa38"
+    sha256 cellar: :any, arm64_sequoia:     "bf1ef708334888ad6f50e75a4dd2da5a0b6c96f7f8032e58d9fff81fed9a3b51"
+    sha256 cellar: :any, arm64_linux:       "e247fe7ef875a324ed1fbe7e590aa12e8ad021b8461cff668d10964a67d65772"
+    sha256 cellar: :any, x86_64_linux:      "ca9587d2a981579c71d2181af0adce327e37281ecb9a10e864fe28f7393446c6"
   end
 
   depends_on "autoconf" => :build

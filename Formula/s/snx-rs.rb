@@ -1,14 +1,17 @@
 class SnxRs < Formula
   desc "Open-source client for Check Point VPN tunnels"
   homepage "https://github.com/ancwrd1/snx-rs"
-  url "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.4.tar.gz"
-  sha256 "257c26920acc4fed159d5e620acc621f65dafa8bced38285f44ff0c681bb1715"
+  url "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.6.0.tar.gz"
+  sha256 "7597fc6e562ffb359092858392d8c0c1600de2a03f01c7a0cf7fd9c5761e133c"
   license "AGPL-3.0-only"
   head "https://github.com/ancwrd1/snx-rs.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "b553d25afad872d7ec972eb3d828bc49fd04363685ccf4f42ada5de520b0e0e1"
+    sha256 cellar: :any, arm64_golden_gate: "967445b784347122d1531cfc36a074522c858834d5f6952198a3129098305fac"
+    sha256 cellar: :any, arm64_tahoe:       "3467a0e0a0646ee4a0fdaa0cff975f7f473708dad4d43d811e98966ff63353d9"
+    sha256 cellar: :any, arm64_sequoia:     "c030148f7f27ede00b49a57dc2cb1e50cb923a25fe28648d460be4b54be40f2f"
+    sha256 cellar: :any, arm64_linux:       "54fed0d32e8341bbdb7b7e27fb80a5e26260913037ea25358851a1261d7a843a"
+    sha256 cellar: :any, x86_64_linux:      "df646f0f17b9fe3aebade6f1f76fd2560545d0799f89d2b7a8ea43554add9c5c"
   end
 
   depends_on "pkgconf" => :build

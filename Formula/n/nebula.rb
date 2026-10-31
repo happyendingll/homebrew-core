@@ -1,14 +1,17 @@
 class Nebula < Formula
   desc "Scalable overlay networking tool for connecting computers anywhere"
   homepage "https://github.com/slackhq/nebula"
-  url "https://github.com/slackhq/nebula/archive/refs/tags/v1.11.2.tar.gz"
-  sha256 "0031d1ddd616f5e25dc29f4b67d6a0c58864251be17095a68d15e4d0edb54843"
+  url "https://github.com/slackhq/nebula/archive/refs/tags/v1.12.0.tar.gz"
+  sha256 "f4d33fbe0a57d2914b8cc94b463d3f170990f92f34251aaef1ca80fb5cd952b0"
   license "MIT"
   head "https://github.com/slackhq/nebula.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "704c765467bb8531f74fdcf9710c6fe5d1437e9a835774d48d9b7f144ece565d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f989686e52055247f22c5900fd8dfd10bcb62efc26b86736f4d7bd3c3f9a3819"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f989686e52055247f22c5900fd8dfd10bcb62efc26b86736f4d7bd3c3f9a3819"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f989686e52055247f22c5900fd8dfd10bcb62efc26b86736f4d7bd3c3f9a3819"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2870833fb40e4c157399e3a52ef2707f116d1451687c6f093f8a342c7ad6e6d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "85839c7d61358a5f7d6c062380f566aff7ce6ccefdb5506fc1f040c3a89f09b4"
   end
 
   depends_on "go" => :build
@@ -20,10 +23,10 @@ class Nebula < Formula
   end
 
   def install
-    ENV["BUILD_NUMBER"] = version
-    system "make", "service"
-    bin.install "./nebula"
-    bin.install "./nebula-cert"
+    ENV["CGO_ENABLED"] = "0"
+    ldflags = "-X main.Build=#{version}"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"nebula"), "./cmd/nebula-service"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"nebula-cert"), "./cmd/nebula-cert"
   end
 
   service do

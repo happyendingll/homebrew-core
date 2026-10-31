@@ -1,14 +1,17 @@
 class Flow < Formula
   desc "Static type checker for JavaScript"
   homepage "https://flow.org/"
-  url "https://github.com/facebook/flow/archive/refs/tags/v0.337.0.tar.gz"
-  sha256 "d7e0783e1cfbc5b04a04ccdc5e01624fe428e0062c715ce05dfc4116475d020c"
+  url "https://github.com/facebook/flow/archive/refs/tags/v0.338.0.tar.gz"
+  sha256 "b0c9885479e0193b0f5c85511da9c7757265eaffbfeae60976ffa6a67af88085"
   license "MIT"
   head "https://github.com/facebook/flow.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "b31bddf75c2be73cede19c27eee3323c4d9bdcfd90af160167e7c4fef9865112"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca860fce9a6fba5f10102d8d8b748cc2c48e142f785b1d3bcdcd73852af64ed8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "57ff044cea4f893ef7c685b8feb219cb2c9c90708b693772d344fb9c53ec2c24"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a9edff97b875f3071820b484fd7933c2673a9f8cacc81c4964cf45168ca31ab6"
+    sha256 cellar: :any,                 arm64_linux:       "fbca72f2cf84fb66e0d8fc7577b4b2c277e9e28775d6c638e52bc6e454635009"
+    sha256 cellar: :any,                 x86_64_linux:      "9a6d8877691a82e6a6a3b5d1e5893199e202a6cf72b46576d624eda373ac52af"
   end
 
   depends_on "rust" => :build

@@ -1,13 +1,16 @@
 class Sdrmm < Formula
   desc "Modular, client-server software-defined radio"
   homepage "https://github.com/Newspicel/sdrminusminus"
-  url "https://github.com/Newspicel/sdrminusminus/releases/download/v2.4.0/sdrmm-2.4.0-src.tar.gz"
-  sha256 "7ab8e7bee285df6b4c611f19d49e2623bc69267a740643a05cf7172fafcd61e4"
+  url "https://github.com/Newspicel/sdrminusminus/releases/download/v2.4.1/sdrmm-2.4.1-src.tar.gz"
+  sha256 "e92605e549d5a2c6858dde406579450391154a37ad9749eb6f9eedbbef8e3740"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "cae11d8d49686122e670a8b056a1a77989c55b0d62cc549f3b3db7428000318b"
+    sha256 cellar: :any, arm64_golden_gate: "57acf9e5f88d5cc625319de013e972ab81f13c2d600a826ffccf716d69eecd08"
+    sha256 cellar: :any, arm64_tahoe:       "9c92c4fd5eae27fe9c8e3698263e47594e61058d9a2dd9426aa0da66545c675c"
+    sha256 cellar: :any, arm64_sequoia:     "914d9eac1d071fe6e4588e5ed4b1d09f7cb1dad37eb61e0e7d7981ad4446c479"
+    sha256 cellar: :any, arm64_linux:       "70e09f60ac3dbb59f5f9359df3a436331e1c3411ce8bb13616d4cbfa4a51e2b0"
+    sha256 cellar: :any, x86_64_linux:      "253ebb036b1804f6b933e2a2b31939ed9f87261be037c2463ab0fa0f701d91b1"
   end
 
   depends_on "cmake" => :build

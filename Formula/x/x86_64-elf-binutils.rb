@@ -32,6 +32,8 @@ class X8664ElfBinutils < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
     target = "x86_64-elf"
     system "./configure", "--target=#{target}",

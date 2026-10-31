@@ -30,6 +30,8 @@ class Xmrig < Formula
   depends_on "libuv"
   depends_on "openssl@4"
 
+  allow_network_access! :test
+
   def install
     # Use shared OpenSSL on macOS. In cmake/OpenSSL.cmake:
     # elseif (APPLE)

@@ -1,8 +1,8 @@
 class Libarchive < Formula
   desc "Multi-format archive and compression library"
   homepage "https://www.libarchive.org"
-  url "https://www.libarchive.org/downloads/libarchive-3.8.10.tar.xz"
-  sha256 "56cad765459d5ee25a3b761f90c47d99379d28297fbfb72d908880d6b875fb96"
+  url "https://www.libarchive.org/downloads/libarchive-3.8.11.tar.xz"
+  sha256 "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2"
   license "BSD-2-Clause"
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Libarchive < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "9e09bd0c3d8e0deab4aa90604d8edaf1635d654dd5c56593ca4f4efce79e792b"
+    sha256 cellar: :any, arm64_golden_gate: "ff99dd8abf1c0dd5dda11165e8307eb3eadece22d4b8003562b5869f9a9fc4f0"
+    sha256 cellar: :any, arm64_tahoe:       "f9daa6da55d53558557ea005b19786be9a2153cf4cad43f5d0439c9d35ab7144"
+    sha256 cellar: :any, arm64_sequoia:     "503847a252e54cec2415ab329e3a9a7b5be9d5624823a0e28bfb2b42e129c5e7"
+    sha256 cellar: :any, arm64_linux:       "a4eb0407bd3595748cdaf0e96fe92f4bfb2b377937811a1b1fa8fea667b9c373"
+    sha256 cellar: :any, x86_64_linux:      "c43b97f198208e62d35b4e649e458cd38c1ec5741f0a1e536f374291e6071fd0"
   end
 
   keg_only :provided_by_macos

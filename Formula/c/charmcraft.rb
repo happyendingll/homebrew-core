@@ -21,6 +21,7 @@ class Charmcraft < Formula
   depends_on "pygit2" => :no_linkage
   depends_on "python@3.15"
   depends_on "rpds-py" => :no_linkage
+  depends_on "zstd"
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"
@@ -350,8 +351,15 @@ class Charmcraft < Formula
     ENV["SODIUM_INSTALL"] = "system"
     ENV["SETUPTOOLS_SCM_PRETEND_VERSION_FOR_CHARMCRAFT"] = version
 
-    without = %w[jeepney secretstorage] unless OS.linux?
-    virtualenv_install_with_resources(without:)
+    without = %w[zstandard]
+    without += %w[jeepney secretstorage] unless OS.linux?
+    venv = virtualenv_install_with_resources(without:)
+
+    resource("zstandard").stage do
+      args = std_pip_args(prefix: false, build_isolation: true)
+      args << "--config-settings=--build-option=--system-zstd"
+      system venv.root/"bin/python", "-m", "pip", "install", *args, "."
+    end
   end
 
   test do

@@ -1,13 +1,16 @@
 class CloudflareWrangler < Formula
   desc "CLI tool for Cloudflare Workers"
   homepage "https://developers.cloudflare.com/workers/"
-  url "https://registry.npmjs.org/wrangler/-/wrangler-4.155.0.tgz"
-  sha256 "b7735eef797a2d85a5802e845a561d951a249ba98a6638ad52f1079f821ccf75"
+  url "https://registry.npmjs.org/wrangler/-/wrangler-4.156.0.tgz"
+  sha256 "ab274b4680faf9f8fa538be9c5ae2b823fc38ada0bdfc6e6e07f0b96bf494e44"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "75a77e91526e3c4a1669ff50fcb6ce59e002202ec451ce0820be76e6a4985262"
+    sha256 cellar: :any, arm64_golden_gate: "f32ccc458dc3247a06e467533e582e874f96510333b3c0c6b56c772ef230adee"
+    sha256 cellar: :any, arm64_tahoe:       "f32ccc458dc3247a06e467533e582e874f96510333b3c0c6b56c772ef230adee"
+    sha256 cellar: :any, arm64_sequoia:     "f32ccc458dc3247a06e467533e582e874f96510333b3c0c6b56c772ef230adee"
+    sha256 cellar: :any, arm64_linux:       "406466d31247d5365fec7740811a75b553d8d137f06d7647cafbfe5b546fc28f"
+    sha256 cellar: :any, x86_64_linux:      "1b2bfeabfd2768019a67c8f5da3a18f2346dcb7dac8f5c7167cea3e6c9995c2c"
   end
 
   depends_on "node"

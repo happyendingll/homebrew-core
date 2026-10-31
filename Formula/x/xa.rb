@@ -25,6 +25,8 @@ class Xa < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "4e35f6c603bbc9e5a84d41c3b9980f572989c8573139ff3438e36304745a5950"
   end
 
+  deny_network_access!
+
   def install
     system "make", "CC=#{ENV.cc}",
                    "CFLAGS=#{ENV.cflags}",

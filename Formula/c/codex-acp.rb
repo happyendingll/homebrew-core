@@ -1,14 +1,17 @@
 class CodexAcp < Formula
   desc "ACP server that exposes Codex CLI functionality for ACP-compatible clients"
   homepage "https://github.com/agentclientprotocol/codex-acp"
-  url "https://registry.npmjs.org/@agentclientprotocol/codex-acp/-/codex-acp-2.4.0.tgz"
-  sha256 "86bd1974cc93c275ba0d5088bc1ac2ce52907f48003e26e2c6736a5f77ab2bf4"
+  url "https://registry.npmjs.org/@agentclientprotocol/codex-acp/-/codex-acp-2.5.0.tgz"
+  sha256 "9206b1543a9e997e7ffcf1be3d5dab60dc3d43b672f1de6dd30ff2a7ca1c280e"
   license "Apache-2.0"
   head "https://github.com/agentclientprotocol/codex-acp.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "b1e246de55a767b74a1981e12d576db1f4be0c7bd6bca3c29946fbafe25b027b"
+    sha256 cellar: :any, arm64_golden_gate: "a6b760cdfe337c4420c6bc00f43757678d839bf66bc3e984129153295f3c2773"
+    sha256 cellar: :any, arm64_tahoe:       "a6b760cdfe337c4420c6bc00f43757678d839bf66bc3e984129153295f3c2773"
+    sha256 cellar: :any, arm64_sequoia:     "a6b760cdfe337c4420c6bc00f43757678d839bf66bc3e984129153295f3c2773"
+    sha256 cellar: :any, arm64_linux:       "4c6820e6792ad7b07fc35717060f410f2b2628f0ada03a047b944160477bf5bd"
+    sha256 cellar: :any, x86_64_linux:      "8bc778fb9c86bcc2a68b0309ba9d44c4f0271f9fe532aba614b67d4e61509cd0"
   end
 
   depends_on "node"

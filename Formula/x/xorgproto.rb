@@ -19,6 +19,8 @@ class Xorgproto < Formula
   depends_on "pkgconf" => [:build, :test]
   depends_on "util-macros" => :build
 
+  deny_network_access!
+
   def install
     args = %W[
       --sysconfdir=#{etc}

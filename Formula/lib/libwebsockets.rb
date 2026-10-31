@@ -1,11 +1,10 @@
 class Libwebsockets < Formula
   desc "C websockets server library"
   homepage "https://github.com/warmcat/libwebsockets"
-  url "https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.0.0.tar.gz"
-  sha256 "f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962"
+  url "https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.1.0.tar.gz"
+  sha256 "9acbba00aaa9e6178ae09c6f920d95449b527c1417e81d2cdd4103bc6d64d13f"
   license "MIT"
-  revision 2
-  compatibility_version 6
+  compatibility_version 7
   head "https://github.com/warmcat/libwebsockets.git", branch: "main"
 
   livecheck do
@@ -14,8 +13,11 @@ class Libwebsockets < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "d4d18df4b299d5554558ba48b16f51480391db580f3f93f4ea000a16407c354c"
+    sha256 arm64_golden_gate: "e74adf9d584a856321f9f296b4247274592c23c954a3168998c8f8bfc1932df1"
+    sha256 arm64_tahoe:       "df4de90c24f08b522aebdd1b3925f15815b15dfa62150612244a1e48d4254cb4"
+    sha256 arm64_sequoia:     "7d7fc8c203694dc167b40a796165369591e3efd20b0384f071d3210a6eb53221"
+    sha256 arm64_linux:       "c4fad3ec1de3566338bf010684fad27cdb9554b2e9c5db82fe1dcaa8aa3afdc6"
+    sha256 x86_64_linux:      "8628fddb347df584b5a31baa7c0395a2d7377fbdeb32a81dc923c642dbb8dfa5"
   end
 
   depends_on "cmake" => :build

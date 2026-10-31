@@ -1,9 +1,14 @@
 class EntireCli < Formula
   desc "Capture AI agent sessions in your Git workflow"
-  homepage "https://entire.io"
+  homepage "https://entire.com"
   url "https://github.com/entireio/cli/archive/refs/tags/v0.12.2.tar.gz"
   sha256 "45beafa8e260c4fb3e74368b8e27ab7d77c407db5e4fa3e77ff38e67ff592e26"
   license "MIT"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"

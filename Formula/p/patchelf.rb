@@ -1,8 +1,8 @@
 class Patchelf < Formula
   desc "Modify dynamic ELF executables"
   homepage "https://github.com/NixOS/patchelf"
-  url "https://github.com/NixOS/patchelf/releases/download/0.19.2/patchelf-0.19.2.tar.bz2"
-  sha256 "d4ad9a4e5c689e09119ce2f30a94b0e8b4f98c78590123ea21665e34c6928801"
+  url "https://github.com/NixOS/patchelf/releases/download/0.19.3/patchelf-0.19.3.tar.bz2"
+  sha256 "20dbe23e9dbc4ad769078a867ad002c04297a069ff93c95fb72242dd55d4dd6f"
   license "GPL-3.0-or-later"
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Patchelf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f6733ea47d3d15b35e13d829442b75e3c1269a1560e9b10f9c800aac9fc9150a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f785866740a9c4010ce961214e5fd8734be9369d06d1282adb75da699322799"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5adbf0b87fc96a767414bbed42dd2dac926d6a6340a9148f50835ba727b6660"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ce4c7e8ae70eb6dca9823a6682be92d3a9caa5d9f0a105991e021b00092f553a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "94c77e6b38123091609f83bdc2d47533335c915d31d935f44c18a85ef7208bab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6cc97c2a1de234017bcd54cb3d12ae95b36e3b5be9a0dfb6b5b276879ca7d9cc"
   end
 
   head do
