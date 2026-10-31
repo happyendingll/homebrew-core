@@ -6,11 +6,8 @@ class TfstateLookup < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3222b9083ac37f69b7509027a288fb670ce30dd3e7eb6f532e1205e23256d49c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3222b9083ac37f69b7509027a288fb670ce30dd3e7eb6f532e1205e23256d49c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3222b9083ac37f69b7509027a288fb670ce30dd3e7eb6f532e1205e23256d49c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e5a29c4458e70baa511637b58c8bc8e7bef4d366315c0eec1d2eddf80233527f"
-    sha256 cellar: :any,                 x86_64_linux:      "1bae57767fea1d0b9425d5d14c2bb1fdcd6d351611ee7cff69da0346e5802312"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ad7fe680211e9ce5e5d972fa0a9aeabd6a8bc1740ea8a6ac70d4043180bccc3f"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Skeema < Formula
   head "https://github.com/skeema/skeema.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d2ddd22b895287001d3c49ea23b86275dcb9d5cee9a5762c3e4cedbe1832ea8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d2ddd22b895287001d3c49ea23b86275dcb9d5cee9a5762c3e4cedbe1832ea8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8d2ddd22b895287001d3c49ea23b86275dcb9d5cee9a5762c3e4cedbe1832ea8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "445fdd7e72ad07d24dba2ffc7242c003959b2aa04c43fe4ed13a699f49e83815"
-    sha256 cellar: :any,                 x86_64_linux:      "fa2500a2303c441e9bb72a507e08483dc35a31ae7b29d2d36940ca52d1a3089f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b1556f31751a535168ad6e2d273e171831fbf5477c43ed8ee5c4102457bd2047"
   end
 
   depends_on "go" => :build

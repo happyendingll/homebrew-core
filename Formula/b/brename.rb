@@ -6,11 +6,8 @@ class Brename < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2212ccc939cbfe057695a0162921a22598766d7cd89de84a36f6349a6de9a3d1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2212ccc939cbfe057695a0162921a22598766d7cd89de84a36f6349a6de9a3d1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2212ccc939cbfe057695a0162921a22598766d7cd89de84a36f6349a6de9a3d1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b6907fee4844568207c80cdc6a387a45b3bf505b26511b6d863e866b787af24b"
-    sha256 cellar: :any,                 x86_64_linux:      "51a77ae555f60537d7317ee02d4f59ebb0d34696fa102302c6050954da1034d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c9d6be33a261f48af72bdff8eac46e96baea28166052215631f6597a6eb037c2"
   end
 
   depends_on "go" => :build

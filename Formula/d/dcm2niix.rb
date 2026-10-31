@@ -13,11 +13,8 @@ class Dcm2niix < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "c5b65c52c4dd87e1b2dbc0124e650fe1f1f427c1d834015a6777cdf5bc5633b5"
-    sha256               arm64_tahoe:       "8827a52a7d153b0ec2634a2a3d5891beacd07660a67f86d2de3ff02d977869c7"
-    sha256               arm64_sequoia:     "722cee2357b69e76e5dab8dcc09873e3298d7ac988927101c591e0ed691bbf80"
-    sha256 cellar: :any, arm64_linux:       "e5f34de692b3f2b60f6164058cdd691471dcaba10ee4818bb56a31fc8af3d65c"
-    sha256 cellar: :any, x86_64_linux:      "ce2ab3dd40e9835f743f2b68d1f80de77380bba8fb5fe201c661336b489efcf3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1e599e11b5f162b559365b49d5684899fdac3f3c44ad2f2a0819ee6b475a330f"
   end
 
   depends_on "cmake" => :build

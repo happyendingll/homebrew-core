@@ -6,11 +6,8 @@ class Lout < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "a90921901e3a5630133c727943b19f8143a6752aff153c630dfbd1de14169d2e"
-    sha256 arm64_tahoe:       "b7af67416857be3856f6cd8257ceb82d5668f54c2489f06674d160282ffbaee1"
-    sha256 arm64_sequoia:     "665f45abfea4ae42da28e05992734db9151094b20a834a1a908d6ff192886fbc"
-    sha256 arm64_linux:       "c71425ce3c6d3a0167e8033fe6b8998da0e438a17797801da5610b097a3391cf"
-    sha256 x86_64_linux:      "84f904b29fde26f1b1b7f19f4a30070adad9bd3036b1ec820b04af25814895cc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "e318e86eb70f91a6c2ec896a91b329fcaf752a9e8a99fbb3d93a6031b629f59e"
   end
 
   def install

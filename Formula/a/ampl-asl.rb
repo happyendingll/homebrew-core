@@ -7,11 +7,8 @@ class AmplAsl < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "36b60c5a7858d4db9ddd2c23829e17f26c92edabc26024d8d2d869275fb2911c"
-    sha256 cellar: :any, arm64_tahoe:       "60f58fc31ee59a4eca8185f57ab627b7df43606e7615dddd9c8b11e35634fac0"
-    sha256 cellar: :any, arm64_sequoia:     "06d1fb1f8166958b8bf53b3b365befbe35273ae9ee2b2f1a308619decdee6e24"
-    sha256 cellar: :any, arm64_linux:       "b9252673d3f768fb0a5e0db566235e3a77fcf881dba0f339d2c50083cacfaeed"
-    sha256 cellar: :any, x86_64_linux:      "c13d846da79122af60e3d0cd85d53dc96aab7206ddbc7d2d896e055426e2acf4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e45d337c24ad66c503169531e3ecc17babbf995d83d0d0632620b0d2182314e5"
   end
 
   depends_on "cmake" => :build

@@ -17,11 +17,8 @@ class Squid < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a3aaf0ea08eab1c8945bc96bc97f6e890870aeb8365c97f68ab0d42b803f22ab"
-    sha256 arm64_tahoe:       "adc996cd5bd1b34ba2414e82bb2d01e57b41888d15ab3d27242413b4213e5ecd"
-    sha256 arm64_sequoia:     "5f616f7e3606d0d87e4c66c63ee997f1affa51f0930c28f991dfc978f9e3a89c"
-    sha256 arm64_linux:       "a320155b4c46bfd61425bdf77c9b82bc55df2ff586a38fe3ff1b5e569abd2c97"
-    sha256 x86_64_linux:      "5940275e8ff7f9f58bb676e64b39f0e4b1128ba432576f95cfce473239fe3fe4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "8b38673c52b97c393f7d2da99d45b7f3d8984f6723e20b4a5c1e7f96f2bea478"
   end
 
   head do

@@ -7,11 +7,8 @@ class Mosdepth < Formula
   head "https://github.com/brentp/mosdepth.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aca29bbd3d039122e9fb5ee700c758d2d31a88ffaa40ef083b8e07b5580a4876"
-    sha256 cellar: :any, arm64_tahoe:       "6fbc754534b3214dac991c1ff6462e3d2c0076ab6398b98f0e26ce174bcbf137"
-    sha256 cellar: :any, arm64_sequoia:     "34f181713614749647b2b7e301b6cdfed540983ef5a81bc6081827b01686d7ec"
-    sha256 cellar: :any, arm64_linux:       "b5986e1b5fe8cb3ac41b162edecfbd51bf49848444737f5cc17617061491ffec"
-    sha256 cellar: :any, x86_64_linux:      "a517cad427a2e1c7129ae2757ff28e6ea17b5d11c1d5c9f276e553637cbc6ef6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8557d0ea17dedb825a02a6c017e6f233116033de9af9aed7d7f56e9d93b82f71"
   end
 
   depends_on "nim" => :build
