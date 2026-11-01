@@ -9,11 +9,8 @@ class Certbot < Formula
   head "https://github.com/certbot/certbot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "60137ffbd1c1a9971fd93ad725679fde6d869978bda2dfd62b4fe9ebf541fb03"
-    sha256 cellar: :any, arm64_tahoe:       "8b4c594eb45fd244b1f30ec56b973241c98be3308a2fb71f3003666f67b8492e"
-    sha256 cellar: :any, arm64_sequoia:     "bea972534e9f730f5c63e47503a8e0230719133b4b6d714b03254cba42ad591d"
-    sha256 cellar: :any, arm64_linux:       "0b7993e8b1c6493e51dd2988d7c82c572291cb93dd73286151ee4d1978f49c01"
-    sha256 cellar: :any, x86_64_linux:      "32c01b0a34fb8676369cb32710642a2aff0b25f09c36a64a60715ad4dea39e66"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "6890ca28cbd912bd3d70a34577d74830c258ce8c2ad34568641b47e3875a258f"
   end
 
   depends_on "augeas"

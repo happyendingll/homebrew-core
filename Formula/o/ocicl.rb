@@ -7,11 +7,8 @@ class Ocicl < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4a9e7367c7c03c4368ecce8d10a622822578ebfb4e121fe90693992e82a8ff6c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75b10389427263c700a67571f55096ed1eb8eee65daebc9aedb1a2766de1522d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b2aae3f91ce22fb368eed816ab6ec820aca0ff4bba237bceeca8ecdc53800579"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a922be7671b55c414c6b45ff050fb8fedac20ea9d70a387f6f3a49f4ad677967"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "42564dab05cc0c56b22253316d973c49d092f52a81a80cf125428f55d9b1ab20"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e3094bdaae8ced52318e47f84b9467374433a3dc0e4e863c2d6ec84795a9b43b"
   end
 
   depends_on "sbcl"

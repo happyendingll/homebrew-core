@@ -8,11 +8,8 @@ class QuickLintJs < Formula
   head "https://github.com/quick-lint/quick-lint-js.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b7caa9b0ab17148fe3ff006837b2133c7849f2448bea3308f0e45c3db7c91c6d"
-    sha256 cellar: :any, arm64_tahoe:       "493b8be17c53a8bce31f032104c2986b78a26db1d7429fef94f139f1727a194c"
-    sha256 cellar: :any, arm64_sequoia:     "45f9b4ad4aea37a30667198864569aecb7362f93bcc3afc0b080d36cda9830cc"
-    sha256 cellar: :any, arm64_linux:       "0771eaf982c12cb8e30b6b4bbbed6855289b8061c736c6e436ae3cd2f144be77"
-    sha256 cellar: :any, x86_64_linux:      "4ca0f31f5239376e43f5c711b2f931fd18bd3e37c436b3d90f13763bbfd9fdb1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "ada13fde755b3b8edc9561bdf40cb04e9e9bda67855242ec16bf3ce45c4b052f"
   end
 
   deprecate! date: "2026-10-29", because: :repo_archived

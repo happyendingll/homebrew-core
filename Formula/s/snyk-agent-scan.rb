@@ -8,11 +8,8 @@ class SnykAgentScan < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ef10f6796ea62249df99d96db36a3460c6956b2c849315c8522055721b2d721e"
-    sha256 cellar: :any, arm64_tahoe:       "3e0a0a3b584443f9c03627450976b304249a0ebe1503fccccedcbe6306101cb4"
-    sha256 cellar: :any, arm64_sequoia:     "f1ee3769346c380977a58f81e45c0c60be2f0b41fd0154f658b0cf03c190e168"
-    sha256 cellar: :any, arm64_linux:       "02ded0b15d39da5463b19754218810bdaaa9b884db89bce02b01bcb23d8eb867"
-    sha256 cellar: :any, x86_64_linux:      "0d3e553d9c95719f03f3ad90d3eef0ac9f2fcdbbae7fb22742b8d083ef4f73c2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "574c5250b01f3a2a1de5d77f1da87a78aab7ed2aad392208042970addc0332ad"
   end
 
   depends_on "certifi" => :no_linkage

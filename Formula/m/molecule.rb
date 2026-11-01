@@ -9,11 +9,8 @@ class Molecule < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "abaf20cb7758f8b1ddfa79311e203034125a36793831b9222ad854810ad6b67e"
-    sha256 cellar: :any, arm64_tahoe:       "b500556fe403ee5bc6e11350b65cde43f1850c18a804b1034cc6d083eb3a7368"
-    sha256 cellar: :any, arm64_sequoia:     "5f6b589928875446257565899c6ec95f11bacf9bd8987f2652a60fa9971e9ff7"
-    sha256 cellar: :any, arm64_linux:       "76cf2484133c60b15fc17cf6d3a7e02ada5ca0f1f35435703fcf1e4338e58151"
-    sha256 cellar: :any, x86_64_linux:      "71b85a1c45b05c2948b28554dff8463c92c323b5eb8e56e18dafc8228093abd4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "7dee07946e798ac78f8140da431262a34dc755d70f1f73bb3a2392862e2c3b6b"
   end
 
   depends_on "ansible"
