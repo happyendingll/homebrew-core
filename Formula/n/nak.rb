@@ -1,8 +1,8 @@
 class Nak < Formula
   desc "CLI for doing all things nostr"
   homepage "https://github.com/fiatjaf/nak"
-  url "https://github.com/fiatjaf/nak/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "0c5e774019094a4d1e2ce0023d0a571bacbb6a0f4619821ed476497d0c7b4318"
+  url "https://github.com/fiatjaf/nak/archive/refs/tags/v0.22.1.tar.gz"
+  sha256 "a4bf489317fe346c582d46fce041244fd0b7e4bed05b3bfbf9d09863e540a01a"
   license "Unlicense"
   head "https://github.com/fiatjaf/nak.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Nak < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "7b4900f2a83fb12ea1230160e266e667bb2905b3891843196444d925b60a86d2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2c9b0aec77aa3dabfc3814b2b24d92759620037742c6041aa50222854df42d02"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2c9b0aec77aa3dabfc3814b2b24d92759620037742c6041aa50222854df42d02"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2c9b0aec77aa3dabfc3814b2b24d92759620037742c6041aa50222854df42d02"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "02a8baa0dad61b932c7d17e898345da46fd6aa112f9db4f9135e886b09ac7115"
+    sha256 cellar: :any,                 x86_64_linux:      "4c133200737386d95818970a27dfd4c1bd71dd03e7a5df0d5024cbfcba43770a"
   end
 
   depends_on "go" => :build

@@ -15,6 +15,8 @@ class Ansifilter < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "e75df363d9d25adfdaf11db12e015de9ced6ef31934106677b0cb18e2eac3793"
   end
 
+  deny_network_access!
+
   def install
     system "make", "PREFIX=#{prefix}"
     system "make", "PREFIX=#{prefix}", "install"

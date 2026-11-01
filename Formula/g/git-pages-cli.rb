@@ -1,14 +1,17 @@
 class GitPagesCli < Formula
   desc "Tool for publishing a site to a git-pages server"
   homepage "https://codeberg.org/git-pages/git-pages-cli"
-  url "https://codeberg.org/git-pages/git-pages-cli/releases/download/v1.12.1/git-pages-cli-src.zip"
-  sha256 "6f48805887fe0d77aa4ea022acaf8d2f99aeb754f88e629a49ca58626b2a6451"
+  url "https://codeberg.org/git-pages/git-pages-cli/releases/download/v1.13.0/git-pages-cli-src.zip"
+  sha256 "79978453573b302afec1a5834dc96c1d6d132ff57574f602caf2e483bc698eb4"
   license "0BSD"
   head "https://codeberg.org/git-pages/git-pages-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "1a64bf40da5bb00d1af61978d04409ae2f695bde8883882799a5f0e4383d818e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "708fd5c316bf0480d8e60188cc6e3e6423319226d04eb25e37692215fc00f5e5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "708fd5c316bf0480d8e60188cc6e3e6423319226d04eb25e37692215fc00f5e5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "708fd5c316bf0480d8e60188cc6e3e6423319226d04eb25e37692215fc00f5e5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "eb9deafc374994969cb2cf05431366e09b9aec5459458cc6c18e10e652c3ff77"
+    sha256 cellar: :any,                 x86_64_linux:      "97c52a44d306a576089353b9e855420fee45861272c250b5712e9ad3ed8d7a41"
   end
 
   depends_on "go" => :build

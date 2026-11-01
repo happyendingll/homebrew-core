@@ -1,14 +1,17 @@
 class Faudio < Formula
   desc "Accuracy-focused XAudio reimplementation for open platforms"
   homepage "https://fna-xna.github.io/"
-  url "https://github.com/FNA-XNA/FAudio/archive/refs/tags/26.10.tar.gz"
-  sha256 "c508f297ec8d065b456b2d9d74bab89ffc84ac3afbcb428bd54e40f09f8b901e"
+  url "https://github.com/FNA-XNA/FAudio/archive/refs/tags/26.11.tar.gz"
+  sha256 "8fcd197678ad1ab5c95f0901c3770d8d76c1d8b1da819f6873db599807ad7d03"
   license "Zlib"
   head "https://github.com/FNA-XNA/FAudio.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "7d97cbef53ca4d2a75f39350e4f52ebcdc335e85ff0a04cf0738e809472e6c3c"
+    sha256 cellar: :any, arm64_golden_gate: "15bf006ca0ef141361ccde395a3eff0a30c82702fa4cb56b370bfbd1203fad1e"
+    sha256 cellar: :any, arm64_tahoe:       "719265e2acf831970d2d962c4760b6001d8b388f0cae672486b2a2beec9a757c"
+    sha256 cellar: :any, arm64_sequoia:     "158a48f06ffea69acfe3e37a34b889e1444f32680ec84d41bbf93c4c814bf698"
+    sha256 cellar: :any, arm64_linux:       "af27aae6161dcba6fb9e97addea1753fdf786c620845410826282b6975c9d492"
+    sha256 cellar: :any, x86_64_linux:      "3539d1e32dc4ee72a6c34cdad437899f99e1206637e961353a3598e3f02f7d58"
   end
 
   depends_on "cmake" => :build

@@ -19,6 +19,7 @@ class Nut < Formula
 
   head do
     url "https://github.com/networkupstools/nut.git", branch: "master"
+
     depends_on "asciidoc" => :build
   end
 
@@ -35,6 +36,8 @@ class Nut < Formula
   end
 
   conflicts_with "rhino", because: "both install `rhino` binaries"
+
+  deny_network_access!
 
   def install
     if build.head?

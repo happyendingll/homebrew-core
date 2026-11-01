@@ -1,8 +1,8 @@
 class Zpaqfranz < Formula
   desc "Deduplicating command-line archiver and backup tool"
   homepage "https://github.com/fcorbelli/zpaqfranz"
-  url "https://github.com/fcorbelli/zpaqfranz/archive/refs/tags/65.16.tar.gz"
-  sha256 "e9b4be43004340808719a47e92a2c6a8d14a1cb56d278920036dae080a6f0aff"
+  url "https://github.com/fcorbelli/zpaqfranz/archive/refs/tags/65.17.tar.gz"
+  sha256 "d9ef4ac640dc164951361225ae20a4f857c44ea866ff2595240bfc34605b7d75"
   license all_of: [:public_domain, "MIT", "Zlib", "Unlicense", "BSD-2-Clause", "Apache-2.0"]
   head "https://github.com/fcorbelli/zpaqfranz.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Zpaqfranz < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "b6c2635b90dc183a280c6061522b8193074679547aa95a0356f7e7ec06c7f8b7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8b606f89dc541a6615906aea03df3c3a097bc253b1d46c2788c90455c2202fe1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4f5bc44880944f7427f37a1349d78b7b04b862f580a9eb8f71f288a1b7cd3b59"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "188f12e0ae23ebf32f3523aec64aa69bc0dc21b0cd5dd6ab6e1032f472695c25"
+    sha256 cellar: :any,                 arm64_linux:       "f8767c41181ec01be8199dea3439e8160bb40925f1a59824d7fecc86484817ad"
+    sha256 cellar: :any,                 x86_64_linux:      "73423ed52aedc298922f86a05d7e74a34ecf2f7a32b2492122f1552b83d28298"
   end
 
   deny_network_access!

@@ -1,14 +1,17 @@
 class GiteaImporter < Formula
   desc "CLI to migrate repositories from GitHub, GitLab and Gitea into Gitea"
   homepage "https://gitea.com/gitea/importer"
-  url "https://gitea.com/gitea/importer/archive/v0.4.0.tar.gz"
-  sha256 "b16d6092e62eaf1dcbc5f6aa6424b0cefc979bfa7d706f393b032cebf5c1e443"
+  url "https://gitea.com/gitea/importer/archive/v0.5.0.tar.gz"
+  sha256 "11c32c509b9ad471f9f00f54a9968acc830ee4e8510be30cd7a879d8b87f8ee1"
   license "MIT"
   head "https://gitea.com/gitea/importer.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "9ff43e084272c1e611da8bcaff610109ed1e05e18c8c1ca329f93f0cc9e8600c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "90402b0804baa7c5362233f0b71faedc778dc9aa4200246bf34b686a885b6cd6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "90402b0804baa7c5362233f0b71faedc778dc9aa4200246bf34b686a885b6cd6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "90402b0804baa7c5362233f0b71faedc778dc9aa4200246bf34b686a885b6cd6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "052221f58387eb2309d2e016c2b71ef9143b2afac49b3b158b93b1b2582a3968"
+    sha256 cellar: :any,                 x86_64_linux:      "b898b781db0d2aba3bcd0c6156077f8982fdd5cf2b43ac21e340cea3ca3e7b37"
   end
 
   depends_on "go" => :build
