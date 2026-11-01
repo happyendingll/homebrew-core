@@ -16,11 +16,8 @@ class CadenceWorkflow < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9652c8cdaf0d32cdfbf81524c3d4e994a707b724a9d2a7eb5380021184d40696"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2d06c497e25d8a0cfc5537f659fcd6f7c55070bc76748040c0385442674bc581"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9a4bbe545636bc16509ca5f70ce70b4fa16d6aa7573bfb5180e35a6d6b2cf240"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ba840612c097a477bf0efaa23fdcd1e50ff88a80c9d80553c12dd1f446befbf0"
-    sha256 cellar: :any,                 x86_64_linux:      "f0608915915baecc3d1b0c7dc6000d808a7ea3b64e5d3499ee1ceae84ee2d983"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4b4df43f5b9355a7f3465b9e513d9b793cfdde4f40ff6a67a711cf359562e1d"
   end
 
   depends_on "go" => :build

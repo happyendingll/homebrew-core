@@ -7,11 +7,8 @@ class Ghorg < Formula
   head "https://github.com/gabrie30/ghorg.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6904ed2eac3d916d3816e5ef8153bc49eeea88e0738862a913e2cf2654b81356"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6904ed2eac3d916d3816e5ef8153bc49eeea88e0738862a913e2cf2654b81356"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6904ed2eac3d916d3816e5ef8153bc49eeea88e0738862a913e2cf2654b81356"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "719944dbb2616f4d845824182a7bcf75859eee385d54a750450d465481cf5645"
-    sha256 cellar: :any,                 x86_64_linux:      "1f5606e02ce8885e33b0852fb9d94a95fd476522c0343f5c5d0ebc9acab02fd0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "224d320d1c03ca57b7e2c6a8fb0e954929b941ffb85ed4f62c449b63f125e7b4"
   end
 
   depends_on "go" => :build

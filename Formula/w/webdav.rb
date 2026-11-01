@@ -7,11 +7,8 @@ class Webdav < Formula
   head "https://github.com/hacdias/webdav.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43a469e15ae16f663ebb209d150cf31cc3c3cdfa640d9c03637a40fa566d9425"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "43a469e15ae16f663ebb209d150cf31cc3c3cdfa640d9c03637a40fa566d9425"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "43a469e15ae16f663ebb209d150cf31cc3c3cdfa640d9c03637a40fa566d9425"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a0b44b8ead257b23f259b1089548bfed641f3b32bd2ffbd278d6a8f41794f2bb"
-    sha256 cellar: :any,                 x86_64_linux:      "2fb72aa1a8425b7152bf8b62d871856af9e6f4a048ff9580b9be8026d7cac09d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "d1479fae032e07eb1cc58e0a6400c370bd17553513b8500eb8e24418e0705e4f"
   end
 
   depends_on "go" => :build

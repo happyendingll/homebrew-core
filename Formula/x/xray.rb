@@ -12,11 +12,8 @@ class Xray < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "272647a033e73191c5b876c4fb5a4ebf0757609ab710f086d0c38b533f2c3344"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "272647a033e73191c5b876c4fb5a4ebf0757609ab710f086d0c38b533f2c3344"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "272647a033e73191c5b876c4fb5a4ebf0757609ab710f086d0c38b533f2c3344"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bc5d4d8a39a119ff73abe726be825d931259d35eadcd415076ba6932ac9669df"
-    sha256 cellar: :any,                 x86_64_linux:      "826c179ccf8812c647c7344f6fbeeace3af0a06fd780e0c94c00c0fff15fb89d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "98480e333bf09ea8ac65e84ce8f7eda2c89aef76ecc157746958c7000ab31d89"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Nebula < Formula
   head "https://github.com/slackhq/nebula.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f989686e52055247f22c5900fd8dfd10bcb62efc26b86736f4d7bd3c3f9a3819"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f989686e52055247f22c5900fd8dfd10bcb62efc26b86736f4d7bd3c3f9a3819"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f989686e52055247f22c5900fd8dfd10bcb62efc26b86736f4d7bd3c3f9a3819"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2870833fb40e4c157399e3a52ef2707f116d1451687c6f093f8a342c7ad6e6d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "85839c7d61358a5f7d6c062380f566aff7ce6ccefdb5506fc1f040c3a89f09b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "928dc8fe00f7a7fef4140e6abaa107bc06f0cf78c2a4e12adbc6e7198fe2f232"
   end
 
   depends_on "go" => :build

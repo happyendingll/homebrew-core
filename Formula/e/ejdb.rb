@@ -8,11 +8,8 @@ class Ejdb < Formula
   head "https://github.com/Softmotions/ejdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "04c0aa2dd320c344d2d79e38f9da50700da817389a2fc0ee4bf984ef484794c0"
-    sha256 cellar: :any, arm64_tahoe:       "9baec871e81ce1d66813feb64c56fcd283d937e5ae32008efe4df4995f62417c"
-    sha256 cellar: :any, arm64_sequoia:     "d443b77d2e7762938401b4ed71eb01b8c3b763f7b6498e37f41e6c23a121d992"
-    sha256 cellar: :any, arm64_linux:       "0e6f5ba25e0a6ef1163da9163b675429bc08dc441dd8b4dbbdc51199e61e885c"
-    sha256 cellar: :any, x86_64_linux:      "56d4db819547b593a4c695d48c243d816f105443fb93f8a8e0f53a5c5026d3b1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "03b2bf06a0e283752c99d63c76a29d54b44c3eb43118685b3287a456a4f7d865"
   end
 
   depends_on "pkgconf" => :build

@@ -9,11 +9,8 @@ class AwsShell < Formula
   revision 17
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "51bff8f9f3add8a7995899275b0c19e98edf864336347a9bdb0223fbbd98fc0f"
-    sha256 cellar: :any, arm64_tahoe:       "af836dc636fdebea16d1e5ef52d2e353c07d096333cd8109a0c65e98b8cd9f4b"
-    sha256 cellar: :any, arm64_sequoia:     "58aee2e7045aa73c475739557bd4ab0325fb2be39ee724071833217c80db7dd7"
-    sha256 cellar: :any, arm64_linux:       "bbe4a672570c7d46587442d2ad0800d7e12c27c2b22b1e4d4ec049103099ed84"
-    sha256 cellar: :any, x86_64_linux:      "a341dbb38c4277c3f2bfd566e9ffda64cd3fa4c9dcc3457d8e3505e757b1e50f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "3a0e25af285147becba34585007dd87dc2977345ea426c607afc0c19a0cb670c"
   end
 
   depends_on "libyaml"

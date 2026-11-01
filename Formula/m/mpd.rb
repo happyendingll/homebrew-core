@@ -7,11 +7,8 @@ class Mpd < Formula
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bc8a0ae2cc1a8a93db825950abd67df9291c6c0d5b516179662c6f1f91315d64"
-    sha256 cellar: :any, arm64_tahoe:       "c51859957e0dc1c0b969d3d1a5cfd22737f2d874ec9495c9fbce735bd7e780b5"
-    sha256 cellar: :any, arm64_sequoia:     "4da94d3c0894c8cd4d2f56c1e53325e4aaccb24d155278e09117873f00d06e0d"
-    sha256 cellar: :any, arm64_linux:       "7849d1ecd09f24e9261eebfa4031b25c74c071fb68c868b1064e872a3dd26dcc"
-    sha256 cellar: :any, x86_64_linux:      "fed529529f43e82cc058013ba1c283965c1248d6971ae8f54e61bd0da414bf50"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0f5f84605a5321361ac6f6f0b6f65897f0d7ac7c835cad58be3a600b13494366"
   end
 
   depends_on "meson" => :build

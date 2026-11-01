@@ -12,11 +12,8 @@ class Jaguar < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6af74950badc64f04f8b664f2e08279b2df6890048688595ec0a1dd6b6697237"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6af74950badc64f04f8b664f2e08279b2df6890048688595ec0a1dd6b6697237"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6af74950badc64f04f8b664f2e08279b2df6890048688595ec0a1dd6b6697237"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ed5b17f2de9870904c601c62aa4ee0cebd11fd98bdc69c3db0ecfc4a3aa8600a"
-    sha256 cellar: :any,                 x86_64_linux:      "de533d08baf9ded29eca33ed6be5b3156fa67d044b4fe22f2f5402df248b48f7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "21bec1a3062df4ff69c5689f2d89fc794c27fd1d87b1c50d4c05f1da27334100"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Mcat < Formula
   head "https://github.com/Skardyy/mcat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4cbdac1912123da29b598815202d522b22904fe276f52b620ea363b663daf92a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "62c2ee0f08fab77a659c5b735470ccd20e22a81ea2e1effc7fb2b2a17359a8b3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b2bfbeb90acf52960ef0544d8b273a8c8685ad5719cd850b593a1b0fdee16aba"
-    sha256 cellar: :any,                 arm64_linux:       "a42bb517a9e2d24ed146d9c4496e1a04c23c40cc7cb1751f30fbf803bc5f8eb4"
-    sha256 cellar: :any,                 x86_64_linux:      "4991b70a48a71dd9aeab8633964580083c81972852db53b147188fa7b719cdc0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "7c8b2e040b21aa5abd76408dabee8466d537b5e86804274a8041fe4db7647769"
   end
 
   depends_on "rust" => :build

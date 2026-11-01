@@ -12,11 +12,8 @@ class Tun2proxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11733ff9174654c2580116261c5524a4af1c79448f76a2c5f971c2bdc56c2b7e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4edb3597f32ba25b14bfa6c44d0bdf0f118f3b9b6197f8966302c0fba8dea100"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8505e0fc3465a2250fd418508a75f05696db72d7eddaf7e8d0c3f2cd35d1fb62"
-    sha256 cellar: :any,                 arm64_linux:       "2e8467ba41834e45550ed93a8f760657185cff8eadb45a429ee2cb3b51c0eeca"
-    sha256 cellar: :any,                 x86_64_linux:      "69b863ab9b16d9ce36b8b181448f9d315c3334a205a94b014a48d08fe9890cf4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1bbf7714bd6b499eb840a5fc9c15a5aec07dc3a692c2cb6721281894826f03d3"
   end
 
   depends_on "rust" => :build

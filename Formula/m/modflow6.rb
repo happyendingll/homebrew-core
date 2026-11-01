@@ -7,11 +7,8 @@ class Modflow6 < Formula
   head "https://github.com/MODFLOW-ORG/modflow6.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2b9b464b0b1cebc7dc22822b1df9e21f1b83a2fd40df5d62b65f7811e915510a"
-    sha256 cellar: :any, arm64_tahoe:       "cc8c167ce65886751d438a3ebff4033ecd70b516e4d90b918900201681298e71"
-    sha256 cellar: :any, arm64_sequoia:     "07a4ad99135c42d13edeb566db37e73b4ade8573496bd304d93e6b6782f29c4f"
-    sha256 cellar: :any, arm64_linux:       "64e489d79d6ed71b34e32fd223f4ccdb20da7f7d092ec0a71de37decac960d2e"
-    sha256 cellar: :any, x86_64_linux:      "43a88d58e4dc23d5596d8f716e7914750466d20876ba4614049ccc8e22b52d59"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "a557e6562d4c85a9734b5d14102e997f00e76105084e06293b4a727303617d7a"
   end
 
   depends_on "meson" => :build

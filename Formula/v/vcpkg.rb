@@ -20,11 +20,8 @@ class Vcpkg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c78cc083f18d1c930d1a577cda4b980a376c35d0335230ef3c95131791ccee98"
-    sha256 cellar: :any, arm64_tahoe:       "903fdc2bacaf706138414cebbc968da3cc6c1918809c0a1bde052026b0af7455"
-    sha256 cellar: :any, arm64_sequoia:     "c771ca888a7bc45ccce278ec7d2fe99391002ce6d0d878e30b09106292014f48"
-    sha256 cellar: :any, arm64_linux:       "be31d9606eaf86054639aa21dfb7a4e1c0e34b9587cb7b8bddfb3d3fbc72c9a1"
-    sha256 cellar: :any, x86_64_linux:      "74e039a32f089b775dfdea4adb5840195677c18a3dc7d003a070384c7fbf7643"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "130dd871d063c62d707e1e2082619ca6863bc078eb48fa26c4d6cbb12aa84046"
   end
 
   depends_on "cmake" => :build

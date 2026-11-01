@@ -12,11 +12,8 @@ class Mimalloc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "25af6b36948c45f5ab5f2a2c2b2fab7899296bbdccf85619bfbbbf505f0138d4"
-    sha256 cellar: :any, arm64_tahoe:       "085dc6048a48155e76e00a37dee769ae04f7c55b0416c2554d0ac4a07353a026"
-    sha256 cellar: :any, arm64_sequoia:     "6976f4f5e065110e4c22a20c0194cffdb4a4f586b07ed9ff2a3bafd2c6864507"
-    sha256 cellar: :any, arm64_linux:       "677a7114dfb2b14b2e5be78bcb5bd0d3b09b2cd5868c982c932585bfcd4c09c8"
-    sha256 cellar: :any, x86_64_linux:      "69c309c660538e46d293de71291f41727f614547f1547804775b573658a9b3e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "50e64626aabdcf695deb9f0321b802853459762c78f1b480341aef074871ffe6"
   end
 
   depends_on "cmake" => :build

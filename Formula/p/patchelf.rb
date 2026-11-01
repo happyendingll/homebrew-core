@@ -12,11 +12,8 @@ class Patchelf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f785866740a9c4010ce961214e5fd8734be9369d06d1282adb75da699322799"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5adbf0b87fc96a767414bbed42dd2dac926d6a6340a9148f50835ba727b6660"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ce4c7e8ae70eb6dca9823a6682be92d3a9caa5d9f0a105991e021b00092f553a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "94c77e6b38123091609f83bdc2d47533335c915d31d935f44c18a85ef7208bab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6cc97c2a1de234017bcd54cb3d12ae95b36e3b5be9a0dfb6b5b276879ca7d9cc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "fd59c7f714cfa7730b625068aaf2bc324693acf30b7fac6d18cf132cea38229b"
   end
 
   head do

@@ -15,11 +15,8 @@ class CargoBinstall < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "682a8b4edacc887cfba91d59dc634805aad6b18da300750f96f1a19feecef797"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a879b46bceabf1ed9afb224de720c37754f4d7bde222c1828060c1d14f95a7f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "308dbc741826ff9d9ef3a735e9fb46f8aea8efce0163d0c4ca06b9a515ea623b"
-    sha256 cellar: :any,                 arm64_linux:       "198792508ebffddf12af12df618521e3fadbb9200990d9bf56a2eba72dbe3cba"
-    sha256 cellar: :any,                 x86_64_linux:      "8beaf69154b309693b36f8c596fa911f75853337479bba58e3301d1ee48a01b6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "485e9ab6ac804c6466498acbb14d84a95bb75d1195a8c508f41046a612b934aa"
   end
 
   depends_on "rust" => :build

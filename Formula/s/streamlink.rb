@@ -9,11 +9,8 @@ class Streamlink < Formula
   head "https://github.com/streamlink/streamlink.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "93d25ff08f3e2d6fd46c68612205d2357aaf04a02b13acdaea1a02bf3198777f"
-    sha256 cellar: :any, arm64_tahoe:       "fbb6ba30505c741a2a95172796b2fa71034fc3357c802eada00a9c49488cd500"
-    sha256 cellar: :any, arm64_sequoia:     "46337dffcf2fbbdf0834fffad000b92d67d600597ab2e380b909bebec0da7f75"
-    sha256 cellar: :any, arm64_linux:       "d73da9a08c769d896718c8046d84a5aafa50f1f928548995e0abb697ac3f4cc4"
-    sha256 cellar: :any, x86_64_linux:      "dd068cb2d22ea4de476f4f65288d5879a1b8ea12297aef174bc0f71c3887910e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "c3fb1ac8e2207b30c9ae76f6acb49c8ef1dc62ee98562af9c4373ab38d9e9bb1"
   end
 
   depends_on "pkgconf" => :build

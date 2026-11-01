@@ -7,11 +7,8 @@ class Karmadactl < Formula
   head "https://github.com/karmada-io/karmada.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "417393a1e6c17eb767c8b5a5536a08d5fb0f0c5ee4afd5d4aef8e3a031203e2e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3494722aaf61d517e8c948b0e6dcddd6f3c88fbfe213c9a9fcf39d0591a1a761"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dbe7e599756cce5402dbecba247ed33dcdd70b58047eb41464a5ae9e8b4489c6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b848ae8eb8df020459748b04f3ae902859235eb9565a8341bcb6196215b25d8d"
-    sha256 cellar: :any,                 x86_64_linux:      "dff9b8915761bed0aa99ec316ba1aaae1c7e7e4bc775c095fb3af5739c461426"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "5be6bea5bf89252665bca65a1124e3a21c669b377a91c53881bda89e9bd8ac37"
   end
 
   depends_on "go" => :build

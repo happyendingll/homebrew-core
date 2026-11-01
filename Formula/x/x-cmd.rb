@@ -12,11 +12,8 @@ class XCmd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a499a66440f1eaa9d93a25be92f31074894251dea94010b434f310a8bde0aee8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a499a66440f1eaa9d93a25be92f31074894251dea94010b434f310a8bde0aee8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a499a66440f1eaa9d93a25be92f31074894251dea94010b434f310a8bde0aee8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6118b87faa02d7158f733606c11a9f6cdd11cacdf1430ce239c4fb09ec3fc1f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6118b87faa02d7158f733606c11a9f6cdd11cacdf1430ce239c4fb09ec3fc1f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "ebebe3eb3765bb5192806e02038545410b0d30916e2c38000b04399c3b6ff3f8"
   end
 
   deny_network_access!

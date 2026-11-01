@@ -12,11 +12,8 @@ class Redress < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cf16792a98ba7fbd512bcc86c54a824e76ebc499a4b571093944819be9427869"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bd45e88a81a7cbad45b9cd9ab5611d45c02848f38370d261cb2c9dcd39a92a51"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "383a4839e6894f916da8f15311eedc69b142bacaa842d7d508ffc4f7c940c6b1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f420ec1d98a5d730d5eb3987087d321ae617ec90edb7b74fdcbd5b92a70e287b"
-    sha256 cellar: :any,                 x86_64_linux:      "a033f5d75e12edf5c7a14d5e742d93b4d1a4889e717aaccb5491d4c4c4522369"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c602a7db3a00bee94b4f377611b621a7d1077219698c4cc88b6fcd74e9a49954"
   end
 
   depends_on "go" => :build

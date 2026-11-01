@@ -12,11 +12,8 @@ class Grokj2k < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ab982e89d80ff359d87e08eeb7d6c97168e4c28e9abc3d29aad0a214a58b6f3e"
-    sha256 cellar: :any, arm64_tahoe:       "78163612af5422e0c5079a5d94336b578ca905ffcc4ea335ce056cb6646b52d7"
-    sha256 cellar: :any, arm64_sequoia:     "e972e4c65568bc0cbebadf15a0a2d63ec183af0cbabe504b239b17096272006c"
-    sha256 cellar: :any, arm64_linux:       "14c8bf060a9b48babc5683db6bcc21cfb89a836b13336a043925e7392c38baa0"
-    sha256 cellar: :any, x86_64_linux:      "27536249b1d6f975acc1d46574be1c122b48fdbbc4f75927d7ad0e5320c98ef2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "8f553cd50f1236ea899313d45d98546f1355d7107a4aa1af9275e57e4f653c89"
   end
 
   depends_on "cmake" => :build

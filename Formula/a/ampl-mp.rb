@@ -11,11 +11,8 @@ class AmplMp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2694e480ea5f65152d17fb741aa6cae2095beeb7920ac5769d5744e2c1c0ba19"
-    sha256 cellar: :any, arm64_tahoe:       "edd7fd778c50bb9ba1c719fd00323f8560ff8e3adf0e3216a95215961117043f"
-    sha256 cellar: :any, arm64_sequoia:     "f000a45a16bf1a93b297689cc72879293db23e3928bad674fa1d4dcccda879f6"
-    sha256 cellar: :any, arm64_linux:       "6cb8595a71369176cefcf5e4131ec311e0984e0ab4578db23d92d89c6557bf76"
-    sha256 cellar: :any, x86_64_linux:      "f527f89fca9a3e455c435ddc76ec8e6a6009c009bbd30e0e99797691424aac22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "614efd0ecbe83d1b4fd34feb4b6de0be146a7bd2c09ac05f5b57ea03550e38d9"
   end
 
   depends_on "cmake" => :build

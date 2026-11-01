@@ -11,11 +11,8 @@ class Ansible < Formula
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "12a8afa5da381fa3dc72d332e7ed1666adbed1c6f8a0d19427de3cbef60863d0"
-    sha256 cellar: :any, arm64_tahoe:       "50e58c50be7be35f0b35d76ab668e888a85fd823f8e0ab281ce946532dd72201"
-    sha256 cellar: :any, arm64_sequoia:     "e32b2ecc70fbc133180d61c7438326db6a3399e9fdaa71c124c3db4d5f8e818f"
-    sha256 cellar: :any, arm64_linux:       "080b90c8237877d31f8218bafcd3084f848ad5f3b6f542a23723d4c0a5fc2c1f"
-    sha256 cellar: :any, x86_64_linux:      "791a4bf2d1790ac2f160849f83041254e6d64c7e71ef37a00d649b12b40f0904"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "c03ed17be91d832843e0414c1a218b97e7320be30190086b0e580293789c5fcf"
   end
 
   # `pkgconf` and `rust` are for bcrypt

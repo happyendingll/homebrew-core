@@ -10,11 +10,8 @@ class SmbclientNg < Formula
   head "https://github.com/p0dalirius/smbclient-ng.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c69109da05195925b83d78bb3dfc48f86442d3c401ae2c6ba66926c91a3e1ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9a4f0515e94d19583bf48390ede92a6c3fc9f7f734b03c86f55267de83bdaa73"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09277072c49d2c335051100e79ec2e46f05d6834c9946e2defe5c1b212528c27"
-    sha256 cellar: :any,                 arm64_linux:       "84207a762d7fdc2c13473bf3759536b40d0f65a519069e1d3836c77ea0e61cec"
-    sha256 cellar: :any,                 x86_64_linux:      "8f81c37728af1dd918617a32cfe052a7cbc328648abf480c81e2b7f270e0ae9d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "945f7fc7aed6781797343f3cd5209a50908f771f30544786efda9723c3108dc4"
   end
 
   depends_on "rust" => :build # for dnspython > uv_build > maturin
