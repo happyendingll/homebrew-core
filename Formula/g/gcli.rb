@@ -7,11 +7,8 @@ class Gcli < Formula
   head "https://github.com/herrhotzenplotz/gcli.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7918700cd15bc09c073b03283a9881236d0b0d6f50485ef93c20555d088d154c"
-    sha256 cellar: :any, arm64_tahoe:       "e52413ae615a54141056c60ca8217cf3c3d10483a63f2b52c8de3c31b23596cc"
-    sha256 cellar: :any, arm64_sequoia:     "4a2bc07bce36b9b117e04622bc41495d686ab6a789dd7d7cc5d8b29aed4ddadd"
-    sha256 cellar: :any, arm64_linux:       "b82ff65a6c6d0b1971cbdd188ce908baedde614cedd9c484eba69ac43959e4c5"
-    sha256 cellar: :any, x86_64_linux:      "179a88f0ef54bc3efc66cf651f57a55003c7e104d43a2e9808e1aea789069e06"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "673e2672e99d5b76ae3a5eb87603565de1a3c60dc1efbc2c91d0b165542246c0"
   end
 
   depends_on "pkgconf" => :build

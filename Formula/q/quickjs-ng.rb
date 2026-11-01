@@ -8,11 +8,8 @@ class QuickjsNg < Formula
   head "https://github.com/quickjs-ng/quickjs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3548576e9dc7d1902a7eceb38e5064308e29d064f107b81440f6d1110dc58605"
-    sha256 cellar: :any, arm64_tahoe:       "fd7674dfed0b220af4314c5019c6269cafb24b9a1c5e0eae564b5fefafb27737"
-    sha256 cellar: :any, arm64_sequoia:     "afe831ce1bf92ee1be4e11bc028525f36f6892e0d231a67996144fda7377f8b0"
-    sha256 cellar: :any, arm64_linux:       "240705ce6d46ccb28d01a1fb2daf4897ade201e229d160c1d391401fbc77cf68"
-    sha256 cellar: :any, x86_64_linux:      "71d104947d327da1c9975df38b6d25bb9fa3b224669386c3294e78aa84e799aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "78dff0d293f7e3cf826c27e696cab2453f6a48ade533da0d2c42f3be24f1b2e7"
   end
 
   depends_on "cmake" => :build

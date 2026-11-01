@@ -7,11 +7,8 @@ class Adrs < Formula
   head "https://github.com/joshrotenberg/adrs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "170183456bc2c7954d8bbc69e88103b9b7cee394dfaf74477fd9cfaf785f4d2f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "70961f29588ff096b94de221c6f75c5e226e5bab5c0c53c7792022522edb778e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4f876dc19293d4771888e5814c0a618e3a51ab0730c50e39737616c5684915e6"
-    sha256 cellar: :any,                 arm64_linux:       "bde4c1165336591332d41050e8e204c2c8637bd0d47107615721d177167a5157"
-    sha256 cellar: :any,                 x86_64_linux:      "a051d5b9003ae0a33dfd9166584f58f8d9b6b1d0a50ca65c306108283d3d0c7c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1a7ec4ecb40abf3a7ee9f419ecfd43ffa410d267a28d817b9048c1c37184ad5e"
   end
 
   depends_on "rust" => :build

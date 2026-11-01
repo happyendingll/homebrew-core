@@ -12,11 +12,8 @@ class Wails < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "462953e893404a7cb4cbca1432397f25f19cfc181055c025795fb90d81a21a05"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a307231ed629959d6379cb5bfcdda5996d798ea8741d82bc33e0f22ac6572698"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "416bcde673338f92762087174f58ffa0c5a73398b4810acc96543091b4db64a4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b5f6b600b4388a7a4e93062b6a424ffd471bbe6b2f673d9dbfd2bf2c1c43080"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ce3ba46f9d50b24a182e6db594a1cd9ebce398e7956f40de3ae01a6d48149b35"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "3041c2a2ed917e2ac8549aecfb751037b3f265b289d705be274feff9d241dbab"
   end
 
   depends_on "go"

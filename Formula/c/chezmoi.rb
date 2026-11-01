@@ -14,11 +14,8 @@ class Chezmoi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b04fc243e1e9143c88480d4d3bab671578678082d89a8735efdc4a19f9ffcefc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "925bc98de5ce8a24b2ed6fb3e572f6091f006376349733d14c16901340a5ce0c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "95dca8882c7514a9ce6f6e446fefae0b6ec6611da915007a96c7cfd11cbd95b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4a7e7f168d4fac72bdd732c7ccb4937d1aad4992d95df58778ab01a918addfe1"
-    sha256 cellar: :any,                 x86_64_linux:      "4768d049ea5029ae621a4be854c66e25d10a6f97b80c6467630a8602b9ef37ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "774077334f1bfdbe9b99dc5099c521d01945096291cb5e25781efdad2f227ac9"
   end
 
   depends_on "go" => :build

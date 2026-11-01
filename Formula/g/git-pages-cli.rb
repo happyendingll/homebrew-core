@@ -7,11 +7,8 @@ class GitPagesCli < Formula
   head "https://codeberg.org/git-pages/git-pages-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "708fd5c316bf0480d8e60188cc6e3e6423319226d04eb25e37692215fc00f5e5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "708fd5c316bf0480d8e60188cc6e3e6423319226d04eb25e37692215fc00f5e5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "708fd5c316bf0480d8e60188cc6e3e6423319226d04eb25e37692215fc00f5e5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "eb9deafc374994969cb2cf05431366e09b9aec5459458cc6c18e10e652c3ff77"
-    sha256 cellar: :any,                 x86_64_linux:      "97c52a44d306a576089353b9e855420fee45861272c250b5712e9ad3ed8d7a41"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "160fa75ecaf561398180c1799b3f14f5753ac05db8520dfd9e5fa87455ad22da"
   end
 
   depends_on "go" => :build

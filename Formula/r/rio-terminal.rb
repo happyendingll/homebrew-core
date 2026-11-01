@@ -13,9 +13,8 @@ class RioTerminal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "adf9d4ff024e4564623b0ac495f553ecf8d08f736b7a7cd0e5e7a3de8195eb35"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0e234b4c6ff9bfa0311f70b71ccaf606459710827e918210ff691a9c737299a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9d628f78834336204dc782f1e406b4aef633c1f19fdb24692099b00e9b820c86"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "12f2654599e215852836a4bf3895624bb6dfcc78d114317a895cdbd35bce995a"
   end
 
   depends_on "rust" => :build

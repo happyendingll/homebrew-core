@@ -7,11 +7,8 @@ class SnxRs < Formula
   head "https://github.com/ancwrd1/snx-rs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4d5e4435c0c4b1d0b3d3ad2afbeb33d205bd72036dee4f219e6f0cc156ce175a"
-    sha256 cellar: :any, arm64_tahoe:       "ab492941ff3d0044495b075fe4b2a2b7d3fe002d7a23bea3d0ae6887f46b9e96"
-    sha256 cellar: :any, arm64_sequoia:     "17d8022daaad0dd80630ccf0273c54c7f4fc7b92ff191fecb58a4c58f1bdfa15"
-    sha256 cellar: :any, arm64_linux:       "e79543d58474a2f35254216dffc6498a16e1ad7453781b3708b29a4e35d92851"
-    sha256 cellar: :any, x86_64_linux:      "aba1514729cbd1a2eebde64bf519572059b02db5cd34e93d027bfc3c075ff3bf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "425a2ef7b93f317ec0710f3bc0f928cb39ddbbcd6132d83c2ec75b97ddba740d"
   end
 
   depends_on "pkgconf" => :build

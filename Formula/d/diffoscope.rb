@@ -8,11 +8,8 @@ class Diffoscope < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "020f020e143a0b2418ffabea6f59eb459adc14add0a72b643c1bf308f9007da6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "020f020e143a0b2418ffabea6f59eb459adc14add0a72b643c1bf308f9007da6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "020f020e143a0b2418ffabea6f59eb459adc14add0a72b643c1bf308f9007da6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "05c2dd8eab706e0fe36ff53104bcd6b198c19728ac8cd77bae7da1f7b376cbc2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "05c2dd8eab706e0fe36ff53104bcd6b198c19728ac8cd77bae7da1f7b376cbc2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e0c4a988f3556b325df4f63104bf8d1fbbc25e4c725b4c738d361f528a6a7737"
   end
 
   depends_on "libarchive"

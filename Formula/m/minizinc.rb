@@ -25,11 +25,8 @@ class Minizinc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1a3cfd0f6a669898370629ad5678e49f544dcebfdac47d05e761d5f07087f7dd"
-    sha256 arm64_tahoe:       "31aeac75fa462a55dca0d810bdd8106338b63dfdf939db564f94554fc1691e0f"
-    sha256 arm64_sequoia:     "44f77ee6be4dc34ac587062704073a866aa0cc8ad052d3308dc50d9cb1a13a39"
-    sha256 arm64_linux:       "5f6bc4ac481fc5fe2f7103716ffb3dcb49cea9d4ef0c4b0c627217f903e8adfa"
-    sha256 x86_64_linux:      "85ee3fefa5887e1cd1bec8aa983e94a27a5c3338a64bf22e78f42bbb1979fce2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "67332b1ca85bb65c17b453ea67ab13bc222d7b95f0c942550e7e69ee724ad3fc"
   end
 
   depends_on "cmake" => :build

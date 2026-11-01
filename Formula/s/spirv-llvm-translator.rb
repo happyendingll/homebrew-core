@@ -7,11 +7,8 @@ class SpirvLlvmTranslator < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d3b90cbd19c5683973cfb07a885eb6b597da8f504814b016e9514175496a2678"
-    sha256 cellar: :any, arm64_tahoe:       "1aa572ac5ef17979ff283d00789276c76be93aab4f4a8f853522cec65462e372"
-    sha256 cellar: :any, arm64_sequoia:     "bd5cb529d44295fc0800fddf9ec00b6252d21f9b736dedfd155efafd649f88d5"
-    sha256 cellar: :any, arm64_linux:       "c4b099bd9e0576a4729646d14ce000897080b32c7588ce7944ee56ad16809f77"
-    sha256 cellar: :any, x86_64_linux:      "8ea50f4b07d1e7c881912fafb70c50a1d060fd36835e4219f08e0a522af32f23"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "488bdd6f2da1bb22e410adc8a9fa7dd499fbb17a89fac3e3c477be281d70d865"
   end
 
   depends_on "cmake" => :build

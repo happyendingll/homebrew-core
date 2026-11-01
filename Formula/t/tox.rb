@@ -8,11 +8,8 @@ class Tox < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0bbaaa2a04dbdd6f71694db767df809128e9188ae063dc4fc8b9fbad22b0e793"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0bbaaa2a04dbdd6f71694db767df809128e9188ae063dc4fc8b9fbad22b0e793"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0bbaaa2a04dbdd6f71694db767df809128e9188ae063dc4fc8b9fbad22b0e793"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b216048b730c2c892e7e21e9e84ac008ad538baac56403cd5dbded156413d507"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b216048b730c2c892e7e21e9e84ac008ad538baac56403cd5dbded156413d507"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "dfd4234fa03a7ea5f6ecb61bf1432234a234b88094e68d24b1ca452364b31db3"
   end
 
   depends_on "python@3.15"

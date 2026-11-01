@@ -12,11 +12,8 @@ class OsrmBackend < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "72996859df84d1d93356de2792bf1c773a3c9d7c5da8a339606edc97440975dd"
-    sha256 cellar: :any, arm64_tahoe:       "40105351ada732b8ee2441b5be853d66e33b9b183185e4b3204aa389db644099"
-    sha256 cellar: :any, arm64_sequoia:     "bc3a080fe2faa416ab6ef2fa87dc751889d2b30f2b82cd2036f197da3cc0976d"
-    sha256 cellar: :any, arm64_linux:       "2d844ba89138280c591d6874db45fbf1afc29105473be9fbfcc81c4e00140769"
-    sha256 cellar: :any, x86_64_linux:      "fab80cc25b98fb7e20188d3d9eb59b1f1afb23e62bd0f30b4c68a14f22def4fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "4392cf52151e948025b2ba98449e4917ef09c433e722ac83573cc2cdba58c8a1"
   end
 
   depends_on "cmake" => :build

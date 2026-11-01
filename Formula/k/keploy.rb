@@ -11,11 +11,8 @@ class Keploy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "28aa01aef20923280670e1cc86e1a7daf3e744d309b456f18b8df5a810e75723"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "28aa01aef20923280670e1cc86e1a7daf3e744d309b456f18b8df5a810e75723"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "28aa01aef20923280670e1cc86e1a7daf3e744d309b456f18b8df5a810e75723"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4e65db171693e55d59a3db326419c2af370688f61edd80403505000203155e2d"
-    sha256 cellar: :any,                 x86_64_linux:      "4a4a8622352fbf82a4d9da21bfc071c366667974ebe8f13d4807a4f3f24e94f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "15ee3849da11fe6e7b4ff1cdd26d25b51d0eb131dc161656f193edf64e352ec3"
   end
 
   depends_on "go" => :build

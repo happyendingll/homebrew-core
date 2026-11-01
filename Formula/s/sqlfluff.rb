@@ -8,11 +8,8 @@ class Sqlfluff < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7114bfdc2fdc087bfa28be10a4e3e6ac37065a2c9d72d07ac96c889757086fd0"
-    sha256 cellar: :any, arm64_tahoe:       "b136f8afec98d6daf3393507ea253498631d8e655d6af9edafd28fa15655ecce"
-    sha256 cellar: :any, arm64_sequoia:     "b15738f8f9869b22523f4a017707f892a1172d08f1ee6b98198cf84c933ff415"
-    sha256 cellar: :any, arm64_linux:       "fcdbe95c01b5d6612ea5cc036cca72ffa1403c05a0f11573dc3ea765b5af341b"
-    sha256 cellar: :any, x86_64_linux:      "4567766b32009b0d581240c25098e8d05848f9b93fe3cc73f0019b4e33506aea"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "d8874eaa56b78b245adb8f3ce5b9d80d0995099c8b25dfc45c6e657502369b9d"
   end
 
   depends_on "libyaml"

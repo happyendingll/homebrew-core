@@ -7,11 +7,8 @@ class Gecode < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c4f0d6981bf2aecf9d46a19e647e0a95c9ddfd7857356a25d30927f076057225"
-    sha256 cellar: :any, arm64_tahoe:       "5fca902a52127fa46dcc4fcce8e204905b80d40801b9baf8167fd6f92ef2e8cf"
-    sha256 cellar: :any, arm64_sequoia:     "05345a73605109e672e866d924c7bdce16aef198681babbcc0845d10489c862b"
-    sha256 cellar: :any, arm64_linux:       "e63f4683937e62b07340af8be98367e4cfa4821110d6c675c63ffde3819ae0ea"
-    sha256 cellar: :any, x86_64_linux:      "07dd9d020ca0d3d307680514295a36a9d28b82dd2bb9cbfb880896db150cb495"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "b19c25835fb865e0a516efe4141de5e28b50806122daef45997a3956f3e4fbd7"
   end
 
   depends_on "cmake" => :build
