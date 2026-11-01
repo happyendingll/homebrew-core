@@ -8,11 +8,8 @@ class Mpfi < Formula
   head "https://gitlab.inria.fr/mpfi/mpfi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ded356712f2a860073ac623621ffe8f5715272bbfcb8ad0967377556ba41ebe0"
-    sha256 cellar: :any, arm64_tahoe:       "77ff8894c355116e031ae3edc9c78fb9eb963bfd499d37ffbb6265fc1816ce3d"
-    sha256 cellar: :any, arm64_sequoia:     "db8707dd0d05575e06945620923ffa0115055bcb1b016922cf0d755eed43580f"
-    sha256 cellar: :any, arm64_linux:       "fcf91c7bc68097cc1e8f1829ec83b652a50be2421f8c385b9603939dd63e9589"
-    sha256 cellar: :any, x86_64_linux:      "6b55c2470092faf4d2d5703275ead512cdd1bc88a6d01aa289dca409493e9605"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6246e3bbf679028e8e500b389ee291a436057ed713525a4b9143f0ee56b1436d"
   end
 
   depends_on "autoconf" => :build

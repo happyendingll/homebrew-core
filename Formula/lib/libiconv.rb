@@ -8,9 +8,8 @@ class Libiconv < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "84718608d5c5f2bf0afd3884587957f9d1c5a4870340dcdc75c12d3a5fd71007"
-    sha256 cellar: :any, arm64_tahoe:       "9a7174efb9791b8465d71485e9d455ce51de5be13a6c20ae457ca2c63f06d7d0"
-    sha256 cellar: :any, arm64_sequoia:     "eaecd1468193e943ad6fb51c286d5bba93ed425c391370be6a9e498ce7f45b92"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "abd35eaf2b226d222f4f8a855ea0a0e52397b313c4d6427054d42a18afcfb799"
   end
 
   keg_only :provided_by_macos

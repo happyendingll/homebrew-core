@@ -11,11 +11,8 @@ class Tetra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cbe2d32725e8c1126441e7fc0745322c379a7d5a8842232e69bc02c2ff462442"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d50d42301674bbfffef5c7f8de4eeee0792326ffa70ba8c827579c5cda5e38be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4983c3484d38e6fb737ded66f76bae3412da1404ed3e163e80d01a056fd68714"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ca2d34fe535418d91710b45e00587156c6439afa3beec6045c6adea661734f04"
-    sha256 cellar: :any,                 x86_64_linux:      "6becd918f58759307382b335eb8f19713339fd21eaa7c58c636c678bbe065ddc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "feae80394654d0157b480ca6e05f7c0d88e1c2473ad0e7d3885b3a8a6e92241f"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Libucl < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2c987363c2aa4194644eeaee384db8e018c6b550ecade0ee5c6236be4523640c"
-    sha256 cellar: :any, arm64_tahoe:       "3967d61a155c8377a6f9f8b38fc42d49df09eaa4ac1b24d418948d68d25d22c9"
-    sha256 cellar: :any, arm64_sequoia:     "d574d99deec33e5548162abd805e89a83310aa6e076724db43e9f1fcbea73767"
-    sha256 cellar: :any, arm64_linux:       "1dc23ca8e9340e7fd1df6e5e22b8dc98defe702fe4c5e65165a7d541b38792fe"
-    sha256 cellar: :any, x86_64_linux:      "538d5ff610d8ff0671f7a304a20d9f4f157afcc2e901d2fb487db32d7d59e872"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c6f33398bb5e919e48857b460c06a20487fd9d1957b0df7a4082c1f7ad9eb40b"
   end
 
   depends_on "autoconf" => :build

@@ -8,11 +8,8 @@ class Uriparser < Formula
   head "https://github.com/uriparser/uriparser.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1cbba70827516fa28a03266652737f8cfbee50df23c5181296de6e4c8aca46c9"
-    sha256 cellar: :any, arm64_tahoe:       "77cf4ecd0fc02cbf5ba23925ca64c34e7db3e176c959c9554255e1ceacf0967f"
-    sha256 cellar: :any, arm64_sequoia:     "dcba49e906d4c9f7cc18585a0f8613e2b5afbb23d14457b4eb75a0d6f67d312f"
-    sha256 cellar: :any, arm64_linux:       "13a3ec62e32a4e4e11b46009b3bff83a55ef37e4237c0616f0f84a34c004eaaa"
-    sha256 cellar: :any, x86_64_linux:      "8fc29f375d7eb876e062d50a2578012d91cf7330624cfacd8c175febef818d32"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "17084c918b9a4c160c04511745967bf23c2afb068b7156ced91e4c5fe0b337ad"
   end
 
   depends_on "cmake" => :build

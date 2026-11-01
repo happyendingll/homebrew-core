@@ -6,11 +6,8 @@ class Zmij < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "62d66e334e441e90a5523a174382817d668eab622d20c9b1b700e80aec81c76b"
-    sha256 cellar: :any, arm64_tahoe:       "4d0a4759ed511331f2f6ef0b39add6a41ae103972fe27e34c60392f9dbd5b417"
-    sha256 cellar: :any, arm64_sequoia:     "a7590743f17917101da42245d6f8f3f9f35c3c7c015c618eb9bb76bc1ec248f5"
-    sha256 cellar: :any, arm64_linux:       "1d4bee56fd0eb7b745fe580808bc1cd5326374534df4b73de7fb4b733b352acb"
-    sha256 cellar: :any, x86_64_linux:      "96ebfe53b1911767ada47a181dc75118f23dbf816d4c9d576211e2d1dd5756a6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "015c901fc5df70b2ba40b54f04d31d480c91da0c075c9eb2ae2cc2be21003ed6"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class Liblerc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1cd5dd2e502dac355e2e57c4efd0dd31597846b79830c7972359b8375f30e0a0"
-    sha256 cellar: :any, arm64_tahoe:       "b61635f91bd88667aa386fc6bbb67df1af289d51daec935a00f89159c3548841"
-    sha256 cellar: :any, arm64_sequoia:     "cff8a14998073c9dd1a91f291258e0488e0d5670db80a8e2049d1c0e7e6f7ccd"
-    sha256 cellar: :any, arm64_linux:       "20f9c6cf1d8ad208171e7a4658e12c6cbb6cb5dd606fbf0ed6bbcc29822973fb"
-    sha256 cellar: :any, x86_64_linux:      "315d93e84865e319954ad3b2c849cf5dc263c52f6bbbf209772be808784fe34f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2dac99b9e7a67fbe9b0cffbf26bf84c4bfc1972769a8cd60b943080723af6e7b"
   end
 
   depends_on "cmake" => :build

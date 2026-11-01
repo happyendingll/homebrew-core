@@ -7,11 +7,8 @@ class CBlosc < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "24db67e9fb0e885be0d0a7b7212df1050d4913f8ff02a6848033d8a47cabf390"
-    sha256 cellar: :any, arm64_tahoe:       "8f3e601e99393d1929b14d52c6f68792c9feee477f490f989820a3d341b3624a"
-    sha256 cellar: :any, arm64_sequoia:     "342b604169fa91f42f41682c3f9fa1b2dbff32dbc462f2435f5ec7d787ba63f6"
-    sha256 cellar: :any, arm64_linux:       "df944abb0b9e6e0b3ce06096d794e17e0f11a1c5e25279e5e3fad5f8e918f81a"
-    sha256 cellar: :any, x86_64_linux:      "c9625c53e286612f5347b87d17286f46b140623130e14e0fdcde4a80df6fafc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "2a0cfbe33bb7b64132fac636eeb5c89719e875042c2f9b2bb8d73218be307094"
   end
 
   depends_on "cmake" => :build

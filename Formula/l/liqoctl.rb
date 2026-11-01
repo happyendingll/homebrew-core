@@ -7,11 +7,8 @@ class Liqoctl < Formula
   head "https://github.com/liqotech/liqo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e5dc75872199a14a9eaed959561e9f7636c3d6e8eecc3d1485045bd273a1955b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e5dc75872199a14a9eaed959561e9f7636c3d6e8eecc3d1485045bd273a1955b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e5dc75872199a14a9eaed959561e9f7636c3d6e8eecc3d1485045bd273a1955b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "22acb8f102c1d790f98fda426fca2dafac426f091a8a11e260e5195961a53e6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4fca3b133beb62f1e2f9be48f43cb1233a743e917f8692b20c40c7e96dec6e87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "baa4d4194cb761c287ac697192930e49cb3914c61461b363c522a39148e3149a"
   end
 
   depends_on "go" => :build

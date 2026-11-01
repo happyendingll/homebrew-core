@@ -8,11 +8,8 @@ class Mtools < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "00f0c85b01d488a9932455e5b7989191fad2c4839c889f2c934e21b901408bf7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9abaf0b9f5a39215bf8891e55783246cc1cbd306d9301662a933f6987284c872"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48e16e404b64817ba6b3339fb50b34dc90b22412b93e9f64958d97ded24ecd9b"
-    sha256 cellar: :any,                 arm64_linux:       "8f1281b90d2bc0e52afff3f096193e56c6b228eb7ff000a239fc8067d11c108d"
-    sha256 cellar: :any,                 x86_64_linux:      "375dec0bd49df495d77c90935b2536c4162a6f88274478431537f5a77a9b957c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "096fb77a68a28e926991fb3665786a7fa4b82e74918e0e7e583664e13a77af3a"
   end
 
   conflicts_with "mcat", because: "both install `mcat` binaries"
