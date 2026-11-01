@@ -8,11 +8,8 @@ class Dtools < Formula
   head "https://github.com/dlang/tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dc0f6227ee3484ebb0fb7932da6da30e3371559b7c9bdfcb2fe02e229caed83"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c11580f33d09c09ae254bb0f312f7a7ee854d5c253344574e368f24b1a6bb225"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6939dcf366172f5df04740af834d518aadba6aa751fdb5ce7259c42fb3a7debb"
-    sha256 cellar: :any,                 arm64_linux:       "d74f59533587bff375a1ea7b5f876c69af1abb5326965233b537c0d7c23bc000"
-    sha256 cellar: :any,                 x86_64_linux:      "b8a5cd8be61b4314c6eca2d13ac14d0d58a4c60850fd614919e30e77e11382cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc0f23404916f2952cb56112ccc647b5451052ca85cbdd66c49ba299237dfe92"
   end
 
   depends_on "dub" => :build

@@ -13,11 +13,8 @@ class Libopenmpt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d2951c4cbe6442f6e58601460bbfd0e66f6a9a862c05434d7ca4e34d0b5208b2"
-    sha256 cellar: :any, arm64_tahoe:       "a266d370b8b13184d227606da83e96d0c8e0671d3148822c5e280905a5e99d07"
-    sha256 cellar: :any, arm64_sequoia:     "d09b0484f592ab0f2290b046dd7791cdc7958018e04ef286b856e8218e47edee"
-    sha256 cellar: :any, arm64_linux:       "48719958b8b7e63405daebc97eaa831e2fab636767415c7b74b37ea2423e87c8"
-    sha256 cellar: :any, x86_64_linux:      "00f08295d696b1de1bc90e29fdb934f75e5841f0a989e709b430c4d68f1c3054"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "e103e93e0fcb988cfbe4990a64a32f691bb9e5cbc9358da7ff979490c2414bfb"
   end
 
   depends_on "pkgconf" => :build
