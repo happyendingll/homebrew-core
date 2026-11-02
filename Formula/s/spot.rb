@@ -15,6 +15,7 @@ class Spot < Formula
     sha256 cellar: :any, sequoia: "25cab00d4523c6c199f9324df527e23bfb8ded26a78e360633462ebef57d9dac"
   end
 
+  # Use Homebrew Python for C headers
   depends_on "python@3.15" => :build
 
   def install

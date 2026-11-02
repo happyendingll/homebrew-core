@@ -10,6 +10,8 @@ class Krep < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "0d578edb90918ad8dafbf36814de3ef1a9994744ea504c5143b0b30e5e6f2c3b"
   end
 
+  deny_network_access!
+
   def install
     system "make", "install", "PREFIX=#{prefix}"
   end

@@ -1,8 +1,8 @@
 class Gost < Formula
   desc "GO Simple Tunnel - a simple tunnel written in golang"
   homepage "https://gost.run/"
-  url "https://github.com/go-gost/gost/archive/refs/tags/v3.3.2.tar.gz"
-  sha256 "838674347bfd7a7df43cab5ca25a21992a247fe50fe61e9a12497d5a1699a3d5"
+  url "https://github.com/go-gost/gost/archive/refs/tags/v3.3.3.tar.gz"
+  sha256 "2c79c7675894cfd5849d646f037dc82e4278cd43439e3e0b0160fdf112269564"
   license "MIT"
   head "https://github.com/go-gost/gost.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Gost < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "258a329045b3b44561ae07190ca029c0e179f09c587bf1abfbf47c31e1d5bfef"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "adb13bfc76e0932f92b344d81f0fd9f18fb6a82be3b379ec0e0d25010e7af6c6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8a3c880db2b207ada8a3a51e779a8a0e6e65c9d8d84da87882cf1fd131e40446"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8cfbc2edcf33ba62ec935dbca0d208a7b45c8f3032f59c2f2308ca9d7e584b6f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1056c80d076fac6995eba1182fe7ec52c962e651b8d7b2f83fe903ec3895ba06"
+    sha256 cellar: :any,                 x86_64_linux:      "37493978bcad3e7350b8c294472ef8445fcedd3806e6fa5f016011044e7e828a"
   end
 
   depends_on "go" => :build

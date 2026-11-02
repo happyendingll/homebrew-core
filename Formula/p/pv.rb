@@ -1,8 +1,8 @@
 class Pv < Formula
   desc "Monitor data's progress through a pipe"
   homepage "https://www.ivarch.com/programs/pv.shtml"
-  url "https://www.ivarch.com/programs/sources/pv-1.12.0.tar.gz"
-  sha256 "31fdbdb449c7143cd2968567bef7599e9f031950e6158ee7bb76e40aebf6ffb8"
+  url "https://www.ivarch.com/programs/sources/pv-1.12.7.tar.gz"
+  sha256 "5326ed7ee95ef18039390c0b17891ac28985ac7c7a4235070fab767c1fe37bd8"
   license "Artistic-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Pv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "2df7a9194cb1daaa15d4fb9d916df878f1651a069222c47d05d2a6b6abb5e28a"
+    sha256 arm64_golden_gate: "466e5845fdc550a3e6cadffa34dda10eaf0f2954ee10c48c18c1508d2d277fb9"
+    sha256 arm64_tahoe:       "d67b31364db4f454b5332d24c058ea32c91f0204428867e0cb13651e13d37e64"
+    sha256 arm64_sequoia:     "1708588d6856fa1e5051ac53a8f3868449dd278c4cc99942824d8cfd427da10e"
+    sha256 arm64_linux:       "d816224b698bc8006f51815ebbfef233c264e9d36f877298aeff350fdc8f3e06"
+    sha256 x86_64_linux:      "d9885d23745a5e12a5f180ff4086b3b8a0558091ed54f009631e5546a4c1228b"
   end
 
   uses_from_macos "ncurses"

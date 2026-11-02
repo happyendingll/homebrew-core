@@ -3,14 +3,17 @@ class TranslateToolkit < Formula
 
   desc "Toolkit for localization engineers"
   homepage "https://toolkit.translatehouse.org/"
-  url "https://files.pythonhosted.org/packages/dc/8f/618a8b6589e67232feecbda4094fbfa3e076cdabd146519960453ea18b44/translate_toolkit-3.20.1.tar.gz"
-  sha256 "8626ab3def40f9db15e0481cf6afcd22aa15f1f12670608a0bcbca57777a2d0c"
+  url "https://files.pythonhosted.org/packages/7b/36/618e11497e18b74a8f2807594d17711ebe9a674aacf7c19624f17c8f3709/translate_toolkit-3.20.2.tar.gz"
+  sha256 "786ed210b262b0a94388f3bc824fa5b586b141d99cdd7db293e02c44ba146e7a"
   license "GPL-3.0-or-later"
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "a45360ccffcfa0de5a3e1e0580dc8a3af6daedf090331d28beac8968b09b72f2"
+    sha256 cellar: :any, arm64_golden_gate: "f59bd0430715758799ba0c7be75fe899debeba6f21531e20d0578ee9497994ab"
+    sha256 cellar: :any, arm64_tahoe:       "7323f0de7530da026adbec9ccecbb8e150511bfebfd655fdf6c20183a839027d"
+    sha256 cellar: :any, arm64_sequoia:     "4ab2a757edb9ef2a8961c4bf0f14ced79f93155577e972c5665f633fafb86b14"
+    sha256 cellar: :any, arm64_linux:       "877868228310ba41094f8c0a2d886d6eefe71855dad5871c19eead73ad73f994"
+    sha256 cellar: :any, x86_64_linux:      "a9a253586f6f95adfb00cbee2faed44f1551eeb945b6025c126120feb3c1a470"
   end
 
   depends_on "rust" => :build # for `unicode_segmentation_py`
@@ -25,8 +28,8 @@ class TranslateToolkit < Formula
   end
 
   resource "unicode-segmentation-rs" do
-    url "https://files.pythonhosted.org/packages/26/e4/28a415f71c7fe00f6b22254b3890442955bc720918c95d7b0c3ea0f5e12b/unicode_segmentation_rs-1.0.0.tar.gz"
-    sha256 "0c813bd38ab6bce5176f65d3b7c13b5d771f02dac09c09ff55ceb39728a995ee"
+    url "https://files.pythonhosted.org/packages/76/ce/3ea1a212af193525f26dfe40f419d67b734c52b43dd5214839c214dbefbe/unicode_segmentation_rs-1.0.1.tar.gz"
+    sha256 "9bd38cbd89338b5d16f8a029c37d4d5743e1c2c91602a1df860bb5661b8e8a0b"
   end
 
   def install

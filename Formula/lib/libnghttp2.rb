@@ -1,12 +1,12 @@
 class Libnghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
-  url "https://github.com/nghttp2/nghttp2/releases/download/v1.70.0/nghttp2-1.70.0.tar.gz"
-  mirror "http://fresh-center.net/linux/www/nghttp2-1.70.0.tar.gz"
-  mirror "http://fresh-center.net/linux/www/legacy/nghttp2-1.70.0.tar.gz"
+  url "https://github.com/nghttp2/nghttp2/releases/download/v1.71.0/nghttp2-1.71.0.tar.gz"
+  mirror "http://fresh-center.net/linux/www/nghttp2-1.71.0.tar.gz"
+  mirror "http://fresh-center.net/linux/www/legacy/nghttp2-1.71.0.tar.gz"
   # this legacy mirror is for user to install from the source when https not working for them
   # see discussions in here, https://github.com/Homebrew/homebrew-core/pull/133078#discussion_r1221941917
-  sha256 "aa317e2cf9dca6afa0aed68f8fad6ff303ec6982e25a78c75c0b65e2b9b3ded5"
+  sha256 "0cdd35ecec77919b4b7b245f87fe8d2216e3d62da854eb0838c594ff058042fc"
   license "MIT"
   compatibility_version 1
 
@@ -15,8 +15,11 @@ class Libnghttp2 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "5fc34d9e93ddb24b1c2cbb83a0beee5e3524a0d96c18b4a64cf32762681b2b65"
+    sha256 cellar: :any, arm64_golden_gate: "d9da888bfcca6b9e1cbf53b84d4664b02e12b38e04032fb985c7e4ff7068acb0"
+    sha256 cellar: :any, arm64_tahoe:       "b666811d826d75ddb25caf4ee321f54cb0a750e050b9857681c2b15538ee13f0"
+    sha256 cellar: :any, arm64_sequoia:     "88d1ab4c79c450318c8e65a3070578a533a11eff7dad6d3a4b79c580b0fbe6bb"
+    sha256 cellar: :any, arm64_linux:       "0f30d9054161da6b9b7b2506f8ea7ca7730a1297b8a0766126678ebee1c0873a"
+    sha256 cellar: :any, x86_64_linux:      "82b44983f47398ff3ebfe86e84d97e1bcb71916f93428c90bb95b7bb814b1671"
   end
 
   head do

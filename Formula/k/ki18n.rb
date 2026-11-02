@@ -33,6 +33,8 @@ class Ki18n < Formula
 
   uses_from_macos "python" => :build
 
+  deny_network_access!
+
   def install
     args = %W[
       -DBUILD_QCH=ON

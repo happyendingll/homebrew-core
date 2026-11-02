@@ -53,6 +53,8 @@ class MscGenerator < Formula
     cause "needs std::range::contains"
   end
 
+  deny_network_access!
+
   def install
     args = %w[--disable-font-checks --disable-silent-rules]
     make = "make"

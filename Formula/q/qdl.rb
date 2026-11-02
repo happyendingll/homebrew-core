@@ -1,14 +1,17 @@
 class Qdl < Formula
   desc "Flash firmware on Qualcomm-based devices via USB Emergency Download (EDL) mode"
   homepage "https://github.com/linux-msm/qdl"
-  url "https://github.com/linux-msm/qdl/archive/refs/tags/v2.8.tar.gz"
-  sha256 "48be6f6f7869fa73432dbdde20aefc2963f9c84a10e066ae523145c26314f88d"
+  url "https://github.com/linux-msm/qdl/archive/refs/tags/v2.9.tar.gz"
+  sha256 "81d75367ca55e7afa218cc95e6d09b43f70345e4f10dc501f832f2491d095681"
   license "BSD-3-Clause"
   head "https://github.com/linux-msm/qdl.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "5015b420e5f71e73a98a6a4d614c2fa80ccc8d69c1144a3a5789c379841d94fb"
+    sha256 cellar: :any, arm64_golden_gate: "925ee0fa3dafad863024183c8ab9d989c204511c6f2e26c60c7885eea5152040"
+    sha256 cellar: :any, arm64_tahoe:       "5b2fd27780c00f67ccb11693cdaf2493bfdd199a1c7c9411f384655ba623f092"
+    sha256 cellar: :any, arm64_sequoia:     "5afcb8a9bc7ce85bfed7d42cbf018451ec1a415ac0cf5ca50b4157062909c359"
+    sha256 cellar: :any, arm64_linux:       "9bffc201247947d9f7ecb0311bbc771cb9987ba290433a258c243660659727de"
+    sha256 cellar: :any, x86_64_linux:      "b452b071852a293188a2db39841e3e277d002ea52a719e3d9cc08f672a7985c0"
   end
 
   depends_on "help2man" => :build
@@ -28,6 +31,7 @@ class Qdl < Formula
       -DVERSION=v#{version}
       -Dnbdkit=disabled
       -Dtests=disabled
+      -Dudevrulesdir=#{lib}/udev/rules.d
     ]
 
     system "meson", "setup", "build", *args, *std_meson_args

@@ -2,8 +2,8 @@ class ArchiSteamFarm < Formula
   desc "Application for idling Steam cards from multiple accounts simultaneously"
   homepage "https://github.com/JustArchiNET/ArchiSteamFarm"
   url "https://github.com/JustArchiNET/ArchiSteamFarm.git",
-      tag:      "6.3.10.6",
-      revision: "c156c7ba6a2ebbfce5bdf70d9f1a69ac77e23ee9"
+      tag:      "6.3.11.7",
+      revision: "6dca024487b9cfe47fc8cc86a38d9dcaa17f5cc8"
   license "Apache-2.0"
   head "https://github.com/JustArchiNET/ArchiSteamFarm.git", branch: "main"
 
@@ -13,8 +13,11 @@ class ArchiSteamFarm < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "b50296f3353459df3d76878e6b1c1207db337eba079cd757bf2bde7c3d4f090f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d6ea7d56b5af0b0fce8d6f2fb46e5de15d59ab70c71328ccc1e3e2d061c40644"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a8940d885045c8a585684277b77a47d098cc2d4cf9637f870a92c6daaeb1089"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5889d9110decf302f8abdef2e47f1435fadffc75b88aab1cc16bea025a783333"
+    sha256 cellar: :any,                 arm64_linux:       "986ea66238248fde511c81468606f976499247ba57f640d2db2082ef30c33f45"
+    sha256 cellar: :any,                 x86_64_linux:      "a299313ba33d333ced3c031c7382f9fd2b6f64a44b8a57dccc6145f86e4c9811"
   end
 
   depends_on "node" => :build

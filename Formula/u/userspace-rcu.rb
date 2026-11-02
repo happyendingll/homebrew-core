@@ -16,6 +16,8 @@ class UserspaceRcu < Formula
     sha256 cellar: :any, sequoia: "2693be2f9333e0de1878c7d5db16d70cd5bec2578d6085f769ff727ec204b9e0"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--disable-silent-rules", *std_configure_args.reject { |s| s["disable-debug"] }
     system "make", "install"

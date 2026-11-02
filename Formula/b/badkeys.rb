@@ -3,14 +3,17 @@ class Badkeys < Formula
 
   desc "Tool to find common vulnerabilities in cryptographic public keys"
   homepage "https://badkeys.info"
-  url "https://files.pythonhosted.org/packages/a1/05/6f1939e3fb4b7cdf7799d7a200c0151ca6a1662042a283b658fe98627f9b/badkeys-0.0.21.tar.gz"
-  sha256 "a4323c2a3de67e81786e87271d8c1cb302eed89054b770f85dbf1f95ce4264ad"
+  url "https://files.pythonhosted.org/packages/7e/b7/b27f5d7e2c70301ed8f6bd743a5d830195aa1dd49b708d786261873e9b8f/badkeys-0.0.22.tar.gz"
+  sha256 "abf12aa9ecd253f7556959a966a4a39b35bd2d452c1a5b12e220b182fb0fb172"
   license "MIT"
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "6fb6d3667325dcb3854e9fe08568f69f368f0d0a7956ae211694959c7d1ef520"
+    sha256 cellar: :any, arm64_golden_gate: "57222ae23f419feb7615f04ebccb0d0d3366cab46e1064746a901ca098065b95"
+    sha256 cellar: :any, arm64_tahoe:       "d1fab523955b353013e746a207924c01bfd07fccd806589275d59dcee2b376ea"
+    sha256 cellar: :any, arm64_sequoia:     "d45ca9eca953a54e91c64a99f13ec3eaa308b0b8974fa294ba85e7fb01169cae"
+    sha256 cellar: :any, arm64_linux:       "13117f68cb655993392c453416f1368769a96822b92652d5c2079f2587ff2455"
+    sha256 cellar: :any, x86_64_linux:      "8933edca489a921c6991f2e0b0d601518b0c6750ac1aa6134d6e702a30840d28"
   end
 
   depends_on "cryptography" => :no_linkage

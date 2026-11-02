@@ -1,12 +1,12 @@
 class Lammps < Formula
   desc "Molecular Dynamics Simulator"
   homepage "https://docs.lammps.org/"
-  url "https://github.com/lammps/lammps/releases/download/stable_30Sep2026/lammps-src-30Sep2026.tar.gz"
+  url "https://github.com/lammps/lammps/releases/download/stable_30Sep2026_update1/lammps-src-30Sep2026_update1.tar.gz"
   # lammps releases are named after their release date. We transform it to
   # YYYY-MM-DD (year-month-day) so that we get a sane version numbering.
   # We only track stable releases as announced on the LAMMPS homepage.
-  version "20260930"
-  sha256 "a3daf373ff07b8dd98773f2eed2707d0bc5dac96ee2a2599b0d2d98d91c9d20a"
+  version "20260930-update1"
+  sha256 "60e648992f6edf3c47e2093a1c0a0bcce42fb89b7ac4370f15ab56abc0b0eea6"
   license "GPL-2.0-only"
 
   # The `strategy` block below is used to massage upstream tags into the
@@ -27,8 +27,11 @@ class Lammps < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "f774fb048435c7a82bbd8a1cb3ef356f335912ad03c8dd08741772bf93e04ca4"
+    sha256 cellar: :any, arm64_golden_gate: "61bbaaea377a313dee32a754670509258da0d2f439c1e8e9d5533959d6dd3bee"
+    sha256 cellar: :any, arm64_tahoe:       "f01cf00e5dcf66151abc9741205a0a8afae98f98b72e7401d2ba088483372a69"
+    sha256 cellar: :any, arm64_sequoia:     "99b068016e53b8be09568164d6f6a293a6627f41ddf4e462be52a0de4e242831"
+    sha256 cellar: :any, arm64_linux:       "7f5115df944088ff944c7ad5bc3dc14922e569fda4d6ef725d1397706e0ef21a"
+    sha256 cellar: :any, x86_64_linux:      "ee0d64218643d4630ca7ffa91dfd35f19b47845b02d287dfe0e5957757c68141"
   end
 
   depends_on "cmake" => :build

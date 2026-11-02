@@ -1,14 +1,17 @@
 class Zlint < Formula
   desc "X.509 Certificate Linter focused on Web PKI standards and requirements"
   homepage "https://zmap.io/"
-  url "https://github.com/zmap/zlint/archive/refs/tags/v3.7.2.tar.gz"
-  sha256 "9fcb6ce1de638ad7a5dcb86b8d7453f7c731895c79957413dcf543c79e7dad65"
+  url "https://github.com/zmap/zlint/archive/refs/tags/v3.7.3.tar.gz"
+  sha256 "43509828d64135a47b7cc25e7e45acfa01abcc787669ec2bd86cc423fc822c6b"
   license "Apache-2.0"
   head "https://github.com/zmap/zlint.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "455384d180089a16524ef8c99036bbd7b107b4a945786b9bf62e77d287d33fd2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "673cc12af5343ae9cc3dd28bb37ba5d0a5c9c463ede07a22ef6fbed225dc8f9d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "673cc12af5343ae9cc3dd28bb37ba5d0a5c9c463ede07a22ef6fbed225dc8f9d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "673cc12af5343ae9cc3dd28bb37ba5d0a5c9c463ede07a22ef6fbed225dc8f9d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "95d04b39ac2ca569a6850af121925c87b74f818a9a7648619a70a4cf5a4cb0e3"
+    sha256 cellar: :any,                 x86_64_linux:      "db085c7c464408a35934f6412460358952bc7933ce8da39b4f1b194eee03b898"
   end
 
   depends_on "go" => :build

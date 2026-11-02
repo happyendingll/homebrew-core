@@ -15,6 +15,8 @@ class Mpck < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "c548fdd791b80aed78b5e8e22b710aca0e13170ec2ef603fd6485eec29b8cd92"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"

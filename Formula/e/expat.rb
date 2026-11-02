@@ -1,8 +1,8 @@
 class Expat < Formula
   desc "XML 1.0 parser"
   homepage "https://libexpat.github.io/"
-  url "https://github.com/libexpat/libexpat/releases/download/R_2_9_0/expat-2.9.0.tar.xz"
-  sha256 "1e6371862cc31999b368c3b89b49994f0677e1bab5f1b2b85ae3741f5d803051"
+  url "https://github.com/libexpat/libexpat/releases/download/R_2_10_0/expat-2.10.0.tar.xz"
+  sha256 "c624ba2998fc65df1163a49641ff3f9ab73138b11641d92c86bee0fb01b1bc7f"
   license "MIT"
   compatibility_version 1
 
@@ -15,8 +15,11 @@ class Expat < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "e02ad7641c08f3418ade205682f8090aa77bab13bf8a4fa6634381a62c2f3731"
+    sha256 cellar: :any, arm64_golden_gate: "84fe964117bbc527e44bd62cc5870c9f1b02df820029b1d6886d0f39c339cc69"
+    sha256 cellar: :any, arm64_tahoe:       "b740a57290aa0014ccd29f36c19b36027c8c0fb0a2994fbb28abe6e3bb8ac1f7"
+    sha256 cellar: :any, arm64_sequoia:     "7f52a026e9f6290276b71d35c6d49d7cc150344cf38bce0498d802a8683fd8b2"
+    sha256 cellar: :any, arm64_linux:       "d59eaa8ad4a9a2512339033a63698c3bbc29d8444fea42ef049ca18877a7a4a2"
+    sha256 cellar: :any, x86_64_linux:      "0e4aca0d27cf5976531f1ff8ba07ecb7495c65342abb0bbe486e5eca25e725f5"
   end
 
   head do

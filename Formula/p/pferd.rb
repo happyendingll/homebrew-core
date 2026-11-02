@@ -3,13 +3,16 @@ class Pferd < Formula
 
   desc "Programm zum Flotten Einfachen Runterladen von Dateien"
   homepage "https://github.com/Garmelon/PFERD"
-  url "https://files.pythonhosted.org/packages/ab/f6/e8467cbaae08b5cae54a2ce31fddbc076d13174d9e5e028cfcb535195a46/pferd-3.10.0.tar.gz"
-  sha256 "8ba7f642eabd518f428845177d7f08e129171db4002c98b3c193fffc2d630c46"
+  url "https://files.pythonhosted.org/packages/bb/03/59a09dd9370d9e5dc360f93b1a1895819e69fa0bc73968333bd59365a563/pferd-3.10.1.tar.gz"
+  sha256 "69fe20f2243fd194b96b98ef3af9759a04ac907c1d37c04f5929ec2ce79f5806"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "47546e5fa2561575ac57d178f53b427d44d62c99292214b50824a93d593561b0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "909f5694b75e666789a8468bbade2c23a3eb780b005112a7e645c5f7c65b79dc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f539e670a89f48b9e08590bb059fd29eedecc7133b33e91cc75aca6d132b0782"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9f7bb7811fa80b38db3047db5b828fbd75d2b67a73058a4d0543bff449b065c7"
+    sha256 cellar: :any,                 arm64_linux:       "b369a65b6e87f9479b4b94335a4a9dc97242496dc9dff3186351d5a571de5b82"
+    sha256 cellar: :any,                 x86_64_linux:      "cc19f70be14bf9a74c39d972e5d471d6a3d84b33b7a5e188cf25258fb3991c64"
   end
 
   depends_on "certifi" => :no_linkage

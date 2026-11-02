@@ -1,8 +1,8 @@
 class Deepline < Formula
   desc "CLI for Deepline data enrichment and durable plays"
   homepage "https://code.deepline.com"
-  url "https://registry.npmjs.org/deepline/-/deepline-0.3.440.tgz"
-  sha256 "169abc20faa1a73c55a779d209ac6c23c63818047523d257b412f46b92c95dfe"
+  url "https://registry.npmjs.org/deepline/-/deepline-0.3.453.tgz"
+  sha256 "34674599dc4dce2f393b55ba353f889fe94cf03381d58a342ddd4d89db6f1480"
   license "MIT"
 
   livecheck do
@@ -10,8 +10,11 @@ class Deepline < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "64a53bb2755bb4a43dd65dfc9dbe004a6dfd108781f8cf5dbfaa061c66318dde"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "73d25a557bd35d35c3679e99ae32552f309761f9ec0f006bc9e48e49597b26d6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "73d25a557bd35d35c3679e99ae32552f309761f9ec0f006bc9e48e49597b26d6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "73d25a557bd35d35c3679e99ae32552f309761f9ec0f006bc9e48e49597b26d6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "cca19148733e858a88279f89eff6fdc004843d5553c3b51a0fb481d278997d88"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2f86575e2e6c2e619e7fc537667477f82c83c57fbd301e7724ad5d201ed742b5"
   end
 
   depends_on "node"

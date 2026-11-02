@@ -3,16 +3,18 @@ class Vapoursynth < Formula
 
   desc "Video processing framework with simplicity in mind"
   homepage "https://www.vapoursynth.com"
-  url "https://files.pythonhosted.org/packages/69/6a/f9441173c91a3355a32b870522726ed2252cd3c7b04b45e499f30b1a2c98/vapoursynth-81.tar.gz"
-  sha256 "3bf6c90ad737e8ffc5605b05a1ff29cd884f8632fbe0eb49a2705942073a96be"
+  url "https://files.pythonhosted.org/packages/25/2e/1a5cb192ce26077c5afe9056a11b3a2d936c4e413b4fec5eee74d45bdb01/vapoursynth-82.tar.gz"
+  sha256 "1128316620890ba8e5b69c924a665f98001b2ba4230dadead0f296446ea71843"
   license "LGPL-2.1-or-later"
-  revision 1
   compatibility_version 2
   head "https://github.com/vapoursynth/vapoursynth.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "d99396ce193f0da880c45218993fae2c8ce4a48f831e8b3e8de34d7c7cce844e"
+    sha256               arm64_golden_gate: "fee835809ce89b8ff1cf486615d206ec93b0b2b91504517573d2618e4cdeb9d4"
+    sha256               arm64_tahoe:       "6952c3a03ef5548f12e72588add3bf3818ba0d87c0ebf55c0223a88ef67c6139"
+    sha256               arm64_sequoia:     "498f5462de067440786390f281c8be2470adc1957cf89ae25cd6692ec5201a3a"
+    sha256 cellar: :any, arm64_linux:       "b9072b49c97a2eed0aee2279877414f321c3ed07d08dad2214fb338e52b9bcc3"
+    sha256 cellar: :any, x86_64_linux:      "e8968416e2e813e265d15bdb6bb9b27c7eafe061e40cfdf310530644552b034e"
   end
 
   depends_on "ninja" => :build

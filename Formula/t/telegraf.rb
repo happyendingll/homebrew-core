@@ -1,8 +1,8 @@
 class Telegraf < Formula
   desc "Plugin-driven server agent for collecting & reporting metrics"
   homepage "https://www.influxdata.com/time-series-platform/telegraf/"
-  url "https://github.com/influxdata/telegraf/archive/refs/tags/v1.40.2.tar.gz"
-  sha256 "519fbd63603acdd23f924f36c49b3f31917f9d2469c17f0d8c584be3be29092b"
+  url "https://github.com/influxdata/telegraf/archive/refs/tags/v1.40.3.tar.gz"
+  sha256 "27bfeaf8c56cbcffc289065623ff7e3b0ff9e48c1d9c00e2278ed453900a0e66"
   license "MIT"
   head "https://github.com/influxdata/telegraf.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Telegraf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "a21f25e349f219cc0abef1a9ea09451750fdd72ebef04f665dd25dc3199f56c6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "be1f9e24bbb10ab0c5d7e5988631709d008babba3f5a929ea4e52e6bd25f1665"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04c8788ebc87f9dcb6bad8613eaaa767abb4584ec9acca545eb8e4c4f894f169"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d6ca5c6a716670110c7ef46eac6ab200011463364c16327446c763c751b7f289"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9417cac6dd8ee32dfc06250873880ad37e6c5b3c2055e14c6f7627a2be048764"
+    sha256 cellar: :any,                 x86_64_linux:      "646f722449b13e512bce937636264bcb094b98fa8f21cca96b65bd9a7d226c6f"
   end
 
   depends_on "go" => :build
