@@ -9,11 +9,8 @@ class Libcerf < Formula
   head "https://jugit.fz-juelich.de/mlz/lib/cerf.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "955821a4bdb1937c1703fb07c743dd052b37b6274b8b71c89932f9cef4a8a540"
-    sha256 cellar: :any, arm64_tahoe:       "1d21b22ae2bdca5e41f98321291b3dec3f679ca50bfdd8342ae6c1a47fc16c5d"
-    sha256 cellar: :any, arm64_sequoia:     "c6520942d4bf1e8d8128aeb5a198684c9bd4cee1870142dd3a921fe3c7ea0c18"
-    sha256 cellar: :any, arm64_linux:       "3d410d47f56feadfa0faf23e3232bd4b8b7c69ac6f0e7847cfcf1d733db9505e"
-    sha256 cellar: :any, x86_64_linux:      "e4579e9349ac9126af7d8fd42f4e8747151f4670988ccf40b42f5a657a62e2a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "849fa8e90a7c7c6ca9964f525a7434b1052f439ed08ac319f8a8385cfdd1427b"
   end
 
   depends_on "cmake" => :build

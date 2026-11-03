@@ -10,11 +10,8 @@ class Toxcore < Formula
   head "https://github.com/TokTok/c-toxcore.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4894f0e4a7c2003a412eba139cdcf812c78f8cc4c3c0048b7819405a54809b10"
-    sha256 cellar: :any, arm64_tahoe:       "999309f451e38e711dc23a3cf59c67b0e37038e3e7dd2fb41a63c95b3e4347f7"
-    sha256 cellar: :any, arm64_sequoia:     "64c8baa3947871fb27e9fac813d5f2e9fda3e2258d160a4f371d7ca06fe9d628"
-    sha256 cellar: :any, arm64_linux:       "c97187ef366f6d59ceb6bfc9b85c576a5c51117188b2feb798de6152938bc5d4"
-    sha256 cellar: :any, x86_64_linux:      "97b271c640e7276a314aa79f55a8c3c0fef3bff95db38b36b09b9c5af5c2a82e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "df1dd9c370a550ab8f613c3ede90bf474c2917d697d57671613a8046507f03d1"
   end
 
   depends_on "cmake" => :build

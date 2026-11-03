@@ -16,11 +16,8 @@ class Mt32emu < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e768a3fd9308c5d9de58cc5c2d5562a154a97a65b4d936cd11711763b3dac983"
-    sha256 cellar: :any, arm64_tahoe:       "fef2bb7f6fd9329ea64579bfb16b9c38a793dc33cfc902c21758ab6b27becf35"
-    sha256 cellar: :any, arm64_sequoia:     "47f27472f2fb6c33054fd7ca9a754779177254e71cb25602deed5df01cda09f6"
-    sha256 cellar: :any, arm64_linux:       "b32b1f3b812d94cb8e73c64ef45c89a0afaa2cea40c4925f015f12e47b499284"
-    sha256 cellar: :any, x86_64_linux:      "8b56f514854749a0c571cb050694fdd3964533a30837182cf37f509a7a6963f7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f3efd219d9924c94e0d0e8da97a30b0f2d153d2f67cad2aba27d5239cf7b3394"
   end
 
   depends_on "cmake" => :build

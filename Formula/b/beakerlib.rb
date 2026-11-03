@@ -7,11 +7,8 @@ class Beakerlib < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a69831a8a5a170e2d3a2cb888a40429cacce5dad1caef1eb7040be3bcb0d72e6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8a489cceb18ba2a9b035810dd8af210e150915aa11937a1d6efd1a35a75d70c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "20e1a9475a34b43787d529ce0c846ee8ea928514c2444a4afe0a1911b2febb54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "158466dad405373a74fe8dda0ea27632949de3dfa721d8e2aaeba81b34b25ea2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fc257afb53d16d696958b0351c09ffdae5a0ab3314d96d643ea55a18e5d779a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b768904f7099cfe5e2807dfa7d17498f424386f632889f23de87f9a4d3e9df72"
   end
 
   on_macos do

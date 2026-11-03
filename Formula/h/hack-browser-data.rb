@@ -7,11 +7,8 @@ class HackBrowserData < Formula
   head "https://github.com/moonD4rk/HackBrowserData.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "229776c7a4fad9712f7a1210e82caa1f98fed9ca4b8c20e1ea0d25bbbde9e253"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "229776c7a4fad9712f7a1210e82caa1f98fed9ca4b8c20e1ea0d25bbbde9e253"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "229776c7a4fad9712f7a1210e82caa1f98fed9ca4b8c20e1ea0d25bbbde9e253"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "33c56b005437537fd7a8131113bd198bdcd95126ae65fc728b2f93fbe8b3ee19"
-    sha256 cellar: :any,                 x86_64_linux:      "a8314cdd5871ad780171208c00c139e0c34f1878ba4b4a20915afba114601af7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "49a2f34ba1b1e506e755d7d9d184a67e7fca6b2a8631dcc0dcaae4963d452c40"
   end
 
   depends_on "go" => :build
