@@ -6,7 +6,7 @@ class Openssh < Formula
   version "10.6p1"
   sha256 "a9dc9565dffe8640f64d863cd29a32bc4a3dbdec0566a7fc44c5d6ee767d5f39"
   license "SSH-OpenSSH"
-  revision 1
+  revision 2
   compatibility_version 1
 
   livecheck do
@@ -15,8 +15,11 @@ class Openssh < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "b63d46f62c798f53ffc43e496ad5b53a9ef2b1cc29c8b78036becae22973d5b3"
+    sha256 arm64_golden_gate: "287ee3dc00cd180182e7990c04fe25fc8440b99a8a4651605a087f4cc44b846b"
+    sha256 arm64_tahoe:       "17a77da899577764c88b6dc20c8fe6a8d34391be63ddbab30c362f1bbfeb8fbe"
+    sha256 arm64_sequoia:     "6e0423432f5ead4556420b0388ae4215133e81466baf633317c2de75d6c57842"
+    sha256 arm64_linux:       "55e780dffc8ab67d6f7092fe3e8773369e7258f0168afde91c37ab3aabaaed42"
+    sha256 x86_64_linux:      "9979138fd3cafb4248147005b65bdef8f3fec632e8a7db21a0bbc0ac9bd8fbe9"
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
@@ -63,7 +66,7 @@ class Openssh < Formula
     system "./configure", *args, *std_configure_args
     system "make"
     ENV.deparallelize
-    system "make", "install"
+    system "make", "install-nokeys"
 
     # This was removed by upstream with very little announcement and has
     # potential to break scripts, so recreate it for now.
@@ -77,7 +80,75 @@ class Openssh < Formula
     inreplace etc/"ssh/sshd_config", prefix, opt_prefix
   end
 
+  post_install_steps do
+    unless_path_exists "lib/openssh/host-keys-migrated-v1", base: :var do
+      mkdir_p "lib/openssh/host-keys-backup", base: :var
+      set_permissions "lib/openssh/host-keys-backup", "0700", base: :var, recursive: false
+      if_path_exists "ssh/ssh_host_dsa_key", base: :etc do
+        move "ssh/ssh_host_dsa_key", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_dsa_key.pub", base: :etc do
+        move "ssh/ssh_host_dsa_key.pub", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_ecdsa_key", base: :etc do
+        move "ssh/ssh_host_ecdsa_key", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_ecdsa_key.pub", base: :etc do
+        move "ssh/ssh_host_ecdsa_key.pub", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_ed25519_key", base: :etc do
+        move "ssh/ssh_host_ed25519_key", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_ed25519_key.pub", base: :etc do
+        move "ssh/ssh_host_ed25519_key.pub", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_mldsa44_ed25519_key", base: :etc do
+        move "ssh/ssh_host_mldsa44_ed25519_key", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_mldsa44_ed25519_key.pub", base: :etc do
+        move "ssh/ssh_host_mldsa44_ed25519_key.pub", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_rsa_key", base: :etc do
+        move "ssh/ssh_host_rsa_key", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      if_path_exists "ssh/ssh_host_rsa_key.pub", base: :etc do
+        move "ssh/ssh_host_rsa_key.pub", "lib/openssh/host-keys-backup",
+             source_base: :etc, target_base: :var, overwrite: false
+      end
+      touch "lib/openssh/host-keys-migrated-v1", base: :var
+    end
+
+    # create unique host keys
+    run "ssh-keygen", args: ["-A"], base: :bin
+  end
+
+  def caveats
+    <<~EOS
+      Default host keys in #{etc}/ssh are regenerated once to replace keys
+      previously distributed in bottles. This also replaces locally generated keys.
+
+      Previous host keys are backed up in:
+        #{var}/lib/openssh/host-keys-backup
+      Restore them only if you generated them yourself.
+
+      Restart any running Homebrew sshd to use the new host keys.
+      SSH clients may report changed host keys. Verify the new fingerprints
+      before updating their known_hosts entries.
+    EOS
+  end
+
   test do
+    assert_empty (bottle_prefix/"etc/ssh").glob("ssh_host_*")
+
     (etc/"ssh").find do |pn|
       next unless pn.file?
 

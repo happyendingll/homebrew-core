@@ -1,14 +1,17 @@
 class PixiPack < Formula
   desc "Pack and unpack conda environments created with pixi"
   homepage "https://pixi.sh/latest/advanced/production_deployment/#pixi-pack"
-  url "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.11.tar.gz"
-  sha256 "142682512cc72af8f37fcda842f1d08078809f7d16eb5b85cbbf6d67a4554642"
+  url "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.12.tar.gz"
+  sha256 "7cbef9759c399ecbc3b67ebf8c2ad8599bc41c425adb68e7556cbdc2d5a706ca"
   license "BSD-3-Clause"
   head "https://github.com/quantco/pixi-pack.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "1f1de9250f1a9b75c939cac36477dc73af18015c8b1b2a2a5d7e73a1ac9ce419"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c497ad550466f5c73ca5e4b51b00f346f1feb7bac95a7157a7642b98d656243d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "abbca8c86337c32b83b09d15bfccf80364029084021c8d321e7f70d2fe32ab33"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8778ff7e5cf494ed7cb8318066be7d42c83247a497e3dfa3595badcae4bf509e"
+    sha256 cellar: :any,                 arm64_linux:       "de70e3865b0efb9b1eb40b4f821f34f5d5bb0100fcb266693eca23f8ede50f9c"
+    sha256 cellar: :any,                 x86_64_linux:      "a28e13f1747f4532ccda5362ab451c7006f489c85494ca348e73ef3abaa48a02"
   end
 
   depends_on "cmake" => :build

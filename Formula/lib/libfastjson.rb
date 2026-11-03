@@ -16,6 +16,8 @@ class Libfastjson < Formula
     sha256 cellar: :any, sequoia: "2a3f60df67b06c724844c541353f26ddb4da673995c242bd4a4f4992329041c9"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", *std_configure_args
     system "make", "install"

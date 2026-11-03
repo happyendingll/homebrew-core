@@ -4,8 +4,8 @@ class Foundry < Formula
   # `build.rs` in `common` crate requires `.git` repository
   # https://github.com/foundry-rs/foundry/blob/4072e48705af9d93e3c0f6e29e93b5e9a40caed8/crates/common/build.rs#L9-L12
   url "https://github.com/foundry-rs/foundry.git",
-      tag:      "v1.8.7",
-      revision: "985eeea031d79922cd654d4e94e6c3701e1c7d73"
+      tag:      "v1.9.0",
+      revision: "6056c5845d34205a83cf7108042adb137325c9df"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/foundry-rs/foundry.git", branch: "master"
 
@@ -15,8 +15,11 @@ class Foundry < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "34e1124cd481ec49c295e2fa89f76a9d106ad1e154ac31798cf337a4ccfd9265"
+    sha256 cellar: :any, arm64_golden_gate: "23262a3b3938abbf2c47789232148372e756bfe07f445a24cd8ce97451c969ee"
+    sha256 cellar: :any, arm64_tahoe:       "b54926e7ae51c6d05f257fa6e6d7ce54ff059803c26cdb0739f1b5cb730d8d01"
+    sha256 cellar: :any, arm64_sequoia:     "ac3158b9559e02040f547dda40b2c4cc656c1770a7504463cf46791236b7da99"
+    sha256 cellar: :any, arm64_linux:       "966bfbaaa83d26c8541a90fa40a34f10f33569e10246d4d826c97ff3b89c8068"
+    sha256 cellar: :any, x86_64_linux:      "95c3ceb234dacfbede5295767aa1809608748538bff391b43797c72f68662e5c"
   end
 
   depends_on "help2man" => :build

@@ -1,13 +1,16 @@
 class Titus < Formula
   desc "High-performance secrets scanner"
   homepage "https://github.com/praetorian-inc/titus"
-  url "https://github.com/praetorian-inc/titus/archive/refs/tags/v1.2.11.tar.gz"
-  sha256 "757f14f8d51a9a6e7d7b76bf26b3a5491925323b3b03d3e7cddaaed2d3815c3c"
+  url "https://github.com/praetorian-inc/titus/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "00b22bc9896f36351259153989ef1a5d1061598e56dfb009097e5a5115742fd5"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "b037bf70eed481fde521dc259fa05324a9059bfe54bb722e116861bf2c1fcf65"
+    sha256 cellar: :any, arm64_golden_gate: "d771130129b920f1bb6f348ebc967118c0030ade27d8b0c021f32a265179e268"
+    sha256 cellar: :any, arm64_tahoe:       "2355122f540cccc2baf019e0e101c171de401af47ce78bdfb2f982d0ac5ec2ce"
+    sha256 cellar: :any, arm64_sequoia:     "e83ddfea9f2fa8e6043652c14bb11994c82e62170adb07fd5573f69a34fd99a6"
+    sha256 cellar: :any, arm64_linux:       "f4fdc982aa7e5e449586b5c158e07dcec96085e151edb328522a4c852fdd9055"
+    sha256 cellar: :any, x86_64_linux:      "8370c278be8ad4fe58f28f386e4a4acd9a4bef9baf3afc28c3a76088649f61ff"
   end
 
   depends_on "go" => :build
@@ -30,7 +33,7 @@ class Titus < Formula
     assert_match version.to_s, shell_output("#{bin}/titus version")
 
     output = shell_output("#{bin}/titus scan https://github.com/homebrew/.github 2>stderr")
-    assert_match "0/0 new matches", output
+    assert_match "0 new matches\n\nNo findings.", output
     assert_match %r{[1-9]\d*/[1-9]\d* rules compiled for Hyperscan}, File.read("stderr")
 
     require "utils/linkage"

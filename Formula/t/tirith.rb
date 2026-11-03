@@ -1,8 +1,8 @@
 class Tirith < Formula
   desc "Detect terminal injection, homograph, and pipe-to-shell attacks"
   homepage "https://tirith.sh/"
-  url "https://github.com/sheeki03/tirith/archive/refs/tags/v0.4.2.tar.gz"
-  sha256 "84e1fdc35e60d684ab932e73c342b71e27d575bc70defcec4989c36957153b0a"
+  url "https://github.com/sheeki03/tirith/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "bcde1306c0229dff305f9469ce1a47bc05f588342e77e901a6cfaa04e29a0ccb"
   license "AGPL-3.0-only"
   compatibility_version 1
   head "https://github.com/sheeki03/tirith.git", branch: "main"
@@ -13,8 +13,11 @@ class Tirith < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "272428fcb6d4c8fcd49d3c5a0613c4747efadaa12099733edf61bc4d68066dd8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "deb0fd62298eee14703bf3386c56b7270c08736fe2127743c475523ce6ff677d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ee5d9eff3a6d5479854173aa55f271ecaea697a5953470ef5d09969408f209e5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc9803643bc14e745e71d24f57226a7d10fc61e4f30e94f432e4d300641b387d"
+    sha256 cellar: :any,                 arm64_linux:       "153b7a640b263619693825d4107beae2e8c6cbeee6929b89b1710b9e44e8bc63"
+    sha256 cellar: :any,                 x86_64_linux:      "2ed67475675191c0fa4343cb0ecf8d9720281d3a1a411a9351ade676e9b95ece"
   end
 
   depends_on "rust" => :build

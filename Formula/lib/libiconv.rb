@@ -28,6 +28,8 @@ class Libiconv < Formula
 
   patch :DATA
 
+  deny_network_access!
+
   def install
     ENV.deparallelize
 

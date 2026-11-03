@@ -3,13 +3,16 @@ class LizardAnalyzer < Formula
 
   desc "Extensible Cyclomatic Complexity Analyzer"
   homepage "https://github.com/terryyin/lizard"
-  url "https://files.pythonhosted.org/packages/3d/a8/0c0b1a46ad296d0f3ed7efafa94745e8c6beb779e7b42c80f905f1966d77/lizard-1.24.3.tar.gz"
-  sha256 "7d2570ca711288388de1cf0f25512e97fbbc5e189f551c87b4e20d11d028b297"
+  url "https://files.pythonhosted.org/packages/e6/67/0c5fe939ee37df57f415f4fe461a894ae12d18e9fea89705cbd2525967b6/lizard-1.25.0.tar.gz"
+  sha256 "e37e0da72be4fd4a254f511470af2b2f6800128879844b2844695641baa83112"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "db2e564baa95c25f881b0aeab07096c4c42c71cf4a90b6e2cf7715f7a4eec295"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c7ee1594571163ce24fcd17eef4d61f4082e6feb30d785d536fcebc78070caa1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "30ae1232719e4b8f24170f76aaf41a7888e99ed9a0778eca3e0ab1e208545a86"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8902759ee24d06cad3ff4bf01e4e082f6ae636323f966b56ed1f52ba9a34527f"
+    sha256 cellar: :any,                 arm64_linux:       "3c11abcc3a2dd466941cc40159f3a10468c56ee5a807ded68d27e39fd1db4adf"
+    sha256 cellar: :any,                 x86_64_linux:      "aabae12f1999e0bec8a9ebb2963d4fceb1bcc4bcccfd900a0120ca7774439ddd"
   end
 
   depends_on "python@3.15"

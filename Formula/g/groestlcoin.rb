@@ -1,25 +1,17 @@
 class Groestlcoin < Formula
   desc "Decentralized, peer to peer payment network"
   homepage "https://www.groestlcoin.org/groestlcoin-core-wallet/"
+  url "https://github.com/Groestlcoin/groestlcoin/releases/download/v32.1/groestlcoin-32.1.tar.gz"
+  sha256 "aef409fecb3e6ed69bda4ae3405e0bd86a21e00f5092d6b05368a88917aa9b2b"
   license "MIT"
-  revision 2
   head "https://github.com/groestlcoin/groestlcoin.git", branch: "master"
 
-  stable do
-    url "https://github.com/Groestlcoin/groestlcoin/releases/download/v31.0/groestlcoin-31.0.tar.gz"
-    sha256 "9c8b3004f7ed640a24acdadccace49ea123feae66ba562ca967de4119f061be3"
-
-    # Backport for newer Boost
-    patch do
-      url "https://github.com/Groestlcoin/groestlcoin/commit/0bc9d354dfd8074d1c36a891a69b6585a8775c65.patch?full_index=1"
-      sha256 "3f163d9775d4f80e559c28bd5a0c58586b25cb9fe08ec9340d5950355476b477"
-      type :backport
-    end
-  end
-
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "ad6d43cc0a7698c7ac4dc537dedf8dd2f52c38ff1365f85f206fa7c20069b2e4"
+    sha256 cellar: :any, arm64_golden_gate: "d34bbaa065438d8624e63afffd3c9198a7565b5904b215df6d964d1fc6b5f462"
+    sha256 cellar: :any, arm64_tahoe:       "8b4e6acc8d4ee2b3633fbf2d5c84b43e9b7638e72b323561dcef1447c3b27756"
+    sha256 cellar: :any, arm64_sequoia:     "df2c21f43d3f730fc2f4ceb082c718d33487438006154caeab8b9a2c30a0c4e3"
+    sha256 cellar: :any, arm64_linux:       "88cf7293d9e3592ece38ec19be462529f64f62a0548ff576fa442a6946df535c"
+    sha256 cellar: :any, x86_64_linux:      "0891ed60fc76049c27db7812629d57c824ab2430674e7a615540397d2da8b03c"
   end
 
   depends_on "boost" => :build

@@ -2,8 +2,8 @@ class Nexus < Formula
   desc "Repository manager for binary software components"
   homepage "https://www.sonatype.com/"
   url "https://github.com/sonatype/nexus-public.git",
-      tag:      "release-3.97.2-02",
-      revision: "b5dd4a0c6605051681d9b1284741d4420d878436"
+      tag:      "release-3.98.0-07",
+      revision: "75daac40ac925415cdd5cdb9b9bf530d55366e5c"
   license "EPL-1.0"
 
   # As of writing, upstream is publishing both v2 and v3 releases. The "latest"
@@ -15,8 +15,11 @@ class Nexus < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "37b55ee80dc7caeeae46f45532f7a0500e5dd6300eafd800a10f407e0bfee2da"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e07a8064c239aad9c3936dfa99459c81e981bbf7f84389c80a99bd49bf0069ee"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5de3881b0863ba9346f8a7be152e7158d0a9f2b0d1037f5ee71deb58f976bb3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48fd06e88e2945db30ef6c07735519aafc455582dec0d31aa66e9c3e72f55551"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b8fec06277c1cd636471d3e65cc06f83a3ee0a63d4f061e4574fbd606ca546d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c72cbdc75d82f143fbe96e76c40b365c2e29ca66a5a16df8980b114d13a8ed59"
   end
 
   depends_on "maven" => :build

@@ -1,16 +1,18 @@
 class AprUtil < Formula
   desc "Companion library to apr, the Apache Portable Runtime library"
   homepage "https://apr.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=apr/apr-util-1.6.5.tar.bz2"
-  mirror "https://archive.apache.org/dist/apr/apr-util-1.6.5.tar.bz2"
-  sha256 "96de1dd6f6a0476d2d2e7964926d8c1ddc3bb0e210e1b1812d3ba5a454a392e2"
+  url "https://www.apache.org/dyn/closer.lua?path=apr/apr-util-1.6.6.tar.bz2"
+  mirror "https://archive.apache.org/dist/apr/apr-util-1.6.6.tar.bz2"
+  sha256 "aa77dd25f036731b7246abbfbebe6cc813b42799b62c874bc82bd4e1f90f2918"
   license "Apache-2.0"
-  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "d2d97c20c22a6cb7b2c19403ac467630a11b9b67388e833b68bb543190f059a6"
+    sha256 arm64_golden_gate: "f7f7174af2e16984ca464ec9fbfd9df33ef2e3c716afb410a024c1d1983f7786"
+    sha256 arm64_tahoe:       "272ac1650856bfba7c5b033e3e118c5d28ab271ae7ce6f469eed954d126ab577"
+    sha256 arm64_sequoia:     "f62ab082561dd6956e950bf71b4057645c27dfb2e0c2bc36335e103932a1668b"
+    sha256 arm64_linux:       "c09d62bca3c07f5adf86ed7eaca967432aea2a5f2c297340372b0d65a0070bc8"
+    sha256 x86_64_linux:      "58519c596959f99d7d4e34100ff6dd000756ca9a980b06456ade7105c878560c"
   end
 
   keg_only :shadowed_by_macos, "Apple's CLT provides apr (but not apr-util)"

@@ -1,8 +1,8 @@
 class Mt32emu < Formula
   desc "Multi-platform software synthesiser"
   homepage "https://github.com/munt/munt"
-  url "https://github.com/munt/munt/archive/refs/tags/libmt32emu_2_8_4.tar.gz"
-  sha256 "1080ee41fe1f9a2d9abc7ec010cb105a57576528708e3d0ef467b6a7d7fde92f"
+  url "https://github.com/munt/munt/archive/refs/tags/libmt32emu_2_8_5.tar.gz"
+  sha256 "801fa771d7384dc462a626d16c8a4d5b9ff73921ff946ea1f042f1a569ee5e11"
   license "LGPL-2.1-or-later"
   compatibility_version 1
   head "https://github.com/munt/munt.git", branch: "master"
@@ -16,8 +16,11 @@ class Mt32emu < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "f3efd219d9924c94e0d0e8da97a30b0f2d153d2f67cad2aba27d5239cf7b3394"
+    sha256 cellar: :any, arm64_golden_gate: "5fdd6065afa02bee30942c5fdc81f01443f37fe9d34e3b67b18cf9d5168c53bf"
+    sha256 cellar: :any, arm64_tahoe:       "b4d6491f1d7414abc1036b3c8ecc0192d6e47ae14983d1e5f24eb5ad615c98b2"
+    sha256 cellar: :any, arm64_sequoia:     "7218dca26c5e188ee963b6eb2f815ae294490cde5d6a46c6f47fcbb7405f495e"
+    sha256 cellar: :any, arm64_linux:       "f620e8800567ea1a1594fef8d4b39e1d25f42c3050f9d5b05eccbac99ee19224"
+    sha256 cellar: :any, x86_64_linux:      "55275c9d842b4eebd48e52d92d24cea9c856cfa65f1a1c6864aa514d1fbf31fc"
   end
 
   depends_on "cmake" => :build
