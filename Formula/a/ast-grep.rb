@@ -7,11 +7,8 @@ class AstGrep < Formula
   head "https://github.com/ast-grep/ast-grep.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "31ba16e32d8b4bacf937b303c559d3c8b946ed2d6430e865786d9d174177e6c9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47aa87982b51b7a9048bec48e4c019a4fa698af5a03d7146d8de73fb3768af19"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "00c63154bf8dc02af8ca993093619565a82182a2f205af34bf4ff3e621717a16"
-    sha256 cellar: :any,                 arm64_linux:       "acc4fa819eceae52f49fee4167fa141b8317e3e76af436cbc7e0dbb617f4a894"
-    sha256 cellar: :any,                 x86_64_linux:      "9b18884f2ceea7c96e4d7426954f4d4e354ca03c4276e71aa873618e08339a25"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e5dd60a49aea95aa73c3f8e2d929c0fb5289728b0b18158620af841eefbaf058"
   end
 
   depends_on "rust" => :build

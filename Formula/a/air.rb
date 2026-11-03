@@ -6,11 +6,8 @@ class Air < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bcecbad2270a620ae7f9c4e7828111eff44b23d3f8c185b8128e4c8da1008ebe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a7563ed37a53433095ba207b03738dba62b70f40dd3eaf48a2cdbbe55d499dda"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f5363c786a1e19e6f3235939b30f0bb7fdcaedc5062db904e7673dccbe53294"
-    sha256 cellar: :any,                 arm64_linux:       "1916044aed3b838fe99090df7220db08fd922f3ba5bca24e6a48aec703f6bd88"
-    sha256 cellar: :any,                 x86_64_linux:      "c6be0fe99691dfb5475a1f1a51ce1db7988785d70924a71a47bdef3bbd7ffbbb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1559387a278dbfd66834d92ee2c5e204ea3f123c63e865823c3bd1074c790da4"
   end
 
   depends_on "rust" => :build

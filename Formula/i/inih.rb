@@ -7,11 +7,8 @@ class Inih < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a1393317f2266668755f0083810c0031dbd3ad3f0a1024047182b6a6549ad0b1"
-    sha256 cellar: :any, arm64_tahoe:       "c42c2039c1b759785f9144d4e886360c1123beb1292d77994dc241e928819d8c"
-    sha256 cellar: :any, arm64_sequoia:     "b05b2e6544c764c64a0c0963c66f05cbd9ee1fd481942a3af0cbc130a37f45fe"
-    sha256 cellar: :any, arm64_linux:       "fb4c70b44176e5ce6e6c1c0449eb4798328a0d07faa069f7c9da982409d17f64"
-    sha256 cellar: :any, x86_64_linux:      "15b361c3631a469358fd4c2cdf738da2c9fd0e152426391508c565cd9029e468"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "aa0836f9ce8173288cb4fbfe80d7c0e84cdefa0cd146f40adac5d4c5a1845f70"
   end
 
   depends_on "meson" => :build

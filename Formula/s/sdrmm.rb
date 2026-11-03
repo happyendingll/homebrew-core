@@ -6,11 +6,8 @@ class Sdrmm < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bc1c3fe488865a9a19a42a5293ba529219c735bd21a07fd97ed23283e7823a7d"
-    sha256 cellar: :any, arm64_tahoe:       "93005860336e1a04e8c6c008fe36d79e4935a71dd3e241089c40aa3c32a2c72b"
-    sha256 cellar: :any, arm64_sequoia:     "d38b4ff5e3e6e615f0c8fa5406f48d928aa03eb894ba930a0fc26246ea6344f4"
-    sha256 cellar: :any, arm64_linux:       "84566e5daac497d3fb4d0bf45810fdbf38ab6474515cd6498e722a08f32c925a"
-    sha256 cellar: :any, x86_64_linux:      "094bf8a17df2c17089f25e26eacd51d871dbd71f2c47821c1f7e148e1f5a5f3c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "079ce0d04d94a5015392fa19309e49d0c2667606fe347e447643da9f8f3717a2"
   end
 
   depends_on "cmake" => :build

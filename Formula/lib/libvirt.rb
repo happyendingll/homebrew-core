@@ -13,11 +13,8 @@ class Libvirt < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "87f2580b12b4572174a6c8f9f2e3bdf7202aa5b75c7349db6ef11321fa723af4"
-    sha256 arm64_tahoe:       "8e8aa7abfdaf2b30fc74525c460a5bada300369c9e0cbc456ad3cef1bfbfc7e8"
-    sha256 arm64_sequoia:     "f2cbea9a9e7360ebd9aa71634244892a002df0da6cc0aebe014e3a311b880be6"
-    sha256 arm64_linux:       "a83cbb81b3dd9fc92d2c7f2bb5afbf1645b8b40eaf9f9506cbf167198b40803f"
-    sha256 x86_64_linux:      "080b9c726f537e5d21cdadaf0358e421c394f0ebeb93a94ff1947d804813ca45"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "403363403d22d666aa784718c427791da471017b7d0f7a729bd3b4ca88d9c88f"
   end
 
   depends_on "docutils" => :build

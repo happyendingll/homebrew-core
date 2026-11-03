@@ -7,11 +7,8 @@ class Dysk < Formula
   head "https://github.com/Canop/dysk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "83e82aa6ab4373826caf36c691bdcbe8fd022211be5be2fc9a0ade35a0933877"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e104444d8211287af92577f4363743677cd37cee24a7fea044fb35fa559d56fc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ed174398c2fee4ed7eac2d33f06d33efbb124b963209f350cc0251e28c8ca3d7"
-    sha256 cellar: :any,                 arm64_linux:       "f8b9f0afa271d1c7b725f5da5972d5f6ea5438c4c48b25a2d6a2f7b808dd2139"
-    sha256 cellar: :any,                 x86_64_linux:      "383e2296c3cf179a2e4feda492b3c8f52b4796f56d39289ef9cf8f4f4a8f7026"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "d905079494b97a37dde520e150e874cec069934040da8e68b3b2e3c503844c5f"
   end
 
   depends_on "rust" => :build

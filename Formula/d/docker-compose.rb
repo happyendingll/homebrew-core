@@ -15,11 +15,8 @@ class DockerCompose < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dcfd580ce0f39860f77870fff595f68f040def6fd1015d7307916378034bccd4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1793acc20d286e77f1d4f654095d16f397fa1d5ec08732103f602cdb1bfaed7c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9745e82b5ca49600e9e71565baf539b4c66c996204d4cc9d18905eec26ffa85c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b6a5b839301906f22201e180df468eb3ded0de172d7dbe797b14b754dddf8096"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "15a72077efc3b55fb7641c09602296499698623941730d6506ae49963d834648"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "9202bf521f0f87cec700f1b4ea4913bfa293b74975d3afccdb19fe1f79c384b7"
   end
 
   depends_on "go" => :build

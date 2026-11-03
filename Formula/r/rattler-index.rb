@@ -12,11 +12,8 @@ class RattlerIndex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7135dc0d2d2093931cd12d80a95740c54fd0d8650edc56570c6df9786102728f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fc0b40f1449d907de768c64f1e751d8b6000b1dbec937db9f5470d939942a763"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "df621fee6f003baba53ae510bbde9812ff51ee58277f4c563b348488c7ecdee0"
-    sha256 cellar: :any,                 arm64_linux:       "4d661d1d3f599ab6f176fe0f8d163fd789410309e6a9f3edc2d594660c61157b"
-    sha256 cellar: :any,                 x86_64_linux:      "7c4b8dde97628816ed5f4fff723b265a0b873dbfef8313d17c0b4095fc584acd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1ebfabebf1bc86897d65e3ffa630dc7aac258e887ed53ed2fc10e13208bad0d1"
   end
 
   depends_on "pkgconf" => :build

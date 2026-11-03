@@ -7,11 +7,8 @@ class OpenCodeReview < Formula
   head "https://github.com/alibaba/open-code-review.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "29e5aea63ae25b925f1a1c0376ceca21fb6cf27586b3949748a43eb47d231e3f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29e5aea63ae25b925f1a1c0376ceca21fb6cf27586b3949748a43eb47d231e3f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "29e5aea63ae25b925f1a1c0376ceca21fb6cf27586b3949748a43eb47d231e3f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4bfdbfb86b4d36a5ebf0876551a1525f28a9450f9090b10262bdeeed2cdb3edb"
-    sha256 cellar: :any,                 x86_64_linux:      "47fab2e6636613a576f91d9ea2f87506fc2eecca6466c94af979847970c98130"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e7b662ef705d69ba847ec7e942a151627f5ed9ee87cee24585cf246d60000e81"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Ldcli < Formula
   head "https://github.com/launchdarkly/ldcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0013fb183656c7240e560cd14bbcebacf2319e8904b678c21f8c659c01103c52"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5d4c3f785c670b68276ddc6ff46f64e65bc4e04afeac0c2eb83d36a51c6b78f5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ae2aa72aec5b87a5efdbacfd60d79d343242009212dbac3250994b5c5453715"
-    sha256 cellar: :any,                 arm64_linux:       "2cb52f4d52275a16d688434feeeeb644e77d011999344170575278ed8b2a67a1"
-    sha256 cellar: :any,                 x86_64_linux:      "b98da6cc7cecb326a08ac9867e9e34fe674503ab5ce31a57e5b0894fa321dfbd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "432f9aa71a08ac5ecad56b4a15e425d0c87d7ea9fed7f6976aa84c64febad355"
   end
 
   depends_on "go" => :build

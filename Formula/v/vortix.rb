@@ -7,11 +7,8 @@ class Vortix < Formula
   head "https://github.com/Harry-kp/vortix.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8746c1c445b6d22d01fce78774d6cfb4de0aa10ed95882a3a52459ce9ec7daa4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a1e0a77d175b22f861f77a6559c5b858b5d4d95fa8d946693008eb2a0a736509"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b28da956f6eae908df95c37d03cab92a938fa5d1fb7dbba691c7134f601ec1e1"
-    sha256 cellar: :any,                 arm64_linux:       "f1759ca5780d4ef97fe9e1462bbbfb98606fe1136f8734c9da8e3618aa0a7656"
-    sha256 cellar: :any,                 x86_64_linux:      "90c6c97306132d80bedbd3522affa880b29c475214a21e29d175a9d2a4e70f88"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b82c38affa72ad506911b9108d6d9c6614ae1190a0232de73705b1d21403b79c"
   end
 
   depends_on "rust" => :build

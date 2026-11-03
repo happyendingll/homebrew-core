@@ -15,11 +15,8 @@ class Apko < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ae0cb3efeb526cda6b29888e3b3968e6cba4709404206876649f147a9550437f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4d454d88fc13d06986145c20250cff076240ab9cd7ccde858fb50b39ae6f1693"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6875fb3b8f188e70bd5896ff7532c1372a1bcfdbfb3768ec6d32afd5a5f4b5d5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d79aed115d25fd084457422506a7d7e7c818f84b1fe1ae4c275fa316d64ebb7d"
-    sha256 cellar: :any,                 x86_64_linux:      "175e02e0d3717c5b2451b9a0fccd4adf5ba438c24154cdd69c607b05ece3ab15"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "30458eac27a03469dad0d629f4b9a29bc7e771aed9c82db336113253d2796c3d"
   end
 
   depends_on "go" => :build

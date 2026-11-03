@@ -7,11 +7,8 @@ class Monolith < Formula
   head "https://github.com/Y2Z/monolith.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "25053bd4529fa990b48e8a23d716d9cfffc9ac8c77c38e7b57351120c4c0b062"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "19dbdbfd463caa6f94ee602a083712b6718ede072ac7d369235cd0f674ecab89"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2d2df83fb0c13a9654419360f123494f30d348a206c9e9c01acf5196b7d30c6"
-    sha256 cellar: :any,                 arm64_linux:       "8aafc3eac7b777e0d1de6f7d64450e387e003c19a438f3a259710c4248f82506"
-    sha256 cellar: :any,                 x86_64_linux:      "a9c846fdb1fef0f5ec0a3218f03ea4342c03e0fa1e29d9818ce3c006ec4e8e00"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "0779f90eabf7f75a2d23075e0f4b6f23cabea93014126f81e03620c5806a7e20"
   end
 
   depends_on "pkgconf" => :build

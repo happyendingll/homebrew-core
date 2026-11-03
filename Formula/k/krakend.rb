@@ -7,11 +7,8 @@ class Krakend < Formula
   head "https://github.com/krakend/krakend-ce.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2265a416a3143a92f50786caf18bf401c44e91ebd6e82e0865ab9b84abc1d00"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "99fd6f11cae7ade28dbfbcb38b049c06f2fbd4e71011c7290e34f85b09c2dd4a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2f0ab722e295525468ed8d22663f3d458d3e9ebd137ffc9c6a3b3205f7256dae"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9d3097d7d18e327e6cf5798e2f8d9a1c5c41c61313ed14109b4d41e8f4d1faef"
-    sha256 cellar: :any,                 x86_64_linux:      "9188b2c63a57acc913c69a6281c2628cb1c8c9518d13404ba756d75379807884"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "de2a16b430067c189cb893b41896117fd3c1d1c11377796358f7f10ebc6b66cc"
   end
 
   depends_on "go" => :build

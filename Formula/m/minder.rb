@@ -7,11 +7,8 @@ class Minder < Formula
   head "https://github.com/mindersec/minder.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "466b676ccb76f453e918338d36e88cc09d9240e7754f9b9f3cd72bc914e7f509"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "466b676ccb76f453e918338d36e88cc09d9240e7754f9b9f3cd72bc914e7f509"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "466b676ccb76f453e918338d36e88cc09d9240e7754f9b9f3cd72bc914e7f509"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "07e7de3a70fd1eb3f9ad7fa173d7445427bcb123de4d40458e5dfa37b7a19923"
-    sha256 cellar: :any,                 x86_64_linux:      "e9347db59d009d3a1f3d0640b09edd0d0a84b8999399e71b1b38e9f19d1a9a4f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1fe7f7496fd6eb93fb5be4e1b735e810f4cf4a03b08de3270da6e0e6bac1979e"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Termframe < Formula
   head "https://github.com/pamburus/termframe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4fc65f02811280837d25dc6da5c11dfd64c3ad645d892050c6135fffd975d897"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b9d0502e0877855f83515604f488409f6e32317cc4f0d59e3d3d62bd53213cfe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8a57b0102491cab7148978f44e161df6502642339a653479c01111fe9dd39eb7"
-    sha256 cellar: :any,                 arm64_linux:       "6ce147a30b27cfb5a40333ec7c5f23bef1311fdb1d6a76f17bc056270f948a96"
-    sha256 cellar: :any,                 x86_64_linux:      "979665e7b091a068342e050376cd692065272197ac271be2ee01d832a5db2910"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "af356a3c9452c1a8fd2b1c793744e3c11bff1928cbc7f0875db7d12bef9d1ccb"
   end
 
   depends_on "rust" => :build

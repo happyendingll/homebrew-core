@@ -7,11 +7,8 @@ class Infisical < Formula
   head "https://github.com/Infisical/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f305b2ee7c16f392d08c96285ac5154abba674c537a2b537060e868cb946c39a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f305b2ee7c16f392d08c96285ac5154abba674c537a2b537060e868cb946c39a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f305b2ee7c16f392d08c96285ac5154abba674c537a2b537060e868cb946c39a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "996bc5746b3a1d9f6211e4bdfab1499cfe0b6e6ac956df99fb3e4165dc447a19"
-    sha256 cellar: :any,                 x86_64_linux:      "971737baa90d957e858387c75f2ba9b883c115cfc29afdb87fa5787fb21a96f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "21c4ececccf73b9f2e78487f8c0cffd40e1a607469a201793eee7b123f293d0b"
   end
 
   depends_on "go" => :build

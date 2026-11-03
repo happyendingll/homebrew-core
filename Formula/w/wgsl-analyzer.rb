@@ -12,11 +12,8 @@ class WgslAnalyzer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "65eacdcf243b6b59c9fd268022a08399f437d88a5eafbbc50eb27ad768a790f5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f8319716bdbb1731b13a2fb0e5899643b7a69d1905acd9c5d6002baac57d0fc0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "694720f7476e036c6865ef72cdca653f1a0acc2eea92b88a401bd25bb2397345"
-    sha256 cellar: :any,                 arm64_linux:       "9e7762d79037ae6b39816e383d5176e84a09e7b682a32d9eed0637199a49cac6"
-    sha256 cellar: :any,                 x86_64_linux:      "e14a20b6f99d626142571c2d502fe56be777ad025a58380cd3db606fbe350f89"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "0183a16e603d90af3b1c099b080f213c2f39f1a06a12b526fbc4e30ec49622b7"
   end
 
   depends_on "rust" => :build

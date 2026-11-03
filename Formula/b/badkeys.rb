@@ -9,11 +9,8 @@ class Badkeys < Formula
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "57222ae23f419feb7615f04ebccb0d0d3366cab46e1064746a901ca098065b95"
-    sha256 cellar: :any, arm64_tahoe:       "d1fab523955b353013e746a207924c01bfd07fccd806589275d59dcee2b376ea"
-    sha256 cellar: :any, arm64_sequoia:     "d45ca9eca953a54e91c64a99f13ec3eaa308b0b8974fa294ba85e7fb01169cae"
-    sha256 cellar: :any, arm64_linux:       "13117f68cb655993392c453416f1368769a96822b92652d5c2079f2587ff2455"
-    sha256 cellar: :any, x86_64_linux:      "8933edca489a921c6991f2e0b0d601518b0c6750ac1aa6134d6e702a30840d28"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "2001cae648a763ab6bf5b7e04260594907da6994554678c60c1a7fea4ce1eb5e"
   end
 
   depends_on "cryptography" => :no_linkage

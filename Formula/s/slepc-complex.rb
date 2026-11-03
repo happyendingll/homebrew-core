@@ -10,11 +10,8 @@ class SlepcComplex < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "7f840add5705bbdebf81c3ded67bbd8901607b3d4386631dd4066896c9bf0c2d"
-    sha256 arm64_tahoe:       "802be17cac3210eb7236743362a81aa7282c5f83ddd383956f9cb3cc92aaad2b"
-    sha256 arm64_sequoia:     "2c96a29adcb3994ce95c403460a58ff20f14eb2884d16ee130239f925af26472"
-    sha256 arm64_linux:       "618741230266683c686e29333e1a8861fc4fea63e4b875f814dd155b8cd7e5f4"
-    sha256 x86_64_linux:      "f910b556aa3bd40cdb30e7157cdfd86be76638c46a26e941b20eb2b8ccbfd4f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "d72f6b834599d0f119295b0b31b21c27f0b1efcb09dd0bc975c45d57c2a8ac58"
   end
 
   depends_on "open-mpi"

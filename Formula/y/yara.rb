@@ -16,11 +16,8 @@ class Yara < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0b6a8506b19961ad592de58a159e7536f342f0757ab571b70f8d55ae682b2b67"
-    sha256 cellar: :any, arm64_tahoe:       "006d93d63ba1ebbcdd7847324807e228d7af5f7b92fdfc65b4a24ac8ce474a75"
-    sha256 cellar: :any, arm64_sequoia:     "04400495022f7b652a9106d68b11a4e3cdd0bca047d88bcea5836c07009d61b2"
-    sha256 cellar: :any, arm64_linux:       "533a98575a135a89f9eb17fcb948227411754ff33cf5cbfac512d943d431e24d"
-    sha256 cellar: :any, x86_64_linux:      "d835f34553f142ef6bf31c5192be2841095905fccf44b78e0ab2a038d50c5c3c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0dd6b3876f5af485e30abd13ebce07fd97fbcaf3cf10fe624935e9c2ef9c423d"
   end
 
   depends_on "autoconf" => :build

@@ -12,11 +12,8 @@ class Gost < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "adb13bfc76e0932f92b344d81f0fd9f18fb6a82be3b379ec0e0d25010e7af6c6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8a3c880db2b207ada8a3a51e779a8a0e6e65c9d8d84da87882cf1fd131e40446"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8cfbc2edcf33ba62ec935dbca0d208a7b45c8f3032f59c2f2308ca9d7e584b6f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1056c80d076fac6995eba1182fe7ec52c962e651b8d7b2f83fe903ec3895ba06"
-    sha256 cellar: :any,                 x86_64_linux:      "37493978bcad3e7350b8c294472ef8445fcedd3806e6fa5f016011044e7e828a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "d961b5b2a8672b1c2ba2858e2bd9fb52e7b6613f7a6a1278969963262d23ecc3"
   end
 
   depends_on "go" => :build

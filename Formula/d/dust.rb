@@ -12,11 +12,8 @@ class Dust < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "752737e1c848831cda9420cef7af7a9bf99909457e306b8d602364ed7cc6a824"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9887c9b2942bdc44f4b0671a30356f119b194b31d4cf9b2b289f32c1744fa55f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd52b635060bb417149948f5b0ef3983730b34db7073ea50fd0fb2068c2a4909"
-    sha256 cellar: :any,                 arm64_linux:       "bff26cca8439917eb8b877014f741afe1452010e216a2911e7dbe4317a672161"
-    sha256 cellar: :any,                 x86_64_linux:      "6615967db2db81cd1c652b5de7af0f7d089c8f033541e724f25953e34de5f0d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "8ad0a17b3845fbff83d3a231f192a95098f055d0435b85d4b81cf5048b234b43"
   end
 
   depends_on "rust" => :build

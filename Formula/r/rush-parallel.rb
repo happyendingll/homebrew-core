@@ -6,11 +6,8 @@ class RushParallel < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f6b47c3cb924b4df1a8428c1c03b05e7c5cab740a4cce9804d8ee58093817f78"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06cb9440cb6e8384f8262d683ac5cb2418319f3556f7b80af4ef71bbee6c382e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d925e393da855eb2fffc83c896a8db4e3ce5ccc50812faf05ffe59795b557b8e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9ee3cadcf6298358f56f24999bae7320d63f8ba88966d4657d7c7f2639b75561"
-    sha256 cellar: :any,                 x86_64_linux:      "550090e6eacbf814699ca9cb63b3bdd3a996c7e377f69d1121c9bfc15fe83aa4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "6fd590cce9782b4b6e2837a3729bfbd1414f607956e13f7e9c7ce4f87cee3afc"
   end
 
   depends_on "go" => :build

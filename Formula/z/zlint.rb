@@ -7,11 +7,8 @@ class Zlint < Formula
   head "https://github.com/zmap/zlint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "673cc12af5343ae9cc3dd28bb37ba5d0a5c9c463ede07a22ef6fbed225dc8f9d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "673cc12af5343ae9cc3dd28bb37ba5d0a5c9c463ede07a22ef6fbed225dc8f9d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "673cc12af5343ae9cc3dd28bb37ba5d0a5c9c463ede07a22ef6fbed225dc8f9d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "95d04b39ac2ca569a6850af121925c87b74f818a9a7648619a70a4cf5a4cb0e3"
-    sha256 cellar: :any,                 x86_64_linux:      "db085c7c464408a35934f6412460358952bc7933ce8da39b4f1b194eee03b898"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e6abd3cb2a0a8c2ea7201d081b32abd4c026d8e47c7f784a6760575e5976cc8e"
   end
 
   depends_on "go" => :build
