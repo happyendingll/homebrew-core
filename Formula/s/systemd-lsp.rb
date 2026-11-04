@@ -6,11 +6,8 @@ class SystemdLsp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ad9ad0163a5e3e96a7b9d376da549d76f99da6e3c6e9449d823169c2e353067a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "51661f31271d52fa7de3bc6f55e81487475a9fd56b900210de455bcd0ea8898f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b51557f8828b4ca34329ffa481d6eabaca23565d9a0b80323ee002541fa59cd1"
-    sha256 cellar: :any,                 arm64_linux:       "d63ad88fad826f2c27113350c5be0d957d8c04719b091f3f77f04bf717b032f8"
-    sha256 cellar: :any,                 x86_64_linux:      "9ef950bb136689a3922d68a021ce4e29087002c72db5e0414dbceda98076ce47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "456c6a29eb4105b66769c76f408e76ea2372d397775c88df3d84b515b36e29a6"
   end
 
   depends_on "rust" => :build

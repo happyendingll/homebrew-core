@@ -9,11 +9,8 @@ class Ipython < Formula
   head "https://github.com/ipython/ipython.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f623bddd7d6380fd544a7226f5a7c3fe2522e528492c7b2ab460cb34cf0ee7d3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95e0fbca688ce50e60cf5457a671d569958faed8d12bc189307f4a461a5128f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b78064b6a8d1cadc8dba64a4806ccc03a035fb9b93ecad338b178f6d15927ad2"
-    sha256 cellar: :any,                 arm64_linux:       "05118aa44444eca8cab10ac9d12b3faf4cee7157ffba46e1c0e03c65f5c469e5"
-    sha256 cellar: :any,                 x86_64_linux:      "f8af3b7b6bdcd68340ac29f23d7015cc815f990e655711a633d89b2f72e793f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "03473f00d18f091f846ebd1bc27a7f61f1e8b0264b989abf137c8850c8deefb6"
   end
 
   depends_on "python@3.15"

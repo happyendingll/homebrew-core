@@ -7,11 +7,8 @@ class Groestlcoin < Formula
   head "https://github.com/groestlcoin/groestlcoin.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d34bbaa065438d8624e63afffd3c9198a7565b5904b215df6d964d1fc6b5f462"
-    sha256 cellar: :any, arm64_tahoe:       "8b4e6acc8d4ee2b3633fbf2d5c84b43e9b7638e72b323561dcef1447c3b27756"
-    sha256 cellar: :any, arm64_sequoia:     "df2c21f43d3f730fc2f4ceb082c718d33487438006154caeab8b9a2c30a0c4e3"
-    sha256 cellar: :any, arm64_linux:       "88cf7293d9e3592ece38ec19be462529f64f62a0548ff576fa442a6946df535c"
-    sha256 cellar: :any, x86_64_linux:      "0891ed60fc76049c27db7812629d57c824ab2430674e7a615540397d2da8b03c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0eaab52b1bc3e7b6865db77d235dd97e6ea066f26f6bf0e3122b371faca4b367"
   end
 
   depends_on "boost" => :build

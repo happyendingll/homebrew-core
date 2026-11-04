@@ -12,11 +12,8 @@ class Murex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "97e8187cfaa5895075ce2ed2f527befaebaa5b7851b8eb5ab05634011311687b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "97e8187cfaa5895075ce2ed2f527befaebaa5b7851b8eb5ab05634011311687b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "97e8187cfaa5895075ce2ed2f527befaebaa5b7851b8eb5ab05634011311687b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b65eea8106bee33d6e4a01dccc705a8e3becd974bf46971b534bb71ed973ab61"
-    sha256 cellar: :any,                 x86_64_linux:      "68a749c2bf170bbaf03cee7af7b19c34d3dc693fb8931164d81acf9846335064"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "f399b6a33e0d2a6866be0e93d155f858c4e030c5eda545fe844ae3a2d9a82c02"
   end
 
   depends_on "go" => :build

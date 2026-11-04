@@ -12,11 +12,8 @@ class Byobu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0beba6cf94fa9eaf79c2b2f5ae40b9bfa86937ef2ac09fc59267cd7ab5ccfb56"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0beba6cf94fa9eaf79c2b2f5ae40b9bfa86937ef2ac09fc59267cd7ab5ccfb56"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0beba6cf94fa9eaf79c2b2f5ae40b9bfa86937ef2ac09fc59267cd7ab5ccfb56"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d7400f007bb160889a74e39210f61c95f1c89a91ca95d4ba33aba2bc304fece"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7d7400f007bb160889a74e39210f61c95f1c89a91ca95d4ba33aba2bc304fece"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "0c458016f09c4cce8b672bf968cbdae175f8c9a6c0b855262159723934e1e697"
   end
 
   depends_on "autoconf" => :build

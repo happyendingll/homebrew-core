@@ -8,11 +8,8 @@ class ConfluenceMarkdownExporter < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a3c7ec0ff1fd9debdf5522b909af73200cdbfe9fca8f6061ea9e45f15240c98d"
-    sha256 cellar: :any, arm64_tahoe:       "b3c663bd4e5db9d3d6ed02b5777eb6849c4f69da79f95570a1592848adf2b699"
-    sha256 cellar: :any, arm64_sequoia:     "e020a992096dbcbb431b6e5859440582b5598400d93e1fb19048bedd31f3c39f"
-    sha256 cellar: :any, arm64_linux:       "20ecd5d6c1c264410c5613651c186ab082cdbd4aefa07a2f1ad793e09d35de7f"
-    sha256 cellar: :any, x86_64_linux:      "91f673bec51ac4843e43fdd193a8e6efd88925db9141e2c8b4459962600373e5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "da8572337264b326ad439d61f553dc42da730e049148f89e49afa13d00267fdd"
   end
 
   depends_on "certifi" => :no_linkage

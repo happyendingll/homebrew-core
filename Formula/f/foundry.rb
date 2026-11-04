@@ -15,11 +15,8 @@ class Foundry < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "23262a3b3938abbf2c47789232148372e756bfe07f445a24cd8ce97451c969ee"
-    sha256 cellar: :any, arm64_tahoe:       "b54926e7ae51c6d05f257fa6e6d7ce54ff059803c26cdb0739f1b5cb730d8d01"
-    sha256 cellar: :any, arm64_sequoia:     "ac3158b9559e02040f547dda40b2c4cc656c1770a7504463cf46791236b7da99"
-    sha256 cellar: :any, arm64_linux:       "966bfbaaa83d26c8541a90fa40a34f10f33569e10246d4d826c97ff3b89c8068"
-    sha256 cellar: :any, x86_64_linux:      "95c3ceb234dacfbede5295767aa1809608748538bff391b43797c72f68662e5c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "92ba50fae113c82f099e16a7656872c5a48e6c47804db514faef2c6b04408d40"
   end
 
   depends_on "help2man" => :build

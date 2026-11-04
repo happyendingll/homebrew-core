@@ -13,11 +13,8 @@ class Tirith < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "deb0fd62298eee14703bf3386c56b7270c08736fe2127743c475523ce6ff677d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ee5d9eff3a6d5479854173aa55f271ecaea697a5953470ef5d09969408f209e5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc9803643bc14e745e71d24f57226a7d10fc61e4f30e94f432e4d300641b387d"
-    sha256 cellar: :any,                 arm64_linux:       "153b7a640b263619693825d4107beae2e8c6cbeee6929b89b1710b9e44e8bc63"
-    sha256 cellar: :any,                 x86_64_linux:      "2ed67475675191c0fa4343cb0ecf8d9720281d3a1a411a9351ade676e9b95ece"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e3a98384b81578b3d25b03a0b9878246809f07a33a56e235a37d96cd2e3c9ebc"
   end
 
   depends_on "rust" => :build

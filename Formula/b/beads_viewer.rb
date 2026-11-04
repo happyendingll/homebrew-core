@@ -6,11 +6,8 @@ class BeadsViewer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ea0e28eef69866117d2e9a756b8292956da076d066701e5a91e62bcf5da31fc2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ea0e28eef69866117d2e9a756b8292956da076d066701e5a91e62bcf5da31fc2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ea0e28eef69866117d2e9a756b8292956da076d066701e5a91e62bcf5da31fc2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9e172f973a30364a3f4e3a935a8819cbc925a40216ee02e6a4d20088b7faf0c1"
-    sha256 cellar: :any,                 x86_64_linux:      "57395508b1da9bd4b9510f1bc8f3167fb9fe32b6fd116fa8b95b68df3567926c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "dda1cb1115ee29a84f9529d7a11fcbfa95652f28caa8820d10085b00307e40cc"
   end
 
   depends_on "go" => :build

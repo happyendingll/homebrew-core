@@ -7,11 +7,8 @@ class PixiPack < Formula
   head "https://github.com/quantco/pixi-pack.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c497ad550466f5c73ca5e4b51b00f346f1feb7bac95a7157a7642b98d656243d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "abbca8c86337c32b83b09d15bfccf80364029084021c8d321e7f70d2fe32ab33"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8778ff7e5cf494ed7cb8318066be7d42c83247a497e3dfa3595badcae4bf509e"
-    sha256 cellar: :any,                 arm64_linux:       "de70e3865b0efb9b1eb40b4f821f34f5d5bb0100fcb266693eca23f8ede50f9c"
-    sha256 cellar: :any,                 x86_64_linux:      "a28e13f1747f4532ccda5362ab451c7006f489c85494ca348e73ef3abaa48a02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "d919229c3bb4e071ad4ed1f89ad66ecd1885765fe71e87d1c8170679884155fb"
   end
 
   depends_on "cmake" => :build

@@ -8,11 +8,8 @@ class Ghr < Formula
   head "https://github.com/tcnksm/ghr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3ebbbe8bb5422b10ed67e8953469c6dbe26746f48cae356c1a9fb983dd58f82d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3ebbbe8bb5422b10ed67e8953469c6dbe26746f48cae356c1a9fb983dd58f82d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3ebbbe8bb5422b10ed67e8953469c6dbe26746f48cae356c1a9fb983dd58f82d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f4f15fa52e06c484c9b8126a93cd38b669fd994f5086b9638f4688c37b6361ed"
-    sha256 cellar: :any,                 x86_64_linux:      "1d8bdc9181ee529ecc04da326d9d049601159f253dbde4e79cfaaace5ddacb60"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "eea5da76bb6f254fde66d6003e9caa54c7dde5d89973203e7dfdd4e3a54ce54b"
   end
 
   depends_on "go" => :build

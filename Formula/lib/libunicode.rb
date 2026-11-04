@@ -6,11 +6,8 @@ class Libunicode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c36eef01f17313f2c9daa223b25093031e0ec9f35f4b67b79007861a691762fa"
-    sha256 cellar: :any, arm64_tahoe:       "279e3ccddfa2ba7e14d30f54034cc52949fb9f4da6ab0f4711bce7e289ad4d15"
-    sha256 cellar: :any, arm64_sequoia:     "7f8c00ea732c7c1bd629f0d50d78b6dcc3b10de66bfe8332734c9e9510916a40"
-    sha256 cellar: :any, arm64_linux:       "8698f0fa266f2977de20b6d96038affcaf2b72a96ce3e3ed594a216a888144a7"
-    sha256 cellar: :any, x86_64_linux:      "1a15a6cd1ef8a0afdc162035e861db112a0f09eee0788bfa78ba619ded7c1023"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "54eda9800fd5fa082723fe3a0e1be9c49e902a7a252be51d96aea89ba5fb0bd1"
   end
 
   depends_on "cmake" => :build

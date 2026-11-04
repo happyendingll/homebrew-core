@@ -15,11 +15,8 @@ class Tinymist < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "da8c697ab00df754547d88cb1cbb02e6610e1e6091d47d52cdea8ac5a9a0aa7f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a87968a0d5b4bf51010f300dfeb6090a578595ea39b0a3cb0dd5b5a69e465f5b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1e6ef452a873fdb55a1009d77fbebafe1bfe6776e0da911ac62c7d69edcd9e11"
-    sha256 cellar: :any,                 arm64_linux:       "b692cc7fc521d72ce389052d619438e6cdea9b43a768ddb6de5cbb1f1d490dd6"
-    sha256 cellar: :any,                 x86_64_linux:      "b75ab07399cf346af9ab689b24cd968fe40b1a495d170769a371c3ccb6dfdcb2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "983d4238946018653ac58d24ab82a2c22015ef4b4bf4f80b9a645c598a3a6d8a"
   end
 
   depends_on "rust" => :build

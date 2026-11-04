@@ -7,11 +7,8 @@ class Pluto < Formula
   head "https://github.com/FairwindsOps/pluto.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e4932d45573b0c825c6ef27796904c636f3516274cfe1b64462777fad2509df"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e4932d45573b0c825c6ef27796904c636f3516274cfe1b64462777fad2509df"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e4932d45573b0c825c6ef27796904c636f3516274cfe1b64462777fad2509df"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a881cb773c5004ae6d1e5621183d8d42c84e6d74fe07aadc409be33e98005ab0"
-    sha256 cellar: :any,                 x86_64_linux:      "b8e0ee60074443eee619e75cf8c90f1176cc066c121f5907b3b3d8d271a62724"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "52e9b4b64184179ededc43215d60617af8955539d1737d28a65261e527e36220"
   end
 
   depends_on "go" => :build

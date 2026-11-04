@@ -8,11 +8,8 @@ class AprUtil < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "f7f7174af2e16984ca464ec9fbfd9df33ef2e3c716afb410a024c1d1983f7786"
-    sha256 arm64_tahoe:       "272ac1650856bfba7c5b033e3e118c5d28ab271ae7ce6f469eed954d126ab577"
-    sha256 arm64_sequoia:     "f62ab082561dd6956e950bf71b4057645c27dfb2e0c2bc36335e103932a1668b"
-    sha256 arm64_linux:       "c09d62bca3c07f5adf86ed7eaca967432aea2a5f2c297340372b0d65a0070bc8"
-    sha256 x86_64_linux:      "58519c596959f99d7d4e34100ff6dd000756ca9a980b06456ade7105c878560c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "d041e665c9fd4f1370531af2fc35a86fa3c9c699a53e68a476b67eebd84439e7"
   end
 
   keg_only :shadowed_by_macos, "Apple's CLT provides apr (but not apr-util)"

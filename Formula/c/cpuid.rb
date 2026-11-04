@@ -7,11 +7,8 @@ class Cpuid < Formula
   head "https://github.com/klauspost/cpuid.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ef8dd3158e7b63058d7be95c03e81f1dcc62cd768aefc5da7eb6a9ff9e02156"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ef8dd3158e7b63058d7be95c03e81f1dcc62cd768aefc5da7eb6a9ff9e02156"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ef8dd3158e7b63058d7be95c03e81f1dcc62cd768aefc5da7eb6a9ff9e02156"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d82b57a4cb9dd71df3f2d4e402f585615bdbc58db62b72e0dc3f5547937fd51a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "26f636932dcdb2c45c6a49e4ed849a22a147ce82df7dbbfe4479c873fce905c7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b8826cc8dc49a8147b3f955b9019a4762e75e232c9465d792948d50c8fc060e3"
   end
 
   depends_on "go" => :build

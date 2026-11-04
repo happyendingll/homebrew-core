@@ -12,11 +12,8 @@ class Temporal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4559cd9f93df839524a83417bd6d17725f2c7b3553346aadc6e6d11e186ed73c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b189e001a6a92744f478d29fd858e26362b56f1782d297f6da78d1c8371c3581"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e16d33fcd7780e608fa520a0cd056dcfd9db6552b85a8520b00dbb1f290bca29"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "01a3f945e035239abe85a733e4b1c2c7d11492aaac61a0f070996c9a7b37891d"
-    sha256 cellar: :any,                 x86_64_linux:      "e9d8771287163b2a35f54e451d4457255b6a1c8a5936051fab6953a54c16e7d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "2623bf96e471508de827d4d343d88612dfb315ed141ccaeba7b409ceabf30929"
   end
 
   depends_on "go" => :build

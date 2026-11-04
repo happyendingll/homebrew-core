@@ -7,11 +7,8 @@ class StellarCli < Formula
   head "https://github.com/stellar/stellar-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fd612a77fe8bb996d7dbe8805507de1597eafada542eb81b6cb0beb58d348aad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3c751a89d17e98c91c3593ec845ed83b4d7f378288c9e9b6049beb2a7f26361d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f267d407b19663e9202236e9fa6ded0006cc431d361400be6542444269543df"
-    sha256 cellar: :any,                 arm64_linux:       "f4a9b18920f7cd8fb030fed21794f577f29b9b55c9e08dd0019be4827a2ad2e4"
-    sha256 cellar: :any,                 x86_64_linux:      "93f036784808a30ed667f7fd0dc4c852cfb930276f9d4946fb01e7f6efacc8c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b654233a5d5de2052f9702c15987ff8d900698ac07eb7d794015a4c7d405de67"
   end
 
   depends_on "rust" => :build
