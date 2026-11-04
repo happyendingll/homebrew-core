@@ -7,11 +7,8 @@ class GoFeatureFlagRelayProxy < Formula
   head "https://github.com/thomaspoignant/go-feature-flag.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0a1e7b786b799e47404d4e51feb1c43af254ac6400b709d39e76074da11dc9b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "88588a691564fe40543b058f20e4bba18ac5b862909db1016c9d6968f47e4163"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "edf511fa7bdbf6a71a4467a41bb4bc5fd2f722320cb237c65fbc1edd15945a4e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b69787cc5921bf53f2f7c14829c310aaef84607b9d9172d5eb464f0611371a67"
-    sha256 cellar: :any,                 x86_64_linux:      "b2540a4459a96adfeeaf3852880aafd1d68ee427ae9f03671562d78f86c4667a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c64e75e7d07091a2335a317cc7c7f7380944d61bda1696d334d026ec9a27c0a2"
   end
 
   depends_on "go" => :build

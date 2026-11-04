@@ -14,11 +14,8 @@ class Rpiboot < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "eb13356c2c0b6ffc0c598b4c5c56330925ce88f3389aaffef2994de01e7e1864"
-    sha256 arm64_tahoe:       "8e4cbde8e831ae6cd56841b54bddb883b62b5395e2c81b11c7da3a4be72324a0"
-    sha256 arm64_sequoia:     "2cbdc1bcdb5fb137a8ad04b0df3a1212136e764ebcd15191e4f9006033d8803c"
-    sha256 arm64_linux:       "f3bc942d4fcb388a8d90e594d10c5ca447f9668ce146d899cf305a16f65a9113"
-    sha256 x86_64_linux:      "3df21f052fb82a1eb3fccdcbfdd5946cb9e8f3e5824e9f9a7f3954f5f03d1585"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "af64427ab4a36b627d0059637006325f41ca4ad8fc6ca9afdfd6d99225c5987b"
   end
 
   depends_on "pkgconf" => :build

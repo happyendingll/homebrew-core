@@ -7,11 +7,8 @@ class Verovio < Formula
   head "https://github.com/rism-digital/verovio.git", branch: "develop"
 
   bottle do
-    sha256 arm64_golden_gate: "323365af4889c6e257ea3f4b5a7951846ed685d3735812e0f982cabe91b27681"
-    sha256 arm64_tahoe:       "201279ca4283c16204aecff72683909a698107782315bbe5f4272b7bd13d9ae5"
-    sha256 arm64_sequoia:     "29a5647a73693ffe96c8c937f63b01e4947f7856c8c0f16804e2c31e2c9aa596"
-    sha256 arm64_linux:       "5cc2a592c805b11b36be5b31c62fb96f1fdf24c480a807fbc85be7f74f346de3"
-    sha256 x86_64_linux:      "89ba30e9dae47bad2520ae6cc342be9e926840db058e7ba32c8c02706d9d7772"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "874a1a025d1bfa312f654585f1b0c3f72c5814c04290b40e7d434046f397a8ad"
   end
 
   depends_on "cmake" => :build

@@ -8,11 +8,8 @@ class Libaec < Formula
   head "https://github.com/Deutsches-Klimarechenzentrum/libaec.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "869b8090dd28b0c5222e43698ea3ec0c3abe0c321cc2f7689a7218bceb33d36d"
-    sha256 cellar: :any, arm64_tahoe:       "250632689a82436e1ede76aeb877c96e311028102671aa3759966c11facfef0d"
-    sha256 cellar: :any, arm64_sequoia:     "8613415289b9b15534e6096b2cae6efd8942bc83ce21db6fc3297362128d59af"
-    sha256 cellar: :any, arm64_linux:       "626cae87583d70941205b4f7cc5b425ebee5747a3254a82c0c544915eb1fa009"
-    sha256 cellar: :any, x86_64_linux:      "6d402bde6fee8e560813fca05f5733942d7b9bda27456df0478945f47b896b0c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "c9684283159167c4282b1b98bfc692b3fb2725c8dceb75758c3160696fd43453"
   end
 
   depends_on "cmake" => [:build, :test]

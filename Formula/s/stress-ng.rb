@@ -11,11 +11,8 @@ class StressNg < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc37e8ae7f27f0d18d026b4554dbac54c79b217b08a8d05515632065753866bd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8ecb465d8d5f161536b609312f772c7d2d45b87f1e109ba05a7f6bbc04dd176e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a68e10e4bd7b54adc836d3e4b06ec13fdbdc78fd0f4b683817a4039524afc0a"
-    sha256 cellar: :any,                 arm64_linux:       "b1d7336b61f50d0d8c8bc1f95dad4eda09ae2bbeccbd4e38c057cd4b97dc7ebb"
-    sha256 cellar: :any,                 x86_64_linux:      "1ddd158c578655076e75e6a9b199c4c71349907edea0c5da3c10b0ea882d64ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "bed071613d31e77553504e2d0fac47009d11fd1dc8d0daebd793b88b9b42cd15"
   end
 
   uses_from_macos "libxcrypt"

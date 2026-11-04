@@ -15,11 +15,8 @@ class Roxctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ebbe31449bbe0b2df3de1a1f4a30fffb3785c6b0cf415cd2dfbe15ecfd2361f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5281ef01ac116777c1298de3f59213ccb0596e7866c8fd7907d03c2a38ec96a8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "119bd7f4d6ef6af917c60cb58eb664a22c6bde917e03916adc107ae71bbc0dd9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5488b89d3978f85e78bd59be39202d46845b3a663c28026730f2831b1c9d07c1"
-    sha256 cellar: :any,                 x86_64_linux:      "fec4f24ce40f8fbda1364af02e87bb87870d1af4d597e55364e2d095497f97de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "52ec3972b41a45a459215aaeb960d48d4f458d9be68dd9eae09c0672d62945ed"
   end
 
   depends_on "go" => :build

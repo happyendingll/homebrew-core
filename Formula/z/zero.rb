@@ -7,11 +7,8 @@ class Zero < Formula
   head "https://github.com/Twigpine/zero.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef61d8450910618a4572c17aebfc373bab93106ae052f0d213c4a4602fb1681b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ef61d8450910618a4572c17aebfc373bab93106ae052f0d213c4a4602fb1681b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ef61d8450910618a4572c17aebfc373bab93106ae052f0d213c4a4602fb1681b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b963e98b778044e428938b92f346484c4d4135554544a7f84a456e10972cd10f"
-    sha256 cellar: :any,                 x86_64_linux:      "822e19ea86f3e0877f191aa78735f2ae69c13e8883bead7e4d680ac3ec1335a6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "0ca045bc0c13d98a8ac296693681c4853660b31038368a337f93d42f92c17dac"
   end
 
   depends_on "go" => :build

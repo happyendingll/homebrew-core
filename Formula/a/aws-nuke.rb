@@ -7,11 +7,8 @@ class AwsNuke < Formula
   head "https://github.com/ekristen/aws-nuke.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3a1673acd559a77ae7d810ae72bea906f2e93dabf148a8cf84850d83f26a501f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a1673acd559a77ae7d810ae72bea906f2e93dabf148a8cf84850d83f26a501f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a1673acd559a77ae7d810ae72bea906f2e93dabf148a8cf84850d83f26a501f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d1b846da192cf83d65dabf4b07cceea91c106ac291ab847f8feb370d146fb857"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fba0649ae134e72e3769e721a91f2be66b98621a28d5f8605e365d078c257bb6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "9c01c9a4c779674a5d6b4e1f49c12f548ce94cb0679f9ad1d4576880c9c5fed0"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Libupnp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9752b98a0ebbf922b101928ab1676cdf7e1b9b8528e0189ebf81136514203ac7"
-    sha256 cellar: :any, arm64_tahoe:       "7c9c552c39b81f7d8d5349369024e32e1298ce5dddebcb3eb07ef6e3d0ce1c27"
-    sha256 cellar: :any, arm64_sequoia:     "1f1197f7921be0a7b4a575e35bb5a1d7b63346111e90b79cd23898a78129d0e8"
-    sha256 cellar: :any, arm64_linux:       "2a95846eeb204a474d4019a645b9372b4754d4b91ba271c924b5064401205b47"
-    sha256 cellar: :any, x86_64_linux:      "f7b579e69a3adbec8d2db5c77bce1207baae4772979a94f01343e2c9e2163716"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "fc887944f946cbcd5411651114b5d882d7ad4732dfde427ff4a065d68fd619a8"
   end
 
   depends_on "cmake" => :build

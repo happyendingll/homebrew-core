@@ -7,11 +7,8 @@ class Caddy < Formula
   head "https://github.com/caddyserver/caddy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d6ffeaebe6e98a0ef2b12a6e912160de0af1ab59d86ecbb9bad849ce87223f14"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d6ffeaebe6e98a0ef2b12a6e912160de0af1ab59d86ecbb9bad849ce87223f14"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d6ffeaebe6e98a0ef2b12a6e912160de0af1ab59d86ecbb9bad849ce87223f14"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "513681f6957dd736cee4df1dd17d5aaec7a2e3176eca309e022e47b040761102"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "fab6b480a78dc62080e867aca2ef7f8e733b44da8685d5b595311e8c1f89b63b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "4a07aef2a3f7bccdc9a0dc1b7536a7d312f701b7512f1d15b196db9597d6e204"
   end
 
   depends_on "go" => :build
