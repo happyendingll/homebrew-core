@@ -18,6 +18,8 @@ class Libcpucycles < Formula
 
   uses_from_macos "python" => :build
 
+  deny_network_access!
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"

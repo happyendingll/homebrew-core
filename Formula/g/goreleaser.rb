@@ -2,8 +2,8 @@ class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com/"
   url "https://github.com/goreleaser/goreleaser.git",
-      tag:      "v2.19.0",
-      revision: "00139d15712716a3a2f21eb4d533f231ff19b9c5"
+      tag:      "v2.20.0",
+      revision: "b8f79e0399c46895220e8479e24d599576b563a8"
   license "MIT"
   head "https://github.com/goreleaser/goreleaser.git", branch: "main"
 
@@ -13,8 +13,11 @@ class Goreleaser < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "def7769bcc9573144b18432166e0d68d1b065a53ae68d815f9c9e0bc67f8f28c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "430dcc9000b3c174fc49781bb67729f26709c77c5592d0b578882d537f857a67"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b23a838fbe8f513543dc555402fd9305a4f4356b9984f2436395a9558dde8f01"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2202a8119eae3a3fd6b84b3138d1163a22be8bde72ae3efe592e95041a9927e7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3deb7dd87acf9fbd2e99d7987d52abb88b06b7564947d98ab0a8838a0944a5a1"
+    sha256 cellar: :any,                 x86_64_linux:      "b081fe7dbe6adfedd6842f89df1b76a5d63d2734ceac5de6a4a5fc13aad4c095"
   end
 
   depends_on "go" => :build

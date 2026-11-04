@@ -1,14 +1,17 @@
 class Zero < Formula
   desc "Terminal coding agent you own"
-  homepage "https://zero.gitlawb.com/"
-  url "https://github.com/Gitlawb/zero/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "d253f69beb00cbc0fb23a302914caf960e2a1d94b045778ff2ed2671fab35f50"
+  homepage "https://zero.twigpine.com/"
+  url "https://github.com/Twigpine/zero/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "065a2bbcdce5e7fe597247e9a14fc41cb4ff0577461fd73bea72bc889af4d233"
   license "MIT"
-  head "https://github.com/Gitlawb/zero.git", branch: "main"
+  head "https://github.com/Twigpine/zero.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "d3e06ed8882bd250ac47f640b6c01b756df01b997ceeb5deb3417e123456e658"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef61d8450910618a4572c17aebfc373bab93106ae052f0d213c4a4602fb1681b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ef61d8450910618a4572c17aebfc373bab93106ae052f0d213c4a4602fb1681b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ef61d8450910618a4572c17aebfc373bab93106ae052f0d213c4a4602fb1681b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b963e98b778044e428938b92f346484c4d4135554544a7f84a456e10972cd10f"
+    sha256 cellar: :any,                 x86_64_linux:      "822e19ea86f3e0877f191aa78735f2ae69c13e8883bead7e4d680ac3ec1335a6"
   end
 
   depends_on "go" => :build
@@ -20,7 +23,7 @@ class Zero < Formula
   end
 
   def install
-    ldflags = %W[-X github.com/Gitlawb/zero/internal/cli.version=#{version}]
+    ldflags = %W[-X github.com/Twigpine/zero/internal/cli.version=#{version}]
     system "go", "build", *std_go_args(ldflags:), "./cmd/zero"
   end
 

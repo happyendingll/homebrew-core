@@ -1,15 +1,18 @@
 class Libaec < Formula
   desc "Adaptive Entropy Coding implementing Golomb-Rice algorithm"
   homepage "https://github.com/Deutsches-Klimarechenzentrum/libaec"
-  url "https://github.com/Deutsches-Klimarechenzentrum/libaec/releases/download/v1.1.7/libaec-1.1.7.tar.gz"
-  sha256 "cc7b93be9002e25a88b45d6b8d5f6120756cb5e1000613f91d803ce0beba24d9"
+  url "https://github.com/Deutsches-Klimarechenzentrum/libaec/releases/download/v1.1.8/libaec-1.1.8.tar.gz"
+  sha256 "660dc7cef65e1749a773439e39b25a7a6cee8f4c6d9739409dea037fac8ff4c7"
   license "BSD-2-Clause"
   compatibility_version 1
   head "https://github.com/Deutsches-Klimarechenzentrum/libaec.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "f88bf3d648a9c2fce686ce855cfd8142d8863123a1ab87bf88aed9221b8af522"
+    sha256 cellar: :any, arm64_golden_gate: "869b8090dd28b0c5222e43698ea3ec0c3abe0c321cc2f7689a7218bceb33d36d"
+    sha256 cellar: :any, arm64_tahoe:       "250632689a82436e1ede76aeb877c96e311028102671aa3759966c11facfef0d"
+    sha256 cellar: :any, arm64_sequoia:     "8613415289b9b15534e6096b2cae6efd8942bc83ce21db6fc3297362128d59af"
+    sha256 cellar: :any, arm64_linux:       "626cae87583d70941205b4f7cc5b425ebee5747a3254a82c0c544915eb1fa009"
+    sha256 cellar: :any, x86_64_linux:      "6d402bde6fee8e560813fca05f5733942d7b9bda27456df0478945f47b896b0c"
   end
 
   depends_on "cmake" => [:build, :test]

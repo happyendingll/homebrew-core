@@ -1,8 +1,8 @@
 class Sdl3 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
   homepage "https://libsdl.org/"
-  url "https://github.com/libsdl-org/SDL/releases/download/release-3.4.18/SDL3-3.4.18.tar.gz"
-  sha256 "9c75cf16330322c217dedd2e0609f1124f1b54b8633e763467b4684d0f4334a3"
+  url "https://github.com/libsdl-org/SDL/releases/download/release-3.4.20/SDL3-3.4.20.tar.gz"
+  sha256 "f3bb06f55bed9557227a700af2ea62e49497ebdf58037732a731a5fb3ef8581f"
   license "Zlib"
   compatibility_version 1
   head "https://github.com/libsdl-org/SDL.git", branch: "main"
@@ -14,8 +14,11 @@ class Sdl3 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6376f2cb500dc8cfc4872e04033b807f1ab511659a36982bf83d3172560c143f"
+    sha256 cellar: :any, arm64_golden_gate: "32a702e3769562e9ef607ca5844db08eb3e491cabc9484694b112252a4ab24dd"
+    sha256 cellar: :any, arm64_tahoe:       "5cc8db9dc41553bd56dcb0e6fd56591b9ac4f464ea29403c11936ec69043ac13"
+    sha256 cellar: :any, arm64_sequoia:     "c1b7b92cbf6446d1f3a228accd9d158c12742b39fadc8431b3624233bcadd202"
+    sha256 cellar: :any, arm64_linux:       "5b6cf2966f7e42e8c1a4d7639d6cf4b7a79adf501b2a798f4a49049f6865e799"
+    sha256 cellar: :any, x86_64_linux:      "21efc3443f4dd34b94506c85d53d2c20bbf206f0779ac458aafa5b8551c28ee6"
   end
 
   depends_on "cmake" => :build

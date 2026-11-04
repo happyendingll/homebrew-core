@@ -2,8 +2,8 @@ class NewrelicInfraAgent < Formula
   desc "New Relic infrastructure agent"
   homepage "https://github.com/newrelic/infrastructure-agent"
   url "https://github.com/newrelic/infrastructure-agent.git",
-      tag:      "1.81.0",
-      revision: "0018b9dda39cfd1c79bf811502f399f0d28f7992"
+      tag:      "2.0.1",
+      revision: "6da860ddecfdad62c72133a22754ccca5e14e952"
   license "Apache-2.0"
   head "https://github.com/newrelic/infrastructure-agent.git", branch: "master"
 
@@ -15,8 +15,11 @@ class NewrelicInfraAgent < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "f27c517122d6732f72783546f417dfbccbc7c106a35a1ac03c81a7eed6ec4b1c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4e886ad78746dd0286343e94f6653af1c8e31f703afab73ebba9bcfa17f15a07"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5fae880a80f7db0f491ce4c0f3695efc02a7bbb54774e67ba929fbb417931ecb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e06b62ba113d8b20691eaa49022d95c3c4ca61d6032e9014f4cb8fa89f8529cd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4de96d88a81d9de3056c143a8e5c450a9450413cb3d983fb540d6ee9ac0ac2a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "10cc5e60150bfa74664239fb1abc48378b64ea03c6560b733025c027b3cde834"
   end
 
   depends_on "go" => :build

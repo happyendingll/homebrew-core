@@ -1,10 +1,10 @@
 class Lz4 < Formula
   desc "Extremely Fast Compression algorithm"
   homepage "https://lz4.github.io/lz4/"
-  url "https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/lz4-1.10.0.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/lz4-1.10.0.tar.gz"
-  sha256 "537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b"
+  url "https://github.com/lz4/lz4/archive/refs/tags/v1.11.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/lz4-1.11.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/lz4-1.11.0.tar.gz"
+  sha256 "247e5fa64da5f7b75ee3dd3bed484076396c9ebe8254d9ccf693eb62800c5e26"
   license "BSD-2-Clause"
   compatibility_version 1
   head "https://github.com/lz4/lz4.git", branch: "dev"
@@ -15,8 +15,11 @@ class Lz4 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "c84d653155571488c94bf002adf7adf3a2d161c795a2c5bde77232e79a5b0629"
+    sha256 cellar: :any, arm64_golden_gate: "464d0e2782c24627a2ffa99093daaf8a7f9e2acbdae1ac4587d8724b85f2dbf9"
+    sha256 cellar: :any, arm64_tahoe:       "f25384fe48be399693954cf6b1b48da50ae795a29058ca7abfe91fc4c3e8b623"
+    sha256 cellar: :any, arm64_sequoia:     "8c311d5e93bca17d53f8225dd8fabbb2626fa6ade09ff5713e3b85d428fec3bf"
+    sha256 cellar: :any, arm64_linux:       "73e9aabe8d8050adae8f0d71946169b0e915fb9d627e956b2377558d48285ae1"
+    sha256 cellar: :any, x86_64_linux:      "48865122616cc54135b0605f93ebc56a6fc7aecffb112019e91a90a5893b6903"
   end
 
   depends_on "cmake" => :build

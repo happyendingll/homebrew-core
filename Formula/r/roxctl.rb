@@ -1,8 +1,8 @@
 class Roxctl < Formula
   desc "CLI for Stackrox"
   homepage "https://www.stackrox.io/"
-  url "https://github.com/stackrox/stackrox/archive/refs/tags/4.11.6.tar.gz"
-  sha256 "ed6a42650fb8c3c87ff50ece55ff1138153b9106e84b61800accc75fbd884e2f"
+  url "https://github.com/stackrox/stackrox/archive/refs/tags/4.11.7.tar.gz"
+  sha256 "85398baace5d5a828c173164afb09b596aa93f715c0c5b07c02d8b73944d2608"
   license "Apache-2.0"
   head "https://github.com/stackrox/stackrox.git", branch: "master"
 
@@ -15,8 +15,11 @@ class Roxctl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "6c048cd047d45a5819d3d2589e0276d154662c7e02796e6f17d2a8375a519b8e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ebbe31449bbe0b2df3de1a1f4a30fffb3785c6b0cf415cd2dfbe15ecfd2361f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5281ef01ac116777c1298de3f59213ccb0596e7866c8fd7907d03c2a38ec96a8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "119bd7f4d6ef6af917c60cb58eb664a22c6bde917e03916adc107ae71bbc0dd9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5488b89d3978f85e78bd59be39202d46845b3a663c28026730f2831b1c9d07c1"
+    sha256 cellar: :any,                 x86_64_linux:      "fec4f24ce40f8fbda1364af02e87bb87870d1af4d597e55364e2d095497f97de"
   end
 
   depends_on "go" => :build

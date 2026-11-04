@@ -8,14 +8,17 @@ class Rustup < Formula
   stable do
     # TODO: Remove curl when release has following:
     # https://github.com/rust-lang/rustup/commit/747057342d4616d6cd2cda6b00826c0ebdd0e671
-    url "https://github.com/rust-lang/rustup/archive/refs/tags/1.29.2.tar.gz"
-    sha256 "ba43980f0651730631174635a0e7764831e810be08a06ae53f9c0620caef019d"
+    url "https://github.com/rust-lang/rustup/archive/refs/tags/1.29.3.tar.gz"
+    sha256 "e830fb32300e2bb69068321e701a328a5ebbfe86ec468dbda82f4fc3f6d3f276"
     uses_from_macos "curl"
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "7368365ce3d0cd26555aa10dbca03a3c7d9990dda2a411abad40201ae3af103d"
+    sha256 cellar: :any, arm64_golden_gate: "9174c3ed278db65f93f9e48cfc1c0799302bf41eb082b0ad863581aa2941c332"
+    sha256 cellar: :any, arm64_tahoe:       "e54ec7231a85215d201a032cf04f2c407e5da2f653e471ce40b7a72b125923cd"
+    sha256 cellar: :any, arm64_sequoia:     "4ba0416f164113eca218e3db5352087548a03957dcb53f52c7f9904dddf6119a"
+    sha256 cellar: :any, arm64_linux:       "bdf79def1d1256d6b736cd92daea5a81482d1bd0429c3200260921ece8e52d27"
+    sha256 cellar: :any, x86_64_linux:      "c87a1e425f8f5da208bf5c486dddd6b293d7e32428da5ed74649824679c49b5c"
   end
 
   keg_only "it conflicts with rust"

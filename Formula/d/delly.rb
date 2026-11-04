@@ -1,14 +1,17 @@
 class Delly < Formula
   desc "Structural variant discovery by paired-end and split-read analysis"
   homepage "https://github.com/dellytools/delly"
-  url "https://github.com/dellytools/delly/archive/refs/tags/v2.7.0.tar.gz"
-  sha256 "e0965d4a6f9f5336f7697049d40b6621fa0946dcc1747ff93cee1abfdb842e20"
+  url "https://github.com/dellytools/delly/archive/refs/tags/v2.8.1.tar.gz"
+  sha256 "09cfe5e6678ddd9da8b21667c0a593ad3c4dcac55bccfb04d068cebfc252f425"
   license "BSD-3-Clause"
   head "https://github.com/dellytools/delly.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "a45e60b2faa7123f9ef8befc25c72feda1d143e6572dabf963da227abe342c3a"
+    sha256 cellar: :any, arm64_golden_gate: "b852cc85193c35776db60aed6cadc00a026ffab6a9dceaea7a867b2ba61fe5ab"
+    sha256 cellar: :any, arm64_tahoe:       "34f240137f16396aa0491ae7d5cce6843d748c7c1eb5bc45de683c4ac1297b73"
+    sha256 cellar: :any, arm64_sequoia:     "ff96a3795c177c8781e31a20293e4732b49557955087b14eaf19f31997fcde68"
+    sha256 cellar: :any, arm64_linux:       "4121f97d23c44652df3a07a3fbe190f30f57ba0bdb237f223fdad1f755ae796f"
+    sha256 cellar: :any, x86_64_linux:      "4ce12c879a169d040b8459b673873c300cd18d7d69f7f644ac107b7b70ea763c"
   end
 
   depends_on "boost"

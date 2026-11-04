@@ -5,12 +5,12 @@ class Flang < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/llvm-project-23.1.4.src.tar.xz"
-    sha256 "819ecf7351f1a66f76b2d701d8942faaf5faeb324cb90c9d5b090de142434bb2"
+    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
+    sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
 
     resource "llvm_man_pages" do
-      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/llvm_man_pages-23.1.4.tar.xz"
-      sha256 "b7b4b998a49ca14faebcc292e7dd2fbb2ba71b4655001d61959e32e4bd7c5b10"
+      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm_man_pages-23.1.5.tar.xz"
+      sha256 "ba08a070d4ad120913b60254968f051bf497195b06a065155edb83e8e59e9425"
 
       livecheck do
         formula :parent
@@ -23,8 +23,11 @@ class Flang < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "7fdd48936ddd784edce93e099052cbb2ab1e0da71023079b5c4206e21aadb30c"
+    sha256 cellar: :any, arm64_golden_gate: "7240378a57deb19d65a7a05f38f09ec01a22abf8f54352a5649f0c06da8b5dfe"
+    sha256 cellar: :any, arm64_tahoe:       "699202a4410fd73e60ba17c3c5fe84f83ba2571d162278ce4653470f1e67d5c7"
+    sha256 cellar: :any, arm64_sequoia:     "3cc6c2310b4a33966a101bbc0609588937603ce333150fb54bcae766d6cf667f"
+    sha256 cellar: :any, arm64_linux:       "106bbbbffa9ec78e654f3850e7101f2a5be6e4e573f18508fae07f7026562849"
+    sha256 cellar: :any, x86_64_linux:      "048593eb3ae0408e3b89ae09b3c126e9237e3ada440e72bf73fc0b1f7c841c64"
   end
 
   depends_on "cmake" => :build

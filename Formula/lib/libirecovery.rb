@@ -27,6 +27,8 @@ class Libirecovery < Formula
     depends_on "readline"
   end
 
+  deny_network_access!
+
   def install
     configure = build.head? ? "./autogen.sh" : "./configure"
 

@@ -1,18 +1,26 @@
 class ContentfulCli < Formula
   desc "Contentful command-line tools"
-  homepage "https://www.contentful.com/developers/docs/tutorials/cli/"
-  url "https://registry.npmjs.org/contentful-cli/-/contentful-cli-4.0.13.tgz"
-  sha256 "afc3ebcc51e3074112b2e68c867655474e7d5c6e4728fb96e4841cc96b415b32"
+  homepage "https://github.com/contentful/contentful-cli"
+  url "https://registry.npmjs.org/contentful-cli/-/contentful-cli-4.0.14.tgz"
+  sha256 "6e3e5576ffc6e8c782778d1f79e6d27a08386213f631d295b51491f93cdc7a5b"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "331b643af3c9b94429336129de79dbe7b5975df2389ae95515f114d551dffa18"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ad5d61c076e7c897986b9908fab54483bbb3add01943282c5e3ca38b7c6ec971"
   end
 
   depends_on "node"
 
   def install
+    # The npm release is already transpiled; do not install its native build-only compiler.
+    package_json = JSON.parse((buildpath/"package.json").read)
+    package_json.fetch("dependencies").delete("typescript")
+    (buildpath/"package.json").atomic_write(JSON.generate(package_json))
+
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
   end

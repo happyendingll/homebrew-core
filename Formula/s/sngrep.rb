@@ -19,6 +19,8 @@ class Sngrep < Formula
 
   uses_from_macos "libpcap"
 
+  deny_network_access!
+
   def install
     ENV.append_to_cflags "-I#{formula_opt_include("ncurses")}/ncursesw" if OS.linux?
 

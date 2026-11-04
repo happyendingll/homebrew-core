@@ -6,8 +6,8 @@ class Llvm < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/llvm-project-23.1.4.src.tar.xz"
-    sha256 "819ecf7351f1a66f76b2d701d8942faaf5faeb324cb90c9d5b090de142434bb2"
+    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
+    sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
 
     # Fix triple config loading for clang-cl
     patch do
@@ -23,8 +23,11 @@ class Llvm < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "4524cd064a98068c4fc26124c0b214e4ef30a72806f18ed4ab43665f23e746c3"
+    sha256               arm64_golden_gate: "870f6eb477cee2a645d0c8a7cfe414371f1f73052a02428344bce6cca482bd58"
+    sha256               arm64_tahoe:       "6ce33f70ccc6642034e3ec239a179e7b390e5656144e9a0c71341673f43dc56a"
+    sha256               arm64_sequoia:     "f0926f3aa84ef96c54e2326ac039579dfa45b3c4c5194f5570c03f792027477a"
+    sha256 cellar: :any, arm64_linux:       "a6fc3c13a5cd1fa652a562693020285b8e0b97d4965888e374cd8bf3a975079f"
+    sha256 cellar: :any, x86_64_linux:      "343238398e887e841af9365b46d580b930d54df62ea5e8fd756ad4cf37f3dbed"
   end
 
   keg_only :provided_by_macos

@@ -2,14 +2,17 @@ class Ejdb < Formula
   desc "Embeddable JSON Database engine C11 library"
   homepage "https://ejdb.org"
   url "https://github.com/Softmotions/ejdb.git",
-      tag:      "v2.96",
-      revision: "13a323eb2ccaf482d39dde2bf2c1c63c77f2b307"
+      tag:      "v2.97",
+      revision: "0e3969755d934a16f13192afed803040bdd456e4"
   license "MIT"
   head "https://github.com/Softmotions/ejdb.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "03b2bf06a0e283752c99d63c76a29d54b44c3eb43118685b3287a456a4f7d865"
+    sha256 cellar: :any, arm64_golden_gate: "e4296571cbda7320589912fce280bc4eec62af32ef13d38000a593e9f34fba9c"
+    sha256 cellar: :any, arm64_tahoe:       "f1a74c5ceb0f60755f0ca7cfd15802c9cbe0a7cd8ab9bcd1883fac7cf406b9a4"
+    sha256 cellar: :any, arm64_sequoia:     "3cf3af7f02094296923ebdbe12fe3b25ad3c3bcd9a08599270b63962a67f5aaf"
+    sha256 cellar: :any, arm64_linux:       "c918a2d740e06a6c5d2c346124f107255a16c07a022c1377bbfa0182ab34c6c0"
+    sha256 cellar: :any, x86_64_linux:      "2de75f5e5784652ba90911ba0a2bfc995ed1ebf151b7d5a2339f2f1f704723f6"
   end
 
   depends_on "pkgconf" => :build
@@ -23,8 +26,8 @@ class Ejdb < Formula
   end
 
   resource "iwnet" do
-    url "https://github.com/Softmotions/iwnet/archive/refs/tags/v1.4.2.tar.gz"
-    sha256 "d9cd5d89c009085717f53334eb70f115c15317178e357a388653e587180834c5"
+    url "https://github.com/Softmotions/iwnet/archive/refs/tags/v1.5.0.tar.gz"
+    sha256 "41ed9ae58dc11d0aa719c9e39521bf1b9c6aa2590490f8e423517d0c1a85781a"
 
     livecheck do
       url "https://raw.githubusercontent.com/Softmotions/ejdb/refs/tags/v#{LATEST_VERSION}/Autark"
@@ -34,8 +37,8 @@ class Ejdb < Formula
 
   # iowow is pinned by iwnet rather than ejdb, so follow iwnet's default branch
   resource "iowow" do
-    url "https://github.com/Softmotions/iowow/archive/refs/tags/v1.7.2.tar.gz"
-    sha256 "42e47ba8a84be2cf1b88677594393356007f103f6b399b0472e4e53043a8fad0"
+    url "https://github.com/Softmotions/iowow/archive/refs/tags/v1.7.3.tar.gz"
+    sha256 "ede6541dcad267801482c169f484afc7128a0ca899943af001fab76c1ffb2583"
 
     livecheck do
       url "https://raw.githubusercontent.com/Softmotions/iwnet/refs/heads/master/iowow.autark"

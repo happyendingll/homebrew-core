@@ -3,14 +3,16 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/c2/a0/1f16ce13dbc10b89ac1dfe2d61bc4c3d642b6fa3db2d1c36d66429c1118d/dxpy-0.417.1.tar.gz"
-  sha256 "ae65ba1d0eeae2df2f98feabe8ee4308106d9fe035389adb19c5304e2188ac90"
+  url "https://files.pythonhosted.org/packages/d4/c1/2074d1d29a58a056860aff931e4bb06f0fbd960ec0d1ff4d13a8447afba8/dxpy-0.418.0.tar.gz"
+  sha256 "325f72008804d22d04dc38ef085495c55d3ad7dd367bf7bd5e342f649644c996"
   license "Apache-2.0"
-  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "606019745c9812e39f8beee38e30839facb94e5ddf0590e411c38de0752841e4"
+    sha256 cellar: :any, arm64_golden_gate: "1e799e8945e2ffdf600f95cf6206e196293437f9e8c2ea6f7ffadac92941f4fd"
+    sha256 cellar: :any, arm64_tahoe:       "da98eeddc38997892cd1cbbb5d5e0fdc210a86553c6a6d9c8504de7368f26395"
+    sha256 cellar: :any, arm64_sequoia:     "a757e188d13eedc16ff4a1d7d7b36ba1772d794b1f5c166418fe471062b77de7"
+    sha256 cellar: :any, arm64_linux:       "17fd44f0e391d0443db5a28410c3eb4f3a990ec591e3dfa7217fd394cef78e32"
+    sha256 cellar: :any, x86_64_linux:      "111a10911cc0c46ffaa1964d7e7a6f0bbd5d858918f903e28dd2c62da4f802c5"
   end
 
   depends_on "aws-c-auth"
@@ -51,13 +53,13 @@ class Dxpy < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
-    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+    url "https://files.pythonhosted.org/packages/18/39/b3927f3616f6223832f9b760e4208e8a7c7e1dea2b4d9ad7d32a5d214c3a/python_dateutil-4.0.0.tar.gz"
+    sha256 "d7295ff14fdc0f92f662100bfb6c551d160ca090f2939f1ec5b9794265c03f06"
   end
 
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
-    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+  resource "tzdata" do
+    url "https://files.pythonhosted.org/packages/7a/29/6a1391d31cd00ff9e927215a224a880e1e84e826b64ba80a499e51c074d8/tzdata-2026.6.tar.gz"
+    sha256 "85d2cd9c09f81f0bb29db27759fc83af4f1e620efb814f8c5bf8b4cc4feece6d"
   end
 
   resource "urllib3" do

@@ -1,8 +1,8 @@
 class Zig < Formula
   desc "Programming language designed for robustness, optimality, and clarity"
   homepage "https://ziglang.org/"
-  url "https://ziglang.org/download/0.17.0/zig-0.17.0.tar.xz"
-  sha256 "b6c7f1728f043700d6529bac980800792f824256a9d2f1839b3d62beed0b8abd"
+  url "https://ziglang.org/download/0.17.1/zig-0.17.1.tar.xz"
+  sha256 "1e89bf06610b769a8c77676c6c8d54b093a0db60f4891f2f91014829012f0e24"
   license "MIT"
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Zig < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "cc2971a60a1ca59b2603653ca366220aafc7f1e80e298c50ce79681a617611c3"
+    sha256 cellar: :any, arm64_golden_gate: "8cfb43412ab96df414cc0ebfe9713901a202b5b8cd1a1e3b920f128e91830d48"
+    sha256 cellar: :any, arm64_tahoe:       "1c8ab891d1e7aea40c4c0a8e0eb0676de2d24e850b67a93c4a4e1c127b15f4f7"
+    sha256 cellar: :any, arm64_sequoia:     "d362a466a649b7bef7e461ee630bbabf38277e5113eb22f509968ddb55ac0d74"
+    sha256 cellar: :any, arm64_linux:       "45559bf3bfd329c9bc1738c144a9b3196517958004cbe404b74284ab8040830e"
+    sha256 cellar: :any, x86_64_linux:      "0415c6661ab8ac17f838ca2dbdc138f6941e9773890fb87d9ee8b24870af9f1b"
   end
 
   depends_on "cmake" => :build

@@ -1,9 +1,9 @@
 class Tor < Formula
   desc "Anonymizing overlay network for TCP"
   homepage "https://www.torproject.org/"
-  url "https://dist.torproject.org/tor-0.4.9.15.tar.gz"
-  mirror "https://fossies.org/linux/misc/tor-0.4.9.15.tar.gz"
-  sha256 "1911f5b216a6814ed143a08bbcff1c6dc96d2ca3b505df9a21876080a92963f3"
+  url "https://dist.torproject.org/tor-0.4.9.16.tar.gz"
+  mirror "https://fossies.org/linux/misc/tor-0.4.9.16.tar.gz"
+  sha256 "6180e193152f4525bdca5475168419b2a2035b963c3c60162a187f86e6160e48"
   # Complete list of licenses:
   # https://gitweb.torproject.org/tor.git/plain/LICENSE
   license all_of: [
@@ -20,8 +20,11 @@ class Tor < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "81d99a854f4c1fe327cac3c3c4bf15e2c7b5775ea6c339f6f0661f9f92f1d033"
+    sha256 arm64_golden_gate: "85982c1568c3f7a71e0fdbbdf2264f06113cb6248d16dd8c576c6fc45bd0dd00"
+    sha256 arm64_tahoe:       "8a0e06a45e1cb2e66134214affce18fa10217581d1b5de1355fbafe17ed50798"
+    sha256 arm64_sequoia:     "e5390510b15843786f7ee8321cc44d5fb98dcacfcd77cbed133b0eb056819066"
+    sha256 arm64_linux:       "429ce6ecb4f5ca7547969d3f1e4e2f3861108b2da25a1233ef564fd9ea262c7d"
+    sha256 x86_64_linux:      "abe0bdf406eeaeddd184ab52695a1ab43f67c28ae5bfa96d679e255486d310a5"
   end
 
   depends_on "pkgconf" => :build

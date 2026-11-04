@@ -34,6 +34,8 @@ class Libass < Formula
     depends_on "nasm" => :build
   end
 
+  deny_network_access!
+
   def install
     # libass uses coretext on macOS, fontconfig on Linux
     args = OS.mac? ? ["--disable-fontconfig"] : []

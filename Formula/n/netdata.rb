@@ -1,8 +1,8 @@
 class Netdata < Formula
   desc "Diagnose infrastructure problems with metrics, visualizations & alarms"
   homepage "https://www.netdata.cloud/"
-  url "https://github.com/netdata/netdata/releases/download/v2.12.2/netdata-v2.12.2.tar.gz"
-  sha256 "87f2074aa99b53f2e0ad211a44e5a869a1b7175459e5edba831bb570e94c0acd"
+  url "https://github.com/netdata/netdata/releases/download/v2.12.3/netdata-v2.12.3.tar.gz"
+  sha256 "6eb14deed1d7611c8f8969b2954432e91e631b2e45f762421873044561d80dd9"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -12,8 +12,11 @@ class Netdata < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "b7c52d280a4f864fd32378c2cb7c27de404e552618c2e399af9f26689ff423f2"
+    sha256 arm64_golden_gate: "e674ec976ddb3aec07111a64e0869e8ba5ef62df2450405737c356ca146bb1a5"
+    sha256 arm64_tahoe:       "d86d4371bbe751004f09eca5340e84830a521a3728dffcfcffcce6b13f6d0591"
+    sha256 arm64_sequoia:     "37bfd5dc7ce1f0dcc89296558b6513f08b3699ba99923479b8db060a5b01793b"
+    sha256 arm64_linux:       "d351e2c09d6a7849147e0711dd63ce87874d0b4e8b1d968a1409902a8bb08017"
+    sha256 x86_64_linux:      "0f0b915c68690a55d03c360a3737d3d8e507513a5dc4206bb32f5eba61fac17f"
   end
 
   depends_on "cmake" => :build
