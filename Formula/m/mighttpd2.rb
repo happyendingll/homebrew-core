@@ -6,11 +6,8 @@ class Mighttpd2 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cf04edbfdba45430ff14877887c27bd53b0c1a72b18531710b091ed05a163657"
-    sha256 cellar: :any, arm64_tahoe:       "4a9888eab361ad5dcf7c70cce6547da656404326e5123d19146a16565b42a3ec"
-    sha256 cellar: :any, arm64_sequoia:     "86e9d0bdba78c1f82d2c19818fbe5148328288d4ca6f5a188acf98b56b260814"
-    sha256 cellar: :any, arm64_linux:       "60afb6558d55144b701d4347c9feb40e36e192047608f1af8d2f36e720c722ab"
-    sha256 cellar: :any, x86_64_linux:      "801c8c997298d157f48793b450594f70d0dcdcbe7c21908d42371f84579fd2f2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "57e48a6ee1b6083f719baa4022a6ec878a85a944f65be61f6d011fc18b406927"
   end
 
   depends_on "cabal-install" => :build

@@ -7,11 +7,8 @@ class Svu < Formula
   head "https://github.com/caarlos0/svu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b84c4946391ababdae7dd7c853214e628a4b67927b27f8c358f99961dd5efb8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0b84c4946391ababdae7dd7c853214e628a4b67927b27f8c358f99961dd5efb8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0b84c4946391ababdae7dd7c853214e628a4b67927b27f8c358f99961dd5efb8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "949992c142ab3234650ed39d8633067afc1cca27e6f436c379aa4c7ae7c28819"
-    sha256 cellar: :any,                 x86_64_linux:      "def6dff8589a790941696b8b505784e7bad0011eb18ae201cfc2bda209bc81af"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ab26a41d0cc65855be078d7fb63c05a7ff79503edcb1229eb661e390f4ece2a9"
   end
 
   depends_on "go" => :build

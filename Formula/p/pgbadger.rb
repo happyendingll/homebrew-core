@@ -7,11 +7,8 @@ class Pgbadger < Formula
   head "https://github.com/darold/pgbadger.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "32d54a823d4dcfc9e32f85cdaba1b14257816d67127a5159f3c495d846592238"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "32d54a823d4dcfc9e32f85cdaba1b14257816d67127a5159f3c495d846592238"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "32d54a823d4dcfc9e32f85cdaba1b14257816d67127a5159f3c495d846592238"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "522d812c4c0122910b224b2f76b713fc5a94c78c143c7c7c7215dbf216d6c54c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "522d812c4c0122910b224b2f76b713fc5a94c78c143c7c7c7215dbf216d6c54c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "857981dc2167849661a2fd19a1b554d65474f5498a29579d66734d60567d3531"
   end
 
   def install

@@ -6,11 +6,8 @@ class T2sz < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "cbda59b07b8a22b87d700be96de0c4a4ade591c808645432758a033be175694a"
-    sha256 cellar: :any, arm64_tahoe:       "09ad7d5a2423360705f4d3b53991debd8b097ca206cc10b05fea1706b4902934"
-    sha256 cellar: :any, arm64_sequoia:     "cbca3f8e2099017e0be6ad89bc991ca0396b7fdeca472f7012a50d7ed339d4a9"
-    sha256 cellar: :any, arm64_linux:       "decf2a324270c8c207600aa653d4ac285c20d8c7b8120871b4c66ac5c6e07df5"
-    sha256 cellar: :any, x86_64_linux:      "fb0ed2d80e2bf80b7f7e19a84f9eb1fb5c09daa9b9f6bdba6f77f5f5264a2d10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "4d64dedae171ccf26456164966b2361ada12408c3ebbfbb0d3dac59ffa83baf1"
   end
 
   depends_on "cmake" => :build

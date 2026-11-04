@@ -6,12 +6,8 @@ class Logrotate < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any, arm64_golden_gate: "e85b9ccac8c53bf7990ff6f3b7f569c8dad8736bbd7b81ff9f41cc47e8c330b0"
-    sha256 cellar: :any, arm64_tahoe:       "78f780e907bf58fb974266ef98a7d5cf6707c89a3f3158132fa19e90755903eb"
-    sha256 cellar: :any, arm64_sequoia:     "02751c8972565a8ac4700289e9216b2570d3cefda92d97594f884db068e491d8"
-    sha256 cellar: :any, arm64_linux:       "cfa0e329b27481f9729ef8c5ad3c167f2c8161ca983986bf38b78b69228835c3"
-    sha256 cellar: :any, x86_64_linux:      "d33b1855513d0931deb474fbf16e233e5bdc98cb056e617f53a787edb79939a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "56f8730278aad01db3c6ba6551b48b2a44851576156f262112855129e9937768"
   end
 
   depends_on "popt"
