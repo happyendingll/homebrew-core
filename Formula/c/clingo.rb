@@ -12,11 +12,8 @@ class Clingo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c0ca281d75541169a2e0d96f15c9124d19275190d326e36dd2fc9181b4d900d6"
-    sha256 cellar: :any, arm64_tahoe:       "06e5319794a0356d7af5d51ab931a345d139fee4ac45f9f20c381d46663862d9"
-    sha256 cellar: :any, arm64_sequoia:     "d8c51dd05900aabd0540447c84a194edf3498b47c8892f76a30e37f6f3a75a09"
-    sha256 cellar: :any, arm64_linux:       "d812aad6e13116d73ab430109a298b4f849fa334a81bd353a634ad36fd6b47ff"
-    sha256 cellar: :any, x86_64_linux:      "3f91437caba22bf1ba618b8bbeb65af3540456ddb8a50113b31fc779e1a8edb8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "178f49ec31c02285be8a307c10a49cacdd4d32059517e43513c2686df36871f8"
   end
 
   head do

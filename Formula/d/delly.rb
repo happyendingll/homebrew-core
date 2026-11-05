@@ -7,11 +7,8 @@ class Delly < Formula
   head "https://github.com/dellytools/delly.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b852cc85193c35776db60aed6cadc00a026ffab6a9dceaea7a867b2ba61fe5ab"
-    sha256 cellar: :any, arm64_tahoe:       "34f240137f16396aa0491ae7d5cce6843d748c7c1eb5bc45de683c4ac1297b73"
-    sha256 cellar: :any, arm64_sequoia:     "ff96a3795c177c8781e31a20293e4732b49557955087b14eaf19f31997fcde68"
-    sha256 cellar: :any, arm64_linux:       "4121f97d23c44652df3a07a3fbe190f30f57ba0bdb237f223fdad1f755ae796f"
-    sha256 cellar: :any, x86_64_linux:      "4ce12c879a169d040b8459b673873c300cd18d7d69f7f644ac107b7b70ea763c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "3f32269d36364cda0a89968fc84f550b96eeb4c2f023beaf03dbebeab95a565d"
   end
 
   depends_on "boost"

@@ -12,11 +12,8 @@ class MongoCxxDriver < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d28d13f495205a4c29e13cbb411ad1ff03cc51660799c4102292a8cb21071d1a"
-    sha256 cellar: :any, arm64_tahoe:       "d3f6f990eb1ab164f46f802d3453152605bd51653fc53dc3f11f070b853bd7ab"
-    sha256 cellar: :any, arm64_sequoia:     "dbc951063d68240b5b303091c5690c2d853c0fe0be03721e6a7d24b8b57ee10c"
-    sha256 cellar: :any, arm64_linux:       "623db8e8afb4fdd9bda26a53ac9b750fa098dc50677e669f53b3f820051a9f13"
-    sha256 cellar: :any, x86_64_linux:      "f732b2a0ac8c20dbbc034ca96e71ea503b39f4ca7f5410adaaae0885bcf5b5a0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "5d6de8790940ca72bcf36f37f2e93c1ae28eb9f7b470772a9db75cc12d1113c6"
   end
 
   depends_on "cmake" => :build

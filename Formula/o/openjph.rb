@@ -8,11 +8,8 @@ class Openjph < Formula
   head "https://github.com/aous72/OpenJPH.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "03dd2f4462b935434362dde9c153ddb78c3866055e37dc4bdde5ea050378bd32"
-    sha256 cellar: :any, arm64_tahoe:       "48eb4a1cbceb65e27ba655df61bb32064f1659328f5da3ccb9b16a382fe2ab5e"
-    sha256 cellar: :any, arm64_sequoia:     "10894d7efd2668cb91f649ec1146b87a323eb79b05c355fe13e462b498ffec29"
-    sha256 cellar: :any, arm64_linux:       "66896af134c8e95660a85f3ca9cab2a75e895c4b3e8b9cfe0191a14ceedff4b8"
-    sha256 cellar: :any, x86_64_linux:      "ab4b0e133c907d0dfd6e809a19ce0faa88d730fc5af208b2455300c9c5a99fd2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "47038cae2d338ac2ea554613001416d3c18fefbd4eb81b0a55dc89798dce503c"
   end
 
   depends_on "cmake" => :build

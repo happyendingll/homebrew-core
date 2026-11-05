@@ -11,11 +11,8 @@ class Spot < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "810ca53a1c1bd043e52973057b0d072ad50d0203dd6f1305ed866b76fe4ae49d"
-    sha256 cellar: :any, arm64_tahoe:       "a736a4a9a4bc2d952a5797bcc454012fd15562e4146651562635f2a6b190cb61"
-    sha256 cellar: :any, arm64_sequoia:     "d428cbf5c79e3bcf8d1691ef2df43e1b483ff14a913c66e6ce6db27732042d03"
-    sha256 cellar: :any, arm64_linux:       "6f269997e9595702d0892033ef365cbd01146c6254b3a786c69cebec79a08d47"
-    sha256 cellar: :any, x86_64_linux:      "208c2770131ec30f14badd9159b18e419c27f39cfcd514ad2d47cb34b907682b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "2608d7a5cb9557f44fdd8dc1092542bc2c9af18a2f06f2af5b622de875a85465"
   end
 
   # Use Homebrew Python for C headers

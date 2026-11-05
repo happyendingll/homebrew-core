@@ -23,11 +23,8 @@ class Llvm < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "870f6eb477cee2a645d0c8a7cfe414371f1f73052a02428344bce6cca482bd58"
-    sha256               arm64_tahoe:       "6ce33f70ccc6642034e3ec239a179e7b390e5656144e9a0c71341673f43dc56a"
-    sha256               arm64_sequoia:     "f0926f3aa84ef96c54e2326ac039579dfa45b3c4c5194f5570c03f792027477a"
-    sha256 cellar: :any, arm64_linux:       "a6fc3c13a5cd1fa652a562693020285b8e0b97d4965888e374cd8bf3a975079f"
-    sha256 cellar: :any, x86_64_linux:      "343238398e887e841af9365b46d580b930d54df62ea5e8fd756ad4cf37f3dbed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "fb9a4dc5d43058a09460bbc9222730113e17f98064a88e1df3e635ed1e2f2e56"
   end
 
   keg_only :provided_by_macos
