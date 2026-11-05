@@ -13,11 +13,8 @@ class Astgen < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "7cc7c9e5510bf51f4f0117072307046bd46154ca422d8e476ad310fc6462c9ee"
-    sha256 arm64_tahoe:       "8362862e22c95490b93d9083e2065642e418c20eddba669b1a292683d47e4db2"
-    sha256 arm64_sequoia:     "f308a79decbfeb81c15a86d4cfc3a05f8e6ae4f6fe4229da6b22abb85ae1ba42"
-    sha256 arm64_linux:       "9949657983d372a42e6e66c8a56017ba788d1a7543715906b7475d7fb07fc31f"
-    sha256 x86_64_linux:      "bc1f6e116d76436ba7c61c41ac48e7052f04153160a127644b4033af25f377a9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "662b3bedc6b4167282691c28d309085c7d501f27218b0fe457ec09f28b8e82a6"
   end
 
   depends_on "bun" => :build

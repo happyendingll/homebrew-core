@@ -8,11 +8,8 @@ class Llm < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9a86f0146ca3d3cece10846ecb27f268e7d4976a55059d081de738f430ef5a2c"
-    sha256 cellar: :any, arm64_tahoe:       "eff7bff99a2ff286a8ccc3fab01f70f9ee097c8264d0314c2920734e514cfdd3"
-    sha256 cellar: :any, arm64_sequoia:     "57845d14fc289ebc59b21bfdd62a88f8523f613e964cef2d09a860f0d32aa903"
-    sha256 cellar: :any, arm64_linux:       "4565859d0219a9302ead3301b3145c8c1a00201e0bdfd321c16a32ff75f7edf5"
-    sha256 cellar: :any, x86_64_linux:      "c9454a8089dbe51719861ee1f0f001c97afb7766aa15c99607abe36d92046a6e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "73e7b1ecf65835568d57a0e1ffffab2d90fb8c77cac5871ec39d79d39d957335"
   end
 
   depends_on "rust" => :build # for jiter

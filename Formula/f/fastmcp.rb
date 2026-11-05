@@ -9,11 +9,8 @@ class Fastmcp < Formula
   head "https://github.com/jlowin/fastmcp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "005de64628fb67b8f2f4fad042cbd6cf9ef39614f55784ceb69493c632fa47ed"
-    sha256 cellar: :any, arm64_tahoe:       "51b7b20a4deaf9f90e2206e105b16aecefc9d34de540881e87545dd585716854"
-    sha256 cellar: :any, arm64_sequoia:     "4b382af8b7260d36b5cb4e815baf08b244a022f71d09c1b5939a3162c80f4ff4"
-    sha256 cellar: :any, arm64_linux:       "6f732ba06d15a41222cf32af57991dd48085f948972852aa2ebaa7912a01a312"
-    sha256 cellar: :any, x86_64_linux:      "02723d7a0d481097233ced684b2d856b68a2f52e988c2fa6f8be6d0ebcc40131"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "2e7d423678a6ecf473ec095e1daddb4f49e2234094807f3c0c0df699f6fea6e5"
   end
 
   depends_on "rust" => :build # for py_key_value_aio

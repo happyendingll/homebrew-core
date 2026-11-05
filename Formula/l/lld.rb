@@ -12,11 +12,8 @@ class Lld < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "20d8df5b4290f8c5503472c485f696dd62d228ced7cdd638b741a2045e9b87e6"
-    sha256 cellar: :any, arm64_tahoe:       "7d82533380ea1a7f5fe0e6280898541cdd9be71c563dbd0bcf01f2026509d852"
-    sha256 cellar: :any, arm64_sequoia:     "6b702ebbaca4f4883a1150a083169341e77051299414b761ce065749d357a80f"
-    sha256 cellar: :any, arm64_linux:       "5aca7e63cc19ff9d50f2a9a3e3bcbc6a367ce9ccee1f9e367d3173661d5be799"
-    sha256 cellar: :any, x86_64_linux:      "e60e8220f1fc0ca86bd33415ba14c74feabe97ffcfeb869e7ab963b344e2ae0a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "b4ec80e7305d3f290a1db2a0668efc6af20bbf57d651f3c347c27b3cadb64cae"
   end
 
   depends_on "cmake" => :build

@@ -8,11 +8,8 @@ class Mapproxy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "519360c3f79ad4aa105fc481d782701bf5a8dade8bb92a86c33aef65fd0d11c0"
-    sha256 cellar: :any, arm64_tahoe:       "c050f09ec297ccb9682140f8c9c6155fefbaed1431abbbbdbde021bd14de7dc2"
-    sha256 cellar: :any, arm64_sequoia:     "61e59db04ce752377d7ff438fcada5877cbf2065ecc38f0ec91fa735e8385ba9"
-    sha256 cellar: :any, arm64_linux:       "4ea354ef464b3be9b6dd24e023b0c63ab775ffa8f3109d62150968f68d69842f"
-    sha256 cellar: :any, x86_64_linux:      "4d5c97c5108f50f2f8d0e513cedff90e7e078535ffa820fe454b2e5a089a541d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "295a3383bb684c740ebe369e320425ef5229c56293d76dbf273e9e312f8b122f"
   end
 
   depends_on "pkgconf" => :build

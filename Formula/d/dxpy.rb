@@ -8,11 +8,8 @@ class Dxpy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1e799e8945e2ffdf600f95cf6206e196293437f9e8c2ea6f7ffadac92941f4fd"
-    sha256 cellar: :any, arm64_tahoe:       "da98eeddc38997892cd1cbbb5d5e0fdc210a86553c6a6d9c8504de7368f26395"
-    sha256 cellar: :any, arm64_sequoia:     "a757e188d13eedc16ff4a1d7d7b36ba1772d794b1f5c166418fe471062b77de7"
-    sha256 cellar: :any, arm64_linux:       "17fd44f0e391d0443db5a28410c3eb4f3a990ec591e3dfa7217fd394cef78e32"
-    sha256 cellar: :any, x86_64_linux:      "111a10911cc0c46ffaa1964d7e7a6f0bbd5d858918f903e28dd2c62da4f802c5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "d5bbadfbdefd53999cb010c27acecb7d86bbac5a1f21d2c9775727734c705bac"
   end
 
   depends_on "aws-c-auth"

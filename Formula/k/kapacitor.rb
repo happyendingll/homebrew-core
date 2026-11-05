@@ -14,11 +14,8 @@ class Kapacitor < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69be42df44208979c89ab5757af10b71686458acfa99bfd59ef423de21956fab"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2428a28404fb19f38d9668ce56501c99070a200570d53cb61a29263f12a86c5e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "37cc0a50deff63ee105d9311dae6f783c637f00ea3431db6c094a4de8839f101"
-    sha256 cellar: :any,                 arm64_linux:       "dbaad8fab63e85890dc9fb3ef8b93c1ec2b8b004328e20133687a0dea5a111b9"
-    sha256 cellar: :any,                 x86_64_linux:      "6c65c502838dbc554f3c7092fda9c920620aaad0d161e8caa584642f3153bd10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "612c79c033a1f04bb354bbc02b57e96c2c786bf4282c71c9a08f0ac476f6d4d7"
   end
 
   depends_on "go" => :build

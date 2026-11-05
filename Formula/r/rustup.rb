@@ -14,11 +14,8 @@ class Rustup < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9174c3ed278db65f93f9e48cfc1c0799302bf41eb082b0ad863581aa2941c332"
-    sha256 cellar: :any, arm64_tahoe:       "e54ec7231a85215d201a032cf04f2c407e5da2f653e471ce40b7a72b125923cd"
-    sha256 cellar: :any, arm64_sequoia:     "4ba0416f164113eca218e3db5352087548a03957dcb53f52c7f9904dddf6119a"
-    sha256 cellar: :any, arm64_linux:       "bdf79def1d1256d6b736cd92daea5a81482d1bd0429c3200260921ece8e52d27"
-    sha256 cellar: :any, x86_64_linux:      "c87a1e425f8f5da208bf5c486dddd6b293d7e32428da5ed74649824679c49b5c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "1c40206a54278a4ad4a61ee58acbe6143a711a832f9551871c31b240fc9f960a"
   end
 
   keg_only "it conflicts with rust"

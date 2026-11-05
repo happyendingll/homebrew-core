@@ -9,11 +9,8 @@ class Datalad < Formula
   head "https://github.com/datalad/datalad.git", branch: "maint"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3437b06e2a20a988fc57d6c7a64cf310c6e6655719a3795c280d721e2e3522de"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "96bdf12a94262c53564c69ddb3b10717d40424f717c6a5d560f4b0c7b1c3ae9b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07e791336a871d1992915a774679c1856d83603f40245392e685bc216859cb9b"
-    sha256 cellar: :any,                 arm64_linux:       "5acfbafa4a158105ea10978e693993d2e55104e63b66176a5c5af5d000f29e17"
-    sha256 cellar: :any,                 x86_64_linux:      "2590932a0aa9e74cfad174cca613976810c3c1ef03f97e4d23f723f000a1cfec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "cd014ba1567de848bd55a9b77af1b652e9a5b3b23669b2d7677228d261701ab8"
   end
 
   depends_on "certifi" => :no_linkage
