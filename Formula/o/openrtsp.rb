@@ -1,11 +1,11 @@
 class Openrtsp < Formula
   desc "Command-line RTSP client"
   homepage "http://www.live555.com/openRTSP"
-  url "https://download.live555.com/live.2026.11.04.tar.gz"
-  mirror "https://download.videolan.org/pub/videolan/testing/contrib/live555/live.2026.11.04.tar.gz"
-  mirror "https://pkg.freebsd.org/ports-distfiles/live.2026.11.04.tar.gz"
+  url "https://download.live555.com/live.2026.11.05.tar.gz"
+  mirror "https://download.videolan.org/pub/videolan/testing/contrib/live555/live.2026.11.05.tar.gz"
+  mirror "https://pkg.freebsd.org/ports-distfiles/live.2026.11.05.tar.gz"
   # Keep a mirror as upstream tarballs are removed after each version
-  sha256 "67c8b5f51edd04f7580f2a8a7778c125290955991c38d1d54afea49f4762a5e7"
+  sha256 "a9001fed451a2e5bc429f1f4cb4efd3eb9840ca429891f7e64f743a5a44b7333"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -14,8 +14,11 @@ class Openrtsp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "b7297cf46a7d6218387083d2853c52b5699ccc7f69088eb8c68b99465c245241"
+    sha256 cellar: :any, arm64_golden_gate: "60d858e6e9927dd91cc756d894ef905b9dfb5be28a7e778093096c3f50e0fb5d"
+    sha256 cellar: :any, arm64_tahoe:       "02c7aab39aebe9a90eb734dac388d3ee097681d5089792224884a39e71ac86aa"
+    sha256 cellar: :any, arm64_sequoia:     "3659ed4007bb6824a868ee97eeabd54c3b2199de94078fb01d71a4f240206f27"
+    sha256 cellar: :any, arm64_linux:       "a122101b250ac154507e358c3b1a43b70f60d90461b7166a7615f412bdc5744a"
+    sha256 cellar: :any, x86_64_linux:      "df49d38a4c1b47c44470da574aa021980b86592b4e1c864b0ab0ead3015f13fb"
   end
 
   depends_on "openssl@4"

@@ -3,15 +3,19 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.39.3.tar.gz"
-  sha256 "a1ad8d3c9504b3562bbc08ecd5c10a46960cac8eecaed1f4e4e72fc84ced0b8d"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.39.4.tar.gz"
+  sha256 "070a12e621770b4b38c5136195db865f31448e0ced1963a8ab3944c2a9851fba"
   license "Apache-2.0"
+  revision 1
   compatibility_version 1
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "81d05da6e37df1d382e486d028ba3e6a215474cdca695844f2320b0a0571ee49"
+    sha256 cellar: :any, arm64_golden_gate: "95a7fcc27e08e707c54744e3688762eac7777411f0dcbf74a013183b606e12a1"
+    sha256 cellar: :any, arm64_tahoe:       "fef9be14f6bb5e7f1160d821849b33bce03ea417a286a4a3f1685aa176000bc9"
+    sha256 cellar: :any, arm64_sequoia:     "ce288d868ed89f5419f0fb799ef8cd897b2d34a4d0b71225bfd2e8bb88656ec8"
+    sha256 cellar: :any, arm64_linux:       "f9f75c145d2f62b94133fc636f326ad409390bfb85e8b11add607152600b1090"
+    sha256 cellar: :any, x86_64_linux:      "0e7125701b708c4dc416ae395d926f47be373130212b7cf90d27cb9d88c0906a"
   end
 
   depends_on "aws-c-auth"
@@ -50,8 +54,8 @@ class Awscli < Formula
   end
 
   resource "flit-core" do
-    url "https://files.pythonhosted.org/packages/e7/91/add211b38c357bf1b94900b4f79c34661a92be65c0243d2b0a3393c5092d/flit_core-4.1.0.tar.gz"
-    sha256 "62e12b63ead8335b37f59fabb977c7167fe476dafb5e41785dfa8c9aff843bc6"
+    url "https://files.pythonhosted.org/packages/d3/8b/0370578a456986d6995344967a479dd5c9d4e064681550c2a9594bb58b4a/flit_core-4.2.0.tar.gz"
+    sha256 "84e4e4d8fdd45ba2613800a3ebc6834de26d47ec9746efc3719f94181137b460"
   end
 
   resource "jmespath" do

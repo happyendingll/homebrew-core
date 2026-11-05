@@ -1,13 +1,16 @@
 class Bfs < Formula
   desc "Breadth-first version of find"
   homepage "https://tavianator.com/projects/bfs.html"
-  url "https://github.com/tavianator/bfs/archive/refs/tags/4.1.5.tar.gz"
-  sha256 "8c3dcc9a7998c7a5550fbbc792f4e090748cf57ea5d118215da2f537b78d36fd"
+  url "https://github.com/tavianator/bfs/archive/refs/tags/4.1.6.tar.gz"
+  sha256 "5b706e1b362c1f05093e1436b396fc8129c6e456a112b9e4a06fd7916f19baaf"
   license "0BSD"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "5faa5804a686536138ae550201fb2b88fbfdaaa708cee4e379730307eea5005c"
+    sha256 cellar: :any, arm64_golden_gate: "ca1368008dd3f33de145cd35fecbb797c76e872d303348a98a35d56a6a6d03d4"
+    sha256 cellar: :any, arm64_tahoe:       "bf96150ee06afc38b6fad05ea0024ec7dc91d95478188f02d999c282a428c24d"
+    sha256 cellar: :any, arm64_sequoia:     "97f0555761cec8169d62cafea7cb9c5e603b94af332ce1e2e21a6a529c033174"
+    sha256 cellar: :any, arm64_linux:       "0acc450fdfbdf909a71ec6428f286a480ca6c6e34fdf434be811599cb8b739f8"
+    sha256 cellar: :any, x86_64_linux:      "ab8db692a5ee56c96932653e916c2cb3328d0e2768f726fb32310f8babb61729"
   end
 
   depends_on "pkgconf" => :build

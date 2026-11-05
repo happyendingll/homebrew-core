@@ -1,10 +1,9 @@
 class Vtk < Formula
   desc "Toolkit for 3D computer graphics, image processing, and visualization"
   homepage "https://www.vtk.org/"
-  url "https://www.vtk.org/files/release/9.7/VTK-9.7.1.tar.gz"
-  sha256 "cae04fd355004cb916a409db79d53a208f1221e975aeacc7540ee67b148ee91a"
+  url "https://www.vtk.org/files/release/9.7/VTK-9.7.2.tar.gz"
+  sha256 "fecef55df5caec6298ce190024060a90ce3bb515033c0f18968b9ab5c12bf796"
   license "BSD-3-Clause"
-  revision 1
   compatibility_version 4
   head "https://gitlab.kitware.com/vtk/vtk.git", branch: "master"
 
@@ -14,8 +13,11 @@ class Vtk < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "72c6dc51fbe09e9a782b6c080ad51111a53de8d111ec76a9c677f520d70e7b42"
+    sha256 cellar: :any, arm64_golden_gate: "a983374364f2eea2bb17e0e347f6bdbe1a3f6f1d967bf86bc517c90b3abe8bd0"
+    sha256 cellar: :any, arm64_tahoe:       "de228c109396cd8151cac4611acd7a82b7771f6b0da7fd390ee7784906d804fb"
+    sha256 cellar: :any, arm64_sequoia:     "0c2361cac87d951a16c02368f8895746fd27271e626449ec4f748def7840bc83"
+    sha256 cellar: :any, arm64_linux:       "a8dc5727f64d705655b966bfd2e8fce6d4d6640296286b2db215d224cb263044"
+    sha256 cellar: :any, x86_64_linux:      "46b55bb5601ef21e2a302d094cac1e7ae159d716a34bf64b2dd399e422e4a240"
   end
 
   depends_on "cmake" => [:build, :test]

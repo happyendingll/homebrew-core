@@ -1,8 +1,8 @@
 class Tt < Formula
   desc "Command-line utility to manage Tarantool applications"
   homepage "https://github.com/tarantool/tt"
-  url "https://github.com/tarantool/tt/releases/download/v2.15.0/tt-2.15.0-complete.tar.gz"
-  sha256 "37a4568d2d723f3f840f688e8c5fe636aac0d6866b14176fd5add19f649bf764"
+  url "https://github.com/tarantool/tt/releases/download/v2.15.2/tt-2.15.2-complete.tar.gz"
+  sha256 "8db35fb323fa84f3d83914ed2461e40604171c4793b496d6dfc804618e8d0fac"
   license "BSD-2-Clause"
 
   # There can be a notable gap between when a version is tagged and a
@@ -14,8 +14,11 @@ class Tt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "8ee30e9442d3cb7b9c5998dab0cd43677bfbc534034415ac69899c148988caf2"
+    sha256 cellar: :any, arm64_golden_gate: "d14326a0bf7e84cfd7013cd8330c77eed1b33929822eac06cc8ab0ac51d96eff"
+    sha256 cellar: :any, arm64_tahoe:       "aec53a3f79902fac47d7b21d082da1e78652c8056a9c894dfaadcf2263f6e34d"
+    sha256 cellar: :any, arm64_sequoia:     "9cd7840ce4cb09ecabe750c326e49bca690c8719ffc2dc807eed0fdd64e534ea"
+    sha256 cellar: :any, arm64_linux:       "018b2bdade45ff1f7bde29c0dd56328900ee1bf988e70c114fceb205948f5c50"
+    sha256 cellar: :any, x86_64_linux:      "4abffd12a755b9c4054cae7437dc368db7cc05183e7d58f8c6be84c2c5a0df53"
   end
 
   depends_on "go" => :build

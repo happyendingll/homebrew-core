@@ -4,11 +4,15 @@ class AwsCrtCpp < Formula
   url "https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.44.3.tar.gz"
   sha256 "dbdeb941b24159e639a1e020a8d1e26b68a0bf9ee21f3a90971f42fe97d21086"
   license "Apache-2.0"
+  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "a40a8474fdc5305233f7ad9c58e087916d40455be1c6f8d7b34265b063fc4170"
+    sha256 cellar: :any, arm64_golden_gate: "9b5c0f0cef79988e8781119d0f192e9771f04f1079223d8d1be3656205b66fe3"
+    sha256 cellar: :any, arm64_tahoe:       "16c545af77b5a7bd519b69de28a5e13d9814a127f1666c4330abd55baedcb1a7"
+    sha256 cellar: :any, arm64_sequoia:     "bd082663047d89f47a187a024ea0472e28ac1dc377edded974d15eac71c3c23e"
+    sha256 cellar: :any, arm64_linux:       "c27317392366da0bc415e416743fadfe377696cc91ded72e6ebdd0da9163c17f"
+    sha256 cellar: :any, x86_64_linux:      "33271cfbfe94ae7349e4465f5dd6aa684f5aa3e3a20679224d01c486505bac47"
   end
 
   depends_on "cmake" => :build

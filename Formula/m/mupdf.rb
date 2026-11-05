@@ -17,7 +17,7 @@ class Mupdf < Formula
     sha256 cellar: :any, sequoia: "dfbe5e37b3bb9671d6272d32ecbfc229d2c3e59fdc2e7953e3ffae0530b03672"
   end
 
-  depends_on "llvm@21" => :build
+  depends_on "llvm@21" => :build # Clang 22+ issue: https://bugs.ghostscript.com/show_bug.cgi?id=709448
   depends_on "pkgconf" => :build
   depends_on "swig" => :build
   depends_on "brotli"
@@ -46,6 +46,21 @@ class Mupdf < Formula
 
   conflicts_with "mupdf-tools", because: "both install the same binaries"
 
+  # Build scripts import `pipcl`, which upstream unbundled in 1.28.1
+  # Ref: https://github.com/ArtifexSoftware/mupdf/commit/ecef7b70bc5
+  pypi_packages package_name:   "",
+                extra_packages: "pipcl"
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
+    sha256 "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79"
+  end
+
+  resource "pipcl" do
+    url "https://files.pythonhosted.org/packages/1c/9d/d797318cf82fff625670bbbf88a722d87299c9d8f3fc8372603713ac0af4/pipcl-13.tar.gz"
+    sha256 "286aba9785463c83659a565210a82a77896195d3303bff0542e825479b56daf2"
+  end
+
   # Currently, some source of mujs is required for building mupdf, so can't use formula
   # Issue ref: https://bugs.ghostscript.com/show_bug.cgi?id=708968
   resource "mujs" do
@@ -58,18 +73,6 @@ class Mupdf < Formula
       url "https://mujs.com/downloads/"
       regex(/href=.*?mujs[._-]v?(\d+(?:\.\d+)+)\.t/i)
     end
-  end
-
-  # Build scripts import `pipcl`, which upstream unbundled in 1.28.1
-  # Ref: https://github.com/ArtifexSoftware/mupdf/commit/ecef7b70bc5
-  resource "pipcl" do
-    url "https://files.pythonhosted.org/packages/1c/9d/d797318cf82fff625670bbbf88a722d87299c9d8f3fc8372603713ac0af4/pipcl-13.tar.gz"
-    sha256 "286aba9785463c83659a565210a82a77896195d3303bff0542e825479b56daf2"
-  end
-
-  resource "packaging" do
-    url "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
-    sha256 "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79"
   end
 
   deny_network_access!

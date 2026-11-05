@@ -3,13 +3,16 @@ class Ramalama < Formula
 
   desc "Goal of RamaLama is to make working with AI boring"
   homepage "https://ramalama.ai"
-  url "https://files.pythonhosted.org/packages/10/c6/2487a19773ad71e05e476c3e6df6b78e8ab056270b5b7876a98602f1025b/ramalama-0.25.0.tar.gz"
-  sha256 "54daf1cde410347bd0cc7a8f1b8a036a19e8f7d63367d9bc63be8bf4ccc0084b"
+  url "https://files.pythonhosted.org/packages/b3/dc/ebce0510d4d78b14eb1f84b4f6509eabd47f6a807dfe28dbc294cf2a7ecd/ramalama-0.26.0.tar.gz"
+  sha256 "616a33f35fbd9bb731ffb82fff25ac055c91f1c665f688d19536ce58b1b8a3a4"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "15cae35dbec874b4602da3c091a5fedcef895abedb8f43846dc51b5d84125684"
+    sha256 cellar: :any, arm64_golden_gate: "26703d5c3012d1e11fc28ae475b92eef041b1d6fb723510c41847e3bfdfa4f08"
+    sha256 cellar: :any, arm64_tahoe:       "154393c3bacae9d4b749d0660a86df67bd40d3df7210e7b959553a9adb660cd9"
+    sha256 cellar: :any, arm64_sequoia:     "a355f24f277b1595c6758c9c1708f3a33dd6093b840720f6be93dfa0d818926d"
+    sha256 cellar: :any, arm64_linux:       "43589bf744ec753bf01a3200eae087c6e48b11b5f0e441746fe85b9687923b4e"
+    sha256 cellar: :any, x86_64_linux:      "3caf12c800e7a844afbc8e0fe2189e63fe2dd6aef187eadb104a71eee7e0d320"
   end
 
   depends_on "libyaml"

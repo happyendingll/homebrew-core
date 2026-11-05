@@ -1,14 +1,17 @@
 class Betterleaks < Formula
   desc "Secrets scanner built for configurability and speed"
   homepage "https://betterleaks.com"
-  url "https://github.com/betterleaks/betterleaks/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "d59617a0ee7f7763e71b91e333665d35541e51189e2b265fea538ae5f19f6715"
+  url "https://github.com/betterleaks/betterleaks/archive/refs/tags/v1.10.0.tar.gz"
+  sha256 "1889be5033c4de90694a0e7fe4e5d21e53c7f779bea0405d309f28db5de673b3"
   license "MIT"
   head "https://github.com/betterleaks/betterleaks.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "720f4073cc82da72abe749e445bca4f974d88f3d910c2481b0a933f100682507"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "18d62173e6a4a29180d6e475a4daa8ed34146a8dd0043d2ce12c5fa06f9a8fd2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "18d62173e6a4a29180d6e475a4daa8ed34146a8dd0043d2ce12c5fa06f9a8fd2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "18d62173e6a4a29180d6e475a4daa8ed34146a8dd0043d2ce12c5fa06f9a8fd2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9bab820406684d80b6ae0493efe4a25582eb6faae7d2fe05d4863dc862d4296e"
+    sha256 cellar: :any,                 x86_64_linux:      "f4c5d5466f1c1aac1932c1621a0f37e672640fde298286ff7e71f6ac01e5bdbc"
   end
 
   depends_on "go" => :build

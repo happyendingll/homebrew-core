@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/portable-formula", __dir__)
 class PortableZlib < PortableFormula
   desc "General-purpose lossless data-compression library"
   homepage "https://zlib.net/"
-  url "https://zlib.net/zlib-1.3.2.tar.gz"
-  mirror "https://github.com/madler/zlib/releases/download/v1.3.2/zlib-1.3.2.tar.gz"
-  sha256 "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16"
+  url "https://zlib.net/zlib-1.4.tar.gz"
+  mirror "https://github.com/madler/zlib/releases/download/v1.4/zlib-1.4.tar.gz"
+  sha256 "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584"
   license "Zlib"
   compatibility_version 1
 
@@ -13,14 +13,9 @@ class PortableZlib < PortableFormula
     formula "zlib"
   end
 
-  bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "47fb4f6cb98942a10131655e9c901558c96fb37e46dd3d0faea485f018f2de38"
-  end
-
   # https://zlib.net/zlib_how.html
   resource "test_artifact", :test do
-    url "https://raw.githubusercontent.com/madler/zlib/refs/tags/v1.3.2/examples/zpipe.c"
+    url "https://raw.githubusercontent.com/madler/zlib/refs/tags/v1.4/examples/zpipe.c"
     sha256 "e79717cefd20043fb78d730fd3b9d9cdf8f4642307fc001879dc82ddb468509f"
 
     livecheck do

@@ -4,12 +4,15 @@ class MathComp < Formula
   url "https://github.com/math-comp/math-comp/archive/refs/tags/mathcomp-2.6.0.tar.gz"
   sha256 "b2e8c5c93fdc9bb5ed9b8a06d1c028aa0096a45b1f3ac6c6509d7a6500c72253"
   license "CECILL-B"
-  revision 5
+  revision 6
   head "https://github.com/math-comp/math-comp.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "21e1f483ceab8ebffb9851ab682c28b8e1cdffc91c917ebb5c76aa697c58e5c3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1087eea832702d8615c81bc41ee7961f136791566e662e483657bd63ff12dc46"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cde6f1dbe7eb10969f11a565f04deb3abf3e3835f311c9771703f7ef90bad3db"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dc07567cac33180ec2deeed51680b405d5087e834e9d896671540596e2c73b80"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0ba0e3a330c2964a5aa3c3ec98fd88106ad1dd85c4a3fd8f9a81524306958c93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ee400ca04611202b1d6a800605a5b122eac566822093d09a551dc48f3bca1103"
   end
 
   depends_on "ocaml" => :build

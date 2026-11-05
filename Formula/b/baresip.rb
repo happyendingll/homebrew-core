@@ -1,13 +1,16 @@
 class Baresip < Formula
   desc "Modular SIP useragent"
   homepage "https://github.com/baresip/baresip"
-  url "https://github.com/baresip/baresip/archive/refs/tags/v4.12.0.tar.gz"
-  sha256 "710d79d60c15c09f0aeb93e5d2f219e7f12ab93f62cab826e4280592a1ea155f"
+  url "https://github.com/baresip/baresip/archive/refs/tags/v4.13.0.tar.gz"
+  sha256 "688dbb92844340c2dd8dab7d93aaebccb3aa433af9215bb099ca598fafc0e0a2"
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "2e72acbba9d288b37d20bb6bb315f1eb5f8b8d5e160f2bab6433280459c45998"
+    sha256 arm64_golden_gate: "6aeb7a185595ea5cc105d40e0d559a5a7d137d86435ecd284dea0ba1db14b28c"
+    sha256 arm64_tahoe:       "feac662a7fc29c3c36c9073d3f669431c1f5e75dadc0faea4b756b556f471a2e"
+    sha256 arm64_sequoia:     "dd7e8aa9e2af2334577138bf8454d55a1471b8dd16ff86ce0368c37e52ba97bc"
+    sha256 arm64_linux:       "623c9f507dbbee2de2cb7fa40ee73a71621d2f61ed4055a0a35f049afa7b7332"
+    sha256 x86_64_linux:      "5801193d47d068327a59d69fd1df41d7bbdd8013d94554daf531e4ec16e23bb6"
   end
 
   depends_on "cmake" => :build

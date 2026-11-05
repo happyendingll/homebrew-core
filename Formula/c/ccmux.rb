@@ -1,13 +1,16 @@
 class Ccmux < Formula
   desc "Run all your AI coding agents in tmux"
   homepage "https://github.com/epilande/ccmux"
-  url "https://github.com/epilande/ccmux/archive/refs/tags/v1.4.5.tar.gz"
-  sha256 "ecbaf344319e6422d9b187ca74797e737d6f2177f20bb8176798c025b9bd9eab"
+  url "https://github.com/epilande/ccmux/archive/refs/tags/v1.4.6.tar.gz"
+  sha256 "17d407a55c61d65003ba73da1db473c19e2fd7757320874ce1fffd59e23a6afe"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "38685831b4c93716aacee30926057d5bb8ed5ef69af0073b2d6a056205c99f2e"
+    sha256 arm64_golden_gate: "cc2ef273e757ca695bab5b431545d591a7c5cebf55b8954156647e7cf8489913"
+    sha256 arm64_tahoe:       "00b5960b6a156345b8032061bae121840cf1b593d4865f37ebd077640d567f67"
+    sha256 arm64_sequoia:     "b88eccbf43d1545c322a4c1a3e030c9e1bb5b7d3f0b910e89eb02c6bd72d7131"
+    sha256 arm64_linux:       "fb2713f96210b369c4ae2ce66407ad6f6570e6d9cacff24c6e076dbc0a0427ae"
+    sha256 x86_64_linux:      "0221ff061161a29b4bc6fc634056d23e8a45e9dbf0757ffd59f1b22c8d11b6b3"
   end
 
   depends_on "bun" => :build

@@ -1,14 +1,17 @@
 class Msgvault < Formula
   desc "Archive a lifetime of email and chat with offline search and analytics"
   homepage "https://github.com/kenn-io/msgvault"
-  url "https://github.com/kenn-io/msgvault/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "0657a1c4c0be70242fb132b7bd16e3a8d544b600d5641bd2589cf3769eb0c151"
+  url "https://github.com/kenn-io/msgvault/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "100629f06329757b8626de34572e610eacee4e06e1c0f59c823298354944ec53"
   license "MIT"
   head "https://github.com/kenn-io/msgvault.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "05684f5ed9e04658adbb32d706b48404014389a500e032ca8cc153318bc13b2b"
+    sha256 cellar: :any, arm64_golden_gate: "b1e19edcd4444bbe58683a9224cfb63f15d3ae1b017ce6e4359e39a83cc5c255"
+    sha256 cellar: :any, arm64_tahoe:       "51ec05ac5d494c891bf4e133693d9b93e86adce88795b94de608c5d401af1de0"
+    sha256 cellar: :any, arm64_sequoia:     "8afc67b4b590a9e461a8c0c67c8ac0a71652fa6d6d5358bb9f077b936467b3e2"
+    sha256 cellar: :any, arm64_linux:       "4c15c6a633382f4505195ce3c5bb6bfddcbaf09a8c19d7cab0b510a9b05dde31"
+    sha256 cellar: :any, x86_64_linux:      "289f95161541e981b730ff5157b673f9a51eb5eb2876a5f8d018063f4ca0fb9e"
   end
 
   depends_on "bun" => :build

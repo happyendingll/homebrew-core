@@ -3,30 +3,26 @@ class Cppcms < Formula
 
   desc "Free High Performance Web Development Framework"
   homepage "http://cppcms.com/wikipp/en/page/main"
-  url "https://github.com/artyom-beilis/cppcms/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "4a7a2217b3fa59384650912a7000e016c308b4fa986a3d2562002691e5a9d6e7"
+  url "https://github.com/artyom-beilis/cppcms/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "1775beca6118a9908aa75e44f4f1174b62da8bee1ac2047ffb34897d64bc6bf5"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "7527a99f8bdaaa3b8710a57a80306ac8e8063bc20b9b3c70f7bbdbd68d3b84ce"
+    sha256 cellar: :any, arm64_golden_gate: "0d193ab4a71fec4a93c39b200b9208511d62f4265b99cea957091b8630698c91"
+    sha256 cellar: :any, arm64_tahoe:       "fdbe60780dff88f91746b900e55406d3882aa7aa2a6c44a1823cebc5e1640c51"
+    sha256 cellar: :any, arm64_sequoia:     "0e022eb61efcd8345ff984e1978dabee687bea4a071c22cdcd1c595050a45e5c"
+    sha256 cellar: :any, arm64_linux:       "6968bb4e80c512a3dace6e211b061abfd023a5b2c43f31eb843bc4a2082c2bde"
+    sha256 cellar: :any, x86_64_linux:      "14aa9e648c3bb21136239bd4f14f11bac81c4281447747d70b37aff2108cc439"
   end
 
   depends_on "cmake" => :build
   depends_on "openssl@4"
+  depends_on "pcre2"
 
   uses_from_macos "python"
 
   on_linux do
     depends_on "zlib-ng-compat"
-  end
-
-  # Backport support for CMake 4
-  patch do
-    url "https://github.com/artyom-beilis/cppcms/commit/92164714273bddfc032d930d3d89f78428110939.patch?full_index=1"
-    sha256 "7934a74f9b39d2108944895f826d960ee34d4b88f52f2482a683f15d395fd74a"
-    type :backport
-    resolves "https://github.com/artyom-beilis/cppcms/pull/106"
   end
 
   allow_network_access! :test
@@ -37,7 +33,6 @@ class Cppcms < Formula
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_CXX_STANDARD=11",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    "-DDISABLE_PCRE=ON",
                     "-DPYTHON=#{which("python3")}",
                     *std_cmake_args
     system "cmake", "--build", "build"

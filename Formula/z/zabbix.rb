@@ -1,8 +1,8 @@
 class Zabbix < Formula
   desc "Availability and monitoring solution"
   homepage "https://www.zabbix.com/"
-  url "https://cdn.zabbix.com/zabbix/sources/stable/7.4/zabbix-7.4.16.tar.gz"
-  sha256 "0e2c391dc184acce8e34250e7326a51e19c8bcee31e67b8497f5526247ecd261"
+  url "https://cdn.zabbix.com/zabbix/sources/stable/8.0/zabbix-8.0.0.tar.gz"
+  sha256 "55469ac599fd1443370ecf4288655d4d62109ad3a686711c4f3e0d428338ca77"
   license "AGPL-3.0-only"
   head "https://github.com/zabbix/zabbix.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Zabbix < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "d53647ed4a0984fb9e46dd5e56ecb7d95179384276eddcadb7519d732ffdc47d"
+    sha256 arm64_golden_gate: "092107b6433b7d8884edd6fea7bc616a8addb78cbe5619be0eff029d026541c2"
+    sha256 arm64_tahoe:       "a80413d48e2f16cd024dc46478db39bbdd4f7806a10c81bf9b04c0d280a4c3c0"
+    sha256 arm64_sequoia:     "3f5729633a6f591dbb5fa6a77950ca309e257cbea871e8c7dc691a2fa608e7d6"
+    sha256 arm64_linux:       "4ef2a223881b9712adbc34a993d105bd512360c8ec74915035fdd24f99bc7639"
+    sha256 x86_64_linux:      "174a2ce5e286943892da800bedfbb211108081781f1e9d163efd36054cb7bedd"
   end
 
   depends_on "pkgconf" => :build

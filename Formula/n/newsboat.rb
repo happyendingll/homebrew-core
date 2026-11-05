@@ -1,8 +1,8 @@
 class Newsboat < Formula
   desc "RSS/Atom feed reader for text terminals"
   homepage "https://newsboat.org/"
-  url "https://newsboat.org/releases/2.45/newsboat-2.45.tar.xz"
-  sha256 "defe303d2518f3c4241780a9165e8750e9984e3f10aa341b7dde107579e34b3d"
+  url "https://newsboat.org/releases/2.45.1/newsboat-2.45.1.tar.xz"
+  sha256 "bf7dd8c99f60220b659607a03d8f56ecaba4f697ac29984504108575b4a41474"
   license "MIT"
   head "https://github.com/newsboat/newsboat.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Newsboat < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "49922d7ae4695695003bb10dfdb92aa67a328a6ddfd9c50c6318b0c802be7b22"
+    sha256 arm64_golden_gate: "65f6e4342e40360b603fb28f9830e44ae015bea7dbe633dfa5f450e3c069945b"
+    sha256 arm64_tahoe:       "0c2ff6cc5e5145d8155272cd666926558ecefda18a82807c9a84aca98809d0ac"
+    sha256 arm64_sequoia:     "b6479318b3f7e5ab216b5211d9ed0d09e911a2a2629c2572b179cebcfa727b03"
+    sha256 arm64_linux:       "29f5fcac6ad6f156943de04e697a7453dc3696a85cd964f444082cbfe9f7d8e3"
+    sha256 x86_64_linux:      "bf2c487832841680d113e2fef858c1a0c76922e124ec4e8d181e9c9e854b7f2d"
   end
 
   depends_on "asciidoctor" => :build
