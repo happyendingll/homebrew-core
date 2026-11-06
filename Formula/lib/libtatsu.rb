@@ -8,11 +8,8 @@ class Libtatsu < Formula
   head "https://github.com/libimobiledevice/libtatsu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "04de393a1757ad619de94bc636091920ecd18c4dcc5a7b59739e1b027c751e2d"
-    sha256 cellar: :any, arm64_tahoe:       "c2c9378a90a8d95d160a1d8c044719a12ec11f87608cce3ad7f94de50e27efb8"
-    sha256 cellar: :any, arm64_sequoia:     "c6220731852f43f37d34164579d16e139192387249b1751a4abf1cbb47ddfcda"
-    sha256 cellar: :any, arm64_linux:       "d7ec4206f131fe610a0ba60afe544762492b89ac24a9f1382e03d6dc4e75bb66"
-    sha256 cellar: :any, x86_64_linux:      "53039b809871d21fa1185003922f6337c134280a466cb22b4bd6e748400d0752"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "b9f4f057761cee9c4f67e105988bb85fe8c02cd184d014f628a6083bdd07bb2c"
   end
 
   depends_on "autoconf" => :build

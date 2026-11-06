@@ -7,11 +7,8 @@ class Okteto < Formula
   head "https://github.com/okteto/okteto.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0a7d4b48eec538c4bec5308119c1fc80fceca4d41c6ca292ab0b087ca57c1242"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "28e8d80ffba0ab0fa998012f93aedfc8306c132c6920b0a136beb5692bc70fd5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e6cc6eee2647bdb1b885eaf73c920226e1bccd5d471b181b6fbdd6bc0d919886"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a35a291b91db88d424e296399f12df5986117fd322f9af3e6a22a74105d6e813"
-    sha256 cellar: :any,                 x86_64_linux:      "a832c3fc40081a3e9d6c154880cd212c663b3327fddd0029650134e15f2bafa0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b0eb51a5fdd303ce17271c9e47bc8f626c25f35aab1719883de2bf6271c3cbb7"
   end
 
   depends_on "go" => :build

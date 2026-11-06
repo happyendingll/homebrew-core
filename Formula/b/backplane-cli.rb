@@ -7,11 +7,8 @@ class BackplaneCli < Formula
   head "https://github.com/openshift/backplane-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bbfdcc5f6bd20189cd672c440260e8875ec530229e5f45414a8023255a788796"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "398647210e97e6118183c05410c302fce4f91e7afb5223108617278ae92abbd1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ea2db9005234db38970a9628fa8a286fd8ba6ca1d56fc78898e3e3f5d7df9a8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0c19ea4b335d1d31710d7496896912d83c8369d19cb33a9a77fdb384c7e6168d"
-    sha256 cellar: :any,                 x86_64_linux:      "0e7c5a1beee520c388c87ea472ecf26f6ea6d569da5d1cb85c1a060112fe62ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "8e4f05fb27b7339ddff9456793ea04fe65b805026589e831aeacdec38bdc49db"
   end
 
   depends_on "go" => :build

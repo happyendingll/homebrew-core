@@ -12,11 +12,8 @@ class Pumba < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69086512c5f931766d9624947565707e0f57165138486f8e785c3b5f5e9504c6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69086512c5f931766d9624947565707e0f57165138486f8e785c3b5f5e9504c6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "69086512c5f931766d9624947565707e0f57165138486f8e785c3b5f5e9504c6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2795491bc328c2679c1441a855f503505c5f51bc5e0c453262e981c40ed75935"
-    sha256 cellar: :any,                 x86_64_linux:      "aa208cbaf29f6a385437a50304add53914c6c4f14c8eda10aed8b364a0f41610"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b798d7dfff11cdcc9b81e53f46af5a8405289f672cbeb9f96e0f509b97328a22"
   end
 
   depends_on "go" => :build

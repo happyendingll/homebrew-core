@@ -12,11 +12,8 @@ class Newsboat < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "65f6e4342e40360b603fb28f9830e44ae015bea7dbe633dfa5f450e3c069945b"
-    sha256 arm64_tahoe:       "0c2ff6cc5e5145d8155272cd666926558ecefda18a82807c9a84aca98809d0ac"
-    sha256 arm64_sequoia:     "b6479318b3f7e5ab216b5211d9ed0d09e911a2a2629c2572b179cebcfa727b03"
-    sha256 arm64_linux:       "29f5fcac6ad6f156943de04e697a7453dc3696a85cd964f444082cbfe9f7d8e3"
-    sha256 x86_64_linux:      "bf2c487832841680d113e2fef858c1a0c76922e124ec4e8d181e9c9e854b7f2d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "c37650836ea24fe62ba65da6ce1e436c7ce51dac2d8f876e14d9e25877297ff7"
   end
 
   depends_on "asciidoctor" => :build

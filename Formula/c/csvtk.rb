@@ -7,11 +7,8 @@ class Csvtk < Formula
   head "https://github.com/shenwei356/csvtk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1cf8f1a09fb9999a1086e098c651210e1981c53d6233378ba2c4a493f66d6407"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1cf8f1a09fb9999a1086e098c651210e1981c53d6233378ba2c4a493f66d6407"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1cf8f1a09fb9999a1086e098c651210e1981c53d6233378ba2c4a493f66d6407"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e032b48b04c7ed995d8a05668d9913c0a727eb5c26a71ffba32509e773eb617b"
-    sha256 cellar: :any,                 x86_64_linux:      "566812ba809a6829b2d015399f0a38c2aef347793bdb2863de794c86e45083ca"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1d73588f3a3363c17dc31437bcdb26e64737d09a81c2b8db37622d08b7fb7810"
   end
 
   depends_on "go" => :build

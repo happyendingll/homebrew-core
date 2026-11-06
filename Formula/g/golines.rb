@@ -7,11 +7,8 @@ class Golines < Formula
   head "https://github.com/golangci/golines.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "928817ce71f8528144706d58cfd8955c5707c700e5a2c507077c1dffaf3f04e0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "928817ce71f8528144706d58cfd8955c5707c700e5a2c507077c1dffaf3f04e0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "928817ce71f8528144706d58cfd8955c5707c700e5a2c507077c1dffaf3f04e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "292ae7465a357a3dcf49d3ae6379644ad9d76f0e9e6b12f68f76f12b85de3e89"
-    sha256 cellar: :any,                 x86_64_linux:      "34fa9d08dac818747076ce68253c0f51623df3c7186148214646ea16fe5f7408"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "60b37c5240c62e2d28aa1163a495748b206c5adaad233ca4627bc0ec1a3c65d4"
   end
 
   depends_on "go" => :build

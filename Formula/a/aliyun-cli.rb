@@ -12,11 +12,8 @@ class AliyunCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "78bb57f6e4e8c3e37b131d526b6a2326f10b247d8268785ecf7d1778dff82228"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78bb57f6e4e8c3e37b131d526b6a2326f10b247d8268785ecf7d1778dff82228"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78bb57f6e4e8c3e37b131d526b6a2326f10b247d8268785ecf7d1778dff82228"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1ba4fa88369451fa18197a91e3d6f222c4899ff398c6e583122a670be883db87"
-    sha256 cellar: :any,                 x86_64_linux:      "2fb6bf90f097a3bb0760b5ef5f9bdc5a6bdb63a7d3c44e290196aade64cfd683"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c055493eec6f8418df00e80ecf4ae9ccbcba36d246bdb4c1dd85a089eadb883d"
   end
 
   depends_on "go" => :build

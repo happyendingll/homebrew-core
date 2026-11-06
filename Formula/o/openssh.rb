@@ -14,11 +14,8 @@ class Openssh < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "c420fda22de5514ea105cf753099f41ff47a31fb2bb5ecd041e3debbe451373f"
-    sha256 arm64_tahoe:       "5686aec4f22f807d68dc4cba6b22d32e86f0f41b5e93391a533b04bdb65ffb45"
-    sha256 arm64_sequoia:     "a0bb9799d7939bf20297f1e8daae9aa1c9966858abf9ac2832574abedc67ab9d"
-    sha256 arm64_linux:       "c64f1a845789b2c8f314edb656b4af280acf11ab47a2bd4ad197812fd72685b4"
-    sha256 x86_64_linux:      "576afcac1eb216303c1a3170c5492e3e04d597a9ed920374d9e371d2d2ab997d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "68067a351f21c95125d89635c56f0de303b961baf96b73667d8c623e7f1d9bf7"
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.

@@ -12,11 +12,8 @@ class Zabbix < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "092107b6433b7d8884edd6fea7bc616a8addb78cbe5619be0eff029d026541c2"
-    sha256 arm64_tahoe:       "a80413d48e2f16cd024dc46478db39bbdd4f7806a10c81bf9b04c0d280a4c3c0"
-    sha256 arm64_sequoia:     "3f5729633a6f591dbb5fa6a77950ca309e257cbea871e8c7dc691a2fa608e7d6"
-    sha256 arm64_linux:       "4ef2a223881b9712adbc34a993d105bd512360c8ec74915035fdd24f99bc7639"
-    sha256 x86_64_linux:      "174a2ce5e286943892da800bedfbb211108081781f1e9d163efd36054cb7bedd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "dc16fa4ed2e78439ea622f846240d6216b5944e06575f0f4d89f649366d5af8c"
   end
 
   depends_on "pkgconf" => :build

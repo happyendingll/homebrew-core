@@ -11,11 +11,8 @@ class Crowdin < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "7af07c7d740f895275772ac69ad2cef8509893571a38e745da02e1841ba79f29"
-    sha256 arm64_tahoe:       "f1d6b9e215c1161a912a3cd6584eb580a48d1ac6a1ecc6de5ea136d7bfa2e0ed"
-    sha256 arm64_sequoia:     "bfca94d32f4146c1e48f7357e9e7dbd822fefabeffa129ead05ccbb725594c64"
-    sha256 arm64_linux:       "e02784c5444bf96990b0b19752f8c2598bff53a3f1bc5d45369a864c302dd4f6"
-    sha256 x86_64_linux:      "3c38187ea1b1eb3f7dc34b4f1299b6907a958e711661f7bfef18acecbd458764"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "ade23548e34479c91730ea90c96df850b14f644edfbec18db1478a6d05585801"
   end
 
   depends_on "bun" => :build

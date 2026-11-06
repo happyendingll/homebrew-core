@@ -13,11 +13,8 @@ class YaraX < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aec5a6fa948b7589ff57f000e15da81539586bbf9c03268e627bb3b57eb44dbc"
-    sha256 cellar: :any, arm64_tahoe:       "832341f7b6fd7e6e110118ef0e85fdb6ca2ffb60b2b5023bacc20c0ae87150f2"
-    sha256 cellar: :any, arm64_sequoia:     "f3ae760dfb001504fb38f52f9c3d43c376b023ae7c4668fc9b077bca49ab0c19"
-    sha256 cellar: :any, arm64_linux:       "328c447931f4db465d81a98540f6aac58ddf23de65aff4697e495d6ccea23a93"
-    sha256 cellar: :any, x86_64_linux:      "e6029064afef64572156e2dab001425ece3f8c455c71042ebbdc85aa3cca3261"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "2fb912c4544808d88312ed40b211f3abfc8676a4096128171633b819854c50fb"
   end
 
   depends_on "cargo-c" => :build

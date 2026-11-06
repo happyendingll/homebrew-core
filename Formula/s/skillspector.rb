@@ -9,11 +9,8 @@ class Skillspector < Formula
   head "https://github.com/NVIDIA/SkillSpector.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "45744cfc2785b272644ebd360c8faa552a7f9abbf02bee37af296a4a90e04e22"
-    sha256 cellar: :any, arm64_tahoe:       "ad2d5116f2261df21f5eea71808e4b21ac337d961eb6edaa287d29facb9086d9"
-    sha256 cellar: :any, arm64_sequoia:     "9f51aaf164c2ac35302f67a546942c86eb5dfd1d16f9c14b0bf06432ade18a32"
-    sha256 cellar: :any, arm64_linux:       "91af477198c9df1be981ab2a4395f77c9200c9dae0a748fbf8b987e6440864ac"
-    sha256 cellar: :any, x86_64_linux:      "0c471bd4709df4cd938920d94da9ff347171fb0e1e19332d8ffbaf63d3b4690e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "88ef22b7261dd40c98b067609e214ce306d0289640707309995eb7f51811fd60"
   end
 
   depends_on "pkgconf" => :build

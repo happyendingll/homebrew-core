@@ -8,11 +8,8 @@ class Opentofu < Formula
   head "https://github.com/opentofu/opentofu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2f0d32bb2daeb5c077827b10b804ce4ba1cf473a76027babad82b820808a985"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "105c7890a9daea9ba1dd4e2f031afb49a1f73eacf1deaf58e10b9498f5a0258e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "207603cfbf22291af160a794d217abe6d13ef6d36642e2ba8d02a10be0563b58"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0ed63836df85edd6f55eac157e759bef61122c5a760495532c568116ebab2738"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0170fb78939f395c0d898fd1e6fe1a74ac709b25e78c83c94fa615feccfb94b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "5fc4ea856bf89e7dbc783b8401adc756a2ee4614fdd6b865f972dda41332da48"
   end
 
   depends_on "go" => :build

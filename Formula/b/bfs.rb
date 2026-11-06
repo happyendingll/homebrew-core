@@ -6,11 +6,8 @@ class Bfs < Formula
   license "0BSD"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ca1368008dd3f33de145cd35fecbb797c76e872d303348a98a35d56a6a6d03d4"
-    sha256 cellar: :any, arm64_tahoe:       "bf96150ee06afc38b6fad05ea0024ec7dc91d95478188f02d999c282a428c24d"
-    sha256 cellar: :any, arm64_sequoia:     "97f0555761cec8169d62cafea7cb9c5e603b94af332ce1e2e21a6a529c033174"
-    sha256 cellar: :any, arm64_linux:       "0acc450fdfbdf909a71ec6428f286a480ca6c6e34fdf434be811599cb8b739f8"
-    sha256 cellar: :any, x86_64_linux:      "ab8db692a5ee56c96932653e916c2cb3328d0e2768f726fb32310f8babb61729"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "eb156c2dcacc129ef87c10b23e36d0dbf5a2532ed29c8bf8de32acc895adfc9f"
   end
 
   depends_on "pkgconf" => :build

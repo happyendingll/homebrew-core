@@ -8,11 +8,8 @@ class Cppcms < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0d193ab4a71fec4a93c39b200b9208511d62f4265b99cea957091b8630698c91"
-    sha256 cellar: :any, arm64_tahoe:       "fdbe60780dff88f91746b900e55406d3882aa7aa2a6c44a1823cebc5e1640c51"
-    sha256 cellar: :any, arm64_sequoia:     "0e022eb61efcd8345ff984e1978dabee687bea4a071c22cdcd1c595050a45e5c"
-    sha256 cellar: :any, arm64_linux:       "6968bb4e80c512a3dace6e211b061abfd023a5b2c43f31eb843bc4a2082c2bde"
-    sha256 cellar: :any, x86_64_linux:      "14aa9e648c3bb21136239bd4f14f11bac81c4281447747d70b37aff2108cc439"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "76d8e7038c69dc67c05e2bfc472a7251f48c0290759fd5e5814d907076c06d40"
   end
 
   depends_on "cmake" => :build

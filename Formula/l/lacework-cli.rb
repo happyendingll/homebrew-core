@@ -16,11 +16,8 @@ class LaceworkCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "584ce84e5cb6175acc707d565399805926bf10b7f60379642acf56ac771be93d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "584ce84e5cb6175acc707d565399805926bf10b7f60379642acf56ac771be93d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "584ce84e5cb6175acc707d565399805926bf10b7f60379642acf56ac771be93d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e55e7467969e6eb8db708a51aa193997ec7f5c713bf7d70b3ad24839d6f91aa1"
-    sha256 cellar: :any,                 x86_64_linux:      "c5729b7727b7621d31daad132d38648d54cb40cdf3d55a31dbc9a96f5e54d9cc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "3edc6ffa8f32bc893098004fcfb1047612beacd3cc0e4d3e1ce4993bfcff2ab9"
   end
 
   depends_on "go" => :build

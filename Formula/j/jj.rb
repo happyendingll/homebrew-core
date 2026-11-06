@@ -8,11 +8,8 @@ class Jj < Formula
   head "https://github.com/jj-vcs/jj.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4a5c843061fd135beb9bbc2f2e311c9ea30e88e20e29c9c75a50d43e05900f97"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2203d5f7aa2f0bbd1b3798fd897e8c975a53078efaac67e8a6da81d7c5539884"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f910a47ef794ed9cc75306042f347536424c6d49263ec380729484aef315612"
-    sha256 cellar: :any,                 arm64_linux:       "ee3b3f977ea01fdae4f7561960876bc29ebb254379e276fc83acc1f76d851626"
-    sha256 cellar: :any,                 x86_64_linux:      "ae80aeab653e558fe220d4be404f8752225dfecd30e2dbdf438f4e8e9a01d0e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e931f764f0ae551f5d15bb11c2d28cd4c515db0aa74e2cdc105d99537229d3b3"
   end
 
   depends_on "rust" => :build

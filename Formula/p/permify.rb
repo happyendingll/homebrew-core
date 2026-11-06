@@ -7,11 +7,8 @@ class Permify < Formula
   head "https://github.com/Permify/permify.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "325a1bc8dea04da4e0fbbf196de07d86f2d94c5e69957934daaa2d1be7250e12"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29544133d92d635f2ff3e8988b7dd16441e5158302d15e08689e8eccda114d41"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b39f73a0a9c224280cc35240afee09bca0fbe1c3589ed0aee63fd7fd0d5254d5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "98acb456f871b6d6269b317673c515e91dcf39288d5f6cbc03e76c1e9533c8a4"
-    sha256 cellar: :any,                 x86_64_linux:      "b059540f85a8edafb417f4a2489556047b8b70b4e8168c43d469c1a1c20d7260"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "4aa33341dcd321f5246c95b6a01da85c45d217924f625588af1ef0adb25251c5"
   end
 
   depends_on "go" => :build

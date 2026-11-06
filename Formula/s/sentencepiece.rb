@@ -13,11 +13,8 @@ class Sentencepiece < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "15412518300368d569ceedd7328f5727cb65b7f4f48e7431688c5ec0fc47c61e"
-    sha256               arm64_tahoe:       "0d98818150326a68c6475201eadc63aa964c565a4f88370e44660e3fc7d059fc"
-    sha256               arm64_sequoia:     "7005bda46c44443d47b1c05d25e7f4f37e069acc86f38d53081a0f6dd2a4024e"
-    sha256               arm64_linux:       "3ea6ea21dc2de859c2aca3ea00d0a151d5993cc3df557e267c829f28085eb7f8"
-    sha256 cellar: :any, x86_64_linux:      "0b7c0e915c352e6642bd1b6d8ac68efe5f6148daed4434d1179ecd70cc395b94"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "6b526fc44f64bbb6889a21b84e0baf4f00c526f841b99fd495ca9a883eb3fd8b"
   end
 
   depends_on "cmake" => :build

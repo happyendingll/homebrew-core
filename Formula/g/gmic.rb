@@ -12,12 +12,8 @@ class Gmic < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "bd1673487779c1a94ed846b5daeb57b2acecbc7f404fae4cdd6d15c66fb357e4"
-    sha256 cellar: :any, arm64_tahoe:       "a3c00ae7d0cab177418e689783cef4ea3c90652924bc283b54e2408ffeb2e4ee"
-    sha256 cellar: :any, arm64_sequoia:     "31f6732769d29af9490456eb8c04261c8354cf843f13035e8155d4023673ba7a"
-    sha256 cellar: :any, arm64_linux:       "666458ad5c98aa243ab59c4c2e766410188a3b911563283fb332fa564272e248"
-    sha256 cellar: :any, x86_64_linux:      "b0784e361b837561db7ca0969a215f83246cef17e9976d4112e21b018ca55890"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "115c2ee5e0ebc5b9016a063327896e2ead407de6b1b10e86d2cd88a4b5dcf893"
   end
 
   depends_on "cmake" => :build
