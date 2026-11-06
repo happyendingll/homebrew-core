@@ -1,13 +1,16 @@
 class AngularCli < Formula
   desc "CLI tool for Angular"
   homepage "https://angular.dev/cli/"
-  url "https://registry.npmjs.org/@angular/cli/-/cli-22.2.5.tgz"
-  sha256 "7e7623e754cda981e0c79f2e07987f3d98e11c1e712b772ce91e246ef30a7f94"
+  url "https://registry.npmjs.org/@angular/cli/-/cli-22.2.6.tgz"
+  sha256 "88b8cca8df15caa5dd1aab7334d9234fe29cb2b77666499101e90cee486c5fd1"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "fb509977b564bc6e98000f88a02438dd2be2ca8851f00415b1f27aaa2184c182"
+    sha256 cellar: :any,                 arm64_golden_gate: "8216c85c23d5250f33bb581bce470ebdfd87e54ad51745e834456855bb15fe76"
+    sha256 cellar: :any,                 arm64_tahoe:       "7b373135dadc836a1ec94b60ee8325572700e3e0d0620f96d47f84cb9eb72b78"
+    sha256 cellar: :any,                 arm64_sequoia:     "6fd9f46a037e87be0d612dff537be3feea5431eca3570e6a8d8b619e6b02639f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "19e52b8f84138fa6c931e4d8a95ebee2a82f1dfb877fd3d46752ef2772144a49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a96481b49c6018a4fe6464b04e416025f4293aef2681be5eb4d64ea81252822c"
   end
 
   depends_on "node"
@@ -17,8 +20,8 @@ class AngularCli < Formula
 
     # Rebuild the prebuilt `oxc-parser` binding as it lacks header space for relocation
     resource "oxc" do
-      url "https://github.com/oxc-project/oxc/archive/refs/tags/crates_v0.150.0.tar.gz"
-      sha256 "08a7d805dc76f773cc5aeafa4adebe276f841cc30671e19fa05f10258293e567"
+      url "https://github.com/oxc-project/oxc/archive/refs/tags/crates_v0.156.0.tar.gz"
+      sha256 "6d27e3c3458bffbd466091dbfd9edda06021e77aa680f508dfaafe8406669c6d"
 
       livecheck do
         url "https://registry.npmjs.org/@schematics/angular/latest"

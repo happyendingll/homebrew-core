@@ -19,6 +19,8 @@ class Samtools < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--prefix=#{prefix}",
                           "--with-htslib=#{formula_opt_prefix("htslib")}"

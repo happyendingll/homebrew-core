@@ -19,6 +19,8 @@ class Libunibreak < Formula
     sha256 cellar: :any, sequoia: "92bc1824b5efcec560183c27af150d2634aa37e4604cf3e1e12cd098497b8deb"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make", "install"

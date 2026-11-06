@@ -19,6 +19,8 @@ class Libxi < Formula
 
   conflicts_with "libslax", because: "both install `libxi.a`"
 
+  deny_network_access!
+
   def install
     args = %W[
       --sysconfdir=#{etc}
@@ -43,6 +45,5 @@ class Libxi < Formula
       }
     C
     system ENV.cc, "test.c"
-    assert_equal 0, $CHILD_STATUS.exitstatus
   end
 end

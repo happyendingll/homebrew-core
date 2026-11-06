@@ -1,8 +1,8 @@
 class ClangFormat < Formula
   desc "Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript"
   homepage "https://clang.llvm.org/docs/ClangFormat.html"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/llvm-project-23.1.4.src.tar.xz"
-  sha256 "819ecf7351f1a66f76b2d701d8942faaf5faeb324cb90c9d5b090de142434bb2"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
+  sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
   version_scheme 1
@@ -15,8 +15,11 @@ class ClangFormat < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "b3d064c4026f053e35ecfb8f5276eedf31ad23ab5c6ffb7fb480b2e8b7f5a00d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3104900788d1036a356fd7ba0ccdb4f8e8b8dfb8aeae41fff22ccb0cf5b9f16c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "99432751d7eaab69ef3aae8bc604e87519d7705f5174f57b6de181e6ac2ad00a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "00ec74feacaa5102ebb1efb435682ac1d24d22c981731f28d48d6d4ff2fee984"
+    sha256 cellar: :any,                 arm64_linux:       "ef45784caf622ee0faa9747063fffc7d0c3c576b787bfb068ec99ce40fc158a4"
+    sha256 cellar: :any,                 x86_64_linux:      "99753e24fd05e249cd8c1642c16b5beee8f9adcf8bc91551639d7ff5bf7fd4ec"
   end
 
   depends_on "cmake" => :build

@@ -1,14 +1,17 @@
 class Pkl < Formula
   desc "CLI for the Pkl programming language"
   homepage "https://pkl-lang.org"
-  url "https://github.com/apple/pkl/archive/refs/tags/0.32.2.tar.gz"
-  sha256 "ca6a2efd6e89e8e9c230023fafa2a58b746c84db7c1c17a6f6b9ade4a7d63eab"
+  url "https://github.com/apple/pkl/archive/refs/tags/0.33.0.tar.gz"
+  sha256 "b232e7149705f4f4922dd27d4693c9ea97fa32b3fec9d45ef6f3297dccf2858c"
   license "Apache-2.0"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "4ad084bd2a40d1d170190b7cc2942114c32926339cf4b08684c8580936082e65"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "efe4d34cab6fb32495da42a4c6319375b72475149200c7e876d781eb2c924652"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c03841bfdb1b106641d28302820da2296af96de1802aea1cc0fd9f2eaa663745"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91b1aec7fd836169f5654c22f370317b5f2a0f5200114a65cccf4ccde97a22a7"
+    sha256 cellar: :any,                 arm64_linux:       "cf3ef386c5d03fa245212186157f219e80bb957b6a29c95776f3adf88ffff235"
+    sha256 cellar: :any,                 x86_64_linux:      "34831d47c53142ca05d8f99c38b25079793775a1b3b4c430c97898174c92a93e"
   end
 
   depends_on "gradle" => :build

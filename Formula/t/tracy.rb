@@ -3,13 +3,16 @@ class Tracy < Formula
   homepage "https://tracy.nereid.pl/"
   # NOTE: Do not report issues with dependencies upstream as they only support
   # vendored dependencies, see https://github.com/wolfpld/tracy/issues/1079
-  url "https://github.com/wolfpld/tracy/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "bf4af567e9c7524d07f3caa745fad02fb33bd5694f11910750382d1efbb251c1"
+  url "https://github.com/wolfpld/tracy/archive/refs/tags/v0.15.0.tar.gz"
+  sha256 "3d57da54aa67d7875da1e8fecd0bd5957675cef73c27dd52bffb6ab8d290a5e6"
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "f50fef5f6b6cfc1abab9e0c871c776493a91328b2e42afa96716a3ac5dba9758"
+    sha256 cellar: :any, arm64_golden_gate: "6163cb10b3d30890fdfcb096ebe2a4994ffe936eecb4b0716365bf1331f13141"
+    sha256 cellar: :any, arm64_tahoe:       "a5dde636b3875485e2f329105a90682420d68643979da705226661dfe9579895"
+    sha256 cellar: :any, arm64_sequoia:     "ec2b049029e222e2518e17d00c1b53c8121aa2aed68adb32c88bf8b3cd45ff78"
+    sha256 cellar: :any, arm64_linux:       "7dc720e12f049686f0e10ef86b70bdecfa0e8599419320c82d9ae9a72c84514c"
+    sha256 cellar: :any, x86_64_linux:      "b99ed1057fb77eec27b71eb2324fa3eaaef0da96b83983c2fef0a3a3fefe8ffe"
   end
 
   depends_on "cmake" => :build
@@ -53,8 +56,8 @@ class Tracy < Formula
 
   resource "usearch" do
     url "https://github.com/unum-cloud/USearch.git",
-        tag:      "v2.26.0",
-        revision: "cc23bbaf21ef52313c5a495adbc40cbd733cdcfb"
+        tag:      "v2.26.4",
+        revision: "1e8a19253138510f35ee2c68dc641e5b5c83c7b5"
   end
 
   def install

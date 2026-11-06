@@ -10,6 +10,8 @@ class LibxmpLite < Formula
     sha256 cellar: :any, sequoia: "558b39bae6522a5d7762dba136a7ba1f66a39215e0876982b098412715c5212a"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", *std_configure_args
     system "make", "install"

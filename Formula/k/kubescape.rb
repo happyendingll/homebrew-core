@@ -3,8 +3,8 @@ class Kubescape < Formula
   homepage "https://kubescape.io"
   # Use GitHub repo URL because the version for the build will be automatically fetched from git.
   url "https://github.com/kubescape/kubescape.git",
-      tag:      "v4.0.18",
-      revision: "8a87f176953a0e18b0efb996a0a5aa0b78fe3ed6"
+      tag:      "v4.0.20",
+      revision: "ec65d3184f6bab7d1ad6e5db9d970d452316d253"
   license "Apache-2.0"
   head "https://github.com/kubescape/kubescape.git", branch: "master"
 
@@ -14,8 +14,11 @@ class Kubescape < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "f91346c03f1c67f72d627fe307226a5fe744b0c1a2a763e921915ca563c1dd67"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c7f7d514ffdb950ed24137c7cb93b76cc9d9a13a5eea6bd030b1a4c98349853c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1244b92d692e1959c714ff6e88bdb43ceca89d13f0a62959557eccb00125b67a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1410da902c954785690787a977e1367deed778d35188b6ce9f17c91e6afc2c24"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f4148709caf3f21befc07aa09706a583b8b8c8dc40d7123274330d6ddb16c9b8"
+    sha256 cellar: :any,                 x86_64_linux:      "b9dfd2351749d9e36fd8b3f66e711d8a2453b19e78582361fb724a2a7d6ed847"
   end
 
   depends_on "go" => :build

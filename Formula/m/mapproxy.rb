@@ -3,13 +3,16 @@ class Mapproxy < Formula
 
   desc "Accelerating web map proxy"
   homepage "https://mapproxy.org/"
-  url "https://files.pythonhosted.org/packages/6a/3d/dd28f28d917042ce4481a9751686c09a3f084c91d38d3f7e107e7e323f85/mapproxy-8.0.1.tar.gz"
-  sha256 "b4784d3a4a324d92582e0b1f484c6d0f32a221b9d7abb4613b3eec886a959b31"
+  url "https://files.pythonhosted.org/packages/e6/2b/819f7f4a7c779a0c36912f673b422e1f184b79d346d382eda8b23517035a/mapproxy-8.1.0.tar.gz"
+  sha256 "e490cbc85ea89655084b6778a7c5c7651c94b6726697712cd3d6a35f41eedc2a"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "295a3383bb684c740ebe369e320425ef5229c56293d76dbf273e9e312f8b122f"
+    sha256 cellar: :any, arm64_golden_gate: "f0ef13ebc75ce7b08c97452c2ae1fa2c53b263b27c5c1ac722c6259defdbd3d6"
+    sha256 cellar: :any, arm64_tahoe:       "6f6515113d84093cf861dfe9da400537be237db672947311446ca3db123f5924"
+    sha256 cellar: :any, arm64_sequoia:     "b6f40dc74753f20fff121c58fa2b8bbe0d7c886262d07983fe624662726a2675"
+    sha256 cellar: :any, arm64_linux:       "0b71d08eb32f4f34705dbc0805cd59ab09a6ab539dc2b1b28f663cc98a6f90fc"
+    sha256 cellar: :any, x86_64_linux:      "3e87bdde94a0e1c27756d8388a0ce719a05db124cf628066b47ab22e051c4014"
   end
 
   depends_on "pkgconf" => :build

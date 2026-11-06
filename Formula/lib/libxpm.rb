@@ -19,6 +19,8 @@ class Libxpm < Formula
     depends_on "gettext"
   end
 
+  deny_network_access!
+
   def install
     args = %W[
       --sysconfdir=#{etc}
@@ -44,6 +46,5 @@ class Libxpm < Formula
       }
     C
     system ENV.cc, "test.c"
-    assert_equal 0, $CHILD_STATUS.exitstatus
   end
 end

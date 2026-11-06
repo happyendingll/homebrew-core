@@ -1,15 +1,18 @@
 class Libplist < Formula
   desc "Library for Apple Binary- and XML-Property Lists"
   homepage "https://libimobiledevice.org/"
-  url "https://github.com/libimobiledevice/libplist/releases/download/2.8.0/libplist-2.8.0.tar.bz2"
-  sha256 "b1f59f7634c58b2481325a23ff4e3bf51574a42d868cbe466d2b39b04550752a"
+  url "https://github.com/libimobiledevice/libplist/releases/download/2.8.1/libplist-2.8.1.tar.bz2"
+  sha256 "2a1792e5820e1657c173735fde75baeebd6dd967d2ac47be1e3891ddc64ebefa"
   license "LGPL-2.1-or-later"
   compatibility_version 2
   head "https://github.com/libimobiledevice/libplist.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "fd91262bd5685d7963c7879f02f388356d6569c12ee98a5370c9b02ca526a103"
+    sha256 cellar: :any, arm64_golden_gate: "2321434c852fb7f232a377636d8ab168e546f720ea3628e695a05792065bf030"
+    sha256 cellar: :any, arm64_tahoe:       "6ff690a56dc4afd4aaf09d832a8ba64f7fc80ee6ecff64ad8b5673614ffaf3c8"
+    sha256 cellar: :any, arm64_sequoia:     "d88d984b12e68f8470e9f72631a4711df0f85b8728c53e6c04bf2956267e84cc"
+    sha256 cellar: :any, arm64_linux:       "3b79ee174bba2c391e206e86758a324b2e2fb3f9a6f366275075d5c4886ddb54"
+    sha256 cellar: :any, x86_64_linux:      "553bbd2e5b172dfcf89cd5a002e99a59ef0253ef933977ecab1d7dab2aaf2a93"
   end
 
   depends_on "autoconf" => :build

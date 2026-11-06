@@ -12,6 +12,8 @@ class Skalibs < Formula
     sha256 cellar: :any, sequoia: "5100090d403212835eedb55501417f51b63ede408fa15311af6d7f7e1ce71967"
   end
 
+  deny_network_access!
+
   def install
     args = %w[
       --disable-silent-rules

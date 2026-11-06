@@ -10,6 +10,8 @@ class Retry < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "7fb3f16b144918aeae325a30be4fddb78e3e957c39c80c3c194bf6ec810aa386"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"

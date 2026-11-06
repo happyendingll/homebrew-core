@@ -16,6 +16,8 @@ class Roswell < Formula
 
   uses_from_macos "curl"
 
+  allow_network_access! :test
+
   def install
     system "./bootstrap"
     system "./configure", "--disable-dependency-tracking",

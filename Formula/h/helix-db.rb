@@ -1,13 +1,16 @@
 class HelixDb < Formula
   desc "Open-source graph-vector database built from scratch in Rust"
   homepage "https://helix-db.com"
-  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.5.1.tar.gz"
-  sha256 "0b76b4a7afbdcd0385b3a18c78218fa8afb9e99d68d2d16618c09593e0819855"
+  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.6.1.tar.gz"
+  sha256 "d68e08f3f01c9e716ca66e870a03815a909f8b413e646a7c34454e4b82666122"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "c824ec2844521032fd58953aa923db6c0a7c2a69981785e791a30ac8504911e0"
+    sha256 arm64_golden_gate: "bd5888026880ef166ffa89bd1d03ce05824128ec21bd52f7d25b41d743bda044"
+    sha256 arm64_tahoe:       "8ed9db7e987e6a6750520f26300203d45a892d153a400eef6970bd65bb708288"
+    sha256 arm64_sequoia:     "19a11287997ea8b4770856b09d71b7efb42bd9e8e6840f7b8e93477d419f4897"
+    sha256 arm64_linux:       "1ed902899485bfc48f9da568eb2cfffa27f6c8be8c4c4f682ccf87ce29a487d8"
+    sha256 x86_64_linux:      "f4aecc9ccb00e4386fb1efed9e1339b0a9080fd44ce3e2eae9d3a2a32b442bcd"
   end
 
   depends_on "rust"
