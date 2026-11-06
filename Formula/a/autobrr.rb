@@ -7,11 +7,8 @@ class Autobrr < Formula
   head "https://github.com/autobrr/autobrr.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a01d7c9cbeb7690fdee4b4e5d8ddb15864bedde3f55ca9856fe8ce07e49f518d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9fbad8f39d7643559bb5311b492f84e876ffd4f1eb6b327ff85b36b201d3300b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd4beef31025a145b2c184593879faed1950f1febcd90037ba511a561436a8cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "380c1ab1ec9d6fde041fdfd78c3c98bb3f82337c840df2fce01c98832f7e10c3"
-    sha256 cellar: :any,                 x86_64_linux:      "338221eb4053853a930a13d8b9491c8261e5fa49d17988ae38dc65fc8dea4652"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "422ed4d6686d0629598973c8397632049ddf39a30aecedfeedea36c6539fe9d5"
   end
 
   depends_on "go" => :build

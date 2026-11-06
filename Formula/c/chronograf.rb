@@ -7,11 +7,8 @@ class Chronograf < Formula
   head "https://github.com/influxdata/chronograf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "888b6b9ee5f8545725cd44ffbd1296e067a3f69bdef1e0596d9db23be235f0cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a192fd1f374dfec43c00eda22fe215ac89f808973c8f88b6118a64555f8203db"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5e48d7b352285953ccbf99c1ff03de52465d2d41c68d45df7f5924a99f4f9fb3"
-    sha256 cellar: :any,                 arm64_linux:       "241b8e968d6d916f5800b191508f8aa8cccdf09581650803fe0b0335bc8e82c5"
-    sha256 cellar: :any,                 x86_64_linux:      "54fa7696c8a6b88a5d2fb6c3d56f5c8a2bae64ab2bd32f519878eb3d7f12b825"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "618d1af7916fc78d355aaf4e9722714b90de5ab1f9bfa48055d79f30cb9c1597"
   end
 
   depends_on "go" => :build

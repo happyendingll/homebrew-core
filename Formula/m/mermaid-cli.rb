@@ -6,11 +6,8 @@ class MermaidCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "a5b6816648c0c22bfb1f81cca48b6a32aaf736cd9c5744c3d58009f79d381ac5"
-    sha256 cellar: :any,                 arm64_tahoe:       "a5b6816648c0c22bfb1f81cca48b6a32aaf736cd9c5744c3d58009f79d381ac5"
-    sha256 cellar: :any,                 arm64_sequoia:     "a5b6816648c0c22bfb1f81cca48b6a32aaf736cd9c5744c3d58009f79d381ac5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5db5c3112b4d7289537303fccc21ef54afe1ba928e8c0ea10bfd6272143d7bf4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "26c2af00ff0c3cd74fd83cd61a7d6d9f23703148ed27884dfe7d305b7b5e1b5e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "d23fa3eae44a639e3bfbad6f585f81c31118899c82aee9e047803f16c4c3eeb5"
   end
 
   depends_on "node"

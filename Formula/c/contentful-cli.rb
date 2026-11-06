@@ -6,11 +6,8 @@ class ContentfulCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "eebf606c30412bbbf555108b60e4f068fbb63907b21f173ecab0941d2864ab10"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ad5d61c076e7c897986b9908fab54483bbb3add01943282c5e3ca38b7c6ec971"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "af99905e07bb7805350b1ea2c6d8d5a333a74c49fe25ca624362a121a9497729"
   end
 
   depends_on "node"

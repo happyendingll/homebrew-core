@@ -7,11 +7,8 @@ class Aoe < Formula
   head "https://github.com/agent-of-empires/agent-of-empires.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5fc8224003918129336956cd447ce63cfd39e471bdec86b4b9b85c8f517f71dc"
-    sha256 cellar: :any, arm64_tahoe:       "af214d64a08f27620bb198e79cf7df6f18b28e1e1a73589e5c51cadd5998fcf9"
-    sha256 cellar: :any, arm64_sequoia:     "c210b1d8c2bbcbf12fa715f0d07281522070118957e06361659decf0a5f1dac8"
-    sha256 cellar: :any, arm64_linux:       "24d25ed8e5a4ceee727d429a3992d81c4d8953856d224890a3079035ec200af8"
-    sha256 cellar: :any, x86_64_linux:      "7d9f324b01817b0ac83e6964927a625bd6821fa9808a9fb64b39066342413652"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "6f6ac886ddd020e3e9802fe4c992e4cdc81d2029b20ece79e14ee4d1875ce541"
   end
 
   depends_on "node" => :build

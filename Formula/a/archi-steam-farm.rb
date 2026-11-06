@@ -13,11 +13,8 @@ class ArchiSteamFarm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d6ea7d56b5af0b0fce8d6f2fb46e5de15d59ab70c71328ccc1e3e2d061c40644"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a8940d885045c8a585684277b77a47d098cc2d4cf9637f870a92c6daaeb1089"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5889d9110decf302f8abdef2e47f1435fadffc75b88aab1cc16bea025a783333"
-    sha256 cellar: :any,                 arm64_linux:       "986ea66238248fde511c81468606f976499247ba57f640d2db2082ef30c33f45"
-    sha256 cellar: :any,                 x86_64_linux:      "a299313ba33d333ced3c031c7382f9fd2b6f64a44b8a57dccc6145f86e4c9811"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e5ebadedbed2942aaff4a0327b23edffc7b7d1ebc87bc8d496551761a146a8d3"
   end
 
   depends_on "node" => :build

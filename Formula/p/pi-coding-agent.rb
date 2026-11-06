@@ -6,11 +6,8 @@ class PiCodingAgent < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b79365c6e5f6f7759afef72985778702a79258bcc53f9ef4b123b373b97d07f1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b79365c6e5f6f7759afef72985778702a79258bcc53f9ef4b123b373b97d07f1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b79365c6e5f6f7759afef72985778702a79258bcc53f9ef4b123b373b97d07f1"
-    sha256 cellar: :any,                 arm64_linux:       "37d6425bf131881d545b0fa0bb595cac46ecf4622296a105a1452054b6a1fa8d"
-    sha256 cellar: :any,                 x86_64_linux:      "dfc138a1d01c45d7a93f8d1488135f3c8d39082ee95d07e69af5f670ca9d2540"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "01ab8ac06dbf44ebcebbddcebb26a0b88ec9c7e1ea25ab44a3c17aba2d8573cf"
   end
 
   depends_on "node"

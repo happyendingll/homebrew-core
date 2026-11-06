@@ -7,11 +7,8 @@ class AklompBase64 < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fb7897d5b01015c1c822eb377386e05e86aa88e3245b4985b2bb8296b5fcb271"
-    sha256 cellar: :any, arm64_tahoe:       "e8e07afc04ee9eff70174ff6fd2e81c805974b13c4eedb39084ff64d87c1eb10"
-    sha256 cellar: :any, arm64_sequoia:     "adce7d96d07a299cb3709876646c4c440bae5e166ea839c2868b97f74d61b514"
-    sha256 cellar: :any, arm64_linux:       "8229597aebc6724dcf70356b58a7773b8f28ab4cd86d6e2428f0902d0de7c652"
-    sha256 cellar: :any, x86_64_linux:      "9ea23400ac7c9a9559c269efae189bc9c16a846bfe05f03865ef85e42adb2b2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "e9f8ba633cc99ec4a0357eec795a33788d19d5cabb133df9a3403448512527e3"
   end
 
   depends_on "cmake" => :build
