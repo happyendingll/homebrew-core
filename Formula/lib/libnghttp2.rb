@@ -15,11 +15,8 @@ class Libnghttp2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d9da888bfcca6b9e1cbf53b84d4664b02e12b38e04032fb985c7e4ff7068acb0"
-    sha256 cellar: :any, arm64_tahoe:       "b666811d826d75ddb25caf4ee321f54cb0a750e050b9857681c2b15538ee13f0"
-    sha256 cellar: :any, arm64_sequoia:     "88d1ab4c79c450318c8e65a3070578a533a11eff7dad6d3a4b79c580b0fbe6bb"
-    sha256 cellar: :any, arm64_linux:       "0f30d9054161da6b9b7b2506f8ea7ca7730a1297b8a0766126678ebee1c0873a"
-    sha256 cellar: :any, x86_64_linux:      "82b44983f47398ff3ebfe86e84d97e1bcb71916f93428c90bb95b7bb814b1671"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "35a0ce7c8e243e44749a6df2c510a85fc50fdfe03cf48d830a31edbf2b962d7e"
   end
 
   head do

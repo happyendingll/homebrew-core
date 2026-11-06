@@ -7,11 +7,8 @@ class Imgproxy < Formula
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0c1699dc2461e42f3b6166ca36c7523360c0c637502349fc6fe76363d107d12b"
-    sha256 cellar: :any, arm64_tahoe:       "4d4fa5e8671fae89543cf3e1c71994cfbb53db1425c5f983639a943fd3b4b6a9"
-    sha256 cellar: :any, arm64_sequoia:     "543aca782e2e9b0b6662c28b34440488de6acca733c3ed23d83646256fb4e5b6"
-    sha256 cellar: :any, arm64_linux:       "f8b727a4ec8c6ce6d77326a34b3be37284e223f0d377a9dc5c85077375f05bf6"
-    sha256 cellar: :any, x86_64_linux:      "0bde0d2fbde45d4bb05153cb7b9a8c9cc974008626e4802507bdec0d1888d5d4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "bf59779317d0491d3cf2482d462e080aeaeae7f805dee397686f00b579cddf6a"
   end
 
   depends_on "go" => :build

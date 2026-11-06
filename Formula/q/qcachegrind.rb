@@ -14,11 +14,8 @@ class Qcachegrind < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "32f7bcc3aff9fef716cfbd2c3f542f8d083146c2fd57bb464368d3a70e4969f0"
-    sha256 cellar: :any, arm64_tahoe:       "32f7bcc3aff9fef716cfbd2c3f542f8d083146c2fd57bb464368d3a70e4969f0"
-    sha256 cellar: :any, arm64_sequoia:     "dd2ed2415a76835a715ca4d7fa4f38644d436237408f56f090993497240554f7"
-    sha256 cellar: :any, arm64_linux:       "30498fdc5b6bb85217a9baff144cfdaeaf4e77f045b8590513f076e62b3b2cc6"
-    sha256 cellar: :any, x86_64_linux:      "1bc4cefef1457cc8651cbb64e63de2fd7b029e4bd9c72517ac47ae2d42ee6695"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "3932a105dc000eb5d689fa34919fa612c76e648461956e8fa1189cba7d111874"
   end
 
   depends_on "graphviz"

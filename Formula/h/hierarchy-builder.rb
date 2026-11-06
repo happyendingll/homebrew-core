@@ -13,11 +13,8 @@ class HierarchyBuilder < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e7dec7c7fe8aee017610f3d7b0f1b0450b57b8fa1324212f7d88d4f8cb58fe6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fa07ca332fff4891992c040a962dc1c7b04718fe50bca0b041800b9a2b6bd589"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a7b36f01e936928add68b8c217ca2680883827fd6f8b275aec6990730aae04fd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "244f078de9f5566fb1097f195cc71e3fbe63a9bb2f8f55dc669da982798dd6c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "088c56937f67fed88ad2fe71a986c637c43d0fffac6151252ebaacafd145a607"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "bfa3f0a6b51751820c0baf3f0e4bbc7d6e8937cb6fb3422bbb6eb7ffbf650795"
   end
 
   depends_on "rocq"

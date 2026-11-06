@@ -6,11 +6,8 @@ class Baresip < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_golden_gate: "6aeb7a185595ea5cc105d40e0d559a5a7d137d86435ecd284dea0ba1db14b28c"
-    sha256 arm64_tahoe:       "feac662a7fc29c3c36c9073d3f669431c1f5e75dadc0faea4b756b556f471a2e"
-    sha256 arm64_sequoia:     "dd7e8aa9e2af2334577138bf8454d55a1471b8dd16ff86ce0368c37e52ba97bc"
-    sha256 arm64_linux:       "623c9f507dbbee2de2cb7fa40ee73a71621d2f61ed4055a0a35f049afa7b7332"
-    sha256 x86_64_linux:      "5801193d47d068327a59d69fd1df41d7bbdd8013d94554daf531e4ec16e23bb6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "09cfa2396c69b45940594425d764f6ae2e8b43e8625f2aaebe94243bcee98331"
   end
 
   depends_on "cmake" => :build

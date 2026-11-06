@@ -13,11 +13,8 @@ class Qca < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ad641ecdad18785111bdb66b1b4640f9d0bb45ef4fca3aea611e9dbc6efce6d8"
-    sha256 cellar: :any, arm64_tahoe:       "fe698c5e4735687ade5f2e7c36fa498e7e94037f47463dcae03856a1fdd0d1e1"
-    sha256 cellar: :any, arm64_sequoia:     "4bc45847b84e7bf714d0482acb1f8aa5ad81089af94686907ad80bdf9e3f77a6"
-    sha256 cellar: :any, arm64_linux:       "79d42fc6eee4d323a65e4192d9acaafde89ada253f0bfe4337823b9b95842f21"
-    sha256 cellar: :any, x86_64_linux:      "0b94aa9d5c72f016cf02041e2b9118f8249a2b106a2035347b4e57536d86648a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0f8bf948f256405dc2107bf17a67a44e3ed8391aa22a2d084bfaf2b4135d77a3"
   end
 
   depends_on "cmake" => :build
