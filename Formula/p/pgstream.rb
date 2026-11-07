@@ -1,13 +1,16 @@
 class Pgstream < Formula
   desc "PostgreSQL replication with DDL changes"
   homepage "https://github.com/xataio/pgstream"
-  url "https://github.com/xataio/pgstream/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "910256b63eb68266cb734a1f5ef4ec253b51ecfd90d88d7c44daa225d8c361a9"
+  url "https://github.com/xataio/pgstream/archive/refs/tags/v1.6.0.tar.gz"
+  sha256 "4b9cf2c14d4f448b265bddf259da1ae79da58099e8257670bd47f7d225a821dd"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "4b05b9a8d2cb7845461f781890749d19e8075b9ec56b00b1d84e469d3343862f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5139df589f96fbe49a781be8b569d8c85a5df9c9e87dd10308ca12531a716c21"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cd224c8d9f73e2591b437eb30fe95bcb4ec7b29f9b5f43e5d5aa26268c48f357"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6f3de6d813c30c44a5aaf8bc9f63a3636ca0f23e77c556638de0599f8e5ca262"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e843e6bc1732ed662ed6d9b439e58326cd152140f1d7418559b63d9b2eb10b1b"
+    sha256 cellar: :any,                 x86_64_linux:      "67cfbf86f9c1128d3ba6d5f2ca90159c65ef0038e4b1cc78d8d83c58fde5c620"
   end
 
   depends_on "go" => :build

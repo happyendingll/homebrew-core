@@ -1,8 +1,8 @@
 class AwsLc < Formula
   desc "General-purpose cryptographic library"
   homepage "https://github.com/aws/aws-lc"
-  url "https://github.com/aws/aws-lc/archive/refs/tags/v5.12.0.tar.gz"
-  sha256 "52c7f98ffd296d267cc015ad4653d1ffae399db65b14421da4f5f7efc44becd2"
+  url "https://github.com/aws/aws-lc/archive/refs/tags/v5.13.0.tar.gz"
+  sha256 "36169f60b2fd0619d919ac2e76da6b7912262256b93908f5c702a4c1b6c9b110"
   license all_of: ["Apache-2.0", "ISC", "OpenSSL", "MIT", "BSD-3-Clause"]
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class AwsLc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "b7ee9f2a28464d4afdb5a2c8b44d9eebee17dbd20b77ae0fce9456a17fca9596"
+    sha256 cellar: :any, arm64_golden_gate: "b235a7ce713b0c3d04a9ae8c9c84a44af45136e1ece2e40b5f197e04ee4e3587"
+    sha256 cellar: :any, arm64_tahoe:       "4fda303ca143b825a69303dd849d05aab1a29948bcd41301bee8e18dc535e207"
+    sha256 cellar: :any, arm64_sequoia:     "21680ef59b05047c4baa7a0edfcba968b9af225875c45cbfdf8dbd4597fbc83c"
+    sha256 cellar: :any, arm64_linux:       "82dbc7c5b587d29317ad55694fb2e3805c305ca86f00d00fea8c85aa314031f8"
+    sha256 cellar: :any, x86_64_linux:      "caa3828b5ba74869badbb85b1de42921a81c1e49f2618ecebad1e9b6a643fcb6"
   end
 
   depends_on "bindgen" => :build

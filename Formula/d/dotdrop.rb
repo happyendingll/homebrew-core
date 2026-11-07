@@ -3,14 +3,17 @@ class Dotdrop < Formula
 
   desc "Save your dotfiles once, deploy them everywhere"
   homepage "https://github.com/deadc0de6/dotdrop"
-  url "https://files.pythonhosted.org/packages/8e/3f/962230bc52799b870d9723d51e77f1094720334e6bc4c8d1355f7bcd87ce/dotdrop-1.18.0.tar.gz"
-  sha256 "287ea0ed88e640bd080ac8dbc4f80d2260aee0feebb18389c6f10a5e2e3583fe"
+  url "https://files.pythonhosted.org/packages/83/3e/40a80275b92adddbe00789968699ddc02506341250d54dafa2ba7ea843b2/dotdrop-1.18.1.tar.gz"
+  sha256 "20d3f0101725fa55a89738d0c2a0a1c1633bf5526efa479a037a74b2c6fc0fcc"
   license "GPL-3.0-or-later"
   head "https://github.com/deadc0de6/dotdrop.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "9c84cd0c62c37abe358169474f9cf06f7f36b24d6ef7131b524869ceb3047c1b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "286c4f1409ac2509c5e0349772004c657a932198a649eef9f46d2ea0fd2f28ab"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8be07f530f1768c0fa602b353f20fc4955ca40097c6eb0f59909aa675bd48ec"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b5f3c93cf249479b22d4d716aa59a19ddcc1ad4a256d7c7f32f8b413900499a0"
+    sha256 cellar: :any,                 arm64_linux:       "6f3ce14a4da43ebafb40e6334a039ccfb675b35b87b49a00279776a0bf4169bc"
+    sha256 cellar: :any,                 x86_64_linux:      "dc661f03dc3b6bed8de7085dc7935326857f90bf255a8e7762790ab0d536839f"
   end
 
   depends_on "certifi" => :no_linkage

@@ -1,14 +1,17 @@
 class Getparty < Formula
   desc "Multi-part HTTP download manager"
   homepage "https://github.com/vbauerster/getparty"
-  url "https://github.com/vbauerster/getparty/archive/refs/tags/v1.28.3.tar.gz"
-  sha256 "ab12d1eaad86477370a93b1cdca8ab5e4ff8465b364374d2786a8cc700d710c0"
+  url "https://github.com/vbauerster/getparty/archive/refs/tags/v1.29.0.tar.gz"
+  sha256 "37906bd07ac29776699e4ecc0e5e7192744ae13ad19a35b0ed956b0893f4589b"
   license "BSD-3-Clause"
   head "https://github.com/vbauerster/getparty.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "5dca1cd1dcf4df500dd9db96d92f5ca6db3a64682b1df9473414c277c5b9c6e1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f8e727cb597ad932cc1fa20df63d85282b0e319e957272fd54c742c0eafcdc9b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f8e727cb597ad932cc1fa20df63d85282b0e319e957272fd54c742c0eafcdc9b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f8e727cb597ad932cc1fa20df63d85282b0e319e957272fd54c742c0eafcdc9b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dd4531594ed531ee84d30f35e6f2395e5710631916fd67feb6ac6691e1912ba9"
+    sha256 cellar: :any,                 x86_64_linux:      "35ec27e71dfe8a968ea56e3c28bae462a489badd816b75d483bdc0da731dd227"
   end
 
   depends_on "go" => :build

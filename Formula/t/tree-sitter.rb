@@ -1,8 +1,8 @@
 class TreeSitter < Formula
   desc "Incremental parsing library"
   homepage "https://tree-sitter.github.io/"
-  url "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.27.1.tar.gz"
-  sha256 "982cd3d4d9eb7be18c243240a622423fd2e4ecb4bec2cd98832c2f3fa1f0f333"
+  url "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.27.2.tar.gz"
+  sha256 "356528363bf7fbad12a2cfeb5a2678c0118ef886a4d69ad9a379db5fdef0735f"
   license "MIT"
   compatibility_version 2
   head "https://github.com/tree-sitter/tree-sitter.git", branch: "master"
@@ -13,8 +13,11 @@ class TreeSitter < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "55c601156613fa7861ed716b2b5ad17c88b9ab63b4ed78980614978d133f8b13"
+    sha256 cellar: :any, arm64_golden_gate: "a56600a706f2c5cbd1cc811029afb05d976af675f91a454b2835f8b2841753d4"
+    sha256 cellar: :any, arm64_tahoe:       "3a04a0fb2dec9b4634f4ac6f09d5000474e11b50ee5cf6636d4dc8e1f401591a"
+    sha256 cellar: :any, arm64_sequoia:     "8b0045cadd30ba785fcdad8c1f564ce31c9444541ff30e89d19291d4e90b65f5"
+    sha256 cellar: :any, arm64_linux:       "758ad0ad98758c01de97c9693222cea8f35d7570df61a31c68ae93407dfc2f97"
+    sha256 cellar: :any, x86_64_linux:      "ab4f10258eee1386d710007809acd397d8e7d34e0e5485897c5ab0b285613887"
   end
 
   deny_network_access!

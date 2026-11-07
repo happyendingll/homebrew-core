@@ -4,12 +4,11 @@ class CoreLightning < Formula
   desc "Lightning Network implementation focusing on spec compliance and performance"
   homepage "https://github.com/ElementsProject/lightning"
   license "MIT"
-  revision 1
   head "https://github.com/ElementsProject/lightning.git", branch: "master"
 
   stable do
-    url "https://github.com/ElementsProject/lightning/releases/download/v26.06.9/clightning-v26.06.9.zip"
-    sha256 "ac37b1b6c41b6c60cf06dd8cd7500f1fab04411cf2f3bc126838d8cafab4538d"
+    url "https://github.com/ElementsProject/lightning/releases/download/v26.06.10/clightning-v26.06.10.zip"
+    sha256 "4914561e6d108dacca0183d7e6b3b1c224c580597ddcbb397299ef5b0fcc3230"
 
     patch do
       url "https://github.com/ElementsProject/lightning/commit/d384750883216e7e19e01779d06bc36295380296.patch?full_index=1"
@@ -40,8 +39,11 @@ class CoreLightning < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "03300989b42ee318d162987c01db6903098f4655f299f52ca912ffdfa27e5077"
+    sha256 arm64_golden_gate: "d8a15513f0a04638918fca293bf6080f7c130a86803155b2f4e5d7f33e219e11"
+    sha256 arm64_tahoe:       "094f13975c8d7e0885bb4322b046f4e9bacbd34fe92c7b70183144d2cd3e16d2"
+    sha256 arm64_sequoia:     "b33c331289541f19780acee7ed3a24f126ecbb3cf98bb0f6ce355d9abe9adda2"
+    sha256 arm64_linux:       "1dcddd11ec8a7a7618450e4c9e236db840f8393b8bdead017833f7e4bc4596a9"
+    sha256 x86_64_linux:      "4a2f8973aa9a54164460edab4c965bae12f2c03a9ef9d14ba9da84ab2651f27e"
   end
 
   depends_on "autoconf" => :build
@@ -91,9 +93,11 @@ class CoreLightning < Formula
     venv = virtualenv_create(buildpath/"venv", python3)
     venv.pip_install resources
     ENV.prepend_path "PATH", venv.root/"bin"
+    ENV["PYTHON"] = python3
     ENV.prepend_path "PATH", formula_opt_libexec("gnu-sed")/"gnubin" if OS.mac?
 
-    system "./configure", "--prefix=#{prefix}"
+    # Avoid `uv run` syncing the workspace, whose test deps lack wheels for our Python
+    system "./configure", "--prefix=#{prefix}", "PYTEST="
     system "make", "install"
 
     rm_r Dir["#{bin}/*.dSYM"]

@@ -2,14 +2,17 @@ class Ejdb < Formula
   desc "Embeddable JSON Database engine C11 library"
   homepage "https://ejdb.org"
   url "https://github.com/Softmotions/ejdb.git",
-      tag:      "v2.97",
-      revision: "0e3969755d934a16f13192afed803040bdd456e4"
+      tag:      "v2.98",
+      revision: "d4c75c48f2bbd685b5d92c4f25a0f0318a10cb1a"
   license "MIT"
   head "https://github.com/Softmotions/ejdb.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "247c6bc7b340cfb7be7b6019fabe2d3e7edba68936c5bf6a007b98593e0b2fc8"
+    sha256 cellar: :any, arm64_golden_gate: "13cbefe006aaef3709339b570aedade88ecf33114cce9ac48d5917e226700ccf"
+    sha256 cellar: :any, arm64_tahoe:       "14f22210d739c885db397e6badc374ed565e09b55420609fa4a1b0f8516b6700"
+    sha256 cellar: :any, arm64_sequoia:     "e9c1b3794e4905f1bd2b99ccaa75bdb9d1408745046ea62ca6fdae72d83d2c00"
+    sha256 cellar: :any, arm64_linux:       "dd2dd6fd181191b87d3f9acbfc0e80baca9daf4708d59e1fc301f33caf793b3e"
+    sha256 cellar: :any, x86_64_linux:      "0a9a8eb9961aca37ae0c974c98b9155e617afd894a2b2c805eb9b67255c90196"
   end
 
   depends_on "pkgconf" => :build
@@ -23,8 +26,8 @@ class Ejdb < Formula
   end
 
   resource "iwnet" do
-    url "https://github.com/Softmotions/iwnet/archive/refs/tags/v1.5.0.tar.gz"
-    sha256 "41ed9ae58dc11d0aa719c9e39521bf1b9c6aa2590490f8e423517d0c1a85781a"
+    url "https://github.com/Softmotions/iwnet/archive/refs/tags/v1.6.0.tar.gz"
+    sha256 "f7acd2625f3327bb854c8eae199ac59d9816f9678f3f4b3712b818231ae1185c"
 
     livecheck do
       url "https://raw.githubusercontent.com/Softmotions/ejdb/refs/tags/v#{LATEST_VERSION}/Autark"

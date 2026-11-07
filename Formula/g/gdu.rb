@@ -1,14 +1,17 @@
 class Gdu < Formula
   desc "Disk usage analyzer with console interface written in Go"
   homepage "https://github.com/dundee/gdu"
-  url "https://github.com/dundee/gdu/archive/refs/tags/v5.38.0.tar.gz"
-  sha256 "44589852e4b1a82fc766182f654e4269d469ec2f9a9f2755a72a7991a5a5ac37"
+  url "https://github.com/dundee/gdu/archive/refs/tags/v5.39.0.tar.gz"
+  sha256 "1ee1bfacb8771ba8bf094f0f8be31f2749066882a2f1f73360c664d82bba6e4a"
   license "MIT"
   head "https://github.com/dundee/gdu.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "fd47ad3154b87dcb93f2b5552ab4046fb60b7edea125c982913930a28b07ec8e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48e974ae1efdb197a2232ff9879859ca3ea1f73ec6736e0c9f523bea7b53d224"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a71f9a0640f01accaa779fa9242b633b02fd0e6a78a551db5f33f798cbff9113"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d124525e284fa7b4a2a989a8f468d19ca3b0625bd3b2daa58f661d937cf2c4aa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9e5878757751a19aa6e4de5bec0ea56280d1ea1e3b6523621a441c2f3d5b6070"
+    sha256 cellar: :any,                 x86_64_linux:      "356a1154ad93d39bee4c4c67abc18fe5011bf7a216299ea2767c54266715ceaa"
   end
 
   depends_on "go" => :build

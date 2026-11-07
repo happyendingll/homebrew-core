@@ -1,13 +1,16 @@
 class LettaCode < Formula
   desc "Memory-first coding agent"
   homepage "https://docs.letta.com/letta-code"
-  url "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-0.34.41.tgz"
-  sha256 "7b91aab56c08463b6cb283ab4bb78b69f8fd48f72857cb87b172c50aa6138e33"
+  url "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-0.34.42.tgz"
+  sha256 "d147f8b6505016aa229ecd39f6a4eaae233a60a8e29046302fcb61a957e0d8ab"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "1ec63eeff7b0d6d7d38253f542192f350b0240e0b7bed2a284abbfa4f8016c0d"
+    sha256               arm64_golden_gate: "ef5716860e63077c2cbae3a3fd056ebafc465263c106b8c6528b8dd4bb18f8f4"
+    sha256               arm64_tahoe:       "aa16c2c9da85c657b2c72cd27c70a27c34710964ed81f3b265a196f24698a902"
+    sha256               arm64_sequoia:     "6854e1e1b531f91498e320fd0beaf5a91c304f74972419bf2fd081f8023a6d70"
+    sha256 cellar: :any, arm64_linux:       "4ca2b37f5b6c1161d66c2ff560450bc7bac23ccf433fe3531cd56baba36f4889"
+    sha256 cellar: :any, x86_64_linux:      "03d535ee2eeefe75ab3a7c428467a443877bbd0cb12ec20d190956caed5821d2"
   end
 
   depends_on "pkgconf" => :build

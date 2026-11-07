@@ -1,14 +1,17 @@
 class Weechat < Formula
   desc "Extensible IRC client"
   homepage "https://weechat.org/"
-  url "https://weechat.org/files/src/weechat-4.10.2.tar.xz"
-  sha256 "6fcd05f350c808a4206d6951af36a9eec11b145b6a1a2a8a2b29dd3502e07022"
+  url "https://weechat.org/files/src/weechat-4.10.3.tar.xz"
+  sha256 "a5bf6d57fd8b45ac663b8cac6642ebe89dfa0365d2a00fdf3953f0e2d84dce29"
   license "GPL-3.0-or-later"
   head "https://github.com/weechat/weechat.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "f450ec6dfffab711d08c6ee10904ff0409360001b01314fbf3edb16c799ad585"
+    sha256 arm64_golden_gate: "4795b25ff7a7683b9ee8b9737f430ac0823fa57aedd6cc5519c9ed74bb9f3694"
+    sha256 arm64_tahoe:       "f87c20db5c4d6e0d2be56bc291e0107b33c20a9b69a0510f368b75b882861953"
+    sha256 arm64_sequoia:     "6dbd3dfd87177403d6444006c7297980721865d2b3b6d0bb3007ea86634a92d4"
+    sha256 arm64_linux:       "15c883cf181283667296c2f07e539434dee072b07ef2bd0ed01902e8c7b277d1"
+    sha256 x86_64_linux:      "51bd0eeeef69283a25683d806a07769619c67becae89e7a5d62403c4e03feb70"
   end
 
   depends_on "asciidoctor" => :build

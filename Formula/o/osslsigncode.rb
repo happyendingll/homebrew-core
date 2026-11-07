@@ -1,14 +1,16 @@
 class Osslsigncode < Formula
   desc "OpenSSL based Authenticode signing for PE/MSI/Java CAB files"
   homepage "https://github.com/mtrojnar/osslsigncode"
-  url "https://github.com/mtrojnar/osslsigncode/archive/refs/tags/2.14.tar.gz"
-  sha256 "0f033fd6069387d2e489fbd2187e62f624764eb8c2758ee94e3e793e5150b5c5"
+  url "https://github.com/mtrojnar/osslsigncode/archive/refs/tags/2.15.tar.gz"
+  sha256 "799e708fca0bcbd2e10ff61e9d7b8f04e1d2a558e118717b459206ede17b0046"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "3948c11832f73f7ad91e56a6a81325b19c2c3b6455f5532fb509966f81df5518"
+    sha256 cellar: :any, arm64_golden_gate: "4cfbedffb917025ea1dcc5aecc8d3fd25e1e8a32bc580f3b82284343ddb14b63"
+    sha256 cellar: :any, arm64_tahoe:       "036ef921d91718e80760d34494c6b1263c1685121d85d17ebd46c00f06d4c228"
+    sha256 cellar: :any, arm64_sequoia:     "60a8ab9d41b2579e685442c8d22f6cbde6c4a2fce6e3f07dfb2387eb0e4f2237"
+    sha256 cellar: :any, arm64_linux:       "48310ddfdf8c93fae163eb2c35ce536f304cdf43a79c0bd995da0663542af1ec"
+    sha256 cellar: :any, x86_64_linux:      "5ff48de5b0ea0c4551b9b1b76b42fa344c0de15d7a5ce3f32f911a97c46e07e6"
   end
 
   depends_on "cmake" => :build
