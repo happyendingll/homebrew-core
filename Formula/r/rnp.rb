@@ -13,11 +13,8 @@ class Rnp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "daafa7c464a3339103e4643094028c08a9a6443a21bd0887d64da2d656e5094d"
-    sha256 cellar: :any, arm64_tahoe:       "4964361b5ed77d10a016384d47afbfee1e2e7542221346c6584689ac693a7266"
-    sha256 cellar: :any, arm64_sequoia:     "3fab1d7a26b52b094c17977ca50cc3961ab725ad281488a0250adbe4b3da2c4e"
-    sha256 cellar: :any, arm64_linux:       "75be327927324dd1cf42f2afcab1109fdae77691a8f85d272b11b0867cf94a87"
-    sha256 cellar: :any, x86_64_linux:      "118f0e30273e9a3d157d4faa295a7d8529a9d6c0dfb4aff72569584548843326"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "50322dc397d652dd749d5ed146fcf35b14a9da205e065a2cb2473cc14c42a496"
   end
 
   depends_on "cmake" => :build

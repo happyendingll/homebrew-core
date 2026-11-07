@@ -13,11 +13,8 @@ class Chuck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "149f6fe10c4f133fa16ec756fd186abfd15c50a03398722e74669979cfc5f1cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a664c0fecf1dc40ab6f619e059ed14a670fb5b1a50576a8ed0a3bc077877e00"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff275e1d82d708ea475783ebc541d9e1c6be6d834bc97aba682e8ff57f1d0c9f"
-    sha256 cellar: :any,                 arm64_linux:       "957e3c72739883c8fa5cb8b52c25ba7f5b016d557bd204ccf01e06db7279cf8c"
-    sha256 cellar: :any,                 x86_64_linux:      "2896e86057d198488191634fae660befd6d66027e9a1c404dceaa2305142e638"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1125bb4817f2ec7cbb68818031cf269acca21654ac60ce3d21592696716e9d6"
   end
 
   uses_from_macos "bison" => :build

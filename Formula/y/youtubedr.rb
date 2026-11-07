@@ -6,11 +6,8 @@ class Youtubedr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a93213c7ef9a5be5a30e90094425325909dd78f120749057426dda4ddd784563"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a93213c7ef9a5be5a30e90094425325909dd78f120749057426dda4ddd784563"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a93213c7ef9a5be5a30e90094425325909dd78f120749057426dda4ddd784563"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "725d4c537634a584f3f724f0b6dceb93d1f7e7fd7f36aa7fe30de17322ac5a22"
-    sha256 cellar: :any,                 x86_64_linux:      "87b06787fcbf1b1f7ab94ba4be809ca6b976e7d9bd871c8022114e48602f0e91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "645b2731831d4152e70bb2ddd7b4ea5f181def238a20791921368ba6f0666fce"
   end
 
   depends_on "go" => :build

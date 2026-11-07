@@ -7,12 +7,8 @@ class Xq < Formula
   head "https://github.com/sibprogrammer/xq.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ddab1a3e2afd9fd8b9ea33bd1244b04f4892f3ffd4223cf98942ca6ee941e1a9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ddab1a3e2afd9fd8b9ea33bd1244b04f4892f3ffd4223cf98942ca6ee941e1a9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ddab1a3e2afd9fd8b9ea33bd1244b04f4892f3ffd4223cf98942ca6ee941e1a9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fe042f3ec87d8d1e08e9a0a38f6f4899a05e034a3810d2e24434939cc380e8b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "7d52f7273c52658a5048ee471d8194bf82db1abe201b111b22195beee744a1cc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "80a69da85ee607279d1337c51a7abb976ec4951de8f9e71c9fdac5101033eb08"
   end
 
   depends_on "go" => :build

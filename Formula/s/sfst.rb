@@ -11,11 +11,8 @@ class Sfst < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "828d946db1ca69de2021906c808d18ed41b2e8c384446a0c9b39befcc42c0a7b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7a99c2a6f971ef8282e2196127b4a5b13415caa66df89cf5d5b2ff586a7bf2dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f55745637948632398775bb967e65e61faf24c7d25edaefd72c1cdb3694358a3"
-    sha256 cellar: :any,                 arm64_linux:       "552fcbc9c57add1cfdce7141e78f0ffb2440f2a1746ca5690637a3eb267152e3"
-    sha256 cellar: :any,                 x86_64_linux:      "74c16885b11c5961fe0c91ab7e314a1345fd9eea050100d95ac993f122ff9151"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0abc256e130acb8a37467ef4bf829b6c242fe5a65e26a7effb0c198e5b949b1e"
   end
 
   uses_from_macos "flex" => :build

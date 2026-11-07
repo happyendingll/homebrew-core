@@ -8,11 +8,8 @@ class Kubevela < Formula
   head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9ffd54135fa6fe6559de26f27bdc9a6359762a3589429a2bf90a55ca6b60c12c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9ffd54135fa6fe6559de26f27bdc9a6359762a3589429a2bf90a55ca6b60c12c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9ffd54135fa6fe6559de26f27bdc9a6359762a3589429a2bf90a55ca6b60c12c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "66fc7077f89a6d81b8807a80ef3a7d81ae28336fd465b981bc09ba244c291958"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c23706aade08b2dff6ceb27f2bab88d422b5971a008fcfc017a255a0c3e5490a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0d26f48569bb962532c830beb2eb09ae4503e5ac68e4d39c888fd9abe8b835d6"
   end
 
   depends_on "go" => :build

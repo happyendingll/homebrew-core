@@ -11,11 +11,8 @@ class Minizip < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "352533eca1a73f183aea5b82f3376a23efe5b0680a548393e7a36d107d26cd12"
-    sha256 cellar: :any, arm64_tahoe:       "cd8f7d8f6cf58ff023a0c24e03d7bc2e86284ede0ad9eb8867b3f2a4dea42d90"
-    sha256 cellar: :any, arm64_sequoia:     "e95a683f6693bbbd59053fa40d6f76779beffeadc1e68655dffb198ecd8fd596"
-    sha256 cellar: :any, arm64_linux:       "55879120ad4310d441832143c7b96f40818ed84fc4e6ee0931dd3cb3f7cf76a8"
-    sha256 cellar: :any, x86_64_linux:      "8f0441b4063253ff5e8e8ca06ea44756358013fd9f2c6f5fe952fcbae78ed4af"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6a043fe2827b209e227a10b95764b31ef785c058e678dc1e4441cbb6455a794e"
   end
 
   depends_on "autoconf" => :build

@@ -7,11 +7,8 @@ class Kubecm < Formula
   head "https://github.com/sunny0826/kubecm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "29c168a553c3504bb4389284cb38536b772eb80ad969d2f584eaf8b821686466"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29c168a553c3504bb4389284cb38536b772eb80ad969d2f584eaf8b821686466"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "29c168a553c3504bb4389284cb38536b772eb80ad969d2f584eaf8b821686466"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "66efde356eb0be1587f763c9646afd315d04721cc9437eb395e4da35edb89910"
-    sha256 cellar: :any,                 x86_64_linux:      "d5eb5aa29bd3bbedbdfb9ef0876160a6690ed49ecdcf39e15d8f9e41acd3b4dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e2f03a784d3ff052612164f9fc6f74c01a3aa344a831005caa4aff9f3abfc9ae"
   end
 
   depends_on "go" => :build

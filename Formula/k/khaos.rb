@@ -7,11 +7,8 @@ class Khaos < Formula
   head "https://github.com/aleksandarskrbic/khaos.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07f11323be4b199f7ab4a1319208f0ab8fef48e90d46b9c654108782ffb99693"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f94523ade8c0afe24d1dfc52eccf61a8bc88712af8e7e7f9a058fb2ed658b00f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5284f8e70c84cabc67b553c108c08d0c114e238229bd86a9f876ec76a299241c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "159ca52eef00a0e681278a06614586260c86b520ceacbcad85594ead02e19126"
-    sha256 cellar: :any,                 x86_64_linux:      "b87868864e9bc82ad8487c9fd9236b704af045c6d82d24c2127bcf9956f4fb1e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3f401abb4dd766d9f5686f7b736d18cb540bc037a6eee1b50f8859e210afc891"
   end
 
   depends_on "go" => :build

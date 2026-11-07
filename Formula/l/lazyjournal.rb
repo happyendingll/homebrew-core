@@ -7,11 +7,8 @@ class Lazyjournal < Formula
   head "https://github.com/Lifailon/lazyjournal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4365fb59a59ca1f164f0215b21f2e109391a15f35e03cdf8ef26352cc0f74aee"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4365fb59a59ca1f164f0215b21f2e109391a15f35e03cdf8ef26352cc0f74aee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4365fb59a59ca1f164f0215b21f2e109391a15f35e03cdf8ef26352cc0f74aee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dbbf72aa6f151435b2d4d2910e089db72e250009734f9c986d4d7e43a29b3257"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d6fe8c9f15f435d270125e4ee021e4706080bc606efa7c74a3fccc076a716ebb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c487a549387222fb1b3a6b15a5d344ba5814e078a9a986b61d277e8b4db278be"
   end
 
   depends_on "go" => :build

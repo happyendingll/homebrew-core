@@ -12,11 +12,8 @@ class DirectxHeaders < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "df985a8e398ab2eff82216f3398b198782a5872d9f7ee3c7e06a1573e5c1a844"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a993ad2876bd75505e5c898932fa5e8bc24b5fa40345c29aadecf97d45837ff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d8da6b81e074e277d2ecd8d648851b0c6bbda92f04296fd957651ee49b479560"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1d9e99a6a11157107649ea1950c0680303a8f9e07ae482a9c417f8ed71b6b3cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "55e5d1cb9d19e8ff3398520b70c9ccc0117c3f46a7622a4659548e16d3fb446d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "576ae4fce00dc6b5a20fb7fa563e3cd1897832049a0a57a28a78b41338e498c4"
   end
 
   depends_on "meson" => :build

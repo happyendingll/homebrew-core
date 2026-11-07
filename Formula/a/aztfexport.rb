@@ -8,11 +8,8 @@ class Aztfexport < Formula
   head "https://github.com/Azure/aztfexport.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9abbe5c279bfd4a7e413de5d2137d1d7d3ce229e4386c518227e82ef916b3482"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9abbe5c279bfd4a7e413de5d2137d1d7d3ce229e4386c518227e82ef916b3482"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9abbe5c279bfd4a7e413de5d2137d1d7d3ce229e4386c518227e82ef916b3482"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a7af68f8606ccf0e8bca9263953dd33ae11a8a9e60332c6ee0910049a9948602"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "61c57b219070a58188815db21fe3792f0351bb7008b5e9eec03a4f68258df5c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "268f4627f88825e7677318b64710da98db5dce5b673c8e1d55508a26933fad97"
   end
 
   depends_on "go" => :build

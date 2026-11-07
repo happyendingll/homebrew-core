@@ -7,11 +7,8 @@ class Flecs < Formula
   head "https://github.com/SanderMertens/flecs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b6b3139b50c2923791debf442e03f5e8e05cb7b98103f65a609774e7e2cb9f03"
-    sha256 cellar: :any, arm64_tahoe:       "60d7e71aab61edc9ffa1bbd42fe91485903d39ed5e2911551b56ac5fe89c8114"
-    sha256 cellar: :any, arm64_sequoia:     "ee69c0ad9864e7773abfa164c62d1d0ae15ad5c952d61dc8220bdd7508180eef"
-    sha256 cellar: :any, arm64_linux:       "924377d3cb006e1b958e1d0c5f9ce65fc818ad96fb55efb2965dedfb0f145e7f"
-    sha256 cellar: :any, x86_64_linux:      "1ba10dff84a61f9033f40d0c6e598607d95938db6927b562a6af8bc9f2ad2ad4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "96ca4794c9f2695d361608add8f94007daa33e47e23f5e4d94754ae4e88f7006"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -6,11 +6,8 @@ class MercuryCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f3f9c48d1dcb5c8bd6e4e44885df4c55dbaa21d323a9148942c0b7fde418bdc7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f3f9c48d1dcb5c8bd6e4e44885df4c55dbaa21d323a9148942c0b7fde418bdc7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f3f9c48d1dcb5c8bd6e4e44885df4c55dbaa21d323a9148942c0b7fde418bdc7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "34e9e80db88bdb4ca946ae8d292bdb4ca4f8cc1420f94736af2fff8eb4211c14"
-    sha256 cellar: :any,                 x86_64_linux:      "e7ff733a24308521840b1343cee27319d458fe6e677af9c0ce78fcadd9e3a8a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d197de46195f0a556ed3cac453fe28df4b78828b20b0b1187c49fafe58292c93"
   end
 
   depends_on "go" => :build

@@ -16,11 +16,8 @@ class Nelm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8b60070aeb6511c1b770f9423ad1552b81fca17caeed0b1b9ce78b865f3cb986"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6fd7b084b67f4c4301b281dfab184d8722c2cb2576ff7c675edc23a9f61c5e46"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "24f04543f9acde2c83aab15192ca5e2c5aef65940cac856a8547809d9bdae32a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "74235cb36f44f5c8ad0a943fcfa98493f3d7bda6c252ff635bb865840d916cec"
-    sha256 cellar: :any,                 x86_64_linux:      "bac4ab1646fd95abd678f5d35592be8cb0e7846e8061ae37a0eb1357b845909d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a5bac0fc9585f6f78e50127da371435698d301be46f42d6b2e81918e81a7aa57"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class Highlight < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "25ab003f609075f3f80cde8c4481bc5f7df7ed066a99dbb315224abf7e361d01"
-    sha256 arm64_tahoe:       "9be8d982574fd2c34401e23df2392694cac7992cd009b92020989606447ca847"
-    sha256 arm64_sequoia:     "d345dcaea7b36d45d79c8ab4fcc34498b35ce8c76467a9375ba82316eb43fb90"
-    sha256 arm64_linux:       "d81a2bbf7459b90755304393e4f59ba66306afaf9420e872c39b51be5d5d1cf9"
-    sha256 x86_64_linux:      "d11a85f2bf2aeadbfdc260f770858285234444bb9123206d4daaf460a868274d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "615bffbe70583f52e40c6d4b7ee61a972b43ebec986d8aac40699dffd8135f81"
   end
 
   depends_on "boost" => :build

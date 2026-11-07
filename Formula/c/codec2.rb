@@ -20,12 +20,8 @@ class Codec2 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "ab0628f64e6690a8fe3d8a0de9920fd4bcd4946b33789eaa2cff468605a20805"
-    sha256 cellar: :any, arm64_tahoe:       "308f2acfaed2fc56992a4764a2aabc09a2d82148597e31449f3b56243b8fcca2"
-    sha256 cellar: :any, arm64_sequoia:     "95c3aca8f5f5d196313b21b8b888783754f6ec51f4b82a00b9016505a5686cf4"
-    sha256 cellar: :any, arm64_linux:       "b09a64a679ce1d1de6c7c07efc418970f11d15653b7785947bfb107091988cc3"
-    sha256 cellar: :any, x86_64_linux:      "dcc7730264fac89b75815621a6b8d97d8d3dfdf7576382c930e5631f3a1cde90"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "aba3d4f5d94951c1ead9524a5145e8941cb820e3f25daa461808578b64b04bb6"
   end
 
   depends_on "cmake" => :build

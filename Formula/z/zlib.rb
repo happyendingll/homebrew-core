@@ -14,11 +14,8 @@ class Zlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4fce88358803cd0dfdcc14e2afaf932af2a6a63927c197029e36bf13a072b002"
-    sha256 cellar: :any, arm64_tahoe:       "af30c0eda23564e812e00202ef7ae256584016dcbb0b88afb1120e768224de87"
-    sha256 cellar: :any, arm64_sequoia:     "89a6f0a9841c9d3b38fd8733bd905fe2f2b218f803c77c7043a6116dd9f3b037"
-    sha256 cellar: :any, arm64_linux:       "49e4dcb67cdd2c48deebe117d4cd1507641535d94f309e268b9e0e2ae9bf7a04"
-    sha256 cellar: :any, x86_64_linux:      "b3eb31f74b7bdd08a084eef995399d27553b97f9639aa59eb525c402db67becc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "738ba9b79f12c3041caa917d8e9f447c04d059f0e91e902c310b25ae59e4f138"
   end
 
   keg_only :provided_by_macos

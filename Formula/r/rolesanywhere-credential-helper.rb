@@ -7,11 +7,8 @@ class RolesanywhereCredentialHelper < Formula
   head "https://github.com/aws/rolesanywhere-credential-helper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6243393abb52d80a5da2768e2ae604443aee302abd1759f9f47d96f8a6c54ba4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d3d21d0b2fe5a2608af24c26e0da4e0e4a8b5d7eb5790b127efa2e54728780f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2dcef988f0e1dbd24d0f0ff4881950856972e8bd75f895add543c70e5326477a"
-    sha256 cellar: :any,                 arm64_linux:       "d51d544905078b94b1e33182d54fa54b153c525afd876d4dbf05c289bae89dac"
-    sha256 cellar: :any,                 x86_64_linux:      "097538d3da4961736d0058ed4c6c9ea7c4f63048976960914f1ea02d7606f906"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b35e628b46f5dc3c2af6f6fb22cd77abbb813146d9eccdffef64a4405a03c773"
   end
 
   depends_on "go" => :build

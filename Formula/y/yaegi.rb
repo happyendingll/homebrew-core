@@ -7,11 +7,8 @@ class Yaegi < Formula
   head "https://github.com/traefik/yaegi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3cbf327873c87dd167291cb91c5830d622383964fd3174c9c4ea9c89a09ab9c0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3cbf327873c87dd167291cb91c5830d622383964fd3174c9c4ea9c89a09ab9c0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3cbf327873c87dd167291cb91c5830d622383964fd3174c9c4ea9c89a09ab9c0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cfcaa670f4c0c3d43ce6f715b5e836ff727daef7a5baa3d16e76dca1df681cc4"
-    sha256 cellar: :any,                 x86_64_linux:      "b806260f5a142706929d96e882ff6ca5bb01ac2f64e56c77128ac633cb15b958"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "ce20b997e3bdac1460b19775b748831a55f4fa85a42a201888300fc7c0a52730"
   end
 
   depends_on "go" => :build

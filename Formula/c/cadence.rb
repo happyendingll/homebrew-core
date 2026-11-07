@@ -15,11 +15,8 @@ class Cadence < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "74cfc43fc0071c56d94cea501d02f6c8149912156f97ffea86684445081d6d06"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "74cfc43fc0071c56d94cea501d02f6c8149912156f97ffea86684445081d6d06"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "74cfc43fc0071c56d94cea501d02f6c8149912156f97ffea86684445081d6d06"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cf789fb2d8b9e199800e61c0a9c0ab3367dac24cb16239b46ade156c818f4202"
-    sha256 cellar: :any,                 x86_64_linux:      "219576bba8a5a17e493a690dc6e12265611901bb99d5bf25e2418d0a1105ca39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b286b55fa41f452a25d0a305f2c92af96724f3cd78dfd231db852f451268db1b"
   end
 
   depends_on "go" => :build
