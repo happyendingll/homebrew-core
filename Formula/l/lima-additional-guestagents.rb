@@ -7,11 +7,8 @@ class LimaAdditionalGuestagents < Formula
   head "https://github.com/lima-vm/lima.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "739da614e3b96094c4486ac80efbc619d52fdbe5431dcd7a3a2196758135252b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d4b1a8695c00fe2ffacde4c12d6848be4b38fa26abfefcff099ccddcfdd3b055"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd468eeb259b6a7d72e787144e41afed23a99114f4347bd4902f77230a76bdf5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "17af2c87fa89208017b1a0264bc393504bd9cf6453a426328683e47eb893f870"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "549d30e2f64d1d18a660b4fd5e1fd1e1c57821451e19539994f41bb2293cb3f7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "8b2523cd15cf9064bd0346db65c9562ae133656298dd28c481f8b61205dd386a"
   end
 
   depends_on "go" => :build

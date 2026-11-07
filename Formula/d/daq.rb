@@ -8,11 +8,8 @@ class Daq < Formula
   head "https://github.com/snort3/libdaq.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "30ded0080accc1f12e29b4478ab4230b8bbc91a1a72960bd84daf42cefc20b24"
-    sha256 cellar: :any, arm64_tahoe:       "840d13d1d40d14a49178f292c243ee49b91879412fd2877b5fb922185fb02295"
-    sha256 cellar: :any, arm64_sequoia:     "0e3ff47c6024e57199b0d9fb4e3e1a873c73c5d800cf379a5b1e43955aa1e9a6"
-    sha256 cellar: :any, arm64_linux:       "27b1065702a8eb49e9e39d5b67deb187c78029e5db414799d0c8bc24072c9bcb"
-    sha256 cellar: :any, x86_64_linux:      "62cfd8d1370dad00879c6cb5c284b29f94e1def98b023953991bd899f3ceaff0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "105251917a917b4b38deb63581388f406d38a6168ce96909ff00932da463e55b"
   end
 
   depends_on "autoconf" => :build

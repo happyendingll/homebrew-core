@@ -27,11 +27,8 @@ class Freeciv < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "23add6a497ac8e9f22db314e622eead2899cf7c0aa8545103b9328bf498a94a5"
-    sha256 arm64_tahoe:       "3bf3f47bd721c6016056385f42eb081e7e25c3d48a23a2fd1aed7cf6f8f03f64"
-    sha256 arm64_sequoia:     "f28fe448562920102cdd043c55ae6584e383c2dcd94304c4cbca1f8850f95bd2"
-    sha256 arm64_linux:       "e37d66ca4f4babc3c2aed8284ac289c244a9ba7817465f53ff6fdd9884128213"
-    sha256 x86_64_linux:      "3cf6366672e9284816b1e407c9960a17c9478c29c95c1e4502a626804d055662"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "fb1f291ee708715f823bc3bc297721c99d0ef6a86887c92a63f6acfe3ecb4424"
   end
 
   depends_on "meson" => :build

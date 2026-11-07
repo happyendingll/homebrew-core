@@ -7,11 +7,8 @@ class Parca < Formula
   head "https://github.com/parca-dev/parca.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "45144223430f1492038f5beefa82d4a91ec689dbc27184560a00b0fe1f0ac857"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75ccceb6c07caf0bfbea5b3c61044e4701e7c26506cf37a077ea10629eef8e28"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "23d66e63f439665d1c5c64092dc763a9b64732b16b047b53deb3c038ae0dc481"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "95b0c961c3d62a850b3c9c94f29aebfa4c413e652ba9990cb4fccc52c17b678e"
-    sha256 cellar: :any,                 x86_64_linux:      "2ddb230e0eb6060fef9012fedd1136e3c67ab1136bd135543b1b6228d96f666f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b4703e8c9707f2239a4d3e7f4584bf9f6f76600bd3571f26b4c333805c6cc8b9"
   end
 
   depends_on "go" => :build

@@ -14,11 +14,8 @@ class Prometheus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21ba49c99322b21cf42b2065399bdf43d7851d2aba560e63e026e1704ca1fe2d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ac06dfd6ba4deca71d87819af5c5282c44b638fd5e672cfff61951de4b8ece58"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9f27a89184b355cac27e5737f1697bee4a773f62dfcc74fe9f76fda1091cad9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a147dd5b147a5de176c3d1eb4bc482864c9700413fa5b6f437725a82ced11392"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "406ee169454a5b71f719ea954887b0b0f670867b0a4707df4d44b9d898897082"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "cf531344e9a591cef6309dd26d73889dc60bbf64a7f04013f69fe3a4500a3c91"
   end
 
   depends_on "gnu-tar" => :build

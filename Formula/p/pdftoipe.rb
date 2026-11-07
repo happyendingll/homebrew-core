@@ -7,11 +7,8 @@ class Pdftoipe < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "edf83419cfbde36e51c327b00c770607d14a6f649873dd3eeb2326abcfe87493"
-    sha256 cellar: :any, arm64_tahoe:       "a6fd642d05f852ee573833a9efef3eaf7f1a3329d316fab24114c6cc471bbb08"
-    sha256 cellar: :any, arm64_sequoia:     "141130711b964a9de82d9094dad77f1a71b6c877bc28e53b9e69f1cf6086d6de"
-    sha256 cellar: :any, arm64_linux:       "52a4dbcbd90f1b189cd95e1d5517240bd883ebdaeb0b832d8d5d63c015ecddba"
-    sha256 cellar: :any, x86_64_linux:      "387899dcd078a86f45e7bd05bd597d8c7196213bcf5a088d9ff80896cbc16bdb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "876371db161f8d3238ee5c4b05e7380b8fd2b9ed846f31173682eaa2069c08a4"
   end
 
   depends_on "pkgconf" => :build

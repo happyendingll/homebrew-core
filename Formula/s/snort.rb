@@ -15,11 +15,8 @@ class Snort < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9441a8308463c20fca030126ee293a8a0f26ffe0429e338ce6881230e210d9b6"
-    sha256 cellar: :any, arm64_tahoe:       "2777e608b55393fc849f89c984e531915d4c4711fbca3e514ab0d5249999ae7b"
-    sha256 cellar: :any, arm64_sequoia:     "bb37500db1581246f882883c53c5edccbdebd0f7b1a4b2ac6d275ae31e81e29b"
-    sha256 cellar: :any, arm64_linux:       "20e9bd3503aa2638a5948e89d9899d5469fb8713ab84d55b07dece4a957cc804"
-    sha256 cellar: :any, x86_64_linux:      "030a3ffb9929d099e9145addbbfd2e3823c881ec999ee60764b9d64e0ef14de6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0059bcbd99d1d0ec956a8b7a0bf545dc7c88a532a1c9d73b747c5b2eda628438"
   end
 
   depends_on "cmake" => :build
