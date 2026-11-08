@@ -6,9 +6,8 @@ class Imagesnap < Formula
   license :public_domain
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf6cd6e70f21b1bf55902c0cb9401f7af4cf97d512c2a57f02f72ff1b68b3d46"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ef14e72a32a94cbdc77a1a3c22ab4ef21cd062d59749175e0eb9f385be224326"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09c88203caee699ca8f83b7242e4a4f20361c2fd444283f827682ab3e30cff08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5d3ddacd5e693fc5d204604ac69a3f4deee47ef8bba2c0e529bef3cde069cbe9"
   end
 
   depends_on xcode: :build

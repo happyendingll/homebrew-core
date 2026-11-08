@@ -7,11 +7,8 @@ class Goda < Formula
   head "https://github.com/loov/goda.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "683d29f3ff9e383188144b8b2d6a5252662a0a33d3cbb451c4c62fc3b31d1692"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "683d29f3ff9e383188144b8b2d6a5252662a0a33d3cbb451c4c62fc3b31d1692"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "683d29f3ff9e383188144b8b2d6a5252662a0a33d3cbb451c4c62fc3b31d1692"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "21809184328bb276af20bb5afd2af161e156016a3d9d27d892b2ed54bdd776d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d1cee4f5124eae9b485b3bc5a57e716a6f936be145aaccf51a30137b54dfd5b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a41ef94cc3ee093c37f2b097275482f1cd029015b58833f85d7f8df55c2dfe82"
   end
 
   # goda runs `go list` to load the packages it analyses

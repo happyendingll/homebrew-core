@@ -7,11 +7,8 @@ class Awk < Formula
   head "https://github.com/onetrueawk/awk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "51eca89676822cd75a52f56835af91a404dd0dd27fed0e3ace1db3cc94fad2eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b93f9eeeee4d904d12c6175f4195551b098c1a9063030e602107d4ab6bd80359"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8312fd473efaa88c7553e68cdfc67e6644685ff7d30f0ea4d84b4704a473c3a1"
-    sha256 cellar: :any,                 arm64_linux:       "b2a92fafe75c38e4deb38b350e847919be7fa3b31b64afe31f8e4e13abb7c9a6"
-    sha256 cellar: :any,                 x86_64_linux:      "64d3733d6bc965e101f2a26d87ad42866b309615d426e80913dc778a87018aa0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "893de823b371d0b60036d134eeef35c4a0bf46b1e9d676cedce1aad54ac6d9a5"
   end
 
   uses_from_macos "bison" => :build

@@ -7,11 +7,8 @@ class Dockerfmt < Formula
   head "https://github.com/reteps/dockerfmt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e0309e2568e546e910828093cea4f5bf909528923d9105bc0bae0e74e9412d91"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e0309e2568e546e910828093cea4f5bf909528923d9105bc0bae0e74e9412d91"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e0309e2568e546e910828093cea4f5bf909528923d9105bc0bae0e74e9412d91"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "890fd720070c57747d05315cf7ef98616dc7aee14b87eeb61c256fc5dc3cd98d"
-    sha256 cellar: :any,                 x86_64_linux:      "6455bcd91cff82a42b956b86e71a0c75889d0ae17b9b678e98cd71aa0fc2b353"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9822e5aef7ae917ebfeac1bfec38c771181a585528d1e9f17be281144dc940c9"
   end
 
   depends_on "go" => :build
