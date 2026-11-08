@@ -7,11 +7,8 @@ class NetcdfCxx < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f44f7a735f164facbde33e928bb7173359b57057e95ab1625a62ca905757b528"
-    sha256 cellar: :any, arm64_tahoe:       "99c1c86b1ab186f4ba17658f17c1df632cad1a7034aec69dc4b2a6935115d6b7"
-    sha256 cellar: :any, arm64_sequoia:     "de135267806b271052aa12181c0ef8f97f9ceb70bc0db0f54817d5e42cf20bd0"
-    sha256 cellar: :any, arm64_linux:       "ed943d2516eab976c2e550a1cdd527514b72499e2057e44a83beb81ebdf87cdf"
-    sha256 cellar: :any, x86_64_linux:      "452234c7d474faac41d20ef2daa57f054bf96bcb47dddefdeb585b8368e70099"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "9e9d6608505e2e021d678d01d6f103e58a2b8654aaaa682cdf5ed71b5f7e24ca"
   end
 
   depends_on "cmake" => :build

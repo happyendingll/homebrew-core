@@ -25,11 +25,8 @@ class Gstreamer < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "496d3bb3aaa971637f9fc5d541e1c595b8c25453537dc9f125f5fe3281b499e6"
-    sha256 arm64_tahoe:       "a20f45ed31059eacd962fbbb1e5e28a195fe149a70115e51d3018fa58f197e79"
-    sha256 arm64_sequoia:     "1b23e3d429d32411476efe6fb0e69be45201e2a661eac5a0a3d3370a1937b7ae"
-    sha256 arm64_linux:       "1a92586fc41439d2ea22b56e34572ec38ffd9a0f6f8faaf1f0f0ae156c68967f"
-    sha256 x86_64_linux:      "735e4353792077b684c332348528baa8f4a87b5bd0e2db2303bd9910a9b83477"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "54fc776ed9d72fa321ba9f40c0ddb4fe5c1cd973eeb822e9469a4fc87596a5d9"
   end
 
   head do

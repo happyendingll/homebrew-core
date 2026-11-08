@@ -6,11 +6,8 @@ class Networkit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c9985e3080312d841e42b6b7a74d72e49bd339b770941dde3aa8bb17d47ced89"
-    sha256 cellar: :any, arm64_tahoe:       "aaff02040deb0eb23b43404e86e3034b8c34008737742ade042180253353e4cf"
-    sha256 cellar: :any, arm64_sequoia:     "b971d6acbc5939fadb29fa7fe4971176262616ed316f0694a4bc9e011bb4be8c"
-    sha256 cellar: :any, arm64_linux:       "6928954e1fb4ec0e4086db2b023821f3b6e486f8a2ad57698ca33983b2d1197b"
-    sha256 cellar: :any, x86_64_linux:      "2410efe3e9b974b2fb2ef33442f436fa9e3bdfe4f472c314cf29e30ce1c26e0c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "3dcdd94f1c20ba67982dd8ded45c9ba73aeee793685ac4bb8cf1280455682e67"
   end
 
   depends_on "cmake" => :build

@@ -9,11 +9,8 @@ class McpGoogleSheets < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b4dc9aa0631071c51c375babafe06808bfd20714c2b787e99cbe8c9958b34e94"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f7114d8945cd05897b4d26c4aaef7a0dcb8d1f74a320fda4432f1592d95fdbe9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1e3f0319589e0ca1aab78e49b3c440b8010af94c4d4823ebe8d5195dcfae366"
-    sha256 cellar: :any,                 arm64_linux:       "46ee9b248af9d022aa20659b7e9696e007996913af7f41fd963fde7988acd5e2"
-    sha256 cellar: :any,                 x86_64_linux:      "12ff335287dd5a14b6a1da44a05586d9723de1d0fbabe1b62ea0d0942f8aabc0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "77baedb96bbd47465c80a5f8d4bd75bea31fd9f5e86f810eb3716bc9c05eee2b"
   end
 
   depends_on "certifi" => :no_linkage

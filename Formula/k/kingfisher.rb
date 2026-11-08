@@ -7,11 +7,8 @@ class Kingfisher < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "82ce6ffa55db6869ffdd2eb8c9c7a63f1a29c83bab60e6e2d4209465a093282b"
-    sha256 cellar: :any, arm64_tahoe:       "2d9b7ada37558804d1a24fd47de72c1a06be870978dce12a261ebab77db0c31b"
-    sha256 cellar: :any, arm64_sequoia:     "4086c95eef2b2ebf3d72d5aa3e403f12a50e63d62a4600ad492dda30fdfba319"
-    sha256 cellar: :any, arm64_linux:       "7e5cc6307b0fbc49b52c5eb9f52784ef5ad8db412db7cb83f3b9d1c092ba48ff"
-    sha256 cellar: :any, x86_64_linux:      "988738662eb6242c4688d8c1162fc1f0b90995e1cf9b86ab146851ded881a7b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "5d1c8f8f411cd716875bd1abb71389ba480fb34f09822b79838d9bf400b2bd56"
   end
 
   depends_on "pkgconf" => :build

@@ -10,11 +10,8 @@ class Gcalcli < Formula
   head "https://github.com/insanum/gcalcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26e9c81458e5fb27ab9f532fcf2b0752f6066d51aa5f30142c71c920ab4ddb87"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a134dd4e957385a99868708f94987f6ba71def88aaf3772110e3d0c0c30a5be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1a2d97544b9ef0c5ebfb928c6752f11ecdf9741fac40d0757beb9689823cf339"
-    sha256 cellar: :any,                 arm64_linux:       "944d38c8e55c59acd7fec2f1c2656ce1b66b5736c55b923ff9f40cf4c2c12317"
-    sha256 cellar: :any,                 x86_64_linux:      "0c1c0f9d30b471abbf335ae5eb415a0c2cc13c19c5c0d02b2aebd8066ab30091"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "977343afbf6f43ce6313f358cbe848fb0aa1b077439c5b9eb5d0e12eb9a7a509"
   end
 
   depends_on "certifi" => :no_linkage
