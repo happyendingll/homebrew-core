@@ -1,15 +1,18 @@
 class Rustypaste < Formula
   desc "Minimal file upload/pastebin service"
   homepage "https://blog.orhun.dev/blazingly-fast-file-sharing"
-  url "https://github.com/orhun/rustypaste/archive/refs/tags/v0.18.1.tar.gz"
-  sha256 "4b63be093e080d4a39e9ca03b378df96f0ae604e469a9c4d9bb437f9643524f0"
+  url "https://github.com/orhun/rustypaste/archive/refs/tags/v0.18.2.tar.gz"
+  sha256 "9468d87e536a7557612470f448d06fb6393e21eaa464eea0c9871cae0dae4879"
   license "MIT"
   compatibility_version 1
   head "https://github.com/orhun/rustypaste.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "6761db05f18ab8e59355c468bc749297715afad6dadeb0b0e9beeacacd4349be"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07a58da0969fc70bf6740d01e0ac99cdb3a2edc28b5d3f4a6fa0e17e5537f380"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "894b9f70062db6f951237f209dfcb0cdbf0fb3302e02d1553707cc18d51816b4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c31ce043892b721d24102da4973f3785873c478c2f21b4ca9f5b98b23627ac54"
+    sha256 cellar: :any,                 arm64_linux:       "80043e22b5b1d0567450be05e23b711ccf69935188bfb4373c47139379cbb3ee"
+    sha256 cellar: :any,                 x86_64_linux:      "95ae2674cd3497991c45c867ed61ff52bfd9b75955930057a53f941f6b29ef7c"
   end
 
   depends_on "rust" => :build

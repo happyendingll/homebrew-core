@@ -3,14 +3,17 @@ class YleDl < Formula
 
   desc "Download Yle videos from the command-line"
   homepage "https://aajanki.github.io/yle-dl/index-en.html"
-  url "https://files.pythonhosted.org/packages/9b/45/cc3e991162a1682c220319057d4145bd53ba61cd150eaffaa11039db8b41/yle_dl-20261002.tar.gz"
-  sha256 "c477dc042457f63252bfca743e0f6ed5528b1c4e1d48923c57520081473fa771"
+  url "https://files.pythonhosted.org/packages/03/7b/a8bb4db61ec4736c2f09397382090601c160eaff766f743a0d9ce8fd1ac6/yle_dl-20261106.tar.gz"
+  sha256 "924f0e49650f47d6753d819bd10fc7dd8fef8ae7019bbaafdbc3a59087db2797"
   license "GPL-3.0-or-later"
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "c3a44561ffdd3c01aee6a3921eb883dbadc6c066fefcc00c065982a92fad891b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ab17ae57276fea4d29a63d453782fd26424faaf2df3e1bb4f639960ba3c3676a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f90361493db7e557df2b7fda5c0130c7bf70b51d63ce2d563cb6f589b1cbb941"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39826de4e80cf4e904d0ec454d0ff42089f4540d9c7c444a7ce794101ec14c95"
+    sha256 cellar: :any,                 arm64_linux:       "64da696c6ea518a5786e9cd463e65fa6abba3f108373a4819cff101e5b6e0373"
+    sha256 cellar: :any,                 x86_64_linux:      "ca748de0b6c2250ecf7baaacf72deb89646bbafd30983bbb46e21c026d97e5f7"
   end
 
   depends_on "certifi"
@@ -29,8 +32,8 @@ class YleDl < Formula
   end
 
   resource "configargparse" do
-    url "https://files.pythonhosted.org/packages/5d/ed/33c0ba7f0b5be384ff8a2101ce77728f219e816b2104819f1651477e1ad5/configargparse-1.8.0.tar.gz"
-    sha256 "22a417f4d7b00149f0af82ef7c491f8ecc4b1d5454633fd319b386f5eb806f92"
+    url "https://files.pythonhosted.org/packages/bc/d9/c591a80cf3335de7820c6762f8ee9298a43da5319803d319e16657b6fdf2/configargparse-1.9.0.tar.gz"
+    sha256 "48d9c22affe4ac419b4dd0691fa929d759e1f99574be41826785f2dbf3da63a5"
   end
 
   resource "idna" do

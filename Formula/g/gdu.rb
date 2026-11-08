@@ -6,6 +6,11 @@ class Gdu < Formula
   license "MIT"
   head "https://github.com/dundee/gdu.git", branch: "master"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(:?\.\d+)+)$/i)
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
     sha256 cellar: :any_skip_relocation, sequoia: "72990fd91bc9d6b012913e8d35351c79cb76697f73ce8aebfb9c3a6cf28a70c9"

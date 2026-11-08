@@ -1,10 +1,9 @@
 class Corsixth < Formula
   desc "Open source clone of Theme Hospital"
   homepage "https://github.com/CorsixTH/CorsixTH"
-  url "https://github.com/CorsixTH/CorsixTH/archive/refs/tags/v0.70.1.tar.gz"
-  sha256 "b3a37b09f168f30600d305314f5a823d3af10bf407074e9a837e0e85acfe9ba3"
+  url "https://github.com/CorsixTH/CorsixTH/archive/refs/tags/v0.70.2.tar.gz"
+  sha256 "7664645a97d9d56a287bdd55035fb325050840fa743c2854f7ff3198ecee1f26"
   license "MIT"
-  revision 1
   head "https://github.com/CorsixTH/CorsixTH.git", branch: "master"
 
   # Upstream uses GitHub releases to indicate that a version is released
@@ -16,8 +15,11 @@ class Corsixth < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "be8d7a7f943dc354c261a2f9504c9358caf524b768e629b9d6b5253e2d027114"
+    sha256 arm64_golden_gate: "b6bdb24cf1424967534a02033ae9920ce926d5bd77ec7c0c06538df8f3a108dd"
+    sha256 arm64_tahoe:       "5495cd9b75151e8ebc16da5a8aa4a9a0a26d1f938547442b9d8e299b3a092649"
+    sha256 arm64_sequoia:     "7b367b5903115cd339a13da03d462a4dff0501d2a0a72cde851d8e08417fe38c"
+    sha256 arm64_linux:       "ea129f3b54a33fbd7f51fec0f04cfaf686d3ba405eebbffa0431ba0e41b15072"
+    sha256 x86_64_linux:      "8201a5b4864cdaf23e12f65272d6b08e1f1b3d9279587971d37977c43d16b21d"
   end
 
   depends_on "cmake" => :build

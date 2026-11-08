@@ -22,9 +22,6 @@ class Hashcat < Formula
     sha256 sequoia: "eb4d5b8b3f8e1e9052e647912547c7d75dc06cb786f2a47e657f69abd12068a5"
   end
 
-  depends_on "minizip"
-  depends_on "xxhash"
-
   uses_from_macos "python"
 
   on_macos do
@@ -39,10 +36,7 @@ class Hashcat < Formula
   end
 
   def install
-    # Remove some bundled dependencies that are not needed
-    (buildpath/"deps").each_child do |dep|
-      rm_r(dep) if %w[OpenCL-Headers unrar xxHash zlib].include?(dep.basename.to_s)
-    end
+    rm_r buildpath/"deps/OpenCL-Headers"
     # The ZC706 bootloader is board firmware, so retain its redistribution notices.
     (buildpath/"docs/license_libs").each_child do |dep|
       rm(dep) unless %w[SSE2NEON LZMA XILINX_FSBL].any? { |dep_name| dep.basename.to_s.start_with?(dep_name) }
@@ -52,10 +46,7 @@ class Hashcat < Formula
       CC=#{ENV.cc}
       COMPTIME=#{ENV["SOURCE_DATE_EPOCH"]}
       PREFIX=#{prefix}
-      USE_SYSTEM_XXHASH=1
       USE_SYSTEM_OPENCL=1
-      USE_SYSTEM_ZLIB=1
-      ENABLE_UNRAR=0
     ]
     system "make", *args
     system "make", "install", *args
@@ -69,9 +60,7 @@ class Hashcat < Formula
     (testpath/"hashcat").mkpath
 
     # OpenCL is not supported on virtualized arm64 macOS
-    # Metal on macOS 27 doesn't seem to work yet
     no_opencl = OS.mac? && Hardware::CPU.virtualized?
-    no_metal = !OS.mac? || MacOS.version >= :golden_gate
 
     args = %w[
       --benchmark
@@ -79,9 +68,10 @@ class Hashcat < Formula
       --workload-profile=2
     ]
     args << (no_opencl ? "--backend-ignore-opencl" : "--opencl-device-types=1,2")
-    args << "--backend-ignore-metal" if OS.mac? && no_metal
+    # Metal fails to find included kernel headers on current macOS, https://github.com/hashcat/hashcat/issues/4968
+    args << "--backend-ignore-metal" if OS.mac?
 
-    if no_opencl && no_metal
+    if no_opencl
       no_platform_message = "No OpenCL, Metal, HIP or CUDA compatible platform found"
       assert_match no_platform_message, shell_output("#{bin}/hashcat_bin #{args.join(" ")} 2>&1", 255)
     else

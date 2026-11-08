@@ -1,14 +1,17 @@
 class Janet < Formula
   desc "Dynamic language and bytecode vm"
   homepage "https://janet-lang.org"
-  url "https://github.com/janet-lang/janet/archive/refs/tags/v1.42.1.tar.gz"
-  sha256 "2391f8c6565742dad1c5e8872ad1d570b64a239d5d1ef11a188fc6b400457a04"
+  url "https://github.com/janet-lang/janet/archive/refs/tags/v1.43.0.tar.gz"
+  sha256 "9e01a7df04ef9b36c103238ac687e57ceeb5645fb7cc8782325a2844f6bb6a79"
   license "MIT"
   head "https://github.com/janet-lang/janet.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "6227f3d407b73d09393c6b4d1a0a40635e83830dcfbff4a33f2e9194ef853b50"
+    sha256 cellar: :any, arm64_golden_gate: "248ec6ff95d3bad5d21c391b66fcf466152a800f1f0b2f86286ecb155f13f144"
+    sha256 cellar: :any, arm64_tahoe:       "8db3b5561e833a9283cc88ffc7232a97fef314c20b03ee12b2907b24d61e9f9e"
+    sha256 cellar: :any, arm64_sequoia:     "f02ae45f22671f1433828c4c124b2871e489dc59701b2c568c79f27c0aec3341"
+    sha256 cellar: :any, arm64_linux:       "22dd6079305ec09233b11f4ba1b3048bc5c5f2087e216549ee8cb8635e738783"
+    sha256 cellar: :any, x86_64_linux:      "859f11ec6d1915b4215388d82f6cc0f3df75379f623dcd620e397284df6ed2c8"
   end
 
   resource "jpm" do
