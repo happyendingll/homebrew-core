@@ -11,11 +11,8 @@ class TyposLsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6935fff6a7ac7c09ee658896ccc947bdbcffff64e46450c760202eb698cf79c9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d9e3b18dd978fe48befb55ce87e3341ddc25bf2bbb06737aab7dce2cdb2291b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "afc55089ec10aad4ce044f6ac0962e251354f748fc42eae5df17513c6660316d"
-    sha256 cellar: :any,                 arm64_linux:       "854e86a910974b3bc83958fea28f46ace36dcdffe059457167f4cf76c08317b4"
-    sha256 cellar: :any,                 x86_64_linux:      "e76fe5e64bd4fef94f7a488ec41249a032f9802c8d740602853150e3fd2eb253"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "afe29652612670b5cc3004f8c5e63e8913687ab3089ac42eb06bfb6b9aaee4f3"
   end
 
   depends_on "rust" => :build

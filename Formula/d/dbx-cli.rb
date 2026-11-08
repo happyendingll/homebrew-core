@@ -11,12 +11,8 @@ class DbxCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "4c523bd61bbefb1e952a19979897cfe2f9a87a5806ce02575e7765645d341c01"
-    sha256 cellar: :any, arm64_tahoe:       "c00c3d4c34801f0c3d656671f257f32ad009b19bb599ebd34be05bf8ab4721d5"
-    sha256 cellar: :any, arm64_sequoia:     "2293250405c68f7f2b4fa710cedd081cec00373276ef76702d1851cd695b9760"
-    sha256 cellar: :any, arm64_linux:       "328615ab719c25031d7b61fe03b505184dac59642fc057c944058ae103b5d8ec"
-    sha256 cellar: :any, x86_64_linux:      "31179727473b4b867615b29b4fc767d0bd14222ce9236682a216d93b739891ef"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "d6011f85a0065bcba36b50f60287de5ef898c19cdc84e29724431170ef97047a"
   end
 
   depends_on "pkgconf" => :build

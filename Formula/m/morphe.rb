@@ -6,11 +6,8 @@ class Morphe < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "420e3323e6d0c8f7a8b7bfc3ef63389a17d96938bf0b3927ed6402c34f4364ac"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "420e3323e6d0c8f7a8b7bfc3ef63389a17d96938bf0b3927ed6402c34f4364ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "420e3323e6d0c8f7a8b7bfc3ef63389a17d96938bf0b3927ed6402c34f4364ac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f92b7c0857542ebb4bafe850cf94196f2de221fd8b94cd3404164185fb15af27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f92b7c0857542ebb4bafe850cf94196f2de221fd8b94cd3404164185fb15af27"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "74308fdf03f0a6237588511383d87bbc2200ac756ca3d384799919fc9637eccf"
   end
 
   depends_on "gradle" => :build

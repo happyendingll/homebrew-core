@@ -17,11 +17,8 @@ class Cfengine < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "515b67cde9cf20546dbd9f8d62e377cd8eb45e6eed8a57da55b1dd4d414e2bfd"
-    sha256 arm64_tahoe:       "8d3e6c69df8774c97c08a791258c3e69ad96dfea7825065a12e8d05fc22ee7e6"
-    sha256 arm64_sequoia:     "f5f093e482c0ed6c0e1e93eaa49c046eaa4c43329395c64828892501890becd8"
-    sha256 arm64_linux:       "84ed830e95bc25d3341c99958c5a120c3e9d7a5333ed97b0083ea619426b03bb"
-    sha256 x86_64_linux:      "ab7b10dd0b082db3da01620e1a3a7b8783990cbe2f14aa17fd825eec75fc3430"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "1948c52449705d8855ef6fa3e82a2c01e16839f901b3087eb0a3e6b6930eb2a1"
   end
 
   depends_on "librsync"

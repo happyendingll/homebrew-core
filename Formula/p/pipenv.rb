@@ -9,11 +9,8 @@ class Pipenv < Formula
   head "https://github.com/pypa/pipenv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "34f13a47520c09aa0f4dcca37f87fc0111152fde0f760c800f19fd4088fc46ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "34f13a47520c09aa0f4dcca37f87fc0111152fde0f760c800f19fd4088fc46ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "34f13a47520c09aa0f4dcca37f87fc0111152fde0f760c800f19fd4088fc46ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bfaa70cbffbb616cf560491bd6a42858b55bd4bac5ec414a26bd116272d7fa53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "bfaa70cbffbb616cf560491bd6a42858b55bd4bac5ec414a26bd116272d7fa53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "3970b158e190485d9f3bce80c76b997eddc8e98e716ecd2a1069de2ae050a922"
   end
 
   depends_on "certifi" => :no_linkage

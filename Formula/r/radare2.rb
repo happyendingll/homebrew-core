@@ -12,11 +12,8 @@ class Radare2 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0bed9020b7c86c96978a80d221fdec515465fc40cc18c57355b795c788a56c94"
-    sha256 arm64_tahoe:       "71ea634a42bc91f525bf64100e7e6a7289c469e9ce00a65bcafcb7a4aeef20cf"
-    sha256 arm64_sequoia:     "99e156b9163a7617f6573ac804cbecee9066db97a99c0d38f166ff1c610f16d4"
-    sha256 arm64_linux:       "620641c6471c49f1575cb15f767af30ae42652574228e6fb93259c471abf2af5"
-    sha256 x86_64_linux:      "cc6109ceb473994dd891c790512f357ec90b81e6d7a3aff2fcae7fe1459988db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "440ca8f942402931bfa20bf8ef12f2d5927414b9062ba92922f5a7a0eff88ec6"
   end
 
   # Required for r2pm (https://github.com/radareorg/radare2-pm/issues/170)

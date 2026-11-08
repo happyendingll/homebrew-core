@@ -6,11 +6,8 @@ class Osslsigncode < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4cfbedffb917025ea1dcc5aecc8d3fd25e1e8a32bc580f3b82284343ddb14b63"
-    sha256 cellar: :any, arm64_tahoe:       "036ef921d91718e80760d34494c6b1263c1685121d85d17ebd46c00f06d4c228"
-    sha256 cellar: :any, arm64_sequoia:     "60a8ab9d41b2579e685442c8d22f6cbde6c4a2fce6e3f07dfb2387eb0e4f2237"
-    sha256 cellar: :any, arm64_linux:       "48310ddfdf8c93fae163eb2c35ce536f304cdf43a79c0bd995da0663542af1ec"
-    sha256 cellar: :any, x86_64_linux:      "5ff48de5b0ea0c4551b9b1b76b42fa344c0de15d7a5ce3f32f911a97c46e07e6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "45077fa607c866a8d9b834a94c1710acacd6023aea0da63b5732594c4a91e023"
   end
 
   depends_on "cmake" => :build

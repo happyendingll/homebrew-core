@@ -7,11 +7,8 @@ class Syft < Formula
   head "https://github.com/anchore/syft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7da37419a24fe1d4a533843f1189e7d66cbc1e4d5c749163f1e02bc6ded04cad"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1e752d44b6f32fd3926f6bac703a9ce8abdf69bc1861a8092de2cf750e3aae68"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cd3d7e46bd5dcad62bdde9ce21ccd3a7e7c9c6a311fadbb825aa3e3715675bf0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fbd90c34dddc8debbf23497606968bec3d49b3e7a752e876408bfb0ab40ca603"
-    sha256 cellar: :any,                 x86_64_linux:      "fcebf8795a3ecb39d078ef8b825f611e71613b8face9dbf83b7743be74c73ac4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "8c7e7cdfa9bca60ea451f1b41953b676007ce3f29adb32955897eae2d43dd76e"
   end
 
   depends_on "go" => :build

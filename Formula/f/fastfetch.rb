@@ -12,11 +12,8 @@ class Fastfetch < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "80331feb5ec6b087766dddb06490c935349f63aa19509e241ea26b21aab7c055"
-    sha256 arm64_tahoe:       "9dd61bf2f92e34e6e8f2436aa58c18c9e1fd17e7d65d9fea3757ceb113ebd89e"
-    sha256 arm64_sequoia:     "89ec06d5ea2808be008434fd8d0b6967c7ae7fd3c4721e475b445a79a941e872"
-    sha256 arm64_linux:       "c6ac3e4f26630a06dc6ae9da07f2e2187caaf886a6a79854936d534db0960a4e"
-    sha256 x86_64_linux:      "5ea6e25edde84e4f23a7480d7fc9c416f81bbce94cc6ac8cdd46662a67ac329a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "b6e8fb404a8cc9833c813cf8a711e5467d58a307e47b9bceac1e0485beaa5105"
   end
 
   depends_on "chafa" => :build

@@ -11,11 +11,8 @@ class Weaviate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a8bc5a58e6ce786cd95760122347ecd6e1405d488988f35112731315a2cbd905"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8bc5a58e6ce786cd95760122347ecd6e1405d488988f35112731315a2cbd905"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a8bc5a58e6ce786cd95760122347ecd6e1405d488988f35112731315a2cbd905"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6b543886a25cfedd833554fbef332da92415f94ba476ebd5d5cef6ddcadbacf1"
-    sha256 cellar: :any,                 x86_64_linux:      "e56ad0090b607094161889f2f4e373444c695322719125984296e450c45adc43"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "6cf1309102f2ae1b54ab8e38789116c6aa31c87c1590642b6e99afc376ab88c1"
   end
 
   depends_on "go" => :build

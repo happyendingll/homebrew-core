@@ -12,11 +12,8 @@ class C2patool < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b4098e79e9782a720bf1aedff1a9a354ddfcbe1bfe706575886f5a1a2acf1df8"
-    sha256 cellar: :any, arm64_tahoe:       "a10f27b9d43b7a51aecb38cf2ee7861ee5aa7bed738369d3322ea33eb0288fd0"
-    sha256 cellar: :any, arm64_sequoia:     "05df91a166f0ea6a68ef1591d390a292b14e5264d75b8a113524b5d54f2578e3"
-    sha256 cellar: :any, arm64_linux:       "7cdc88ac040716b6fbfbc4bb10f38c8e8082158963249405ef491aeca4616d71"
-    sha256 cellar: :any, x86_64_linux:      "dad20444c9bcf69eff980f4383fd0bb0614f13dad6215baf98b401852efb8168"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "36b13f1f9c3bb710cc613fc148ffdb1d7b13d51045cfc88d95aaa2148963dac8"
   end
 
   depends_on "pkgconf" => :build

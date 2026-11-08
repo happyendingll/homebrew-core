@@ -11,11 +11,8 @@ class Biosig < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "185a7085e73fbe08153a7733bf4f7e5d71bb9bfec565b45ef7dbbc41f700b50e"
-    sha256 cellar: :any, arm64_tahoe:       "ba1f148dd8fe9dcc8603bb5ad1d7e3a2ef104d8e50bf8e2b518009d8e587d3ec"
-    sha256 cellar: :any, arm64_sequoia:     "0f53af3ae1d5f588dc59394d79bf569f7234ceee8f8abeece5216572a0e21a42"
-    sha256 cellar: :any, arm64_linux:       "cc40ed7704bf3f129d0f0dfd4adb26bc8ec9db092b09ca956b84ec27f6c9e868"
-    sha256 cellar: :any, x86_64_linux:      "4985747d1468da710df1d6af52be18292b2902a25fcea6413e7832bca1c6464c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "b21aa2e69ca7a8ec25f891a457fd55dcc32404fe22643b7f5a612b5409f2e02b"
   end
 
   depends_on "gawk" => :build

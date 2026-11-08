@@ -12,11 +12,8 @@ class PopplerQt6 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "ebe46149feec3aaf08a80dbf7dd98f95aca739a4d4c2afc4e9dee8815640d83e"
-    sha256 arm64_tahoe:       "2d978b0bccb6466410aef5876a76e4f83902232acbcf23c13540493ca5d8399c"
-    sha256 arm64_sequoia:     "5dd349bac231868894c2aa2d9ec36359334506823ca22631901538cefef16c77"
-    sha256 arm64_linux:       "2157a863abf10e51553ad9dc0351b553e3f0fda5db2c686af45b1a9908fefd55"
-    sha256 x86_64_linux:      "dd9eafd43d7555fa3e1a358edfbe6e94836e685a894f57645faad5d8607391a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "ca7e107a8c7d442d9c03233d51833763b363f3eca0527dcb4965f9970f216c48"
   end
 
   keg_only "it conflicts with poppler"

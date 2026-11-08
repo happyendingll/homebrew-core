@@ -7,11 +7,8 @@ class Swctl < Formula
   head "https://github.com/apache/skywalking-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6d025e483d0218e3321a43867f0236a69eb2ed408b4ad60050f6430fc5224ef7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a902147d5ed5fe7009b2bd2dbb6fd683aef52dd1b5e02bab6fd70a6773db7f7b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e67fd627a8e2f5b996beffdd3dfb693a2fa004557faa69030b4dc4cc4c7e4aac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c4774ac8e53bc19c9b7b5904416b2f587a660efb9459afa62e5ee0f5931ea8a6"
-    sha256 cellar: :any,                 x86_64_linux:      "021e439ac12adf237c5573265a976b769e5a69531fe8e46dfbdc3d6b8e64359e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "a0b9a800725c55dd1d3486797a1cbcf392be059d06b04fb768633c95c64f198f"
   end
 
   depends_on "go" => :build

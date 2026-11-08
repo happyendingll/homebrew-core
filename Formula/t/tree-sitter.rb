@@ -13,11 +13,8 @@ class TreeSitter < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a56600a706f2c5cbd1cc811029afb05d976af675f91a454b2835f8b2841753d4"
-    sha256 cellar: :any, arm64_tahoe:       "3a04a0fb2dec9b4634f4ac6f09d5000474e11b50ee5cf6636d4dc8e1f401591a"
-    sha256 cellar: :any, arm64_sequoia:     "8b0045cadd30ba785fcdad8c1f564ce31c9444541ff30e89d19291d4e90b65f5"
-    sha256 cellar: :any, arm64_linux:       "758ad0ad98758c01de97c9693222cea8f35d7570df61a31c68ae93407dfc2f97"
-    sha256 cellar: :any, x86_64_linux:      "ab4f10258eee1386d710007809acd397d8e7d34e0e5485897c5ab0b285613887"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "997949c48c7ee0da57131d64b061844e7dc887f710dc9e8887ec5064cbdb4b0f"
   end
 
   deny_network_access!

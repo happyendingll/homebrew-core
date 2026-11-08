@@ -17,11 +17,8 @@ class Bitcoin < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e9502cc4440192d61a49fabd022dd68c4e5bad09f87e72d24e73f2b0d20d7530"
-    sha256 cellar: :any, arm64_tahoe:       "41844a3bed604c3502bd3f06c7a2b60ce02b73384505724dc045c6fe449e7f8a"
-    sha256 cellar: :any, arm64_sequoia:     "2bfe12dbe4fd5ce393b0cbad559ed32f58384ca55969ebfb332209c8d74b94ca"
-    sha256 cellar: :any, arm64_linux:       "0c4663dd2158cad1916999fecca55a27d4fe96a9dc37441fd5cf479f80806335"
-    sha256 cellar: :any, x86_64_linux:      "e15c6221e2a3b65af4f0aa55ab8825ce14480e5364ec65157ded6cc9972e9b43"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0954cf733f377191f8d1b4ea121ecc1c54ed15eb946f8bfaa040af625e8d5861"
   end
 
   depends_on "boost" => :build

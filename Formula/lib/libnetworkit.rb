@@ -11,11 +11,8 @@ class Libnetworkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b1c4aee8b66167207a5f62aee082bfaabfcb9e178f3e836e829af8f199391c2e"
-    sha256 cellar: :any, arm64_tahoe:       "bf10d3a4fe3552ca92ffdf6e790a6a7031179f18aa52e15b7899cb530a9e4edf"
-    sha256 cellar: :any, arm64_sequoia:     "e5f5148869a241cf86959f0a37f8cd3f12989d363c08ebb50f208e2ab12ce0dd"
-    sha256 cellar: :any, arm64_linux:       "ff30d644ee7dc57760d8017546933ed9437dd357e7d1e9b49354f161b4704fcc"
-    sha256 cellar: :any, x86_64_linux:      "a2e4f0d17af1c82ae577416e3d2a2b741c611ac8bbb5062c2532e815a065b3c7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "fbad0f701296f40c9d404866da7ac0d9352a1de3efa0fc95e5141486c87972bb"
   end
 
   depends_on "cmake" => :build

@@ -13,11 +13,8 @@ class Botan < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "71c89d76ef109ad7eb1af4c7ff2bfb4a45594ad6642f46530d84d0ac2c282ae2"
-    sha256 arm64_tahoe:       "54de75c5085c7cb53e1dbd60d4942f933d6a99c3ffeef31bdfe53811a509e4f1"
-    sha256 arm64_sequoia:     "9abc6beedca224c8dd2759e65587ceea67614df645810f6272ee47f0b058e635"
-    sha256 arm64_linux:       "5fb1ffd5b8b05896ff9ce42f8dcca7bb274c9f06b06c751f340b986cb1ada711"
-    sha256 x86_64_linux:      "16452aad4ecf9bc4bbaae5a3172ccc9f0712fe81516edb0f6407bcd792a26aac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "af7a515e724ba256f73a102459285d0158e8baa3add37849391302c3c6586bb0"
   end
 
   depends_on "pkgconf" => :build

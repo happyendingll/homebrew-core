@@ -7,11 +7,8 @@ class Gdu < Formula
   head "https://github.com/dundee/gdu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48e974ae1efdb197a2232ff9879859ca3ea1f73ec6736e0c9f523bea7b53d224"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a71f9a0640f01accaa779fa9242b633b02fd0e6a78a551db5f33f798cbff9113"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d124525e284fa7b4a2a989a8f468d19ca3b0625bd3b2daa58f661d937cf2c4aa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9e5878757751a19aa6e4de5bec0ea56280d1ea1e3b6523621a441c2f3d5b6070"
-    sha256 cellar: :any,                 x86_64_linux:      "356a1154ad93d39bee4c4c67abc18fe5011bf7a216299ea2767c54266715ceaa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "72990fd91bc9d6b012913e8d35351c79cb76697f73ce8aebfb9c3a6cf28a70c9"
   end
 
   depends_on "go" => :build

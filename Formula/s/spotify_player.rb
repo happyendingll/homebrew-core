@@ -7,11 +7,8 @@ class SpotifyPlayer < Formula
   head "https://github.com/aome510/spotify-player.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef0bdc1161439fcc3ea673b05f2928690e2c4e962abc17a5a4aa08346e9fb523"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04917bcdbefe0824841fb8dd6bf067da00abffaa0e7b4c3840d3f94697998e9b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e17806aa52cff776c7794e3904d0a8becbcc1587ed3fa39a44307c4a069c447f"
-    sha256 cellar: :any,                 arm64_linux:       "4f7b26ff1f6d62d923b5502d705d2f8f1ed0909bae4698912bffbca5d658ac9d"
-    sha256 cellar: :any,                 x86_64_linux:      "b49cf120c3cdf46df599e44ffe917f16d6959522a43951637e60151d7e73b9b4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "4c82a395a5da474a94466c22b499a480908726d111db20d1dceee8e7dbd3a215"
   end
 
   depends_on "pkgconf" => :build

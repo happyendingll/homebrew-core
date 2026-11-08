@@ -8,11 +8,8 @@ class Libplist < Formula
   head "https://github.com/libimobiledevice/libplist.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2321434c852fb7f232a377636d8ab168e546f720ea3628e695a05792065bf030"
-    sha256 cellar: :any, arm64_tahoe:       "6ff690a56dc4afd4aaf09d832a8ba64f7fc80ee6ecff64ad8b5673614ffaf3c8"
-    sha256 cellar: :any, arm64_sequoia:     "d88d984b12e68f8470e9f72631a4711df0f85b8728c53e6c04bf2956267e84cc"
-    sha256 cellar: :any, arm64_linux:       "3b79ee174bba2c391e206e86758a324b2e2fb3f9a6f366275075d5c4886ddb54"
-    sha256 cellar: :any, x86_64_linux:      "553bbd2e5b172dfcf89cd5a002e99a59ef0253ef933977ecab1d7dab2aaf2a93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "bcdb9a3eb40bc26aa9f8c4f01c0739ff70a0abeb5403a2215d03acf6d0d69c32"
   end
 
   depends_on "autoconf" => :build

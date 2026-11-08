@@ -7,11 +7,8 @@ class Portop < Formula
   head "https://github.com/padovanl/portop.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7b4889d3d68ca705e3a884bdbe6e2ead9aa91ecb940ef328c2a590e1d5755864"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7b4889d3d68ca705e3a884bdbe6e2ead9aa91ecb940ef328c2a590e1d5755864"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7b4889d3d68ca705e3a884bdbe6e2ead9aa91ecb940ef328c2a590e1d5755864"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b4da77dadb1e6a7e4b227b95055701a4af3099f4238581128fbb98deee4bf40e"
-    sha256 cellar: :any,                 x86_64_linux:      "25ff93781f5e43910f6118d1b4c87b881cf8e155b282fce9b0074db6f934f793"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "cb1ebeb6f63e2653de7b47a41ebf54c5b5957e4dfa9236a49f122f5723094e93"
   end
 
   depends_on "go" => :build

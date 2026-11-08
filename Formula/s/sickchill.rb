@@ -10,11 +10,8 @@ class Sickchill < Formula
   head "https://github.com/SickChill/SickChill.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4f878a5cfa772f221e687534c775e83270c2f7a0e94e769a446ae944be644359"
-    sha256 cellar: :any, arm64_tahoe:       "defe78cfc695e5ff2f8e37cda7145540131f6764195bb70ba16cbcd5686d8a4b"
-    sha256 cellar: :any, arm64_sequoia:     "3a19c30eef5e5a13b33a4c3df8ff11d8641fda1c3701b0fabfb41b1193fe974b"
-    sha256 cellar: :any, arm64_linux:       "777362c1da9c111e42491504d90e8258c49a85c801913a02d165220bab8d87cd"
-    sha256 cellar: :any, x86_64_linux:      "9afb651881def6dafe4cddc91dccd8403d289e4597dd6e946edbc4e56574be79"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "21f86ddeb2c568f9e548f0f71a1e05abb0d11ff5879f6719a98cf625ba04d555"
   end
 
   depends_on "rust" => :build # for cachecontrol

@@ -12,11 +12,8 @@ class Juliaup < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "911246c090445d0465fd1621379533ff1007880f62d1df886bc37c92763150f1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "104d37d949b16e17810a6747caf627cf28c9ac0225c7497d172bcab98e297dc9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7704096f7c7c2c734337dd3700e7c9ac81ca40ae29bb59772a8497903c780cf9"
-    sha256 cellar: :any,                 arm64_linux:       "2e1b82b5ff1430f53a3ff450d6ed696d79f43f25d8167c9df5e9c82adc56f2c8"
-    sha256 cellar: :any,                 x86_64_linux:      "c3818ba414715943dc273291f68d3c982039b07b7128258a3b152c42f4ded115"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "60c40341bc7f3eca980cfdcf1b0ba1d004c631cb74301a826a8b70bc42fecebf"
   end
 
   depends_on "rust" => :build

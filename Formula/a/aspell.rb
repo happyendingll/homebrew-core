@@ -9,11 +9,8 @@ class Aspell < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "08436da282a6673d81b2c905da102df730e1c4a86e409088ab0892557a378aee"
-    sha256 arm64_tahoe:       "4c04fc9c8d318233b046b40e1937da1e18520e90a5c540b705ba44fc75d6a767"
-    sha256 arm64_sequoia:     "9c1f28c2289199cba0259868d64a72cf10d6d972f34fdf713a7451e1113beda9"
-    sha256 arm64_linux:       "710cab6fd71ed4e97fe14dd88f549ab84f5ce01a262caab36f1f5719b59223b4"
-    sha256 x86_64_linux:      "4588b75601d9c44d0dec206595808c6e6ecd013244b441fbe5e2682d5186a8a8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "5b2e018aa9af34d014f2d82c10841e19e344b4ad5bb926a550b31e041228bfb1"
   end
 
   uses_from_macos "ncurses"

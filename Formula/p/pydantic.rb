@@ -10,11 +10,8 @@ class Pydantic < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5420ee9c73805b0d6c4b47deaf7940ee582fbb2ec21370b651793338bf78cb9e"
-    sha256 cellar: :any, arm64_tahoe:       "084ef7731720ea993be2fc46bb8dbaa19c5ec55f46e8f33b1625cb281a6efaed"
-    sha256 cellar: :any, arm64_sequoia:     "ea135ffa4ee2711d0a26421ff9db7efe2fc8e24004f2805cfa2276ad356a0070"
-    sha256 cellar: :any, arm64_linux:       "aa0e8b9511ee64c1169c212ec171b471e2a70cb17c1e848f6a14b6524448e810"
-    sha256 cellar: :any, x86_64_linux:      "2ca6c10354e98b24f1b096d45327bb9658898523af3436dc14697cdae7328b17"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "923eb7d868fd69168683831eb78384eb2789f04a469b5da27e7f90f7329cf78b"
   end
 
   depends_on "maturin" => :build

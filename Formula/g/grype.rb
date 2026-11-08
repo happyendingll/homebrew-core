@@ -7,11 +7,8 @@ class Grype < Formula
   head "https://github.com/anchore/grype.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "006c48d816cc37108be8e49ff7da7704ad6f2b6b6fa6b7033daf0ca1927ffebd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b712bae2553625ade51ac5e06c18e034fb97d4a62e8011fcf525ca1924073f24"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "73023226d6a7acef6b97379f3f52d575a9537b134584444d25cd2573497f2578"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "797951cd09c6559df8ef1a973ff7f256c381a65a212ec17deb35b585ae63bb48"
-    sha256 cellar: :any,                 x86_64_linux:      "fa09283f089b91fd5126a25b51d6e65f7eed440289fca0c28c101ba845d9ae31"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "24f87ec4ecc6953b635f7a93e49390e5682502b567b5d6eab1370fbc77248502"
   end
 
   depends_on "go" => :build

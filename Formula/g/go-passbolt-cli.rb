@@ -7,11 +7,8 @@ class GoPassboltCli < Formula
   head "https://github.com/passbolt/go-passbolt-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4cc014f014df5cefae49817268b7c8f802643665985edb91b4aaf3850632ddb6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4cc014f014df5cefae49817268b7c8f802643665985edb91b4aaf3850632ddb6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4cc014f014df5cefae49817268b7c8f802643665985edb91b4aaf3850632ddb6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e04d06ba5bde5e53be9f33dc955235a80b2413e0f7c50d8ae5eb25c688c7e3b6"
-    sha256 cellar: :any,                 x86_64_linux:      "b1b34e864b59d21f3703978c40f5b54c03b3c51f3924b89d2a1baae6f5f13d4c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c4a8f2ce96acee5ee795168575da4406954466d61c869b49b4c11d8dd147ea41"
   end
 
   depends_on "go" => :build

@@ -13,11 +13,8 @@ class Algernon < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ed06775d160261a7421885cef30bf5790b06c9d3892b43e9785eaa48b1cbc689"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed06775d160261a7421885cef30bf5790b06c9d3892b43e9785eaa48b1cbc689"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ed06775d160261a7421885cef30bf5790b06c9d3892b43e9785eaa48b1cbc689"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c5084276860ef51214ab0c665860acdf55238c7b833332417a3e814173dec20e"
-    sha256 cellar: :any,                 x86_64_linux:      "098a2c9d07bcf8eb13621869fac2ddd95fd73630a06c8754f4a886f45ad6ad38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "19d27dc346c1db0b768b1670e039500d8f4227e65ed5ce5334d2aac4f3d615cc"
   end
 
   depends_on "go" => :build

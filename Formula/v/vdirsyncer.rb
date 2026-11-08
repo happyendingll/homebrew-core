@@ -10,11 +10,8 @@ class Vdirsyncer < Formula
   head "https://github.com/pimutils/vdirsyncer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e4621e7fd782e8f04fe36127896955fde8f0d3f727d28d025bf3752a1e3f28a4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9dbdc3c05d14b21c787774490d1c8aa2fe7e57e93679379454818cd8d932f91c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "91889d8e2b5779b125dbcf67ec405fcacc9180a03bddfd90412ee848f81c78ba"
-    sha256 cellar: :any,                 arm64_linux:       "9f17eb616d7b6644b6070c0e5f1730d176c3e460757396857893837a9972c6b5"
-    sha256 cellar: :any,                 x86_64_linux:      "5115efed6449fc3a145f6f0fadb8d6c5b3642cc7406b06e7c1c765fe33ba5b47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "ee8c199ad76f7e5b493605a06e4f97f8986d9c7e528519b5bd8bce35a0b8ce80"
   end
 
   depends_on "certifi"

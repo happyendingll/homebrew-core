@@ -7,11 +7,8 @@ class Maki < Formula
   head "https://github.com/tontinton/maki.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f7cfbd1a38e26228d7836da5d6a92ab33a5f706619857e1c9cfeb3a88a490a70"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "337713abf61c3b85c10fccc3cebd39820ffec38bf693a61bb781c804f63a1a89"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0582aabe94161055afbc552a14138436e38d09a845b7b7bdfc7cbbec4ebd3956"
-    sha256 cellar: :any,                 arm64_linux:       "5c6578f1b448eff7d436261f34a47f0c4fe7996045f0fefaae7b68832364b103"
-    sha256 cellar: :any,                 x86_64_linux:      "5cf4f08c0a145279f40568ee6894a3f2d0fb869fa6eb968d049810047e198b91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "72e600358292d28950f0f880f03e7d05dde224b1c54da046be6fbc82648c7892"
   end
 
   depends_on "pkgconf" => :build

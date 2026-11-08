@@ -6,11 +6,8 @@ class Near < Formula
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "95ec8579bb167e2049aabe2c913993009b5972b591c00534c1d0b09fbf9aeaca"
-    sha256 cellar: :any, arm64_tahoe:       "12c130f9c1e48fdc3c44479676738281e12992c4ad30f02e3cfb4555f7098299"
-    sha256 cellar: :any, arm64_sequoia:     "552d89071903b66ed2b8570b4e33b896801a63b19d6d754565b4b7d0de05aa59"
-    sha256 cellar: :any, arm64_linux:       "eb5e9a886952745155b310a1710a1b562f486b04c1f280d46a7fdf4f0c6e7fc4"
-    sha256 cellar: :any, x86_64_linux:      "70dfa045e7cd618df165cf0ba741fe2af3aa7abd95f9f3a6aed619730a8e0140"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "934941227e9b4fe9eb5ed1865e1dd9188eac9bc95b928ce8201475e02ef90f1a"
   end
 
   depends_on "cmake" => :build

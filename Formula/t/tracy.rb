@@ -8,11 +8,8 @@ class Tracy < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6163cb10b3d30890fdfcb096ebe2a4994ffe936eecb4b0716365bf1331f13141"
-    sha256 cellar: :any, arm64_tahoe:       "a5dde636b3875485e2f329105a90682420d68643979da705226661dfe9579895"
-    sha256 cellar: :any, arm64_sequoia:     "ec2b049029e222e2518e17d00c1b53c8121aa2aed68adb32c88bf8b3cd45ff78"
-    sha256 cellar: :any, arm64_linux:       "7dc720e12f049686f0e10ef86b70bdecfa0e8599419320c82d9ae9a72c84514c"
-    sha256 cellar: :any, x86_64_linux:      "b99ed1057fb77eec27b71eb2324fa3eaaef0da96b83983c2fef0a3a3fefe8ffe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "7f7b0dcb6be9aa506717afb3ac3775c2637ed0032c645b3cacb46b8ff8778c9e"
   end
 
   depends_on "cmake" => :build

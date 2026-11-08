@@ -11,11 +11,8 @@ class Jruby < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a13eac35582c548fb83bb933e35dafdd98120a08fad13904cbd802b975e8be60"
-    sha256 cellar: :any, arm64_tahoe:       "dc76d17f8c561f9f5e01a0dd0aab19ef7526ac528da092c2fe64866a08904452"
-    sha256 cellar: :any, arm64_sequoia:     "afbcce81a9121c10e95c10b1bd64848bd272bba81f3265d5bc217a38e4b66077"
-    sha256 cellar: :any, arm64_linux:       "2cdb08e666b5986e4cd08a48414152589e8107900ce2ae1bd44dcf03ae551e87"
-    sha256 cellar: :any, x86_64_linux:      "dcadbcd10e8091e88ba74f639cbb62a35c0a67a815baf664d9771e6df8ab0ebb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "9c41fb6ad0661e222fb9bc96674635e7ff368e2f377d070f13180016a786cd52"
   end
 
   depends_on "ant" => :build # for jffi

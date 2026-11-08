@@ -12,11 +12,8 @@ class AwsVault < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5b0be54f140096041ed275c8334bae018031798911450372e65a9634aa8c0a43"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "03c7a0f041396d061f53ab2a2ee5ad1ef1ccccf8fad5fa527a4e2dcfe3e3b3ec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39e25d2994ff4bf6170810dcce7b801bae245f67612aff9cf088c084665e709f"
-    sha256 cellar: :any,                 arm64_linux:       "96bc545d999f564c33dc159e5463be0f950a06226558fb8f9606cdd3afb5c6a3"
-    sha256 cellar: :any,                 x86_64_linux:      "ff0359ad351520a6e5310b0740f40758d8b042335946ba6d8d3c116c1642f90a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "454f56a0699d868415c7e395eae172172c09e9995a6facf1611de78795bcc2bf"
   end
 
   depends_on "go" => :build

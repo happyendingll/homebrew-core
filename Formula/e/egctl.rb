@@ -7,11 +7,8 @@ class Egctl < Formula
   head "https://github.com/envoyproxy/gateway.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e6151630ab37e0a6da13a322abfd5edb9ffc8c69fa6c8b21f28125eb60f88924"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4bd21be3b66260c3cae429a540f11c518dbc08fcc159a581f91eb4f04ebdadbe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4882ad44b38c3a858de3e3908f8877a2dad5c8e44a7aba95c88bbaf514df3328"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a56b2f0755f55f01372793afc93730888b3a13a101bf70f72256ab358219b457"
-    sha256 cellar: :any,                 x86_64_linux:      "a610f497d0883e6b4d0df09dd4d49ad89b12b8a473c16b2b5bb8c325d98e6dcc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "99912bbc25745ab45c25485f85155b53d3f180b65f16a6d6b53509f3598cd5ff"
   end
 
   depends_on "go" => :build

@@ -8,11 +8,8 @@ class Httpd < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "8f7481cd69ea63d43eeccf4555b0e1b21af7c27655c4a1c100fcc800254b40f2"
-    sha256 arm64_tahoe:       "921f1d5a4242483a89333b28cfa450102a82880f121d578f0302bd14d2aef845"
-    sha256 arm64_sequoia:     "abd19b740dc98a628c60d6ad317767406b6a3f318a5a485ce8e0a34e645242ac"
-    sha256 arm64_linux:       "535ff061a181bc54888a4dfd45a4cec4e9c194cd7d239ab16d052dd836785014"
-    sha256 x86_64_linux:      "b07c59dbb01bcc490ee7cb08f9164883c8720ae80e953fee8e423890a2025a45"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "7e91bc4f926cc449bf137899dc7cd6b5d48d981b25dc75eecff8bb3a2c1c8bfa"
   end
 
   depends_on "apr"

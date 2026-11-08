@@ -7,11 +7,8 @@ class SignalwireClientC < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "244579c2acb67012e0ce31458b0eab069e962c0e1a92ecdbc390e357ea9c353c"
-    sha256 cellar: :any, arm64_tahoe:       "5fc4dabd44395ee6138c56b70983395ba02605039b7abcfd994596ce0a1032b3"
-    sha256 cellar: :any, arm64_sequoia:     "97bdf557640c8cb51188dffb81081d06df728fb9e4ccb6934d7d63da7da2c8c0"
-    sha256 cellar: :any, arm64_linux:       "5d91ece6b7924ab5e7bd5fa684fc53ef906162b658fff438059bf63eab6b4659"
-    sha256 cellar: :any, x86_64_linux:      "10a26e9f0dc4cc36d9b8f3dabb3e2657fd915e2f96f84d8357564a161924f3ed"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "d21a8f59ccef810390fd2413b9284f9c4757259a912a3f1bb14e1a62be6e9620"
   end
 
   depends_on "cmake" => :build
