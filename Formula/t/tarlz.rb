@@ -12,11 +12,8 @@ class Tarlz < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d07bbea8b6e086d0cf9b3fef70922c4ea94bd63a9624a76e676123c038e0b638"
-    sha256 cellar: :any, arm64_tahoe:       "731345a4ea45bf6b6fc35d5a3bfc2bd8c1249cd60db89a3a7730f822112e4951"
-    sha256 cellar: :any, arm64_sequoia:     "9f670f14e056431a696da9dc113d749e2ca47129436c4ac01fe96a628a425f54"
-    sha256 cellar: :any, arm64_linux:       "1ba531a0af4c7be6fdc3bd656a8e213db3a16c6cd65a0e769a952dcb691f6271"
-    sha256 cellar: :any, x86_64_linux:      "c0e3a4867727db9430396d993f3e08a49bddbb17d9d59de905d1b05909bcdb56"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "fbe3abe6b80d58c776cc4ab715523d849763fee48d471c3f2c0ff3b89ad4505e"
   end
 
   depends_on "lzlib"

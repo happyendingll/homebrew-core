@@ -7,11 +7,8 @@ class Slackdump < Formula
   head "https://github.com/rusq/slackdump.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2d3a2ab57bdd4ec37aeaacafdf9beed938d0fac193e335235172cb6289608be0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2d3a2ab57bdd4ec37aeaacafdf9beed938d0fac193e335235172cb6289608be0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2d3a2ab57bdd4ec37aeaacafdf9beed938d0fac193e335235172cb6289608be0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b335b6946165ea62ebaeb71d8a51e36a24a2ef091ed2d72b1a8cacbd93482557"
-    sha256 cellar: :any,                 x86_64_linux:      "254c1302aaea6546695ba7bc73742983329c8315ef1bdf7fd787f2a4e457d709"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "e20b04217807fe6083d3246203d8052c74c41dba30c2f8e45fe0b4acd50ff750"
   end
 
   depends_on "go" => :build

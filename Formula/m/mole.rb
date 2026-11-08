@@ -15,9 +15,8 @@ class Mole < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "90856eb7e82d07a111c2628619cbc80273fe666a9152001a3bd34f013722bd09"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "86544fdb065cff7f9c5565e61efb1ac7c5941fb1410d04047230b0aae5225c96"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0fb68bd2fa4a66c57ffbbcc3ad04575cabb1d86be1813ec51222575ad2777a1e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "8e062c1cb16d8c772b8a893c4fbce62436eec739a63ceab81fa261bb1e8e2e1e"
   end
 
   depends_on "go" => :build

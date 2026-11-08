@@ -7,11 +7,8 @@ class Janet < Formula
   head "https://github.com/janet-lang/janet.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "248ec6ff95d3bad5d21c391b66fcf466152a800f1f0b2f86286ecb155f13f144"
-    sha256 cellar: :any, arm64_tahoe:       "8db3b5561e833a9283cc88ffc7232a97fef314c20b03ee12b2907b24d61e9f9e"
-    sha256 cellar: :any, arm64_sequoia:     "f02ae45f22671f1433828c4c124b2871e489dc59701b2c568c79f27c0aec3341"
-    sha256 cellar: :any, arm64_linux:       "22dd6079305ec09233b11f4ba1b3048bc5c5f2087e216549ee8cb8635e738783"
-    sha256 cellar: :any, x86_64_linux:      "859f11ec6d1915b4215388d82f6cc0f3df75379f623dcd620e397284df6ed2c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "8042f077080354b2bc3d109843c2f0279c25a493448bf487ccc9aaf0af086a6c"
   end
 
   resource "jpm" do

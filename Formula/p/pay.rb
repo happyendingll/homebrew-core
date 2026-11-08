@@ -12,11 +12,8 @@ class Pay < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "27cd48ffbf394edeac0ba104ce51b88b289abcdae1f277dd4a2a1dd72f14b647"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "46a81cfcb524956fa6e29a3916de97f0c38bceefabd0f73a0b9cc6bab7a5f7c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "16a7012f872d061960e9e5e98b7539e71cee083d173d1cd200c00f386ac55879"
-    sha256 cellar: :any,                 arm64_linux:       "9b2c13f6090c13da36e2107499bfc40170df49f59e85d1a968a8c16408e7920f"
-    sha256 cellar: :any,                 x86_64_linux:      "5fc400ebac38ddcdd0fc204353f2b5aac84f983d55cb047473048d11a957f104"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "2924dfc36cb04cabde5907ecdd2491056b00867c321e3eb824f54ea89a30bc08"
   end
 
   depends_on "cmake" => :build

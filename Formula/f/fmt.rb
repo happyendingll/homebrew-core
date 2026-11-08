@@ -8,11 +8,8 @@ class Fmt < Formula
   head "https://github.com/fmtlib/fmt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8401e362ca031b083150a1853a6dfd4c65573b3d2acef6c188528492d5a8f6a8"
-    sha256 cellar: :any, arm64_tahoe:       "25bdf7d81b112069ba5729c5f8901a6233cd2b6672ff1bbe7a9ca3a63ed2f90e"
-    sha256 cellar: :any, arm64_sequoia:     "8a8c73c17025670d13e28efe475ddaf4c9aa6cebb9104fdc18b28f96693df82c"
-    sha256 cellar: :any, arm64_linux:       "eddf6744630de1406e88200bde0e326f38292bb8919e455673294e794786c27a"
-    sha256 cellar: :any, x86_64_linux:      "b9b63eab0ea3bb8aec944e69ae336b55b7fd86d26dc469e137fa67dcd874398d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "298737f4fd0e34b47f2e3dcc56eea957f8e1a4358c3b3a292b0e481eb3dc5f51"
   end
 
   depends_on "cmake" => :build

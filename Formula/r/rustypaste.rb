@@ -8,11 +8,8 @@ class Rustypaste < Formula
   head "https://github.com/orhun/rustypaste.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07a58da0969fc70bf6740d01e0ac99cdb3a2edc28b5d3f4a6fa0e17e5537f380"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "894b9f70062db6f951237f209dfcb0cdbf0fb3302e02d1553707cc18d51816b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c31ce043892b721d24102da4973f3785873c478c2f21b4ca9f5b98b23627ac54"
-    sha256 cellar: :any,                 arm64_linux:       "80043e22b5b1d0567450be05e23b711ccf69935188bfb4373c47139379cbb3ee"
-    sha256 cellar: :any,                 x86_64_linux:      "95ae2674cd3497991c45c867ed61ff52bfd9b75955930057a53f941f6b29ef7c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "6c3008280a054f86c0a52c4f17209022e6523357748eb3f933bcc8ac984f2154"
   end
 
   depends_on "rust" => :build

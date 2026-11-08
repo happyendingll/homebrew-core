@@ -7,11 +7,8 @@ class Croc < Formula
   head "https://github.com/schollz/croc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "177898b9a51e06b09013dbb752cd552bfe479ac7173a7ac6da53a73cf4928df1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "27a99c7a620c2181e03d131aba202dfc0fa9941328bd4abb49760d78a1650bae"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f41ae46c48852a72442c848407a0921e6a92a492acc345c9e1f94084f8342159"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5dea17b3a5ca28def980fab1e6beda0622d86a90f756d41d5165824c7da4febb"
-    sha256 cellar: :any,                 x86_64_linux:      "2363e7e81acdf1dd2190db5d09ec2f0105310923296b04ad0a147a65a5d3e80a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "9253aac574a76f47d09be2b830118e5b69a166ab7cfb1cb70fac5fea11c85287"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Ncspot < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5bb3e62aa21729cf77a320d01fa1da2bf1e89da64509e2763cf19e6075ce256f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a3b26c770d94d045711922106ae532ee43bc58be48cb50172bf296faf16e805b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "002e88722108029f98ddbd7bfb3b852619c3d5b5fe8dba193801b05e76e8ddd0"
-    sha256 cellar: :any,                 arm64_linux:       "72cdd2892e97c6c354e0e6f7e5982726c69ecb9a6d7a118377632144225e7ddd"
-    sha256 cellar: :any,                 x86_64_linux:      "9ffc7ccc89a7d3cde68f73c4e1fc8316d50b02d6152ee8ed88c78f236bb94b5c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef154f728caf398619cfe60dd6f6ed0660ac5cdfa68c5942164c7a194cca1902"
   end
 
   depends_on "pkgconf" => :build

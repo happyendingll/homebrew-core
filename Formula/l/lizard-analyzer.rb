@@ -8,11 +8,8 @@ class LizardAnalyzer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4683fb918138a7bd01e93f4ffe9dcfeab068a6a2cb7c319489ab4580d15be32d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff60f37c9b813486df4ac1fb8c7a93f22eca4eb76921f12bf82eeab01b3a79cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2526c7c5d44cbe570284926b84d600b3200ea976a98d21bc2f0abdaa45243e3"
-    sha256 cellar: :any,                 arm64_linux:       "48e7d3dc0e57cafee9e26f1d549f530677e14f0d9e9f2dd087726ba636053b1e"
-    sha256 cellar: :any,                 x86_64_linux:      "90d81f2c573081b4fa173d3d2f3f0746a13da58b094e3a2cf5a2ebe9ccdbfee1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "c830efb8ffc9a0c5ddd1dda0ee9c1cb65153e82d569d75dac2c040372ea20aeb"
   end
 
   depends_on "python@3.15"

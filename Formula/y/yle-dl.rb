@@ -9,11 +9,8 @@ class YleDl < Formula
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ab17ae57276fea4d29a63d453782fd26424faaf2df3e1bb4f639960ba3c3676a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f90361493db7e557df2b7fda5c0130c7bf70b51d63ce2d563cb6f589b1cbb941"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39826de4e80cf4e904d0ec454d0ff42089f4540d9c7c444a7ce794101ec14c95"
-    sha256 cellar: :any,                 arm64_linux:       "64da696c6ea518a5786e9cd463e65fa6abba3f108373a4819cff101e5b6e0373"
-    sha256 cellar: :any,                 x86_64_linux:      "ca748de0b6c2250ecf7baaacf72deb89646bbafd30983bbb46e21c026d97e5f7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "9f5a5cea8413b114b7ea122a2f4996fad8c7f7e962d0a113b5e59578acbb8a73"
   end
 
   depends_on "certifi"

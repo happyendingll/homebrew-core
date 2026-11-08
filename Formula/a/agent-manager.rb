@@ -7,11 +7,8 @@ class AgentManager < Formula
   head "https://github.com/YoanWai/agent-manager.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "84c45fe8aa91e0706040a4a3b4faa6fc2032db4a69c066da454f7a0e11661c9f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9d33d623ffaaa95d8bfecc6c745079e0b5b9e81e25718e2726df0442cb8f790c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "42bf293d3c8e74fcc15da97f0fc774996db1ba50ad2a560181ca53766f3e1dc9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9f2719fe2924235ec317761c4f10f1eccddab963d2a126aeed0928fb73f978ef"
-    sha256 cellar: :any,                 x86_64_linux:      "2bd66aa40e614fd3264bd67f7edade2ce3156f50876fb299d912a6f7d88b8548"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "275709589433236af4484848bc504fd9cb4b9503f7f2ee31fb64d8756699b3aa"
   end
 
   depends_on "go" => :build

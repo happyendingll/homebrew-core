@@ -6,11 +6,8 @@ class Youtubedr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b8d7caed31508e087e9fa2cab2a92bee662d05c173667a6c4240dc9f80a5aa31"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8d7caed31508e087e9fa2cab2a92bee662d05c173667a6c4240dc9f80a5aa31"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b8d7caed31508e087e9fa2cab2a92bee662d05c173667a6c4240dc9f80a5aa31"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2fe82860956884e36c7a468b194b196a1265b4189295108e5416a40056f79342"
-    sha256 cellar: :any,                 x86_64_linux:      "e9c476e55e3ca5623d00395b23bafa16c21b9663fd43e46d6708bfc22ba12c39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "6c8b23771f98be5e113dca26ce1545aed5709435d6eab48c99cb86616de06955"
   end
 
   depends_on "go" => :build
