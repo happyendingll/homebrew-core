@@ -9,11 +9,8 @@ class Prowler < Formula
   head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "93c21da982be7dd22bff894133c06e73348dd24a48497aa6da8389295a0635b2"
-    sha256 cellar: :any, arm64_tahoe:       "c7049a79e566f7e47f23111b171655be6308ed308f9d7e478bb2290de2417591"
-    sha256 cellar: :any, arm64_sequoia:     "adbd74c0f57f92459024176edf42a10f51829260456dbf3e7b0a504ec92aafb0"
-    sha256 cellar: :any, arm64_linux:       "f72eb4c3a0e7b7ea00bda94357a409c0e8b234f97c4ae398b522577b000373a6"
-    sha256 cellar: :any, x86_64_linux:      "be5c1181598959bf3f382d1dfbcf62a82689208530d857598e72e4901d75bcd5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "f729fbbdbb8c8d4ae1a111c6ae248a248845c0c354eb9c0a7d6ca478ab576aa9"
   end
 
   depends_on "cmake" => :build

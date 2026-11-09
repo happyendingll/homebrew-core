@@ -14,11 +14,8 @@ class Cryptominisat < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0254439ef6fca7d293141eb0649f4e8eadfa3f1d5040d37e2bffed911c1a1767"
-    sha256 cellar: :any, arm64_tahoe:       "5f4b2fb751dbeb4d71bedcba41c795306af4e75a7c75f71d271ca0b6a49ba8e6"
-    sha256 cellar: :any, arm64_sequoia:     "a4c1ec409bdeba093c2f089c102accdd84c9723b2c0056fce7bd0b5b82c01fc4"
-    sha256 cellar: :any, arm64_linux:       "990d098ed30a7d7125993d8180af23c8dfb2e5ac295eef69f871723bcaef960d"
-    sha256 cellar: :any, x86_64_linux:      "604bedae01b51f2cda2152c8cbd624da46ddf9a20ebdc65f27a7e0e872eabe09"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "37e20c0af9b02c8c83261d85945af5e6580725225a25540f2d0d49a016090fbb"
   end
 
   depends_on "cmake" => :build
