@@ -7,11 +7,8 @@ class Chiko < Formula
   head "https://github.com/felangga/chiko.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cafb1c8782a9f8da2f73721d6a7bbf5d9071a536adaf5ee44613b25fb68fa7d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cafb1c8782a9f8da2f73721d6a7bbf5d9071a536adaf5ee44613b25fb68fa7d0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cafb1c8782a9f8da2f73721d6a7bbf5d9071a536adaf5ee44613b25fb68fa7d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d3f2a25d8a057758107db70aa52c18b7fb730d5aa217d9d88372dfcc231b2d98"
-    sha256 cellar: :any,                 x86_64_linux:      "e50e51a6dd1055b81fcfc776d99b39feb8913a2607cc3f62361fc91db84b10b3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3d6d3332c2b714ba0552c683f49145f983b9c17823d0c0145f2f41785cb6d055"
   end
 
   depends_on "go" => :build

@@ -7,12 +7,8 @@ class Libxcursor < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "2c4a7bc7940a286ecb8a6fb90a3380ea01da85468856f50279555c6b14926540"
-    sha256 arm64_tahoe:       "0ce9a15234d8fed400468ba6071d6d6d981e7e64fdc4d6f492fa95fa78ee4f27"
-    sha256 arm64_sequoia:     "89433fda42917b2845ab4b45f70a307ea34dcc030d8f19ee9269e60db8dedb12"
-    sha256 arm64_linux:       "de8516c4f3994809d0a7a2fce41f2089b2f84d7831e0f970d3aca4052b67999f"
-    sha256 x86_64_linux:      "b0e43878cc57b710c0ae5d839b09614534f52d7bce60e5a5de9ea721f4c26fc6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9eabd934e336e0fa5962881ea7f7bcf4612f09d97c874cb513b08fc29cc49749"
   end
 
   depends_on "pkgconf" => :build

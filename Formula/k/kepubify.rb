@@ -12,11 +12,8 @@ class Kepubify < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a520c236a3f9d8dfb8055f500a2826e417072010547a74b5ed81367841d08d9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5a520c236a3f9d8dfb8055f500a2826e417072010547a74b5ed81367841d08d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a520c236a3f9d8dfb8055f500a2826e417072010547a74b5ed81367841d08d9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b43edf639f63ce668fcbdde284ad17b646d9f8e57ae1ca5c639fdd88d76cd1d"
-    sha256 cellar: :any,                 x86_64_linux:      "637894bc3fff2644d4cc84b2fe5156697dc027122e4167798228b58361762529"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5c7e8b877568c8c547374b42d11ee08da134605f94884e0d5f79d59943029525"
   end
 
   depends_on "go" => :build

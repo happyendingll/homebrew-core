@@ -12,12 +12,8 @@ class Stk < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "824f5a67e81886214168ec94e8d38f93bb169013e182aff5d1c3aa1b832f63a7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "14b11f68c2557197e095d18b4ef4165afee87aec1d094e11665ee4f3ba457fab"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8050290142b2bd021e4ab23875affcc51996f459f8dbad28b6428df44383afdb"
-    sha256 cellar: :any,                 arm64_linux:       "2b816f2bfaee8682d4717e0ad0118efa11a04e92b9aff21b9f089f9ea9cc8138"
-    sha256 cellar: :any,                 x86_64_linux:      "ac6eb9225f58b77cd508c338154016eac3d9d83f9eb7b511aa9adaf34b196d4a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e09e9bdad683f2a7f5a51aba0bbe84f9f0a2b01f5f64020f5832620c38efc8b4"
   end
 
   depends_on "autoconf" => :build

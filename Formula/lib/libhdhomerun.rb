@@ -12,11 +12,8 @@ class Libhdhomerun < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f578fe3c5036b4afa472e9a6e3403ac064a0fbda8e533ec898847da98fbf9549"
-    sha256 cellar: :any, arm64_tahoe:       "6368ef60b78c03f73c9f998df14d9edc9ded8d77f396de82a1f517766653f528"
-    sha256 cellar: :any, arm64_sequoia:     "ecaed292b6d261923c5b13747aee5e628825c01116d320be48d7624556eab8f3"
-    sha256 cellar: :any, arm64_linux:       "3eb87ade6db53ed7030f3e9136200b98578464191c6d0b29e5960a1baf6f5585"
-    sha256 cellar: :any, x86_64_linux:      "788bee8384b8ccdb7b07fde67998671b76efe09b46b9919d996e4935b33269e3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "34d4f526ada3dd28902eebb1409598b5f63965addecc61480a4ba55bf479ff9c"
   end
 
   def install

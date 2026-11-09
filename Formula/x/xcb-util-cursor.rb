@@ -7,12 +7,8 @@ class XcbUtilCursor < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "a9b1f0ab481342a42b5e5504923cc07f9d0cd555bf5946b4ab3fc92c7002ae1b"
-    sha256 arm64_tahoe:       "6fe89f93adb0c513b21b555ab47cebb0e9c5b1708cb8001cb81b4a359906ed17"
-    sha256 arm64_sequoia:     "da110205b1873747fa016952f8a44c605c3d1d06ab1ba2adacdc40f092f2e5cf"
-    sha256 arm64_linux:       "af07b42279f19d5646a8109b2fd76468625173b5767bdeffcde81db5b5bd1eba"
-    sha256 x86_64_linux:      "1fde4be1cfc9c969db35396281e36cc67d33f0cfb5b2883c9cfd85f6bec50802"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "6c964e73f65087130975db03e9eb222a1b36442005c4903546f6a3ee39e7c7ea"
   end
 
   head do
