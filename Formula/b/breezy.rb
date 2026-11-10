@@ -3,15 +3,18 @@ class Breezy < Formula
 
   desc "Version control system implemented in Python with multi-format support"
   homepage "https://www.breezy-vcs.org/"
-  url "https://files.pythonhosted.org/packages/01/8c/2cef999acc8cc0e1015d9a3a92d648243989865ae80e10e8051b51d6d05e/breezy-3.3.24.tar.gz"
-  sha256 "aad679ebdd2f75bef15ec1fafe9d5bca81dca16bacb6b8fc4b677a64cfa5ba7b"
+  url "https://files.pythonhosted.org/packages/e4/31/8b72e0d4588dac3b0c09fb31844bddf51c512be445f733fa55c640c46fa5/breezy-3.3.25.tar.gz"
+  sha256 "01932bc4f7e4c15f6b57b208224e78490d3f4af777869aaeb877a965637c8095"
   license "GPL-2.0-or-later"
   compatibility_version 1
   head "https://github.com/breezy-team/breezy.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "fb8f12a314cafadf4deafe5a26804728552b7a17deaa658ec8dfe27b4ddcaf01"
+    sha256 cellar: :any, arm64_golden_gate: "5019b82bc91a7086f27e67f1ce5fdc4d5c6c9b75b0c379180b641219296d900d"
+    sha256 cellar: :any, arm64_tahoe:       "d9b2d5d6e28bddab37a363fb8578dd3f73cadb684f8828408142f8fa6e8d347e"
+    sha256 cellar: :any, arm64_sequoia:     "f76d6fd562d1d1c663b645aafafc6a62bb73b8d680fc970089539ba4f8273c64"
+    sha256 cellar: :any, arm64_linux:       "00109f3d97bc901d304111cfc6aee34a3dff5eedad6b5eb8b56a2f5122233005"
+    sha256 cellar: :any, x86_64_linux:      "eed3019539fed6524a80dbaf32c5d6cd30490542e5ae0d5684326a7565ddcf34"
   end
 
   depends_on "gettext" => :build
@@ -30,8 +33,8 @@ class Breezy < Formula
   end
 
   resource "dulwich" do
-    url "https://files.pythonhosted.org/packages/18/92/e47acfff672d6219d1bba1c210f902c1ad4a58d8c68eb89fe0b786f00a68/dulwich-1.2.20.tar.gz"
-    sha256 "28e1f48098d2cb157e722588466070cbefdfe8093c2a141c568b01362296c0f3"
+    url "https://files.pythonhosted.org/packages/01/d1/01adf1db003374db4c2a70f7bae757ddfc39a33d9fb5ab765522b4d339e6/dulwich-1.2.21.tar.gz"
+    sha256 "5d3939f64883e6799614cab708ef4ee9ef415dd6dcad47527cdbb0eea43bf3a2"
   end
 
   resource "fastbencode" do

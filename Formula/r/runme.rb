@@ -1,14 +1,17 @@
 class Runme < Formula
   desc "Execute commands inside your runbooks, docs, and READMEs"
   homepage "https://runme.dev/"
-  url "https://github.com/runmedev/runme/archive/refs/tags/v3.17.7.tar.gz"
-  sha256 "f38eb84080e12a202d18022c81acb979c6a21af258deecbd212702f8e423ec62"
+  url "https://github.com/runmedev/runme/archive/refs/tags/v3.17.8.tar.gz"
+  sha256 "7b85f20325e7f98037b9a8182e729e01aa2aa2023b16e8dd11c95edc47adc129"
   license "Apache-2.0"
   head "https://github.com/runmedev/runme.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "d7cc9dd8f8c4ef0559665a6923e04fd95ffb6b8c7aea219ea3238e70bd41de0c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c5732723d0eff86158b12eeecce54c5b445be531d8b91fa7c1239c0c7cc7a8cb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5e953aaec32caae4385b21df76ead1eb211c4198e4e5fc824c791a5c25c1c77b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a68cb4c5dc5cb26661830b086261a42616f0032dbab31bdf104c95006cd0f723"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bfdb3784d857b3829e280aedcaa32217f31c62305a7617023cc0c3779573b750"
+    sha256 cellar: :any,                 x86_64_linux:      "207ecf078edae3ece71c8b64bba99b1ecd30a7164d87f1bce1ec78367c249c85"
   end
 
   depends_on "go" => :build

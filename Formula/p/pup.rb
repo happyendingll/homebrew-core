@@ -1,14 +1,17 @@
 class Pup < Formula
   desc "CLI companion with 200+ commands across 33+ Datadog products"
   homepage "https://www.datadoghq.com"
-  url "https://github.com/DataDog/pup/releases/download/v2.4.2/pup_2.4.2_source.tar.gz"
-  sha256 "bd768ca40160fca677bb7f87e39756ae7bc16100013acae3bf0c4e1d8bd767c6"
+  url "https://github.com/DataDog/pup/releases/download/v2.4.3/pup_2.4.3_source.tar.gz"
+  sha256 "ab3d4e28ec26556c9aa10fdaf375f7a450b4090dc5a0f8918a24c50572012fff"
   license "Apache-2.0"
   head "https://github.com/DataDog/pup.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "ea7421f30b542c875f4537c7acc23dfb4e58e6361245f722e0f2af89891b20ed"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4b7389fae403406bf8b89e9dee25156430ee58be9817aea1dd24882cca392c6c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bdec49fb6b22ee031086986fa1b82164f3a5a14c156d3b20cc1dda6af82b7aac"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f41159b209927c491014979ad537effa235919dff6852e6689fe5f47545892db"
+    sha256 cellar: :any,                 arm64_linux:       "5209f47c06da9e2f60390ad07e1a674d995ecccdeb913d7c9390b5e09486f0b4"
+    sha256 cellar: :any,                 x86_64_linux:      "e662bbe475a940453f9a0015a75bbffff895d64de5aa427a93bd947d748aa1b9"
   end
 
   depends_on "pkgconf" => :build

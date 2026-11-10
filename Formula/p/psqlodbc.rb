@@ -25,6 +25,8 @@ class Psqlodbc < Formula
   depends_on "libpq"
   depends_on "unixodbc"
 
+  deny_network_access!
+
   def install
     system "./bootstrap"
     system "./configure", "--prefix=#{prefix}",

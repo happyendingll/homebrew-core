@@ -1,10 +1,9 @@
 class Nushell < Formula
   desc "Modern shell for the GitHub era"
   homepage "https://www.nushell.sh"
-  url "https://github.com/nushell/nushell/archive/refs/tags/0.116.1.tar.gz"
-  sha256 "0cca0c5bc9d9eb608dee00c75b6b511917df6e66c784b034468bab2ff0fbb9b4"
+  url "https://github.com/nushell/nushell/archive/refs/tags/0.117.0.tar.gz"
+  sha256 "ccb5640f8f88b48787c946daf87a349972b939c2edbc5a3b4ca6fc0921bddd6b"
   license "MIT"
-  revision 1
   head "https://github.com/nushell/nushell.git", branch: "main"
 
   livecheck do
@@ -14,8 +13,11 @@ class Nushell < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "9cab86179f1c517464a17e0c4f9c5a12b40a1d117dfa369ae2dd078c80c1758d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6140577dbc3fd54dfef8b8a74d7952be152d1fe780389fbd9361e9d4b3e994c6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ac90b102a7fe43b30d6aa75f560680d4fb29c9e76d6456942adf14fd41f9685a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c3323239e4bf69c8ef9ddc9f67a92d4d335dfe8c8ef13a647779f6207edc0cbb"
+    sha256 cellar: :any,                 arm64_linux:       "47488a0bc802e4f8229543232fc4c8b50a06ea3335556f541c48920dc66b087a"
+    sha256 cellar: :any,                 x86_64_linux:      "5f8609e016e389b0af8cbd788629ca3db7c41fca3edb5f0264bce23f8c107926"
   end
 
   depends_on "pkgconf" => :build

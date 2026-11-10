@@ -1,14 +1,17 @@
 class Cookcli < Formula
   desc "CLI-tool for cooking recipes formated using Cooklang"
   homepage "https://cooklang.org"
-  url "https://github.com/cooklang/cookcli/archive/refs/tags/v0.41.0.tar.gz"
-  sha256 "233f3a349c21936d89eca66daf9e61009dff745fbeabf1fb591c5e33dccabe0e"
+  url "https://github.com/cooklang/cookcli/archive/refs/tags/v0.41.1.tar.gz"
+  sha256 "1e5c4160245d91f1667c5e55d0c6bbd977ac6b7565889bc01b38c462d7e2d95d"
   license "MIT"
   head "https://github.com/cooklang/cookcli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "e2c2c806580824707fdb1eb16d58006e86ff414a5a22816267890cf5383dc4b7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fde96a3776323273d59b0353ebd3eb2282b4e472841dc69e4abd042d05af2a99"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "71188a033c9295c5e65f60ec149785b633d3780cd793e5dbb1a7b3971aa52eb4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7db9bfe3eb7b6465ee0ac101c0aeccae98e65ba3b9a3ddee1a8bf4fa4d8c12e1"
+    sha256 cellar: :any,                 arm64_linux:       "6a22f33b8a4d22ffda29483c29f4796419d474882d0723fdc0849464afe03b1e"
+    sha256 cellar: :any,                 x86_64_linux:      "1ee02fee814745c24fecaa92cfe9bff253c2956ec3c130365070172675dc956d"
   end
 
   depends_on "node" => :build

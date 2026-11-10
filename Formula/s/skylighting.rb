@@ -1,13 +1,16 @@
 class Skylighting < Formula
   desc "Flexible syntax highlighter using KDE XML syntax descriptions"
   homepage "https://github.com/jgm/skylighting"
-  url "https://hackage.haskell.org/package/skylighting-0.15/skylighting-0.15.tar.gz"
-  sha256 "2929c28a042453ee67785201dda234308ef19e068fb474cc1db69dd5f67c4dab"
+  url "https://hackage.haskell.org/package/skylighting-0.15.0.1/skylighting-0.15.0.1.tar.gz"
+  sha256 "b84691c7e2e619e0f98e28a3f468bb7a57c68293efe9d6c66174f4123b8d570e"
   license "GPL-2.0-only"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "e524205ec44a2f462e579318230d6e2a291c6e9efe5e881755e1df11c1b88d24"
+    sha256 cellar: :any, arm64_golden_gate: "847411e10873ad306943ebb698367e3c01863c6e4521589570235ae51812412f"
+    sha256 cellar: :any, arm64_tahoe:       "97e2362843abfeace57c206c68ebd59168773a8c15042576a79a715b32b2775e"
+    sha256 cellar: :any, arm64_sequoia:     "a07712f08675e94a754cc5976657defb1f9e25b7b35fd6605faa09e94b9b5863"
+    sha256 cellar: :any, arm64_linux:       "369c3bde6095b16362e962bfbe1dac42e84342a01241bafb13914e7495a30ad6"
+    sha256 cellar: :any, x86_64_linux:      "a48c29d01158b15072e3a73c6e88c97d6e726e9afa3c50d4c0ca8a20ca0efe32"
   end
 
   depends_on "cabal-install" => :build

@@ -2,8 +2,8 @@ class CloudflareQuiche < Formula
   desc "Savoury implementation of the QUIC transport protocol and HTTP/3"
   homepage "https://docs.quic.tech/quiche/"
   url "https://github.com/cloudflare/quiche.git",
-      tag:      "0.30.0",
-      revision: "be47c5011215b9f13bad06bd7627d3ae49888a19"
+      tag:      "0.30.1",
+      revision: "7ccccc7b7f4bd4ec6bc70219fdbe491024f5cb0b"
   license "BSD-2-Clause"
   head "https://github.com/cloudflare/quiche.git", branch: "master"
 
@@ -13,8 +13,11 @@ class CloudflareQuiche < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "dd4c61a3d224d30f02435920083a7e27039aa8df088b7327313c6f3b1b0dde0d"
+    sha256 cellar: :any, arm64_golden_gate: "9d6c4f8b3936075503f9626cd5ae802b1d44b85df0378be5700c5446a48236b4"
+    sha256 cellar: :any, arm64_tahoe:       "58efb22f599205c17d359384e27e351e76cbda47a36f58e3255ce68ca8ef5f93"
+    sha256 cellar: :any, arm64_sequoia:     "b668d76758f8c791fa66c18636fbe25ff895e0e6f639b873bce234e030282b99"
+    sha256 cellar: :any, arm64_linux:       "0cdb5e7d2e804d0455875b71330bb5e1e88005a95c92adcea34416605d094480"
+    sha256 cellar: :any, x86_64_linux:      "a09b8f5815959a390517310067e6f911c85c69b0fec26fa03366229d4efd3126"
   end
 
   depends_on "cmake" => :build

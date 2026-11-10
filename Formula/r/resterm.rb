@@ -1,14 +1,17 @@
 class Resterm < Formula
   desc "Terminal client for .http/.rest files with HTTP, GraphQL, and gRPC support"
   homepage "https://github.com/unkn0wn-root/resterm"
-  url "https://github.com/unkn0wn-root/resterm/archive/refs/tags/v1.18.0.tar.gz"
-  sha256 "6c05f876851673f02b46c5ebfb7de5dccfe09b69cddb07ddda2555e5ac6bb6b1"
+  url "https://github.com/unkn0wn-root/resterm/archive/refs/tags/v1.18.1.tar.gz"
+  sha256 "618932c49c9aedf16bbb004e6de2bb069da78cecc1e034483d7fc90a6e7cb1f6"
   license "Apache-2.0"
   head "https://github.com/unkn0wn-root/resterm.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "95b211c4a304b764279582db826fb7cab43f8ef7b4ce344f19f80084ac0643ce"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b1bfc740be4fbcbf4f9c954597916ab138699fe0056499481837cef9e8ee4a5b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b1bfc740be4fbcbf4f9c954597916ab138699fe0056499481837cef9e8ee4a5b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1bfc740be4fbcbf4f9c954597916ab138699fe0056499481837cef9e8ee4a5b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dcf3a43e52ce2dab30fec654cc1e38cb406b7dbb7a5bd85b5f4801e5185ef666"
+    sha256 cellar: :any,                 x86_64_linux:      "1cb36b693b0764ed824095387553c1b9bc30380e11474ccb74e039cfd09e946f"
   end
 
   depends_on "go" => :build

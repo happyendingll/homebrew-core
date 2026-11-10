@@ -3,13 +3,16 @@ class RobotFrameworkRobocop < Formula
 
   desc "Static code analysis tool (linter) and code formatter for Robot Framework"
   homepage "https://robocop.dev"
-  url "https://files.pythonhosted.org/packages/76/72/c6caa328a81cae1c7d8f9211fd46565e2656deafa095cd5f87e5638e8c73/robotframework_robocop-9.3.0.tar.gz"
-  sha256 "af2993d98aebca96f9ef7ed78e12ef8e878b2ce741579ad26f35207d4d528696"
+  url "https://files.pythonhosted.org/packages/1c/de/ec2aefd98a4c22ab8f62dbb00baba2f072e39ffdc7a4559310ecf55c2abe/robotframework_robocop-9.4.0.tar.gz"
+  sha256 "e8a94dddb4b254bdff675c18dce212512ab38bc332883bf855ec3467bbe5af33"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "17c4016d0cd268e10a88c69c4cc4e5fea68e65f7762a8402b679f17dec0b2fce"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2c75148dc292ec3671839067ffd45e36fc11a7f908cfb68f615e8c758968a124"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2261eb349c92028d59b69cd23ec99d8cf961c34ac1599a67d2941dcd7eb91a3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c411ec9e64adc65feba5cadc379664d175dd964900b82bbc11eee0426938db1c"
+    sha256 cellar: :any,                 arm64_linux:       "8be098a2be7c66f5e570e9138023ac2978e626f66a70e81b2a4481300e23df4c"
+    sha256 cellar: :any,                 x86_64_linux:      "cdd2b36c91089a76943482715309ffb30040ff706d7634dc13b3c57a6c600599"
   end
 
   depends_on "python@3.15"

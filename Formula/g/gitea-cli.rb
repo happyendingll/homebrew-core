@@ -1,14 +1,17 @@
 class GiteaCli < Formula
   desc "Official command-line tool for Gitea"
   homepage "https://gitea.com/gitea/cli"
-  url "https://gitea.com/gitea/cli/archive/v1.1.0.tar.gz"
-  sha256 "b48b90f1427fac8779f87d1f014d62b2b7513725da11677910bb04577d3cd710"
+  url "https://gitea.com/gitea/cli/archive/v1.2.0.tar.gz"
+  sha256 "09854deee075d10d1930131c1acb9d3e1f035627bbdad729d4c994410e90b433"
   license "MIT"
   head "https://gitea.com/gitea/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "2438288dd944b4d9b6df0676f0a37c8a49bb5724dd83cf9432ff55e777ffcb80"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5dbe3ee58b5a101e65a596e16aa93d94003fe1a52afb1dbfa3ffd62cebabd815"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5dbe3ee58b5a101e65a596e16aa93d94003fe1a52afb1dbfa3ffd62cebabd815"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5dbe3ee58b5a101e65a596e16aa93d94003fe1a52afb1dbfa3ffd62cebabd815"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "20e0dc145f3748039a66ac03eb8dfc6097566815bfe5c3b4a845723299fa5255"
+    sha256 cellar: :any,                 x86_64_linux:      "14bce4a4547a526b6a52655dd5246dc1895b5a093bac1a48a6420977b7a580b0"
   end
 
   depends_on "go" => :build

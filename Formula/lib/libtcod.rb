@@ -1,8 +1,8 @@
 class Libtcod < Formula
   desc "API for roguelike developers"
   homepage "https://github.com/libtcod/libtcod"
-  url "https://github.com/libtcod/libtcod/archive/refs/tags/2.2.2.tar.gz"
-  sha256 "69f30fe65df1c84049a8f4f4b1ea0894191221da3a671be61832e33e75df898e"
+  url "https://github.com/libtcod/libtcod/archive/refs/tags/2.3.1.tar.gz"
+  sha256 "dbde843dfdc117bc77a35f6f7321b2aca95196702f468c40286b27996e900ac7"
   license all_of: [
     "BSD-3-Clause",
     "Zlib", # src/vendor/lodepng.c
@@ -11,14 +11,11 @@ class Libtcod < Formula
   ]
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "6cf37b43575c9bbbcbac063453b9506b8be3a3c55d1bab912848df6922cd2a66"
-    sha256 cellar: :any,                 arm64_tahoe:       "612e3f1e9f6976f652fbcf1a2eb61eea4fcc89587d7b53b15787b4397540da73"
-    sha256 cellar: :any,                 arm64_sequoia:     "2936e52ddf2b7f8b348dd7c853b72151525639fa980e48db5321546887b8d472"
-    sha256 cellar: :any,                 arm64_sonoma:      "2fb1ffcb63481f5bdd7ccbb37cc9ee5306893d6f081b80449066bab9b9259534"
-    sha256 cellar: :any,                 sonoma:            "658e1e5d8b99476480480624806bc1f356064487dec25717193218d13564f1f8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7061320d3e56653d9479caaaaf03cfc2a8ba93e3072afbf9a2edac0cd6852c81"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9bd3c9f84e29286387f4741845a996b3fcecffec5ba6715842db8168f25249ee"
+    sha256 cellar: :any, arm64_golden_gate: "fdeba208c6be8a170926847eae6f6e9de5926b4a0463382760fa1e1e782e1578"
+    sha256 cellar: :any, arm64_tahoe:       "6f6d013bbd2bbf46241db852aa17aa0b0265c9932e09b45407060f0629bfae29"
+    sha256 cellar: :any, arm64_sequoia:     "7d2c80482bf9d8db6375ed3dc2935de0ff6ad8cccb6f2f808f777c3afeeda5fc"
+    sha256 cellar: :any, arm64_linux:       "a43042ade31d1a9fe3aa424acc82ecf374ab3ec9318a671860d1fdea4c081239"
+    sha256 cellar: :any, x86_64_linux:      "9b99edc4372dff2e16bf3b3bcfb595c64ac0e4f5c4b2a5bf7f5306d2e8e297a6"
   end
 
   depends_on "cmake" => :build
@@ -30,8 +27,10 @@ class Libtcod < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
-    rm_r("src/vendor/zlib")
+    rm_r Dir["src/vendor/{utf8croc,zlib}"]
 
     # We bypass brew's dependency provider to set `FETCHCONTENT_TRY_FIND_PACKAGE_MODE`
     # which redirects FetchContent_Declare() to find_package() and helps find our `sdl3`.

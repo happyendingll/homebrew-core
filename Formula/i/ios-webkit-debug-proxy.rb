@@ -1,15 +1,17 @@
 class IosWebkitDebugProxy < Formula
   desc "DevTools proxy for iOS devices"
   homepage "https://github.com/google/ios-webkit-debug-proxy"
-  url "https://github.com/google/ios-webkit-debug-proxy/archive/refs/tags/v1.9.2.tar.gz"
-  sha256 "768f101612bf5d2507957f10a8e34e98675ea8fe3c63b8ed78772f8abd103fbf"
+  url "https://github.com/google/ios-webkit-debug-proxy/archive/refs/tags/v1.9.3.tar.gz"
+  sha256 "799477f40f5429a8355641a80f4ba6f415cfc8b3af6a86ba4fd448cdf9be30a1"
   license "BSD-3-Clause"
-  revision 2
   head "https://github.com/google/ios-webkit-debug-proxy.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6d61a2cb6c0061c1a656a1ea85a3e037d9530ae5ca8c9c9fd794efa1dca81491"
+    sha256 cellar: :any, arm64_golden_gate: "8319f0eacfb26bc45753c397eb037a6e0659c5b03ec732a76a042b39d183916e"
+    sha256 cellar: :any, arm64_tahoe:       "01d5b391d3ae4280d072849ba8d75cf2875ef2844f9925823a63d0b6ad673658"
+    sha256 cellar: :any, arm64_sequoia:     "5b1094c9c2ea6301ddf76bf9829843455eb5bbaf39f9cfed4bc1fefd549f5d36"
+    sha256 cellar: :any, arm64_linux:       "196a65e5b8c6be692b9d76add2cc11f8de829a7583c40580919bb3b4b3ae3ce9"
+    sha256 cellar: :any, x86_64_linux:      "988cc22187d15d0e407643d80f1e397a6c145cb7403f18a689f51d6e2a29d75b"
   end
 
   depends_on "autoconf" => :build

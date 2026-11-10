@@ -1,14 +1,15 @@
 class Paneru < Formula
   desc "Sliding, tiling window manager for MacOS"
   homepage "https://github.com/karinushka/paneru"
-  url "https://github.com/karinushka/paneru/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "068ecede1ac04a1ae9ca096d52b713d11c1f04250471836863d958ce9deb6e6e"
+  url "https://github.com/karinushka/paneru/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "ffa53f23244f6eb2d3a9d9df38b877dc95c73ad158d52606f965d8c6c0fead6d"
   license "MIT"
   head "https://github.com/karinushka/paneru.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "e253f89766f75c23e45a1ecfa5a9bf0f3999ff39c4af57da3ca852670d812ea6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "54ffbd77293f75f08b2cc76533def8516cc86e75587ae27ae8b4dd2af28e6c74"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e171d0581bacd72af2a9e78d99912236063ce2ba19348223771799024eef3b9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c56213d0c7ef5559b23d6f6d947b30ef67aa44b98d79c4bdd384cb519ffc848b"
   end
 
   depends_on "rust" => :build
