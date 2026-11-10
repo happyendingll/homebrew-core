@@ -12,11 +12,8 @@ class FluentBit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "58e9df701d22dfcc196c6d81c5e5b56a018ed7d1f913737bad58941bac144fdb"
-    sha256 cellar: :any, arm64_tahoe:       "2e7e43b115cfb482b652f7c2bfe2383fd91fde51dd6e48b65fd2045e65b78494"
-    sha256 cellar: :any, arm64_sequoia:     "3a737774997226a71794ae552804980a887a905eaae0626ac983ecad6983d54f"
-    sha256 cellar: :any, arm64_linux:       "1352a5399b1787aaaca954cf7fe2ab7d98cf17fda57257cbb0f7d936b632b844"
-    sha256 cellar: :any, x86_64_linux:      "fce227e49d61c6b5a2fc13c53dad270dca627d5f4fbdbd671f579add1b68434a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "8cebad229d33ea978cb084d26c7431c0285ec3662e42b773a19d70ecbacce4cf"
   end
 
   depends_on "bison" => :build
