@@ -6,11 +6,8 @@ class Cdxgen < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256               arm64_golden_gate: "81e0d3798bec7bebe3200372a514e58f1238e3cfc58f01f45bbb56fc8e1ca0ab"
-    sha256               arm64_tahoe:       "73bcd50d6b955c9d685aacae58b522275ee94327e0aa17ed20b16567f8276fde"
-    sha256               arm64_sequoia:     "f8eb4251f9ced60c6f05cb62b6f9f8a0d5fb72148d74736d7f1f378b6a3bd9cd"
-    sha256 cellar: :any, arm64_linux:       "3c1fad323793afaacdbc81a92b1d825541a1363e18ad16f554c5807cda1bfb5c"
-    sha256 cellar: :any, x86_64_linux:      "6be41293152c964c884ce1d269e22f4585041bf7099785a48356789fafa43848"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "1a605c13a5caa6797d6365581f3df4f5de2b889cadf99a1b65bc23d47b9ead46"
   end
 
   depends_on "dotnet" # for dosai

@@ -7,11 +7,8 @@ class Terramate < Formula
   head "https://github.com/terramate-io/terramate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "08e2a9fbbb7b727edf4b9aca0558ba7598e51bf130193598945324b60525ce61"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "08e2a9fbbb7b727edf4b9aca0558ba7598e51bf130193598945324b60525ce61"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "08e2a9fbbb7b727edf4b9aca0558ba7598e51bf130193598945324b60525ce61"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "54df88aa1e093a1650541e1a26e8320c5c0213f51f642300040091852c504341"
-    sha256 cellar: :any,                 x86_64_linux:      "9b3c0884a2bdce571b3508b24f36318c194ca1b11d1e4bdf434b38ebf79de2d4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "94954eb5590e6a7ec42d5575cbdeac3376a5fb892c53251d852e6ff92d2642d2"
   end
 
   depends_on "go" => :build

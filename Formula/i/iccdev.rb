@@ -12,11 +12,8 @@ class Iccdev < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f13b5d063d893ce4a42ba11ac1f063283e752b500447053a9e8bd7fe7a401fee"
-    sha256 cellar: :any, arm64_tahoe:       "fe765fbb0d7f40bfe0f5b94ba5fd34a978a3fe320996829a29bc0cecadb199db"
-    sha256 cellar: :any, arm64_sequoia:     "2791bfada55a547bae60795bc49fe1bded9c8f2f90346d79a489ccb642943218"
-    sha256 cellar: :any, arm64_linux:       "a40711fd28be03613603b27295d2f8a81a13f5d957f53818253d2f884acb48b8"
-    sha256 cellar: :any, x86_64_linux:      "c67ce19f97a51de32ddad40ede38cacfec20026d6493ebf75a15955dc0fe1af8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "628cb499ea3ec4c8b629222a4c54f891ea23e8156ea231b7796dc54da9fe97ee"
   end
 
   depends_on "cmake" => :build

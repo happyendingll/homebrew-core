@@ -7,11 +7,8 @@ class BitbucketCli < Formula
   head "https://github.com/avivsinai/bitbucket-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "503b856227917781abbe77a087594c393cb971d1232e8033db247d428ac99cc6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a7705d01968a33f44471ec5be1676fa2ca83cb05e3d5cdee84c102726c3fe18"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9fd888848176807c13f12d6c1aaf4d42a6891fcd5a54e616de8a6bc70253963"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dbda09d5db48ff1254fd33e0525f8de838f87acfa9057a57cde038febd643363"
-    sha256 cellar: :any,                 x86_64_linux:      "2b7b0e67737fd317e0c117ecf47c339ebd9bc7f599ea9b448bcb20d973ee0925"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "0f32460256eb0d13df10f0c9e0145ad60b2b7b0b4f49d55bf39a3c4a3de93710"
   end
 
   depends_on "go" => :build

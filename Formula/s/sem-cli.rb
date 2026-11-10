@@ -7,11 +7,8 @@ class SemCli < Formula
   head "https://github.com/Ataraxy-Labs/sem.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "761870e175ebace2c9e02763eae3cc191c10a5519c5128646a7f293a3e583be7"
-    sha256 cellar: :any, arm64_tahoe:       "4427c85f24e5dd2f819a0d160d55f48e1418909db8e66ff8459f393a7e4749d7"
-    sha256 cellar: :any, arm64_sequoia:     "d74ea20068bcf8cab8f2023948878f4dcd2e9969bcae00b74b5b7e8771db5ead"
-    sha256 cellar: :any, arm64_linux:       "af790aa870314559435c26ff5b375fffb9829e343bb55e57a3514502877ecd63"
-    sha256 cellar: :any, x86_64_linux:      "7e4e8287d89776dccdb5f75eec9b20073e1c98f5b075a626c1dda2ce3b90f722"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0280d46c857cb223915aea961588416d5c4639f4f8d5028721820d370fe87ef8"
   end
 
   depends_on "pkgconf" => :build

@@ -6,11 +6,8 @@ class Rulesync < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e294646f07b6db1a0e03620e7528cc5087bda4f97bfb203b6f07f790b6e4ba98"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e294646f07b6db1a0e03620e7528cc5087bda4f97bfb203b6f07f790b6e4ba98"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e294646f07b6db1a0e03620e7528cc5087bda4f97bfb203b6f07f790b6e4ba98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "05a68002ff8a05f6ec0bad52787fb348633ebf726e2a29445f796cf9bf1e2389"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "05a68002ff8a05f6ec0bad52787fb348633ebf726e2a29445f796cf9bf1e2389"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "01298bd7dec293378d5b82eae95c5ce76e62c091a4eee7b6a40720a9a9b30363"
   end
 
   depends_on "node"

@@ -12,11 +12,8 @@ class Xk6 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6fff4f3bedda0cf4fbab3dff79391685a437351a378cb32be93a84689db3c22d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6fff4f3bedda0cf4fbab3dff79391685a437351a378cb32be93a84689db3c22d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6fff4f3bedda0cf4fbab3dff79391685a437351a378cb32be93a84689db3c22d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c8978572d97a5a35556a04f178c593b8b5978bfbeee989af781d0408d95d1562"
-    sha256 cellar: :any,                 x86_64_linux:      "253b6270c57c540fe28b944c82d48b71f25ea35e17537fe8b3ff8f3071ba3eb8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd92d05110a8051be32417f5b79b37745d7ac03cf0501da540d576a4ff8216bb"
   end
 
   depends_on "go"

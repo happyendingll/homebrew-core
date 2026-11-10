@@ -8,11 +8,8 @@ class Vectorscan < Formula
   head "https://github.com/VectorCamp/vectorscan.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "be51d7a3b1140b8a673aa6c6da9c9f48e0ad81cb42e056f4f2589b61724c5b87"
-    sha256 cellar: :any, arm64_tahoe:       "df6b7e60803aba7c1f10e2f05628a5e4302b85e39954df64a29f184c89493f11"
-    sha256 cellar: :any, arm64_sequoia:     "4bf3e1e734efb30d41e0a1ed42eee43538860ef56eb0500cdaf30a0d6bbc1254"
-    sha256 cellar: :any, arm64_linux:       "9ff3ff25f30ada840226a47367c41a716271ce86de4167f8f62fe95c03f01f04"
-    sha256 cellar: :any, x86_64_linux:      "338effe7bba5a5308f57e3b2f2520220d54097c2632ceb17a31bed796ba93743"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "cec74fe9e5b0525ccc09b39457d45cf9e9ab5f91510a5fe5a38b17c8650471b9"
   end
 
   depends_on "boost" => :build

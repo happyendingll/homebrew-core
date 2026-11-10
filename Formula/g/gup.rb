@@ -7,11 +7,8 @@ class Gup < Formula
   head "https://github.com/nao1215/gup.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c5e78bde7334893d0e1bc82b8410f6359ac96e4ea90f35ace3644d1656dfca47"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c5e78bde7334893d0e1bc82b8410f6359ac96e4ea90f35ace3644d1656dfca47"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c5e78bde7334893d0e1bc82b8410f6359ac96e4ea90f35ace3644d1656dfca47"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ce6d247dbf3f0d18361afb74193f058e5713c77057dbf74c8a6dd8dcedae36b3"
-    sha256 cellar: :any,                 x86_64_linux:      "086953eb24d1ed430a788087114b9fa97f533c9a3f26e8ddb8d1e5e87777bf24"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "0ac1f61767f3768ac520c65527a8c4932aa7c8a7013d3494fdb3d246ea6a17f5"
   end
 
   depends_on "go"

@@ -16,11 +16,8 @@ class Mt32emu < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dc6558c0fa7a50037252e9e702ab3da1e6d7bea349c3f6862831ac7eb93c0038"
-    sha256 cellar: :any, arm64_tahoe:       "9331d8b6c89d41c2134a29a06e4e037822288952f2d1880ac42f066d338df89f"
-    sha256 cellar: :any, arm64_sequoia:     "37eab2ccf702b957b92e2e6b03c8ee87d7ec361ed8754d4043edbdc99849063e"
-    sha256 cellar: :any, arm64_linux:       "6cf529d43744cfbf17e10811eb66bd15602bb79e9e3f84b6b11b42944d65d3e6"
-    sha256 cellar: :any, x86_64_linux:      "91ba1d484e04c625a402024d97eaa639fd3b462dd9912f0873a78603e158aa6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "41cf686fb0ac96cdcaf23e93e97ab6a49587fb2a7799b7ab153c63819f322388"
   end
 
   depends_on "cmake" => :build

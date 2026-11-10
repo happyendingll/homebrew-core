@@ -8,11 +8,8 @@ class Ccache < Formula
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "1f177443af33bc7b4f6602d2d669b0f9dce9544105bdfb9b911943821080e7e1"
-    sha256 arm64_tahoe:       "82c64178bd8a3648b8dfd776ecfc39003e862ab7cd36c6034625491a2f3d40e0"
-    sha256 arm64_sequoia:     "26b277396e0bd94ef9c68228dc0bc361b2ebc604d6fbd369b9ddaf13889349f4"
-    sha256 arm64_linux:       "7b8777cf3afc2bd451ef76ec194a5e0b635b63b95b9efc6f76e994c87039db6b"
-    sha256 x86_64_linux:      "0986908291706866baabbc4a74f66c5477f284b026c450e906f96b2a2f1731e1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "da430aa87b673fcb7fb0f50f59e0f5d7e61b81569dba6fb43c41ca786c470066"
   end
 
   depends_on "asciidoctor" => :build

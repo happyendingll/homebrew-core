@@ -6,11 +6,8 @@ class Faircamp < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a76e8bf8a3b41adccc3ccf30ee0dd3f4a52f323e1b7e3cf08ba4e3909e1a3867"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "92fa031f292f81c056843698482ea657f46036a47ef7bffc97d2e9d412db8799"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "afedfdaa940e2fb17ff1ed029fc227eb2e78b88bd132514c0993f89a90d7b967"
-    sha256 cellar: :any,                 arm64_linux:       "7a83de08184eaa19fef65d48485786f606647b158f04a8bbb3c34bb67fac37f9"
-    sha256 cellar: :any,                 x86_64_linux:      "980542e5ea663a4e895886a95b7ccfbc3d20589eb589a8f846c6f45af3eb2b29"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "5e10f40f3d8f79c4065a5bdebe9f9680ae555a923565ac6036bd4540dc6e1c55"
   end
 
   depends_on "cmake" => :build

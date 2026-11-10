@@ -12,11 +12,8 @@ class Kics < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "72ac0272cb75f9d41efebf788e4669e9eefa96dbd558115ccbf0e88aba47d63c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e297e7433bfc7884d47d2bb846cdfc2b9f5c5d819b72f44a20d7890dc4984bd3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a5eb9df859657c878011e0a27239dd704878a5fe9902275c092c86c39001043d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cb2f93870c4d2dd3fa6efb7791de7a6c67b315e795d22473eb9ef32292dda939"
-    sha256 cellar: :any,                 x86_64_linux:      "95e4a977449d8ca2d81912fe80fdc75563753a700f05c0402a04bb1542a0fc64"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "a98ff5149430730d80c41cec40e0051958ee01995b4afe11c7aa1655f56934bd"
   end
 
   depends_on "go" => :build

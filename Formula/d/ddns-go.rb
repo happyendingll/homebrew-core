@@ -7,11 +7,8 @@ class DdnsGo < Formula
   head "https://github.com/jeessy2/ddns-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eaf84232280bf428292a637e0d147978ca7899d525bade7e3b4f791d61556821"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eaf84232280bf428292a637e0d147978ca7899d525bade7e3b4f791d61556821"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eaf84232280bf428292a637e0d147978ca7899d525bade7e3b4f791d61556821"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "819563f088bd16838690e31bc2faa54194efc5baabc093bcc751685eca8ad481"
-    sha256 cellar: :any,                 x86_64_linux:      "86ef01134bc6f03676bf927a30492a8a528aba285070919f6ca9a1943dc1a800"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "1255735123f65ed4baa4a736c1d21c193edbd380bffbd4313496dc35d1fa37e7"
   end
 
   depends_on "go" => :build

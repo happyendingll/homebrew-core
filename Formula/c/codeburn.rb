@@ -6,11 +6,8 @@ class Codeburn < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c03b3291bc40ce1d7bf2c9961243ef1ea46149f64df25e3a3f3feb19698a9f4d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c03b3291bc40ce1d7bf2c9961243ef1ea46149f64df25e3a3f3feb19698a9f4d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c03b3291bc40ce1d7bf2c9961243ef1ea46149f64df25e3a3f3feb19698a9f4d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "958f58d7c823d72b774188bc0049f887260ab056ddd179403401d49aadcce26a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "958f58d7c823d72b774188bc0049f887260ab056ddd179403401d49aadcce26a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "d0c4e694881819724fce25da460f336c097190e7f3e07105feaadbe8a5122ea4"
   end
 
   depends_on "node"

@@ -7,11 +7,8 @@ class Enzyme < Formula
   head "https://github.com/EnzymeAD/Enzyme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a641ce049759ad52bb20575d77cc67b54771da52123553fe7ce5f67c965c7387"
-    sha256 cellar: :any, arm64_tahoe:       "04e1d6f6fb63dce745e6a4b6e7f875dfe1025ae0c133657a3181b67026963730"
-    sha256 cellar: :any, arm64_sequoia:     "1d17a900107e768730e08f5f9e76b3d7d217db26702c30b95c0f92d8dd163466"
-    sha256 cellar: :any, arm64_linux:       "2a8b9a712699def5b58164ce7acd5a54d3d145e49ac3b1302c62b60d418a38e5"
-    sha256 cellar: :any, x86_64_linux:      "751df70b596e59a987826449d451a6de353d3f755b5c6c3f790e74f51eefbac2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "008c74ffaa69d2ff7d1a6ab73c3048b933e56d1f6b2f1a5183bb1efba17f3d58"
   end
 
   depends_on "cmake" => :build

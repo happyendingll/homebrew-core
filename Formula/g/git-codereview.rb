@@ -7,11 +7,8 @@ class GitCodereview < Formula
   head "https://github.com/golang/review.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9970d6217d9a118fddeebd03fa289fca4f48c72f5f53517e6c4211b275e883b6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9970d6217d9a118fddeebd03fa289fca4f48c72f5f53517e6c4211b275e883b6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9970d6217d9a118fddeebd03fa289fca4f48c72f5f53517e6c4211b275e883b6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dd705af4782ed68ea517fedee82d085ac039efb8d7cd3e512813650bd07e822d"
-    sha256 cellar: :any,                 x86_64_linux:      "950cb6bcd81e9833622220840710835f5594959c8a8e555e07f7be29732c613d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "b164083e1fa4e811a30b5e60a7d1ba337b3487670fa802e728c1a6e86b8a7929"
   end
 
   depends_on "go" => :build

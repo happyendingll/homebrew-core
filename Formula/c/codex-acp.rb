@@ -7,11 +7,8 @@ class CodexAcp < Formula
   head "https://github.com/agentclientprotocol/codex-acp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f13ade35542fa08d470d241dc125e457f6a01d7d35510f07df82666edfc49dc1"
-    sha256 cellar: :any, arm64_tahoe:       "f13ade35542fa08d470d241dc125e457f6a01d7d35510f07df82666edfc49dc1"
-    sha256 cellar: :any, arm64_sequoia:     "f13ade35542fa08d470d241dc125e457f6a01d7d35510f07df82666edfc49dc1"
-    sha256 cellar: :any, arm64_linux:       "6b82c6da43d5a45351e30da2a60a2cce7414db2980eef5ef5ea34b002fdb1ef8"
-    sha256 cellar: :any, x86_64_linux:      "5e583032390d718fe0495975b18465ce6c16e3eea5e4d192bfb131cce92f9a54"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "0f2d1661953162fed4f3f5cee499acb36f6d33eb7d017e472d50a175d4ba9815"
   end
 
   depends_on "node"

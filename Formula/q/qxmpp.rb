@@ -6,11 +6,8 @@ class Qxmpp < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1eaa50568977f306197bf1d376baff881c74f8d6f1a6eb7caa1caf0f855da4e2"
-    sha256 cellar: :any, arm64_tahoe:       "ed9afe14573f3f3104ce5ef43595175fa37028e746e141598cddf1f9dce3bd47"
-    sha256 cellar: :any, arm64_sequoia:     "5373331d3539268cf328e16dc1faec4fcddc9c41221c735a4f91bc02347b9c63"
-    sha256 cellar: :any, arm64_linux:       "d5ec7bcc010d075c32a8754b712b64e9b283967fae71e4e4f79176320be93770"
-    sha256 cellar: :any, x86_64_linux:      "25720720b06e0644145edb892e61162288356a171bc470f02091d42e7450e639"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "4ad2e1436c584a0539b3e3d3edf599b05af7da909e04b361e4c88d76f979c737"
   end
 
   depends_on "cmake" => :build

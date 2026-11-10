@@ -15,11 +15,8 @@ class Mockery < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b52772f24c326d38bfb532e7ef3502f8e7d588f42c30ccca519c5a0bae804d88"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b52772f24c326d38bfb532e7ef3502f8e7d588f42c30ccca519c5a0bae804d88"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b52772f24c326d38bfb532e7ef3502f8e7d588f42c30ccca519c5a0bae804d88"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "588c8bd29e95c81dd49dded0cfec417e145dbf2921d1bfb5d1bd60d5fb6baf00"
-    sha256 cellar: :any,                 x86_64_linux:      "3f38d757f7789f144cf4724964c1f7702f01b53d2c45e1391359ba251f814c90"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "79e4a35c6a953941265d290f3d6772bae798b0ada5fd232797b2f84e6b8f5f0c"
   end
 
   depends_on "go" => :build

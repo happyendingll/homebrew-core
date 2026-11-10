@@ -13,11 +13,8 @@ class Yq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ebcabd62fd524873c22ed5b86efaed3ed60d1563f89e1896be436ecc08efec3f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ebcabd62fd524873c22ed5b86efaed3ed60d1563f89e1896be436ecc08efec3f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ebcabd62fd524873c22ed5b86efaed3ed60d1563f89e1896be436ecc08efec3f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "17dfdf5acf2fcb18b62c86f3f0092a1be6f20a14ee2bf35855c5faf21fef3850"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ad69a2e7efc088c8f7309ab51cfa9b3b85a79cda0e42ae97f53744d15df80c64"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any_skip_relocation, sequoia: "195a77ef6bc89822edcf745bda1a254b6523c525408e8356b06de75d1d0282de"
   end
 
   depends_on "go" => :build
