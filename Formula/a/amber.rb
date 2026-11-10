@@ -22,8 +22,13 @@ class Amber < Formula
     depends_on "zlib-ng-compat"
   end
 
-  def install
+  allow_network_access! :test
+
+  def fetch
     system "shards", "install", "--without-development"
+  end
+
+  def install
     system "make", "install", "PREFIX=#{prefix}"
   end
 

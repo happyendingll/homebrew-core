@@ -1,15 +1,18 @@
 class Ccache < Formula
   desc "Object-file caching compiler wrapper"
   homepage "https://ccache.dev/"
-  url "https://github.com/ccache/ccache/releases/download/v4.14.2/ccache-4.14.2.tar.xz"
-  sha256 "0feb2707d9cb48885abb950e5d629e85f57fa79a2439cbbdfa681d6c3dc5f0dc"
+  url "https://github.com/ccache/ccache/releases/download/v4.14.3/ccache-4.14.3.tar.xz"
+  sha256 "e1999132cf7dbce48de7d946b767f3e26ea09adcb5daa4a7103a8fa09ee0637d"
   license "GPL-3.0-or-later"
   compatibility_version 1
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "c8ab2ae3222f095aa92cba806d30e83072cf175d0adacbc5ef2b10355f4fcd43"
+    sha256 arm64_golden_gate: "1f177443af33bc7b4f6602d2d669b0f9dce9544105bdfb9b911943821080e7e1"
+    sha256 arm64_tahoe:       "82c64178bd8a3648b8dfd776ecfc39003e862ab7cd36c6034625491a2f3d40e0"
+    sha256 arm64_sequoia:     "26b277396e0bd94ef9c68228dc0bc361b2ebc604d6fbd369b9ddaf13889349f4"
+    sha256 arm64_linux:       "7b8777cf3afc2bd451ef76ec194a5e0b635b63b95b9efc6f76e994c87039db6b"
+    sha256 x86_64_linux:      "0986908291706866baabbc4a74f66c5477f284b026c450e906f96b2a2f1731e1"
   end
 
   depends_on "asciidoctor" => :build

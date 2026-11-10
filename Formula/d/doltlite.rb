@@ -1,14 +1,17 @@
 class Doltlite < Formula
   desc "SQLite fork with Git-style version control via prolly trees"
   homepage "https://github.com/dolthub/doltlite"
-  url "https://github.com/dolthub/doltlite/releases/download/v0.51.9/doltlite-autoconf-0.51.9.tar.gz"
-  sha256 "ae6a44cab882de9e6a34b9aa6c29ae1c6f7a5ef2a60f3f48b6ae13be9cd2a47f"
+  url "https://github.com/dolthub/doltlite/releases/download/v0.51.10/doltlite-autoconf-0.51.10.tar.gz"
+  sha256 "0763c478ac3a7b79a42c18259b05cc17e7ec9c72af9a3aaaa77dfc6baa10bdf0"
   license all_of: ["Apache-2.0", "blessing"]
   head "https://github.com/dolthub/doltlite.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "948db40021735e056037c79870f3cd2e1f631057aa9b2e348043e38ae9b6834c"
+    sha256 cellar: :any, arm64_golden_gate: "f05f474270f3bd90413cd14f66428b6a06b64ab9f9f309c75f817e0360a87e86"
+    sha256 cellar: :any, arm64_tahoe:       "a257caef50c258985b3426c0f12430e4948871da2bfe739acf1f724b20eabf2a"
+    sha256 cellar: :any, arm64_sequoia:     "5f6580f487f22b91ba36222f3d0f6f4ccc23c6c63778091435357dd4433a094d"
+    sha256 cellar: :any, arm64_linux:       "c1f56f9cde6cc5a2f4a8abf83e08e839302f6c6ce2935714708afc806cdad6d5"
+    sha256 cellar: :any, x86_64_linux:      "69c3c6ba73277e0c85896fb6a1dd744e5bc183f797628a8e2f36003ab670c5cc"
   end
 
   on_linux do

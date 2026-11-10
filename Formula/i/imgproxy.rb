@@ -1,14 +1,17 @@
 class Imgproxy < Formula
   desc "Fast and secure server for resizing and converting remote images"
   homepage "https://imgproxy.net"
-  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v4.0.22.tar.gz"
-  sha256 "c77831181c53913f512821fd11fca693e1c3db260802c789121439ce1ec43313"
+  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v4.0.23.tar.gz"
+  sha256 "a10829246d3e67679f728c8b1cafe3e5516333ade4d733fcf2e3610d8432f3af"
   license "Apache-2.0"
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "bf59779317d0491d3cf2482d462e080aeaeae7f805dee397686f00b579cddf6a"
+    sha256 cellar: :any, arm64_golden_gate: "aa72643d11ad1fa927e9f9cfeea5e6770641e5c6dd2d7a8da96ac5a0248234ac"
+    sha256 cellar: :any, arm64_tahoe:       "11c62c7ea556313017d2266f24c1cf4ea0f79733cacca65a8e6cade14fe7dfb0"
+    sha256 cellar: :any, arm64_sequoia:     "c79c78aeecda1fc59dfc26e9122c317508058b13474dbb978022fa2f24a7fe04"
+    sha256 cellar: :any, arm64_linux:       "3186284afb0596f7d7e60964ed6b36f3feb3c69bf9382eabe5ae9c2921e8cd2b"
+    sha256 cellar: :any, x86_64_linux:      "df32205b0ef0fc2ec6aed6117a78ab080913445606efb424831353862628b6e1"
   end
 
   depends_on "go" => :build

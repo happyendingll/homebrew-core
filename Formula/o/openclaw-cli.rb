@@ -1,13 +1,16 @@
 class OpenclawCli < Formula
   desc "Your own personal AI assistant"
   homepage "https://openclaw.ai/"
-  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.11.1.tgz"
-  sha256 "611282534d576e12f10b0ac5a1ac0d2825aac360637e92815a56eb71fb5a0301"
+  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.11.2.tgz"
+  sha256 "7881887b88d81e5fdff361b7aac59b6a736308e1815a175b9ccd9cdca1bb5e48"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "f64867b54d608c9a1fcefa9e4e6750131b940b7f15fcbc0f4da151bef4cee6f1"
+    sha256               arm64_golden_gate: "d5d277fbb19704ad591f1d01cbeec7db122bea3e7d2d2a0b499db8ed405ca44d"
+    sha256               arm64_tahoe:       "d5d277fbb19704ad591f1d01cbeec7db122bea3e7d2d2a0b499db8ed405ca44d"
+    sha256               arm64_sequoia:     "d5d277fbb19704ad591f1d01cbeec7db122bea3e7d2d2a0b499db8ed405ca44d"
+    sha256 cellar: :any, arm64_linux:       "5e4dfc2ce0583e07c7261441c3f68b7c897908fd25c9ff3c5983d6ab04b3f30e"
+    sha256 cellar: :any, x86_64_linux:      "c10a9224b017481be865d85c8ae3691e2e379074740ba2689aed7ffcd5f467d1"
   end
 
   depends_on "node"

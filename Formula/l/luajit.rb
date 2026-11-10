@@ -10,14 +10,14 @@ class Luajit < Formula
   # Get the latest commit with:
   #   `git ls-remote --heads https://github.com/LuaJIT/LuaJIT.git v2.1`
   # This is a rolling release model so take care not to ignore CI failures that may be regressions.
-  url "https://github.com/LuaJIT/LuaJIT/archive/ea9eb7edb5eac4a9d175d74523db34fac0fa5180.tar.gz"
+  url "https://github.com/LuaJIT/LuaJIT/archive/c4b1e2f73a2e10fbcc637fcec474f639c38daafe.tar.gz"
   # Use the version scheme `2.1.timestamp` where `timestamp` is the Unix timestamp of the
   # latest commit at the time of updating.
   # `brew livecheck luajit` will generate the correct version for you automatically.
-  version "2.1.1793383622"
-  sha256 "338a5640be00b89fd0a2a027a7433fcbbb4d006be840d216d84151386b5bcdf7"
+  version "2.1.1794214635"
+  sha256 "8232ea0ebc837a56ef679f8e4c04c2dfc4dec0b4145282337fd618b270b43ddd"
   license "MIT"
-  compatibility_version 36
+  compatibility_version 38
   head "https://github.com/LuaJIT/LuaJIT.git", branch: "v2.1"
 
   livecheck do
@@ -31,8 +31,11 @@ class Luajit < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "dcc937ba103d8b8c4a2f561df3efd79e3069ed5fef79f71085100ee3dc70021e"
+    sha256 cellar: :any, arm64_golden_gate: "b2526860bc1240dd890a92749ff1ae3bcc718532b690ffe63cdd2e02b55a5e4e"
+    sha256 cellar: :any, arm64_tahoe:       "efc6ba7982fa95bdecbef95c1acf946bdc3c293a21e4c5b0b19fbe296115b59a"
+    sha256 cellar: :any, arm64_sequoia:     "e74649442d65b196499702da89bead1c52705c5ff63fee1159c89abaf97f0f5e"
+    sha256 cellar: :any, arm64_linux:       "732422960f82c31135ff2a3abaebedc7d4dacc3d576807211b3374cf1bcaf34a"
+    sha256 cellar: :any, x86_64_linux:      "828d814421657f2a4a4a0e22e6e6f69bce0b49ed977dc13f2d4e49e5358a4115"
   end
 
   deny_network_access!

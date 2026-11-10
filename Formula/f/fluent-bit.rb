@@ -1,8 +1,8 @@
 class FluentBit < Formula
   desc "Fast and Lightweight Logs and Metrics processor"
   homepage "https://fluentbit.io"
-  url "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.1.5.tar.gz"
-  sha256 "de18660c0d8b077289d29cec6da6d8956b212b4ce75a58e2debe9be78286c621"
+  url "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.2.0.tar.gz"
+  sha256 "7f1b92ed09e43c33d8c572bc1643ad0e797f129286468faf85ac56beed6cccad"
   license "Apache-2.0"
   head "https://github.com/fluent/fluent-bit.git", branch: "master"
 
@@ -12,8 +12,11 @@ class FluentBit < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "642bc7f433bd88ef4c32c446585154ca2920f75953898c78b336876c5c876152"
+    sha256 cellar: :any, arm64_golden_gate: "58e9df701d22dfcc196c6d81c5e5b56a018ed7d1f913737bad58941bac144fdb"
+    sha256 cellar: :any, arm64_tahoe:       "2e7e43b115cfb482b652f7c2bfe2383fd91fde51dd6e48b65fd2045e65b78494"
+    sha256 cellar: :any, arm64_sequoia:     "3a737774997226a71794ae552804980a887a905eaae0626ac983ecad6983d54f"
+    sha256 cellar: :any, arm64_linux:       "1352a5399b1787aaaca954cf7fe2ab7d98cf17fda57257cbb0f7d936b632b844"
+    sha256 cellar: :any, x86_64_linux:      "fce227e49d61c6b5a2fc13c53dad270dca627d5f4fbdbd671f579add1b68434a"
   end
 
   depends_on "bison" => :build

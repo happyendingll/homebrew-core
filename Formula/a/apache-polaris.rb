@@ -18,6 +18,8 @@ class ApachePolaris < Formula
   depends_on "gradle" => :build
   depends_on "openjdk"
 
+  allow_network_access! [:build, :test]
+
   def install
     ENV.delete "CI" # work around Gradle stalling on macOS CI runners
 

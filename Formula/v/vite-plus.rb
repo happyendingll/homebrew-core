@@ -1,14 +1,17 @@
 class VitePlus < Formula
   desc "Unified toolchain and entry point for web development"
   homepage "https://viteplus.dev"
-  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "1b0de3dc75ceecd073591b65f90479d18372aa8151089868a07baedc2d9c7ca7"
+  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v1.5.1.tar.gz"
+  sha256 "2ce42df9434fb3d76bde6cc7ed5b452a3da9356439e04f580dec5412da6fce55"
   license "MIT"
   head "https://github.com/voidzero-dev/vite-plus.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "09142551db625e40c74fa12d43c6bb7d2ee832ef91b7033e1f55832465baeb1d"
+    sha256 cellar: :any, arm64_golden_gate: "4bb32e841f2029702660d65186097557dfdbab6ecc22210e917cf543d0d322ac"
+    sha256 cellar: :any, arm64_tahoe:       "f809c36cb924d00b5748011a6f2e68f5830172b8e5a3f42995c5827e15da90c3"
+    sha256 cellar: :any, arm64_sequoia:     "3aace7c62aa5b4b3c1c6c6f22588afe176f88cbac5a639ae2e4b566232167300"
+    sha256               arm64_linux:       "f9ceffdd5d07c18fba0810c519c9b1ba5999b06adb43957cdc7a5be08c177960"
+    sha256               x86_64_linux:      "09ee1a892f6e09a1f6f6bcfb7c0c6754c33c83978ee53269bc64acc72faf3efc"
   end
 
   depends_on "cmake" => :build
@@ -21,8 +24,8 @@ class VitePlus < Formula
 
   resource "rolldown" do
     url "https://github.com/rolldown/rolldown.git",
-        revision: "de6facf2228279718e042b801dd6b60dd6503918"
-    version "de6facf2228279718e042b801dd6b60dd6503918"
+        revision: "f9a49d6adff486e21b3cec60db4d291f1fa4d8f2"
+    version "f9a49d6adff486e21b3cec60db4d291f1fa4d8f2"
 
     livecheck do
       url "https://raw.githubusercontent.com/voidzero-dev/vite-plus/refs/tags/v#{LATEST_VERSION}/packages/tools/.upstream-versions.json"
@@ -34,8 +37,8 @@ class VitePlus < Formula
 
   resource "vite" do
     url "https://github.com/vitejs/vite.git",
-        revision: "981f07fa4580fb88b333c4450431e4715d2a0b82"
-    version "981f07fa4580fb88b333c4450431e4715d2a0b82"
+        revision: "5def936009d2637a48d056e197aebc6242ac27c6"
+    version "5def936009d2637a48d056e197aebc6242ac27c6"
 
     livecheck do
       url "https://raw.githubusercontent.com/voidzero-dev/vite-plus/refs/tags/v#{LATEST_VERSION}/packages/tools/.upstream-versions.json"

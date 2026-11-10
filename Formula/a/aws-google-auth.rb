@@ -166,6 +166,8 @@ class AwsGoogleAuth < Formula
     resolves "https://github.com/cevoaustralia/aws-google-auth/pull/277"
   end
 
+  allow_network_access! :build
+
   def install
     without = %w[jeepney secretstorage] unless OS.linux?
     virtualenv_install_with_resources(without:)

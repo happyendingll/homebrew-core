@@ -1,14 +1,17 @@
 class Ggc < Formula
   desc "Modern Git CLI"
   homepage "https://github.com/bmf-san/ggc"
-  url "https://github.com/bmf-san/ggc/archive/refs/tags/v8.7.6.tar.gz"
-  sha256 "b524691a42dbb5fe06bcadfca05d18bd69ce472ca9a2116181b727a1a5cb0158"
+  url "https://github.com/bmf-san/ggc/archive/refs/tags/v8.7.7.tar.gz"
+  sha256 "5d016e01d89e255c635e9d5a99d1be07639dc1a58b0b61aee95c34b58eea5eaa"
   license "MIT"
   head "https://github.com/bmf-san/ggc.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "2fba7e55a3158a48cd0f5ae969a96c248bceec36374eeda913a35086394b9d48"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "89a1ebd4aa9da1be1fc0383c3c4d248a6e582cbf025373dcc72ec185bf80dc9b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "89a1ebd4aa9da1be1fc0383c3c4d248a6e582cbf025373dcc72ec185bf80dc9b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "89a1ebd4aa9da1be1fc0383c3c4d248a6e582cbf025373dcc72ec185bf80dc9b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9138a3d440efa00458c9896bc0b022d75b44df4a014f8178ee55f083239be7b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "280a9b1e30d50045c53ff65e8776bf4540c80c55349368a018f71b427ad1e816"
   end
 
   depends_on "go" => :build

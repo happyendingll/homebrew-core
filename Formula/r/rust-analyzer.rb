@@ -2,14 +2,17 @@ class RustAnalyzer < Formula
   desc "Experimental Rust compiler front-end for IDEs"
   homepage "https://rust-analyzer.github.io/"
   url "https://github.com/rust-lang/rust-analyzer.git",
-      tag:      "2026-11-02",
-      revision: "b98172d80f0da12bbde3d6733c274e17cb6417aa"
+      tag:      "2026-11-09",
+      revision: "e5e7830640558e323e89c831488a3172b58dc66d"
   license any_of: ["Apache-2.0", "MIT"]
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "3ff9a110b7b8c619b82e7f6c98eaab65bbbad2bfd1db740b2327c9ebd539af81"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cf025050f6ae09b93122b83f25456c89c06a535bc3ebfc38c112824bce9af6b5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f094a419feea87c32330892cddaa06a721dae20640529a92f094fc3003d8cef8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3f231638c75342211251bd3f8a1b6c32f8ce360a201e957d1a69a8a4ac7fc0e8"
+    sha256 cellar: :any,                 arm64_linux:       "d726fd389217b937fdf6e57fd8672ba1e23ec156448f1d88e8ad491a3098770f"
+    sha256 cellar: :any,                 x86_64_linux:      "88df72fa28b25c2040e03ffa30d6a89c13875a778d00539e0ab1589a1612707e"
   end
 
   depends_on "rust" => :build

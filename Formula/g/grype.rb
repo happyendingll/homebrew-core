@@ -1,14 +1,17 @@
 class Grype < Formula
   desc "Vulnerability scanner for container images and filesystems"
   homepage "https://github.com/anchore/grype"
-  url "https://github.com/anchore/grype/archive/refs/tags/v0.121.2.tar.gz"
-  sha256 "1b68dc6388cbf5287a7b055bf67b2c68e39a5f7abd159b0e2a1d155d3e89ccb2"
+  url "https://github.com/anchore/grype/archive/refs/tags/v0.121.3.tar.gz"
+  sha256 "ced703b9f94606d33f346369ec3d2f84aaa420147232b633d8d847987f9c64bd"
   license "Apache-2.0"
   head "https://github.com/anchore/grype.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "24f87ec4ecc6953b635f7a93e49390e5682502b567b5d6eab1370fbc77248502"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9dd81b224fa3092657e2f9db6e80acdba0855a439256e3ff5cafcb2daf9f4c4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fd0b5b351bb1c815a9d02c6934d8768e9af45ba3bb7d501a54474b5f408da050"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "feda1a7ca138642e80cb8cc2d012a052c4685c25a3501072454c6fd3bfc8e5fb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ac85a00d47d787405e7523d62f5a2605f6327ab1f53c4be61dc22ff9bfea3c8b"
+    sha256 cellar: :any,                 x86_64_linux:      "93c0f8dfa0c1fda250bc3c78eddfc3285337207611c17c4bea1c295db8e1d8ef"
   end
 
   depends_on "go" => :build

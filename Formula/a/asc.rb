@@ -1,14 +1,17 @@
 class Asc < Formula
   desc "Fast, lightweight CLI for App Store Connect"
   homepage "https://asccli.sh"
-  url "https://github.com/rorkai/App-Store-Connect-CLI/archive/refs/tags/6.5.3.tar.gz"
-  sha256 "a026efd3331da78fc5b546051c3f8e0ec87a8828e72a58d1418c943abc205186"
+  url "https://github.com/rorkai/App-Store-Connect-CLI/archive/refs/tags/6.6.0.tar.gz"
+  sha256 "11cc0c975a246063784dc94f1727f540539c0c28c934c1b4cddf089836510254"
   license "MIT"
   head "https://github.com/rorkai/App-Store-Connect-CLI.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "8f673e9fab3bc53db92c56cf662716730d65aa4fcfd003b0655aa98b324fa291"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "327604bc45024e761e963ae290cfc1ffd984706ea1d32498c7a1b8b66967b7d4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "213e8512147720e8e3dfeefbe996862017de5b9c611e25bd696792e30140d376"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f865a5952b66c8a18ec36798a7a3e228ae3913e6d9d169e463cc0a8e84f6d82a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5829d73489e52d19c239a38f456de86ae7843f3f626b164e2163514623397b35"
+    sha256 cellar: :any,                 x86_64_linux:      "c77c2469572d76a6cae8d0149aa585225b2520fda44906b7e0ec9dbf49eaa201"
   end
 
   depends_on "go" => :build

@@ -1,14 +1,17 @@
 class Runme < Formula
   desc "Execute commands inside your runbooks, docs, and READMEs"
   homepage "https://runme.dev/"
-  url "https://github.com/runmedev/runme/archive/refs/tags/v3.17.6.tar.gz"
-  sha256 "91d80a79ef0523dfdd42653fc4b6d0f4c708913afc2134717a04e049291f4651"
+  url "https://github.com/runmedev/runme/archive/refs/tags/v3.17.7.tar.gz"
+  sha256 "f38eb84080e12a202d18022c81acb979c6a21af258deecbd212702f8e423ec62"
   license "Apache-2.0"
   head "https://github.com/runmedev/runme.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "0acef7e2aa2f09f71dc15bbd7d033e3ac96178ce6aa94b3266b6657c668c58a1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "565d6b8b6d3143a2b8bb2123b3021c261bd98074d22287eb978359f749fd491f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d05b7392f832747b93f3c331d1733b70ca22152c38a223c8cc67ace02990da2b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aac8d37a9778a9fab7fe106a3a266c0b232cf3cba1700bca62351f4670f6619f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6fecfd69bf350d85c1fc2a8c6f55eba520e006faa289567d99929977e719571c"
+    sha256 cellar: :any,                 x86_64_linux:      "1f7bc66b7e961d73bc7d3f045b986c343e2b16569067c7829ab812f541cdda94"
   end
 
   depends_on "go" => :build
