@@ -7,11 +7,8 @@ class Pacparser < Formula
   head "https://github.com/manugarg/pacparser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f71f4a257a886be7da0a3919b66ab59ab6a9e3c62603cb43120b6781110989df"
-    sha256 cellar: :any, arm64_tahoe:       "13f355c8bf2e9e4b84b08b93d6e72f0b6165bba1249fc593a14c960611a295ef"
-    sha256 cellar: :any, arm64_sequoia:     "94c8383c09a4f49b081dee75b26e61cb0a4e67bb1e99c63cf050d9197c1f44ac"
-    sha256 cellar: :any, arm64_linux:       "51352cd2b2e2261613846961b1b3209ca229df09c376cdc34d9b24b155589ecb"
-    sha256 cellar: :any, x86_64_linux:      "20fd90bba14b1437fb5748c51ea1517a7aacd5be9e221957137846ee398c24be"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "566d6181d022c707bb98566077d55684854d9f669e06044a34824835a6746a89"
   end
 
   def install

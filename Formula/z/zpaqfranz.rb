@@ -14,11 +14,8 @@ class Zpaqfranz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26efab7afe01b68ec705a68a32cb2c5578180875bac677eb29d0381b21a7e6c3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1db88e848a2559cf41c3dcf4924ef4705638fa70e0e560569a4371a6615ee9fa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "43a3db68bb916dd84ca9d2a9170ee77c13d04b3dc62b5f6765db1f7a7f913ecf"
-    sha256 cellar: :any,                 arm64_linux:       "daf5636962b9cf52bce38b45765c5274fe50b62895ec94b46290e588d990ffad"
-    sha256 cellar: :any,                 x86_64_linux:      "c915f80319867b1734e46dd2a881f8b00ebb1925b524216eebde833e03d35313"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "7423b5c3c41b46e1f327e69d07788c6e2673967ab86256e32570e14711b631ea"
   end
 
   deny_network_access!

@@ -15,11 +15,8 @@ class Lz4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c"
-    sha256 cellar: :any, arm64_tahoe:       "9ab0175d769ca830f573defafb22b020f3e9b4e0862ee6ee9f47e0b46a29468d"
-    sha256 cellar: :any, arm64_sequoia:     "69c0c38e660f81b36bbd165a77d7619d2b8b6b175bf670a4840aaaaddd86a520"
-    sha256 cellar: :any, arm64_linux:       "14205882471527eb17656af9519512f70b76e9f944f6b68f3395253a175e15f4"
-    sha256 cellar: :any, x86_64_linux:      "f89740f8da822dda3870cefc3993db46d721944f4c8eb10755aee79ec5b0706e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "61fd55fe974e1d83b53032a92715d5ccd7d7eb5dce6bb98f7b082aa51fc9a63f"
   end
 
   depends_on "cmake" => :build

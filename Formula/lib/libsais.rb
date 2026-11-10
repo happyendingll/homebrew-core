@@ -7,11 +7,8 @@ class Libsais < Formula
   head "https://github.com/IlyaGrebnov/libsais.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "15b39446e38955cada574e9cfd31ebb7214a280e0eb2b691b60e1593ce2d98c7"
-    sha256 cellar: :any, arm64_tahoe:       "030536bce11b4b2e65020b83e9435d2a352c0961c4adc7fadfdb1dfdf38c9676"
-    sha256 cellar: :any, arm64_sequoia:     "0f1bf2bef152e9bf1e3c16e86f8b0da198536e6abf8d146e10a0e2441cda268e"
-    sha256 cellar: :any, arm64_linux:       "c4502234aab79b4cf272ea81f7f099a1afae1c93d3c93deb87c8e338e1fe730e"
-    sha256 cellar: :any, x86_64_linux:      "d7067423e1c3cc4f97a2421d97baeef0f06c8e798c20fc97a4906fc720fb66d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "5fdf88e988319f747494859b9bee036af1a147460019d6bece409f4d9933829a"
   end
 
   depends_on "cmake" => :build

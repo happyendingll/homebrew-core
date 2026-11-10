@@ -7,11 +7,8 @@ class IosWebkitDebugProxy < Formula
   head "https://github.com/google/ios-webkit-debug-proxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8319f0eacfb26bc45753c397eb037a6e0659c5b03ec732a76a042b39d183916e"
-    sha256 cellar: :any, arm64_tahoe:       "01d5b391d3ae4280d072849ba8d75cf2875ef2844f9925823a63d0b6ad673658"
-    sha256 cellar: :any, arm64_sequoia:     "5b1094c9c2ea6301ddf76bf9829843455eb5bbaf39f9cfed4bc1fefd549f5d36"
-    sha256 cellar: :any, arm64_linux:       "196a65e5b8c6be692b9d76add2cc11f8de829a7583c40580919bb3b4b3ae3ce9"
-    sha256 cellar: :any, x86_64_linux:      "988cc22187d15d0e407643d80f1e397a6c145cb7403f18a689f51d6e2a29d75b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "324d600670a9eb23b7998f31ec56b4b925eb8b38ac0ff2834c075a40a5f60e9e"
   end
 
   depends_on "autoconf" => :build

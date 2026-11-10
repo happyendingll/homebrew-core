@@ -11,11 +11,8 @@ class Coturn < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6ef92bc8a564d8a61d18468a92c665f2718de585fb3b2a962015ec8bdd01081a"
-    sha256 arm64_tahoe:       "9178ec71cf0ce450b326101577e2027bcd0a55d2df060b49442745c47af6e144"
-    sha256 arm64_sequoia:     "81f67977382b1d636fe4040914d1ddf432c3898b38a2a0dbb7ac045d98dde372"
-    sha256 arm64_linux:       "a54b2145422b5021dd73f1805a79a9762d37311981b8dafc8c80df25f1108f8f"
-    sha256 x86_64_linux:      "1fbc2a37abb2ea7d535ffa962028172599f15ab00ae3b24ccc70379f44f86021"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 cellar: :any, sequoia: "7cc7476ceee353087901efad76ac5d7d27806314436b1fbdc8cef1eb1f6b6261"
   end
 
   depends_on "pkgconf" => :build

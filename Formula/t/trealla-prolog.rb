@@ -11,11 +11,8 @@ class TreallaProlog < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a678a4f643581b40968bd57aebc2729d0f69790a9d209bc229606759c3fc4444"
-    sha256 arm64_tahoe:       "bc3a7acf0b9ba3e4c6410e7d2e52635d451e27eac87c53e192f8206d2e78e2e4"
-    sha256 arm64_sequoia:     "6e3e6f29561f7d2aa9b5b27a6d869c51c7b746c8a63c5c1fae40372ae9c9cf8d"
-    sha256 arm64_linux:       "b06e7b42cda13c162a6a43d758a3c307381b48ea995760b10774fc442b358b0e"
-    sha256 x86_64_linux:      "5d4b035b747d1274fa95caca606229b313a7b6f1e7ead5a19bd61ed60edc32af"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
+    sha256 sequoia: "e1e388d0f8b05ede72d7497f1e0397aa3a7e8be4caf51ad66c826fd1839812a9"
   end
 
   depends_on "openssl@4"
