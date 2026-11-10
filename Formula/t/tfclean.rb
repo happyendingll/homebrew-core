@@ -7,11 +7,8 @@ class Tfclean < Formula
   head "https://github.com/takaishi/tfclean.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "76413e3c7efc4343047e4658c88bd45fe48b7b4b78e0628c9397244fe9e7f053"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "76413e3c7efc4343047e4658c88bd45fe48b7b4b78e0628c9397244fe9e7f053"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "76413e3c7efc4343047e4658c88bd45fe48b7b4b78e0628c9397244fe9e7f053"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dacbda5e6dbb41f2d125a06d858fae2f12c836cbff6d01f16eed8d6ad32b6d08"
-    sha256 cellar: :any,                 x86_64_linux:      "940fd6ac21d038f33b7dde78fff16184f6cb3a3bb455f14ef53e851a50d1cc6d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "bcf020440f01fe41013bb99adeaa06786bfdb33636edf4ae8b78842deabd3260"
   end
 
   depends_on "go" => :build

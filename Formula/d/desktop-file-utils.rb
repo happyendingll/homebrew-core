@@ -7,11 +7,8 @@ class DesktopFileUtils < Formula
   compatibility_version 1
 
   bottle do
-    sha256 arm64_golden_gate: "13a8ed5b67571a08e0cc77c6c403eb94bb364cde3e1ecb47d250e9f04939422c"
-    sha256 arm64_tahoe:       "672164493b9d75d0165c82965299a0a14fd13a5d37c7a9dbf9ec790aae184938"
-    sha256 arm64_sequoia:     "affde13278895c14a46fc275448917d94f07acdcfadf7882808c5f238e98846e"
-    sha256 arm64_linux:       "ead45e3d8224efa1d79fe4c080fa492878d56d525930a29d48c4f423f0d88348"
-    sha256 x86_64_linux:      "f8af999b6bffa3fcf398297667a9441385c4a6fac26c2ac319e594021f8e0050"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "ee64c513308c77cc5f8dbd0c74e2eab07320ba6838d2b9d5f3a6c188491f6ae7"
   end
 
   depends_on "meson" => :build

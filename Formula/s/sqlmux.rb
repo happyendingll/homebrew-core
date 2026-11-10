@@ -12,11 +12,8 @@ class Sqlmux < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a8693d64e956f3d71b780a88562104205be70d3bf8d0a5dfb5e642d924e91eee"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8693d64e956f3d71b780a88562104205be70d3bf8d0a5dfb5e642d924e91eee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a8693d64e956f3d71b780a88562104205be70d3bf8d0a5dfb5e642d924e91eee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "821184f9f1c405705e61cffd02c95e0d2de904ae8d40e7129e99f8c852e44698"
-    sha256 cellar: :any,                 x86_64_linux:      "d9b8904c2aadae5cdcf30fabfbcd30c2934ca086be7f699006c9f1e0ac3fb12d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "72c12fb0ca2979ebaa1987c0a2710381cb59dde261bb02b7cfa7e3dd4349ec8d"
   end
 
   depends_on "go" => :build

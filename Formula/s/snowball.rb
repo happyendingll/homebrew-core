@@ -7,11 +7,8 @@ class Snowball < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c487473f786dc0c10f37b678ad70f0044ecbaa4e134f3953db19a35c8402b6ce"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "abce97574300d240298a7cfea629f1a4af66fe25cda0d30bf4f1a6e153afe942"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26906139900128bd8fffd24feed75bfaf89f1306bfaf10cec8d103085eeccd98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f588cd4ebb29b972a8f6e455f6bbe269a720783698c25737ac4b8c5fe46ec3b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "399433f043228d8f4e2f1f7dac771744c8f32d944382569d13690b202fa9bf62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f52734bdd6a466278cc23f6d2bf930b6ee3e37b2d79ef294b1a3d0e8f89007a9"
   end
 
   def install
