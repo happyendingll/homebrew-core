@@ -11,11 +11,8 @@ class Libgnt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c5445aa5f1e7551a1cbd4260738c1b4fe0a878b025f42ac0574f0743ca167e5e"
-    sha256 cellar: :any, arm64_tahoe:       "b527b2f03c67197b52f9b78fd2eeece7a6a873fee179373913308c1d00873614"
-    sha256 cellar: :any, arm64_sequoia:     "b182ba465d144c5b1bf0a2033d034ea6ef5343b62c14005db32722a40884dc8b"
-    sha256 cellar: :any, arm64_linux:       "6ef933392dfc3e8a90097606ce182fd78c9a59e67912b50b6a13fb47558540e8"
-    sha256 cellar: :any, x86_64_linux:      "8877647da1d1687289a473e3628eab6e34ca30bfceaec686fe8d3aec27d64d2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "5e2490de628cb45417e8e3020c4c12a5045c9b3b8aaf306465f16885fb051c05"
   end
 
   depends_on "meson" => :build

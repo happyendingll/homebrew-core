@@ -11,11 +11,8 @@ class Hivex < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c5487e5f00f415838d08d5f85332e7050263ebd865661068a3b287c079a2558a"
-    sha256 cellar: :any, arm64_tahoe:       "388c7e0f254b34c93a7b4c06461cecdc74da595a13cdd8e5fc1f9f394341a117"
-    sha256 cellar: :any, arm64_sequoia:     "92f96d59734b9ff898f9f6dd03279ad085cce2a0c1a5f8c3385c4530590a09ed"
-    sha256               arm64_linux:       "cc78ca46f50b0e79a7a4d52b1836b24b13f3915aaf106093889292bd7ed17315"
-    sha256               x86_64_linux:      "f0b14ab9bd2b5be5bce7e53252ae80fdc4210e1ddc4cfa9a4a5200d281fce144"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "bfc7a63410c61c9a70d2bcf7a785872bc282d502eab514a8798f0db47466d7bb"
   end
 
   depends_on "pkgconf" => :build

@@ -8,11 +8,8 @@ class Cminpack < Formula
   head "https://github.com/devernay/cminpack.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5c3b2e9fe67aa283195c193431b8ae141856e41948755b8f5478e733ea547184"
-    sha256 cellar: :any, arm64_tahoe:       "c6e7ac92386ae7ab658b6f9f422dfd11da82e39113a803308984fc77e7255f5e"
-    sha256 cellar: :any, arm64_sequoia:     "1757084529d88dfad798bc6041453dda44e8c07f6b8c0cd953f64ac126c76dd4"
-    sha256 cellar: :any, arm64_linux:       "b323456f5bcf44bb111a135c09c757feb8fbaede96134991da9ce5e242f02879"
-    sha256 cellar: :any, x86_64_linux:      "0c3aa3236b2dfad9a1e71ed70875ed802d126ac36e61aa7ad3a58200ea43f0c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "45b88cab3ba1c67a76578d491bda1e838d8b5ada402d1041bdf9b4277e64acae"
   end
 
   depends_on "cmake" => :build

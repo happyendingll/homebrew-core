@@ -16,11 +16,8 @@ class Assimp < Formula
   head "https://github.com/assimp/assimp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "33b634485316f645d29cf271fcdf3066af99024385edfdc942ba1f7be97318d7"
-    sha256 cellar: :any, arm64_tahoe:       "4e3c3f0573c0ff85ea12ae50d58579cd9dca6c5e5c4d5fcefd355852a38f984b"
-    sha256 cellar: :any, arm64_sequoia:     "b87f9aee5a5fd5c7ee22c6097df9be220d6fe647c8063ed8047a6324da58fcfe"
-    sha256 cellar: :any, arm64_linux:       "54fba931aad64ba799e708c517b8246957e374ab3b24e64d2664de7877a7ce01"
-    sha256 cellar: :any, x86_64_linux:      "555e2b5658d70ae1f614dc4a658f4c337e1e2cfa5f714e65cb7786caa789605c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "555950748ce06e1a57da27af2064f154bce4fe36908bd24c1ba07d1bd70d04c0"
   end
 
   depends_on "cmake" => :build

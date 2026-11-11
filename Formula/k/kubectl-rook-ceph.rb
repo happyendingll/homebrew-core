@@ -7,11 +7,8 @@ class KubectlRookCeph < Formula
   head "https://github.com/rook/kubectl-rook-ceph.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3fa7e830abcf481cd9de332c58b1313ad56f09c1f9fa422531c58e6f7dfbc24a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "35440c0e2b3a61c22a91707f6e08025ecaed801cba89d4c2b022535b2846f00a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5834107c3dc025f223966851f6dd352be203d9a4ec7a0f947aa9fc3b7d0b1aad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b970172d7af7a45a4aaabb31ba26b6212ecee0c0d3715f782979e337b6a87b14"
-    sha256 cellar: :any,                 x86_64_linux:      "94cd78c3d2df9ad694cd6545e2b80e2f8617d75acd07c9496f981759f10a9eb7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "3c9a1e9ca63e329c441a56fc31bb112e05bd60a7bef6fdb067dd5f100447a51c"
   end
 
   depends_on "go" => :build

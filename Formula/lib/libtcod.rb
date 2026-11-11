@@ -11,11 +11,8 @@ class Libtcod < Formula
   ]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fdeba208c6be8a170926847eae6f6e9de5926b4a0463382760fa1e1e782e1578"
-    sha256 cellar: :any, arm64_tahoe:       "6f6d013bbd2bbf46241db852aa17aa0b0265c9932e09b45407060f0629bfae29"
-    sha256 cellar: :any, arm64_sequoia:     "7d2c80482bf9d8db6375ed3dc2935de0ff6ad8cccb6f2f808f777c3afeeda5fc"
-    sha256 cellar: :any, arm64_linux:       "a43042ade31d1a9fe3aa424acc82ecf374ab3ec9318a671860d1fdea4c081239"
-    sha256 cellar: :any, x86_64_linux:      "9b99edc4372dff2e16bf3b3bcfb595c64ac0e4f5c4b2a5bf7f5306d2e8e297a6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c35bda7deb234e292af7522f4e4b6d34706daa10406b9c08f2750d608b344fdc"
   end
 
   depends_on "cmake" => :build
