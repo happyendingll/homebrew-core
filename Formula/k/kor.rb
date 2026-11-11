@@ -1,14 +1,17 @@
 class Kor < Formula
   desc "CLI tool to discover unused Kubernetes resources"
   homepage "https://github.com/yonahd/kor"
-  url "https://github.com/yonahd/kor/archive/refs/tags/v0.6.9.tar.gz"
-  sha256 "2b354562dd032a629dec136bb38c288886f5d362dabbd2597bf9bde8628b59e1"
+  url "https://github.com/yonahd/kor/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "3556833e78da34d4ec66bd87ceaa12aa1550d2c2d250141356f6684a133e1eda"
   license "MIT"
   head "https://github.com/yonahd/kor.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "2ce26d53e8de4ce43e62b732bd9e336546e75fff0f6a94dee1f45372ad09681f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6de6766b3c86e134cb5720ef454a92aba17460b60d63729712ab79c2b29b5bb5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9a937de7d80bf6ee2ca0464940595b57bbea6f71bfd44f590b4fbc8ac2c62cd6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc164824872aff9254b00341068c0e6df62f6a214887c81798277f5b3964ccfa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7a5008d7d63bed82ebcedf0fa8f7ae135091232a312014c59bc2a10315ed603a"
+    sha256 cellar: :any,                 x86_64_linux:      "eccc674970529c4e121d6b93723ba10f2d2bbbc7329d3e77a64f56d545fb5c5b"
   end
 
   depends_on "go" => :build

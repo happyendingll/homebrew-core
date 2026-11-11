@@ -1,8 +1,8 @@
 class GitSvn < Formula
   desc "Bidirectional operation between a Subversion repository and Git"
   homepage "https://git-scm.com"
-  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.56.0.tar.xz"
-  sha256 "26c56c296b38c0695b26fa95f475f1d01704d2d38e73465ca30b0b2f5dc789d3"
+  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.56.1.tar.xz"
+  sha256 "f0b0bf89264b9bd2e1c640363e7529643989da76281600473c50745cd34a607f"
   license "GPL-2.0-or-later"
   head "https://github.com/git/git.git", branch: "master"
 
@@ -11,8 +11,11 @@ class GitSvn < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "266501f719d8c1daa5fbc8a7b8cc87e83dd4a35847c5957651935b9f9e37fa4b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "37d38d1e01735601b6e5e0b2598ce64c54fed4193959e4c621ff9ed9213c3bc2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37d38d1e01735601b6e5e0b2598ce64c54fed4193959e4c621ff9ed9213c3bc2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "37d38d1e01735601b6e5e0b2598ce64c54fed4193959e4c621ff9ed9213c3bc2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d78716bda9a4257f6031b93c6a2e74a07a3fc4e30e417e56f4b0d4c4ffc9b7b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2428a17c6466f7f4d4dade236c6dc8c9b48342e97bd8db145ba9fc34d516b8be"
   end
 
   depends_on "git"

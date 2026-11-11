@@ -1,14 +1,17 @@
 class CfTerraforming < Formula
   desc "CLI to facilitate terraforming your existing Cloudflare resources"
   homepage "https://github.com/cloudflare/cf-terraforming"
-  url "https://github.com/cloudflare/cf-terraforming/archive/refs/tags/v0.30.0.tar.gz"
-  sha256 "6f90684359f9f7f5d2e6013aebc49aa58d38f27a4d1477e108a93ae0ac41a876"
+  url "https://github.com/cloudflare/cf-terraforming/archive/refs/tags/v0.31.0.tar.gz"
+  sha256 "62c7186f2c83b8065d0b3429635d1947f4b8271e44ff76acb9a7a0726bb61517"
   license "MPL-2.0"
   head "https://github.com/cloudflare/cf-terraforming.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "9fa2f75e035d158b989c627b4c1d970bf956e6369e76bbe0b790f96ae4dbd097"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "363d3c1b2f9aafe4f0b5022231547692d3fb4075e99d47f85253aeeba434cb3d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "363d3c1b2f9aafe4f0b5022231547692d3fb4075e99d47f85253aeeba434cb3d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "363d3c1b2f9aafe4f0b5022231547692d3fb4075e99d47f85253aeeba434cb3d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2e824b50484726ba8f7ed304b758844e1251dc6e32705890f5861acacc3df689"
+    sha256 cellar: :any,                 x86_64_linux:      "64892506ac3ce71a732b3f0bc806328534b32170438113ef4c5dd4aaabc02744"
   end
 
   depends_on "go" => :build

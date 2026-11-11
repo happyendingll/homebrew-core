@@ -1,13 +1,16 @@
 class Ctrld < Formula
   desc "Highly configurable, multi-protocol DNS forwarding proxy"
   homepage "https://github.com/Control-D-Inc/ctrld"
-  url "https://github.com/Control-D-Inc/ctrld/archive/refs/tags/v1.5.9.tar.gz"
-  sha256 "7f41dd435a8d36214be8da1fafb46edd0cecf4a16cdf26b5a070fdefa2c40cf5"
+  url "https://github.com/Control-D-Inc/ctrld/archive/refs/tags/v1.5.10.tar.gz"
+  sha256 "a4a05597900b68ac02d62d3fdd29febb222a2d77aecdf7e734e12183d651a900"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "e94badc37f3e0721238654fbb0b0460d0ca4ba81c87b401061749e38b0e79f00"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ff8855ec21564596582079205919222dfa67fdb9f65e758e6a66027ac6a0014a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff8855ec21564596582079205919222dfa67fdb9f65e758e6a66027ac6a0014a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff8855ec21564596582079205919222dfa67fdb9f65e758e6a66027ac6a0014a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "588a00b0aa207040f9a656ee1de882fa9a0ffbc21c2a791a5c3787d77f4b488b"
+    sha256 cellar: :any,                 x86_64_linux:      "89a7bd3bd945b4e9af93036426b724c38af25dc16871ca85d06dc9c9e6005f1e"
   end
 
   depends_on "go" => :build

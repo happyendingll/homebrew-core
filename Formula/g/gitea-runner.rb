@@ -1,13 +1,16 @@
 class GiteaRunner < Formula
   desc "Official Actions runner for Gitea"
   homepage "https://gitea.com/gitea/runner"
-  url "https://gitea.com/gitea/runner/archive/v5.4.1.tar.gz"
-  sha256 "b5e06ae28b27ec304e4ce2da9c2e51a5be9e1adc9083a1aa1355c8cd2de27bce"
+  url "https://gitea.com/gitea/runner/archive/v6.0.0.tar.gz"
+  sha256 "563cdba528c213114c8d00f3b34d049f10049f288ef9f4e0e6d1b6946343d498"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "8e1b752fe9bf2d9e7791cf264e7c5eade1b7bd8106a4a2b8167abffd99df1a17"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0aae651d51caad8f3fd22dd96c185f8e55ab8a9681fb2ba31fe1a3523d3e174"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a18fba935f8dc63a4b5abe07cccf1196f2efb5835821e3f0dfcfa157f7cd6e53"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "419430a8fd8f0b696a0243e06ead9d5bf4c7413127d2fe06a35c6e3fcf8a4d6b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b9a150de842ac7c3a65e2484c7c9801ea84e755fc423d180cc5cea515e934193"
+    sha256 cellar: :any,                 x86_64_linux:      "e0af7cc99a08eb89303bacfe07cb2ef4669eb47157b0d31f8af6091314f63119"
   end
 
   depends_on "go" => :build

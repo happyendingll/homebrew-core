@@ -1,14 +1,17 @@
 class Zellij < Formula
   desc "Pluggable terminal workspace, with terminal multiplexer as the base feature"
   homepage "https://zellij.dev"
-  url "https://github.com/zellij-org/zellij/archive/refs/tags/v0.45.1.tar.gz"
-  sha256 "5cbe711437d2a61afd9287165f6aca0bcccb9ab1473633665a5b11ed55467852"
+  url "https://github.com/zellij-org/zellij/archive/refs/tags/v0.46.0.tar.gz"
+  sha256 "2dfa237fea447f3cc98954e81b0097b9d25841010036720e11f67880fe7861f0"
   license "MIT"
   head "https://github.com/zellij-org/zellij.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "49cf2414753844333ee24c460086ca13cdca97f5d98d8fe8116eed019334a2b2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7f7df89c09c039467b91f05b4f066e10b97a018d6c3bc52dce5219a2dfcad5e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d1e9395bb2b833cbf7f392f901e5a51dc4413ac74731feda81a6bef42f631bef"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1963842abf5d2260c18f2d1efdf797c71ea6b13ad09612c4b5a675b5741faac6"
+    sha256 cellar: :any,                 arm64_linux:       "1fe71dfb39aec6bcd6886f41ac8212af1a0f27fc56f7e60c10f55e4a01520d00"
+    sha256 cellar: :any,                 x86_64_linux:      "55738c7245fecf08af4114fd6fe79b5ff159a8a28a067297de8ba4fd6c247314"
   end
 
   depends_on "rust" => :build
@@ -25,19 +28,18 @@ class Zellij < Formula
 
   deny_network_access!
 
+  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
+
   def fetch
     system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4") if OS.linux?
+    ENV["OPENSSL_DIR"] = formula_opt_prefix(openssl) if OS.linux?
 
     # Remove vendored_curl from default features
-    features = ["plugins_from_target", "web_server_capability"]
-    features << "window" if build.head?
-    odie "Add window feature which is included in default features!" if build.stable? && version >= "0.46.0"
-
+    features = %w[plugins_from_target web_server_capability terminal]
     system "cargo", "install", "--no-default-features", *std_cargo_args(features:)
 
     generate_completions_from_executable(bin/"zellij", "setup", "--generate-completion")

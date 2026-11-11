@@ -3,14 +3,17 @@ class TranslateToolkit < Formula
 
   desc "Toolkit for localization engineers"
   homepage "https://toolkit.translatehouse.org/"
-  url "https://files.pythonhosted.org/packages/e5/42/c747cf80217f1331f924eed11a68cb2c2898ac7135a2edf7962ddcb914eb/translate_toolkit-3.20.4.tar.gz"
-  sha256 "e122b31412ab05f9f3c6a29a12eee87440f7483ad99940783cf66cfad5bcb150"
+  url "https://files.pythonhosted.org/packages/e7/ec/c4572b49fdb9246f0610b6efcc6169d331f650dfdf2670e1a96c756c468c/translate_toolkit-3.20.6.tar.gz"
+  sha256 "232a2043c438a390fb911eb6b4124e01a983fa8f193e58c422e72cd34bac6a05"
   license "GPL-3.0-or-later"
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "951e04e397a1f770340e1e5ffc50bd31992a7b53879eccd2b0340142f6fe8cb7"
+    sha256 cellar: :any, arm64_golden_gate: "dd07a6a76a01aff6ebe0cfbdbcefc2a8ae1f743a74ef0d7a2b050c4d850a9b73"
+    sha256 cellar: :any, arm64_tahoe:       "909a18778465bba152872d4db2e649268c111445e68dd8ea4cb715f82992a42c"
+    sha256 cellar: :any, arm64_sequoia:     "c8680ab8fe680b64698d9d72970eea0c7eea42dfb4bdd5046706aa85447b2451"
+    sha256 cellar: :any, arm64_linux:       "fd9ae82a3fb0a1c4d591db905becada60f5c644fd30732e080f724063f204dca"
+    sha256 cellar: :any, x86_64_linux:      "7fe6a961e995bb55bb63413cb4b0db96930204c4d94dd53e402c5799d46e9371"
   end
 
   depends_on "rust" => :build # for `unicode_segmentation_py`

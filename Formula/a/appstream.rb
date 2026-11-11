@@ -1,14 +1,17 @@
 class Appstream < Formula
   desc "Tools and libraries to work with AppStream metadata"
   homepage "https://www.freedesktop.org/wiki/Distributions/AppStream/"
-  url "https://github.com/ximion/appstream/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "6b554b90c2139aceef65e1aebe811cfe398af4ea749eb5ffa0b7286053ff9e50"
+  url "https://github.com/ximion/appstream/archive/refs/tags/v1.2.3.tar.gz"
+  sha256 "12f01e127081c485a3e3056b6d30f54d003101689ff815adac6f1ef2b19af6ab"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "47e114ed0cf7a7cef0666e4ac3b57bd10b28bf000813e92ecf9ee9a90594e533"
+    sha256 arm64_golden_gate: "0960ca171fa051e95e7299828d174457be5c9b0bc7adee39496235e63b723c7a"
+    sha256 arm64_tahoe:       "3529a8d73c8565daf22bea0d7a8f2834619894e30e116fde46645bec9cf15579"
+    sha256 arm64_sequoia:     "703ba59e3f4b4110ae6a801fac545d6990efdcc464cabf045c50e1d0ad93c3a4"
+    sha256 arm64_linux:       "ca684a2b402cd6b7a34013208c3364fdd43335c7390b9b68ae310385ae3b97b1"
+    sha256 x86_64_linux:      "d941bdb0bc8cde0bde51db066ae0bc999558da7f61e464a2195608c4be0e8674"
   end
 
   depends_on "docbook-xsl" => :build

@@ -1,8 +1,8 @@
 class Xcodes < Formula
   desc "Command-line tool to install and switch between multiple versions of Xcode"
   homepage "https://github.com/XcodesOrg/xcodes"
-  url "https://github.com/XcodesOrg/xcodes/archive/refs/tags/2.1.0.tar.gz"
-  sha256 "884c6d0c50528ccc660e22499edcd324f3a5e6f7e2f7006933ddb6eb278f6387"
+  url "https://github.com/XcodesOrg/xcodes/archive/refs/tags/2.2.0.tar.gz"
+  sha256 "29fcc60507f1b226d1a7384dac34c2b0e56067575bb428fc7bb2d3d030683fa9"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,9 @@ class Xcodes < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "e1b6ebb1000d65396d472df3bb31afd96f597263317bc8d5593f31ca732a0ff1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "81c13eb2a30b3eaaa45888af463df13ca68dca033d665dfc92be4544ad65b199"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95c6a67be6585a93475dd06bee1b8060d4a6673a7f83c8313962c97acbe98d90"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a072effea08e3d25e19cce9b838ed0d176f5fa178bb32a818aa05c904a3bb1c5"
   end
 
   depends_on macos: :sequoia # older SDK fail to build on non-'Sendable' type 'Logger'

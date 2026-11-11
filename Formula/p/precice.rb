@@ -1,15 +1,17 @@
 class Precice < Formula
   desc "Coupling library for partitioned multi-physics simulations"
   homepage "https://precice.org/"
-  url "https://github.com/precice/precice/archive/refs/tags/v3.4.1.tar.gz"
-  sha256 "ef4713c938a1b2000d0b071175e1b45f9ec55c7aec4bbe7b65c3992edcc74ac7"
+  url "https://github.com/precice/precice/archive/refs/tags/v3.5.0.tar.gz"
+  sha256 "cf60ae64b5f738a45c5bc06e39321c3b3a987f4115b401a30246222194797e99"
   license "LGPL-3.0-or-later"
-  revision 5
   head "https://github.com/precice/precice.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "823cc87a07d652865d5707b4c016f771da9a530546b3b8916e9989a6ef5df0f1"
+    sha256 cellar: :any, arm64_golden_gate: "9f55d1e23a00b34231e40b6eef30bed36a19f3cf32963ae8ffd2c960f0ffb8a5"
+    sha256 cellar: :any, arm64_tahoe:       "86c45ec1c9a2272bac4b91e2c16e72426607595ec5959d31b2497c32cb8bdfe2"
+    sha256 cellar: :any, arm64_sequoia:     "4ec45589d1feda4a4fb1d7cb6d08947c16436564db6310532b8eb9b4b454c9ee"
+    sha256 cellar: :any, arm64_linux:       "46aed4fc03c03ce6a596c23f15d174167e23645fe3470bdf989e2fa2711c3c2b"
+    sha256 cellar: :any, x86_64_linux:      "a9fc4732d2ea2bd646181ce637b58cbc695a39e98714ff4e21d685ea0b466c41"
   end
 
   depends_on "cmake" => :build

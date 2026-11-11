@@ -1,14 +1,17 @@
 class VitePlus < Formula
   desc "Unified toolchain and entry point for web development"
   homepage "https://viteplus.dev"
-  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v1.5.1.tar.gz"
-  sha256 "2ce42df9434fb3d76bde6cc7ed5b452a3da9356439e04f580dec5412da6fce55"
+  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v1.6.0.tar.gz"
+  sha256 "8bb73c2ff33523675c66e9d87d8694754e4def7d7bbaff2ee95f274fb48de946"
   license "MIT"
   head "https://github.com/voidzero-dev/vite-plus.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "9a0756a0836147bb82e9e25b39fd0e0d402fec6f95cbd9809fe5926200875b84"
+    sha256 cellar: :any, arm64_golden_gate: "58ac93701b598d71e966bf112958f6994b446734585bab787b376dcda9037586"
+    sha256 cellar: :any, arm64_tahoe:       "f4f58c9b727ec0d843387f48a185e8ad9915f1f5de51c3cf0a7c910e0285a625"
+    sha256 cellar: :any, arm64_sequoia:     "f690b5b2cafc59a8a80adbd8c0f9f39b9d78c646657d94f4e7c9a2b8da53c028"
+    sha256               arm64_linux:       "58562cd6476547ccea85cd7eae19053eb4f4e2b7fbeb1b2829797f47c4a256d8"
+    sha256               x86_64_linux:      "ab98b0921364b7c1c54b80e88c56b2af2a178f10ee527e2c624892e00d2ff7bc"
   end
 
   depends_on "cmake" => :build

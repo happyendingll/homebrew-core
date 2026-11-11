@@ -4,6 +4,7 @@ class Lldb < Formula
   url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
   sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
   license "Apache-2.0" => { with: "LLVM-exception" }
+  revision 1
   compatibility_version 1
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
@@ -12,8 +13,11 @@ class Lldb < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "0facce2392c1c0038149bf7a1dd86a2b145aadba81bfaa44660b0a8e7ea34b4d"
+    sha256 arm64_golden_gate: "290f59be8721ea27a4f4bb66f8e3d442ab75aae8f5483196b8508f7b42b4deb2"
+    sha256 arm64_tahoe:       "17b752c8f34bb1f7cd860920617f69c198bee2508755b7fb18975ea8ba3d2b61"
+    sha256 arm64_sequoia:     "134d5a7f5a169aad780fc1c0c390deb948037fe137d6e207259ee5bc4afeee50"
+    sha256 arm64_linux:       "c70ef8483bc168fae971ac0b56d015e637061dd1a9a3382dbe809222edddb9c9"
+    sha256 x86_64_linux:      "b7bdc5de82464e14829d8eb1ecd8345f296a9ac1bc84f703af03cb445954abac"
   end
 
   keg_only :provided_by_macos

@@ -1,15 +1,18 @@
 class Httpd < Formula
   desc "Apache HTTP server"
   homepage "https://httpd.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.70.tar.bz2"
-  mirror "https://downloads.apache.org/httpd/httpd-2.4.70.tar.bz2"
-  sha256 "1eefd7dc95836c5872894ce8e6a37f773d5a6764f0766869d39b8bcf0b1bafc3"
+  url "https://www.apache.org/dyn/closer.lua?path=httpd/httpd-2.4.71.tar.bz2"
+  mirror "https://downloads.apache.org/httpd/httpd-2.4.71.tar.bz2"
+  sha256 "2bc5da5a33c247341de082717d4ebcb5cb49e8b73a05b7fddf7d5d6dc2f8de62"
   license "Apache-2.0"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "7e91bc4f926cc449bf137899dc7cd6b5d48d981b25dc75eecff8bb3a2c1c8bfa"
+    sha256 arm64_golden_gate: "1960622bcc500aa4c7e8cc10d1ad12b3c9092aa1ae9a742b2a971fa60c513ed0"
+    sha256 arm64_tahoe:       "25332dee39649e12296e23467ab7c1397e5b967e32afe41e367ebbb9e482f395"
+    sha256 arm64_sequoia:     "70473f73fa318bc75e30fe319306b8790ee31404f844fd4947a0dbd9bb2d6e13"
+    sha256 arm64_linux:       "44d76557509648a8e81a08b3f81d719452fcd75607ba7782a04ee84b930c4bbc"
+    sha256 x86_64_linux:      "05f7da1afe4e495e34834fef6d046e7f1bbc0ae10222661af15d7216a964cb39"
   end
 
   depends_on "apr"

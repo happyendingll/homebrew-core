@@ -1,13 +1,16 @@
 class AwsAmplify < Formula
   desc "Build full-stack web and mobile apps in hours. Easy to start, easy to scale"
   homepage "https://aws.amazon.com/amplify/"
-  url "https://registry.npmjs.org/@aws-amplify/cli-internal/-/cli-internal-14.5.1.tgz"
-  sha256 "8f5bcb9b609e7d97527dc5b49819677710f54b05eaaafa62323bc7d094170de9"
+  url "https://registry.npmjs.org/@aws-amplify/cli-internal/-/cli-internal-14.6.0.tgz"
+  sha256 "16e843f3b73ee7339321ccf0f57f9f9039619665c3cda900d483d45751f35a62"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "42906b4c43c8805f167551e15fe1d03c7fd34e80a1b67138303274bcc53a9130"
+    sha256 cellar: :any, arm64_golden_gate: "7141f7a1604d069e4b4d00cee99562f76d175c4bbe83ccb21210424be24302d1"
+    sha256 cellar: :any, arm64_tahoe:       "7141f7a1604d069e4b4d00cee99562f76d175c4bbe83ccb21210424be24302d1"
+    sha256 cellar: :any, arm64_sequoia:     "7141f7a1604d069e4b4d00cee99562f76d175c4bbe83ccb21210424be24302d1"
+    sha256 cellar: :any, arm64_linux:       "9a1934e1380dc3558f9da69b110c8c5fed491d1408e97f525aa18b96c8b3dc1e"
+    sha256 cellar: :any, x86_64_linux:      "9258d6fdc8a34c56fea6b90a99a633c8dd493f88e2dc750c2574b1529acc8017"
   end
 
   depends_on "node"
