@@ -1,8 +1,8 @@
 class Libjwt < Formula
   desc "JSON Web Token C library"
   homepage "https://libjwt.io/"
-  url "https://github.com/benmcollins/libjwt/archive/refs/tags/v3.6.1.tar.gz"
-  sha256 "b483a5f77e548964553f54a0ec5f0c810cc6c0629c5ac5a03610bcced150e7be"
+  url "https://github.com/benmcollins/libjwt/archive/refs/tags/v3.6.2.tar.gz"
+  sha256 "df794f41c1310fb96e3d45b6fc034ea9fbaf619b631c43bd86ff64dd597d33c4"
   license "MPL-2.0"
   head "https://github.com/benmcollins/libjwt.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Libjwt < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "caf030a78814a204f38ea57467ed4b5243b0cb7b808c4cd711eb2bc7b5484663"
+    sha256 cellar: :any, arm64_golden_gate: "7801c86ed38def1af8feac00258cf6056dc9056b53ba695ae4a76097757d30d9"
+    sha256 cellar: :any, arm64_tahoe:       "4592d72fabd5c5494a9c6f744c677481e1306d8c2b1a23b85523fdb39664536c"
+    sha256 cellar: :any, arm64_sequoia:     "7ab3807d277316bc69a97ab050bd330be4fa3983c7fef426e2c5cca16a0661b6"
+    sha256 cellar: :any, arm64_linux:       "43db8c89e52d6b260a79a4692d2d72575ffce56d734fb8f129b2ddcab259e5bf"
+    sha256 cellar: :any, x86_64_linux:      "e8929f0133fc48e6f3528840b1dfa9840f1ae17a5ca03c8f10554707c174a397"
   end
 
   depends_on "cmake" => :build

@@ -1,14 +1,17 @@
 class Azion < Formula
   desc "CLI for the Azion service"
   homepage "https://github.com/aziontech/azion"
-  url "https://github.com/aziontech/azion/archive/refs/tags/4.24.0.tar.gz"
-  sha256 "b0b1c0c34b2285585e0e44abc2ac5e718623c3cd3fd41a4ddf25bf7e20bc8b57"
+  url "https://github.com/aziontech/azion/archive/refs/tags/4.26.1.tar.gz"
+  sha256 "b4d603743a0181966764063f4af40a11b48711177b9fb9c0c5d4e7f1cecb09af"
   license "MIT"
   head "https://github.com/aziontech/azion.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "e1aa78378f9512b433176c1ecbb3eae92ccc4aefeddb82c5c3f0d9ceeb969515"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "be0515e7c95bac1abd30cb3cebaffbf3c94d6f370368eba1f3f300610b785bde"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "be0515e7c95bac1abd30cb3cebaffbf3c94d6f370368eba1f3f300610b785bde"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "be0515e7c95bac1abd30cb3cebaffbf3c94d6f370368eba1f3f300610b785bde"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9fcd53e13ef4183cd6d8cefd54d64bb196465f6fa2653e4fdec4dd8c20e024a7"
+    sha256 cellar: :any,                 x86_64_linux:      "553890bf7d2e5a1ffe4c2e872fa0861e9f2bb8614268c3050b4948f955903793"
   end
 
   depends_on "go" => :build

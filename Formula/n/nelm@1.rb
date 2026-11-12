@@ -2,8 +2,8 @@ class NelmAT1 < Formula
   desc "Kubernetes deployment tool that manages and deploys Helm Charts"
   homepage "https://github.com/werf/nelm"
   # Check stable version at https://github.com/werf/nelm/blob/main/trdl_channels.yaml
-  url "https://github.com/werf/nelm/archive/refs/tags/v1.29.0.tar.gz"
-  sha256 "67c5e9ac812a66c82fbd3f7293e287cf837967791ebcfb4579420873bae8910e"
+  url "https://github.com/werf/nelm/archive/refs/tags/v1.30.4.tar.gz"
+  sha256 "23d7af4dbd8e0a1f39e6e377008bc9f7f0a014c9351a1d0139ddbbaded22e752"
   license "Apache-2.0"
 
   # Track the stable channel of official Nelm binaries. This accounts for the
@@ -15,8 +15,11 @@ class NelmAT1 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "4b9f3e2881697379a9bc302b5416d94b9b615d7335e9988845c4ee1514bac4e5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f837d613dde0b98db3285689b320c5cb9e42599a71ec484e92516623dc48d793"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "53f8edd30d1303df52d762976e90009e90a132e5a58a315092a1710e8e8a20b8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5cadd15d9c85516144e699e7f523deef166fea0a7ddbb14a509f5de3455a6da4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8929c66087cea3b7b549f9955d110efc6b09b7e17cf9d36221b4496ed1809062"
+    sha256 cellar: :any,                 x86_64_linux:      "719ce16a0b6a4e94a20dda8643aad29c89bdaf10eb2662978cb9f17dd6322e76"
   end
 
   keg_only :versioned_formula

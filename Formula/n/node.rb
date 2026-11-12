@@ -2,13 +2,12 @@ class Node < Formula
   desc "Open-source, cross-platform JavaScript runtime environment"
   homepage "https://nodejs.org/"
   license "MIT"
-  revision 2
   compatibility_version 1
   head "https://github.com/nodejs/node.git", branch: "main"
 
   stable do
-    url "https://nodejs.org/dist/v26.13.0/node-v26.13.0.tar.xz"
-    sha256 "263f639ecfa7a17b49438d76cdbf9aff73179e3c7cb789da69b900718427fa2e"
+    url "https://nodejs.org/dist/v26.13.1/node-v26.13.1.tar.xz"
+    sha256 "a7f6204ff63b6a2cd274d48903285abb86ed53a99070e532d4c2fd787457d9e6"
 
     # https://github.com/v8/v8/commit/f607706154eabc4a949628a88b38dbe95cd2274c
     patch do
@@ -24,8 +23,11 @@ class Node < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "e65dbf195b34d36c336b54aee99e99efc9da0bbcc836437b75e6d195040a2c0c"
+    sha256 arm64_golden_gate: "55ddb379469402e702791d382ae5cbae8dec5dbbe155b525b59c052645f115bd"
+    sha256 arm64_tahoe:       "0a2c2e431bf6c120ae31a1c90bce000ddfb920722d7b34163ef057e61747fd85"
+    sha256 arm64_sequoia:     "c2e0b31f521bf4a29ee30145109f3f6bc6e5afdef5449eaf82c6167120fa81a3"
+    sha256 arm64_linux:       "7de901bc907f952ad7ca4d8044ec8b8db7d6e6369627a943be6dfc9547beb5ff"
+    sha256 x86_64_linux:      "1dee5142682a715ed6d9f40821a88fc3aaa89219668dd45cbfcd35233b63f3a2"
   end
 
   depends_on "pkgconf" => :build

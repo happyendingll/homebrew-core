@@ -1,8 +1,8 @@
 class C3c < Formula
   desc "Compiler for the C3 language"
   homepage "https://c3-lang.org"
-  url "https://github.com/c3lang/c3c/archive/refs/tags/v0.8.5.tar.gz"
-  sha256 "9fc60b5092ec63bb77ee5cb80df49a0929e38b2d56ce76d4211ccedb391ca709"
+  url "https://github.com/c3lang/c3c/archive/refs/tags/v0.8.6.tar.gz"
+  sha256 "ce2bd6e7658b480278e3a3af7c999b7a55d8a042c26446e9ea317f9357a8416b"
   license "LGPL-3.0-only"
   head "https://github.com/c3lang/c3c.git", branch: "master"
 
@@ -15,8 +15,11 @@ class C3c < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "4704fd18063b1cba5d8cf696983545e95db03c2d3a8716a02ed0b26db89ef3ae"
+    sha256 cellar: :any, arm64_golden_gate: "8bece8a87917947f3821815e7ff002dce4f34fbdfe4ebb73ee69cb2c9d4827b0"
+    sha256 cellar: :any, arm64_tahoe:       "38f77fd82605e4fb6eb596ccf393f251191307b476272e0904d76dfeda6eadfe"
+    sha256 cellar: :any, arm64_sequoia:     "b9a906948e6036e5c51a13c7a48a9a9eb163b83bb0b57858c73129d6f0d7cd35"
+    sha256 cellar: :any, arm64_linux:       "4c84fcbd0f8a1f9bab6862165d0ba4884a14a027a19fc8bbf17d6056e1874c5b"
+    sha256 cellar: :any, x86_64_linux:      "502ac9ae489105aae5f3a0b4c3ae4956ae4ac3851acda10b0add9d1a52d656cf"
   end
 
   depends_on "cmake" => :build

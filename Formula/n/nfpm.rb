@@ -1,14 +1,17 @@
 class Nfpm < Formula
   desc "Simple deb and rpm packager"
   homepage "https://nfpm.goreleaser.com/"
-  url "https://github.com/goreleaser/nfpm/archive/refs/tags/v2.48.0.tar.gz"
-  sha256 "878dab9c3e02549f981a227957fd73c042ab5316bd12d201a0db94445284df1b"
+  url "https://github.com/goreleaser/nfpm/archive/refs/tags/v2.49.0.tar.gz"
+  sha256 "cb94db4244d324c8b1daab9d9d27d553e4b7ad9ec6e152cc58a2e80195bc410f"
   license "MIT"
   head "https://github.com/goreleaser/nfpm.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "7adafed01dfc1e1f505b76c5f8535412243adc3933c6f16c5ab57b4e6e1f439b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69a48deb86446598392ad0dbb4e3deb15e9f3d930f47397e785cd9795cffc844"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69a48deb86446598392ad0dbb4e3deb15e9f3d930f47397e785cd9795cffc844"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "69a48deb86446598392ad0dbb4e3deb15e9f3d930f47397e785cd9795cffc844"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6e00ce7ddb5195d20ceb89ca8cd3ab63e547f4d770898e9e62946b1719f4ac32"
+    sha256 cellar: :any,                 x86_64_linux:      "0fc77878b04d5d51107928a1233635fb461c7da86554d7eeb63c40fe420151fa"
   end
 
   depends_on "go" => :build

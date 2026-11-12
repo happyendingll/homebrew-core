@@ -4,6 +4,7 @@ class Vips < Formula
   url "https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz"
   sha256 "5baaead3b0bb20ffdb9e9ff09aa9fda08620923df77b63b436654cb5e0b3bf94"
   license "LGPL-2.1-or-later"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -12,8 +13,11 @@ class Vips < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "791eb230339e2d415cdfd4abc3991af39e6731e3ae314254cc99d20f067feca7"
+    sha256 arm64_golden_gate: "5bfa85cf7c5ab6a43f047d1ba998c2fc3aae935202e00289bf3ab387e873e325"
+    sha256 arm64_tahoe:       "43c51937e488dbb715b49e92933605fd2b64a44f106afca01b981b061e96eaac"
+    sha256 arm64_sequoia:     "c2513ea7c996254500a6d56b0c18866319223a2e87fd99f99be23b9eaf5fe8ca"
+    sha256 arm64_linux:       "28398995df204863b0ca7d5f283ee1b93e3be579e3a690f2e626164bafb6db6f"
+    sha256 x86_64_linux:      "656db2784475d013c76c79bccf236145fd9c923f0cf509d5b3b6fd8381711bbe"
   end
 
   depends_on "gettext" => :build

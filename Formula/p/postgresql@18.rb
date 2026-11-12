@@ -1,10 +1,9 @@
 class PostgresqlAT18 < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2"
-  sha256 "555610c24d53e4316da5b7d3fc25c279d96856d5e0e23ee308c328c5fa881d9f"
+  url "https://ftp.postgresql.org/pub/source/v18.7/postgresql-18.7.tar.bz2"
+  sha256 "441dfae4280cae3e0425e5f876f80559fb0731c140f1aae22b3e5a54d0411bfd"
   license "PostgreSQL"
-  revision 1
 
   livecheck do
     url "https://ftp.postgresql.org/pub/source/"
@@ -12,8 +11,11 @@ class PostgresqlAT18 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "457a4905abb02640dd72a6e8bb62b68619e1af795604cd6a8b2667d7ac64c54d"
+    sha256 arm64_golden_gate: "50d1ee512ef7b30ff5faa6f4fd4d76bca286f34bfbab23b0b8a929651e2fff4f"
+    sha256 arm64_tahoe:       "72bb84ae1958f25cfdec65e4add6688429b910bb6553aed7449403bf1b5aca87"
+    sha256 arm64_sequoia:     "676ca37df51e026d0f20ae2f9670c6f3d8065360df0581f7b412385afda276ed"
+    sha256 arm64_linux:       "40652304e464e0cf2969c46658f55a63f2e5db1e82ca6460c52a2a0efdc4544c"
+    sha256 x86_64_linux:      "ce282ca33797ccd7fac6bbb453edb39acacd18dc7a817cc4ad21830feb94f3b7"
   end
 
   keg_only :versioned_formula

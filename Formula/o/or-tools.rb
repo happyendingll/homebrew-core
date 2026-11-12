@@ -4,7 +4,7 @@ class OrTools < Formula
   url "https://github.com/google/or-tools/archive/refs/tags/v9.15.tar.gz"
   sha256 "6395a00a97ff30af878ee8d7fd5ad0ab1c7844f7219182c6d71acbee1b5f3026"
   license "Apache-2.0"
-  revision 15
+  revision 16
   head "https://github.com/google/or-tools.git", branch: "stable"
 
   livecheck do
@@ -13,8 +13,11 @@ class OrTools < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "b031bbb0d225bc41d23f5394c841392546ac167b1202f4a668d5bdb57eb73e95"
+    sha256 cellar: :any, arm64_golden_gate: "db74577be8dbe1cf5ca1a08e4af189e8954b71f485abb5f4512caa6882224fbf"
+    sha256 cellar: :any, arm64_tahoe:       "f5d7654d0f585b2d1f9552381b578bdd42ca2a45a0783d77d3e7e1743077ca4c"
+    sha256 cellar: :any, arm64_sequoia:     "5faeafc6f0fba992aaeecb248909797b96d9c6fe4be152788bf0c13c9e456282"
+    sha256               arm64_linux:       "60c9450e3175761c006660b5a74f63fe4b8e7ec448efddbd85cd4f84ca5dfd10"
+    sha256               x86_64_linux:      "a4e4db6eb95acbbbfa24393f13d062d6bb357a262b21de0c38022d4c52174543"
   end
 
   depends_on "cmake" => [:build, :test]

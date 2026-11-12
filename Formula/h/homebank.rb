@@ -1,8 +1,8 @@
 class Homebank < Formula
   desc "Manage your personal accounts at home"
   homepage "https://www.gethomebank.org/en/index.php"
-  url "https://www.gethomebank.org/public/sources/homebank-5.10.3.tar.gz"
-  sha256 "574de504cceafdb6138ffa2e03be567ad66b8a2ceaef3434e07ca695e82dd9e3"
+  url "https://www.gethomebank.org/public/sources/homebank-5.10.4.tar.gz"
+  sha256 "f8072131328e7c1d6ca336f809e265e483c6d6d21f3654bc520700d27deae2d8"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,8 +11,11 @@ class Homebank < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "7cf76ce20fbf200ce4fc207460a63f052f0baf1014bc0e0eaa97bf9567327c0b"
+    sha256 arm64_golden_gate: "1cb5dffff7a9b706d9fc1a8314fb733ac7d1e9dba92b590acbf21cb7b0dc0b46"
+    sha256 arm64_tahoe:       "2401e8227cb13f9de1dcf89b6bfd0eafa26b38d12d37bb8a29e10092b49f8c0f"
+    sha256 arm64_sequoia:     "80a9c76f9e24b128cd09d0df0389487d25de98a69627db6b238c73e3c467d228"
+    sha256 arm64_linux:       "00b09eedf572a3377473ed8a33721eb1526491d4eedf1385a5d493d5de259d75"
+    sha256 x86_64_linux:      "22083dfe1482b212a832340f5b5c40a45d301848cde30c71c57680897085aa10"
   end
 
   depends_on "gettext" => :build

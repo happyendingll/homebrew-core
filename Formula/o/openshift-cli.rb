@@ -1,9 +1,9 @@
 class OpenshiftCli < Formula
   desc "OpenShift command-line interface tools"
   homepage "https://www.openshift.com/"
-  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.22.22/openshift-client-src.tar.gz"
+  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/5.0.1/openshift-client-src.tar.gz"
   # This project employs synchronized versioning so the sha256 may not change on version bumps
-  sha256 "88c3b70294daf27f4ab59b340726d467eb3138cc99450acc9452db8146da9b6e"
+  sha256 "58e63e4aaf8059b7c9edb28570eba1f105ce3c15897d3a4bb4bb7d7c1a3a730e"
   license "Apache-2.0"
   head "https://github.com/openshift/oc.git", shallow: false, branch: "main"
 
@@ -13,8 +13,11 @@ class OpenshiftCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "9d95451ff42a0b23cdfe1816bfe89d51d1ff2961496bbd8c93ffaa697747c543"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5cd509ffa8a22540c81bc45c909536a5e5db5de5a276a3efcef605ae050f1d45"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7059e4d72d601657ff1e53660699c1f925f7d03b6096dff3fc768edde1fb8288"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2890c7422e3a0958d2a784db648ef76675991b685d2381f1dd3df932166011dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bad43d349ab4afe0266f51c9496e8e5a446e305fd5ec94c63d406aea92a8c8a9"
+    sha256 cellar: :any,                 x86_64_linux:      "c13dd993aa0786fed73c0785e95fd06e21f856ba258ed46863fd269b0c8c8caa"
   end
 
   depends_on "go" => :build
@@ -52,7 +55,10 @@ class OpenshiftCli < Formula
     assert_match version_json["clientVersion"]["gitVersion"], "v#{version}"
 
     # Get remote release details
-    release_raw = shell_output("#{bin}/oc adm release info #{version} --output=json")
+    # TODO: Restore the semantic version lookup once `oc` resolves versions beyond 4.x from the update graph
+    # release_raw = shell_output("#{bin}/oc adm release info #{version} --output=json")
+    release_image = "quay.io/openshift-release-dev/ocp-release:#{version}-x86_64"
+    release_raw = shell_output("#{bin}/oc adm release info #{release_image} --output=json")
     release_json = JSON.parse(release_raw)
 
     # Verify the formula matches the release data for the version

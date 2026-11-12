@@ -1,15 +1,18 @@
 class P11Kit < Formula
   desc "Library to load and enumerate PKCS#11 modules"
   homepage "https://p11-glue.github.io/p11-glue/p11-kit.html"
-  url "https://github.com/p11-glue/p11-kit/releases/download/0.26.5/p11-kit-0.26.5.tar.xz"
-  sha256 "f2cc09111e44bf3fea58f023180b33acea90aa82d042d6fbb623fbc5ba033bb7"
+  url "https://github.com/p11-glue/p11-kit/releases/download/0.26.6/p11-kit-0.26.6.tar.xz"
+  sha256 "5fda95dc89964af32dbd8e01b139c166717cf96c4fee3d601bcd60bdb23d23c6"
   license "BSD-3-Clause"
   compatibility_version 1
   head "https://github.com/p11-glue/p11-kit.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "ee01fce79642e0693fd6bb9024aeb3e684bddfcf797ad6cb9ba8907c24742162"
+    sha256 arm64_golden_gate: "a0751e0579ea06c14793f5b95093c34921df22e74cfe9101d0d396e44b7d378c"
+    sha256 arm64_tahoe:       "9ed312a272c9972e1122b0957e63e944d2875d38bec6c865cc9248114487d2cc"
+    sha256 arm64_sequoia:     "5d529f086a87a2d2e6dc22b48e43502943cbd900bc2e3350a32b1337078eabb2"
+    sha256 arm64_linux:       "7f0e904b2199b43ee0734afac6c137a3a65a93a5d50b8716f7129e279433281b"
+    sha256 x86_64_linux:      "2c308eee58e480734ec818cc86f8634cded3b81a7d3d539acf07ff322f29617a"
   end
 
   depends_on "meson" => :build

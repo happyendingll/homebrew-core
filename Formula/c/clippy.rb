@@ -1,13 +1,14 @@
 class Clippy < Formula
   desc "Copy files from your terminal that actually paste into GUI apps"
   homepage "https://github.com/neilberkman/clippy"
-  url "https://github.com/neilberkman/clippy/archive/refs/tags/v1.9.1.tar.gz"
-  sha256 "27e6934defdfe662037f59e0c5b6671399abb1c14985697b876c0e17c0e2b779"
+  url "https://github.com/neilberkman/clippy/archive/refs/tags/v1.10.0.tar.gz"
+  sha256 "07870271de5a1c263317bde3f47fa2cad068111700b32379f436757ef8d936c5"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any_skip_relocation, sequoia: "c1c9651bddb937dfad5cbe79dd8fb5862a2a637b2bcf5bb8c8211db06117e59a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3f8b693ee267f5ef722635b8a3c601c39ac6aa35337a3bf4798a50dbfe3ef0a9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fa9cfa9be33e988a8d87ae5aa6d344163bfc76609e9340220b89c71babfdea5e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf2c05c7aeb15feef62cd78f00a2471c38ee8f88a5999a11201b290cdb307e26"
   end
 
   depends_on "go" => :build

@@ -4,6 +4,7 @@ class Fluxcd < Formula
   url "https://github.com/fluxcd/flux2/archive/refs/tags/v2.10.0.tar.gz"
   sha256 "1b96e764547d572c0c217e8a2d326370a71cce977ab597cc16894aa9cd095b87"
   license "Apache-2.0"
+  head "https://github.com/fluxcd/flux2.git", branch: "main"
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
@@ -15,6 +16,13 @@ class Fluxcd < Formula
 
   conflicts_with "fantom", because: "both install `flux` binaries"
   conflicts_with "flux", because: "both install `flux` binaries"
+
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download"
+    system "make", "cmd/flux/.manifests.done"
+  end
 
   def install
     system "make", "build", "VERSION=#{version}"

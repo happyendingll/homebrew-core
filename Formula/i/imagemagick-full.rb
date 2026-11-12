@@ -4,6 +4,7 @@ class ImagemagickFull < Formula
   url "https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-35/ImageMagick-7.1.2-35.7z"
   sha256 "1d95f7d0ed11e91a3ee9e3042a8e248cb88c666dd9256ab14cc871b1f73138fd"
   license "ImageMagick"
+  revision 1
   head "https://github.com/ImageMagick/ImageMagick.git", branch: "main"
 
   livecheck do
@@ -13,8 +14,11 @@ class ImagemagickFull < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "4e16fbd50aae27847a13b2cc51598ac4329f9c61d9541029f4701365075893ab"
+    sha256 arm64_golden_gate: "4aec755bf08bb164ac093d8afcf935bc5526c478f152d92a4db1e7269bd31357"
+    sha256 arm64_tahoe:       "69805e36b1b224c683e0b92c28b1068e4c629aa0230469a71450861329c00955"
+    sha256 arm64_sequoia:     "a020be67666057f580b84da18b0446715c311edc7bd834ed879575639e7d9c63"
+    sha256 arm64_linux:       "6c9500a5912ad2e4f533528416787f7ca94e0c111c7f5d3003a263fda61f448a"
+    sha256 x86_64_linux:      "21800a11d045afd52c4e81f8b57077c9ef248d8be83f328ef192a57a0dc8b487"
   end
 
   keg_only :versioned_formula

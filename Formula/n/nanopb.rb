@@ -4,10 +4,9 @@ class Nanopb < Formula
 
   desc "C library for encoding and decoding Protocol Buffer messages"
   homepage "https://jpa.kapsi.fi/nanopb/docs/index.html"
-  url "https://jpa.kapsi.fi/nanopb/download/nanopb-0.4.9.2.tar.gz"
-  sha256 "98b8cadce538f37230ca0d5d8796894e3067d58dd2fb2618e6712c7362bdd8bb"
+  url "https://jpa.kapsi.fi/nanopb/download/nanopb-0.4.9.3.tar.gz"
+  sha256 "3dcfe9e47b7ae5f5e567ca8df7a5d1c8e43996898ad20c7ef9f61c4054b2d250"
   license "Zlib"
-  revision 1
   compatibility_version 1
   head "https://github.com/nanopb/nanopb.git", branch: "master"
 
@@ -17,8 +16,11 @@ class Nanopb < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "8a7f06df32288cea50d7777f466796de40dc857d677da58806e0ecc6bde4f119"
+    sha256 cellar: :any, arm64_golden_gate: "a69403355f3e481abc46c743b42de8629ecb2e76b505888219014413a9b5c14e"
+    sha256 cellar: :any, arm64_tahoe:       "d1361fdc4268124a730fffe8917a6df92c569b9f03a0a54db6b10f91a926abfb"
+    sha256 cellar: :any, arm64_sequoia:     "f2bac7c12022a82ffa21a401064e10c052df7218f0d50ea0d0baabda6ba5eb0e"
+    sha256 cellar: :any, arm64_linux:       "225aa2b92fec562563b2e5a861e422e1ea8d163773cbdb5d07ab7d6d4886a528"
+    sha256 cellar: :any, x86_64_linux:      "34d3ff5365eb36e996eff927930ae3e6f8a8dbb5888329cc22619b59c8e48974"
   end
 
   depends_on "cmake" => :build

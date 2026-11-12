@@ -4,6 +4,7 @@ class Chafa < Formula
   url "https://hpjansson.org/chafa/releases/chafa-1.18.3.tar.xz"
   sha256 "fb995ef21dce6c73dd0dd454ba3e0f7fac08e053ea16060a2e5ce69a3746ee27"
   license "LGPL-3.0-or-later"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -12,8 +13,11 @@ class Chafa < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "8890f87af37c4e3592c0a2b2439507d6d6f9456bd2c0703c97109703f5ef0ea2"
+    sha256 cellar: :any, arm64_golden_gate: "6aeb3a346d23942bfc95e7842083383922329bcb4e278b8e0a72c584e3c6b5e7"
+    sha256 cellar: :any, arm64_tahoe:       "ed19e393a53d7ec520b2069025f0aa81c96748406bcec2459b84692fc246bdf6"
+    sha256 cellar: :any, arm64_sequoia:     "10f0a5ecd32eeda9d686c8e95e8d7879e310ff82b49ebd8bfa0c599f90551d15"
+    sha256 cellar: :any, arm64_linux:       "c12794fcb731df0de6b65fe1e8d1bce817b35d91b28c640e4245583e4958fd08"
+    sha256 cellar: :any, x86_64_linux:      "8b3f78baca160275b6b154b185c9714a9cb14d6d4c5340e43967b93876f6a849"
   end
 
   head do

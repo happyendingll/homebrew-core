@@ -7,7 +7,7 @@ class FfmpegFull < Formula
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   # Passing `--enable-version3` changes the license to GPL v3+.
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   livecheck do
@@ -15,8 +15,11 @@ class FfmpegFull < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "1cf14ae24e14517092218428aac68d2b550238fc7f2316a7357906653589c5ef"
+    sha256 arm64_golden_gate: "e3633fad31954b0c5a6e039a369924e8ade03506d7d2d9d666ae6cfcab6d201f"
+    sha256 arm64_tahoe:       "06363b4e87aff433b2094055f94c2f2633204eb8bd705180a059301d259a5b1f"
+    sha256 arm64_sequoia:     "9203628926e70d6c57e9ef9d0e33ed7d3200151a9e9aed87307fd98e8b3f3deb"
+    sha256 arm64_linux:       "e4b241e6d79a220b3949b5f0e89f9d53eb04f2157978c3c88c8f690715cff8f6"
+    sha256 x86_64_linux:      "b3ca03f1e16b3f5647ebc6cc95e8579fbefbd421afeb92841e78fe25d4f3e5ed"
   end
 
   keg_only :versioned_formula

@@ -1,8 +1,8 @@
 class Kapp < Formula
   desc "CLI tool for Kubernetes users to group and manage bulk resources"
   homepage "https://carvel.dev/kapp/"
-  url "https://github.com/carvel-dev/kapp/archive/refs/tags/v0.66.1.tar.gz"
-  sha256 "044e6480297043b8939ef819bcf2d4cd9d36486d83d2f3bd3fd1382efad48c61"
+  url "https://github.com/carvel-dev/kapp/archive/refs/tags/v0.66.2.tar.gz"
+  sha256 "8983b3f80312e65b97d909d426fea1536666e1012e174df0d83be114d59c01c7"
   license "Apache-2.0"
   head "https://github.com/carvel-dev/kapp.git", branch: "develop"
 
@@ -12,8 +12,11 @@ class Kapp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "439edc7742ba4a645cd06e4585451b0ecfb133bad82adb62e3c6d380ff706b1e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2e4304fac3412edbd726b88da1ffe235ccb8023f2ba969c86ae1d50ec190875b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e2e61602002e6b8c02390f4a5529ac61c2f9da60083d9274784f826713d8ff9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4023825f835a3bc5ee447e6b1f3380758f2dd018a9a39d414a9fbd2fe6689d74"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "301ef242be23613f17c13fcb8eb15de9121fd19974c0ea56c146d2927c774acf"
+    sha256 cellar: :any,                 x86_64_linux:      "b15370e2bfd63dc3a5997cb326b6fbe33b6f6feacba7d3ba5d21a7c7ce9e74e0"
   end
 
   depends_on "go" => :build

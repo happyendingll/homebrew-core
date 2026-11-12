@@ -1,8 +1,8 @@
 class Plink1 < Formula
   desc "Whole-genome association analysis toolset"
   homepage "https://www.cog-genomics.org/plink/1.9/"
-  url "https://github.com/chrchang/plink-ng/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "07f74f8c588e9cdc95f60b3b665976852e27db1f188a3bb75ff5ff4cba075d9d"
+  url "https://github.com/chrchang/plink-ng/archive/refs/tags/v1.9.1.tar.gz"
+  sha256 "c1da6fc12829108743affc94866391d96021d3c55ed52735e110b89654af85b3"
   license "GPL-3.0-or-later"
   head "https://github.com/chrchang/plink-ng.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Plink1 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "67d6212a1ecdc7ffc45a1247797b314da51bda2ed818166f3901b90cc0d549cc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "011c20a42ba25975af270bf7c29d6df52e74370dabc4bf3627819d0a3cffeafb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "94a51199d23efa0ab5cd0e839f54c68df95a2aabb0153bedabe627bd9f9a2965"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c02013e508033a06cb15e6065c8a357653f74b3a25fc791c6a56850780a065a5"
+    sha256 cellar: :any,                 arm64_linux:       "238aaa239bf2eff6f3f9478fdfe1ccf8cdcabb602b6b1b4bfc830a64af89f2c0"
+    sha256 cellar: :any,                 x86_64_linux:      "7b99efde445ba5e65fcd60da9931e58bd456c2f116f20c0c652fc805e2c7c70a"
   end
 
   on_linux do
