@@ -14,11 +14,8 @@ class Libressl < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e349a8c3490ae8d9119467135c2e068f6fec359d196b809fdb1d6623677bae61"
-    sha256 arm64_tahoe:       "aebf532e1c5a0a09848bc0908c32146df91868b610c3fbe05367b27a4261e1b5"
-    sha256 arm64_sequoia:     "ffb499a0617f07c4390820afc1e075861e058fc0acd66c3041ef1c4669c0ec6a"
-    sha256 arm64_linux:       "386316ba49a6dcb5e483af7b3472a34e8ea0b797eb433727b40ad6eb957db9ec"
-    sha256 x86_64_linux:      "c0761706ff693594ddd6e25324808ccb54eb39f3c9fa07c0004175c5e923bd94"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "ac301c282ce0f4b4f3d6b73e5e954f62a26fbef6a83321a42f32132da9a87219"
   end
 
   head do

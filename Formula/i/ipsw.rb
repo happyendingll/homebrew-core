@@ -12,11 +12,8 @@ class Ipsw < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "44cf940804762b833312ba18cfeb4c7f5e398bba8e86fb932bcd1df82bf086d3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c121456460f4681c5824951b5717e06ba1cf58396d6ec2f9f68323eb6d18e513"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7cec23645fe84e6c01aac5debe54d2195c2ba8a11907cc9a791756e37449c377"
-    sha256 cellar: :any,                 arm64_linux:       "e2da742a7372772553eae63b9ad500232e775743456e8c2589def2560f398005"
-    sha256 cellar: :any,                 x86_64_linux:      "b868a1d245d0f8f9070b80ee4fb99f08917ddcbdf7fff5b960eec78406cd02fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d2960055879ac657c81e31dc278b673cc205cf9f9be58318c57829f04fc0ba83"
   end
 
   depends_on "go" => :build

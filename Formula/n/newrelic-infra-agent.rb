@@ -15,11 +15,8 @@ class NewrelicInfraAgent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b61013efcb6dcbc5d0737cf7881f10c5a041463d2ec193c6c0640751295e4735"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0c989ab75a0e26620881a4ee33a6612ae2de9eff34582a50e2b8119b08df4fc0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b1f60bc5b628f3d0fbb8a87e6cfc6cf9975a48b77c4b491a8fb66040859f223"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e54d87ab12a76fc11f18452233cc98f93de3df83e4567d28f36ad79b30eae12a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1d9ad9f033ab9ac78d999420f36af1ba8705c69cc70f00430bd0d4bc160e7442"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ec8b541b8a62d58fac856e4acdd6165db85d1bcdec70caa6d60b694b735bcb8b"
   end
 
   depends_on "go" => :build

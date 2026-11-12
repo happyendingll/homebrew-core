@@ -33,11 +33,8 @@ class Krb5 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9ee71115230780fcf77473cbe412f3abea1b7ec672b0d9c34c70b59d39902dbc"
-    sha256 arm64_tahoe:       "4827d11086d9f6d699be5403572eb6e9fbef3699c2f8c7001947eb78f2d6b384"
-    sha256 arm64_sequoia:     "465873b2f5bb5751fc01e086648cb54fc30a4b975e3bc00e393e00e763931015"
-    sha256 arm64_linux:       "aa9e5353cb1afed5c356c3741005707f7658ba5062f8cdbe3f094cce09af5a08"
-    sha256 x86_64_linux:      "6bea50f9570bb1e8e9fb3d9e8a2eab31c5ee01edb700b347e63679e0659ee61b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "2d4f3422abb19675df5849bf2e14c0c3b47f53ed0ccfb63f0e1abeb76a6f7393"
   end
 
   keg_only :provided_by_macos

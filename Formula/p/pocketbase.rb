@@ -11,11 +11,8 @@ class Pocketbase < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e1c2151affefbd76fad943da0c544a86e67fc09290ea392c75943a8c594409d9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e1c2151affefbd76fad943da0c544a86e67fc09290ea392c75943a8c594409d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e1c2151affefbd76fad943da0c544a86e67fc09290ea392c75943a8c594409d9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7cefd8a69d4cbc1b4d1d6a56a35b61adb8209faf6b3de29a90d1a2afc5c5c8d8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a9c63231d8afc186fe6128756da49b1aa5d7530fafcd1937b71d256ddf2c5bdb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "54994daebb7cf6d1f7efab83fbec80a50562f72cd0c827fcd68d3a87ec3011a7"
   end
 
   depends_on "go" => :build

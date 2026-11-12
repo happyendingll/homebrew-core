@@ -11,11 +11,8 @@ class Glab < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "829bc24a819b48e3e9a3bf541f79c61f8ee4db1f91d40cdf268bc2c494a9da9f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "829bc24a819b48e3e9a3bf541f79c61f8ee4db1f91d40cdf268bc2c494a9da9f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "829bc24a819b48e3e9a3bf541f79c61f8ee4db1f91d40cdf268bc2c494a9da9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dd24dcc2d49ccee24beee51fc213cfa434be2edcdcf83a08ebb407f61b42544f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a80599122f8596bde1ba46d905f2fa66408648af4e63cf4be9b371e35fc74945"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6f8a24b0ed1d84b4256c5995941dc8e8a2b94e55d1f1c5f174a66409beed6bdd"
   end
 
   depends_on "go" => :build

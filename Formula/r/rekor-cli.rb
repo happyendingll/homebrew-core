@@ -11,11 +11,8 @@ class RekorCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f533367a81e0a1aac27a9965bae0d4e294ab6fcc56c557b0a4e88297161deb6b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5f941fb908110abacb851e9f81f3cda9b17f858f53cd7c6fefc887f14b3aa13b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a0e4875c888c60c288d0ccd826841e83630128823b51cb8ae6953a5720483c7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b53f9220997c332da8f26043cd6e496d1a1829f8a01fbf6e1600ad6660556b74"
-    sha256 cellar: :any,                 x86_64_linux:      "ee466f27d0660763406899c2a978e5df0c1cff5bdbcd99d9c07799101a74b52c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d43e62c4d38447c4034f357cf2a62977128f998435a0b17cde76f4f1fe4fc02a"
   end
 
   depends_on "go" => :build

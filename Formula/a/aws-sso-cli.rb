@@ -7,11 +7,8 @@ class AwsSsoCli < Formula
   head "https://github.com/synfinatic/aws-sso-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e0784e7c92a218c5b5a0890fc43f933d694b0327d38f0a78b4a6c1ca03252d55"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "603963fdc881ef9c9cb26f8908cb84957a0c34fb734efe285bb803b4cea6759b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f4759a5e0ec82adcbc36b96be72a7a17db02ea006c22da2b172622c21e2be9a1"
-    sha256 cellar: :any,                 arm64_linux:       "051d03083e6cc25cdb40760ef3fb23ab11643559712708269c8ad19299f1d952"
-    sha256 cellar: :any,                 x86_64_linux:      "f33492ee3dc68d481cfff1ec760a69f0913e652a9364b0970e694a7db4f363fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e810e75af33fbfece50b1644aaf09bd5cd4d14af915ad11ef3fbc0e27c0d2cf2"
   end
 
   depends_on "go" => :build

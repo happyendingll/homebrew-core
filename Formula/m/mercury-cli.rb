@@ -6,11 +6,8 @@ class MercuryCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bb7adb4a9c5b2cd2646ef97d0228526fa341830836e13b26d9103c5819b62cb7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bb7adb4a9c5b2cd2646ef97d0228526fa341830836e13b26d9103c5819b62cb7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bb7adb4a9c5b2cd2646ef97d0228526fa341830836e13b26d9103c5819b62cb7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ebe80248b47b1acaae80f252af05d74a7c3020726dc1c1fb85726d9e5e8b5a88"
-    sha256 cellar: :any,                 x86_64_linux:      "a1d5411f6f733643d39d2530882d40b110a072f4c710f3ecd8ac6d812334d0dc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd631c191e677d45d60c491ed9093881d8daf7de7f8590cf7b808ecfe7991613"
   end
 
   depends_on "go" => :build

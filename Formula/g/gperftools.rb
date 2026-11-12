@@ -13,11 +13,8 @@ class Gperftools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "057c3bd0bcd5c262a0ef5cac163de4972775a0f7c01788f62b332cff232371fa"
-    sha256 cellar: :any, arm64_tahoe:       "477269987e0cadd0b37c189417cb03068b81b39c0caef3ef8bdca9a7cff5d90f"
-    sha256 cellar: :any, arm64_sequoia:     "752546c6762d3f6bc3cd54946a25ca737738d31a8bbcf41557fecc05eb541a5a"
-    sha256 cellar: :any, arm64_linux:       "add4396d928ecf50f6bdf12d1861c0d9d40c94dc51d6db82ab1719ccfe8d9565"
-    sha256 cellar: :any, x86_64_linux:      "2a0de312c40194661384c021b40f37b023801224ef6d77604e1e306c8f4b352e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "ab17647c27d6716b24214f6ae311af6e8108634c76aa1843d0e11591adf47325"
   end
 
   head do

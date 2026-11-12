@@ -7,11 +7,8 @@ class ParquetCli < Formula
   head "https://github.com/apache/parquet-java.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8713f55ba235584eaf9f96d63bbb247307bd466c35f8c23cd79d352649f64b94"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8713f55ba235584eaf9f96d63bbb247307bd466c35f8c23cd79d352649f64b94"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8713f55ba235584eaf9f96d63bbb247307bd466c35f8c23cd79d352649f64b94"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dce068d0bbfed40a698766c0d9fd393eb1f43044ee4caff0d60e9067f6d10d9e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "dce068d0bbfed40a698766c0d9fd393eb1f43044ee4caff0d60e9067f6d10d9e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "82afa590bb2eff4298c82ac19e9b01ca4eba5d7a36ccb1da60d28db0b927f965"
   end
 
   depends_on "maven" => :build

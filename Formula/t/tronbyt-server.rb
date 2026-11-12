@@ -7,11 +7,8 @@ class TronbytServer < Formula
   head "https://github.com/tronbyt/server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "be6cfdfeee63217a5632baef8d18ea87575de3330f3b357b1993903b7dfa31f2"
-    sha256 cellar: :any, arm64_tahoe:       "5497137b68fe10e16b83da584465e7092b81c17141ec45362dd4cad59d5e462b"
-    sha256 cellar: :any, arm64_sequoia:     "6341a1f699235d587b970bbfb3d747bae967c72a9025612269035577742c5f9a"
-    sha256 cellar: :any, arm64_linux:       "8022f64c8bc6938b6aab4f14111d48a527633cc1fa6370321bd1f7e9d9a88b58"
-    sha256 cellar: :any, x86_64_linux:      "c0e15d49516486797d1680bfbb55eacadced18d9615997d5c95dead28cc59b72"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "6c5a2993067de71c52a4bd89ed9e79e519be37bc4ae19f8224dfc54e20ac66e2"
   end
 
   depends_on "go" => :build

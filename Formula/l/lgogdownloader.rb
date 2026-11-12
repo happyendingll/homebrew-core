@@ -12,11 +12,8 @@ class Lgogdownloader < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8bf70da100e92a4c09baa77da04cc4c10fde6b8371d058508392cf7e5c990d3d"
-    sha256 cellar: :any, arm64_tahoe:       "a86e8af5d486fa9e76deda6eaffe935ba194cfcfe50c179784d12723177e58e2"
-    sha256 cellar: :any, arm64_sequoia:     "0e57ddd27354578ba087a0326b386fc9793c94361eb92f89e668da49bcb23d1d"
-    sha256 cellar: :any, arm64_linux:       "9b089f82d5c9a31b81948a32267484c90fd2e59718ec4b2ea7e0a0766a675cda"
-    sha256 cellar: :any, x86_64_linux:      "37ca9c6083cd7a30cbc40640b772c9d035409ca2db0413e2f2eff2f578998423"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "88eaa131151d5018088a09cbb0db21c4534fc126351d3c2859918236ecfce870"
   end
 
   depends_on "cmake" => :build

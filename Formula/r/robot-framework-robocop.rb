@@ -8,11 +8,8 @@ class RobotFrameworkRobocop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2c75148dc292ec3671839067ffd45e36fc11a7f908cfb68f615e8c758968a124"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2261eb349c92028d59b69cd23ec99d8cf961c34ac1599a67d2941dcd7eb91a3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c411ec9e64adc65feba5cadc379664d175dd964900b82bbc11eee0426938db1c"
-    sha256 cellar: :any,                 arm64_linux:       "8be098a2be7c66f5e570e9138023ac2978e626f66a70e81b2a4481300e23df4c"
-    sha256 cellar: :any,                 x86_64_linux:      "cdd2b36c91089a76943482715309ffb30040ff706d7634dc13b3c57a6c600599"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "5f459898e42f401993d4b31375797dd488da44aaa42a0915939303f746074658"
   end
 
   depends_on "python@3.15"

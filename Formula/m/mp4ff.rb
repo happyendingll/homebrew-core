@@ -6,11 +6,8 @@ class Mp4ff < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "78073765f594b365127e0af02d9936cdf4f771cfc778207b188b4581864dee21"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78073765f594b365127e0af02d9936cdf4f771cfc778207b188b4581864dee21"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78073765f594b365127e0af02d9936cdf4f771cfc778207b188b4581864dee21"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0eb4e34c8b2a8bc7cb732431ec6432b8529231324e92523d3726c5e935c3d449"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "688b9694ffa3f587d5106c199227d6082ce19ae1fb5eb9207f5cf9399c30a2dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b785373880aa1ad2950c39b3e8a161d74d121703daa79e8ccde889f644e56bcf"
   end
 
   depends_on "go" => :build

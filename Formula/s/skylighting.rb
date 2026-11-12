@@ -6,11 +6,8 @@ class Skylighting < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "847411e10873ad306943ebb698367e3c01863c6e4521589570235ae51812412f"
-    sha256 cellar: :any, arm64_tahoe:       "97e2362843abfeace57c206c68ebd59168773a8c15042576a79a715b32b2775e"
-    sha256 cellar: :any, arm64_sequoia:     "a07712f08675e94a754cc5976657defb1f9e25b7b35fd6605faa09e94b9b5863"
-    sha256 cellar: :any, arm64_linux:       "369c3bde6095b16362e962bfbe1dac42e84342a01241bafb13914e7495a30ad6"
-    sha256 cellar: :any, x86_64_linux:      "a48c29d01158b15072e3a73c6e88c97d6e726e9afa3c50d4c0ca8a20ca0efe32"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "ab63f6b43fc2fcc5b90177edefe8530d305497a21eb810e0ff43027a44eba0ab"
   end
 
   depends_on "cabal-install" => :build

@@ -7,11 +7,8 @@ class Runme < Formula
   head "https://github.com/runmedev/runme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c5732723d0eff86158b12eeecce54c5b445be531d8b91fa7c1239c0c7cc7a8cb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5e953aaec32caae4385b21df76ead1eb211c4198e4e5fc824c791a5c25c1c77b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a68cb4c5dc5cb26661830b086261a42616f0032dbab31bdf104c95006cd0f723"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bfdb3784d857b3829e280aedcaa32217f31c62305a7617023cc0c3779573b750"
-    sha256 cellar: :any,                 x86_64_linux:      "207ecf078edae3ece71c8b64bba99b1ecd30a7164d87f1bce1ec78367c249c85"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "21fa86593544251fff4afeef4c188de2b0e1a0ce79d493f82e22f08582fc25d7"
   end
 
   depends_on "go" => :build

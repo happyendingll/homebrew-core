@@ -6,11 +6,8 @@ class GiteaRunner < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0aae651d51caad8f3fd22dd96c185f8e55ab8a9681fb2ba31fe1a3523d3e174"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a18fba935f8dc63a4b5abe07cccf1196f2efb5835821e3f0dfcfa157f7cd6e53"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "419430a8fd8f0b696a0243e06ead9d5bf4c7413127d2fe06a35c6e3fcf8a4d6b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b9a150de842ac7c3a65e2484c7c9801ea84e755fc423d180cc5cea515e934193"
-    sha256 cellar: :any,                 x86_64_linux:      "e0af7cc99a08eb89303bacfe07cb2ef4669eb47157b0d31f8af6091314f63119"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2a6d842f56e3edb8b381c397a08260209ace9617ef6869aee4ca7d878368ba51"
   end
 
   depends_on "go" => :build

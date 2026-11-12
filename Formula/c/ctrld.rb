@@ -6,11 +6,8 @@ class Ctrld < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ff8855ec21564596582079205919222dfa67fdb9f65e758e6a66027ac6a0014a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff8855ec21564596582079205919222dfa67fdb9f65e758e6a66027ac6a0014a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff8855ec21564596582079205919222dfa67fdb9f65e758e6a66027ac6a0014a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "588a00b0aa207040f9a656ee1de882fa9a0ffbc21c2a791a5c3787d77f4b488b"
-    sha256 cellar: :any,                 x86_64_linux:      "89a7bd3bd945b4e9af93036426b724c38af25dc16871ca85d06dc9c9e6005f1e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "9bd6ea0703acfa7a9bce89ea4652c18bb1ebcf6d7395b9f96ff161be9659ef28"
   end
 
   depends_on "go" => :build

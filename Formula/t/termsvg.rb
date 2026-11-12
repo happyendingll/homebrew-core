@@ -7,11 +7,8 @@ class Termsvg < Formula
   head "https://github.com/MrMarble/termsvg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "58d2141772e1fdad264d888d8a48e3318969286012f3137d29c563b4def46326"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "58d2141772e1fdad264d888d8a48e3318969286012f3137d29c563b4def46326"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "58d2141772e1fdad264d888d8a48e3318969286012f3137d29c563b4def46326"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9d6b47ab7e91f63f972b2b428696fa660a55889f51c3e69003ee8f17d01eef5d"
-    sha256 cellar: :any,                 x86_64_linux:      "b9bd47c6392438b73166f4489fbdd8a90592c6cf604739a90330b80debf01468"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b88b90ad6f8828471f424b756d13b0954c1789fc0ab181506e62f6f4c78b93f5"
   end
 
   depends_on "go" => :build

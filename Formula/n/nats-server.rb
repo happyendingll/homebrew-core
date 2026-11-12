@@ -12,11 +12,8 @@ class NatsServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b26de58cd4ef0d95816452785d098dcdb535c6406251d6c7018468f1d4605650"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b26de58cd4ef0d95816452785d098dcdb535c6406251d6c7018468f1d4605650"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b26de58cd4ef0d95816452785d098dcdb535c6406251d6c7018468f1d4605650"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6d890186bbe97c61c08ee6e9e51a80cca7b9c0988274d99eda21c1ac42233a90"
-    sha256 cellar: :any,                 x86_64_linux:      "ce3ce429bb902c79a7e78043c0d38fba38728af6aa24023a89070096295c5e02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "1cb75fecbe74cfc004093b180107144aa004712914c2b7351f732fe4b9ebe0a8"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class EntireCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3952037f66461e3382f6bc4bcac629201379eb43d5b7603e1a5f625a9c676ccd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3952037f66461e3382f6bc4bcac629201379eb43d5b7603e1a5f625a9c676ccd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3952037f66461e3382f6bc4bcac629201379eb43d5b7603e1a5f625a9c676ccd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "31350b22d2373a9ddab95c7cdfa5edc99ab1698231cb88df9dde76c3649acbf0"
-    sha256 cellar: :any,                 x86_64_linux:      "fd392e84532cf160467c76df022626c864b154276f9271785b38c065be83ab86"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "3a12960451c87163e0c011e74161d198f30ea2a772eb28aec86ae97abf00b78c"
   end
 
   depends_on "go" => :build

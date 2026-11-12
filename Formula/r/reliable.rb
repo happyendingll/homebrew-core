@@ -7,11 +7,8 @@ class Reliable < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5e6aa427352f112d101cf29291e1e464d491d7b68b695ce63c5a71762a72927b"
-    sha256 cellar: :any, arm64_tahoe:       "604c34b2a6cc4f5b69da2b80a12b41b6a01a311fe64bd9de79828eeed9c0fcb6"
-    sha256 cellar: :any, arm64_sequoia:     "3747f989f895b82cb05df9fa9939b18f5be8c8a2b52181f2152c9ebb09480cf9"
-    sha256 cellar: :any, arm64_linux:       "e128dcabb8434aa7cab1d7c4a791f5197eec89babb68463f33c67e5ae2233229"
-    sha256 cellar: :any, x86_64_linux:      "85a7638a678c78d60cc660d87013ae3ded0c0124b3d322c327448cd7178c80c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "0c79fa3e7a8ac4f959f77750e479c0bb2991bf30f1b1bb5842ac147564b3ffdb"
   end
 
   depends_on "cmake" => :build

@@ -7,11 +7,8 @@ class McpGrafana < Formula
   head "https://github.com/grafana/mcp-grafana.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "116958c4dd932206db573ce1f53fc8856660c0fbe8608753d1d319d6b9836ae5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7c012d8dff1a546e10630c835f922109f4f7146887aa39426297791096693590"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1ebe6e7aa36b3c527d5a14ae0ca011ac438f107e81e589d5ed0708f5ba47d6c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1f150038fceeb46e453e765f9d1b683a02b94ad5932369cbe6d79afe7800c3f1"
-    sha256 cellar: :any,                 x86_64_linux:      "4d8a4e2c816e0cd7cf56de89ad1097da3a0a3ecff81ec25bce801d7384b2aef2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b97de284b8b4c4780a8082065aec4b7cf91efb20bdc24575fca82947125140e0"
   end
 
   depends_on "go" => :build

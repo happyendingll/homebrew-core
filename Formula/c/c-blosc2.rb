@@ -8,11 +8,8 @@ class CBlosc2 < Formula
   head "https://github.com/Blosc/c-blosc2.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f2d62c69039f14121ec3d19ea99425f24e3d802566f8ef7213a75d205116ff01"
-    sha256 cellar: :any, arm64_tahoe:       "ea919dd4dee0a4262fd7fd9fb91339079dafd18caea5358fe4ef0b08b75922b0"
-    sha256 cellar: :any, arm64_sequoia:     "584ba9470d8f962d23d7c413f4d3075b08288f92781acdbcdbc24b673a8a3659"
-    sha256 cellar: :any, arm64_linux:       "1f59c59a106570af1dc5c34374c9babbfa0c1cd60bc902e13eab3c4662d2c182"
-    sha256 cellar: :any, x86_64_linux:      "4f1733874f0ee1505899a25ba8eaa858a5587da82ac0e22374c48fe00f0602d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "e693f06b3a5a93da20696693bc2ab3e7a4b486d053c863a4c188b101151c8646"
   end
 
   depends_on "cmake" => :build
