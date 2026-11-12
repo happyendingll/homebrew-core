@@ -12,11 +12,8 @@ class AwsLc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9d2f2bfd79f39f35b57e597468f0370429d011aad363bbac70bbaec93df1922e"
-    sha256 cellar: :any, arm64_tahoe:       "d5e96ab2c70697ae453c09e75bfe529247646709e6c5371898a0bc2882d966fd"
-    sha256 cellar: :any, arm64_sequoia:     "031e18f9477556c6093b66b0519c671f1368ba43ea35a223c7756cc019e994ef"
-    sha256 cellar: :any, arm64_linux:       "0635451e79c5474c4f0aec44dd055b63ede4c2591f8295397862de6ce05b9424"
-    sha256 cellar: :any, x86_64_linux:      "4feab6e37389ab1b4570f9e2a0997dd89819bf5262e0571ff642849575ed8568"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "c6cf4fbd6588e68450628fd69d3813e8322b14d5a14b1c72dcc9c84a38fc3671"
   end
 
   depends_on "bindgen" => :build

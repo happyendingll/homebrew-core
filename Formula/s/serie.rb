@@ -7,11 +7,8 @@ class Serie < Formula
   head "https://github.com/lusingander/serie.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db22578e4b6be44fde062b09c0cc6d32d25c3cd73a63da4a13ac3f943b22a4a8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41a62e5ec18e4aa37b8755291a620169136b68f0b893065d548341dcbda32cdd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ed1b991938aac090dd715fb870fcc1cee29659dd8e7a868673eb2acc9353ac22"
-    sha256 cellar: :any,                 arm64_linux:       "44192ccea1cb819f64d662a12bd31b7443321e523cd5b13bafdc11d62d821eb0"
-    sha256 cellar: :any,                 x86_64_linux:      "6770fb72ac2423bb930f6f39e857e0518e734b787a6394d2df67b696bed6b3f7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "934776cd7a6bf31712776d455b465b019dbb864b34bb502501d959da68958787"
   end
 
   depends_on "rust" => :build

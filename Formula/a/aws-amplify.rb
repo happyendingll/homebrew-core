@@ -6,11 +6,8 @@ class AwsAmplify < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7141f7a1604d069e4b4d00cee99562f76d175c4bbe83ccb21210424be24302d1"
-    sha256 cellar: :any, arm64_tahoe:       "7141f7a1604d069e4b4d00cee99562f76d175c4bbe83ccb21210424be24302d1"
-    sha256 cellar: :any, arm64_sequoia:     "7141f7a1604d069e4b4d00cee99562f76d175c4bbe83ccb21210424be24302d1"
-    sha256 cellar: :any, arm64_linux:       "9a1934e1380dc3558f9da69b110c8c5fed491d1408e97f525aa18b96c8b3dc1e"
-    sha256 cellar: :any, x86_64_linux:      "9258d6fdc8a34c56fea6b90a99a633c8dd493f88e2dc750c2574b1529acc8017"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "a182f3bf2b85bcfcad8e4b8b9602fffa8f747129805601fe7b5c9fc4eb544060"
   end
 
   depends_on "node"

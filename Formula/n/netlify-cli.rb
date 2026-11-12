@@ -6,11 +6,8 @@ class NetlifyCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0b45c6823a689c9b35b0349876ca49969344c3906cedc1e6005da2a2f20e1540"
-    sha256 cellar: :any, arm64_tahoe:       "c450268c84b56fa7f7c9b51d5a83cb6fbb2677f2c0c403d368e9fcb8b877a5f3"
-    sha256 cellar: :any, arm64_sequoia:     "47e83aba4e1e0c72961ff70cbeb67286cf4ab00152e9123a8be88090fcbdbd80"
-    sha256 cellar: :any, arm64_linux:       "6765d2713329595f5c1dd65c0b62284fd8efd55b9a96ea219dcc0e8015e15faa"
-    sha256 cellar: :any, x86_64_linux:      "e86cd62dacf65e35cdf1af0de0b7b0b8000026155f13ec1bf83bac3910e35623"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "d8f4561ebf1ee02db67474aa344ca77dd3f85d9528e569335c174be743f343b6"
   end
 
   depends_on "pkgconf" => :build

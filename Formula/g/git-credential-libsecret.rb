@@ -11,11 +11,8 @@ class GitCredentialLibsecret < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "38a9fb547929058debaa58cf8d151a71a399ef76cb3ecb3cf9e23ef6a7d64a09"
-    sha256 cellar: :any, arm64_tahoe:       "b2f8b9477f2d365e2535c4dd94ec267935b39a417b10d83a479fcdcdd52e776e"
-    sha256 cellar: :any, arm64_sequoia:     "8f6bdbc70aa22524377ab9ebe001a3f5165b7747c77ead4114cee7823e3a84db"
-    sha256 cellar: :any, arm64_linux:       "f968f642f48e341ffb892b56afb60bfcbac6ad03cb69fd6a8118063f7aee9cab"
-    sha256 cellar: :any, x86_64_linux:      "f4a177047021fc59fe11c51cbf2650e0e2f7a4f34eec9713d5b6af01bf1b9728"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "0370fbde7e3e450355661dfe1fdf37fb1bf5793e0be66dbd92e1fb49d3429509"
   end
 
   depends_on "pkgconf" => :build

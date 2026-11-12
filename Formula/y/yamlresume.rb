@@ -6,11 +6,8 @@ class Yamlresume < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "00e33bb8777ed7e1c7406cfa2266dbff13e627a64c8663dfc08058fd336d3d76"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b042bc2c476ce3b179ac5fb420249554d8d4299e47b7720f31d87bc7048316fe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e2b41a0e9af8b29d019827a56c3676bb73a383a0b25f4ecf8a9339f98ce79c32"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f14ff0d62dd9cbc0f3f7fff8308c32011b61c4d034b82e2acea48518ab84b449"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f14ff0d62dd9cbc0f3f7fff8308c32011b61c4d034b82e2acea48518ab84b449"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "af29cfad2556edca21b64e8e17ce1645e3d7b86f7e41867c594d74b22508af99"
   end
 
   depends_on "node"

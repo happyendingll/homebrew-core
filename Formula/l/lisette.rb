@@ -12,11 +12,8 @@ class Lisette < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2827f3b5584f0d2c2eb4f76fadef7b93518bb899063f717739a2ce0804ce064"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "87cfb31ded9a7c75a3325ef7b56b8dfa3c2c14c653f11bcd2dd147b39e621a59"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0dc94fe4dd8ad9b2982a1a0859cd7f8216c2c62ea31b45f71bf5684b6ecc507f"
-    sha256 cellar: :any,                 arm64_linux:       "46cfb089f3667b12db29cc9a26916a9aa7c589057f1cdb50647d46f6e50b7199"
-    sha256 cellar: :any,                 x86_64_linux:      "e36ee9b5a244e6d5f43b925efcaf1179bd46af0acca1a7de0ca026f65f40040b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6318625d02c50c5f8d0a7815fc318c434fb997e3a422cc82e14ebf735f9a8889"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Wuppiefuzz < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "001d5857aec873a9f3cb372eceb02abf3d3b6f3813c13e9be7ef8919a88e0563"
-    sha256 cellar: :any, arm64_tahoe:       "31219042a09597715868dbc9705eb7c36c5e42525b52ffdb40e9e47f6bb196b5"
-    sha256 cellar: :any, arm64_sequoia:     "37d9c1d0b9ed3629e849e193a4aca603e2645ea69dd4fd4c90018079bdd56629"
-    sha256 cellar: :any, arm64_linux:       "0ae1bb3d601ca427be43b3c57afbc6c405cec90a958f81bf6aa883192f76377c"
-    sha256 cellar: :any, x86_64_linux:      "7f280993fb25f08acebd4c9467abbd60d779ffd5170ae93d81825da9b68c64c0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "aea6553cf7b20d0236333482bbe84d6416df7006bb22d842e13948165552df42"
   end
 
   depends_on "cmake" => :build

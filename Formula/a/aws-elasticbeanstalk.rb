@@ -8,11 +8,8 @@ class AwsElasticbeanstalk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bd410f951af7a0131e6573652e9ae51c1e52ec5f9856d077aa58a1616174128b"
-    sha256 cellar: :any, arm64_tahoe:       "07ab8aece1beda2ef3a7bdbfc2f04246380db6e97327931bf2e7af44939095cf"
-    sha256 cellar: :any, arm64_sequoia:     "1bdaa9e6ff08a7e550a1dbc79031430b8af085d7c6b71a0821bb187cec3c4a78"
-    sha256 cellar: :any, arm64_linux:       "1d6dc97ab7710e5595dc81026e06d04b591a17e06a3e08bff897b638d5f117f3"
-    sha256 cellar: :any, x86_64_linux:      "21f25b8cc9999d920ec5471d9c3bcefd77f6cfee3e3b95fe2f4f245a02d8e05a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "907817be700554286a9cbcfafe985fd862d7cd00075210610235673b43d39f6d"
   end
 
   # `pkgconf` and `rust` are for bcrypt

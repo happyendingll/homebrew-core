@@ -8,11 +8,8 @@ class CondaLock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a324090142c5320d36c6a1c98a0ab1b9156dac4f721d9cf062e031e76867ae6a"
-    sha256 cellar: :any, arm64_tahoe:       "d4e32614581df22e1f5256fb351405e2c987a5af95741068b488c36e10ce5e52"
-    sha256 cellar: :any, arm64_sequoia:     "dc23ab5aa8adc84a666ed2ef048a924041cf2cef57d923a9d67f7dc5ee14781e"
-    sha256 cellar: :any, arm64_linux:       "9c5db258a1b05e017f63aa207e01d9953b2c1a7478b922b2be5230ce213bdb38"
-    sha256 cellar: :any, x86_64_linux:      "c742e50714d0512d04ace25ceb0c64663a70b8485fe244e3ab905471a9c9627a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "3ea392f5996561671db929f31cb37aa7753feb72a3eaa7156e261a07795d3b9f"
   end
 
   depends_on "rust" => :build # for cachecontrol, uv-backend

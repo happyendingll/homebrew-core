@@ -6,11 +6,8 @@ class Ovsx < Formula
   license "EPL-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "49322d118b873d4b950b319122594f814eae8400314c99b10f2a5ac8565b2bc2"
-    sha256 cellar: :any, arm64_tahoe:       "49322d118b873d4b950b319122594f814eae8400314c99b10f2a5ac8565b2bc2"
-    sha256 cellar: :any, arm64_sequoia:     "49322d118b873d4b950b319122594f814eae8400314c99b10f2a5ac8565b2bc2"
-    sha256 cellar: :any, arm64_linux:       "0b323c33fe001753d550eefe9a63b7252ab43da251ca0173ed58fccfea1219a8"
-    sha256 cellar: :any, x86_64_linux:      "42d697c66c0fe3627466813cb8f0bbc51ea3a87353ab717734da9b2504ef12e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "6b8c69733afed6cf46a58589755090b7631f2268af854cc48c29fe38ef4e7f25"
   end
 
   depends_on "node"

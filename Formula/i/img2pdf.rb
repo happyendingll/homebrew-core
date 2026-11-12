@@ -10,12 +10,8 @@ class Img2pdf < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "4a421c302d106b5ce96c46bfaaa6745f9f1d871b970f30a827ce5d2fedbca3e4"
-    sha256 cellar: :any, arm64_tahoe:       "d0e78d91b191baf86f8d13f956baea5ffd647b9ee6b7b493d7bf8fe3adc45497"
-    sha256 cellar: :any, arm64_sequoia:     "14f04c5d20be7f1056201609ce6c7b9de596569b3085d08062735bfbcc74a78b"
-    sha256 cellar: :any, arm64_linux:       "8fe980098f4d9ee4b6401cdb32ad925710db324ea760501ce3d1b030f914869d"
-    sha256 cellar: :any, x86_64_linux:      "550b86d43403f8d6ba3f806f48031fb29d8d71747a9bb11d401ea45510bfabbd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "a96a4b2460586d0de8132b3df6beed7eecc7480c83d9919e87da7a1aa2a454ca"
   end
 
   depends_on "pillow" => :no_linkage

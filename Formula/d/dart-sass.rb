@@ -13,11 +13,8 @@ class DartSass < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "dd0f8b51ce48e30b959708f01607679b426046e91d4c0b79c63e21d5ffc282ff"
-    sha256 cellar: :any,                 arm64_tahoe:       "3aeec4c6fa2e405fe8cc0007857f09b8928bac4dc8e99c8e8cc862018b13493e"
-    sha256 cellar: :any,                 arm64_sequoia:     "2d3cfe383c2734079f8d14b49f6d8669276e4e8f8588199a3f85d63eb9ca39c9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e47f3c7e41f729227003cc34bb2fa72704ca07665bd8d34fe6f43c73da11e57e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "337f36e09a653ef02edb77ea947ab65c28c93db6444b634962447bf91d6da514"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "4ed1de9e1105336c4f341a9e31e1a79045e83d4b59f3d517902a8842e48ffd38"
   end
 
   depends_on "buf" => :build
