@@ -8,11 +8,8 @@ class Cryptol < Formula
   head "https://github.com/GaloisInc/cryptol.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e0954bc152744c95e1a4fcc9906413003dd04f0656c214dbd0a8a2f42e13fab0"
-    sha256 cellar: :any, arm64_tahoe:       "f3d0a0295ad14f3049a3c90d1b9c18d946c3a28efd25ab41820d1037f9c31077"
-    sha256 cellar: :any, arm64_sequoia:     "27d07d49485c5507677ece6f0e73f2c2237b521eb758698c3d500949515db27a"
-    sha256 cellar: :any, arm64_linux:       "06943dea01ca9f8b1e30a85668ac35ad210352f777b48f9b35635d19a77424a8"
-    sha256 cellar: :any, x86_64_linux:      "31b45aacbf5cf51fb3aa3bf364b268f5e37a16c4d1776e7176d3b154a3c05c08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "e7a679bfbb988c8ebf54f13666f9f928fa8c467b164c5375bd35f752239bec95"
   end
 
   depends_on "cabal-install" => :build

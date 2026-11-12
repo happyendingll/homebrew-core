@@ -13,11 +13,8 @@ class Solidity < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ba8c0afa18a3ae154cff1074fd07c1a131d5c3049aeffc348d11f6d69a4db467"
-    sha256 cellar: :any, arm64_tahoe:       "28731e55742243ddbd8d411b44efe4b3e26e8f55d28db181eccf158721b56722"
-    sha256 cellar: :any, arm64_sequoia:     "15aa4a2e991a5b168631de6f9cf55cd5ebdfe6850fcc0c0c4c78bfd50268f0b0"
-    sha256 cellar: :any, arm64_linux:       "29a4bf78984e4076f4858b1f94643659d2324e699314b439ecd6ab2bd30ae854"
-    sha256 cellar: :any, x86_64_linux:      "70795049b637cd9a8a3b1c648ce6c7d37f6336a346ed78e0beaa1ef1ec265301"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "31db9370871e2b72215f6f9726cef1dee0e5723b2fc3e31f745e46a6be63cbaa"
   end
 
   depends_on "cmake" => :build
