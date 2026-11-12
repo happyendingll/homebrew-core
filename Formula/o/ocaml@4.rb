@@ -18,11 +18,8 @@ class OcamlAT4 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f89b39077cb0d6ddc603d1dce0aa5edef17713c57dca16ec245c1eb8309b3a5c"
-    sha256 arm64_tahoe:       "6e9a59d8e3123cfa97be3eb3cc5ecb0c7ceb9236d4ef56678c1e3aa802fc48f0"
-    sha256 arm64_sequoia:     "062a7bc2b47915d8c8b42f44285c25889992240fc462b1bd7c0db4b1c8b50289"
-    sha256 arm64_linux:       "3197c91ff62e0ca714a5740c6455639db85100aaea4443ce2d47acc0c030c522"
-    sha256 x86_64_linux:      "dd69b27aedb6f8cc833a2dbe601bc98c5839e6e1706ff8f49bf406c27e001bc7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "1e15130f53c61a7775c82058b872204c76623ad021f47d3223c25c89de74a323"
   end
 
   # The ocaml compilers embed prefix information in weird ways that the default

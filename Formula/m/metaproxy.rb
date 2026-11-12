@@ -13,11 +13,8 @@ class Metaproxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9c51140d7ecfca5e7d1d759934596ab050bb82cbde37d065398ade10d5a911b4"
-    sha256 cellar: :any, arm64_tahoe:       "a3b3de88d330fa735075471ad5e50262c57ef195c24c1e9b2c51ca829fec746d"
-    sha256 cellar: :any, arm64_sequoia:     "2ecf2023469f197da35250a30bc93d2bb604995e094039fe753b7bc34e94f119"
-    sha256 cellar: :any, arm64_linux:       "b3ed0ebf094790ab8ac8f6e0e9880e5ee32bafd4a052b54325cacbb293f09a8d"
-    sha256 cellar: :any, x86_64_linux:      "9a2f0df20d599311fc2a96975a7479d6d495a1e0d14159bff6a44d0da08b971b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "25ca23a43c047a839b79702b9e503e5e918499222ed1b32af9b94c6ddd34d73a"
   end
 
   depends_on "pkgconf" => :build

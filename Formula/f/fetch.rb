@@ -7,11 +7,8 @@ class Fetch < Formula
   head "https://github.com/gruntwork-io/fetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e37b4a1556f7e21331afe8de0320659a42d8a06fa7cdae07b0a135d43034e85d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e37b4a1556f7e21331afe8de0320659a42d8a06fa7cdae07b0a135d43034e85d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e37b4a1556f7e21331afe8de0320659a42d8a06fa7cdae07b0a135d43034e85d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9deb395b21f32a24472a809c0641fd70107ca6e63afc123f4eb2e887ce8d6b4c"
-    sha256 cellar: :any,                 x86_64_linux:      "aaba3cc83c63b333e5f10d0fb2fe73c573cd8518d2a9911625874ecaacb5d361"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7926f5065a4a9623ef0eeb3c304f2b1fb4973a3b0b120bb26ed0544d2249e474"
   end
 
   depends_on "go" => :build

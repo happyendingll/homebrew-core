@@ -7,11 +7,8 @@ class Mob < Formula
   head "https://github.com/remotemobprogramming/mob.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21d36aa5cb1cfa6bf3d7e3dd4d4d687619a5baaaf4e1392e29a10afa54d88881"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21d36aa5cb1cfa6bf3d7e3dd4d4d687619a5baaaf4e1392e29a10afa54d88881"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21d36aa5cb1cfa6bf3d7e3dd4d4d687619a5baaaf4e1392e29a10afa54d88881"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "602e5a00488058b353935734e32356a1588c5c90930e32bf6979f9c6408fffa7"
-    sha256 cellar: :any,                 x86_64_linux:      "1265685b0873abc20c083f410ed5458c22424b363ba8e7110893f6178617ba59"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "49820a129f71f6020063929546ed8b9f8ac2f0c936d8d43576eacf12acdf14c7"
   end
 
   depends_on "go" => :build
