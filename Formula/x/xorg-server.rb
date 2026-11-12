@@ -12,11 +12,8 @@ class XorgServer < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "922de97e843c2e71284312cb1fa37a89d296932629ccb0aa46f4044198292cbe"
-    sha256 arm64_tahoe:       "ab2bb8bc44572c96888b3a27cc6471130d8c23301e827b2bf0b761f13aa628a9"
-    sha256 arm64_sequoia:     "3b40ba7aa4d4ce84cb782c82ed2aa02188a20f77edb3a507d5c4cff881b201f0"
-    sha256 arm64_linux:       "ea45c1138a74868d0a4ed3990666027ebb0f561a78db7efd93ee48f5dd16f87e"
-    sha256 x86_64_linux:      "1a3adaa3335656b2f3561eedc92869225ccbdc63bcdf8f7bae85915c44834149"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "2e5cb16c9f100fa10faa463ed4339992d80d67a0ef5f6c06263fa6b4fbd8801d"
   end
 
   depends_on "font-util"   => :build
