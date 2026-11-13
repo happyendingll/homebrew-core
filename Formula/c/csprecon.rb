@@ -7,11 +7,8 @@ class Csprecon < Formula
   head "https://github.com/edoardottt/csprecon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9f4bbd561d08266d3e7bacfbc8ade81aa238217d2c40eef108acf4ccc8aa5e44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "abaadc597e0e78a010594e72ec35f6881f365247e3171cc03b880672cde2a08d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "15d3b4918b2e69a607ae6368ab81e9745db0da85a7ea986204424995ee9a2b76"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "feaa83e3128522214ce6baf0c59208bc6065b1264e569264d212f70636539ae5"
-    sha256 cellar: :any,                 x86_64_linux:      "893cae38a997822d46b1a1243a68e4ca9f699d04e21d94f435f3ccb5be87c3ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "3ad622813f6859d37bfd5fc436726e5be16cd1a35a7e23e3145d7cafa1e60587"
   end
 
   depends_on "go" => :build

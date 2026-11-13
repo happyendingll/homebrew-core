@@ -6,11 +6,8 @@ class Netbird < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ca14b4bc96e43cca2bb8b9814021b883a021e3bb2fe3373ac1fc32bcdf8360c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ca14b4bc96e43cca2bb8b9814021b883a021e3bb2fe3373ac1fc32bcdf8360c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ca14b4bc96e43cca2bb8b9814021b883a021e3bb2fe3373ac1fc32bcdf8360c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1398ed8ac4fc0edce489d3219bb1632e3feb42e821b49d95c74cb35c9383375d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9474b7308b398a47ecc323b70ee4e7c3abdf88707336ee72139f9df4ee64404d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f7cff62610fccb8e9cf1aa36fb7aacc554da687ebec9f9140576ac271db031e6"
   end
 
   depends_on "go" => :build

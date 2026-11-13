@@ -14,11 +14,8 @@ class Victorialogs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e7299380f23db274f0b171da2ba342bbd99e674de1e707588215358b9b803cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fb5071958a2ebd25e7105f58ef126e040e8a72894fbce380c38fcd6e5309af90"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b0bd5517fb55d9776c53855d50b0614386a28d2e4dd7459c8b10d2dd6544fe9e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2289a457350e0b5fa74be30f6b7603ea1fb403398985d1eecceb801936a72d76"
-    sha256 cellar: :any,                 x86_64_linux:      "4ea76125a96a6ddb8641ceb6eda3ea9b1c4fb03822f1523d618f2bcc0f30f97d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b813e263e7c2c2b09ba8b53209b3f4c1546b9a4d93176973c1c14a6e46d574a"
   end
 
   depends_on "go" => :build

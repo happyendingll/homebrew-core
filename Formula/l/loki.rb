@@ -13,11 +13,8 @@ class Loki < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cde78230ba6357072d5efe01d600030d1b5977990e7290321801344cd3f30134"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f94e884fe54ee88ff416e758e20a7fd0a8eac109d026875df989fe7c8d667bc0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "183024f3a207ba378e970c7edb6d6f322a68f148506736ae4c2d1083b62dd0fd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fd55d987769b271c2690b680fc5f8499abdf80751fc73b383060a5c40d782869"
-    sha256 cellar: :any,                 x86_64_linux:      "ba00efff019df4d54472a5da45bd5432fbb0261adf008a1ef802dc0cf66783f4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "5c6aa2a01a91f5f93b75d8f8278a9e0add0233cd491b9ea5a2cd049e0144a593"
   end
 
   depends_on "go" => :build

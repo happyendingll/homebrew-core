@@ -12,11 +12,8 @@ class Steampipe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d90952e9f200dcd7c31a76956cdbf3b7403047b68574d39c5d943d56e8016287"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "91e3331d3419f2bc23f242699eb9436ce7ac379d68e115ce7db4bcb25720ccb1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c338abba437bfb7eadb39377936cefcdf58a0626ee7103f35a0684e1ad06b1b4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "78b0bd2b8eed3f27ceba371c8a9437851d798038758cd309a306de9591012276"
-    sha256 cellar: :any,                 x86_64_linux:      "efabbd52cbc58ed20bfd23c354ac20f78cb65c531831202fc97bc20107c78cec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "4b8deaacdb8fe58c0abd7fef81653ca0072d377ca42ded3b0fa1789ac2bc200a"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Pvetui < Formula
   head "https://github.com/devnullvoid/pvetui.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "edbe5f7a77e16aa0b1e949f12619ecd2a5747e5bba5b2909641357cf55ed62fe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "edbe5f7a77e16aa0b1e949f12619ecd2a5747e5bba5b2909641357cf55ed62fe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "edbe5f7a77e16aa0b1e949f12619ecd2a5747e5bba5b2909641357cf55ed62fe"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "717457072516be9a79ffff251e9961321811a4b034ec40044c4f902b46f54120"
-    sha256 cellar: :any,                 x86_64_linux:      "52874e7acb571eb75e16df94ae126a1e7ebdf63a45894327208162a0c73dc8ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "a4a40f97aea608a9f7eb0545237a854621f0606b162257d78b200dc35bb11cb5"
   end
 
   depends_on "go" => :build
