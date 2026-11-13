@@ -1,14 +1,17 @@
 class Mdcat < Formula
   desc "Show markdown documents on text terminals"
   homepage "https://github.com/BIRSAx2/mdcat"
-  url "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.20.0.tar.gz"
-  sha256 "3436d183cf55d628245b30e605f14a4d7b3b129a457e34eac029828e2c2a07e6"
+  url "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.20.1.tar.gz"
+  sha256 "1e6e3a533bdfd5854272cd9f54143ddbd879f4e7699a0b2e7ac469fcaa9799f2"
   license "MPL-2.0"
   head "https://github.com/BIRSAx2/mdcat.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "27419cb3e5023484cc58c36e434d84590ccce76c4457c3aab8830d0072e2100a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7069a7fcc48565ffbc5d0e3961d74c13774d0bf5f4adebdc2eee905ce042aa1a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c631221785196c346e3b3729b86826e3f31dd43d248ea181de2aa94c4edcd8d8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fa19d796dae405e7bf63d163d2950b488f61f57690c1fb37904701438af69e56"
+    sha256 cellar: :any,                 arm64_linux:       "7e18dc61fe1549c03d0cd63ad360f8ca2859c6d6fa8696ae4ce5639fa301e5fd"
+    sha256 cellar: :any,                 x86_64_linux:      "60c5f7276f970f22a015861d94e5bde2e1548dace8c6879f85401ba3c25f491a"
   end
 
   depends_on "asciidoctor" => :build

@@ -1,8 +1,8 @@
 class Loki < Formula
   desc "Horizontally-scalable, highly-available log aggregation system"
   homepage "https://grafana.com/oss/loki"
-  url "https://github.com/grafana/loki/archive/refs/tags/v3.7.9.tar.gz"
-  sha256 "374cc8b5f9aab740b44b1b0d9689e69b0e6f2c0feb41942cb52d3e1c4bb7bdeb"
+  url "https://github.com/grafana/loki/archive/refs/tags/v3.7.10.tar.gz"
+  sha256 "52e1a821de73d634a152e6737f7a4629dae830240015a2d6f244ccaaf3b13357"
   license "AGPL-3.0-only"
   compatibility_version 1
   head "https://github.com/grafana/loki.git", branch: "main"
@@ -13,8 +13,11 @@ class Loki < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "a7d6242e0b7823424f7771b2a095e86c94b75775df0cecaed0de592ca904b600"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cde78230ba6357072d5efe01d600030d1b5977990e7290321801344cd3f30134"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f94e884fe54ee88ff416e758e20a7fd0a8eac109d026875df989fe7c8d667bc0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "183024f3a207ba378e970c7edb6d6f322a68f148506736ae4c2d1083b62dd0fd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "fd55d987769b271c2690b680fc5f8499abdf80751fc73b383060a5c40d782869"
+    sha256 cellar: :any,                 x86_64_linux:      "ba00efff019df4d54472a5da45bd5432fbb0261adf008a1ef802dc0cf66783f4"
   end
 
   depends_on "go" => :build

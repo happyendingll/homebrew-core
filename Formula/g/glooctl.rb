@@ -1,8 +1,8 @@
 class Glooctl < Formula
   desc "Envoy-Powered API Gateway"
   homepage "https://docs.solo.io/gloo-edge/main/reference/cli/glooctl/"
-  url "https://github.com/solo-io/gloo/archive/refs/tags/v1.22.7.tar.gz"
-  sha256 "42a8f107dec293333460fcce932a73732c2075d0cb4e40cc0dcd8da45b824c7e"
+  url "https://github.com/solo-io/gloo/archive/refs/tags/v1.22.8.tar.gz"
+  sha256 "fd4b381c81a253bbd7b64efe5c6e0037f015a4784c023ae057bee3a9b5eec0cd"
   license "Apache-2.0"
   head "https://github.com/solo-io/gloo.git", branch: "main"
 
@@ -16,8 +16,11 @@ class Glooctl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "421c7cb1bc90bbcfd28266cc1c319a9bb973222388f51e5e20288f29aff424c1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "38b6ce4c4f0bcb0049510d6e9caa2015daab75d415715093fb37b7665f086bfd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f13f5f604e6a3018da54aac7067e356dbfaa0421a1e06680e78b22090e4144c9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c92ade8d6116f24680fa3a8fbd745f3c17065fc4c628a8fc2f1d6d6a3846a258"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f095585def40a7f433e7cc19bec14e1e0e89a549bceb7eda6f101ef2d1a87e18"
+    sha256 cellar: :any,                 x86_64_linux:      "dd20a3082db1a1823fb9a075d7a5438120ecf6b20a237e2a395b10ab136e9781"
   end
 
   deprecate! date: "2026-12-31", because: :deprecated_upstream

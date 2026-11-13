@@ -4,6 +4,7 @@ class WhisperCpp < Formula
   url "https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.9.5.tar.gz"
   sha256 "ff1a9053feb509ff9d7729703355541ae9690073a6b1c40eb692c962e0dc1720"
   license "MIT"
+  revision 2
   compatibility_version 1
   head "https://github.com/ggml-org/whisper.cpp.git", branch: "master"
 
@@ -13,8 +14,11 @@ class WhisperCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "514d9c4640a9b62754af3cc3b2258d8c9efb547756953c0978474df286e7d789"
+    sha256 cellar: :any, arm64_golden_gate: "d1b38766f30e6eb78c502ec9fab921b39838fcd10fe084b9bff4d335ed592557"
+    sha256 cellar: :any, arm64_tahoe:       "7ac257aafd3586b79ed3be9cf150b3650c2f94a097c9dce9a75139914cc4a429"
+    sha256 cellar: :any, arm64_sequoia:     "5a28079052309e287e3f7d98ddc74f3f5ee2f2a31bce193f6e1ac068de79dcf5"
+    sha256 cellar: :any, arm64_linux:       "0d8d7ade355581a9bb7dff7c9306e7e3c52252f0276aedee19227f2315d33cde"
+    sha256 cellar: :any, x86_64_linux:      "dccee89fee5df5013d5cb8008a38142cfeb3f4d3f924786667ea77fa71981940"
   end
 
   depends_on "cmake" => :build
@@ -22,6 +26,14 @@ class WhisperCpp < Formula
   depends_on "ggml" # NOTE: reject all PRs that try to bundle ggml
   depends_on "llama.cpp"
   depends_on "sdl2-compat"
+
+  # Support new llama.cpp
+  patch do
+    url "https://github.com/ggml-org/whisper.cpp/commit/63ae1b5f55b5d56622b39b3c01a4710feb57d844.patch?full_index=1"
+    sha256 "4422ba043e70622ba20c5c8dfb614680fb7c88229c9e398dffea098b5d12d65c"
+    type :unofficial
+    resolves "https://github.com/ggml-org/whisper.cpp/pull/4173"
+  end
 
   deny_network_access!
 

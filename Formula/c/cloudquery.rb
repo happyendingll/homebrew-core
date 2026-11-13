@@ -1,8 +1,8 @@
 class Cloudquery < Formula
   desc "Data movement tool to sync data from any source to any destination"
   homepage "https://www.cloudquery.io"
-  url "https://github.com/cloudquery/cloudquery/archive/refs/tags/cli-v6.50.0.tar.gz"
-  sha256 "2fc50344a912e0995ceab084738f5cd5f56afe9cf58d9c728c2eadc1debeb7a7"
+  url "https://github.com/cloudquery/cloudquery/archive/refs/tags/cli-v6.51.0.tar.gz"
+  sha256 "77a93d5daaaff73c739bde3c025daeaf27c54c05612fa436cfe3cf3db235f588"
   license "MPL-2.0"
   head "https://github.com/cloudquery/cloudquery.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Cloudquery < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "042fd7f0cf049dc7a247d783f073d1d0bf625fe9fdb9dc4ce36ecc7832f3f582"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e8633a3e808600f70f31f3ba97ab1fc0b502d6debe06f047165c60ef10abdbd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e8633a3e808600f70f31f3ba97ab1fc0b502d6debe06f047165c60ef10abdbd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e8633a3e808600f70f31f3ba97ab1fc0b502d6debe06f047165c60ef10abdbd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "90f521d38e1bf8f5a9d26948a90fcb8f072484c7eaa90875c14f7f1b85f7891a"
+    sha256 cellar: :any,                 x86_64_linux:      "d34bbb4af4b4ade02c09b93d05d4ba0338fd7eac7fef54469d39ff7c12f6c0a7"
   end
 
   depends_on "go" => :build

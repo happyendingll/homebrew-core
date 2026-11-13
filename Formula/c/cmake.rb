@@ -1,10 +1,10 @@
 class Cmake < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
-  url "https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/cmake-4.4.5.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/cmake-4.4.5.tar.gz"
-  sha256 "a0c54c88abb8078dd8eccadb717fc6bb194bf18e7d44c86309910288886e04e2"
+  url "https://github.com/Kitware/CMake/releases/download/v4.5.0/cmake-4.5.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/cmake-4.5.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/cmake-4.5.0.tar.gz"
+  sha256 "424352d6133e8455e020da787008e8dc67abb18820af3532572ab35657e49213"
   license "BSD-3-Clause"
   compatibility_version 1
   head "https://gitlab.kitware.com/cmake/cmake.git", branch: "master"
@@ -18,8 +18,11 @@ class Cmake < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "3c47ab41519ad598d6d3afa6a3d42019733d54b0d9ccd6de5fa2baaa94dc594d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23f036b5ff4bffe8ff1ab4d511f41897ae0b4706b65296474a2714d1fa013b71"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "497c6366207d61a93ee3be3576250bfea8cc08e77f67666c0e5e2a0f6e50d80a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e7db80e1f065cb99db30eba9751a4bcd225d35998be89e0031ebbd7e1733640b"
+    sha256 cellar: :any,                 arm64_linux:       "466d35874352813b902f545dd9d5a26caaef07d000038c3d60c11c221c7561b7"
+    sha256 cellar: :any,                 x86_64_linux:      "5ff241b01cd53cf9c96ff60c422a8e61519d704e2516d3455012c8a935022467"
   end
 
   uses_from_macos "ncurses"

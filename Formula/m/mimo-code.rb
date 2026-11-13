@@ -1,13 +1,16 @@
 class MimoCode < Formula
   desc "AI coding agent with cross-session memory"
   homepage "https://github.com/XiaomiMiMo/MiMo-Code"
-  url "https://github.com/XiaomiMiMo/MiMo-Code/archive/refs/tags/v0.1.16.tar.gz"
-  sha256 "dff948e338bf58e7d580a18fc6385f6669c66512e001fa8e08113280d4cab6a6"
+  url "https://github.com/XiaomiMiMo/MiMo-Code/archive/refs/tags/v0.1.17.tar.gz"
+  sha256 "b31dbb1f7ed1fb601778e30ef9b07de65968193937ddbfa42dc783dd4a058e59"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "60253a7d9518a3e96e0fa0d2d4d60be65d305c347dd67c86bf65d2f6111c5548"
+    sha256 arm64_golden_gate: "17bb02569607d389a8b0b42283d1f796c6b36acc2ce8cb901abdc2de01619179"
+    sha256 arm64_tahoe:       "ca2a1195e5d683b2abc9c43a40696f0ed02d5990c4fce146009496c1c66904da"
+    sha256 arm64_sequoia:     "a488a9c80509e3541a151be7cc384c76876079135092122a55d5376ecda3d6ec"
+    sha256 arm64_linux:       "5269a6d4db16412a0a208286bee5ba929366a79904fa25fd0b007d3f0e4efa87"
+    sha256 x86_64_linux:      "04e1557a5c169824affeb2ed6df733dea099ff5b411898d0a7aa703f63b72e3e"
   end
 
   depends_on "bun" => :build

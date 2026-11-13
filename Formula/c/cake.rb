@@ -1,13 +1,16 @@
 class Cake < Formula
   desc "Cross platform build automation system with a C# DSL"
   homepage "https://cakebuild.net/"
-  url "https://github.com/cake-build/cake/archive/refs/tags/v6.3.0.tar.gz"
-  sha256 "6db077c1a78323dce1b53a799e5c53ed4d864dd4f6c6d206d46e5d71733e3dcf"
+  url "https://github.com/cake-build/cake/archive/refs/tags/v7.0.0.tar.gz"
+  sha256 "91aecc5affe86993927d859f2d8c442fc0268ee229bdcf20c72829bea778e157"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "fd9327ef310c8a7ae046ffb55e3ce126baa43548bee23bac212a9016c9e595fa"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "10d9c11dad1a5f67e2cb7fba77eb7e18a04559bdd5a3891868076d97bab7b163"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "af2ef0b8938b0c1865ccbeec6605d04e129ca7615dde2f074119f512076bf2eb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "369eebbb28824d236d3153f20aff058daeaae056096d39c5ec38f6c804492af9"
+    sha256 cellar: :any,                 arm64_linux:       "dfba519f5a2aed827898d8d4556f5609b0f98ae5ad7a94edcbcf948e1f648b40"
+    sha256 cellar: :any,                 x86_64_linux:      "e25c0a91a368d87066629cf99c4bf71ca1f006307a79f6ebbdb591403910bc8c"
   end
 
   depends_on "dotnet"

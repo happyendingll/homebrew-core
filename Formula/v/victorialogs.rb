@@ -1,8 +1,8 @@
 class Victorialogs < Formula
   desc "Open source user-friendly database for logs from VictoriaMetrics"
   homepage "https://docs.victoriametrics.com/victorialogs/"
-  url "https://github.com/VictoriaMetrics/VictoriaLogs/archive/refs/tags/v1.53.0.tar.gz"
-  sha256 "9dab43bfb2ccc2b3009a2e7cacd798f12b561a92f4a29c8a697c60295a383874"
+  url "https://github.com/VictoriaMetrics/VictoriaLogs/archive/refs/tags/v1.54.0.tar.gz"
+  sha256 "4d1974e3034f9f4a3c3c26f4468e75a174ced21578011e87f3399b865750f414"
   license "Apache-2.0"
 
   # The Git tags are interspersed with higher versions like 1.118.0, so we check
@@ -14,8 +14,11 @@ class Victorialogs < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f76efee5832bed8b47c3038356d6ef45d33b30fa49f69dab4f73aae712e30069"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e7299380f23db274f0b171da2ba342bbd99e674de1e707588215358b9b803cd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fb5071958a2ebd25e7105f58ef126e040e8a72894fbce380c38fcd6e5309af90"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b0bd5517fb55d9776c53855d50b0614386a28d2e4dd7459c8b10d2dd6544fe9e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2289a457350e0b5fa74be30f6b7603ea1fb403398985d1eecceb801936a72d76"
+    sha256 cellar: :any,                 x86_64_linux:      "4ea76125a96a6ddb8641ceb6eda3ea9b1c4fb03822f1523d618f2bcc0f30f97d"
   end
 
   depends_on "go" => :build

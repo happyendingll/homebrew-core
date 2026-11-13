@@ -2,14 +2,17 @@ class Ponyc < Formula
   desc "Object-oriented, actor-model, capabilities-secure programming language"
   homepage "https://www.ponylang.io/"
   url "https://github.com/ponylang/ponyc.git",
-      tag:      "0.78.1",
-      revision: "8b41336769c60944dc44093d195ea61efbc546fd"
+      tag:      "0.78.2",
+      revision: "c7a0a0462802c5a1cc2b368a791551e1c0bb1e29"
   license "BSD-2-Clause"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "30cbbc7c4c97f0d5b308943207a5cf0d159e47e28890c016e9e8a33bf9236358"
+    sha256               arm64_golden_gate: "f8ed420f3a3688e23723b50da9ed26176566866a39e7abc6a333db661e7b85f8"
+    sha256               arm64_tahoe:       "3464e1e4f077cbef757fac8b76b317c6f41bce4b606b1fd2b428cc454a63fdd6"
+    sha256               arm64_sequoia:     "c3a65ae727d36a26f96e15b47536c17a19a5c78c816b11ae10b1c3e185bf6828"
+    sha256 cellar: :any, arm64_linux:       "b832e1ba4c9ad3ae6b02ff8e7ec48fec6ca77b77d4fb47f490ebfdfe5f3e9b66"
+    sha256 cellar: :any, x86_64_linux:      "b528a106877244ec70595d245e17fe93a54f91fe6dca4a51e6059ba46d8519db"
   end
 
   depends_on "cmake" => :build

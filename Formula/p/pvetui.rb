@@ -1,14 +1,17 @@
 class Pvetui < Formula
   desc "Terminal UI for Proxmox VE"
   homepage "https://pvetui.org"
-  url "https://github.com/devnullvoid/pvetui/releases/download/v1.4.4/pvetui_1.4.4_source.tar.gz"
-  sha256 "08e41536f1185d8900de20e74d7c2ca10e92ee6136d8fc1640c4dce816f3d022"
+  url "https://github.com/devnullvoid/pvetui/releases/download/v1.4.5/pvetui_1.4.5_source.tar.gz"
+  sha256 "1cd5ead5cb9f2ed1177044cef7e22f7766f393e6f02adc0f19d841d62e546709"
   license "MIT"
   head "https://github.com/devnullvoid/pvetui.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "656c055cf8cdadbc1f830742de438284d222de9f0270da659d18ea1c930035a1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "edbe5f7a77e16aa0b1e949f12619ecd2a5747e5bba5b2909641357cf55ed62fe"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "edbe5f7a77e16aa0b1e949f12619ecd2a5747e5bba5b2909641357cf55ed62fe"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "edbe5f7a77e16aa0b1e949f12619ecd2a5747e5bba5b2909641357cf55ed62fe"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "717457072516be9a79ffff251e9961321811a4b034ec40044c4f902b46f54120"
+    sha256 cellar: :any,                 x86_64_linux:      "52874e7acb571eb75e16df94ae126a1e7ebdf63a45894327208162a0c73dc8ba"
   end
 
   depends_on "go" => :build

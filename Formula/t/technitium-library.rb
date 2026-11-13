@@ -4,18 +4,22 @@ class TechnitiumLibrary < Formula
   url "https://github.com/TechnitiumSoftware/TechnitiumLibrary/archive/refs/tags/dns-server-v15.6.2.tar.gz"
   sha256 "e7f5add92da555fc3120991fabd802c0605ab9c45cb4b56137dfb0699a006cec"
   license "GPL-3.0-only"
+  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "6af58baac11afc896cc8a0da43a0d34c13b593d3f9e186489617916423c9364b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a1edec6890fdc1ee779c1d160ba19802f2cdbf558d1f3c6610c41332d3941a9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8951d861eabae1b1063070370b86e833df6aa901f47b042b3068906bbaca01e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2851a1c1c8660c02f408fed599ab659bf813cd59506357d509a5b201f8ff3bbf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b2b88a0c4bbc8b1d72fc1dbd87c74719b883dc32fb23aaed00a04f1e08dd77ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "592c64756ab807a028bf409c09763cf7f40bf4929427778303b6a50e56ce1248"
   end
 
-  depends_on "dotnet"
+  depends_on "dotnet@10"
 
   deny_network_access!
 
-  def dotnet = deps.find { |d| d.name.match?(/^dotnet(@\d+)?$/) }.to_formula
+  def dotnet = deps.find { |d| d.name.match? Version.formula_optionally_versioned_regex(:dotnet) }.to_formula
 
   def libraries
     %w[

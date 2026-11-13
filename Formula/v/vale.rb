@@ -1,13 +1,16 @@
 class Vale < Formula
   desc "Syntax-aware linter for prose"
   homepage "https://vale.sh/"
-  url "https://github.com/vale-cli/vale/archive/refs/tags/v3.26.0.tar.gz"
-  sha256 "c63c9c9b415d55616c112c04ddd98fba5e94bec0e266bc576e36da6aa7d6b53e"
+  url "https://github.com/vale-cli/vale/archive/refs/tags/v3.27.0.tar.gz"
+  sha256 "66636c2528aac28c173f9449e3f4f1429b84d5be8d7877bf52fa6c5fd50ce5a0"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "0499afcb5ae74e249e2bac29660ae6bee531ca918635d9be9ee7dc729d4046be"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f6d61669794291915d614c586f37f880d66c6b6bb08aa57b69c7fe95082c30d0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f6d61669794291915d614c586f37f880d66c6b6bb08aa57b69c7fe95082c30d0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f6d61669794291915d614c586f37f880d66c6b6bb08aa57b69c7fe95082c30d0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2ec521a24142b42036a97b88ce344c6a9c878e5dd880ced12d713e00d209e855"
+    sha256 cellar: :any,                 x86_64_linux:      "faf377fd731603c8b341178805cddf78345fee8d5d65f6d849cd83e17145b763"
   end
 
   depends_on "go" => :build
@@ -19,8 +22,6 @@ class Vale < Formula
   end
 
   def install
-    ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
-
     system "go", "build", *std_go_args(ldflags: "-X main.version=#{version}"), "./cmd/vale"
   end
 

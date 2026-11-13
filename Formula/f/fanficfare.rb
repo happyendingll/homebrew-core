@@ -6,11 +6,15 @@ class Fanficfare < Formula
   url "https://files.pythonhosted.org/packages/ca/bc/987888bfdc83399441b972e5b556228d8322add50931a7f900799e3b21c6/fanficfare-4.63.0.tar.gz"
   sha256 "21338d88297303b09a64f00dab5982b0760902d91829629d66c162c98feba9ef"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/JimmXinu/FanFicFare.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "254f4880d3b3c99827e59251ef63c320ab23807e9da219fd1372504cb9c65800"
+    sha256 cellar: :any, arm64_golden_gate: "2f289397e36cfbccbf41ba3622fc88670723f2d7de8c77a55519c248dffdbd26"
+    sha256 cellar: :any, arm64_tahoe:       "fce02858d240194be6dab52bf2d4a76e3f772e60ae04295895fb8e9ba84a9464"
+    sha256 cellar: :any, arm64_sequoia:     "f1f668b16eca3f80afbdf9981b780c606644673a60c21044f16ddfc1c7106562"
+    sha256 cellar: :any, arm64_linux:       "8df76c192089761ba560a29b816e1031d58badb7df7837ae15c9432901600152"
+    sha256 cellar: :any, x86_64_linux:      "954dc0fdfa0da0e668b3992429e9a3707207eb91e753e6e708bc6206d8f20dac"
   end
 
   depends_on "pkgconf" => :build
@@ -108,8 +112,8 @@ class Fanficfare < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/19/63/0b6bae54546aed98d72f12d09df57b19a287f01c84d22047fa2e23772ab9/soupsieve-3.0.4.tar.gz"
-    sha256 "924fab84ae21604c19e175e1f39815eb6fa83ba23836e09e9de180925e5bc4c0"
+    url "https://files.pythonhosted.org/packages/95/48/21a393ff731b8f928fa4f8176f9a7ceba2252ee60a5149f25b45c292aa5c/soupsieve-4.1.tar.gz"
+    sha256 "ca9abf7126667010d8f6e9b39bfc1bc3b23c8aed9bcb0f54a754dde969bb8aab"
   end
 
   resource "typing-extensions" do

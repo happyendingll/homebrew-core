@@ -1,14 +1,16 @@
 class Ocicl < Formula
   desc "OCI-based ASDF system distribution and management tool for Common Lisp"
   homepage "https://github.com/ocicl/ocicl"
-  url "https://github.com/ocicl/ocicl/archive/refs/tags/v2.20.0.tar.gz"
-  sha256 "c93441daeb9772922af5f7b394d60bbe44c67ea061511648943db07d33b5abb0"
+  url "https://github.com/ocicl/ocicl/archive/refs/tags/v2.21.0.tar.gz"
+  sha256 "4ed3f547768d412f7910e3ce2d1067f8fb426a4de65094ed748078b7e59375a5"
   license "MIT"
-  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "e3094bdaae8ced52318e47f84b9467374433a3dc0e4e863c2d6ec84795a9b43b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b6c29b386792da25e79ce166c8c78cc3c48919c6a19250927de7cb9615d61eab"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5468e8075a3fc51713d1a79187e5cb68f58b335ff5f981fe99092291b27240dd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "228cc5f62eb4a9dc8986224472cd56050b76f7e6f9805ba79ed19b50cdda569c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "08df89e228e752fea2e06056877249e9e53038990b350d6938b4851b38b65ee7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "30a1e510f8cf8b64b19f6fbddd0cec6ffc8d3f07c833ffe055fdd032d23b0ce5"
   end
 
   depends_on "sbcl"

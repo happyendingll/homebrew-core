@@ -1,8 +1,8 @@
 class Astyle < Formula
   desc "Source code beautifier for C, C++, C#, and Java"
   homepage "https://astyle.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/astyle/astyle/astyle%203.6/astyle-3.6.23.tar.bz2"
-  sha256 "9c29649223429d0a8a9fd775767f9d268e2624ccc39aaba7571493c5787c00af"
+  url "https://downloads.sourceforge.net/project/astyle/astyle/astyle%203.6/astyle-3.6.24.tar.bz2"
+  sha256 "972034b036e387de23639b796a06826d78a2c8646be3454b60e48af138e90336"
   license "MIT"
   compatibility_version 1
   head "https://svn.code.sf.net/p/astyle/code/trunk/AStyle"
@@ -13,8 +13,11 @@ class Astyle < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "d8bc4f7e8e83d7346d67e551a3704ddd37bd1d3a274333c8518bf27ef8c83606"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "01ee5d719dc22619e7875e553b7ac447520a7c359bbea002149c87c530017247"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4c9148250f71df7db51c5b17815455252b1d38df58c22a6e37084570e555f1ec"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d5997036d1d610fa13018de8f58d2eddfe099aad923bdfd0d24d272f2b1e4610"
+    sha256 cellar: :any,                 arm64_linux:       "bd8d858ef661713f182d498fd4b7320be1dcd8bee0ce3cd14bf5faaf14d7093e"
+    sha256 cellar: :any,                 x86_64_linux:      "b4c6dbc81998bb124ba692e5192bc08286a30858172339367da25095347c61ee"
   end
 
   depends_on "cmake" => :build

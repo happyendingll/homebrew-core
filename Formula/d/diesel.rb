@@ -1,14 +1,17 @@
 class Diesel < Formula
   desc "Command-line tool for Rust ORM Diesel"
   homepage "https://diesel.rs"
-  url "https://static.crates.io/crates/diesel_cli/diesel_cli-2.3.14.crate"
-  sha256 "0d10dbdcc7e8c4cb84e9ff9b1d6623b981395911b585e3bc753af9a31064c4bb"
+  url "https://static.crates.io/crates/diesel_cli/diesel_cli-2.4.0.crate"
+  sha256 "84223d1adcb1618dd0f68e7b309099d1323c59541eff336a8b83a7066edaae89"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/diesel-rs/diesel.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "6a9376b43ffb015186f980dbfab937a345232bf36b30e658765e281ede068d93"
+    sha256 cellar: :any, arm64_golden_gate: "1dc5eccd97bef62f0911202574b3f61f1cfa0b32ba1ee7e06da5a7a8040b97a8"
+    sha256 cellar: :any, arm64_tahoe:       "594c64dc27e7d589805e3fe8f5c94c9d9b0fac8786d42d167ea8d3f818ee17e4"
+    sha256 cellar: :any, arm64_sequoia:     "f8ce5d337c7b5044473699b39025ef35a7fb444bc2f7030925576b38ed55c54c"
+    sha256 cellar: :any, arm64_linux:       "77ef55b59a4797ac6f882511368499195e1f5761574c5a290008db511c6a7ec0"
+    sha256 cellar: :any, x86_64_linux:      "6623dc31fa4f2195643328588bf17208f9b18ea18531be26d5c092a3973c7ff1"
   end
 
   depends_on "rust" => [:build, :test]

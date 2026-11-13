@@ -1,14 +1,17 @@
 class Gittuf < Formula
   desc "Security layer for Git repositories"
   homepage "https://gittuf.dev/"
-  url "https://github.com/gittuf/gittuf/releases/download/v0.17.0/gittuf.src.tar.gz"
-  sha256 "a3fa3cb08baa4799d7d2a70691cdc803ed7d26abc77223c132803ff622480996"
+  url "https://github.com/gittuf/gittuf/releases/download/v0.18.0/gittuf.src.tar.gz"
+  sha256 "feb0b809fd9deb6a846c1839e714a2739b7219241fbc2c03ba37b3fdfcef4cc7"
   license "Apache-2.0"
   head "https://github.com/gittuf/gittuf.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "dd6a551c3c0c6de78b07375a96f30371651ccba8fa07cf257fd10c78e6c8ce05"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0bb9ef84ce28d3933c1fc0e62d60d4f41f9bdd10b9bbc4ed9dbcd9330252803d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0bb9ef84ce28d3933c1fc0e62d60d4f41f9bdd10b9bbc4ed9dbcd9330252803d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0bb9ef84ce28d3933c1fc0e62d60d4f41f9bdd10b9bbc4ed9dbcd9330252803d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "920abefe07ce9ea04044fffcb1babe91ca590f6eaa162497afa79177f9355b86"
+    sha256 cellar: :any,                 x86_64_linux:      "7d6902887bd52373ff3fa706eb4fa043d7e2e2311382570721c68b1fad59114e"
   end
 
   depends_on "go" => :build

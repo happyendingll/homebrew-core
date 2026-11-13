@@ -4,13 +4,17 @@ class TechnitiumDns < Formula
   url "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.6.2.tar.gz"
   sha256 "7fe162a7c1db828ca3ce0d754e9739118e5d666ddac526d2302509b47c3d513b"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "2bdcddb7a7d6c186c62e3a941188695fe33c30e9a32bed4007b289c69ff6c61f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4be24dbac555c64e093b5b11290345bd7bcfea328f15e71235156df8a0a79ea1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "795ae9a3c226db9e86a9c07735ae2194564029ce45a51cd30f0fedae4b5594e4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "022cc5ed39c4baf2f9eb3fa3956f18150eb8ce11e7d9e31580bf5ceed0a20f9a"
+    sha256 cellar: :any,                 arm64_linux:       "25cf616eb714a8a0d12ce5bca3e6cabb77521008758293b9ec39b4b8b846d735"
+    sha256 cellar: :any,                 x86_64_linux:      "a9d1349246f0413886f1f78e53817d567c6fe8f97648f0ccfc2fac556052006e"
   end
 
-  depends_on "dotnet"
+  depends_on "dotnet@10"
   depends_on "libmsquic"
   depends_on "technitium-library"
 
@@ -20,7 +24,7 @@ class TechnitiumDns < Formula
 
   allow_network_access! :test
 
-  def dotnet = deps.find { |d| d.name.match?(/^dotnet(@\d+)?$/) }.to_formula
+  def dotnet = deps.find { |d| d.name.match? Version.formula_optionally_versioned_regex(:dotnet) }.to_formula
 
   def fetch
     ENV["XDG_RUNTIME_DIR"] = buildpath

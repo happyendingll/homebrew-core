@@ -1,14 +1,17 @@
 class CargoShear < Formula
   desc "Detect and remove unused dependencies from `Cargo.toml` in Rust projects"
   homepage "https://github.com/Boshen/cargo-shear"
-  url "https://github.com/Boshen/cargo-shear/archive/refs/tags/v1.14.0.tar.gz"
-  sha256 "c4da6c4d6752741c0dff2b4404d10d4cef728125a332dd416c3147f57e8fee13"
+  url "https://github.com/Boshen/cargo-shear/archive/refs/tags/v1.14.1.tar.gz"
+  sha256 "8cedddd7f8ebfea46fa7369a89f6be2905c4bbb9c9430a1057df9d048e9548be"
   license "MIT"
   head "https://github.com/Boshen/cargo-shear.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "bc22746b09ac36caeaafd638f472d264824cf15d0efd769fef4a509444fbd569"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b72443821c8288e4e12cae5ac2448b8b7988d4c66232fe54a02a62f3a596c1e3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4e81ef3e948cf57ed49201fc33629ea6ec455109fe762373a9d54e583272db2d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc92e7709cac8c2dc19f4278c5aa4db3e181f08bb829f6fb247f2b30c8080cfb"
+    sha256 cellar: :any,                 arm64_linux:       "e35592f2c062b0310e0a8403bdd536fa6ca2ee7d0b2bbbd0763aed2d63fb0307"
+    sha256 cellar: :any,                 x86_64_linux:      "7f1254bb9403016332b0e2a8d9bf90048ca4c5f957f3e90391d9e00297c61c27"
   end
 
   depends_on "rust" => :build

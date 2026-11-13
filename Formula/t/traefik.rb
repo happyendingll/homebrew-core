@@ -1,8 +1,8 @@
 class Traefik < Formula
   desc "Modern reverse proxy"
   homepage "https://traefik.io/"
-  url "https://github.com/traefik/traefik/releases/download/v3.7.18/traefik-v3.7.18.src.tar.gz"
-  sha256 "d7e6c551bab6fdba4f1afc22945a1671f4cffcd42e3cd093da7e1a727f03df1f"
+  url "https://github.com/traefik/traefik/releases/download/v3.7.19/traefik-v3.7.19.src.tar.gz"
+  sha256 "94212099d79321aa28b8cf44a69dab0e54b008518d65356dc1db294554edabde"
   license "MIT"
   head "https://github.com/traefik/traefik.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Traefik < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "9b3948c8c8061afb5392eaccdb95e70f60137272bec40c1c2948d477a3406947"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0e72949f9156b0fde80ed678940728844a79b3bd20be8241f3ab2bc09fb6354"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e1dd3e6d16fb10ae702168776b67389201520977f47fa4773065bd114f319b7c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c23f724dbf66850f05ff273a31a5fbd39a22302d8658a4e210d406aae6567d42"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b0e72d1c322e92223d5f0c687110cb23022373dd40f95b6af17e8691fd6a9e93"
+    sha256 cellar: :any,                 x86_64_linux:      "bc5637be29e4f21c941edbd61fbf7e5d168616855a43449f2455cf024107d7e2"
   end
 
   depends_on "corepack" => :build

@@ -1,14 +1,16 @@
 class Soapyremote < Formula
   desc "Use any Soapy SDR remotely"
   homepage "https://github.com/pothosware/SoapyRemote/wiki"
-  url "https://github.com/pothosware/SoapyRemote/archive/refs/tags/soapy-remote-0.5.3.tar.gz"
-  sha256 "de5bdf209dc93bf7c341077e1e21353037fc387e7c6a9ee41eace3390669dcc1"
+  url "https://github.com/pothosware/SoapyRemote/archive/refs/tags/soapy-remote-0.5.4.tar.gz"
+  sha256 "7109077f9f64c530c26604d2f30437d4403d6133df50e600c3c7e022a622521c"
   license "BSL-1.0"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "e4ec0fdca284f6e10d46b54bb8582cef63e6e1cf817380c6227043a69b7790cb"
+    sha256 cellar: :any, arm64_golden_gate: "4943dfc0d665c54bba5e24601133e351172911e2310ba7fde0b44155361680b5"
+    sha256 cellar: :any, arm64_tahoe:       "611bd6e2f6785920e55bed0bee8ef652dc31ff4d53640f88a091f4db7d406692"
+    sha256 cellar: :any, arm64_sequoia:     "6e62f4dc506f0d52211ac5368cbda8a6ef88c74617086ebd1cdb2d97c9e34b8f"
+    sha256 cellar: :any, arm64_linux:       "3e40f55fb2cb25402275ddf56ede8cd0d83419d9b51c3d589aa9f26703b3e559"
+    sha256 cellar: :any, x86_64_linux:      "9614ce6c5dc95128b542ceb41ab2365bbe46626ebdc372af40bcd64c7d86e2cc"
   end
 
   depends_on "cmake" => :build

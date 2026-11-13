@@ -4,8 +4,8 @@ class Dpkg < Formula
   # Please use a mirror as the primary URL as the
   # dpkg site removes tarballs regularly which means we get issues
   # unnecessarily and older versions of the formula are broken.
-  url "https://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.23.11.tar.xz"
-  sha256 "4baf0632157bfac430b7dc1fe8800ea0787dac91f8bb272404ae19d98e569dd3"
+  url "https://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.23.12.tar.xz"
+  sha256 "829e7a454f61232b33372c1564b803ab16cfc98e08bd2ec1e2b94bdb1fb97502"
   license "GPL-2.0-or-later"
   compatibility_version 1
 
@@ -15,8 +15,11 @@ class Dpkg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "4ecaef8443623ef22cf78922f9c520a4a4c375c642b2bd77d66f201ed73bb65f"
+    sha256 arm64_golden_gate: "006104df9008756d2ef443fa5e61932716995233e6a1d04d26afaafe9c48638d"
+    sha256 arm64_tahoe:       "a499509fd23f412c6fb65a00f44296207d98a1d435133a98c4878b484be9ccc3"
+    sha256 arm64_sequoia:     "08c34d640bb28d6aea83438a13ca50e31d03e62bfc567edfb77218a9ec6c6d93"
+    sha256 arm64_linux:       "735939b62c5d5b9e10fa8339f73c6377d6d58535f0fdf3c9949d66f50da6a626"
+    sha256 x86_64_linux:      "8f4ce201df665c2409c9c2bdb27fdf5d21dda7b4f0f650481765539aa667aba7"
   end
 
   depends_on "gettext" => :build
