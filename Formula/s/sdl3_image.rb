@@ -14,11 +14,8 @@ class Sdl3Image < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bc50ca43127f408fff615450c972b9a19ebed30be203fb9ee410a7da58652766"
-    sha256 cellar: :any, arm64_tahoe:       "26a4609bc61be9036967190527065779bf7de375d58f8db6f8da22b7d8b052ef"
-    sha256 cellar: :any, arm64_sequoia:     "2024ba1cdc678d2d3e3356ffaa22eecafd06c295f867043450a1b8534d510d2d"
-    sha256 cellar: :any, arm64_linux:       "29246410eef050e31731ffa188c54a3ba93590b0f9721ff3a43528c00ef47480"
-    sha256 cellar: :any, x86_64_linux:      "6d04d9bfcfb4228a79b68da370b865867055452cae2cdcaf2cf6021525c72342"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "19a170d8afba396fe9365bd3c669b815ef8e914fae6d17d55249a2e419f5e16c"
   end
 
   depends_on "cmake" => :build

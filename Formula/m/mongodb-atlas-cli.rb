@@ -12,11 +12,8 @@ class MongodbAtlasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eef92aff70cfea74c65565ff740916fc0ed595ac449a34f609e9fdc62832d367"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b674d50658fef055f96a19aafeaffe826d6a76d27178c40656d7706fcb6a2aee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fa1476f3875f8a9b575cb2655d8ddd6e5dd2dc8425f6ff8e65336cf240834dd4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "56b779f6a48be5a152e8ae9064f3fdd7c28f55d6c0e1495ef74eaefb13eb9910"
-    sha256 cellar: :any,                 x86_64_linux:      "9520102c28f932c8ac46bc6d1ddcbed8eac1c75028d58d84a084937c3e4b11ac"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "05ca8b41d52f609bcf02f1cc6585aed74667c2980f311bd12c92124ef86331a7"
   end
 
   depends_on "go" => :build
