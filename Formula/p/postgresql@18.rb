@@ -11,11 +11,8 @@ class PostgresqlAT18 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "50d1ee512ef7b30ff5faa6f4fd4d76bca286f34bfbab23b0b8a929651e2fff4f"
-    sha256 arm64_tahoe:       "72bb84ae1958f25cfdec65e4add6688429b910bb6553aed7449403bf1b5aca87"
-    sha256 arm64_sequoia:     "676ca37df51e026d0f20ae2f9670c6f3d8065360df0581f7b412385afda276ed"
-    sha256 arm64_linux:       "40652304e464e0cf2969c46658f55a63f2e5db1e82ca6460c52a2a0efdc4544c"
-    sha256 x86_64_linux:      "ce282ca33797ccd7fac6bbb453edb39acacd18dc7a817cc4ad21830feb94f3b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "b02b456467bebff4093ee6f7486232c35cc5faba51a22e4c73748fd8efcd3a42"
   end
 
   keg_only :versioned_formula

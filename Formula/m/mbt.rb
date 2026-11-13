@@ -7,11 +7,8 @@ class Mbt < Formula
   head "https://github.com/SAP/cloud-mta-build-tool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e6cbd3432090002793d32db20fa35c2e0c8f6cf4b1a68aafbc233bc9f4e6a431"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e6cbd3432090002793d32db20fa35c2e0c8f6cf4b1a68aafbc233bc9f4e6a431"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e6cbd3432090002793d32db20fa35c2e0c8f6cf4b1a68aafbc233bc9f4e6a431"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d439eb1e464d97b0c4fc0e3386fc22bd94c96cfe3665413a6602765d17715c8"
-    sha256 cellar: :any,                 x86_64_linux:      "bcea7027b5e6dd3248a50276aa8412bb1ae86b10dd4d7fd1323b70c5c60ee3c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f7a023f4a864d2f614bc867789c0791765755eccd998ec6e4404297c8aa36a6b"
   end
 
   depends_on "go" => :build

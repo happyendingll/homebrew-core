@@ -7,11 +7,8 @@ class Packslip < Formula
   head "https://github.com/jdx/packslip.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4a31e22da499b96237bc7cbed460642c8ee339a015fa03c2324a8e780debc755"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f4f13930fd266b4244b2b234d5a3809016e9c8a81b94b8d6711560a8cc64866d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe26a2b55f6fcb96c9f138409dd03f42f88bbd195cb3aa585278d582384028e9"
-    sha256 cellar: :any,                 arm64_linux:       "d4bdde997d7bab5b29cd784aba31d81a9440fa900825ecc332d33b9726b31ac9"
-    sha256 cellar: :any,                 x86_64_linux:      "1e7044050931795fd190300004827ffe46e7b4b587c1f9df6852e6a78fdcc6c2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e0f771044024b7ca34b763e7dd71bceec1773b1e4c8cc7f4cec18d734a9d6f6f"
   end
 
   depends_on "rust" => :build

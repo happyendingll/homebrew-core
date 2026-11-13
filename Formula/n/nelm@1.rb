@@ -15,11 +15,8 @@ class NelmAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f837d613dde0b98db3285689b320c5cb9e42599a71ec484e92516623dc48d793"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "53f8edd30d1303df52d762976e90009e90a132e5a58a315092a1710e8e8a20b8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5cadd15d9c85516144e699e7f523deef166fea0a7ddbb14a509f5de3455a6da4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8929c66087cea3b7b549f9955d110efc6b09b7e17cf9d36221b4496ed1809062"
-    sha256 cellar: :any,                 x86_64_linux:      "719ce16a0b6a4e94a20dda8643aad29c89bdaf10eb2662978cb9f17dd6322e76"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "4d655af655be297488e8bfb6ccacb04b600255643e59e0c35855208de17b9fcd"
   end
 
   keg_only :versioned_formula

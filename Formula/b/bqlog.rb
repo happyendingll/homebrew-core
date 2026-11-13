@@ -12,11 +12,8 @@ class Bqlog < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4c803b1c48acd426a4b433145ee9d9b687c4deeadc5f59dec9057afe94621894"
-    sha256 cellar: :any, arm64_tahoe:       "16450e88c860361e2a290ec96fe504e56017a7aad53c06c3a27aa8fbcb596b4b"
-    sha256 cellar: :any, arm64_sequoia:     "e9c3ab9fad92df5c2b4a0cedb5077577ae963011897f9560d4fb5d1be64f74a4"
-    sha256 cellar: :any, arm64_linux:       "138fd6b301ec0a7e75a521b86fc3f3c49ea8adcf3ac491ec7ba30f75af123257"
-    sha256 cellar: :any, x86_64_linux:      "e98a3f5418116ac50e5578865f3a519dec36c61bca964c3cb406c1815c207da6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "1886a53eb59b78e0760d517fe85a7ffed904adacce53f5739c1ab8788d997dd4"
   end
 
   depends_on "cmake" => :build

@@ -19,11 +19,8 @@ class LittleCms2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "95b216343a5dce73473576b9ac02283944cf293b0817b48be2d8c19ba78b4cc9"
-    sha256 cellar: :any, arm64_tahoe:       "c434b974c1afdc696c5475a743081cda752c842a7645eed54235b874df2b8175"
-    sha256 cellar: :any, arm64_sequoia:     "e04ebf2fc43c8ea39680a2255da8b6a7060ee38e5e1f159c8182c6344dd4c679"
-    sha256 cellar: :any, arm64_linux:       "40bdf93dd4ade58a731077ee1d75e4962c0b60814270e3dd5722bf7d69eba422"
-    sha256 cellar: :any, x86_64_linux:      "32f90320c436dae548b670e659b7108d3a8d508e833d79a77614e9ecd669ce08"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "aa079d01b28b59b3700f48856ef693c84bf67bb4e2c3cdcdf4e4a580d58cd1d6"
   end
 
   depends_on "jpeg-turbo"

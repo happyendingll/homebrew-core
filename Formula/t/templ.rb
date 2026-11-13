@@ -6,11 +6,8 @@ class Templ < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f477fade0e1ab89ea6cfb55707c00d142172bd32aadddad09d84e6ee21fc8582"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f477fade0e1ab89ea6cfb55707c00d142172bd32aadddad09d84e6ee21fc8582"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f477fade0e1ab89ea6cfb55707c00d142172bd32aadddad09d84e6ee21fc8582"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9db93e6208ca2000a4e4975bde6a7f3693ea596cd0ad204c40f92ad4df0f5ab8"
-    sha256 cellar: :any,                 x86_64_linux:      "f7f2ceedf55ce2045cf2349505aef0af522d9cea6e84c1f4a1e24c774dd4720e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d3d189a92a317c811a16e0e814ed446ba12ba2461905ccdff81535d6b80a43a8"
   end
 
   depends_on "go" => :build

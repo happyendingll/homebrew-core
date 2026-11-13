@@ -6,11 +6,8 @@ class MermanCli < Formula
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a64d376bab9ed3d8fa14e09f1457b062ad9377d997cbafa3adabd9cc04a9ba9d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "428762d59fd47abc4714acd42ccd15b57c577544bb29b2eb2ea072aaa19a6a35"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3eca9ef714367cd51f2cfc2914151c6afc22d45308204256b018fbd5f5aaf04"
-    sha256 cellar: :any,                 arm64_linux:       "4fbcad46a21d660434a2a6cc56c0f756da4fe8014cb773bb1835c44b72bb310b"
-    sha256 cellar: :any,                 x86_64_linux:      "145eb6dc7f7552c7c2374571d300325198f2bf8510f0351091f41a42b475355a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "822a586dba774274d9d52f71016356bd37e4d73c1249a3064a22fe1cc82445c1"
   end
 
   depends_on "rust" => :build

@@ -8,11 +8,8 @@ class Fastapi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "709d4042776508a679560d000456bc1877811e76335f67fb70a283ea4b344a48"
-    sha256 cellar: :any, arm64_tahoe:       "273c203696794638b46eaeda2d828f6e6248c8ecdc8ff279afec6f64e02d90da"
-    sha256 cellar: :any, arm64_sequoia:     "7e79faa0965f88765ee9aa07817d2d968099099d87fbfd2eb75cf0cb5d9a2250"
-    sha256 cellar: :any, arm64_linux:       "809d368549823a9f7b2af3197ef3c0e8170bad6f2a1ea819b41299472fdef435"
-    sha256 cellar: :any, x86_64_linux:      "b9673b61d2951010700ce8df9c33960723093e3b4081af78095987a4db2b4bc5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "f49e8af8bb6fb45e5b484e254738aa43e7ad67d02b53b9175f71d55701d11ffe"
   end
 
   depends_on "rust" => :build # for annotated-doc

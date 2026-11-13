@@ -10,11 +10,8 @@ class MemtierBenchmark < Formula
   ]
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6a51da7c122049b5c29d8a4425b45f740923c488757f470a2ce4310901218bf5"
-    sha256 cellar: :any, arm64_tahoe:       "ae40da1fdff8aa72c39fa0758f74ac7d1a0135558f5e6d0082b73b69d394e29c"
-    sha256 cellar: :any, arm64_sequoia:     "a590b1b16b663598a3e20934c6c84d812d7ed7a1531b9317dcb9be32d5f419df"
-    sha256 cellar: :any, arm64_linux:       "6c0bc5141039bccb5399f8d858f91492fee28730bad5c0c4ad79ba08327448ce"
-    sha256 cellar: :any, x86_64_linux:      "daa668a5eb67b043e8089db5cf58ad0d12907a96db6326d38b7af5987a78f17a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "545438bf32421d38762c6bfe0e7b86da9fc21b65a5f5623b88390e3465ee7851"
   end
 
   depends_on "autoconf" => :build

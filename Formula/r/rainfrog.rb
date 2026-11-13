@@ -7,11 +7,8 @@ class Rainfrog < Formula
   head "https://github.com/achristmascarl/rainfrog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7e7f92d6cfb870664231d582d547fa748d137bc7e8826075f759bc281a17dd20"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dbc433166e62fb97df5005f95dc94117b5066637209cbc2f6ec78bd3006fb4d9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8cea024c1b241db6f3065e29791cda5257b51e6e4035c2f7ead89615a8959de4"
-    sha256 cellar: :any,                 arm64_linux:       "16eb55aba6cf8a5d8b157089d1d04ffb3444d8b6e0cfae3e6189973df6eea53d"
-    sha256 cellar: :any,                 x86_64_linux:      "fa0dc3ec38abef37d62cf541cd40fa55002978c2aaa8cba0c4836a09bbd0ef37"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "df943b5a94d359b092f86ee582e3850e80949a78c8949fee99c040226f7e3483"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Flow < Formula
   head "https://github.com/facebook/flow.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b1b5a66524cb7561826ec8f02835662fe1e77703c452362bd2cc8a4532597b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3c18b10b8832ee75f725a09574562754b79ebf4ced6f262b784509a94e06a817"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "51f75107b8458939f3553fcd495c37e4045f7d6a4900e4eb72fec41c520ff802"
-    sha256 cellar: :any,                 arm64_linux:       "a9d97771a94430eb88bac250a419d4ba7382d3016e03351edc952e7e0e566a6f"
-    sha256 cellar: :any,                 x86_64_linux:      "84ce33d9a3b3b4f911e1584f861ad4dac809a3e688467427d105b2f2351834bd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b132a4ecd4f9bd15bba2635945809c5f23ea980626e364649f12eb04a1110bf4"
   end
 
   depends_on "rust" => :build

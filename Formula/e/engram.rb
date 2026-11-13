@@ -7,11 +7,8 @@ class Engram < Formula
   head "https://github.com/Gentleman-Programming/engram.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2a7944137f0f410534c4ed99a32f006f50a179d621644f07d1f4821e8bd166f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c2a7944137f0f410534c4ed99a32f006f50a179d621644f07d1f4821e8bd166f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2a7944137f0f410534c4ed99a32f006f50a179d621644f07d1f4821e8bd166f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9d87841a194130ec29ecd273706a12a35c6f6b4df5d1d10f2fe6a45bf2db9e22"
-    sha256 cellar: :any,                 x86_64_linux:      "fe5433d940b2d316519688e6dd6f431eafd8f0c4681715978fda6cccfc0836e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f89551d0e555b8272af8cec6b7064a974a7393339eb144dab492acd89b616e3a"
   end
 
   depends_on "go" => :build

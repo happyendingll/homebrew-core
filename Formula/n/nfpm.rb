@@ -7,11 +7,8 @@ class Nfpm < Formula
   head "https://github.com/goreleaser/nfpm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69a48deb86446598392ad0dbb4e3deb15e9f3d930f47397e785cd9795cffc844"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69a48deb86446598392ad0dbb4e3deb15e9f3d930f47397e785cd9795cffc844"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "69a48deb86446598392ad0dbb4e3deb15e9f3d930f47397e785cd9795cffc844"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6e00ce7ddb5195d20ceb89ca8cd3ab63e547f4d770898e9e62946b1719f4ac32"
-    sha256 cellar: :any,                 x86_64_linux:      "0fc77878b04d5d51107928a1233635fb461c7da86554d7eeb63c40fe420151fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6cc26f2eb0b622970523a1281799c3371a56efc0a94081e369558a64861ac020"
   end
 
   depends_on "go" => :build

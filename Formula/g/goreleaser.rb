@@ -13,11 +13,8 @@ class Goreleaser < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ed3c35f71b98b639bb40ab02856696b66e3657a5d690524b17040d7f9345376c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bc32ecff26a02b9d09e559cc66a5ed54bdb6529162e439ac7d17470a9986f851"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "884666a551eebc455856d6600eb39f7a0c10455e2287f84e611d622014590a79"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0fa9addf46f1fc3239fd0c4eaf76d2e028c6ee8ce7d8bfe0c81f08dfbca5a472"
-    sha256 cellar: :any,                 x86_64_linux:      "c5458edd58db85dfd6ae4a9f29910dfd937edf10f629ea988246da43aa90f1d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "90a8e641d41665a39317b153e1bfd9f99db62bdd32f2b9a0f6f9d8e1ab81c3c3"
   end
 
   depends_on "go" => :build

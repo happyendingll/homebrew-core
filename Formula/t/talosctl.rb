@@ -12,11 +12,8 @@ class Talosctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ac8c1beaa47d4837d4a666f30d8bd615d9fed5423fcd62f1f1520d2e906fb62d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "76d250dff24c66ef4a767dfc051d362abbff43cd40e9d1774111904139c32b87"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0ffbc2cecc8b6e8c170ecd9b70f5cdc75db3ead71efe92c73e69c74782cfd2b5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "edb5bbcbcb348a988a9bcad3be080f932f09fed4b792e9239838093e54140754"
-    sha256 cellar: :any,                 x86_64_linux:      "55961574b4945f4add07737d3886673a959a80bc783d7d9911849e8407361f80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "9e35d050072eea574660dc2da23eb491de39a62fa6fedfbaecb552b8d4c4bc2e"
   end
 
   depends_on "go" => :build

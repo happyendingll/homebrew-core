@@ -8,11 +8,8 @@ class BeszelAgent < Formula
   head "https://github.com/henrygd/beszel.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe9c5eecad2bad92924633afa7cbb90af81314d54b57dbfa4b9572d039b71162"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe9c5eecad2bad92924633afa7cbb90af81314d54b57dbfa4b9572d039b71162"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fe9c5eecad2bad92924633afa7cbb90af81314d54b57dbfa4b9572d039b71162"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a30085320ce5eebbdf48b48515675e5eeb14d4e2eb9f3220e74c7581f307d097"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "771087efd4334dd66ae60284b2f0a64db884ea81c0bcac11175655cc5223d5d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ecfa75c47e707f32f07721f900934f0fc70574610eb9e3a0163230e86915f804"
   end
 
   depends_on "go" => :build

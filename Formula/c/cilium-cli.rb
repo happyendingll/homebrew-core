@@ -15,11 +15,8 @@ class CiliumCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "16ddb3115382631494d93f21bd14128f2215264ab8738cd19d23928929c0a06a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "813cd825372b5aa2d636ca77b23c90bbbe6ef4843bc5e4e3c67af646c235d679"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ad3c42001808f207eb0ecf0224c4d93835320a445a46711d31614d7bed4ff898"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "85859cca0c06e86c9a6db509f3945512252f2988fea45ac591e4afacc0ff4bc0"
-    sha256 cellar: :any,                 x86_64_linux:      "1c01baa1533440e2b345103b89b2983d8c89f618377a2de39e5414bcd15d4663"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "c71957a897ac7854601d30e1a594c2c1c8f8233a85a9a6706d2fee8299662909"
   end
 
   depends_on "go" => :build

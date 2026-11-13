@@ -6,11 +6,8 @@ class Sabiql < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "843225fc3b536612558d0bf7b5cf35053811d1d9611e02db4ae9e69d33129650"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "18b020ba7e157fe890471d67174244a8cdb567b4761f2a141dbbe5e942f6e031"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b3a66eb8977f68aea7d743682c109e0d685ae1d3cac9db885d9f40ba382b3490"
-    sha256 cellar: :any,                 arm64_linux:       "0e0d477366fee0a2c1778636d67d25247262cbc36c647192f9cbbdef1bb4c5f9"
-    sha256 cellar: :any,                 x86_64_linux:      "fcb006ecf2ea33de9d7ecfdfefd68d3e71c56549e43275785dae605c0c84ae87"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e3dd56e2cc8c16574afa8dff0ace082acbb3d100271cebdc96f300e421ef6e35"
   end
 
   depends_on "rust" => :build

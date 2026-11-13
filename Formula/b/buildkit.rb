@@ -15,11 +15,8 @@ class Buildkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ba0b7082f60b5d4a3b6c0110b4f32bf9822a3afcbf4aaa2a9c6170853f32dee2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba0b7082f60b5d4a3b6c0110b4f32bf9822a3afcbf4aaa2a9c6170853f32dee2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba0b7082f60b5d4a3b6c0110b4f32bf9822a3afcbf4aaa2a9c6170853f32dee2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4d7eaab316f9bbd62c077e8978c120f8c0617ce78e7601b30a132be07a757847"
-    sha256 cellar: :any,                 x86_64_linux:      "f12c75bc11ba2e193538f8c45a6f96a347c7c599d4f225f3b2921dae013d5bb7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "356a8bd9e30cbe235a2c3d0a58101f7514520d2cfcec642a5f276244c7e6991e"
   end
 
   depends_on "go" => :build

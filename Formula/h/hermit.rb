@@ -7,11 +7,8 @@ class Hermit < Formula
   head "https://github.com/cashapp/hermit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f34c9f0e17fac2d8988d78a89c153294d646e05fd420c5cf246493a113f95d57"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c68dc21ec858f98424ed234f5df4f1cf4a9ff23dfde07535ba02acc5b9ac9442"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "03071f86524d2ab6affbb5bbbf4f20c3ccfd75acb7444de1f06ce8e7eee31a75"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "86a2c0e195789305a4b4358c568d4beb27945914b275686be2143a84a5222138"
-    sha256 cellar: :any,                 x86_64_linux:      "561440ee5e1c67fde691c12e99c0e188c834a77b9a67641041cf90a1e346c6e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "78168e2a395bf372ad621612925f1ff5fa72b0ed05e19d1e297df11c49efa238"
   end
 
   depends_on "go" => :build

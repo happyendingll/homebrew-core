@@ -7,11 +7,8 @@ class Octl < Formula
   head "https://github.com/outscale/octl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fb9a31deee34b765e919ed262f53d50271c19b5212e5add1a3ddb087b9723079"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "49a4a2547c941c6b5a8308134aa3703845698ad72bc9e16f2c4712d8ad328522"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2b7612ed30905492a2622f4c0de8eccd0806ad2cd65c2009a695031e231d546f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c4dc20633fb4a183ae62dd4e47817481b2ec8aa03c8a7db73b16489a44bccdef"
-    sha256 cellar: :any,                 x86_64_linux:      "26d0cd0c758dcf553a5275807779df9b656fe31b0f117f036ac6545eb294820a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "99ef3a7bd93ef908ebfcca4818f0df6d199c9bb958ddd67356b070143ff61735"
   end
 
   depends_on "go" => :build

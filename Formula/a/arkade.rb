@@ -12,11 +12,8 @@ class Arkade < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ec63bb818d25e96d4111424d65082a5e0bbbd4b5d9f292732864aa5b721cbedd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec63bb818d25e96d4111424d65082a5e0bbbd4b5d9f292732864aa5b721cbedd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ec63bb818d25e96d4111424d65082a5e0bbbd4b5d9f292732864aa5b721cbedd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "18597187169509ced7b37051774434928bf14c530813bfb1d65025a53d551a44"
-    sha256 cellar: :any,                 x86_64_linux:      "1fb2142a10e714809a757817adab55cc19745892dab32aa405d6c858fae55d8a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "670a434d7502972c660305a5b6fc035af2c0844c295af71007784a8b62d38ea4"
   end
 
   depends_on "go" => :build

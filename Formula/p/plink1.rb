@@ -12,11 +12,8 @@ class Plink1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "011c20a42ba25975af270bf7c29d6df52e74370dabc4bf3627819d0a3cffeafb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "94a51199d23efa0ab5cd0e839f54c68df95a2aabb0153bedabe627bd9f9a2965"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c02013e508033a06cb15e6065c8a357653f74b3a25fc791c6a56850780a065a5"
-    sha256 cellar: :any,                 arm64_linux:       "238aaa239bf2eff6f3f9478fdfe1ccf8cdcabb602b6b1b4bfc830a64af89f2c0"
-    sha256 cellar: :any,                 x86_64_linux:      "7b99efde445ba5e65fcd60da9931e58bd456c2f116f20c0c652fc805e2c7c70a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "15a3c09f10ec70e7f6727c341f7b64ff7c2a67141ae923b296a3b3aeb2d736a3"
   end
 
   on_linux do

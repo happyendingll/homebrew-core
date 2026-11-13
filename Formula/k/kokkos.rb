@@ -13,11 +13,8 @@ class Kokkos < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7d23c2e4fa7b50da61e3713d6bf7ccd3509323bc00785b27be9fb5479816e761"
-    sha256 cellar: :any, arm64_tahoe:       "fe05e914c325f7dd62161ba320b1c6bfaa618b1ad81ddb2ee35df1fcb5ee9e7b"
-    sha256 cellar: :any, arm64_sequoia:     "29aab18b1b4ebf9eaa7985b9f948bc5384caaf1a07640160a280465d6650989d"
-    sha256 cellar: :any, arm64_linux:       "b2f01ca80d7d5e9a4cf7560befaaa14dd2727d37247cede4dd22eaea993da738"
-    sha256 cellar: :any, x86_64_linux:      "c4297214467974d7b1111cc8368fb5de25c2e04209cd77b96b68ccae7db89755"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "ae1395c114dc240b020e097283dc7d22f00fb62575e05fd9ab37ffb64e1d1688"
   end
 
   depends_on "cmake" => :build

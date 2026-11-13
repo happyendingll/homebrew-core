@@ -12,11 +12,8 @@ class Kapp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2e4304fac3412edbd726b88da1ffe235ccb8023f2ba969c86ae1d50ec190875b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e2e61602002e6b8c02390f4a5529ac61c2f9da60083d9274784f826713d8ff9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4023825f835a3bc5ee447e6b1f3380758f2dd018a9a39d414a9fbd2fe6689d74"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "301ef242be23613f17c13fcb8eb15de9121fd19974c0ea56c146d2927c774acf"
-    sha256 cellar: :any,                 x86_64_linux:      "b15370e2bfd63dc3a5997cb326b6fbe33b6f6feacba7d3ba5d21a7c7ce9e74e0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e900573412d70d6fa246101bfcaf846e78bb386de3be1509ea13acea04c99b72"
   end
 
   depends_on "go" => :build

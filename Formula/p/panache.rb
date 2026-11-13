@@ -7,11 +7,8 @@ class Panache < Formula
   head "https://github.com/jolars/panache.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "93e4fd8517994f94520831d0b043e5a9a34ea74803706430df75756349b84bc0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69203d0ffa3418b2b0d46551c2ff80f525c4df8ff1c1c7f8f974ab5f9a195cfd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "88908ce76649a834f796352bcdbd86537f8395f27a9facc34d73bda861dccaa5"
-    sha256 cellar: :any,                 arm64_linux:       "1099d8c130886fecf52d8d700038370e17768080139b1df79d3365e7075f61c4"
-    sha256 cellar: :any,                 x86_64_linux:      "9793e390877c01e9b576368821954dfa291c461327073aba6613ac83830463b9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ff54fac29c1b84d07fe614b99b91f829b6ceee90132488299e5ee84de3f405ba"
   end
 
   depends_on "rust" => :build

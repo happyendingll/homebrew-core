@@ -7,11 +7,8 @@ class Kool < Formula
   head "https://github.com/kool-dev/kool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "925e50b91292e72223a83724cc69b3788866f3640bfe662af865a4d26a494612"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "925e50b91292e72223a83724cc69b3788866f3640bfe662af865a4d26a494612"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "925e50b91292e72223a83724cc69b3788866f3640bfe662af865a4d26a494612"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f672ea370c5604e6d3eb2a0398684f8245e2ada3afbb18a33d4cada65edafdd3"
-    sha256 cellar: :any,                 x86_64_linux:      "acb89f82659956643662db44d8d25a2dda5090811dcdfa4d406f47076fda869c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e0f6b09d254cb59c90569d1d9d8764ea56dc9c62a32e6f28fab91b7875fd5af8"
   end
 
   depends_on "go" => :build

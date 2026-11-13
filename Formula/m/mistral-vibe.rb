@@ -9,11 +9,8 @@ class MistralVibe < Formula
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "03333309646f5a530c365b68040ba594cf4e3afa4d019a663665a15224d41e44"
-    sha256 cellar: :any, arm64_tahoe:       "1d5fa58c8f9751b899e2df94e45f81624f9b07fa118040f27a1091452965d2ca"
-    sha256 cellar: :any, arm64_sequoia:     "cda2f71c0627270ab180d47293be1a37734a9910df641c6c66d20007bc936432"
-    sha256 cellar: :any, arm64_linux:       "acc8bc1b0152edc271acbf1a528a84a12b8e5a10fd0549aac7736474b45c5fc0"
-    sha256 cellar: :any, x86_64_linux:      "047e4541b7128a788fbfb8bdbfa495b4cd4060fa7ea9c62792126b95c486a4b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "0d0604894b637bac760f5497bbfe32246ea342646a46ef8eee01a77271c00558"
   end
 
   depends_on "pkgconf" => :build
