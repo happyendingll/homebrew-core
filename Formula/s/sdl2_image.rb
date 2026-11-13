@@ -14,11 +14,8 @@ class Sdl2Image < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "94c3a842c63996b271c6c6571e809cfc3d0382b3e87650ea198635c0ccad8edf"
-    sha256 cellar: :any, arm64_tahoe:       "5be50d7cb3c3f91fdf5a7b9dcab8d034c811103bce8f1d4f48009afec59dc4a3"
-    sha256 cellar: :any, arm64_sequoia:     "e73feaab1d1de793669c299620346dd1b6f126834aab3c9efac01d3bcfb66efd"
-    sha256 cellar: :any, arm64_linux:       "eae08400b9b6fa326b70e45470a0559616e67f52c14eb8062d841ebda6a7fdc1"
-    sha256 cellar: :any, x86_64_linux:      "057ee12f097549b27c32c6ecd1a5d6288f1d29de699f7b823a5a893d78abd578"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c5ec213ab5f2e4775fe3709419ece9b934b0e55a393449ff1c097b139e906b23"
   end
 
   depends_on "autoconf" => :build

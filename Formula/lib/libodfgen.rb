@@ -13,11 +13,8 @@ class Libodfgen < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "21de7b0286b5f16a232fbb4456b4ccddc335e12b80ef1df9a7aa318c4fa6c1e2"
-    sha256 cellar: :any, arm64_tahoe:       "e5ac413589685636fca66be3533d82b03871f6212b7b3ffa07ea79247ba86407"
-    sha256 cellar: :any, arm64_sequoia:     "c5139571193f9ce15055aef6f5ce47184987a813f8b7bb65ba2dbb1cf853362e"
-    sha256 cellar: :any, arm64_linux:       "aff3f9f9a20f03a91c2467fd1d1397e10efeb78ba94468d18e5d96f19729fd47"
-    sha256 cellar: :any, x86_64_linux:      "779e70f0677f2d6e66953eaa0583dda710fb3eff341c7d1cdce83fec5ac93afb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c5aa43175f1eb32a868fb7f26de35375174aaf8659bc64ffda1f7f410c4e617e"
   end
 
   depends_on "pkgconf" => :build

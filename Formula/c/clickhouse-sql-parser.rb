@@ -7,11 +7,8 @@ class ClickhouseSqlParser < Formula
   head "https://github.com/AfterShip/clickhouse-sql-parser.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b000bb3f6dba44f7fd9dea47ab629bd852d03fb781d3af36278319026eedf1d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2b000bb3f6dba44f7fd9dea47ab629bd852d03fb781d3af36278319026eedf1d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2b000bb3f6dba44f7fd9dea47ab629bd852d03fb781d3af36278319026eedf1d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "173d4552d89e22584feec34c01836678f2084c3a478dfd8310861f96d918f43e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d8a77831b2e6dc04d4e48bbf1e5dc1725b5a334a92ec865d9a4ea7528d5c5d2f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5146fcde59c950d4ef9b88ee58f8139964afd1fad1f1c50c3e38d6d4a7f2f861"
   end
 
   depends_on "go" => :build

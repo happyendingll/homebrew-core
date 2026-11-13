@@ -12,11 +12,8 @@ class Cabextract < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a72af65513457bedcdadf111fcb022502ffee4cac6eb0f674a7cf449016f81f5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9bf0dafabe848673f7b1501467f1fd99ae9cc11427c1056621e375031ae5dc5c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4d45444d69bd2332701100c27601e5a009a2f8ccea0b30b159ac4c3c9696f64b"
-    sha256 cellar: :any,                 arm64_linux:       "e57ed13cbc70dc64d8146f7650be017e0d422d6286431e5573c6da89cf60bf78"
-    sha256 cellar: :any,                 x86_64_linux:      "7cbb01222097fe982c50869945cb672488b367b152fbcbfd460157f0ccda0b38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c7da4bdb6254f7073d1d367854652b9f059caa2b4fc9ae083ddb4e408a8c5902"
   end
 
   deny_network_access!

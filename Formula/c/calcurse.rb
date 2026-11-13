@@ -11,11 +11,8 @@ class Calcurse < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2eb8e08d63a8959d613c0d813d75a3df832c3954aae4af3af7514ec5c0f388b3"
-    sha256 arm64_tahoe:       "ae659e6b960dd2c98f6079ac27fdaa69f035d1b0d1cc467d472b61115017cefa"
-    sha256 arm64_sequoia:     "049e6b3779e9b7b032d939585c728fd085c37e93c1732b7d69f9bca7c1e4f37f"
-    sha256 arm64_linux:       "7922ea58aeb354ce3bfeb0238349feb875810cdbd3f234ead28c396f566e3e2c"
-    sha256 x86_64_linux:      "1b255f106d8b22fdbc11a70dadcc43cf9f9a9d4e944e8ecf27f26cd666205577"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "12970754af7a587fcfdcfefe6468a07c66de9e5c1c5e2624a1098448c5394814"
   end
 
   head do
