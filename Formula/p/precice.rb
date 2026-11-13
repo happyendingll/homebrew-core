@@ -8,11 +8,8 @@ class Precice < Formula
   head "https://github.com/precice/precice.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "73e96fe42575da52b7253d3821d5d243b0db01ae8bf5ffaaac455cca3419d2c3"
-    sha256 cellar: :any, arm64_tahoe:       "106d1ff72b107c9b724d97e77426471f29e5deda55ae5d613302953191d29769"
-    sha256 cellar: :any, arm64_sequoia:     "f0e4712c87ea7b64ac223e8ae12d120d5165c38bb0ca2749174e347b831f03cb"
-    sha256 cellar: :any, arm64_linux:       "6d62f5878a286d804de288b0d5dbe43b92a22d3ea8b9fd742a15451b696dbf9a"
-    sha256 cellar: :any, x86_64_linux:      "cb7bf5e9495f8a25ce6840c90da810ad84096bb595ee522431cbb821d26de224"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "8413c6d87d4c4c29996e89d70f6cefc886b1b6e45d4701ff8f55c223493586c7"
   end
 
   depends_on "cmake" => :build

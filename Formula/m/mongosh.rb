@@ -7,11 +7,8 @@ class Mongosh < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7d9676ad5671422ef3f271ac5c2e2c3015e41b4931569c4121ba7122aa260ea5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7d9676ad5671422ef3f271ac5c2e2c3015e41b4931569c4121ba7122aa260ea5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7d9676ad5671422ef3f271ac5c2e2c3015e41b4931569c4121ba7122aa260ea5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8a7f0c0fe173dee510b7bbdab31af10067e1055a89cf35043d466d733f3f352c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8a7f0c0fe173dee510b7bbdab31af10067e1055a89cf35043d466d733f3f352c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "7229c71dfb336a1b85f8b2781e5d6b532c4bf1aba3e9a251c774dcead06a6866"
   end
 
   depends_on "node"

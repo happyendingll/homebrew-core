@@ -11,11 +11,8 @@ class Homebank < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "1cb5dffff7a9b706d9fc1a8314fb733ac7d1e9dba92b590acbf21cb7b0dc0b46"
-    sha256 arm64_tahoe:       "2401e8227cb13f9de1dcf89b6bfd0eafa26b38d12d37bb8a29e10092b49f8c0f"
-    sha256 arm64_sequoia:     "80a9c76f9e24b128cd09d0df0389487d25de98a69627db6b238c73e3c467d228"
-    sha256 arm64_linux:       "00b09eedf572a3377473ed8a33721eb1526491d4eedf1385a5d493d5de259d75"
-    sha256 x86_64_linux:      "22083dfe1482b212a832340f5b5c40a45d301848cde30c71c57680897085aa10"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "5f33f0a935ccc90f750972a31e2b0a4efaf8e4dc3750ce73ddbd87bb07349a30"
   end
 
   depends_on "gettext" => :build

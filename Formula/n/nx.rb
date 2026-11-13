@@ -7,11 +7,8 @@ class Nx < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "13211846052cf65d6eb8b3076826b0ba9bd2b6f8f44b79e65d80d828e5c3dc19"
-    sha256 cellar: :any,                 arm64_tahoe:       "13211846052cf65d6eb8b3076826b0ba9bd2b6f8f44b79e65d80d828e5c3dc19"
-    sha256 cellar: :any,                 arm64_sequoia:     "13211846052cf65d6eb8b3076826b0ba9bd2b6f8f44b79e65d80d828e5c3dc19"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e9584c281e5858e7a04c5a7b0ae1613f89018cc122cc73305fec41728749bdce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "91ab18061a6f83bf485427b4f2ba585645173d0974bbb461815f17cb708df6b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "9b935f108fe9a64f9fb08183e15ab8d0c441063172bc105a7431299ca055b1c3"
   end
 
   depends_on "node"

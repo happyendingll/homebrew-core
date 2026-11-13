@@ -15,11 +15,8 @@ class Highs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7f49333672b6b7fa8d9bdf3acb4fbe33ff76eebe56aac3e70d3ab5ec1e9a9f6a"
-    sha256 cellar: :any, arm64_tahoe:       "2d235f7925d73c12d7bb461c8e98a1fd11949aaa1b255bcbc8a33b212782d957"
-    sha256 cellar: :any, arm64_sequoia:     "c758868c9632031d093d776611d21f22c455ea0b7619b3a27702e16134d6fcd8"
-    sha256 cellar: :any, arm64_linux:       "0a558678b6b75a4ac90dce3232009186ce62f8644d5cde0e021a755dc8c83bc3"
-    sha256 cellar: :any, x86_64_linux:      "0d871d4f78a7cf450d092bc74ad4339ef60093e3e0efee8c519dd67a9c2f8e83"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "9e72bcceeb7aa78025eb3899a3e96bf01669b274d84c6fcd92bd2272b5df3275"
   end
 
   depends_on "cmake" => :build

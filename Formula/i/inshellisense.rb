@@ -6,11 +6,8 @@ class Inshellisense < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3d271335967351d5ced28094811a7934304a825f920ef911c21bd92a22ab7ade"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3d271335967351d5ced28094811a7934304a825f920ef911c21bd92a22ab7ade"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3d271335967351d5ced28094811a7934304a825f920ef911c21bd92a22ab7ade"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ae151d3c4de4241580f2472516e3ae0ccc67b0f9c0855219fe42410454408938"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "84c934e9024a34aa9bd4633779dc5631340444b337a2ceb83aa0f626d3a37f6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "9447d358e184490c8d37a5a2dd5193de91abbb64b2da14695ebeffb062b4a7a1"
   end
 
   depends_on "node"
