@@ -8,11 +8,8 @@ class TechnitiumLibrary < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a1edec6890fdc1ee779c1d160ba19802f2cdbf558d1f3c6610c41332d3941a9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8951d861eabae1b1063070370b86e833df6aa901f47b042b3068906bbaca01e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2851a1c1c8660c02f408fed599ab659bf813cd59506357d509a5b201f8ff3bbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b2b88a0c4bbc8b1d72fc1dbd87c74719b883dc32fb23aaed00a04f1e08dd77ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "592c64756ab807a028bf409c09763cf7f40bf4929427778303b6a50e56ce1248"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "19232e9799d3c3c995ca1dcecf3733d639c8573f528f3fb87780f350553d4f1a"
   end
 
   depends_on "dotnet@10"

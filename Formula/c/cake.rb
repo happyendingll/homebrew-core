@@ -6,11 +6,8 @@ class Cake < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "10d9c11dad1a5f67e2cb7fba77eb7e18a04559bdd5a3891868076d97bab7b163"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "af2ef0b8938b0c1865ccbeec6605d04e129ca7615dde2f074119f512076bf2eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "369eebbb28824d236d3153f20aff058daeaae056096d39c5ec38f6c804492af9"
-    sha256 cellar: :any,                 arm64_linux:       "dfba519f5a2aed827898d8d4556f5609b0f98ae5ad7a94edcbcf948e1f648b40"
-    sha256 cellar: :any,                 x86_64_linux:      "e25c0a91a368d87066629cf99c4bf71ca1f006307a79f6ebbdb591403910bc8c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "a5830367c0e3c1309dc0583c3c390984be9587696ca62b2d395f1b61b6b05957"
   end
 
   depends_on "dotnet"
