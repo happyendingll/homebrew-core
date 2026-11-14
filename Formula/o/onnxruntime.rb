@@ -1,10 +1,10 @@
 class Onnxruntime < Formula
   desc "Cross-platform, high performance scoring engine for ML models"
   homepage "https://github.com/microsoft/onnxruntime"
-  url "https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.31.1.tar.gz"
-  sha256 "92ffbf8b97872fd1e73c9eebdf3319d9a3b24919ae438d27db903b72ee08939e"
+  url "https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.32.0.tar.gz"
+  sha256 "8bb6dde72d89509b8c014a440bf113505d86af99e8f143da3de1a3feb8132561"
   license "MIT"
-  compatibility_version 11
+  compatibility_version 12
 
   livecheck do
     url :stable
@@ -12,8 +12,11 @@ class Onnxruntime < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "278297700110cacd27e3b499b9b4416dadf9f43300280aa2633ec1ccc8e81e2b"
+    sha256 cellar: :any, arm64_golden_gate: "756dbf106ccd54b45c01fe5f80458b949a5e8e1a036576447a9be0298db88bbb"
+    sha256 cellar: :any, arm64_tahoe:       "4d1a1a90456c57cb4ec6a8a2aabaef4ffe14995dde54de10a0c75e9ee21e0135"
+    sha256 cellar: :any, arm64_sequoia:     "5cea3fb7fbef84304e8cc945fc47914e9daadf79bd7dd397980b973e1960abb5"
+    sha256 cellar: :any, arm64_linux:       "d2e28a3de14cf34dffdc6a070ac6e8147f8824ab1cd71a23971bb9eb17704b0b"
+    sha256 cellar: :any, x86_64_linux:      "b97424995489b5279bd3480d5d72ac0e07f4a95817b189f4f0bd637adb479510"
   end
 
   depends_on "boost" => :build
@@ -82,14 +85,6 @@ class Onnxruntime < Formula
       url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
       regex(%r{^psimd;.*/(\h+)\.zip}i)
     end
-  end
-
-  # Fix compatibility with newer ONNX types, upstream PR ref, https://github.com/microsoft/onnxruntime/pull/33259
-  patch do
-    url "https://github.com/microsoft/onnxruntime/commit/9be45798c9a3d17bdf6c29e623a9823cfee98547.patch?full_index=1"
-    sha256 "23aa70e50ae04fd67e563a5f81a9d387e7b068e0256f5fb1632b3744cc3b67ab"
-    type :unofficial
-    resolves "https://github.com/microsoft/onnxruntime/pull/33259"
   end
 
   deny_network_access!

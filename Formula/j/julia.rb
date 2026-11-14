@@ -2,8 +2,8 @@ class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
   # Use the `-full` tarball to avoid having to download during the build.
-  url "https://github.com/JuliaLang/julia/releases/download/v1.13.3/julia-1.13.3-full.tar.gz"
-  sha256 "13c4cd067962d6c81fea60081925be9e2992a4204289cc30dee3ddd9692cf31b"
+  url "https://github.com/JuliaLang/julia/releases/download/v1.13.4/julia-1.13.4-full.tar.gz"
+  sha256 "55bb4442c887a3e99f287b53c467fdd5e78e376344ea2a84865742d13a27d71c"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
@@ -17,8 +17,11 @@ class Julia < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "606fcad6a78e23e05ce9ed8e1537eafece6e5cc9285d987fb82bfdf9b33eb7cc"
+    sha256 cellar: :any, arm64_golden_gate: "d63fd3799057df4562e21076754305e56657eee7bbe9517ee1e746e24c3b15ff"
+    sha256 cellar: :any, arm64_tahoe:       "6c7a4619906848bdce915f9ded0e71bf8135aca96aa47c8dbe008146463cc5f9"
+    sha256 cellar: :any, arm64_sequoia:     "6a1264fb7d448748ffb37a7969f0b0f800637502b96ba51025f354a656c60b71"
+    sha256 cellar: :any, arm64_linux:       "89fec2b2ff88d41cd9f11845e803601440e04c1ea0fd1d3e194cd22833fec9f4"
+    sha256 cellar: :any, x86_64_linux:      "59ebbbac1b045fce652b4dfb63dc9e33501bfd74e4f05fb63605da329d584a90"
   end
 
   depends_on "cmake" => :build # Needed to build LLVM

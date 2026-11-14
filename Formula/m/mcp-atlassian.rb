@@ -3,14 +3,17 @@ class McpAtlassian < Formula
 
   desc "MCP server for Atlassian tools (Confluence, Jira)"
   homepage "https://github.com/sooperset/mcp-atlassian"
-  url "https://files.pythonhosted.org/packages/72/9a/8d093970c753099c59a3985faf971079fb8d6efe09b5456dd8ce35bec996/mcp_atlassian-0.24.2.tar.gz"
-  sha256 "ef690378cf120c8900bce539b2c950fd639eae72ec1c3ab0a1743fefa1da95cc"
+  url "https://files.pythonhosted.org/packages/29/ba/ef1fa817694aeebdacfc97b6bcc283b56e957775737d000d1f41d690f4ea/mcp_atlassian-0.24.4.tar.gz"
+  sha256 "ef0fbe8d269d8e6e53d32858ec533b7c9f3d59c14e1f95c336bdfe974861407b"
   license "MIT"
   head "https://github.com/sooperset/mcp-atlassian.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "968bd371c6f1142f94a51afd6cb5ef27b6a9bd47c43dab8716911da09dcdea20"
+    sha256 cellar: :any, arm64_golden_gate: "1abea07f4ddf5fdfd90d2b3c265a451a43f25f9146708f7bd5462a0d2f8a8ffd"
+    sha256 cellar: :any, arm64_tahoe:       "cf3512a88081e907ffb72aa4b086b3ac00d657219a91f41bbf6bb0f004d115cf"
+    sha256 cellar: :any, arm64_sequoia:     "e21ccef554528172e5de9807c30cb4f3580d74221944696f7dacf0ba85ac87d5"
+    sha256 cellar: :any, arm64_linux:       "dacf4e80ba509ad2bc76c944f9948bba802a9f96bc211ec48ba0dc6ec308c0bb"
+    sha256 cellar: :any, x86_64_linux:      "b1a3e272954be3d311ae6f01ddbd0d62683b5e22516a718c08a5fa053ac36206"
   end
 
   depends_on "pkgconf" => :build
@@ -89,8 +92,8 @@ class McpAtlassian < Formula
   end
 
   resource "cyclopts" do
-    url "https://files.pythonhosted.org/packages/4d/b2/b6d6f3a5fc8b16e274eefc5c89d8e555d5bf8d3c0e4c0a770236d9d54722/cyclopts-5.4.1.tar.gz"
-    sha256 "5872925e9a6ff3ed2344b91abe0c3593b853a647c0c17adebb0939cf6a5a8385"
+    url "https://files.pythonhosted.org/packages/49/a2/34a66cdd2c2a5ffcfb15c195091bb944cf25bc8c1c0faeb4726ecb906c18/cyclopts-5.4.2.tar.gz"
+    sha256 "f0374ffae32bba180db7eae1d17a97a1bcd656455a3b7436f2133c4132f7c5b5"
   end
 
   resource "deprecated" do
@@ -309,8 +312,8 @@ class McpAtlassian < Formula
   end
 
   resource "pydantic-settings" do
-    url "https://files.pythonhosted.org/packages/d0/31/21d21e0e38a8f5f7a7f0cde22820117b6d17d6bc36f348129527f915d7f4/pydantic_settings-2.16.2.tar.gz"
-    sha256 "3dc08ffabed2bbd5dc2dd55ead7b78b4e4c5cd776aecd04310db5f1224caaf46"
+    url "https://files.pythonhosted.org/packages/59/28/227c843eedd29bd78e132e5aafa420d83154b10465c312f9c21ff2eaf77d/pydantic_settings-2.16.3.tar.gz"
+    sha256 "10e36f616623ebb586c05ca3d3cd22927146869db413d4f14c20c514442a1337"
   end
 
   resource "pygments" do

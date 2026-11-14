@@ -1,14 +1,17 @@
 class EnpassCli < Formula
   desc "Enpass command-line client"
   homepage "https://github.com/hazcod/enpass-cli"
-  url "https://github.com/hazcod/enpass-cli/archive/refs/tags/v1.14.0.tar.gz"
-  sha256 "e54fee6a4af2fb0acb003b7ac8de13a9a8cedb2cfd55bfea7b18484d87a1de5f"
+  url "https://github.com/hazcod/enpass-cli/archive/refs/tags/v1.14.1.tar.gz"
+  sha256 "674d0ec15481703962eff2aa69e243ae2cd003048f862344bf925c28d7ed8f3f"
   license "MIT"
   head "https://github.com/hazcod/enpass-cli.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "d7fb412a63b376096b17155fcd6887bd043f62d97f0db45fb97837e1fb9cbd12"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a375d30cafba65e9b79703aa433917a784b0ac61366516c1ce0babfaf81c3914"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "02d53ac1384605a8a36ab338f0af5ce36f43f4fcae82e99f27da398ea71ebecb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e18c6896fda816a53d59f48739a134d37931cc1bcf58447ae720f30e57a025c"
+    sha256 cellar: :any,                 arm64_linux:       "19224a412234e9d7fe0c51bb167d44997def39d0bd6b442ce9c687548e78ed91"
+    sha256 cellar: :any,                 x86_64_linux:      "cd21525870632503bcbc274b4c3b33da20eb4c107bd2c624121361ce2fd7be64"
   end
 
   depends_on "go" => :build

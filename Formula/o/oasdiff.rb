@@ -1,8 +1,8 @@
 class Oasdiff < Formula
   desc "OpenAPI Diff and Breaking Changes"
   homepage "https://www.oasdiff.com/"
-  url "https://github.com/oasdiff/oasdiff/archive/refs/tags/v1.37.0.tar.gz"
-  sha256 "cc8d7a4df7b7ef2947361af703e6deca1ac5739069f5618cb98f91627a5199d4"
+  url "https://github.com/oasdiff/oasdiff/archive/refs/tags/v1.38.0.tar.gz"
+  sha256 "286ca90992744acd71350462dcf5aedfbe48bb9d6c86c95b747a95a359bc49b9"
   license "Apache-2.0"
   head "https://github.com/oasdiff/oasdiff.git", branch: "main"
 
@@ -13,8 +13,11 @@ class Oasdiff < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "98f3a7056931c19bded87c08f2cdbcd3fdc682e749b770fce3b3406247f22e31"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "da217774e7da6ac58d3be41fd8ec7f37898883174bc448c8f29a1965639d13dc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "da217774e7da6ac58d3be41fd8ec7f37898883174bc448c8f29a1965639d13dc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "da217774e7da6ac58d3be41fd8ec7f37898883174bc448c8f29a1965639d13dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6dad1efc3f7212d65e26d241583ca5d51611835c1ee96775ec4e5502616ae768"
+    sha256 cellar: :any,                 x86_64_linux:      "526addaae4f774e47a214411d6329b74f06f6df78830d14e8e096651c9f770d5"
   end
 
   depends_on "go" => :build

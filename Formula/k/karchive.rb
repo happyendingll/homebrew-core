@@ -1,8 +1,8 @@
 class Karchive < Formula
   desc "Reading, creating, and manipulating file archives"
   homepage "https://api.kde.org/karchive-index.html"
-  url "https://download.kde.org/stable/frameworks/6.31/karchive-6.31.0.tar.xz"
-  sha256 "95acaf5a459593184104e1c157cef415ec59a33e71674186169e0df33cdacaac"
+  url "https://download.kde.org/stable/frameworks/6.32/karchive-6.32.0.tar.xz"
+  sha256 "30687d9be0aea05a4ef887212abd91d7c4337cb9f166610f98eac2b01407fb1f"
   license all_of: [
     "BSD-2-Clause",
     "LGPL-2.0-only",
@@ -18,8 +18,11 @@ class Karchive < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "592e5146f62cbcec04c701ab832a9e30feb5003bd1c860872977ee6cadea589f"
+    sha256 cellar: :any, arm64_golden_gate: "ee811c8e9d98a3b986b736cb677d5fa4418337b3918bcf02e00848f1c6878c35"
+    sha256 cellar: :any, arm64_tahoe:       "8d6ae92d2838ac8a8a0a9440f7edb0949888e41473e07fb705ad4ca0e41f1193"
+    sha256 cellar: :any, arm64_sequoia:     "ce44273c44192d780c899f72f904002094a7f77f09c8d70bb11c45d6770162ad"
+    sha256 cellar: :any, arm64_linux:       "5fa671edab1f85e1874c81baffdad218b7f9aceae4b5025c4034ac134dce0f76"
+    sha256 cellar: :any, x86_64_linux:      "7b2ebebcefdb41fffff57601f2486a699af363704d84d95fb7d2d4bee4830e7f"
   end
 
   depends_on "cmake" => [:build, :test]

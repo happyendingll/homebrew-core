@@ -1,13 +1,16 @@
 class NetlifyCli < Formula
   desc "Netlify command-line tool"
   homepage "https://www.netlify.com/docs/cli"
-  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-27.17.0.tgz"
-  sha256 "564d463f33c1c47df222577236b78c76467520d494d669a720573f759a804ff6"
+  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-27.18.0.tgz"
+  sha256 "ca1d70247976e3691acf8708d87135dbbf9fe9c8bb61936fdae173db44096d55"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "d8f4561ebf1ee02db67474aa344ca77dd3f85d9528e569335c174be743f343b6"
+    sha256 cellar: :any, arm64_golden_gate: "9e89bd88fc2e16886baa9812857ac083a87fa9fb4f5ab04564782a6f837591d5"
+    sha256 cellar: :any, arm64_tahoe:       "9a36ea4d527f38904720b9898080186e77fb5e21f02985c9931a991912a5bde4"
+    sha256 cellar: :any, arm64_sequoia:     "84612a0f6cfd47213144a8d63d356cbb2fec9b3f685211344dc66fe28eebc9b2"
+    sha256 cellar: :any, arm64_linux:       "5f085463d18092650136d87c34e44358085caf73a1767d8a18bcfc9167ac9b00"
+    sha256 cellar: :any, x86_64_linux:      "973070770c670ac70b4b9ee15f11a43560bbbd7a6976edcfc8ab058c6fde97d2"
   end
 
   depends_on "pkgconf" => :build

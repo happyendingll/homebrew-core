@@ -1,14 +1,17 @@
 class Vals < Formula
   desc "Helm-like configuration values loader with support for various sources"
   homepage "https://github.com/helmfile/vals"
-  url "https://github.com/helmfile/vals/archive/refs/tags/v0.51.0.tar.gz"
-  sha256 "413b60e0abc9ef39a52f23b994f3b857d5e45733f33139899d7f1d68256bf142"
+  url "https://github.com/helmfile/vals/archive/refs/tags/v0.51.1.tar.gz"
+  sha256 "d132c1e739d837f3e2321ca1d215915dfd6d78a6c853ed8fd0bb1d6495dc7069"
   license "Apache-2.0"
   head "https://github.com/helmfile/vals.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "4041ffbd7233562e24560ef4abfe20e980ee052abbbdd961897ce40fd0a46bff"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f81aae07a0d27d004909d3cc6744b4ef81c2d59e3a01e8b89c2b9bfa8e274971"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "668079b59ef43cf66db2c089f4364b65f1e65ed6c15b85e0b512dd7f8e5727d3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d29c7c93728cc35ec037c53e0b177e1961d53bc56147ce63e2cb5dc9068b120"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1f22fe7369b89d95cb1fa250c4e1d907c798ec90ac52a8655938785820339c08"
+    sha256 cellar: :any,                 x86_64_linux:      "cf8293e467479ebb326de5cce47ae9b774fcf4e079964a4b4e2137c5aca76ec5"
   end
 
   depends_on "go" => :build

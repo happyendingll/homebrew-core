@@ -6,11 +6,14 @@ class Nvchecker < Formula
   url "https://files.pythonhosted.org/packages/be/43/e2b9699bb92a8125a24f2052152dfbfa4286285e6ea7aa7a47e8728ed72e/nvchecker-2.22.tar.gz"
   sha256 "7c5d04d55e3faffa2f7e7a81165a2f6b68786f4b185d4e1e2ec7af03a524e784"
   license "MIT"
-  revision 3
+  revision 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "b9e85668768895de90481fed452d9dd7ec25e781dbb26149cc4212b58c91901a"
+    sha256 cellar: :any, arm64_golden_gate: "519c6daabcf15100e7be0992071944b3ba58c836f3849996bb9be8f343d2771b"
+    sha256 cellar: :any, arm64_tahoe:       "0addcacb0e328b872c8d32f789dbb5e0bde0ee0526d27daaf4e10aa96049c09a"
+    sha256 cellar: :any, arm64_sequoia:     "106aa316d6a0948a380fb34a315699bb298fb448ae1df3ad020faca4437763c1"
+    sha256 cellar: :any, arm64_linux:       "0ca70236db2035937984756f8227c46538fa69524562333655b2bdf136fbcef9"
+    sha256 cellar: :any, x86_64_linux:      "c45a3b0896b4a4fcebc215d38e5495c83357fd967ea652640e8726a7acf48633"
   end
 
   depends_on "curl"
@@ -25,8 +28,8 @@ class Nvchecker < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/35/e9/bf409046a91b6a9ca652e9b0ac3c39481674f6774e23e58b52315516099a/platformdirs-4.13.7.tar.gz"
-    sha256 "f7f351c027d6632c30471124e1fdb6ac0fef9ccc5cbac1b34cb333431b1fc3e1"
+    url "https://files.pythonhosted.org/packages/d7/9a/8475be631fb33ca1466915e70fd594c42a4e84b512db650eaa14f90fe75d/platformdirs-4.14.5.tar.gz"
+    sha256 "32e9921db7385aa8169bee4fe9501923e5715ba9fb7ea3b9c69b0d8e0639f7a1"
   end
 
   resource "pycurl" do
@@ -40,8 +43,8 @@ class Nvchecker < Formula
   end
 
   resource "tornado" do
-    url "https://files.pythonhosted.org/packages/d0/02/5f549b1ad5da6267ed1e1fac2eef69257b1979cc812497002499b7895ff9/tornado-6.6.tar.gz"
-    sha256 "34c4aa916d7f2b2d5cadee2c6850f5a4a7f3d688cbf58399ea9bd3057af4abd5"
+    url "https://files.pythonhosted.org/packages/64/2b/8ff2b41620cbba0eeb0862fed21dcaa5a2ad36c6dd9bb465f9ff7a147be2/tornado-6.6.1.tar.gz"
+    sha256 "28e6311402af59c8b02e3fa0f5e7d8eb465b25081381803b127d97e6a4395d5a"
   end
 
   def install

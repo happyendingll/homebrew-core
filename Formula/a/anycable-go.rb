@@ -1,8 +1,8 @@
 class AnycableGo < Formula
   desc "WebSocket server with action cable protocol"
   homepage "https://anycable.io"
-  url "https://github.com/anycable/anycable/archive/refs/tags/v1.6.20.tar.gz"
-  sha256 "d03981135c87401e298b5e79bcad0571e2887db9b946d22fd44f13c24b56fc05"
+  url "https://github.com/anycable/anycable/archive/refs/tags/v1.6.21.tar.gz"
+  sha256 "af9cc9a79e758e4ee125bd6d74850fa747817da205c69fe0ecfe999fe06a336a"
   license "MIT"
   head "https://github.com/anycable/anycable.git", branch: "main"
 
@@ -12,8 +12,11 @@ class AnycableGo < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "90738e2dd982b75baed027d856c2ab01cd295bc4024b99fad39891ebc242c575"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "931bf9f1b9813bf6153ce88d18e7cf52385abd052176cea9ab5d7a90575cd4b8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "931bf9f1b9813bf6153ce88d18e7cf52385abd052176cea9ab5d7a90575cd4b8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "931bf9f1b9813bf6153ce88d18e7cf52385abd052176cea9ab5d7a90575cd4b8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7ea916daeb4cf3d5a3b613f4c5740018f62911265e49ee6d00ba1cb03efe4d36"
+    sha256 cellar: :any,                 x86_64_linux:      "26fb9eb514b431e11509a9fda678f7826f2dbc85e1645d3e1e29051bc1720b89"
   end
 
   depends_on "go" => :build

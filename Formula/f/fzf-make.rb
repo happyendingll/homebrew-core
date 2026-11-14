@@ -6,8 +6,6 @@ class FzfMake < Formula
   license "MIT"
   head "https://github.com/kyu08/fzf-make.git", branch: "main"
 
-  no_autobump! because: :bumped_by_upstream
-
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
     sha256 cellar: :any_skip_relocation, sequoia: "2e1a8035776b7a48e0f17e262f09a6f1500f5b416eecda6b22ac5c86081e1ad4"

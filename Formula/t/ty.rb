@@ -1,14 +1,17 @@
 class Ty < Formula
   desc "Extremely fast Python type checker, written in Rust"
   homepage "https://docs.astral.sh/ty/"
-  url "https://files.pythonhosted.org/packages/34/6c/22c0680e71f529e084ee2e308a51f04317298248ee699f4914c02129c351/ty-0.0.101.tar.gz"
-  sha256 "dbb43374b49fe30ea49e244da63aa90098dff1257a49ae4351b44881ccef724f"
+  url "https://files.pythonhosted.org/packages/8a/06/fce7ef8edb9af069cbd17accbc81804e9638f70f4ebf674d0b7847a2023e/ty-0.0.103.tar.gz"
+  sha256 "bf4dc5160a482d24b16e3b5057d638a02b06406d54faecb600a2c109cb023c45"
   license "MIT"
   head "https://github.com/astral-sh/ty.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "58f29a398fb9d8f2a6c36960375b9bbe1d67afd61e2e09870480f116419c700c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6ba1e54895d458e993ba6f8106cebcf8c69023b5b4de6186dbcba259078ed6a8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8b7aec442e6b4c526f11bea4684b5bbbf5532da3b78459a20fc9ce25807ec22"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1146757661ed293501bc12a930813103bf17423e8367c33f388e9c99e659bec8"
+    sha256 cellar: :any,                 arm64_linux:       "3e411d04a3307b7ca7fa030febe096e7466c268098fb8e17ee2de9cfb10ca415"
+    sha256 cellar: :any,                 x86_64_linux:      "475a9c35abbeaca968039d69d7a0bb1293ec19aeb372abd0cd3f5b0f1c233e85"
   end
 
   depends_on "rust" => :build
@@ -36,7 +39,12 @@ class Ty < Formula
           return x
     PYTHON
 
-    output = shell_output("#{bin}/ty check #{testpath} 2>&1", 1)
-    assert_match "error[invalid-return-type]: Return type does not match returned value", output
+    shell_output("#{bin}/ty check #{testpath} 2>&1", 1)
+
+    (testpath/"good.py").write <<~PYTHON
+      def f(x: int) -> str:
+          return str(x)
+    PYTHON
+    system bin/"ty", "check", testpath/"good.py"
   end
 end

@@ -3,18 +3,13 @@ require File.expand_path("../../Abstract/portable-formula", __dir__)
 class PortableLibffi < PortableFormula
   desc "Portable Foreign Function Interface library"
   homepage "https://sourceware.org/libffi/"
-  url "https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz"
-  sha256 "7da3e2d9a171eb0a038f592ecad3ff2bb2550f3496d87b3b29ad0cf4430c0db4"
+  url "https://github.com/libffi/libffi/releases/download/v3.8.1/libffi-3.8.1.tar.gz"
+  sha256 "81e879c094cc5ec3186c48510c6385ac6b3e866192e8bc71a35245703757ee40"
   license "MIT"
   compatibility_version 1
 
   livecheck do
     formula "libffi"
-  end
-
-  bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "237993a44642cc801aba5a6c04de8f26298609ff293d5c06a39692c108d08ba3"
   end
 
   deny_network_access!

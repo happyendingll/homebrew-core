@@ -1,8 +1,8 @@
 class RustWasm < Formula
   desc "Rust standard library and sysroot for WebAssembly targets"
   homepage "https://www.rust-lang.org/"
-  url "https://static.rust-lang.org/dist/rustc-1.99.1-src.tar.gz"
-  sha256 "db56bbc64db491ceda6b78a2811a6d121c639338906fd944f720289cbd02245c"
+  url "https://static.rust-lang.org/dist/rustc-1.100.0-src.tar.gz"
+  sha256 "e8904548563117043c24a67c4967119b7c9ed304821988283e7681122ceec98b"
   license any_of: ["Apache-2.0", "MIT"]
   compatibility_version 1
 
@@ -11,8 +11,11 @@ class RustWasm < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "1c9fc5c7953ab41790357a251b09dd0dfc997b2a15586258f5aae40ed5d2360d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1a50677159da179fa2019c8e82cae19ea68a247cea716319cfc684882f0fabeb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1a50677159da179fa2019c8e82cae19ea68a247cea716319cfc684882f0fabeb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1a50677159da179fa2019c8e82cae19ea68a247cea716319cfc684882f0fabeb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "76d3a03ce1a6e93fa311e0000a6d22b8d4eec2578ec73544f5d95ad9abf20d92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "40a295e97486282674991d69911cf3ceea7b894f1663fa76da3df48cd1693849"
   end
 
   depends_on "wasmtime" => :test
@@ -81,7 +84,8 @@ class RustWasm < Formula
                       "-Zbuild-std=std,panic_abort"
 
       target_lib = lib/"rustlib"/target/"lib"
-      buildpath.glob("target/#{target}/release/deps/*.rlib").each do |rlib|
+      # Cargo 1.100 nests artifacts by build unit rather than in `deps`.
+      buildpath.glob("target/#{target}/release/**/*.rlib").each do |rlib|
         # Skip the stub crate itself; keep `std` and all of its dependencies.
         next if rlib.basename.to_s.start_with?("librust_wasm_stub")
 

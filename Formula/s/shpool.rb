@@ -1,14 +1,17 @@
 class Shpool < Formula
   desc "Persistent shell session manager"
   homepage "https://github.com/shell-pool/shpool"
-  url "https://github.com/shell-pool/shpool/archive/refs/tags/v0.11.6.tar.gz"
-  sha256 "3b8b50cc220fbd4d55f0071e8bd9aa77f035d73fb8797ae39ed883b1619d1864"
+  url "https://github.com/shell-pool/shpool/archive/refs/tags/v0.11.7.tar.gz"
+  sha256 "a521a6fc38434c6f881145b726ad4101e4bd1dc06f6f17260fdb881b52f172b6"
   license "Apache-2.0"
   head "https://github.com/shell-pool/shpool.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "3fd013675240fbf9e4551ce7169587dcda9e20b86beb0865515cf69bb15e7eb4"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "72ec397c6d873c0251feee74c9a79711b03133f855782159f2e53399c449280b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba86152b660fb83d52f2ec08b5bec088d0deccd6c9e6b6b313617d04590dfda6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "de7f2dd3a8903729d2f6de370e0ee49b587f20656c873cc929247e1c5893af94"
+    sha256 cellar: :any,                 arm64_linux:       "f0b3d0201c717954bfd23d978a28c11348cf139f471aede3fd92b8040a42cca9"
+    sha256 cellar: :any,                 x86_64_linux:      "51615bd83a356ea5df941250ef41ede269dd78819fcb4f1279ed13e2c9ff503d"
   end
 
   depends_on "rust" => :build

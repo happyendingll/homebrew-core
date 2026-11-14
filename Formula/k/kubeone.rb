@@ -1,14 +1,17 @@
 class Kubeone < Formula
   desc "Automate cluster operations on all your environments"
   homepage "https://kubeone.io"
-  url "https://github.com/kubermatic/kubeone/archive/refs/tags/v1.14.4.tar.gz"
-  sha256 "420b7d729702617e2c6070aafd280843af3d58f3be025fe743f49b16454f582b"
+  url "https://github.com/kubermatic/kubeone/archive/refs/tags/v1.15.0.tar.gz"
+  sha256 "f7614214f85da4c652e1aa6882ae9e1edae8d6d558e7eb93306dc37c2c5515c2"
   license "Apache-2.0"
   head "https://github.com/kubermatic/kubeone.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "6f83ce31dc9895b83d5a594fae1ca41f5078c8240508d6ba74fe0ec7f8b7ba35"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5fea206381ac9e6677117bfc75212d373b69792d9ba9ad5ab91cfdc39da4f054"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "76d52db9b2d1f37e4a5609e1ee65db6d8fce1cd94da9f53aaa966c4755f555e0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6deb54f773082e87be726b96d4187e065bbd92f68a059c429303071c8123b813"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5b5d03e759a80621e8b0a43b923965790d707a7bfa40d591bcd73ea6736ca62d"
+    sha256 cellar: :any,                 x86_64_linux:      "104bde5a936f63aa605f645705df0e3c7ee4fe71764832a03c60b666631d5991"
   end
 
   depends_on "go" => :build
