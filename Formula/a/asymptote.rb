@@ -12,11 +12,8 @@ class Asymptote < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "15f2e324377f4f3c8cf2ccdf645a2fc1df4e4ae836c21a01592e242b25f83760"
-    sha256 arm64_tahoe:       "cc599f37c6eedeee835f0ac1778faae4483f7b755e2c1eaf5668f8e374877372"
-    sha256 arm64_sequoia:     "b7d28ddb24746f7a1733f09a1fbb6d27f3bb4f75deac0cf6f95a39ced47de009"
-    sha256 arm64_linux:       "f7a39373b7c72b7e0d1404782ddbe735aa5e42b6a6ec9869779fe738b1dc095e"
-    sha256 x86_64_linux:      "3ad371288a96f51ec82f04169353123fd7eac5bff42dc02b36710634f71d5988"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "c33efd58d7fe7f3571c229d75f578bef48ec355046602e8decbde18a3ab2fc9b"
   end
 
   depends_on "cmake" => :build

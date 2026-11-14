@@ -7,11 +7,8 @@ class EnpassCli < Formula
   head "https://github.com/hazcod/enpass-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a375d30cafba65e9b79703aa433917a784b0ac61366516c1ce0babfaf81c3914"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "02d53ac1384605a8a36ab338f0af5ce36f43f4fcae82e99f27da398ea71ebecb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e18c6896fda816a53d59f48739a134d37931cc1bcf58447ae720f30e57a025c"
-    sha256 cellar: :any,                 arm64_linux:       "19224a412234e9d7fe0c51bb167d44997def39d0bd6b442ce9c687548e78ed91"
-    sha256 cellar: :any,                 x86_64_linux:      "cd21525870632503bcbc274b4c3b33da20eb4c107bd2c624121361ce2fd7be64"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "08048a2bb3b24f508521f76b990fdf89dbe354e4f5e5e0b352883ff14e939703"
   end
 
   depends_on "go" => :build

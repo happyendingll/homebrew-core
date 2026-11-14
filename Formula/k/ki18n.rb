@@ -17,11 +17,8 @@ class Ki18n < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f5cba2ee272625c6e2f1acd155564102f6fe4608798f3bdef4a705f63f025bf8"
-    sha256 arm64_tahoe:       "4b10da778bee5f9a57d759d7858de8db215ba87bebab02eca0e0900675e19e13"
-    sha256 arm64_sequoia:     "b84358c3961084aff06b52e583a08e7f4581b9735bb95a6dc2fb8f6f3a1b0908"
-    sha256 arm64_linux:       "1cd7c3a90e8da80836a3f785bb2cefa007e0b71c30a32819961d45edefcff7a0"
-    sha256 x86_64_linux:      "6ffdcb38cfffc6718659f9c29ff37a47082bdaea3276345d10bbd36b18599edb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "9a562347fd70a49a475280a0792e18bd5ebdd61e95f21c6c25689d011628ff8e"
   end
 
   depends_on "cmake" => [:build, :test]

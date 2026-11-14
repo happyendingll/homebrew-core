@@ -12,6 +12,11 @@ class PortableLibffi < PortableFormula
     formula "libffi"
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "778a1b0bc0812a37bb5807fbdd0ffef7eb6ce89292e68ba0073281555cd075be"
+  end
+
   deny_network_access!
 
   def install

@@ -12,11 +12,8 @@ class Onnxruntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "756dbf106ccd54b45c01fe5f80458b949a5e8e1a036576447a9be0298db88bbb"
-    sha256 cellar: :any, arm64_tahoe:       "4d1a1a90456c57cb4ec6a8a2aabaef4ffe14995dde54de10a0c75e9ee21e0135"
-    sha256 cellar: :any, arm64_sequoia:     "5cea3fb7fbef84304e8cc945fc47914e9daadf79bd7dd397980b973e1960abb5"
-    sha256 cellar: :any, arm64_linux:       "d2e28a3de14cf34dffdc6a070ac6e8147f8824ab1cd71a23971bb9eb17704b0b"
-    sha256 cellar: :any, x86_64_linux:      "b97424995489b5279bd3480d5d72ac0e07f4a95817b189f4f0bd637adb479510"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "b8eddf002b90dd7047d0a9ed2fbfbf35f9835c4776cd87cb344028c6a44896b9"
   end
 
   depends_on "boost" => :build

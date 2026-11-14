@@ -7,11 +7,8 @@ class Flex < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fa02606fe8873fd98d3a07b7537aea05b5165b00fb7a1c2bf1f958f158e14eb0"
-    sha256 cellar: :any, arm64_tahoe:       "d216e586e1091d1ccfa06a9496f6cf5c8a34e00b697d569cf58381cf6b1ff4b5"
-    sha256 cellar: :any, arm64_sequoia:     "d2b14d572cb51f92e26e915d08663d7be0e62d3067dce5d4dcbc17aea6b54d82"
-    sha256               arm64_linux:       "d95efae350e339945dc00b3f520612299a3f1cf71e7b67fac0e17e70eda8df2d"
-    sha256               x86_64_linux:      "536a0c363e76c8a7a27211c15561b95ee8372deb0ecd4899ccad44410905050b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "8d224de056467be2986e5fb062ad0d57f5d64e773d106838768934bd5844011c"
   end
 
   head do

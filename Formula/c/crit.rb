@@ -7,11 +7,8 @@ class Crit < Formula
   head "https://github.com/tomasz-tomczyk/crit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "34bce4cd91137ffe397dfe9565e4d5119859bec886bb375b3196795e5b49d59e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "34bce4cd91137ffe397dfe9565e4d5119859bec886bb375b3196795e5b49d59e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "34bce4cd91137ffe397dfe9565e4d5119859bec886bb375b3196795e5b49d59e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ba7f3595d9eb0a30296c676c7fb8fc0db2a4c94717bceace761e017521384371"
-    sha256 cellar: :any,                 x86_64_linux:      "2921ec7c653ab2d4b29ab14b6a666f435ed152dc65a4262fcec6d293b44e9743"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "01b8e9d52f66a698eab0520d36315ddf747e63d6431d5214baab505ef865bcb4"
   end
 
   depends_on "go" => :build

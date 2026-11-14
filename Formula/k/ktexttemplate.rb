@@ -7,11 +7,8 @@ class Ktexttemplate < Formula
   head "https://invent.kde.org/frameworks/ktexttemplate.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "fffbb65e121cac61c87a9db484a2e4cb8f0a27891c3a501109b330ddc3ca74ff"
-    sha256 arm64_tahoe:       "f9d3c9f3d4619addfb5c7acadd195df16e144096ab4bea1d4231ed860ade58ca"
-    sha256 arm64_sequoia:     "4f215d4a27fcec3b26503b1f481ec271f457b97c662598f5dfc5adc3fec3fd0a"
-    sha256 arm64_linux:       "4db62d401de6e246547554dec8ec1472e39bdb508a35ea565b4349df28fb566d"
-    sha256 x86_64_linux:      "d7a51a475d23921646734fd8264026aacad06529959ba8e2ddf08fcd3c8551ad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "40ea2527b23ab1ee3192b3d8516a43cca8fbadf0d18d345ba971652ed2102415"
   end
 
   depends_on "cmake" => [:build, :test]

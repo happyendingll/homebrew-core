@@ -12,11 +12,8 @@ class Bitwuzla < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e957fdaef1f997d0ff3e4fe8e42375587d93357ea24c42735ef95f1f6b02012a"
-    sha256 cellar: :any, arm64_tahoe:       "18b3b97bd771f3dc7fa7396b2368dd35c4d43790af52d3b83e7cb82fcdae90b8"
-    sha256 cellar: :any, arm64_sequoia:     "c8b8de29d8fbb8dbc81ce55dff35be8fdad2068a0fb3ebe4622de5166e7e3be2"
-    sha256 cellar: :any, arm64_linux:       "376c9474ba7973982cc8969162699d446e290cdb2276d62088314b4f85f4a3f2"
-    sha256 cellar: :any, x86_64_linux:      "18711ba903b1ec60a488879052340ce5a323768ce5d6ad91e12b35fbfb92be59"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "724ba5cd75b37eb22009239656a9c7942f5a2bb71c2ff1ee2e63a32c88c036ca"
   end
 
   depends_on "meson" => :build

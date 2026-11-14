@@ -12,11 +12,8 @@ class Libical < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "eea0a690ad9b6110d253d03c345aedcbdf8a0ec384f3491b078aae6751ab5f15"
-    sha256 cellar: :any, arm64_tahoe:       "5cdba727ac85333a27a54adb5e883354f947c9bfb5adee3ce605f3453943e244"
-    sha256 cellar: :any, arm64_sequoia:     "298899bc4715eff088c5d0add4ab5c0d7911a96a168a8fca3a5a747b77c9d98b"
-    sha256 cellar: :any, arm64_linux:       "41a5daf50d96f0e63be9ebb44e255c4469bc4c055cd69681b7480c5341423a8e"
-    sha256 cellar: :any, x86_64_linux:      "8715111d7523e641a92699819602c31c50d68322ed5502fa6b7c3d9574752751"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "bca6397f2439a778e9b7626bf3f3a30662e47b78ff0639469cd2299dd11b8792"
   end
 
   depends_on "cmake" => :build

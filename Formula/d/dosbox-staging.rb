@@ -38,11 +38,8 @@ class DosboxStaging < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "93b9bd92c7182805a4911405e98506a9545ddd467be6fcc8869c921f3fd81958"
-    sha256               arm64_tahoe:       "30ad9bc41600692e66ceb028a6bc3f89c69ec1a5460a5f676487cd2e8fa9e989"
-    sha256               arm64_sequoia:     "dc81c0f9d57b86249c4f2791a673193f3e91f211e5f2d88b934f0ca92c408c00"
-    sha256               arm64_linux:       "5710e350f973467687852c393ee0a7799f8bdabd791ba3dca19bf69755566869"
-    sha256 cellar: :any, x86_64_linux:      "3f5363d60b86a0daa908417805b513ee00ff05339b4f4e7285c0ba6e202514b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "a7f9e3ed0987906b85c250923d21f29ace75338dac21079c7b2a9e45167c00b1"
   end
 
   head do
