@@ -7,11 +7,8 @@ class Resticprofile < Formula
   head "https://github.com/creativeprojects/resticprofile.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "86f10fca650dddb8aacf40286a5c2b6bc02a0a8dc8cc42257b5a189ccfa74339"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dc074b46b0683539ef914135ddebf410555f52af4a0c63a8b832021c23d076f8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fb322474d629e7d7848af6691d59a342ac32dfe9d65453641fbf286d26c5fda8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cbabcf4e759799a8904660f79523f145eb9b1c2e5d44b3e642d0af52547e2f83"
-    sha256 cellar: :any,                 x86_64_linux:      "9b1ce2fa6cf8d23c3dd5c4307e597c33365625c408aefd2b8d84d24ef6f4de49"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "63b4e2a712a0d0de8fa694472b0b20f733f20e088c54adefef39c6f5926afa2f"
   end
 
   depends_on "go" => :build

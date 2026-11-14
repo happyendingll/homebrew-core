@@ -7,11 +7,8 @@ class Caire < Formula
   head "https://github.com/esimov/caire.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "99f6434b982cdf099a8b29957d1e586851fc19c87c6c05de6100fc2d9335b295"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e395c6bcbbaea4139779f6b3ecb1291588abfed80349dea13a40c1d7214a969f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "89aaf1ceb434d86617f9395dde2af02de81c5665218520d6b87a7617b06cf451"
-    sha256 cellar: :any,                 arm64_linux:       "68570fdaa64dff88ffb6eca4702912bdb9f85d0ff26785527bb2d6a466522cec"
-    sha256 cellar: :any,                 x86_64_linux:      "6d540e0940711294949d1fe943d910c78f95a97b42c5cd6767064507ff95f2e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "abecbdc74aa36153fd8952caf850bc0bab4762d3ba68e6f203f217b47236efe4"
   end
 
   depends_on "go" => :build

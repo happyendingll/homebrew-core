@@ -7,11 +7,8 @@ class GitSizer < Formula
   head "https://github.com/github/git-sizer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f57eb07ee7927a6697de207a68741289aa1f811885342732c58b1b948a2b10e6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f57eb07ee7927a6697de207a68741289aa1f811885342732c58b1b948a2b10e6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f57eb07ee7927a6697de207a68741289aa1f811885342732c58b1b948a2b10e6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d3614c4262825771af8c8abbaffde1f18227ab02ec21891b7c6d38c6add44aa0"
-    sha256 cellar: :any,                 x86_64_linux:      "b5dd2b8b88d3f53be8dfabe56184deef28636e108ae186c871dec5b8f8149dfa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "efb3d9c41ccec4a56dee6109eb90454aa1c4c38b74ffb43fca8cc13c0c9f6c9e"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Lazymake < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "75d04df33a570496571f15b9ac3394f24760a43e4160f277ac283d24fe849ba7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75d04df33a570496571f15b9ac3394f24760a43e4160f277ac283d24fe849ba7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "75d04df33a570496571f15b9ac3394f24760a43e4160f277ac283d24fe849ba7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fab224b41654c30a3286dbbda57b8966e6d1da11f3c1df921c0908317f3e92f3"
-    sha256 cellar: :any,                 x86_64_linux:      "ff0a3b5fd6a625e1c9cfe86d4fbd47f6bf2deaea25fe361ec13e4e4c6c3ed479"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e0c140f3e25188a27903f82dccba1c193d92a82e7c3c91f49c73bbb58da1e6db"
   end
 
   depends_on "go" => :build

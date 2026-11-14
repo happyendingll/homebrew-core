@@ -6,11 +6,8 @@ class Kalign < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4c43619c7d280716e5d59e91a1858ebb2e0ce2a234968aa6ee8ff147655fc88e"
-    sha256 cellar: :any, arm64_tahoe:       "a7484a3ce74c4fc64389e85ef0420f0c646c58b754228f72764069e0149bddda"
-    sha256 cellar: :any, arm64_sequoia:     "2eaf0722a0781be6c30838c5c5848c44fc940dfaf51b27b4cf8c82861009f958"
-    sha256 cellar: :any, arm64_linux:       "8f252500d42988e39bd5ebef2954a8cf0f7a024996433100857c56ba050f117f"
-    sha256 cellar: :any, x86_64_linux:      "75ca80be9c96ef176d284818c7899a7a1f5af839f08eff8175a3e90317131dd3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "76be3b66c1acae0e7429481bead16d15879e4cdd5fc627d4fd6356ce2491f7d1"
   end
 
   depends_on "cmake" => :build

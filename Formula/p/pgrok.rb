@@ -11,11 +11,8 @@ class Pgrok < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1aab6b97ced5de92663e6ed40de7e7e7f145328d03353fd7e4f2aa12a2e33e7a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1aab6b97ced5de92663e6ed40de7e7e7f145328d03353fd7e4f2aa12a2e33e7a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1aab6b97ced5de92663e6ed40de7e7e7f145328d03353fd7e4f2aa12a2e33e7a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0297f3dc0b17bfad599adc2a7b594faf20cb5599294d41b397ee44f609bd850c"
-    sha256 cellar: :any,                 x86_64_linux:      "7e50799447900a343eb4bc2d17cd3f718dc6540f5b5c18816cfcf5352a86a7d9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "aa6784107cc65948b05cbe9b8b71db9e929568b37fb78f61a2a038fa4d96246f"
   end
 
   depends_on "go" => :build

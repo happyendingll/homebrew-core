@@ -15,11 +15,8 @@ class Purescript < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4e72779d2a8eb53130a068d910252049522cea40808c689c118ee9689c298b82"
-    sha256 cellar: :any, arm64_tahoe:       "e4c221120015d3fd023a9203a494a212891a773adb3d6bbaf4555d6d5c5e9f74"
-    sha256 cellar: :any, arm64_sequoia:     "197217b63df2f12b97d25c3fedb75b484555296b9aafafd167e41f28af72801e"
-    sha256 cellar: :any, arm64_linux:       "1a7bf3e4e1e9b44beb11b4c4d31852dc7a7e2361739dd4ccb6eda494af067214"
-    sha256 cellar: :any, x86_64_linux:      "876ea1c2d6d86e4af19942318c59c56ec3cc2cc5c55d04c2802d323b831af0d6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "15b19acdf14240447ea64a87c0e1a2d8da93d3cb1cba9e1b38d46419798dae7b"
   end
 
   depends_on "cabal-install" => :build

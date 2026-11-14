@@ -7,11 +7,8 @@ class Mmdbinspect < Formula
   head "https://github.com/maxmind/mmdbinspect.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d10d700b7e8501142e38dc674a89285f05a7a7af069af12bf0845a27ddaedbdd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d10d700b7e8501142e38dc674a89285f05a7a7af069af12bf0845a27ddaedbdd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d10d700b7e8501142e38dc674a89285f05a7a7af069af12bf0845a27ddaedbdd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "73298ad4f21e4091aeda312e955a7fe4df2a1243eaaedd90d353b602ce11e5ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1102c203aab32f3332605f5270454678b48be22aa3f4ed51cf0479619778bfd8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "6e563d712a9e613e6ce3899e4eb6989225cd0207ad4a264824a11dd0ed893e04"
   end
 
   depends_on "go" => :build

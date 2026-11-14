@@ -6,11 +6,8 @@ class Vcfanno < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "add49d2935e062ec8e5124edc49a76dfb9ebc14ae64f8f40f7eca6038812018c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "add49d2935e062ec8e5124edc49a76dfb9ebc14ae64f8f40f7eca6038812018c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "add49d2935e062ec8e5124edc49a76dfb9ebc14ae64f8f40f7eca6038812018c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6430d2b52aacfa8e659e8dd13ab228f8e85da6dfb60fcea4234bd7a9923c5f11"
-    sha256 cellar: :any,                 x86_64_linux:      "15277a0405113949f916a5ff6c5b839878ccfca5f4bfe5d41c6eb999116a0709"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "a5f9224c91d634a146555bb3b27437dd4f17c390b844c70a7a24035747e29d2f"
   end
 
   depends_on "go" => :build
