@@ -10,11 +10,8 @@ class Aqtinstall < Formula
   head "https://github.com/miurahr/aqtinstall.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2e80f215edd2cb27ba076a73d083c89b1f697a07356420940c86319dc7c0f167"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8918e19c16866b7c6888d82f43d5d9b6832143a521d0c9f4d9ea1b81cd4ab37"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a5ea813be1b89db60b8a755acdc3e24274e2699b94638f36772b29e358ed729"
-    sha256 cellar: :any,                 arm64_linux:       "3664df9f4272587eb7162fa0d017a1e4145799b6daf9b4b7ca5a281be0e120b5"
-    sha256 cellar: :any,                 x86_64_linux:      "bac91af61b58974586f108f9f8acd155c5be92bcca0bff95d427ec826cd7583a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d022bc1d5bcdbceb784b1431b097725b931fdc14282e050296bce7c13e0dec4a"
   end
 
   depends_on "certifi" => :no_linkage

@@ -8,11 +8,8 @@ class Helmfile < Formula
   head "https://github.com/helmfile/helmfile.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "449edc030903f1d50d94017b21c92b3a9fa02618ed7140359e1ab3a43bded8e5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1670cd02a2e7f2618a29b6abe87709b755dfe47cee7f53cf7d6bdacb2af35bc1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9a42236f0cc31a3621cd1561cce9a891473193e53de8a225830a9ae5c8662699"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a933f61d6fb2959a6cdfa09439f95da8892a23e8e50994b52932a03fa01309a8"
-    sha256 cellar: :any,                 x86_64_linux:      "8feab842e787c169b7e9ff1085d8dfc98e101d0c1cd66e2ddc53a2e839f5f0e0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b329a0795875437210c7116fd726db167cbd9e38014ede97167363900ebb14b2"
   end
 
   depends_on "go" => :build

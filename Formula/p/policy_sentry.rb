@@ -10,11 +10,8 @@ class PolicySentry < Formula
   head "https://github.com/salesforce/policy_sentry.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ec9622705ffe049cb5984a08159dff8892cf7f687688136fe9cf7804f8475db8"
-    sha256 cellar: :any, arm64_tahoe:       "af093177bada99d7976830b46ecea40370c868521356f85e480e263c79a4dd40"
-    sha256 cellar: :any, arm64_sequoia:     "3deeedd6a0dfa73df19566e50ba63d82ca7aa5bfbe62f47a14807a5dec81690f"
-    sha256 cellar: :any, arm64_linux:       "529182537604830cc784d82fa7ef1e991527ceee7951e07af3abc0c9366a84a7"
-    sha256 cellar: :any, x86_64_linux:      "e4656f3dc64bbdc991fdcb3b577cdd6f25c8a8ae2e11a95929a08c35d43b938f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "a364d4c440a81df517e1c46a5f03fe8381c76f39c516183da58f7ca1efb69a54"
   end
 
   depends_on "rust" => :build # for orjson

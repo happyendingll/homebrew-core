@@ -9,11 +9,8 @@ class SigmaCli < Formula
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5b920044d1adac95a0357c03aa79bce885929fc482226313ab3e66c249ead778"
-    sha256 cellar: :any, arm64_tahoe:       "113c07ef11920f17c10bfc9c8f4c537b8ecebf43432b7aa82f2b621b944c679f"
-    sha256 cellar: :any, arm64_sequoia:     "f2b4810f30756e9bfa99170442ceec7b3bbd51272af19862118a4400ac23eef8"
-    sha256 cellar: :any, arm64_linux:       "452809276aabde7c474250797540db1b9284ae836a23edb922807423924f513b"
-    sha256 cellar: :any, x86_64_linux:      "11c08b0f007d38a632299b0418938b6f4f6da1b9a9ace60ab946875d5363170d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "896a070753c8d01005a452d9d7180d0b200b4a5244fc1c2f6c0a8d667a54855e"
   end
 
   depends_on "pybind11" => :build # for `google-re2`

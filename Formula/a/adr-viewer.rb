@@ -9,11 +9,8 @@ class AdrViewer < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c7dd7b39d030d47e8b60cf129b36eda9222db3571fd29ce5d99c5cf9966bc04"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0723fdc0c58e5f0332c5f88b5e9a6b8a747b444e85b54a3b5fe73b3db4b14ce7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "83b9194259570a51ac4e2c5137753932aecc30d89d28885d7ff3659b995338c5"
-    sha256 cellar: :any,                 arm64_linux:       "c6c921dbd030772367ab575d2c2341acc036fea28f7ea1b6498143755e315f26"
-    sha256 cellar: :any,                 x86_64_linux:      "3bf6a71b8fa789f8a53046dd208229ae592343e8722c2228e5401f6718d04b73"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "201a97908ca488b0310686510953970cf307dfff70e88d78888c05b6f8d52ad9"
   end
 
   depends_on "python@3.15"

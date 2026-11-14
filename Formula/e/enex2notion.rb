@@ -9,11 +9,8 @@ class Enex2notion < Formula
   revision 26
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "689df4d2bef1f361e1d71686f0f5b243f9505b6773c13b76a2968cccb3c4c9e0"
-    sha256 cellar: :any, arm64_tahoe:       "a2b4a95f5be8d7869733b35a89ad58f2b6710e76f6f1cf703ff41fe88a5befb4"
-    sha256 cellar: :any, arm64_sequoia:     "95654c103e96143222ef7e28367f6a0cfc5fcac15b6513b50b1d0ac74c9f34fe"
-    sha256 cellar: :any, arm64_linux:       "53ca204c656d47bf1b5e4121a5f803b9892b71d28a269e11d39103139403fedd"
-    sha256 cellar: :any, x86_64_linux:      "3151fc5e50ee90c6c5aac47bcd4bfea9e6f3224641700365cce3f2ededeabf26"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "864628d2142ae6da89482e96554345fc8b676c748cc30c15af892a51116fe847"
   end
 
   depends_on "rust" => :build

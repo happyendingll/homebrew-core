@@ -7,11 +7,8 @@ class Pixlet < Formula
   head "https://github.com/tronbyt/pixlet.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5413857b8732cae316b89181f22b75df5341e2ce40df184e234d5cbfd3de1b9e"
-    sha256 cellar: :any, arm64_tahoe:       "afc1aa3d22fff1a1e1ad638acc08a57a2c18da33949e6173e98d264003c3ceb1"
-    sha256 cellar: :any, arm64_sequoia:     "c68d3e1844dd6f5fe8e693dcdce302e0019fc365e7a34b030f62d31fddfdb6eb"
-    sha256 cellar: :any, arm64_linux:       "93240b1c8cf9365381ad89afd8a95d274e7442df9fb28c9083bf957bacb200d4"
-    sha256 cellar: :any, x86_64_linux:      "2587ed6ac1fdfbc77e487285c5b43b7e36d93575c1b90e07ae9ceeb9427fe79b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "7168de7d90b4d88ffaff67c0ffbf671d899694cf7d3021a2f0620e9b78d871ce"
   end
 
   depends_on "go" => :build

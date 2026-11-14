@@ -6,11 +6,8 @@ class MimoCode < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "17bb02569607d389a8b0b42283d1f796c6b36acc2ce8cb901abdc2de01619179"
-    sha256 arm64_tahoe:       "ca2a1195e5d683b2abc9c43a40696f0ed02d5990c4fce146009496c1c66904da"
-    sha256 arm64_sequoia:     "a488a9c80509e3541a151be7cc384c76876079135092122a55d5376ecda3d6ec"
-    sha256 arm64_linux:       "5269a6d4db16412a0a208286bee5ba929366a79904fa25fd0b007d3f0e4efa87"
-    sha256 x86_64_linux:      "04e1557a5c169824affeb2ed6df733dea099ff5b411898d0a7aa703f63b72e3e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "0dd48235790ed4b3f8ea77dbf678273d0896350f0a2d1503cc76c993943cc281"
   end
 
   depends_on "bun" => :build

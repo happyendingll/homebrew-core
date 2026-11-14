@@ -7,11 +7,8 @@ class CargoShear < Formula
   head "https://github.com/Boshen/cargo-shear.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b72443821c8288e4e12cae5ac2448b8b7988d4c66232fe54a02a62f3a596c1e3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4e81ef3e948cf57ed49201fc33629ea6ec455109fe762373a9d54e583272db2d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc92e7709cac8c2dc19f4278c5aa4db3e181f08bb829f6fb247f2b30c8080cfb"
-    sha256 cellar: :any,                 arm64_linux:       "e35592f2c062b0310e0a8403bdd536fa6ca2ee7d0b2bbbd0763aed2d63fb0307"
-    sha256 cellar: :any,                 x86_64_linux:      "7f1254bb9403016332b0e2a8d9bf90048ca4c5f957f3e90391d9e00297c61c27"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "633b934a31abff6a746f823f3f8b8ce60bda2bbbb25ec8b22e4f2d35ce326595"
   end
 
   depends_on "rust" => :build

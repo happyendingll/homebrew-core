@@ -7,11 +7,8 @@ class Mdcat < Formula
   head "https://github.com/BIRSAx2/mdcat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7069a7fcc48565ffbc5d0e3961d74c13774d0bf5f4adebdc2eee905ce042aa1a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c631221785196c346e3b3729b86826e3f31dd43d248ea181de2aa94c4edcd8d8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fa19d796dae405e7bf63d163d2950b488f61f57690c1fb37904701438af69e56"
-    sha256 cellar: :any,                 arm64_linux:       "7e18dc61fe1549c03d0cd63ad360f8ca2859c6d6fa8696ae4ce5639fa301e5fd"
-    sha256 cellar: :any,                 x86_64_linux:      "60c5f7276f970f22a015861d94e5bde2e1548dace8c6879f85401ba3c25f491a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f568b9b3d03c0b44fb35627d2890d2f3ae07caa9b6bab5f5292962d86ea59c17"
   end
 
   depends_on "asciidoctor" => :build

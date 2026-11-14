@@ -24,11 +24,8 @@ class V8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ed4843dbd2994d0ce489d4b9b78405aa686a4909c64c98e955588def3008922f"
-    sha256 cellar: :any, arm64_tahoe:       "e5e063358d860d8c55fa4181a5dc49a9beba20216436aaed2864bd7fcfd84879"
-    sha256 cellar: :any, arm64_sequoia:     "62b8a3f31cdb12f311038151aa197a17297aba0e5aa2fbe8b8f142b79bd1405a"
-    sha256 cellar: :any, arm64_linux:       "7a1502114c6cb5c5277e23f48621c14eb93bfa37475d7489c88b9f056765ce29"
-    sha256 cellar: :any, x86_64_linux:      "978088b516f4afecff7b9a4f49fe065f22f88a0aa819199c88c9855a83c3c608"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "846ae3bea70b8bf7bade93d4a60142e94bad8e72a03b7bbaf944e628b8bdb9b0"
   end
 
   depends_on "llvm" => :build

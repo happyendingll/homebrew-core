@@ -8,11 +8,8 @@ class Modal < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "200aec17bd44cc357d82f4a7f21aa2675500b2ec1ac3300c7db716a08707b2fd"
-    sha256 cellar: :any, arm64_tahoe:       "b0659f9b1ae976a40f41cca6f68e1d04576f1a5c4e89320c5a10229d83630494"
-    sha256 cellar: :any, arm64_sequoia:     "abf4ab3036f58701cebe224565c65564599040ce10f6776357ac06cf7c6c29ec"
-    sha256 cellar: :any, arm64_linux:       "0c6e917b980991e7a8c0525120ec07d5f6e4c704023d774159f152cbe7578028"
-    sha256 cellar: :any, x86_64_linux:      "96e1641407b8124ee1a31a4bf3d70d3d4032340f0353d8e7e29d9955aa937e32"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "b2b77d63c8218d11bc991146b11db3866d8e79d71a681667ee9a4fdfc676fa87"
   end
 
   depends_on "rust" => :build # for `cbor2`

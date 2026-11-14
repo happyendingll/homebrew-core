@@ -8,11 +8,8 @@ class Tunnelite < Formula
   head "https://github.com/cristipufu/tunnelite.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "385f05239ee2e68b1fb7761733270a7118f7be2d3b3cd8e8d24281c61d2ffa3c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eb199688b93d47ecfcbaad2d7d44934383458f2a5e02cf06cad30e83e09a697d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d78dd84b3bc1ad4f0b2c86e9a5a3aa2b5b4b475337e7c544a2ac999ed9949735"
-    sha256 cellar: :any,                 arm64_linux:       "1ce8d713e7febf6fc88f106c2fbb268017edf09fd1d8c696aba235ff61324ed2"
-    sha256 cellar: :any,                 x86_64_linux:      "5911cab9ee7d0db3616ec9fd865c6488061b5e658752f68d5eae2609c0075410"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "36c92ccfec6cd94ea2f741cc2659a4f0734e155d0be823ebfcc063fc0205af9d"
   end
 
   depends_on "dotnet@10"

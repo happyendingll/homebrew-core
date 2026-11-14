@@ -9,11 +9,8 @@ class Pferd < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4c6cb35165a3d64bd3c46329a1e383e243dea7cff94096d9a8de5323e709a440"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2ee0f9ef60e084040b939fcd60d9a988fd9d88084c036251103a27ac102c6bb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c37cb8fd5ebaaab3124bea3df76c5845c09a4a5708613d570427b824a8101ce7"
-    sha256 cellar: :any,                 arm64_linux:       "74805e26f4164eee3f6a23d628592f0a0bcf6da230a58c69027d77b612cb981d"
-    sha256 cellar: :any,                 x86_64_linux:      "8c9c14098b0ef011fb24f0576d25c05750fb2a00bc4aafe310f1d885f4036aa8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f3d6ef277771077bf2fc126a6753afbe9887ea8c30118efcbfad818a1556df81"
   end
 
   depends_on "certifi" => :no_linkage

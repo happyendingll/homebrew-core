@@ -7,11 +7,8 @@ class BudgetTracker < Formula
   head "https://github.com/Feromond/budget-tracker-tui.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "25b6dd0b8d9db5c84048cc9ac0888801d653fccd53fbd4ec85f92a6b64724a44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c4cb472fa4dd475a4d679943be3d735548e496a52a5ca7c0e3d7a92b52bc3682"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e75eac56c4b3fc457460cd76e9cb6f3f003483e8df443f9f624035c5efb93fbd"
-    sha256 cellar: :any,                 arm64_linux:       "9be48669061adc2d1c917f2418b73bc0ea26b055bd345e56bbcf3c1b9459c2a6"
-    sha256 cellar: :any,                 x86_64_linux:      "ce0086ca597ea2c52c34a2d441c682efa69beee2a2fc8dd8e8bd20f835e7fe99"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6be2494ca5b2644e3294d09a79f014ff8732cd260f3382ba4fcf7967c9b86e08"
   end
 
   depends_on "rust" => :build

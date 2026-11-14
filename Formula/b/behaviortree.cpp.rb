@@ -6,11 +6,8 @@ class BehaviortreeCpp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "725bfdbf10d7bfa413436e796612e6e68e2c3532f21cfa4adf15a4dda9cb041e"
-    sha256 cellar: :any, arm64_tahoe:       "e0a82ad8859296d6326be624a06bff825a1918d706d711d497d271e001e37a66"
-    sha256 cellar: :any, arm64_sequoia:     "08b3eada795f6a95d71fca1c44462854b175f9b65637f2086aa16978c4caa7df"
-    sha256 cellar: :any, arm64_linux:       "75d67468eb30f10fde274a52dd6137e16f069dd1a2146561e71b2bdbaeeef583"
-    sha256 cellar: :any, x86_64_linux:      "3d7cde43c1d92f53c8b9e38483d6f4a96abadbc1617759bfe8aa80dfd6043d29"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "baa15fed53a8391bc6fa7482dc91668483667e1f3de37366cb132f7fdb81e3cd"
   end
 
   depends_on "cmake" => :build

@@ -106,11 +106,8 @@ class Dotnet < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c4655631dba711425bf87101607ad64d93d3dc0d893305ef2cca21bf3b424ac3"
-    sha256 cellar: :any, arm64_tahoe:       "45d7cd5cdba40f600ca0267f018f7923cd302ea41d661abb76b723940866ef4e"
-    sha256 cellar: :any, arm64_sequoia:     "60064902141f586b7b67968d0c2c37671340c28adde3ee8e99745639e86108da"
-    sha256 cellar: :any, arm64_linux:       "452c9c63db77f394201c2c4f93e99cc155f354977b997ce393a620ecabee85f4"
-    sha256 cellar: :any, x86_64_linux:      "115b6501fd45383a2da38e4e77458fdaac59cf8106e510012b69e187506087f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "18686c10d349a225062d0191ec793f6c3b6191c2d07787e0cc27dd817294c159"
   end
 
   head do

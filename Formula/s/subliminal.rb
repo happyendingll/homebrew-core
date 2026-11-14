@@ -10,11 +10,8 @@ class Subliminal < Formula
   head "https://github.com/Diaoul/subliminal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2af3c6b51f82c7883a7c218508df84588985bbca5102448649611eafcd69552e"
-    sha256 cellar: :any, arm64_tahoe:       "8bf8d142673c56e127634bca677de74a19025971059b942308ee49a386d96e13"
-    sha256 cellar: :any, arm64_sequoia:     "0adba070bd5a8fb13e76a3fd1ce4c3077f2c1a2386ce9bc24a07c0413e5ba340"
-    sha256 cellar: :any, arm64_linux:       "83aa5ae40e877fad05768a4498b0368e662b8898efa41ca5433cdc3b182be68b"
-    sha256 cellar: :any, x86_64_linux:      "b3e6f649fb6b3b83164de1a8fca066e2e2c070879447373c13e9dd38b94e3560"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "20f8fd2633279b35311ffdf785f9d2faee5e9673f5363939e60a029ebe963707"
   end
 
   depends_on "rust" => :build # for rebulk > uv_build > maturin

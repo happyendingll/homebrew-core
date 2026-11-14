@@ -8,11 +8,8 @@ class Ponyc < Formula
   compatibility_version 1
 
   bottle do
-    sha256               arm64_golden_gate: "f8ed420f3a3688e23723b50da9ed26176566866a39e7abc6a333db661e7b85f8"
-    sha256               arm64_tahoe:       "3464e1e4f077cbef757fac8b76b317c6f41bce4b606b1fd2b428cc454a63fdd6"
-    sha256               arm64_sequoia:     "c3a65ae727d36a26f96e15b47536c17a19a5c78c816b11ae10b1c3e185bf6828"
-    sha256 cellar: :any, arm64_linux:       "b832e1ba4c9ad3ae6b02ff8e7ec48fec6ca77b77d4fb47f490ebfdfe5f3e9b66"
-    sha256 cellar: :any, x86_64_linux:      "b528a106877244ec70595d245e17fe93a54f91fe6dca4a51e6059ba46d8519db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "3235a25796e260326eb6cb60d77fc2f6d07f7735b78b3b5475f19480c9c1cb19"
   end
 
   depends_on "cmake" => :build

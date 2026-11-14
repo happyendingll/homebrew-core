@@ -11,11 +11,8 @@ class Ford < Formula
   head "https://github.com/Fortran-FOSS-Programmers/ford.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ad8247861bcd56db9cb4d606578a002b30a75d8ee0b042e4e3fe91dc0b273c2b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1adc854981264e0521e401fd9b598d19338b73ef18002e2ac5867a4ca966e5a8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e623195fff3d0f8978aeffd37c835a998d1b0582185ec263f6d966b5cfd6599a"
-    sha256 cellar: :any,                 arm64_linux:       "a5541797df28f0383ab897b5f028b9e6e866985e0e75f40a513d7b07ae8a789d"
-    sha256 cellar: :any,                 x86_64_linux:      "d590f7aaacfd1a949d49ec74abbb00b2e169b9c04c398ab867d5cb964cd91124"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "facfd33bbc32fee31c87a14f80b0399e75d7a6498e4be291590cef4161c4ef7d"
   end
 
   depends_on "graphviz"

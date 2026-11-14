@@ -18,11 +18,8 @@ class Buku < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9222efd0015ac3b4328f27cfa5ea67fb893de249cbc1d2313dea64b2a002591a"
-    sha256 cellar: :any, arm64_tahoe:       "4bd16839a2a544e81bb730bcc72c0742ec7eaa645d3b9f5968f52a45b8b17508"
-    sha256 cellar: :any, arm64_sequoia:     "3d48780bd81ffa0d72aae2db3c3c0515e01dd6ee923af2081a31c72ace297c5a"
-    sha256 cellar: :any, arm64_linux:       "187c3c9f39e3ded17f1a0a1c0982c9381b07a3b7bb5f15ff3c1e686921ee1cf1"
-    sha256 cellar: :any, x86_64_linux:      "d5b0ea0b7449c17083f83bf03ebc5d9185a8dbc5fe79ce013f0416030a759a44"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "c7ed7af5ac37b004ea3bfd8dfe2a1138bf1697f183020dad230dcc96cf3bff1d"
   end
 
   depends_on "certifi" => :no_linkage

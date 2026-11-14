@@ -7,11 +7,8 @@ class Officecli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f3c9f2e88311c0febe28f189ef20494345f238c5a404162db9b3dea98194904"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ffc4f1182f81cb4d0490cece3e58eb3b7c62b27fd15d14562310fea19516868"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "10d23ca2d560aef06b430f8a41c0e2cc7e0acc8f2e594ff46f64833040089364"
-    sha256 cellar: :any,                 arm64_linux:       "387c5e01ad751ab2ae7a9227734d083cd0f84dc6a09028e69800e0d7b921d21b"
-    sha256 cellar: :any,                 x86_64_linux:      "0fb7726024fd3b69583d6f312cab7a507e6b0c4ebe93eaa3b1c82cdfbc993aec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "3b109cc0acee7934124a17919e073b63de5d4fb459faa7efa02ecbb82db57de5"
   end
 
   depends_on "dotnet@10"

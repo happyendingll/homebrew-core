@@ -6,11 +6,8 @@ class Evnx < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "130375a6d620f1931cb69007e47cdb801b7a7dd0a49757f1944d19fb024e04d5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "68b4b4fca9bcefeb3af6e20c487ae19136ddac9ff25639bb89c73909c3a12ba5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "90f5a610898c1dc946bb0246967592c87ade94390e8203e142793b39d3856d9f"
-    sha256 cellar: :any,                 arm64_linux:       "892cec42a606d1c144fa85eed55813c964c1e3475cb35f26a92cabeaa16de39e"
-    sha256 cellar: :any,                 x86_64_linux:      "1c7a094faa08c0cd9444343265670754c6520c311b957a038f97da86a4343238"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "cc67ad49527add7d1cc787dce2e57f8dc26c48bc14677ceecb37c18bda19948e"
   end
 
   depends_on "rust" => :build

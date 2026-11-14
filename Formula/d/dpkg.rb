@@ -15,11 +15,8 @@ class Dpkg < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "006104df9008756d2ef443fa5e61932716995233e6a1d04d26afaafe9c48638d"
-    sha256 arm64_tahoe:       "a499509fd23f412c6fb65a00f44296207d98a1d435133a98c4878b484be9ccc3"
-    sha256 arm64_sequoia:     "08c34d640bb28d6aea83438a13ca50e31d03e62bfc567edfb77218a9ec6c6d93"
-    sha256 arm64_linux:       "735939b62c5d5b9e10fa8339f73c6377d6d58535f0fdf3c9949d66f50da6a626"
-    sha256 x86_64_linux:      "8f4ce201df665c2409c9c2bdb27fdf5d21dda7b4f0f650481765539aa667aba7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "5996e34560ce092df1c3d82caec8a6e23bb37c5df067b7ff57b0555edf62c98b"
   end
 
   depends_on "gettext" => :build

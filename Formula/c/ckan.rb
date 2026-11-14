@@ -12,11 +12,8 @@ class Ckan < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e82842b138c68f3bf99c799358d0a99453f558c2196c41172835b7ed76d1bfbf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec6124396ab9a00b540e0b925643213a50be95c54b365f98247959622a0fd825"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ef595601d00d07c7f0d4f765583a804e532f1336059e23b8eba6db18ef0addb1"
-    sha256 cellar: :any,                 arm64_linux:       "3135db5229dac64223fbeb1219db3d3e36c762dd85ace11b9a40937f2c377c35"
-    sha256 cellar: :any,                 x86_64_linux:      "a5e4c28ebc6392e72117889d138fca22c59bc0d6fcda3853120c29ed94b12008"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6bd6c7a79f90141cd20e9a642a4408da90af9b22fb536de70049c6fbd39adf34"
   end
 
   depends_on "dotnet@10"

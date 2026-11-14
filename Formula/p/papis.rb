@@ -10,11 +10,8 @@ class Papis < Formula
   head "https://github.com/papis/papis.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "50d0efc95c85acd635aebcaf5e65a299098885feaba1941c79051222bfbaf532"
-    sha256 cellar: :any, arm64_tahoe:       "f2791ab83517e4e04b91e63a57857b042e99c1b7895959b57838c05ae6615c0e"
-    sha256 cellar: :any, arm64_sequoia:     "8e511b0418c26cb018a8d0328e6e45d050488a01953d5be45a6c5c67d8507b22"
-    sha256 cellar: :any, arm64_linux:       "d21030cf64c0bfbb9c3dd84c38a53524af79244884adb48786b1adfd709c9a97"
-    sha256 cellar: :any, x86_64_linux:      "53b389211bc2f1b61ec37b488cda2df6969dfc4d661a3c55531ade623a14798d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "1a930041df58dcebacbb66195a0a8ff47bbf4ca408a74181cd5194830a004202"
   end
 
   depends_on "certifi" => :no_linkage

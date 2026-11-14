@@ -13,11 +13,8 @@ class ScalaCli < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "46b3a4f6aa560615579b6ae7b2b65c39b834e3ab47ccdc2bd67eabed0cc9a67c"
-    sha256               arm64_tahoe:       "72f6130bbfa4938b50a1c900d2153d4f726ec25e717df832024a55a4ed2b4198"
-    sha256               arm64_sequoia:     "45edffa1b57cbb607c5372008416cdff2d925f4fd498832b1666eb5124510f82"
-    sha256 cellar: :any, arm64_linux:       "314f37f8c8be58c4e50875c21a30129c41c1f2eaf7829489c81f865eec4abf19"
-    sha256 cellar: :any, x86_64_linux:      "2a494902c635cc149494b6367b6d334f5b407223cbf3be938e317b83638d7f91"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ce9c3104e80738a8567e139531051322fcf97d6f582f3149c14b20c0ae987ead"
   end
 
   depends_on "openjdk@17" => [:build, :test]

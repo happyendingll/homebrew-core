@@ -12,11 +12,8 @@ class DatadogStaticAnalyzer < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "66d410b21ea24101eaa4bac6a48b0b79b76ebcfada5552a76649103684f72aab"
-    sha256 cellar: :any, arm64_tahoe:       "15b898b26fe65516b1f10a9bf9a314e8a2c57652270ba911cfcf63e208af184c"
-    sha256 cellar: :any, arm64_sequoia:     "f153578ef428650470a0781b0f5b3680719d283f5a942fa07559d4290eb4b78d"
-    sha256 cellar: :any, arm64_linux:       "3cee499019f2eb679f2de9e582879a4563171c4c0e43b6911afc1e48213cdad7"
-    sha256 cellar: :any, x86_64_linux:      "7e60697de5a942662ee6bbeabf4a9720c7424d39547340de85b56255e8f4050f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "96c8d7b2e310703a46e2ea4076a2e12af8efc9a15988eb19a1523f95468f9bbb"
   end
 
   depends_on "pkgconf" => :build
