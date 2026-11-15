@@ -4,10 +4,14 @@ class Fvm < Formula
   url "https://github.com/leoafarias/fvm/archive/refs/tags/4.3.2.tar.gz"
   sha256 "e16b1e76eb4df5b22d00ab40fe77cfd8c261be6f968e94eb081ad39af5615059"
   license "MIT"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "48f02d1860184e864cdfaa03e26c364ad8a90e99cb1c03105aa01f53027082de"
+    sha256 cellar: :any,                 arm64_golden_gate: "acc1cb12c8f68bcb0d1f2caad504ad2832c54ed4b5c8e6fbb535368338ba79f8"
+    sha256 cellar: :any,                 arm64_tahoe:       "f0e1ea0d35ba13b3c6141f230517b834940b3258d98b35705d75828e8e0a47a5"
+    sha256 cellar: :any,                 arm64_sequoia:     "e8ec99fab9b673f3e905cd9db4f86611bdd7ec8be0c3592e88ddb81734c7db70"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1906d31a56ccad38da1d4e515f42ed0e230851d416c79f6b3f1e82ffc6b8a3c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5ed195908c26322674e108382a95a0d8f96272f292f53b7cc78cb297bfd9cb35"
   end
 
   depends_on "dart-sdk" => :build

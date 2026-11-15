@@ -4,6 +4,7 @@ class Librsvg < Formula
   url "https://download.gnome.org/sources/librsvg/2.63/librsvg-2.63.4.tar.xz"
   sha256 "31f07d9350dad3f8964fd613c31309ac160fdef13dfac59df6fd082de78d6e8f"
   license "LGPL-2.1-or-later"
+  revision 1
   compatibility_version 1
   head "https://gitlab.gnome.org/GNOME/librsvg.git", branch: "main"
 
@@ -16,8 +17,11 @@ class Librsvg < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "f4945ac93c49fcda7148863ddd7e9683614a6c4106d9b862a9ccf5a27839d1fd"
+    sha256 cellar: :any, arm64_golden_gate: "4bf727a10083f030348c98b94bd1589092527c42fc119efd9b622f37287b5e33"
+    sha256 cellar: :any, arm64_tahoe:       "9e66074a308d2245eb81886bc5648dc22acbb113d80a5076bf45dd5212034239"
+    sha256 cellar: :any, arm64_sequoia:     "7cec71ffb43c1515ab1407fbc4ebee727653d71f9e5b152aa752f3e3d7a4f226"
+    sha256 cellar: :any, arm64_linux:       "efc74b2e1998f5aec882fbd293a878ba19410159d0572392fa4401e7851db27e"
+    sha256 cellar: :any, x86_64_linux:      "f7d77a97b046c52717a3247fd23ec816a44da19b8f03e50453ba4b6d7ebbec6c"
   end
 
   depends_on "cargo-c" => :build

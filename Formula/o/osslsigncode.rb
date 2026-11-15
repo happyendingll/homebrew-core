@@ -5,6 +5,11 @@ class Osslsigncode < Formula
   sha256 "c8fce7cdb0f1643d98a6689cb3106fda8265f17014fd7912856c9473f9b141a7"
   license "GPL-3.0-or-later"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
     sha256 cellar: :any, sequoia: "005e3459f4f58a4bff3553e1969152c48e6668505ea4f227b33f18455cdde9ab"

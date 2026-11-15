@@ -1,8 +1,8 @@
 class Websocat < Formula
   desc "Command-line client for WebSockets"
   homepage "https://github.com/vi/websocat"
-  url "https://github.com/vi/websocat/archive/refs/tags/v1.14.1.tar.gz"
-  sha256 "5c976c535800ca635b72839fe49d0fe4ad2479db8744c5a00f0cf911e4832e2d"
+  url "https://github.com/vi/websocat/archive/refs/tags/v1.14.2.tar.gz"
+  sha256 "cb49afdb6c108c5be9ae2e78d72f4c31cd2e464d4e3a9faa1e9f958b61e53e3d"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,11 @@ class Websocat < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "577a043e3ed1a3e2978dc5259b1fb405199f9e2bfebe31675a2383fb7b8e157b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2b31104c3edbbb58342905c27e0146433af3db4b65040e128248126f6989757"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bd74ae2eba6236f2eaa6e04c0550ef19b0a431a1db434ac4e1497dfdc1df5b18"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3c942390b0f1a464cf83ba31e44a8720a5396b36876b6ef43b9412606795ad30"
+    sha256 cellar: :any,                 arm64_linux:       "04a777829753b2ecc3a484e32819fafc160760faea9d0e861f4a2029913d43de"
+    sha256 cellar: :any,                 x86_64_linux:      "707f5a76e7c7bd461236ff3521ed81ac09a8741600bd3855916bc79a24adca93"
   end
 
   depends_on "pkgconf" => :build
@@ -22,11 +25,12 @@ class Websocat < Formula
     depends_on "openssl@4"
   end
 
-  # Backport support for OpenSSL 4
+  # Match Cargo.lock's package version to Cargo.toml for locked builds.
   patch do
-    url "https://github.com/vi/websocat/commit/aa8fadaa212c2287067b722d4440b4f4118b39ea.patch?full_index=1"
-    sha256 "5957930d4c4df80305b3ac15412f7be18438025132d1f77208d77499eb0e6f0d"
-    type :backport
+    url "https://github.com/vi/websocat/commit/dbeaa84544e054014a23d199de5c490c8989248a.patch?full_index=1"
+    sha256 "c7473d519369f89978dfcfe7c8eed285e085b87a955cd3394737528c66a2e50a"
+    type :unofficial
+    resolves "https://github.com/vi/websocat/pull/319"
   end
 
   deny_network_access!

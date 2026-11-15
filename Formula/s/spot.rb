@@ -1,8 +1,8 @@
 class Spot < Formula
   desc "Platform for LTL and ω-automata manipulation"
   homepage "https://spot.lre.epita.fr"
-  url "https://www.lrde.epita.fr/dload/spot/spot-2.16.2.tar.gz"
-  sha256 "52f8d06cf9bf1ae1b4309ec5d3419ef74ef5c199b71c70a2352e4c4f0a2302ac"
+  url "https://www.lrde.epita.fr/dload/spot/spot-2.16.3.tar.gz"
+  sha256 "c17eb7f3d7634c8b4e1587ab37303a118805bbf5740bdd28e90589db3c7d2034"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,8 +11,11 @@ class Spot < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "2608d7a5cb9557f44fdd8dc1092542bc2c9af18a2f06f2af5b622de875a85465"
+    sha256 cellar: :any, arm64_golden_gate: "81d7fdd0b4950782364aa3916e5da0bfb7078bb28bbabb8e3a83fdfb6516c283"
+    sha256 cellar: :any, arm64_tahoe:       "d7e316cda28c8730c444e7f926fda350113cd506221189ba0f09381698e64102"
+    sha256 cellar: :any, arm64_sequoia:     "7ef567f4f5724b91a4ee3a91e323c2379db55de57d47787567ff6a6d9d95d471"
+    sha256 cellar: :any, arm64_linux:       "543c799ccebf0ccf4ca3a10b4dc1e42f221eb060c4f4f69f0b08c26908bdff59"
+    sha256 cellar: :any, x86_64_linux:      "9bc6ca20d852e002adb3e2b33889a648ba2bca1f894c1910edf684c3aec370bf"
   end
 
   # Use Homebrew Python for C headers

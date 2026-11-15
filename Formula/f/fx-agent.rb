@@ -1,8 +1,8 @@
 class FxAgent < Formula
   desc "Tiny, open, embeddable, native coding agent"
   homepage "https://fx.sh"
-  url "https://github.com/vercel-labs/fx/archive/refs/tags/v0.0.16.tar.gz"
-  sha256 "545d95702ad2a0ce811af9261b7fe2daa1a4e6394ff6de54f4020e419d333079"
+  url "https://github.com/vercel-labs/fx/archive/refs/tags/v0.0.17.tar.gz"
+  sha256 "54c16e60ca2ec2d2428dd5806a4967bbe58df29a67dcd2daf948b6af24167753"
   license "Apache-2.0"
   head "https://github.com/vercel-labs/fx.git", branch: "main"
 
@@ -12,8 +12,11 @@ class FxAgent < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "9aa67dfd749fef41839316441b6b3b0d1bf224aed22e6a8ea6d47e717724e8e2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ac453e10b501d201fa334b505f98404e94a13dbbbf1e7eda357a1d4c4540a904"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6871c028072aa2dd895cc21a033a4e9c698b22b9dd158c8cb6645d61973fbd41"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "302da4122c070960f4e0b611d92842254bc57b545b013f2d7c0ba192097b1f39"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dc713a03e6ffa5cdf3882b18365e3c151ffae02b196ff8bd4ad7774317aff634"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ad4aa774c4188745ba6f33bb67ff4ae228504967aa76a255d3075a5674043e93"
   end
 
   depends_on "zig" => :build

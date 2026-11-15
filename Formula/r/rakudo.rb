@@ -1,8 +1,8 @@
 class Rakudo < Formula
   desc "Mature, production-ready implementation of the Raku language"
   homepage "https://rakudo.org"
-  url "https://github.com/rakudo/rakudo/releases/download/2026.09/rakudo-2026.09.tar.gz"
-  sha256 "7216aeea9e9780917deb49ec66cd64bc18ad67ce1d8657d8f61cf37d275a468e"
+  url "https://github.com/rakudo/rakudo/releases/download/2026.11/rakudo-2026.11.tar.gz"
+  sha256 "02f71c340e943163de524ed4ea3c872143ca03a907a11326d54f2d150789ab43"
   license "Artistic-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Rakudo < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "0985432f50f9c5c251303c579b628c5c729d98b11325d6f6f4ca856ee16e6920"
+    sha256 arm64_golden_gate: "49c3bc609bf21e519d9ad09bd6edcf945d20503566406d0c134aa60c3aedcf5c"
+    sha256 arm64_tahoe:       "3081eda44e8a34fba65b85a6546bc47db90c67f8618a6da817af0025db275e00"
+    sha256 arm64_sequoia:     "e2990c8f4151b2b527666483dc9c3c157dcde00b4f086800101f187ff766259a"
+    sha256 arm64_linux:       "9c8052458e759781ad604d1e271af9370f3cc06e5032322bdfce11ffb7c2fb76"
+    sha256 x86_64_linux:      "c734f42c2b5fa41d63ec68b13749cafc476ede76f4843fd4be811bf168fed274"
   end
 
   depends_on "moarvm"

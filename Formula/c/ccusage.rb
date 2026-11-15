@@ -1,21 +1,24 @@
 class Ccusage < Formula
   desc "CLI tool for analyzing Claude Code usage from local JSONL files"
   homepage "https://github.com/ccusage/ccusage"
-  url "https://github.com/ccusage/ccusage/archive/refs/tags/v20.0.50.tar.gz"
-  sha256 "07aa5fe8b7f53386b108fe7bba25f4610f52e391d6388ecafec3fcd43aa6c72c"
+  url "https://github.com/ccusage/ccusage/archive/refs/tags/v20.0.51.tar.gz"
+  sha256 "71ce87c83264c64a13232a4f049a18d4902422e629ac7146cf0111b74260b713"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "c434ece9ae349b55d82bc09cca1e0386163e9e6cd6fbb4eb7f96277e14526ade"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a275be65581ed04679bdc27f3bd47f2ca5a0074769a15ea607866755281db318"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "486138504f904ad641ce70ed99eac935460278b8fae3a65d368886dab7c045fa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "741f4be3e53fec443c3f5aa4ca01351f1ebb6bb55134a818980d14547d6d00de"
+    sha256 cellar: :any,                 arm64_linux:       "fc39fc0f9465b87a03515b2612cba5224a23daf4f316a2cd8d29bb56f1df118c"
+    sha256 cellar: :any,                 x86_64_linux:      "e4b466b86dcccf454bf184c9381d0b49c9e9c1f51e7f5162a3682a3ff5645b8a"
   end
 
   depends_on "rust" => :build
 
   resource "litellm-pricing-json" do
-    url "https://raw.githubusercontent.com/BerriAI/litellm/95ecfbbac60091dfb665e73c5f0eb7ef8ed899d7/model_prices_and_context_window.json"
-    version "95ecfbbac60091dfb665e73c5f0eb7ef8ed899d7"
-    sha256 "4d9f67ab0593c98c989b222d5290508e58299c01faa746517037dfa5b8794088"
+    url "https://raw.githubusercontent.com/BerriAI/litellm/27c796c412eed2f7336dccb46a58247463b7c498/model_prices_and_context_window.json"
+    version "27c796c412eed2f7336dccb46a58247463b7c498"
+    sha256 "c5658d536b6d5c020c679631c0a9b69b35b19bf5eb5edd64a2bb8079fe1bf97a"
 
     # Fetch the latest available resource
     livecheck do
@@ -41,6 +44,25 @@ class Ccusage < Formula
   end
 
   test do
-    assert_match "No usage data found.", shell_output("#{bin}/ccusage 2>&1")
+    ENV["CLAUDE_CONFIG_DIR"] = testpath
+    project = testpath/"projects/homebrew"
+    project.mkpath
+    [["first", 100, 25], ["second", 200, 50]].each do |session, input_tokens, output_tokens|
+      (project/"#{session}.jsonl").write JSON.generate(
+        timestamp: "2026-05-22T02:34:40.000Z",
+        message:   {
+          id:    session,
+          model: "claude-sonnet-4-20250514",
+          usage: { input_tokens:, output_tokens: },
+        },
+      )
+    end
+
+    output = shell_output("#{bin}/ccusage claude daily --offline --json --no-cost --timezone UTC " \
+                          "--since 2026-05-22 --until 2026-05-22")
+    totals = JSON.parse(output).fetch("totals")
+    assert_equal 300, totals.fetch("inputTokens")
+    assert_equal 75, totals.fetch("outputTokens")
+    assert_equal 375, totals.fetch("totalTokens")
   end
 end

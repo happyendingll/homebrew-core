@@ -1,13 +1,16 @@
 class Likec4 < Formula
   desc "Architecture modeling tool with live diagrams from code"
   homepage "https://likec4.dev"
-  url "https://registry.npmjs.org/likec4/-/likec4-1.60.0.tgz"
-  sha256 "2a52f65809e68fa3f270a096c0eeccc5181f282bba2bf76931782ccd6498dd9f"
+  url "https://registry.npmjs.org/likec4/-/likec4-1.61.0.tgz"
+  sha256 "892ea1363fa213f7425215bff61e59dbc4f336d0f855eef26a184e2697ed5853"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "118f0e6f1222abb748b1d0231ba7fc7d766bb537b2e532b5c64e605e32fa9d5c"
+    sha256 cellar: :any,                 arm64_golden_gate: "6e62f09bf7669ed6f901c5a9b1397ed094dbc5447bfc49c1b7a9aa1783fd0a1b"
+    sha256 cellar: :any,                 arm64_tahoe:       "6e62f09bf7669ed6f901c5a9b1397ed094dbc5447bfc49c1b7a9aa1783fd0a1b"
+    sha256 cellar: :any,                 arm64_sequoia:     "6e62f09bf7669ed6f901c5a9b1397ed094dbc5447bfc49c1b7a9aa1783fd0a1b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6cb79f79ec3d02ecd23f9ebae062682d60152e101d629e364905ac0e07f61d68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "43798fbae80afcffb6f523b0d6d31b695736836eb56a102860e52888bd52e68f"
   end
 
   depends_on "graphviz"

@@ -1,8 +1,8 @@
 class Nqp < Formula
   desc "Lightweight Raku-like environment for virtual machines"
   homepage "https://github.com/Raku/nqp"
-  url "https://github.com/Raku/nqp/releases/download/2026.09/nqp-2026.09.tar.gz"
-  sha256 "25aea7f4a510efca52f55bd9703aa29ed20dec6003d01268fd1cdf477f9aead9"
+  url "https://github.com/Raku/nqp/releases/download/2026.11/nqp-2026.11.tar.gz"
+  sha256 "a40d60b0062925e6e09d4fed219dafb2b9d23df22052a445a61790aa0bdbaad5"
   license "Artistic-2.0"
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Nqp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "e5f8c512f943989ce04e70f2754c474de49ce70a575bfcd880a2a42db6abfc98"
+    sha256 arm64_golden_gate: "f45754adaa4d1a2e2a5692daab29a8a1c3dbe94c57428d21265b790ad462cf61"
+    sha256 arm64_tahoe:       "e88e49cce4da7327d2067501fe2e5e1baa8fea4de36aa9a5d7e9d21421dfa153"
+    sha256 arm64_sequoia:     "d72e3debf93630b768a810b370469fc4bfe17fdcb4c0bf271fc7baee561b77a4"
+    sha256 arm64_linux:       "8966b68c78302ce1edadfafff4c2512a08a0f0b4b32adc68b21acd3c5ae6944d"
+    sha256 x86_64_linux:      "526109e54edd30bd95a032d0f247f58bd84d5577ff63cbf29f72f47da49a4876"
   end
 
   depends_on "moarvm"

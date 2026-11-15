@@ -1,14 +1,16 @@
 class Libsail < Formula
   desc "Missing small and fast image decoding library for humans (not for machines)"
   homepage "https://sail.software"
-  url "https://github.com/HappySeaFox/sail/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "bf2905717c06b4ff4269dec010339a85994be9cc524fa3dcde3734b4df376089"
+  url "https://github.com/HappySeaFox/sail/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "d248055481e51807ff8e692529008042e728a6547e8e061a4247e0e55e8360f4"
   license "MIT"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 sequoia: "4c3aec6e540cf7cd5f66a076ffd41c8ddbc03231bb633b6b439ebb3ab477c59e"
+    sha256 arm64_golden_gate: "5d9234aa13a9ae3af643f6cc3e651fe02ec40913f80bf059bb5c0108e58a1ce0"
+    sha256 arm64_tahoe:       "c1811b00c767ac93d55ef94c9aa7d90b596b667a7e71071157a02805220e01ab"
+    sha256 arm64_sequoia:     "7ff5ba41dd881cc9cacff7ea2031241647279369d59d12a9b958d0a3d6e4db0a"
+    sha256 arm64_linux:       "caba9cf7345fa612e8ca64d4aed17af7951f37a7f8e70e0016633ae638849074"
+    sha256 x86_64_linux:      "2266fe20959e65742b99d47f5e711cdccde3ed6330bbf6896016e14dca11a01a"
   end
 
   depends_on "cmake" => :build

@@ -1,13 +1,16 @@
 class Scs < Formula
   desc "Conic optimization via operator splitting"
   homepage "https://web.stanford.edu/~boyd/papers/scs.html"
-  url "https://github.com/cvxgrp/scs/archive/refs/tags/3.3.1.tar.gz"
-  sha256 "99a1437b2508ed29933d259793a5745f29000fd8ec58f63a8f54a20006aacb86"
+  url "https://github.com/cvxgrp/scs/archive/refs/tags/3.3.2.tar.gz"
+  sha256 "21c06eca0279ca3561bc8b13a4a48dab553b2e7fec337445c2186ec2d4904cf3"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "deee1ecba9be81750114cf1c1e8dff1976f7e1c857ab171905c679f37ec1b903"
+    sha256 cellar: :any, arm64_golden_gate: "d3a72013589ec2d7a16cddc2683f6f3ce6fa0a23bfe2f34a3d432fd377f12c80"
+    sha256 cellar: :any, arm64_tahoe:       "d8b0062394bfa6efeb6a1e4ca206ac2457f54413a8e29a871bac300e7b130ae9"
+    sha256 cellar: :any, arm64_sequoia:     "cd0ff4ffdb21e327337614ebc61be0eaaa15a5811e5639e6bc0581913441874c"
+    sha256 cellar: :any, arm64_linux:       "501aa341a0e66da9e399829ecd3d67d6c811fe6d68393217671987c75d1c6260"
+    sha256 cellar: :any, x86_64_linux:      "a0e5f8233757d02c085139c16841dc69eaef7601535dc1605df7c511027aa60b"
   end
 
   on_linux do

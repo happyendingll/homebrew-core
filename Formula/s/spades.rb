@@ -1,6 +1,4 @@
 class Spades < Formula
-  include Language::Python::Shebang
-
   desc "De novo genome sequence assembly"
   homepage "https://ablab.github.io/spades/"
   url "https://github.com/ablab/spades/releases/download/v4.3.0/SPAdes-4.3.0.tar.gz"
@@ -19,9 +17,9 @@ class Spades < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.15"
 
   uses_from_macos "bzip2" => :build
+  uses_from_macos "python"
 
   on_macos do
     depends_on "libomp"
@@ -36,7 +34,6 @@ class Spades < Formula
     end
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    rewrite_shebang detected_python_shebang, *bin.children
   end
 
   test do
