@@ -6,11 +6,8 @@ class Varlock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "37c8cce37f428c5ab8c8cbbd9beec9aa82330fe0e3635e3dea3f415394671a10"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37c8cce37f428c5ab8c8cbbd9beec9aa82330fe0e3635e3dea3f415394671a10"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "37c8cce37f428c5ab8c8cbbd9beec9aa82330fe0e3635e3dea3f415394671a10"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "de0a89377af3a5cb78806395f07db919487362240c4f738ec2cdb0c31bfb5333"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f5d7727e836198afacb7f656440fc2bed695e7bdb3a3f0f0a6c81fcb0efdaf9e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "5a7aaca6f320af5fe086608f57862df10655d19c557b1d18e14c0ebb305d2a5c"
   end
 
   depends_on "node"

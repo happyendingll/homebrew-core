@@ -8,11 +8,8 @@ class Gamdl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "432c5072ba858201f1c6b5574cd4df84b2124626b812875b083e9cfd24f4c8c7"
-    sha256 cellar: :any, arm64_tahoe:       "95fd434ecd06fd9b29f3354691c1110ac7fd807b13c4e4fdcc96bc35eb9ce2d7"
-    sha256 cellar: :any, arm64_sequoia:     "213a796814b61cbcacda23b7b67e7fe63ddba51eb7ee7e702ebe09a5f1d2ee24"
-    sha256 cellar: :any, arm64_linux:       "72482a2bd0a121be8dd57e08290976f0d2b6c4ad26bf457390e0505809be549e"
-    sha256 cellar: :any, x86_64_linux:      "1048f5d027dddc974a041029cfc62cf667f79ea0910da381593e86a77a6b0286"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "39dc8fc17e2583754f3ed8dd939cf74e1832e59b7fe3398da52c2c91162a6ce9"
   end
 
   depends_on "rust" => :build

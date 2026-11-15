@@ -9,11 +9,8 @@ class B4 < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "dd072156124bc9c700880f10eb01623d9cc9b3c040712ae113cb53e7eea36a58"
-    sha256 cellar: :any, arm64_tahoe:       "c6853f7e1dd8a4ab8f80a129abdde3d4e0f6d1b6b4285d24d39adaa58e7a30cb"
-    sha256 cellar: :any, arm64_sequoia:     "38cd88716b99493139c95595682ed5b4d1701e251cdb1f2acd7d25b1756122af"
-    sha256 cellar: :any, arm64_linux:       "661b9bc7807292dcbbdf600ecd706a120a9006fee87b7310c1262f5d041fd12e"
-    sha256 cellar: :any, x86_64_linux:      "8aa1956af8a553cbbb53909017493e898b654908384fd0bfbf6d0c4095b79ca2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "719ccda44c49db2803ee07d8162dd254dc7fe5f5df111c8c3fd1cd30b680023b"
   end
 
   depends_on "rust" => :build # for `dnspython`

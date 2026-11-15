@@ -14,11 +14,8 @@ class Vsce < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b151a1588ed3cf28a301bfe2b8454ddf149a3b91c3663f261ac51f2849f6dcd7"
-    sha256 cellar: :any, arm64_tahoe:       "b151a1588ed3cf28a301bfe2b8454ddf149a3b91c3663f261ac51f2849f6dcd7"
-    sha256 cellar: :any, arm64_sequoia:     "b151a1588ed3cf28a301bfe2b8454ddf149a3b91c3663f261ac51f2849f6dcd7"
-    sha256 cellar: :any, arm64_linux:       "14df9221899b2461fe7a10cde5590801dc61edd106f1c08c601cebe0b588d444"
-    sha256 cellar: :any, x86_64_linux:      "89a2c9d5995918664ed00cf8e107ea9f1fedd2b275ce5154d855351bc2585421"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "89ebe596654c4fbaa75c7b8f949c2f93f10b820b5f0cfce797f234436c739118"
   end
 
   depends_on "pkgconf" => :build

@@ -8,11 +8,8 @@ class PandocCrossref < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "74cd8696e6620b2aaaec1849704b3f9ce7d8f67eaaca7793b099cf4b56615ee0"
-    sha256 cellar: :any, arm64_tahoe:       "8d7f71cb31f0e0546588b280f84cde52adbcf911e8403aa725bf0119bcbb7993"
-    sha256 cellar: :any, arm64_sequoia:     "0c4f7d51ea1cc61510da16c51da816dc844854027d28901424ab5894ca844c28"
-    sha256 cellar: :any, arm64_linux:       "2fd8e9550cb579cadc6125de944fd34865c4f95593bed765c76bf44ef3c1c3fc"
-    sha256 cellar: :any, x86_64_linux:      "c9c3f0b0d59789d55f3df6e1d8eba8d668821b30062e944388028e6b241acc2d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "d07265141a60365f3d061030109ea36b3e187efed92b76d97fd649277c773567"
   end
 
   depends_on "cabal-install" => :build

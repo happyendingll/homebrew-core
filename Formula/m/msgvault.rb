@@ -7,11 +7,8 @@ class Msgvault < Formula
   head "https://github.com/kenn-io/msgvault.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ef35b4d073d3cda710cf12d1c719a74d0f6295612b57b6a68c7959e42f1e7857"
-    sha256 cellar: :any, arm64_tahoe:       "9dae884f61eddf2a02049318d7a0cd5d88bd9ea94603e61c44e4530f7d18af6e"
-    sha256 cellar: :any, arm64_sequoia:     "afc931ff3a694c73f5bd5e6cea7e94dc171ad54870fae6e214dd36417168761c"
-    sha256 cellar: :any, arm64_linux:       "8a80802b68cde67e139beb16f12a4b6317e5fa34890691cdea3ee06519b2019b"
-    sha256 cellar: :any, x86_64_linux:      "6d06be527853d7ba1f7c8c93a2ab43064825fb1cad17bddcedad46a96d9c38c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "2d52984710eec82fe0ad06d4e783c3b9558310981dc4d376ad9592dd783dad26"
   end
 
   depends_on "bun" => :build

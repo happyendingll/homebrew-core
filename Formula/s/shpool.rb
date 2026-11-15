@@ -7,11 +7,8 @@ class Shpool < Formula
   head "https://github.com/shell-pool/shpool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "72ec397c6d873c0251feee74c9a79711b03133f855782159f2e53399c449280b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba86152b660fb83d52f2ec08b5bec088d0deccd6c9e6b6b313617d04590dfda6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "de7f2dd3a8903729d2f6de370e0ee49b587f20656c873cc929247e1c5893af94"
-    sha256 cellar: :any,                 arm64_linux:       "f0b3d0201c717954bfd23d978a28c11348cf139f471aede3fd92b8040a42cca9"
-    sha256 cellar: :any,                 x86_64_linux:      "51615bd83a356ea5df941250ef41ede269dd78819fcb4f1279ed13e2c9ff503d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "4f4afe33fd24c95b3eff0274ca07246d3b13a9303ffd60b5af1459839ea632f2"
   end
 
   depends_on "rust" => :build

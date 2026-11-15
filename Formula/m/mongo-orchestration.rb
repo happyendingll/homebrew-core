@@ -10,11 +10,8 @@ class MongoOrchestration < Formula
   head "https://github.com/mongodb-labs/mongo-orchestration.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c9175f1e4989bb76d59c117abfb28049913917c19e8e455bb09bb35d81de7d4d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2a51d6913444ee1328b36a0d5c1069d56c37fd4ce5bc4316506b555cf4e5fe91"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9134e2d7bceed0b22a94a86b9844686d6ede82809f35b0417ac5ae32539c4529"
-    sha256 cellar: :any,                 arm64_linux:       "9718d77ee7267a28df10234078881653f14a64be8fd0e7b782579ffcbd05dc49"
-    sha256 cellar: :any,                 x86_64_linux:      "2f6d9f85172ab2e98e0184a6b63bb503f8d001708b4204c406a7a63b0b18d0b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2d47f7e8ae3b67afa8a719602973bc7eb17a3818e9556ef0b4b952732b68f431"
   end
 
   depends_on "rust" => :build

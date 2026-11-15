@@ -7,11 +7,8 @@ class Oha < Formula
   head "https://github.com/hatoo/oha.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d4a13fba7f72795e7a2ce5817558ffef55944a1a488fc8c0b72acc799d394a21"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e4956395053d93642c680e7a6bfa57893720a8988c9460f036c09e4d3086804b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "77c55016ffcde619acb6c58da9cd03d33adf96c93841b867b178c482265fe3d3"
-    sha256 cellar: :any,                 arm64_linux:       "fbb2e8f15a5bdfd671feb02204adf23a2cd54240eddfb3b5cd8b98651096a2c4"
-    sha256 cellar: :any,                 x86_64_linux:      "9f39b0b91ef34bdba5132bdf31c6ffa76341225085e96b91a259cb0090f26eb9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "cfeed64eba739930d6132703d75cc8548dc90c734cde64693c05992d8a34810d"
   end
 
   depends_on "pkgconf" => :build

@@ -9,11 +9,8 @@ class Fava < Formula
   head "https://github.com/beancount/fava.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "65bafe5c660b0039810ac78527029eae75e23a48ddd16106a98916e0e3db005c"
-    sha256 cellar: :any, arm64_tahoe:       "3c096edfe614fea378c00dbe61d0a981018da4811b415f9e9a4174ef6b30432c"
-    sha256 cellar: :any, arm64_sequoia:     "51df766c8c3918094fe986e021f9413224b30cae0393544ebbd202018da790bc"
-    sha256 cellar: :any, arm64_linux:       "d8ce780adbdfbc03f45926b2097d472aebb95a0045dd5f87755a6ec3f1976edf"
-    sha256 cellar: :any, x86_64_linux:      "8f237479b8356dd8e92955b8ff810b4841a4465155451f46e773c54ba6b588cd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "a4306d29111010536fe410ada5bb6e4e172e4ebdffa4d7d1e6fa059376cf79a3"
   end
 
   depends_on "bison" => :build # for beancount

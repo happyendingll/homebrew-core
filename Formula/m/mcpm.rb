@@ -9,11 +9,8 @@ class Mcpm < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b64fed8184ebc5e6b74b837e479fd26e624efb10a71367ff545007fd4908d592"
-    sha256 cellar: :any, arm64_tahoe:       "1a612100ad2ec24487774ad62d926af8cd3d3c2ce47b35c68ad7e37bfe723df1"
-    sha256 cellar: :any, arm64_sequoia:     "780c3045f8d9306e4aeb1eb19f7402b241c418546832288b9e6c4be138d020e3"
-    sha256 cellar: :any, arm64_linux:       "e01b77f50d4fad9c948da67c46f759f6d1a58f4301ed8254e9a72e086c22c989"
-    sha256 cellar: :any, x86_64_linux:      "9475ba7eb505d07a3513e79e86333e8598d0eabe73849f388d3b435db63cf127"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "797818dc0c538d337ef3dcbd5ecf51841727316cd6a6c20dc05bf71935a6b4bb"
   end
 
   depends_on "cmake" => :build # for duckdb

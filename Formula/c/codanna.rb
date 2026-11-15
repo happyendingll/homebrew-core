@@ -7,11 +7,8 @@ class Codanna < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ccdccde7a98094db3a73ed3f38fa16fd83ac9642f1766c0a2dfe9ac370712ac0"
-    sha256 cellar: :any, arm64_tahoe:       "75cb961c938a3ec975bf86450027b23e48c42a20ef8266eb471f90817979b4bd"
-    sha256 cellar: :any, arm64_sequoia:     "825c09ed3ffe0659ab8577b6e995fd3549df6bbcb42b2f2a0afdc402a016787a"
-    sha256 cellar: :any, arm64_linux:       "99afabc0f7e285559c1ff847b3cef64ee922848cfad6f5ba78e0cacadf2dad79"
-    sha256 cellar: :any, x86_64_linux:      "e113e0ef6ce26f8e66cdce21ab9c74aa7930ec43e674055381cc26cc2ff004ba"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "3df742785e4c5e26acc492226d2a5f7c5319233b247a7fac9660ef0f4fbd3a0a"
   end
 
   depends_on "pkgconf" => :build

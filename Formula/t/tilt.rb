@@ -10,11 +10,8 @@ class Tilt < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8338b34e637cf7fc31cd77fdbd137355858bb4cab6609321ef7b2401e79c0cd5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0579763d3c7469bbb83988c5960e3f7264c677fabd4091b793696f4dbeee3c1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "685a528600fe6dea18566d4eb21035f052dbb8d528517f38230d7bbbc66288cd"
-    sha256 cellar: :any,                 arm64_linux:       "e2f6f52109402c55e073578f8a175786676d58b92f8d4491530739b118ae2729"
-    sha256 cellar: :any,                 x86_64_linux:      "08d5a200e1fd23ad7fe6ae932aad569ad2c1af446968aa1902a43582d2d2e678"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "0e8ba03fa86f557d9674c2422e93b3d4ba0294c9cbc9902949ca3fb4ab4cbcac"
   end
 
   depends_on "corepack" => :build # for newer yarn

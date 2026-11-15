@@ -6,11 +6,8 @@ class Obscura < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5c771f1b1948880a980e81f1d4955ce17a9b95236218b35dac7b7ee37f87f160"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a51cd30fe233ad50c22aa13f39b769b3bf95cc21ee86d7123c4c51c5f407bb47"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c9fb4abf96d6d89d3e11c8d4114d9c2671bc9296c55c6c56f2fd0b9b474ad2e6"
-    sha256 cellar: :any,                 arm64_linux:       "f5ceb6ccb61f89767fd6267d72aff81bdde6898bfbaddf24f6d2feb427c1200a"
-    sha256 cellar: :any,                 x86_64_linux:      "8d319885df65eaa364f01467e95970d3b7c97b73a947b0f6700c3d921d7156e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f6bd2c7a7963c471c0a6dd008cd2a65c6ac70b2d0455a26b474be8695a470fab"
   end
 
   depends_on "rust" => :build

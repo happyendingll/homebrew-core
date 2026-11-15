@@ -9,11 +9,8 @@ class CfnLint < Formula
   head "https://github.com/aws-cloudformation/cfn-lint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d7b31517bd1617b550b39c51a944f0037998fa55f4007e1f1894eb89065f3e44"
-    sha256 cellar: :any, arm64_tahoe:       "964d4da9df339f3506f47cedcd719a60a28d8240f4fbe51082ee96a22de33b8a"
-    sha256 cellar: :any, arm64_sequoia:     "fd3c869d3cb0417d0fbf8efb4ca82adfcf3dcc4968d80c6325c2495cee0b1de7"
-    sha256 cellar: :any, arm64_linux:       "e1aad56d0868d535d744cbd53fe95b13ba45202b166c476ee5df83fb81bda95e"
-    sha256 cellar: :any, x86_64_linux:      "bbfae1535a950baa2a326572c3df2bb1d6bef02dff39b1a87afd655c79e157a9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "c711b6e3d5f7e830dcb439197eb638e37e010b499b6be7360210fbb9bd9b5bc7"
   end
 
   depends_on "libyaml"

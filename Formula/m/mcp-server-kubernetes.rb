@@ -6,11 +6,8 @@ class McpServerKubernetes < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "70b58d606616c637b4402cdb017a48a136514ea03907373706fc9d004f1763fa"
-    sha256 cellar: :any, arm64_tahoe:       "70b58d606616c637b4402cdb017a48a136514ea03907373706fc9d004f1763fa"
-    sha256 cellar: :any, arm64_sequoia:     "70b58d606616c637b4402cdb017a48a136514ea03907373706fc9d004f1763fa"
-    sha256 cellar: :any, arm64_linux:       "5b67a42032f6564e3a00e9c778b8b3424c5a2c02560c39344a9f5a12e59d3a9d"
-    sha256 cellar: :any, x86_64_linux:      "387ceb6f7b7a389fbffc99ea9ad91b36a28ff80476f32d94424506b11243e69f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "7bb606117aabf680c1f4a4e0419ac48a7acc7abbd9c4334a0ec44246ab52e4e0"
   end
 
   depends_on "node"

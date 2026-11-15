@@ -9,11 +9,8 @@ class Dnsviz < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6652f0913a6e807f1843cc56ac32426d90bc84594ee3ea71cd38348a4af216f0"
-    sha256 cellar: :any, arm64_tahoe:       "c38d24acf57d32566da3c9a441bd3460918f463d32ee5b446ba587802f7178fd"
-    sha256 cellar: :any, arm64_sequoia:     "8fbf81f96c144bafdd8ec8f7d8826135486ae4b48bd0ff866f678dfa040597d5"
-    sha256 cellar: :any, arm64_linux:       "3d2a8085260773d5829cfc631c18db89933ead953ef0e4de05e472cb26f12c5a"
-    sha256 cellar: :any, x86_64_linux:      "1be2172479e173edd7166d4d5a456f2ba11d546628611c14f2c2caf1d44d1a80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "f8d409b17254386b5b8d41c3249d8bc1ab9195aff7eaefe7ef5ff46b807fba6f"
   end
 
   depends_on "bind" => [:build, :test]

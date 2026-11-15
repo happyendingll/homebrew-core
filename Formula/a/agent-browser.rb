@@ -6,11 +6,8 @@ class AgentBrowser < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6531a29e4268607084242c51727791b96e23f94b51cb0f0a0c40e5e5f84d8bb4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1bccb9607d6674514d0070d92dcae4da7ef9339f08ad57003193b26ec812dec4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b0937ff6832ee6f33372fb7ef583a9ecc970a73f51f14d89308b6bd5c4434408"
-    sha256 cellar: :any,                 arm64_linux:       "b40c364af70074524745053be3b75e04e7420676113a49418f27bb0429396e49"
-    sha256 cellar: :any,                 x86_64_linux:      "20d42dc447024159ad1bcac68f88d6b071ddd8bb30aac2c2e35ea52c296868f0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "a654e5379fb4d7d17a237c366786e5c2bc7bfb7d61f41e67b576ec8864146bc9"
   end
 
   depends_on "pnpm@11" => :build

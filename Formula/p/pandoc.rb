@@ -8,11 +8,8 @@ class Pandoc < Formula
   head "https://github.com/jgm/pandoc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "db3c668261bdc18566b44f2dcb89a172a0b1e5485b5c72fcf343d2f7d7c2ac8e"
-    sha256 cellar: :any, arm64_tahoe:       "6fc0e13edce13abfa4dce87b16793d9fe2e859396c4f59c0f4010cfbc0cec77c"
-    sha256 cellar: :any, arm64_sequoia:     "f08452641481cdb0a29e8c5b2029395b32756185153f691094bc857e8f1cbc35"
-    sha256 cellar: :any, arm64_linux:       "c3af17977edaecc7c4ae84a008a6bdd3ff21639ecf7b37127be0408f4dd41545"
-    sha256 cellar: :any, x86_64_linux:      "20cf5c008062fb2d3e6fbe9c751d668f04ee3d86d9baefd80b9846f835076d0c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "0ed0d588de4bfe67c7dc3c3acd7b90f56668f92ce77045fea9b80328cc637a71"
   end
 
   depends_on "cabal-install" => :build
