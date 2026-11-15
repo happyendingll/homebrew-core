@@ -6,11 +6,8 @@ class Freesasa < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3ace0796c7285dbc23e161e13e5dbc95e2bb0ad141bd7941d4bb341a8d0755f7"
-    sha256 cellar: :any, arm64_tahoe:       "a1625588f5e46a454620a3fa86c26afd07a1426a7b633fd3228ecb00cf201fb0"
-    sha256 cellar: :any, arm64_sequoia:     "a12b834e8c80fafa40c8c8c59ef750250a237ceb24614cb18055277021806ac3"
-    sha256 cellar: :any, arm64_linux:       "a65e7d352e1e3e903035b1a69c8b17bd96edc47bd20f66e6e43e69a1c897c57b"
-    sha256 cellar: :any, x86_64_linux:      "310c887f6d500a1f26b40948520e5b142da67a09a93ee16128b85b5665894767"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "36017edb726a2121448cd2cd52be9c2b869b2a30e9adee3826aea413866a9fa7"
   end
 
   depends_on "autoconf" => :build

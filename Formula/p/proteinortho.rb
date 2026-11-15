@@ -6,11 +6,8 @@ class Proteinortho < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "da693ce66b7938528e06d7a449d8d76f7e9ae628c6c650b1aa5b83fb2a1af382"
-    sha256 cellar: :any, arm64_tahoe:       "f03983fbc6739867d30c9d7762c0ef26a8b7de5d80c2559b88ab690df7d0312e"
-    sha256 cellar: :any, arm64_sequoia:     "65a313e433ceeedb616cdaff5c78371bf09e017ff8fc894dd37515d875ed0f58"
-    sha256 cellar: :any, arm64_linux:       "86a0133fdf7518970a0a64298282ec534d9c1487db0cfbb5ab6f10406fd7a83b"
-    sha256 cellar: :any, x86_64_linux:      "5d8a81a029a52e80a455af92c6b7206e040ad614beb966e55bb441a9f7694a93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "53d469878cb559924813f3d85a9310ab045349194ece5c17b22ee7bf31538347"
   end
 
   depends_on "diamond"

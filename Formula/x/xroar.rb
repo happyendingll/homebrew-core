@@ -6,11 +6,8 @@ class Xroar < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "526193c1cca92e7201881581a81b946573ab77e04adf0edaec564d33d168fd59"
-    sha256 cellar: :any, arm64_tahoe:       "cddf9fbd9d1dff6b41b3a5abfb3dfebb5def5170efbf55e7eb2ef988700b82c6"
-    sha256 cellar: :any, arm64_sequoia:     "839a20b7c3de18a075f6a161f8d3cf371c89df618797f660016c708dce988385"
-    sha256 cellar: :any, arm64_linux:       "5a8c2be852a7d30a7436e4e35fb7539de32138d3f3d5d9f20b68a819b9f01140"
-    sha256 cellar: :any, x86_64_linux:      "0c45c11cf44219cf8f733fac8b4ffb2ce9209a3507c66df70539790ea7886de8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "497b2f8570083c470e8ef2ca7a73dfab90a17394c3280c8d0da89249ebb268a7"
   end
 
   head do

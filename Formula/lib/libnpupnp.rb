@@ -13,11 +13,8 @@ class Libnpupnp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fa9c584e2e1f01f12ac1e3aca0b018fb59017463606f4188c1bbfe4e87e065ad"
-    sha256 cellar: :any, arm64_tahoe:       "0f4a521d1f73de529303c5cb37a880367eb448717668159a353970582decbef7"
-    sha256 cellar: :any, arm64_sequoia:     "e10f1fde2bcab43fcc4fd4374b80ce56ba46f98d8e9ba960c4c88f09c3c1b88d"
-    sha256 cellar: :any, arm64_linux:       "1a5d36f6b7edfc79cb3a4373e20ddf400973572aa3b6bf9f70cac8811f098183"
-    sha256 cellar: :any, x86_64_linux:      "d8a18602a14cc31b3237f8b73ccc3119eb3e234a8181b85d7b1534be433e1a2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "10a5e48a406c3eab2be9ea11ef334f0e4f32c8846f808f731b8909fa76a0bb27"
   end
 
   depends_on "meson" => :build

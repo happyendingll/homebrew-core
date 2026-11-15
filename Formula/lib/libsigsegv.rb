@@ -8,11 +8,8 @@ class Libsigsegv < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0396c86719dec7735598c913fbc3123f1dc7fd0a7cd29e1657e1707f7d84e0aa"
-    sha256 cellar: :any, arm64_tahoe:       "c8c31bf94e9848ab41c559f87d2900e9d8cbb436748224b24328e80cae20f3d5"
-    sha256 cellar: :any, arm64_sequoia:     "b6f6b65a6ac29eaf4858763caf5f6453a0c795380393ddc842343f5766351159"
-    sha256 cellar: :any, arm64_linux:       "270d92daf11deecb8c151507938252b0714e87fee71d939156aed8660d531285"
-    sha256 cellar: :any, x86_64_linux:      "4d2b76a7fb6a5d4ae95de83fabdee92f0453e873a4cc9e93721aad8b288dea70"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "067d8bbbd36a8abdf8f0e7cc9c16fe477111f98e555b7ea4b9b62c0265e295ae"
   end
 
   head do
