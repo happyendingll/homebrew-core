@@ -11,11 +11,8 @@ class Rakudo < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "49c3bc609bf21e519d9ad09bd6edcf945d20503566406d0c134aa60c3aedcf5c"
-    sha256 arm64_tahoe:       "3081eda44e8a34fba65b85a6546bc47db90c67f8618a6da817af0025db275e00"
-    sha256 arm64_sequoia:     "e2990c8f4151b2b527666483dc9c3c157dcde00b4f086800101f187ff766259a"
-    sha256 arm64_linux:       "9c8052458e759781ad604d1e271af9370f3cc06e5032322bdfce11ffb7c2fb76"
-    sha256 x86_64_linux:      "c734f42c2b5fa41d63ec68b13749cafc476ede76f4843fd4be811bf168fed274"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "7be71b1567390e84e043628e66aa20f3a4db1da673356b596802f2a01f39d572"
   end
 
   depends_on "moarvm"
