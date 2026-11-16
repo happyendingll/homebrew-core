@@ -6,11 +6,8 @@ class Nvtop < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "51f654b4dc7a59dea8752df811b77801eef3244d73faaa47ea6415bc187fe873"
-    sha256 cellar: :any, arm64_tahoe:       "559c770e90849e10b207bb0cac9a4828f74b39115b607c54edd65073ccaed1dd"
-    sha256 cellar: :any, arm64_sequoia:     "2573b08206524a93f5a56e9ab2c294e261c97fe09fed65992eface285dc7e1d3"
-    sha256 cellar: :any, arm64_linux:       "043bf47ac3227153b7948e242b36f7ac70df5d6fbf09eb40c1edfe848dcab7f8"
-    sha256 cellar: :any, x86_64_linux:      "bc3fcebf0604907b2908b5d7e91d0b30ae97509ea71bac433b1fd3753928a598"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9beb05a93442bba967ea1b80b6e3d93cd0ee395e86dd431b88a3e78befd2ebd9"
   end
 
   depends_on "cmake" => :build

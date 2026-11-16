@@ -13,11 +13,8 @@ class Dlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b6f6b2ed845eda910d5b67434ea9909cb70a5cc08fd5f1e70f04fe2e0e48b27e"
-    sha256 cellar: :any, arm64_tahoe:       "c06e88b703bd85b9c2909ce4c683972ea65eb5361f2f00c96bc2f7a5b13bc687"
-    sha256 cellar: :any, arm64_sequoia:     "e429fc1cbf6dcc70f37abb4d99b42e53f40724880d4145a29e6bdbd296087534"
-    sha256 cellar: :any, arm64_linux:       "cf54d2a5a4d922981183c0f803e3ae6ee195835a9a5d720dbb559a25c8ca7ab6"
-    sha256 cellar: :any, x86_64_linux:      "f910d266fe85af8dbbad6a504075db4cdeab6e3c8ee52723f6c5d8af88d28065"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "260791195cd67f9d4589415c91e136643aa112c2a5a58b1dc8349f73cfbe716f"
   end
 
   depends_on "cmake" => :build

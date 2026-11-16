@@ -6,11 +6,8 @@ class Dopewars < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "9124b36e81ce76fead891d1ef8e21b4a72909286e66000a8d16083418d7b0c10"
-    sha256 arm64_tahoe:       "32b1b72f03015a87d1f859a9f739ca8cb9918f8cfae668d1de4317cbef5bc626"
-    sha256 arm64_sequoia:     "8aeafadcc264e12349d8a85fd5f4524a2345b5802397878b5e8c8f83fe7b4692"
-    sha256 arm64_linux:       "1a76b9b191b543f432b549f9aa3182bfdbf67039c683b9c445050cea53752ff5"
-    sha256 x86_64_linux:      "cb1cc09dd5cefd70012cb61dbb6020331dcd627fd23f15ea03c145a84e7f303d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "73121235b13624c2145ab8e9c29f4e69225059b0fd10ac5813869e4f60dac0f9"
   end
 
   depends_on "pkgconf" => :build

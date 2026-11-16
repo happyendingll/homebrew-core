@@ -12,11 +12,8 @@ class Porter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6243954ed826a2320e2403e5b0cd125d1faef5fada6b193ee5fc090a289e48ba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9f3c2143f49fa57f9c248e05abb60e7939333e64b942216846d5152cdf69fe4b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87e94d06c86b8daadf3947be9588c75e36b40629793aee7ed48b735ca211934e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "38df4d9b3ce37d3ee4c9f1c946317ceecf0a2039ff7f1cf88bfa563ac703c65b"
-    sha256 cellar: :any,                 x86_64_linux:      "e2f184d10fbefe148ef856170b4b0d26428370f45602deb66b256c6f4b050778"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7e119b81ed0f250b87f8333720df0e433cb1a4dc0186e233d9542aa2c42e3b6e"
   end
 
   depends_on "go" => :build

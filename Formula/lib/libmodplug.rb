@@ -12,11 +12,8 @@ class Libmodplug < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9014a2a4c7cfb30c08910e745fb0ae00d7ce7d1d157c2315a07e26649e4c919d"
-    sha256 cellar: :any, arm64_tahoe:       "6efb09badf5149ba9de2a95478a7368d0b5a0cb15cfab76ce8b8411c582892a2"
-    sha256 cellar: :any, arm64_sequoia:     "3ad7489e3a52048affa2e92b215ea7ac643647aa4503966d73b288f109165100"
-    sha256 cellar: :any, arm64_linux:       "704a9e65b80b4fa457f4bb1002a8868e283a8fe80ddbdc381bb39aed5a7b51c9"
-    sha256 cellar: :any, x86_64_linux:      "9c6801f8f9b31f5f1c6563f695b7b05841a7196d0540794f63833ceb20d8642c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8fc85d7c6d264b5e20bf750f961263facfc9b39ba756b3a3617bb802fe909236"
   end
 
   resource "testmod", :test do

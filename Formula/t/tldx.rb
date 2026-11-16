@@ -6,11 +6,8 @@ class Tldx < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d44a663ef699c960834486193e166e37149f7c421d1440365549ea9b9420807d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d44a663ef699c960834486193e166e37149f7c421d1440365549ea9b9420807d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d44a663ef699c960834486193e166e37149f7c421d1440365549ea9b9420807d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d19cea7241cb4d7cf3cb3c62a50d0f3952f4ddff53acad8d231ade94b3417499"
-    sha256 cellar: :any,                 x86_64_linux:      "8af4f5590e817403bcaa431e7871ba1ce143b9014ff76140e2e447390300a145"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8c061e718265f1e2c3fbe24e9bc1ad655d018c32356f5130638215002856ad6d"
   end
 
   depends_on "go" => :build

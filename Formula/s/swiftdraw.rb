@@ -7,11 +7,8 @@ class Swiftdraw < Formula
   head "https://github.com/swhitty/SwiftDraw.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a52e0549049f9fee1018b9090b30022335d69debb9dd7d863afbf68d11c91b94"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "40f4ebfaa9e7907381c4fe4902b41b2499f5a9adea48cdb841c941e748465126"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4e81ce9b9959db714a63b024e2b96e05097e3f16e5b79ccfde85f9ed3d8dd604"
-    sha256 cellar: :any,                 arm64_linux:       "29482ccda4ff35d39ed969a4c657b4a7c266516d36c9b747a199f88fb1f74b4e"
-    sha256 cellar: :any,                 x86_64_linux:      "5c2ef1629259b50216c5e334c6db6ff286870d2dc5f0bce1e42ccb78126d81a2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "87ada65c336d936ae3b017ad9ab1bd8752568b9599ad2a1c01cb1e5ce03ad38b"
   end
 
   uses_from_macos "swift" => :build
