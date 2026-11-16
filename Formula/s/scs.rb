@@ -6,11 +6,8 @@ class Scs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d3a72013589ec2d7a16cddc2683f6f3ce6fa0a23bfe2f34a3d432fd377f12c80"
-    sha256 cellar: :any, arm64_tahoe:       "d8b0062394bfa6efeb6a1e4ca206ac2457f54413a8e29a871bac300e7b130ae9"
-    sha256 cellar: :any, arm64_sequoia:     "cd0ff4ffdb21e327337614ebc61be0eaaa15a5811e5639e6bc0581913441874c"
-    sha256 cellar: :any, arm64_linux:       "501aa341a0e66da9e399829ecd3d67d6c811fe6d68393217671987c75d1c6260"
-    sha256 cellar: :any, x86_64_linux:      "a0e5f8233757d02c085139c16841dc69eaef7601535dc1605df7c511027aa60b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "f5716049b0ec5099a8ab8a61730119bc9aebf5c05f5856627381844acc77e312"
   end
 
   on_linux do

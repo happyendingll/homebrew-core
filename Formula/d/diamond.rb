@@ -7,11 +7,8 @@ class Diamond < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "70f71cc45c1aa79d860b339a5f24b7bd349f0fa64edd7543b7501fcd54d23fa0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04949f1905cdedba2ab0c22745d0cddac07450f89a57b9e3b4280b442b6b189f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "574834d34813cb9f8ae14ce88f73e94c62bb6c0c0b38130a27166f940fc8b127"
-    sha256 cellar: :any,                 arm64_linux:       "18497a563175139db9c7888b62259238e24d1c576c706d59b405702280f7cb8c"
-    sha256 cellar: :any,                 x86_64_linux:      "88418f8126e4fcc390f1450edb4b041cfa44a9bc161d8bf3dcf35212783ac1b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6241adecba8b0d2ee25068ff2a306f6e1cad3cf88a515552ccab319e1e3868a4"
   end
 
   depends_on "cmake" => :build

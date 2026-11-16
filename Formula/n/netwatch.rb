@@ -6,11 +6,8 @@ class Netwatch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "492902bd64e4a25ebf9508d42178d8ae3d5ba5dd392cd59c0187fa01c651cb21"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "38d0d86ff5154a8a5377738f97bf3f827a5e7e37cf73c761714d8c5e514a1a69"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "66e4f2b4108cba6442a1cf6f78f3dc3ead871b4e8300ca4337cf9da435e8698f"
-    sha256 cellar: :any,                 arm64_linux:       "b60050516ca0090a888d3ac49af5c5981fdface475f76233aeb0d87e3056f2ba"
-    sha256 cellar: :any,                 x86_64_linux:      "ed4864f58ed1ee17c301376728bde96f95567470daa79c33b2c6db2c8961001c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "821d095ff2a206994322169028cb71fcb2e54e3b2819d7e4ef745b23a33ff1b2"
   end
 
   depends_on "rust" => :build

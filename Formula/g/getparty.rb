@@ -7,11 +7,8 @@ class Getparty < Formula
   head "https://github.com/vbauerster/getparty.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cce09a11faa55c4ad043d5033b6cf55aa9a294ad649aca79e41a64678408a4b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cce09a11faa55c4ad043d5033b6cf55aa9a294ad649aca79e41a64678408a4b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cce09a11faa55c4ad043d5033b6cf55aa9a294ad649aca79e41a64678408a4b4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d2a746e1da6e47d9ab4f52923abee45b2543a7985f39d0e47d23998ca2dfe201"
-    sha256 cellar: :any,                 x86_64_linux:      "0bcec58e618578021128ac6f832b26d742956cfd9ecf7a8c9777c158b08cd7c3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "fabda63628a407eba95b9fb41016f5d7e84b539e23363f7262222cd8741bc02e"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class GoParquetTools < Formula
   head "https://github.com/hangxie/parquet-tools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dd651fe4dd2dcd9518fe7e9ff0b77f582c7f4f6f5a2571d0b2f7420a55534928"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dd651fe4dd2dcd9518fe7e9ff0b77f582c7f4f6f5a2571d0b2f7420a55534928"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd651fe4dd2dcd9518fe7e9ff0b77f582c7f4f6f5a2571d0b2f7420a55534928"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8722061db43dac2ba33fda0b93b5537e53e2fd508673d559d4cd6ee8c151b6b6"
-    sha256 cellar: :any,                 x86_64_linux:      "409da5dc0b2aef11fdd61273c6c4f75d32c71ed93156c150c53fdcc01e48a4be"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6ebe2cef91f83b1ece0d79cdfc37c8480bc196f969532e5019456395506414e7"
   end
 
   depends_on "go" => :build

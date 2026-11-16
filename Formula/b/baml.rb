@@ -12,11 +12,8 @@ class Baml < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "508ae63a39863f8e774d66690b63ff6e3cb4a776b7b12ed7571db90b96cd3a51"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "337b64f9666b65487135cd06a2a0e23f8e7ba6cfe4fbee8a7c1a386a4aa9c88b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f95c5caad244c8a5966e4e9a0071890ad395b7025b01a9895789285fc4a0ef54"
-    sha256 cellar: :any,                 arm64_linux:       "1215331eafe55bdf87bdbc0b0fad12d89c40c6577af4ccd9e3d9859c86364b00"
-    sha256 cellar: :any,                 x86_64_linux:      "a8253429a9a8e2c73b263c864510d41954830c1b3725a424ce33502186406dde"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2789e311ffe1f7dffd4ee46715ad592f536a061464736054439217db54fdd344"
   end
 
   depends_on "cmake" => :build

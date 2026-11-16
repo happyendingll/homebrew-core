@@ -12,11 +12,8 @@ class Worktrunk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "54a8cbf2c4816d398e04acdc1720fb520126c794385ae0d47a65ef50b2d7f76e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d95eaaf5b23a9024a294cba46a78a5f5ab969e2ec9820c87449daac6b6da1692"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5665f9139c1a4bdfed5ef42ae7e58c5a466ac31f0a2869f6d6f1deadc5a64dbd"
-    sha256 cellar: :any,                 arm64_linux:       "7f6c0a3b742cdb4f8ca25e135d54a32cd51ed162bbb2f98c81d779bc64673991"
-    sha256 cellar: :any,                 x86_64_linux:      "8913e851cce42cde15b4b7c2bd8a4c11bbb0f756ac94d39ce3599e4cc7285fce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "1d236aab5ba46bc1a2b89cefc9d087663b31f1b5fe629ce1ea95c6770e7dde7e"
   end
 
   depends_on "rust" => :build

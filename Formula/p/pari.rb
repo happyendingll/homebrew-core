@@ -12,11 +12,8 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "a03865fe7af505f8c0160920f78f19aea5fde67dc582e748f3649668014b02c7"
-    sha256 arm64_tahoe:       "623ae5e33125fae3d5ee61504964333961bbf00add579dec9cff08d9a009750b"
-    sha256 arm64_sequoia:     "d9d1cd586b3499a1bc8750745487e90f3bbe1a4ce98d1fca0dc156e2c891c438"
-    sha256 arm64_linux:       "907cd39b53b8e598587893c20ed97da3cdea9f2026102e2223ea7c87bf3d4f99"
-    sha256 x86_64_linux:      "ed1a87e02b58bfd4329dc6c35238f5281ff460a3a4dda85049c1e3599ea14ee9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "69b1f4426ddc25edc56af6463b8fba7ea85de8faf3cbc89024a5be9f269b8783"
   end
 
   depends_on "gmp"

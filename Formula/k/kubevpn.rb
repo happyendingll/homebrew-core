@@ -7,11 +7,8 @@ class Kubevpn < Formula
   head "https://github.com/kubenetworks/kubevpn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7caa6f7d4c0a052b4f64645cf796a15126465ecdea8fb63eed706c2a037a20cd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "be2c3cd30ed1b4fe31761ccfbf95927ef901b55ff4d15cdaba0e25bee4534645"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "739ed0688ad92ddb3f0fddbeedc2ae8803513a6a73bb5a61a0534ccc37db686f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7c9200b09ae7b14119be6336cee9af153c51642ae33fc90422ac7a2da1d236d0"
-    sha256 cellar: :any,                 x86_64_linux:      "dd261d1fcf31fcc8070e64f2db691b34182fd01445039bd5ef73d51d2c843618"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "c3a9fc6adcf738ed27b7822ed7b01e6602ccc6a96f7e04a07dd78631cb6c2a45"
   end
 
   depends_on "go" => :build

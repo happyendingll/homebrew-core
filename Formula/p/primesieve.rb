@@ -7,11 +7,8 @@ class Primesieve < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a25e3c7f694151d3aa396c4d43474b0ecea355c4be3edaa60593e7aef690283b"
-    sha256 cellar: :any, arm64_tahoe:       "e0f3fe02b9453bca9180c8f95ffa4b4520fec17f07c4c84fbe9e137a1477b5f5"
-    sha256 cellar: :any, arm64_sequoia:     "122e0b01681fbe1dac65838a4a1216e41d2a9f1a62bd65235b865a39cb050b80"
-    sha256 cellar: :any, arm64_linux:       "8959747915d45e542ad8925d39b6f9c808d2aff434df251c3532f933da522136"
-    sha256 cellar: :any, x86_64_linux:      "3c7314e1d3d779cb7e6c4188a87f5d0a0d1e52cd70723a7de959200d7a01dab3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "d5630d5e821a168969bcad2df90f2038cae8c4ddec21c607fccc89071dd82476"
   end
 
   depends_on "cmake" => :build

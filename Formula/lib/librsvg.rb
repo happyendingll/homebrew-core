@@ -17,11 +17,8 @@ class Librsvg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4bf727a10083f030348c98b94bd1589092527c42fc119efd9b622f37287b5e33"
-    sha256 cellar: :any, arm64_tahoe:       "9e66074a308d2245eb81886bc5648dc22acbb113d80a5076bf45dd5212034239"
-    sha256 cellar: :any, arm64_sequoia:     "7cec71ffb43c1515ab1407fbc4ebee727653d71f9e5b152aa752f3e3d7a4f226"
-    sha256 cellar: :any, arm64_linux:       "efc74b2e1998f5aec882fbd293a878ba19410159d0572392fa4401e7851db27e"
-    sha256 cellar: :any, x86_64_linux:      "f7d77a97b046c52717a3247fd23ec816a44da19b8f03e50453ba4b6d7ebbec6c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "e792789e357953420db05f95f209b3e2c811897a6b718ca8d7dd1082681f74d4"
   end
 
   depends_on "cargo-c" => :build

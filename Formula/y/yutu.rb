@@ -12,11 +12,8 @@ class Yutu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3f279444072c630dfa6f1b6f758e79dff252b9443f1c450bdf28c55dcf0515c7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3f279444072c630dfa6f1b6f758e79dff252b9443f1c450bdf28c55dcf0515c7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3f279444072c630dfa6f1b6f758e79dff252b9443f1c450bdf28c55dcf0515c7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "df7257f692bec2ac0e2586d2d49cadf88a6cafa9d8bf9223605cb6d887f1ad5e"
-    sha256 cellar: :any,                 x86_64_linux:      "d1d665077293ec6571e6c5324e158889a6e0c278a25082ff17196c88053ade5e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "c1b567fae43439df76d094ef6b6364770930143aa3552631b8b190c78224ed8c"
   end
 
   depends_on "go" => :build

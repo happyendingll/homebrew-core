@@ -11,11 +11,8 @@ class Websocat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2b31104c3edbbb58342905c27e0146433af3db4b65040e128248126f6989757"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bd74ae2eba6236f2eaa6e04c0550ef19b0a431a1db434ac4e1497dfdc1df5b18"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3c942390b0f1a464cf83ba31e44a8720a5396b36876b6ef43b9412606795ad30"
-    sha256 cellar: :any,                 arm64_linux:       "04a777829753b2ecc3a484e32819fafc160760faea9d0e861f4a2029913d43de"
-    sha256 cellar: :any,                 x86_64_linux:      "707f5a76e7c7bd461236ff3521ed81ac09a8741600bd3855916bc79a24adca93"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "3fcb2848c4596c5a69b5ff2de4b53f1755a64147c9bb39aa6a3d02b93576a917"
   end
 
   depends_on "pkgconf" => :build
