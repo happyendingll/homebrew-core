@@ -12,11 +12,8 @@ class Nqp < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f45754adaa4d1a2e2a5692daab29a8a1c3dbe94c57428d21265b790ad462cf61"
-    sha256 arm64_tahoe:       "e88e49cce4da7327d2067501fe2e5e1baa8fea4de36aa9a5d7e9d21421dfa153"
-    sha256 arm64_sequoia:     "d72e3debf93630b768a810b370469fc4bfe17fdcb4c0bf271fc7baee561b77a4"
-    sha256 arm64_linux:       "8966b68c78302ce1edadfafff4c2512a08a0f0b4b32adc68b21acd3c5ae6944d"
-    sha256 x86_64_linux:      "526109e54edd30bd95a032d0f247f58bd84d5577ff63cbf29f72f47da49a4876"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "b10fedcc6d6d56da9f634c5a7b8fff73efd39638356e3359ee5f4c6efc66313c"
   end
 
   depends_on "moarvm"

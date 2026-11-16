@@ -8,11 +8,8 @@ class Merve < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7a7d2396e5b8f945e9e180465869f7635502295ac59517e1a9854687ad3bdcea"
-    sha256 cellar: :any, arm64_tahoe:       "a7478a309126cd74997be855cf8c0e2eccaf3c0da2c8b85d45e60ebdb01d9b36"
-    sha256 cellar: :any, arm64_sequoia:     "feb23bbedbc47af4ed30ce7da8187a3b989894c630d26046730e04a3e0e93354"
-    sha256 cellar: :any, arm64_linux:       "eaeb49403463ace65982c8148ddf5e4faf4d9ffeac67c11ca3a1ba96dbf60181"
-    sha256 cellar: :any, x86_64_linux:      "4148080cf7ed8f75899f38d9e05609a95fee7e7d3bbdd4a4876bb7ef67e0bf39"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "e9aeff40f3492c02311c3ffe8145e9238014a1b08ac04213060e4bf4d276f4aa"
   end
 
   depends_on "cmake" => :build

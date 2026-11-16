@@ -7,11 +7,8 @@ class Fvm < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "acc1cb12c8f68bcb0d1f2caad504ad2832c54ed4b5c8e6fbb535368338ba79f8"
-    sha256 cellar: :any,                 arm64_tahoe:       "f0e1ea0d35ba13b3c6141f230517b834940b3258d98b35705d75828e8e0a47a5"
-    sha256 cellar: :any,                 arm64_sequoia:     "e8ec99fab9b673f3e905cd9db4f86611bdd7ec8be0c3592e88ddb81734c7db70"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1906d31a56ccad38da1d4e515f42ed0e230851d416c79f6b3f1e82ffc6b8a3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5ed195908c26322674e108382a95a0d8f96272f292f53b7cc78cb297bfd9cb35"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "e49bf47b69b3619ce63c6002fb8d7649f201c257092aeeecce9a9191fd9a3736"
   end
 
   depends_on "dart-sdk" => :build
