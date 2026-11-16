@@ -6,11 +6,8 @@ class Likec4 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "6e62f09bf7669ed6f901c5a9b1397ed094dbc5447bfc49c1b7a9aa1783fd0a1b"
-    sha256 cellar: :any,                 arm64_tahoe:       "6e62f09bf7669ed6f901c5a9b1397ed094dbc5447bfc49c1b7a9aa1783fd0a1b"
-    sha256 cellar: :any,                 arm64_sequoia:     "6e62f09bf7669ed6f901c5a9b1397ed094dbc5447bfc49c1b7a9aa1783fd0a1b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6cb79f79ec3d02ecd23f9ebae062682d60152e101d629e364905ac0e07f61d68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "43798fbae80afcffb6f523b0d6d31b695736836eb56a102860e52888bd52e68f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "9cda63a127225219ffbc694664e326008e79e99f1af4b67f8ed07642d3abb760"
   end
 
   depends_on "graphviz"
