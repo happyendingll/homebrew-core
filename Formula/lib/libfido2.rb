@@ -8,11 +8,8 @@ class Libfido2 < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6407a5715cc67b0c0acf715ba34c8c15001e6f2b49959477ccf4dc08d4c27020"
-    sha256 cellar: :any, arm64_tahoe:       "9612687aaa341d338f0f71a18a45e5399ecb2a5cd04664ee0f9e04dcc9460aab"
-    sha256 cellar: :any, arm64_sequoia:     "cd56a071ed3cca968ac12a94cd8f9e9b73ded9a53f68a9439c1173e8c3fd6212"
-    sha256 cellar: :any, arm64_linux:       "af3ca0a6bd18489865e7a492011917fb913baa90cafd2a07d48917b1c8b0cd5c"
-    sha256 cellar: :any, x86_64_linux:      "7c3b0fc7503c444499d5ebdd2584512ef2a93d3e4f5193fd0211394109510afb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "cc9137d4cd5bf20365c8d7d3a1eabd2fbb8eadcd926561c724158e7209083079"
   end
 
   depends_on "cmake" => :build
