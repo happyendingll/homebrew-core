@@ -1,10 +1,9 @@
 class Camlp5 < Formula
   desc "Preprocessor and pretty-printer for OCaml"
   homepage "https://camlp5.github.io/"
-  url "https://github.com/camlp5/camlp5/archive/refs/tags/8.05.03.tar.gz"
-  sha256 "a56ef4afe3eb81ab3d8371f887779f8c0cee3b82c0ada7e066b723e51590f78c"
+  url "https://github.com/camlp5/camlp5/archive/refs/tags/8.05.04.tar.gz"
+  sha256 "bb82054e68bdb6343736a7ec0c29964341b3a3cb6c183b21479bbe4fb9d8dd45"
   license "BSD-3-Clause"
-  revision 1
   compatibility_version 1
   head "https://github.com/camlp5/camlp5.git", branch: "master"
 
@@ -14,8 +13,11 @@ class Camlp5 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "51b098264e7d73b707c3763b8e695b0eaaf8549fba674246fe365ddaad9276e4"
+    sha256 arm64_golden_gate: "6771dc7b70f5289a0a8fa81a55bbe9782b7ece975de3ddf5de026e375140d05d"
+    sha256 arm64_tahoe:       "843f00c1252c768ba1fd87f581e7ef1874f07af6e66c43e43cf560957678ff19"
+    sha256 arm64_sequoia:     "fe8c2a8c46beca27c0605b2a30e204dc611f9842f41453cfbc9f3181edd79222"
+    sha256 arm64_linux:       "68b3ed0ac70d117275dd5c6ee43d03c596df14c28dd3e8b5c0a337862648fa41"
+    sha256 x86_64_linux:      "c484f61bce9e981a355a2e87f0d916c71fda11a9f2cba2130f8ce6f2df00a695"
   end
 
   depends_on "ocaml-findlib" => :build

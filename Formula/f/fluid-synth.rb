@@ -4,12 +4,16 @@ class FluidSynth < Formula
   url "https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.6.2.tar.gz"
   sha256 "ca376b42a3c1b186a4c8c248931789a455ac94a89b777394969d678010c2f91f"
   license "LGPL-2.1-or-later"
+  revision 1
   compatibility_version 1
   head "https://github.com/FluidSynth/fluidsynth.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "36b48c46cf9e1a05b7499705756c3a0c2aac4ab93fc237cfd78dfe7ab83c6dfc"
+    sha256 cellar: :any, arm64_golden_gate: "2bd2dbfb4e3a5d884cc6ec0044384fdb8267abeb3f2d4b13d6aab8bdb7b3c6d6"
+    sha256 cellar: :any, arm64_tahoe:       "2f333cf223e7a18aa07ed8c3e278e3e01cf0518700408e0b864028a56509322e"
+    sha256 cellar: :any, arm64_sequoia:     "299718045e2c37d15691149d2194a5c194f031afc1e6e23aa1997c389b7d4287"
+    sha256 cellar: :any, arm64_linux:       "e25c785450afef0d6d41ff02a581dd11fb1d66ccc100d5439db2aa897c11da03"
+    sha256 cellar: :any, x86_64_linux:      "67ead6ed6224743f9f3f0a152d60cc689c839810d62270a6ba4d4db867f2b642"
   end
 
   depends_on "cmake" => :build
@@ -76,16 +80,6 @@ class FluidSynth < Formula
       -Denable-winmidi=OFF
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-
-    # On macOS, readline is keg-only so use the absolute path to its pc file
-    # uses_from_macos "readline" produces another error
-    # Related error: Package 'readline', required by 'fluidsynth', not found
-    if OS.mac?
-      inreplace "build/fluidsynth.pc",
-                "readline",
-                "#{formula_opt_lib("readline")}/pkgconfig/readline.pc"
-    end
-
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     pkgshare.install "sf2"
@@ -99,7 +93,8 @@ class FluidSynth < Formula
     assert_path_exists wavout
 
     # Check the pkg-config module
-    ENV.append_path "PKG_CONFIG_PATH", Formula["systemd"].lib/"pkgconfig" if OS.linux?
+    ENV.append_path "PKG_CONFIG_PATH", formula_opt_lib("systemd")/"pkgconfig" if OS.linux?
+    ENV.append_path "PKG_CONFIG_PATH", formula_opt_lib("readline")/"pkgconfig" if OS.mac?
     system "pkgconf", "--cflags", "--libs", "--static", lib/"pkgconfig/fluidsynth.pc"
   end
 end

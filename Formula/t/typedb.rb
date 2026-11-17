@@ -1,13 +1,16 @@
 class Typedb < Formula
   desc "Strongly-typed database with a rich and logical type system"
   homepage "https://typedb.com/"
-  url "https://github.com/typedb/typedb/archive/refs/tags/3.14.2.tar.gz"
-  sha256 "60ce1fe64d221be05ea7e5455f60e85f79be0b488f61bcb40266b1dfec32f1b4"
+  url "https://github.com/typedb/typedb/archive/refs/tags/3.15.0.tar.gz"
+  sha256 "a7af244dec329fa6f6979cf5449ec45bc6a00177ef62234c919fe8b6b8212697"
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "bb3040e1cfc6f9b6ebb674e81e3b4f4223ba6b039ddbc8c1a7bb8b328e932f41"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0e0bbc8b621c2c8676b5b63353a4be893ea13e0448d39bd15e3d0bbba1657da"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "293988d846632c0b7bcb915d63f968deff4cc06e5c1404cb26e7601a15f128bf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a0158a50bcd5cc28a78aa0bcccb280ae6138f772fc69ede2dfc4c1bad589aae2"
+    sha256 cellar: :any,                 arm64_linux:       "12c9acd8e82127c1ce1be15a3c48bf3cd440fa1b6ce2f16dc24c989b8988ea00"
+    sha256 cellar: :any,                 x86_64_linux:      "93ff5013cd83da6f0cb67ce56321efd59082675629df0d9e77ebbf9a6863f29f"
   end
 
   depends_on "protobuf" => :build

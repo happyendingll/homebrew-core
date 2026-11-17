@@ -1,8 +1,8 @@
 class RakudoStar < Formula
   desc "Rakudo compiler and commonly used packages"
   homepage "https://rakudo.org/"
-  url "https://github.com/rakudo/star/releases/download/2026.09/rakudo-star-2026.09.tar.gz"
-  sha256 "feee33e1d9e58ac76d09c3d2fb6790b9881be821924783a62af6c92899fe6365"
+  url "https://github.com/rakudo/star/releases/download/2026.11/rakudo-star-2026.11.tar.gz"
+  sha256 "97d226d46c2d52bb32e7de125e0c817d08f4d61fedff1624dc8d805493074913"
   license "Artistic-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class RakudoStar < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "e525ba88216534d0514c6471cdf4e29a140a2f587f416ae3121a8404db3932df"
+    sha256 arm64_golden_gate: "52830b43b5ea24c92b4cfa09485e210da95282c4c6a3ab5e6b2f353cc8019895"
+    sha256 arm64_tahoe:       "8ec9dec07bb4c270c8c0256ed7b502c3c008aa21323d1197009488291e329d70"
+    sha256 arm64_sequoia:     "075539a36b060c32aa1f599c1bc736900ef434b68025a24291a697099a50fbbd"
+    sha256 arm64_linux:       "46749dbae11c9d45c2675afc2bc9e6cc345283e755a40f6fd086c4b545f5f9a8"
+    sha256 x86_64_linux:      "87bc1554d931591b82704996e08aaa21c2731126861e8e89b126125bd7d5701a"
   end
 
   depends_on "pkgconf" => :build

@@ -1,14 +1,17 @@
 class Render < Formula
   desc "Command-line interface for Render"
   homepage "https://render.com/docs/cli"
-  url "https://github.com/render-oss/cli/archive/refs/tags/v2.36.0.tar.gz"
-  sha256 "dff9390e52de81a9ba3b045c239ad5ee16cb7c332c9af495cbbd3e0c34111a2f"
+  url "https://github.com/render-oss/cli/archive/refs/tags/v2.37.0.tar.gz"
+  sha256 "61e39916f512dbce9d3daadb6a5f25f67cd49fa56ffa02e3b0604027a7d949a5"
   license "Apache-2.0"
   head "https://github.com/render-oss/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "d99a879254ce9abeb9667059b32908416ef70c28c5e552687e7c598a3204f36a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e20e491b42250a4fb3b829ba935ecb3a28909fdcd7dbbc8801cab6d5809d0c9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e20e491b42250a4fb3b829ba935ecb3a28909fdcd7dbbc8801cab6d5809d0c9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e20e491b42250a4fb3b829ba935ecb3a28909fdcd7dbbc8801cab6d5809d0c9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1cccac4ba7bd45087651b83ecab248ce395736d8e92c3c3cd64f29b40c2e7f17"
+    sha256 cellar: :any,                 x86_64_linux:      "8bc08f6c0c2dcd84287aa790019ca5067bb47fa2a4cfe59fb31751632b0b5092"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Goimports < Formula
   desc "Go formatter that additionally inserts import statements"
   homepage "https://pkg.go.dev/golang.org/x/tools/cmd/goimports"
-  url "https://github.com/golang/tools/archive/refs/tags/v0.52.0.tar.gz"
-  sha256 "52846a0ad92cde47a8ed152c5f1908f81daa93114c8fa5c10a8f19352af1a1d9"
+  url "https://github.com/golang/tools/archive/refs/tags/v0.53.0.tar.gz"
+  sha256 "c74b3b140f7fe5d5482e5fea18fb543bf34a13c9370ade58e402e5e87e0e4cbf"
   license "BSD-3-Clause"
   head "https://github.com/golang/tools.git", branch: "master"
 
@@ -12,8 +12,11 @@ class Goimports < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "6ae883bd9241ea051ddf05f1a82a0c1d9cd2ff013203ca449f61f9c564a48fba"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26ebe948bad087dac2b6b866453062700ffd5a0da8836de420de504bccfc0de1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ebe948bad087dac2b6b866453062700ffd5a0da8836de420de504bccfc0de1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26ebe948bad087dac2b6b866453062700ffd5a0da8836de420de504bccfc0de1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b65adde4337e5249cf32d2c488de72b2814c631a0c60b0b4bfc3f3fae52ff409"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c59c444a7b389886938482da82fa25fb5cd479147d6d11f4be8c74c700ce0819"
   end
 
   depends_on "go"

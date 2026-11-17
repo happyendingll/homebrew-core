@@ -2,8 +2,8 @@ class Glab < Formula
   desc "Open-source GitLab command-line tool"
   homepage "https://gitlab.com/gitlab-org/cli"
   url "https://gitlab.com/gitlab-org/cli.git",
-    tag:      "v1.130.0",
-    revision: "9b430a11f95ec78d87f19be071d1c381d8803630"
+    tag:      "v1.131.0",
+    revision: "206ebab4fc3fa590b720d2885ac890c195c46650"
   license "MIT"
   compatibility_version 1
   head "https://gitlab.com/gitlab-org/cli.git", branch: "main"
@@ -11,8 +11,11 @@ class Glab < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "6f8a24b0ed1d84b4256c5995941dc8e8a2b94e55d1f1c5f174a66409beed6bdd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48283ac86539126c2a05ae9dce370126505f33cc8aa4fa09ec3941b26b8c6ca1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "48283ac86539126c2a05ae9dce370126505f33cc8aa4fa09ec3941b26b8c6ca1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48283ac86539126c2a05ae9dce370126505f33cc8aa4fa09ec3941b26b8c6ca1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8856f1564bd5ebd488637789399391a199763ae32dae53a30ee508f594e68e9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "de827854827b8fff72f888ddbbeb5bc220b5690f85c982fbc15db03621cd9a3b"
   end
 
   depends_on "go" => :build

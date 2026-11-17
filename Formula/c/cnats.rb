@@ -1,14 +1,16 @@
 class Cnats < Formula
   desc "C client for the NATS messaging system"
   homepage "https://github.com/nats-io/nats.c"
-  url "https://github.com/nats-io/nats.c/archive/refs/tags/v3.14.0.tar.gz"
-  sha256 "1f8b450bc295d0c94be201e34713ca0b515aae2c0d1b279273c3e6e0e72fe005"
+  url "https://github.com/nats-io/nats.c/archive/refs/tags/v3.15.0.tar.gz"
+  sha256 "aed133ecf121b0ec454c9d28d34edab41898f56a67dacce09a1a645e84c0edfe"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "eceef71dd1f135b513ffc83dd72b03cc886cfe7c2ff7341a51b1d1446ee474ab"
+    sha256 cellar: :any, arm64_golden_gate: "03553a33c9c4f71973c0ef22828a52d5f16fc12d076381d86e0e52a260b8a857"
+    sha256 cellar: :any, arm64_tahoe:       "0a97b25b97e436acfcf9a4871065fafc45cbc9e5c0a5248a5be387d59855886a"
+    sha256 cellar: :any, arm64_sequoia:     "c1f700de6a926235f9597a78a7a6bd9eb97acb48a02a2e716577dec1fcc7cb2f"
+    sha256 cellar: :any, arm64_linux:       "f8b4415dd659feb293fea6c29c8cb236ff530052aa0653e03e0988f97e2bfe56"
+    sha256 cellar: :any, x86_64_linux:      "fac1343cb372c7fb776e200bbf3b2b0626cbe6c22c966796a1c07df33f461da2"
   end
 
   depends_on "cmake" => :build

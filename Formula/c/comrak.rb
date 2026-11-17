@@ -1,14 +1,17 @@
 class Comrak < Formula
   desc "CommonMark + GFM compatible Markdown parser and renderer"
   homepage "https://comrak.ee"
-  url "https://github.com/kivikakk/comrak/archive/refs/tags/v0.59.0.tar.gz"
-  sha256 "74dfb6edda9b94b557685382162844ec9902cea3f10281585035c7a51d04fcfc"
+  url "https://github.com/kivikakk/comrak/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "77f6c0ab30a9b204d0b2a417afa05915fe8459d9e96680f8edcd1a3adf121224"
   license "BSD-2-Clause"
   head "https://github.com/kivikakk/comrak.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "bca3d37caec583518bc1967dae7afbaf63d8683f1488d51c6b4c25edf6e73762"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c83a9447e3707f411c922ab1bf33e5b55822b52a8f22d61eb3bf850c7833cbb2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0ca11de2a02152b40c889375d1716e818d530d89beb7a8518653dbf2b95253d9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d3dfb2cd0928222141e7d2b3ae726f1906faad61ef089c8c54476b3889892db5"
+    sha256 cellar: :any,                 arm64_linux:       "a59d21a26dda9221b6dce81fbd875b5c778a96425c842b18d16351961c99d668"
+    sha256 cellar: :any,                 x86_64_linux:      "066651b274231bbcd172eb749a18e563ad5e7930ed8147bc2e08b0aa8a3c1e9e"
   end
 
   depends_on "rust" => :build

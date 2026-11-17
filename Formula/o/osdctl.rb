@@ -1,14 +1,17 @@
 class Osdctl < Formula
   desc "CLI tool for managed OpenShift clusters"
   homepage "https://github.com/openshift/osdctl"
-  url "https://github.com/openshift/osdctl/archive/refs/tags/v0.67.0.tar.gz"
-  sha256 "a55b758d4c1a2637037093fe815b1063159f11285f07aeeca57ad76bf7e16cb5"
+  url "https://github.com/openshift/osdctl/archive/refs/tags/v0.68.0.tar.gz"
+  sha256 "2592057c6a6e87e1a72a7a4d6a61902db1669fe47ef4aacfde59e9dc0859a7fc"
   license "Apache-2.0"
   head "https://github.com/openshift/osdctl.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "baefe5a55c39922bf9198eb804dcf905f0b7cb1fc672525fc5af26bea29d24b9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5f9462a76b063ceb80d4745d1d894ed5b654f71e165bf85eeec663779f5b1d29"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5f9462a76b063ceb80d4745d1d894ed5b654f71e165bf85eeec663779f5b1d29"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f9462a76b063ceb80d4745d1d894ed5b654f71e165bf85eeec663779f5b1d29"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1ed91db2323699c16803ef9113c061b710b0450cfef8173b76211a5a787c8fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "372a87272c82fe01efd29c737987b54c32af6c85c2094b9da531eeff609248d1"
   end
 
   depends_on "go" => :build

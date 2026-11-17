@@ -1,14 +1,17 @@
 class Tfcmt < Formula
   desc "Notify the execution result of terraform command"
   homepage "https://suzuki-shunsuke.github.io/tfcmt/"
-  url "https://github.com/suzuki-shunsuke/tfcmt/archive/refs/tags/v4.14.20.tar.gz"
-  sha256 "c9937126f6d9605f4f3b4fd1233f55d33e2e6b17373e2a41e8361111d257dccd"
+  url "https://github.com/suzuki-shunsuke/tfcmt/archive/refs/tags/v4.14.21.tar.gz"
+  sha256 "38302ccc161530ec206f0b257ad009d9a1ce61e83a47fe9981758c300c3d7a38"
   license "MIT"
   head "https://github.com/suzuki-shunsuke/tfcmt.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "bcc61f15d3909aeed809ecb3b8c600bb10cb3a3be278731ceb97cb640bd73c6a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "01e869393dd0b59506f244d40a56c9ad12da955f48939d0cc8f45b3e8307eb8a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "01e869393dd0b59506f244d40a56c9ad12da955f48939d0cc8f45b3e8307eb8a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "01e869393dd0b59506f244d40a56c9ad12da955f48939d0cc8f45b3e8307eb8a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bb029b08284603745f731b17eb117cbbf041117a3a34da1dcee4ff961db4d0eb"
+    sha256 cellar: :any,                 x86_64_linux:      "081d8b51274173e241c8402efe1716c5d9512b928101ad6e168422852f68eddb"
   end
 
   depends_on "go" => :build

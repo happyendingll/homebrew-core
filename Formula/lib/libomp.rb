@@ -1,8 +1,8 @@
 class Libomp < Formula
   desc "LLVM's OpenMP runtime library"
   homepage "https://openmp.llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
-  sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.6/llvm-project-23.1.6.src.tar.xz"
+  sha256 "d3b86ab29cfb4445a6652e5c2642ccc75e04e38084dde3701d323320f35a31da"
   license "MIT"
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Libomp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "cc9c95bbc0ed067ea4f8a7fa6edac5b280e54c4c4e3cac6b98c560323b225912"
+    sha256 cellar: :any, arm64_golden_gate: "77e3d7ef9b3fc9cc48a11420faced84e217164003e7648df16e47d3ebc2e42f9"
+    sha256 cellar: :any, arm64_tahoe:       "0bc81e61efc7da093375230006561ed75891106adbe19e130940a2f5f368a66f"
+    sha256 cellar: :any, arm64_sequoia:     "d8d154f796a93a5fdca8470e254b402b29d6a66bbaf25bdc5e74ccd05ce09ffd"
+    sha256 cellar: :any, arm64_linux:       "1b1fbab38827776ad9b4f6a385506f2ac708b09e31e7db97123792f47a09fe95"
+    sha256 cellar: :any, x86_64_linux:      "411a12d2775da0c3bb6f457f1edfc4b73f0abcf4f03fb29693fa5a84335c4679"
   end
 
   # Ref: https://github.com/Homebrew/homebrew-core/issues/112107

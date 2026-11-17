@@ -1,15 +1,18 @@
 class Libfaketime < Formula
   desc "Report faked system time to programs"
   homepage "https://github.com/wolfcw/libfaketime"
-  url "https://github.com/wolfcw/libfaketime/archive/refs/tags/v0.9.13.tar.gz"
-  sha256 "8e56deeb805682b025107e095f1d94a6ea677472f05824cd475f5c5e6e1a5ddf"
+  url "https://github.com/wolfcw/libfaketime/archive/refs/tags/v0.9.14.tar.gz"
+  sha256 "d6468957b11bae8e541524ad43f2cdf91e5d87c8996183897c0499856024c90c"
   license "GPL-2.0-only"
   compatibility_version 1
   head "https://github.com/wolfcw/libfaketime.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 sequoia: "73a3ad752912c925652ecc36448fcccb5c53d060d53978e00a173ce0b1d1bd10"
+    sha256 arm64_golden_gate: "5099088aa0fa21415d6e01dc084942228569ae86434fcea3ef67cee7d0417890"
+    sha256 arm64_tahoe:       "5873cd6861d0ad3fa2c5b77946199bfac2edb99babbc47c9f22b75addaf4cc62"
+    sha256 arm64_sequoia:     "73b9207340dd1b828672162156941c9d8534822c91ef2ab4084e63a567a276f7"
+    sha256 arm64_linux:       "ad724607aa12e0572bc0b4bfc045ebc01159ce833d879f098c3acdbe66c5468e"
+    sha256 x86_64_linux:      "7a418a5de6dfd0dcc3e1a869a321ba6c875b9d197e442003331b6309fe38b26c"
   end
 
   on_macos do

@@ -1,13 +1,22 @@
 class StripeCli < Formula
   desc "Command-line tool for Stripe"
   homepage "https://docs.stripe.com/stripe-cli"
-  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.55.11.tar.gz"
-  sha256 "8c24a8d5e9033a1d063b035988ccb11ba5c0e1163ee5a4ad6207861b65da959d"
+  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.55.12.tar.gz"
+  sha256 "6cf57e3a86fd1e6d454c551087755518a96061e1d0a07f588a1efc0d8d8b86d4"
   license "Apache-2.0"
 
+  # Upstream creates releases as pre-releases before promoting them
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "469d768db8183198abd1edec8911dca0dffd2ef6caa0b8e6550c9df7443a02d8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9d57cc76766f57d8e1e8993c2f93317437462de87feb957527c49bfac714b13"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d9d57cc76766f57d8e1e8993c2f93317437462de87feb957527c49bfac714b13"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d9d57cc76766f57d8e1e8993c2f93317437462de87feb957527c49bfac714b13"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "aa81a36fd34f74c8832623ec1d324f7041b861637899e60cd3e7f608c9ccf60b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e29890ba3d47955ad052db7280391a15fc08bb9c205906ed7a51df99f00a61ff"
   end
 
   depends_on "go" => :build

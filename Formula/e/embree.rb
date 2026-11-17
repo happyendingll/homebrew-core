@@ -1,8 +1,8 @@
 class Embree < Formula
   desc "High-performance ray tracing kernels"
   homepage "https://www.embree.org/"
-  url "https://github.com/RenderKit/embree/archive/refs/tags/v4.4.1.tar.gz"
-  sha256 "dcf338cc61b636c871ccf370e673bfd380c5ecb71ce49ad50f28e1d4ec9995dc"
+  url "https://github.com/RenderKit/embree/archive/refs/tags/v4.5.0.tar.gz"
+  sha256 "6692fdf2b55831ac58732459443336d709974051d7ec642b3e1fcf06271b5eea"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/RenderKit/embree.git", branch: "master"
@@ -13,8 +13,11 @@ class Embree < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "79e5ecc2939baa314ccd99933a2e9c4e1af6a004f17a9eb0bcdceed293d91104"
+    sha256 cellar: :any, arm64_golden_gate: "556634b7a1c648515b02facb99c3801994c44b29cd8afabe6691460459accc10"
+    sha256 cellar: :any, arm64_tahoe:       "aa25cece256cb986cc0379ee21c8f47978c99d2ae9bd44a6763eec9ed02ee190"
+    sha256 cellar: :any, arm64_sequoia:     "527b0e8608f5fe7fc848776c37282dfd2d3d0576a5be1a029793306976936b69"
+    sha256 cellar: :any, arm64_linux:       "4e4fb3ce6d0a332cc693c8281c0c3afd4e803860f7dd1679f0e0a35b6f5d8c62"
+    sha256 cellar: :any, x86_64_linux:      "72837df15a7601e719b89a55c9f9f00f42f939f19bf94412b49566b654232eed"
   end
 
   depends_on "cmake" => :build

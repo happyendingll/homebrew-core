@@ -4,11 +4,15 @@ class Hashlink < Formula
   url "https://github.com/HaxeFoundation/hashlink/archive/refs/tags/1.16.tar.gz"
   sha256 "c392ce6e1d3670bcb60c85d83a161591707de9cdb6b00b48e79f9ea7807fc5a9"
   license "MIT"
+  revision 1
   head "https://github.com/HaxeFoundation/hashlink.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "87d0d433bcc14bd25c17cfb8d32575300f789b528f100c9c55d3e9f6595feef5"
+    sha256 cellar: :any, arm64_golden_gate: "5a3f7bb9afc8b15ee6c6b908d5573e5ae79464b3f0570906597e29663481ccdc"
+    sha256 cellar: :any, arm64_tahoe:       "d56e01dc93c896bf944bc4bf2681e3b07e21d799b3efe6b76c4782aac1d8220a"
+    sha256 cellar: :any, arm64_sequoia:     "8c5c6d5360b4fc4736b2f309a504f4f484ed5df51eb56f305964392597ac407a"
+    sha256 cellar: :any, arm64_linux:       "2ae4c203061f11b96a22c58401384d0dad4b908ca8b1d4c7da09c1fba7c1346b"
+    sha256 cellar: :any, x86_64_linux:      "31bbf0fa11a130c8caad66cc6c3245afab6fe7b644f1a958104d7f2df7875115"
   end
 
   deprecate! date: "2027-03-31", because: "needs deprecated `haxe` which needs EOL `mbedtls@3`"

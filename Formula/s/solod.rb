@@ -12,6 +12,9 @@ class Solod < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "d7eafd3c72d417fe46592be2bdfab3f26ff87957e5d066fa4462102b7bf8a04b"
   end
 
+  deprecate! date: "2026-11-17", because: :repo_archived
+  disable! date: "2027-11-17", because: :repo_archived
+
   depends_on "go" => [:build, :test]
 
   conflicts_with "so", because: "both install `so` binaries"

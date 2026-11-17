@@ -1,13 +1,16 @@
 class Oxfmt < Formula
   desc "High-performance formatting tool for JavaScript and TypeScript"
   homepage "https://oxc.rs/"
-  url "https://registry.npmjs.org/oxfmt/-/oxfmt-0.78.0.tgz"
-  sha256 "efcd09f280a59f1bbd8cf961c7e438fe8ae34d9c7531e7b55afa2a1b100e944b"
+  url "https://registry.npmjs.org/oxfmt/-/oxfmt-0.79.0.tgz"
+  sha256 "6298c21d0461876b41dca405cf96a6006a4d8170d3df3c6f4a3801fef46a424b"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "b19e25ab54e18bca52dcceb8e11444243b1e963b43f397f17ab67cd056a5e958"
+    sha256 cellar: :any,                 arm64_golden_gate: "4084e2eaecf491bc10077ced5cf5a72b0b46d75d8459a27116582ed46a362930"
+    sha256 cellar: :any,                 arm64_tahoe:       "4084e2eaecf491bc10077ced5cf5a72b0b46d75d8459a27116582ed46a362930"
+    sha256 cellar: :any,                 arm64_sequoia:     "4084e2eaecf491bc10077ced5cf5a72b0b46d75d8459a27116582ed46a362930"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "24e0ae6f31a4e78f2042a274a25a69c5bede21ec0988f713b1e30cb35e9b3e2a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d2e18905355c26c6ad9fee03d621621e96723ba5dd629d0cf1415f6b491c54a9"
   end
 
   depends_on "node"

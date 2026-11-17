@@ -1,8 +1,8 @@
 class Tenv < Formula
   desc "OpenTofu / Terraform / Terragrunt / Terramate / Atmos version manager"
   homepage "https://tofuutils.github.io/tenv/"
-  url "https://github.com/tofuutils/tenv/archive/refs/tags/v4.15.1.tar.gz"
-  sha256 "dcdc001456b1a3d5d2f680f20cb4ef3f049eb17d9def9abc96b0303c6b16b99f"
+  url "https://github.com/tofuutils/tenv/archive/refs/tags/v4.16.7.tar.gz"
+  sha256 "c2b560ce5c241650416c525e2e57f61686a0f33569802d84bd714e68fd646122"
   license "Apache-2.0"
   head "https://github.com/tofuutils/tenv.git", branch: "main"
 
@@ -12,13 +12,11 @@ class Tenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "273418fbd5639d5f2a741d48510bdd11b33a6b5bcf3cbaf7bc632ff3411333d2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c00d676a520557da303dd5c5b935b743fecccfbe0dde580a45df709757530d74"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c00d676a520557da303dd5c5b935b743fecccfbe0dde580a45df709757530d74"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "c00d676a520557da303dd5c5b935b743fecccfbe0dde580a45df709757530d74"
-    sha256 cellar: :any_skip_relocation, sonoma:            "d6e5a0efc047cf8d30dc20fd98e5110c2a3638890bee1f0b33246c55c18313e3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "cce50f66d1dce85930c5b9d2712d1e1067f553ca764f475a353861d4e229ce9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c1826eb6b2ab65c9a9bc2143b2bbe6e79d8bfa22cbbbaebb295ad54aa4f6163b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0536588a82be4d2620de9d22490f86a550797c8c3448e56ab9880fd2d499a5a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0536588a82be4d2620de9d22490f86a550797c8c3448e56ab9880fd2d499a5a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a0536588a82be4d2620de9d22490f86a550797c8c3448e56ab9880fd2d499a5a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "9e9562c2a646fc1e4986ff265d2e7e15e29a11df0a5ae2e187c5490e6ab1f815"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "76f7ed15ea1de607c50e7aee32a285c2d28cf6c40f5b0e30767b465f99746daf"
   end
 
   depends_on "go" => :build

@@ -1,8 +1,8 @@
 class Dagger < Formula
   desc "Portable devkit for CI/CD pipelines"
   homepage "https://dagger.io"
-  url "https://github.com/dagger/dagger/archive/refs/tags/v0.21.11.tar.gz"
-  sha256 "90cdd1012c73317ed41da4feae5abf3f08634c2816f30f0e54a2d7cb9e20df63"
+  url "https://github.com/dagger/dagger/archive/refs/tags/v0.21.12.tar.gz"
+  sha256 "4aaca8b6f4f31388b035ca9d2543a4fbc12d79fd7a8723efa3b533f1522d7530"
   license "Apache-2.0"
   head "https://github.com/dagger/dagger.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Dagger < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "105503a7fb1236d8fc9ef1d4e324859b1a744a9e0daa2c076a007febcbf16a79"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c8fe519acf057c5affac4953fde422658c584b91122c8a700388fe996c26648f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8fe519acf057c5affac4953fde422658c584b91122c8a700388fe996c26648f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8fe519acf057c5affac4953fde422658c584b91122c8a700388fe996c26648f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "12143c7cc652f011feb3a47cb97488d57aff6c48711432bb81f45727c0a926d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "006607a6066a56a9aceb33e7df376f13476fbbe6168e710e10c282a44fb39706"
   end
 
   depends_on "go" => :build

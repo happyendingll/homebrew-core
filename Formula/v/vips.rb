@@ -4,7 +4,7 @@ class Vips < Formula
   url "https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz"
   sha256 "5baaead3b0bb20ffdb9e9ff09aa9fda08620923df77b63b436654cb5e0b3bf94"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
   compatibility_version 1
 
   livecheck do
@@ -13,8 +13,11 @@ class Vips < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 sequoia: "2bc4e3bf30a6e3225e7c17be3b504c749a81d3e7c2658bcee775dbbec715abaf"
+    sha256 arm64_golden_gate: "3ab6b72606d73d84988d178d4d2068fd7fc335f2bbd69255d1d020d5b4e0eb79"
+    sha256 arm64_tahoe:       "84953cacf9f680e4b117d56877af9eb970af31d362647a4e0b86af472572f229"
+    sha256 arm64_sequoia:     "3c51bcc9c013629477af326b92c798e3cf5e06cf85e68ebd2a5f2b19fa4b7200"
+    sha256 arm64_linux:       "7a2167ac06ef48bd94b851b67869882f34947a9de7b2e4721895770b2e549c0b"
+    sha256 x86_64_linux:      "e4c9b088442dd71d535760adad08b8fcd0d6a247cd7a80fdcc8b24ae01a270d4"
   end
 
   depends_on "gettext" => :build
@@ -68,17 +71,6 @@ class Vips < Formula
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
-
-    if OS.mac?
-      # `pkg-config --libs vips` includes libarchive, but that package is
-      # keg-only so it needs to look for the pkgconfig file in libarchive's opt
-      # path.
-      libarchive = formula_opt_prefix("libarchive")
-      inreplace [lib/"pkgconfig/vips.pc", lib/"pkgconfig/vips-cpp.pc"] do |s|
-        s.gsub!(/^Requires\.private:(.*)\blibarchive\b(.*?)(,.*)?$/,
-                "Requires.private:\\1#{libarchive}/lib/pkgconfig/libarchive.pc\\3")
-      end
-    end
   end
 
   test do
@@ -93,9 +85,5 @@ class Vips < Formula
     # [palette] requires libimagequant, vips warns if it's not present
     cmd = "#{bin}/vips copy #{test_fixtures("test.png")} #{testpath}/test.png[palette] 2>&1"
     assert_empty shell_output(cmd)
-
-    # Make sure `pkg-config` can parse `vips.pc` and `vips-cpp.pc` after the `inreplace`.
-    system "pkgconf", "--print-errors", "vips"
-    system "pkgconf", "--print-errors", "vips-cpp"
   end
 end

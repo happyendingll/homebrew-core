@@ -1,8 +1,8 @@
 class Numpy < Formula
   desc "Package for scientific computing with Python"
   homepage "https://www.numpy.org/"
-  url "https://files.pythonhosted.org/packages/95/b0/c7453d0b6e2073c3264468b106ee1563750cecc910965e67357e3698c83e/numpy-2.5.4.tar.gz"
-  sha256 "9a94cf751c9ad8ebaa835bcd3d40dacf8534ad086b88c38029b65123c7999d2a"
+  url "https://files.pythonhosted.org/packages/4e/3a/8770c288c47f0b5c2a786d3c20e79f66fd245f2d42cd232d7cd5e00e83e5/numpy-2.5.5.tar.gz"
+  sha256 "5cddc243c75114ba845f01b1f87aca1572dbf7b6c2d88636ed3e1d2bccd7f1bf"
   # TODO: Remove Zlib from license when release includes
   # https://github.com/numpy/numpy/commit/3d065710eee404a34788deb8f05f977a88879b20
   license all_of: ["BSD-3-Clause", "0BSD", "MIT", "Zlib", "CC0-1.0"]
@@ -10,8 +10,11 @@ class Numpy < Formula
   head "https://github.com/numpy/numpy.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "c2d7f1974bc842f3453ce253425e0b68cad7c233f58658c5ad9517dfd4a8f731"
+    sha256 cellar: :any, arm64_golden_gate: "6f53fade9bf1192c76dc8461b02e13970f072880482dafc5e41cdca44863624d"
+    sha256 cellar: :any, arm64_tahoe:       "835a77ddb8ad8ef0f6029203951a38664da57570fb1f8be5105c38b025ab7cbc"
+    sha256 cellar: :any, arm64_sequoia:     "5e93cdbb12d3d14625f0d519d30e4c410c0b5beea23f7990a7e36903288da393"
+    sha256 cellar: :any, arm64_linux:       "d1e2d88eef6964c8005ebf3b8f6aa702817ec18ed19c4b42eda12d36f473ce71"
+    sha256 cellar: :any, x86_64_linux:      "7df9055692026393f34536a385f5b03b57a0a3604bcf14b73a1589351f499841"
   end
 
   depends_on "gcc" => :build # for gfortran

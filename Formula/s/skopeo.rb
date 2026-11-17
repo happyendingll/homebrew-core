@@ -1,13 +1,16 @@
 class Skopeo < Formula
   desc "Work with remote images registries"
   homepage "https://github.com/podman-container-tools/skopeo"
-  url "https://github.com/podman-container-tools/skopeo/archive/refs/tags/v1.25.1.tar.gz"
-  sha256 "8e889df322ec3d9457a2e3b61ba9fa77759dd81dac857514333fb3b837e98b65"
+  url "https://github.com/podman-container-tools/skopeo/archive/refs/tags/v1.25.2.tar.gz"
+  sha256 "d2ebe154195934908e2dd8d992bfda5dc554e1f5d8586c49b6a931fd69563d24"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "61ca9da822a1e84bd945c67d9d62d7d634a4ab475ca934aacad27dca86084e4d"
+    sha256 arm64_golden_gate: "97198a8f5aaa9b01de0b4780b0ef3edc75581ba3c0310f533e8c73dbc8d69617"
+    sha256 arm64_tahoe:       "587e70941026a0b340773891dc6e0bf15646450ae9095349cc50bcea45f8fd2d"
+    sha256 arm64_sequoia:     "6a6177e3e429105d1a33e5f17bc30528e094e431ea285c2135e6718c1e1c09c3"
+    sha256 arm64_linux:       "d1fcb02e54bdf5c40e9cd2bc8d56f2138fb771d3b2d24864d4d1be1677f49193"
+    sha256 x86_64_linux:      "33fd64e5b4dfa30fc267d154cfcf4c53978d56a65d8af4f66b391a44ef9cf325"
   end
 
   depends_on "go" => :build

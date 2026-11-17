@@ -1,14 +1,17 @@
 class GoArchLint < Formula
   desc "Architecture linter for Go projects"
   homepage "https://github.com/fe3dback/go-arch-lint"
-  url "https://github.com/fe3dback/go-arch-lint/archive/refs/tags/v1.19.1.tar.gz"
-  sha256 "b3829f82788f6f5b0b741a25936d9d1d539fc8de6b3342bd2bfa34b0eabe53c9"
+  url "https://github.com/fe3dback/go-arch-lint/archive/refs/tags/v1.19.2.tar.gz"
+  sha256 "6bdf785c3a43a6020abf4ee7d1916980fed80100f4a9e0292d0e0cda08099559"
   license "MIT"
   head "https://github.com/fe3dback/go-arch-lint.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "4a18e3af256343cf86c8d08c8b29b01e8480c9a0490b0ebf3bbea7288b0eccaf"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "990e950c242a0d7de8bdfa034252c7e8dddd4d3c35e9f61a23d032f216bc5f6a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "990e950c242a0d7de8bdfa034252c7e8dddd4d3c35e9f61a23d032f216bc5f6a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "990e950c242a0d7de8bdfa034252c7e8dddd4d3c35e9f61a23d032f216bc5f6a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "8fe377bc0f3285b9c9a8e28b63774b6d2e39cb5dafc462b3ea95ef5269f6702d"
+    sha256 cellar: :any,                 x86_64_linux:      "70f141e227e229dc6e0ea607e620343432bb28f826b853b22f706bf827ea3393"
   end
 
   depends_on "go"

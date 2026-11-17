@@ -3,8 +3,8 @@ class Flye < Formula
 
   desc "De novo assembler for single molecule sequencing reads using repeat graphs"
   homepage "https://github.com/mikolmogorov/Flye"
-  url "https://github.com/mikolmogorov/Flye/archive/refs/tags/2.9.6.tar.gz"
-  sha256 "f05a3889b1c7aafed4cc0ed1adc1f19c22618c1c7b97ab5f80d388c8192bd32a"
+  url "https://github.com/mikolmogorov/Flye/archive/refs/tags/2.9.7.tar.gz"
+  sha256 "041635b3b7e7afc69fd50ab9cbf040db4749b04ae626ba65c8b08f550642351f"
   license all_of: [
     "BSD-3-Clause",
     "Apache-2.0", # lib/libcuckoo
@@ -15,8 +15,11 @@ class Flye < Formula
   head "https://github.com/mikolmogorov/Flye.git", branch: "flye"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "8831972d55e79a17a13cc4237a1e2e3031b19af2af91f6b4470e9d58b0ffbb52"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eeba63bee15ff606b5b3bc0bed01bc5014ad88f736d00bb9916879104f088bf4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2c7bbc96f7d7bca0faa9664d04484a334a18482e285d9751a6ecdacd4bba2c44"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3a99a0f664ffdc99a802b3c1d60b17776cec72f22d54672044a143ed372bb7f"
+    sha256 cellar: :any,                 arm64_linux:       "967a146dd6be450d82784387bd647efadef7e5aec454c401a98515b6235be012"
+    sha256 cellar: :any,                 x86_64_linux:      "d9490261e843a5100bc160bbbf43de9e2fc3865ec57d5b0e725edc005f8f593b"
   end
 
   depends_on "python@3.15"

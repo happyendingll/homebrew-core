@@ -1,8 +1,8 @@
 class Oras < Formula
   desc "OCI Registry As Storage"
   homepage "https://oras.land"
-  url "https://github.com/oras-project/oras/archive/refs/tags/v1.3.6.tar.gz"
-  sha256 "9a67269f475019a07384bd73004ca308c221674aea0d0dc48e059c61b09bcd54"
+  url "https://github.com/oras-project/oras/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "453bda1279b166eb6c2bd84b5995b952403c388ad8eb2f77a9f269011f69788b"
   license "Apache-2.0"
   head "https://github.com/oras-project/oras.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Oras < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "1f1be8f26e2e6c51fc4978527843f763470665ee2ff700c2c67214c2d81ba908"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04cd59a8abb78106696c3a44023f0f5cfb8b6ac627ef44217614932de7c66633"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04cd59a8abb78106696c3a44023f0f5cfb8b6ac627ef44217614932de7c66633"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "04cd59a8abb78106696c3a44023f0f5cfb8b6ac627ef44217614932de7c66633"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e0f4a71bef49943a57028ada9a89a9d0e3132c9ed6e5cc97fe12c7cbdb55453e"
+    sha256 cellar: :any,                 x86_64_linux:      "c6be3afdf3f15476c88527a352e6070e0febd51f86b4cb82d4b87a2294f1f6fb"
   end
 
   depends_on "go" => :build
