@@ -23,11 +23,8 @@ class Podofo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9e11b51e2e308ca45fb0c483d8adbaaf8272043bb7bd631c12762e92494ce977"
-    sha256 cellar: :any, arm64_tahoe:       "f22d4674d26b4f003513bd2a6e44567e71cd0645f356defffe5d71ed03da07d2"
-    sha256 cellar: :any, arm64_sequoia:     "369f6c7df2f1be6a619ca173743da48a3a80522de1fe12908d26c6e9641d1b83"
-    sha256 cellar: :any, arm64_linux:       "b078619aafb24a3a58c73d02df87614bcc0725db98b6b124ecf670626cb585a8"
-    sha256 cellar: :any, x86_64_linux:      "09772d6811fd33b614e42a5a80b9a13bff7add415117f311b13fd7e50051639a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "d15e63099127bdf6c825587e90d4d7eaeee379a1d59f51c099db760981716e80"
   end
 
   depends_on "cmake" => :build

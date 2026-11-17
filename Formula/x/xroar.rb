@@ -6,11 +6,8 @@ class Xroar < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "907102152aca4756e8de67a34cad2c3680bed7114a922811bbd8cc99ab99402a"
-    sha256 cellar: :any, arm64_tahoe:       "9311a78f485ab94417bff88fece1997147012afefe0b913c85d92cdbda06756f"
-    sha256 cellar: :any, arm64_sequoia:     "8a6aeaf56d22e4428a8cbe54046a1753f731a4b9c874eb3410d940d16884ae56"
-    sha256 cellar: :any, arm64_linux:       "4c651acfa66e4d6c4905f3f5c1c599444781528cc206e1f021db070941a81951"
-    sha256 cellar: :any, x86_64_linux:      "6ef152807a40a61029abfc231808fcfe3c07372ef32923430823ff1eb199b8b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "dca34258459af46252a8fdafd0de7bd99c95633539fb0ecbe850c511834dc498"
   end
 
   head do

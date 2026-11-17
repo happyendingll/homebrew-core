@@ -12,11 +12,8 @@ class Mmctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8f6d64cf351018f08fe24e22b691ae46960018f041b86fe213a3ebc0813ce6df"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f6d64cf351018f08fe24e22b691ae46960018f041b86fe213a3ebc0813ce6df"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f6d64cf351018f08fe24e22b691ae46960018f041b86fe213a3ebc0813ce6df"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bff29827f93da33483a7df6647ca9a1cf278340eeed5a227375b7543c65b940a"
-    sha256 cellar: :any,                 x86_64_linux:      "6ced562eaa2e194809a1d9185bf9c712870f757f8947ac192c34d51297332deb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e6eb62e0388f7e46cf3473f0f764ce5e486514c07018b12dfdb6b78c56c48306"
   end
 
   depends_on "go" => :build

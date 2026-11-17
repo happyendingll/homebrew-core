@@ -16,11 +16,8 @@ class Kubekey < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c1e2623680f2880c80650893d383ee394bd7c90cfb7f846143dfa7c8f46bc365"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ec00141c7a8f328a745b5a8e5e3c94e60c398bf8be5abe29455be4800c4aee35"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8ddcdba72ad50838b35a4beed1454433aaa7b67aceab19174861b46dd3218217"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "708d7928bb550380a787050c67f472041303d8bf5f9b05f99384b01905d3d0e9"
-    sha256 cellar: :any,                 x86_64_linux:      "a5678b77739f7d4afad2d089538e85475c9c63d575536d9b1b220a14db68691f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "8036f2fbc4344f42ecd97c52c5246ad540047125a2171c31a505e9f7c20b9d76"
   end
 
   depends_on "go" => :build

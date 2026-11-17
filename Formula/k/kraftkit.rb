@@ -12,11 +12,8 @@ class Kraftkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ec1933301c640ae5dd838d241073f112248579f1dda402cf5dff9ee82dc0f10f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d0b9ce31aa08cba5553da4ed4f9791a2bf3eb4c9462d9ae6f1803856b848170f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a32631fe978c42ccba8406ec320af0058e2afacd2c3a1a261e85ff6d66884fc3"
-    sha256 cellar: :any,                 arm64_linux:       "5aaf30a2e1058717c77572be9967b7460e6a40c65174440c3c95a8e8a8e56225"
-    sha256 cellar: :any,                 x86_64_linux:      "2f14959d7cfc5a89e5c423f7fa42dcd7511cfc32577fbb72fe3ecb3a761e14b6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "af5e7fa992841f301d766b332aac96f1fc50894b55456943ddaeb25096a3c067"
   end
 
   depends_on "go" => :build

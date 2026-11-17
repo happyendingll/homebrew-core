@@ -12,11 +12,8 @@ class Nextdns < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2daf3f9593a8622cee095e2f0686a09a3206749a2bebbefc615226787f2a025e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41269034e2b8263f1e3185ee3f0bc8010fb85f8c8694cb97be396fecd96d8295"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4b1c922b306a564759d0256bf459d19f8b93a26c73d49a2c2a313315f8476253"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "186ab7e24f8d6ce927cdc05ba1319846d495fede498c278c260a30b04983fe50"
-    sha256 cellar: :any,                 x86_64_linux:      "e2dc92fde1f0d15fc25e9d8ea475bf23648f4fae317e8f41ada41d5426df33b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "005ea933e3e266e813fc0130b5bcb9bd75e4c24bb2d02540f8c7545b8cfa6ec1"
   end
 
   depends_on "go" => :build

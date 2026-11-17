@@ -14,11 +14,8 @@ class Calicoctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dae74e5d24aba98f81494e2f0ce5e2eed4b159cadf9ed1eec5fbef2b8eecd710"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "828c2c8eb75b2f8d4c55bb086fd3bf652638809ee8980890f3e9a7ee7706e6f1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d5012054bb266394da12bf7525b3606c4cd50bb3b993dc0cca14ffec9266e8a7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d5685f47945ddedd0349c6a6ca1336db4fff5d4fbf18e7b7e22077542f76a42c"
-    sha256 cellar: :any,                 x86_64_linux:      "4f3e6204efedc15402014e5c747cbaf71e6195c5098b489473d33a0edcc7cde0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "0d78602acd470d0171b13c28707e838e0d8ef6ffe61c5326d999e10bc7c89cd3"
   end
 
   depends_on "go" => :build

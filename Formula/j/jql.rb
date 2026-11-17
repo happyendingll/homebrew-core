@@ -7,11 +7,8 @@ class Jql < Formula
   head "https://github.com/yamafaktory/jql.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6eb9b5abee328f4e51cd5d37947f9851bc3d487a0097b4c656f30fd7230a9100"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf4743004ece1b8a8ea1fc81a201671be2012562c4646f9fce0d3fb33e9fc115"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4335b8ca5b2dbaca1e48652405a169c5d027aa5f4b10013a4f73c56665909dee"
-    sha256 cellar: :any,                 arm64_linux:       "48f636659d98b0906df0dd6dafffc6c0d7d218bdb76aa34ca16bc83d3a248700"
-    sha256 cellar: :any,                 x86_64_linux:      "4019fa07998ddcc10116e935b7e69bcb920d6c9418754f28dcd77ef1cc1fea16"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ad8d611d3fbaec8c43710f5ae43293b7a6135a21e2eaaccbab3719ae9e2cd19a"
   end
 
   depends_on "rust" => :build

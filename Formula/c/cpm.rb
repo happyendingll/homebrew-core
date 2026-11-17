@@ -7,11 +7,8 @@ class Cpm < Formula
   head "https://github.com/skaji/cpm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c8d1b2d795a1871cb40d4fa7c6b07134c4b637296d91b2cdf9649327dab116d2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8d1b2d795a1871cb40d4fa7c6b07134c4b637296d91b2cdf9649327dab116d2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8d1b2d795a1871cb40d4fa7c6b07134c4b637296d91b2cdf9649327dab116d2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "98bfd86cc915d9498ea9c95771027adeca2bc158c41cf1332b780ff44d7ce6ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e2eb2c81f8b8fdf3103d3f60671b03aec7076ca53a041b6795feddf97c7fa95f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "21b1f653076a55cd413708728859b565f846f211f50e63095905eb103e068fc4"
   end
 
   depends_on "perl"

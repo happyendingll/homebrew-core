@@ -7,11 +7,8 @@ class Prek < Formula
   head "https://github.com/j178/prek.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "937cf1cc555b95fc9e485834b138f672f8c3f3bb67064e2e020ac8b393456477"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e308d7077e481d8fd8f42d1d972de5c47a50ffad775457851409c42b53ba7e55"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f9eb93f0d7dd7cf645893b52157cb6bbbab21c731f653427205b61324f9f8387"
-    sha256 cellar: :any,                 arm64_linux:       "b90c1cf50a76f57a716a7ecc109ae360136b305948d3026bbb2a9f8fd2b54a6e"
-    sha256 cellar: :any,                 x86_64_linux:      "4ce09779f7e06f1dcecbde3ebf4c6f4044bbf757dff290762a05ceef656f449e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "bb15002d3028b87d063dbeeeece83ac5baacfac9140d3f488639759bfb39bc8e"
   end
 
   depends_on "rust" => :build

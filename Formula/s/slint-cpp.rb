@@ -7,11 +7,8 @@ class SlintCpp < Formula
   head "https://github.com/slint-ui/slint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "19f43ad18bb266478f16453cb01be439d4715c6c43f5b4612e5b24db4ded7639"
-    sha256 cellar: :any, arm64_tahoe:       "7ff281d61f06400196381e90649bc962c27922f7448e1930fae7e2e4b3f52abb"
-    sha256 cellar: :any, arm64_sequoia:     "aa6cecda6368f9fac8832c05f6150b34a26c6386a41e82e1bbb6b1d6287a83fd"
-    sha256 cellar: :any, arm64_linux:       "e996ed9097de81132c665276da97eb457c64e88c3ca5c29caf3d9a085cf8d0ed"
-    sha256 cellar: :any, x86_64_linux:      "cf1be273661534a2894852b0137a2d0bb9c4ddb71f650d86a8ff9ac96dc42421"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "4eb1cf41cf256c5e5d44e6a6c3b3a1757ec1a29ece9b1af0bd9d36581ba2e686"
   end
 
   depends_on "cmake" => :build

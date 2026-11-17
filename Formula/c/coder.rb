@@ -15,11 +15,8 @@ class Coder < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1c8a4d956bd90b9edf252f92e07b84ae70af7c2d26a989566dd20a5f8b94d58"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe7bbd2e337d7ac0bba857051708a3787fc2940c0bac5f5b88e86484b2094cf5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "84274ba3063632ed093e7aef748ba7b176bcee870f99073d6c24540021db252b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "503e5a4dbd88103fa70c1336cc8e41287996a6bffb2833cdff23fae66e3042e7"
-    sha256 cellar: :any,                 x86_64_linux:      "83c8ff7365690078fc23b56f30a7437087eec014cc8455f27afa7ef2a1ca7b3b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2a749df100f4dd8284f9fea89022b91aa2899e97e257503f33e82fe978a3d4e7"
   end
 
   # TODO: unpin go@1.26 when coder supports go 1.27

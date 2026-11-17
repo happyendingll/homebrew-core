@@ -6,11 +6,8 @@ class DuoUnix < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_golden_gate: "c96422b355aee7a106152b8814cb5eb63c8e30bf24809d747fab3f3ab27707ad"
-    sha256 arm64_tahoe:       "2a8b171bb538ad09eb8cd138e66f63440e46fe321417a986400acdfcf8f661d8"
-    sha256 arm64_sequoia:     "138d70cb765c13071f07c27aa4a29e20f69e53a60402436f0111373a8eef8af0"
-    sha256 arm64_linux:       "9352118f9732aaba7070e5842990f8041c587eb690a99f7a0ce8256749d92603"
-    sha256 x86_64_linux:      "844305881fdb956899339963617a3098f32b08efa10ed6ef7e797d0c022f26a2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "57310da04d76d985aed66e62e107e836837bad857a90d7f9f5fffe7f4126e7de"
   end
 
   depends_on "autoconf" => :build

@@ -12,11 +12,8 @@ class Abcmidi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "832efa07f19dd78dad45c0aa53365fa89acaef7a94d28fc76335f030f8e0532f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d5c60225a934a0d10268806671e1201416a0933589590cf58e553a4a8c1828c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4c5ffe72ccbb2a2c2e79ef743069325c796ecc6903cb1489d86761f7c70f62be"
-    sha256 cellar: :any,                 arm64_linux:       "407e707a11b7c48b221770643e56553d8fc9198a8f00aa693604f54a372516e5"
-    sha256 cellar: :any,                 x86_64_linux:      "7cc42e70beeb46126672280dc7ce995aedff856b6d644f0c68f8e05be292a7bf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d5ed95e26002228a18c34367ba475719d7e23fd7a0ab3eb0031343cf4e9f63e6"
   end
 
   deny_network_access!

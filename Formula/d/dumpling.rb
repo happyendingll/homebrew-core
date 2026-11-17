@@ -12,11 +12,8 @@ class Dumpling < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "effe5ef6c759e0a6b59dfcb4bf49cea5168591fdd593bed36c01d349288066e9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "24a25bb0fc7de69eccf93cfdef5b91e4696b9d2a935ac9e59cf0b8a89cdc43fa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7ab41d814e7c862641d17bd217d4cb9e2331a70faf26606ede9551c78a478267"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "45103bcd1edb2e97bcd6b57c8ed39ada20c71b093ee3ffc9d72a0f2a94c7da38"
-    sha256 cellar: :any,                 x86_64_linux:      "c88c4d6b7ccea8440bba8f0e5a0a9cba33f6ea5d008575a1738bbce626b9c02b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "33eada854758ca31eda1f204c553330e42823ec9bc999523b955ce97663205d5"
   end
 
   # TODO: unpin go@1.26 when dumpling supports go 1.27

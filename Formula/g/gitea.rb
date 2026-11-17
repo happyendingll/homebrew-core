@@ -13,11 +13,8 @@ class Gitea < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c77d836b07f0ef212737da6e8647a2a863b1dc3f304c605c694f3e1f3ff26805"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "82352dfc5a4e67dc180f48588c2a16b26231694a21e71a4408cbdd6337c32f27"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "03e0bed5292292371875d1a81566fdb507331e7b0377f66479720047bdab5777"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a4f89c7c836fc65a7294ce2888307ddd6b748bfe4626a852bbc290d3d6460581"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c332e85c63b370478997cff45cf634786b3af7a2e0b7e64f5fe84ee4df3002ec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "8e4f0574a8fb0bc3827839613f6f7aea2791a5f54c7b9ede41af54609d08afe2"
   end
 
   head do

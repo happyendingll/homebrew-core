@@ -6,11 +6,8 @@ class Ec < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "baf36f25646f881c8f42c7a50fb47a300ad86bbfebc1714c708caae5a4858efb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "baf36f25646f881c8f42c7a50fb47a300ad86bbfebc1714c708caae5a4858efb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "baf36f25646f881c8f42c7a50fb47a300ad86bbfebc1714c708caae5a4858efb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0843cde3acb96bd9dbedc54001268e92df34daedb7778c388c71f7d88c926b9c"
-    sha256 cellar: :any,                 x86_64_linux:      "ddf4e1dc4955e542fe0c6acb7e1da9b91b51d86fc9b652d589422fe5eb9f6b30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "e0169b224ab20736d3bade9480618d1055d1044b4a61477dfbe99c3afaf7544a"
   end
 
   depends_on "go" => :build

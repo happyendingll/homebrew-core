@@ -7,11 +7,8 @@ class Kbld < Formula
   head "https://github.com/carvel-dev/kbld.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "37d91a8fbfa8e39b49273fc19ef879ffff8b74e1b15a43908864dc669706b41e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37d91a8fbfa8e39b49273fc19ef879ffff8b74e1b15a43908864dc669706b41e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "37d91a8fbfa8e39b49273fc19ef879ffff8b74e1b15a43908864dc669706b41e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d9a4a0c6bd8e14127766e818386b5fd6cc20fa61dea9bf46464e024ee145eb08"
-    sha256 cellar: :any,                 x86_64_linux:      "7875993b266344dd0849db99fb452ac203a98b987d48706334b2ba6bfe7789ee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "cb7d214ed0b3e8208f78870b8f82065da97d9a8faf33848805c116cfa51241db"
   end
 
   depends_on "go" => :build

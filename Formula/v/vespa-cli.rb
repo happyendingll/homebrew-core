@@ -12,11 +12,8 @@ class VespaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7a104580751c118d6b663ef92cec12c2c2c4a546f40f9e550d41b4a67add15e2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9a0923c7dcd5600ef606581eb10f300c50b31090179dd5287c3c208a933b6a9b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "32dbf671ad697ca85faba6ec1823dba413c3c90b043c38d6f254332b4fa62742"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0a7b8aa08ad37b1fab8f6cc7b0ef46a0ce2758e76fb1b65f3c1e3d59e304e055"
-    sha256 cellar: :any,                 x86_64_linux:      "3e3683fc297479cde226dfefdf691d6712b851c88ecf18a8f08ac80766c58b8c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "be127829e85ef772564e277e8a6adca23455d82ceb322242e875362a7413073d"
   end
 
   depends_on "go" => :build

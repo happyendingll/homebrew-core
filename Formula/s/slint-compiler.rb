@@ -7,11 +7,8 @@ class SlintCompiler < Formula
   head "https://github.com/slint-ui/slint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc8ceff7bbf6846062280fea3bb4efc80f64c000172582d975171f4850833db8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "79739ab1c5d988778475a3a7def00f8562f64e0f33d8ba8370648ac94ac704da"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "960f7af8e554b6bde42baab24a16d58a2c667cddff3686de7742306a0d26f4bc"
-    sha256 cellar: :any,                 arm64_linux:       "aca66c211284bd1a062f5d2f8abcc0139546add42a7d725301cf58f4792b87de"
-    sha256 cellar: :any,                 x86_64_linux:      "e417e2c3153dc2720928fcb5a3c7aa0f683753eab0ed9e37225718839820d123"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b6265fb13a82e5acd88c0850785c606627a728a0a6009481303fc1d824da83d8"
   end
 
   depends_on "rust" => :build

@@ -7,11 +7,8 @@ class Kwctl < Formula
   head "https://github.com/kubewarden/adm-controller.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "01d128ff632c12a0b4f7fc1bbcd32eb9f0eadc2ddbf8257faae1f824499f952b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5ed8301587943e6f6d2548b47dbf97d9137ef645110a0b167a0c90f174a17272"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4112214975d6182a04bbc14828c345d9ca7655c5527a677d0748796bb309448d"
-    sha256 cellar: :any,                 arm64_linux:       "70614e891c70cad9ac084927a70892e531e0aed64cee319fd7552734ed6dcafa"
-    sha256 cellar: :any,                 x86_64_linux:      "a5db9f764d9f504b8750e5dd7ebac30a2c75105e1549857babc54976334a8300"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "7e3f1f39368075351ba1cf845beb69070995d332901c7fe5c4ddb8985121ddd2"
   end
 
   depends_on "pkgconf" => :build

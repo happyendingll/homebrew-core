@@ -6,11 +6,8 @@ class Imapfilter < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "c60a44fe2bb9323021d989362838b9531bad99bc0f2e6ba27ba8b2742c2c49dd"
-    sha256 arm64_tahoe:       "aabab7b3556edd28da6c2ef4b41adc3af610f4ec3bbb1b8d831911808b95706c"
-    sha256 arm64_sequoia:     "8b662deb79c5012abdce4d40cb1f9d060b877677b577663d45c1fbc44a6f2ade"
-    sha256 arm64_linux:       "2cd6718364baad524b3a28436bba19c66f5c890e10996f86f5466bed1f7513dc"
-    sha256 x86_64_linux:      "33fe8fb653788e5c05a7f1253e83b12847394a8eb5ac9cf94ac32d5392a264c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "ad09d50472d49e1910b9899b0d871d1577d3185301d206ff3d3ed0aec9cabfdf"
   end
 
   depends_on "lua"

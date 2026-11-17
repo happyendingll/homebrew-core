@@ -13,11 +13,8 @@ class PkgConfigWrapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eaa5fece3f6bf6d26e25c19178cb1db07edc5100e00455fb3b591cc1084f59ca"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eaa5fece3f6bf6d26e25c19178cb1db07edc5100e00455fb3b591cc1084f59ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "eaa5fece3f6bf6d26e25c19178cb1db07edc5100e00455fb3b591cc1084f59ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "34de32c08738176d1ec712dd8a898f747795b3337cc88f8307417e030f38d2b9"
-    sha256 cellar: :any,                 x86_64_linux:      "43eded48fd8a82fc90dec35152403ddf5dbda86ebc61f94f7e7f3dbdf8477faa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "298d136f074a7132c03b46c1085720c0540b7a1963af2ff20fa179fe534e811c"
   end
 
   depends_on "go" => :build

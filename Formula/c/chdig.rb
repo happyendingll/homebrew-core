@@ -7,11 +7,8 @@ class Chdig < Formula
   head "https://github.com/azat/chdig.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d9892db7abde56cb8885a58a2982c68b537347267065b4dddd6f951e4bfd194"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a7c1277f91296ccea8dfc1c1b18f98fdccf5cf8921982feec8115482e1b00ed5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4d95f24fb80a3ea532b50fad4bc339aa3a01fe1d1ff7e8b677787c19577497c6"
-    sha256 cellar: :any,                 arm64_linux:       "6928d98e8fd440aa79ba9ce9072a66cd8ce86c270f626c2efcfdd0c90010c92d"
-    sha256 cellar: :any,                 x86_64_linux:      "ea803154958452bdd397ed41378e8348f15f2c6c7f8ecf713359a9a29b619411"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "3d90c2af6fdbcbe2d7532e640dfa8f23987f33bccf8a8ac23fd31ba5d84b75c6"
   end
 
   depends_on "rust" => :build

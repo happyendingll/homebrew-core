@@ -7,11 +7,8 @@ class Mlc < Formula
   head "https://github.com/becheran/mlc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ad24725817d686ebec7b4b2d4779d0f19869c1f8285720512888baaccdf5929e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "80a82ddd10ba7faf10e672e2e7f512c38e966758f00f3ca0a1aa1c7ea9c93da3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "02b8c027057921525641d5d18ef318eea53678f138f20c7780db8413aeb86572"
-    sha256 cellar: :any,                 arm64_linux:       "68664b6f94e66f5e44c416802b1dd0b867d5313f693bfaec077588fbfdba6bbe"
-    sha256 cellar: :any,                 x86_64_linux:      "98b8ab6939e6535d93b6600f51ec9568502d6e9a2068fd57153fa647bcb9270e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "46bf0395c5ed72d662400c5ef780bacc7d8cac824728133daad47b6e7ed9bc1f"
   end
 
   depends_on "pkgconf" => :build

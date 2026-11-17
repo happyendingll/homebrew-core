@@ -12,11 +12,8 @@ class Oxlint < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04416414178def27a841411ae48d33370bd9e5c97a1e3b9c8af366e99d10d8f2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "328d48a748e844772353f14e70751b3793ab265ff2392666bf706f14bf76b4cd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dcc9927d1be97b258e6007b6256c55bc22ae95f6b9beb88e01afb78a02832b4b"
-    sha256 cellar: :any,                 arm64_linux:       "96a3418be1058446264881163c1e98b9e343c4498e5302f7347851e560ef00fa"
-    sha256 cellar: :any,                 x86_64_linux:      "ed85c9cf5360f68bba7e59cb9294335cdd2bbb079165220757a43ab735466963"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "7d1b635702a7050ba8171294f603d31042fd469ad4f2991b285dc83cf56e181b"
   end
 
   depends_on "rust" => :build

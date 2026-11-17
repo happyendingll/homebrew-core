@@ -11,11 +11,8 @@ class Megatools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b8de0384ada644416dcab2cb3a8f716ac97264fd3a04fbdf8087fc546c236462"
-    sha256 cellar: :any, arm64_tahoe:       "4bd6ff739b042cdee5e6b516af1b0ef91dc57375f5ca40d7bc788aea4c2c1a95"
-    sha256 cellar: :any, arm64_sequoia:     "1025d6bd6f7e94990ac89856ce9ff9a35414d5335103ad56f9856cbc0d18f4fb"
-    sha256 cellar: :any, arm64_linux:       "bbbe5411eb2552e0310bbf2b0015feb41eeae556e789387c171c3660ffd6f1ca"
-    sha256 cellar: :any, x86_64_linux:      "b955b4b4301d1c111b3b025073978442bd27ad276bf51f590f175d303d418bbb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "46180a3ab3c9e54a68f419e85c8215192e8e8568a1ae5d3fbcbd877c64c94a06"
   end
 
   depends_on "meson" => :build

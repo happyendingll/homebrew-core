@@ -7,11 +7,8 @@ class Futhark < Formula
   head "https://github.com/diku-dk/futhark.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "847de033388c2e19b42bc702e9b36c912299e37cedc171f1e3737693e5bd6b4a"
-    sha256 cellar: :any, arm64_tahoe:       "72a45494298403239c46f41832264fd4aca619f4ba48cfca9afcc6440a2eb985"
-    sha256 cellar: :any, arm64_sequoia:     "8155f95e36fa7d80a83595a72f9bfe6b3394778099a2d3a15abca195d1d21217"
-    sha256 cellar: :any, arm64_linux:       "ba1c3596a0a87ac2cdc1f916d58f43e8706609392e7adf55bb971f1ac20e1f75"
-    sha256 cellar: :any, x86_64_linux:      "0bfa5d5bc610b1e5477d0e110fc20cfaa9a770f4e30abadebc40cc4f002e48bc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "b346255a64afbbbaaead610c26de19ae9197acdb94968f1ea3e26ecd5e13a2c4"
   end
 
   depends_on "cabal-install" => :build

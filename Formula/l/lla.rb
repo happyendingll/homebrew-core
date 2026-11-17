@@ -6,11 +6,8 @@ class Lla < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "50463d767785c6cbd3af4430268acb6e6c28dd43fd2b817a7803436d6f9ba402"
-    sha256 cellar: :any, arm64_tahoe:       "b8c0b27891bc785285c325a1cc9faf3aacae63015743fd6f6a7071be513b3c0f"
-    sha256 cellar: :any, arm64_sequoia:     "acce00eef63e47d21ce89c3134dc9c854ad6d4ae709ad6c10457c4a643c68455"
-    sha256 cellar: :any, arm64_linux:       "546b08439a088691f59daff4e2f6fec9c2b66ca7ada7786aef936eb414bc0a77"
-    sha256 cellar: :any, x86_64_linux:      "235f4058da9441ffba033c9aac084d011d1c46f6f1b72878cf765ae0b20ce529"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "d64ff9c3c9361e65649f6dddd9a817ce86639fcf5d8237e6a86b0ee6953285dd"
   end
 
   depends_on "protobuf" => :build

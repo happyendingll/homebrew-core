@@ -9,11 +9,8 @@ class Djlint < Formula
   head "https://github.com/djlint/djLint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c4552b13e8fd12b669fd522aed938c8b7df583f9bacc51777d65f0c5eadc5492"
-    sha256 cellar: :any, arm64_tahoe:       "4388f28ef1345ea716a3eeb3e892900da60c78e452d0e66e0eb0dafd8cb6bb38"
-    sha256 cellar: :any, arm64_sequoia:     "0f0417202e5ac1bbadb76ee171b3c18c96c22ed6a1e932d301de735a649f9bc3"
-    sha256 cellar: :any, arm64_linux:       "8912d700aa3febc42c4030cf2393a29a4b858d9725c105f20df31762b7c6c56c"
-    sha256 cellar: :any, x86_64_linux:      "af18e32892ba37d939f87da3190128fa5a8e2bdb74d526230f5488c2fcc44f02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "49b33bcf5b58ee02538c748fd771970e6cb55b1777934a9f4eff20d9eff8a43a"
   end
 
   depends_on "libyaml"
