@@ -1,8 +1,8 @@
 class VespaCli < Formula
   desc "Command-line tool for Vespa.ai"
   homepage "https://vespa.ai"
-  url "https://github.com/vespa-engine/vespa/archive/refs/tags/v8.781.11.tar.gz"
-  sha256 "c6868fb4dc645d8119bf9b09c5857b4ecd38ca47a300dece07e94ac30ee09101"
+  url "https://github.com/vespa-engine/vespa/archive/refs/tags/v8.788.13.tar.gz"
+  sha256 "25a7998badfd6f64d2ec403cac94bae5627b6605e603372134d297d243ced1fe"
   license "Apache-2.0"
 
   livecheck do
@@ -12,8 +12,11 @@ class VespaCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "994127dbdbc04fb882174181d289481ddcb30016a66fd0fc303d693758603f3b"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7a104580751c118d6b663ef92cec12c2c2c4a546f40f9e550d41b4a67add15e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9a0923c7dcd5600ef606581eb10f300c50b31090179dd5287c3c208a933b6a9b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "32dbf671ad697ca85faba6ec1823dba413c3c90b043c38d6f254332b4fa62742"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "0a7b8aa08ad37b1fab8f6cc7b0ef46a0ce2758e76fb1b65f3c1e3d59e304e055"
+    sha256 cellar: :any,                 x86_64_linux:      "3e3683fc297479cde226dfefdf691d6712b851c88ecf18a8f08ac80766c58b8c"
   end
 
   depends_on "go" => :build

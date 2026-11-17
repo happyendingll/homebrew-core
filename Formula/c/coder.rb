@@ -1,8 +1,8 @@
 class Coder < Formula
   desc "Tool for provisioning self-hosted development environments with Terraform"
   homepage "https://coder.com"
-  url "https://github.com/coder/coder/archive/refs/tags/v2.38.7.tar.gz"
-  sha256 "ec4a4577deb44cc42a7bed9c1c16c5658602dafaa16d5c487e2ebc3bbbdfee3a"
+  url "https://github.com/coder/coder/archive/refs/tags/v2.38.8.tar.gz"
+  sha256 "ed32ff9318ccded908823f84407ce7de745090e41109a4e5e69b331a32e79d74"
   license "AGPL-3.0-only"
   head "https://github.com/coder/coder.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Coder < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "806ac2d7501ba227a5dc3973a1610387ca07a9bd04931cf5b63eef52dc31e429"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1c8a4d956bd90b9edf252f92e07b84ae70af7c2d26a989566dd20a5f8b94d58"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe7bbd2e337d7ac0bba857051708a3787fc2940c0bac5f5b88e86484b2094cf5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "84274ba3063632ed093e7aef748ba7b176bcee870f99073d6c24540021db252b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "503e5a4dbd88103fa70c1336cc8e41287996a6bffb2833cdff23fae66e3042e7"
+    sha256 cellar: :any,                 x86_64_linux:      "83c8ff7365690078fc23b56f30a7437087eec014cc8455f27afa7ef2a1ca7b3b"
   end
 
   # TODO: unpin go@1.26 when coder supports go 1.27

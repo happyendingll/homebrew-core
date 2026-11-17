@@ -1,13 +1,16 @@
 class MailtrapLocal < Formula
   desc "Local email sandbox with SMTP server, web UI, and JSON API"
   homepage "https://github.com/mailtrap/mailtrap-local"
-  url "https://github.com/mailtrap/mailtrap-local/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "91d30439b3420d72939900d604e0a232504f1fca77546d46cae2b8ca77e7bba6"
+  url "https://github.com/mailtrap/mailtrap-local/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "15fc6a2ef722fd3d97bebd36dee91d72ea2c9e2d54b04f580d276c0ae15ebe90"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "97a2ecf854dfa391975b5c6668a8f7332ab85e50807f7e126a7e74242be92969"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9ae0b039b8950dbf5d61e44f79bf1bfd78aa22c1864e41862bef246b6cb6630"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d9ae0b039b8950dbf5d61e44f79bf1bfd78aa22c1864e41862bef246b6cb6630"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d9ae0b039b8950dbf5d61e44f79bf1bfd78aa22c1864e41862bef246b6cb6630"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "050bdbe4c30606ab1e90676db169c9fda1ca4c2dc3379eefdc09ccb4174f90e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "674f603bca3dcdf733b2a4295ce554df22cca612f25247a47387bba4d7ea00c7"
   end
 
   depends_on "go" => :build

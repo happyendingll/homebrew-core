@@ -1,14 +1,16 @@
 class DuoUnix < Formula
   desc "Two-factor authentication for SSH"
   homepage "https://www.duosecurity.com/docs/duounix"
-  url "https://github.com/duosecurity/duo_unix/archive/refs/tags/duo_unix-2.3.0.tar.gz"
-  sha256 "f8c53a1beb54f40765c1f5708a6cf6fd4abd94c645d5fdc52e222223d2040092"
+  url "https://github.com/duosecurity/duo_unix/archive/refs/tags/duo_unix-2.4.0.tar.gz"
+  sha256 "cfeb6c372cc35c99e373d0e099c809a30dbf4e3a67c1cf9ad929e745d744a381"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "252421bf362be638878b2987c5175c0eb4fa5704a06960895579d279fc609586"
+    sha256 arm64_golden_gate: "c96422b355aee7a106152b8814cb5eb63c8e30bf24809d747fab3f3ab27707ad"
+    sha256 arm64_tahoe:       "2a8b171bb538ad09eb8cd138e66f63440e46fe321417a986400acdfcf8f661d8"
+    sha256 arm64_sequoia:     "138d70cb765c13071f07c27aa4a29e20f69e53a60402436f0111373a8eef8af0"
+    sha256 arm64_linux:       "9352118f9732aaba7070e5842990f8041c587eb690a99f7a0ce8256749d92603"
+    sha256 x86_64_linux:      "844305881fdb956899339963617a3098f32b08efa10ed6ef7e797d0c022f26a2"
   end
 
   depends_on "autoconf" => :build

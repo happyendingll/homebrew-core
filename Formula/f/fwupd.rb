@@ -3,14 +3,17 @@ class Fwupd < Formula
 
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
-  url "https://github.com/fwupd/fwupd/releases/download/2.1.9/fwupd-2.1.9.tar.xz"
-  sha256 "d45f3cbac06f1f6da300fb7c148237ff15c12df9981824e925bc2f3722bff233"
+  url "https://github.com/fwupd/fwupd/releases/download/2.1.10/fwupd-2.1.10.tar.xz"
+  sha256 "cb23ab505cabaf616dacfc199f710f883329e8782ca3aa67548bdb7181d62fab"
   license "LGPL-2.1-or-later"
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 sequoia: "00258925303d3d06cf0197d881fb230fe39e0b91f46c20c9cf3b816d38c5e5a1"
+    sha256 arm64_golden_gate: "e4fd71b1c53999fdeb720ecc39a6c6d06da841691e41f09e06b9e8a6616c77bc"
+    sha256 arm64_tahoe:       "470ab3b92d3c0c6c6b8ff277b46822bcae2c84ce714a6c4176c253d2dd43656f"
+    sha256 arm64_sequoia:     "8a99217b06ab51d145bcb532bfeb3374b67d2f519600d87f9f461991f569db2d"
+    sha256 arm64_linux:       "2184942e0f6903c60ebfd088c6802b3bd09e6b76c204a9c23bc37149c64506ca"
+    sha256 x86_64_linux:      "603caafbe0b2addf42a46d63cb5a8156fb43f0ae3ed9e9f94b7180c3459e6e17"
   end
 
   depends_on "gettext" => :build # for msgfmt
@@ -65,6 +68,7 @@ class Fwupd < Formula
       "-Dbuild=standalone", # this is used as PolicyKit is not available on macOS
       "-Dpython=#{python3}",
       "-Dsupported_build=enabled",
+      "-Dopenssl=disabled", # GnuTLS already provides crypto; avoid linking an indirect `openssl@4`
       "-Dplugin_modem_manager=disabled",
       "-Dplugin_uefi_capsule_splash=false",
       "-Dtests=false",

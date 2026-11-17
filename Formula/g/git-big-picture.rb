@@ -3,14 +3,13 @@ class GitBigPicture < Formula
 
   desc "Visualization tool for Git repositories"
   homepage "https://github.com/git-big-picture/git-big-picture"
-  url "https://files.pythonhosted.org/packages/bb/df/15392f049576f9b3989ffe9d5ec12135f8d9618c089a6259c5a2c16556c9/git-big-picture-1.3.0.tar.gz"
-  sha256 "a36539d20059d24516bcb6bbf6bca0a6932a7a8ac480b4b5b68e9e863a2666a5"
+  url "https://files.pythonhosted.org/packages/be/db/ccd8e2c699a6d2b1f98e56ad5fce4f193b0a64554f0d7016afc42c90f909/git_big_picture-1.4.1.tar.gz"
+  sha256 "ed3e30fe43ee35b5fb6116fedffc12d1b98900e0984367016b177906bbeea2a8"
   license "GPL-3.0-or-later"
   head "https://github.com/git-big-picture/git-big-picture.git", branch: "main"
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any_skip_relocation, all: "a6cf32be8a82d9bde4c15d16212748953a6624f8f92cff6a73735299e2585412"
+    sha256 cellar: :any_skip_relocation, all: "d5c3dfe39a79111d7a852aeb8b6b406e28a2fc888b6a21391292b47fbd572df9"
   end
 
   depends_on "graphviz"

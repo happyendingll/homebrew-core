@@ -1,14 +1,17 @@
 class Tuios < Formula
   desc "Terminal UI OS (Terminal Multiplexer)"
   homepage "https://tuios.dev/"
-  url "https://github.com/Gaurav-Gosain/tuios/archive/refs/tags/v0.13.1.tar.gz"
-  sha256 "9f34163e076611002ff09780014d227d8b80efb0ad95dcd7bfa0e2c188971010"
+  url "https://github.com/Gaurav-Gosain/tuios/archive/refs/tags/v0.13.3.tar.gz"
+  sha256 "26ffb34240cc273eb7d0f3b6ee5a9a124c7c4a947f39fb22877ca2f93a539d73"
   license "MIT"
   head "https://github.com/Gaurav-Gosain/tuios.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "87c5b9191b2d4370dd0c697025b550c91ef5b5add2f2cf6e1e18931bda2a6325"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0f5c4ce89d00e42edf78401fcd6bc0fcd6ea6f7b8c423b864e429618cd603615"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "beffbd548dfc11b0e5ebbb420db9e5c720bf1367bdcf1656a6ea928e5dbd91ba"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f76cf206b307791d48638769e1b468839d03211249b65bedb4b8c11b0195f34b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b19265ef329dc75acb570d1a787cfec726cc4ccfaeaf0ac87bc49767784aa49b"
+    sha256 cellar: :any,                 x86_64_linux:      "105966aea7918bab73553ebb162e2e5ea630739cfcd0be7a2b747b3138320a6a"
   end
 
   depends_on "go" => :build

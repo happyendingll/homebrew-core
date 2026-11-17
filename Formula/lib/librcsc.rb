@@ -4,11 +4,14 @@ class Librcsc < Formula
   url "https://github.com/helios-base/librcsc/archive/refs/tags/rc2026.tar.gz"
   sha256 "876d2903eace3f46be3a91b184ccce96a7885c73903c0e73d52cf0df3d79b9d5"
   license "LGPL-3.0-or-later"
-  revision 3
+  revision 4
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "abc5b051ef7a77019c1997351a08df32c24255b3f2e25c2bbe8dbc3ec2a5c7f2"
+    sha256 cellar: :any, arm64_golden_gate: "e17823d2045aa373c7216a2813a6d28cebe37de2e4490ef47683bb589bd781d3"
+    sha256 cellar: :any, arm64_tahoe:       "de05fbbe79e807b3e229f6180b6b8a04b9b991dd8321d8ed63346409d383728b"
+    sha256 cellar: :any, arm64_sequoia:     "e11dc2ba1f3df070983af0729395a3920246c634fb75b9e57c0e97ec1521d8fd"
+    sha256 cellar: :any, arm64_linux:       "e2b6bffea14ab2b7045a680780071e15b6064a1304df4aad16e890c25f6516c3"
+    sha256 cellar: :any, x86_64_linux:      "c82481ab05a9b3d68eece877de643ca1be61fc037fe28ed6c8c5db7d5f45f25b"
   end
 
   depends_on "autoconf" => :build

@@ -1,14 +1,17 @@
 class Libcbor < Formula
   desc "CBOR protocol implementation for C and others"
   homepage "https://github.com/PJK/libcbor"
-  url "https://github.com/PJK/libcbor/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "a8f3aa5c75a4e1e2c639a4928036a3a53fd1682037033db0964935965bd5f5da"
+  url "https://github.com/PJK/libcbor/archive/refs/tags/v0.15.0.tar.gz"
+  sha256 "c94145d3c22e67cff9a3325dc036b4545a49a42231553995be4947d52cf2ef57"
   license "MIT"
-  compatibility_version 2
+  compatibility_version 3
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "410cac8006f5d74f941e191999343780c1c8f11051190c8c6662611a083aebfa"
+    sha256 cellar: :any, arm64_golden_gate: "3f8eec24c56884c2cf6b5ca3749cef68d71e94277a97be05b24fd942b3d63fe3"
+    sha256 cellar: :any, arm64_tahoe:       "4a39325b18be5ce01f57a27618141a70b2887cd9cd0e824e857ca0439aa95f91"
+    sha256 cellar: :any, arm64_sequoia:     "2f4c156c3a23ef829ce56b6a696bd0fec01fb081f56a461ec22170ec5b17fe7e"
+    sha256 cellar: :any, arm64_linux:       "8f41e4a7ca665dbe2238d3dfb66dd18914013c16ba8fe2ef0210e9923854f0f1"
+    sha256 cellar: :any, x86_64_linux:      "01eee0ee578f2e9df1b056125c79ccd24477826c193438d81eeeba8442fccdf9"
   end
 
   depends_on "cmake" => :build

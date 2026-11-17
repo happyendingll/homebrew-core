@@ -1,14 +1,17 @@
 class Chdig < Formula
   desc "Dig into ClickHouse with TUI interface"
   homepage "https://github.com/azat/chdig"
-  url "https://github.com/azat/chdig/archive/refs/tags/v26.10.1.tar.gz"
-  sha256 "a6c63271cec839d862cab09ef46feb062e6a41b18b826984c92a53b537db1236"
+  url "https://github.com/azat/chdig/archive/refs/tags/v26.11.1.tar.gz"
+  sha256 "c385cc9f1aba57e49aea577ff0b68bb279cd5d3366d90074e4fa4a67aaa2b499"
   license "MIT"
   head "https://github.com/azat/chdig.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "458226b106423bc54471feea6e940af7760236992c250b6474ea7d10cf61c902"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d9892db7abde56cb8885a58a2982c68b537347267065b4dddd6f951e4bfd194"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a7c1277f91296ccea8dfc1c1b18f98fdccf5cf8921982feec8115482e1b00ed5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4d95f24fb80a3ea532b50fad4bc339aa3a01fe1d1ff7e8b677787c19577497c6"
+    sha256 cellar: :any,                 arm64_linux:       "6928d98e8fd440aa79ba9ce9072a66cd8ce86c270f626c2efcfdd0c90010c92d"
+    sha256 cellar: :any,                 x86_64_linux:      "ea803154958452bdd397ed41378e8348f15f2c6c7f8ecf713359a9a29b619411"
   end
 
   depends_on "rust" => :build

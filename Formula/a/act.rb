@@ -1,14 +1,17 @@
 class Act < Formula
   desc "Run your GitHub Actions locally"
   homepage "https://nektosact.com"
-  url "https://github.com/nektos/act/archive/refs/tags/v0.2.97.tar.gz"
-  sha256 "807e43becd597f65c76c7d5dd6dbe5ff94285629214f6005ad18ce618b70e49c"
+  url "https://github.com/nektos/act/archive/refs/tags/v0.2.98.tar.gz"
+  sha256 "4e572417b47a2bed56663d5a06ce60f6aa90e1cb4f6e103b9cae0dee852a0ca5"
   license "MIT"
   head "https://github.com/nektos/act.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "074847e11a2799f254bf468f4fd443f6be42379012c01c4eb06a5a2410ebbf25"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "07e9a319d6bcaf3468dc12928b3b975b085d12aaa76eb33ae6da5c8669eb9f4f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "17c3348e31e2b884e85f1a69a7d6772185113673fd1b92c1539c19456ee86889"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cf60071b349ae7e83f8f084c2b27c852c12c9d2aa8248144026ebe0328662b0d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "85c642a61898d5b3736601e2350ca39476f8f706f033823d05e340ff0eb0cd9e"
+    sha256 cellar: :any,                 x86_64_linux:      "69d2bd2d126151996a693b335d8339b3b6a2e47f8dd02b44c30f54e6a5675a8a"
   end
 
   depends_on "go" => :build

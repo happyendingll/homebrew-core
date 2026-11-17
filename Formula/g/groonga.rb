@@ -4,7 +4,7 @@ class Groonga < Formula
   url "https://github.com/groonga/groonga/releases/download/v16.1.5/groonga-16.1.5.tar.gz"
   sha256 "f7ae843e80aec4a8b83743b570c0f82ffe44939405db0843f06ecd6190801476"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 3
   compatibility_version 1
   head "https://github.com/groonga/groonga.git", branch: "main"
 
@@ -14,8 +14,11 @@ class Groonga < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "17bd7c54f6facca40ed1ac9497ae50c0a3479c49e8364db7d9e2569e5d51f614"
+    sha256 arm64_golden_gate: "e6cbb8524355b6383dd1dd8e2d038a1a22e31c9d14f080a2f29360a5adbadf17"
+    sha256 arm64_tahoe:       "313c13e8e947ecf8614d81f511b179c7f808ce0e7c021d2a4c67ace1cf574495"
+    sha256 arm64_sequoia:     "1b48a00f7ab96fa28e2aacd7cc5b2a79bb50eb0d26af1cdecc5aebaa7f52ef92"
+    sha256 arm64_linux:       "826553aadbfe663ff3ea338f9020d42bf33aade1cbddcbdf1fd0d7ef306977bb"
+    sha256 x86_64_linux:      "ddfe1a61a2cc635795d11b45899406385128975d4afbb678eca0a16bfad7f431"
   end
 
   depends_on "cmake" => :build

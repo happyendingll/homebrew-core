@@ -1,8 +1,8 @@
 class Libunibreak < Formula
   desc "Implementation of the Unicode line- and word-breaking algorithms"
   homepage "https://github.com/adah1972/libunibreak"
-  url "https://github.com/adah1972/libunibreak/releases/download/libunibreak_8_0/libunibreak-8.0.tar.gz"
-  sha256 "9c4fad6e517338a098373acc9f35579ae2c325e6446666fb9ac2666ba15ceba4"
+  url "https://github.com/adah1972/libunibreak/releases/download/libunibreak_8_0_1/libunibreak-8.0.1.tar.gz"
+  sha256 "ac0dcc96c395bc86ff7f86f6b91d8b45bc8c39db775f3f1e73f947a11520737b"
   license "Zlib"
   compatibility_version 3
 
@@ -15,8 +15,11 @@ class Libunibreak < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "92bc1824b5efcec560183c27af150d2634aa37e4604cf3e1e12cd098497b8deb"
+    sha256 cellar: :any, arm64_golden_gate: "37e043da80de9d9cc918a656465cccae1fee285d44b493da83f0a98093b7a92a"
+    sha256 cellar: :any, arm64_tahoe:       "d3886397eb0c32473b50792a788f54c8243ae68d05a96608875030b870c9b6b9"
+    sha256 cellar: :any, arm64_sequoia:     "840390fa9037b1a870aa8c703a8040c137b2699eb80a59f207b1548b4e2d7a04"
+    sha256 cellar: :any, arm64_linux:       "c1ac7b388fa8692ff87352efb4add26c49ff9735bce4ac9f1aabfb1d87c8783e"
+    sha256 cellar: :any, x86_64_linux:      "4d3efcb62fde85cf06fd5e7b7a0a28fd751f5db0ffdfc8be508871a91c56f0ff"
   end
 
   deny_network_access!

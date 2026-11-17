@@ -1,13 +1,16 @@
 class GitPages < Formula
   desc "Scalable static site server for Git forges"
   homepage "https://codeberg.org/git-pages/git-pages"
-  url "https://codeberg.org/git-pages/git-pages/releases/download/v0.10.1/git-pages-src.zip"
-  sha256 "d9a06bc1801a4f88302ecd96452238974c05ff17b06532c0a97671b47cd7bb27"
+  url "https://codeberg.org/git-pages/git-pages/releases/download/v0.10.2/git-pages-src.zip"
+  sha256 "bfbb4cd1e5481a051cc513ad1c0a1e9e6220f2403fe9f1311cd1207404aeed3d"
   license "0BSD"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "aa243f2fece4190128110bc02b8221c68d80d2ab589bed63426594107b9cd001"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "717c370e16c4efe09430e51cd36f88c817182040eb687568aa6f65d491298f0a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5160ebff8ff66dfd775a0df289088f8438d6dbb2c9855653ec85f3a2c52bdeb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a3346850520b2df6657e39d99a4abc9a1eedea8181c52559cf136bb24aecf82d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3de65f0cbec5e0f657719e2214e02f5cf938f68a0b91029997a014e4b714f20d"
+    sha256 cellar: :any,                 x86_64_linux:      "2cff6a7e94b7850e264d3848c8b2bfbc0d188018b07018df9d1e9c7f2d3fc37d"
   end
 
   depends_on "go" => :build

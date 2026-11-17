@@ -32,12 +32,7 @@ class Lmdb < Formula
       system "make", "install", *args, "prefix=#{prefix}"
     end
 
-    (lib/"pkgconfig/lmdb.pc").write pc_file
-    (lib/"pkgconfig").install_symlink "lmdb.pc" => "liblmdb.pc"
-  end
-
-  def pc_file
-    <<~PC
+    (lib/"pkgconfig/lmdb.pc").write <<~PC
       prefix=#{opt_prefix}
       exec_prefix=${prefix}
       libdir=${prefix}/lib
@@ -50,6 +45,7 @@ class Lmdb < Formula
       Libs: -L${libdir} -llmdb
       Cflags: -I${includedir}
     PC
+    (lib/"pkgconfig").install_symlink "lmdb.pc" => "liblmdb.pc"
   end
 
   test do

@@ -1,8 +1,8 @@
 class Podofo < Formula
   desc "Library to work with the PDF file format"
   homepage "https://github.com/podofo/podofo"
-  url "https://github.com/podofo/podofo/archive/refs/tags/1.1.2.tar.gz"
-  sha256 "d6ffe6fc173ac6d6e5b00f5cb9db01990cab1bdf7cc03bdeffce3013bc9ec63a"
+  url "https://github.com/podofo/podofo/archive/refs/tags/1.1.3.tar.gz"
+  sha256 "9fe13b87148cd9691dc7f5b40dca9ce789576c131fe65e90a09e163a4fb25c31"
   license all_of: [
     { any_of: ["LGPL-2.0-or-later", "MPL-2.0"] },
     "GPL-2.0-or-later", # tools/
@@ -23,8 +23,11 @@ class Podofo < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "8541804c7d8e2846731915ca87b4301e48096827a5f6e22a08ebbdcd5bd21a29"
+    sha256 cellar: :any, arm64_golden_gate: "9e11b51e2e308ca45fb0c483d8adbaaf8272043bb7bd631c12762e92494ce977"
+    sha256 cellar: :any, arm64_tahoe:       "f22d4674d26b4f003513bd2a6e44567e71cd0645f356defffe5d71ed03da07d2"
+    sha256 cellar: :any, arm64_sequoia:     "369f6c7df2f1be6a619ca173743da48a3a80522de1fe12908d26c6e9641d1b83"
+    sha256 cellar: :any, arm64_linux:       "b078619aafb24a3a58c73d02df87614bcc0725db98b6b124ecf670626cb585a8"
+    sha256 cellar: :any, x86_64_linux:      "09772d6811fd33b614e42a5a80b9a13bff7add415117f311b13fd7e50051639a"
   end
 
   depends_on "cmake" => :build

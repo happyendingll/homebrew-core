@@ -1,8 +1,8 @@
 class Libvisio < Formula
   desc "Interpret and import Visio diagrams"
   homepage "https://wiki.documentfoundation.org/DLP/Libraries/libvisio"
-  url "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.11.tar.xz"
-  sha256 "2a6efd40b6d9dbcb70fba3be53112366882ba97b57151df3698dfa478c8d8dd3"
+  url "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.12.tar.xz"
+  sha256 "f59fa2e3baf95475256fe84ea0aa1214f43940bae94424f4026b2d633933df01"
   license "MPL-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Libvisio < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "2c09cb3ea0a703f8044875ebc8363071a9ea4d6730c783247e2679ac3fc87343"
+    sha256 cellar: :any, arm64_golden_gate: "1ba55bc6d363dfb65454fd5f2ef269b6164ac924136f67554ab0f204fc34abb6"
+    sha256 cellar: :any, arm64_tahoe:       "2e6e55f0f80404a0239a22f61f424b28cd377312e1ca87b0a02e0a6fd5ac0423"
+    sha256 cellar: :any, arm64_sequoia:     "f1c5ef54bd6dd1f0e8b0aaab02b0aa2eb7595fd2e8c0c5a8663420fb2dd6a9f4"
+    sha256 cellar: :any, arm64_linux:       "9526fa22207e87c93999a3edb687c335929b0c5ff1c74b9d0812aea43f24ae11"
+    sha256 cellar: :any, x86_64_linux:      "ad180b002f535be0fdc631db0f738442e250b6286b903f0edb4889fc6fdb2116"
   end
 
   depends_on "boost" => :build

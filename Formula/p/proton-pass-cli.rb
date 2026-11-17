@@ -1,13 +1,16 @@
 class ProtonPassCli < Formula
   desc "Command-line interface for Proton Pass"
   homepage "https://protonpass.github.io/pass-cli/"
-  url "https://github.com/protonpass/pass-cli/archive/refs/tags/2.7.0.tar.gz"
-  sha256 "623e6fa0c3d83daa8778e7d6693406f6d5aee82e4b460ddccddb5218322598a4"
+  url "https://github.com/protonpass/pass-cli/archive/refs/tags/2.7.1.tar.gz"
+  sha256 "a413bbac7d7b77e8cc465fad26aa8aed3407e48e9b8e96a903100fffc6434d94"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "5bc4238280a6de5dcb75968b9dfa04f39c69d8cb2ad03f33beb5e2da76ddee20"
+    sha256 cellar: :any, arm64_golden_gate: "9722b3c2220a846359afd70eb10af4aef10c92175a2043050bbf0963d24cef4b"
+    sha256 cellar: :any, arm64_tahoe:       "c70c438d5ad8347833a08a3ffb43c79367a51dd5b7432475dd03f9d5fc7b5ad2"
+    sha256 cellar: :any, arm64_sequoia:     "1ed571b53bda14fb37e9444cdffcfd6bade098deaa523ddd3b004086ef2a464c"
+    sha256 cellar: :any, arm64_linux:       "a04eb7d2cc00aa7de2b207f6e1a2b37060cfd409f307c17043fa21db45761f15"
+    sha256 cellar: :any, x86_64_linux:      "d4e51ea915808145242d9c13580ba0dffd53d159f55fdd5d73b7625d9c10b433"
   end
 
   depends_on "pkgconf" => :build

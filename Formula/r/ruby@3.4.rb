@@ -47,10 +47,6 @@ class RubyAT34 < Formula
 
   allow_network_access! :test
 
-  def determine_api_version
-    Utils.safe_popen_read(bin/"ruby", "-e", "print Gem.ruby_api_version")
-  end
-
   def api_version
     "#{version.major.to_i}.#{version.minor.to_i}.0"
   end
@@ -138,11 +134,7 @@ class RubyAT34 < Formula
     # Customize rubygems to look/install in the global gem directory
     # instead of in the Cellar, making gems last across reinstalls
     config_file = lib/"ruby/#{api_version}/rubygems/defaults/operating_system.rb"
-    config_file.write rubygems_config
-  end
-
-  def rubygems_config
-    <<~RUBY
+    config_file.write <<~RUBY
       module Gem
         class << self
           alias :old_default_dir :default_dir
@@ -227,7 +219,7 @@ class RubyAT34 < Formula
     hello_text = shell_output("#{bin}/ruby -e 'puts :hello'")
     assert_equal "hello\n", hello_text
 
-    assert_equal api_version, determine_api_version
+    assert_equal api_version, Utils.safe_popen_read(bin/"ruby", "-e", "print Gem.ruby_api_version")
 
     ENV["GEM_HOME"] = testpath
     system bin/"gem", "install", "json"

@@ -36,8 +36,6 @@ class MinimalRacket < Formula
 
   def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
 
-  def racket_config = etc/"racket/config.rktd"
-
   def install
     openssl_version = Formula[openssl].version.major
 
@@ -84,7 +82,7 @@ class MinimalRacket < Formula
       end
     end
 
-    inreplace racket_config, prefix, opt_prefix
+    inreplace etc/"racket/config.rktd", prefix, opt_prefix
   end
 
   post_install_steps do

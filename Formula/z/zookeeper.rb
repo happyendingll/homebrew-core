@@ -25,12 +25,6 @@ class Zookeeper < Formula
 
   deny_network_access!
 
-  def default_zk_env
-    <<~ZSH
-      [ -z "$ZOOCFGDIR" ] && export ZOOCFGDIR="#{pkgetc}"
-    ZSH
-  end
-
   def fetch
     system "mvn", "dependency:go-offline", "-Pfull-build"
   end
@@ -64,7 +58,9 @@ class Zookeeper < Formula
       BASH
     end
 
-    (buildpath/"defaults").write(default_zk_env)
+    (buildpath/"defaults").write <<~ZSH
+      [ -z "$ZOOCFGDIR" ] && export ZOOCFGDIR="#{pkgetc}"
+    ZSH
     cp "conf/logback.xml", "logback.xml"
     cp "conf/zoo_sample.cfg", "conf/zoo.cfg"
     inreplace "conf/zoo.cfg",

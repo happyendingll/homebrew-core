@@ -2,8 +2,8 @@ class Fortio < Formula
   desc "HTTP and gRPC load testing and visualization tool and server"
   homepage "https://fortio.org/"
   url "https://github.com/fortio/fortio.git",
-      tag:      "v1.76.0",
-      revision: "67ce9fa2a3a62fdb2f7a0d2b50acda1f7002d32b"
+      tag:      "v1.76.1",
+      revision: "32a39ecf9482289d571aefc6b4622a0a868d21d5"
   license "Apache-2.0"
   head "https://github.com/fortio/fortio.git", branch: "master"
 
@@ -16,8 +16,11 @@ class Fortio < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "bd3e4d9f125e176bb5668295ead54e8fdba4fda60159bae2e98c8c79808dd965"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6517de3aed56883766e76f54a304384b9f11684602b6387c160acfd1b2774106"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "42f252108aa323de87c3e145bee3baa5e3d6da36b98b1876fe6cfa0bb1e669ab"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2cc25f84d43c472b44ae42aebae928a35bbba20bfc71b7998eb3311461aaa696"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "69434bd8dbea43bbdf85f964d6038b0d3201f5dc1f8bcb9fd38a5da05b311cd1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a1c5e8298adb36c6e8574406008e8df5bb1f1493d3d3081a8119194e430d8525"
   end
 
   depends_on "go" => :build

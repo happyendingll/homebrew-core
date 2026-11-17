@@ -1,14 +1,17 @@
 class Cpm < Formula
   desc "Fast CPAN module installer"
   homepage "https://metacpan.org/pod/CPM"
-  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-v1.1.6.tar.gz"
-  sha256 "c78f0ce4bb7770fff95334956bfd63a9cab537d4cca4bdb1d1844990ad601fa8"
+  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-v1.1.7.tar.gz"
+  sha256 "34e4809ad6726a1aa32ce66ec5209d6d7319c4ea46ac24e4b3a5d221478c30cd"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/skaji/cpm.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "7d6ff49e4eedbbc2d862a2caeb41e1c360872e740b4f4b400e7cc9d7ee82c731"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c8d1b2d795a1871cb40d4fa7c6b07134c4b637296d91b2cdf9649327dab116d2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8d1b2d795a1871cb40d4fa7c6b07134c4b637296d91b2cdf9649327dab116d2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8d1b2d795a1871cb40d4fa7c6b07134c4b637296d91b2cdf9649327dab116d2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "98bfd86cc915d9498ea9c95771027adeca2bc158c41cf1332b780ff44d7ce6ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e2eb2c81f8b8fdf3103d3f60671b03aec7076ca53a041b6795feddf97c7fa95f"
   end
 
   depends_on "perl"

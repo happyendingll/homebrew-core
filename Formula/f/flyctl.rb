@@ -2,8 +2,8 @@ class Flyctl < Formula
   desc "Command-line tools for fly.io services"
   homepage "https://fly.io"
   url "https://github.com/superfly/flyctl.git",
-      tag:      "v0.5.10",
-      revision: "1f836fe16302703423c9751e5ae24afacf17377f"
+      tag:      "v0.5.11",
+      revision: "459ed4c33022ee3dad8fdcfffee0505f69646918"
   license "Apache-2.0"
   head "https://github.com/superfly/flyctl.git", branch: "master"
 
@@ -18,8 +18,11 @@ class Flyctl < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "0e8895240dce38a564e07234e02ed9ccf7ac317f8ac897c66e6a4440dc0ccb6e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "284ea165005f096c855d4d80eb9e113db2d38856ed74484548205e3fb563bcc3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "284ea165005f096c855d4d80eb9e113db2d38856ed74484548205e3fb563bcc3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "284ea165005f096c855d4d80eb9e113db2d38856ed74484548205e3fb563bcc3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d3f54ea1b11b6d4c3c4db0c9061ebb31361debe6a6d22a858f6e5452473b9b6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "17dd8baea7cfaff070105952feed55e80b388d7f65261ec06e0c93850acca58e"
   end
 
   depends_on "go" => :build

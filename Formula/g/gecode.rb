@@ -1,14 +1,17 @@
 class Gecode < Formula
   desc "Toolkit for developing constraint-based systems and applications"
   homepage "https://www.gecode.dev/"
-  url "https://github.com/Gecode/gecode/archive/refs/tags/release-6.5.0.tar.gz"
-  sha256 "83d854613d356da9bc040864479e98d81d090087366219aa23832375a965d64a"
+  url "https://github.com/Gecode/gecode/archive/refs/tags/release-6.6.0.tar.gz"
+  sha256 "de6441af2495aeb2b48766caaf51858ece69acf73cab3c39a96341f5b816a564"
   license "MIT"
-  compatibility_version 2
+  compatibility_version 3
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "b19c25835fb865e0a516efe4141de5e28b50806122daef45997a3956f3e4fbd7"
+    sha256 cellar: :any, arm64_golden_gate: "1c4795b63e941c436ca04e3090712ab4eaaefa212040aeba8db69bfaf45122b4"
+    sha256 cellar: :any, arm64_tahoe:       "bde444a2c5b50ec670ac2e81746fd12bdd072d1e6c715ad1f3274d01d6520272"
+    sha256 cellar: :any, arm64_sequoia:     "724e2dac5168efb3fb9a6f52a9bbd70fc33426d17f97a1eaee2f02969b741eb4"
+    sha256 cellar: :any, arm64_linux:       "22282dc5f717b9ebe74e183ab7c78f57fe6383e392e285b18efe99bc51dce6ce"
+    sha256 cellar: :any, x86_64_linux:      "5a0afbeb172c5cb9559d1c9a73b2939053580f553bb2c2c96cc4f68a0ce6f16c"
   end
 
   depends_on "cmake" => :build

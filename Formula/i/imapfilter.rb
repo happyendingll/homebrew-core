@@ -1,13 +1,16 @@
 class Imapfilter < Formula
   desc "IMAP message processor/filter"
   homepage "https://github.com/lefcha/imapfilter/"
-  url "https://github.com/lefcha/imapfilter/archive/refs/tags/v2.8.6.tar.gz"
-  sha256 "380bc0848002aadb074ade86f2fe3f5b62612a378173f2b10043527d31f13aeb"
+  url "https://github.com/lefcha/imapfilter/archive/refs/tags/v2.8.7.tar.gz"
+  sha256 "fad8eb3779f2b40ba10b1ebaeee57044cac14139a6a59b37d27aeb598f19799d"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "0fbd95d881cf71181241d0254bcc749c8ed8927046a7961a3c90c0ee9345c5d4"
+    sha256 arm64_golden_gate: "c60a44fe2bb9323021d989362838b9531bad99bc0f2e6ba27ba8b2742c2c49dd"
+    sha256 arm64_tahoe:       "aabab7b3556edd28da6c2ef4b41adc3af610f4ec3bbb1b8d831911808b95706c"
+    sha256 arm64_sequoia:     "8b662deb79c5012abdce4d40cb1f9d060b877677b577663d45c1fbc44a6f2ade"
+    sha256 arm64_linux:       "2cd6718364baad524b3a28436bba19c66f5c890e10996f86f5466bed1f7513dc"
+    sha256 x86_64_linux:      "33fe8fb653788e5c05a7f1253e83b12847394a8eb5ac9cf94ac32d5392a264c8"
   end
 
   depends_on "lua"
