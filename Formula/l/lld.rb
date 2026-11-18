@@ -1,8 +1,8 @@
 class Lld < Formula
   desc "LLVM Project Linker"
   homepage "https://lld.llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
-  sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.6/llvm-project-23.1.6.src.tar.xz"
+  sha256 "d3b86ab29cfb4445a6652e5c2642ccc75e04e38084dde3701d323320f35a31da"
   license "Apache-2.0" => { with: "LLVM-exception" }
   compatibility_version 2
   head "https://github.com/llvm/llvm-project.git", branch: "main"
@@ -12,8 +12,11 @@ class Lld < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "b4ec80e7305d3f290a1db2a0668efc6af20bbf57d651f3c347c27b3cadb64cae"
+    sha256 cellar: :any, arm64_golden_gate: "80a763bfb710e2e6ec13e220204d4c80fb3ee77f4b545399bd3a101f37cb6307"
+    sha256 cellar: :any, arm64_tahoe:       "1c2e0a1ad4edbd0082a6f90f434cc40ce8494ae65ab584bed45611ea325b4780"
+    sha256 cellar: :any, arm64_sequoia:     "13124f426568b2b1d209f446faea63b2425dc1f1a2540b2b9853706b03fc8a8c"
+    sha256 cellar: :any, arm64_linux:       "756dccaa2241c173adf822815ad80ab1063a0761e1ad45df25313e75273e1ba9"
+    sha256 cellar: :any, x86_64_linux:      "9b748eb35714344126199afb6533201c83913056ced21f5ded54373ac29555b4"
   end
 
   depends_on "cmake" => :build

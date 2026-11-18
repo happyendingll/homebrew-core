@@ -1,13 +1,16 @@
 class Yamlresume < Formula
   desc "Resumes as code in YAML"
   homepage "https://github.com/yamlresume/yamlresume"
-  url "https://registry.npmjs.org/yamlresume/-/yamlresume-0.18.0.tgz"
-  sha256 "8a4813499151a3c31cfd0d2332b257d5e9ffd5ab102414353ac377aa2bcb03aa"
+  url "https://registry.npmjs.org/yamlresume/-/yamlresume-0.18.1.tgz"
+  sha256 "f5be97cd293c29d0f8786427c2072c1e3d9b0cf8913533061c094fe8c785da27"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "af29cfad2556edca21b64e8e17ce1645e3d7b86f7e41867c594d74b22508af99"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d7eb260904f85e7e6ef8998bcbfe51c7d409309d63246f0eb2682fce1374c4a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4b5b54fbd77f473a8d10b2c3e8c4945c7110450fe2b85253728cff9808991991"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "666037e5c2913645df76d78439f917300f4f1935c9958882f8e47c87cf3b94da"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d9803d7a19becad09f3f16e50cdd05b4fb6e0ed18a317ec03fb5cf6f531991c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d9803d7a19becad09f3f16e50cdd05b4fb6e0ed18a317ec03fb5cf6f531991c9"
   end
 
   depends_on "node"

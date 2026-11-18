@@ -6,6 +6,11 @@ class Aoe < Formula
   license "MIT"
   head "https://github.com/agent-of-empires/agent-of-empires.git", branch: "main"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
     sha256 cellar: :any, sequoia: "9e44624d8c1398dd61ce5d7e7b51eee998309c3f0304fcea08f8d7ad840bc0cc"

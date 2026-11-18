@@ -1,14 +1,17 @@
 class Libnfs < Formula
   desc "C client library for NFS"
   homepage "https://github.com/sahlberg/libnfs"
-  url "https://github.com/sahlberg/libnfs/archive/refs/tags/libnfs-8.0.0.tar.gz"
-  sha256 "bc91216e927a85142b5de611c7f711558e02119a7daad67620ea631634038350"
+  url "https://github.com/sahlberg/libnfs/archive/refs/tags/libnfs-8.0.1.tar.gz"
+  sha256 "03653086471ceddd846077151adc6fda9ebc47118010a196e27f4f2e3e5e32f0"
   license "LGPL-2.1-or-later"
   compatibility_version 5
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "349bf6202dcf0ae2cfa8fd296a151df183f3a2b4452be03366d740e562b0986e"
+    sha256 cellar: :any, arm64_golden_gate: "7ed920fe89be50c7f868c3e737076a5ae4ebe090452c9655fb7e9a1358ccc08f"
+    sha256 cellar: :any, arm64_tahoe:       "f3b65659daa3fd594bf3cbc8180acfc83089b6fd48ea998d6912890a0d0c31aa"
+    sha256 cellar: :any, arm64_sequoia:     "afa41c038854b4fde86c0ec862d538fab2025407685575d4b6b9c8c26d91fe2d"
+    sha256 cellar: :any, arm64_linux:       "50aaeb5068e5ab07f237d98d57596d634261f9c4a909fbe93f719ba6db577e78"
+    sha256 cellar: :any, x86_64_linux:      "17b7be29913a1bc3c43d1b1686ac0280f2a8d69310658722c78234e6853189b0"
   end
 
   depends_on "cmake" => :build

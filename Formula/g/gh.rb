@@ -1,8 +1,8 @@
 class Gh < Formula
   desc "GitHub command-line tool"
   homepage "https://cli.github.com/"
-  url "https://github.com/cli/cli/archive/refs/tags/v2.104.0.tar.gz"
-  sha256 "779060cbdc5a354fa2fc8afb56e9277f64a29ac599daefd941558356509081e4"
+  url "https://github.com/cli/cli/archive/refs/tags/v2.105.0.tar.gz"
+  sha256 "3a8fddd2ca0f7c96983a251d3971a84ef042b230b26ca696e5e6ed811cd0ed8d"
   license "MIT"
   compatibility_version 1
   head "https://github.com/cli/cli.git", branch: "trunk"
@@ -13,8 +13,11 @@ class Gh < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "65b6ca95a8b79837ca44922bbec433d31f7b3700193f6b8f597fed29ae89ba73"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04e000cb2faa577e8b164c46479b1d517fe6777c1bb3565fce42293103a68f0b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37b15d760c279e04215c5a6ec2b43e7a2cb2fc5b60158b58c2658ac81af90b9c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "86e614f29b06c2262f756074566bf5ef765040d7c2d3fce6523a392a8a45eee0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "610606cc633a32264669b38a875bdeeca21786dabe2f30096ecdb1dee41f1045"
+    sha256 cellar: :any,                 x86_64_linux:      "ee2e9739e1ed73652cae5e684a60842c841afb09324ab1ef22f0aef5776a8660"
   end
 
   depends_on "go" => :build

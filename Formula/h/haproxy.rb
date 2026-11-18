@@ -1,8 +1,8 @@
 class Haproxy < Formula
   desc "Reliable, high performance TCP/HTTP load balancer"
   homepage "https://www.haproxy.org/"
-  url "https://www.haproxy.org/download/3.4/src/haproxy-3.4.7.tar.gz"
-  sha256 "ccfd342f3724c2cd659574044d788f44e20b212467c6bd5edbbfc517a2775dca"
+  url "https://www.haproxy.org/download/3.4/src/haproxy-3.4.8.tar.gz"
+  sha256 "024bd521a6cbbe32b426853147e6bbd6a89b107c5a34144846193fee5b7c6ed1"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
 
   livecheck do
@@ -11,8 +11,11 @@ class Haproxy < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "1082072b42d09f810579fcda228e596a0794df80376aa1ec28371873e13c07e4"
+    sha256 cellar: :any, arm64_golden_gate: "02c72e4608eba95a7da05f3e3bc105c8e6876c4ec8c64027f0fe3dcd764f3e19"
+    sha256 cellar: :any, arm64_tahoe:       "f61f47ae57381eb13816730780dc18aac0948b8a6e745c8872c6fac1c587160d"
+    sha256 cellar: :any, arm64_sequoia:     "355c15941ae00b67873c95751eb8b958f70f1702608124f36753e5771ee12f67"
+    sha256 cellar: :any, arm64_linux:       "83b6c27494a9c29a671e724d574b0702ccf610ea4e026b76bfcddf71caee97b4"
+    sha256 cellar: :any, x86_64_linux:      "a98f34d24fb305358b7ebe721787cb6e8cc5e3dd6a93083f49a12b031fb4d674"
   end
 
   depends_on "openssl@4"

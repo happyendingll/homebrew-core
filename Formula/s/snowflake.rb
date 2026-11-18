@@ -1,14 +1,17 @@
 class Snowflake < Formula
   desc "Pluggable Transport using WebRTC, inspired by Flashproxy"
   homepage "https://www.torproject.org"
-  url "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/archive/v2.15.3/snowflake-v2.15.3.tar.gz"
-  sha256 "a78196e776297ef127122a84d0be691ec978d8263bc97f773e553be042632e57"
+  url "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/archive/v2.15.4/snowflake-v2.15.4.tar.gz"
+  sha256 "eccdecb99db4bdb2f32d5f4988e97cb01b4b0c4ccf1a67f29b84d81bdf34f3f7"
   license "BSD-3-Clause"
   head "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "cbebd9adfcf86583d65460955833cd36c121941edb53683efb683cc06ee75338"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a856a820881b2916c5858285bfc1b238da2b693096d4571ef6dc3b0c5e1cfc9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41dd8d1e53967cba6e00993e7e589eb3bba47c135e2832945b5ef1bf5a459dd9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d09e0025fb7a90e4f305bad743f801b007fc2e5e1daad7a8125b23abcc001dfc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1996db77ca2d46ee45619b86f90c5f886a943c46a46e4ca8689a2be74fa9759d"
+    sha256 cellar: :any,                 x86_64_linux:      "3e1de001964ec90ecc9dd6f2461b3ff266e796a0f34f4c6ea533b4aea7f89a2f"
   end
 
   depends_on "go" => :build

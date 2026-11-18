@@ -1,8 +1,8 @@
 class Spoofdpi < Formula
   desc "Simple and fast anti-censorship tool written in Go"
   homepage "https://spoofdpi.dev"
-  url "https://github.com/xvzc/SpoofDPI/releases/download/v1.5.6/spoofdpi-1.5.6.tar.gz"
-  sha256 "8a0d0834b3f25f450eb71f0fc9f0f60ab1c2005e390ea5210f32ba0e64a2521c"
+  url "https://github.com/xvzc/SpoofDPI/releases/download/v1.6.0/spoofdpi-1.6.0.tar.gz"
+  sha256 "186e9556b81844e2076ce8426b741fd1436ec987c4eb855de67b9254520675a3"
   license "Apache-2.0"
   head "https://github.com/xvzc/SpoofDPI.git", branch: "main"
 
@@ -15,8 +15,11 @@ class Spoofdpi < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "e3a9340f8fc1aee2fd4ee733c540c1b1fe43182b23a2db0a0d24a7b1371bbcf1"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b22fc3d0c66d93779528248551e9ad20039440f213f427d39c142322be80b16a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "12a16c25a4a107e85ffe4f8da8d1992d0b4f48943782ac47a64a20bb259248b9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "219566ce9b0ae316ff0f88f81484fef7ec624241138d463708fe27323c3040ac"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "81804afedc286e0e2975f6eb480cc547049e55672894c2454281688f8f03bcda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f5f9f426f79370ed39ba5d6621fd512125a0199bda06896cd7db22fb70b6ef34"
   end
 
   depends_on "go" => :build

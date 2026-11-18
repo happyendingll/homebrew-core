@@ -1,8 +1,8 @@
 class ElanInit < Formula
   desc "Lean Theorem Prover installer and version manager"
   homepage "https://github.com/leanprover/elan"
-  url "https://github.com/leanprover/elan/archive/refs/tags/v4.2.4.tar.gz"
-  sha256 "aae972bd10907763d53d0ea9593c02a340359505ce667b99e5289372f6801eec"
+  url "https://github.com/leanprover/elan/archive/refs/tags/v4.4.0.tar.gz"
+  sha256 "4d38c12f11a9ceb9f7a878376cc525d1491cc41267ec99282be7452c95c30914"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/leanprover/elan.git", branch: "master"
 
@@ -12,12 +12,11 @@ class ElanInit < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a5b7ecc6769afb1462a348a86983ae864d1ec990b2f7f7a8d2254a608ab17170"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7284664746c1d9c96bdcb2eb0d0a530afb3a9140f799ab75ca42c647df50f204"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8863f82f766e102c48fabd329d0d0ee30f0c4c6af7e7d4d0415ca946682c56f5"
-    sha256 cellar: :any,                 arm64_linux:       "1c417f4e363503715f9d28742b6b5892f8be0776064e8e5482facb84d2610a09"
-    sha256 cellar: :any,                 x86_64_linux:      "31d10a1966ca8a4550baf61a80c0e2ddb1be9a3453dc1a6d92f462c7a57d2d33"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "56825e5f546d2aba77cf47b6fbb8fe59b2458abc42de950981c7d3d18002a6b7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "124a5c156152816c3e3b4bb7b5215f1d9aa492d073124bba2ab5eb9da224de12"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4efdf0261a3ff73655fc5f63698638bce746403b67022293b0dd471c5576879e"
+    sha256 cellar: :any,                 arm64_linux:       "468d9e2fd3c72c64e664d282c78709a9e4829be1201db5d64ed8ec62b49be837"
+    sha256 cellar: :any,                 x86_64_linux:      "34356a635d412718a7f016f53dc4026c2a81078bfa7678bcafa51aa9e5341537"
   end
 
   depends_on "pkgconf" => :build
@@ -35,14 +34,6 @@ class ElanInit < Formula
   end
 
   conflicts_with "lean-cli", because: "both install `lean` binaries"
-
-  # openssl@4 support
-  patch do
-    url "https://github.com/leanprover/elan/commit/5a90cb8529f1c96105cd7f67e3080781a52bac45.patch?full_index=1"
-    sha256 "c2a7087cc30d2481de7c6ae14fbd43189b9a7f7048a16cdc4059d9aa289a0bbe"
-    type :unofficial
-    resolves "https://github.com/leanprover/elan/pull/213"
-  end
 
   allow_network_access! :test
 

@@ -1,8 +1,8 @@
 class Tenv < Formula
   desc "OpenTofu / Terraform / Terragrunt / Terramate / Atmos version manager"
   homepage "https://tofuutils.github.io/tenv/"
-  url "https://github.com/tofuutils/tenv/archive/refs/tags/v4.16.7.tar.gz"
-  sha256 "c2b560ce5c241650416c525e2e57f61686a0f33569802d84bd714e68fd646122"
+  url "https://github.com/tofuutils/tenv/archive/refs/tags/v4.16.9.tar.gz"
+  sha256 "e82fc7cf1cf6030f4056658ae870d0ef9a728f69c5d9997f5e46c738827b490c"
   license "Apache-2.0"
   head "https://github.com/tofuutils/tenv.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Tenv < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "42496a769c5d169aa3e735efa718a4aa676aa0a89192162cecd0cab3327bc46a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d3df537e8a7f3041498f06ba7e4fa6ae42614bc4b2eb34e094a83b8536508f48"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d3df537e8a7f3041498f06ba7e4fa6ae42614bc4b2eb34e094a83b8536508f48"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d3df537e8a7f3041498f06ba7e4fa6ae42614bc4b2eb34e094a83b8536508f48"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "ecd85b70f62880f7acb3754e5e53c427e9d16a98b86f1fd3f1af884c0bc64672"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f87a372ef61503b5d22ab6371747cd5ef40d11b9db63d76e3f33f256af032beb"
   end
 
   depends_on "go" => :build

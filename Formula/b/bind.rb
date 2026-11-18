@@ -11,8 +11,8 @@ class Bind < Formula
   compatibility_version 1
 
   stable do
-    url "https://downloads.isc.org/isc/bind9/9.20.30/bind-9.20.30.tar.xz"
-    sha256 "9e1443a40a72a30272cbc3196d020a6b2e26937111c83e59e101e82e1e3b4fef"
+    url "https://downloads.isc.org/isc/bind9/9.20.31/bind-9.20.31.tar.xz"
+    sha256 "9bfecd503ec79209d321053689c794da9f8dba993a24e9cd6bd7aa87cdf4122f"
 
     depends_on "readline" # TODO: Remove in 9.22
   end
@@ -25,8 +25,11 @@ class Bind < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "8b27db7b42bf3dcf312899ccdb729717872beddac82a6991842f97c51ca35e06"
+    sha256 arm64_golden_gate: "7d65d065d5445ee437d57e4954b8b288c1c8a39f2c543abf062574941344d742"
+    sha256 arm64_tahoe:       "711a153584643c474ff1c3d8dcaaaefd6a4a04764b8034d4e2f418df83a50ff9"
+    sha256 arm64_sequoia:     "5b8c924e8508e5b7ccf7393b7df3ef027e3053aaa38bbbd12a1ad64077e8692e"
+    sha256 arm64_linux:       "050fdaa1ad860679ac443a87e2af04cc3c674a53806f01bef1e6e4ec56f18bcf"
+    sha256 x86_64_linux:      "6e0ca8afdd73e7f0862c11224b6c0827ce17c0af8696eb00a5be819b67ff8175"
   end
 
   head do

@@ -1,8 +1,8 @@
 class Marmot < Formula
   desc "Open-source data catalog exposing metadata to AI agents"
   homepage "https://marmotdata.io"
-  url "https://github.com/marmotdata/marmot/archive/refs/tags/v0.13.1.tar.gz"
-  sha256 "fd747c05af6bc352626b0afd5f496c43fde23d6658b69b4f08b67533c5a3ca02"
+  url "https://github.com/marmotdata/marmot/archive/refs/tags/v0.13.2.tar.gz"
+  sha256 "82f30dd2cde2b5a7a5fc43e72d21a3c620dc76decf9da54709de823beaee6a9d"
   license "MIT"
   head "https://github.com/marmotdata/marmot.git", branch: "main"
 
@@ -12,8 +12,11 @@ class Marmot < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "4df15d78620bd9270af920248eb56f8e43eec181697f9aaf285c984cefdbe984"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc81e96d6913eb5f2ec06cba657a9e305a4197a7a54314775b1d3f7c8e2a0db2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fc81e96d6913eb5f2ec06cba657a9e305a4197a7a54314775b1d3f7c8e2a0db2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc81e96d6913eb5f2ec06cba657a9e305a4197a7a54314775b1d3f7c8e2a0db2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f6fd577735987c573d073061d2b5fe4ec27730bc472fa37cad118741d2294720"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "eac99cc2e450e32ff24c707d900f8cb250782460f532f3bda4a56f80b512e1ed"
   end
 
   depends_on "go" => :build

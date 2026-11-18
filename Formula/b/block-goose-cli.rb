@@ -1,8 +1,8 @@
 class BlockGooseCli < Formula
   desc "Open source, extensible AI agent that goes beyond code suggestions"
   homepage "https://goose-docs.ai/"
-  url "https://github.com/aaif-goose/goose/archive/refs/tags/v1.59.2.tar.gz"
-  sha256 "d12f7c727306ab07789b0bb5513f0b70c72d7e8032aaddc05bb1d1fc3e8ed9ba"
+  url "https://github.com/aaif-goose/goose/archive/refs/tags/v1.60.1.tar.gz"
+  sha256 "f8745160e5c36190d6d0b69377fb8a5bd1aa2961f1b0a6a289218b5c11cdf7c7"
   license "Apache-2.0"
   head "https://github.com/aaif-goose/goose.git", branch: "main"
 
@@ -12,11 +12,11 @@ class BlockGooseCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca80a1a09ecd35946799e66030194ee71a2f2c2b9e6281c6c73428f5a38f8d12"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4e1c04146b974691c67d1e70d9ba3e96f4b2d960abcc86876a3262b756cd0e19"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a4aa353f3db9efac2c1ae8cb6992c448dd25af07e469bc019f392787f1a22f8"
-    sha256 cellar: :any,                 arm64_linux:       "884fc12bc9f4b1167c1fa9bad8d9f36a35b1e843a52dfb86a68f025ea5307301"
-    sha256 cellar: :any,                 x86_64_linux:      "e5285d81243a2ff83b5e950c3bfa77360b2fa07f78906a8feb120d40e22ec72d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fcc37931a692a807150458a75d3a2edaaa53cd114e0a7bb069a2883aeadbe504"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e774840036510fcc494b96840823af942c6060e6e257c8b9ab242efe90889586"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac6ba12290bd133009937e3613ed6cbd2de1d9977f39d40ca59389f04c57ff40"
+    sha256 cellar: :any,                 arm64_linux:       "bd5a5b9dfcf06b29440b5e80291e31ad6d87f3ea5014c550a9cd4d3afb5fe652"
+    sha256 cellar: :any,                 x86_64_linux:      "4f81b1da5322441b8262088dd82819cbce67203991b67a1e65037224afedc51c"
   end
 
   depends_on "cmake" => :build

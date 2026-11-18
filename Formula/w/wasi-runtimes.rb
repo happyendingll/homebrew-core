@@ -1,8 +1,8 @@
 class WasiRuntimes < Formula
   desc "Compiler-RT and libc++ runtimes for WASI"
   homepage "https://wasi.dev"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz"
-  sha256 "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.6/llvm-project-23.1.6.src.tar.xz"
+  sha256 "d3b86ab29cfb4445a6652e5c2642ccc75e04e38084dde3701d323320f35a31da"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
@@ -11,8 +11,11 @@ class WasiRuntimes < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "dc22c3d1b490ccb8571f9418d8289925926f0213c03c7c9b2a076282fb5649e5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "53baf45d3e63da209e97a8376d9d4cea63a639a28df24023d3fcf2af47abf750"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "53baf45d3e63da209e97a8376d9d4cea63a639a28df24023d3fcf2af47abf750"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "53baf45d3e63da209e97a8376d9d4cea63a639a28df24023d3fcf2af47abf750"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1b32cb31e5b86aa2fa1998b18a4c074ed6e52e76ad46efe940e0374aa2423e5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "9ccaac132a536ee9d55872dddb437830ceb2ce755d11605e89457ebc6b96b2aa"
   end
 
   depends_on "cmake" => :build
