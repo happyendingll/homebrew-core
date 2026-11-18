@@ -12,11 +12,8 @@ class Marmot < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a3bab42c8fea3d502b579dda422c17866e0f277a57c360fc942703e3fa01091f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a3bab42c8fea3d502b579dda422c17866e0f277a57c360fc942703e3fa01091f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a3bab42c8fea3d502b579dda422c17866e0f277a57c360fc942703e3fa01091f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9c0851f60d14e0111dddffbc64e0a0d77d67ab608a0e2a9ce2d9deef6065af95"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5ab5eada5365d36aec83d963bcd6808ca08fe173777183778e3a17e585a2bd27"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "4df15d78620bd9270af920248eb56f8e43eec181697f9aaf285c984cefdbe984"
   end
 
   depends_on "go" => :build

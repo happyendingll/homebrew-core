@@ -12,11 +12,8 @@ class Oras < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04cd59a8abb78106696c3a44023f0f5cfb8b6ac627ef44217614932de7c66633"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "04cd59a8abb78106696c3a44023f0f5cfb8b6ac627ef44217614932de7c66633"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "04cd59a8abb78106696c3a44023f0f5cfb8b6ac627ef44217614932de7c66633"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e0f4a71bef49943a57028ada9a89a9d0e3132c9ed6e5cc97fe12c7cbdb55453e"
-    sha256 cellar: :any,                 x86_64_linux:      "c6be3afdf3f15476c88527a352e6070e0febd51f86b4cb82d4b87a2294f1f6fb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "372f46cfd1baefbb4f3ce4e4353890321df0dad2eb3ee32a734f7be9985e57ba"
   end
 
   depends_on "go" => :build

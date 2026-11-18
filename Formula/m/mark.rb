@@ -7,11 +7,8 @@ class Mark < Formula
   head "https://github.com/kovetskiy/mark.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e27487458be54422a02b8f3035698e6a00ad944766ed66c50aa79953bfcaadd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e27487458be54422a02b8f3035698e6a00ad944766ed66c50aa79953bfcaadd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e27487458be54422a02b8f3035698e6a00ad944766ed66c50aa79953bfcaadd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "066c4c59cb41bc5afd536fcffa2a60b42cc382f41c5e46fb6e8cae8e10465e10"
-    sha256 cellar: :any,                 x86_64_linux:      "be11e56ae199102beaa46bfbd60982139ea2f1d87da7e63ae6c1a365329d4c69"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "718318d664672749c9973904c6b979a7e5d08192381040dc918ece8b3aa640fc"
   end
 
   depends_on "go" => :build

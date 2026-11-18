@@ -14,11 +14,8 @@ class Pkgconf < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f5da9ea7e060cd8a7d06e31bdb76dbf74e5d46d77b6657d0573ba1d548216d33"
-    sha256 arm64_tahoe:       "84d9b76f2382bca438590bb86a0e1d464147ec70d0bc9a20c25b665c29535aa3"
-    sha256 arm64_sequoia:     "984325551072d74b5c32e4c0a48464250612eaf835c39f8b23425fbaf7d3cbc1"
-    sha256 arm64_linux:       "1d8dc2d266572d5491b094de900891372681eb9a58b58d1dc4871fe6da145010"
-    sha256 x86_64_linux:      "4657c8c704d846d6b2a0b7e3a7d44513c7f9fe22721debe1a6292b02226f7c62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "5c77e2d1fbc35b9243e8b562e5cd1fd43f0e46ffc874352e65fa7b3475d9d120"
   end
 
   head do

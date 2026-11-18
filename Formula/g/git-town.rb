@@ -7,11 +7,8 @@ class GitTown < Formula
   head "https://github.com/git-town/git-town.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e8d0c08cc73bd1e8d3a2ce41237539c6e21df8ad691a4223882a3c45ad75c25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6e8d0c08cc73bd1e8d3a2ce41237539c6e21df8ad691a4223882a3c45ad75c25"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e8d0c08cc73bd1e8d3a2ce41237539c6e21df8ad691a4223882a3c45ad75c25"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "44328408cfde092498c7265e7c40d447a334d5787d0ff1d5e8134c59428700ef"
-    sha256 cellar: :any,                 x86_64_linux:      "81bfc303cc61b342a0a0449e647854b93f779fbbea9f6d599eb7e603809350d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "9c600532b68ecfef784c55f1146ee604da0f9b385d09800bbf68c558cc9d7895"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class StripeCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9d57cc76766f57d8e1e8993c2f93317437462de87feb957527c49bfac714b13"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d9d57cc76766f57d8e1e8993c2f93317437462de87feb957527c49bfac714b13"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d9d57cc76766f57d8e1e8993c2f93317437462de87feb957527c49bfac714b13"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "aa81a36fd34f74c8832623ec1d324f7041b861637899e60cd3e7f608c9ccf60b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e29890ba3d47955ad052db7280391a15fc08bb9c205906ed7a51df99f00a61ff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2c6bc2e41d5287ae366d7d4020f5e96dc792f746d220fad5c2a8da1ef7f39762"
   end
 
   depends_on "go" => :build

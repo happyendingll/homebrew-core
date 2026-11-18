@@ -12,11 +12,8 @@ class Hugo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8322c83fe03457f067cc2bfab88e348ff76f4e89a1691ae849dc1fa0674f20fc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8322c83fe03457f067cc2bfab88e348ff76f4e89a1691ae849dc1fa0674f20fc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8322c83fe03457f067cc2bfab88e348ff76f4e89a1691ae849dc1fa0674f20fc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "12ecee91e1e22d1ddb1b103182421887c24fbc82b172ec5178ad8a25b9588683"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8c5a49dbdb5366885d21e28cf43e14f8be96c3666e897fdcc0800ce6c2c9a846"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "462948611bd7bba191f448978d021291e6e7a684be797072ba8ae9eaa4d8da7d"
   end
 
   depends_on "go" => :build

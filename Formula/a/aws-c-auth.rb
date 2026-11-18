@@ -7,11 +7,8 @@ class AwsCAuth < Formula
   compatibility_version 4
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "29b29ef1f5ef00ce8a519d98a9eb6c2c4b3a98e9d662b87ff0f46e06598a415f"
-    sha256 cellar: :any, arm64_tahoe:       "2bf4faea720e68e6872096269be4a196e6c439a329fd2da8102c7859835c3a57"
-    sha256 cellar: :any, arm64_sequoia:     "a141cca313280000d2b667e7132a0940493a4036ded71170ceb8b20c2d6377f1"
-    sha256 cellar: :any, arm64_linux:       "83f78203e64403e112ed77ad71fff3d013ef0b538ed5e3fb4413ac825f6e33cc"
-    sha256 cellar: :any, x86_64_linux:      "911882fea242d359d53284b1eeae2e23059645f02f7a3585fe2ffb97f706cbbe"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "ddf27f28ddf2676ee1d6cd91f1a31e17a000fb56e29fa2e083b8940af336f223"
   end
 
   depends_on "cmake" => :build

@@ -7,11 +7,8 @@ class Gpk < Formula
   head "https://github.com/neur0map/glazepkg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "41a72a1e8c838bac6af7d62d97cfcefbcd6ae919ab0a95c20a39cc3fc2151b3a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41a72a1e8c838bac6af7d62d97cfcefbcd6ae919ab0a95c20a39cc3fc2151b3a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "41a72a1e8c838bac6af7d62d97cfcefbcd6ae919ab0a95c20a39cc3fc2151b3a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4f04575cb1e711b08bb33dd4b763f4961213d4c1b9852fc68cb56fbfc076975b"
-    sha256 cellar: :any,                 x86_64_linux:      "6e144cc51c20f0e0091316cb5c9bc7019041d7c74ff23603fe4e49c3a23c5ce8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d95920df04df38249c8e7dddbe610a4448840792e113166aad69ba272836c92d"
   end
 
   depends_on "go" => :build

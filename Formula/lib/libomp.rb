@@ -12,11 +12,8 @@ class Libomp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "77e3d7ef9b3fc9cc48a11420faced84e217164003e7648df16e47d3ebc2e42f9"
-    sha256 cellar: :any, arm64_tahoe:       "0bc81e61efc7da093375230006561ed75891106adbe19e130940a2f5f368a66f"
-    sha256 cellar: :any, arm64_sequoia:     "d8d154f796a93a5fdca8470e254b402b29d6a66bbaf25bdc5e74ccd05ce09ffd"
-    sha256 cellar: :any, arm64_linux:       "1b1fbab38827776ad9b4f6a385506f2ac708b09e31e7db97123792f47a09fe95"
-    sha256 cellar: :any, x86_64_linux:      "411a12d2775da0c3bb6f457f1edfc4b73f0abcf4f03fb29693fa5a84335c4679"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "95a976746c508cc5f8f9e4b02b046c2c9771ddd86683bac56f7b49427d187925"
   end
 
   # Ref: https://github.com/Homebrew/homebrew-core/issues/112107

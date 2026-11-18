@@ -18,11 +18,8 @@ class Flagd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4bd434c992a08ed2c9e1333f372ef4ca775c3983497e1a57094790d0fbc9ffa2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4325693a58531b01d95c3b56619a3b41981db8e4c6a7be65cf5e2a59001c40f5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e300ebbf405990ddf36b748aaed03fd4bd9c87ef60a7dd75bc0366e763c4f52f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "dd6a8a7be6633347a1cb6c3d217b88812573e300fbd45db952542b60d82f558c"
-    sha256 cellar: :any,                 x86_64_linux:      "dc6c2eee84cd86cb5678534ae221dd79af3e31afbca0c961fb51ba0f70dd4690"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "96154ad102c2adc2448c669c187ecf89857dbfd0d4e921da5cd6bc4e807b8e5c"
   end
 
   depends_on "go" => :build

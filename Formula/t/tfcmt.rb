@@ -7,11 +7,8 @@ class Tfcmt < Formula
   head "https://github.com/suzuki-shunsuke/tfcmt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "01e869393dd0b59506f244d40a56c9ad12da955f48939d0cc8f45b3e8307eb8a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "01e869393dd0b59506f244d40a56c9ad12da955f48939d0cc8f45b3e8307eb8a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "01e869393dd0b59506f244d40a56c9ad12da955f48939d0cc8f45b3e8307eb8a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bb029b08284603745f731b17eb117cbbf041117a3a34da1dcee4ff961db4d0eb"
-    sha256 cellar: :any,                 x86_64_linux:      "081d8b51274173e241c8402efe1716c5d9512b928101ad6e168422852f68eddb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "15f907e0e3ef28e8a5d614ea56042f04558aaea076c22e8faf45ca5a4ed03ab3"
   end
 
   depends_on "go" => :build

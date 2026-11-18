@@ -12,11 +12,8 @@ class Dagger < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c8fe519acf057c5affac4953fde422658c584b91122c8a700388fe996c26648f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8fe519acf057c5affac4953fde422658c584b91122c8a700388fe996c26648f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8fe519acf057c5affac4953fde422658c584b91122c8a700388fe996c26648f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "12143c7cc652f011feb3a47cb97488d57aff6c48711432bb81f45727c0a926d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "006607a6066a56a9aceb33e7df376f13476fbbe6168e710e10c282a44fb39706"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "0471a92c6c401edbd548cdcbd8b428a1c34420f660da988a3e51c22d9c24e9c5"
   end
 
   depends_on "go" => :build

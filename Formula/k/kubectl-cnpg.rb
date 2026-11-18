@@ -8,11 +8,8 @@ class KubectlCnpg < Formula
   head "https://github.com/cloudnative-pg/cloudnative-pg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2ecd67f03618990bfe0ee0b67d32978e58f7e6eeff5cb4ab0ab7145a967f76ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "075bdcda76acb47ef9e5c837418a7fd43468fc1f3127599e830f26432dcd69dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1b5784eb4ac25b434874830b1799a7f8b6c98fa6f6b968bfdb7576ec08341410"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9d39866d4be8e7cca82c835c11e0a330b988a7fe37d0d1a0dc1a63ee81e33476"
-    sha256 cellar: :any,                 x86_64_linux:      "e70eaf2e7defea765bc0bb87a3cb749af450474ca1cff4cf826c74cf6ab390de"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "a5cae27c802dc6e09b7078f923d9a8ee98125b5c756b699d0ffc125724672b05"
   end
 
   depends_on "go" => :build

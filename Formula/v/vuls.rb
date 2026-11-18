@@ -12,11 +12,8 @@ class Vuls < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "09e7834ab3ae9d0fa80652eacc6b97765ab50570f5ffae9d501d6ca3ddf7ecff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "09e7834ab3ae9d0fa80652eacc6b97765ab50570f5ffae9d501d6ca3ddf7ecff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09e7834ab3ae9d0fa80652eacc6b97765ab50570f5ffae9d501d6ca3ddf7ecff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3a7651cfb5fcb75d89eb8e281f8e45f4d3ac6da4ee08d19570b8731dfc115324"
-    sha256 cellar: :any,                 x86_64_linux:      "a378f0f645c3ec7f9cc2f7a02800c31dbddb56bddc407f3f7bebe726ef1135d1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d3f461532aa0f6856c1a6aaac9879597ba7bf2f58fd610cb96038b52f270f762"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,8 @@ class Appwrite < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "59f17593c12bbedf2f08ba2e9dd00de5288c5c2f936bed2e3a9f5a0be1604726"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "59f17593c12bbedf2f08ba2e9dd00de5288c5c2f936bed2e3a9f5a0be1604726"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "59f17593c12bbedf2f08ba2e9dd00de5288c5c2f936bed2e3a9f5a0be1604726"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4b10cc4655c313c93d89b597dc552525ae7626790be05709310ed1de56a96486"
-    sha256 cellar: :any,                 x86_64_linux:      "9e859bd73faaca5a69cccfac7dca3a79486cfe05e5cbdd99d22084e7e1f919cb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "81d8798fc2437580cb404d25c19c55a6c2de655fd74e73059cffaf3e9ae61023"
   end
 
   depends_on "go" => :build

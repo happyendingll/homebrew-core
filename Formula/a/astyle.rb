@@ -13,11 +13,8 @@ class Astyle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c1b543215f8a9493dab72f25cd494742af0e7c9a490069975eec3d0e6977062a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1f19f355b19e2226c753efe40662056cb1fa88fcce424f661b098ec299c0c73f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "52c4be4b218c1da5902f69de1e98b6021d3ca6ae8c51dd0c6e70ed39c1b17038"
-    sha256 cellar: :any,                 arm64_linux:       "5470dbdaf960b302a2408e98b1e6361c232f7642480a88c87fdf0cc86f92ade6"
-    sha256 cellar: :any,                 x86_64_linux:      "2b72329d40733634a27c82300e3f09730c5856036d3fbb4dce8d3cde93b450f8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "0861b081a7411296198fa191ca21623f0bf5a8de45d43fc00d5c560aeef2e4cd"
   end
 
   depends_on "cmake" => :build

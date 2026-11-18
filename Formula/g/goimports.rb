@@ -12,11 +12,8 @@ class Goimports < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26ebe948bad087dac2b6b866453062700ffd5a0da8836de420de504bccfc0de1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ebe948bad087dac2b6b866453062700ffd5a0da8836de420de504bccfc0de1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26ebe948bad087dac2b6b866453062700ffd5a0da8836de420de504bccfc0de1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b65adde4337e5249cf32d2c488de72b2814c631a0c60b0b4bfc3f3fae52ff409"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c59c444a7b389886938482da82fa25fb5cd479147d6d11f4be8c74c700ce0819"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "eca36390b115f54a7a7a9e08f0476b05f79a17098ca2d0ba7776f09fe29566c3"
   end
 
   depends_on "go"

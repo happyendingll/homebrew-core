@@ -7,11 +7,8 @@ class Osdctl < Formula
   head "https://github.com/openshift/osdctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5f9462a76b063ceb80d4745d1d894ed5b654f71e165bf85eeec663779f5b1d29"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5f9462a76b063ceb80d4745d1d894ed5b654f71e165bf85eeec663779f5b1d29"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f9462a76b063ceb80d4745d1d894ed5b654f71e165bf85eeec663779f5b1d29"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c1ed91db2323699c16803ef9113c061b710b0450cfef8173b76211a5a787c8fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "372a87272c82fe01efd29c737987b54c32af6c85c2094b9da531eeff609248d1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6d42f1728a4100c7be5a2d89b43836e58032c33489504b803ba454d194da2d04"
   end
 
   depends_on "go" => :build
