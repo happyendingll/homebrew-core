@@ -7,11 +7,8 @@ class CcSwitchCli < Formula
   head "https://github.com/SaladDay/cc-switch-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1ec3117ebf4ed1868851ceb64b8a77a8c386a5a75697ac63607bb89b57a6d416"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d52b56d0d32ab018bb5b0ec6b38a25bbc16be34bafc34c7eec51043375b89f6f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f2ee6b8cf8417a982f1c990004cbdeb368bf0acb13bab1e4a4e12f146a0b31d6"
-    sha256 cellar: :any,                 arm64_linux:       "42a721fdd4cc4014000e81eb3d6f76c46d4dc54fedf486cba2507f5ce6a415f1"
-    sha256 cellar: :any,                 x86_64_linux:      "8c3211596ee16c01d0a276787b4c7add6a4bc620b76eddc0a0e470dec0c94438"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b18c6d6a53f9964615a967106b9bfb2d4ff94af6b724c27a008251ec70ffd30c"
   end
 
   depends_on "rust" => :build

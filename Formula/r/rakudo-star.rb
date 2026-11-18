@@ -11,11 +11,8 @@ class RakudoStar < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "52830b43b5ea24c92b4cfa09485e210da95282c4c6a3ab5e6b2f353cc8019895"
-    sha256 arm64_tahoe:       "8ec9dec07bb4c270c8c0256ed7b502c3c008aa21323d1197009488291e329d70"
-    sha256 arm64_sequoia:     "075539a36b060c32aa1f599c1bc736900ef434b68025a24291a697099a50fbbd"
-    sha256 arm64_linux:       "46749dbae11c9d45c2675afc2bc9e6cc345283e755a40f6fd086c4b545f5f9a8"
-    sha256 x86_64_linux:      "87bc1554d931591b82704996e08aaa21c2731126861e8e89b126125bd7d5701a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "697a7f5e763d82539bad1b6f4559fc40895a31fb8cf02b823535a62079b99d2c"
   end
 
   depends_on "pkgconf" => :build

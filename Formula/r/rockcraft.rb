@@ -16,11 +16,8 @@ class Rockcraft < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0134b37695d9a57df37be4999bc62e3c19faf794f433a7994fd4cfd42971c349"
-    sha256 cellar: :any, arm64_tahoe:       "4137daf24726682019d0f4567f54bfd47630349e63421658e79f1e8e1cae6479"
-    sha256 cellar: :any, arm64_sequoia:     "03cd1dd10a468357214398aa01ecfdaed57003bcab44aef428bf2de8bbb8f7d0"
-    sha256 cellar: :any, arm64_linux:       "50e5be3ff0f58dcca04c3d7594ba4a5430a56602911fadc14bbcb209358d92e0"
-    sha256 cellar: :any, x86_64_linux:      "cb2474c262b6eb9e065d2ed675610d223e3f5b8981d137e0a81588c6ef118dc8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "37876131c41c3280acdfdf1e10b5ba8271ec4a877c417e6edc75de8de264e9e4"
   end
 
   depends_on "certifi" => :no_linkage

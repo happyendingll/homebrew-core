@@ -7,11 +7,8 @@ class Bup < Formula
   head "https://github.com/bup/bup.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4a87f7bc6e4e75c3ce9df064d3791e4875cced9c30b62f7c5f5bc75bd41d4c1c"
-    sha256 cellar: :any, arm64_tahoe:       "f2b2f1036206e362c8808d8ea8e1239f88b68d81996d99262cf1e57e4c5e0e53"
-    sha256 cellar: :any, arm64_sequoia:     "540ec5a5987727050a77a879c39f86962eb5a8c9dc051aa88a3ce777a04f4453"
-    sha256 cellar: :any, arm64_linux:       "60f8609e0b7917cd07c16ce3ad402b217fc32e43b03c8bc85b5190798ac30ffe"
-    sha256 cellar: :any, x86_64_linux:      "e66fefeb5b569814ddc22f2408c15963020a5dc550786eedb740833345900f54"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "765596ea78e8c8075c6dd44b28dc8e6d5fa9f16952d0143e3698dbf398b9d711"
   end
 
   depends_on "pandoc" => :build

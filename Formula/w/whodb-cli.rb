@@ -24,11 +24,8 @@ class WhodbCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4e8ffb6940e4967f97a4861fac7650fae1c1aad58faf6806ca60c205d99e8342"
-    sha256 cellar: :any, arm64_tahoe:       "6318d3a3f41867b0c98631ac21c8193f70bc5c0167adf78e66e33a5c0412ee39"
-    sha256 cellar: :any, arm64_sequoia:     "24168db3b776a5ea739185e86483fbfdc6f89dfcb25f8f27878586fb2f576544"
-    sha256 cellar: :any, arm64_linux:       "fc69cd0d1301bce4d491dca216023c8de48cb45b8b0f951aae5dd4bf0704766f"
-    sha256 cellar: :any, x86_64_linux:      "df80b9715e5587a9a07c7c2410d6eec3b1f35003cfc62402d662c2cac68221a9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "5ee6c750f46c835daf92d8c7b302eba42ada72a6c482d976b345457fc0fc0d34"
   end
 
   head do

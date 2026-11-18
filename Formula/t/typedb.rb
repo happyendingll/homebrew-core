@@ -6,11 +6,8 @@ class Typedb < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0e0bbc8b621c2c8676b5b63353a4be893ea13e0448d39bd15e3d0bbba1657da"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "293988d846632c0b7bcb915d63f968deff4cc06e5c1404cb26e7601a15f128bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a0158a50bcd5cc28a78aa0bcccb280ae6138f772fc69ede2dfc4c1bad589aae2"
-    sha256 cellar: :any,                 arm64_linux:       "12c9acd8e82127c1ce1be15a3c48bf3cd440fa1b6ce2f16dc24c989b8988ea00"
-    sha256 cellar: :any,                 x86_64_linux:      "93ff5013cd83da6f0cb67ce56321efd59082675629df0d9e77ebbf9a6863f29f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "b6907adeb330297fcae02a890a0f0722bb19a7d55c97ec22f264256121c679c6"
   end
 
   depends_on "protobuf" => :build

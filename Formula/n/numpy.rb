@@ -10,11 +10,8 @@ class Numpy < Formula
   head "https://github.com/numpy/numpy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6f53fade9bf1192c76dc8461b02e13970f072880482dafc5e41cdca44863624d"
-    sha256 cellar: :any, arm64_tahoe:       "835a77ddb8ad8ef0f6029203951a38664da57570fb1f8be5105c38b025ab7cbc"
-    sha256 cellar: :any, arm64_sequoia:     "5e93cdbb12d3d14625f0d519d30e4c410c0b5beea23f7990a7e36903288da393"
-    sha256 cellar: :any, arm64_linux:       "d1e2d88eef6964c8005ebf3b8f6aa702817ec18ed19c4b42eda12d36f473ce71"
-    sha256 cellar: :any, x86_64_linux:      "7df9055692026393f34536a385f5b03b57a0a3604bcf14b73a1589351f499841"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "228463e8caa3decd7097453f537323da74efe0b1770060821e446058d3f642c5"
   end
 
   depends_on "gcc" => :build # for gfortran

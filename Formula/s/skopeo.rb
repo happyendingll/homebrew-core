@@ -6,11 +6,8 @@ class Skopeo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_golden_gate: "97198a8f5aaa9b01de0b4780b0ef3edc75581ba3c0310f533e8c73dbc8d69617"
-    sha256 arm64_tahoe:       "587e70941026a0b340773891dc6e0bf15646450ae9095349cc50bcea45f8fd2d"
-    sha256 arm64_sequoia:     "6a6177e3e429105d1a33e5f17bc30528e094e431ea285c2135e6718c1e1c09c3"
-    sha256 arm64_linux:       "d1fcb02e54bdf5c40e9cd2bc8d56f2138fb771d3b2d24864d4d1be1677f49193"
-    sha256 x86_64_linux:      "33fd64e5b4dfa30fc267d154cfcf4c53978d56a65d8af4f66b391a44ef9cf325"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "af53333e0ed4d0a339822b4b0d6003068eb4a4d4134c8234b073a6fa49700716"
   end
 
   depends_on "go" => :build

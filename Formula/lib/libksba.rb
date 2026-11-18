@@ -12,11 +12,8 @@ class Libksba < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aab958865fe3fc7810bb03912472c6392b5a5a50f7482bef223711e3d323bbb1"
-    sha256 cellar: :any, arm64_tahoe:       "0d843abb9cfa9de950ff2bfff1a7d3ac59a8fbde62887075dbd0399913326275"
-    sha256 cellar: :any, arm64_sequoia:     "8cf9f4148f5b71450f0ccf5002e087f9a3a80b6a074d0821b6299bb6d05d2058"
-    sha256 cellar: :any, arm64_linux:       "f50c8ef26457df3057ce964590bbe24d4ab911cd4e7e6a1fc2b30e7bce641e20"
-    sha256 cellar: :any, x86_64_linux:      "8402c17e39064e4cb5ce27750b4d0dae1e42b979b14cc61acd97812dd0d980c8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "d17ee9a0dddf1521bf1ce5c7bf5f98fbf7f51e711eb399178434b405c2973427"
   end
 
   depends_on "libgpg-error"

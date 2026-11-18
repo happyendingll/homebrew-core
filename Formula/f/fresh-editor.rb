@@ -6,11 +6,8 @@ class FreshEditor < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "47b58e1078b8e490afd436ca25b92d7df134ed2ac42f2779c894abc7ab549ab4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3ee2f762ecf517c432617eac723e2f62bb4443f9ad128c4137ac6ccb148d6428"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5e10c486dc0a727f3a42f5788ebb15c1971872436fd45ac842c6c5f31d7f2d04"
-    sha256 cellar: :any,                 arm64_linux:       "e90d5318fb2893fffea0ca4a1f3192b4d344b807adced9ce4f84fb87a615aca2"
-    sha256 cellar: :any,                 x86_64_linux:      "663da1173cd7c6c2b363bbf0d25ea97ddcbb44650f175cd6181a5ee5d19bf88b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "26cf8afddd983236824683fc8915bf28958280a07686996d9f18aeb68f25ac75"
   end
 
   depends_on "rust" => :build

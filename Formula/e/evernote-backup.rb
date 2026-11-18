@@ -8,11 +8,8 @@ class EvernoteBackup < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5fc8aceed9c04af713fccadc1f858587afa7aa0c7d3cce7c639f7b7c9e2a1ba4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b2cf6aa9e4d5aa3ed38e2c311bc2c40af7d156014451b0b2e7b611cc98df5d4d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5102b058f3a5fb3092038e8b98007efc6d52d6f21b2fa0150d8a4319680884e5"
-    sha256 cellar: :any,                 arm64_linux:       "f8d952faf7660b84b4024fe52771310d72dab9cd24d147ecf9c33e5d8d72547e"
-    sha256 cellar: :any,                 x86_64_linux:      "49f8b4133a514c93e7ffb150dfae5614c694d869ce241613c93f3a3bb6cc4965"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "44d46313b5c05d211ca55750628f6bf60a7fbca92aa75a1152d29491a8238d5e"
   end
 
   depends_on "rust" => :build

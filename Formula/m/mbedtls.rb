@@ -15,11 +15,8 @@ class Mbedtls < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "15510975e7d3b547052e4bfa40ceb3002f3220d51a063775d98a9fe6aa082456"
-    sha256 cellar: :any, arm64_tahoe:       "4f8596f46c4394ba8548bae619b2d513ca9c22a0018bc0395a4d74e47d3d077f"
-    sha256 cellar: :any, arm64_sequoia:     "5283dd60123a97b2732571dd4641a77233817ab7bce0f14d35b316c44d077e0f"
-    sha256 cellar: :any, arm64_linux:       "fc9e800d2e9ee449fdb98458e85d990a02b76554c8322438867fc34ad0fff474"
-    sha256 cellar: :any, x86_64_linux:      "511c090c62eeaf041e5c047667b8a6ecb5b2c2d996aef940cf5bdcec9e61eb9d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "852497eb5a7907995c489641f58bf6fc0f7d74b1ff54f0579005e90c47eb85d6"
   end
 
   # https://lists.trustedfirmware.org/archives/list/mbed-tls@lists.trustedfirmware.org/thread/YPIGCB7WN6GCHOGEGKOJXUYAP7OK527W/

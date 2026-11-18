@@ -9,11 +9,8 @@ class MailDeduplicate < Formula
   head "https://github.com/kdeldycke/mail-deduplicate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "811b0823754abd5e29bdbf400e7f855e8803369f006fa1da72d71d4161df2840"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2a6c2e7748d78b93ee7e03431a513d9083f92152d8912e86ca8aa45ea373b92d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0576914549997b22f141f8ee657f120ba57f53b8bafcaddc5b1cfe84d2af30b5"
-    sha256 cellar: :any,                 arm64_linux:       "131e83103d05b9610cd013195d4bb5afc9df8d55ed19ea57a2b67b6f986a138e"
-    sha256 cellar: :any,                 x86_64_linux:      "8e2026488ee8e75289667b383fe495416a425fb3185a89f7da83458173b72626"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "0716dd1b2a13bbc2c9be2542d6d8fe1c1351150e259e864e2cbb050f7da9d705"
   end
 
   depends_on "rust" => :build # for click_extra > uv_build

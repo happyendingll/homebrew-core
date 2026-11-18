@@ -15,11 +15,8 @@ class Flye < Formula
   head "https://github.com/mikolmogorov/Flye.git", branch: "flye"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eeba63bee15ff606b5b3bc0bed01bc5014ad88f736d00bb9916879104f088bf4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2c7bbc96f7d7bca0faa9664d04484a334a18482e285d9751a6ecdacd4bba2c44"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3a99a0f664ffdc99a802b3c1d60b17776cec72f22d54672044a143ed372bb7f"
-    sha256 cellar: :any,                 arm64_linux:       "967a146dd6be450d82784387bd647efadef7e5aec454c401a98515b6235be012"
-    sha256 cellar: :any,                 x86_64_linux:      "d9490261e843a5100bc160bbbf43de9e2fc3865ec57d5b0e725edc005f8f593b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "8388547f335789e31769a22a2a3fbf78a4a101bbc0bc20a2ecf82b50fc74da33"
   end
 
   depends_on "python@3.15"

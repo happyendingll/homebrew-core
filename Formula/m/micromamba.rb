@@ -16,11 +16,8 @@ class Micromamba < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "57daca020ea453aa7da5c75da0f0b72d756c8ccca733068017bdf59b4674c95d"
-    sha256 cellar: :any, arm64_tahoe:       "88f3669af88e07d9d1600c0734099b08830c3fa463bf5d267354fc6da480044f"
-    sha256 cellar: :any, arm64_sequoia:     "5caa8de035f27ff9a56327b75069054fdd6b504a86eaaa8c777a584bbcebc126"
-    sha256 cellar: :any, arm64_linux:       "3a0b6001ff870aba556c96095e821605e67b369a090f1f272a109e6f5484a8d3"
-    sha256 cellar: :any, x86_64_linux:      "677bc4a83d41273ed0dc8533f0c10caa2cd6eafaf2aeaf7949589959bc3bbfe1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "66da59fe687c84b397438c69d6ddd12205f2bb68f9b247ee9dee5794691479a3"
   end
 
   depends_on "cli11" => :build
