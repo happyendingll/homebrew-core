@@ -12,11 +12,8 @@ class Tenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a0536588a82be4d2620de9d22490f86a550797c8c3448e56ab9880fd2d499a5a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a0536588a82be4d2620de9d22490f86a550797c8c3448e56ab9880fd2d499a5a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a0536588a82be4d2620de9d22490f86a550797c8c3448e56ab9880fd2d499a5a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9e9562c2a646fc1e4986ff265d2e7e15e29a11df0a5ae2e187c5490e6ab1f815"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "76f7ed15ea1de607c50e7aee32a285c2d28cf6c40f5b0e30767b465f99746daf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "42496a769c5d169aa3e735efa718a4aa676aa0a89192162cecd0cab3327bc46a"
   end
 
   depends_on "go" => :build

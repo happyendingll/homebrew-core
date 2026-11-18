@@ -9,11 +9,8 @@ class Atlas < Formula
   head "https://github.com/ariga/atlas.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b25d6869b2a7a4f6da59d0a017a239907f352e557fd1a3d61617d9ded12ad412"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c2a98d7d13fff6203313a365a1379cbbec5c764c5560bd78eb1f7b364c2ff3df"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5c8040c7f64aeb85040ec47b206e6d53a616404f4db54e1069457e249d4d754f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0f8bddb46cccc5bbdbdf2cd9997844a65ce8f56db7f29dcb34d1dde7deecdcdf"
-    sha256 cellar: :any,                 x86_64_linux:      "cbb98fc4a7bd019415a220cdc4f7b46db94e5f7b9a919670f2537b5751ed72bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c87a8e2a2c8963c4f9d8757f9f462252a79cbd92178ec6d4cfacdb34bfab587b"
   end
 
   depends_on "go" => :build

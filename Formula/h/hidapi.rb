@@ -8,11 +8,8 @@ class Hidapi < Formula
   head "https://github.com/libusb/hidapi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "adf377bac31b67f0b3aad40d7567610ba159ae6e4b503c09232f78683a4de2df"
-    sha256 cellar: :any, arm64_tahoe:       "44f19f17ac637c9ff3e24fd442205c674ec8f5fcf9f7a06e0135e2091a1bc367"
-    sha256 cellar: :any, arm64_sequoia:     "fbfed806633cd2477bdd6055b7306fbcbf84227a0bccb35cdec4017889371fee"
-    sha256 cellar: :any, arm64_linux:       "2c86ebca0eab2dc5ad6693b4b5e4e02cb82add3743b983443f828e29766fedf4"
-    sha256 cellar: :any, x86_64_linux:      "0a5dd57fe4d72a980f17a65aede0b623cb8cd1eba64f2a503b060c572227729d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "bbd193aceed81a244c7679f958ada841b1a0b38d2a9046c46c3a72b0be18edf0"
   end
 
   depends_on "cmake" => :build

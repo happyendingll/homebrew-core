@@ -7,11 +7,8 @@ class Frizbee < Formula
   head "https://github.com/stacklok/frizbee.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "29f72e88e376dcc681fe7a13fa675ae5f56a0c7f047e058102c8d43f85dcd871"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29f72e88e376dcc681fe7a13fa675ae5f56a0c7f047e058102c8d43f85dcd871"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "29f72e88e376dcc681fe7a13fa675ae5f56a0c7f047e058102c8d43f85dcd871"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e9fb102cbb9e874f12f03b6353d00e6e49a7a621992c27ef243b4f7994fa6054"
-    sha256 cellar: :any,                 x86_64_linux:      "0db6590c90b455cd477a0f902a7756da3e2ccd342c9158e172e5d3bd8dda9236"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "2759030b86f723b7bbc088b4ef1570633e8dc9b633d7d8499cf4521e1201f06e"
   end
 
   depends_on "go" => :build

@@ -11,11 +11,8 @@ class Cadical < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11ab537c42b14f88b9a35d21d4f95c2bdc43e7187c5c2f9ec73bc6d1137853ff"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "83ff0c0e8421b9c8b1027db74d6fd4ee335b0104dd56682a70a9d9ae8b5b5f7c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "822156060651b5974bb7d833b07b2ca32a4c875d2a5dfb7a9452f072747aa6ca"
-    sha256 cellar: :any,                 arm64_linux:       "ba938baf40cad18e0a3806fcf9a36f34331767422916939de56806d47dc36da6"
-    sha256 cellar: :any,                 x86_64_linux:      "84bf1ab4364a96ab913aa54b85443f82481b8ba949adaac51725ab798d70fcf4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b36d0e4031e7eceb4b5b5d63415079c9031df7146be6229a75c1a5963e71f134"
   end
 
   deny_network_access!

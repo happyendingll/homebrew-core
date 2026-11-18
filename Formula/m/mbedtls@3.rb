@@ -12,11 +12,8 @@ class MbedtlsAT3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fd87eb9ce5612a9510d85130b036d8c2b34798d3128f53d992702c2f8276e5f5"
-    sha256 cellar: :any, arm64_tahoe:       "962810743b805cd8ddadc42b8e3c202463d521557a23b7ea972fa9ee2375989f"
-    sha256 cellar: :any, arm64_sequoia:     "4f12bfd22f62f27d11001294032c6e5fc6fa0ff4e2709c8bee29680765ffe787"
-    sha256 cellar: :any, arm64_linux:       "43a259f6d0dad1e677718e88b5a53e96f254a7bb3a9263890f368020e6098157"
-    sha256 cellar: :any, x86_64_linux:      "b9d85d0e42808636ae73d62a8a3245e9b97ebc4dcc6391b5a9a53bad3d34f327"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "bb61ee86be5c112e81afcd4c6cfa7f27616189d39cabce830e3760e8c10bf220"
   end
 
   keg_only :versioned_formula

@@ -12,11 +12,8 @@ class Goctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "30b815a0f05963c7813d0df72bf92f4940a48096160f2af4f854db70bbfde108"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47c5587b97bc94cc6310d67f0991c268b3fdb44eed6d55093867f2f7a51ae32e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bee67440bbf36e46481e028a338bafdd04e239d4686049102b794068adcab5ab"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ffe6ac7df754566c89186dab5adc6554ff9aaea6b6a9d4d9e9dc23d1b161444a"
-    sha256 cellar: :any,                 x86_64_linux:      "6b2b981b8e457d2328effa7d102ab89c3b75196282718c51e0afb5409a47f565"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "011deb3b09f6b6ffbe52c6615787bb374b4bf861aca6be282d206bb168b8a126"
   end
 
   depends_on "go" => :build

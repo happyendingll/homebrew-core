@@ -13,11 +13,8 @@ class Yices2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4ce4c4f2aa8190ceecfd662d631e0106a29201a32226455b902c42601e39adf7"
-    sha256 cellar: :any, arm64_tahoe:       "e551b9cf6ef4baa43bcb645cfa8f72a404e1f933cb7619589c66d7b31103f94f"
-    sha256 cellar: :any, arm64_sequoia:     "cee3136d1316e9c1af807b116eacec2dd1736483ec712b8b7481fb4db0cb0524"
-    sha256 cellar: :any, arm64_linux:       "829f9a848ed6e72cf964490faa4c772ae608fd808da94569342a443a1f69cded"
-    sha256 cellar: :any, x86_64_linux:      "a7f3fc3b9382f24780cd8c15f68140503046192858781f9e90c1b8f8981c24d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f8d353b29e688ca70165c31db5a809c7008babb81536efafee149f2e071bac35"
   end
 
   depends_on "autoconf" => :build

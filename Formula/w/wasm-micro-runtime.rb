@@ -15,11 +15,8 @@ class WasmMicroRuntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "061c8bbfeef2fb74276f11f5a16fd3e3a393e64e270ec75c7d8df84f85b67b6a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "868ae97be1441e76511383f63b9676e039119993966ced1b09ee6b36e0894b46"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "90d8de07b469d3b8141011c79a8c1e0cc7a78914a9be15c570bdded91177fb60"
-    sha256 cellar: :any,                 arm64_linux:       "802b41cb6e3f5057925868740571ac166bfbebd5c66687f294cb1c19ed05bb2c"
-    sha256 cellar: :any,                 x86_64_linux:      "188d238a6e51a3e883c071f573803cf513ac0da22c2718dbc7280f080e92cf15"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e8852fe413a717ca6d50c4d47d3829271d3aa525925471a239493f9e7fc98e26"
   end
 
   depends_on "cmake" => :build

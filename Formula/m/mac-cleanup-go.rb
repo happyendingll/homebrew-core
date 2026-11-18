@@ -7,9 +7,8 @@ class MacCleanupGo < Formula
   head "https://github.com/2ykwang/mac-cleanup-go.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2f1f340793dd1cf2f1b186d8d85c0a53b2727e4880cffc778fb41f10e1bf3129"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ffe3e7eb5a60eb24aee31f54abca3e6a77e95497f786f911f2a4a9f9a57cb297"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9815c53c5f4dab98e561828776429859b3a3e5ef89c3deaeb0509d9859fc61b7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "e55092f825fccfd5dea28c919ddf5fa839514351d33db2a299dfecfa7194bf3a"
   end
 
   depends_on "go" => :build

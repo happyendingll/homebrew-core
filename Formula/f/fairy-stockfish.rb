@@ -16,12 +16,8 @@ class FairyStockfish < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2ffeab4f25bf666156096a8f476c480aef341f4095bd1e1982268dc0bc5c796"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f895429306b45cf7e3b48afc8e59acdf7a2e28ca8caf5cdf683cae285967109a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9630cdfb4334c4eb98c7487cd9834ce5abf60f4a1d267820d9369e3d974846a8"
-    sha256 cellar: :any,                 arm64_linux:       "a7821a06bf2b02fa896d1d539c8fb2cae0bfd530fc75afee948273e179d8150b"
-    sha256 cellar: :any,                 x86_64_linux:      "af04175e33f678d7261c7c8d4bff7ef7556e0983c5adcabb3cd1772b4100ca38"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "7cc4363b237ad9b7c4d086651302dc0854e5b723d5e9127fe945015bcec63d33"
   end
 
   deny_network_access!

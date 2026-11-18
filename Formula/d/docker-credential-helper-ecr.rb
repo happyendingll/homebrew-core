@@ -12,11 +12,8 @@ class DockerCredentialHelperEcr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3000010b6a643b2487436072507381c715ac3ebc6ebe2825931cc744c94221b9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3000010b6a643b2487436072507381c715ac3ebc6ebe2825931cc744c94221b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3000010b6a643b2487436072507381c715ac3ebc6ebe2825931cc744c94221b9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "76e71a84d6a81ad131757c28a45c80c0a3c71f324744ff9d5436a9ccdffdd47e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "60e0ad11e96d6569ff204bd4e0f193c4954de1035538360627050f9d83664eff"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8d930d633fb281674ceaf55f3a3e851c6a51f6039f7a5545c4cdb7fe12951547"
   end
 
   depends_on "go" => :build

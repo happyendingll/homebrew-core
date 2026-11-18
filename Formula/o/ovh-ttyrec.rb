@@ -7,11 +7,8 @@ class OvhTtyrec < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "49c76ef839781713412995467ac6eb9b13cb53a921572c2e23141022e1c54da3"
-    sha256 cellar: :any, arm64_tahoe:       "eef33b07caa38cf80d5c3e9d985697b1d8308e8c42b6717721cdb013f3ba36e7"
-    sha256 cellar: :any, arm64_sequoia:     "a9cd3deebf729a009eb87270b33e6f634bddb5116ab2e444a54ea8dedd70ea46"
-    sha256 cellar: :any, arm64_linux:       "2c4804ba637ed8cc4580503d0a681cd06dc8c5e1ce432d9675b294ff8f533a86"
-    sha256 cellar: :any, x86_64_linux:      "daf275236fc6323c4596d54a5d8724392ba6fb38f96c1cb1069541d9923b24fd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "cb09546ca80bd31a434cb48439258ac74065482f37c35fd9d7f7dc8633919097"
   end
 
   depends_on "zstd"
