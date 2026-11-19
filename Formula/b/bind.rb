@@ -25,11 +25,8 @@ class Bind < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "7d65d065d5445ee437d57e4954b8b288c1c8a39f2c543abf062574941344d742"
-    sha256 arm64_tahoe:       "711a153584643c474ff1c3d8dcaaaefd6a4a04764b8034d4e2f418df83a50ff9"
-    sha256 arm64_sequoia:     "5b8c924e8508e5b7ccf7393b7df3ef027e3053aaa38bbbd12a1ad64077e8692e"
-    sha256 arm64_linux:       "050fdaa1ad860679ac443a87e2af04cc3c674a53806f01bef1e6e4ec56f18bcf"
-    sha256 x86_64_linux:      "6e0ca8afdd73e7f0862c11224b6c0827ce17c0af8696eb00a5be819b67ff8175"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "f67784fecf4c7ba860b323cb71417926c693a0662b82adc8556fabc2e082eddb"
   end
 
   head do

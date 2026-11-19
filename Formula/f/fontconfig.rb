@@ -19,11 +19,8 @@ class Fontconfig < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "824ffef57aa041532e77a53bdbe901520024407d24e12db562a7dcc1eb9eaa6f"
-    sha256 arm64_tahoe:       "3eee46f2e8f28d1afc33ca4cecdddfc7af61bbb91a63909e35b4801e788f088c"
-    sha256 arm64_sequoia:     "cec32d9ebf57d27a1c7e7b306d6fa3fdbbaeccfeec06d14ab5a6d46662b1820b"
-    sha256 arm64_linux:       "308a71f5289c679dc6a4296bf3f10130ff46d37e82fbf9af00681dd7780f466c"
-    sha256 x86_64_linux:      "55e68d598670a5e9dc98cec7d5cc30b1fa64de0668360f6465d59a357fe997c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "bd81e3a26347c5132b8179eb987a68becb9cc78a07b482a0386a599888eca58a"
   end
 
   depends_on "gettext" => :build

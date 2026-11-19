@@ -15,11 +15,8 @@ class Doltgres < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9a3fb3c1cda41abb79e014d4040c1b6f88f9bcfa821c65e11e3163abbc0eddd2"
-    sha256 cellar: :any, arm64_tahoe:       "1b41aa38476f1d5034b0137cb12982ef44d342b3e7b1be0e5399c29a3f3462fc"
-    sha256 cellar: :any, arm64_sequoia:     "07bc6a527dea8468f43f17e2da179a0f334ac8d49124b42cc5443fbf4f62c338"
-    sha256 cellar: :any, arm64_linux:       "1393173d7bb2d721776be0a2fb3b3b36a4723aa2ed3dd53eb32df4e2e6ad4c63"
-    sha256 cellar: :any, x86_64_linux:      "e818f4bcc8a90c09eb3da7e22f86cc509e24ed15d58bc4ea0f2b3f4e57241b34"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "42922e7ef2a31fe93d3106faf852202c0a1d535b1198f98e2d43f781568f11c1"
   end
 
   depends_on "go" => :build

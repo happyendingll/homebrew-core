@@ -12,11 +12,8 @@ class Tenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d3df537e8a7f3041498f06ba7e4fa6ae42614bc4b2eb34e094a83b8536508f48"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d3df537e8a7f3041498f06ba7e4fa6ae42614bc4b2eb34e094a83b8536508f48"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d3df537e8a7f3041498f06ba7e4fa6ae42614bc4b2eb34e094a83b8536508f48"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ecd85b70f62880f7acb3754e5e53c427e9d16a98b86f1fd3f1af884c0bc64672"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f87a372ef61503b5d22ab6371747cd5ef40d11b9db63d76e3f33f256af032beb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd101eba016168c1681fb5d7bbf058c47ef55e532645756e0298f08b10d7df2c"
   end
 
   depends_on "go" => :build

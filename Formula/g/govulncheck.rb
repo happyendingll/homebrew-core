@@ -10,11 +10,8 @@ class Govulncheck < Formula
   head "https://github.com/golang/vuln.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ea4dcf1babbe15e699ca06ee9a7b34e91d21b1daa4e7d56b60e9c912d360eb7f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ea4dcf1babbe15e699ca06ee9a7b34e91d21b1daa4e7d56b60e9c912d360eb7f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ea4dcf1babbe15e699ca06ee9a7b34e91d21b1daa4e7d56b60e9c912d360eb7f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "84587e3f1f9869857c1ff7a6099c951a4e61ce2256dc8de84de91b32cf5ef50f"
-    sha256 cellar: :any,                 x86_64_linux:      "121cbf02bd90bff945cba870e19fe489638d4f8fd0fa364395d4999ac2349dfb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "3460e4927b230b024859badf849740c58cd70b2099c4b49d4efa982739d2c53c"
   end
 
   depends_on "go" => [:build, :test]

@@ -12,11 +12,8 @@ class Tlsx < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c8078aded2246d2052853710297fd599595f0685c19d96b31a5e2ab4ac680d96"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d9a1205e20b4d070752ba14cc6f1fa1a557b545de61eb7ab94c7477a4913709f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd20c6d8ea43c53363e1e8a8463c9962d9cf3fca3399f68964fae7e154b54b68"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4c5bf4cffaf6875b895cc9629a51f3e482c6f7db3a20a046b82b9ce00ed519b9"
-    sha256 cellar: :any,                 x86_64_linux:      "af813a1dd149745aeebaf4dd113db073fcb84570ebbdcab815fd571d31ce2100"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "4ae54c7d41c5a5881253b68bb013a4f2ff9b7927f78a75002e6cb518dda883d1"
   end
 
   depends_on "go" => :build

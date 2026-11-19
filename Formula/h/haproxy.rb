@@ -11,11 +11,8 @@ class Haproxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "02c72e4608eba95a7da05f3e3bc105c8e6876c4ec8c64027f0fe3dcd764f3e19"
-    sha256 cellar: :any, arm64_tahoe:       "f61f47ae57381eb13816730780dc18aac0948b8a6e745c8872c6fac1c587160d"
-    sha256 cellar: :any, arm64_sequoia:     "355c15941ae00b67873c95751eb8b958f70f1702608124f36753e5771ee12f67"
-    sha256 cellar: :any, arm64_linux:       "83b6c27494a9c29a671e724d574b0702ccf610ea4e026b76bfcddf71caee97b4"
-    sha256 cellar: :any, x86_64_linux:      "a98f34d24fb305358b7ebe721787cb6e8cc5e3dd6a93083f49a12b031fb4d674"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "31ac0316c583069b62a70a7e450db510d1121f26e68094d2815189af975f7c21"
   end
 
   depends_on "openssl@4"

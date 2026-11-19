@@ -13,11 +13,8 @@ class Gh < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "04e000cb2faa577e8b164c46479b1d517fe6777c1bb3565fce42293103a68f0b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37b15d760c279e04215c5a6ec2b43e7a2cb2fc5b60158b58c2658ac81af90b9c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "86e614f29b06c2262f756074566bf5ef765040d7c2d3fce6523a392a8a45eee0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "610606cc633a32264669b38a875bdeeca21786dabe2f30096ecdb1dee41f1045"
-    sha256 cellar: :any,                 x86_64_linux:      "ee2e9739e1ed73652cae5e684a60842c841afb09324ab1ef22f0aef5776a8660"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "6ef011c0f7043bbe0251c1e41c0f54999f8efcc90f3ba0f4aa25f014592629cc"
   end
 
   depends_on "go" => :build

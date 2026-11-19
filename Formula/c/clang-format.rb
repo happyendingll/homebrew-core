@@ -15,11 +15,8 @@ class ClangFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "baa15b07d4ea97e5da1be32d89534a991d012702b9e8c26be152f87a9d2740c5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "afa67ee29cae66c5c99adce1187373bd2bed1b06768a8505c2771de4fba855fd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7e3abbadb2f094f0cddc46aa35063ab94c04720afb42e1f42888aa42e922b64e"
-    sha256 cellar: :any,                 arm64_linux:       "c11e6e655993040452a270a235296582e6ba5dc89595e144b72e27943d0dee1e"
-    sha256 cellar: :any,                 x86_64_linux:      "469639c0d0b846b5ecdbebe206637842a10befd0ec5945942acc46c3a62dae4d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "94ad3b4a5814319a90031ee85a141d95d2f6d11761d92473e1a09a79e589c2e8"
   end
 
   depends_on "cmake" => :build

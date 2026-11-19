@@ -7,11 +7,8 @@ class Qshell < Formula
   head "https://github.com/qiniu/qshell.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "602ebaed92b790db5809b692abdd7573af4a02232b301e3cf7889cdb783c0229"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "602ebaed92b790db5809b692abdd7573af4a02232b301e3cf7889cdb783c0229"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "602ebaed92b790db5809b692abdd7573af4a02232b301e3cf7889cdb783c0229"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b3125e0e2d5a26785be081af1dc5121dadda015c3806733783f019e95457e865"
-    sha256 cellar: :any,                 x86_64_linux:      "a9f8d86e34bdb505272afb1b548910a59f34a003b23db81a5a1e2ab1547b3776"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "9b1cb568cc4c5ad88a044587c74e62fd023ed36106ab19193e463d3220d616ed"
   end
 
   depends_on "go" => :build

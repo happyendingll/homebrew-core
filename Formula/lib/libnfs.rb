@@ -7,11 +7,8 @@ class Libnfs < Formula
   compatibility_version 5
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7ed920fe89be50c7f868c3e737076a5ae4ebe090452c9655fb7e9a1358ccc08f"
-    sha256 cellar: :any, arm64_tahoe:       "f3b65659daa3fd594bf3cbc8180acfc83089b6fd48ea998d6912890a0d0c31aa"
-    sha256 cellar: :any, arm64_sequoia:     "afa41c038854b4fde86c0ec862d538fab2025407685575d4b6b9c8c26d91fe2d"
-    sha256 cellar: :any, arm64_linux:       "50aaeb5068e5ab07f237d98d57596d634261f9c4a909fbe93f719ba6db577e78"
-    sha256 cellar: :any, x86_64_linux:      "17b7be29913a1bc3c43d1b1686ac0280f2a8d69310658722c78234e6853189b0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "103e72045b6dddd00e3295cb0d205be0c17c58d970415da97c705b2043583d82"
   end
 
   depends_on "cmake" => :build

@@ -12,11 +12,8 @@ class LivekitCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ebf70221da215f4f34a3bec2a1cb7e0fd331e277f610a9fdd06fd20a0cb9c2a3"
-    sha256 cellar: :any, arm64_tahoe:       "3b0e0781fe460e2b2c44e3844da403b34baa731b53ae46f728c186d519d623fa"
-    sha256 cellar: :any, arm64_sequoia:     "e80ba6a65ed2577c0a1c8e95a4310b31d50bdd523f9794853ea9f610610f8b7a"
-    sha256 cellar: :any, arm64_linux:       "272e982099a8d0ba15aeb3c0c43b8fa2542af7e9b1d678dcb1ec2521182375ef"
-    sha256 cellar: :any, x86_64_linux:      "637277a69c9ba49b1093ee044d10dc17a7b4ceb905266c7517517b67659d1d4e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "933bec00b2793b607c4717464929d3941294cdf9599961667fe37d5dfc1ded74"
   end
 
   depends_on "go" => :build

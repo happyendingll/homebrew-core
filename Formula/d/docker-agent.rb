@@ -7,11 +7,8 @@ class DockerAgent < Formula
   head "https://github.com/docker/docker-agent.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b37234c9f88d5c82fe3de359fc05a3e042a80968996f8d5e6e171659b6663cb3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29a5406f1fcea72e1fd3b3866727966101a8029ee5b5ef9b84b78a860029af77"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f955199e69a16f378645030594758f1d6b53e407474bd862b8d081212d34ae05"
-    sha256 cellar: :any,                 arm64_linux:       "c195f75d8f118db9b734d09dd0c31021a5ac2e82a18f8c74526ba35b8e3a6123"
-    sha256 cellar: :any,                 x86_64_linux:      "4789b4c4b40a4d269396df722742fa1f45a975e2c8f9a5b7581d472364d7dd47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "04847bf9b2375a00386e889a033ec0b1f4fb6abe05dbad1b1afa3fd1d3b6851d"
   end
 
   depends_on "go" => :build
