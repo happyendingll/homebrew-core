@@ -4,14 +4,18 @@ class PgCron < Formula
   url "https://github.com/citusdata/pg_cron/archive/refs/tags/v1.6.8.tar.gz"
   sha256 "c19ab9bb35406c60fb51ecda993737c083850abe424acb6c1030439d00a1f8e4"
   license "PostgreSQL"
+  revision 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "1d1a6d402ba109aad068300ec2c3ce5eba1f6b9143358e8f51c915aee8483947"
+    sha256 cellar: :any, arm64_golden_gate: "3e83853bf9ee22e7c27fcc9d3813e2b97b47984a94452d745224f10c3a8ce5c5"
+    sha256 cellar: :any, arm64_tahoe:       "2721a0e6777877ad7dedba04e3e37bf789b42194ed0258f74c48eb2136e62b33"
+    sha256 cellar: :any, arm64_sequoia:     "b24e95b802f4cedaa19ad93a6b2ef678246780bda14abc3de6f7569a6671eeb9"
+    sha256 cellar: :any, arm64_linux:       "264ee471ce52121ffef86923c95c2fdb17638db6ffd0e22b726b27120ee925f5"
+    sha256 cellar: :any, x86_64_linux:      "70030df1da202a4ee0f376fed9d29cabc324a242aacc59f6f23b1f80598fe53d"
   end
 
-  depends_on "postgresql@17" => [:build, :test]
   depends_on "postgresql@18" => [:build, :test]
+  depends_on "postgresql@19" => [:build, :test]
   depends_on "libpq"
 
   on_macos do

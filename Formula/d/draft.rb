@@ -1,14 +1,17 @@
 class Draft < Formula
   desc "Day 0 tool for getting your app on Kubernetes fast"
   homepage "https://github.com/Azure/draft"
-  url "https://github.com/Azure/draft/archive/refs/tags/v0.17.17.tar.gz"
-  sha256 "02417432eaa374505829ea2e8d80655f5555436a5f3b737dca1fa19a8e570026"
+  url "https://github.com/Azure/draft/archive/refs/tags/v0.17.18.tar.gz"
+  sha256 "3dcec7ae0e5abf39cde7623fbf2ab392f02b08107516f22bc669b6ba3e8031ee"
   license "MIT"
   head "https://github.com/Azure/draft.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "7fa790912e08af95303baa1fd741f6a55fd6757eb016c96c32b58cc420e88f5e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d60359ddbfdcea26ed7155b8020f38b36eb6c38ea2848c7012d5ff9443c05e82"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4a313266620d1e7e5875a75b6e7669e6c196285e2d78837fa9206def51fd5919"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "30af94f1028e37eedb917169c5cf1ffb889aba77da37a120da1b662640abdd5b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "82ca7f2778cc72533e826e8ef903c5c0b1b40a086c017777c7b6f7dea391e20e"
+    sha256 cellar: :any,                 x86_64_linux:      "265dd374bb22e00163b25aaa28a8a136eaea3ca2364228b72ddd58cebab7a580"
   end
 
   depends_on "go" => :build

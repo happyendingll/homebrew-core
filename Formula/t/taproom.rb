@@ -1,14 +1,17 @@
 class Taproom < Formula
   desc "Interactive TUI for Homebrew"
   homepage "https://github.com/hzqtc/taproom"
-  url "https://github.com/hzqtc/taproom/archive/refs/tags/v0.7.1.tar.gz"
-  sha256 "66c8c6ab96f08382b95c3f8bebae15915c0bc1678bcecb4811cdab6f21063e31"
+  url "https://github.com/hzqtc/taproom/archive/refs/tags/v0.7.2.tar.gz"
+  sha256 "626329f1bdcd3e982c690a90e1147fc995584c69583f20ba7dfb6cc72419760e"
   license "MIT"
   head "https://github.com/hzqtc/taproom.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "d9fe47a4279ade9c0f6513c49d90a73e8c6e20c8b47166169ffab9216699b259"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cdb71401f5c1857839f535edc0f816e3116f59b0e6aeae4fcabfdb41ccd3ce22"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cdb71401f5c1857839f535edc0f816e3116f59b0e6aeae4fcabfdb41ccd3ce22"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cdb71401f5c1857839f535edc0f816e3116f59b0e6aeae4fcabfdb41ccd3ce22"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "17e159c66a4af2a38a5ddb7d0241564ff18c28d3416347408ac56a7649224eea"
+    sha256 cellar: :any,                 x86_64_linux:      "809736bd4367c83214cfcf3f03e533a9bd119fd32dbd0f05b26f61ebf2f19a8e"
   end
 
   depends_on "go" => :build

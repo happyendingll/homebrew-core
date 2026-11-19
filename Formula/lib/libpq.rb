@@ -1,8 +1,8 @@
 class Libpq < Formula
   desc "Postgres C API library"
   homepage "https://www.postgresql.org/docs/current/libpq.html"
-  url "https://ftp.postgresql.org/pub/source/v18.7/postgresql-18.7.tar.bz2"
-  sha256 "441dfae4280cae3e0425e5f876f80559fb0731c140f1aae22b3e5a54d0411bfd"
+  url "https://ftp.postgresql.org/pub/source/v19.0/postgresql-19.0.tar.bz2"
+  sha256 "a89fd70efbad6a08c7dbed8d4872e3af30170d9e5ca9dc7906523be95b4e692d"
   license "PostgreSQL"
   compatibility_version 1
 
@@ -12,8 +12,11 @@ class Libpq < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 sequoia: "cec6107d0709376279b909e6ca28f764b1bdce40fdf2c3dcc515ac01e0abf476"
+    sha256 arm64_golden_gate: "3b29585438499645bb5a0f3d72f98e579bc2bcf0751c5cb70e80d1190754a30e"
+    sha256 arm64_tahoe:       "6b63fb160d9cc1fd4788b130da24af96a7b9b5a779edbc5072f4d683d5e5ab47"
+    sha256 arm64_sequoia:     "0f7195c10825b1d24cb826d54419e387eb80a403d21d25637f465c0ad5f11f88"
+    sha256 arm64_linux:       "14bb17803af8567fbe120e5477c5754cc8815a461a1349972a071da021132b8f"
+    sha256 x86_64_linux:      "39e19a95340524358dc5d7aadd4e931875276a645be0fd451893589c8c5bfdc8"
   end
 
   keg_only "it conflicts with PostgreSQL"

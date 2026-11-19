@@ -1,9 +1,9 @@
 class Wireshark < Formula
   desc "Network analyzer and capture tool - without graphical user interface"
   homepage "https://www.wireshark.org"
-  url "https://www.wireshark.org/download/src/all-versions/wireshark-4.6.9.tar.xz"
-  mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-4.6.9.tar.xz"
-  sha256 "d062d416a1ab3a49975aafe3a671c882dde0562ccd71b078808ceb59d465fc0f"
+  url "https://www.wireshark.org/download/src/all-versions/wireshark-4.6.10.tar.xz"
+  mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-4.6.10.tar.xz"
+  sha256 "268f41bdf8acee561b670217cf6ea74cf9e779477543e59f92f1cd00294a03dd"
   license "GPL-2.0-or-later"
   compatibility_version 1
   head "https://gitlab.com/wireshark/wireshark.git", branch: "master"
@@ -16,8 +16,11 @@ class Wireshark < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 sequoia: "557fb73cfff69a122ca1e020044fc41dab1837bc8a27e59033a0e5b6d9857a21"
+    sha256               arm64_golden_gate: "62eb1e7f449d42c23cde3e21648419ed2a8692aa4e01b2f95edce4982a99382f"
+    sha256               arm64_tahoe:       "c3264739cd1f8b05c944d7f0e45e79693be1d231e8035c3871427a6900d8e910"
+    sha256               arm64_sequoia:     "3482dfbfb587c637dc9ff170f08815f037a0e31e473ac847ef3777da839ded87"
+    sha256               arm64_linux:       "5418842e1e2e26bfef4b0ffa81697e222bf793754d8d9c5e110aac667460356b"
+    sha256 cellar: :any, x86_64_linux:      "698b23407766a4d8bb72e49ff55d783c5840f52daa4dfb4aa66b0f539f38e701"
   end
 
   depends_on "cmake" => :build

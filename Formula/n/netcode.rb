@@ -1,14 +1,17 @@
 class Netcode < Formula
   desc "Secure client/server protocol for multiplayer games built on top of UDP"
   homepage "https://github.com/mas-bandwidth/netcode"
-  url "https://github.com/mas-bandwidth/netcode/archive/refs/tags/v1.4.10.tar.gz"
-  sha256 "8f08f610f6360ade97b3de00032eda36ecebeccf02405fdf60fde3ee67e2d524"
+  url "https://github.com/mas-bandwidth/netcode/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "77399eff996ffd43f8c7bf496d7b51aa6dfc76a57055812505ef7610e554a1c5"
   license "BSD-3-Clause"
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "e3e7a5d7e28efcebf574d3531de661cbf73de7d78a2068ee67d944062290b0b8"
+    sha256 cellar: :any, arm64_golden_gate: "79a55986f366f73712edad24e28999a23d99dbfcd7485505e62f0a5969538565"
+    sha256 cellar: :any, arm64_tahoe:       "6aac5a6fb2d82a766333112f1559d3c6c5b494eedd1d4a1ae508e22ba3b2b6d6"
+    sha256 cellar: :any, arm64_sequoia:     "358b025a51f9ca0af276c4172c144fa6767978b6c6f89c2b96a75e64d3fa4b87"
+    sha256 cellar: :any, arm64_linux:       "a8e65da8418e0095056c8beb570e3a1b88a4069cd41a9c74dbe166391553dec9"
+    sha256 cellar: :any, x86_64_linux:      "52e5525e73bc330c34c755492331dd8031642475bbde56ca8d8183a73a385287"
   end
 
   depends_on "cmake" => :build

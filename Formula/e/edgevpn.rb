@@ -1,14 +1,17 @@
 class Edgevpn < Formula
   desc "Immutable, decentralized, statically built p2p VPN"
   homepage "https://mudler.github.io/edgevpn"
-  url "https://github.com/mudler/edgevpn/archive/refs/tags/v0.37.0.tar.gz"
-  sha256 "2ef04fe40b523cbf5d241afa8e6782f35583b0f948751f51a667e6d7751cdbc9"
+  url "https://github.com/mudler/edgevpn/archive/refs/tags/v0.37.2.tar.gz"
+  sha256 "b7bab4833cd651973aa54241d6516f6d91efe97b67f98704634e479e13e7d30c"
   license "Apache-2.0"
   head "https://github.com/mudler/edgevpn.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "32a061333acb47d15d6e0aab95dab743d0e9417726d5cb7f16ea2b4a7f921810"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "41a0c7ae7965f3304991d5352e63aa7c0dd5b665c2e2cb50eab4e4b1c9db7123"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41a0c7ae7965f3304991d5352e63aa7c0dd5b665c2e2cb50eab4e4b1c9db7123"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "41a0c7ae7965f3304991d5352e63aa7c0dd5b665c2e2cb50eab4e4b1c9db7123"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "5de47928dbc2ce65ae5bcbcb0086f440d1fcbaac62c8c0efac65b0576ab9ee07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c6daf89f3d9db8828b1ec21b0c94d62b866fb70fdff91e1b01133206663c80bb"
   end
 
   depends_on "go" => :build

@@ -3,14 +3,17 @@ class Yoke < Formula
   homepage "https://yokecd.github.io/docs/"
   # We use a git checkout since the build relies on tags for the version
   url "https://github.com/yokecd/yoke.git",
-      tag:      "v0.22.7",
-      revision: "2adf51010d4f6f22eae57b959b625b27c90db072"
+      tag:      "v0.22.8",
+      revision: "79330fb515b72d616e4e85bab98e7401c945704f"
   license "MIT"
   head "https://github.com/yokecd/yoke.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "6315b50d14107356558ef78b3cded64b9f66774e07454ecfcac2fd9ca20282c3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3c4cdef8926f01186abc7fa3a74377facc858618cde9b871101feb128718e542"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "453082431ded9a17c030b029e3ef7599495deac08f2aaa32e2494440f2ee7db8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "44101b49cba5a2d1e4fdb2cc4f6b543c11ad2070f4aa1446880d4ec99bab452c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4b6a3ea4729d2b7b4c7318ebdd3f49948d644b690c0bf7b517be56dcaa54961e"
+    sha256 cellar: :any,                 x86_64_linux:      "37163a3568d936b675173a9256e4a9d9c585126d3955a0b13661d3261b4106d0"
   end
 
   depends_on "go" => :build

@@ -1,13 +1,16 @@
 class Vale < Formula
   desc "Syntax-aware linter for prose"
   homepage "https://vale.sh/"
-  url "https://github.com/vale-cli/vale/archive/refs/tags/v3.27.0.tar.gz"
-  sha256 "66636c2528aac28c173f9449e3f4f1429b84d5be8d7877bf52fa6c5fd50ce5a0"
+  url "https://github.com/vale-cli/vale/archive/refs/tags/v3.28.1.tar.gz"
+  sha256 "8ccc68482a36a9123c078267ccbaca6e0be678ef2a1991ef935191cbe9bed8cd"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "ec5673020b493ac2629b44475a136c21fe19251cf7e998d661b70683806a8b80"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "240f035bd7477df3ebdab0b27c9e189d329365fcaea17d6430c25119f101556c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "240f035bd7477df3ebdab0b27c9e189d329365fcaea17d6430c25119f101556c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "240f035bd7477df3ebdab0b27c9e189d329365fcaea17d6430c25119f101556c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a00ee2329ee79542f0ab648acc98d7abec519c29b4be63d49c51c463ad211b98"
+    sha256 cellar: :any,                 x86_64_linux:      "7306a03731275c2c9bdf51c8a55fdb46d447540525289374458869694786880d"
   end
 
   depends_on "go" => :build

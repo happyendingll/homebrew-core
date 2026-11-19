@@ -1,8 +1,8 @@
 class Libmspub < Formula
   desc "Interpret and import Microsoft Publisher content"
   homepage "https://wiki.documentfoundation.org/DLP/Libraries/libmspub"
-  url "https://dev-www.libreoffice.org/src/libmspub/libmspub-0.1.5.tar.xz"
-  sha256 "3671095f5a10bee8a755052a30576952c5b16d8b0f2ba9f2fb998338c18cb119"
+  url "https://dev-www.libreoffice.org/src/libmspub/libmspub-0.1.6.tar.xz"
+  sha256 "408eb742b172a0ccbd128a0ff6402eee495839cd905198ce2b3f2607bba617f4"
   license "MPL-2.0"
 
   livecheck do
@@ -11,8 +11,11 @@ class Libmspub < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "b049712cb7fe68516fd320d552d6721cfbf35d6955f63c946f4127590c9bcab1"
+    sha256 cellar: :any, arm64_golden_gate: "c3174720121f8245c480cbf4080dbe920d193475c782a2a4d39b3a739113e0b5"
+    sha256 cellar: :any, arm64_tahoe:       "47dde38d071be4b4b72042259950a961724c6a40222d0d5785b23e67a3e7e15e"
+    sha256 cellar: :any, arm64_sequoia:     "07afd3addc982da7d55bd3de982171df04c128397ef4bbd8d7b0917ac924af0b"
+    sha256 cellar: :any, arm64_linux:       "f65052a5b96b8c5435a119596f36b00049c8c8701a9acf843d7802c42d5e9bed"
+    sha256 cellar: :any, x86_64_linux:      "b4c87e6f83025c6da81b0556b454e4039391de29e0520f8b1093ba083797d09b"
   end
 
   depends_on "boost" => :build

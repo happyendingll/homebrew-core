@@ -1,13 +1,16 @@
 class Libyojimbo < Formula
   desc "Secure client/server network protocol library for multiplayer games"
   homepage "https://github.com/mas-bandwidth/yojimbo"
-  url "https://github.com/mas-bandwidth/yojimbo/archive/refs/tags/v1.15.2.tar.gz"
-  sha256 "801b98b6c83af560b2430fce542524939e50210f2964615fed07d5b551f1b269"
+  url "https://github.com/mas-bandwidth/yojimbo/archive/refs/tags/v1.16.0.tar.gz"
+  sha256 "32e9284e3e0e6e1c1ed29b7bb6111a66c264b88db3263fd0cbed5d8ae6f24db6"
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "3d0ab8a0f9fecab668fba26939c22c4bfc1c9f40e0ec86e40fe062dcd7faf99c"
+    sha256 cellar: :any, arm64_golden_gate: "7baac9b9cdc4c7bab8f0671175f7c00c8d2936d13cdca2554330908b3d216eb9"
+    sha256 cellar: :any, arm64_tahoe:       "a74c8f271f6939ed92b63fea885689b3dcb1d6f41cb832f814d3e26d6adb06ad"
+    sha256 cellar: :any, arm64_sequoia:     "f266233588b9ea7e502bc325c5d7fc8d79ec5d5b4c7dbfc305421b1b8d2f943b"
+    sha256 cellar: :any, arm64_linux:       "400d226e8ec94fa315a04169b116a59bb69d454fb59ade0fe8f13f6bfbbc1965"
+    sha256 cellar: :any, x86_64_linux:      "bafc4941fc23fa34a0acd2318fcd65b8fd3598a011b61c2009780394634475bb"
   end
 
   depends_on "cmake" => :build

@@ -1,15 +1,16 @@
 class Xcodegen < Formula
   desc "Generate your Xcode project from a spec file and your folder structure"
   homepage "https://github.com/yonaskolb/XcodeGen"
-  url "https://github.com/yonaskolb/XcodeGen/archive/refs/tags/2.47.0.tar.gz"
-  sha256 "b867352035605e00cbe3cfea82a500bf11ef9ca913a05675b3a43df1560babdb"
+  url "https://github.com/yonaskolb/XcodeGen/archive/refs/tags/2.48.0.tar.gz"
+  sha256 "366252b130fb65619dcb725f6ed450caa09c2e49038b5e171f0f25289cbbaf60"
   license "MIT"
   compatibility_version 1
   head "https://github.com/yonaskolb/XcodeGen.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "5b06328b4d6d89f7cbd0c9ef18dd1ff0b380f47fdf118b18a4ff3427a027a596"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d20524b1cb9a331f28a8ff2a162ba1b74ae8bd5a212610743e05177db1113e36"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7f1f226f08b93f37e5ce22b5ae5cfad3f973eb975056cf3e0d7e8aadde94cc7b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0db8dbbbbc06aaf2e3a84540075301ba817a91ad939fc977032c305c4f2b7e78"
   end
 
   depends_on xcode: ["15.3", :build]

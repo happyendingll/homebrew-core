@@ -1,13 +1,16 @@
 class Proxelar < Formula
   desc "Man-in-the-Middle proxy for HTTP/HTTPS traffic"
   homepage "https://proxelar.micheletti.io"
-  url "https://github.com/emanuele-em/proxelar/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "09750029dca413b15cbdaf964dc2f888ac41d462c1ec25a90e6f58ea7d7cae72"
+  url "https://github.com/emanuele-em/proxelar/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "6570666545c10cdd954c2b39961087c825ffc54c8bbbe794cad1b012f4629c36"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "bddffc4e378ef62701a5d59cb941127a48fb5ba83ef40f990a376b35e10bfb01"
+    sha256 cellar: :any, arm64_golden_gate: "db81050f106a659d15ae5e4ff8f2fbf21b102c41481218af32661a29914950ce"
+    sha256 cellar: :any, arm64_tahoe:       "c2b9c45f3e0b465aa2018234ddd61b11e48a7939fc13ec026a5df350b8f801c0"
+    sha256 cellar: :any, arm64_sequoia:     "cf9e1f182059f281bbe3c3dd482c642e5dd982c561a85a1d3f6dc66641f5ea6b"
+    sha256 cellar: :any, arm64_linux:       "b241d95701ebe92333a154b6f7af0bd3ccd23cf1cce442727820a1d23a3632ae"
+    sha256 cellar: :any, x86_64_linux:      "cc40876bdd56b3aed7f6dde5a7caa6b1e82ea6980ede3b4ca8aa4aadf2c66a90"
   end
 
   depends_on "cmake" => :build

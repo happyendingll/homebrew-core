@@ -1,8 +1,8 @@
 class ForgejoRunner < Formula
   desc "Official Actions runner for Forgejo instances"
   homepage "https://code.forgejo.org/forgejo/runner"
-  url "https://code.forgejo.org/forgejo/runner/archive/v13.2.1.tar.gz"
-  sha256 "c5596ecdf5336b5c4777109a373ba675130324104618ce34952f28682a44c948"
+  url "https://code.forgejo.org/forgejo/runner/archive/v13.2.2.tar.gz"
+  sha256 "81af58eeba53154c7d69f1ecf4501d7d04cf61b3d4fe31373f5e74fd7ea2a927"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -13,8 +13,11 @@ class ForgejoRunner < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "390a39bfe641af670235a5973ff7dfbf5374ea5d20d2cf677e9c5e3376d79869"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1860fe99270ae4e65eb11b24ca4c92f4796080a007feb396b6dd9f502249fc64"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1860fe99270ae4e65eb11b24ca4c92f4796080a007feb396b6dd9f502249fc64"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1860fe99270ae4e65eb11b24ca4c92f4796080a007feb396b6dd9f502249fc64"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bc3e81d62cb68390acd3800abe3aaf1b8bf570cd69264c837da3d81a3d492f87"
+    sha256 cellar: :any,                 x86_64_linux:      "aba078b4c743d6869dffd37b11cd0492daeb50b9c3fa8758a858711cb5a13307"
   end
 
   depends_on "go" => :build

@@ -1,18 +1,22 @@
 class Mmseqs2 < Formula
   desc "Software suite for very fast sequence search and clustering"
   homepage "https://mmseqs.com/"
-  url "https://github.com/soedinglab/MMseqs2/archive/refs/tags/18-8cc5c.tar.gz"
-  version "18-8cc5c"
-  sha256 "3541b67322aee357fd9ca529750d36cb1426aa9bcd1efb2dc916e35219e1a41c"
+  url "https://github.com/soedinglab/MMseqs2/archive/refs/tags/19-ab57c.tar.gz"
+  version "19-ab57c"
+  sha256 "68b20700b82c93f2a30a8a7fbe545ab6ec715bfccb13ddcab144d3f3f504c5a4"
   license "MIT"
   head "https://github.com/soedinglab/MMseqs2.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-1"
-    sha256 cellar: :any, sequoia: "c048a170fed973b60745f88845a1c4e09d40f94d094e5466c412573d67fc892c"
+    sha256 cellar: :any, arm64_golden_gate: "c50cce6f94df5fa2387ee927f4057ede16c30bc06df7a26924c680ea9b6f079a"
+    sha256 cellar: :any, arm64_tahoe:       "345673be616f68f684e40d90d3a46a0afe54ef230bb3e85816f0faa4c7aff9ca"
+    sha256 cellar: :any, arm64_sequoia:     "cbee345ec5521f759bff4f321caec21e717bf13c578a4fafdca3587a885d4b04"
+    sha256 cellar: :any, arm64_linux:       "945c35bbc777811cf5ec31ad6952805a5775cca87fd40af02fe8da44cea90459"
+    sha256 cellar: :any, x86_64_linux:      "d5fbde9b4b0c530f5912a56f6fc18b6b6c7a437964f072abfdfb95ab900cbd98"
   end
 
   depends_on "cmake" => [:build, :test]
+  depends_on "rust" => :build
   depends_on "wget"
 
   uses_from_macos "bzip2"
