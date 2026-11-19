@@ -12,11 +12,8 @@ class OpenjdkAT21 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e99f7ebcffe4b1721ba47d95df9aff52b588f51cb4ab8ba688f2e825dc7b351c"
-    sha256 cellar: :any, arm64_tahoe:       "0da4f564a88d12d1d2f13c407ce48ae9c56c91e7bb32a390c57af3fbf2c69710"
-    sha256 cellar: :any, arm64_sequoia:     "3855c44d6294db3c08fe2479b486c46f4e75ff3e800be156862205415db6e826"
-    sha256               arm64_linux:       "47d450c98925ce6915b785ba68627b8625866a95720809c6cb84c10b9cfb50e8"
-    sha256               x86_64_linux:      "da2aa49793a2593a3f95e0232a91f4c76ad0e7dc1d589929f86ceca858697c53"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "8a68b13bf80a85ffc06da5df8f15b21b07d19922a215243739b7e7645bf34e2f"
   end
 
   keg_only :versioned_formula

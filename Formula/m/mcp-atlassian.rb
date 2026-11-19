@@ -9,11 +9,8 @@ class McpAtlassian < Formula
   head "https://github.com/sooperset/mcp-atlassian.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c821552ae76b714e79009f2db1422cf3d35c2609b0ba4f4015d17edb0df6e585"
-    sha256 cellar: :any, arm64_tahoe:       "3f1d2322647ec67e45a2f8c5c17937cfdf3379ad7b4e04f9724354e76698118f"
-    sha256 cellar: :any, arm64_sequoia:     "94e5f9b4f328c07d652dd1371b4423ef820ca3341320672ea1f9376e957bf0f1"
-    sha256 cellar: :any, arm64_linux:       "b70e096f42701607a9f002a612da6050f6921e79e96ef47ffea01e5bf9879030"
-    sha256 cellar: :any, x86_64_linux:      "4c8bceee53cf0f0c7bbc9ff3f94d803e13c5be40649924f94e91b7a3fbb58ea5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "1a81e959718f2cceebc53e095c7c68d3e6699b01003244e3eb72a97a3e4deaef"
   end
 
   depends_on "pkgconf" => :build

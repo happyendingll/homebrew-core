@@ -12,11 +12,8 @@ class Enzyme < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0639f4bd00d8e630b2e3298fde8d6a3fddfb9a1a4e8a7faa555cb9d1c81de729"
-    sha256 cellar: :any, arm64_tahoe:       "f458bf0aed3aa60a956dfc2f8738a2731a133650835b3450ea89d4c2b7cc40dc"
-    sha256 cellar: :any, arm64_sequoia:     "a166e878d4b74b65c205795f49d12b9211fab6aa8e05698fe9eb59524d9ed428"
-    sha256 cellar: :any, arm64_linux:       "21e87ad0a2ffb5c30dbad63a14c08d772d481e6b2b5966195a3792d54f4b3b04"
-    sha256 cellar: :any, x86_64_linux:      "49f6157839ed3cb2148c7a5956853f343598c2b4ddc618650ad091f8a65ff818"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "132850f5088f3eb0892f7d6958267de92d4be59cb3179fdb22ce9b0516aaf030"
   end
 
   depends_on "cmake" => :build
