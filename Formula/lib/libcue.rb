@@ -7,11 +7,8 @@ class Libcue < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6b3e2c2586518bb4a7119dbae1b4c774403f5582cd7a167fc7a04da2f235776"
-    sha256 cellar: :any, arm64_tahoe:       "198d47a1351eefcf24e1834716f54ae87fd4fee9ccff6fbc7dee4a81c8bcfb06"
-    sha256 cellar: :any, arm64_sequoia:     "d0e586de95e4f4a86d04f19371c4988fa3617037d29bf524bdbf6f51cfb8fcf5"
-    sha256 cellar: :any, arm64_linux:       "f58452b8732d015bd065d3aeebb0b72046b6c6854a3db4c3b8765cc2f8e7e4d0"
-    sha256 cellar: :any, x86_64_linux:      "769f2d4b8eb5420fbb01f0fb3cb09cb55f7fe77d804920e9a110cb9f103ce981"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c603adfa34a9c3deda1efed015b0b116efd78deaa551770c608123b13323cfde"
   end
 
   depends_on "bison" => :build # Needs bison 2.4+

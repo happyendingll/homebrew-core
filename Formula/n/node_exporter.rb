@@ -12,11 +12,8 @@ class NodeExporter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2b6a36223a6673fec2ce4a2dfd40695530809c60bea7297c79ad71c1a4a1ae0c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "667c122319ea8873649ec2b99f65b9396da9f5478019590228243d093c8c94cf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b1692d3b357e78bc4eafc8c0e20c099de21dbccb65e028bba67865510a44dd28"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f448dd8d1c3bc76001eb0b49d6d2517929984dbb26ac3514c61b6c960679edf8"
-    sha256 cellar: :any,                 x86_64_linux:      "1962f7253b4bd5b55ccb3dbb3411807e90583261d7c26ed35acc0ee0e921f7da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "8c1140d418f7ab91a0b6c8230ec7f5f70023bc2c26b4bbfe7769301272a0db5b"
   end
 
   depends_on "go" => :build

@@ -7,11 +7,8 @@ class Libfontenc < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c9b39562d9eebb24ca9dcb46ccc7fca6fcb8fa9f2ff9905207c240243cb18c3c"
-    sha256 cellar: :any, arm64_tahoe:       "da90d84d049c0b846db3aab5dfda0b45c3f3cc230fe0f371cfaef11b82b1355c"
-    sha256 cellar: :any, arm64_sequoia:     "5f88fc36263f3fe0ef0f61ab56ba58950ee5951f31213e3281fa9836987ff7ff"
-    sha256 cellar: :any, arm64_linux:       "24cd45f071820125b83c9462d9d33c158347e896cb08f66dd1505c9606388c7c"
-    sha256 cellar: :any, x86_64_linux:      "407d3e86eb6fcbf37dad783f63c2c9778db1a1395249d348c2e013f37324b72f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d223d1ed9c0ce9c6749383ce2b6102d17c9e9af3e7978f7716dedf837563d60d"
   end
 
   depends_on "font-util" => :build

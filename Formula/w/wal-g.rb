@@ -6,11 +6,8 @@ class WalG < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c5b264e5782f90cf982fecd8854925a6ac91622cd504497f11bea91312bcb2d3"
-    sha256 cellar: :any, arm64_tahoe:       "3018cffa57613f9f4031794009d8c12f8323eb7467968f1d8ffef9c735b2bf91"
-    sha256 cellar: :any, arm64_sequoia:     "a12f8b663830fdde49cabf7004f82d3cf7bfa7003798e9936496ed228c47be62"
-    sha256 cellar: :any, arm64_linux:       "2735077a373582d0d31644a98fc482fae145a1d45d6092a1214857adecd73857"
-    sha256 cellar: :any, x86_64_linux:      "652b597b71b70bb966176138149bf833ad1a3618018607240fa1c35c0fb6b498"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ed9b6f7cab4099465a677be9a86ea51735dece7cf8ee3d1fb7d4e80f61eaea1b"
   end
 
   depends_on "go" => :build

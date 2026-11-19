@@ -6,11 +6,8 @@ class Mongoose < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7554043843eb9a94924ff1d88874b31b5935ab8e0c5f9a383f2b077c286d1888"
-    sha256 cellar: :any, arm64_tahoe:       "29dd52409ce1581a5b9d27b5b69d466704e304f0343e2af67fb2b51903e3a079"
-    sha256 cellar: :any, arm64_sequoia:     "c3c051f280bf68d0e34c0a10ca15e807c17a98f4b4680ae0cbb816f0902175ce"
-    sha256 cellar: :any, arm64_linux:       "c3a62ba94bd803666248723d5167bdb5f643747cd9a26ccc38cc7c622177843e"
-    sha256 cellar: :any, x86_64_linux:      "dd6b3a2188538317f4e7597007fc2cfa727ef6b9d516d7a35388d59298af597e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "83bab77e25d6efaf9084c55f81695ef9f02e90ac4120abba3b5fcb07fe6e0faf"
   end
 
   allow_network_access! :test

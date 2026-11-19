@@ -11,11 +11,8 @@ class Sqlcmd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e434bb4a9ab0786b0f2de35c5051914d214d4a527e2a91e681496c19fb4fd445"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b63c28e4f0d74cac5410af86396759964b210720d087dad2eab1bf17cb5011d4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "52360221838209c2c2ca00996447f45e6c00a6d775926ddd6d13286054902af6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "82e6e2a758e8a811218c9287c464bff47be54cfd75a58f05579c7070578d29b2"
-    sha256 cellar: :any,                 x86_64_linux:      "8ebde5d15bbb8b7d7e5393191112ef043cd51cb4e41da2745014f1afed5001c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "17401b5473038a5916e37c203a3d956ea1aa2cdf70e112bebde8eca79459ec74"
   end
 
   depends_on "go" => :build

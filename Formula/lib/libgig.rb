@@ -12,11 +12,8 @@ class Libgig < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "22aceba70b09b0e590d38c37c54f5da80507300be4a83e6ca103a65dd5905b25"
-    sha256 cellar: :any, arm64_tahoe:       "709c6f82737e01325335fe8b829b363041dcdcaefd339f70938d6db33cebcc36"
-    sha256 cellar: :any, arm64_sequoia:     "2c8e798f84258ce101d047efd34db83e9aa338b86bbdf6e86caee48ea295e4fe"
-    sha256 cellar: :any, arm64_linux:       "a873eef5a88f386782c649476c20ed0fa2b1a42c044d77add8c712f50ec404ed"
-    sha256 cellar: :any, x86_64_linux:      "717e49655ec1d9eb1398307ad5a5c66d12a901a26cb02b2f7a057531ec0fdaee"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "ad86f235ea2105209402c6a025692ab5586be0d9cf9b206761919f0f7e78c4eb"
   end
 
   depends_on "pkgconf" => :build
