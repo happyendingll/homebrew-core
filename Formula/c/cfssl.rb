@@ -7,11 +7,8 @@ class Cfssl < Formula
   head "https://github.com/cloudflare/cfssl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3228f04fca4e28af5c6cae91a6956a1e80dd8986633e33c972960221b1bdca38"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "454146d8ccd8ad3538912fad3bd46ce904928661ce48af223bf32ef8379ea66a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f92102ef032549d333ea5937028f8a4014d1717a75511a1eb4459c92a9557caa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "61824211ef966870b0eec0260180c86ba17d3fd3989c3f745e42322432b771ab"
-    sha256 cellar: :any,                 x86_64_linux:      "f66343a19754e0c69da334f3904feb48de242f1984f06f314994fd8bf1945333"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "131ae69693425b4d1f6fb816ad8ba99192f9ba8a8780d5451e76ca8bd8dc5b44"
   end
 
   depends_on "go" => :build

@@ -8,11 +8,8 @@ class Eksctl < Formula
   head "https://github.com/eksctl-io/eksctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dee1619c05f66c06e827a6e6c9f8263d7be561f35f4364a33876388a5afa1d0e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7969714c4a6e1bc0c0c6d07645da9bcd87db141823ce6ec6d79144e6813ded57"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "71949195ee0d6f28d8e19e6b21b0f9d95cc79557a50bb018544f30c666fcd967"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "80735f03facc217893ffd974c030971469600c01d98ea1306514a337b1cd7d79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "cf88a9eb807ebf7de773f7640dd74734cb58da4e32f8db819fc04c2fba6397dc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2bc4f367e06bb588baa560f29579a0c7bc704fadef0e0d5f70229468ecfbfba8"
   end
 
   depends_on "go" => :build

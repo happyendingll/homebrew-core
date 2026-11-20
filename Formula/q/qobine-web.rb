@@ -13,11 +13,8 @@ class QobineWeb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c9e6d01f3126e7d0675a9772402d3e4ae362512a443b310f1f93e198dc0bb093"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5bda8f2f543d658b33a6a1ea45ce8591ab37316f29b824285173a1b758aacaa0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c9c56e8f7cbb17f62e78f6ff980f4c7224a5f524b6ed57b00e1da100661abd05"
-    sha256 cellar: :any,                 arm64_linux:       "e562c5f955155adb170f71d415ea6e3fca5e02a93fdc0ab34fad2322d1663fd5"
-    sha256 cellar: :any,                 x86_64_linux:      "6ec555343cc7845cd4424d13330c59bc07f6968548f3bff712f28cd394a97d62"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "35ff178ef5aa9f7a8e0ea5badb4cb625a3ff58c3bfcae7a6930546791dc144e0"
   end
 
   depends_on "pkgconf" => :build

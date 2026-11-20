@@ -8,11 +8,8 @@ class Gixy < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1fd0f8e0580e208835e9dfceacc9a9f28a6ac534c999d5e83470c98782d1bbd5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e9ffdd8c44ceeaab20c7a950a58b73d54b6d1aa1f55de87b9391ed8a35331e0a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "318ef49526aa8552c006800c93ef5beaeb3df3d66d9ac99fd4c0480f1817f328"
-    sha256 cellar: :any,                 arm64_linux:       "c738529ed3a74cf0ce82c09522cfa1ea1e4a7cf57c5c6b4d2ffc35d4d60e7e6f"
-    sha256 cellar: :any,                 x86_64_linux:      "bd8202894308958c780395ab61642cb521ad0547eae26a4c8faa5ce526f5c5fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ef38ca4e09e895c95102e6bad2bd92d5d76e5b6d201e98e3abd8dc552ecde4ce"
   end
 
   depends_on "python@3.15"

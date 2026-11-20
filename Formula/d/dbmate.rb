@@ -7,11 +7,8 @@ class Dbmate < Formula
   head "https://github.com/amacneil/dbmate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3266ed386b989e63bb626f848e160e1772eb94c91bc745536f6bd7cfa924959f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "382c7eb20acdc6a8ce8414e93f49964300c69c00bcf280234ddd566a8698cc26"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "625834a795d9528567a2e863f9bbd75052315023f26da45a136a623cce91fc7d"
-    sha256 cellar: :any,                 arm64_linux:       "f964fbfc8ef6d6c33f34302b9a794a6345e87bc555b39a01b1fc9c2a062a19e6"
-    sha256 cellar: :any,                 x86_64_linux:      "e23caa7a5ca6776c711cec71cf04f0eae139cac4f6ce2102d7ce0aef0c380c5a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "fc390e48dc84ec819ba5a3a46b1be4bdb7c60d50c71a2ad40bab2b2727c326a5"
   end
 
   depends_on "go" => :build

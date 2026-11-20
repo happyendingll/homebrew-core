@@ -15,11 +15,8 @@ class Virtctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f49513422a200108079f8c307368ed6ed55cb56d9faa8ce1582b80a02964b9d3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "23960112fbd3a58e6c9f44d6631935257468df2921e048bf950cbbbb7c2f6110"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b857df2db1875d42fb0aa96413a306f46af664b097459b3c5cf73a98652d0a9b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ad7bffed32d39d7979af3500b2cf3a43cda699a1e09f3190843b922d3af07922"
-    sha256 cellar: :any,                 x86_64_linux:      "ebc979032a2014a47065d2bb98c8011c44ceee375904d8d1487ab3c072e59cdb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "fcb1472f3cc6cfbb38ecbf189d5292feae2f9dff56eb3e8d7bb0cb0116b04050"
   end
 
   depends_on "go" => :build

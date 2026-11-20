@@ -7,11 +7,8 @@ class Gosu < Formula
   head "https://github.com/gosu-lang/gosu-lang.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe3905b642ca1a33ef529c6ee6fbba4db168787f8b975352d4fc52604aee1e05"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba7115bb23e4547ad04131f3f4568700a830a766be3bd9d8a4926207893812f4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b4fc537941ce2a0d853f0261546952c1080438f04dc09fe86b18f6be60183008"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7dc64125053b84d195abfdf368ff13519d5f64661171d8739790320599ae524c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "08e87ca6ca21f03d39602ae5298100182fb690014c85d2cad12d938c41b63d40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "c888df6ad83c1fba2a685c0ae6b567be59c2ee8a699f1da95ee4a26a192a4129"
   end
 
   depends_on "maven" => :build

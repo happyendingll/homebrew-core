@@ -12,11 +12,8 @@ class Pkgsite < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "282d2bbe10f808ef3e409431d41d6f5bac1c748f44c230beca3edc098e74cb1f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "282d2bbe10f808ef3e409431d41d6f5bac1c748f44c230beca3edc098e74cb1f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "282d2bbe10f808ef3e409431d41d6f5bac1c748f44c230beca3edc098e74cb1f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "308ee203af03d54508cc753c56dab86aebe29ace8095c7466fde0fc02f9b59c8"
-    sha256 cellar: :any,                 x86_64_linux:      "096260ae22fa27d01553c2b324b1b71e0c0eae434823a953c3cc5d99443962da"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "df02ab39f6c3ba806fc063612904eecec13992ea3abd4e64ff4ba816f24ec128"
   end
 
   depends_on "go" => [:build, :test]

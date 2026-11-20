@@ -11,11 +11,8 @@ class Libmspub < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c3174720121f8245c480cbf4080dbe920d193475c782a2a4d39b3a739113e0b5"
-    sha256 cellar: :any, arm64_tahoe:       "47dde38d071be4b4b72042259950a961724c6a40222d0d5785b23e67a3e7e15e"
-    sha256 cellar: :any, arm64_sequoia:     "07afd3addc982da7d55bd3de982171df04c128397ef4bbd8d7b0917ac924af0b"
-    sha256 cellar: :any, arm64_linux:       "f65052a5b96b8c5435a119596f36b00049c8c8701a9acf843d7802c42d5e9bed"
-    sha256 cellar: :any, x86_64_linux:      "b4c87e6f83025c6da81b0556b454e4039391de29e0520f8b1093ba083797d09b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "df9fec4438b54b83e0f2e3913d7cb938f2e44fbfce70d1f730349eeb8d3775d3"
   end
 
   depends_on "boost" => :build

@@ -9,11 +9,8 @@ class Gdown < Formula
   head "https://github.com/wkentaro/gdown.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2bb32da450666386a6130c1cecc0abe3269cdd92d1e5739b5b54a21dd72aab98"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2bb32da450666386a6130c1cecc0abe3269cdd92d1e5739b5b54a21dd72aab98"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2bb32da450666386a6130c1cecc0abe3269cdd92d1e5739b5b54a21dd72aab98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "88bf6f2397b6287a277db9c9ef8324dc0051431a7c9d2a75a0e16cef9a808aa9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "88bf6f2397b6287a277db9c9ef8324dc0051431a7c9d2a75a0e16cef9a808aa9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "a1317b2ed53d76ab2a96207223a15ad8a6ec0f86e2575dc0755ee61ff5859043"
   end
 
   depends_on "certifi"

@@ -11,11 +11,8 @@ class Monit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b231ed64c1d5daa9be71f7c29684dd2e93722fe2dfdbe203a4cba76296b64b34"
-    sha256 cellar: :any, arm64_tahoe:       "94a5a3097c18bda882bfe30ff4e1e9f385d137d38668084a881fbd62c9135194"
-    sha256 cellar: :any, arm64_sequoia:     "fbeb133a4ad05f74feed815d1f6d4de6cdc31ee595baebf5de5b411245d42690"
-    sha256 cellar: :any, arm64_linux:       "df1a0dc75c6d61d6816c2381b3351670ebda1cf0fb6f716cf1d8ef5e16c6fa25"
-    sha256 cellar: :any, x86_64_linux:      "d5150f33bc3ffa43d404e90ea606464a24c84d08b5afd9f873f0396aa6c3d27d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "5ca4d012774a18c3fee1274151fccfa96064c0fad7d4a18428b7d185b0553664"
   end
 
   depends_on "openssl@4"

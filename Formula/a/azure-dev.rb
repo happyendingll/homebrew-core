@@ -7,11 +7,8 @@ class AzureDev < Formula
   head "https://github.com/Azure/azure-dev.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9bc69f2e892f484f1bc2d752487f2935fb867a14c69e94855ebebfa9e0e91383"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9bc69f2e892f484f1bc2d752487f2935fb867a14c69e94855ebebfa9e0e91383"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9bc69f2e892f484f1bc2d752487f2935fb867a14c69e94855ebebfa9e0e91383"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9a2bd2e5e0cb0f8e7e0b75e2f955aecdb106483689406545ae864dd4cc3114fb"
-    sha256 cellar: :any,                 x86_64_linux:      "0620ec56bfea46a30541776e84ecad44a7966e38561899e70bc90b6d5a1a5bd7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "d451c6effe05bf1d3e83a660db17ec7799904af3c7d64a6f5764bdab8ca0f85d"
   end
 
   depends_on "go" => :build

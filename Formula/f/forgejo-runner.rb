@@ -13,11 +13,8 @@ class ForgejoRunner < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1860fe99270ae4e65eb11b24ca4c92f4796080a007feb396b6dd9f502249fc64"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1860fe99270ae4e65eb11b24ca4c92f4796080a007feb396b6dd9f502249fc64"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1860fe99270ae4e65eb11b24ca4c92f4796080a007feb396b6dd9f502249fc64"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bc3e81d62cb68390acd3800abe3aaf1b8bf570cd69264c837da3d81a3d492f87"
-    sha256 cellar: :any,                 x86_64_linux:      "aba078b4c743d6869dffd37b11cd0492daeb50b9c3fa8758a858711cb5a13307"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "ec795cfe6a8329add0e83ca8b81b4763619a32d9fc9502cee1d3eb5a7c437b68"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class RubyAT34 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "9dde7c232336b11b6958d10ed98e6488e969be718ce49135770fb3116166c9a7"
-    sha256 arm64_tahoe:       "f04341646b014b6ec65633b754eadd415a436c860ffe7fe69fac9723db03ec05"
-    sha256 arm64_sequoia:     "6147cec61a99720b93147f4b4efa522ee72ac59ad832271da50e4a92c0652dcb"
-    sha256 arm64_linux:       "a3d13bb863acc499663ecb14b1e039011f99b81202d8c3a16ac2089e553c4093"
-    sha256 x86_64_linux:      "4c65903c58b0d3a15d90440e93ad5542235cc586c29e81b26c5bd2651d15d71b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "174bd29e6d47f83a7ece31399d5f1fe1a08adf63d724ad63f5786088d3d40443"
   end
 
   keg_only :versioned_formula

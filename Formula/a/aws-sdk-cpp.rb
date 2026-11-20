@@ -12,11 +12,8 @@ class AwsSdkCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fd72487028ed311bed93bf35cdf44ba1510f0828e67749264548dd2350f38d17"
-    sha256 cellar: :any, arm64_tahoe:       "79586fb0e69eb385c4f8493f95ac0003ab8db1e3809bf0ef128fe011895b19e4"
-    sha256 cellar: :any, arm64_sequoia:     "bcba59888b8de8e3b54b18397b8bb05a73ef61f57b19feff01d16a22290b0730"
-    sha256 cellar: :any, arm64_linux:       "454a4847b6bc70da2015fe13cb66f084b974d05b070a2efa6cde5fcb21f02c42"
-    sha256 cellar: :any, x86_64_linux:      "fa7edd6b2c0446e46af7f383f71083e1e011d60f16037f756ec2beaa894c5686"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "1ddf29797e7f9245261840f35c15461bfa3a77689458262418dd7ecdb2362806"
   end
 
   depends_on "cmake" => :build

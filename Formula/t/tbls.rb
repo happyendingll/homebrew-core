@@ -7,11 +7,8 @@ class Tbls < Formula
   head "https://github.com/k1LoW/tbls.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a3d065dc9a07ff509c6bdbcf21d8f14674b378f9b26323e99e2c6f6399603f46"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "25bf0ff32d84e0cfe8f3ed8b2812199682cdd52ea0e132018eea8f706b05834b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7765be9ccee80b3f98731d5a8a85dc3937d8eca1dbbb1f4f202a1ecb56700d25"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4adddfc8d5c7873c6de94a1b3fc3a336f01148d721d735bb575176da6a66eda4"
-    sha256 cellar: :any,                 x86_64_linux:      "fbed995cc170ef91022925ac33e4a8afe1013342ef7ba1b9dc4a710055b665e7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "51aa84dc5d96d6af166a90de22e6664158b11749d68ceb040d17af8fbf364617"
   end
 
   depends_on "go" => :build

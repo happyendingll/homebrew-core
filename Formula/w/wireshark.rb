@@ -16,11 +16,8 @@ class Wireshark < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "62eb1e7f449d42c23cde3e21648419ed2a8692aa4e01b2f95edce4982a99382f"
-    sha256               arm64_tahoe:       "c3264739cd1f8b05c944d7f0e45e79693be1d231e8035c3871427a6900d8e910"
-    sha256               arm64_sequoia:     "3482dfbfb587c637dc9ff170f08815f037a0e31e473ac847ef3777da839ded87"
-    sha256               arm64_linux:       "5418842e1e2e26bfef4b0ffa81697e222bf793754d8d9c5e110aac667460356b"
-    sha256 cellar: :any, x86_64_linux:      "698b23407766a4d8bb72e49ff55d783c5840f52daa4dfb4aa66b0f539f38e701"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "3f998ddc02c575f47b1d0484b28a69f60177a1e89307774d78c1ee902fbf8528"
   end
 
   depends_on "cmake" => :build

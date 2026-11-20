@@ -7,11 +7,8 @@ class GiteaCli < Formula
   head "https://gitea.com/gitea/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ba6860fc515dfa8dbd0e52c42b47415627bf35f2555e87c08f24041aa28ee41f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ba6860fc515dfa8dbd0e52c42b47415627bf35f2555e87c08f24041aa28ee41f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ba6860fc515dfa8dbd0e52c42b47415627bf35f2555e87c08f24041aa28ee41f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b19e74a39d7c156a164648b9140930499dee814ffc54d2286c6fcd3dd49afed5"
-    sha256 cellar: :any,                 x86_64_linux:      "9de89af2cdc1d091ee9536945fb66846fcf1a2e7131a4b835ed6936273062d74"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "cae3d48bf3de58668cd57fb0f6b0742ca88f9b624a2a3ddaa1fbf4d0d60a1fe4"
   end
 
   depends_on "go" => :build

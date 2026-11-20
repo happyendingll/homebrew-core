@@ -7,11 +7,8 @@ class Taproom < Formula
   head "https://github.com/hzqtc/taproom.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cdb71401f5c1857839f535edc0f816e3116f59b0e6aeae4fcabfdb41ccd3ce22"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cdb71401f5c1857839f535edc0f816e3116f59b0e6aeae4fcabfdb41ccd3ce22"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cdb71401f5c1857839f535edc0f816e3116f59b0e6aeae4fcabfdb41ccd3ce22"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "17e159c66a4af2a38a5ddb7d0241564ff18c28d3416347408ac56a7649224eea"
-    sha256 cellar: :any,                 x86_64_linux:      "809736bd4367c83214cfcf3f03e533a9bd119fd32dbd0f05b26f61ebf2f19a8e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "40b8804d335ef27622491f96a3671e340b13ea8dc09de0b992f21bc8c6ffa08c"
   end
 
   depends_on "go" => :build

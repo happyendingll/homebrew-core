@@ -16,11 +16,8 @@ class Proftpd < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "be10483ba2fc648e7fcaafe44414a528f3a47c2b648547ce6d98a9d9c13f9771"
-    sha256 arm64_tahoe:       "dc6889e7008f711f39bbae5819f7ac3c0c88b45c74f08a1ab24fcd9d9018d16c"
-    sha256 arm64_sequoia:     "b3f81dade99e5a2e746c780935313b3e50e79df029958b69bb7ebd06331666cd"
-    sha256 arm64_linux:       "f13e27f00a96c5517dfb2791247c3798656d48648fde894a4c8520dda1917fde"
-    sha256 x86_64_linux:      "27a272be92ec49af2462ab1120fe691bf305f90bbc36e51e91a148a8dab846f9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "dfa1cbb308807149f8895ee86e379393c2b3f012834f893de39823a3ced07b10"
   end
 
   depends_on "inetutils" => :test
