@@ -6,11 +6,8 @@ class Celero < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "be40d5e1407b125ab2c19be1955902b2ea5dc0caaf7fc553e22784c754368491"
-    sha256 cellar: :any, arm64_tahoe:       "21940873eda4962c4fb1557aba8eb735ab209152a2da91ea1659315baf9fb0a8"
-    sha256 cellar: :any, arm64_sequoia:     "9fbf5364ce367a1e306c563e502d69d4f3580f08c567ff2205eaff6e8e4d0f81"
-    sha256 cellar: :any, arm64_linux:       "f33325a371c3b3084ff1a51e6aff833599056a0f0208e7a89aeaf13a3e386e88"
-    sha256 cellar: :any, x86_64_linux:      "716af80343ef929d49f081f6d7f5eeab8526cebd262a3ce0b1d4971ececc6107"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "25804b009983234618c22bb8ed923e68dcdf375945dd660e722472833e74cdfc"
   end
 
   depends_on "cmake" => :build

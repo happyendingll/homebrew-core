@@ -7,12 +7,8 @@ class Libxc < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "062054526dde4f93321c133195566032b58113ca69d501c26ed5c0acc3b884d3"
-    sha256 cellar: :any, arm64_tahoe:       "ab2639fc70474d5f0470a8da67bce3f303071d185a470b9c059c5ce5f82d1a6a"
-    sha256 cellar: :any, arm64_sequoia:     "e31f695c5452672c85950d0aa3beb4900f807b03571243b4618e047891c482a7"
-    sha256 cellar: :any, arm64_linux:       "290e611de24aa5c9c3393622814de49748dab8ae2ef161b2f1a8bfbfe07e2348"
-    sha256 cellar: :any, x86_64_linux:      "88f07995510971169d45b5509607d100d4d6433b14f8ec6af5d26a438d542c04"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a5f90af7e3b104cb2a7e8406884b0ab2352bcfdb089c35cb838cee4cc4180c02"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -12,11 +12,8 @@ class Chaoskube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6dead7a4d97781c4e8d46fd95c8a1699320d63fa12f7a6b37329e1e6a4d40a82"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f16d4a2d96e544c772dc7a1878d2bb69934944dffe3ff99787795287960bd75a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1b6075e1f04f2d2a4220783b479efe7f2dde732eea0e44203b9b41312c8f427"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0b1237289adc260093ec68da4fc4a47fd81f6e71888de17a3afe0e51de10a71f"
-    sha256 cellar: :any,                 x86_64_linux:      "0990501fe58d71762634f378ec219f5b6c35a4b8ac2bce8fc60c65e9d8c09af9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "4ac3cac0cd66cce5624cd21cd2789c4aa2f7a7d23eab0af229af18331b87ccac"
   end
 
   depends_on "go" => :build

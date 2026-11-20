@@ -7,9 +7,8 @@ class Xcresultparser < Formula
   head "https://github.com/a7ex/xcresultparser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "162a84c6d7628ab7cf32c0f77a1e5501006a9a08c7106b5f8d7dd325412d5074"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff100065a1e9b245402b1dafcdfcc30ded7aa484a03c764e1e29a0b45664515f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4806fe37e6dd28386cb7545ead79f03e469be502a54e88c1ef899f286dabdacc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5387f63a0641386c07b0650b8b9769d3fdbb07025e47c51f47d74bd2c9685b37"
   end
 
   depends_on xcode: ["15.0", :build]

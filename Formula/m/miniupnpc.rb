@@ -16,11 +16,8 @@ class Miniupnpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0d7e9b9f0e5f0a30040ab7181f97e04644db48b378c717c88cee30e7ce1872bd"
-    sha256 cellar: :any, arm64_tahoe:       "159eb8471db7c3375b6670364111bcc21ad10f92d53b57eac77b0bb29ed6099f"
-    sha256 cellar: :any, arm64_sequoia:     "0d558e5433fcfdd53179c65082a62ba42abaa55b6589f76bb553e3927e6fba42"
-    sha256 cellar: :any, arm64_linux:       "1ba898dfa2c2a94ef77b0f6aac40f6ca87c7441fcaa269504681e04c3a2f8f89"
-    sha256 cellar: :any, x86_64_linux:      "51522e207314a8b2de82aeec4d4d929328247436c49aea8b28497233d7900fe1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "34862835ef422f61691863f0d4af0a80c343ba20cd615452f4163f9d0adcd10f"
   end
 
   deny_network_access!

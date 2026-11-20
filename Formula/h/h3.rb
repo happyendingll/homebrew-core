@@ -6,11 +6,8 @@ class H3 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "88374021e91f01aaaeef212a80075469e1f46427850aec9c651e52031900213f"
-    sha256 cellar: :any, arm64_tahoe:       "86f52938236e1da805e4e320640424344cc5af442a8e03e9619f67ad17db0b46"
-    sha256 cellar: :any, arm64_sequoia:     "0e5233913a9b529316cf04bc3c212f5d477e0bec6de6522dd002e974ac47e380"
-    sha256 cellar: :any, arm64_linux:       "3fb578b16d9cf684415c22423e3f8babbbd2a7ee436b8a2e8a6a36bddc6927b9"
-    sha256 cellar: :any, x86_64_linux:      "5f12a97189905085fdbd136d3894af8e95c5f068ea42e84bd74eeaea3943fd2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3504f4280327987a42faecee158c8497b14ad3db3c67db625d257243569b7f22"
   end
 
   depends_on "cmake" => :build

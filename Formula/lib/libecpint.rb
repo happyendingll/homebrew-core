@@ -7,11 +7,8 @@ class Libecpint < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f25d9acf57439672db8cf9065bd65651e3d697ae82339eeaf3052c8792e2b6a9"
-    sha256 cellar: :any, arm64_tahoe:       "44f7a089df2478520358c2735eb716a52085286619febfb5336eae43e5ac94af"
-    sha256 cellar: :any, arm64_sequoia:     "9b314e0990d9f1e3ffd3cbe14d5860c8581f91298a9a046d3af6d16e3e9c00a7"
-    sha256 cellar: :any, arm64_linux:       "488a6ab44343e1ca4f74b9555d7788448e1cba59071a427f6f5f515ddb968313"
-    sha256 cellar: :any, x86_64_linux:      "e302935540459779a03f1269af40091f4e9918304857aebf2cef4b98fbeaf9b5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "68aabdc5cccf08890f25a85e972fe89c31c73bd35428953c2de9267a7cb46d6e"
   end
 
   depends_on "cmake" => :build

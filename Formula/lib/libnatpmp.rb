@@ -12,12 +12,8 @@ class Libnatpmp < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "2b116cdd78f36020d0fb816671973f6ad2ec880647e2bff2915d7645ec4b0ce7"
-    sha256 cellar: :any, arm64_tahoe:       "4398ea5d9d517fdcfe67a1e14364423156cdb6e5b4b38c3402f040de145ca363"
-    sha256 cellar: :any, arm64_sequoia:     "a3613d14e472288a40a3c5bbc3727b815fee73976d6fca7d519b3ea49dcb2406"
-    sha256 cellar: :any, arm64_linux:       "513fe13811b08989129129b2cc3410b8adb0a84579f4e592c3754de9238afd6b"
-    sha256 cellar: :any, x86_64_linux:      "bdf43166795722ebd9cbe7c58e82ff348ce1bfaaee34f0cb812421a65b13ac26"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "65ca5c32bc5c99512a95593b688789605cd73ebd5a8e86e14e887028ee706ec5"
   end
 
   # Fix missing header. Remove when no longer applicable.

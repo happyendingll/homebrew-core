@@ -7,11 +7,8 @@ class DockerLanguageServer < Formula
   head "https://github.com/docker/docker-language-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "749bf6f4fd3fab89f4571208ff1748ff4002d0614ea4f7469c74eabef4eedb89"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "efd5817ad29b5c1f08f19b03b566a6a6ebcce6b21a698c4e4eac8b2481d1fdd8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ea8b95be41f9ace28ef2b49b515fdd250d705c42ffec78c9c084ee57f38af014"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e8cbabf65becba1bab7aa2c72e9cdaaf122bf1a07a7556f993da75e619772d25"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5f2a2ceb9aff08d2934e3954bc4d4c32b4b946cfe09c6f10a85876e0b9ced559"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c2747c284369f4900217f931addce871ccf14e1274bbb9ae4e3c5a4252a76af8"
   end
 
   depends_on "go" => :build
