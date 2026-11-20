@@ -7,11 +7,8 @@ class Fluxcd < Formula
   head "https://github.com/fluxcd/flux2.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ce5dd3590102cf588f927c22257cd0066271267a7af7cee0206e8628727f2711"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "13cca67741c8d0db250f06f6ed552f80f889afa05830dc92935d2808359e41a6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a24ffd8e8825e7ee16aacb216ac63147c97fa51574108fa846fb4df81f05d25"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7384a08a7ae42dc8dfeff316da1177aaced825f02c02ea65debef6511bf037d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d94482bb65e53e2257026b3a525a58dc4bb4c4cc3591287f441cdb109bfe27a5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "1b8a7ecbce59c72a1672b33b154609632d4661c7f68c90a22fe4ea75adf8db11"
   end
 
   depends_on "go" => :build

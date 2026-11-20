@@ -7,11 +7,8 @@ class ArcaneCli < Formula
   head "https://github.com/getarcaneapp/arcane.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "45b8fbe243096151e925e5a310d0fa7a85217344ece352b5146014a173ed8723"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "45b8fbe243096151e925e5a310d0fa7a85217344ece352b5146014a173ed8723"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "45b8fbe243096151e925e5a310d0fa7a85217344ece352b5146014a173ed8723"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8f87474acc1eb0f1898305bda906e420ed371052e6f2815720e4acf6c47c4d76"
-    sha256 cellar: :any,                 x86_64_linux:      "c491f8a186f89e2928995809d8d32f39d6e41af5e86a9c5b71d0570dd1c183f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "89d70a6961e5f7438359e4bec78a9b0642b0173719741689fb6231fb5abd6434"
   end
 
   depends_on "go" => :build

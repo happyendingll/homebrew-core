@@ -12,11 +12,8 @@ class Kyua < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6fdb8de88659d594876e883bdbfa0f0a943d894783323a0bd769cb73f8a6d557"
-    sha256 arm64_tahoe:       "4905d096a462bd0097740684d968bf204140269a1c7982a40bd7149c9235e0ca"
-    sha256 arm64_sequoia:     "963855fa6f8e41b41fbf9ce5d43bfcb4bf04ee3e7cb7194315b5c1f47c8c397e"
-    sha256 arm64_linux:       "a5e2e755f72e1c5bfef5116abcf557751b83995ec1670c419f5a03296b5ecb24"
-    sha256 x86_64_linux:      "eb3d40d567c56e6467bc765ac6218a339ec5e4da382c5f16b94317c1c9a28739"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "f31c254f2ff463a58b2c5e82a8ce3ea6270c3e70ecc6d6c9c7f38170b03a986c"
   end
 
   depends_on "pkgconf" => [:build, :test]

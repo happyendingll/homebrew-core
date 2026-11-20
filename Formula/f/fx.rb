@@ -7,11 +7,8 @@ class Fx < Formula
   head "https://github.com/antonmedv/fx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a333c70caac2d2410e63c898559b3b9a7e0e864193c003cbbcc0b930ae1d8e4f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a333c70caac2d2410e63c898559b3b9a7e0e864193c003cbbcc0b930ae1d8e4f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a333c70caac2d2410e63c898559b3b9a7e0e864193c003cbbcc0b930ae1d8e4f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9410b7177019d2f58ea4ccdf62ffa2f44be758fb8c0a57bf8fa02031cc225f3a"
-    sha256 cellar: :any,                 x86_64_linux:      "a32a2ecd52fd984f12f235855a27e6d5dbda13784b346083d666f368c9f7b835"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2aa01bd39e6ee81b7bc5893d55b19a00abb3534a01e7150fdc3735f751669939"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class NodeExporter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "702964d827c7ca970e073f3e0681c3e1b902f785067e3df0bdc826d7485c6a26"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "13b1fdde02ad167e31075517222295e2848dff26061d2041f27abab36e6fa5c2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "edeaa3b350ca40d43b40aede00fca2b4e64b4e2f9b9564470f2b95b49b3ff7f9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "21621fdb8ec128caaefbcd1b303674b6f5a2db77f9ab052e7b690169e30b1d4b"
-    sha256 cellar: :any,                 x86_64_linux:      "6bc742cb499be0f77c3ed1a6c810fb1e84836baae8ee8a674bbde8f1b93ec329"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "03e895c749c4c8c97df33f438f6df9a420c6ca52acb9b9c34093a6e2e789923c"
   end
 
   depends_on "go" => :build

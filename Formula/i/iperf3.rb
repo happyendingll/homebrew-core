@@ -11,11 +11,8 @@ class Iperf3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c2e60cf6ae2701590d8599782e0d24c0b15942cafce31566ef84b6a0b0e97ac0"
-    sha256 cellar: :any, arm64_tahoe:       "5595f27cfd5e37aa86ee2bad61cdeb740f0b4d855522c0629bbd5f296bd259fd"
-    sha256 cellar: :any, arm64_sequoia:     "4634f55a2b2cf94837ca31da3c7cdced30988bbc46dfef423123c4aa1f069cd4"
-    sha256 cellar: :any, arm64_linux:       "4387d45f6479d4f8fa60af93e1f0981f689e82e74a9cacb1063fc80188db7a04"
-    sha256 cellar: :any, x86_64_linux:      "b0c53c497787f5373d3b3ed8bbcbc804715498ff0c82f3d81ac40d4b5f579027"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "36b36c7ac628a7b6b6bd83aeedc148726b8fc54d16d8f9b9d6a3e6a9c6f34f94"
   end
 
   head do

@@ -8,11 +8,8 @@ class Trufflehog < Formula
   head "https://github.com/trufflesecurity/trufflehog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dff0262477c97847aa457bf9f12aa562eae3ff0718b06a74915e30a5269dd9cb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a68ef62a7dde5f855edcef5895f616a329ce08ba3c2bb8ebaadf40ef7e13f373"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dfe8f22bca1f0faddf91c68901999dc9dc6071d0d9416db0bfddb2533a9cceb6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1573153331f2a978bdd660ae2027134365ff8238e2a6471eaaca1388234d5742"
-    sha256 cellar: :any,                 x86_64_linux:      "14029eae9d8782c73a27e12bc20e0e5dcc60c8241a4b4632d8a83e61cf3ab047"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "780958ff73b929b6f729470354d29f1c156a07685be1cd151db689f899335359"
   end
 
   depends_on "go" => :build

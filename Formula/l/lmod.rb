@@ -6,11 +6,8 @@ class Lmod < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f6d3f91b369d6164ae9790583a44f4689babefa76591e297404836b9ea628ec8"
-    sha256 cellar: :any, arm64_tahoe:       "8a9d866eb06823e9050d84a62a7c2de8dd08df3e552ef36a3e0b290c62d1b9e3"
-    sha256 cellar: :any, arm64_sequoia:     "bf2359552704c3c04337dfb85bf3dc8d8e3038251fae8a6cfdddf0ffd7fc5c22"
-    sha256 cellar: :any, arm64_linux:       "5bfcae205dfb51fbea9538c47642cc6371643f2b18160754b1c06b3b8c3c6fef"
-    sha256 cellar: :any, x86_64_linux:      "66f41f4f0069b5dd62bb220700a81f263edabaf2e9756778ab872019a7566b57"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "25e500f0236999ea02cbe3e5d5da4888ff15acf7209028ced4bf0f2d143eb555"
   end
 
   depends_on "luarocks" => :build

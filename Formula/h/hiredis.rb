@@ -8,11 +8,8 @@ class Hiredis < Formula
   head "https://github.com/redis/hiredis.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3909d04c4db1e84ad6c0365d6748efe2d2d42a76c4bca41893c829e5bcbe1d07"
-    sha256 cellar: :any, arm64_tahoe:       "512e5b2b7330fdb6973d23b3ea528eac2c422a1b94ead8210d8b0e2805d390ab"
-    sha256 cellar: :any, arm64_sequoia:     "e198c1c0d5ac924a42f189ba584b79de70dcf29574d6063eface75b12fb4b2a0"
-    sha256 cellar: :any, arm64_linux:       "4a8352eb9f232532be77171f1019e70df5a63bf15f9ac1b1ed100afdc68f8736"
-    sha256 cellar: :any, x86_64_linux:      "089c198d7878c28c91a396b44b577da3735c01ee4f2a6972c7c72b38f1b59388"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "274c483b056dac0b72125013e84a5349f9e25e96a9d26fb5bdb8139213416c9b"
   end
 
   depends_on "openssl@4"
