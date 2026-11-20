@@ -1,10 +1,9 @@
 class Esbmc < Formula
   desc "Efficient SMT-based context-bounded model checker for C, C++, and Python"
   homepage "https://esbmc.github.io/"
-  url "https://github.com/esbmc/esbmc/archive/refs/tags/v8.6.tar.gz"
-  sha256 "a691bbf63a51da753a24b59027dd603c91bc2e90fcdd1abc042e241453164f5a"
+  url "https://github.com/esbmc/esbmc/archive/refs/tags/v8.7.tar.gz"
+  sha256 "594390f0c8520119f26cadd295419488c0824664ca8b251dbd5dfeade9fc3481"
   license "Apache-2.0"
-  revision 3
   head "https://github.com/esbmc/esbmc.git", branch: "master"
 
   livecheck do
@@ -13,8 +12,11 @@ class Esbmc < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "759b250badb999eef119ab9fc216fc17d41859342ecc7516b73bf4e9545f9231"
+    sha256 cellar: :any, arm64_golden_gate: "3a47196e1c1f5bb58fc9d1479e87874d92b959c5278325252240cf21798a0d74"
+    sha256 cellar: :any, arm64_tahoe:       "8143eca75e3c8ddf8a3541ed7933f58a0710a159c3528dc697830845c3e5d38c"
+    sha256 cellar: :any, arm64_sequoia:     "38c28775710393af3a5ab299797a4e78485ba4d3c2fc6d950266d27f55884928"
+    sha256 cellar: :any, arm64_linux:       "f026ec2977b8029eaab0b03c80d9c1a7b8a621a68015c9fd94031555ffe4673a"
+    sha256 cellar: :any, x86_64_linux:      "1d40ae76f073b8e22e7a3e864d1df93d15c4e48de3d6c2306a20a6b199470a5a"
   end
 
   depends_on "bison" => :build # macOS ships 2.3; esbmc requires >= 2.6.1

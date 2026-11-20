@@ -5,14 +5,17 @@ class Icloudpd < Formula
   homepage "https://github.com/icloud-photos-downloader/icloud_photos_downloader"
   # We use a git checkout as scripts/patch_version runs git commands to update SHA
   url "https://github.com/icloud-photos-downloader/icloud_photos_downloader.git",
-      tag:      "v1.33.1",
-      revision: "33805aea4cc212f26b1298951c2abf553c0acab2"
+      tag:      "v1.34.0",
+      revision: "47039b6ec264f03ec55083eb8d8d6063a1d8f4fa"
   license "MIT"
   head "https://github.com/icloud-photos-downloader/icloud_photos_downloader.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "d0a8337c3371acfa9a194b9d849cc1433c6f00ceaf4171ab9e2339981739b551"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b155e8793496e8564fdfd0f3c0102fecb5be73928fe8b2834ec697216d0e863e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "08c1688458aec6a64e643d64acdcb13bbb10266b14a68378929e9046728e6c8f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a56145bb2e59c6ebde69052c670cf36b9a44b5213c67edc334a3a1e13e77c5b"
+    sha256 cellar: :any,                 arm64_linux:       "2a1ebd59dd1fd8ab1ce42df96a78faf3d9ad3d77c412790736c6859f329f2c65"
+    sha256 cellar: :any,                 x86_64_linux:      "73c862e8f1e1616680f5a8b2b709880688d7b7bc6454aff700c0398761c14183"
   end
 
   depends_on "certifi" => :no_linkage

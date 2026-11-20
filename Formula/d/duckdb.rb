@@ -2,15 +2,17 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v2.0.0",
-      revision: "d54cbbe3df17e8e5ce68312f483b4155836112aa"
+      tag:      "v2.0.1",
+      revision: "8d78114e90a53823803660bf821f6073ac87da8c"
   license "MIT"
-  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "761e513305c9b74521507525b3fff91829c45e07f0cbe8f41552a55fc1690a6a"
+    sha256 cellar: :any, arm64_golden_gate: "70366b6021757995ee977924d36a948b40dc748dfc1b53df5d6838dab38dfa6c"
+    sha256 cellar: :any, arm64_tahoe:       "4c20b4187aa6a6f0c85d31643cc5b96597a9f7cd7a48855d6f24641cb0b5ed86"
+    sha256 cellar: :any, arm64_sequoia:     "ca081c603065488f74c6f8de8d2c7f4a45a873171c8802bd9ef39a45c54da6e7"
+    sha256 cellar: :any, arm64_linux:       "f977eeccd9963a88f6f2d32333079fe0e6ab5ac5c3db76b09ec33738be9eb02f"
+    sha256 cellar: :any, x86_64_linux:      "a9abc43565b5294032b5dfc251ebad7d326d895aa86ad77cc74fddf5328b9ddd"
   end
 
   depends_on "cmake" => [:build, :test]

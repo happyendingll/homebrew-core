@@ -1,13 +1,16 @@
 class SnykCli < Formula
   desc "Scans and monitors projects for security vulnerabilities"
   homepage "https://snyk.io"
-  url "https://registry.npmjs.org/snyk/-/snyk-1.1308.4.tgz"
-  sha256 "68d1bd8b033fa769700cd912ed576c5cb37cf40f7bf936fdefe865c3f619e507"
+  url "https://registry.npmjs.org/snyk/-/snyk-1.1309.0.tgz"
+  sha256 "2a03d3725763169b64a6c994fa1a3ba3e163231634fe26a1d0873c6b5e193673"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "c14a294572dd1ba7fce139b1fcfe392c08c58d0f5f136803e20bdd01280adaeb"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "adb74219266eb2076f73e9b81964e58ceae5fde504f794c3f7a17b2673c593e7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "adb74219266eb2076f73e9b81964e58ceae5fde504f794c3f7a17b2673c593e7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "adb74219266eb2076f73e9b81964e58ceae5fde504f794c3f7a17b2673c593e7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "758e8dc9f8a99b6affa90a011233ee39ed8e82831e27413282cea55d4876c8ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ded6fa4640dcb910689c03288b4f30e4e0f03750d9fbf6a65272d26bed8514c7"
   end
 
   depends_on "node"

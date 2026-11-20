@@ -1,14 +1,17 @@
 class Resticprofile < Formula
   desc "Configuration profiles manager and scheduler for restic backup"
   homepage "https://creativeprojects.github.io/resticprofile/"
-  url "https://github.com/creativeprojects/resticprofile/archive/refs/tags/v0.34.0.tar.gz"
-  sha256 "343b956215e3a9124d0ac3d94740668a905eb4b9210e9f50f91baec67144f693"
+  url "https://github.com/creativeprojects/resticprofile/archive/refs/tags/v0.35.0.tar.gz"
+  sha256 "890e768a98948a85f5f7594a666784159209423f3688bf87b3f9c103b3c735f7"
   license "GPL-3.0-only"
   head "https://github.com/creativeprojects/resticprofile.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "63b4e2a712a0d0de8fa694472b0b20f733f20e088c54adefef39c6f5926afa2f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1a9a5c3a633b82cb4fac64a5a429d1502931d591c4c918b7ff6cc4415c9e1c83"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "401c1f515dbe0678bafdc1bd94011178fd52f77906678e999f5067da2874eeb4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a5d137cd5bc88fff7a8b418d7c30261275c0ee3d54f47b49f5f9cc04f3900103"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "12e40d0dc1a986d3d3e6d633cc1462705f035aba680af56fb3f98eee98ba3d4e"
+    sha256 cellar: :any,                 x86_64_linux:      "403a33da9ea51d519769940597190b6c697e36513bd2b723907e4baca58593bf"
   end
 
   depends_on "go" => :build

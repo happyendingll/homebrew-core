@@ -1,14 +1,17 @@
 class Gf < Formula
   desc "App development framework of Golang"
   homepage "https://goframe.org"
-  url "https://github.com/gogf/gf/archive/refs/tags/v2.10.4.tar.gz"
-  sha256 "eab11107d1e4f3fbd0d8653c6e998182e99b2a3c42a4f4111c4d2362827a3af0"
+  url "https://github.com/gogf/gf/archive/refs/tags/v2.10.5.tar.gz"
+  sha256 "00cb34258148f6991120eac5a0ca8e5cfa4231d3cbf90fdc01786f35aeead309"
   license "MIT"
   head "https://github.com/gogf/gf.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "bf4b4c0979bd75e4bfa4ab37f1e5a0fce879fec1b8742df6fb872cdd9066c815"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "57cae2c7b968c2b94bdc107a19ef036a9dfee63e7358bdba19690cc9f485679f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "57cae2c7b968c2b94bdc107a19ef036a9dfee63e7358bdba19690cc9f485679f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "57cae2c7b968c2b94bdc107a19ef036a9dfee63e7358bdba19690cc9f485679f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3c90e4e05253d08f0a7572468de73cb1da678a94bdb67ca2c50a8a743d15220d"
+    sha256 cellar: :any,                 x86_64_linux:      "44f667802948deecad49efb8c48bb2800fdb5145a1835fc920ce7e5b10a2f8d4"
   end
 
   depends_on "go" => [:build, :test]

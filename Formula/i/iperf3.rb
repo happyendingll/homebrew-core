@@ -1,8 +1,8 @@
 class Iperf3 < Formula
   desc "Update of iperf: measures TCP, UDP, and SCTP bandwidth"
   homepage "https://github.com/esnet/iperf"
-  url "https://downloads.es.net/pub/iperf/iperf-3.22.tar.gz"
-  sha256 "1c0d0fb02c52626111d6e132db80edfbf27bbaff8bd9245df2a371dcb0b35a92"
+  url "https://downloads.es.net/pub/iperf/iperf-3.22.1.tar.gz"
+  sha256 "de018b5252e2a7068c89fac8b35a295d83334f2b7814aa9532a2a8107b04a4a9"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Iperf3 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "868e213842c9469541c944b6363ba47db22cf32dbfd8e7752719d0732aabdcf6"
+    sha256 cellar: :any, arm64_golden_gate: "c2e60cf6ae2701590d8599782e0d24c0b15942cafce31566ef84b6a0b0e97ac0"
+    sha256 cellar: :any, arm64_tahoe:       "5595f27cfd5e37aa86ee2bad61cdeb740f0b4d855522c0629bbd5f296bd259fd"
+    sha256 cellar: :any, arm64_sequoia:     "4634f55a2b2cf94837ca31da3c7cdced30988bbc46dfef423123c4aa1f069cd4"
+    sha256 cellar: :any, arm64_linux:       "4387d45f6479d4f8fa60af93e1f0981f689e82e74a9cacb1063fc80188db7a04"
+    sha256 cellar: :any, x86_64_linux:      "b0c53c497787f5373d3b3ed8bbcbc804715498ff0c82f3d81ac40d4b5f579027"
   end
 
   head do

@@ -1,14 +1,17 @@
 class Svlang < Formula
   desc "SystemVerilog compiler and language services"
   homepage "https://sv-lang.com/"
-  url "https://github.com/MikePopoloski/slang/archive/refs/tags/v12.1.tar.gz"
-  sha256 "e7454393956ef0f3e9bbcac27f7de473e11e1fd7be125c3009f1f2bfeddf0358"
+  url "https://github.com/MikePopoloski/slang/archive/refs/tags/v12.2.tar.gz"
+  sha256 "29c8dee801e489e10f84ebc8a65b641bbcee18614fd183223b35e85c2461b6ab"
   license "MIT"
   head "https://github.com/MikePopoloski/slang.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "6680dcdc4685ff802ea1be8d0e1bfdd0241cfdb46c880c5e8ed5ff59b783e9f1"
+    sha256 cellar: :any, arm64_golden_gate: "0a24254d329ba0244b4b25213e53f595d502559f42b2e4951b0541b6936fc48d"
+    sha256 cellar: :any, arm64_tahoe:       "0464cd9ced22bb3f506346d05bcfb77c1bebdede8ccea02166323d2adac55a17"
+    sha256 cellar: :any, arm64_sequoia:     "f32ccf10886678458a5576746047954dbb3e756cffe86aefc4c2ca6d70d9f5ba"
+    sha256 cellar: :any, arm64_linux:       "dc0df10edfafde6a69e84be4313c31f5a64c717ba58a9bab892e8be92b882cd5"
+    sha256 cellar: :any, x86_64_linux:      "c4a8b4feec6b6223822b451c5d21aba4bfc886c146610574565d215a7479296e"
   end
 
   depends_on "cmake" => :build

@@ -1,14 +1,17 @@
 class Mcat < Formula
   desc "Terminal image, video, directory, and Markdown viewer"
   homepage "https://github.com/Skardyy/mcat"
-  url "https://github.com/Skardyy/mcat/archive/refs/tags/v0.6.8.tar.gz"
-  sha256 "022adad76674d5a0cf9a7c1a23be9d6b608bf0847bdceee58023f8ea888b796c"
+  url "https://github.com/Skardyy/mcat/archive/refs/tags/v0.6.9.tar.gz"
+  sha256 "e36278e7b23ad443726867f0f5061ba2795dea3d630ccd99e7eef50bacb545f6"
   license "MIT"
   head "https://github.com/Skardyy/mcat.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "7c8b2e040b21aa5abd76408dabee8466d537b5e86804274a8041fe4db7647769"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "12174fdb382278372106ce861794b5a5b9153835689e2d65ad9cbbb6dfc7b185"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5e3df3cc92ae3852f1b6b5b1aa42dcc1c7361cc5a0986d4566ea467901495dbf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8891ad6a81336651d8b298e69a49515f7ac8f08632fac775c6475e921d5c7c27"
+    sha256 cellar: :any,                 arm64_linux:       "d64228dd248326ea35542d7aca70e1e1fa9f4def954df7a55aa175752c9ffecf"
+    sha256 cellar: :any,                 x86_64_linux:      "03ebbfb3f7f4e6ffbf565cfebacb0eef3507761a3dce2e008141ea48a16b916d"
   end
 
   depends_on "rust" => :build

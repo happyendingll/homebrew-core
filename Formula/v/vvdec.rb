@@ -1,14 +1,17 @@
 class Vvdec < Formula
   desc "Fraunhofer Versatile Video Decoder"
   homepage "https://www.hhi.fraunhofer.de/en/departments/vca/technologies-and-solutions/h266-vvc.html"
-  url "https://github.com/fraunhoferhhi/vvdec/archive/refs/tags/v3.2.1.tar.gz"
-  sha256 "5c334557a33cd93e981b84ba0e77126ef970a38e2481b67f0475db40f75379b8"
+  url "https://github.com/fraunhoferhhi/vvdec/archive/refs/tags/v3.3.0.tar.gz"
+  sha256 "8b09dbd3e3ea76972a6a2fb59e96b81a9c953f414e69f8a1b5a23eeca5bc2600"
   license "BSD-3-Clause-Clear"
   head "https://github.com/fraunhoferhhi/vvdec.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "51e800e97bbb2fa23185221e0b065d0626f8278ff7e39951fa7bd769346403e3"
+    sha256 cellar: :any, arm64_golden_gate: "3dda1e912c843aadec9e67b16ede9f8253250f3b1ff45bca2a788532f9c1b12a"
+    sha256 cellar: :any, arm64_tahoe:       "6221a50ee5cd77e9ebb307854029dab189a80bf96de86149e3b1ca0773a60d8e"
+    sha256 cellar: :any, arm64_sequoia:     "568e0a69764622a88b31db393ade2aad0903985b742545425afe345fd9aad458"
+    sha256 cellar: :any, arm64_linux:       "d84d9111fc92cfe888034c70919bab92e4ab6e38c0a99fbfe125041b5f99161b"
+    sha256 cellar: :any, x86_64_linux:      "80bf80167a0d2308a01b4a794d45d9b9c90fcbdbcf076240ce14377e117ff659"
   end
 
   depends_on "cmake" => :build

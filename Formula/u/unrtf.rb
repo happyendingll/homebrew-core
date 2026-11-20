@@ -1,15 +1,18 @@
 class Unrtf < Formula
   desc "RTF to other formats converter"
   homepage "https://www.gnu.org/software/unrtf/"
-  url "https://ftpmirror.gnu.org/unrtf/unrtf-0.21.13.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/unrtf/unrtf-0.21.13.tar.gz"
-  sha256 "ff227d1a0adb84a9e1a51b5e5c3cecbda3d67c8a31dbd7e8593a040a438fb44c"
+  url "https://ftpmirror.gnu.org/unrtf/unrtf-0.21.14.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/unrtf/unrtf-0.21.14.tar.gz"
+  sha256 "b1f72e87f195bd50dbc974b800918df61c881706c11716b7bd0a1981e81b9587"
   license "GPL-3.0-or-later"
   head "https://hg.savannah.gnu.org/hgweb/unrtf/", using: :hg
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "08beb0c8b76fb431603d2803101b92a5a2e47fd8eb0c95654d567a94db8c57a1"
+    sha256 arm64_golden_gate: "492fbd3533b6e5cc92160c527a966015f4fd50e76b5ecd4261f524a9620dbdf6"
+    sha256 arm64_tahoe:       "ba43df400660cf0b8dc74ab3bd3d45d6bbfd8868894ec9faa49f420bca24a024"
+    sha256 arm64_sequoia:     "aa2a0add9ac9fe87755c6273765d7ecbe87381824fe20d080d821ffaf84a42f3"
+    sha256 arm64_linux:       "986d21a03fd2a3be4df3819edf1d029aa6d683eafb636644a95d1b19a31f4b73"
+    sha256 x86_64_linux:      "893398302af1ed96a003896c34e64bb29709530c7f4cb83fab213fed88869a73"
   end
 
   depends_on "autoconf" => :build

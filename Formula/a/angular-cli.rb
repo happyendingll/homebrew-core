@@ -1,13 +1,16 @@
 class AngularCli < Formula
   desc "CLI tool for Angular"
   homepage "https://angular.dev/cli/"
-  url "https://registry.npmjs.org/@angular/cli/-/cli-22.2.7.tgz"
-  sha256 "f77fef613d5afac2d68b5a0f80153655b58b07d6cc8c4f21f2682e5f57b9950b"
+  url "https://registry.npmjs.org/@angular/cli/-/cli-22.2.8.tgz"
+  sha256 "be53b34de12a9e7ad6e995bfea7df484b446ca7cbd2c58a239bcdc02a88f928d"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "2147806b91fe314dc177b5a84dc960aa48007df4f7f749ed29c334ac9435ac63"
+    sha256 cellar: :any,                 arm64_golden_gate: "91101af4147d2c19597714b6f6e04920f3c1960e76506f7b38fe5c65597606d5"
+    sha256 cellar: :any,                 arm64_tahoe:       "799f9ff1b8e1e6b1532b358a3b0324f55a51fca068071083ea125f526556aaeb"
+    sha256 cellar: :any,                 arm64_sequoia:     "d7a4b691e65a9eb900c6c1b6708fb4d93ff05fe9e72dac4776e2e8e4204fdde4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "50bb91b4d3eb6e4865e9f36436582f0078781f7190bfa4c4894dde08b95944a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "34ae5dd9ce72ac50e6ee3e24cbe82a2e70c08000ef7ccef8164dcf962040936a"
   end
 
   depends_on "node"

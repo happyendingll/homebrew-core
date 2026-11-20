@@ -1,9 +1,9 @@
 class Logtalk < Formula
   desc "Declarative object-oriented logic programming language"
   homepage "https://logtalk.org/"
-  url "https://github.com/LogtalkDotOrg/logtalk3/archive/refs/tags/lgt31020stable.tar.gz"
-  version "3.102.0"
-  sha256 "269ce4b1b5aa5ca59940a7a65e0caf10a589a44dd2ec1cc3711f8c48e4712c91"
+  url "https://github.com/LogtalkDotOrg/logtalk3/archive/refs/tags/lgt31030stable.tar.gz"
+  version "3.103.0"
+  sha256 "c461388e4d5715dbceadf570b3ad48efc71998c20f35a4b4e2f3cd22b5f020c7"
   license "Apache-2.0"
   head "https://github.com/LogtalkDotOrg/logtalk3.git", branch: "master"
 
@@ -15,8 +15,11 @@ class Logtalk < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any_skip_relocation, sequoia: "68359b56582212058c227aabe367ba55916489f5cde24fa8cb9b4473df197484"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48cf25d967c9f9847f2e6795c144af7c20768f8802a6034cc0445ad78e2a4baf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78f5d49c63ce66b73956214d5cf11cd5f0b767cd45ec751471be2473afd2489d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a0c931d9d7975078d4e8d55c7481d4c8725d19ed29dba76d1c9ce2ee01dbe68e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "518bd8bd3149f3fba00dd376aebf71d6700965aa90528ff11e676f43744df475"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "680611ec0e7fdafcb31d565583ef0b368c856fe565b2070b209d82ea95566aa8"
   end
 
   depends_on "gnu-prolog"

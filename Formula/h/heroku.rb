@@ -1,13 +1,16 @@
 class Heroku < Formula
   desc "CLI for Heroku"
   homepage "https://www.npmjs.com/package/heroku/"
-  url "https://registry.npmjs.org/heroku/-/heroku-11.13.0.tgz"
-  sha256 "401e22e1f0ffd3c9e42ad6ac0c54d5ef97f310e1da5110b76935be7b9cc217db"
+  url "https://registry.npmjs.org/heroku/-/heroku-11.14.0.tgz"
+  sha256 "1bde73d790d577b6bee8dbdddb755ac084f5357c23d06a86a688c016f9279b78"
   license "ISC"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "2ce979ac4f63f48b94203aca72c4e9cd4446cf5adc17fc711e8884a08e7c2442"
+    sha256 cellar: :any, arm64_golden_gate: "6956cafe8628c9267139215927b8a63a1beb83f3f616535b80b27a1d9ad44d84"
+    sha256 cellar: :any, arm64_tahoe:       "6956cafe8628c9267139215927b8a63a1beb83f3f616535b80b27a1d9ad44d84"
+    sha256 cellar: :any, arm64_sequoia:     "6956cafe8628c9267139215927b8a63a1beb83f3f616535b80b27a1d9ad44d84"
+    sha256 cellar: :any, arm64_linux:       "11f25973fa2505d1c970ef19eef71b8d790e10fc38e4a65a257b83dca8b81098"
+    sha256 cellar: :any, x86_64_linux:      "da8bfdbdbf2a4f888c0f6cc90a19bc6629aafe8744540ef4633bb1384e96ef40"
   end
 
   depends_on "node"

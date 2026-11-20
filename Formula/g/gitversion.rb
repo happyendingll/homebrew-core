@@ -1,15 +1,18 @@
 class Gitversion < Formula
   desc "Easy semantic versioning for projects using Git"
   homepage "https://gitversion.net/docs/"
-  url "https://github.com/GitTools/GitVersion/archive/refs/tags/7.0.0.tar.gz"
-  sha256 "3162799004cdf1187d80906e38c1761f796ad21cd935ea67597f5efc8b3e5a11"
+  url "https://github.com/GitTools/GitVersion/archive/refs/tags/7.0.1.tar.gz"
+  sha256 "a6b01ce3850e132760da786be07b8603eb1a1492ba0476dd243117cd5e472731"
   license "MIT"
 
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "cd1e4a1924939057dcda5c23460463f2c8ff2e5a5472615800ed00159635bb42"
+    sha256 cellar: :any, arm64_golden_gate: "992f61fca409cb148c6ac95e02ea1c082e1285e870ae274d17da31cc638540ea"
+    sha256 cellar: :any, arm64_tahoe:       "35d54be91f8f4363667456822404fa6f724919142e1ac51c6745703d63ea14c3"
+    sha256 cellar: :any, arm64_sequoia:     "ac4ca570dc73cb0af8b79d5d8107a5166648f400e7c022da6580eb5d2cd66443"
+    sha256 cellar: :any, arm64_linux:       "4659832468c62b09936c9f0957c504cd893db4266b36915180d024a6af6bc7a6"
+    sha256 cellar: :any, x86_64_linux:      "0edfd4801cd3343a86cbd728e46c3868dd632db33913a17e657933af0ae6181a"
   end
 
   depends_on "dotnet"
