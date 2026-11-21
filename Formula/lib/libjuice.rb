@@ -1,13 +1,16 @@
 class Libjuice < Formula
   desc "UDP Interactive Connectivity Establishment (ICE) library"
   homepage "https://github.com/paullouisageneau/libjuice"
-  url "https://github.com/paullouisageneau/libjuice/archive/refs/tags/v1.7.4.tar.gz"
-  sha256 "95c088862aa1b88b73d62aa99577135010eb768fcafb252d13aa85a8515ef798"
+  url "https://github.com/paullouisageneau/libjuice/archive/refs/tags/v1.7.5.tar.gz"
+  sha256 "a0cdc9069613d4dfdc54f829ad11ebd23fedf345bc43727fbcd2f5439f2425bd"
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-2"
-    sha256 cellar: :any, sequoia: "a6939cba5af3787d1b4f7c957d4ad65967cf36e5230328f42b008617d83a291e"
+    sha256 cellar: :any, arm64_golden_gate: "0a1a7e5114406e3603ea73e41b1b05dcee3b3875ad7a1f989233056eb6ecaeb0"
+    sha256 cellar: :any, arm64_tahoe:       "1ee6c66a8d8560e92f23c828b448450df1b7de0e086674a1440ae9ac32ae30c4"
+    sha256 cellar: :any, arm64_sequoia:     "ad09c7d79021247bc4bc95d37f3cad4bef99c43fd3e8668125363cf2e94c3497"
+    sha256 cellar: :any, arm64_linux:       "a624c6e6ecb40cf928172035de7c8434514cf89a88e4a90674e075d811af061c"
+    sha256 cellar: :any, x86_64_linux:      "263d39cfcf0ab415079f7df02c7a410183b2d741c2ef9f4b3510f1e569f3b03e"
   end
 
   depends_on "cmake" => :build

@@ -5,18 +5,17 @@ class Manticoresearch < Formula
     "GPL-3.0-or-later",
     { any_of: ["Unlicense", "MIT"] }, # uni-algo (our formula is too new)
   ]
-  revision 5
   version_scheme 1
   head "https://github.com/manticoresoftware/manticoresearch.git", branch: "main"
 
   stable do
-    url "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/29.9.0.tar.gz"
-    sha256 "e1dc58dc671e74278a6ab5327c2fc666d75ae3ad6fbc59587f60376043f3cb4e"
+    url "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/32.1.3.tar.gz"
+    sha256 "3261be44aea2e8998a20602c2780dca96c1a00780b5115ca7a2535a9e9ed3e9f"
 
     resource "mcl" do
-      url "https://github.com/manticoresoftware/columnar/archive/cb282a2442d2d51349fbea67cda97c2dda37f0bd.tar.gz"
-      version "cb282a2442d2d51349fbea67cda97c2dda37f0bd"
-      sha256 "5d444222405c00ce21f3a360e5983b140247f43b18c7f01b85d4b564e87a8432"
+      url "https://github.com/manticoresoftware/columnar/archive/12f86b4299dcef1495972838b76931bf46e4426f.tar.gz"
+      version "12f86b4299dcef1495972838b76931bf46e4426f"
+      sha256 "54c4e48e283280eabbe664627bd6d1cb07306e6a8bf3fe9557dc366f1a9213f0"
 
       livecheck do
         url "https://api.github.com/repos/manticoresoftware/manticoresearch/contents/mcl?ref=#{LATEST_VERSION}"
@@ -36,8 +35,11 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "974014598132d9badb689c966388f341e7efca450dc8ec327378f308e52c2300"
+    sha256 arm64_golden_gate: "5f97f47b4c24d067e56fe22d9b5abeeee86fd922b8608e173efd31fcad14e51c"
+    sha256 arm64_tahoe:       "0937b45d33ae6f44449f4d8ed29f71f20c022cc4ecfad6fdcb1fbd53e6c2f4d6"
+    sha256 arm64_sequoia:     "a057b52d8005a81133aed5b75f481835b7ef3e5354e973ad2142ee89506d95f3"
+    sha256 arm64_linux:       "daad6a7d7a98974f8924ceb7fd45cc9ea8c7d57896ebe0c9b4bd78c366614f7c"
+    sha256 x86_64_linux:      "b0e9f092910ccfa19b72f8236702d933795bc75802eee640af387d08b08167eb"
   end
 
   depends_on "cmake" => :build
@@ -115,7 +117,7 @@ class Manticoresearch < Formula
       -DCMAKE_REQUIRE_FIND_PACKAGE_stemmer=ON
       -DCMAKE_REQUIRE_FIND_PACKAGE_xxHash=ON
       -DMYSQL_CONFIG_EXECUTABLE=#{formula_opt_bin("mariadb-connector-c")}/mariadb_config
-      -DRE2_LIBRARY=#{formula_opt_lib("re2")/shared_library("libre2")}
+      -DRE2_LIBRARY=#{formula_opt_lib("re2")}/#{shared_library("libre2")}
       -DWITH_GALERA=OFF
       -DWITH_JIEBA=OFF
       -DWITH_ICU_FORCE_STATIC=OFF

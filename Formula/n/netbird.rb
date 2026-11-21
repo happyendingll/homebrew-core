@@ -1,13 +1,16 @@
 class Netbird < Formula
   desc "Securely connects across any network with one identity-based platform"
   homepage "https://netbird.io"
-  url "https://github.com/netbirdio/netbird/archive/refs/tags/v0.83.1.tar.gz"
-  sha256 "5c8d32eab039acfa5720f280685bf864a7851504a0077a78d20b2f7cf6168f0f"
+  url "https://github.com/netbirdio/netbird/archive/refs/tags/v0.83.2.tar.gz"
+  sha256 "e6d4d36da04017919f98b3724e51e1fe9982d803495ada1cdbc718eb0394cc48"
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "f7cff62610fccb8e9cf1aa36fb7aacc554da687ebec9f9140576ac271db031e6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b83d4f778af0b08a265314ef33c8bf931c61058315a8e0ffc3e77985391a3441"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b83d4f778af0b08a265314ef33c8bf931c61058315a8e0ffc3e77985391a3441"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b83d4f778af0b08a265314ef33c8bf931c61058315a8e0ffc3e77985391a3441"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "944ba40dec52f1db08adfb612b9f28d3a128e7064326d6b92e786b1679cb0ebc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5c77026a38ee2b62e580c6c3649edf2cdfcb83af2d6373a1408944450f80fa1d"
   end
 
   depends_on "go" => :build

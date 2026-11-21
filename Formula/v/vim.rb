@@ -2,8 +2,8 @@ class Vim < Formula
   desc "Vi 'workalike' with many additional features"
   homepage "https://www.vim.org/"
   # vim should only be updated once a day
-  url "https://github.com/vim/vim/archive/refs/tags/v9.2.1373.tar.gz"
-  sha256 "1530e7f53811c5c1000410b6f9831d15a3f1e258d6dc4fbd7ab3dca344fb541f"
+  url "https://github.com/vim/vim/archive/refs/tags/v9.2.1380.tar.gz"
+  sha256 "b0ed9b4c3c9384eb5f77f924bd5382ab995b54c9bcc69bb66ab38f83f3cc5b5b"
   license "Vim"
   compatibility_version 1
   head "https://github.com/vim/vim.git", branch: "master"
@@ -21,8 +21,12 @@ class Vim < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 sequoia: "3d42af6d09828b425125756fa54a4c37b554dc4cf95c9a955abd3be150dbac3d"
+    manifest_sha256 "1b3cfd5dbeb7ae54d26feb171447eb70c61937754c980c1af9555143be6059e9"
+    sha256 arm64_golden_gate: "752a4a499d7e6313234e556b99a3e915587e3298e7fb9feabcff4071a485e841"
+    sha256 arm64_tahoe:       "5dbc5bb3334fd397d0579610d1631552bf40e7c8e4e061e91afead461788624c"
+    sha256 arm64_sequoia:     "6308870516ec74aee45c5ec12b1fa7b13546fe4538a736ec5b5461f67d93af98"
+    sha256 arm64_linux:       "0f0e46ce28f899f5e14e07447b428937ef03f80c9e41292d97a2314c3d4d8057"
+    sha256 x86_64_linux:      "42356deac174deb3df0f2f0d87dbdb1087283b530c9c80452914d7c9c396bb21"
   end
 
   depends_on "gettext" => :build
@@ -64,6 +68,7 @@ class Vim < Formula
     # the right place (HOMEBREW_PREFIX/share/vim/{vimrc,vimfiles}) for
     # system vimscript files. We specify the normal installation prefix
     # when calling "make install".
+    perl_linkage = "=dynamic" unless OS.mac?
     system "./configure", "--prefix=#{HOMEBREW_PREFIX}",
                           "--mandir=#{man}",
                           "--enable-multibyte",
@@ -71,7 +76,7 @@ class Vim < Formula
                           "--with-compiledby=Homebrew",
                           "--enable-cscope",
                           "--enable-terminal",
-                          "--enable-perlinterp#{"=dynamic" unless OS.mac?}",
+                          "--enable-perlinterp#{perl_linkage}",
                           "--enable-python3interp=dynamic",
                           "--enable-rubyinterp=dynamic",
                           "--disable-gui",
@@ -87,7 +92,8 @@ class Vim < Formula
   end
 
   def caveats
-    "Additional features can be enabled by installing: #{extra_deps.map(&:name).join(", ")}"
+    dependency_names = extra_deps.map(&:name).join(", ")
+    "Additional features can be enabled by installing: #{dependency_names}"
   end
 
   test do

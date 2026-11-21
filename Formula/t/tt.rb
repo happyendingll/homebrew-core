@@ -27,10 +27,6 @@ class Tt < Formula
   uses_from_macos "unzip"
   uses_from_macos "zip"
 
-  on_macos do
-    depends_on "bash-completion"
-  end
-
   deny_network_access!
 
   def fetch
@@ -44,7 +40,10 @@ class Tt < Formula
     bin.install "tt"
     (etc/"tarantool").install "package/tt.yaml.default" => "tt.yaml"
 
+    # Avoid bash completion being manually sourced due to
+    # https://docs.brew.sh/Shell-Completion#bash
     generate_completions_from_executable(bin/"tt", "completion")
+    (share/"bash-completion/completions").install bash_completion.children
   end
 
   test do

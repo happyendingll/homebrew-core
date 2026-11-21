@@ -22,6 +22,7 @@ class Tgui < Formula
 
   def install
     # `gui-builder` is installed into pkgshare, so it needs its own rpath to lib
+    builder_rpath = rpath(source: pkgshare/"gui-builder")
     args = %W[
       -DTGUI_MISC_INSTALL_PREFIX=#{pkgshare}
       -DTGUI_BACKEND=SFML_GRAPHICS
@@ -29,7 +30,7 @@ class Tgui < Formula
       -DTGUI_BUILD_EXAMPLES=TRUE
       -DTGUI_BUILD_GUI_BUILDER=TRUE
       -DTGUI_BUILD_TESTS=FALSE
-      -DCMAKE_INSTALL_RPATH=#{rpath};#{rpath(source: pkgshare/"gui-builder")}
+      -DCMAKE_INSTALL_RPATH=#{rpath};#{builder_rpath}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

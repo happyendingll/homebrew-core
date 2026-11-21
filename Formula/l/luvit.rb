@@ -4,12 +4,15 @@ class Luvit < Formula
   url "https://github.com/luvit/luvit/archive/refs/tags/2.18.1.tar.gz"
   sha256 "b792781d77028edb7e5761e96618c96162bd68747b8fced9a6fc52f123837c2c"
   license "Apache-2.0"
-  revision 41
+  revision 42
   head "https://github.com/luvit/luvit.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "67ddc36cf23b322f0ed62fa51b5357889cff368e7bb66d5985a2cbcd8fb777cb"
+    sha256 cellar: :any, arm64_golden_gate: "59b5032657078fcf6273ea3d1472d836379f4234291fe7bf05b9bf7fc7928327"
+    sha256 cellar: :any, arm64_tahoe:       "0acde22c5dd7a185d1f3680373709a855742092b525799333d2e33b3afceab5d"
+    sha256 cellar: :any, arm64_sequoia:     "5d7239fd6d1a9b1883055d18d7e435ccdab18a77cd4b744553a2e43f2831f054"
+    sha256 cellar: :any, arm64_linux:       "a22b42ca5137b59c2b021ce56ffaf6704712a7b7900823b54e06e6ed622f913b"
+    sha256 cellar: :any, x86_64_linux:      "36f454b748dfca14d1c35b534042d9ff8a965feb3fdf6b1d1d7da6e189e9762e"
   end
 
   depends_on "cmake" => :build
@@ -110,7 +113,7 @@ class Luvit < Formula
         -DLUV_INCLUDE_DIR=#{libexec}/include/luv
         -DLUV_LIBRARY=#{libexec}/lib/#{shared_library("libluv")}
         -DLUAJIT_INCLUDE_DIR=#{luajit.opt_include}/luajit-2.1
-        -DLUAJIT_LIBRARIES=#{luajit.opt_lib/shared_library("libluajit")}
+        -DLUAJIT_LIBRARIES=#{luajit.opt_lib}/#{shared_library("libluajit")}
       ]
 
       system "cmake", "-S", ".", "-B", "build", *luvi_args, *std_cmake_args

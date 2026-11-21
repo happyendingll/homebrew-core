@@ -1,8 +1,8 @@
 class Libtcod < Formula
   desc "API for roguelike developers"
   homepage "https://github.com/libtcod/libtcod"
-  url "https://github.com/libtcod/libtcod/archive/refs/tags/2.3.2.tar.gz"
-  sha256 "a4f6bcdddd33fc3cdb52d47a269f0a22c5f88a15c855f596bb1e8e1698362173"
+  url "https://github.com/libtcod/libtcod/archive/refs/tags/2.3.3.tar.gz"
+  sha256 "e42d67c9afac51d4ff45a7c35fc25b216ccd6a23897cd4dd21a4b2e0e2337277"
   license all_of: [
     "BSD-3-Clause",
     "Zlib", # src/vendor/lodepng.c
@@ -11,8 +11,12 @@ class Libtcod < Formula
   ]
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "c8a427c6cdf8c822a3bab78430298cc37aa6fb21b19e20efd85f3cf899563524"
+    manifest_sha256 "a9e3d3f54a9fa3c7a1fda88632716983276ddcc9707594fa4e57cd7379b3eff0"
+    sha256 cellar: :any, arm64_golden_gate: "9a33d37a211f886e81d8aa529a2bf810923f69d9c087900e021a53279556c1f2"
+    sha256 cellar: :any, arm64_tahoe:       "6935b14317a6447ba8ba1abff168d57496cf1231d41ad2835f9e69e38ade3bc2"
+    sha256 cellar: :any, arm64_sequoia:     "eaaf32bd1493e80316a77ff91e68ed92875625b8403fe280ba31ad84efd6bc56"
+    sha256 cellar: :any, arm64_linux:       "07a3622c048c13f73b109f04b18336f94b928f21abe905083486291490311ec2"
+    sha256 cellar: :any, x86_64_linux:      "d8e02aa078c5388312fc71e3a5977f533ee01673d652dbc6d81d2d582b8bdbb8"
   end
 
   depends_on "cmake" => :build

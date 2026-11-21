@@ -43,6 +43,7 @@ class Lldb < Formula
   def install
     # Features are set ON/OFF to avoid auto-detection impacting reproducibility.
     # See https://lldb.llvm.org/resources/build.html#optional-dependencies
+    llvm_lib = formula_opt_lib(name.sub("lldb", "llvm"))
     args = %W[
       -DLLDB_ENABLE_CURSES=ON
       -DLLDB_ENABLE_LIBEDIT=ON
@@ -54,7 +55,7 @@ class Lldb < Formula
       -DLLDB_INCLUDE_TESTS=OFF
       -DLLDB_USE_SYSTEM_DEBUGSERVER=ON
       -DLLVM_BUILD_UTILS=ON
-      -DLLVM_DIR=#{formula_opt_lib(name.sub("lldb", "llvm"))}/cmake/llvm
+      -DLLVM_DIR=#{llvm_lib}/cmake/llvm
       -DLLVM_ENABLE_LTO=ON
     ]
 

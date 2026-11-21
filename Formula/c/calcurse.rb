@@ -1,8 +1,8 @@
 class Calcurse < Formula
   desc "Text-based personal organizer"
   homepage "https://calcurse.org/"
-  url "https://calcurse.org/files/calcurse-4.9.0.tar.gz"
-  sha256 "8d4c36c868cc37d50decb49423548320488e64693d01527a272d1c2fb0afa8e6"
+  url "https://calcurse.org/files/calcurse-4.9.1.tar.gz"
+  sha256 "111f58413e62d47e6eda5807f63b589a2b458e4bf3c80f156ded0107957aa675"
   license "BSD-2-Clause"
 
   livecheck do
@@ -11,8 +11,11 @@ class Calcurse < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 sequoia: "12970754af7a587fcfdcfefe6468a07c66de9e5c1c5e2624a1098448c5394814"
+    sha256 arm64_golden_gate: "5d919d1105101456dc8edbd70ad16f914a028aa3210cb6d3205afbd8a9f2a4e9"
+    sha256 arm64_tahoe:       "2ff5c6cda82119ae5677bd6f0331b6443f52a2a8472497198f5524b90c076a93"
+    sha256 arm64_sequoia:     "f0c8b5a5111c647332d1ffc1e54b6eaa6d5884fc50ca4371b84d6005ab8468b2"
+    sha256 arm64_linux:       "ef35631e6bd89ad74c524a86d281251aba13d1ddcd28ae65bc1e411dfc1487c1"
+    sha256 x86_64_linux:      "b2343243b2a588c1d0538a1280d48b190f13a140826460ef5845d56c78e26845"
   end
 
   head do

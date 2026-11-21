@@ -1,13 +1,17 @@
 class PiCodingAgent < Formula
   desc "AI agent toolkit"
   homepage "https://pi.dev/"
-  url "https://registry.npmjs.org/@earendil-works/pi-coding-agent/-/pi-coding-agent-1.5.2.tgz"
-  sha256 "691bde186273b457d9d1c41d0fd47b57853b5e85ded1add1a1f6b78e66c261f4"
+  url "https://registry.npmjs.org/@earendil-works/pi-coding-agent/-/pi-coding-agent-1.6.0.tgz"
+  sha256 "85d5de404e019e850c90ee9ac6dc6c16240da122fdce0314895608164030336b"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "4079b2c16473935e0d754598f65c5ac1ad5df3f4dfc61bbc9c07646eb73c34e4"
+    manifest_sha256 "126327c969789d88bea2d9d378e091f036da0fc3e7c2ecdba18ad33282adff10"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f096b1dcf4507a511fb27531c60ca0743cdc807f446fec5b54a3e5b1b513d7df"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f096b1dcf4507a511fb27531c60ca0743cdc807f446fec5b54a3e5b1b513d7df"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f096b1dcf4507a511fb27531c60ca0743cdc807f446fec5b54a3e5b1b513d7df"
+    sha256 cellar: :any,                 arm64_linux:       "de379a8593251d7ce5bf68e894840cd2c1bd8c0cb497b816bba1aa55136ac0f4"
+    sha256 cellar: :any,                 x86_64_linux:      "ca23a90e0f624fe3d4293bfaa78b56a2a1d0ab182e39136f623b24135829e222"
   end
 
   depends_on "node"

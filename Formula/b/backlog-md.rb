@@ -1,13 +1,17 @@
 class BacklogMd < Formula
   desc "Markdown‑native Task Manager & Kanban visualizer for any Git repository"
   homepage "https://github.com/MrLesk/Backlog.md"
-  url "https://github.com/MrLesk/Backlog.md/archive/refs/tags/v1.55.3.tar.gz"
-  sha256 "d61d27116a36e01ce368d014a2717c792cb592d4aee6081e265cd8d543ce3b2d"
+  url "https://github.com/MrLesk/Backlog.md/archive/refs/tags/v1.57.0.tar.gz"
+  sha256 "91e44227910ab3449b41da4976787f03a9174588726b65422ea65d6be314b279"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "26dc9fb8d898f2aa20eef5c299c71b3f6f09737c41e6724b1228086c23edaba2"
+    manifest_sha256 "b1127a4c905bcb5d9204c459af50ba41a8f1cff212f23abbfbcfc798be105597"
+    sha256 arm64_golden_gate: "837e93200c5790397ee1373f95c27a11467a66958fe52df249340ab1fae0c053"
+    sha256 arm64_tahoe:       "2aab9da80fb100bb8a286d48e8fd7961aa44c2af327085a888573bdbe09747aa"
+    sha256 arm64_sequoia:     "668668fce21b58a8e992667b55f1c654b8d3128cd7136b0c0509b74023fcf6d1"
+    sha256 arm64_linux:       "4f643b98d0451d807035ba1735c74bd923551c87ae52efc9e7f159f8d93479fc"
+    sha256 x86_64_linux:      "2b95525a542becc3c2cf90ab3d6723b0f1c81be6616b92c5f3e8413a928f65e8"
   end
 
   depends_on "bun" => :build
