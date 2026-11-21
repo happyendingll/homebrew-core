@@ -12,11 +12,8 @@ class Gpgme < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "63197bb323b8c5ab478aefcfbf0ace1a20bdc8080f270e610852e646824ca811"
-    sha256               arm64_tahoe:       "28fdf2ec352e6caa7c5c9e142eb2d1636a3fee34c1cd8e78ac58ab5eb4581b10"
-    sha256               arm64_sequoia:     "a16ad13f866957188976f1fad13ab544f7f7f27118f4450996102840e3e2d0de"
-    sha256 cellar: :any, arm64_linux:       "551b3f0766dfc104afa5d6037513832f292b1d7c38b2541feec5cbb4765a4df5"
-    sha256 cellar: :any, x86_64_linux:      "4fffc6a234ef19ad28064c98579a811b4c7d62eec656227594043e55e7efc737"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "b8fd3ab1fd0922d5f1b1f7c27d6bbf6677096ea40531d7b70036ca3c2800ae5b"
   end
 
   depends_on "gnupg"

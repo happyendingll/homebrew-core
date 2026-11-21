@@ -7,11 +7,8 @@ class Atuin < Formula
   head "https://github.com/atuinsh/atuin.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f7e3ac5bb622a95b5a73383d60626eee5ffb914ba720dafc112cbb4af88e4324"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fde3f6585186952dc5d9297b34ab67c0553607d8c51ebadff06d3614f8ea4fa9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5308df3c43afaed9fa8986cc56c3c85039dc8ce31ad13c7e267aa5aa4e9b673a"
-    sha256 cellar: :any,                 arm64_linux:       "6433d57c62e83a96133c61f454e597e1d35f7ae4001e74be13e56e75aaea7089"
-    sha256 cellar: :any,                 x86_64_linux:      "666067f5cebde4051092cddeec9b642572a9f2e966b7ab01814e962e0ee0a881"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f34317f418bce78c72b471159f2f8efc3705224d2132b1de4cc31f1d762fde41"
   end
 
   depends_on "pkgconf" => :build

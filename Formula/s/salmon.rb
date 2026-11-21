@@ -7,11 +7,8 @@ class Salmon < Formula
   head "https://github.com/COMBINE-lab/salmon.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bec10e4fd026be395a4ee180e01fd05dc65a717a62c8b68c642fa9887375fe99"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "87796ad5e4ed67338b7d218ce24507957936c2b21029f16985d9bad1dde8f861"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "68b42450a3446b780301ecc63388fc1b6a02016e83f81bcb5ca3b9bd3c4ca716"
-    sha256 cellar: :any,                 arm64_linux:       "261c6b6fdd6dc8de8c45b12f1af7883ed5622acd879baf6add9e95661e74bc6a"
-    sha256 cellar: :any,                 x86_64_linux:      "ab158bf9990fa4e6f188aea1c67c0e28b7687a7fd4536b0e7d901d92532c882a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "16ef88bb3db4cfd871ed8efcdaecc6e550b60e8604234fef982cd3a7b8795885"
   end
 
   depends_on "rust" => :build

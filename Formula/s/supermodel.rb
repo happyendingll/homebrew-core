@@ -8,11 +8,8 @@ class Supermodel < Formula
   head "https://github.com/trzy/Supermodel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d62852f9a84ffa86461ae5fa8c9d43854db655784c706ff282a2748e9747ce2c"
-    sha256 cellar: :any, arm64_tahoe:       "8705ede606acc87ca62dd3d0ac14678f3ccd8d1f30746836e1cdcccb0d73f6b6"
-    sha256 cellar: :any, arm64_sequoia:     "fc83bcfaec311243b3a19b5a68279d87166d5857611ec55f3ac36197aefcf801"
-    sha256 cellar: :any, arm64_linux:       "db8f88a90702ade97a7c44d18a09fa3ba4000fd6ec2c0e9cd12fdb75a8b1eb77"
-    sha256 cellar: :any, x86_64_linux:      "938ccf26776a80fef5f91ed0d0d28c7219edeff5374bf751162ffaa20245c789"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "a086e448a7997ca64bdc2b46c13757571d29ef2bbd933c884080e2ec2b279755"
   end
 
   depends_on "sdl2-compat"

@@ -11,11 +11,8 @@ class BazelAT8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "82145d357e631aa73fa9387ace404d2263f425a55c4c1829ff08d306c5b6f45e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "24e1bdc956e3f3805883bb024aaeaac924e92a43094a29e131ae3892a71f4dc0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "803f273f969a3ac5cf78ad637b4c423ff0a84e92e23dbb59869d675c85cb2f85"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e945f6374753e798c0a9a74c90095f8bd28d9d7e6ff7d7cefe3a847ffcad00b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8de376f56f4c6b0f568ee57f1c8afd7aa49a41926882dee12af5edb5d36c73df"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "7e9b380fe3427c356e5d8fdec6c515442835ae946eb583746dcea61b3cadf4a3"
   end
 
   keg_only :versioned_formula

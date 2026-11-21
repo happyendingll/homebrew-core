@@ -31,11 +31,8 @@ class Gnutls < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c118d53b47033725a76201d0f0c65bbbffa7176a5f54021c067c84381b194b50"
-    sha256 cellar: :any, arm64_tahoe:       "5509d03e9fe545ff0848d3a5ee1c23a2e6ae077e6755cd0b04cca4b2d15b7872"
-    sha256 cellar: :any, arm64_sequoia:     "0f91625c5ac8e6d4542de6eb8b484fa78074dc9b23c01afa7471cd08f2d9791f"
-    sha256               arm64_linux:       "2eae01b3627aa62f7635ab50174c250e9a02796c26abc3bb92b7bc092809e7de"
-    sha256               x86_64_linux:      "be82965b59fff42219ed399bbe6463aa0ef44e6bebc310599f7f1fc2118f1378"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 sequoia: "4834366feaec9ff87cc4b202e6eca45efea8afc19935e9f059207250332eb3e9"
   end
 
   depends_on "pkgconf" => :build

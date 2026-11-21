@@ -11,11 +11,8 @@ class Icloudpd < Formula
   head "https://github.com/icloud-photos-downloader/icloud_photos_downloader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b155e8793496e8564fdfd0f3c0102fecb5be73928fe8b2834ec697216d0e863e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "08c1688458aec6a64e643d64acdcb13bbb10266b14a68378929e9046728e6c8f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a56145bb2e59c6ebde69052c670cf36b9a44b5213c67edc334a3a1e13e77c5b"
-    sha256 cellar: :any,                 arm64_linux:       "2a1ebd59dd1fd8ab1ce42df96a78faf3d9ad3d77c412790736c6859f329f2c65"
-    sha256 cellar: :any,                 x86_64_linux:      "73c862e8f1e1616680f5a8b2b709880688d7b7bc6454aff700c0398761c14183"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any_skip_relocation, sequoia: "f2976663cca75e222ef410b6556a040a73b31187ab1fea8d5cd05304a2882e34"
   end
 
   depends_on "certifi" => :no_linkage
