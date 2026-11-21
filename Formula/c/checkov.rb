@@ -12,11 +12,8 @@ class Checkov < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d2dde2c2fd75683c3559de65751276d93fdb39ef1a59be960f546defe1e16008"
-    sha256 cellar: :any, arm64_tahoe:       "41244491ba5568a24fd27529da5794ae22db117529eab3077d74ede2cd27ae84"
-    sha256 cellar: :any, arm64_sequoia:     "8bcb22d0b999fd479ec18739c5800abeb89049ead133d9bcaaef7ac7a079f524"
-    sha256 cellar: :any, arm64_linux:       "d916aa70952b2cba02d2281d4cd77426dc0e154579852baff24020a7640ed7d1"
-    sha256 cellar: :any, x86_64_linux:      "a0e8a28422ba795d07ebe7e91d55aab2fb700d46ea8c8155184bb3d657c30ed2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
+    sha256 cellar: :any, sequoia: "1131eaeba4c6387517f962633e228da5849c87ecdecdfb82667206d78087b5f8"
   end
 
   depends_on "cmake" => :build # for igraph
