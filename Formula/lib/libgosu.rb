@@ -7,11 +7,8 @@ class Libgosu < Formula
   head "https://github.com/gosu/gosu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6be94b591a4797a872a3b0cd17f71834cebd7215150ec2090c0ccd432bbe316c"
-    sha256 cellar: :any, arm64_tahoe:       "93b2d2379c12f6c24986876f0e78a5f8e39923f8717ad3d7e8bad6e0285f2d8f"
-    sha256 cellar: :any, arm64_sequoia:     "c9f74f0df18daacb33488ab7771dc527332db18e0fef220fbe86c084f567f88d"
-    sha256 cellar: :any, arm64_linux:       "ce87e678c8cf34a6e58b914b5152a98fd705065e946db9bf6b260e34587a095c"
-    sha256 cellar: :any, x86_64_linux:      "294f694c1f3d1b295b6bbd5c3108d0d40c2983344b79e8be05ce92cce6c9f5b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a4f90e3c6a80294bdb8f1b7c1bd5b8d62e507502fe85694dd9ff3959c7fc1be8"
   end
 
   depends_on "cmake" => :build

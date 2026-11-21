@@ -8,11 +8,8 @@ class Libffcall < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "77729a92694af90b17873ca592d21a468a06a1054c1029b2551ad9a767758bc3"
-    sha256 cellar: :any, arm64_tahoe:       "43b81e5f5874e3fe1fba31e6e5c7dcc4d0674d8c0cfc0c1c0449b9e810118ea8"
-    sha256 cellar: :any, arm64_sequoia:     "b4db7f982f859bd96dbfdfa774eebdbe775e920ed8c719e4e6e4e254aaa4e95f"
-    sha256 cellar: :any, arm64_linux:       "e91715c47088a1d58752e14df1b3f7151b906bd1ba4b423ea9030267afd8eb33"
-    sha256 cellar: :any, x86_64_linux:      "6806137374966f0e35097bf9e5704795f0809c06398aed1a4f86414ed1f31419"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9945061f0f95fcacb68717bf1ccfeee02ab2b03fbf7628e45769af086bcc7618"
   end
 
   conflicts_with "epics-base", because: "both install `callback.h` header"

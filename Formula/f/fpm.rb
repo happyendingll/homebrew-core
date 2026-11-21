@@ -6,11 +6,8 @@ class Fpm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2b91d3c3dd71bf82d76253ae7d1c8930bf920c574f367aacf067863f496afd51"
-    sha256 cellar: :any, arm64_tahoe:       "a19641f1606992444c4f5c0813572397b184cbbe4cf6ffd0b67c02c54f80d5ee"
-    sha256 cellar: :any, arm64_sequoia:     "792c5891be558b482bae3bb0db8909832eae25f8315513c8e2fed213c0a544b2"
-    sha256 cellar: :any, arm64_linux:       "ac37ca985d6824a990a97dc861259b7a09e307c1b834854939540bf3a1e220ce"
-    sha256 cellar: :any, x86_64_linux:      "d8a802c5e9a80570904005ae0849e8717e4e1c569021021bcfcdc94a25d13dcf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "3f60a56415829594ee90aacc0c4b129ad8080ef7c059072df7f4d65ccee4cfbf"
   end
 
   depends_on "gcc" # for gfortran

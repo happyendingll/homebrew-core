@@ -12,12 +12,8 @@ class Suil < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "5e61204661ea0fb05a4cfd25e17a82727816a0b916f50cb2de73c3d239789f4c"
-    sha256 arm64_tahoe:       "f1114139ad9a565503ce1b1605c8f8fca56912801de06cb08629222d29ab690b"
-    sha256 arm64_sequoia:     "93c11803d5ebdd53cdba26f7c0c01ed16ff73b8b186a87b78c2636bd6f5ebaf5"
-    sha256 arm64_linux:       "923b3b4a5ec4a19a8e2b9983940e54f4dc45a4a0a985c5a1fe489a4d87d9253a"
-    sha256 x86_64_linux:      "ea9b30c9a3054fe029fe38a143ec0e5e23661396b990bfd62dcc99b90d7f6514"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "1cd424cce3b849d563478bc8d6fcfb89eab2d0b1c2b34ee9952d92a1c59cebc6"
   end
 
   depends_on "meson" => :build
