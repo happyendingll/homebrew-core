@@ -38,11 +38,8 @@ class Standardese < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "b08295fabbe51894b8122229f9e3c57bf2eded24960c2566da08e826c04e4d18"
-    sha256               arm64_tahoe:       "af60907f8dc7197d4571bc34eb016c23de51f8981b73c83f5754e5aa01778893"
-    sha256               arm64_sequoia:     "d04fb151ca1608e9fd5e7fc8601aea6c1699b9c15c7aca714ae2169cf737b308"
-    sha256               arm64_linux:       "ea0f203a7bdf21e2f03e17414b2f29d2d4ec0f0874093a79d68a166ca0871e15"
-    sha256 cellar: :any, x86_64_linux:      "7790155d4ff1c554e5bcefdffaf1b5b2d7201ca5b76dea0f9b964233d7f88b09"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "c57dba5a40e74e42f1b507a8f33de1d36cae090ade5993b29fa8005d012e346f"
   end
 
   depends_on "cmake" => :build
