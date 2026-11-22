@@ -8,12 +8,8 @@ class CargoLlvmCov < Formula
   head "https://github.com/taiki-e/cargo-llvm-cov.git", branch: "main"
 
   bottle do
-    manifest_sha256 "a8a15eb3462d2d84448265795363c4ad7e5b42b9098c8fe2033beac9ba06619c"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "81eb8f77df890e38e7d7e6eb261f5d17f03db74568f30ea81aee5275dbed5272"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9186033eaa51f191813e717d51258fe8681feb5f0ec1c6870d250a8b001858b9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "14bdcbbc4bba32014194ea7d3b3969ca35cec2a932554fca6c3877ccc03eea5e"
-    sha256 cellar: :any,                 arm64_linux:       "386b219da289819605ed9f9efbbe381de6f01255ac536ca10bdebf615b96c21b"
-    sha256 cellar: :any,                 x86_64_linux:      "fc8501c0f6911e2aab76fdfa04193f282ca3e8c9506929a70ac197cf16927ffc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "7919af443dc11dbb4d75556cab065c6c36950126998727c3f86e73762f78ce3c"
   end
 
   depends_on "rust" => :build

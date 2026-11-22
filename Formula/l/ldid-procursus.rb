@@ -14,12 +14,8 @@ class LdidProcursus < Formula
   end
 
   bottle do
-    manifest_sha256 "3d09a026780017761614ca8f7aaff371e8298a569aa80e2ccb96bc30be5d3461"
-    sha256 cellar: :any, arm64_golden_gate: "7fc86491ac3977da934d01c17c6ce6d9da098ce0e6134bbef40421e21649d2cf"
-    sha256 cellar: :any, arm64_tahoe:       "6c553b7a6d90b4da13987433251744f0db14ae1ad70310725cdd1cc774288d71"
-    sha256 cellar: :any, arm64_sequoia:     "3f23496c0812e6e9defc561b8cf2c887136e410086d37c237f58221dddd2c781"
-    sha256 cellar: :any, arm64_linux:       "6424070b6b0d7c63ced664bb2a512edbf7648a67fddae7025885db954d06b598"
-    sha256 cellar: :any, x86_64_linux:      "2fa0009adc5ebb3c5a69a5b39bbabb8f7947bad5a9d15f2a8fd452a4eee3b429"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "8768db6c95478173e41308303e4233fe414e9ce16f0f9daf584cd51b9b99010b"
   end
 
   depends_on "pkgconf" => :build

@@ -12,6 +12,11 @@ class PortableLibyaml < PortableFormula
     formula "libyaml"
   end
 
+  bottle do
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "205754030ff87476649eff7116eca349d65247d50db26776e8290fcd9a12f12f"
+  end
+
   deny_network_access!
 
   def install

@@ -9,11 +9,8 @@ class Vunnel < Formula
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "303d8b12e688b76ac30d1baaccb2caa5eeab9ba51d745d9a0df722b195d923e2"
-    sha256 cellar: :any, arm64_tahoe:       "68b700f6bbfd1dfe81c81668c9b5f45e504f2ecb7daeef8720dc11ad51a2d4e8"
-    sha256 cellar: :any, arm64_sequoia:     "a2e0e2aafc2221fc26bdcf078663aee20465a7befba45f9746bfff9e14ac5b10"
-    sha256 cellar: :any, arm64_linux:       "4f0417f79959366495f7f05deec8b4397c6506210cfbf107ec58212957e08c79"
-    sha256 cellar: :any, x86_64_linux:      "6aa780c807a2c7203958be87d8ea9933f1c4859ade0e6f4c6fcdaa544eabfac9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "bc0e88a8f88683d1fcacae0f9c012ad75af6206c47e52e9ceeeed05b858bd67a"
   end
 
   depends_on "rust" => :build

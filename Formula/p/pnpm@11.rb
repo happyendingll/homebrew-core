@@ -14,11 +14,8 @@ class PnpmAT11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "0b3da004bc1c7a7488f40c4d5e429dd860dd727576103de50f8c7e464cd14c91"
-    sha256 cellar: :any,                 arm64_tahoe:       "0b3da004bc1c7a7488f40c4d5e429dd860dd727576103de50f8c7e464cd14c91"
-    sha256 cellar: :any,                 arm64_sequoia:     "0b3da004bc1c7a7488f40c4d5e429dd860dd727576103de50f8c7e464cd14c91"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0d699d770ad65be0b04b5d83818bc10001f3f754c5f8b322060d1fa2c91520a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "0d699d770ad65be0b04b5d83818bc10001f3f754c5f8b322060d1fa2c91520a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "898f3ccf9f9fd5b63bd64ecd48ffd395216fdd776398638e8acea220b9b64cd2"
   end
 
   keg_only :versioned_formula

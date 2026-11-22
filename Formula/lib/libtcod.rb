@@ -11,12 +11,8 @@ class Libtcod < Formula
   ]
 
   bottle do
-    manifest_sha256 "a9e3d3f54a9fa3c7a1fda88632716983276ddcc9707594fa4e57cd7379b3eff0"
-    sha256 cellar: :any, arm64_golden_gate: "9a33d37a211f886e81d8aa529a2bf810923f69d9c087900e021a53279556c1f2"
-    sha256 cellar: :any, arm64_tahoe:       "6935b14317a6447ba8ba1abff168d57496cf1231d41ad2835f9e69e38ade3bc2"
-    sha256 cellar: :any, arm64_sequoia:     "eaaf32bd1493e80316a77ff91e68ed92875625b8403fe280ba31ad84efd6bc56"
-    sha256 cellar: :any, arm64_linux:       "07a3622c048c13f73b109f04b18336f94b928f21abe905083486291490311ec2"
-    sha256 cellar: :any, x86_64_linux:      "d8e02aa078c5388312fc71e3a5977f533ee01673d652dbc6d81d2d582b8bdbb8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "b06e258626dacd8effca6a8999f3edcfd6d112abe5713da0215212e296ad4eef"
   end
 
   depends_on "cmake" => :build

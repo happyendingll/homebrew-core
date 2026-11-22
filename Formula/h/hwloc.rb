@@ -12,12 +12,8 @@ class Hwloc < Formula
   end
 
   bottle do
-    manifest_sha256 "d6064db562dc2b3380179ae314c639e0f5faa7a19b9881a002c3264be235a2a5"
-    sha256 cellar: :any, arm64_golden_gate: "c0b62d65c0f5865468d380b55d02da120d54b22a813d69408c7dfb488a7b7f92"
-    sha256 cellar: :any, arm64_tahoe:       "ff18d6b1f50d604331341e9a061426ad3379add277cab1f4554602cca3357966"
-    sha256 cellar: :any, arm64_sequoia:     "1392635c0406064a026dd2a07dd7a130b2ca04caf9389ccf68c777e5d19444bd"
-    sha256 cellar: :any, arm64_linux:       "095b3342f4603691b0b5bfa52a856d2ba3a9edc9067a593c790cbe62fd6fdff7"
-    sha256 cellar: :any, x86_64_linux:      "ca6bd3d33f100800402246076aa743b211bfb3164138ae9676de95b7073e18e2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "fbefe73dd561e2978484779d2360579c900b8623aeb3cf45ae83e1588452eb42"
   end
 
   head do

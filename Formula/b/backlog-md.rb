@@ -6,12 +6,8 @@ class BacklogMd < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "b1127a4c905bcb5d9204c459af50ba41a8f1cff212f23abbfbcfc798be105597"
-    sha256 arm64_golden_gate: "837e93200c5790397ee1373f95c27a11467a66958fe52df249340ab1fae0c053"
-    sha256 arm64_tahoe:       "2aab9da80fb100bb8a286d48e8fd7961aa44c2af327085a888573bdbe09747aa"
-    sha256 arm64_sequoia:     "668668fce21b58a8e992667b55f1c654b8d3128cd7136b0c0509b74023fcf6d1"
-    sha256 arm64_linux:       "4f643b98d0451d807035ba1735c74bd923551c87ae52efc9e7f159f8d93479fc"
-    sha256 x86_64_linux:      "2b95525a542becc3c2cf90ab3d6723b0f1c81be6616b92c5f3e8413a928f65e8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "a6baecfae029be1795d7a56cf3e522e3a4c4492487c96dc30b42ef03b9f5a860"
   end
 
   depends_on "bun" => :build

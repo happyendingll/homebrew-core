@@ -6,11 +6,8 @@ class Libjuice < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0a1a7e5114406e3603ea73e41b1b05dcee3b3875ad7a1f989233056eb6ecaeb0"
-    sha256 cellar: :any, arm64_tahoe:       "1ee6c66a8d8560e92f23c828b448450df1b7de0e086674a1440ae9ac32ae30c4"
-    sha256 cellar: :any, arm64_sequoia:     "ad09c7d79021247bc4bc95d37f3cad4bef99c43fd3e8668125363cf2e94c3497"
-    sha256 cellar: :any, arm64_linux:       "a624c6e6ecb40cf928172035de7c8434514cf89a88e4a90674e075d811af061c"
-    sha256 cellar: :any, x86_64_linux:      "263d39cfcf0ab415079f7df02c7a410183b2d741c2ef9f4b3510f1e569f3b03e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "e21e5f06f87558f89e7eea01d9b8fd4a92a74959341cd72eb2cb494abf8f01b5"
   end
 
   depends_on "cmake" => :build

@@ -7,12 +7,8 @@ class Scrutineer < Formula
   head "https://github.com/alpha-omega-security/scrutineer.git", branch: "main"
 
   bottle do
-    manifest_sha256 "e432ccb696c8561f092bccd163ebe75fcf785cd158e8cf487b9f5e90b371f8fc"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fbfbfd651c3f0113d348f9ee8d5d472bc620af3b225dcfdb48a8268493bc6123"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fbfbfd651c3f0113d348f9ee8d5d472bc620af3b225dcfdb48a8268493bc6123"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fbfbfd651c3f0113d348f9ee8d5d472bc620af3b225dcfdb48a8268493bc6123"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "80e0f225a6ba029140057f70c945d8e895d81c5af3add7def0478de664c2dfe4"
-    sha256 cellar: :any,                 x86_64_linux:      "30cdd52cf8bf450f8f6579f33496ec22dc3fde17317fa746e4776c39d332de30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "5d7f71825ab8e86703e939060cc9ed8a82ac0238f7fd1657038e5d1ba8500ba1"
   end
 
   depends_on "go" => :build

@@ -11,12 +11,8 @@ class Nickle < Formula
   end
 
   bottle do
-    manifest_sha256 "b4e3c57915f51007993c65d0a2b60f975a71a6268c4da9aed41d2e404f01f6dc"
-    sha256 arm64_golden_gate: "c13cd22d50aa5274337b777e080d077ea5fdd8aeb363c91c1c42dc79f2c90072"
-    sha256 arm64_tahoe:       "c398ace6241ff4c500f6a8621baa1723d9bb1c68d313fe3d2cd8023ee602e432"
-    sha256 arm64_sequoia:     "c41d7010263b548c4bde473a434091c64cd94e7f27a806979af683d915fab78b"
-    sha256 arm64_linux:       "0e404d0cd4039f23870c2c787fd459ccc561ba63ee188174f3e93e1fdb628c29"
-    sha256 x86_64_linux:      "4c15213ef3e90011aa0537268d55df62e45b8ec7094d5b3fbba52b908a0836c1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "7eab6bbd80e6044a2884ad7eefeedec21e3a15a0643e72c6642dfe7ed63b1207"
   end
 
   depends_on "bison" => :build

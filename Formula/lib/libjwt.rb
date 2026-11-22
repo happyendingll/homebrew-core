@@ -12,11 +12,8 @@ class Libjwt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6049ce8a9026f5e9f625fc971b1fefb33094e7704826ab10fab5d7a8312cf741"
-    sha256 cellar: :any, arm64_tahoe:       "286fe3134fb2f276422922c54b037cc61b8fc1e8b9155cdcf4522792d65d23b3"
-    sha256 cellar: :any, arm64_sequoia:     "150c7297d7eae2afccd6f5a3f6cb76d4c6b5cd17148d1d5f04c8aad735354349"
-    sha256 cellar: :any, arm64_linux:       "7e69cb531d54edd592e91269bbf546966450beec0521773c194122ccc60925ce"
-    sha256 cellar: :any, x86_64_linux:      "3fc8f75dfad10d4fcf5c76c6014f9a0cd1097946ea99ab328533e3f5369f2b8a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "1d846a96639c0b2f3917493b90b067e84813fb850e37a6d07d31cbb902d38a00"
   end
 
   depends_on "cmake" => :build

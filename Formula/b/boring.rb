@@ -9,11 +9,8 @@ class Boring < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ecca6d8bfaec63324cafdb919dbdf552427102c0c7dbaaf3f194839089ab8dc5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ecca6d8bfaec63324cafdb919dbdf552427102c0c7dbaaf3f194839089ab8dc5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ecca6d8bfaec63324cafdb919dbdf552427102c0c7dbaaf3f194839089ab8dc5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b70036bd3bd0784d98ef75249dfc471dc38783595ec35b6aa7768282febcfcdb"
-    sha256 cellar: :any,                 x86_64_linux:      "5af1acd972c90d668497ae3f1a7e0c03023cf98d3524d04c9a52019c1bf7f367"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "8b97de5e1a3e8ed8c0f5bf3d7f546c0335eee5cc387a2b3fccfb75d5e88eff71"
   end
 
   depends_on "go" => :build

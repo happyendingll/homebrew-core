@@ -6,11 +6,8 @@ class Libyojimbo < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "db17a5c9b6d753eb28220e94687783f5ab42ed01abf556a546bf4b9b362b5cc7"
-    sha256 cellar: :any, arm64_tahoe:       "e13c38a4023bb0fdb5d1fd48adc43a0622ffb546000ba404f6dc2692e9e97043"
-    sha256 cellar: :any, arm64_sequoia:     "e4c60715cb83f4a2f675e860031521f5ff8a6847f530ce9668505e43ba881e66"
-    sha256 cellar: :any, arm64_linux:       "a0cd9fe434d5f3e1ba9582a23d8864cb8c07d970adf3c9381e9a80058212a283"
-    sha256 cellar: :any, x86_64_linux:      "788a738ee572728165be8d543038ee82347aab6954ca05cfb68a7e93b9f86137"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "c3a775f6bfb25a6bb34461666bdb86dfef3e0fa983b2c3fc034883c577a36cd8"
   end
 
   depends_on "cmake" => :build

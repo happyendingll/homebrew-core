@@ -6,11 +6,8 @@ class VimClassic < Formula
   license "Vim"
 
   bottle do
-    sha256 arm64_golden_gate: "8c4f557bd6f096c1d0bf29dfb0c898654227def6f2a9d5e330cc71319b3f70c5"
-    sha256 arm64_tahoe:       "3121c85d28de68639b7c4788a359dda9c8a4e15aead23e16331e2d256ab5ae99"
-    sha256 arm64_sequoia:     "2ec28ae6e1bfa81d91f54b1e3057cb7c129595cda8a45fa01421bb3205f177c9"
-    sha256 arm64_linux:       "114aa74b27901649ebe6ce15612c4fe6d224c9e2ce85e8270bae456ba457673f"
-    sha256 x86_64_linux:      "31a5f868ba90f7558198ef9f5c7c78a00920064dfa50cfa01617bdc8012dc0d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "fe28c5f911e6c756feb9faac476b69a907847dfd0af13adff3881cd997df4445"
   end
 
   # Homebrew Ruby installs (4.x) currently cause a linker error with vim-classic,

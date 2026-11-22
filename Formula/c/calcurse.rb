@@ -11,11 +11,8 @@ class Calcurse < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "5d919d1105101456dc8edbd70ad16f914a028aa3210cb6d3205afbd8a9f2a4e9"
-    sha256 arm64_tahoe:       "2ff5c6cda82119ae5677bd6f0331b6443f52a2a8472497198f5524b90c076a93"
-    sha256 arm64_sequoia:     "f0c8b5a5111c647332d1ffc1e54b6eaa6d5884fc50ca4371b84d6005ab8468b2"
-    sha256 arm64_linux:       "ef35631e6bd89ad74c524a86d281251aba13d1ddcd28ae65bc1e411dfc1487c1"
-    sha256 x86_64_linux:      "b2343243b2a588c1d0538a1280d48b190f13a140826460ef5845d56c78e26845"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "bbefffb1f29f463aaef5194adc08b42a76903c696d41172ae6f7dbba2882cc0a"
   end
 
   head do

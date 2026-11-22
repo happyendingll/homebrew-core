@@ -12,12 +12,8 @@ class Par2 < Formula
   end
 
   bottle do
-    manifest_sha256 "9432d1e84a579a6629a83b4bfcf7286ba6985fdb60c8d5790e3cf5b163c70b5d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9b9d6252add89cda91cb8cf9eac9346edef079c79a1c44d62b413d60af5d4d16"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "93652d2a76d6096ee2ae582e4ec62b052ba0f1a335c02c37ecce282c5fb2dc5c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0fb11a7b04831ac7dd90ad7fee4281661f9d86ef0bf12caaf3743d3b3b616124"
-    sha256 cellar: :any,                 arm64_linux:       "b6535e6a5d924971215a643ee27b10532c0911241c8e6433746c81261cf25abf"
-    sha256 cellar: :any,                 x86_64_linux:      "02c908249a4ecdec1c6d65a81cf946ab637eb86835dbf9bc31b120fd8828f886"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "456be4ad9182f156275a5c8bc800a9767c9ab2605b5b62412c54038cbc0eb47b"
   end
 
   depends_on "cmake" => :build

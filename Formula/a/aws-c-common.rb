@@ -7,11 +7,8 @@ class AwsCCommon < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fa86e03f9edbb2e8f02ed9b2aac76ab4d6bd97ee572a2ed575a8c74506de9f2b"
-    sha256 cellar: :any, arm64_tahoe:       "c44f9922a28d162cac136e86cc3b9d340a1ca2ba3276525124c439ff993032f7"
-    sha256 cellar: :any, arm64_sequoia:     "6de06cf092f51f4c0a1629687b4a2b1e6018d7e28d9325c306db00f768cdaaa3"
-    sha256 cellar: :any, arm64_linux:       "01c3f421c048028c8cde371918f8179605f23ed1c7e02b669914d7f6a8b681f3"
-    sha256 cellar: :any, x86_64_linux:      "a2312640107c225c23147ce471b4b8270e650ce6effb8e1436e6f8d29f40630a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "d6fef4c7e306fb176de506118bb59f5b5d1de39ef4b8b65a9c41354464a18c87"
   end
 
   depends_on "cmake" => :build

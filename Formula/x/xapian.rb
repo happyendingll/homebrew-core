@@ -14,11 +14,8 @@ class Xapian < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "863e3c289292470c672f4674fba1b1c9f6bfd2260082ae0f88722f1772cdf1af"
-    sha256 cellar: :any, arm64_tahoe:       "1fdb939960308f643cd58fda7b79c4a37b720e9631d3f75004243f7f8560ff7d"
-    sha256 cellar: :any, arm64_sequoia:     "30a37bdafc5c9b8e7cf98ce7b18182aa9c4a365c75aa1084922cda357be749d2"
-    sha256 cellar: :any, arm64_linux:       "450ab6a587eee6a5d54655d696c452da491b049862935da78e58b4c4915c3a6a"
-    sha256 cellar: :any, x86_64_linux:      "f407920cf5498ebfb3340dc12856f1baf550166a10e945efa1666172afe92f02"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "1dc7363aa2b4ec07ec3e6cb06e6339195b32b1a6e73a4fc7fa60af4b6b2de27a"
   end
 
   depends_on "python@3.15" => [:build, :test]
