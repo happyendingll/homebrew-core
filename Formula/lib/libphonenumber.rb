@@ -11,11 +11,8 @@ class Libphonenumber < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f6d96ee184dc33baf1dd734fbaafd8d93c9832161ccffa57cef67d27ba2fd736"
-    sha256 cellar: :any, arm64_tahoe:       "11db1bc2083b4c66d7da8007e4e9cbd600fd618b03d53e86a8265b5844e8bba9"
-    sha256 cellar: :any, arm64_sequoia:     "0c8375676ec1acc2a877d8290a2396d00b274a43655d77bde17d52904d8d31e9"
-    sha256 cellar: :any, arm64_linux:       "60f8f529cc0a2aba04ffc8a525a034bad209ed96e1a9da60c66ba1f84ce7715e"
-    sha256 cellar: :any, x86_64_linux:      "ab53b6e3776157bb81e7a8a122cd519b7ec9a8bf3731c022f88ebc8a08357ab4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "1a1ddff0ab077edee678158bae8aa2824aefe366ea585fd3b0c45167f9c85042"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -14,11 +14,8 @@ class Gwenhywfar < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 arm64_golden_gate: "cfbe6e62a17071fce5540e2bbc2ad0b2b697f7ee1c8b2c33a65e5b39513da434"
-    sha256 arm64_tahoe:       "190807d994003112ea563b1362a2f38a76db7dac0a8a236f61785eecc2655df2"
-    sha256 arm64_sequoia:     "dfff70d53735882e0af8a5509738196a2a2c4958922ed6714ef600ef7a5bd801"
-    sha256 arm64_linux:       "cd419b2b210d9c5eb88180f89cc935e10db3e7ef01d4500331a421df02354acf"
-    sha256 x86_64_linux:      "51790f1f02bd224d73e972e46c007c89fe7447c03dc28170bedcbbec107511db"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "8df1c268586a846f56ab4a4b8e59ab9581cb000ca1004d1c0c84e52df397e744"
   end
 
   depends_on "gettext" => :build

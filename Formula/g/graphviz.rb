@@ -13,12 +13,8 @@ class Graphviz < Formula
   end
 
   bottle do
-    manifest_sha256 "08d538760f0712d1ad95725c4cb6e46d5835f6896de818b068fc797d1f069ea3"
-    sha256 arm64_golden_gate: "7321ae8d9beb275809a7f291ae992bba3b5c7c3f7981795870b2b6f5c215e8af"
-    sha256 arm64_tahoe:       "7ba1d8a29af2f4e7a9edd2bcb68cfd2f110dd4cf61c1f127b608f2ea1e2cdd0b"
-    sha256 arm64_sequoia:     "cba731adaa8b4e167f8ac3a07b84f593ec01e0daa6e8ea6aebb1dd712010530a"
-    sha256 arm64_linux:       "8d5bd268af48d29ff39773801a309edab91bf15c9ecaa49ecbc59c01c1f91aca"
-    sha256 x86_64_linux:      "d4e16fc9ceb2ed32b19516a805a925a0397557ff8bc96bd4645fbc37a0460a4e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "f45eaa57981a0e14a8916f617e5cdd33eb98f09aadcde52fca74421c96b03ab6"
   end
 
   head do
