@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-8.10.3.tar.gz"
-  sha256 "edde778f6bdee7581e42fc139ca9e07e2822212092f7501f99989656e3629d02"
+  url "https://download.redis.io/releases/redis-8.12.0.tar.gz"
+  sha256 "b0100a879b2d45dc97d8fda941127609d648f8913008db1b65a2f72a8ae36c8b"
   license all_of: [
     "AGPL-3.0-only", # modules: VectorSimilarity, LibMR
     "Apache-2.0", # modules: ScalableVectorSearch, cpu_features, friso, cndict
@@ -22,8 +22,12 @@ class Redis < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any, sequoia: "c0f0d6317ec6ba09b85858ccafd2fa5349954839789617d84cc74da1134e6845"
+    manifest_sha256 "359b281af8785bee8472883be15a8aba43f6b7046bc60a2f12a92ab4526609ba"
+    sha256 cellar: :any, arm64_golden_gate: "490582c9a9634c7b6cab2d695d5813443412eac688ceed61c3c254b3c233d779"
+    sha256 cellar: :any, arm64_tahoe:       "140542d67ca7bca18590e1fbb0bc90cee541b4dad5f32a1e31a822707c01b643"
+    sha256 cellar: :any, arm64_sequoia:     "94a1a3da5058a7ef2ca0aeee04b422f61c7ba2a6915e6c94c071e505b01a1c11"
+    sha256 cellar: :any, arm64_linux:       "98ba461fa99ef56c4e3560098338d49f6be73e321f8ddf85b4b2bb3aa07dc5e3"
+    sha256 cellar: :any, x86_64_linux:      "f67ac5cec2ef46cc0208415af7621df80cfbd383951bd2c4af280ee20022997b"
   end
 
   depends_on "autoconf" => :build
@@ -47,11 +51,6 @@ class Redis < Formula
   def install
     # VectorSimilarity selects its SIMD kernels at runtime via cpu_features.
     ENV.runtime_cpu_detection
-    # FIXME: redisbloom's vendored readies has no `OSX_MIN_SDK_VER` past tahoe, leaving `-mmacosx-version-min=` empty
-    ENV["OSX_MIN_SDK_VER"] = MacOS.version.to_s if OS.mac?
-    # RediSearch looks for Homebrew's `openssl@3` before anything else on macOS
-    inreplace "modules/redisearch/src/CMakeLists.txt",
-              "/opt/homebrew/opt/openssl@3", formula_opt_prefix("openssl@4")
     system "gmake", "deploy", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes",
            "BUILD_COMPRESSION=yes", "REDISEARCH_GENERATE_HEADERS=0", "IGNORE_MISSING_DEPS=1", "LTO=0"
 

@@ -1,14 +1,23 @@
 class Blocky < Formula
   desc "Fast and lightweight DNS proxy as ad-blocker for local network"
   homepage "https://0xerr0r.github.io/blocky/"
-  url "https://github.com/0xerr0r/blocky/archive/refs/tags/v0.36.0.tar.gz"
-  sha256 "98b613b88c2b960b091ebfa7c3622a325e47528da6c636d313efdf183a8bd254"
+  url "https://github.com/0xerr0r/blocky/archive/refs/tags/v0.37.0.tar.gz"
+  sha256 "1bdd2269625880233a554f4043aba6640c48683662aab62ab58d3e2ad4483eb6"
   license "Apache-2.0"
   head "https://github.com/0xerr0r/blocky.git", branch: "main"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "c82fb60554283f3c62c2e460aa17dcfe313eee7418428e768960e126159e8848"
+    manifest_sha256 "5b8e0f308ca53c3e273be2bca731f9074c4d51e5464c5bda701fa044432c57f2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d3443f24e4b344f8c9b5bee340d65a96b262e5d36aaef75f4a05dd043ca4eae5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e44d1f39d7da635296aaba45093d4eb1cf2aab5298ffe25d0f4dbb315b63302f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "863cf0cbc155d7bfc5bd46de2429462556429b70b99c946ece7ba286c5cfcac1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4a2d455f278af8d3dc39cbb498183e6950ba404d7fafa73902adc661021e6ed9"
+    sha256 cellar: :any,                 x86_64_linux:      "420672079fbfa9563f0b57231a260c6d62d9a61f0f76d0ed719afac96bdb89df"
   end
 
   depends_on "go" => :build

@@ -1,13 +1,17 @@
 class Pake < Formula
   desc "Turn any webpage into a desktop app with Rust with ease"
   homepage "https://github.com/tw93/Pake"
-  url "https://registry.npmjs.org/pake-cli/-/pake-cli-3.19.0.tgz"
-  sha256 "6ee6dbef3fe6d635b4b74482ce6027b7499835192e3f23ec1a8b92ac2b45a70e"
+  url "https://registry.npmjs.org/pake-cli/-/pake-cli-3.20.0.tgz"
+  sha256 "58b471f6870c3616f2db2182a14e023003a674eb1db7eb152c18856ff49fd75c"
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "8c050b511f8d112d039c997ba5ea6e0f3d351d1d30e55625015f0712f78e7699"
+    manifest_sha256 "fd300287ab454ee388abb8bb2977187d6cdf8980f1b046ac0db1a22a1c1e13fe"
+    sha256 cellar: :any, arm64_golden_gate: "1e2fa924600d29ed8b86c336a19fee258cee9d9743999588e149923a96d7557e"
+    sha256 cellar: :any, arm64_tahoe:       "2c58d7b690ae39c18d5e4bc63ab755ba63e20abd9856c8014a29aea40a752c09"
+    sha256 cellar: :any, arm64_sequoia:     "0f7a40bcd2132563a403b487bd6f69280595ac5f470456bf20b660a8b2122f14"
+    sha256 cellar: :any, arm64_linux:       "7bb47336cc86acf06a3797f7f2fcd8cafcb332e1d335bc26b6b298b89aacada1"
+    sha256 cellar: :any, x86_64_linux:      "142984437de07c14f1845f9c7e0fb88cc8d8ccd64f4291c00492845e137328a5"
   end
 
   depends_on "pkgconf" => :build
@@ -19,6 +23,11 @@ class Pake < Formula
 
   on_macos do
     depends_on "gettext"
+  end
+
+  on_linux do
+    depends_on "patchelf" => :build
+    depends_on "xz"
   end
 
   # Resources needed to build sharp from source to avoid bundled vips
@@ -40,6 +49,13 @@ class Pake < Formula
     node_modules = libexec/"lib/node_modules/pake-cli/node_modules"
     libexec.glob("#{node_modules}/.pnpm/fsevents@*/node_modules/fsevents/fsevents.node").each do |f|
       deuniversalize_machos f
+    end
+
+    # Help the prebuilt `@tauri-apps/cli` module find Homebrew's `liblzma`.
+    if OS.linux?
+      node_modules.glob("@tauri-apps/cli-linux-*/cli.linux-*.node").each do |f|
+        system "patchelf", "--set-rpath", formula_opt_lib("xz"), f
+      end
     end
 
     ENV["SHARP_FORCE_GLOBAL_LIBVIPS"] = "1"

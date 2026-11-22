@@ -15,6 +15,8 @@ class Buildapp < Formula
   depends_on "sbcl"
   depends_on "zstd"
 
+  deny_network_access!
+
   def install
     bin.mkpath
     system "make", "install", "DESTDIR=#{prefix}"

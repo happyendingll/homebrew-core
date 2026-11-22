@@ -1,16 +1,19 @@
 class FluidSynth < Formula
   desc "Real-time software synthesizer based on the SoundFont 2 specs"
   homepage "https://www.fluidsynth.org"
-  url "https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.6.2.tar.gz"
-  sha256 "ca376b42a3c1b186a4c8c248931789a455ac94a89b777394969d678010c2f91f"
+  url "https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.6.3.tar.gz"
+  sha256 "c51ebe04c8a445f4a7dd5a86e09a27b5c5af547756574edc52fc61c88ebe8427"
   license "LGPL-2.1-or-later"
-  revision 1
   compatibility_version 1
   head "https://github.com/FluidSynth/fluidsynth.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "7d08d34926d3800d4e1d7d890dd9863a6a7b4473d8c1969f9c2b62586262c11c"
+    manifest_sha256 "5a1ee9350f9aafbf24424d99913f771f7021738b24bfeb184521bda5d697d574"
+    sha256 cellar: :any, arm64_golden_gate: "fffd61d6aec99aa4d00ac5a475415e13512fa27a9efb0d01ea9a93c290555f8e"
+    sha256 cellar: :any, arm64_tahoe:       "d4ff666dd6b168e18a95032496132ee580a75e1562c66ae8bf4dd8d979f0a806"
+    sha256 cellar: :any, arm64_sequoia:     "36ffa276ed0cd98616a949530aae5c49ab6cf79a26757ee60fcfdad16bea26cd"
+    sha256 cellar: :any, arm64_linux:       "54e354f6737dbbb809d56da7e36c8e2a3c3e7f0c3e3a74d0155d6543988e5c95"
+    sha256 cellar: :any, x86_64_linux:      "680bf92e6157ba086528d974e1ed7427f35c07bb42b6f26f49ed52f23705b94d"
   end
 
   depends_on "cmake" => :build

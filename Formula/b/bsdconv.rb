@@ -11,6 +11,8 @@ class Bsdconv < Formula
     sha256 sequoia: "ef1ee342780c3fe341e30467cefba5174c13fee13874f48d9c9c01a319976d5a"
   end
 
+  deny_network_access!
+
   def install
     system "make", "PREFIX=#{prefix}"
     system "make", "PREFIX=#{prefix}", "install"

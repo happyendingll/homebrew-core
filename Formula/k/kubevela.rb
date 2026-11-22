@@ -2,14 +2,18 @@ class Kubevela < Formula
   desc "Application Platform based on Kubernetes and Open Application Model"
   homepage "https://kubevela.io"
   url "https://github.com/kubevela/kubevela.git",
-      tag:      "v1.11.1",
-      revision: "6552be81df471e35a612a5a0b3f38e5d6f944b02"
+      tag:      "v1.11.2",
+      revision: "6b09de2813dd9909b39ae8b0820768e194bf4da2"
   license "Apache-2.0"
   head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "0d26f48569bb962532c830beb2eb09ae4503e5ac68e4d39c888fd9abe8b835d6"
+    manifest_sha256 "65fbd299d5df047e113318cb2a4aed88b4d51e96321409fb3ab469d08464d072"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b652bc9cd2725e551505e2f90307f888320074823f37668c39dce8714fddee5d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b652bc9cd2725e551505e2f90307f888320074823f37668c39dce8714fddee5d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b652bc9cd2725e551505e2f90307f888320074823f37668c39dce8714fddee5d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "919ccb168ae450280065ac7e2fce70f2fa5393e01be50df21763d43bd958a095"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "dcc2c0181a929f8e1c53909394db606da96693209cac51069ce8fd87a2d3cb25"
   end
 
   depends_on "go" => :build

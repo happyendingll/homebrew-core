@@ -1,8 +1,8 @@
 class OhMyPosh < Formula
   desc "Prompt theme engine for any shell"
   homepage "https://ohmyposh.dev"
-  url "https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v33.1.0.tar.gz"
-  sha256 "9e3acbaa1a8d06fe3b1e6b3a483534bfa9092a0887bd2c80dc79e6c65cf365d3"
+  url "https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v33.3.0.tar.gz"
+  sha256 "75b86a279eb5d191177eef57b20a2cc0a1bc5d41485928528e4b4e28b6e9d558"
   license "MIT"
   head "https://github.com/JanDeDobbeleer/oh-my-posh.git", branch: "main"
 
@@ -15,8 +15,12 @@ class OhMyPosh < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "4536b73513816a43c60e0bffb528c6ff6b74545060a0541c75bc74c1efedf63b"
+    manifest_sha256 "80816d34084975c52f96c82ed19c0ce0060c1becd2ef6c12d51a1672227fb55e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d06871b007ee99ce73e24ddbc800ff085ba72aee53f7d3c32ac928b1deab83e2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26ce8e934d7f98807802e65c50338c497b7806d0d3d9b39be019b730fe0a358a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ff823e80ce3012bdd50cb2cc1a4a80c4bbc0ec84b3f693ec41eac19e21b489f0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1d490132957e3ecc098045d2c2bf83f96b8d1bc6d40c49109364c456bc17204c"
+    sha256 cellar: :any,                 x86_64_linux:      "4a635e5369c424b8f567febdbbb64e6afffcfbe42c6250df6ac5abd60b71a80d"
   end
 
   depends_on "go" => :build

@@ -3,14 +3,18 @@ class Apm < Formula
 
   desc "Dependency manager for AI agent configuration"
   homepage "https://microsoft.github.io/apm/"
-  url "https://files.pythonhosted.org/packages/52/d9/bf1a4a8065e675ab63d3ad2f008c9d938b5301412d5eca64b681ee554a8c/apm_cli-0.36.1.tar.gz"
-  sha256 "b231d68b3ce5ea78326a33ec725b410227d0b081b2689aad5e4ba13b3b8388fa"
+  url "https://files.pythonhosted.org/packages/00/1c/b3b216e7c09966e504f78b241ff1e3e7712690262179ce2103553f821c58/apm_cli-0.37.0.tar.gz"
+  sha256 "1078dc4d5bd7d797f4924548f684daffd026df740b31f99b17fc13958e5da762"
   license "Apache-2.0"
   head "https://github.com/microsoft/apm.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "a91777dab31306bc133313108ba84d846c600cee784bdf97819f04142b25dffc"
+    manifest_sha256 "13a51443cc157e8397fbc25d64ecb0653f37f7e778bac71bc2459df3728f5428"
+    sha256 cellar: :any, arm64_golden_gate: "b034adb70537c7a73683c4a1f9dc0820c2e02b93ec52bda2fd96216fff033cc9"
+    sha256 cellar: :any, arm64_tahoe:       "6da7cffa48ab52bc064da19f354961dbf30b5f92c189c7cb145beb5c473dca77"
+    sha256 cellar: :any, arm64_sequoia:     "20f6891cacd07e6c3208e3c9d60637fb09c8f9fc5cdd117e347de52f27971e51"
+    sha256 cellar: :any, arm64_linux:       "105db33dcdbd870d2e72f936f554a4677fc5ce674b6bdd0475f19351583d4bee"
+    sha256 cellar: :any, x86_64_linux:      "258733b900c971413446652270e5a9b37885f4f8533f34f3f8872f44396365a7"
   end
 
   depends_on "rust" => :build # for jiter
@@ -157,8 +161,8 @@ class Apm < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/fd/db/2c78953776d819eac18b10bc830942693203f7d763b0c875ad930a7394a1/openai-3.55.0.tar.gz"
-    sha256 "82f8df6cbe8caf6042cee8c5bf6d6f4289602d01dc0d5a6b948a51cb2fc07cdf"
+    url "https://files.pythonhosted.org/packages/90/b2/97780581dab39384d1de4bc15f1f6cbaff26ce965a46c23a10bd948b71a8/openai-3.57.0.tar.gz"
+    sha256 "5a0a89d6a542efc85e2a8cec701ca9265b795d578c777828e10fafdf80e333b6"
   end
 
   resource "pluggy" do
@@ -197,8 +201,8 @@ class Apm < Formula
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
-    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+    url "https://files.pythonhosted.org/packages/76/b8/c0b780928e2fb1c87e9e375818c6f121da2398b071012d1747be300b83f4/pyyaml-6.0.4.tar.gz"
+    sha256 "e24bf71af8a432d7808fabff134d38dfe16d3cbb41f2873bb4b1e42422de0a1a"
   end
 
   resource "requests" do

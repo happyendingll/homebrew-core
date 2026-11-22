@@ -1,13 +1,17 @@
 class VideoCompare < Formula
   desc "Split screen video comparison tool using FFmpeg and SDL2"
   homepage "https://github.com/pixop/video-compare"
-  url "https://github.com/pixop/video-compare/archive/refs/tags/20261004.tar.gz"
-  sha256 "65555c2bb4f76dee86666ad047e3b335f9f486d036402faebf97bd40ada7209e"
+  url "https://github.com/pixop/video-compare/archive/refs/tags/20261122.tar.gz"
+  sha256 "f2158589d711edfed0239c5577f3790b0a492de8737898c85d4e9fa80e59a917"
   license "GPL-2.0-only"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "165eb0c71067452ee3c6853b77e33aa14038ba3ac7d36dead8e8a675a229a531"
+    manifest_sha256 "29d64e991449d7cd597fca9a38d281dc9832b99b4a400a529e1d1a06baeecbb4"
+    sha256 cellar: :any, arm64_golden_gate: "8f449e11696b8fbbd61ae9ba1df431563d7e9705435a3ed5237916e25b1b08b6"
+    sha256 cellar: :any, arm64_tahoe:       "1901eca689888b28198074faaf2f73c55a889cce0b1f784caf627e77da5c1690"
+    sha256 cellar: :any, arm64_sequoia:     "db8b8d56aac607da3b7a606505a723262563f63bf6cb0f17b14f404b9e392a90"
+    sha256 cellar: :any, arm64_linux:       "c37665f41d9f0d29ffb56ec57e77532ed050a4113bf46528d7183526a6c42f49"
+    sha256 cellar: :any, x86_64_linux:      "1ada6c0f58127fb49c0b14a8845a384cbca6f4bddb5de323194c03a767508c49"
   end
 
   depends_on "ffmpeg"

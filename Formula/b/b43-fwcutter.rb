@@ -15,6 +15,8 @@ class B43Fwcutter < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "025a79b6d58f01a1a4f539e50f7ba3096084e0720e346061433b0235b40f89f5"
   end
 
+  deny_network_access!
+
   def install
     inreplace "Makefile" do |m|
       # Don't try to chown root:root on generated files

@@ -15,6 +15,8 @@ class Xtermcontrol < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "62ac1310f15c15d6fe9ca735686dea94facff3fbb7bffdeeb08518d134ab03ca"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", *std_configure_args
     system "make", "install"
@@ -22,7 +24,11 @@ class Xtermcontrol < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/xtermcontrol --version")
-    expected = "--get-fg is unsupported or disallowed by this terminal"
-    assert_match expected, shell_output("#{bin}/xtermcontrol --force --get-fg 2>&1", 1)
+    if ENV["HOMEBREW_GITHUB_ACTIONS"]
+      expected = "--get-fg is unsupported or disallowed by this terminal"
+      assert_match expected, pipe_output("#{bin}/xtermcontrol --force --get-fg 2>&1", nil, 1)
+    else
+      assert_match "rgb:", pipe_output("#{bin}/xtermcontrol --force --get-fg 2>&1", nil, 0)
+    end
   end
 end

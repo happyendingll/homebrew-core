@@ -1,8 +1,8 @@
 class Armadillo < Formula
   desc "C++ linear algebra library"
   homepage "https://arma.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/arma/armadillo-15.6.2.tar.xz"
-  sha256 "63ee9351b54994dff7b4e2094a86ace48cfb41354cb65893a9dab7c8a16382c4"
+  url "https://downloads.sourceforge.net/project/arma/armadillo-15.8.0.tar.xz"
+  sha256 "84cba6695fa523a7bf9d46bd20d000c4d4f108fbdc15ba45c294d507f5def880"
   license "Apache-2.0"
   compatibility_version 1
 
@@ -12,8 +12,12 @@ class Armadillo < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "df8be984ef6250725aa88174fdddbe65d0364ee76d930e6a8c74caee87e819c1"
+    manifest_sha256 "f490b879599355054696a5b0542489fc3abc89fa949b7c819555e002c67dd391"
+    sha256 cellar: :any, arm64_golden_gate: "8c498d9abbd41ec283841b81a21278a82f3be6629ed3f51e125b89deb0b404ec"
+    sha256 cellar: :any, arm64_tahoe:       "2365840d78427e6b65a6007bb2b16886eb73746a76f9c1ceceb07bcda88ef87b"
+    sha256 cellar: :any, arm64_sequoia:     "09ee08ae6547ab399669162bccbe0cc5c79f16164b3a5efebe88c824027517ca"
+    sha256 cellar: :any, arm64_linux:       "59ba759bbc145fe099919e117ed63f8e74752407a741932ebd347043a39d9abe"
+    sha256 cellar: :any, x86_64_linux:      "5425351e7dde11fe7502c6c56464b13a2bdb094791480b0373e69a93afe8f21f"
   end
 
   depends_on "cmake" => :build

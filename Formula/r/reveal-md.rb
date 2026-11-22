@@ -10,6 +10,9 @@ class RevealMd < Formula
     sha256 cellar: :any, sequoia: "483802cbd061c6378e24912bceee37f2b5392383b5f70be0108415d44c4b8533"
   end
 
+  deprecate! date: "2026-11-22", because: :repo_archived
+  disable! date: "2027-11-22", because: :repo_archived
+
   depends_on "node"
 
   def install

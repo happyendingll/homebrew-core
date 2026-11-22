@@ -1,8 +1,8 @@
 class Qrcp < Formula
   desc "Transfer files to and from your computer by scanning a QR code"
   homepage "https://qrcp.sh"
-  url "https://github.com/claudiodangelis/qrcp/archive/refs/tags/v0.11.7.tar.gz"
-  sha256 "e3dcc23b85e2f37f378cf95b41a7a7c2ee5cd9941e3935a3325e3a0c8c770a06"
+  url "https://github.com/claudiodangelis/qrcp/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "7aba9290ff94a6265f99a85da2c1a94fadcc47d65c40cc172bbaa19ebcc43cc3"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,12 @@ class Qrcp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "f49f99397a87c8e6fa65867a6688ad7eed5ce2eca3724b4dae0b6dc0ef171bde"
+    manifest_sha256 "cd179d7cddcf6694f0c874e2a887c8294578f1e69de6e218ab4e7f5b072cef87"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2245506a6b1b0cb89f7edee65212f2057993007fd9cd136fae05faa11f06d3ee"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2245506a6b1b0cb89f7edee65212f2057993007fd9cd136fae05faa11f06d3ee"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2245506a6b1b0cb89f7edee65212f2057993007fd9cd136fae05faa11f06d3ee"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "fbbc5f11d3f40742b35c5350587d9d3042684ba4cb191b078f5c89e0894e16c6"
+    sha256 cellar: :any,                 x86_64_linux:      "652cf5524f7fa98ffa4f9123f0473e2a62d64578fbfb05479fbd19c490226510"
   end
 
   depends_on "go" => :build

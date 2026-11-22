@@ -14,6 +14,7 @@ class Bpytop < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "7d4e83c1b1e12427a29ef05973f4e5f179a32a9e9246537ab4d3de5fa431c762"
   end
 
+  depends_on "python-setuptools" => :build
   depends_on "python@3.15"
 
   on_macos do
@@ -33,9 +34,11 @@ class Bpytop < Formula
     resolves "https://github.com/aristocratos/bpytop/pull/405"
   end
 
+  allow_network_access! :test
+
   def install
     venv = virtualenv_create(libexec, python3)
-    venv.pip_install resources
+    venv.pip_install resources, build_isolation: false
     system "make", "install", "PREFIX=#{prefix}"
     pkgshare.install "themes"
 
