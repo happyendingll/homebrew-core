@@ -11,11 +11,8 @@ class Ncmpc < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "98dbae46af76ebbdd9cb07ec1d18920aceae7e74a1602f0c78601d4470734790"
-    sha256 arm64_tahoe:       "380d5542e059f7207c9bb1f01561514940261aa200d243fd16aee9b708cefb16"
-    sha256 arm64_sequoia:     "3fc654fdaa68ef86af67e22acb40369111f73cf2bf30c14a5a8748b19e50985b"
-    sha256 arm64_linux:       "5119fe178e3a48f5a3a9715d741a67fa62b4004bf844b7683cc57dc1669a5d71"
-    sha256 x86_64_linux:      "021538cdfc5769bc905cfd7d0dacf4e03b20059d9fce250e2f3dc8064e5ecdaa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "1408d0385a44d4cc5f473e830935dca7aa25f9c52fedbf0af877538125c71569"
   end
 
   depends_on "boost" => :build

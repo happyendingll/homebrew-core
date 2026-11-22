@@ -12,11 +12,8 @@ class Cortex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "32a087ddbca6e0c5b73f4b20f93a578449dbc7ee8f4220eb13a3f0dfea707626"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "22f5b203a7b4a4bf86e956d8540b2907d87b04651fc9ea9391ee9990efd62f81"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0703caa7d4badfe64627df32a8ace39d1c98db4d2f61de83c322a2222575240f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "64d17ed5843440b22655b3b1bb20ea39dfa5b739c7760b640eb2d55c4c8242dc"
-    sha256 cellar: :any,                 x86_64_linux:      "30e3b20395cc59c86e8fc615084cda8f061dd7cef315d641b6d3428fbaed5c96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "13770644a9e1f1d9c4514dd02a70ed14b59af665f93bca50d2ed7b4b40fed379"
   end
 
   depends_on "go" => :build

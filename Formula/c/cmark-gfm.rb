@@ -8,11 +8,8 @@ class CmarkGfm < Formula
   compatibility_version 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ee420d6bd4c2c39c7a07d057c5930ec4e5e748615fafcd3df6f68b280468b6ad"
-    sha256 cellar: :any, arm64_tahoe:       "8e64ee0191d7c9d5bc72720bc27e262dd41cb9d9ddc44a47c2315ca86a5888da"
-    sha256 cellar: :any, arm64_sequoia:     "f494a64ec5af2ed9a7f367a3061e8a98f2b6c51a1e0a036efca71b6901963ec8"
-    sha256 cellar: :any, arm64_linux:       "1d69674fcb1e270ab2c210c645dafed8db6840693cf679087ebbfcf1450204ae"
-    sha256 cellar: :any, x86_64_linux:      "836c3602c5e6f005d3bd80000aa857ac6173581f91baa61d01c1059f471762ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "78b7f70e13be0ec49c44611fda01b4c18116ce6ae86e9b53894592aff1d8fb0f"
   end
 
   depends_on "cmake" => :build

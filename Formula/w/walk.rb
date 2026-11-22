@@ -6,12 +6,8 @@ class Walk < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "f8081014c2f8299a86d097dc0847e5b8bfc27a11007a5a0bc30ee887dbf7e491"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7367d2050ec4bcabe7e857457ecdc234744a42fe1ff1f7c0bc0dc3270c54ab0d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7367d2050ec4bcabe7e857457ecdc234744a42fe1ff1f7c0bc0dc3270c54ab0d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7367d2050ec4bcabe7e857457ecdc234744a42fe1ff1f7c0bc0dc3270c54ab0d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "515d548fac0ee436412ff1200882739ededd1d8e5f722de7a0bff1444e13f9ad"
-    sha256 cellar: :any,                 x86_64_linux:      "3cca4907a91fb746e410698dac86fdcef04e2f2cb02a8b813a7d882486883318"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "11fa008851c3e3027ee7e7bf79bd0a43b9d3da016fcb102317b88e2119568f4d"
   end
 
   depends_on "go" => :build

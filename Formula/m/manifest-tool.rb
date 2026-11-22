@@ -7,11 +7,8 @@ class ManifestTool < Formula
   head "https://github.com/estesp/manifest-tool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "660e4bf09f645873e17d5374706ea9e08117bf15fa39f670279aa65809d9f0a1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "56193e4529f14a40d3806db63dcb92097f8bdd24407040f791262af93067561a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4e3bf78982962094d2bb1bbb36c462a633c2fe9c8337978b75ded3794107f865"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "faf3643b9708f26c6ebd8b934a4becd51ee7d7e33995aa6d3f54ef74ab02b20c"
-    sha256 cellar: :any,                 x86_64_linux:      "0eebdc764623f496e874d5debe9d70b139af37999ee91fe908ad46be16ee0e5b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "de23dac95b810c9b08921087e408493a3f48a81613119b1ac2b0606c7ed9c5f6"
   end
 
   depends_on "go" => :build

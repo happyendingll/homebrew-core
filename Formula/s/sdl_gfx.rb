@@ -11,11 +11,8 @@ class SdlGfx < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "42799f9a6bf6e8b6306fec1994370277bde4a6829c436599b5dce2b4f4645654"
-    sha256 cellar: :any, arm64_tahoe:       "0760b647e4267b19be015cfcd7a7e2e1d4dc8225e97e504dafd90f13bb1e9d1c"
-    sha256 cellar: :any, arm64_sequoia:     "e7724fdbcf13b8ca715f9f405f9d9584c7a47894b4581dfcdbc53497816c6662"
-    sha256 cellar: :any, arm64_linux:       "47c29bb910b43534a2b2ea9c4fdd0d31b068e6854f6ffa751c0cbf31ec6dd927"
-    sha256 cellar: :any, x86_64_linux:      "af0e19ad8bdfc0f3049231aa929d85a22e95a744f0a4370f4b28e4452fc76ecd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "9f4c35c3cb5e0e4a22a3e5777fd1ae1f206c9233b45fbcc1db953e676e816701"
   end
 
   depends_on "cmake" => :build
