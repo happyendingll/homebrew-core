@@ -14,12 +14,8 @@ class Libshumate < Formula
   end
 
   bottle do
-    manifest_sha256 "aeb8476a92227ae468720de938fd7094db1fff264d2f764cafc1edac9feced05"
-    sha256 cellar: :any, arm64_golden_gate: "185e41404190bd42e541f3f4b490fbb6f8416cd7358f7d80eb2a7eaf18b717e9"
-    sha256 cellar: :any, arm64_tahoe:       "733e9b53ea39a2614319d542133430e74e058dfad7c986739d0094ea41ef4ae9"
-    sha256 cellar: :any, arm64_sequoia:     "d028244dc93b6f950f2dabb687f0cc30d43f68b764285d0526b5e67a5f5220a3"
-    sha256 cellar: :any, arm64_linux:       "495bd905661a6ceb5bff1705c8333466db4cb69a7860b36418cfc9786ebe711a"
-    sha256 cellar: :any, x86_64_linux:      "bace4befb9977235ec86c7914c42356c69ab62f52267496f2705ee7f6a97c40f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "81d6665bc4fba85734d3b3b4d4a3fe99887897b0e77dabb17e4eb92021e0311f"
   end
 
   depends_on "gettext" => :build
