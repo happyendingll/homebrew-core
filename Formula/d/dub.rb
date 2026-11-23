@@ -19,12 +19,8 @@ class Dub < Formula
   end
 
   bottle do
-    manifest_sha256 "0c02e314d277357d598bb4b5eb7de47b1f1218e2f852db8e9ac5e1bc89040602"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2455cc59a797bc6f8c0701a702d2b7fbf8719d92a75b3faa645bdf104495082"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "762c179465207a6481448a33cb3adac12ce9253b20922bbf7add92ceb799a18a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b04324f5af0bec5ee837aced9d850bb063139004b878eb2a8596e16c1830926a"
-    sha256 cellar: :any,                 arm64_linux:       "64fd3c0c6b296a1fdf1dae62b9ef696edeebb1bdcadbd6856f52c5663ba7091b"
-    sha256 cellar: :any,                 x86_64_linux:      "d769f1ffcdfb649ee0514dc0f428afd5b56e2e7bf5d3c11304db43b4ae6ae312"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "1efebefe310238c712a35edc92fb524c3e5595610cf69ce513e0ac2c58720f22"
   end
 
   depends_on "ldc" => [:build, :test]

@@ -7,12 +7,8 @@ class Bettercap < Formula
   head "https://github.com/bettercap/bettercap.git", branch: "master"
 
   bottle do
-    manifest_sha256 "0a614cffdec5e7816f61779fbb281a03af23d074261fb7dd869754c3164b024b"
-    sha256 cellar: :any, arm64_golden_gate: "706483dbc0e1bbebe564de4f159812cd72f3f794a5eec4a164cd5342bda0c9a8"
-    sha256 cellar: :any, arm64_tahoe:       "2d6084eb7e421172f44c9206ee938886106710b040614720c8119829b230c059"
-    sha256 cellar: :any, arm64_sequoia:     "56cdb6f133975e2571e5cae18fe989a1f728a05966cf698be1e662f8113cfefd"
-    sha256 cellar: :any, arm64_linux:       "0bfb044dc2d4719d3a500df194e2ac184f958f26f74fa59550c30e3d9a779b14"
-    sha256 cellar: :any, x86_64_linux:      "722fcac485f99d4280b90240c647eda156a3a77fc0a66c25b4c512305cffebb1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d2ce72cdc3bbad9945241aa0d5dd8d18ff1dfbd0e9571d05f12f4f976a5ea284"
   end
 
   depends_on "go" => :build
