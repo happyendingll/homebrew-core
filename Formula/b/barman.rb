@@ -9,11 +9,8 @@ class Barman < Formula
   head "https://github.com/EnterpriseDB/barman.git", branch: "REL_3_X_master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "807b020165260e205d057450f2bad47b17c0d1d4796fa875cdc6ecc9f0ff500b"
-    sha256 cellar: :any, arm64_tahoe:       "fda0c7c42d4181abc7ca33d61ac556398dc77e8cfafb07d672d20720096fb24f"
-    sha256 cellar: :any, arm64_sequoia:     "477dd38796ee7b570afb69326a5508f4d2ed39b115b25efef3274b20ae55297e"
-    sha256 cellar: :any, arm64_linux:       "c5efaf571dc77cd294152547d39310aa7f9839ee8872f3c1e1eeb8eb7702cdca"
-    sha256 cellar: :any, x86_64_linux:      "5234ee7fba853e65200687e7fe73e34b184da9002f80c19d82af434a4c00ebe0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "7de76c27a388e6c4982b7d7a680d4e9909aa7e5213861fdc0b105bcd3e35fb2d"
   end
 
   depends_on "rust" => :build # for uv_build > maturin
