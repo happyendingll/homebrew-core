@@ -9,12 +9,8 @@ class Apm < Formula
   head "https://github.com/microsoft/apm.git", branch: "main"
 
   bottle do
-    manifest_sha256 "13a51443cc157e8397fbc25d64ecb0653f37f7e778bac71bc2459df3728f5428"
-    sha256 cellar: :any, arm64_golden_gate: "b034adb70537c7a73683c4a1f9dc0820c2e02b93ec52bda2fd96216fff033cc9"
-    sha256 cellar: :any, arm64_tahoe:       "6da7cffa48ab52bc064da19f354961dbf30b5f92c189c7cb145beb5c473dca77"
-    sha256 cellar: :any, arm64_sequoia:     "20f6891cacd07e6c3208e3c9d60637fb09c8f9fc5cdd117e347de52f27971e51"
-    sha256 cellar: :any, arm64_linux:       "105db33dcdbd870d2e72f936f554a4677fc5ce674b6bdd0475f19351583d4bee"
-    sha256 cellar: :any, x86_64_linux:      "258733b900c971413446652270e5a9b37885f4f8533f34f3f8872f44396365a7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "2c81936aa2c4c4924030093b0beac486d6e1747062a9baba9fc9a4ae368593a8"
   end
 
   depends_on "rust" => :build # for jiter

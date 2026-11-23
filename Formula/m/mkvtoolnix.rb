@@ -13,12 +13,8 @@ class Mkvtoolnix < Formula
   end
 
   bottle do
-    manifest_sha256 "8386fbc2fc2e38948460d19d1cd22a36e9261dca7b76bbc0a40c769de3c9d840"
-    sha256 cellar: :any, arm64_golden_gate: "ea821b71369fee9a9998aafddd5ea40d880fcd30785effd5483b647fd85b67b6"
-    sha256 cellar: :any, arm64_tahoe:       "c77489e8a4c7f14b0605fd63a6027447c9ea9f320596905e78b08d19a04f88c6"
-    sha256 cellar: :any, arm64_sequoia:     "9a8119d0aacce247a2a7329477c270eb5dc8f8d521e05f2890c865df49db732a"
-    sha256               arm64_linux:       "387914e1da192c76d4026c015462e3dbaa131f08502e96b9f1cd1b4ff67ecee6"
-    sha256               x86_64_linux:      "e370490eaff1b0d05376a170367306a35c9109254faf4ab2590345fe417609be"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "093e7ca129585d180fc9ce46efd6b6ff34af5d86dad7a6a9edb0b92882032e71"
   end
 
   head do

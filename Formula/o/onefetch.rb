@@ -7,12 +7,8 @@ class Onefetch < Formula
   head "https://github.com/o2sh/onefetch.git", branch: "main"
 
   bottle do
-    manifest_sha256 "6de1a06834faed7e37f4b0446fb32af9115545bdedde101b5010ad4a2f8211c8"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f3958465fe0855424573564e94185acd601a3ab298044edb770e8ea0105abf5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bd8681ac17a705b489dfa06436f57b4be2fefc8252d1dd553c88f99a1ad021a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2c374310696931ee92dd8f719a4f32af4947fdd72c8041cf8cf45484ec7b575e"
-    sha256 cellar: :any,                 arm64_linux:       "9705e7c2148911476445ce75fbbfe81bdc6e751eb7403267fd296ec5236bb43e"
-    sha256 cellar: :any,                 x86_64_linux:      "85b912920942964455cb91211d961d90eb57e355c26b7d4b22d93ee881582212"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "033541fcfda60e99009a97a47e83764bd2518a59102b7327535a85fcf3b79b1e"
   end
 
   # `cmake` is used to build `zlib`.

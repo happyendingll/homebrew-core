@@ -7,12 +7,8 @@ class Fallow < Formula
   head "https://github.com/fallow-rs/fallow.git", branch: "main"
 
   bottle do
-    manifest_sha256 "d1acfd69e2c25f1f3004ec3299a98f3ffb6b2f35e63d99e819e3782a862092d8"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5717eb24a5d49ccfdcba5317bc7798c3a9b7e66d6021a7c36ec282e03afdc98f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c979c698d709a01ef5ce5149f46286c39c40d591462495ef3c4ecd15d9180f9c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d31ada03a1fba9df8773ae42736a279488d03ff92e0b8023150c4fa12fbd0226"
-    sha256 cellar: :any,                 arm64_linux:       "7bce05391d633b0b1acdcb49ae9237188a82fc7b97c7aeb6e3ecd6050492fafa"
-    sha256 cellar: :any,                 x86_64_linux:      "2002b134b3759375ef937efadd17631c1848a926e9a29b217c7c26d1fcc12901"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "a916c53842e62438e26c1f9bcd5f7071b99ac12f8607eaaf143dee4e39a201fa"
   end
 
   depends_on "rust" => :build

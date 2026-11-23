@@ -11,12 +11,8 @@ class Qrcp < Formula
   end
 
   bottle do
-    manifest_sha256 "cd179d7cddcf6694f0c874e2a887c8294578f1e69de6e218ab4e7f5b072cef87"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2245506a6b1b0cb89f7edee65212f2057993007fd9cd136fae05faa11f06d3ee"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2245506a6b1b0cb89f7edee65212f2057993007fd9cd136fae05faa11f06d3ee"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2245506a6b1b0cb89f7edee65212f2057993007fd9cd136fae05faa11f06d3ee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "fbbc5f11d3f40742b35c5350587d9d3042684ba4cb191b078f5c89e0894e16c6"
-    sha256 cellar: :any,                 x86_64_linux:      "652cf5524f7fa98ffa4f9123f0473e2a62d64578fbfb05479fbd19c490226510"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "7e661ab76e3c746512cdb3594c11be139ea56094619e9e12f5b38c2cf63c2719"
   end
 
   depends_on "go" => :build

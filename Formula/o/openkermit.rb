@@ -11,12 +11,8 @@ class Openkermit < Formula
   end
 
   bottle do
-    manifest_sha256 "742d4a5d7996a6616efb961f59d6609977b8d820519436bf77b2cebcaaad48d4"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "49895aeb70b19c12a4b7f7a2d4287d60a629d2a1d5f7b49d9394cc19db649de2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e202564113be18fcea32a92b1c4cce0aa6032c4ae86485c97b0110d21762c50e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "410c3f50a416b40f2a750e1418f98b8f1644919d98a76d5b37f831fbb2823c49"
-    sha256 cellar: :any,                 arm64_linux:       "e686c7df3fe74bc84b0abfe0fa2299af1ad2ff565c4c54496828fb7c91d3a9d3"
-    sha256 cellar: :any,                 x86_64_linux:      "262ab432581836b13a0beebaf3ebcef57fe17d03f2c13878709f4168c08ef4ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "49e94ababe149166f22b9c5614d1af3cde38cd19c864e06fb3baec42da00d4f5"
   end
 
   uses_from_macos "libxcrypt"

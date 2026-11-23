@@ -8,12 +8,8 @@ class FluidSynth < Formula
   head "https://github.com/FluidSynth/fluidsynth.git", branch: "master"
 
   bottle do
-    manifest_sha256 "5a1ee9350f9aafbf24424d99913f771f7021738b24bfeb184521bda5d697d574"
-    sha256 cellar: :any, arm64_golden_gate: "fffd61d6aec99aa4d00ac5a475415e13512fa27a9efb0d01ea9a93c290555f8e"
-    sha256 cellar: :any, arm64_tahoe:       "d4ff666dd6b168e18a95032496132ee580a75e1562c66ae8bf4dd8d979f0a806"
-    sha256 cellar: :any, arm64_sequoia:     "36ffa276ed0cd98616a949530aae5c49ab6cf79a26757ee60fcfdad16bea26cd"
-    sha256 cellar: :any, arm64_linux:       "54e354f6737dbbb809d56da7e36c8e2a3c3e7f0c3e3a74d0155d6543988e5c95"
-    sha256 cellar: :any, x86_64_linux:      "680bf92e6157ba086528d974e1ed7427f35c07bb42b6f26f49ed52f23705b94d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "f747b929b4c6bd0e5d73b7ae1f673916106a83f59222d6d521403f372915c3e0"
   end
 
   depends_on "cmake" => :build

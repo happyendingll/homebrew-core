@@ -10,12 +10,8 @@ class MetaPackageManager < Formula
   head "https://github.com/kdeldycke/meta-package-manager.git", branch: "main"
 
   bottle do
-    manifest_sha256 "409a00af8c09059f212ec3dedbb3ac77d0d44c936c02dec6fef0deabeb0e6b3b"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fae1b4b20e8a6ca050c64525581a9fffa37021169f8409eadb86df67244ae2f6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "506d15294a10a37f617769d694f34bfd9a740f1f538c645dcef511ad9745076e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "63f13b304a667680d33861daf9f10776d23a60bb9415ab0ca39a1a9b0288d98d"
-    sha256 cellar: :any,                 arm64_linux:       "e6de853f890fcb673df90ac6d0f13bb8d9c1b42c28d166f3c2639d10943e3616"
-    sha256 cellar: :any,                 x86_64_linux:      "d7e24e85d7ee2fe6750ee043fb6dda20fca62332a9eb2cfae6b6013e72861bc1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "bd1e466a60a2029ad409c6ecab825e5f06b33535f8fe564661da9a24a0d9ed83"
   end
 
   depends_on "rust" => :build

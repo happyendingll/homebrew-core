@@ -12,12 +12,8 @@ class Ipsw < Formula
   end
 
   bottle do
-    manifest_sha256 "3ecde76a02fdbf1621be43b5dcdfd9a8d24fb037318b98dc27872c48c1783d33"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6efbd2230a639a03735af33e7315bd2c7703bb531d07f911bb6fe90e27d5461a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f557b6646285a242cd58b7791e01d60ef27ec00f803404da800a97f4fd59e9ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f0d7680e9f9b034d99cc3890bcbacf4533e7e2e6a6cd91aaf1ca005a5d94ecbe"
-    sha256 cellar: :any,                 arm64_linux:       "34c554fd995a3df1767903571e2c1f14ee669717a98ece598e6a23eaa69aa4b8"
-    sha256 cellar: :any,                 x86_64_linux:      "e3d367b77608a4efd70063447d8b1d2151817326cc3fe1179b2aded69624f2a1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "b3a1b8f73d1e0f9def3c03efa1323e93a206f28bb5b685f688dbe2705d1f16b1"
   end
 
   depends_on "go" => :build

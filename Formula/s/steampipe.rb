@@ -12,12 +12,8 @@ class Steampipe < Formula
   end
 
   bottle do
-    manifest_sha256 "30e3f794855080383ee0668e4ca3047dba5b71819cf95f04e225c49966d3b36a"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c3b4f77e4fa2fb0f9476a3aa80e397e806e7a58b9ce8cae1563ef5d82fc1e2f8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "203291dec96c2fa857b95abde74d84e841bc5729fed5aac28968de99b2ef536a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5d1d849441fb844355e469ea2d93dfbbf7cf214d2e87d4b25bcbbfaf7879cf00"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3c05a9ee95d38fe7449c47c3c88cdb01faaae7abf70aa1e46185d7096737ce84"
-    sha256 cellar: :any,                 x86_64_linux:      "55784db496ed48d13c09990b6185e7d45b451c14688faae5716384f08b0b356d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "8ab75ac945ab170b191d40af247d35ae787ef243b10199a271a08bedffebb589"
   end
 
   depends_on "go" => :build

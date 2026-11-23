@@ -12,12 +12,8 @@ class DnscryptProxy < Formula
   end
 
   bottle do
-    manifest_sha256 "8a01bdb59602905b0970c2d1cb9f35c2fe09be571032b78396cdcd8eb913cadf"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a949f2a103572ba6b6a11937c11ff377ccbca07a3404ba617dca63cc6ca488a2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a949f2a103572ba6b6a11937c11ff377ccbca07a3404ba617dca63cc6ca488a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a949f2a103572ba6b6a11937c11ff377ccbca07a3404ba617dca63cc6ca488a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "77294bc45d233e4ff7819becce7dc3361cb765911354c9b6676330845a9d1b85"
-    sha256 cellar: :any,                 x86_64_linux:      "1cd284d20dc71f3958f7779031fc6466dca572cf77da7bca69b9d07aff2cda26"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "dbdf54f329ba724b6224780368d312786263e7b631ade99dda20801ad2dd9e82"
   end
 
   depends_on "go" => :build

@@ -6,12 +6,8 @@ class Codanna < Formula
   license "Apache-2.0"
 
   bottle do
-    manifest_sha256 "40d41e7e0ad49ece3ac0cd9191c6815933e6c1c8d04468ebf4123a024c5c8f5c"
-    sha256 cellar: :any, arm64_golden_gate: "a6454efce134ed0f13a2855290368ca1c7ac792ac81a9e5c199a11e5df9aeabf"
-    sha256 cellar: :any, arm64_tahoe:       "3f172c1bb2756bcffc8db5320dc1e47e030837e4d17ead51ef8958a10cba65d8"
-    sha256 cellar: :any, arm64_sequoia:     "b19953f290d8a83dd65696649b9e94c59eb00c618d5696e8b9a745c901a3a418"
-    sha256 cellar: :any, arm64_linux:       "249aa6b3da318d56bc6f40b8fdb12a019d56726e110e920c4d35a87402d03cb6"
-    sha256 cellar: :any, x86_64_linux:      "7ad42dfb66cdd5e54bf00b34941bd15814763f3c3fcc0c61a685ae00ecd6ccf2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "9a5533c9806cffc85b4acb0f0d842f586edd6e3448ce76044a29e2e533a65027"
   end
 
   depends_on "pkgconf" => :build

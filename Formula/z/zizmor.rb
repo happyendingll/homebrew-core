@@ -7,12 +7,8 @@ class Zizmor < Formula
   head "https://github.com/zizmorcore/zizmor.git", branch: "main"
 
   bottle do
-    manifest_sha256 "e058f65ba4b9bbbda42c509c404caca3dea38b70364de1b6843797e4878e8045"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4c48cc6cc75509f34bacab7d908a98414006d10a416f9f2e008d2392c9471c0e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2426bdd3e9e7985eaaf1517abbceff3d0eca4a320bf1a49586bda2627f7b4b2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c208f14ff3b793f842591b08a4a87616447e4ecddff2f87547909ee75ce1322a"
-    sha256 cellar: :any,                 arm64_linux:       "5ba294dbc107da0379003012e9c817c7f21c4542c247d29a3459289e6561d6c8"
-    sha256 cellar: :any,                 x86_64_linux:      "48932ba7a3477160dc8702de65624f152e149dd3e6b6a92ecbf966fb9363ae8f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "f8fc9891e3ce92661a6d646146b0d62d04c778108f0c50b721274cc56523c0df"
   end
 
   depends_on "pkgconf" => :build
