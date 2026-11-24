@@ -6,11 +6,8 @@ class NodeRed < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "8ce7c6b03c511ae21e0036037d1bdfcb815bc10c0a1d419ec7ff5e903a8da538"
-    sha256 cellar: :any,                 arm64_tahoe:       "8ce7c6b03c511ae21e0036037d1bdfcb815bc10c0a1d419ec7ff5e903a8da538"
-    sha256 cellar: :any,                 arm64_sequoia:     "8ce7c6b03c511ae21e0036037d1bdfcb815bc10c0a1d419ec7ff5e903a8da538"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d210bbc604886af5e342fcf98a3824c3ef44b2f9180b1290c867286689496167"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4d7c5a2535f030aa16d40366f5d8edf49fa706cf6120c7ba846cbfa1d5f2f88e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "5b6392c7603a8efed126bba547c1103cc22a4839c151a2e1544abb1e472c9916"
   end
 
   depends_on "node"

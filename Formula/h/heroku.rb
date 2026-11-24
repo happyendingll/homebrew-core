@@ -6,11 +6,8 @@ class Heroku < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6956cafe8628c9267139215927b8a63a1beb83f3f616535b80b27a1d9ad44d84"
-    sha256 cellar: :any, arm64_tahoe:       "6956cafe8628c9267139215927b8a63a1beb83f3f616535b80b27a1d9ad44d84"
-    sha256 cellar: :any, arm64_sequoia:     "6956cafe8628c9267139215927b8a63a1beb83f3f616535b80b27a1d9ad44d84"
-    sha256 cellar: :any, arm64_linux:       "11f25973fa2505d1c970ef19eef71b8d790e10fc38e4a65a257b83dca8b81098"
-    sha256 cellar: :any, x86_64_linux:      "da8bfdbdbf2a4f888c0f6cc90a19bc6629aafe8744540ef4633bb1384e96ef40"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "cd2e72af6f8b75aa00ac8a2998c8133e6d70043f40ecd8a695a33614a8a2b706"
   end
 
   depends_on "node"

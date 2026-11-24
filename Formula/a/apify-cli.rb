@@ -8,12 +8,8 @@ class ApifyCli < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    manifest_sha256 "a2c68f91d739ece05711ff8ced4e17f25e27a91a02147d9f19c1ad68ff4bc816"
-    sha256 cellar: :any, arm64_golden_gate: "a7c8c48bc7b15616e4472d1fe098f8c9f0b37e4614ae1a9c21f76866cc27130f"
-    sha256 cellar: :any, arm64_tahoe:       "a7c8c48bc7b15616e4472d1fe098f8c9f0b37e4614ae1a9c21f76866cc27130f"
-    sha256 cellar: :any, arm64_sequoia:     "a7c8c48bc7b15616e4472d1fe098f8c9f0b37e4614ae1a9c21f76866cc27130f"
-    sha256 cellar: :any, arm64_linux:       "4191f5dc00eaadcb8986114c8b167e43185c33cb7ea57e902650344a33d50d08"
-    sha256 cellar: :any, x86_64_linux:      "3220632353d500f44321aed4ad3efbbe530de543de0637c69a18c17aad125371"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "0a7cc00b67425c9fc0ed83a0772b6646257f9b1f4cdcbd550aebb125966cb9d4"
   end
 
   depends_on "node"

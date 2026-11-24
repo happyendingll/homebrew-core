@@ -7,11 +7,8 @@ class Edgevpn < Formula
   head "https://github.com/mudler/edgevpn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "41a0c7ae7965f3304991d5352e63aa7c0dd5b665c2e2cb50eab4e4b1c9db7123"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41a0c7ae7965f3304991d5352e63aa7c0dd5b665c2e2cb50eab4e4b1c9db7123"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "41a0c7ae7965f3304991d5352e63aa7c0dd5b665c2e2cb50eab4e4b1c9db7123"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5de47928dbc2ce65ae5bcbcb0086f440d1fcbaac62c8c0efac65b0576ab9ee07"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c6daf89f3d9db8828b1ec21b0c94d62b866fb70fdff91e1b01133206663c80bb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "e29f70163a82ae625664f88cdea9a3a0544eb38d2b9df4226a74a8ae7e87fad9"
   end
 
   depends_on "go" => :build

@@ -12,11 +12,8 @@ class Pgroonga < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7456e19a4e05a06577e76d33a1fe7d03e43751ed1fe228409e5122f27056234a"
-    sha256 cellar: :any, arm64_tahoe:       "c6306ee1a33ecc9e370ee4378b7f5ecf0299693a6f2e97f32920b52f342d5f8a"
-    sha256 cellar: :any, arm64_sequoia:     "19b670dc2329979ea9527e11e58b13be84e5eebbfee81d065a09dea21eae63c7"
-    sha256 cellar: :any, arm64_linux:       "5871f25c697ac3d84cc79ed163a7c35077fd99abf0e6698712c0918223459ec9"
-    sha256 cellar: :any, x86_64_linux:      "1f157121de9eb115b7e6bf90ed6fb284dda87cc230c85c261f157791f1828545"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "9799bb61c94f16478af0e37085672a8775c2c8cdd479e4d538389f7f2ff0fe6f"
   end
 
   depends_on "meson" => :build

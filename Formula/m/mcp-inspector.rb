@@ -6,11 +6,8 @@ class McpInspector < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "56a0d4e466208c6bb4230c129cf1108476447f2128cc0725d77c4f7e35cfcb47"
-    sha256 cellar: :any,                 arm64_tahoe:       "a772ad9002d6883a0a2b68e7475b43f4603fddcd2659e7c687327fce913e7e89"
-    sha256 cellar: :any,                 arm64_sequoia:     "ce0421a701f43d8714a45adee69b3abfc2a784498911862ccfd4e245f38a302a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2e5ef8391ab9ac7fd9cb156ca5980af61f32f361799bbbc6c2caa48ce23a9cf3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c1b44fa862b1f546954778eab11eccc214a6ac1f670135d734d0b4a51522952d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "6e93e96add74374c30817e0e68becc5b7643ebf09aa6e47d62c4a71c76c55756"
   end
 
   depends_on "node"
