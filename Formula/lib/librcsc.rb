@@ -7,12 +7,8 @@ class Librcsc < Formula
   revision 5
 
   bottle do
-    manifest_sha256 "daaa2306b41462e67d929cf811784de4771d9095a86a9f424030c2c69ed1dedb"
-    sha256 cellar: :any, arm64_golden_gate: "19cf9fd65b42c6ffb7613868db311281f91779da844f89bcb6ea125ead8da3e4"
-    sha256 cellar: :any, arm64_tahoe:       "74c528c1e696d5b31a4063184429339e4c8092e288201d9f6436df043dc05bc0"
-    sha256 cellar: :any, arm64_sequoia:     "5eb2838d53794512bf14bb818f66c02a195ad80309bf04d20fb802aeb81e5435"
-    sha256 cellar: :any, arm64_linux:       "f35907c3d711b3f86c8fe7da9dbd55f7dd9128c2cefb3d299c68a82bad11ae11"
-    sha256 cellar: :any, x86_64_linux:      "9e3256e268d050f48ee09bbe166858bcca5e1e67c17089bc964a4710929bd359"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "e00e154a144a06b66c348c2b3fccb317f08f75d02301cb6bad783cc5a2c995f7"
   end
 
   depends_on "autoconf" => :build

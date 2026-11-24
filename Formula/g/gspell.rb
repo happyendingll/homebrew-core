@@ -7,12 +7,8 @@ class Gspell < Formula
   compatibility_version 1
 
   bottle do
-    manifest_sha256 "5eab33389450735e34ee6d8f3d4772f26a88da51f9a0ac7e696b78f8da401e25"
-    sha256               arm64_golden_gate: "bbdc7a46fb1b3fdf42715145dc13f7aafa0918bba6267f8f350f363e1fa28f68"
-    sha256               arm64_tahoe:       "93988cd51a1e82fbe8a5724874ab99e2567eadf24a973e377b87af90cf02de23"
-    sha256               arm64_sequoia:     "cdb3e628c5c857836599465b0d02774cbec7cb494847e076d173864c4e3dcf8a"
-    sha256 cellar: :any, arm64_linux:       "331b84c075abedcf68bc225d78d15f57b342895f45f16bf3e9f48ff2fa5be090"
-    sha256 cellar: :any, x86_64_linux:      "3d5f1c276c95c8e882b17f8dd8f52369bbc9f6d55f41f969424fad0650661ad7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "3804a3c40a4c6c0a7d13bdcd9a77d7f565953b1535cff612baaefe78e2dc9e70"
   end
 
   depends_on "gobject-introspection" => :build
