@@ -7,10 +7,8 @@ class MacCleanupGo < Formula
   head "https://github.com/2ykwang/mac-cleanup-go.git", branch: "main"
 
   bottle do
-    manifest_sha256 "c59716f3d921361ca46b6084b45567d0fd3dc1cbaea59f752e287e665f2734ea"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "503ec71e283291b1a45524ffb332da60616e95e6a9143a706bb39132bac06eea"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7f19cbe40f27971d619b6576c8fb3535502fba1248a967b1f65d749341949118"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1f325530492f951b874e27b852bfcf7feca99ce40a669ac4abbe0631396028d5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "2404d536ced72eefa552181aeee07c5061f7a23f04b2d8b378b9b8db0c47bbae"
   end
 
   depends_on "go" => :build

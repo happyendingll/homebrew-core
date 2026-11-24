@@ -9,12 +9,8 @@ class Jiratui < Formula
   head "https://github.com/whyisdifficult/jiratui.git", branch: "main"
 
   bottle do
-    manifest_sha256 "b160dc5c69245c5f8b4f6e341feb1bed8dbb22bc696f725b2489a41a5c7e7083"
-    sha256 cellar: :any, arm64_golden_gate: "a557edae09e873ff8f1b59688d3ad4cbebc70a8f8a91e25db13e592de3b4043e"
-    sha256 cellar: :any, arm64_tahoe:       "c94d446d001b46126aca0a156552a667efa5beca5fbffd1d949e00096becf227"
-    sha256 cellar: :any, arm64_sequoia:     "9b74696b8b41fe3e09f1c342d6a04fd28c23c54bf4605dbac170f717f2e711da"
-    sha256 cellar: :any, arm64_linux:       "5242bd56cf3c4d6a3a78ac4ee2ea89420b466f0877e8796079c4b11e008fe0b3"
-    sha256 cellar: :any, x86_64_linux:      "dd775b9e8d34ab04a67806c8e7609bda852a595b3a12347d791de2dab1f3864b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "b92ff764b58c4b15c8e0dd96102856c1783b5e72a223c30271f9c5ab58fb900f"
   end
 
   depends_on "rust" => :build

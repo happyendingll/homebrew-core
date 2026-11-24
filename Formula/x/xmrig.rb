@@ -12,12 +12,8 @@ class Xmrig < Formula
   end
 
   bottle do
-    manifest_sha256 "c57756f917ae62cec4ee2e1750a90d35b0af97497157f711c92240b8bbcb2c02"
-    sha256 cellar: :any, arm64_golden_gate: "d7b0e0979d5724c65f87ac4fc6681188d637295ce18abccbef476c91abd647d6"
-    sha256 cellar: :any, arm64_tahoe:       "6f7f6d658e7d44d02ae660c50b9726da9d8f416f3388d02357e6bd694294f9d5"
-    sha256 cellar: :any, arm64_sequoia:     "dc7663cbff813e1d9f1969e6333a4863a012580e916964867d294d5aaf9c6936"
-    sha256 cellar: :any, arm64_linux:       "313894b2704cfcc72382a6028f88c8fd7bcb7f6fda1d47e3bb9977d2dd490863"
-    sha256 cellar: :any, x86_64_linux:      "f5256cc3e52e2fc7ed9b9db5566344af7601b24ad8825ee8cbeacd1665c66a6b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "5c56f6079cc33506794ce2febcd0f14a3399203ce8277f2ac2887ab9e98371d8"
   end
 
   depends_on "cmake" => :build

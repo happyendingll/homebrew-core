@@ -7,12 +7,8 @@ class Tcpreplay < Formula
   head "https://github.com/appneta/tcpreplay.git", branch: "master"
 
   bottle do
-    manifest_sha256 "de44b79d89a70c7aab70042997d34924b1836e9e0fb8b8cab24702ae5b4e72ec"
-    sha256 cellar: :any, arm64_golden_gate: "e3b3da2dbff74e922cbc50621b5d54dd06f6b741d91ba5f2ff475c1702a58ef9"
-    sha256 cellar: :any, arm64_tahoe:       "c2628b0363bea16ac99b22f8a58439f607d49533c215c71d77b7d991418a1955"
-    sha256 cellar: :any, arm64_sequoia:     "b72e6ffa300c51971f8e3947a00bbd8101b73338669cbc81c3573a505f53806c"
-    sha256 cellar: :any, arm64_linux:       "54c2e898c04c6a20fe162ad98e4495d0c8093bd8dbaa25465f14ea9a037fe1de"
-    sha256 cellar: :any, x86_64_linux:      "4d62ef82f4d34ac32ca4e5a36aaaed520f89dfe30c9a54de44be7d9f0a380f6a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "092b656bf1b61412d9861b9af47ba8a445464e3ad7b624a3ebc96ba243aa9c21"
   end
 
   depends_on "cmake" => :build

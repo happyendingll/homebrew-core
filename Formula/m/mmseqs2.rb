@@ -8,12 +8,8 @@ class Mmseqs2 < Formula
   head "https://github.com/soedinglab/MMseqs2.git", branch: "master"
 
   bottle do
-    manifest_sha256 "769dfbbe4e837405c778432819d2d90cf5a6c49ca3aea51bc84c8dc94ac12e50"
-    sha256 cellar: :any, arm64_golden_gate: "0a24675d526cd2c32b1308f7872c56aee60ab046128fb82da873afd76142c741"
-    sha256 cellar: :any, arm64_tahoe:       "e33fb37c717acc84d9e87afce3706f62c09a3003b320ace871ca2802895f8e23"
-    sha256 cellar: :any, arm64_sequoia:     "72e6dec3ff417b83bed14c0b2a395d0ff3b0105e8364bc279d87e00f4f13cfae"
-    sha256 cellar: :any, arm64_linux:       "2377220c3964c52375a2c7be8dee24c8da3bed63326927a1c7772a3893d049da"
-    sha256 cellar: :any, x86_64_linux:      "b312c5feb28653f8b851302add8d7d20ad504897fa07f79d1ff6e909f3a47637"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "23bd3148141721c4a6b3fceee5dd6fa7d7050761a37f1c27b83db5ca5710a82a"
   end
 
   depends_on "cmake" => [:build, :test]

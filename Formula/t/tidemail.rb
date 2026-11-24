@@ -6,12 +6,8 @@ class Tidemail < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "c91dc6945312e96a9bda3d62a8564e053ad208a6526b7d53746f15a63ce3567d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0cfb0ebc4e94810992bfb70c010b8342664c2fcae5a99b078fb0b2718298dd97"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0cfb0ebc4e94810992bfb70c010b8342664c2fcae5a99b078fb0b2718298dd97"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0cfb0ebc4e94810992bfb70c010b8342664c2fcae5a99b078fb0b2718298dd97"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a39bf9033e9a0949520436af0d8adaae018a9ed264245501de1a35c937efd477"
-    sha256 cellar: :any,                 x86_64_linux:      "8a8ba49afb3f5cda5d4c9624ed258d870e3b45c06cc73aa6e4e7f4acd5dc741c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "1e090d5b9cd8969fba62d7e2b3d1351c9d04bcf1da29e0a88fa0efbece42ead6"
   end
 
   depends_on "go" => :build

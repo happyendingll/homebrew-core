@@ -15,12 +15,8 @@ class Nginx < Formula
   end
 
   bottle do
-    manifest_sha256 "d4b986408aeb062a0d548451694e6a0cfc7909b86c4c79e8f1459567aeaed4d6"
-    sha256 arm64_golden_gate: "f96dc22c5b3aead43c213e1098536c6ddede0ffbbdebaa0edd401832ce13938f"
-    sha256 arm64_tahoe:       "a2195a47775f4666104d53db1e424f206e3b68da444c8df13f3d4d7de6c1899f"
-    sha256 arm64_sequoia:     "57afd4d995643cdf08896a7201fed89805f2b1be0e9610e5afabb7bd4ea358d9"
-    sha256 arm64_linux:       "79e370e3c233a489d2679fc10ab3a70ca764b939d66fb8393cdffe5ddc8270c8"
-    sha256 x86_64_linux:      "8332644510cdf2134158e4639facf3d4c8309e70de2ef88b074ce4d88d3a1871"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "3118b5cf3f0ec91eda35ca8c247a874c5788ae8c80ea4c0de9b441dc2804b768"
   end
 
   depends_on "openssl@4"

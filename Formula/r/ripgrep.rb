@@ -13,12 +13,8 @@ class Ripgrep < Formula
   end
 
   bottle do
-    manifest_sha256 "9821a1856c58b7883c49081519e78f21008e656095e986bc478caa050515cf99"
-    sha256 cellar: :any, arm64_golden_gate: "2a271df3360bfd5faea4a128f3db751f663d7eb00c8b0a7291b559ddff47bcc0"
-    sha256 cellar: :any, arm64_tahoe:       "15e2b23e8774d6876b857705bb8bc2ac94d8694aaea8dd61895e4a66b4d4a319"
-    sha256 cellar: :any, arm64_sequoia:     "466909c89cbf077281bacc1167bb95be35c5f59af75c34585f91cb1e2d98bbbe"
-    sha256 cellar: :any, arm64_linux:       "537d00273767baca9ee5a4bd66b59e47bfcd498ea5dc36036dddbfc25c3a5bbb"
-    sha256 cellar: :any, x86_64_linux:      "862724e6e257ef757dcdcd7c7484eca6c2ca8ca11575d600cdbf54a5dc1e757d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "b3877dc31b3860d86f65761698ebe3ed468ca877b5d13bc86401ef1eb42fd4bc"
   end
 
   depends_on "asciidoctor" => :build

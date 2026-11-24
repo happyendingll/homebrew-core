@@ -7,12 +7,8 @@ class Lavinmq < Formula
   head "https://github.com/cloudamqp/lavinmq.git", branch: "main"
 
   bottle do
-    manifest_sha256 "d13a7b3f6ae19eaa973b0ee0c070b9639f734531de163d75cf62674a91f15a2e"
-    sha256 cellar: :any, arm64_golden_gate: "a6801fc4cd6ba669bfb3f12918452d548d1aa5eee378fcbe5e62e7ae569946a7"
-    sha256 cellar: :any, arm64_tahoe:       "1f23007aacd4cafa895ecc29f2c4c1f4c3082955a19f5b1b72581bed0e82a385"
-    sha256 cellar: :any, arm64_sequoia:     "e917f008af491cd8e155dd3f5534215aca7bd4d3474bae4904ec36d15b182274"
-    sha256 cellar: :any, arm64_linux:       "450e449cdd4ca706cdb3d7f108eb942339beacd11ad133f869b6adba71cc9332"
-    sha256 cellar: :any, x86_64_linux:      "bc251004f44e01f65d7c675455e1a1217bb51821daa172a8602214aa19e96542"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "a7f02441c3d8bd63f76eb72e653e7f15ee1d248bbcc9290542c372490829fbd9"
   end
 
   depends_on "crystal" => :build

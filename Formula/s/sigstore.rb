@@ -9,12 +9,8 @@ class Sigstore < Formula
   head "https://github.com/sigstore/sigstore-python.git", branch: "main"
 
   bottle do
-    manifest_sha256 "1980f9ce823ad4fe09727132921cafa3c9ffb6b8dc227abfdb42e21aed14dac4"
-    sha256 cellar: :any, arm64_golden_gate: "12bad4eada636addb7c4e7e38765c2de97b7b6b4b62972bd27f686641eea9e9b"
-    sha256 cellar: :any, arm64_tahoe:       "35ac5b6a0fa92923a01d5954bb6ff7bdcbabeb663d918559468f43c3318a3708"
-    sha256 cellar: :any, arm64_sequoia:     "177bf3462adc9b8068359a9e7ff58dd2d75ce0ff37089d460730e826e0439f2c"
-    sha256 cellar: :any, arm64_linux:       "16f467b90db424af2f8a6c319f990a4e60dc5b78dd2c13550110ec9640288caf"
-    sha256 cellar: :any, x86_64_linux:      "9cc49fd61c3332d3efb8c7e616aebed18b8b7449a13c31c040875c303a9282dd"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "c49618bb059baa9c65a14f4d20ebb2ae7790a36d8ebb9f17c48aad2a54a904c3"
   end
 
   depends_on "pkgconf" => :build # for rfc3161-client

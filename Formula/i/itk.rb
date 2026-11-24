@@ -12,12 +12,8 @@ class Itk < Formula
   end
 
   bottle do
-    manifest_sha256 "a43ed84f17f0a4051a29c3aac144ef2beaa1e2e1f7ba8fb9e5a7b9b373f0db70"
-    sha256 arm64_golden_gate: "dd4117590094c4739c1f25ef55d8ea9eed2317a865cdffb0a679c4a6b5724841"
-    sha256 arm64_tahoe:       "2aa68d7352f80d55d8d70f2fcd69b3eac77294c2ab75899c1fd2b881141b8b1b"
-    sha256 arm64_sequoia:     "44c9e01d197e1308b259814f61db4b8c0326d3c764921ddbaaef3afbe843d580"
-    sha256 arm64_linux:       "68d2dd6d3be6e6b349a967105eb2cde5d78cfb0742227ccc96e852af50959476"
-    sha256 x86_64_linux:      "95891abe4df79d25857c1413a11ebd798aff4e7aab46eeb23ee7c70f1f67919d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "58ef6de32d91f796294a466556e20f9648a2381f6fd5d206985965490f661529"
   end
 
   depends_on "cmake" => :build

@@ -7,12 +7,8 @@ class Dbxcli < Formula
   head "https://github.com/dropbox/dbxcli.git", branch: "master"
 
   bottle do
-    manifest_sha256 "84f62a12898c782f906de4f9cd96b614a4bbb754afae002be202d4aa7562d020"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0a85246e602b1eb12cd6b193b4e52c88a01b24fcd670a4844480eea05fd976e0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0a85246e602b1eb12cd6b193b4e52c88a01b24fcd670a4844480eea05fd976e0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a85246e602b1eb12cd6b193b4e52c88a01b24fcd670a4844480eea05fd976e0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "89d2ecaad3a928cfea3ab6a427cb11ad2246fe7672336177cd58c99dc5e5dac5"
-    sha256 cellar: :any,                 x86_64_linux:      "14551dafdc2f9dfa99d7df19f716645e16678143b327143fdc3dd3cd5d8b3efb"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "7eeca472eddeead45fb6dbbb5efcc5712d01032c21fcc9af4d41ebf1fc4fa053"
   end
 
   depends_on "go" => :build

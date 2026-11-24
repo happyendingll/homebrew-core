@@ -7,12 +7,8 @@ class SpiffeHelper < Formula
   head "https://github.com/spiffe/spiffe-helper.git", branch: "main"
 
   bottle do
-    manifest_sha256 "7608f1567aac806505dde62871045193e3f5cc881fa5fba242dc8290f7b9e52e"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2f40134b38cc74a8cb5358a31a96b627899d8e54c3d77a7284d90ebc65b817c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f2f40134b38cc74a8cb5358a31a96b627899d8e54c3d77a7284d90ebc65b817c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f2f40134b38cc74a8cb5358a31a96b627899d8e54c3d77a7284d90ebc65b817c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8e679c3f142d9a508723f01b1bb2ad3668fca16d278678cea6086132ebac3961"
-    sha256 cellar: :any,                 x86_64_linux:      "1d049cfe940c8e2269314be4cf038df75568337c69fcd7fb972c7dcea4bb594f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "557169867bf61d195b1fabdd8ff099222e1f1eb7c5bda986c32b6d6c782c9321"
   end
 
   depends_on "go" => :build

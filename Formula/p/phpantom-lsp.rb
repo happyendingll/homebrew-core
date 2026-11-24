@@ -6,12 +6,8 @@ class PhpantomLsp < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "d321c1c0670488fdb2d8dd84d6e41cdcf48796bde83ea9a631345d0f276da69a"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d4a8987f57cbc79e71a9a861267b622e43f74aa079fa9da9a8e0e779f1c0506"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "86e69d48c515b1f4a8af4dc6a1e0d43b0023ae220d31a897d22f3fee93f160ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db17cf72c13f48f440b9a6436e55de0971b05fe2b2e330363f3252f8f2520dfc"
-    sha256 cellar: :any,                 arm64_linux:       "3707ece8a6de71a81f387a90f1c1e43ad3059f2bf1017dabd0d48e8fb37f2516"
-    sha256 cellar: :any,                 x86_64_linux:      "0564ed465e02e1096657204e2f239ac99e1363167c1bb8205e9157d188df8976"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "ec4f8281318f178375c971a84d95306351b4992bb30671076f79b01e91c671f4"
   end
 
   depends_on "rust" => :build

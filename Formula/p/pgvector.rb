@@ -7,11 +7,8 @@ class Pgvector < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5731617b09cbaa103c5d929fbf4d30b2270ef0d5fe6c4c09327bbae6b94b8075"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8de9c8aa037c813d939dfe761e1ab28e7d6b20b98a71eb951c6306031e110cff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d5f16ed6c60c703280a2760e2c5862a34f469b758c8941bd4c4f4f1dcb3ad3e4"
-    sha256 cellar: :any,                 arm64_linux:       "68fdbd03e5533bf39bb13e7d6f10b4fa6cf9315628c9e994ef8d60e22a4f5098"
-    sha256 cellar: :any,                 x86_64_linux:      "0cbf08566402266b3cdde87c5a2961d2348d02439373df59a543a36df1ce65d0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "025a1a8b3c876fb8b9968d350142f94fd2f4c7a065e3e96738c40de00679a121"
   end
 
   depends_on "postgresql@18" => [:build, :test]

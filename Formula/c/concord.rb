@@ -6,12 +6,8 @@ class Concord < Formula
   license "GPL-3.0-only"
 
   bottle do
-    manifest_sha256 "ea3127ad60ca6b52a089b86996de4f70a865d8c248f08c9f05a97fca70e46e6c"
-    sha256 cellar: :any, arm64_golden_gate: "b22c3888b7c394caadf7c006130b9963a38fbebcadccf19cf2c753649a2d2549"
-    sha256 cellar: :any, arm64_tahoe:       "ce34203e3e1a8e72774f95a49de06d95f11562ecb8a43cb2821611b0e4e96381"
-    sha256 cellar: :any, arm64_sequoia:     "47d9b12cdf47535be13cb6473d9b62be3313e0b2067565a34471b3abecf957d2"
-    sha256 cellar: :any, arm64_linux:       "f8d32fdb7642546bd3176a6327e119cdbad312970678fbc6488434456b116f0c"
-    sha256 cellar: :any, x86_64_linux:      "65a13b463f15724aeef250a07479606e31a27558ed4d7d8bc068581a9a4ab3ad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "d3ba81be0b72ecded01218b5f4d723d556b4138521f60162e4b3e88a30fc8608"
   end
 
   depends_on "cmake" => :build

@@ -12,12 +12,8 @@ class Telegraf < Formula
   end
 
   bottle do
-    manifest_sha256 "6e4761a410ca9c1b1d6864305f0296bd48fd2fa538bbdb73ada16291479685e0"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "20560948692a8d8057c3f730458dca656847b473ab32060c2a5a75802c65f90b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e8c7856f6dd6ebe67f30dca062d2e2ec8924992e2392aab422c1c5e4db23fcaf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "507d5e6d8fe3a30f81a14c9d5d4747248c80b7ea200984dff0c3a1b268d974fe"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7d110e0bd52ff0ac011d160b83d373e95a6dfe159c6d7577ee519e07e8faf799"
-    sha256 cellar: :any,                 x86_64_linux:      "7b836c66424171db5746c42f65317f8af7b3769ac70903bb5d652ad2f5f29067"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "24e620a6f22b260493d4d67e333e8df68f52aa29b446aba1bfc4c314fd635eb0"
   end
 
   depends_on "go" => :build

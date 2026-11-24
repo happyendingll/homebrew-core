@@ -12,12 +12,8 @@ class Proto < Formula
   end
 
   bottle do
-    manifest_sha256 "14e8c2bbce8fbe8e277b988baa5e9bd285aadd06785a4aadc1818ee310b0281e"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6f88c71801fc14af5cf46538b92d13e27ba60bff07e9bdf2b6c71f1e22c37040"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8fc7ab4311cf737fb8011ebf21e186f81694b3e5d9b23c78563dc2c87017cf46"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "268f4fb83a40e926356eac08ee6f9fed52dbed3d9ed710e5d856e75ff6b1079f"
-    sha256 cellar: :any,                 arm64_linux:       "ee18b9626619ed6b84c74eb9262a49b859d19995a0e2d42b34d6670c9f70b0e6"
-    sha256 cellar: :any,                 x86_64_linux:      "80ab93a97478e6bb7cd05c961103e4101aa623e6ab863111255f2268b87051c4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "55e17c942714a2557a1cb15a75054523a88c891f2c0585cee6c26030398aa6a3"
   end
 
   depends_on "pkgconf" => :build

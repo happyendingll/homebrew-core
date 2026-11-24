@@ -6,12 +6,8 @@ class Fwup < Formula
   license "Apache-2.0"
 
   bottle do
-    manifest_sha256 "df69335a4259712b8cf8a55b03373641e4c85203df7e36713ea1c715ceb99725"
-    sha256 cellar: :any, arm64_golden_gate: "89d0d0c85f872a08ac118985cc46021aa60f74d942714ef32bc2e08a800cae54"
-    sha256 cellar: :any, arm64_tahoe:       "9a372f347134c2acb63f0414c83c2f0b5e4b7e2a4adf1959bd9d2f6341faab9c"
-    sha256 cellar: :any, arm64_sequoia:     "f5486fa3790b2faf71f840114fdc5d46e26457032b095285b4571d2d4f4bfc06"
-    sha256 cellar: :any, arm64_linux:       "d9e7839f40aaac0921d15e7dbdfc1ca1385fe52c2d89e8a7a7695fd10c9075c6"
-    sha256 cellar: :any, x86_64_linux:      "e6b1ad4c6082a461c17f1f7f7e27313255548e760a30243f6eb8d20fdc6dd53b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "f5b4987e88e5a6909590880c09fa3852c3b9d1b03a2f6938b0183f1aead88147"
   end
 
   depends_on "pkgconf" => :build

@@ -7,12 +7,8 @@ class Miller < Formula
   head "https://github.com/johnkerl/miller.git", branch: "main"
 
   bottle do
-    manifest_sha256 "097a59a00486b9116b162ad93a79593ff704b201407feb7676edb7b459b1333f"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "169541ec5cceaab8742963676b197d3ce29a6a685b0cf402756d086a16a11862"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3a428edf572f2a8f7770c5faf701a9d4eef7cecc34d28057c2988703284f860d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4c9976793042d02cf9bb39562c07120eca9042371a2f73325abc90d8fe2ba1f1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "afc0feb341ba1855fc9243e513d5510659221488b292e554e5dc2d07004ce1b2"
-    sha256 cellar: :any,                 x86_64_linux:      "6dd7883cb79cfed152e70ee907473aa9d92b4c352ed240a6464f25cce47361fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "1727010207dfb1f7d3c86f61d85ead07382850fc6456734ed0c0bf85f88212e2"
   end
 
   depends_on "go" => :build

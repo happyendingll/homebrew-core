@@ -11,12 +11,8 @@ class Biosig < Formula
   end
 
   bottle do
-    manifest_sha256 "80dc825e0d988c6a6a6219c8b63e62ad2a549d8acc7c7286b512ace479633eff"
-    sha256 cellar: :any, arm64_golden_gate: "a7d080eb8d9398b462919f5d31c720591af4dbf77dd790bdfe195358e7e4a643"
-    sha256 cellar: :any, arm64_tahoe:       "934125beefe1841e4e86a2a9974f4117b45b8c60d171b5ed6a50cb201b0ab6ac"
-    sha256 cellar: :any, arm64_sequoia:     "2dbebf8617c1cb608a9453f1229347c4bc841173ae52fe0de869d867036836ac"
-    sha256 cellar: :any, arm64_linux:       "34faed95b1d799ede08a887ef2ca1796bac9b137cd6185597237d0f3a59ac03c"
-    sha256 cellar: :any, x86_64_linux:      "5744d5d9b4d3918bdf8d988bb7c2191a120beb80c9704417c38ad7406adfea61"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "881fb4e8f73c24c0f557dcdf3607bd9c91a490b951f428996049f933f61d7601"
   end
 
   depends_on "gawk" => :build

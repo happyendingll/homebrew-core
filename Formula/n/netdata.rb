@@ -12,11 +12,8 @@ class Netdata < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "70482ff12f3fdc265d02179a29ac8cd3ffb38acb2ab1201d75e4039f35d55bc2"
-    sha256 arm64_tahoe:       "c6d0a89a0ad250ce86a8b9c2899ac4614cde060ec478538a4260fe794b543b2e"
-    sha256 arm64_sequoia:     "9d45fb9c9358ce9687b4421d5e43543e91d4b56ab9a53258172b8d5d2a343814"
-    sha256 arm64_linux:       "9a3c26546f92a620cf0b079c8ed327d7ebea4df64e00c6539c722a50f612e2e6"
-    sha256 x86_64_linux:      "d7a26318e1c2ba787d455606a87c5229951d8e883c4a21e549821f76a2ff981b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "601636ab27fd9d852e50606a819e12df11460ff93c480d626f16196c89bccc29"
   end
 
   depends_on "cmake" => :build

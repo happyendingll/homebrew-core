@@ -7,12 +7,8 @@ class Carapace < Formula
   head "https://github.com/carapace-sh/carapace-bin.git", branch: "master"
 
   bottle do
-    manifest_sha256 "5dd66a1b42ab4fc6750e080d975a88a066b8028ace9f171dfabe63ebf82a8ad5"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "021e6609521711aebbee7851cdb4aefdaf7b67b6d591cfe2d8133d36f75bf9cc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "021e6609521711aebbee7851cdb4aefdaf7b67b6d591cfe2d8133d36f75bf9cc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "021e6609521711aebbee7851cdb4aefdaf7b67b6d591cfe2d8133d36f75bf9cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2fec7feb65da44f729a699b22b8ba222a9cbe5b938491cb29fcd23353bc21934"
-    sha256 cellar: :any,                 x86_64_linux:      "d5dd15bf3c562f48d97fe7fbe04a6208153a93b9ca3d6421b6ce6cf0d785800d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "eef690d4a0ceb6e12c8194f08dab21007accd93e994728b2524e9fdda61a5ea9"
   end
 
   depends_on "go" => :build
