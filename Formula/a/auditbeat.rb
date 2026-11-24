@@ -2,14 +2,18 @@ class Auditbeat < Formula
   desc "Lightweight Shipper for Audit Data"
   homepage "https://www.elastic.co/beats/auditbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v9.5.6",
-      revision: "9c3843112456aa7984fc91d941139d4f78a34f1e"
+      tag:      "v9.5.7",
+      revision: "9455ccba703306aae4ed36b86a03976c963c0186"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "612d85e8524111e127b6cb629c9371b83a7f5ade4fb585bc327fd863ea29a897"
+    manifest_sha256 "7309e6706493b90176b613f05799a07dd3e601e1e0f20b2df7ce54e3a238e4fc"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aab15756dc41057aabb28f6c189c8cb9b50a575f2787fe9e7dbbcbdf5da41911"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "adc4cbf084f2ed3de38ebd3d05333ac75fe67da5c9b57e1a1587276726f0b395"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7eb483d1fb42e453a614f8d2c41056023cd0380441287b7b365686f0b5fce24e"
+    sha256 cellar: :any,                 arm64_linux:       "67938cd4baa9c4e3d467dc0f9ba375910e342f62e89022e613f782ef303644a3"
+    sha256 cellar: :any,                 x86_64_linux:      "2870393ca4f106fab88c1eaec1c210892e5e5014b63c3d2bdb9044efecbf9469"
   end
 
   depends_on "go" => :build
@@ -74,17 +78,15 @@ class Auditbeat < Formula
         filename: auditbeat
     YAML
 
-    pid = spawn bin/"auditbeat", "--path.config", testpath/"config", "--path.data", testpath/"data"
-    sleep 5
-    touch testpath/"files/touch"
-    sleep 10
+    with_test_process(bin/"auditbeat", "--path.config", testpath/"config", "--path.data", testpath/"data") do
+      sleep 5
+      touch testpath/"files/touch"
+      sleep 10
 
-    assert_path_exists testpath/"data/beat.db"
+      assert_path_exists testpath/"data/beat.db"
 
-    output = JSON.parse((testpath/"data/meta.json").read)
-    assert_includes output, "first_start"
-  ensure
-    Process.kill("TERM", pid)
-    Process.wait(pid)
+      output = JSON.parse((testpath/"data/meta.json").read)
+      assert_includes output, "first_start"
+    end
   end
 end

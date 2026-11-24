@@ -1,15 +1,19 @@
 class GitDelta < Formula
   desc "Syntax-highlighting pager for git and diff output"
   homepage "https://dandavison.github.io/delta/"
-  url "https://github.com/dandavison/delta/archive/refs/tags/0.21.2.tar.gz"
-  sha256 "d8b5b3c3a5a354b5fddd6e7156f62c8a5db2a33aad9d49debd536777facb66b7"
+  url "https://github.com/dandavison/delta/archive/refs/tags/0.22.0.tar.gz"
+  sha256 "71fb0ba85058a8f206f11ea227d2f940f6051c9c81dcb238935e10b0dc82c09c"
   license "MIT"
   compatibility_version 1
   head "https://github.com/dandavison/delta.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "a2107a16e24353992282b1b2dc9692234932d7de30fff9f6c6a1c928f9d19d63"
+    manifest_sha256 "cd08e50471bad573536d11be06850900fa2c2a95578921708e4ac45f379ca02c"
+    sha256 cellar: :any, arm64_golden_gate: "715b9d12735fead0e9842d0daf780e4aff0a99b8b6fd00c840e0c278d9541ba8"
+    sha256 cellar: :any, arm64_tahoe:       "8eb52fafe80ea7f0c0a56db0658225d6b1a8c39cb00fa125659f9cb33655ee38"
+    sha256 cellar: :any, arm64_sequoia:     "75cb4b64696344f7903a293237e0f5f2c7405ee03ce2154d535fbc92a45b5918"
+    sha256 cellar: :any, arm64_linux:       "ffb46520ad6ede0e5685323f0eeaabb3ca35cd9717ceb355277aa483bd150289"
+    sha256 cellar: :any, x86_64_linux:      "9e25553247592bfdd39090771e877f31856fad4df9205a4f9e424d567e150565"
   end
 
   depends_on "pkgconf" => :build

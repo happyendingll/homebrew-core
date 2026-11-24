@@ -1,8 +1,8 @@
 class Gtk4 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "https://gtk.org/"
-  url "https://download.gnome.org/sources/gtk/4.24/gtk-4.24.1.tar.xz"
-  sha256 "e98abe720e16129c8c0f50761dee0a2e9ae2478055e31018f6cf977fcf6513e9"
+  url "https://download.gnome.org/sources/gtk/4.24/gtk-4.24.2.tar.xz"
+  sha256 "05561abc25d1b1400136bf79ab68830cb4b053d1922ae97e551b3f19755bf3cb"
   license "LGPL-2.1-or-later"
   compatibility_version 1
   head "https://gitlab.gnome.org/GNOME/gtk.git", branch: "main"
@@ -13,8 +13,12 @@ class Gtk4 < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 sequoia: "6c548b6a7a42c4bf77dccfccc91d825ad604582127fc6806d5752ba7d38a35c1"
+    manifest_sha256 "8afb4468e76f5686b64edb7271b909ae70233fc71c69f1c0c4371bf4490609bd"
+    sha256 arm64_golden_gate: "ac84f292cfe34edaea2c71f6fe1d5db8a35d8c977c4d2d739d3a7ddc31a95cc9"
+    sha256 arm64_tahoe:       "23bd4f24e87cb8570d7eebace333c63d15657edb9daa19f62bdd3470dc9628bf"
+    sha256 arm64_sequoia:     "7fabebf916e8e6c2db85ab180c048f816c0f1d88c225c3212081f4b8a7f1b769"
+    sha256 arm64_linux:       "b11b3c0c20bb5ef2006a7d57d505b11b1886f8b0d7b8b5bca487afa356f37a82"
+    sha256 x86_64_linux:      "2a566109e30a675e7d56c339f7dbf37b075a2503368a729b011a335029fbb0cc"
   end
 
   depends_on "dart-sass" => :build
@@ -61,6 +65,8 @@ class Gtk4 < Formula
     depends_on "libxrandr"
     depends_on "wayland"
   end
+
+  deny_network_access!
 
   def install
     # Replace deprecated `sassc` with `sass` in the meson build file

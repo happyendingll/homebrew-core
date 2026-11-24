@@ -1,14 +1,18 @@
 class Buildkite < Formula
   desc "Work with Buildkite from the command-line"
   homepage "https://github.com/buildkite/cli"
-  url "https://github.com/buildkite/cli/archive/refs/tags/v3.69.0.tar.gz"
-  sha256 "96681b1a8772a04e28318af0e969dac279339165e05d238e8d05ad15f13cb43d"
+  url "https://github.com/buildkite/cli/archive/refs/tags/v3.70.0.tar.gz"
+  sha256 "52e1b708d08b0253252ae99245fc15462dd76986b4c05d6cb010592d8e498841"
   license "MIT"
   head "https://github.com/buildkite/cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "ffdc7ce84304132d350bbf702afe4bc03333347cdb73dfdcccf5c2fe5fbf7269"
+    manifest_sha256 "1cf1d937b4c71cf60ab4896dea3da321d11ae19bad7d7f2765a657c09f23d1ae"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0d78ddd8c004fe8bc0722efe677581c18492ee75eb9e4b463c6cde6b5afc4644"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0d78ddd8c004fe8bc0722efe677581c18492ee75eb9e4b463c6cde6b5afc4644"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d78ddd8c004fe8bc0722efe677581c18492ee75eb9e4b463c6cde6b5afc4644"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "59ef9dcec620a40d9c4e545531308c073b09191c64c98fe59d97facee232f7af"
+    sha256 cellar: :any,                 x86_64_linux:      "563812cb4653ac26e7f1b5785ee48662a8055ae5679ad912a0d3d57a628fb48b"
   end
 
   depends_on "go" => :build

@@ -24,14 +24,8 @@ class LibvirtPython < Formula
 
   deny_network_access!
 
-  def pythons
-    deps.map(&:to_formula)
-        .select { |f| f.name.match?(/^python@\d\.\d+$/) }
-        .map { |f| f.opt_libexec/"bin/python" }
-  end
-
   def install
-    pythons.each do |python|
+    python3_interpreters.each do |python|
       system python, "-m", "pip", "install", *std_pip_args, "."
     end
   end
@@ -45,7 +39,7 @@ class LibvirtPython < Formula
           raise SystemError("Failed to open a test connection")
     PYTHON
 
-    pythons.each do |python|
+    python3_interpreters.each do |python|
       system python, "test.py"
     end
   end

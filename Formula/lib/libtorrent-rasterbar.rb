@@ -1,10 +1,9 @@
 class LibtorrentRasterbar < Formula
   desc "C++ bittorrent library with Python bindings"
   homepage "https://www.libtorrent.org/"
-  url "https://github.com/arvidn/libtorrent/releases/download/v2.1.2/libtorrent-rasterbar-2.1.2.tar.gz"
-  sha256 "3362546d9cd71b9e49ee6cac7d3f1f914ce9cdb217c86b63d5b22cbed0334dbc"
+  url "https://github.com/arvidn/libtorrent/releases/download/v2.1.3/libtorrent-rasterbar-2.1.3.tar.gz"
+  sha256 "de05681acc564651211b4351af7d633a7a225587f0604611d657729dec299ae6"
   license "BSD-3-Clause"
-  revision 2
   compatibility_version 1
   head "https://github.com/arvidn/libtorrent.git", branch: "RC_2_1"
 
@@ -14,8 +13,12 @@ class LibtorrentRasterbar < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any, sequoia: "cb800b09aebd5d5730374c857c755451e580e826a613264d31458f7e0ef66f23"
+    manifest_sha256 "0168c0d9756d225c89ba3a446153ed68c1c3bdb895683cf55b6922edb6601b1b"
+    sha256 cellar: :any, arm64_golden_gate: "b8c5d2a81f2282d0286623d97d5840225fb33f9f22a6f72b51695577dce03d1b"
+    sha256 cellar: :any, arm64_tahoe:       "c2250c992f63e20bb6464dfa4e6f001c982d4fa264bd57c0da3b0a616b9b644e"
+    sha256 cellar: :any, arm64_sequoia:     "dbe631a93891dfa71f2aef3bbd4b9f017834993d0107e398c7bf7447c59a3978"
+    sha256 cellar: :any, arm64_linux:       "89ce8c76a6b70d777cb820f13908ef0b2577242c4d50e63e69594b477cf47bc1"
+    sha256 cellar: :any, x86_64_linux:      "5d851afb01d68b912484172ceb5d677db5f981dd02813526a6e244129d49a9ac"
   end
 
   depends_on "cmake" => :build

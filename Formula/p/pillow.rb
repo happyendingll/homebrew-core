@@ -46,22 +46,16 @@ class Pillow < Formula
 
   deny_network_access!
 
-  def pythons
-    deps.map(&:to_formula)
-        .select { |f| f.name.match?(/^python@\d\.\d+$/) }
-        .map { |f| f.opt_libexec/"bin/python" }
-  end
-
   def install
     ENV["MAX_CONCURRENCY"] = ENV.make_jobs.to_s
     deps.each do |dep|
       next if dep.build? || dep.test?
 
-      ENV.prepend "CPPFLAGS", "-I#{dep.to_formula.opt_include}"
-      ENV.prepend "LDFLAGS", "-L#{dep.to_formula.opt_lib}"
+      ENV.prepend "CPPFLAGS", "-I#{dep.opt_include}"
+      ENV.prepend "LDFLAGS", "-L#{dep.opt_lib}"
     end
 
-    pythons.each do |python|
+    python3_interpreters.each do |python|
       system python, "-m", "pip", "install", *std_pip_args,
                      "-C", "debug=true", # Useful in case of build failures.
                      "-C", "tiff=enable",
@@ -81,7 +75,7 @@ class Pillow < Formula
       print(im.format, im.size, im.mode)
     PYTHON
 
-    pythons.each do |python|
+    python3_interpreters.each do |python|
       assert_equal "JPEG (1, 1) RGB", shell_output("#{python} test.py").chomp
     end
 
@@ -93,7 +87,7 @@ class Pillow < Formula
       print(im.format, im.size, im.mode)
     PYTHON
 
-    pythons.each do |python|
+    python3_interpreters.each do |python|
       assert_equal "WEBP (480, 360) RGB", shell_output("#{python} test_webp.py").chomp
     end
 
@@ -105,7 +99,7 @@ class Pillow < Formula
       print(im.format, im.size, im.mode)
     PYTHON
 
-    pythons.each do |python|
+    python3_interpreters.each do |python|
       assert_equal "AVIF (512, 512) RGB", shell_output("#{python} test_avif.py").chomp
     end
   end

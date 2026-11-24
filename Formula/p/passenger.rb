@@ -4,12 +4,16 @@ class Passenger < Formula
   url "https://github.com/phusion/passenger/releases/download/release-6.2.2/passenger-6.2.2.tar.gz"
   sha256 "753e74b89ffc7e0e9525b00c936d71da28f279f849e94781be72e7c19c617994"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/phusion/passenger.git", branch: "stable-6.2"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "2c91300988dac736228f599ee9742719e0a168b39d53795a3b9759be500a6e99"
+    manifest_sha256 "8de5cb09bb26dbdb345bc0b224b22975c99a322b65353193bdcdd614327eef70"
+    sha256 cellar: :any, arm64_golden_gate: "4262cf895100b6f04bfd0893e43cdaa49ffb164b58c2a7a63687019acb254575"
+    sha256 cellar: :any, arm64_tahoe:       "5f189ba2207857686966fab505052ed6344a752e8c07106148c21612ba984869"
+    sha256 cellar: :any, arm64_sequoia:     "1e787111d1e7ed0cf035a74916110e6457e62b412cbcba4944434c59e8c0de9d"
+    sha256 cellar: :any, arm64_linux:       "60e71b08ecd397eb7636e76e1534d07683582a9eab1c6455d98b1de41f96e4cc"
+    sha256 cellar: :any, x86_64_linux:      "79062fe262df3487aafc39f263a6b8e4819b20e6d492c981b835f30dd033b230"
   end
 
   depends_on "httpd" => :build # to build the apache2 module
@@ -30,8 +34,6 @@ class Passenger < Formula
 
   allow_network_access! :test
 
-  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
-
   def install
     if OS.mac? && MacOS::CLT.installed?
       ENV["SDKROOT"] = MacOS::CLT.sdk_path(MacOS.version)
@@ -40,8 +42,9 @@ class Passenger < Formula
     end
 
     inreplace "src/ruby_supportlib/phusion_passenger/platform_info/openssl.rb" do |s|
-      s.gsub! "-I/usr/local/opt/openssl/include", "-I#{formula_opt_include(openssl)}"
-      s.gsub! "-L/usr/local/opt/openssl/lib", "-L#{formula_opt_lib(openssl)}"
+      openssl = dep("openssl")
+      s.gsub! "-I/usr/local/opt/openssl/include", "-I#{openssl.opt_include}"
+      s.gsub! "-L/usr/local/opt/openssl/lib", "-L#{openssl.opt_lib}"
     end
 
     system "rake", "apache2"

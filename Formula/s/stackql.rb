@@ -1,8 +1,8 @@
 class Stackql < Formula
   desc "SQL interface for arbitrary resources with full CRUD support"
   homepage "https://stackql.io/"
-  url "https://github.com/stackql/stackql/archive/refs/tags/v1.0.888.tar.gz"
-  sha256 "69007fa7a2b2e742c26e671a668d7f56e6ba039d0301488092b5080132f129c5"
+  url "https://github.com/stackql/stackql/archive/refs/tags/v1.1.959.tar.gz"
+  sha256 "c70f01ede8f88c00c0eb872bbea0c60758130495c5993a20938b7c239b30d3df"
   license "MIT"
   head "https://github.com/stackql/stackql.git", branch: "main"
 
@@ -12,8 +12,12 @@ class Stackql < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "3dd964be8f18ff561e311bfe27c6b62eb82f0366e833f9403a74c6ac7af41b8a"
+    manifest_sha256 "8d6a3287c664b54216e2157ac0399131f3e6affced3433f94cec53a958c57cc8"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7d41aa4ccecc4433f01b9469b22d7ddd6c376394843848bf454213ff868aeef8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7d41aa4ccecc4433f01b9469b22d7ddd6c376394843848bf454213ff868aeef8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7d41aa4ccecc4433f01b9469b22d7ddd6c376394843848bf454213ff868aeef8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "40a1da786a5583233eeb7c202caff250f338de9414076bf11ece93a25032d71f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b3e6b26feaa3f9f3904bb05d8ecf0555001684c39b38f84714078acb34d0bcd5"
   end
 
   depends_on "go" => :build

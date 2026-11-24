@@ -28,8 +28,6 @@ class Httpd < Formula
 
   allow_network_access! :test
 
-  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
-
   def install
     # fixup prefix references in favour of opt_prefix references
     inreplace "Makefile.in",
@@ -60,6 +58,7 @@ class Httpd < Formula
       zlib = formula_opt_prefix("zlib-ng-compat")
     end
 
+    openssl_prefix = dep("openssl").opt_prefix
     system "./configure", "--enable-layout=Slackware-FHS",
                           "--prefix=#{prefix}",
                           "--sbindir=#{bin}",
@@ -83,7 +82,7 @@ class Httpd < Formula
                           "--with-libxml2=#{libxml2}",
                           "--with-mpm=prefork",
                           "--with-nghttp2=#{formula_opt_prefix("libnghttp2")}",
-                          "--with-ssl=#{formula_opt_prefix(openssl)}",
+                          "--with-ssl=#{openssl_prefix}",
                           "--with-pcre=#{formula_opt_prefix("pcre2")}/bin/pcre2-config",
                           "--with-z=#{zlib}",
                           "--disable-lua",

@@ -2,8 +2,8 @@ class Vim < Formula
   desc "Vi 'workalike' with many additional features"
   homepage "https://www.vim.org/"
   # vim should only be updated once a day
-  url "https://github.com/vim/vim/archive/refs/tags/v9.2.1380.tar.gz"
-  sha256 "b0ed9b4c3c9384eb5f77f924bd5382ab995b54c9bcc69bb66ab38f83f3cc5b5b"
+  url "https://github.com/vim/vim/archive/refs/tags/v9.2.1397.tar.gz"
+  sha256 "dd864361b60258aebe032e6ea3948783ddef7faf189382270068cc5ffa26c5fd"
   license "Vim"
   compatibility_version 1
   head "https://github.com/vim/vim.git", branch: "master"
@@ -21,8 +21,12 @@ class Vim < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 sequoia: "925c21799fd0f24e4f0132711c0a633e214f6b9a69936d36ecd89b9fe971fc37"
+    manifest_sha256 "7df26783a9ccafb4fed027514e8830f89b64e6b39349a230d8ac9a1e6cdcf755"
+    sha256 arm64_golden_gate: "bfc405d003cb8741c94d593847f7dbbd224b23700a764c5e65946bd9cc2eb5cc"
+    sha256 arm64_tahoe:       "ae34871299797f11854c98424d362f5370f4cf5380f07cf85041bca02d78ee67"
+    sha256 arm64_sequoia:     "4a95285d2a8c70ec9d83204e296d2bf3bd9453dc915a7da81ee2e63ec45d9650"
+    sha256 arm64_linux:       "7106b6e83f059197fac14829b962606e7726d333c219980510eac47bf9c05495"
+    sha256 x86_64_linux:      "f2acdaf0c2b4d4d9a928ca85c12a7ddc4e51d1b9bb9312a45818564ee9a649ad"
   end
 
   depends_on "gettext" => :build
@@ -46,7 +50,7 @@ class Vim < Formula
   conflicts_with "macvim", because: "vim and macvim both install vi* binaries"
   conflicts_with "vim-classic", because: "vim and vim-classic both install vi* binaries"
 
-  def extra_deps = deps.select { |dep| dep.build? && dep.test? }
+  def extra_deps = deps.build.select(&:test?)
 
   deny_network_access!
 
@@ -55,7 +59,7 @@ class Vim < Formula
 
     # Allow dynamically loading formulae libraries when not linked
     extra_deps.each do |dep|
-      extra_rpath = dep.to_formula.opt_lib
+      extra_rpath = dep.opt_lib
       extra_rpath = rpath(target: extra_rpath) if OS.mac? # cannot use $ORIGIN
       ENV.append "LDFLAGS", "-Wl,-rpath,#{extra_rpath}"
     end

@@ -1,8 +1,8 @@
 class Biosig < Formula
   desc "Tools for biomedical signal processing and data conversion"
   homepage "https://biosig.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-4.0.1.src.tar.xz"
-  sha256 "b3aa75fea68ebc111bd7398423bce05133a5022496c1293e264df24545356c6f"
+  url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-4.0.2.src.tar.xz"
+  sha256 "85fce7d2f6985a99967a3f3e89c62080269c893e11d56b75393a499e46dd92ca"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,8 +11,12 @@ class Biosig < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any, sequoia: "503ccb2d2572dd5e425cb8b70d05852980f65b97147ace451ca232f38019e3c5"
+    manifest_sha256 "80dc825e0d988c6a6a6219c8b63e62ad2a549d8acc7c7286b512ace479633eff"
+    sha256 cellar: :any, arm64_golden_gate: "a7d080eb8d9398b462919f5d31c720591af4dbf77dd790bdfe195358e7e4a643"
+    sha256 cellar: :any, arm64_tahoe:       "934125beefe1841e4e86a2a9974f4117b45b8c60d171b5ed6a50cb201b0ab6ac"
+    sha256 cellar: :any, arm64_sequoia:     "2dbebf8617c1cb608a9453f1229347c4bc841173ae52fe0de869d867036836ac"
+    sha256 cellar: :any, arm64_linux:       "34faed95b1d799ede08a887ef2ca1796bac9b137cd6185597237d0f3a59ac03c"
+    sha256 cellar: :any, x86_64_linux:      "5744d5d9b4d3918bdf8d988bb7c2191a120beb80c9704417c38ad7406adfea61"
   end
 
   depends_on "gawk" => :build
