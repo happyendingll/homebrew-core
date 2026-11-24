@@ -6,12 +6,8 @@ class Libdpp < Formula
   license "Apache-2.0"
 
   bottle do
-    manifest_sha256 "cedaa78a1a5614bfa817078aee2734f0a63c52ff8aef27175979513ff42ece20"
-    sha256 cellar: :any, arm64_golden_gate: "fcce5e560af5581007c332089beeadd86c75275ffb6571a8fda84863565c873d"
-    sha256 cellar: :any, arm64_tahoe:       "448af35de1b5813dcd645143d8fff1a80642cd2c22e9ab44b6172694b13cfce5"
-    sha256 cellar: :any, arm64_sequoia:     "7b0f0153434d10dffdc32cef9afb47b74cc582452a74beafd96c2cbfb24ac486"
-    sha256 cellar: :any, arm64_linux:       "0e26a208b0d1c3b5510c3b167344be6ee53c9bda1142cd3d86a6e010391cf34b"
-    sha256 cellar: :any, x86_64_linux:      "77996fe08258867836046155bd7c22b61ccb8f547dd72327049532ee5e74e1a8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "c8a97c9c9305923ae5e95daa0f8156fda0f1ebbdcd4f4b05e7231448f18428c9"
   end
 
   depends_on "cmake" => :build

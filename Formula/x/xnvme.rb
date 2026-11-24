@@ -11,12 +11,8 @@ class Xnvme < Formula
   end
 
   bottle do
-    manifest_sha256 "c8c0c1bcfc668b78a3813bbef270f13421881d8b8ed43722b6f43df04bb775f6"
-    sha256 arm64_golden_gate: "074a7b82762d56cf16e1d9383ab5c223e0d1ef1aa5dce60fd06d08885f655a50"
-    sha256 arm64_tahoe:       "8252a91117b1c44025e68495393804c20212adaba615716783f820c55c7e230e"
-    sha256 arm64_sequoia:     "ad1022655309654cc7ed637a79ef0cabe774e047ec06d8f6863559e162c9f4b0"
-    sha256 arm64_linux:       "9d5d4efbd7cc5e0df30e5338a39b337a394ea4c6266f81e7d4754864b3f706be"
-    sha256 x86_64_linux:      "18d55160e9b7424214929f4aa49b983fc9c7da9e343ac1a6b473f5752c46c5cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "d96d3e6ad9f9a6aebbf4a306c9a2254ec266b367e9550a977fc02f7834908e1e"
   end
 
   depends_on "meson" => :build

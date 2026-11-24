@@ -14,12 +14,8 @@ class RancherMachine < Formula
   end
 
   bottle do
-    manifest_sha256 "4439ed9d7462e2a19ac6f016938c96ade6a5d1b8d9af8b9d37019e0a1ef889ff"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "738dd03ad2a6c863e89484959e1ba984a367358b2ab7212ab92d493a3d483684"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "738dd03ad2a6c863e89484959e1ba984a367358b2ab7212ab92d493a3d483684"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "738dd03ad2a6c863e89484959e1ba984a367358b2ab7212ab92d493a3d483684"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bbaa4e1b57cedd0ba00b5087526a89fde14f94b7f64f23291afcd7e0a3b498cc"
-    sha256 cellar: :any,                 x86_64_linux:      "29994ec618046fd986e59288eb8d78535ca8b60c96295fd46c2b3b21971c7186"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "5a372e7cabd25a7498a879d876c5e743cc4ded128e0d2295786888670d623ef2"
   end
 
   depends_on "go" => :build

@@ -15,13 +15,8 @@ class Rpm2cpio < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    rebuild 4
-    manifest_sha256 "6dd1b1f5f2b6f89cf9a8bbdef5be400470a2a070717f521d9c8b6fd2e39a0b9c"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "635041390ce3ddafbcbcfeed3444476de152f1b5ff056930901bf2e38d3fe981"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e358f228d40752923527dcf212ca75d98b667ffbe1843074084198b6279bb222"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "224d2df5b4a45f241645a391b5987b53aeee76e47c216231cd639233adbaa10b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ba5ea9dfa9fd07cd699ff18c6cf1fedfdf691700e86197ada2461c372c48a949"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ba4899d9fecd9838550f203a48c738f2e3c7c6d4617d85b3e008ab50c41ac429"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "9d6c39d0e2c0795867dfdc424258fc26b3a8a75b568c935b83838da8fa8bf5bb"
   end
 
   depends_on "libarchive"

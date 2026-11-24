@@ -8,12 +8,8 @@ class GoBindata < Formula
   head "https://github.com/kevinburke/go-bindata.git", branch: "master"
 
   bottle do
-    manifest_sha256 "f395774352b1fb86f3950d3fb7207ed9a755ff32f7c43182951319a724fc30f3"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "058b6fa15d814718fb8f34f26bdeb064a34582f6e8ebce6d7235c222ebf89137"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "058b6fa15d814718fb8f34f26bdeb064a34582f6e8ebce6d7235c222ebf89137"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "058b6fa15d814718fb8f34f26bdeb064a34582f6e8ebce6d7235c222ebf89137"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6699ca13ea8abd323bd498ce2968eac081b7b36caebf15614684c4396e3662af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d7e818362a4834eb167a5d3f243ee8b964a8d01e997bfaae0e12c415aa62f599"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "dff6aebbfb7e85467f9b01d0874691a0b67407a8f0caa10da90e6b369f266f22"
   end
 
   depends_on "go"
