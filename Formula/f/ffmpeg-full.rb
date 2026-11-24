@@ -14,12 +14,8 @@ class FfmpegFull < Formula
   end
 
   bottle do
-    manifest_sha256 "10cb1ad02cc47e2f0e642b02e7db2002a8943448310f8ece8119b11f91e5acef"
-    sha256 arm64_golden_gate: "a5681f17293b8ae229ff620c8995e0b62bc83a5e5a1706c46a2adb8dc1660530"
-    sha256 arm64_tahoe:       "01902e9a81c817f97094e4ebb2cdbf8b56b658c9dfe7a40771ffc7a622f967ed"
-    sha256 arm64_sequoia:     "9191e0476e423db9d9009cf3e11aec638e5b1895692e7a7e85b52ebca788d02d"
-    sha256 arm64_linux:       "9084f723425f055422822f95823231b1a227e276f3a2adf4031c0a6339392362"
-    sha256 x86_64_linux:      "21778baeb8fd76d4c50da4b68d3d6f59ce21905354825099f7eca3fe4a093e36"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "484becaa4f42960c33c9539be8ca8c76f3539f6fdb1db5a48686864b44bea930"
   end
 
   keg_only :versioned_formula
