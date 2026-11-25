@@ -8,12 +8,8 @@ class Copyparty < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "6e0c39e52c59db5d45a24ffe817b41a7e7f8fbedadb561cb34caab2aeda76797"
-    sha256 cellar: :any, arm64_golden_gate: "8da3aa7e7425c80c4429f93c34fdae07e85bac623ec2e760a0f658019af5a8a1"
-    sha256 cellar: :any, arm64_tahoe:       "8d3d0f3fb9d0a954f42064c0ddef44ee1888e39dadfde9b09c2860be3a578097"
-    sha256 cellar: :any, arm64_sequoia:     "4d068e6f4c3d309d1de46fe626e72796d1eb2426a9286d0d04fdf26ba7e0c0a2"
-    sha256 cellar: :any, arm64_linux:       "bec19f9d69c7b67644a6a85a24dd6225d09e8d89d5b8052004fd79de13cf738c"
-    sha256 cellar: :any, x86_64_linux:      "66080b4cf6cfb9c32cc98d2f36c27e51d9098937101e562d6cb0aa2b71b00515"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "e9ea932700dc8869720f64d79ca2c66fda8c4a4e6b661d753fd97423b27b1f85"
   end
 
   # `pkgconf` and `rust` are for bcrypt

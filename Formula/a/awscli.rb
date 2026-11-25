@@ -10,12 +10,8 @@ class Awscli < Formula
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    manifest_sha256 "c8355c37bd8f52162e3c62955df2e1c7f98292307d456dec851e3791ebb3968c"
-    sha256 cellar: :any, arm64_golden_gate: "d1512d1d27f7cf7ae10ad6d4c7fec873c31fb23fad3a45a144f73558831e4e6b"
-    sha256 cellar: :any, arm64_tahoe:       "c666e42a9309ce7d48a505553ae18591de45b39b551ad0787ae75d58303776f7"
-    sha256 cellar: :any, arm64_sequoia:     "e5941751f7ec07561649e3ffe09df1475df48ffcd879a876d45deab684a9c38c"
-    sha256 cellar: :any, arm64_linux:       "2717b0db919b6da8eb6e98b3ca59528c416d650ee6ccacb4b2f68ea5b37df282"
-    sha256 cellar: :any, x86_64_linux:      "563b2e54f3cb1ba4c498a21ef8edd82f9588a3b8c9c79cab84c9d129ca43914a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "60e08273a34e61abdc14eec5ac6ae1d47d08f73328ddd91d5df5b828b9123bfa"
   end
 
   depends_on "aws-c-auth"

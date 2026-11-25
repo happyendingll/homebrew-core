@@ -7,12 +7,8 @@ class ZlibRs < Formula
   head "https://github.com/trifectatechfoundation/zlib-rs.git", branch: "main"
 
   bottle do
-    manifest_sha256 "86c04b25f03dd8807927b51a72e1e2205ade938b56b81ca8e3f3f8febe132c0d"
-    sha256 cellar: :any, arm64_golden_gate: "eebf6ac26374c8d65efdada4c332db4bc62280ca3504febbca8f5ab0fe8ab89e"
-    sha256 cellar: :any, arm64_tahoe:       "6d6b161bc2ede32fb5404b09d81e1a75c2a0c44520f32368db2cff7da6fa6418"
-    sha256 cellar: :any, arm64_sequoia:     "f9f9b9aa18ac9d95aa964d84803d454972df798a2d4da26628ec50c990b873e8"
-    sha256 cellar: :any, arm64_linux:       "cfc4d7e4a844799753615b9aad4410389da8721035414c3506363baf2b3a20f9"
-    sha256 cellar: :any, x86_64_linux:      "ead1f4ef7ff1c9a2a1560a37cf85cc59fac336ffa7d1b226375aa73a8f82cc2d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "aa3f929a3a682773f9f5d57adf7f0fa53c5b81a32ea8ffd4dab399a39bb38cea"
   end
 
   depends_on "cargo-c" => :build

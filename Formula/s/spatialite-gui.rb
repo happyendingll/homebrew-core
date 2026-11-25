@@ -12,12 +12,8 @@ class SpatialiteGui < Formula
   end
 
   bottle do
-    manifest_sha256 "ede6bd1fb84991b280e0f8ced3412e8f28a8a02ddb3dcda0aff7a5f5d982ab01"
-    sha256 cellar: :any, arm64_golden_gate: "f84911fbfd5c14dfa19a845bcc4afe84a44da9c9544a69164c12dd22d46105de"
-    sha256 cellar: :any, arm64_tahoe:       "0279bbfd5b7ed42c3608eda754e488c8ee6f713f228bb8835c4a6525e83d2dd5"
-    sha256 cellar: :any, arm64_sequoia:     "c3c3b53196d2c4c5168c3d6c152285c2faebe7396234e8e0510978d46280474c"
-    sha256 cellar: :any, arm64_linux:       "883ef477c8d412fc078ee19a1c2b9824379ee6617e3c802dc2b0f68151591ccd"
-    sha256 cellar: :any, x86_64_linux:      "43ee25b8f2900b684ebc4991676eea0e4e449e9ad85d8be8dbe8a044adc9a026"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "460ac4d3a1e9543ef0b37687f5a9cde812f4e252026f19b9397deaf2b21245de"
   end
 
   depends_on "pkgconf" => :build

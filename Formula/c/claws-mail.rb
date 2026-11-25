@@ -12,12 +12,8 @@ class ClawsMail < Formula
   end
 
   bottle do
-    manifest_sha256 "9bb4beb276234884c9697727f6c1ecc2bdf32d96f2f875bbec082141e4944439"
-    sha256 arm64_golden_gate: "e076d4f08bff2c997f6490029f7695cf1e2967b18da56109bbad319d59544c69"
-    sha256 arm64_tahoe:       "55b8e98959b2f53646bcb490d21c035684eb423f79077f237baddc8d7d49c379"
-    sha256 arm64_sequoia:     "43e50c2070c1ce7272b19017b2a5dde3eb84d18d706ddd7a17a9e5e6a2bd8beb"
-    sha256 arm64_linux:       "a660bec2a731ec56ca2901c8e1721f340804ad1b3734851eff87859bcdcc1dc1"
-    sha256 x86_64_linux:      "983e45268e00c0937754cc663969d9f162dc0dba97a68e22d6325547b1bafe23"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "c8b9265bef63110de20bea39264da8599a39e094fca5c57a4f7ee94b96196896"
   end
 
   depends_on "pkgconf" => :build
