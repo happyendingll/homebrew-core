@@ -19,6 +19,9 @@ class Kubergrunt < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "7769576197145d4805b8c59d6a425ee084e76f656f9dbf6f057feef26df25eaf"
   end
 
+  deprecate! date: "2026-11-24", because: :repo_archived
+  disable! date: "2027-05-24", because: :repo_archived
+
   depends_on "go" => :build
 
   deny_network_access!

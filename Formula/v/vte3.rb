@@ -4,12 +4,16 @@ class Vte3 < Formula
   url "https://download.gnome.org/sources/vte/0.84/vte-0.84.1.tar.xz"
   sha256 "aca1caa8478aebcdbb1d67897fb3511eb7601debae6810e16a15b6fa25f31ac8"
   license "LGPL-2.0-or-later"
-  revision 5
+  revision 6
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 sequoia: "c68e1316f187a4cb7fd0fb33537d65ad44aa25bb2e6d359aa090d6d07fd873b6"
+    manifest_sha256 "b8a214a6db4c13ec3a98c2b4587cd6d7811c5a513ce92507debdaeed0ab50aa5"
+    sha256 arm64_golden_gate: "6a032fea7018cb64b0e760e74a3b92349af01675a690f61685e055bd3c9d5fd1"
+    sha256 arm64_tahoe:       "fb54c7ea264a297b40436a4f8f1eb0a8f7bf745c81c814979a6c95aff71e2517"
+    sha256 arm64_sequoia:     "eabd6284838adc742651e75c3ee7df137502a8a49b0410efbbcbc4f93516e82d"
+    sha256 arm64_linux:       "a04a2dc4b5a86fc76f06d8451cea685fa61b3b1fa42e3cebebea03eba679c212"
+    sha256 x86_64_linux:      "afc9f5e4c79c7dc30936f7325946fad756fefa444c6ea235a3e2a00901d45243"
   end
 
   depends_on "fast_float" => :build

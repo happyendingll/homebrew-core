@@ -2,8 +2,8 @@ class GitlabRunner < Formula
   desc "Official GitLab CI runner"
   homepage "https://gitlab.com/gitlab-org/gitlab-runner"
   url "https://gitlab.com/gitlab-org/gitlab-runner.git",
-      tag:      "v19.6.0",
-      revision: "9e4c6b50fd8a81ceaf2ee5c0b4d5d1c6c16067b0"
+      tag:      "v19.6.1",
+      revision: "9afb29f820608764d0f424eaaf388151d78c5355"
   license "MIT"
   head "https://gitlab.com/gitlab-org/gitlab-runner.git", branch: "main"
 
@@ -13,8 +13,12 @@ class GitlabRunner < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "0da885b8fde026dcebb3ebf108b7b859a2b3b639d8b2added6eed7f66cec1f5b"
+    manifest_sha256 "d9ee51298ecc9ef00c3044d4a68dcc5714deb7561e9d5b720e391954de81dc6e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c99cf913c6fd8e3a0c58b0dd90b8c24b736320b3ab86b323bb29147ce68db86"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "467ab8dd70f7a86f133011ef0b6d779f4197e46b98d70664fcc989e78b4a7737"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "93010b03692113e53584282c9047684359ed6200e71f575b1a74ef31547b74c8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "eb3e38ac5b4bdd7f93797a6f897b4163558456f3e2afd2aca545bb46ffc0a852"
+    sha256 cellar: :any,                 x86_64_linux:      "7b479e2a34fe74d3deeaafcff637ecdbbb90a71b0e56f9736dd20fbf364cbb68"
   end
 
   depends_on "go" => :build

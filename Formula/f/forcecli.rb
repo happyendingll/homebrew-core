@@ -1,14 +1,18 @@
 class Forcecli < Formula
   desc "Command-line interface to Force.com"
   homepage "https://force-cli.herokuapp.com/"
-  url "https://github.com/ForceCLI/force/archive/refs/tags/v1.18.0.tar.gz"
-  sha256 "934459399466fefd4544412887e26aee881edb66524597ed952cc4714ae68afa"
+  url "https://github.com/ForceCLI/force/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "d75f538f8d8cdf1f7580a28e9c740b3b0f8633dc7163a9fe35b02c8d71139264"
   license "MIT"
   head "https://github.com/ForceCLI/force.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "8ce1360dbec65158454bb40e418f36bbbf1c33747a56787f247fee99becf28aa"
+    manifest_sha256 "32d575d123eb4d07addb0ab2ac706a65c545c57d2af9c97011ba4b6412553419"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d90ee6bd02acd6d121f81f17ce4c99a6090195a537efe75738cb381bede29cf4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d90ee6bd02acd6d121f81f17ce4c99a6090195a537efe75738cb381bede29cf4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d90ee6bd02acd6d121f81f17ce4c99a6090195a537efe75738cb381bede29cf4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "45832de58a2cc384d7377cfd472979f4def80666e617f40001546edec9a61632"
+    sha256 cellar: :any,                 x86_64_linux:      "c153c5b345e2b9e5d72d4e1d1088828c573dff97e1f445e472c73681dc1e1ce6"
   end
 
   depends_on "go" => :build

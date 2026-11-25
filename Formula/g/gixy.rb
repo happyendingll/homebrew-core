@@ -3,20 +3,24 @@ class Gixy < Formula
 
   desc "NGINX configuration static analyzer focused on security"
   homepage "https://gixy.getpagespeed.com/"
-  url "https://files.pythonhosted.org/packages/1a/db/7e99c8fe473d466d62afc49ecdc5d36befd806e6f7a62deb976e86ce3689/gixy_ng-0.2.63.tar.gz"
-  sha256 "ccff12aa3fdda85e125d7540aa4b51219ed7ab7e59adbafafffb47d6e4b348a5"
+  url "https://files.pythonhosted.org/packages/ce/b0/2ce6455741358066ae65bd7e8b6f14880d0dcedb0b9996014ba8d7e24c53/gixy_ng-0.2.64.tar.gz"
+  sha256 "3cb264372f5ab70316a0221a62488891fd89665b115a15926efa753f90392278"
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "ef38ca4e09e895c95102e6bad2bd92d5d76e5b6d201e98e3abd8dc552ecde4ce"
+    manifest_sha256 "0c2a926aa7137d7212f8eedfb2004e929f5243908bb5ee4f7deab1b85050f1d9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a5f4ca46afa6754597207f1e41e709138253051c969471b1b7b3596a1aa52b27"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ab6dae70e56ab24593344dbbaa0444e84af6d0d2e2a474bcfaba86443033336a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "34dfa4ef40e8d08e304f665a338fdd06e3578104a00a42768073d43e3c31b757"
+    sha256 cellar: :any,                 arm64_linux:       "cee0193a157695bdb57e7ae94a5267468960362cb4132ce09b00cf355d651836"
+    sha256 cellar: :any,                 x86_64_linux:      "73aefaac4831ab8a9a492f5c48218d8cbf521b446dd0b527e195f003d26ab037"
   end
 
   depends_on "python@3.15"
 
   resource "configargparse" do
-    url "https://files.pythonhosted.org/packages/01/77/0ca08089aff2548621a27575d64cb0c0e0e3694e4798211381a65d48dda7/configargparse-1.10.1.tar.gz"
-    sha256 "8ee7c4429e6402b881c9a85569eb9484db2f63260718b45c67c59625284371c8"
+    url "https://files.pythonhosted.org/packages/14/94/269624ec6e8fc8fd5ab6a81c208aea9e02327b8874f9bc254f5379d5a2ec/configargparse-1.10.2.tar.gz"
+    sha256 "2deb0b3d6d46ff6e3218fcd350127507c5e3c11e21c8072a9fb24531dfc9bd4a"
   end
 
   resource "jinja2" do

@@ -26,6 +26,8 @@ class Chuck < Formula
     depends_on "pulseaudio"
   end
 
+  deny_network_access!
+
   def install
     os = OS.mac? ? "mac" : "linux-pulse"
     system "make", "-C", "src", os

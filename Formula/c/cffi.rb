@@ -12,6 +12,7 @@ class Cffi < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "b1ea07296a2220cf2c03d3642a297c779d36c5673c86ec8791244aa59ff85841"
   end
 
+  depends_on "python-setuptools" => :build
   depends_on "python@3.14" => [:build, :test]
   depends_on "python@3.15" => [:build, :test]
   depends_on "pycparser"
@@ -20,9 +21,11 @@ class Cffi < Formula
 
   pypi_packages exclude_packages: "pycparser"
 
+  deny_network_access!
+
   def install
     python3_interpreters.each do |python|
-      system python, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
+      system python, "-m", "pip", "install", *std_pip_args, "."
     end
   end
 

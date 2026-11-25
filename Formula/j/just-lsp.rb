@@ -1,14 +1,18 @@
 class JustLsp < Formula
   desc "Language server for just"
   homepage "https://github.com/terror/just-lsp"
-  url "https://github.com/terror/just-lsp/archive/refs/tags/0.11.2.tar.gz"
-  sha256 "1c79704097b7fadfa9ccfd8c39847841e15d9a33433ac7b01023eff0534a6700"
+  url "https://github.com/terror/just-lsp/archive/refs/tags/0.12.0.tar.gz"
+  sha256 "094d17ebd1457571ffa0c75de165303495eb74a902efd0c3d1f5667975a797ca"
   license "CC0-1.0"
   head "https://github.com/terror/just-lsp.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "081594c37731c7402060bb5e843ba1b3255505bf7f39d3433fce376a076bf9af"
+    manifest_sha256 "127c5f4df6adf7f5f4b6d0dadd50e56690e6da57ef8d1f017f074100c76bf2b0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "973251f6a0f7185bd2fb3016329bbe75850ccfeb3031a11f31150c1f272cbda9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e48de0a1a6f7af8dee950391e9425e13b429f399490c9bc24fdbaf3ef5bbc78d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "583f61f17500bac8397b3cff304f639796d22a231930df1b5d9471f407809bc7"
+    sha256 cellar: :any,                 arm64_linux:       "6998eb6d51fed62f8ff406a071275961415ae5f090d733ee596bd6bd21f6cd4c"
+    sha256 cellar: :any,                 x86_64_linux:      "1ee5d604313f039c8fb40168db7ac990e53ddc49f1093a6179ec054ef0df2e49"
   end
 
   depends_on "rust" => :build

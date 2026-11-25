@@ -1,14 +1,18 @@
 class Fn < Formula
   desc "Command-line tool for the fn project"
   homepage "https://fnproject.io"
-  url "https://github.com/fnproject/cli/archive/refs/tags/0.6.73.tar.gz"
-  sha256 "93452a52db5d67dd365b4d17244a0cfbac9290aef92729e3a1b4ce20f3cf9af5"
+  url "https://github.com/fnproject/cli/archive/refs/tags/0.6.74.tar.gz"
+  sha256 "c3eaeb3498f446e9b7217a5b76400c5d11f57ceaff84826ea8b1da6e9f668949"
   license "Apache-2.0"
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "22f545f1d695c4ae3a53152de9cd600e0a78a12a3473eb0a39be2a95f35be01d"
+    manifest_sha256 "e611ed1854645767477d1a2e2688e0bbccb1feb9f76c412ef57d10036ca75f76"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9782cd4bc78e47e290165737b22a632a548c8613dd86b3cdc0f88278a1aea0d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b9782cd4bc78e47e290165737b22a632a548c8613dd86b3cdc0f88278a1aea0d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9782cd4bc78e47e290165737b22a632a548c8613dd86b3cdc0f88278a1aea0d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6c8535df2e83c22466aabfd368bc9c779ee9523cb75e557df2a417d4456d4d76"
+    sha256 cellar: :any,                 x86_64_linux:      "160ec95a4eef16bcf28dfc2d543ea96ea2834dbfd95d628259f06d980fdf60fe"
   end
 
   depends_on "go" => [:build, :test]

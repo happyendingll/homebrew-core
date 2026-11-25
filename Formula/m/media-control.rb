@@ -2,14 +2,16 @@ class MediaControl < Formula
   desc "Control and observe media playback from the command-line"
   homepage "https://github.com/ungive/media-control"
   url "https://github.com/ungive/media-control.git",
-      tag:      "v0.8.0",
-      revision: "e711d3ffbdc97add23cf0133d073a1ae773348b2"
+      tag:      "v0.9.0",
+      revision: "507575ce288a9238372b7f39fde44988612700d4"
   license "BSD-3-Clause"
   head "https://github.com/ungive/media-control.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "1b8bfd072868eed4b639759f167e12d945f4f4329102019a1527ca0c33e82e45"
+    manifest_sha256 "3340e6a4d1ef14017a63a8424001135864fde50f183d20e69ac2ca740f3b0283"
+    sha256 cellar: :any, arm64_golden_gate: "56590a7995fad6ffba8cae044d18dae37853368526d6c35f61c6fcd40bf4805c"
+    sha256 cellar: :any, arm64_tahoe:       "93aaf6b1e2e00459896aade73a91ade4469b26e01f89750834b303c648be9eb1"
+    sha256 cellar: :any, arm64_sequoia:     "1553a6e39cd333e89a1403d8f61da7ee5ef38da900dc0dfa257d73449b02857f"
   end
 
   depends_on "cmake" => :build

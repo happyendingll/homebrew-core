@@ -1,13 +1,17 @@
 class SymfonyCli < Formula
   desc "Build, run, and manage Symfony applications"
   homepage "https://symfony.com/download"
-  url "https://github.com/symfony-cli/symfony-cli/archive/refs/tags/v5.22.2.tar.gz"
-  sha256 "5cb2eb468eb90501519395d24f2023ed19cb1b49299124eeba2516335b2510d2"
+  url "https://github.com/symfony-cli/symfony-cli/archive/refs/tags/v5.23.0.tar.gz"
+  sha256 "649e6a9583c5c6456eada1ca8102e9cbe00a6b8d66ff5bfe5e5c89fd370172a5"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "c355d5fd25c8dd69d4651f5129a0d402c80ac6cd7c025f5f1b5e60d733ea7db8"
+    manifest_sha256 "19cf2a84894bc465826a5a765aba08b6a22f891a77b28e4dd786d5fff3c4af24"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "53674a63a7ca5ffd661d3ed2b8521f66b2669a57af6e632e8510607955726e76"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eb25316b26b40337fbcb3c4f5a6bc47883e285edc3f141c19fd7c0a5dd79102b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ecc750fcffbfc5ec0319435129c9f904ecafcfd8006cc480aeb1b819736dc156"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "b1be9f3b7fe0eb1b6dea4376f074d208247c7e165ee4184f103028dd2791cb25"
+    sha256 cellar: :any,                 x86_64_linux:      "303e75b97b1975f98278e50322d0d45cb9a0f1f4307638160870a0f7d48e0a15"
   end
 
   depends_on "go" => :build

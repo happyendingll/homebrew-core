@@ -4,8 +4,8 @@ class OrTools < Formula
   url "https://github.com/google/or-tools/archive/refs/tags/v9.15.tar.gz"
   sha256 "6395a00a97ff30af878ee8d7fd5ad0ab1c7844f7219182c6d71acbee1b5f3026"
   license "Apache-2.0"
-  revision 16
-  head "https://github.com/google/or-tools.git", branch: "stable"
+  revision 17
+  head "https://github.com/google/or-tools.git", branch: "main"
 
   livecheck do
     url :stable
@@ -13,8 +13,12 @@ class OrTools < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "057fdc8105ff6c359d89078c273a3865fc5c062d88ee26ccc5611c90a1a06f39"
+    manifest_sha256 "6917a75e21040f4b62f5ab07f01b2caa1ae0c7557eb3632eb1fea5daca25b1d6"
+    sha256 cellar: :any, arm64_golden_gate: "9e2fd9809b02c9136e59eab7d1a7723428de35f09885c0d894a27e182a4f54d2"
+    sha256 cellar: :any, arm64_tahoe:       "73f26f1de6cd97c61a08cadbf571fb51cb5edfc564b86e7d719248a921e61b00"
+    sha256 cellar: :any, arm64_sequoia:     "0e2dadf8f2b3761287635db29dc440f2aa876f0779dc7b05d3f2aa22e7d7335b"
+    sha256               arm64_linux:       "d2080973dacd80ffed5c7a86ae50db81d0d05bf7395320417c40f2018686e321"
+    sha256               x86_64_linux:      "a92d99b1a4f6c43818cd56b49fe443767e5bc96a08f7bdddded8418d96738fe3"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -30,14 +34,6 @@ class OrTools < Formula
   depends_on "scip"
 
   uses_from_macos "bzip2"
-
-  on_macos do
-    depends_on "cgl"
-    depends_on "gmp"
-    depends_on "mpfr"
-    depends_on "openblas"
-    depends_on "osi"
-  end
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -59,6 +55,8 @@ class OrTools < Formula
       -DBUILD_EXAMPLES=OFF
       -DUSE_SCIP=ON
     ]
+    args += %w[EXE SHARED].map { |type| "-DCMAKE_#{type}_LINKER_FLAGS=-Wl,-dead_strip_dylibs" } if OS.mac?
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

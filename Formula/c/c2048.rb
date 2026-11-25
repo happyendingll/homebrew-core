@@ -11,6 +11,8 @@ class C2048 < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "c338c1f582bb0b43260a59b3c7442509008ec496b408129d383d1385d86b89ea"
   end
 
+  deny_network_access!
+
   def install
     system "make"
     system "make", "install", "PREFIX=#{prefix}"

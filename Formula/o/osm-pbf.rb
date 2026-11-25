@@ -4,25 +4,25 @@ class OsmPbf < Formula
   url "https://github.com/openstreetmap/OSM-binary/archive/refs/tags/v1.8.0.tar.gz"
   sha256 "18ec63e28a42073db62e8fb59134b8bd410c29e8eb1d8ec1759efc9501fbf41a"
   license "LGPL-3.0-or-later"
-  revision 1
+  revision 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any, sequoia: "d72888605a4aacb14b0ce1c394f38e8f24358fe0c68a6ba13b70a5023709d6b5"
+    manifest_sha256 "7f144659d4f0f4e8c872ede1b9e70ce3536470ac201d45f3fe9dd392f7e303d8"
+    sha256 cellar: :any, arm64_golden_gate: "83801c79fd2a703f6b1738687672f5f47b5695bf96e5a113ee32168d814ce00d"
+    sha256 cellar: :any, arm64_tahoe:       "e15aba68e664e6d37121a7d27f7051a50271df19f5acd8220ccedc7ddccfbf64"
+    sha256 cellar: :any, arm64_sequoia:     "5a33fb82dfbbb6684ae0732acf009343c00ded6e76d64383177eae0b25f621b3"
+    sha256               arm64_linux:       "ffc41c1c148d29cdd3dd3e8987cc7f75334c3e0c9f6d457f6df4866d249cadaf"
+    sha256               x86_64_linux:      "905786d7c4840a18cb2993f32bce2d9741e8df42bb4b2be37453d56f92b89ea6"
   end
 
   depends_on "cmake" => :build
-  depends_on "abseil"
   depends_on "protobuf"
-
-  on_linux do
-    depends_on "zlib-ng-compat"
-  end
 
   deny_network_access!
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    args = ["-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-dead_strip_dylibs"] if OS.mac?
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     pkgshare.install "resources/sample.pbf"

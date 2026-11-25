@@ -1,13 +1,17 @@
 class PhpantomLsp < Formula
   desc "Fast PHP language server written in Rust"
   homepage "https://github.com/PHPantom-dev/phpantom_lsp"
-  url "https://github.com/PHPantom-dev/phpantom_lsp/archive/refs/tags/1.0.0.tar.gz"
-  sha256 "d9f5a1bda4a67e61ea0650ccb6ebe2f143b884e81cb5156d4cd0726888d2191c"
+  url "https://github.com/PHPantom-dev/phpantom_lsp/archive/refs/tags/1.1.0.tar.gz"
+  sha256 "b726026bacfa0214a9cace239c9265cd78e66821d25de40bb2abb7305703375a"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "ec4f8281318f178375c971a84d95306351b4992bb30671076f79b01e91c671f4"
+    manifest_sha256 "22e53ae92761ee38f2a0d401cb2e06beb694d3e378e2cbe8509956a960af87fb"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fbac1e072fc717c8c8e2d56494b98506348a50bd059f66a3fa0d6e11f589d7a2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e1dc882b67f29f0bbbb32c59cfabd9ef18382a42c552e31166b44f619ddde1fb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cb47dbd5242dafb910ffcc2f42031bddfef55f209218ac615f965abd2307ca17"
+    sha256 cellar: :any,                 arm64_linux:       "1ecb9a9204010ea07afb800fe0dd0efc6c8a27b632c97b049a64bb71e53be21c"
+    sha256 cellar: :any,                 x86_64_linux:      "c07ef1297d7310e8f24617fc28464bd5f3868792e667429497c2f98bcd72c79a"
   end
 
   depends_on "rust" => :build

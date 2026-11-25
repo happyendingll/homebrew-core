@@ -1,14 +1,18 @@
 class AgentManager < Formula
   desc "Run Claude Code, Codex, OpenCode and other AI coding agents in tmux"
   homepage "https://agent-manager.dev/"
-  url "https://github.com/YoanWai/agent-manager/archive/refs/tags/v0.49.0.tar.gz"
-  sha256 "47fe35e9e3b5455a1e28947b3a4359ba62716024fc89057045fce9bf469bd8e1"
+  url "https://github.com/YoanWai/agent-manager/archive/refs/tags/v0.50.0.tar.gz"
+  sha256 "5a1ba8f72ccefc0ccb03a0a19db1f9e9c20c9374f848d14d73035f45e5258c86"
   license "Apache-2.0"
   head "https://github.com/YoanWai/agent-manager.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "7b959c3da280c011c3f9dd420a0e9f197ef120833895669c0e1ebac109f33769"
+    manifest_sha256 "552aae4c22e69879cc5f57e08f1f3819a631768f2a1d6100ca0969c0966aacbd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b03900d2c4e0ad4b79bd79c0078f41093b4e972ef103e08586fd15a2442dbe0f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21b2ae7dc46c22a9bd4a29fd25f57416f336642481b94aff7d7fba85327f27c4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e9d2efe58776c09413540f6850217207b2244a8588e88dd8771f643bf3ca4432"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f3aef0ffe992f880fb59017de8c7e20044d1c02d7d56aafce96f071e6ee64452"
+    sha256 cellar: :any,                 x86_64_linux:      "3835af41670d736495fe29e99fa82a8efa1d37d8a8fe61690761793b5f3bdd23"
   end
 
   depends_on "go" => :build

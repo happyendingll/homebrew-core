@@ -16,6 +16,8 @@ class Chkrootkit < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "e7a4efa69960abd6e44150aae730a48493bebf80ca21c2b963f392fc16f8fcb2"
   end
 
+  deny_network_access!
+
   def install
     ENV.deparallelize
 

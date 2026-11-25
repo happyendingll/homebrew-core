@@ -2,7 +2,7 @@ class Node < Formula
   desc "Open-source, cross-platform JavaScript runtime environment"
   homepage "https://nodejs.org/"
   license "MIT"
-  revision 3
+  revision 4
   compatibility_version 1
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -24,8 +24,12 @@ class Node < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 sequoia: "5f9ca3009368129403b1bf46f3a2fa36412546039dd42f7af143206bf739e046"
+    manifest_sha256 "f1e435e4db4a2d99b0f432ca0dba04554ea26571c4b805cf7225fd698900db69"
+    sha256 arm64_golden_gate: "ce40077d5072a0f9a1f8a61c7c77c3ec130cd51df5ae67f26687c62cac215a59"
+    sha256 arm64_tahoe:       "0d1d5e1197685c957d7c3a91db68cfd07a1f8fa54ce842c79515fb3fe6782195"
+    sha256 arm64_sequoia:     "ee79e60003e444bd4560c62045e03ad01f140e483c02c588df633f91e0206710"
+    sha256 arm64_linux:       "1f436be648d7ea65043f7f1ee3cfab0d7c7f687462f4800e452937d58254abbc"
+    sha256 x86_64_linux:      "8ed09f45e9c1c95394ceadc839b84e2c33f16d562ccfd6f4d2fb11edc966c133"
   end
 
   depends_on "pkgconf" => :build

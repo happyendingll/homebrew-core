@@ -4,30 +4,22 @@ class Onnx < Formula
   url "https://github.com/onnx/onnx/archive/refs/tags/v1.23.2.tar.gz"
   sha256 "2f23784e27d210a23b059a847c305e305034fb4a842fface3ff37283f85a2b40"
   license "Apache-2.0"
+  revision 1
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 cellar: :any, sequoia: "5265cf616ed409baca79b4b8dd4a53e99164e1a4a25fa995606562cded5938bd"
+    manifest_sha256 "7a65cba483e9ac2c71b18eed61f6f9a6079a25a79a0773139e985c601ce0da6d"
+    sha256 cellar: :any, arm64_golden_gate: "cb4dd9f517f285a3a252ac9437ad2271d7eb5797cb7cdeff6adda5ef42450ef7"
+    sha256 cellar: :any, arm64_tahoe:       "651b991b8b83aeeae108a2efdc2a1289744807928659c95e470d463a697a3677"
+    sha256 cellar: :any, arm64_sequoia:     "7c6eec29eb6829b7d7e17740a36d02112113446a3f3379b0b78d9feadd66b80b"
+    sha256 cellar: :any, arm64_linux:       "1ec8824b4abd68f920fc30905b041bece2754504bb9ba73a12b50c6cdcb3466a"
+    sha256 cellar: :any, x86_64_linux:      "fbf395b76bc944268ca72e890a78d76955d2aaeed71d9019c11c15f930fe3ca0"
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "abseil"
   depends_on "protobuf"
 
   uses_from_macos "python" => :build
-
-  # Apply Fedora's workaround to allow `onnxruntime` to use `onnx` built without
-  # ONNX_DISABLE_STATIC_REGISTRATION[^1]. We can't use this option as it will
-  # break functionality for any dependents/users expecting the default behavior.
-  #
-  # [^1]: https://github.com/microsoft/onnxruntime/issues/8556#issuecomment-1006091632
-  patch do
-    url "https://src.fedoraproject.org/rpms/onnx/raw/4de8a450afd87b1ba1931f50d841e9c50b63d8a0/f/0004-Add-fixes-for-use-with-onnxruntime.patch"
-    sha256 "d9ddb735c065fd5dae11ab79371e62bdcca157a6d2a7705cc83ee612abeaaa98"
-    type :unofficial
-    resolves "https://github.com/microsoft/onnxruntime/issues/8556"
-  end
 
   def install
     # FIXME: From v1.22+, onnx internals are hidden by default, which breaks
@@ -41,6 +33,7 @@ class Onnx < Formula
       -DONNX_USE_PROTOBUF_SHARED_LIBS=ON
       -DPython3_EXECUTABLE=#{which("python3")}
     ]
+    args << "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-dead_strip_dylibs" if OS.mac? # strip abseil linkage
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
