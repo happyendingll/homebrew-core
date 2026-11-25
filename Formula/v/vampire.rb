@@ -11,12 +11,8 @@ class Vampire < Formula
   end
 
   bottle do
-    manifest_sha256 "1621cbc922cbbd3204ac422905f49f7fd0a510068c1a8bc034252d784eb2aa0a"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a13da61c979eb8683edc6a9463872332c817634e651e2f275f1467e986555d19"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2e8295fb3b8ddf45cb792430856c5c555125d31a43f2ecd131d89b0b8ab536d7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9a2961eca77e5de741318d99970a2ecbb3672d2077eb91c6a9310ab728dd27e4"
-    sha256 cellar: :any,                 arm64_linux:       "741aa65ddf115d2333acb42942caf86dd9e94a053955000050b38554d62df293"
-    sha256 cellar: :any,                 x86_64_linux:      "a1ac00dcd0909c7c63c98b383a78d22b73808756a3d3e042e0278d6228fa29d3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "66b2cf66e0a95659635b409f9239dd5ee33b7cdbe2589fd648a0757124348ae1"
   end
 
   depends_on "cmake" => :build

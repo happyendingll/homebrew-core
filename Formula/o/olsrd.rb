@@ -12,12 +12,8 @@ class Olsrd < Formula
   end
 
   bottle do
-    manifest_sha256 "f3e61618d5719b3be42bc2592a5e96f178a1d9fee254fdb202496703de34a7e4"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "251cf96cab79bc721c39a34108f66d64551414fa7e29b1507659f8ad4b790426"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "24353431ac1cd81eebf2d8279efcce49ec4c4c9a3c57735fad457c7e7963a10c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ad0ed6461d43a57ebf0bb24ff2bbfc553e3afea0b979ea209f3aa023ff517f10"
-    sha256 cellar: :any,                 arm64_linux:       "e0d08d6ae889658efdeb70861c5b970f34cd1cd972bcebd43fec7d4e578a7f93"
-    sha256 cellar: :any,                 x86_64_linux:      "f6642c210147970c4c713d2621f8144add08790a195e3f72d671b9234c3779f6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "c61590ef26dca6b36fe26de6ea39b62d9cfbcf958f1fc0f8dc0553c212a6bcf4"
   end
 
   uses_from_macos "bison" => :build

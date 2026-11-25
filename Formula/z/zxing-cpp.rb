@@ -7,12 +7,8 @@ class ZxingCpp < Formula
   head "https://github.com/zxing-cpp/zxing-cpp.git", branch: "master"
 
   bottle do
-    manifest_sha256 "9ff94cccc76d7b894466e6c7b912bfffe47fda3e064cf72c64bc108542cd9e82"
-    sha256 cellar: :any, arm64_golden_gate: "0367deeaa96f6b7725346572ef388e83120dd3e3ce03af807e9f2d73c44f4e23"
-    sha256 cellar: :any, arm64_tahoe:       "a39b56acf9c3768dcf86a8ced01a40f62a79277f3fa1c22bc62f2848b44e6aa1"
-    sha256 cellar: :any, arm64_sequoia:     "81f68cff037e756a181f2a7f2dc44200d2c0bc25e730049b3991b8909f360335"
-    sha256 cellar: :any, arm64_linux:       "9563af7bae13dac07d6c87d5fc8121a8537986889861de3e222e6b8fc992b36d"
-    sha256 cellar: :any, x86_64_linux:      "6775e1a76e9709b07a4a1b71938c44268037e3fb9362e8a7a0cac1d351cf6469"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "d47d6941b8506049b434f95c02c4e4cd5c8d120e916f27a3ae605928b2998fac"
   end
 
   depends_on "cmake" => :build

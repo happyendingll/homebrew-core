@@ -8,12 +8,8 @@ class ScIm < Formula
   head "https://github.com/andmarti1424/sc-im.git", branch: "main"
 
   bottle do
-    manifest_sha256 "fbcc343041591f19fa59092426ff247a3d61bb1b49530d0853fd65ff2eb18a75"
-    sha256 arm64_golden_gate: "4efbb68594acdb1bf6aae1bdf801188915118b1751a2ef78e1cc02defd072461"
-    sha256 arm64_tahoe:       "21b2e372ffd18e6b1201f6f8e26d7f9f87f01bf5f410bf5b4c7758109afe479c"
-    sha256 arm64_sequoia:     "4d1764c6deaeaf5235ea0049dddae62713a11db2ec2bdf33ba57f7fe02f58b78"
-    sha256 arm64_linux:       "0b28980ae331b2557ee353aa0c59c0de36f4c39fb7f35befab1892c2c9c89029"
-    sha256 x86_64_linux:      "c1c60cae8e4541eeac4f5b87dc583484e59976fc743edb766529b34aabf7a76b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "3534e944e910c4d951ddc7b5a1397524d430905e93c703f9efd52ed1eba99b35"
   end
 
   depends_on "pkgconf" => :build

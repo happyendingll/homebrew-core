@@ -22,13 +22,8 @@ class Liblinear < Formula
   end
 
   bottle do
-    rebuild 1
-    manifest_sha256 "326526aa0ae4140e2400413451487e55cc69df85e6e1b908026b60161dac9165"
-    sha256 cellar: :any, arm64_golden_gate: "086adcd21fcd8282611df45aa50c11bba7c0f7853e67411b99f4b7c824a798b0"
-    sha256 cellar: :any, arm64_tahoe:       "ead4d4e962f26d4e2771f04c2c60256116dbc4390dcf688ee11e4e5d2884b515"
-    sha256 cellar: :any, arm64_sequoia:     "5813c0b3b108d40de56b17316ee0f6eb9c298f241477b1787b49b1a8b6b663ca"
-    sha256 cellar: :any, arm64_linux:       "f33603915c87542a965c48074503e3426f410da3823bb47ea7b3987878d1c016"
-    sha256 cellar: :any, x86_64_linux:      "6e1f3fdb7156a9a8ccf49c61a51f67ef1e0c26bcfa6d72a35ec3bc4df8f15d4f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "1426da49cc4128340739633253ec1121d10bb933fb17564470df0e6b1e13e9ea"
   end
 
   # Fix sonames
