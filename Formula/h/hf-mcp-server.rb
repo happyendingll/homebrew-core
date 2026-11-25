@@ -6,12 +6,8 @@ class HfMcpServer < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "a697608698458e1ff0f1e4780d044e85ade8e7328b015225286530e552adb0f0"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "29c8712c5f180bfef9a5c21c2c748006734876a3941fe360d5b93634e09e075d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29c8712c5f180bfef9a5c21c2c748006734876a3941fe360d5b93634e09e075d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "29c8712c5f180bfef9a5c21c2c748006734876a3941fe360d5b93634e09e075d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ecff65647db9cd8e0b8465ab37dfe5f3086e5740551e6547f4c1d0cec59a2109"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ecff65647db9cd8e0b8465ab37dfe5f3086e5740551e6547f4c1d0cec59a2109"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "bf7029eb9fd401d30948b2ed84a3e69df6a12182eae20c28a2b6e02cfb0af934"
   end
 
   depends_on "node"

@@ -12,11 +12,8 @@ class Aoe < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1fc19df9130479a1903c94dfbc571a4a9344511320ecbb87ad12ccbabf5d46db"
-    sha256 cellar: :any, arm64_tahoe:       "e9d94d17d701b239636d4a91d034c4e6e7c64af4592dc97396bc95ed31cbfbf3"
-    sha256 cellar: :any, arm64_sequoia:     "8f23fbb44dd654447c6b62ba32643af10f1438bf039922a28f3fa467cf2539bd"
-    sha256 cellar: :any, arm64_linux:       "95d4c6733c7563a6d175ea7a1168dc3f6b82baf48340be3831ee3fdd1aeb289a"
-    sha256 cellar: :any, x86_64_linux:      "b8d8e1af591e1c254555fea9ed82bf4c19ed159426613b5a2a494744f7c19d0d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "7760785df688e139c594df12dfb33fc28432ab363d2581e554c10ad1a179df0b"
   end
 
   depends_on "node" => :build
