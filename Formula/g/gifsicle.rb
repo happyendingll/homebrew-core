@@ -11,12 +11,8 @@ class Gifsicle < Formula
   end
 
   bottle do
-    manifest_sha256 "fb3a5d9205146722959321994ac175dad92f40f9761f7ce0def8aa9689ad6192"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "781a2d0a3d95784484d0b10275a0cd8a8af132cbff69c0bde6b1bc32d5167a09"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ac5a2d2dfabb906b29910d0c0e0997f376f183f22e2c9ed7a805ecf14044c30e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "59dfbc7caad15df714eebf76c0ae06a2175d979481b7fe7e14fff360bebcbb06"
-    sha256 cellar: :any,                 arm64_linux:       "2cf0e3e524eb457c3042f131f7ccf6790a46cf41ec36e6fccd7991c3e9b7b316"
-    sha256 cellar: :any,                 x86_64_linux:      "bbb56c40e2d5863747366d232e759370afee00d03343fc58122c5c6e4c9d9a22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "9b2bd03488a1c25a85988e7baa423bb8adcbae60f4a04828259eb676b09d4662"
   end
 
   head do

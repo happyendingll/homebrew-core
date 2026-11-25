@@ -9,12 +9,8 @@ class Zookeeper < Formula
   head "https://gitbox.apache.org/repos/asf/zookeeper.git", branch: "master"
 
   bottle do
-    manifest_sha256 "c826fcc62d72e3c3a96ef4013373fe2cb85159557cd39b635fec62808ff51f9a"
-    sha256 cellar: :any, arm64_golden_gate: "740a725fbeb3fc73936a6c646b11cac1255770b9fd3018ba536741768881de2d"
-    sha256 cellar: :any, arm64_tahoe:       "3c6d6efa9619279e4cd7ed22eb2f7a2c68dc9008eff34de63146771acbc761f7"
-    sha256 cellar: :any, arm64_sequoia:     "12489ee4b27e3e8212d94f671c0a8d28e73f7f49ec75b8bb68acc0377d48cd9b"
-    sha256 cellar: :any, arm64_linux:       "3b0522256c9229bca55d6640e35cdeaad13291b9caa04a8e7c271422ad15b173"
-    sha256 cellar: :any, x86_64_linux:      "60afb392ff0b4d26e804ab0d744e76246031abd869ed261de454ff0b2211a31d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "86f4acf18067a3ad6cff256779608a355249f24b6c15b0f9e4e5caa4c6e40039"
   end
 
   depends_on "autoconf" => :build

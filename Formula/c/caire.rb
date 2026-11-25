@@ -7,12 +7,8 @@ class Caire < Formula
   head "https://github.com/esimov/caire.git", branch: "master"
 
   bottle do
-    manifest_sha256 "68074454522950f04d5b6a5de87f2d7dd019693bbc180c190e27ed782a8aca2d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11a1ee28dbf61d888d0450e8552f9efa303cc64fb47bc02d3612d09b7e7566a4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "02acaf95303772d66003245f6d9a7404bbdb22277ceadc7ea8bd18a4d59f3170"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "68626f375331041ad4e6c104fa0dbbaec3cf45f0f9cff98bc33fa1cf771e2bbd"
-    sha256 cellar: :any,                 arm64_linux:       "69ed543fc5e65b8d6dd0590013dbafe674a6096fa1be4dad8107e6ef090365b3"
-    sha256 cellar: :any,                 x86_64_linux:      "6a5e78c69d85e468bef1e9c094e3370e11a40d269f069b78b27e2c40ec24adec"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "d92d26137b1a4834e39371ee962ead998bab2843731dfded6e59c4b7c70a4522"
   end
 
   depends_on "go" => :build

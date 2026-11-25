@@ -8,12 +8,8 @@ class Cosign < Formula
   head "https://github.com/sigstore/cosign.git", branch: "main"
 
   bottle do
-    manifest_sha256 "b747e1a8e717af4c893e8e0965a94c6e3cc6b4b0344a72a888f18bb5f684a7a1"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "276df39b832d3ddfb0bef2b1dad33cd5d4c1a4ecc41ed6e37321aed8da271071"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "276df39b832d3ddfb0bef2b1dad33cd5d4c1a4ecc41ed6e37321aed8da271071"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "276df39b832d3ddfb0bef2b1dad33cd5d4c1a4ecc41ed6e37321aed8da271071"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b2df9deca5363f55ef8dc2d26192612ef0a545315f8035396116c0d3ef63460b"
-    sha256 cellar: :any,                 x86_64_linux:      "65f55cf4e3f3a2849d40c1f2b58e8a702bafedc75de8c489945d1ee6746415b8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "224835acc7910e6547dd0b190c1ad972b728751178b2bc98b81917926a23ddcc"
   end
 
   depends_on "go" => :build

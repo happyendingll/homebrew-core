@@ -11,12 +11,8 @@ class Micronaut < Formula
   end
 
   bottle do
-    manifest_sha256 "0d4ce3e9bd33caafe6aee19046f13b3d0a38580ceefdd70bf939d5650dcacc6d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a8220cfe9d66176902c4bedd4fb435997d8b9206439cdc7cbddf57320916bd94"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a8220cfe9d66176902c4bedd4fb435997d8b9206439cdc7cbddf57320916bd94"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a8220cfe9d66176902c4bedd4fb435997d8b9206439cdc7cbddf57320916bd94"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "82378e55a9d3ca7a482c8e93be9103952616830bd2a78078ee338ed7b1802716"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "82378e55a9d3ca7a482c8e93be9103952616830bd2a78078ee338ed7b1802716"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "dd0800e4fa6238142e93ccb1720f2599bd942f07b93826f08612383fc48a7e1c"
   end
 
   depends_on "gradle" => :build

@@ -7,12 +7,8 @@ class Zellij < Formula
   head "https://github.com/zellij-org/zellij.git", branch: "main"
 
   bottle do
-    manifest_sha256 "49b204808faea3095ed9905b2e236ea3ec488f55d89e61127d7ccaea5b3549ee"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "669a0f13a411e37c041d881bd0b9c539d0d0c3dd39a31adb3c7d60e45c1ebb0f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d4425d2be6ac9bfd1d430ac66206c8ac2dc07279bd75a64b5e599a243051ca20"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ca96161d925e132f3e319dc73d787a32f00ccb1846262ad209d0607a885b250e"
-    sha256 cellar: :any,                 arm64_linux:       "18cd60e697c4748430ff30a4de1fc81f0945a8e9694ed336d6081979c897b580"
-    sha256 cellar: :any,                 x86_64_linux:      "45ba5683f68de058135dd3e2d18cf05a55ac98b90e54e7130a21498f2f9f1f5f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "af2a81d226e9ed7510b06cd22f650577b3d461e9e74163c86b36ccb12a13f2a3"
   end
 
   depends_on "rust" => :build

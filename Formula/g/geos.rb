@@ -12,12 +12,8 @@ class Geos < Formula
   end
 
   bottle do
-    manifest_sha256 "24191e70a4620dce11dbf7ba321b2dfcfb5926e05ad9b42da4afa3f699b1f2d4"
-    sha256 cellar: :any, arm64_golden_gate: "7355fc188c9cef6f9b726bbe95e1f5d6058f78e672cf4146c32afc57a3fe25ff"
-    sha256 cellar: :any, arm64_tahoe:       "be86a5e10f911c883285f609535d0f42dbe68ca42c821b186b2426e85a506445"
-    sha256 cellar: :any, arm64_sequoia:     "8baedc5643ae9f13cfc326ee8fbe810007de8863be3843aa68a346b5e3928ab8"
-    sha256 cellar: :any, arm64_linux:       "d10fe11f5e95bcdc5aae5ad50a5981a66678685ae782f262b89a66f845995765"
-    sha256 cellar: :any, x86_64_linux:      "0106c09356c3b1b808ea9055b7f0795345e36ab678af05b0259804e4eba3d02b"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "1fe24853abe10228f47408c0e6ba48ccca7a0540316eb0f01f2fb9f01f2bedf0"
   end
 
   depends_on "cmake" => :build

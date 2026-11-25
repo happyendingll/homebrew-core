@@ -11,12 +11,8 @@ class Xnvme < Formula
   end
 
   bottle do
-    manifest_sha256 "e0ab19cfc66d3d55b2b148979d7c84342a061da1da15c18dae8276e0900537ce"
-    sha256 arm64_golden_gate: "46d270a82735bac8d4ca107cbb464382b1293f4978d8926e599a6dc78fda0893"
-    sha256 arm64_tahoe:       "fe79b0a39804dcf7f1c258989e6649756e0cb06bdb311fc52b44212b4de05938"
-    sha256 arm64_sequoia:     "1b786a2f878d6680518800812b059f0ca026a47803a8f46ef873c1281356900c"
-    sha256 arm64_linux:       "e59f3480ad4fba4cb298fe56b6302f1c3b3a0f1e5cc2d8d1d45ba8018e973185"
-    sha256 x86_64_linux:      "fa28bfa322c2a9e07efd380d06b4af4cef8c138980160358200cc8720b4e5141"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "09aa8aad8a7900f085fd305b78fd3a2bdecc3a2d489db41324145fd46a384e8d"
   end
 
   depends_on "meson" => :build

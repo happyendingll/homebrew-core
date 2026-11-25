@@ -7,12 +7,8 @@ class HickoryDns < Formula
   head "https://github.com/hickory-dns/hickory-dns.git", branch: "main"
 
   bottle do
-    manifest_sha256 "6ed4ee3c339c2d10d7c702ba3b25422fc7d8083d0310cd6b58941ac6e66f4f18"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c64924063bc68a9c953567531227eafb58b0b38d43517b104e3ce05e0a49de0d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "54deb137b216979aee4ff52a113da72b38476664c6d79e6e412584a06a9bfacb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0b8b2fc0e14b7bb547d0d1c26907b5702d1a911081052df7d4609fa80f884a7e"
-    sha256 cellar: :any,                 arm64_linux:       "73b934fc77a50fc04910331e6eb45812086f2f336d2bf17d949ea2c94226c900"
-    sha256 cellar: :any,                 x86_64_linux:      "e115cfdf86852d49f8e9277383f5120c683c60459949678a3af0c55739a0979a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "94bf2405f9dc40e7cbe2fd2c90660b1408cbb53f08749e68a4cb5abb17ac306a"
   end
 
   depends_on "rust" => :build

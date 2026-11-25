@@ -7,12 +7,8 @@ class Forcecli < Formula
   head "https://github.com/ForceCLI/force.git", branch: "master"
 
   bottle do
-    manifest_sha256 "32d575d123eb4d07addb0ab2ac706a65c545c57d2af9c97011ba4b6412553419"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d90ee6bd02acd6d121f81f17ce4c99a6090195a537efe75738cb381bede29cf4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d90ee6bd02acd6d121f81f17ce4c99a6090195a537efe75738cb381bede29cf4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d90ee6bd02acd6d121f81f17ce4c99a6090195a537efe75738cb381bede29cf4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "45832de58a2cc384d7377cfd472979f4def80666e617f40001546edec9a61632"
-    sha256 cellar: :any,                 x86_64_linux:      "c153c5b345e2b9e5d72d4e1d1088828c573dff97e1f445e472c73681dc1e1ce6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "bf6bbe5a5faee692bf736e3b8a70053ddba531416c228ced53c82ace999878d7"
   end
 
   depends_on "go" => :build

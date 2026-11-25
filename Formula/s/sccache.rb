@@ -12,12 +12,8 @@ class Sccache < Formula
   end
 
   bottle do
-    manifest_sha256 "248c32d373641f7e31ca5b1045354f0c8d02c97669be01d22576a3cdb9d76986"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a4d8386abba67e21607b310fb7ca27f6d0adfd10b1908439537c4137171caccb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f8390e6e59cb5e237493f8feb76b323dc6f11ba841e344dce4d41c408b2b09c8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e14de5a95969a95807d6b154e8dc63f7740d5d89dc113ae78568ddaf7e7dcbf9"
-    sha256 cellar: :any,                 arm64_linux:       "aed28b9da76df973a5c4485c4c8db23a5e17fdc3c58c56657b6a17b503cc86de"
-    sha256 cellar: :any,                 x86_64_linux:      "3aacba58c4a7f6f52cb9180eb7dd7fd27874ad439fc69d79d07857d2420444e1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "b79ca308794d1f2b7d9a18223d72fc96afa23eea2e508f786eadb1c443c96b41"
   end
 
   depends_on "pkgconf" => :build

@@ -7,12 +7,8 @@ class OsmPbf < Formula
   revision 2
 
   bottle do
-    manifest_sha256 "7f144659d4f0f4e8c872ede1b9e70ce3536470ac201d45f3fe9dd392f7e303d8"
-    sha256 cellar: :any, arm64_golden_gate: "83801c79fd2a703f6b1738687672f5f47b5695bf96e5a113ee32168d814ce00d"
-    sha256 cellar: :any, arm64_tahoe:       "e15aba68e664e6d37121a7d27f7051a50271df19f5acd8220ccedc7ddccfbf64"
-    sha256 cellar: :any, arm64_sequoia:     "5a33fb82dfbbb6684ae0732acf009343c00ded6e76d64383177eae0b25f621b3"
-    sha256               arm64_linux:       "ffc41c1c148d29cdd3dd3e8987cc7f75334c3e0c9f6d457f6df4866d249cadaf"
-    sha256               x86_64_linux:      "905786d7c4840a18cb2993f32bce2d9741e8df42bb4b2be37453d56f92b89ea6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "3f011eec8dbfffafeb95cb2b9d84c99cc516af3b5f20d2abebafef7e4cda70d3"
   end
 
   depends_on "cmake" => :build

@@ -7,12 +7,8 @@ class Ntfy < Formula
   head "https://github.com/binwiederhier/ntfy.git", branch: "main"
 
   bottle do
-    manifest_sha256 "73a45d168e36e8e38763eff1bd747a7ea375e4a6752a4d3211920b9006d8a760"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e4627ca450d82feb6555e9ae017dd002b9ff864f7fae3d686dafff65c236a686"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e4627ca450d82feb6555e9ae017dd002b9ff864f7fae3d686dafff65c236a686"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e4627ca450d82feb6555e9ae017dd002b9ff864f7fae3d686dafff65c236a686"
-    sha256 cellar: :any,                 arm64_linux:       "0fa9d5b5bc8337c4eaccf01dc56ee254c5e9ccaefc7c4250240d9beacdac06b2"
-    sha256 cellar: :any,                 x86_64_linux:      "270b93e4b22c3a019c0ac211fae8aa04b6fbe9ce054d3b7cc9b74acc9277843a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "e5e126b4de89ffb94fa548d69ce25f1e1b30f75753a58549c9696be60600f382"
   end
 
   depends_on "go" => :build

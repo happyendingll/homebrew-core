@@ -8,10 +8,8 @@ class MediaControl < Formula
   head "https://github.com/ungive/media-control.git", branch: "master"
 
   bottle do
-    manifest_sha256 "3340e6a4d1ef14017a63a8424001135864fde50f183d20e69ac2ca740f3b0283"
-    sha256 cellar: :any, arm64_golden_gate: "56590a7995fad6ffba8cae044d18dae37853368526d6c35f61c6fcd40bf4805c"
-    sha256 cellar: :any, arm64_tahoe:       "93aaf6b1e2e00459896aade73a91ade4469b26e01f89750834b303c648be9eb1"
-    sha256 cellar: :any, arm64_sequoia:     "1553a6e39cd333e89a1403d8f61da7ee5ef38da900dc0dfa257d73449b02857f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "6506ee57f903a1f701862fe03b94ecdbc55f441f0671455da5517db1a6a020f8"
   end
 
   depends_on "cmake" => :build

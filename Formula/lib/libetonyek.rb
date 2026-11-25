@@ -11,12 +11,8 @@ class Libetonyek < Formula
   end
 
   bottle do
-    manifest_sha256 "47cebc3e420799290297b76e9a81479b4e16f78cd441d14232662e1c3b21d1da"
-    sha256 arm64_golden_gate: "f408c6d9d7268dfcde3ad4cb88515c70373f09939e1053f2c4217f608c62eb22"
-    sha256 arm64_tahoe:       "a45ed8398054c802b66130e5f3793f1e8de954d48606bdc1db5a615bc8150432"
-    sha256 arm64_sequoia:     "a3e09230ead3fa931e0d49173a3e292c9f926ad85c0e169f3562279f89c1447d"
-    sha256 arm64_linux:       "82f632120fc0cb3bf80b34b626d4f4db67bc000d6cbfb0d48b65bc0ac2438161"
-    sha256 x86_64_linux:      "5258cae7e8fd923cbb98311889c9de1ac3287dc49e4c9a23aae515499b113540"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "a33f09d88dfffe5d7f177516329cde0b4d822e36b60cb45fce43af904272968e"
   end
 
   depends_on "boost" => :build

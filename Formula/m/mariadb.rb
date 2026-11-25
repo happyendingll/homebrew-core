@@ -17,12 +17,8 @@ class Mariadb < Formula
   end
 
   bottle do
-    manifest_sha256 "fe7ae2f8e4a4456aa0dc9eece0d8cd842659a7cb9db02d3e430e3b2de3bfefe8"
-    sha256 arm64_golden_gate: "104b0fbc4de0e23f942b487dc7b42e574ed91032f94dc1db87f4b516a0fb1d99"
-    sha256 arm64_tahoe:       "8b31e117671db68de7d93ed506b300a137c48e1f39b86f1e2307611fae29ef7b"
-    sha256 arm64_sequoia:     "207a32bd1c042a11dfa6eff856d2b7fd0122edd59557517995b89dbe32903a6d"
-    sha256 arm64_linux:       "4bce72f2400622a8bea4c5f0cad9fad263b5a39dc9b4b9038ee64bb109073070"
-    sha256 x86_64_linux:      "69c28a1193e9491de175de423899f3980d07b82b1f311525461b008b00641a1c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "09b4c58bf56c79be5cc66437a3a90da67f85f4b7ed682d52b4fcbc56435a5c59"
   end
 
   depends_on "bison" => :build

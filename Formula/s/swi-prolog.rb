@@ -12,12 +12,8 @@ class SwiProlog < Formula
   end
 
   bottle do
-    manifest_sha256 "6f4e3d9f6557c67054a8297d90a9ff3f60bc85a831e8d7c6980024ea1b4b8eb6"
-    sha256 arm64_golden_gate: "58014b7c8277a966c3fdcd2c2bee042b2cc6c04e66c8f16b86d35df8bb5ed452"
-    sha256 arm64_tahoe:       "77182356e2749d0b25a441eca813629638edd23af94394000e29fe9ecd72800a"
-    sha256 arm64_sequoia:     "3f355b4f222dcaced54c367eea2d95f7eda6634d3e6390711b75a7bed511011c"
-    sha256 arm64_linux:       "0fd1c030e41ab716f2c6a96dab7e908cee49042b636c32569c9d61d0c0e5b3c7"
-    sha256 x86_64_linux:      "5729d8321bc8f82619be89b794210aef944a36fd813f9e9b0de526dbf07b8b22"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "eda121f541d0d61d0232e0aaa55037da80e2ac719e33c56f636a78481d5001a5"
   end
 
   depends_on "cmake" => :build

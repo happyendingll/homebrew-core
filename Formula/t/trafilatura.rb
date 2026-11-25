@@ -8,12 +8,8 @@ class Trafilatura < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    manifest_sha256 "32c144046b2d365b429429a2d2a89c53039ad9519e2d2a6d0cb4dd1c33ab20e4"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8df48495f3f2ee419823a211b9907e7a18fa6a9ff4e275e27ba12e04d5fdaa22"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "43dc4817c3193bf9d06d83a888ed7434ba94d8b34ce7968926296edefd2595e4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "014e5d3f8f0a077a19b63d5423baf37ad088b4207713a83d074d35561d89d0e3"
-    sha256 cellar: :any,                 arm64_linux:       "afcfedab793d26ec2e7a093f6e22fbabebcda9a44fe1b27dfd2bea9441728a30"
-    sha256 cellar: :any,                 x86_64_linux:      "16f3ded05e2e758bba4b5996fc1fbd6f73aa9be6da491e5cebf0f0b1f2f2b91a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed197091ce39487586e5e977255c433e9d72200257316517808156902de303f9"
   end
 
   depends_on "certifi"

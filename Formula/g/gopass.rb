@@ -8,12 +8,8 @@ class Gopass < Formula
   head "https://github.com/gopasspw/gopass.git", branch: "master"
 
   bottle do
-    manifest_sha256 "b9a1e8ee5f95762178781b914abaad484961beb425948da7aa99f6e5796e849d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e4193d2040d48858ad376745c1c12ebc918772a1c198c3b611e060e362b010d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7394dc97d63ec9b04e4eb5c001e1bbce576f625ff5bda670c1d8f75c839c1bf7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "86218b9cb038f9bc2f9ea8bba4f184cec3a3fc40eb6967477dc5dec07bb3fba1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "43555184d04fdec2d66ae3bacb5b31b5ca25089ae48bd0f83630c537f89cd422"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e62b1e7c0bad6617afb54f8e654794d8e8d889a5e20a6795ca91aed7d4115c57"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "71ac7da8f8f7697e3e6a54e823523ef5ac68d0aada3bd1ce975b1d78584aa69b"
   end
 
   depends_on "go" => :build

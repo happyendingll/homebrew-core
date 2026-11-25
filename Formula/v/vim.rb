@@ -21,12 +21,8 @@ class Vim < Formula
   end
 
   bottle do
-    manifest_sha256 "5594799d13af209b4ca22116f827204d456d248a40cd592cee28819a3051e93e"
-    sha256 arm64_golden_gate: "1493d4f39106737a8759a7ee436d7409a929880a617c41aaf2961182f1000542"
-    sha256 arm64_tahoe:       "4ff7439efc5ba32f4cfd1a47d90a980bc82e3a20df9ed0c56ca7e3dac924b3ff"
-    sha256 arm64_sequoia:     "56ab1038a47fcb215745b30c91f3e02cefca76c2fc1528ad3be0378decba97eb"
-    sha256 arm64_linux:       "605f797ab3ec7904dee1226569eba90385d50134890bf50395ff048f26e66d40"
-    sha256 x86_64_linux:      "d0ba29dbf08e1b6132b00a7f9a4145b9c5a02f7a23033f73a2730daed573c971"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "61064eb60cf2c69a594a1adf1b9f68dfaee83486da61117bb280d22b4b34533e"
   end
 
   depends_on "gettext" => :build
