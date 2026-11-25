@@ -6,12 +6,8 @@ class LanOrangutan < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "03a3a34ede6bd212068cd34c2a305e78381a21ee77ea207559f9505cca1485e3"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "77b7633bfb656aaff0da231edbef1fad22f2f84756bb680a9b914887690bce9a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "77b7633bfb656aaff0da231edbef1fad22f2f84756bb680a9b914887690bce9a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "77b7633bfb656aaff0da231edbef1fad22f2f84756bb680a9b914887690bce9a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "498b2ac2037a3d5a44bf2dd8c736623c6c46ec9f790c5c972f7e2d7d1eefd48a"
-    sha256 cellar: :any,                 x86_64_linux:      "8e9a003d298cc8bdda7812a6451ba0f45be9b5b1c9fb16387bc624b1758dfcb0"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f5b151cf4bde7a1a057c73d640e8a390fbd8709896f8359c50b6327ec76eabbf"
   end
 
   depends_on "go" => :build
