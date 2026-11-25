@@ -1,8 +1,8 @@
 class Dust < Formula
   desc "More intuitive version of du in rust"
   homepage "https://github.com/bootandy/dust"
-  url "https://github.com/bootandy/dust/archive/refs/tags/v1.2.7.tar.gz"
-  sha256 "923a2eed637d2ea5f4ad5f820b6f87cc6e0081cfa4bc5ed1fe09278dd74db963"
+  url "https://github.com/bootandy/dust/archive/refs/tags/v1.2.8.tar.gz"
+  sha256 "2df7ea0258025b2061e1a1819ee7fc48b69fbf8c084c5f0e51a457f37695453e"
   license "Apache-2.0"
   head "https://github.com/bootandy/dust.git", branch: "master"
 
@@ -12,8 +12,12 @@ class Dust < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "8ad0a17b3845fbff83d3a231f192a95098f055d0435b85d4b81cf5048b234b43"
+    manifest_sha256 "510d71bb2d969fd7207462d53d179b2e0506b4d8d5de54bb1c08d92c265eed4c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "321dddc009900b921834f2fc6a91caaaa2dd8d2f4108c6046b2fa6416a5d0d34"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8ebacb83db199b15d72c2e6142dc4621a10f3ec008260bf88b8ab6f106160442"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c8a2eda2f0f6e6f9b9ab24e07b3695985d384fccdfe6af51a7d1bab297629d59"
+    sha256 cellar: :any,                 arm64_linux:       "f2f523dd01df6795530be819a2bbe532d2866b7b464d8f8df2fe1b637ea41989"
+    sha256 cellar: :any,                 x86_64_linux:      "1dd05b4c101ee1055abde38d04a3437df408aa6d42da13b501f0ed588e2664ad"
   end
 
   depends_on "rust" => :build

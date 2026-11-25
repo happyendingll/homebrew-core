@@ -1,8 +1,8 @@
 class GithubMcpServer < Formula
   desc "GitHub Model Context Protocol server for AI tools"
   homepage "https://github.com/github/github-mcp-server"
-  url "https://github.com/github/github-mcp-server/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "550715e8a04a2b0db1c49a851d388c705ba30293955007bd92fbe8d058f4f4e4"
+  url "https://github.com/github/github-mcp-server/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "a2b31bd783c497f41913705945b5f0e253748e5ff27b464731eae19d1c657489"
   license "MIT"
   head "https://github.com/github/github-mcp-server.git", branch: "main"
 
@@ -12,8 +12,12 @@ class GithubMcpServer < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "c7c334a557c4b146fad15639af4f6dd2b4a68dbfa868ae9a47cedb00af0a4488"
+    manifest_sha256 "52ca86992248021e7b6896f855b0730bd22c8a6ba33c21a97705effce27bc10c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc08e9b66b2a91ff10e6e7fd64ece90f27fbed66acadea7e26e1e0eb4ae7a21f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fc08e9b66b2a91ff10e6e7fd64ece90f27fbed66acadea7e26e1e0eb4ae7a21f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc08e9b66b2a91ff10e6e7fd64ece90f27fbed66acadea7e26e1e0eb4ae7a21f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2e61d08551c976258840b971017408c2539f1b4c89538dcfc746bf93c405dd61"
+    sha256 cellar: :any,                 x86_64_linux:      "28b410faffa7f23120e33822faf748b9ca0fddd9764ce06714d501bad0008a66"
   end
 
   depends_on "go" => :build

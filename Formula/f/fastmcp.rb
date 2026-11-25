@@ -312,9 +312,7 @@ class Fastmcp < Formula
 
     port = free_port
     ENV["FASTMCP_STATELESS_HTTP"] = "1"
-    pid = spawn bin/"fastmcp", "run", "server.py:mcp", "--transport=http", "--port=#{port}", "--no-banner"
-
-    begin
+    with_test_process(bin/"fastmcp", "run", "server.py:mcp", "--transport=http", "--port=#{port}", "--no-banner") do
       data = <<~JSON
         {
           "jsonrpc": "2.0",
@@ -337,9 +335,6 @@ class Fastmcp < Formula
                      "--data", data,
                      "http://127.0.0.1:#{port}/mcp"
       assert_match '{"result":3}', (testpath/"response.txt").read
-    ensure
-      Process.kill "TERM", pid
-      Process.wait pid
     end
   end
 end

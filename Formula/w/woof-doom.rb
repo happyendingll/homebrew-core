@@ -42,6 +42,8 @@ class WoofDoom < Formula
 
   conflicts_with "woof", because: "both install `woof` binaries"
 
+  deny_network_access!
+
   def install
     # Remove bundled libraries
     rm_r("third-party/yyjson")

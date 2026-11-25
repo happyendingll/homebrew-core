@@ -1,13 +1,17 @@
 class Neonctl < Formula
   desc "Neon CLI tool"
   homepage "https://neon.com/docs/cli"
-  url "https://registry.npmjs.org/neonctl/-/neonctl-9.9.3.tgz"
-  sha256 "9c25f80048ba5fc73e108117e3d11ed6ef8af6eeacbbf47263ca2ee8528cba93"
+  url "https://registry.npmjs.org/neonctl/-/neonctl-9.9.5.tgz"
+  sha256 "42aeeff7857f2880cac8c725c140302d29b53b392df54c5918e9a10c69f463f3"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any, sequoia: "0874acf597660cc85a6366c5b7082afd7361ab94efff24035b6773da17c9267a"
+    manifest_sha256 "227bae0eceb20ae693aff43b04ffda0dfd9cb00d9467e8a6360b906c4aec3f8c"
+    sha256 cellar: :any,                 arm64_golden_gate: "8dff1bef6dcdb53e18d8ce53689406e8ccfb2bdef74758dfcff75cc80aa8cd58"
+    sha256 cellar: :any,                 arm64_tahoe:       "8dff1bef6dcdb53e18d8ce53689406e8ccfb2bdef74758dfcff75cc80aa8cd58"
+    sha256 cellar: :any,                 arm64_sequoia:     "8dff1bef6dcdb53e18d8ce53689406e8ccfb2bdef74758dfcff75cc80aa8cd58"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "45e09f8626a17d06ee6b46c3bed2f02e4820bb47f18c7cdb08d64ff889e67b5d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "a2ab42a8315d20b9a8b34f8a2aae8bc3c5cad05352d999559b2800b75c83b207"
   end
 
   depends_on "esbuild" # replaces the bundled copy

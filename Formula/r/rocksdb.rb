@@ -1,11 +1,11 @@
 class Rocksdb < Formula
   desc "Embeddable, persistent key-value store for fast storage"
   homepage "https://rocksdb.org/"
-  url "https://github.com/facebook/rocksdb/archive/refs/tags/v11.13.2.tar.gz"
+  url "https://github.com/meta/rocksdb/archive/refs/tags/v11.13.2.tar.gz"
   sha256 "6f12f408c4876175b1de73cfefcdd1baf0001ad8d799c1a09320d96e4fd213b5"
   license any_of: ["GPL-2.0-only", "Apache-2.0"]
   compatibility_version 1
-  head "https://github.com/facebook/rocksdb.git", branch: "main"
+  head "https://github.com/meta/rocksdb.git", branch: "main"
 
   bottle do
     root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"

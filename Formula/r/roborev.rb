@@ -1,13 +1,17 @@
 class Roborev < Formula
   desc "Background code review with AI agents"
   homepage "https://roborev.io"
-  url "https://github.com/kenn-io/roborev/releases/download/v0.75.0/roborev_0.75.0_source.tar.gz"
-  sha256 "b033f52eaa9d03d4bb646e7dee7fee57c0ba2db0145797f3bed311ba6c367bf3"
+  url "https://github.com/kenn-io/roborev/releases/download/v0.76.0/roborev_0.76.0_source.tar.gz"
+  sha256 "ab4bad18702c654a913d4672e0c8829ac55bd3ace8956bd41f2739e0a335afd1"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "07cc33eb81eb8f3752d2f1c6b2111d18a0522b2d81cd453b15ed57d41db729e1"
+    manifest_sha256 "b25033d10c7c8fe3bd923f4692c1be529b03e618f85594027ef734f417f63f5e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3cb85c708bf5220751c6ec61a8e45fe010c107d021510c96339af9c60dbf9aa2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "042f995d6bdb15085dbfa673aa3b2f39801bce86c6550c2a03741aef28da9262"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "05220c0f6e92dcfe67506434c97cde6fa0ee4b93355c0e82e6564cc42528b8af"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d19d3d6e5cca9082a4d015bee0473b9ff4f1e85d757546501906b487c1444812"
+    sha256 cellar: :any,                 x86_64_linux:      "bbc24ccb35fe418f81ab5877e114a36588b364b7c3055bf4f18bee6af7f76b1a"
   end
 
   depends_on "go" => :build

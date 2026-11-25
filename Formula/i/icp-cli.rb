@@ -1,14 +1,18 @@
 class IcpCli < Formula
   desc "Development tool for building and deploying canisters on ICP"
   homepage "https://dfinity.github.io/icp-cli/"
-  url "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "85e37d5140f20e79a8300bea4f72ede53eb16a2de978605c511592489880ce26"
+  url "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "9fc1eb079e93f170a5fe9122e4814d71f5fb4987ee3a9711df64224889db1f52"
   license "Apache-2.0"
   head "https://github.com/dfinity/icp-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any, sequoia: "db11914aa17e01fb99007cf5c4a034c334134f192b88be9f83bc28ce63c1674c"
+    manifest_sha256 "7e49bc12505e783724890f187f7d42ab55a91a96e85c49724324a56b81e367d1"
+    sha256 cellar: :any, arm64_golden_gate: "35bc94b20290ef350baee8a752e530d024de800b4cf86e86c32c5cea2d98a279"
+    sha256 cellar: :any, arm64_tahoe:       "2b4703440db3db9be998c853a83a86d4ca201293d7a850d118f820eb4c43b5b3"
+    sha256 cellar: :any, arm64_sequoia:     "77cde8d0f6c81fe5d5130bb414e7ea4874aa593071f22bf17d5e442e807ef858"
+    sha256 cellar: :any, arm64_linux:       "6bf131dafcb98b6842f85170809f1ed6763569a512805c6c9305870f4bd814c9"
+    sha256 cellar: :any, x86_64_linux:      "e5954aabd6e24cb32299b275254f1e597a146199630bd3bdf64488a32d43d60d"
   end
 
   depends_on "lld" => :build # for `wasm-ld`

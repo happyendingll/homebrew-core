@@ -1,8 +1,8 @@
 class PerconaXtrabackup < Formula
   desc "Open source hot backup tool for InnoDB and XtraDB databases"
   homepage "https://www.percona.com/software/mysql-database/percona-xtrabackup"
-  url "https://downloads.percona.com/downloads/Percona-XtraBackup-9.7/Percona-XtraBackup-9.7.2-2/source/tarball/percona-xtrabackup-9.7.2-2.tar.gz"
-  sha256 "b7d2e4fa7407a000d26870022ac382ae5187523dcecd83037f35d7374be58064"
+  url "https://downloads.percona.com/downloads/Percona-XtraBackup-9.7/Percona-XtraBackup-9.7.2-3/source/tarball/percona-xtrabackup-9.7.2-3.tar.gz"
+  sha256 "9b810d2e4135315314880718f6c30266e48b33aa7cd17f36ca8f943072bef1d2"
   license "GPL-2.0-only"
 
   livecheck do
@@ -19,8 +19,12 @@ class PerconaXtrabackup < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 sequoia: "7c42f5d129b340401ee795a926b613eab3803da696a84b3080f6d7d33041d664"
+    manifest_sha256 "934134a066e81f5f72a4b21c56da528ff17cf0c6726c2890fc3950efef717ab0"
+    sha256 arm64_golden_gate: "3ef0878836a2e2114b19337acabefc823b90ce998c5cfd97bccb28dffd7d15d0"
+    sha256 arm64_tahoe:       "b9caa7b2cbbf7ad3e93ffa8f657edc676fd55ea6e90596a161398c74f7b0e9b1"
+    sha256 arm64_sequoia:     "2bca3c468b779dead59111765f0e1fe3746401e7196dd21cd3fd25835e5e473b"
+    sha256 arm64_linux:       "098c8f2bdaaa5f27bcf6758107f88fe35aa69ea127ef0be107f33e8fefe93f46"
+    sha256 x86_64_linux:      "b4e22eb0c54a01a1a079f86916b0f4676fc2eec9c30571fb2b7da40ea51bb882"
   end
 
   depends_on "bison" => :build # needs bison >= 3.0.4

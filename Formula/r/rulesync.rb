@@ -1,13 +1,17 @@
 class Rulesync < Formula
   desc "Unified AI rules management CLI tool"
   homepage "https://github.com/dyoshikawa/rulesync"
-  url "https://registry.npmjs.org/rulesync/-/rulesync-43.12.0.tgz"
-  sha256 "c0cf7f9f89961b2d9324bef7eddb2234e4b9a5bc35b0579756d86658560f53fc"
+  url "https://registry.npmjs.org/rulesync/-/rulesync-43.13.0.tgz"
+  sha256 "d1081345d57568140722fa295e87891aa79f960349bf81c89ec65f5eabb43c65"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "e3c2f5ec8411277590f47cd56adc469c64609f7c8a68d14ca135f8ed4993ee77"
+    manifest_sha256 "93c9fe6a0800c517616208909cc2eef2241a72083e7a0d1856988e80c04fc218"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2237521eea7f54a390a274cea83ad974978c2e7d43fa7224bc156490cade5d2b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2237521eea7f54a390a274cea83ad974978c2e7d43fa7224bc156490cade5d2b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2237521eea7f54a390a274cea83ad974978c2e7d43fa7224bc156490cade5d2b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f7cbd38ded626170af2b05396364d5ac7f307eeb0c27a43a142a8c464c746374"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f7cbd38ded626170af2b05396364d5ac7f307eeb0c27a43a142a8c464c746374"
   end
 
   depends_on "node"

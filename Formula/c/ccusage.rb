@@ -1,21 +1,25 @@
 class Ccusage < Formula
   desc "CLI tool for analyzing Claude Code usage from local JSONL files"
   homepage "https://github.com/ccusage/ccusage"
-  url "https://github.com/ccusage/ccusage/archive/refs/tags/v20.1.1.tar.gz"
-  sha256 "66440b75d35ebab32b33ad7777dfee3362b49f64d2acfcfc93628e77f203dcd8"
+  url "https://github.com/ccusage/ccusage/archive/refs/tags/v20.1.2.tar.gz"
+  sha256 "9d69db8b290e04526e2cdaa090a9569ce75b1ba020d6ef5e2e07c657ec1db4b1"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "b15099cc7b0874edaded98f9711e817a13f83f8ce0c3c95dd9cce9b45c70cb0a"
+    manifest_sha256 "8e9c34ceff50aea55526c151160b2cfd9f8381235508edb98b48d6a634399bd3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "166658e7e028744cf6fa7829b8df7cb2c90157b47cff9140628c9dfaa8b478c9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cf1d84bb473b6493245b32f53d63d5a2456bdc74dd453b419c9e39d619344b49"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bf87209b19b21eb2d016d4536b2a904b3e9feab11e1b5964a7501fd629602443"
+    sha256 cellar: :any,                 arm64_linux:       "98479a1a8aa32bd453b8b64a2641a3e853216310e63f5e69e3817c66a5b4c82b"
+    sha256 cellar: :any,                 x86_64_linux:      "f6bb0122fddcdf2ac0e9742e94c6f31d96dc38557dffdd009cbe31f62f1424f2"
   end
 
   depends_on "rust" => :build
 
   resource "litellm-pricing-json" do
-    url "https://raw.githubusercontent.com/BerriAI/litellm/9bf9d88111b27f9978de80a3149e381849da83ba/model_prices_and_context_window.json"
-    version "9bf9d88111b27f9978de80a3149e381849da83ba"
-    sha256 "21523c8f267eac4c915855af42a70d00b2c878e13b8a85547fd8855b49c69dec"
+    url "https://raw.githubusercontent.com/BerriAI/litellm/6e3ad131cfb40938f044e006527d02abcf86c9d1/model_prices_and_context_window.json"
+    version "6e3ad131cfb40938f044e006527d02abcf86c9d1"
+    sha256 "996c36cd33eb92beecd6eab19ef7291d0dcd6f0780fc375283bcd197d88ee62f"
 
     # Fetch the latest available resource
     livecheck do

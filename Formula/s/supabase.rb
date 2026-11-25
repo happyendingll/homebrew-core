@@ -1,8 +1,8 @@
 class Supabase < Formula
   desc "Postgres development platform"
   homepage "https://supabase.com/docs/reference/cli/about"
-  url "https://github.com/supabase/cli/archive/refs/tags/v3.3.0.tar.gz"
-  sha256 "febeca291130664ab6ac004675edbb9cfe6fd6cb4c12fb2fd78b81c980448f72"
+  url "https://github.com/supabase/cli/archive/refs/tags/v3.4.0.tar.gz"
+  sha256 "07df917b082137497f14961a67a8fb73494c7ac4accad923307a9aee471c6dd1"
   license "MIT"
   head "https://github.com/supabase/cli.git", branch: "develop"
 
@@ -12,8 +12,12 @@ class Supabase < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "7c923a1bafc5acdf1e5f6d855a908add97f3f9134589ef94de5a162210f4be36"
+    manifest_sha256 "3f7c30caa8dc022b851e7e698cd09cb0a42f8af56e0f84a0608049b5ba7e7148"
+    sha256 arm64_golden_gate: "020e472b19b6e8a59486e82fe2f3f2ec2d48c0529f416251335e4ee1bdbad48a"
+    sha256 arm64_tahoe:       "e02b9cf7f84346bf458ad2e21112c63ab1a05ee66e328b631d52f60942c466d7"
+    sha256 arm64_sequoia:     "3eb10d15e2c37eea48409d56b7574a7c3c0b62af59b782aa182be567a4a5cd21"
+    sha256 arm64_linux:       "b9cc9d2aaf286a376df8a38072b073a841beedd5d85a2842cbd904027a22e7b5"
+    sha256 x86_64_linux:      "fbd496df7efe09a291ceda4ecb3b51aca1b4e534d7d44dff9f02e6e8398c9119"
   end
 
   depends_on "bun" => :build
@@ -52,7 +56,7 @@ class Supabase < Formula
     assert_match version.to_s, shell_output("#{bin}/supabase --version")
 
     system bin/"supabase", "init", "--yes"
-    assert_path_exists testpath/"supabase/config.toml"
+    assert_path_exists testpath/"supabase/config.jsonc"
     assert_match "failed to inspect container health", shell_output("#{bin}/supabase status 2>&1", 1)
     assert_match "Access token not provided", shell_output("#{bin}/supabase projects list 2>&1", 1)
   end

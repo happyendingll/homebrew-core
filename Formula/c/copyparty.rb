@@ -3,13 +3,17 @@ class Copyparty < Formula
 
   desc "Portable file server"
   homepage "https://github.com/9001/copyparty"
-  url "https://files.pythonhosted.org/packages/2f/4e/f958260b5d669c18d704ca6d8933ac99da4e41045d2800477c96b46f0bfe/copyparty-1.20.27.tar.gz"
-  sha256 "b208c2aa00340a4590e8a0f10e428868973b85e2e8e3129b9d2d76deef4cabdc"
+  url "https://files.pythonhosted.org/packages/c9/bb/941ba833b3907f32cca56ee2ccf253f664c353fe4a227f86eeea4226e817/copyparty-1.20.28.tar.gz"
+  sha256 "642c6c46ce3bc268fb188504cd8019946c34d0b06913d4be5316fb8aa857b448"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any, sequoia: "e9ea932700dc8869720f64d79ca2c66fda8c4a4e6b661d753fd97423b27b1f85"
+    manifest_sha256 "02fb12c96ba7f4d1a108caf32527d20820d38b265145aa3ed3d32a8737348e3b"
+    sha256 cellar: :any, arm64_golden_gate: "5be11ab53a1d5b824c1c92da1088cb2b98d7766ee7a9afac797c7531a763a0ad"
+    sha256 cellar: :any, arm64_tahoe:       "ba83a85f41d894d567ad60a0e8f0f72decc4050f50b02a49d5bf79d7ffb42aaa"
+    sha256 cellar: :any, arm64_sequoia:     "f05a711e7245891e62da93cef82385f4bf5bbb5628afe49f04bcefc2b429aebd"
+    sha256 cellar: :any, arm64_linux:       "e19792ec593d16733a05f3b744d2828fd11a21245630a0ca7b278bb5b7bb0fb0"
+    sha256 cellar: :any, x86_64_linux:      "5197d33ecd0446fc8bb06b0aff963fea194f2fdd498eb01dd9d5729c7ab49eed"
   end
 
   # `pkgconf` and `rust` are for bcrypt
@@ -121,14 +125,10 @@ class Copyparty < Formula
     (testpath/"testfile").write "homebrew"
     logfile = testpath/"log.txt"
     port = free_port
-    pid = spawn(bin/"copyparty", "-q", "-p", port.to_s, "-lo", logfile)
 
-    begin
+    with_test_process(bin/"copyparty", "-q", "-p", port.to_s, "-lo", logfile) do
       output = shell_output("curl --silent --retry 5 --retry-connrefused 'localhost:#{port}?ls=t'")
       assert_match " 8  testfile", output
-    ensure
-      Process.kill "TERM", pid
-      Process.wait pid
     end
 
     assert_path_exists logfile
