@@ -1,8 +1,8 @@
 class Pdns < Formula
   desc "Authoritative nameserver"
   homepage "https://www.powerdns.com"
-  url "https://downloads.powerdns.com/releases/pdns-5.1.5.tar.bz2"
-  sha256 "7b670653ccd72be30d973bbdd349c4505beda1b87b842af702a341fa6837f8aa"
+  url "https://downloads.powerdns.com/releases/pdns-5.1.7.tar.bz2"
+  sha256 "70cb249cebf982285d44c41704ad1524d3739d59de0534832c576f95a75953a6"
   license "GPL-2.0-or-later"
 
   # The first-party download page (https://www.powerdns.com/downloads) isn't
@@ -16,8 +16,12 @@ class Pdns < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-3"
-    sha256 sequoia: "91e66a6248c70eeede52a724543f7fb1cf431e222b33ab88b2ec29f95eb24dac"
+    manifest_sha256 "4797f03365a071922b521e144a3a409e922a5a66d8b9a0388546abaa448f1da9"
+    sha256 arm64_golden_gate: "cfb9ab37ad45fb68e9f51bee0600355d66fc396d080f26e0274a0bb10a98f94e"
+    sha256 arm64_tahoe:       "9368ec2196a18a91552b06a2c11f2c2d083035ef6ee3a73b670467b003a51ef5"
+    sha256 arm64_sequoia:     "58d7ca17c2a5284e094be603ea20f0755f9334377583877035919b558e029663"
+    sha256 arm64_linux:       "61c0241e29d70b1b0b8338ce8b3f31c7735cc92a92dd7222128d51d940703b6d"
+    sha256 x86_64_linux:      "82da5bf8a40b0ecac5b14824a7774f1195dac57b70607aef5f01e21c72826873"
   end
 
   head do

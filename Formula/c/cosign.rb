@@ -2,14 +2,18 @@ class Cosign < Formula
   desc "Container Signing"
   homepage "https://github.com/sigstore/cosign"
   url "https://github.com/sigstore/cosign.git",
-      tag:      "v3.1.5",
-      revision: "e5a0818ca5729481095773409e9c1b60cc278e8d"
+      tag:      "v3.1.6",
+      revision: "252f10a80ba871152a12e5ee324ad1e02c85d079"
   license "Apache-2.0"
   head "https://github.com/sigstore/cosign.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "224835acc7910e6547dd0b190c1ad972b728751178b2bc98b81917926a23ddcc"
+    manifest_sha256 "c19b4d38a9761b8312ba603fb10bdde9dc7243fede31abdc3c589c4e7e72127d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48551a51ac041e96a674992554f393815ba533b5b2cace343c0f32e014d93947"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "48551a51ac041e96a674992554f393815ba533b5b2cace343c0f32e014d93947"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48551a51ac041e96a674992554f393815ba533b5b2cace343c0f32e014d93947"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3aa3e7d393134b87e3240b70d16e96c8bf0c9cc846ed76d24ab255d9be1d854f"
+    sha256 cellar: :any,                 x86_64_linux:      "7cba90acb6001e949e3bf7c4595f326a814b63ad51c6129f8e61ca44ca8c5efc"
   end
 
   depends_on "go" => :build

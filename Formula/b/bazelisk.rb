@@ -1,14 +1,18 @@
 class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/bazelbuild/bazelisk/"
-  url "https://github.com/bazelbuild/bazelisk/archive/refs/tags/v1.30.0.tar.gz"
-  sha256 "938c875176d6895d1f9cce21d71a76f56f82e88d819f22ed587f124f795aad33"
+  url "https://github.com/bazelbuild/bazelisk/archive/refs/tags/v1.31.0.tar.gz"
+  sha256 "7aff92f74b73f1560bd1425ca853e6b5f78babef11f4ab10582165fa82a63ad4"
   license "Apache-2.0"
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any_skip_relocation, sequoia: "c91f82558b65da781225d5ef13ab02279c82df5336fbcc43f4557b21ce7e4544"
+    manifest_sha256 "5982a4fc5db8b745983665360b60653939bbf1a49f6109578905a731680d730a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9833f0f7310b065421ccbca2938508da2b850c08b1483e39bd8852791480b194"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9833f0f7310b065421ccbca2938508da2b850c08b1483e39bd8852791480b194"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9833f0f7310b065421ccbca2938508da2b850c08b1483e39bd8852791480b194"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "bb646ad128a7f03db713beb21e860f7b6b278c81fd7924e1545f56f8016786b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b747bd90f2433f349c64acb2c3c0bf81fa57bf7b8d58c7a0c4871808c6e7054c"
   end
 
   depends_on "go" => :build

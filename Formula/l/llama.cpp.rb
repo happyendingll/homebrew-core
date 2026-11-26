@@ -3,8 +3,8 @@ class LlamaCpp < Formula
   homepage "https://llama.app"
   # CMake uses Git to generate version information.
   url "https://github.com/ggml-org/llama.cpp.git",
-      tag:      "v1.0.0",
-      revision: "b1b770d90d94cad9e9ea5b993bdbc383a522fb28"
+      tag:      "v1.1.0",
+      revision: "171527522610996f5f0acf12334e185156ca8f44"
   license "MIT"
   version_scheme 1
   compatibility_version 2
@@ -16,8 +16,12 @@ class LlamaCpp < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "f93000090911a31f934702e008b035b12509eb5d59c9b5380ee22d56ecc56d9c"
+    manifest_sha256 "244cbb998d636f6f5132625b64262bfb4972634d30cb0b7c4a61904100a9e985"
+    sha256 cellar: :any, arm64_golden_gate: "1d1affb8441ab4280d31de8a8a59c41d1fd04105a3545a24e934b202e67c5ecc"
+    sha256 cellar: :any, arm64_tahoe:       "82568a466bc10bbbb65e920d8ed5c158b085d912d88f761f3f333317446a137e"
+    sha256 cellar: :any, arm64_sequoia:     "b8f276158ee703b8c396889d06ec1b68e591ce61ab9f87a248ed450dbe5bc8b2"
+    sha256 cellar: :any, arm64_linux:       "a0482a9cd028f322deb7dca14abfe08e76b602f14b4f008e6cd0837dd4351e91"
+    sha256 cellar: :any, x86_64_linux:      "a1c36d62450f2891b2942bdd091a68bdb8d880cb605a83c77d75459460c1017a"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -29,13 +33,13 @@ class LlamaCpp < Formula
   allow_network_access! :test
 
   def fetch
-    cd "tools/ui" do
+    cd "ui/apps/chat" do
       system "npm", "install", *std_npm_args(prefix: false)
     end
   end
 
   def install
-    odie("we do not want to bundle ggml") if deps.map(&:to_formula).none? { |f| f.name == "ggml" }
+    odie("we do not want to bundle ggml") if deps.none? { |f| f.name == "ggml" }
     args = %W[
       -DBUILD_SHARED_LIBS=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}

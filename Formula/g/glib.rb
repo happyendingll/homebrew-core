@@ -3,8 +3,8 @@ class Glib < Formula
 
   desc "Core application library for C"
   homepage "https://docs.gtk.org/glib/"
-  url "https://download.gnome.org/sources/glib/2.90/glib-2.90.1.tar.xz"
-  sha256 "93c941aa17d5eb1d53fe838365f29a8b4e539c222a256d974ec8f30fc413e396"
+  url "https://download.gnome.org/sources/glib/2.90/glib-2.90.2.tar.xz"
+  sha256 "edf473b4f5ee70a31d2410622ee605dc4a2c8c46dbc0ec53c9abbaf3960232fd"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
@@ -17,8 +17,12 @@ class Glib < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-2"
-    sha256 sequoia: "c278516bcbe698fdd998d76e4b796661a8e612122732435a1736cd5b8b9d7481"
+    manifest_sha256 "4f4741b5490d1f600dd91a4450c60100cf79e59c1ce6cb0b36eb3137cd3ee141"
+    sha256 arm64_golden_gate: "ff7ee35893db3adf21e2b7cf7e98d62e105b0fea948e8338b5f02ffb3d076930"
+    sha256 arm64_tahoe:       "4ead3a7743d291c1ce010e9033b528c687b31035d6b737ec4df5ca2d20b63d0e"
+    sha256 arm64_sequoia:     "dd40f39cd7e7f58755022628bd75ff0a38fc18b92090339a99251f006cec2c15"
+    sha256 arm64_linux:       "418236f103a6adfac1b485652df3e09311a2ff5f2483f443265f02f1a9f075cb"
+    sha256 x86_64_linux:      "057ac238967e891d2825d17cbcb71fadc41224b242eea5798814de54c6d98c26"
   end
 
   depends_on "bison" => :build # for gobject-introspection

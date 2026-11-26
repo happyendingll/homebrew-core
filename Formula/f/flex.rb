@@ -1,14 +1,18 @@
 class Flex < Formula
   desc "Fast Lexical Analyzer, generates Scanners (tokenizers)"
   homepage "https://github.com/westes/flex"
-  url "https://github.com/westes/flex/releases/download/v2.7.7/flex-2.7.7.tar.gz"
-  sha256 "4fff8a32ce095788537fdc4dbecd04ec069110c84429d182259f108db1003db2"
+  url "https://github.com/westes/flex/releases/download/v2.7.8/flex-2.7.8.tar.gz"
+  sha256 "88d80ba91c8f89251cdbef92b4cac598e87ee782a9467eff47715aeac92d6d86"
   license "BSD-2-Clause"
-  compatibility_version 1
+  compatibility_version 2
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any, sequoia: "5eba43e33367635baada24245ff512fa57a67b60832a9601be4dc300b72f0a8c"
+    manifest_sha256 "b7eb67f24bf7433bba3034cc4fee2b60e45c7658ca507cc66599941c90fea93a"
+    sha256 cellar: :any, arm64_golden_gate: "c119cdf80b2d52aa4bd6a92d582b47637ea1abaf44e1d54db7a6ab375cc0c9f3"
+    sha256 cellar: :any, arm64_tahoe:       "a0fe86b40574ee5990f0c899c2d04e51a96e4801892583af356c318ff1a70d30"
+    sha256 cellar: :any, arm64_sequoia:     "15e0d7cad6001bbb32b7b052ecd260d41bc56e0cb78168e78e2a665fa3d2837d"
+    sha256               arm64_linux:       "e0edb162eef07505a18580e34ec6f8acbe40278035c01f0a17931974f661e557"
+    sha256               x86_64_linux:      "269803cdd0feee1216fa9a8e5a36180d4fc03973ed0cc822f68c5d79383f2069"
   end
 
   head do

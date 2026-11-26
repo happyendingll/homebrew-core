@@ -10,6 +10,8 @@ class Vpcs < Formula
     sha256 cellar: :any_skip_relocation, sequoia: "bd9deece9ffd5064c0443d006eb648ff3fb1d756f4aaf1417e51cac9a77eb754"
   end
 
+  deny_network_access!
+
   def install
     os = OS.mac? ? "osx" : OS.kernel_name.downcase
     system "make", "-C", "src", "-f", "Makefile.#{os}"

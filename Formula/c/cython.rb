@@ -3,15 +3,19 @@ class Cython < Formula
 
   desc "Compiler for writing C extensions for the Python language"
   homepage "https://cython.org/"
-  url "https://files.pythonhosted.org/packages/99/ca/18e324972e5cac914816fdd7bb03e19a455b90039c277a538f7781b50c85/cython-3.3.1.tar.gz"
-  sha256 "e0e45989e821bef6aa9ae15c7d583ab5e055f7406c4b3624e49e06d24e90375a"
+  url "https://files.pythonhosted.org/packages/98/de/dff7f5fcfd06a947b16bbd66568e3e8f291cd9a17c35fd04b43b5a7ad3bf/cython-3.3.2.tar.gz"
+  sha256 "e789d9fd939b74fb8c572fc2b689e3b14bd141ba95243693a546064c8179a1d3"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/cython/cython.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-5"
-    sha256 cellar: :any_skip_relocation, sequoia: "733583c366b9206bfd9d5b8d86b818b484c202be3ae48dd621d10c2bd0b72501"
+    manifest_sha256 "189edb2f2440fc69780779f7a0e21762ae8934096d96246cbf7b06ae4283607a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "91b94eb9958882d1388b46add58b40d583e03c978966f4735d9170cb71620541"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "65162078678c54cbc1c088c7d58fdbbb928f65ede88dccead5a159ca68712d33"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0dcce2f8f75479e59bb1692579824de5acac619d01f351b20c1fc5f4f12415c7"
+    sha256 cellar: :any,                 arm64_linux:       "914cc551cb4635148c7a69908dca145e866f343d82c35551470dca1dfb411f08"
+    sha256 cellar: :any,                 x86_64_linux:      "12150b1348cb00d4d30f72d18522e055bdc9741454d26abc95461b1e22c125a9"
   end
 
   depends_on "python@3.15"

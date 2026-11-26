@@ -1,13 +1,17 @@
 class Himalaya < Formula
   desc "CLI email client written in Rust"
   homepage "https://pimalaya.org"
-  url "https://github.com/pimalaya/himalaya/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "261b6d3bce4f0de6399b347525fc3c687f309d83840b4e10a58ab7ad70c03544"
+  url "https://github.com/pimalaya/himalaya/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "e6843e062be203d6c97b392f4f4f58844c3ae16f42849704727029e882274e0a"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles"
-    sha256 cellar: :any_skip_relocation, sequoia: "9bed20ff7140ff9730779b1d687aa28d7cf6628ba2bbbfd3ecc2ef46ddcca47c"
+    manifest_sha256 "08759b4605421953ec712924c9a2c2e6eba1f344352fc02bb97a7d784083d3ab"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a7d5977c465afc36e64023975ca64038b9f4f33904e7e579ee745cf520c87c7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6c8f5a153ac8b7a7342a2c095407257a7c7d11f9342725c19f14ecb43eb666c4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a91d1ab63881338d6c331c0928eb2ebf338ce2a0d85bb9e58685791d5972c38e"
+    sha256 cellar: :any,                 arm64_linux:       "0896700e40576addf2949189c2a60f5787dcbe2339f384f29902287e61e4e411"
+    sha256 cellar: :any,                 x86_64_linux:      "f04b6202f73092f3dc3c1d642341a2956bfad764faa987b0d687ae9fa7509364"
   end
 
   depends_on "pkgconf" => :build
@@ -32,32 +36,13 @@ class Himalaya < Formula
   end
 
   test do
-    # See https://github.com/pimalaya/himalaya#configuration
-    (testpath/".config/himalaya/config.toml").write <<~TOML
-      [accounts.gmail]
+    (testpath/"config.toml").write <<~TOML
+      [accounts.personal]
       default = true
-      email = "example@gmail.com"
-
-      folder.alias.inbox = "INBOX"
-      folder.alias.sent = "[Gmail]/Sent Mail"
-      folder.alias.drafts = "[Gmail]/Drafts"
-      folder.alias.trash = "[Gmail]/Trash"
-
-      backend.type = "imap"
-      backend.host = "imap.gmail.com"
-      backend.port = 993
-      backend.login = "example@gmail.com"
-      backend.auth.type = "password"
-      backend.auth.raw = "*****"
-
-      message.send.backend.type = "smtp"
-      message.send.backend.host = "smtp.gmail.com"
-      message.send.backend.port = 465
-      message.send.backend.login = "example@gmail.com"
-      message.send.backend.auth.type = "password"
-      message.send.backend.auth.cmd = "*****"
+      email = "alice@example.org"
+      maildir.root = "#{testpath}/Mail"
     TOML
 
-    assert_match "gmail", shell_output("#{bin}/himalaya account list")
+    assert_match "personal", shell_output("#{bin}/himalaya --config config.toml account list")
   end
 end

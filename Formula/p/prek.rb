@@ -1,14 +1,18 @@
 class Prek < Formula
   desc "Fast Git hook manager written in Rust, drop-in alternative to pre-commit"
   homepage "https://prek.j178.dev/"
-  url "https://github.com/j178/prek/archive/refs/tags/v0.5.11.tar.gz"
-  sha256 "1dbafca264151131170d86f1b36e642797469dbf0ec98d77f1110c65f1aa0eed"
+  url "https://github.com/j178/prek/archive/refs/tags/v0.5.12.tar.gz"
+  sha256 "679d6708c56991e41943395afd4c5b536beac7fda7b8bb648e238136a19b4af4"
   license "MIT"
   head "https://github.com/j178/prek.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "bb15002d3028b87d063dbeeeece83ac5baacfac9140d3f488639759bfb39bc8e"
+    manifest_sha256 "fe4782eb1fc27af7f55c6cd291ab303bd27202cf3a996d7d564f5db18c2d5823"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8106c2f243a8cf8646e676f1de75ec32b59df86bc31bcecf45b452073c11edcb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a31255b9c815d7f24652ad580683b638aca2357a2e74e9c36ba54dc29d72519b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ca63d53f9274da7980960be22792fc502e219f099a4f0d9d219a6e503af00bcc"
+    sha256 cellar: :any,                 arm64_linux:       "bc06efd7780f6d9b8f8f7f141207d082163e6510194673ed8f628f5a39ecd925"
+    sha256 cellar: :any,                 x86_64_linux:      "22fd554f58df10559740f21be8120ef36416426eea080d90ea509baa24c19c38"
   end
 
   depends_on "rust" => :build

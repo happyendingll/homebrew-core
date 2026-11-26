@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v2.84.1.tar.gz"
-  sha256 "e717da648c16275d9416ff6ffc10e370ab65d7c792983b7d18b43aa91e25560d"
+  url "https://github.com/werf/werf/archive/refs/tags/v3.12.2.tar.gz"
+  sha256 "2d8e034c39dba2a20285a2396d2d6c6f5cd12ca089a98df479268bbfb9bb5542"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
@@ -15,8 +15,12 @@ class Werf < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "6e0bb0a4e61f2781a914ce2467bcbca315d1b857b6461c7282dbf4de81d50bca"
+    manifest_sha256 "0a5c63053d985686d2ae5c94862f99f2ed0d930316f500b1c71b80e9c03b8eaa"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db70cbb9d4294723869a7e86e5bbd1dd3194daea8ed7c2c574025f78305adc19"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "567a9846a0a2c331ad878bd6960bc4ba76b95f8e39c8b6751b918ba9efd950e7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7f11271284e628275117c9479cf7daa8423a2f9284323e2161ab083b7f30cfba"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "4fea48d046819c5966e1bd8243bdfe26f0fcaee95f3670810a77438bf47648f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e85edd48dd42d1a3c864bb4f4305bc721eaa02974b880b1ff47fd6d2b06bb779"
   end
 
   depends_on "go" => :build
@@ -34,7 +38,7 @@ class Werf < Formula
   def install
     ENV["CGO_ENABLED"] = "1"
 
-    ldflags = %W[-X github.com/werf/werf/v2/pkg/werf.Version=#{version}]
+    ldflags = %W[-X github.com/werf/werf/v3/pkg/werf.Version=#{version}]
     tags = %w[dfrunsecurity dfrunnetwork dfrunmount dfssh containers_image_openpgp]
     if OS.linux?
       ldflags += %w[-linkmode external -extldflags=-static]

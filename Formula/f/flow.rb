@@ -1,25 +1,18 @@
 class Flow < Formula
   desc "Static type checker for JavaScript"
   homepage "https://flow.org/"
+  url "https://github.com/meta/flow/archive/refs/tags/v0.343.0.tar.gz"
+  sha256 "fcc19bd507fa397fb30582fb068a2a0b2eae0f5b641e3ef47d330b4e30318230"
   license "MIT"
   head "https://github.com/meta/flow.git", branch: "main"
 
-  stable do
-    url "https://github.com/meta/flow/archive/refs/tags/v0.342.0.tar.gz"
-    sha256 "9964e7ba88755be8a23ba4bd910b57a115cf46b39c3a25c757c20e04f143c996"
-
-    # Replace `box` patterns, which Rust 1.100 removed, with `deref!` patterns
-    patch do
-      url "https://github.com/meta/flow/commit/9976dbf5c6220ea90555d25ac97a1e7496ab203c.patch?full_index=1"
-      sha256 "2ede7443733e6e5a126b4f7508cd74eb9b0acd55c3ca130c7b03fc42dbcf8f9a"
-      type :unofficial
-      resolves "https://github.com/meta/flow/pull/9536"
-    end
-  end
-
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "c8ee1b11a461898624e10afcefe1c6c1782959a8ee9f5dd2727cfb885f130792"
+    manifest_sha256 "85a9aec2197aa8a0011e8a4f186dec5722919d7eedcd82cb70de386ce4097d5f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cce29113494ba5799374e69514fdc9e9698885360df66375e93503ecc54e8038"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f2d13b9543f75799fbfffaa69d7f8124dac78d13a02b0271b98a5c44ce24e29d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "57226639ce8508392f91d0bcdfeb85fd60ffdd9549912f0ba281d98a79f47dea"
+    sha256 cellar: :any,                 arm64_linux:       "15b8738759af663c4361097d28cbbe7e785fab50565c367171be783ed390ec12"
+    sha256 cellar: :any,                 x86_64_linux:      "63a0427aef67826c06774cc0eba11d0cbfc1979e63f8fc3a300cca2e2e66fb1c"
   end
 
   depends_on "rust" => :build

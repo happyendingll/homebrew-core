@@ -1,8 +1,8 @@
 class YaraX < Formula
   desc "Tool to do pattern matching for malware research"
   homepage "https://virustotal.github.io/yara-x/"
-  url "https://github.com/VirusTotal/yara-x/archive/refs/tags/v1.24.0.tar.gz"
-  sha256 "c2727bc36dde79d6d2ba048c4318a4eba04c3ac1dd8a5a56abdc5af18340f509"
+  url "https://github.com/VirusTotal/yara-x/archive/refs/tags/v1.25.0.tar.gz"
+  sha256 "4ecb118f9b6d2bef8123bb553d4d8f0c46ae2b43c24a5607521f5904cc55a624"
   license "BSD-3-Clause"
   compatibility_version 1
   head "https://github.com/VirusTotal/yara-x.git", branch: "main"
@@ -13,8 +13,12 @@ class YaraX < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any, sequoia: "e1b913af6ed0fc25237e2b7bbffba6a84cbda91bb0be786ee4c9ce1ad219128f"
+    manifest_sha256 "46e6055e1b8cc663f778b0c2460912e7558228e888410265ed530b57a55edfeb"
+    sha256 cellar: :any, arm64_golden_gate: "bfac89bb39c8f9d335a2ec1b4d7936b0c9581fd3bfeb217f9fcefd7fc2a8ff64"
+    sha256 cellar: :any, arm64_tahoe:       "0797769f01ecb7d82624bd4922b6ab61d73470a79865a7792b7350c8b1a40363"
+    sha256 cellar: :any, arm64_sequoia:     "9d34ba93a8a89640efcca8ca06569bfde29c1ff60198baccba19b77b451c2be3"
+    sha256 cellar: :any, arm64_linux:       "34750ab13a8be1be88c8cc4fa04493ca1abe11c968332fca904c7f1fb1331700"
+    sha256 cellar: :any, x86_64_linux:      "8421b48c171e4f1a1c64a91490e4992440f8dc0475f036718ae1444a502fa285"
   end
 
   depends_on "cargo-c" => :build
