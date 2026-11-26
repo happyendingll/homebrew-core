@@ -12,12 +12,8 @@ class Tevent < Formula
   end
 
   bottle do
-    manifest_sha256 "a06e8cee8b5b7978cb2cf64e27db11144e83220273e3119606592166f4dbe2a7"
-    sha256 cellar: :any, arm64_golden_gate: "fd8576e5ac11e4095f56f30cd2be5635870928b1d1cb9824a1e0d40601872a4a"
-    sha256 cellar: :any, arm64_tahoe:       "36c7a491b5c0826b72f46814774aa36907e987ef8737c1bc9ad2778343baa056"
-    sha256 cellar: :any, arm64_sequoia:     "ff82d430f85c5a09fbec0a832ffaa935592c42d37acfdcb036803a34dccc40d4"
-    sha256 cellar: :any, arm64_linux:       "da062d551e7781f7af9a07770902906876b4a13ddd9c164082af83905d36c60d"
-    sha256 cellar: :any, x86_64_linux:      "ea82673c4926807e4543bc039f56e15f85044d78efb84be224f9e528c0e4d235"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "a438372dd63afb3014aba03d1cfb2baa60d7a06aa0e196c58551df9a9646bc98"
   end
 
   depends_on "cmocka" => :build

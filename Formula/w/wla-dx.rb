@@ -12,12 +12,8 @@ class WlaDx < Formula
   end
 
   bottle do
-    manifest_sha256 "ed66fd59ceefce76863dcc3a160dbeed9d864eeb50538daae3209b65123d44be"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7230f5650cac652adaca7fb136ce59fc971b990d57df21dad0a83ad8f24fca00"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c4adc4db22f13df61bc519a47b7aa988c79ebc2bafb33b2da5921f0adecc80a6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2aba608f95d91e16331e2b435a12f32672e80996fae0f12f298d8db8d69f176d"
-    sha256 cellar: :any,                 arm64_linux:       "efb043bba8643d279c1032ca415d53894f0d3e6dcd8228444cc44ffc869d3331"
-    sha256 cellar: :any,                 x86_64_linux:      "fef90611aa527277f0454bd1b47ddc8be785f3fd4f0ad6cc33d6178faa39c109"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b33c03b9de9ddc1765dffa9d97210b59f1e8bcc883806d68d17b595a09fa1199"
   end
 
   depends_on "cmake" => :build

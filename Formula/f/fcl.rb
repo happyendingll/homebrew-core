@@ -50,12 +50,8 @@ class Fcl < Formula
   end
 
   bottle do
-    manifest_sha256 "bae14e4a1a4540894c71732f3054ae5c610843e542e9df787dbdc66473c0f21c"
-    sha256 cellar: :any, arm64_golden_gate: "faa05739d19f3031309bc5dac7f2af8da0402fca8e53bcf5e0bb6b07eb4dba6c"
-    sha256 cellar: :any, arm64_tahoe:       "b608fba1ca24b458ef1e39d05fbb7c178dd315e9f7f098d159412d133f274d2d"
-    sha256 cellar: :any, arm64_sequoia:     "dbc8a7a22e55cab98662a731e113e547dd3beb533371c2979ee166e161ade375"
-    sha256 cellar: :any, arm64_linux:       "a9dbe25f0e5bceb190dec90424d48f32b34bc9d52cdab5d35964f6c8e66e068a"
-    sha256 cellar: :any, x86_64_linux:      "5dd32290d648be8f2fd5cd4c58eafa337acd054c4740c3080f1fa403ac5726f4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "f1dd49909a2f1d05cc9546dfdfa0d705e0e142de0c9def3d7ac00f0e22833c24"
   end
 
   depends_on "cmake" => :build

@@ -7,12 +7,8 @@ class Reckoner < Formula
   head "https://github.com/FairwindsOps/reckoner.git", branch: "master"
 
   bottle do
-    manifest_sha256 "a58bd947342b93935fcc1317e95778a062072ee2a2ea2cb00938bb409f9d55d5"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db4a2d09d46770f7857d3a71812461e8b930c5e652d65266e05950631e7f4d90"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "db4a2d09d46770f7857d3a71812461e8b930c5e652d65266e05950631e7f4d90"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db4a2d09d46770f7857d3a71812461e8b930c5e652d65266e05950631e7f4d90"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4f68d53966152166ea1ced9085129dacff8237eb90c34bf0a1b2861a1d96bc95"
-    sha256 cellar: :any,                 x86_64_linux:      "140c3e2636e91516b13f970c3abaebdcb1415f4a6108110157c13462f1ac7a6d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "896f28e47c67f1abe368c55f7545e7ec6c48d3e7915f08855ed39ca2d1a9ed45"
   end
 
   depends_on "go" => :build
