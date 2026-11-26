@@ -12,12 +12,8 @@ class Sqlmux < Formula
   end
 
   bottle do
-    manifest_sha256 "4c79b0806d61803720da54d7c732d2d7391797b36103dbbc5be0ad015c2c17d0"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5427f0addf3544ce4fd567b8d4c6e8506aa0581b9679c24fcf743506ec380a32"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3ca2c345a05e69691ba86b4e55e3d87b676f417b0a9569e475e7aa804d0b59c6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "efaff20f137995ac1c7c6333dcfd8688df5bfaf060d79e9f2d72bb26566bf25f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8441c2d46150f7fc93d432acb915e91666308c3113bd9c3c2ff7b78f91a530f6"
-    sha256 cellar: :any,                 x86_64_linux:      "46002d8849e05d88f3aa56dbed122533d4bd80464eb5f12699d80f85b1231840"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "297adda5c9ade736d83a540d169a3f07660ab1f5b88023f6029d798243973e8f"
   end
 
   depends_on "go" => :build

@@ -17,12 +17,8 @@ class Fetchmail < Formula
   end
 
   bottle do
-    manifest_sha256 "0be9d734bd938b9b0d6abe1c6db3167c55f23b70214722c3c04a8ea02b8a347e"
-    sha256 cellar: :any, arm64_golden_gate: "ce723917e9a8c9b2a80b1e4afedcc6fec2b8c00508aec0083c3453d215ebda7a"
-    sha256 cellar: :any, arm64_tahoe:       "239e8a9cb4f63a6a6047b9bfb91169074020342118113f1822797a169c1687a0"
-    sha256 cellar: :any, arm64_sequoia:     "ceae391e272427f2a4ea9b81f261dacc3af1835d5639f61ed17bd8079261f535"
-    sha256               arm64_linux:       "19aa73231cc5ace1d12028e461d5e419a07086a5c45d58ca261f0b4ce11a651a"
-    sha256               x86_64_linux:      "bf7a5f7a4ba4604b30d8255219f3e33a360de5db1f69597c96f5d49236532a9d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "62919133f76c4f4c43d9c1ce1b040006218d8e849a93631660f5ab2c14501b8b"
   end
 
   depends_on "pkgconf" => :build

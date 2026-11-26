@@ -14,12 +14,8 @@ class KubernetesCli < Formula
   end
 
   bottle do
-    manifest_sha256 "4e0059cf87b0f1c4ae21e2060d7a260a876f23afb1d81e490bebfe26db58b598"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "db7d4ee3969e211e6aa9f4dc3f8508b708512b6d9e5fdbcb968fe5c544806204"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "cf5dcd66cb18fff02f8e976578f06f5c9048fa8fde3cc3370b47ff0b437e6280"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "06631a55bf5b9d0d0143166a4c19b580bb9579e92a81e1162848122e1544c973"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e134891e38325dc30507087058922b1e8886a4618054f38a0814941091bcd346"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "4f3f28a938e200d6f181aa429025efe630c3462f0d5a921855f0dbc9f65114e9"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "d2f1b3d60713f6267d40bb93186af8ceba9c5c0f2e62aea911d31ba57c90ca61"
   end
 
   # TODO: unpin go@1.26 when Go 1.27's ML-DSA ClientHello no longer gets reset by TLS middleboxes

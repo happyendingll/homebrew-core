@@ -7,12 +7,8 @@ class NovaFairwinds < Formula
   head "https://github.com/FairwindsOps/nova.git", branch: "master"
 
   bottle do
-    manifest_sha256 "6d86b17098aeee5eec9636c9c56766ca5daa8bfa81ee71575c2c1c1e0d77ea3e"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ac7d25c2c3123d418ad7b50cf35caceb112cfdc222f25045a6b73f9a5cc559f6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ac7d25c2c3123d418ad7b50cf35caceb112cfdc222f25045a6b73f9a5cc559f6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ac7d25c2c3123d418ad7b50cf35caceb112cfdc222f25045a6b73f9a5cc559f6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "60d9808500a4c8a6c980063bb81507aeb562130afb90f1a22540d3346e2d4c97"
-    sha256 cellar: :any,                 x86_64_linux:      "5ce7bf25f563e8c5cb7b0259a90826822ad92c9c0e5383afe62cbc152e934184"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "967fe0e24b7a2a14959de71767314c31afbfdb0c3375784937efeb4c8a1d563e"
   end
 
   depends_on "go" => :build

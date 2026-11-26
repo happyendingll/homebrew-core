@@ -30,12 +30,8 @@ class Exim < Formula
   end
 
   bottle do
-    manifest_sha256 "7719de0d99926de257367a0ce45dc1af634bddc12a221760bf29829322355711"
-    sha256 arm64_golden_gate: "298881768679d568f73a261f6b418bdebfaa3197e49699348ed23b9eafc6685d"
-    sha256 arm64_tahoe:       "d76ef17e402c191c5f7dd1333387c96fb463a9a93335809df43df31e4361e7b9"
-    sha256 arm64_sequoia:     "2462ef71804bc305ee6fe0d459bd8b99c2353cc4732e2b3904a63522a25b2742"
-    sha256 arm64_linux:       "0b01ab253fb6a0e80b1eeafb5b2477f6f74443972eb16efd440cf7dfac5c9f14"
-    sha256 x86_64_linux:      "ee3eb85c9622da83942a676e07863674a654a5c7eec3482d35a6ab641863b7fa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "75ca511464628977482093e6313843cea189afd5488c2a7ebab410dacb06d623"
   end
 
   depends_on "openssl@4"

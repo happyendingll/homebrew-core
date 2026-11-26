@@ -12,12 +12,8 @@ class Chaoskube < Formula
   end
 
   bottle do
-    manifest_sha256 "1e757453f213bc85991ba0de972681fa487ed8d003590928a3f5cd3673a52eca"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e5274541c08606e88a91bc9f26757057b185b86b5898d8987d05febdaa265002"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f7cfd7976e8967f890a77051abe69ed9e380a6fe3bfc206af8dd018cc3513089"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fabae85d3bfb682e587eea795c46e012975119289652068d904f949ad09c286f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "afc17c42578cc73c04fe9e7f3f3758c0e9f0225b4a6b22868be9adbb7d6a8fdf"
-    sha256 cellar: :any,                 x86_64_linux:      "714abaf918fe66f3e7d46916893d3dee0b64adfab98e497da082356035701b0e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "2ed9df2e0488876015983171e72b75aa2785200cb75d155f342b9d2a7c19798d"
   end
 
   depends_on "go" => :build

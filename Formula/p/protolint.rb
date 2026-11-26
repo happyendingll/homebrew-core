@@ -7,12 +7,8 @@ class Protolint < Formula
   head "https://github.com/yoheimuta/protolint.git", branch: "master"
 
   bottle do
-    manifest_sha256 "dedb2169e51bcdaf4720726e66accdacd44e98535ba602dc8bf8d2cb736d66dd"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "39a8d3b7e7b125ffb3870f4128603dfb14e24dd0439b01ed3353adfa87dfcf30"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "39a8d3b7e7b125ffb3870f4128603dfb14e24dd0439b01ed3353adfa87dfcf30"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "39a8d3b7e7b125ffb3870f4128603dfb14e24dd0439b01ed3353adfa87dfcf30"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a3c454a878a2d4c5fad4330b635396241c4bcd21c05e0eea5dba83eddd2c921c"
-    sha256 cellar: :any,                 x86_64_linux:      "875ce1d63a62881f03139a1ad8f2c9404c6f7f8c0b5ea8a4eca7d1b79d1afdb8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "f17a035f65765189205ca83dd372c14c8348408ab205eea4e741838c345ca2dc"
   end
 
   depends_on "go" => :build

@@ -12,12 +12,8 @@ class Libyaml < Formula
   end
 
   bottle do
-    manifest_sha256 "ee50683c383d0fc75186f4331913f85acd97e3501e46c1ceb651018cb827ec0c"
-    sha256 cellar: :any, arm64_golden_gate: "af43cbb6cfc13515a520e8491b9a7e8a73fdac42a5a45f53e7c803eb3c99dcb5"
-    sha256 cellar: :any, arm64_tahoe:       "ccfa9b03cc309ee805fe13767172a1fb1698cbdda862919a883cdf052c60cb48"
-    sha256 cellar: :any, arm64_sequoia:     "a31294e0c9b02c3388c5b1b75c81074a1babb3a5c8663e350572012866e7ac54"
-    sha256 cellar: :any, arm64_linux:       "8780be35726cbfe7f35e5861848fb011f6c838860ecaf42520ef7c33afc3cba4"
-    sha256 cellar: :any, x86_64_linux:      "106d554ac52de1b20030a834fdcf383671c7a2619eeebb84b722c2518729d5d8"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "521e308fce2a2613ca09f58a4407e86063a42277c480b84fe3ae28270cb5ca69"
   end
 
   depends_on "autoconf" => :build

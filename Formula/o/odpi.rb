@@ -6,12 +6,8 @@ class Odpi < Formula
   license any_of: ["Apache-2.0", "UPL-1.0"]
 
   bottle do
-    manifest_sha256 "04ff151fd6565fbb70291fdfa0050710c600a0e41d721fc2f53475b56aa14126"
-    sha256 cellar: :any, arm64_golden_gate: "61264544cce450113adc03b177925c9d65ec2ebd554b594e919d127caa907fd7"
-    sha256 cellar: :any, arm64_tahoe:       "751a0f4be7e7fdf57d5e620099a65b244e52a6ab679167c5b64130ff434c1036"
-    sha256 cellar: :any, arm64_sequoia:     "ab5dd584de889e3d22cdd83a5ad487d509e5de52d017204e785268b1ce20722f"
-    sha256 cellar: :any, arm64_linux:       "629161db5cd9e8343720b7d58a8d1b17e6545f69f9642322fc554d83bdbfa2be"
-    sha256 cellar: :any, x86_64_linux:      "d6eba96c090b83fd6732c29837007270a200cdf8c1fdfe4880bd67f073496711"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "fa23118a7e87f0943eba382684077330f47593f3b332d82c024f1ad4a9bb8711"
   end
 
   def install

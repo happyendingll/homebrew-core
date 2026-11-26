@@ -6,12 +6,8 @@ class Tele < Formula
   license "GPL-3.0-only"
 
   bottle do
-    manifest_sha256 "948eccfd2978d6a7967886d33916d40fd4950497af1bb8fb11d77130ddc6bc0c"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a649b77954926246c1876ca0be383216e07940085ca8a5c12d2b46b2e5f383ec"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "376ec6f88ca5a129407ad9e4585fa92ac70ace5d4df30747cd8d8aeb284fc847"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6b4c7c9684a27c0cf12a5968161032340b6477a96fc90ffb1f82b56bbfb44968"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4231623163874679f4e56f40d552435287fc3073ce6224325efbaec7ef506069"
-    sha256 cellar: :any,                 x86_64_linux:      "4cd8dfb5092334b5d93d08a5721cfd36ba76d70838fbdaa9ecf806a478b5f003"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "6e972d62dcdb609414bbe74d6ad958a7644c42a5689c47ea15675fabacb7e36e"
   end
 
   depends_on "go" => :build

@@ -7,12 +7,8 @@ class Azion < Formula
   head "https://github.com/aziontech/azion.git", branch: "main"
 
   bottle do
-    manifest_sha256 "3318b05c7a659de1afbe3bae95ef2eb712d0bc417892facd60b66ba3070312bd"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4cd1ac86a08c3cfbc75e7be9a56a58717240f289b6b0542c239c3e83fc16ec06"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4cd1ac86a08c3cfbc75e7be9a56a58717240f289b6b0542c239c3e83fc16ec06"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4cd1ac86a08c3cfbc75e7be9a56a58717240f289b6b0542c239c3e83fc16ec06"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e023b94f49fac41d6e801198c4e054971bc8d4bd3c8dd9fc1d05560d79fc1f17"
-    sha256 cellar: :any,                 x86_64_linux:      "b632a51c84c04e69047c547d2c99033267ae996c5d99de39b3928cbd2b0a2ec3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "8b0b2cd0a7fa722c3805747fac0687d94136cae3ad759e8357126d58feecc198"
   end
 
   depends_on "go" => :build
