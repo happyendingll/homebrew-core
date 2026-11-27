@@ -1,14 +1,18 @@
 class SingBox < Formula
   desc "Universal proxy platform"
   homepage "https://sing-box.sagernet.org"
-  url "https://github.com/SagerNet/sing-box/archive/refs/tags/v1.14.4.tar.gz"
-  sha256 "0958ccd23b1ea9a141d715d15478b1e040fd04bcca19d8ff5529636b1b753e18"
+  url "https://github.com/SagerNet/sing-box/archive/refs/tags/v1.14.5.tar.gz"
+  sha256 "d7d5a6f64c213958cb2a11b82cfaa6c7acc0a877a28033193c8b3949a45c3646"
   license "GPL-3.0-or-later"
   head "https://github.com/SagerNet/sing-box.git", branch: "testing"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-4"
-    sha256 cellar: :any_skip_relocation, sequoia: "2e1f8937afbdf9f0fa3e7b8212f5644efcb2b1838d9b38b4385a7c14b4d5eaea"
+    manifest_sha256 "d4f70dd17cb9ca5d323489f1a57af79bc7575d20017df256b4094855fe50af3d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2155172abf27c47669162d0d82e82bf2c28e48d6e6da640f38e1c31920ff1570"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e001a4d995f5ede5e5af3661562d924942b1d3c94c6fe832039bfe08463d4d2f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f847bbf3a6b8a348f0ed940349b1ffd172c4a2f52c14e1df7e69e9b83f05b91"
+    sha256 cellar: :any,                 arm64_linux:       "d4e6bf0ff9c28cfe49a409193952cc0e4604ba590cc1a7fe7f3afb8810c7c5e3"
+    sha256 cellar: :any,                 x86_64_linux:      "b8fc608a8691be81122301384568b86ccd9aa9ef7dda40bbc1c68021216f9833"
   end
 
   # TODO: unpin go@1.26 when sing-box supports go 1.27
@@ -29,8 +33,8 @@ class SingBox < Formula
   resource "cronet-go" do
     # Using git checkout for submodules
     url "https://github.com/sagernet/cronet-go.git",
-        revision: "0d28acc44093df24b2526dea3d6ffefd6b0a54f0"
-    version "0d28acc44093df24b2526dea3d6ffefd6b0a54f0"
+        revision: "ccefd17767e7b91299e0d54a6b1bb0468cf9173f"
+    version "ccefd17767e7b91299e0d54a6b1bb0468cf9173f"
 
     livecheck do
       url "https://raw.githubusercontent.com/SagerNet/sing-box/v#{LATEST_VERSION}/.github/CRONET_GO_VERSION"
@@ -48,8 +52,8 @@ class SingBox < Formula
 
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-        revision: "3357c4f51b1a9e676378c695dd9c7e9911c35ee6"
-    version "3357c4f51b1a9e676378c695dd9c7e9911c35ee6"
+        revision: "150a9d6ba0aa7f407aa4feeabc5f03ce9aa7e04b"
+    version "150a9d6ba0aa7f407aa4feeabc5f03ce9aa7e04b"
 
     livecheck do
       url "https://raw.githubusercontent.com/SagerNet/sing-box/v#{LATEST_VERSION}/.github/CRONET_GO_VERSION"

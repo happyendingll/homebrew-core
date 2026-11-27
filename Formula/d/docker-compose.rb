@@ -1,8 +1,8 @@
 class DockerCompose < Formula
   desc "Isolated development environments using Docker"
   homepage "https://docs.docker.com/compose/"
-  url "https://github.com/docker/compose/archive/refs/tags/v5.8.0.tar.gz"
-  sha256 "1836019594ad054f8459cea7efc1d52eae7d05c64217c4efffe02d0d2930c44b"
+  url "https://github.com/docker/compose/archive/refs/tags/v5.8.1.tar.gz"
+  sha256 "5ed75d95a0aface6495a2aefc0a46c1fb56d0889abdf0840dc02c372a2ae7430"
   license "Apache-2.0"
   head "https://github.com/docker/compose.git", branch: "main"
 
@@ -15,8 +15,12 @@ class DockerCompose < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any_skip_relocation, sequoia: "9bb6e2f2cd9577a8c9be0ecad4cbb465f533519476854dd4b597dce02f095c76"
+    manifest_sha256 "e29575c66cac77ab3f9a49b3831aee1616e11751b0d9b3df38023ea2916a0efd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3b0e077a8df0e952f5ca040c6c171347bf04564b811af94123727d47bef3a170"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a5a4a966e9c32cfd35c886735f2cb5301b176a63b9c7a1bdc279720b98867a92"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bd97ac3447b1125a0dfa92d109a92a387d3d5ad9a499c3741c78a6da51ab067a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dcece0cdfaf93c386d945f697eaf25ab2f0b8516f07909721826897710701854"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "53f3ff3dfb7d50a3b1ad2621b336f053047d90f24af7c8ea148f0bdd9568bbf8"
   end
 
   depends_on "go" => :build

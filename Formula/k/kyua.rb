@@ -4,6 +4,7 @@ class Kyua < Formula
   url "https://github.com/freebsd/kyua/releases/download/kyua-0.15.2/kyua-0.15.2.tar.gz"
   sha256 "469499eab896790a46b2083dfe89f09c8cad3bf79ce45848619a61f287b68837"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/freebsd/kyua.git", branch: "master"
 
   livecheck do
@@ -12,8 +13,12 @@ class Kyua < Formula
   end
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 sequoia: "f31c254f2ff463a58b2c5e82a8ce3ea6270c3e70ecc6d6c9c7f38170b03a986c"
+    manifest_sha256 "e038bd1f20ff456c4438e8db91b3d3d9030999bd557a586fd89f4145762653c1"
+    sha256 arm64_golden_gate: "7172a8473d0287b071ede11452992535a294318c42065f033fba6809d117de23"
+    sha256 arm64_tahoe:       "25fd8164cac9153fc714b3f08998e6c1eb5fee3b0ac3e90c3a7dd84e73279e02"
+    sha256 arm64_sequoia:     "6ab256cdeeb7b8b84ccdf4ba4d1f014c5366ce83d0b6eddda0414c48d5d1e423"
+    sha256 arm64_linux:       "c6ead836de8d2a0a9f3575ff69ff63dc6c5ffbdeee78eccebe7f5a6ab52454b9"
+    sha256 x86_64_linux:      "5d67667f81d6acdd87b4d0d4f4d93f27b62535fc934ff491fa3f6217055f4ce1"
   end
 
   depends_on "pkgconf" => [:build, :test]

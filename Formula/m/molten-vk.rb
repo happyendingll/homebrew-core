@@ -19,7 +19,7 @@ class MoltenVk < Formula
 
       livecheck do
         url "https://raw.githubusercontent.com/KhronosGroup/MoltenVK/refs/tags/v#{LATEST_VERSION}/ExternalRevisions/SPIRV-Cross_repo_revision"
-        regex(/^([0-9a-f]+)$/i)
+        regex(/^(\h+)$/i)
       end
     end
 
@@ -31,7 +31,7 @@ class MoltenVk < Formula
 
       livecheck do
         url "https://raw.githubusercontent.com/KhronosGroup/MoltenVK/refs/tags/v#{LATEST_VERSION}/ExternalRevisions/SPIRV-Headers_repo_revision"
-        regex(/^([0-9a-f]+)$/i)
+        regex(/^(\h+)$/i)
       end
     end
 
@@ -43,7 +43,7 @@ class MoltenVk < Formula
 
       livecheck do
         url "https://raw.githubusercontent.com/KhronosGroup/MoltenVK/refs/tags/v#{LATEST_VERSION}/ExternalRevisions/SPIRV-Tools_repo_revision"
-        regex(/^([0-9a-f]+)$/i)
+        regex(/^(\h+)$/i)
       end
     end
 
@@ -55,7 +55,7 @@ class MoltenVk < Formula
 
       livecheck do
         url "https://raw.githubusercontent.com/KhronosGroup/MoltenVK/refs/tags/v#{LATEST_VERSION}/ExternalRevisions/Vulkan-Headers_repo_revision"
-        regex(/^([0-9a-f]+)$/i)
+        regex(/^(\h+)$/i)
       end
     end
 
@@ -67,7 +67,7 @@ class MoltenVk < Formula
 
       livecheck do
         url "https://raw.githubusercontent.com/KhronosGroup/MoltenVK/refs/tags/v#{LATEST_VERSION}/ExternalRevisions/Vulkan-Tools_repo_revision"
-        regex(/^([0-9a-f]+)$/i)
+        regex(/^(\h+)$/i)
       end
     end
 
@@ -79,7 +79,7 @@ class MoltenVk < Formula
 
       livecheck do
         url "https://raw.githubusercontent.com/KhronosGroup/MoltenVK/refs/tags/v#{LATEST_VERSION}/ExternalRevisions/cereal_repo_revision"
-        regex(/^([0-9a-f]+)$/i)
+        regex(/^(\h+)$/i)
       end
     end
   end
@@ -90,6 +90,7 @@ class MoltenVk < Formula
   end
 
   bottle do
+    manifest_sha256 "9d54e228efde334d25e37bb0e29f91c1a7f5966ee84fd78beed8269e658ec700"
     sha256 cellar: :any, arm64_golden_gate: "0de19dbda466d4dabcfdd57963f81764e6f33447b723623683a0a3ddde954031"
     sha256 cellar: :any, arm64_tahoe:       "5a83a9421fb588695613464a75ea469443f9aef72db475c3b2ae64dccc97c98a"
     sha256 cellar: :any, arm64_sequoia:     "fb4d355feaf8f36631695721b1ea2ac2e63cfdced0f3044c85ed8e6305a9acbc"

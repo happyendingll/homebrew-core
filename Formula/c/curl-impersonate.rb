@@ -3,8 +3,8 @@ class CurlImpersonate < Formula
 
   desc "Curl build that makes HTTP requests look like they came from a real browser"
   homepage "https://curl-impersonate.readthedocs.io/"
-  url "https://github.com/lexiforest/curl-impersonate/archive/refs/tags/v2.3.2.tar.gz"
-  sha256 "027e0cc1efef9ff9587f7cd33da5a6a0df1eb285d860fbfd78bc86c8c45f7f23"
+  url "https://github.com/lexiforest/curl-impersonate/archive/refs/tags/v2.3.3.tar.gz"
+  sha256 "7667300ac44accd34db5fd56006a401d6c3e16695299051a47acd53b5111101a"
   license all_of: [
     "MIT",
     "Apache-2.0",
@@ -18,8 +18,12 @@ class CurlImpersonate < Formula
   compatibility_version 1
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-6"
-    sha256 cellar: :any, sequoia: "6cb689a48f64a8ca9aed53a9273e7d0d0e2058893eef171509e540d1824de111"
+    manifest_sha256 "09937e0621bb20f3791b63b341b58d8bae05b26d3978970b1e5baeab2d61dd1b"
+    sha256 arm64_golden_gate: "e84967f6c92457b3572415c2e6d5e9dc01c93f017836f710891978b2092ea9e8"
+    sha256 arm64_tahoe:       "7ae1a63a85fa88cf03a00c194d5ee5eed983b53c77948b0ce54fd45b0e7ddc02"
+    sha256 arm64_sequoia:     "79a3762667c0937f4847b66efdba02b3466b7656eb415a6997ec88088d1d1599"
+    sha256 arm64_linux:       "2b01e68d4e1f4ba032fc41bdaca3a158b6e1bdf33c750554d70ffdc672ab0027"
+    sha256 x86_64_linux:      "94179377607a3be2538f0b397014638db9e2ad4bd729907cd95d7158552e426b"
   end
 
   depends_on "cmake" => :build
@@ -113,8 +117,8 @@ class CurlImpersonate < Formula
   end
 
   resource "zlib" do
-    url "https://github.com/madler/zlib/releases/download/v1.3.2/zlib-1.3.2.tar.gz", using: :nounzip
-    sha256 "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16"
+    url "https://github.com/madler/zlib/releases/download/v1.4/zlib-1.4.tar.gz", using: :nounzip
+    sha256 "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584"
 
     livecheck do
       url "https://raw.githubusercontent.com/lexiforest/curl-impersonate/refs/tags/v#{LATEST_VERSION}/CMakeLists.txt"
@@ -123,8 +127,8 @@ class CurlImpersonate < Formula
   end
 
   resource "zstd" do
-    url "https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz", using: :nounzip
-    sha256 "eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3"
+    url "https://github.com/facebook/zstd/releases/download/v1.6.0/zstd-1.6.0.tar.gz", using: :nounzip
+    sha256 "2ba599ae2a257976278e7e71e998433a387bfd18aa7b78678229fd5d84f5e9b8"
 
     livecheck do
       url "https://raw.githubusercontent.com/lexiforest/curl-impersonate/refs/tags/v#{LATEST_VERSION}/CMakeLists.txt"

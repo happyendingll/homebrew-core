@@ -1,15 +1,19 @@
 class Cminpack < Formula
   desc "Solves nonlinear equations and nonlinear least squares problems"
   homepage "http://devernay.free.fr/hacks/cminpack/cminpack.html"
-  url "https://github.com/devernay/cminpack/archive/refs/tags/v1.3.15.tar.gz"
-  sha256 "4bcc2fb514809eaa7bfecf2f2f663f3f0988a425ff64615316f5c4ed68757b97"
+  url "https://github.com/devernay/cminpack/archive/refs/tags/v1.3.16.tar.gz"
+  sha256 "90f717a8e7fb212430d7fe5265ecc7ea24f669e4613e2a920fb9b1d3be9209d1"
   license "Minpack"
   compatibility_version 1
   head "https://github.com/devernay/cminpack.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
-    sha256 cellar: :any, sequoia: "45b88cab3ba1c67a76578d491bda1e838d8b5ada402d1041bdf9b4277e64acae"
+    manifest_sha256 "91d7c52cbce1a61d96aea538ed2b49306ca06623eaa4bae50d64efaa39c2bb74"
+    sha256 cellar: :any, arm64_golden_gate: "18a60e267697f7556b78b776e55968d1e5adc7eb8f2f5259d96ad4a410af330a"
+    sha256 cellar: :any, arm64_tahoe:       "3ac84c4ef83cff7ceb7fa742edf14fb0970b8a63489989405af5aee05bea427c"
+    sha256 cellar: :any, arm64_sequoia:     "ad9feca5fe9f0fe387c473f52fc30d610e2b2989aca56749e9787190dcbcad87"
+    sha256 cellar: :any, arm64_linux:       "732e273ed55867e7bdb577b7fea995d05dd302300aab5246fc1799d46301aed6"
+    sha256 cellar: :any, x86_64_linux:      "9bdc45e79620b84c25a4ff96681ba93e0bc1adb40458275f533a4816ac4326a3"
   end
 
   depends_on "cmake" => :build

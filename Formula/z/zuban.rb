@@ -1,14 +1,18 @@
 class Zuban < Formula
   desc "Python language server and type checker, written in Rust"
   homepage "https://zubanls.com/"
-  url "https://github.com/zubanls/zuban/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "79a51f5a6720dc3be091edc566c34ab6aa5938f22e8f1cc3dc7f90a4dc989030"
+  url "https://github.com/zubanls/zuban/archive/refs/tags/v0.11.1.tar.gz"
+  sha256 "68ce3e0802e98d63f516a850eea987f43222988977bf597156ada414d442b093"
   license "AGPL-3.0-only"
   head "https://github.com/zubanls/zuban.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
-    sha256 cellar: :any_skip_relocation, sequoia: "92870acaec9265b369a2d786205eb26099be00c6fa102f3d4aeacf417ca21d5f"
+    manifest_sha256 "26f6cfb7b50204348de1e1041d54e1178a36e6b2a2d23c17131c55e85aa26c92"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cbfe8a6aba41dc2b2e392b53afbad1f3940b372fa6bd434943119631cd9f81ef"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "01573d28dca3ee5cc0995176252f8a2fe3e4c1a9a81a66a9026d395863fed73f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "862285f14cd98040fa1966ae1d350ba3907a0f36491da9e034b092b629388f2f"
+    sha256 cellar: :any,                 arm64_linux:       "1e80648e469d25d1d09cb461fd71a1cdb225fe7058c771b7ca4d9117b9777ef7"
+    sha256 cellar: :any,                 x86_64_linux:      "822c0696e2eabe9228382f4024bb17b4c64982c663974e7540a350a50fc94385"
   end
 
   depends_on "rust" => :build
