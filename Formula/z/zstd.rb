@@ -20,12 +20,8 @@ class Zstd < Formula
   end
 
   bottle do
-    manifest_sha256 "906c8306968cf73983cabf73b3f19d4da11cfd556abadee81392130a882c3eb8"
-    sha256 cellar: :any, arm64_golden_gate: "78df508100eba34ed911f4e3ced121d5d001f1a340ae800f38f2325df56bfe2a"
-    sha256 cellar: :any, arm64_tahoe:       "406c93bb4ed7d09e857ba4d00e30fb72c2f6e7d610bd5e888a498b9269c957c4"
-    sha256 cellar: :any, arm64_sequoia:     "7c49194de54641895c5c965446472552d4619e30170eb8fd9d10eef223919730"
-    sha256 cellar: :any, arm64_linux:       "0b6bc6c6f35848f5205ef7619a6f415bd149af2d5ab9e82317f12bd178c20406"
-    sha256 cellar: :any, x86_64_linux:      "f9fb6295ab9b8cbaef315f84ed29b42b86e4d54848d67153b2373b9d9a5dab47"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "2625038d75f046aa37051a33bb01a320baed0875ca3206e989a223b8890624f5"
   end
 
   depends_on "cmake" => :build
