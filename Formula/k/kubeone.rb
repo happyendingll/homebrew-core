@@ -7,12 +7,8 @@ class Kubeone < Formula
   head "https://github.com/kubermatic/kubeone.git", branch: "main"
 
   bottle do
-    manifest_sha256 "6e7e94bb0349c015c90be53f8a94d9d1cc132560a7e9939d876b3391084167ab"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "512d3842254142954eee0400bdda2572255de10ee71c99908279f4fb93aa5cb2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ddb2d9a3e52194c96935bdafe0c63155a80fac7a433a30b3c5f64eb6604e5fb1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c39e00b842396ae4b6382fe9056eb6a2054a437fb84cd628cb65ae48870c1166"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d1d797357dba67ae94348cd9b7267a1b04dede41cc9191f2b31fc21c86ff819b"
-    sha256 cellar: :any,                 x86_64_linux:      "ee36097d82bea25c01976859e94c80bc0242875d4a49d7be26e1069e520fb9a2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc155250d13f903a7bf59c2d671a0586ba38e3511be1b6ce39bf606262dcdafc"
   end
 
   depends_on "go" => :build

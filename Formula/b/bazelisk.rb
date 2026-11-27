@@ -7,12 +7,8 @@ class Bazelisk < Formula
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
-    manifest_sha256 "5982a4fc5db8b745983665360b60653939bbf1a49f6109578905a731680d730a"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9833f0f7310b065421ccbca2938508da2b850c08b1483e39bd8852791480b194"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9833f0f7310b065421ccbca2938508da2b850c08b1483e39bd8852791480b194"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9833f0f7310b065421ccbca2938508da2b850c08b1483e39bd8852791480b194"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "bb646ad128a7f03db713beb21e860f7b6b278c81fd7924e1545f56f8016786b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b747bd90f2433f349c64acb2c3c0bf81fa57bf7b8d58c7a0c4871808c6e7054c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "9cf9cb4e724540fd5aeb1bba428a1f2d1c381b205d3a211b26038193a6697afe"
   end
 
   depends_on "go" => :build

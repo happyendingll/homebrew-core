@@ -7,12 +7,8 @@ class VolcanoCli < Formula
   head "https://github.com/volcano-sh/volcano.git", branch: "master"
 
   bottle do
-    manifest_sha256 "c802df1aa448bd7f3aac03b349564a32d3b572ece9ae7d2cbb3985791613be68"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "eaa6e7a5e5ec8f73f755e9668d76d4e6b72ed7470d419288497651efa4478054"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e68c6ef993b9854fd7fe24a8b4e2d6da08d78576389c41c33e5c6b3d83e30a34"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a020105d9b45bbb845978472c263f1bc8df341abf2d0f28069f85116640eb65"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b8b9a2a286af93563b71f90b786a3c804570c59ff63a36071e1917d96c928b35"
-    sha256 cellar: :any,                 x86_64_linux:      "ecf32821730d3008c06f0131d66ec6f0bdeab333b87ab5f7068aacbbb846e255"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "74881c3ed6831883d2b5251ee51fe1dd59f66cd6e5b2da15a857ab0a8068a22e"
   end
 
   depends_on "go" => :build

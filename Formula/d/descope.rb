@@ -7,12 +7,8 @@ class Descope < Formula
   head "https://github.com/descope/descopecli.git", branch: "main"
 
   bottle do
-    manifest_sha256 "7460814c54cc9822d8273b82b92b13c26c57e207605ab60bf848b0ade94a5562"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5f8e8d3c8de056d516d56457e0d58caafcb1885694bd954f4a74e59eebf25e54"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5f8e8d3c8de056d516d56457e0d58caafcb1885694bd954f4a74e59eebf25e54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5f8e8d3c8de056d516d56457e0d58caafcb1885694bd954f4a74e59eebf25e54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e74a10375f75c74d40001400b6ac14e9ffd1a7e418660ba45c63e57682e530ec"
-    sha256 cellar: :any,                 x86_64_linux:      "687868cdbad6670e506e4f0e027105ddfc0bdd550a6eb3baa064329b7dc57c79"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "c51440d3dc497bf86cc7b31b08d577d007d1004c3a4fb100712c141d0f6d433d"
   end
 
   depends_on "go" => :build

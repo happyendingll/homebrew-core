@@ -12,12 +12,8 @@ class LibtorrentRakshasa < Formula
   end
 
   bottle do
-    manifest_sha256 "1c36ae0fc0e389e607026e59eacc273f4620d5276a19f055dbb6ae8b79ec36bf"
-    sha256 cellar: :any, arm64_golden_gate: "dbab7c5dd132524933c8d79a21bc9ba3a52f201502d273676a2a9c306346ea62"
-    sha256 cellar: :any, arm64_tahoe:       "7e4504f9a86eb0199ae34cf0e59c8999bf0d40752e8de729bb52b03b1a38145b"
-    sha256 cellar: :any, arm64_sequoia:     "0cd9f2e20bbafb17f3c1bbec4a0bfd2bd036ff42d3aaf2cb1fd71cbed2079e44"
-    sha256 cellar: :any, arm64_linux:       "0ff8a5a0bc5cca774572a48b16e2b69e7208824c0d0c850e70fcf6a43ae9dc86"
-    sha256 cellar: :any, x86_64_linux:      "87a0fbba5ba294ce51fb6f9f3bd19bdfc9cdd06c35a186cbcc4fb866a21100c6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "f0ff34d1d27a9ffda6faa589959ec3fb75803981d7b4b181483d702a16afd64e"
   end
 
   depends_on "autoconf" => :build

@@ -7,12 +7,8 @@ class Libcue < Formula
   compatibility_version 1
 
   bottle do
-    manifest_sha256 "c2da556df94be2088c08237dab0a6ad317a3b68c45b2987aaf327b078d159001"
-    sha256 cellar: :any, arm64_golden_gate: "34a0260e2abd44f4bbc2363a56f0a1788600fccd5b323019063a5df2140adee9"
-    sha256 cellar: :any, arm64_tahoe:       "2387f929652ddb9563d9b50b6f64d63edbc2557fa361dab357d2872ca89cb9c0"
-    sha256 cellar: :any, arm64_sequoia:     "9b1e9717ce696c4371e3990d44cba85d39b247bf2d4899283fe6f8a0c12aa6aa"
-    sha256 cellar: :any, arm64_linux:       "843d287df589b434a40d196972be6225b1a7ea74785077b321ed512674f6b7d4"
-    sha256 cellar: :any, x86_64_linux:      "edaf4b16bc74651435c139bff9b3afdf64013e591091ccfa19fbb8882e31b808"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "4202ff632e2c8929f3470f2ca42592d3510cd767a04cfb1020c3db23d702d51c"
   end
 
   depends_on "bison" => :build # Needs bison 2.4+

@@ -7,12 +7,8 @@ class Buildkite < Formula
   head "https://github.com/buildkite/cli.git", branch: "main"
 
   bottle do
-    manifest_sha256 "e9b6e907093e05169d60234ea26835b24eebaf5214705dfdfe31c110952b94be"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2d183cbb981a276cc509c5c93e62c2c75071d3590e3e742ab04c36e3a18d2973"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2d183cbb981a276cc509c5c93e62c2c75071d3590e3e742ab04c36e3a18d2973"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2d183cbb981a276cc509c5c93e62c2c75071d3590e3e742ab04c36e3a18d2973"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "9c6854aaa096232794895a3d39ca9c6c4c78df3b280e918bc569d16168a7eb7f"
-    sha256 cellar: :any,                 x86_64_linux:      "6863e0fe8c7efa347f1f49d47600691e8af67ae9f9a6537b6e870198524dc4b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "577f5ef9c857e3d0197497c12928e3a5ab8c1530efadee3f74c5fb7c17589813"
   end
 
   depends_on "go" => :build
