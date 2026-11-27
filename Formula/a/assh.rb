@@ -7,12 +7,8 @@ class Assh < Formula
   head "https://github.com/moul/assh.git", branch: "master"
 
   bottle do
-    manifest_sha256 "73fcccde0444b5df4a514fcc3cd4ecdfe618363f1db9b996f95ac890b307a811"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4352a460317174a1bd6e938863ac88bbba2263ada4492e5884f8cc61f486403c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "29479cf2c9877d151a3c3005bc7441a786a0b33c7f0ebb48a9d1668fb972b1a6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3f9ba92b95052fc644ba6b878a2bac7776bcac837432b19edba7cee19e766d1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4ce5d3bd715471ea78b04462d46f792ea478a74e7d965410b00c39deaceae1f9"
-    sha256 cellar: :any,                 x86_64_linux:      "c0ebd519549c878449ec70ee8c1c003be8fcc16662326c70da6c31071f46d7ce"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d4d29ccd3137433e9d1e43d74724ce16c8fc5fd7129246c7643b76e33741ab1e"
   end
 
   depends_on "go" => :build

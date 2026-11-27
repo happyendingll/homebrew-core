@@ -14,12 +14,8 @@ class Libstatgrab < Formula
   end
 
   bottle do
-    manifest_sha256 "65a23f9a0fee19b510722e1e7457745daa03d76f1a816a42ddf7e2c6a7740802"
-    sha256 cellar: :any, arm64_golden_gate: "cd290d05291a4188886137d494013bfe00c3cdc012db5055d0fb9820a2305ef7"
-    sha256 cellar: :any, arm64_tahoe:       "d8d91c63f0cd32e8babc1ab931772ee6b39c8abe877466654781605336b02503"
-    sha256 cellar: :any, arm64_sequoia:     "0120622ba014ca9cc64eaf8147d78439eac57388ad2606fcb79d546d145a5ad5"
-    sha256 cellar: :any, arm64_linux:       "8598dd9e92ce149beb38a1bc57ae377e55fe8fd62ec444a2594b95a4fe0e0ebb"
-    sha256 cellar: :any, x86_64_linux:      "123a985b9646d2b9110fc3b75bbd120cf04eceb1cc01b5dce1975097948341cf"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "8cadad16eb12ad806b79fe8aee7de50ca75084cd54ed9e10b34072f558505072"
   end
 
   deny_network_access!

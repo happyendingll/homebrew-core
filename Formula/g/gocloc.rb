@@ -7,12 +7,8 @@ class Gocloc < Formula
   head "https://github.com/hhatto/gocloc.git", branch: "master"
 
   bottle do
-    manifest_sha256 "4ca8884c71345f556e04782bad3fce487e1f7b135e36902a11f336ab530a1eea"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0cfbb41e354f38ed3a6a184ce6f2c3770b21c185b15a64f2b27b6ab8684edbe5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0cfbb41e354f38ed3a6a184ce6f2c3770b21c185b15a64f2b27b6ab8684edbe5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0cfbb41e354f38ed3a6a184ce6f2c3770b21c185b15a64f2b27b6ab8684edbe5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ea43befbffa1323c3d8ae582b2d115469ec3eef525c9b4b37293eff953ca306b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "352bcb225db213cf821e464e05e507297e219d7a500868e2bdef5d8e91019634"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "edea1f17a449f626f0745a6549efac9f5c8e727a32577597ca92ee16193989c1"
   end
 
   depends_on "go" => :build

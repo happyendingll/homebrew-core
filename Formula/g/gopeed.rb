@@ -7,12 +7,8 @@ class Gopeed < Formula
   head "https://github.com/GopeedLab/gopeed.git", branch: "main"
 
   bottle do
-    manifest_sha256 "87c0f56c620d0b81211928b9e05b25e77e71a2d6fff4a6e45a5d7afd53dd44d6"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b2d452584b6af4bee6e5dbcd2bdf436d48b785bd885cb9d6148a24fedcd5c42d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d42ab062bb33dfc1bcfa8126d2867a44d8e7b33239bad1246af491a52cc93df2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "edb3ced7717de9bb981b4446538e1be45a2526e6f2469db7d482f5fe324dbcf1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e12ce22d20548344b5f35d2c88b08a3ab3fcf60364674193478201f4ea6d22fc"
-    sha256 cellar: :any,                 x86_64_linux:      "576d78e4bc7fce4bed3be947c2c9e8244aa1980739415ce83abccf15e36d0d96"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "f32a44acf56aec3f9ec0d74da0e634d992b3ccc7edb490241cdd454a2b1fcb08"
   end
 
   depends_on "go" => :build

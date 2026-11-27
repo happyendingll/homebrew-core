@@ -7,12 +7,8 @@ class Gotests < Formula
   head "https://github.com/cweill/gotests.git", branch: "develop"
 
   bottle do
-    manifest_sha256 "7c117481a55087475741c7472e7a4bfd5b5fee2eeecff1ba6e89e32fce5d751d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d6763f50ae384e7857d6c32b6d7d5ac18063c39457aa5d2dd2c00898328441d0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d6763f50ae384e7857d6c32b6d7d5ac18063c39457aa5d2dd2c00898328441d0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d6763f50ae384e7857d6c32b6d7d5ac18063c39457aa5d2dd2c00898328441d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "df0855fd02c736b190a03a0654fe935aefd627efb36d705fcdf153ccf7e3912d"
-    sha256 cellar: :any,                 x86_64_linux:      "13c8eab06b4412c833fbaa45cf950fe79207848d8af88dfe8c835db504b5bf2c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "38cfacf15875b2ea7da46054b802cbc351324ba706b4d7cdda0ec5bd64298100"
   end
 
   depends_on "go" => [:build, :test]

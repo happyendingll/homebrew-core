@@ -7,12 +7,8 @@ class Ifacemaker < Formula
   head "https://github.com/vburenin/ifacemaker.git", branch: "master"
 
   bottle do
-    manifest_sha256 "665723f51db70a0f38609941bdb7f0a5f90bae26c348c0ee661baecbf3dfd3f5"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "559fb93832e542351707abd4ffa96bea989e1f0bd3c750937e1703b7e273c21b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "559fb93832e542351707abd4ffa96bea989e1f0bd3c750937e1703b7e273c21b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "559fb93832e542351707abd4ffa96bea989e1f0bd3c750937e1703b7e273c21b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ce01b1d842c6d89166b335e99425a96f9aa20fcce26ce6fb5aecc5873b341f2f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "793fa810bd8e85b386c146096d35d3ce623d7a384d63556a8aac81287aec396f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "b9e204b3ca539c2e938a20661d77f1f69e8ed086bece229f6fc4292b2ecb2dc8"
   end
 
   depends_on "go"
