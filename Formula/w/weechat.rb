@@ -7,12 +7,8 @@ class Weechat < Formula
   head "https://github.com/weechat/weechat.git", branch: "main"
 
   bottle do
-    manifest_sha256 "9b13230f9527854b56605558bbc99296fdb0b9362b5e9e3d9531c0f60189d36d"
-    sha256 arm64_golden_gate: "62bb323ebbcfb483544a00807bdbd1f997661101a864bc81050e8f29b0788a88"
-    sha256 arm64_tahoe:       "9cfcef3d9e56c6a1da27cab152e1b90208b96e8689e245feaa1f4678bc88b9c5"
-    sha256 arm64_sequoia:     "ea3537c8f9ec8b8b659d43f4b088e7d8ff343f52b72b0102b32944f6ba39471b"
-    sha256 arm64_linux:       "f815d61cdc36096bf7276000e94f5b80664fba284475152938913f8c945b59ae"
-    sha256 x86_64_linux:      "9d1aeb4dfda44bd50a460f970a5d041dcffa391efbf12a27f2475f267c2688fc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "0be7b1c7fb856065930f20976ef0e6d8ebb154698f4f83c6662544196e2ebc2d"
   end
 
   depends_on "asciidoctor" => :build
