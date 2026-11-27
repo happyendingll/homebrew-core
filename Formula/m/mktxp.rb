@@ -8,12 +8,8 @@ class Mktxp < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    manifest_sha256 "d9b90b0b58ef2983ca37df340a5bfddd671eb9540f2ccc785f04b5b7cdce9b33"
-    sha256 cellar: :any, arm64_golden_gate: "40424e2a7406c1c62ff360497897aee531e62b0d8250d744748fc493f7e2db18"
-    sha256 cellar: :any, arm64_tahoe:       "8a8066bcd9e351c322eadf35c1cd7ffc238c6eadcaed192594ef78f31040c475"
-    sha256 cellar: :any, arm64_sequoia:     "293a8041475e5290fee3bd5b10d1d39a3fe1e8b613fd22cb381b03a4fd7c48cf"
-    sha256 cellar: :any, arm64_linux:       "b67fcf7e67639566bfb3793eb8495608852f7a37cbcf69dce0cf32e9cff82f70"
-    sha256 cellar: :any, x86_64_linux:      "e31c36cef084b81cc2ec47fd5dd876897a57d819f711ddb79234a5279a45bf1e"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "8d964f5164634f3e6ddf44eaf636d6cb3c3253ab8194723ed44e6d47975c2cfd"
   end
 
   depends_on "libyaml"

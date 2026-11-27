@@ -6,12 +6,8 @@ class Himalaya < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "08759b4605421953ec712924c9a2c2e6eba1f344352fc02bb97a7d784083d3ab"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a7d5977c465afc36e64023975ca64038b9f4f33904e7e579ee745cf520c87c7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6c8f5a153ac8b7a7342a2c095407257a7c7d11f9342725c19f14ecb43eb666c4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a91d1ab63881338d6c331c0928eb2ebf338ce2a0d85bb9e58685791d5972c38e"
-    sha256 cellar: :any,                 arm64_linux:       "0896700e40576addf2949189c2a60f5787dcbe2339f384f29902287e61e4e411"
-    sha256 cellar: :any,                 x86_64_linux:      "f04b6202f73092f3dc3c1d642341a2956bfad764faa987b0d687ae9fa7509364"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "67716d2bf67f254b67a4944d4e92fc1896eac1023c9c127db4e383078c61ff21"
   end
 
   depends_on "pkgconf" => :build

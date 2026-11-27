@@ -16,12 +16,8 @@ class Pdns < Formula
   end
 
   bottle do
-    manifest_sha256 "4797f03365a071922b521e144a3a409e922a5a66d8b9a0388546abaa448f1da9"
-    sha256 arm64_golden_gate: "cfb9ab37ad45fb68e9f51bee0600355d66fc396d080f26e0274a0bb10a98f94e"
-    sha256 arm64_tahoe:       "9368ec2196a18a91552b06a2c11f2c2d083035ef6ee3a73b670467b003a51ef5"
-    sha256 arm64_sequoia:     "58d7ca17c2a5284e094be603ea20f0755f9334377583877035919b558e029663"
-    sha256 arm64_linux:       "61c0241e29d70b1b0b8338ce8b3f31c7735cc92a92dd7222128d51d940703b6d"
-    sha256 x86_64_linux:      "82da5bf8a40b0ecac5b14824a7774f1195dac57b70607aef5f01e21c72826873"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "61246048dc2ab369010af399877e781dd3b1e3c7ae229f23f10293a22db89b02"
   end
 
   head do

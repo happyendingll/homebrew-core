@@ -14,12 +14,8 @@ class SourceHighlight < Formula
   end
 
   bottle do
-    manifest_sha256 "fb56b54a67d062c9d5e647a62b2a892aa527b7dbdd6e18d574c6e50bedd936b6"
-    sha256 arm64_golden_gate: "0e974eb82d796938a2d79cdf52763c72dc8f9294449cbbc32c818a36c99d7851"
-    sha256 arm64_tahoe:       "ce820a91da679e6eed65aebc738efe9e4ed3d60564a1407b9882d2fecf34c305"
-    sha256 arm64_sequoia:     "69bef5c333725bee8b5e69535c378d59c47146703164fb888601a0fd8637fc0e"
-    sha256 arm64_linux:       "1952a80273bcc8e1456917ade34198a5e7710d43736052517ca22f0f53fa9217"
-    sha256 x86_64_linux:      "ecb6f92e503af11624ca259452d09caa7b4b8efc01d59540b245048477668cf6"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "9c860a8e9254ea54b120f28b610181f364e9d8af0a4d6b2d0d5bc6deb9b78188"
   end
 
   depends_on "boost" => :no_linkage

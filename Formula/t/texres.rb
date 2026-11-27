@@ -7,12 +7,8 @@ class Texres < Formula
   head "https://github.com/leoliu0/texres.git", branch: "main"
 
   bottle do
-    manifest_sha256 "858c894af5cd137a4d6e45b784ca7cbafb76f9644ae01ed7168388fda93e63f3"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cae14343fae3d639555ab2dda23012c9645800bee1be60c19095af77cb32e4e4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fedc76832f77226a6894b003995432253de2a1e0c6589df8be80e37766e92dbb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "643c3b9b6e9cbc8ec2a606f1fbbf59d38e4dbaeab934887c7085d4d13184ceb2"
-    sha256 cellar: :any,                 arm64_linux:       "d4b861ab6555645bc7b55ec4cca0c0d3e6f6d2b331ae3627d7b1bf1020f00ff8"
-    sha256 cellar: :any,                 x86_64_linux:      "955eaafea6276542aec656111b66f65f9941a34e7151201362322d6ff813eec7"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "cddea64ec2b4971e68e870aebe50e29d2b738aca5a835e8004a3064889d9aad8"
   end
 
   depends_on "rust" => :build

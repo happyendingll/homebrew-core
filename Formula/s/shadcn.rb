@@ -6,12 +6,8 @@ class Shadcn < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "b596e3edf150d7a1d7adab03a3f7ff38dd66e9cc0bcb20764536439caad3124d"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0260e2f0a036a175c3a9a171383c29862d924cea79b5c4f413b750a1ebe0572a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0260e2f0a036a175c3a9a171383c29862d924cea79b5c4f413b750a1ebe0572a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0260e2f0a036a175c3a9a171383c29862d924cea79b5c4f413b750a1ebe0572a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6eff738b2067043ca05c94b1e5b1e173f5f53e01d91401253847fc2c20ef29b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6eff738b2067043ca05c94b1e5b1e173f5f53e01d91401253847fc2c20ef29b2"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "dca8823caddd229db9492d73fa6ed3f1ed60df4e74565a225938f9ab23361e7a"
   end
 
   depends_on "node"

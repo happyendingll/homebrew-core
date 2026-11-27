@@ -15,12 +15,8 @@ class Pixi < Formula
   end
 
   bottle do
-    manifest_sha256 "89b80c93e3fb95283ea6cbd74edaae3c385c309ad63f6af9bba576e1b5053591"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3795906248b3508e9a0e89fd6a339f3eaba0b6f04d49774718d17f37f6bd4f69"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1ca915c686d14496869b66c6a0a4c912935aa82121a6ca20ea8d0b2acb78cf43"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7bc4b15c576b854933d54a6338d6fb653dcd277d27ac4a099eb09189b6bbc0e0"
-    sha256 cellar: :any,                 arm64_linux:       "04d3a87a366eb41d659b78b4f2359bc64a4e07b91623a34aacc55094624cabbf"
-    sha256 cellar: :any,                 x86_64_linux:      "c5f7407325721d44fe017df30d0d6cc5510080d2566dde10cf9e6c0d1647ff2a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "bc00533c7a8c0ef5d6d8626c66350b84fa6f71da20977da3cdd622b719bcc598"
   end
 
   depends_on "cmake" => :build

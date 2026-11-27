@@ -9,12 +9,8 @@ class OciCli < Formula
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
   bottle do
-    manifest_sha256 "ee9aa1df424a880901d7aa04cea7dff75174a7ae7c9ec04cc5c9f93e5adbb228"
-    sha256 cellar: :any, arm64_golden_gate: "3f870690c853245af9914bad8bc152194d23645c7b76ebe20ca0bbd30b95eb8f"
-    sha256 cellar: :any, arm64_tahoe:       "1779f8232cf024a47295dce404630f3752a58aa533d61d1f52f357adfb95374b"
-    sha256 cellar: :any, arm64_sequoia:     "dbdbe7298cccedc998cd6213b14005486602f7d3c6802c6232d0014e0e36fdc2"
-    sha256 cellar: :any, arm64_linux:       "1deeee4ac8fdc792d9e0fd68d545267229fe6a59e591409aef4d071073732ee0"
-    sha256 cellar: :any, x86_64_linux:      "96c64424955a4aa4539e3032dda61e59784d2d1e6edadf4e59ede52caf96874a"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "53b4cfb2761e217e9666954d0a7ac52c99c1c353c14d467f7dbee278726b6d0d"
   end
 
   depends_on "certifi" => :no_linkage

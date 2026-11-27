@@ -8,12 +8,8 @@ class AnsibleLint < Formula
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
-    manifest_sha256 "6a0f537ec8622b2c0ea01b697ef76872954621da2911249695daa985f76a735d"
-    sha256 cellar: :any, arm64_golden_gate: "a0ab4a16aaba3829feccd36dc06a949790dcc71c6af11457792a25668f279c47"
-    sha256 cellar: :any, arm64_tahoe:       "1638d995652ebfb994a19640d0dd75e1f63b815d9c477796dd9463e0a77670ca"
-    sha256 cellar: :any, arm64_sequoia:     "2b78b53dbddea85a4516829823a936eeff9a1ee889469e18c75668cfd597fa97"
-    sha256 cellar: :any, arm64_linux:       "b70c9dba16fc882235473aecd7953b9b098da81a71234178c1f13c9707f0c650"
-    sha256 cellar: :any, x86_64_linux:      "a47be6889150fce5a255ef39461b1bc001331c1b9f9cf03b6d1eae753dd68d07"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "0c9cf25022c392ab403eddea3f18d0c454289d7e059010a62f18ca6e85c56c02"
   end
 
   depends_on "pkgconf" => :build

@@ -13,12 +13,8 @@ class Dnsdist < Formula
   end
 
   bottle do
-    manifest_sha256 "9a37fe531b4f3eb0885a6662560f8b871623c4c0872a78a4f0318d1e4f25c23f"
-    sha256 arm64_golden_gate: "0f94c442b4bec949ff9327de9018d158e85dd40c83433fbcdec783877a460c40"
-    sha256 arm64_tahoe:       "a37899adf14161f196a445a783271e8da7df9bb0198c2ff9bd845c9f68f1876c"
-    sha256 arm64_sequoia:     "cf30a8b788b2aed45aa37ec1eec5fb88e51bf29d856e7bc242cd3dd7c55017cf"
-    sha256 arm64_linux:       "765107200f70dfdc03f1dbc4d1107159edd511f850528943544c3bf9ce1f5ba1"
-    sha256 x86_64_linux:      "b7a7cedfe5dc3c12656f3dfe028382fde0aa87ecbced7869aec5b9552d24682c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "e9cf74d3377b9a4afc2c7a21d5d0e4f7f61dfcc851e2a25f28575f08f7c0097f"
   end
 
   depends_on "boost" => :build

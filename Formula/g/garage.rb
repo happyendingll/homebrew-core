@@ -12,12 +12,8 @@ class Garage < Formula
   end
 
   bottle do
-    manifest_sha256 "a6041f638886b70612fda0e72ab9f386ed9c6123f89fcb1eb5ade534baee31c5"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23d7e2b77e95e01e0ec4d81e7da607eebca90575b1ba26cc43454b30cbca7819"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f504466cc760defa0c59afbaa26fa73480153e9f7139cd1e3c45e617f04adf14"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9fa1da623257748d80ed8f7be2656f9f6f08115f94a46051634ba257374bd6b6"
-    sha256 cellar: :any,                 arm64_linux:       "548f69883ac48ace9c99de372e8dbdb48199aae893ec4c47072a1bedb9429450"
-    sha256 cellar: :any,                 x86_64_linux:      "6ef1f8b1272648c7c5c24b09c4e6e5a89320985c8c1fa2eba6927bb09a51a4ad"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "51ed9f84b8432b87833dd0a3dc6e58b825580dc8400aee90be5fc073322d0c7e"
   end
 
   depends_on "rust" => :build

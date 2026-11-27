@@ -6,12 +6,8 @@ class Sanity < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "5078b4b9cb6e4f0e992d74ab122f6ac024ebe10c9d84e1e9fdc778c77b2fb95d"
-    sha256 cellar: :any, arm64_golden_gate: "fea9a3a298db37fd0b9975eb91ae107d8efe166babf570863ddcd5d7d2fbf7f8"
-    sha256 cellar: :any, arm64_tahoe:       "fea9a3a298db37fd0b9975eb91ae107d8efe166babf570863ddcd5d7d2fbf7f8"
-    sha256 cellar: :any, arm64_sequoia:     "fea9a3a298db37fd0b9975eb91ae107d8efe166babf570863ddcd5d7d2fbf7f8"
-    sha256 cellar: :any, arm64_linux:       "827a8ba3e45667d59bc4696505e558274399e59e02d227325beb29d08af2e4f3"
-    sha256 cellar: :any, x86_64_linux:      "37b5b3d29a684a00905ef7136c5786aba2e60e54d2c6a237fe45328497c3d31f"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "29cb3477a99732ef83590812d56d4d0684847d89f1506c108ff03dfda0e706a6"
   end
 
   depends_on "node"

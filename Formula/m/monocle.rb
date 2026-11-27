@@ -6,12 +6,8 @@ class Monocle < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "267250aafbd26003db98754ea0fdb0dbf6256043e5b198ba33e682aba421e5b0"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4efb55a7f9a31c2deafa26f217557bef27c885ca10d2b10904c535eb7bfb8a6c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f6bf9ce730281ebc2e0ad95ee5475204e3f36a652bf95939411dc98caeafcf54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a2f975e1ac5548495a84a4f66577d753a6d435a2389d556cee73ce69398e57d"
-    sha256 cellar: :any,                 arm64_linux:       "b12c829788a0d378e8cc0ec7755bccbcc848e8a1b76fe791c4e78a857995ecbf"
-    sha256 cellar: :any,                 x86_64_linux:      "7572754fcb1548415a69aad51c5d59c59ab806d8147b17f0e35d8381fb9f52c5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "571603609d2adad35a14f80706da084eba728d40259adee969080ec47c5cff9d"
   end
 
   depends_on "rust" => :build

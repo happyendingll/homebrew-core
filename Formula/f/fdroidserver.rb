@@ -8,12 +8,8 @@ class Fdroidserver < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    manifest_sha256 "06549dd6b0098be437bb4078477532a9a13c132237d65446a5d8b3d5cd417872"
-    sha256 cellar: :any, arm64_golden_gate: "ae662b4044b8adbef70c25554f73ef79f9a05149dc7bb551a96999614cc53713"
-    sha256 cellar: :any, arm64_tahoe:       "aeceb5231c028c3f190e03ff9b558b5146caef0dc2432c5c4b79c7bf7217cdcd"
-    sha256 cellar: :any, arm64_sequoia:     "5914c6b3190b4ee3a1db93ee7a14ddf64e5a3f01c7a349cee141570ec7ab3d83"
-    sha256 cellar: :any, arm64_linux:       "d5f89b1beaaadd974cf6fb8de32391532a19c1c18c01cce835c57a98617bd383"
-    sha256 cellar: :any, x86_64_linux:      "96941fe0c735339a430c6c9cd1ab60a3e0d1f798ab76faeade77101859a00623"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "48e368617447aaae905152f36bc158891214fd10459dd57d1bfa3f2d2c5c9418"
   end
 
   # `pkgconf` and `rust` are for bcrypt

@@ -7,12 +7,8 @@ class CargoAuditable < Formula
   head "https://github.com/rust-secure-code/cargo-auditable.git", branch: "master"
 
   bottle do
-    manifest_sha256 "b661cbf3368eb9ca1e0d47b9b49cdef47ed8575a8d04a43fa091870278ecea80"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "325f720916da4a4f344149ba23c13decaa8dde70511f43b32f8173e390dba131"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3e87873e6f081d6e31946a0590feb4d9b36b683b18247a2c8ed0c81b7b8280d0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a8411069c9dbf7a51929217467238d49493eef3e2aa7a8d5bf3922d62506eec0"
-    sha256 cellar: :any,                 arm64_linux:       "5f74eeeb8bc9c23c5b670f45125b2b2062c51e5870e0b1113de23d92f2af4d2b"
-    sha256 cellar: :any,                 x86_64_linux:      "2f61483a342ee9343cee74f0ac1863b3f9396d11d428fd41efabc07b3c4fdad1"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "99c98cdaf52df2e82a8f367e14aa9873030ab474729ae7135fb63e6bed10e31c"
   end
 
   depends_on "rust" => :build

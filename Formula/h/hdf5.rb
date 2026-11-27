@@ -16,12 +16,8 @@ class Hdf5 < Formula
   end
 
   bottle do
-    manifest_sha256 "8643b31cc1f53513e753f129e5ca5a3581f086c5f6c5adbb2468d6d1410bd446"
-    sha256 cellar: :any, arm64_golden_gate: "4d7c4fa523adaaca33f70e194a2861b883b37de423f73cd2ab096189633d6d69"
-    sha256 cellar: :any, arm64_tahoe:       "936dabdc74b42bb0182d4a495909fc71caf528cd360cfb52a9e18bdc880ea59d"
-    sha256 cellar: :any, arm64_sequoia:     "2e9f3ffc99b54bc871e0e522d384d8066956e5c9ac2343b01695eaf496225dd7"
-    sha256 cellar: :any, arm64_linux:       "66420f57caed8381475e1689ac98fa7cc60fcf3fef9eb57ebe65f92878ba56fb"
-    sha256 cellar: :any, x86_64_linux:      "7673e1399eef8cc3fd0e2dd902754b2b6d8a2eabcd4cca5e27e8b906b13c589c"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "da4a1515a7306526ea89c959cb35680d6cadd7941549a58d051935777de103ed"
   end
 
   depends_on "cmake" => :build

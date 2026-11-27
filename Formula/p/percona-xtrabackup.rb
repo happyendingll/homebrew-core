@@ -19,12 +19,8 @@ class PerconaXtrabackup < Formula
   end
 
   bottle do
-    manifest_sha256 "934134a066e81f5f72a4b21c56da528ff17cf0c6726c2890fc3950efef717ab0"
-    sha256 arm64_golden_gate: "3ef0878836a2e2114b19337acabefc823b90ce998c5cfd97bccb28dffd7d15d0"
-    sha256 arm64_tahoe:       "b9caa7b2cbbf7ad3e93ffa8f657edc676fd55ea6e90596a161398c74f7b0e9b1"
-    sha256 arm64_sequoia:     "2bca3c468b779dead59111765f0e1fe3746401e7196dd21cd3fd25835e5e473b"
-    sha256 arm64_linux:       "098c8f2bdaaa5f27bcf6758107f88fe35aa69ea127ef0be107f33e8fefe93f46"
-    sha256 x86_64_linux:      "b4e22eb0c54a01a1a079f86916b0f4676fc2eec9c30571fb2b7da40ea51bb882"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 sequoia: "fa5b6520fc83d746561c62688075f687db814abe0fc5efe4e30830f8ff1b3fad"
   end
 
   depends_on "bison" => :build # needs bison >= 3.0.4

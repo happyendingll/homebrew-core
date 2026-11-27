@@ -12,12 +12,8 @@ class Supabase < Formula
   end
 
   bottle do
-    manifest_sha256 "3f7c30caa8dc022b851e7e698cd09cb0a42f8af56e0f84a0608049b5ba7e7148"
-    sha256 arm64_golden_gate: "020e472b19b6e8a59486e82fe2f3f2ec2d48c0529f416251335e4ee1bdbad48a"
-    sha256 arm64_tahoe:       "e02b9cf7f84346bf458ad2e21112c63ab1a05ee66e328b631d52f60942c466d7"
-    sha256 arm64_sequoia:     "3eb10d15e2c37eea48409d56b7574a7c3c0b62af59b782aa182be567a4a5cd21"
-    sha256 arm64_linux:       "b9cc9d2aaf286a376df8a38072b073a841beedd5d85a2842cbd904027a22e7b5"
-    sha256 x86_64_linux:      "fbd496df7efe09a291ceda4ecb3b51aca1b4e534d7d44dff9f02e6e8398c9119"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "ab6f67e0bb39fe8175744e96d82762f9c45020ada6842c56c9a45949ac645219"
   end
 
   depends_on "bun" => :build

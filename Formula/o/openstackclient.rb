@@ -8,12 +8,8 @@ class Openstackclient < Formula
   license "Apache-2.0"
 
   bottle do
-    manifest_sha256 "f90e08b30a5b1e83ce4e76d786ff94e467d63b49ca89a35141f04050fee078a6"
-    sha256 cellar: :any, arm64_golden_gate: "93c941a6aff5c3268bd27eec560c9b923618526c3ce7a7d13e164d50292a3914"
-    sha256 cellar: :any, arm64_tahoe:       "939449d39f1165d0676fca9779776f2efe87c1d97825f916f698f30b98f39b60"
-    sha256 cellar: :any, arm64_sequoia:     "aa127091a1ac833da56b7b93ec9393c6a360b75a84c8ec833be64541d8dd7c4f"
-    sha256 cellar: :any, arm64_linux:       "1df4129b2d7838475674ceeb9e1a3416ac745c475ad3b7adf889b9e90d002f70"
-    sha256 cellar: :any, x86_64_linux:      "705a74e2168f91c2108206e25e43374ea7e3e6b50aae904c84000bc31df38a80"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "6602ace033624722083f3db26b32c7a30d1e6c14c63ea00614f977797c110607"
   end
 
   depends_on "certifi" => :no_linkage

@@ -6,12 +6,8 @@ class Dicebear < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "dd2ccb69e50a1f378d7661c440b1988e7984196db25309d4bfd1331e3b437994"
-    sha256 cellar: :any, arm64_golden_gate: "9c625574cb4391717d6956a6165cd6dfca9f1095ac4f0617815c8c6f593be77f"
-    sha256 cellar: :any, arm64_tahoe:       "d45246ddc100452b8e50d156024e8fd979d77e0393d83e8ee636a26e183dd242"
-    sha256 cellar: :any, arm64_sequoia:     "0333c2f872807e69bc3e5644abc239b036e7b63e7d7aa1b361f08614699dbfd5"
-    sha256 cellar: :any, arm64_linux:       "db8ed8f0499cd1dc94446502629783e4d83d30c12ddaec1740e6d7c847ccba02"
-    sha256 cellar: :any, x86_64_linux:      "75e1b4f95e1d4efb9ef3b636925d86a3e6190ef061f47b484f02332ed00b18aa"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "4fc33566a03a5a89110c5c89e205b58bc3ffe3c46941e0160f6a91e0bb0fc64f"
   end
 
   depends_on "pkgconf" => :build
