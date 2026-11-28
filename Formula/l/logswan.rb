@@ -6,12 +6,8 @@ class Logswan < Formula
   license "BSD-2-Clause"
 
   bottle do
-    manifest_sha256 "72599c1dc5eed2ede981cfa59383c6c5ec2188a05bede9161d318efcf889fdd9"
-    sha256 cellar: :any, arm64_golden_gate: "2884466f15b57a27cc3c5dc98c5c2bc77317ebbe9b58a58a69cf2ac1bbe034f3"
-    sha256 cellar: :any, arm64_tahoe:       "cfb00ad36ff3e22ebebc4e45631fd3836621714b05961a5690ecc65bcadd74f5"
-    sha256 cellar: :any, arm64_sequoia:     "99d050e73653a1aa10d89841ca55cb46ffb38aa04b3ba989044cf01bf7f18f49"
-    sha256 cellar: :any, arm64_linux:       "09f0744f4cf2af0f22a441f41c827dade20717f60ee8f0b068fcb15c19c89112"
-    sha256 cellar: :any, x86_64_linux:      "f8101513ba48cd6d12720a2d478b2f04e87d88820d7de1874cfd364d2addb266"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any, sequoia: "20695b9ae20e18cbeea281a0e1e05e646a9f8dadfc436aa89718eb39f4a09221"
   end
 
   depends_on "cmake" => :build

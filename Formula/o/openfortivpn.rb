@@ -7,12 +7,8 @@ class Openfortivpn < Formula
   head "https://github.com/adrienverge/openfortivpn.git", branch: "master"
 
   bottle do
-    manifest_sha256 "60d74e81333af6e120954e933b688e83b8a01a402f9c11134168d87f40ca1e75"
-    sha256 arm64_golden_gate: "3cab91e96399fd3ba82cea0852466fe3b5c695b72060bea2bc751fa5223d2c4f"
-    sha256 arm64_tahoe:       "60b17eea5b2760b6d9f57b1b75c9ab3320a55b6077569bf7a8477c8c5d3ed9a3"
-    sha256 arm64_sequoia:     "3a2457e27663ed18555a0a59e191dd49051140ccbebec767f28a1ae94b9e619a"
-    sha256 arm64_linux:       "3aef1f080c217234fa9d532f2e4905ea94cbb663eff1e11d67bdf11143a96985"
-    sha256 x86_64_linux:      "4381ddd3e996405a7db8c4ee0fe3177275e9dd09579e4bf3b481f63dd3002b00"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 sequoia: "a3ecd88dc10027e969072315fc2426aa4c7dcaf5176375d86ddf3c9dba4c1f50"
   end
 
   depends_on "autoconf" => :build

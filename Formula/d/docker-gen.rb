@@ -7,12 +7,8 @@ class DockerGen < Formula
   head "https://github.com/nginx-proxy/docker-gen.git", branch: "main"
 
   bottle do
-    manifest_sha256 "f19c8ac0261a29d0f1ca5b510a304ce013bccf05d626ceadb90f58b1b87ca84c"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1243e74a4c9fe25bbc65db3c6b399db299661706e6830ab6076a8d76c7911139"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1243e74a4c9fe25bbc65db3c6b399db299661706e6830ab6076a8d76c7911139"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1243e74a4c9fe25bbc65db3c6b399db299661706e6830ab6076a8d76c7911139"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "604b075422f454b9ffe757fc5d6e693e3fff07a792040ff16d68a7c165916920"
-    sha256 cellar: :any,                 x86_64_linux:      "b59005ef2f517ea5f822fd44e2c7cecfb3b14e8c48656645b591ce537047b268"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-warm-3"
+    sha256 cellar: :any_skip_relocation, sequoia: "d0bcf4537e125e1248f0663d1c7c9e3bb762f917550e38681c63ba7235f2bdf3"
   end
 
   depends_on "go" => :build
