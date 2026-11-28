@@ -7,12 +7,8 @@ class Yaegi < Formula
   head "https://github.com/traefik/yaegi.git", branch: "master"
 
   bottle do
-    manifest_sha256 "b41fac046b82d8e3b0f15dfa1f72266644fa6c6c962814a9855a05406e34c431"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a8d4df6c2a05c1fc33940ff46c81310b3385a392cde4667ad14affb431f9148"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5a8d4df6c2a05c1fc33940ff46c81310b3385a392cde4667ad14affb431f9148"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5a8d4df6c2a05c1fc33940ff46c81310b3385a392cde4667ad14affb431f9148"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4849f9b4ee9626eb7f6d5a5d0177bc00adc58afea4aeab01774cffb900c001d4"
-    sha256 cellar: :any,                 x86_64_linux:      "72a03f367386770bb54e9a2326ebb22f0c7e0e423156770588caf3bf33fcd9e4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "021dd1dd31f6730c3b731bbea960c59dc89ed9c3bf6bd7e227b7bafb4551ee2d"
   end
 
   depends_on "go" => :build

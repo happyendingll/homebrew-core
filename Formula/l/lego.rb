@@ -12,12 +12,8 @@ class Lego < Formula
   end
 
   bottle do
-    manifest_sha256 "52bfab1ca6ad8e5edce23634062b2c8ea2b8c6c79796669838c32adc4e651b6e"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "186bd0cacf749f3291f22c83b16a756dc41062649e4ab733ab4c1cb92b0c9458"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "186bd0cacf749f3291f22c83b16a756dc41062649e4ab733ab4c1cb92b0c9458"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "186bd0cacf749f3291f22c83b16a756dc41062649e4ab733ab4c1cb92b0c9458"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "465bf9fd32b1f7b03cc2a82163e71f46557b83d463de2d0467c56da45cae571b"
-    sha256 cellar: :any,                 x86_64_linux:      "87a0072bb98155e5e5c7f741971980bbf3420182d0d9b0e0800778b94aebe015"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "ed5742ec222928ab08adb4ebb94d050f0e16015dbfce3abb98847dbedc3893dc"
   end
 
   depends_on "go" => :build

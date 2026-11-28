@@ -7,12 +7,8 @@ class K0sctl < Formula
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
 
   bottle do
-    manifest_sha256 "8a533148b87d379cb3e3f23c5ffac56f325dcba5fa854a08c1bd990a472b9961"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4b37335fb8fe64e16f0fcd4f731c4f8cf921811c0904e602341c93abbf316994"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4b37335fb8fe64e16f0fcd4f731c4f8cf921811c0904e602341c93abbf316994"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4b37335fb8fe64e16f0fcd4f731c4f8cf921811c0904e602341c93abbf316994"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0396c60ee9a2e4ae96eb41e020d605ca6b413e3ccd8453bf040cb223c7731cc6"
-    sha256 cellar: :any,                 x86_64_linux:      "5c01d61d116fb7fc868524f7cd6071064f25832620f2e35180bea0a1587bba30"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "8b2373d8e706e19efaa1b08ebfcc325c9c9c9a4bbe5bd203a34ff279aa32ff44"
   end
 
   depends_on "go" => :build

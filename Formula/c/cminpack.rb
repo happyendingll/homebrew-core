@@ -8,12 +8,8 @@ class Cminpack < Formula
   head "https://github.com/devernay/cminpack.git", branch: "master"
 
   bottle do
-    manifest_sha256 "91d7c52cbce1a61d96aea538ed2b49306ca06623eaa4bae50d64efaa39c2bb74"
-    sha256 cellar: :any, arm64_golden_gate: "18a60e267697f7556b78b776e55968d1e5adc7eb8f2f5259d96ad4a410af330a"
-    sha256 cellar: :any, arm64_tahoe:       "3ac84c4ef83cff7ceb7fa742edf14fb0970b8a63489989405af5aee05bea427c"
-    sha256 cellar: :any, arm64_sequoia:     "ad9feca5fe9f0fe387c473f52fc30d610e2b2989aca56749e9787190dcbcad87"
-    sha256 cellar: :any, arm64_linux:       "732e273ed55867e7bdb577b7fea995d05dd302300aab5246fc1799d46301aed6"
-    sha256 cellar: :any, x86_64_linux:      "9bdc45e79620b84c25a4ff96681ba93e0bc1adb40458275f533a4816ac4326a3"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "0fc630774598feba412309a6f89f816cc41eb5b3c672f2281d7455f24ef6bfdf"
   end
 
   depends_on "cmake" => :build

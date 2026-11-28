@@ -12,12 +12,8 @@ class Tevent < Formula
   end
 
   bottle do
-    manifest_sha256 "5e1ea5d63aba7eee06e21c6205f03630328708ef495034742d91925aef9f3b24"
-    sha256 cellar: :any, arm64_golden_gate: "539b9e5c2b7dce61575153fb563b436f23e8972d73225c61bd3ef450685488f2"
-    sha256 cellar: :any, arm64_tahoe:       "8d4391131337d1f4f35f27d45a34c5bca34f671898f8334a5708740ae84d274b"
-    sha256 cellar: :any, arm64_sequoia:     "90d30b87939a52d65bf537ca2bc21b93f3078b9afdab9eb0c8fc2ecff7b28b5a"
-    sha256 cellar: :any, arm64_linux:       "df7514f8a9e49222e043c149b4396a698cc3b4eb9e49f3dbe9c39be5268a4970"
-    sha256 cellar: :any, x86_64_linux:      "b089f6ce88081c17127ab173e02f42eb20ec7991139b54974c313918ea26d68d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "fa6b4a22b706650b3765a61ee9b3e33ba6e76361728a59862f74060d5e42ef93"
   end
 
   depends_on "cmocka" => :build

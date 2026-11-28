@@ -12,12 +12,8 @@ class Cozypkg < Formula
   end
 
   bottle do
-    manifest_sha256 "dab8ce038f64f95a7efc8316327a6bf022e3d6a1e13727e94a0d55aace3da1e9"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "06f6e3627c0418fbd7a9e27fdde4cd3b5a07a737f3533ef6c4da1e057221a595"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6226c3054935b09bb3ba0724d04f09bb89d291a1fd6a45d7556d93dab17c151f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6e6219e1fa2300c24cc2f621fc2205fce31338ba6114d1cc5deed633528f2f43"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8d9fa34cb22f332b54cafae3ca7fe6ef716f54dc5d4a34e44bb3846c52ca4b48"
-    sha256 cellar: :any,                 x86_64_linux:      "c3a34171b8c038fc8964cdb9fc0173a4138fd57a4e4f85eabc42661c75059628"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "038638849a127e57b4bdaa368523d176995f05b9a5af3e243d14fd89214c909b"
   end
 
   depends_on "go" => :build

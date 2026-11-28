@@ -9,12 +9,8 @@ class MagicWormhole < Formula
   head "https://github.com/magic-wormhole/magic-wormhole.git", branch: "master"
 
   bottle do
-    manifest_sha256 "d15352a641c1eaa87d6c6daeeaa0eaa81b1edaa288d0f2c434c1baee4c1e9e46"
-    sha256 cellar: :any, arm64_golden_gate: "0b72078066f887660221a925354e504bb6aaf1353766ede2906cb7cb9e541d3b"
-    sha256 cellar: :any, arm64_tahoe:       "b4211a5bb912dadb17f243f8e6d28a6f19562765345d67390167529c089c803b"
-    sha256 cellar: :any, arm64_sequoia:     "9defce09da87d2e4c38fc5023d1f02ea748642c3c497240fb5b541d341fffd2c"
-    sha256 cellar: :any, arm64_linux:       "b7c754a3929b68049781d34827989c4a5354096accb07991405b5eef2db8ac21"
-    sha256 cellar: :any, x86_64_linux:      "009d5cb96c0bb656e76662353c91f70f0e77291fe83852e44b8a2e7071e23abc"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "57d1bb6ff1daa9bebe98c00174ff0217051818c51a2a5d172b5af04bb5d431e2"
   end
 
   depends_on "rust" => :build # for `cbor2`

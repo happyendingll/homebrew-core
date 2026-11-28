@@ -7,12 +7,8 @@ class Gat < Formula
   head "https://github.com/koki-develop/gat.git", branch: "main"
 
   bottle do
-    manifest_sha256 "7a6f0ebd40e9181059077bedbcb173ce47f345f7a8c5a801aeb63cd829db9961"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9e781cc82f1d85f5e2ea8cf22813fdfcf7ce77934b340f78d8569b05902e0cd9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9e781cc82f1d85f5e2ea8cf22813fdfcf7ce77934b340f78d8569b05902e0cd9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e781cc82f1d85f5e2ea8cf22813fdfcf7ce77934b340f78d8569b05902e0cd9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "db01ab498a03a2e49bf7f98e2854e6b666e6a87d681fc80545dfa618e135b14d"
-    sha256 cellar: :any,                 x86_64_linux:      "4ba726b669f75beb86275b502edca9f95923f6935281765885247d21dd9514ae"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "2c012dcc3865b580718d99e537a0b5bf724bba738713a5c0d6f692b8707b80c8"
   end
 
   depends_on "go" => :build

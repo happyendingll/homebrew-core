@@ -9,12 +9,8 @@ class Nuitka < Formula
   head "https://github.com/Nuitka/Nuitka.git", branch: "develop"
 
   bottle do
-    manifest_sha256 "1c47ddb2f4562959c132d56a040e799f8403de0ac217b2fe46c272482e10be46"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f2cfb6e2c837b4a28bfb42ad9470bc4941fdcb9aa0169317f0582096920a8630"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0ff97f695d7fb07a46af2bb56cf9bdec485f3270e9ad5843c06ff4238bd1cc96"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c2ae7d9bea8e5abcd38deaf4570a830520105790c5dc9406f10a46ab0936b95a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "48f2bbb584b24a458a94e994a22e55ac4ce0ade0aadbbb09405c381f880d3b50"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "68a9049078028f92bae92096b8c58a36dbaed279687c466d14be682bc727cf69"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "5d17f3f19eddb8323623a0a785fbd1ccf9aacd1cefa4e602bd2c8d157afdbd79"
   end
 
   depends_on "ccache"

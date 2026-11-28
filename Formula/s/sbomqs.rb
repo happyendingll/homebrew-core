@@ -7,12 +7,8 @@ class Sbomqs < Formula
   head "https://github.com/interlynk-io/sbomqs.git", branch: "main"
 
   bottle do
-    manifest_sha256 "aed5fde754724bc9e1edd81ca91b3d0097b320e5622ffafffdd5a29bd7983727"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23dc8f6c33d978000ee420df68aaaf1ba934d8f2225c9aaf931ad4387dbb33a1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "23dc8f6c33d978000ee420df68aaaf1ba934d8f2225c9aaf931ad4387dbb33a1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "23dc8f6c33d978000ee420df68aaaf1ba934d8f2225c9aaf931ad4387dbb33a1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "7cce783e1b51710d94987843ec6f3451ebd4e01e7d5c2d48221622ee3013bd29"
-    sha256 cellar: :any,                 x86_64_linux:      "54e35f928856fefb6da3425b5ac1c25be5043801df7076967c4f858442a3cd58"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "253a293a6bed301d3fb301aa356311b0d69365957c2b8e7e616f6f7c7ae89c76"
   end
 
   depends_on "go" => :build

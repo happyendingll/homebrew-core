@@ -8,12 +8,8 @@ class OnlykeyAgent < Formula
   license "LGPL-3.0-only"
 
   bottle do
-    manifest_sha256 "62d699241bb7bb6383e47431ec98cbc26e309f390248281bb174180e4e7fcdd3"
-    sha256 cellar: :any, arm64_golden_gate: "b1f24c8931ad9e436cd66f8c33be2587f6ac7f8e94eed56bd27b80ca374e1e59"
-    sha256 cellar: :any, arm64_tahoe:       "7155b850b04e4f382b0e04bb79d5108dfbef7a7cf39390f611b8fbf8e3031481"
-    sha256 cellar: :any, arm64_sequoia:     "94a20501310e0f650df896c035c2a59d53e826687f3acdb07f605edf9c6a42d0"
-    sha256 cellar: :any, arm64_linux:       "3e51cda20ecc5efd9abaac2c758a0088af2b5c0a24a5ce5fc6b09d0d268a46d7"
-    sha256 cellar: :any, x86_64_linux:      "dc31e145eb2f0d9eb70d8e46aa5bedae802c95a2d0269629e3453337729ce5f5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "5bec4a9e3147321ef458150350e07cfd7b7088e9ce7596d7b376be5dc7357c9e"
   end
 
   depends_on "pkgconf" => :build

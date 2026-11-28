@@ -7,12 +7,8 @@ class D2 < Formula
   head "https://github.com/d2lang/d2.git", branch: "master"
 
   bottle do
-    manifest_sha256 "e192338ff6ffa284ab2ebf66de5e89ad6898c08cd0b2b011d883d694cba68353"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7b7e87107735c3047e7e659b1df48cf664179b1ffb718fe12ba539ab488dd93f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7b7e87107735c3047e7e659b1df48cf664179b1ffb718fe12ba539ab488dd93f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7b7e87107735c3047e7e659b1df48cf664179b1ffb718fe12ba539ab488dd93f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "14b4dd3217115ac968067ebaded3dc02929fe882d02330e995f063129c84e8fb"
-    sha256 cellar: :any,                 x86_64_linux:      "30b45724f4ee23fef9cf185242b1d5af2ff7d8b35ad7a51123bdc5aa55132297"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "c2959f669d2148bca656406ce55722695345fd0226cfd8cb27ded7a074e23183"
   end
 
   depends_on "go" => :build

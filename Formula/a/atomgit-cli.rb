@@ -7,12 +7,8 @@ class AtomgitCli < Formula
   head "https://atomgit.com/hust-open-atom-club/atomgit-cli.git", branch: "main"
 
   bottle do
-    manifest_sha256 "921692783b2734a325c8ec4edff993fcef8bc669c925ad03af026fa3ad6362f0"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "382a3488be0d58ac1ce924fd94d121c66744eacb3fbce7f04d06869c73a86bf0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "382a3488be0d58ac1ce924fd94d121c66744eacb3fbce7f04d06869c73a86bf0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "382a3488be0d58ac1ce924fd94d121c66744eacb3fbce7f04d06869c73a86bf0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "40de745573eecd68e1ca592b5e7d93e35cc32be3414e060a9a7b4ae87bd06380"
-    sha256 cellar: :any,                 x86_64_linux:      "b11ead330a6572d99260296748dd631d8f55cf6630cb0074ea3658cb2f74a52d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "69c6e35bbc80e9f25f9f986da6bbc49926a90ad22eff0b898fdcc7f519dd9b59"
   end
 
   depends_on "go" => :build

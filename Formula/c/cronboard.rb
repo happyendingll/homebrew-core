@@ -8,12 +8,8 @@ class Cronboard < Formula
   license "Apache-2.0"
 
   bottle do
-    manifest_sha256 "c9ab16d7b74cebf91de9525575a9482d618cf1ef8cd1092969c06444618e0973"
-    sha256 cellar: :any, arm64_golden_gate: "6f9d18abbd8e4e04a78e38871ad9527f2083dc39382766185f3bb3bcbdfa5d73"
-    sha256 cellar: :any, arm64_tahoe:       "993ab54a88e792f297be3cb26b4256dfd9af50c2495b6b93cd79236bc8bd0ff3"
-    sha256 cellar: :any, arm64_sequoia:     "5547a4c0eb60b363341ef4f5a450eba149443a8cb5d1d291ff968ee05d614d07"
-    sha256 cellar: :any, arm64_linux:       "56cadd4170eca9e5a60a3754b09127dacf12bce22733847e0a203ce9de759af8"
-    sha256 cellar: :any, x86_64_linux:      "341fde4f6b647ad23b01acaff713b91728909e173f5a4d8e0175764c70889c01"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "98df93ced09e371ae049b327ded02f535f2d8c7f582cf86b81eed16b1c403ac1"
   end
 
   # `pkgconf` and `rust` are for bcrypt

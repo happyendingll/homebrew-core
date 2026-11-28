@@ -7,12 +7,8 @@ class Blake3 < Formula
   compatibility_version 1
 
   bottle do
-    manifest_sha256 "4f1dcbc745244c417fcc0adbac7afd0037b1393b02ae645073ef4ba516bbb27e"
-    sha256 cellar: :any, arm64_golden_gate: "f652c9fc262ba9c36370f79ad541bcfd25f0a5657db25ab09930dfa5e104f6a7"
-    sha256 cellar: :any, arm64_tahoe:       "fef921e381113065838e3bdffb9115784b80caf8699befdae9cb649d2b48a7da"
-    sha256 cellar: :any, arm64_sequoia:     "b20bf3f3ccff301131690d322fdddd9ee8f6b2812f7f3ecd44cb62420bf928cc"
-    sha256 cellar: :any, arm64_linux:       "4141ed3ebc4ff8865f068a30177ef787b3be51a47c706504e41f2e33e9feef33"
-    sha256 cellar: :any, x86_64_linux:      "caf9f69a09729c75298d46a58efc3c3b4bc2194ed1081214ed0f43458bee56f4"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "c72efae3bf669814835e0cc077675a2bde4b067a67391c1099ef777bd768bbf1"
   end
 
   depends_on "cmake" => :build

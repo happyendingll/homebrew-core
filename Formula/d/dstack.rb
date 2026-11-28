@@ -9,12 +9,8 @@ class Dstack < Formula
   head "https://github.com/dstackai/dstack.git", branch: "master"
 
   bottle do
-    manifest_sha256 "a4606e01575f3913eef0fc26ec243e7d30d52ed06ea48d9a6c78b4fb14d1438c"
-    sha256 cellar: :any, arm64_golden_gate: "3a9d8de1d6075cc085e6a0cdff4fa4b325caa4c5ebf6a97961376b7d1a16fa66"
-    sha256 cellar: :any, arm64_tahoe:       "9552807eff4bdcf97c833ca5092b47d983084e39b46ba11ca1d87237b235b105"
-    sha256 cellar: :any, arm64_sequoia:     "0290fc1ab3bd07e32893d1653ab1a5b801102b83f0aee45362594eea1d951c08"
-    sha256 cellar: :any, arm64_linux:       "48e77c6f2e58cf7feee3fa5c8c1e7e7541c7e348bb152463840de6a6d87f614e"
-    sha256 cellar: :any, x86_64_linux:      "441f9b596ef3da9a0983b616b7374200277c0ddb204cd0e390cc69a9536efa12"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any, sequoia: "be0392b31a0e7a04cd998a3dd65e01da897b602080bf2a4019b925f4d4a30342"
   end
 
   # `pkgconf` and `rust` are for bcrypt

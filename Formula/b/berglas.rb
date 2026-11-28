@@ -7,12 +7,8 @@ class Berglas < Formula
   head "https://github.com/GoogleCloudPlatform/berglas.git", branch: "main"
 
   bottle do
-    manifest_sha256 "ab5bf45cceb77d77335410520bcb3ae11d5ee77d6cffb42fee0ca1e30cc3906f"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d8ed3fd4a67b45464d4dd6327e778b2cb1d0fd4a8a135319530e85bd640c523f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d8ed3fd4a67b45464d4dd6327e778b2cb1d0fd4a8a135319530e85bd640c523f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d8ed3fd4a67b45464d4dd6327e778b2cb1d0fd4a8a135319530e85bd640c523f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ab57f5e65ab0418a1b74fc05270bc7567ecf70baa8adc944f0a4dbcc8cf8c672"
-    sha256 cellar: :any,                 x86_64_linux:      "eda56f9d06147328427f682f944efb96ae621daf77084194c633f87c3add9900"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "0e4d1ec76a1be9df93014bb9f3e84525a41bd820576b4d80c242c126343c4042"
   end
 
   depends_on "go" => :build

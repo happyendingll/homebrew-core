@@ -12,12 +12,8 @@ class Immudb < Formula
   end
 
   bottle do
-    manifest_sha256 "e10bd0b97a2dca639e96ba53a6979524db297946e602fd17252b28cbde849552"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f36d6a03ab665298f90562f4ef456c14b2f1d3b27d22240b3e5a910a6a4f4ce0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c8ddc310a38122ae96c3e096813eddedde8da8b18f71f1556432a98ff90d5047"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fc464aa990ee42d88b0a6362f84729c4672651c016d8f4972fa98b1c884eb6d1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "509d5577e9fe388ba88af0b9f9aee7b2ba94f619dee143f0f0749dc52fa77202"
-    sha256 cellar: :any,                 x86_64_linux:      "f6efa8b498ed40e4ad73aad4c3317c39b4da398aedfa3683591c076a3b938a46"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "03ed15c7beae4e1f005a9cfeee648df37dcb9d53c08ab397b4fd5a87a5f86247"
   end
 
   depends_on "go" => :build

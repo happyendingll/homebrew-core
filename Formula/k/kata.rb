@@ -6,12 +6,8 @@ class Kata < Formula
   license "MIT"
 
   bottle do
-    manifest_sha256 "5fcba6be1265d58994d6defbfc702b9d46e5696483c115f3b54704d261ac2e0b"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e626f8ae90bf930b5a985d7f4afdbadde2292dedb792621e020e4f09e1e14b2b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e626f8ae90bf930b5a985d7f4afdbadde2292dedb792621e020e4f09e1e14b2b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e626f8ae90bf930b5a985d7f4afdbadde2292dedb792621e020e4f09e1e14b2b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6bee3e1142b247ef35e908328f525f044c980c76f624699a6e352d61616eff61"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c5bb98e201bf63136ebfeb4ceabc7b4b6f8cb4159427aca7eec139960005313d"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "e89be3a3000aaa47450cb6953054d1087bd47ac4f9b06179307f022cfea86949"
   end
 
   depends_on "go" => :build

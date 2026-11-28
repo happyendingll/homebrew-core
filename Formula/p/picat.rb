@@ -17,12 +17,8 @@ class Picat < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    manifest_sha256 "1ee827ccd9341dbb856f457aab8b7e4779213380bb8cfa37f03c62dcc5a0c6a5"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7611b387308f074f292950672ddf0afbcf0ca1a6419d1d8123ccd5f83595aa41"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6426007a4400f438d4a825e2659ac5d8e84c89d4aa8c516ebaf0db464a8b5681"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "658eaba311799968f84d7056c7006ac0230faf269d3654d94a634cad9ed3f0b7"
-    sha256 cellar: :any,                 arm64_linux:       "c5570689974ba2edba571f9789a9efca83cc9eaa1061e2f724a3470c64395d6c"
-    sha256 cellar: :any,                 x86_64_linux:      "2a1919b53baa9bfc6df21b58df9fd60d092c6e89e56788f594bc91ea2f2aeba5"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "c0204099b5a8d510333dda17efb36c9c680d80d4c7939cc52fe7d1ca73656d5e"
   end
 
   deny_network_access!

@@ -13,12 +13,8 @@ class Roadrunner < Formula
   end
 
   bottle do
-    manifest_sha256 "d6f15ab1c874f34f509c29f0ca266e2fdb4e87559a51c602ffbe29ef6703662a"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3a2125c0dcaed1dd9a32c5b65bb947cce16b66d78c3dcafa43ccd82f9bb1b129"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "31553cbd7f78a186d4fe4a050ea0ce4865573deb8996019c67edc0daceb613b5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "05857ab91d1dc04338863606665c39fa6184e051970f72122a57f5eda359ec0b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e258647f2d5930bca31ba1e345c7e130328ba1dc4022eed08387b607f0a2e773"
-    sha256 cellar: :any,                 x86_64_linux:      "8c94819eb2697b8483bff9ce8854a6a0d27e5018eead6f9c8709ab8d16719238"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "98a77840f0dc316a9568397e7b21629fa338cbb1267a59682308d9990884696c"
   end
 
   depends_on "go" => :build

@@ -7,12 +7,8 @@ class GitSync < Formula
   head "https://github.com/kubernetes/git-sync.git", branch: "master"
 
   bottle do
-    manifest_sha256 "f5df8692f25b3d527475ca486f42eb711b15cc222def1350b04457db9c4a55ea"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "11e22b50f2334955905359b4d13865fb9e2eaafbddb98d60f91dd4bce64ab4dc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "11e22b50f2334955905359b4d13865fb9e2eaafbddb98d60f91dd4bce64ab4dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "11e22b50f2334955905359b4d13865fb9e2eaafbddb98d60f91dd4bce64ab4dc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "05cbc76471d632474d01af17923819c7e964f00fc4cc0c7be402bbd065817345"
-    sha256 cellar: :any,                 x86_64_linux:      "160bdb3e1855e097ff3208c3ed9797c2d6b63314b19314f1548f731ea61d5842"
+    root_url "https://github.com/happyendingll/intel-bottles/releases/download/bottles-7"
+    sha256 cellar: :any_skip_relocation, sequoia: "f007dc2d41b3e518741bd540ea27751f9d77dfaa57688b9c5ab8876381b4e442"
   end
 
   depends_on "go" => :build
